@@ -401,6 +401,7 @@ is:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Kubbar)'
       starwarsblocks_hour: 'Star Wars (Kubbar)'
+      loading: 'Hleð...'
       weblab: 'Vefsmiðja'
       view_all: 'Sjá öll verkefni...'
     popup:
@@ -416,6 +417,7 @@ is:
       prizes_link: 'Nánar'
   teacher:
     answer: Svar
+    dashboard: 'Stjórnborð kennara'
     for_teachers_only: Aðeins fyrir kennara
     title:
       one: 'Kennari þinn:'
@@ -1101,3 +1103,4 @@ is:
   behaviors:
     this_sprite: "þessi vera"
   unit_prefix: "Eining %{n}"
+  teacher_feedback: "Endurgjöf kennara"

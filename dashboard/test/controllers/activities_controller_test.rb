@@ -41,7 +41,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     @script_level_prev = create(:script_level, script: @script)
     @script_level = create(:script_level, script: @script)
     @script_level_next = create(:script_level, script: @script)
-    create(:lesson_group, lessons: [@script_level_prev.lesson, @script_level.lesson, @script_level_next.lesson], script: @script)
+
+    @lesson = create(:lesson)
+    @lesson.script_levels << @script_level_prev
+    @lesson.script_levels << @script_level
+    @lesson.script_levels << @script_level_next
+
+    create(:lesson_group, lessons: [@lesson], script: @script)
     @level = @script_level.level
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
@@ -878,13 +884,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    game = create(:game)
-    (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
-    script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Lesson 1', display_name: 'Milestone Lesson 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Lesson 2', display_name: 'Milestone Lesson 2'; level 'Level 3'",
-      "a filename"
-    )
-    script = Script.add_unit({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
+    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Script', skip_name_format_validation: true
+    script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
+    script.reload
 
     last_level_in_first_lesson = script.lessons.first.script_levels.last
     post :milestone,

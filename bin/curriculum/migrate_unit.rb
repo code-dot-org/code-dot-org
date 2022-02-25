@@ -91,7 +91,6 @@ def main(options)
       skip_name_format_validation: true
     )
     script.fix_script_level_positions
-    script.write_script_dsl
     script.write_script_json
 
     log "updated unit #{script.name}"

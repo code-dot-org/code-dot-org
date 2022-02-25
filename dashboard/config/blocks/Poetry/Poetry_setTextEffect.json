@@ -12,10 +12,6 @@
             "\"fade\""
           ],
           [
-            "typewriter",
-            "\"typewriter\""
-          ],
-          [
             "fly from left",
             "\"flyLeft\""
           ],
@@ -30,6 +26,10 @@
           [
             "fly from bottom",
             "\"flyBottom\""
+          ],
+          [
+            "typewriter",
+            "\"typewriter\""
           ]
         ]
       }

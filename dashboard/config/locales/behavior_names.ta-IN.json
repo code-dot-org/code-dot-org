@@ -688,31 +688,58 @@
         "international_outbreak_freeplay": {
           "recovering": "மீட்கிறது",
           "moving left and right": "இடது மற்றும் வலது நகரும்",
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகர்வது",
+          "spinning left": "இடதுபுறமாக சுழல்வது",
+          "spinning right": "வலதுபுறமாக சுழல்வது",
+          "shrinking": "சுருங்குதல்",
+          "growing": "வளரும்",
+          "moving south": "தெற்கு நோக்கி நகர்வது",
+          "moving north": "வடக்கு நோக்கி நகர்வது",
+          "jittering": "நடுங்குவது",
+          "moving west": "மேற்கு நோக்கி நகர்வது",
+          "patrolling": "ரோந்து"
         },
         "helloworld_animals_behaviors": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_emoji_behaviors": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_retro_behaviors": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_animals_sounds": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_emoji_sounds": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_food_sounds": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_retro_sounds": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_food_behaviors": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "poetry_hoc_spriteSizes": {
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
@@ -1688,25 +1715,33 @@
           "patrolling": "ரோந்து"
         },
         "helloworld_animals_backgrounds": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_animals_events": {
           "moving forward": "முன்னோக்கி நகர்தல்"
         },
         "helloworld_emoji_backgrounds": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_emoji_events": {
           "moving forward": "முன்னோக்கி நகர்தல்"
         },
         "helloworld_food_backgrounds": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_food_events": {
           "moving forward": "முன்னோக்கி நகர்தல்"
         },
         "helloworld_retro_backgrounds": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
+          "moving south and looping": "தெற்கே நகர்ந்து வளையும்"
         },
         "helloworld_retro_events": {
           "moving forward": "முன்னோக்கி நகர்தல்"

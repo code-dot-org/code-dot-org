@@ -2287,7 +2287,8 @@
           "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
+          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
+          "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
@@ -2315,7 +2316,8 @@
           "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
+          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
+          "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
@@ -2343,7 +2345,8 @@
           "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
+          "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
+          "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा."
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "`क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `चेंज कॉस्च्युम` ब्लॉक कनेक्ट करण्याचा प्रयत्न करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
@@ -2804,6 +2807,56 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "हा ब्लॉक शोधा आणि `150` वर क्लिक करा.\n\\[ब्लॉकली ब्लॉक[0]\n\nजेव्हा संख्या `25` असते तेव्हा काय होते?\n\\[ब्लॉकली ब्लॉक[1]"
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "हे कोडे पूर्ण करण्यासाठी `when clicked` इव्हेंटला एक किंवा अधिक `actor 1 say` ब्लॉक्स जोडा."
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "तुम्ही सिडला आणि मॅनीला बर्फाच्या स्फटिकांनी मारामारी करायला लावू शकता का? ",
+          "iceage_free_play_b": "आजीला डीएगोचा पाठलाग करायला लावा. जर तिने त्याला पकडले तर गेम जिंकला म्हणून थांबवा.",
+          "iceage_free_play_c": "तुम्ही सिडला डीएगोकडे हिमकण फेकायला लावू शकता का आणि एखादा हिमकण लागल्यावर  डीएगोला अधिक मोठा करू शकता का? जर  डीएगोला 5 वेळा लागले तर गेम जिंकला म्हणून थांबवा."
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "हे कोडे सोडवण्यासाठी तुम्हाला फक्त एकच ब्लॉक जोडायचा आहे. एक `say` ब्लॉक टूलबारमधून बाहेर काढा आणि वर्कस्पेसमध्ये आधीच असलेल्या `when run` इव्हेंट ब्लॉकला तो जोडा. नंतर त्याच्या आत \"Hello!\" टाईप करा.     "
+        },
+        "iceage_hello2": {
+          "iceage_hello2_a": "हे कोडे सोडवण्यासाठी, तुम्हाला `actor 1 say` ब्लॉक वापरून सिदला काहीतरी म्हणायला लावणे आवश्यक आहे. तसेच तुम्हाला `actor 2 say` ब्लॉक वापरून मॅनीला काहीतरी म्हणायला लावणे आवश्यक आहे.      "
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": "हे कोडे सोडवण्यासाठी प्रत्येक `when ___ arrow` इव्हेंटला वेगळी  `move actor 1` कमांड जोडलेली असणे आवश्यक आहे."
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "हे कोडे सोडवण्यासाठी प्रत्येक `when ___ arrow` इव्हेंटला वेगळी  `move actor 1` कमांड जोडलेली असणे आवश्यक आहे."
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "या कोड्यासाठी, तुम्हाला एकतर डीएगोला 200 पिक्सेल्स खाली न्यावे लागेल किंवा मॅनीला 200 पिक्सेल्स वर न्यावे लागेल.",
+          "iceage_move_to_actor_b": "हे आव्हान संपवण्यासाठी  `when actor 1 touches actor 2` इव्हेंटला `play ___ sound` ब्लॉक जोडा.  "
+        },
+        "iceage_move_to_flag": {
+          "iceage_hello3_a": "हे कोडे सोडवण्यासाठी `move actor 1 right by 200 pixels` ब्लॉक वापरा."
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "हे कोडे सोडवण्यासाठी `move actor 1 left` आणि `move actor 1 right` हे दोन्ही ब्लॉक्स वापरा."
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "`when actor 1 touches actor 2` इव्हेंटच्या खाली तुम्हाला दोन ब्लॉक्स जोडावे लागतील.",
+          "iceage_sound_and_points_b": "ही पातळी उत्तीर्ण करण्यासाठी तुम्हाला `score a point` ब्लॉक आणि  'play \\_\\_\\_\\_ sound\\` ब्लोक, हे दोन्ही ब्लॉक्स वापरावे लागतील."
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "`when actor 1 touches actor 2` इव्हेंटच्या खाली तुम्हाला दोन ब्लॉक्स जोडावे लागतील.",
+          "iceage_sound_and_points_b": "ही पातळी उत्तीर्ण करण्यासाठी तुम्हाला `score a point` ब्लॉक आणि  'play \\_\\_\\_\\_ sound\\` ब्लोक, हे दोन्ही ब्लॉक्स वापरावे लागतील."
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "तुम्हाला आजीच्या दिशेत बदाम कधी फेकायचे आहेत? ॲरो दाबल्यावर? तुम्ही सिडवर क्लिक केल्यावर? तुम्ही आजीवर क्लिक केल्यावर? निवड तुम्हाला करायची आहे!",
+          "iceage_throw_hearts_b": "जेव्हा आजीला बदाम मिळतो, तेव्हा तिला आनंदी करण्यासाठी, तुम्हाला `when actor 2 touches projectile` इव्हेंटच्या खाली `set actor 2 mood to happy` ब्लॉक जोडावा लागेल."
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "हे कोडे जिथे न्यायचे आहे त्यासाठी तुम्हाला फक्त दोन ब्लॉक्स जोडावे लागतील.",
+          "iceage_warn_ice_age_b": "`when run` इव्हेंटच्या खाली दोन्ही नवीन ब्लॉक्स जोडा म्हणजे प्रोग्रॅम सुरू झाल्यावर ते लगेचच रन होतील."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "हे कोडे जिथे न्यायचे आहे त्यासाठी तुम्हाला फक्त दोन ब्लॉक्स जोडावे लागतील.",
+          "iceage_warn_ice_age_b": "`when run` इव्हेंटच्या खाली दोन्ही नवीन ब्लॉक्स जोडा म्हणजे प्रोग्रॅम सुरू झाल्यावर ते लगेचच रन होतील."
         }
       }
     }

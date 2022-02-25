@@ -391,6 +391,7 @@
   homepage_donors_donate: "Donate"
   homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
   homepage_below_hero_announcement_link_text: "Learn more"
+  homepage_higher_power_body: "Create with Dance Party, get a chance to see the band live."
   contact_form_topic_student: "I'm a student"
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: "I'm a teacher/educator"
@@ -598,7 +599,6 @@
   volunteer_engineer_submission_distance_16: "10 miles"
   volunteer_engineer_submission_distance_24: "15 miles"
   volunteer_engineer_submission_distance_32: "20 miles"
-  volunteer_engineer_submission_distance_80: "50 miles"
   volunteer_engineer_submission_num_volunteers_5: "5 volunteers"
   volunteer_engineer_submission_num_volunteers_10: "10 volunteers"
   volunteer_engineer_submission_num_volunteers_25: "25 volunteers"
@@ -1738,6 +1738,8 @@
   hoc2018_dance_video2: "Dance Party - Events"
   hoc2018_dance_video3: "Dance Party - Properties"
   hoc2018_dance_video4: "Dance Party - Congratulations"
+  dance_box_higher_power_line_1: "Code a dance to Coldplay's \"Higher Power\" and you could get the chance to see the band live!"
+  dance_box_higher_power_line_2: "Check out <a href=\"%{path}\">code.org/coldplay</a> for more information."
   page_not_found_title: "Page Not Found"
   page_not_found_header: '404: Page Not Found'
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
@@ -1757,7 +1759,6 @@
   page_not_available_title: "Page Not Available"
   page_not_available_description: "We're sorry, the page you requested is no longer available at this address. If you still need access, please email [support@code.org](%{support_email_link})."
   page_not_available_button: "Return home"
-  ! '': 
   hoc2020_mc_available_code_org: "Available on Code.org"
   hoc2020_mc_available_mee: 'Available in Minecraft: Education Edition'
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
@@ -1833,3 +1834,4 @@
   outbreak_tile_title: "Outbreak"
   outbreak_tile_subtitle: "A virus has infected Monster Town! Code an outbreak simulator and make predictions about what will happen to the neighbors of Monster Town."
   outbreak_tile_alt: "A simulation of how a virus spreads through a group of purple monsters."
+  footer_cookie_notice: "Cookie Notice"

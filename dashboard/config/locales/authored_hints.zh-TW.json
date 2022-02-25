@@ -1817,17 +1817,17 @@
         },
         "courseA_harvester_loops5a": {
           "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
-          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`\\[<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
         },
         "courseA_harvester_loops5a_2019": {
           "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
-          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`\\[<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
         },
         "courseA_harvester_loops5a_2020": {
           "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
-          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`\\[<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
         },
         "courseA_harvester_loops5b": {
@@ -7379,7 +7379,7 @@
         },
         "courseE_bee_functions2": {
           "courseE_bee_functions2_a": "已為您編寫好函式，但您需要在每朵花上調用。",
-          "courseE_bee_functions2_b": "<xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> 積木呼叫現有的函式。",
+          "courseE_bee_functions2_b": "\\[<xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> 積木呼叫現有的函式。",
           "courseE_bee_functions2_c": "你需要前進並採集 2 次花蜜才能通過這關。"
         },
         "courseE_bee_functions3": {
@@ -8904,7 +8904,7 @@
         },
         "courseA_harvester_loops5a_2021": {
           "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
-          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`\\[<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
         },
         "courseA_harvester_loops5b_2021": {
@@ -10797,7 +10797,7 @@
           "add_behavior": "向你的代碼添加一個`sprite begins`積木。確保你已經製作了你要給予行為的精靈圖。 \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "尋找這個積木並點擊`150`。\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n當數字是`25`時會發生什麼？ \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block>></xml>"
+          "size hint": "尋找這個積木並點擊`150`。\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n當數字是`25`時會發生什麼？ \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         }
       }
     }

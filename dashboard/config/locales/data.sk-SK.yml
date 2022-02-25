@@ -567,9 +567,9 @@ sk:
         C4_bee_conditional: Podmienky s včelou
         C4_variables_artist: Umelec - Premenné
         C4_variables_playlab: Premenné - Play Lab
-        C4_for_loops: Cykly "For"
-        C4_for_loops_bee: Cykly "For"
-        C4_for_loops_no_bee: Cykly "For"
+        C4_for_loops: Cykly "Pre"
+        C4_for_loops_bee: Cykly "Pre"
+        C4_for_loops_no_bee: Cykly "Pre"
         C4_math_artist: Programovanie Umelca s matematikou
         C4_function_edit: Úprava funkcií
         C4_function_create: Tvorba funkcií
@@ -578,7 +578,7 @@ sk:
         C4_unplugged_algorithms: Algoritmy s tangrammi
         C4_unplugged_madlibs: Slovné halušky
         C4_unplugged_variables: Premenné v obálkach
-        C4_unplugged_forloops: Cykly "For"
+        C4_unplugged_forloops: Cykly "Pre"
         C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binárny
         CSF_a_b_artist_loops: Cykly s Umelcom
@@ -637,6 +637,9 @@ sk:
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Cykly
         csp_cs_is_changing_everything: Informatika mení svet okolo nás
+        csp_internetsimulator_1: Internetový simulátor - Časť 1
+        csp_internetsimulator_2: Internetový simulátor - Časť 2
+        csp_internetsimulator_3: Internetový simulátor - Časť 3
         starwars_intro: 'Star Wars: Budovanie Galaxie pomocou kódu - Úvod'
         starwars_typing: 'Star Wars: Budovanie Galaxie pomocou kódu - JavaScript'
         starwars_events: 'Star Wars: Budovanie Galaxie pomocou kódu - Udalosti'
@@ -806,6 +809,20 @@ sk:
         csp_tutorial_libraries: Knižnice v App Labe
         PL-Video-21: Vitaj v profesionálnom vzdelávaní Code.org!
         csd_ml_intro_ai_lab_july2021: Úvod do UI Labu
+        PL_CSD_TeacherTips_Advise: Tipy pre učiteľa – Rady pre nových učiteľov
+        PL_CSD_TeacherTips_IntroToCSD: Tipy pre učiteľa – Úvod ku kurzu Objavujeme
+          informatiku
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Tipy pre učiteľa - Proces riešenia
+          problémov
+        PL_CSD_TeacherTips_PairProgramming: Tipy pre učiteľa – Programovanie vo dvojici
+        PL_CSD_TeacherTips_Debugging: Tipy pre učiteľa – Ladenie
+        PL_CSD_TeacherTips_LeadLearner: Tipy pre učiteľa – Najlepší žiak
+        poembot-playtest-intro: Testovanie poetického bota – Úvod
+        poembot-playtest-sprites: Testovanie poetického bota – Postavičky
+        poembot-playtest-events: Testovanie poetického bota – Udalosti
+        hello_world_intro: Ahoj svet – vitaj v laboratóriu postáv
+        hello_world_events: Ahoj svet – programovanie s udalosťami
+        hello_world_congrats: Ahoj svet – rob si, čo chceš
         rough_poemart_intro: v1 Umenie poézie Úvod
         rough_poemart_events: v1 Umenie poézie Podujatia
         rough_poemart_imagery: v1 Umenie poézie Obraznosť
@@ -817,6 +834,7 @@ sk:
         poetry_module_multichoiceprompts: Nápovedy s viacerými možnosťami - programovanie
           s poéziou
         poetry_module_conditionals: Podmienené - programovanie s poéziou
+        poemart_intro: Úvod do umenia básne
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

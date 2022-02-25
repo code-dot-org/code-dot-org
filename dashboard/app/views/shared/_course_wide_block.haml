@@ -104,10 +104,6 @@
       .courseblock-span4.heading
         %h3
           = data_t_suffix('script.name', id, 'title')
-          - if Script.beta? id
-            &nbsp;
-            %span.betatext
-              = t('beta')
         %h4= data_t_suffix('script.name', id, 'description_audience')
         .smalltext= data_t_suffix('script.name', id, 'description')
 

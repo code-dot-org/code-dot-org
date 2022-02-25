@@ -168,8 +168,29 @@
           "word": "Bucles",
           "definition": "la acción de hacer algo una y otra vez."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Cifrado César ",
+          "definition": "una técnica de encriptación que desplaza el alfabeto en un número determinado de caracteres"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Cifrado",
+          "definition": "el término genérico para una técnica (o algoritmo) que realiza el cifrado"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Romper la encriptación",
+          "definition": "Cuando se intenta descifrar un mensaje secreto sin conocer todos los detalles del cifrado, se está tratando de \"romper\" el cifrado. "
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Desencriptación",
+          "definition": "un proceso que invierte el cifrado, tomando un mensaje secreto y reproduciendo el texto plano original"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Cifrado"
+          "word": "Cifrado",
+          "definition": "un proceso de codificación de los mensajes para mantenerlos en secreto, de modo que sólo las partes \"autorizadas\" puedan leerlo."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Cifrado de Sustitución Aleatoria",
+          "definition": "una técnica de cifrado que asigna cada letra del alfabeto a otras letras del alfabeto elegidas al azar."
         },
         "code/starwars/unversioned": {
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
@@ -218,6 +239,14 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compresión sin pérdidas",
           "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modelos y Simulaciones",
+          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
         },
         "event/sports/unversioned": {
           "word": "Evento",
@@ -306,14 +335,6 @@
         "line/poem-art/unversioned": {
           "word": "Línea",
           "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
-        },
-        "event/outbreak/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modelos y Simulaciones",
-          "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
         },
         "sprite/coursef/2021": {
           "word": "Sprite",
@@ -840,6 +861,64 @@
         "try/coursee/2021": {
           "word": "Probar",
           "definition": "intentar hacer algo."
+        },
+        "machine_learning/csd/2021": {
+          "word": "Aprendizaje automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "ethics/csd/2021": {
+          "word": "Ética"
+        },
+        "user_interface/csd/2021": {
+          "word": "Pantalla de Usuario"
+        },
+        "bug/csd/2021": {
+          "word": "Bug o error",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "for_loop/csd/2021": {
+          "word": "Bucles desde",
+          "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
+        },
+        "debugging/csd/2021": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/csd/2021": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "variable/csd/2021": {
+          "word": "Variable",
+          "definition": "un marcador de posición para una información que puede cambiar."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "condition/csd/2021": {
+          "word": "Condición"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condicionales"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstracción"
+        },
+        "function/csd/2021": {
+          "word": "Función"
+        },
+        "input/csd/2021": {
+          "word": "Entrada"
+        },
+        "processing/csd/2021": {
+          "word": "Procesamiento"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Huella digital"
+        },
+        "copyright/csd/2021": {
+          "word": "Derechos de autor",
+          "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
         }
       }
     }

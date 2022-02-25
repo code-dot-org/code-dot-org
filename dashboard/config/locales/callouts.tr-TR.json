@@ -2127,6 +2127,158 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Kod bloklarını burada bulun.",
           "run_button": "Animasyonunuzu bu düğmeyle test edin."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Izgarayı göstermek için buraya tıklayın."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Buradaki sayıyı değiştir"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 abstraction rotation control_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD U3 abstraction velocityX if-statements_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 abstraction velocityY control_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "İşte kod"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Kodunuzu buraya ekleyin"
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "Kodunu buraya ekle."
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Bu satır ne yapıyor?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Burada oyunaBaşla'yı tanımlayın"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Burada oyuncuyuHareketEttir()'i tanımla"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Oyuncu kazandı mı kontrol edin"
+        },
+        "CSD games velocity bee_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Buradaki sayıyı değiştir"
         }
       }
     }

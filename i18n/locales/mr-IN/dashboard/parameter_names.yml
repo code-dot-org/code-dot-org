@@ -3,5 +3,6 @@ mr:
     parameter_names:
       height: उंची
       left: डावा
+      min: किमान
       size: आकार
       width: रुंदी

@@ -177,6 +177,7 @@ fr:
     email_preference_yes: "Oui"
     email_preference_no: "Non"
     email_preference_required: "Vous devez spécifier une adresse e-mail préférée."
+    share_teacher_email_reg_partner_question: "Accepteriez-vous que nous partagions vos coordonnées avec le [partenaire régional de Code.org] (%{cdo_regional_partner_desc}) de votre État afin qu'il puisse vous informer des activités de développement professionnel, des ressources et autres événements qui ont lieu dans votre région ?"
     share_teacher_email_reg_partner_preference_yes: "Oui"
     share_teacher_email_reg_partner_preference_no: "Non"
     share_teacher_email_reg_partner_preference_required: "Vous devez spécifier une adresse e-mail préférée."
@@ -284,6 +285,7 @@ fr:
       blank_code: "Saisis un code de section."
       cant_join_own_section: "Désolé, tu ne peux pas te joindre à ta propre section."
       provider_managed_section: "Cette section est gérée par un autre fournisseur et ne peut pas être rejointe. Demande à ton professeur de t’ajouter via %{provider} et de resynchroniser sa section."
+      not_participant_type: "Nous n'avons pas pu vous ajouter à la section %{section_code}, vous ne remplissez pas les conditions pour y participer."
     mail:
       student_disassociated:
         subject: "Notification de Code.org: %{student_name} n'est plus considéré comme l'un de vos élèves."
@@ -400,6 +402,8 @@ fr:
       minecraft_hero: 'Héros de Minecraft'
       playlab: 'Labo de jeux'
       playlab_k1: 'Labo du Jeu (Pré-lecteur)'
+      poetry: 'Poésie'
+      poetry_hoc: 'Art du poème'
       scratch: 'Scratch'
       sports: 'Sports'
       spritelab: 'Le Labo des Lutins'
@@ -422,6 +426,7 @@ fr:
       prizes_link: 'Plus d''informations'
   teacher:
     answer: Réponse
+    dashboard: 'Tableau de bord enseignant'
     for_teachers_only: Pour les enseignants uniquement
     title:
       one: 'Ton enseignant:'
@@ -540,6 +545,7 @@ fr:
     all_students_must_be_in_current_section: "Tous les étudiants doivent être inscrits dans votre section."
     already_enrolled_in_new_section: "Vous ne pouvez pas déplacer ces élèves car ils sont déjà dans une autre section."
     third_party_login: "Vous ne pouvez pas déplacer d’élèves dans une section qui est synchronisée avec l’outil d’un tiers."
+    not_correct_participant_type: "Impossible de déplacer ces utilisateurs car ils n'ont pas les autorisations nécessaires pour participer à la nouvelle section."
   share:
     title: "Apprends avec Code Studio"
     description: "N'importe qui peut apprendre l’informatique. Crée des jeux, des applications et de l'art avec du code."
@@ -581,6 +587,7 @@ fr:
     how_it_works: 'Comment ça marche'
     try_hour_of_code: 'Essaie une Heure du Code !'
     store: 'Magasin'
+    cookie_notice: ' Utilisation de cookies'
   reference_area:
     title: 'Besoin d''aide ?'
     subtitle: 'Regarder les vidéos et les indices'
@@ -992,9 +999,11 @@ fr:
       school: 'École'
       school_name: 'Nom de l''école'
       school_city: 'Ville de l’École'
+      school_city_district: 'École de ville/ district'
       school_country: 'Pays de l’École'
       colombian_school_city: 'Ville de l’École'
       colombian_chilean_school_name: 'Nom de l''école'
+      chilean_school_commune: 'Commune'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'
@@ -1019,6 +1028,7 @@ fr:
         malaysia: 'Malaisie'
         mexico: 'Mexique'
         thailand: 'Thaïlande'
+        uzbekistan: 'Ouzbékistan'
       ages:
         ages_under_6: 'Moins de 6 ans'
         ages_7_8: '7-8 ans'
@@ -1111,3 +1121,4 @@ fr:
   behaviors:
     this_sprite: "ce sprite"
   unit_prefix: "Unité %{n}"
+  teacher_feedback: "FeedBack enseignants"

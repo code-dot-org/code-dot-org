@@ -2,70 +2,6 @@
   "lt-LT": {
     "data": {
       "resources": {
-        "csf-artist-intro-video/artist/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-doc/artist/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-video/artist/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internetas"
         },
@@ -135,377 +71,107 @@
         "implementation_guide/coursea/2021": {
           "name": "Diegimo vadovas"
         },
-        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Mano draugai robotai",
-          "url": ""
+          "name": "Mano draugai robotai"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Mano draugai robotai",
-          "url": ""
+          "name": "Mano draugai robotai"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "Mano draugai robotai",
-          "url": ""
+          "name": "Mano draugai robotai"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Mano draugai robotai",
-          "url": ""
+          "name": "Mano draugai robotai"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Mano draugai robotai",
-          "url": ""
-        },
-        "c2-maze-bridge/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-maze-blocks/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Mano draugai robotai"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Programavimas poroje",
-          "url": ""
-        },
-        "csf-lesson-recommend/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-artist-intro-video/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-video/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-doc/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programavimas poroje"
         },
         "unplugged-video-big-event/coursec/2021": {
-          "name": "Didelis įvykis",
-          "url": ""
+          "name": "Didelis įvykis"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "Didelis įvykis",
-          "url": ""
+          "name": "Didelis įvykis"
         },
         "assessment-answer-big-event/coursec/2021": {
-          "name": "Didelis įvykis",
-          "url": ""
-        },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "right-app-scenarios/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Didelis įvykis"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Dvejetainės apyrankės",
-          "url": ""
+          "name": "Dvejetainės apyrankės"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "Dvejetainės apyrankės",
-          "url": ""
+          "name": "Dvejetainės apyrankės"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "Dvejetainės apyrankės",
-          "url": ""
+          "name": "Dvejetainės apyrankės"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "Dvejetainės apyrankės",
-          "url": ""
+          "name": "Dvejetainės apyrankės"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "Dvejetainės apyrankės",
-          "url": ""
-        },
-        "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play-lab-project-guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Dvejetainės apyrankės"
         },
         "implementation_guide/coursec/2021": {
-          "name": "Diegimo vadovas",
-          "url": ""
-        },
-        "lesson_type_guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_slides/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Diegimo vadovas"
         },
         "graph-paper-programming/coursed/2021": {
-          "name": "Programavimas ant languoto popieriaus",
-          "url": ""
+          "name": "Programavimas ant languoto popieriaus"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Programavimas ant languoto popieriaus",
-          "url": ""
+          "name": "Programavimas ant languoto popieriaus"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Programavimas ant languoto popieriaus",
-          "url": ""
+          "name": "Programavimas ant languoto popieriaus"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Programavimas ant languoto popieriaus",
-          "url": ""
+          "name": "Programavimas ant languoto popieriaus"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Programavimas ant languoto popieriaus",
-          "url": ""
+          "name": "Programavimas ant languoto popieriaus"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Programavimas ant languoto popieriaus",
-          "url": ""
+          "name": "Programavimas ant languoto popieriaus"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Programavimas poroje",
-          "url": ""
+          "name": "Programavimas poroje"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Programavimas komandoje",
-          "url": ""
+          "name": "Programavimas komandoje"
         },
         "relay-assessment/coursed/2021": {
-          "name": "Programavimas komandoje",
-          "url": ""
+          "name": "Programavimas komandoje"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Programavimas komandoje",
-          "url": ""
+          "name": "Programavimas komandoje"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Programavimas komandoje",
-          "url": ""
+          "name": "Programavimas komandoje"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Programavimas komandoje",
-          "url": ""
+          "name": "Programavimas komandoje"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Programavimas komandoje",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-project-guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance_party_unplugged/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_2/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling-faces-image/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programavimas komandoje"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Sąlyginiai sakiniai su kortomis",
-          "url": ""
+          "name": "Sąlyginiai sakiniai su kortomis"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Sąlyginiai sakiniai su kortomis",
-          "url": ""
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Sąlyginiai sakiniai su kortomis"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Sąlyginiai sakiniai su kortomis",
-          "url": ""
+          "name": "Sąlyginiai sakiniai su kortomis"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Sąlyginiai sakiniai su kortomis",
-          "url": ""
+          "name": "Sąlyginiai sakiniai su kortomis"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Sąlyginiai sakiniai su kortomis",
-          "url": ""
-        },
-        "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Sąlyginiai sakiniai su kortomis"
         },
         "implementation_guide/coursed/2021": {
-          "name": "Diegimo vadovas",
-          "url": ""
-        },
-        "lesson_type_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Diegimo vadovas"
         },
         "pair_programming/express/2021": {
           "name": "Programavimas poroje"
@@ -518,6 +184,39 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Diegimo vadovas"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizaino režimas"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizaino režimas"
+        },
+        "functions_2/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Kartojimas"
+        },
+        "for_loops/csd/2021": {
+          "name": "Kartojimas"
+        },
+        "variables_1/csd/2021": {
+          "name": "Kintamieji"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Greitis"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Greitis"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_1/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "lists/csd/2021": {
+          "name": "Sąrašai"
         }
       }
     }

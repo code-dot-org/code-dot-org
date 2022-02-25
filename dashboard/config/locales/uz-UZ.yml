@@ -480,6 +480,7 @@ uz:
       starwars: Yulduzlar urushi
       starwarsblocks: Star Wars (Blocks)
       starwarsblocks_hour: Star Wars (Blocks)
+      loading: Yuklanyapti...
       weblab: Web Lab
       view_all: Barcha loyihalarni ko‘rish...
     popup:
@@ -495,6 +496,7 @@ uz:
       prizes_link: Batafsil
   teacher:
     answer: Javob
+    dashboard: Teacher Dashboard
     for_teachers_only: Faqat o'qituvchilar uchun
     title:
       one: 'Oʻqituvchingiz:'
@@ -1451,3 +1453,4 @@ uz:
   behaviors:
     this_sprite: bu sprayt
   unit_prefix: Bo'lim %{n}
+  teacher_feedback: O‘qituvchilarning fikri

@@ -1915,6 +1915,216 @@
           "poetry_background": "Temukan blok kode di sini. ",
           "pause_button": "Tes animasimu dengan tombol ini.",
           "run_button": "Tes animasimu dengan tombol ini."
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Klik di sini untuk menambahkan kostum baru ke proyek Anda!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Anda dapat memperlambat program di sini."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Coba sisiri code Anda satu blok sekali tempo."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Pertama kali tekan tombol run!",
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Coba ubah ketika ke selagi."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Blok-blok baru di sini!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Gunakan blok event baru yang ada di sini."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Blok ini salah urutannya."
+        },
+        "courseF_events_time": {
+          "events_category": "Klik di sini untuk membuka kategori Event."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Klik di sini untuk membuka kategori Perilaku."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Klik di sini untuk membuka kategori Sprite."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Klik di sini untuk membuka kategori Lokasi."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Cari blok baru di sini."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Cari blok baru di sini!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Apakah latar belakang berubah warna ketika Anda menjawab pertanyaan? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Apakah Anda sudah selesai? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Cari dua blok baru di sini!",
+          "text_answer_finish": "Apakah layar judul muncul selama 3 detik? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Cari blok-blok baru di sini!"
+        },
+        "courseF_text_events": {
+          "events_category": "Klik di sini untuk membuka kategori Event."
+        },
+        "courseF_text_print": {
+          "print_block": "Temukan blok print di sini!",
+          "text_print_finish": "Apakah pesan Anda tampil di atas? Jika ya, tekan 'Finish'. Jika tidak, tekan 'Reset', ubah code, dan tekan 'Run' lagi."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Temukan blok prompt di sini!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Klik di sini untuk menampilkan grid."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Ubah nomornya disini"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Inilah kodenya",
+          "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Tambahkan kode anda disini"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Apa kegunaan garis ini?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Menentukan memulai permainan di sini"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Tentukan Pemain yang bisa dipindahkan() disini"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Periksa apakah pemain telah menang"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Ubah nomornya disini"
         }
       }
     }

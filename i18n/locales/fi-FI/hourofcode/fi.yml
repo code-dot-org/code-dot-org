@@ -10,7 +10,7 @@ fi:
   campaign_date_short: Jou. 7-13
   campaign_date_full: Joulukuu 4-10
   campaign_date_year: '2021'
-  campaign_date_full_year: Joulukuu 7-13, 2020
+  campaign_date_full_year: Joulukuu 6-12, 2021
   latam_campaign_date_start_short: Lok. 1
   latam_campaign_date_start_long: 1. Lokakuuta
   latam_campaign_date_short: Lok. 1 - Jou. 18
@@ -135,6 +135,9 @@ fi:
     Tietojenkäsittelyopissa on kyse niin paljon muustakin kuin vain koodauksesta!
     Nauti Code.orgin tarjoamista opetussuunnitelmista opettaessasi oppilaitasi tekoälyn
     upeasta maailmasta.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: 'Hour of Code Live
 
 '
@@ -993,6 +996,7 @@ fi:
   footer_menu_support: Tuki
   footer_menu_terms: Ehdot
   footer_menu_privacy: Yksityisyyskäytännöt
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Koodaustunti
   learn_banner_blurb: Kokeile yhden tunnin opetusohjelma, joka on suunniteltu kaiken
     ikäisille yli 45 kielellä. Liity miljoonien opiskelijoiden ja opettajien kanssa
@@ -10471,6 +10475,14 @@ fi:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: Kaikki nykyaikaiset selaimet
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Blocks
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

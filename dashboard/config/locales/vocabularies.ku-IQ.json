@@ -11,102 +11,17 @@
         "code/artist/unversioned": {
           "word": "کۆد"
         },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "conditionals/aquatic/unversioned": {
           "word": "مەرجیەکان"
         },
         "loops/aquatic/unversioned": {
           "word": "گرێکان"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "کۆد"
         },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/poem-art/unversioned": {
-          "word": "کۆد",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "کۆد"
         },
         "variable/coursef/2021": {
           "word": "گۆڕاو"
@@ -123,73 +38,8 @@
         "drop/coursea/2021": {
           "word": "درۆپ"
         },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "conditionals/coursed/2021": {
-          "word": "مەرجیەکان",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "مەرجیەکان"
         },
         "conditionals/express/2021": {
           "word": "مەرجیەکان"
@@ -214,6 +64,21 @@
         },
         "define/coursee/2021": {
           "word": "پێناسە بکە"
+        },
+        "variable/csd/2021": {
+          "word": "گۆڕاو"
+        },
+        "conditionals/csd/2021": {
+          "word": "مەرجیەکان"
+        },
+        "abstraction/csd/2021": {
+          "word": "پوختە"
+        },
+        "function/csd/2021": {
+          "word": "فرمان"
+        },
+        "input/csd/2021": {
+          "word": "داخڵکردن"
         }
       }
     }

@@ -145,6 +145,9 @@ hi:
     है। कम्प्यूटर साइंस में कोडिंग के अलावा और भी बहुत कुछ है! कृत्रिम बुद्धि के बारे
     में ज़्यादा पढ़ाने की इस नई यात्रा में Code.org के पहले कदम का मज़ा सारे कोर्स
     में लें।  "
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -234,7 +237,7 @@ hi:
   hourofcode_homepage_hoc2018_header_line1: कोई भी, कहीं भी एक ऑवर ऑफ़ कोड इवेंट आयोजित
     कर सकता है।45 से अधिक भाषाओं में एक घंटे के ट्यूटोरियल।किसी अनुभव की जरूरत नहीं।
   hourofcode_homepage_hoc2018_header_line2: 4 से 104 उम्र।
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: ऑवर ऑफ़ कोड आ रहा है!
   codeorg_homepage_celebrate_cse: हर जगह कंप्यूटर साइंस का जश्न मनाएं!
   codeorg_homepage_csc: कंप्यूटर साइंस कनेक्शन्स में लैंग्वेज आर्ट्स, गणित, और अन्य
     विषयों कें साथ कंप्यूटर साइंस का सम्बन्धों के बारे में जानें.
@@ -245,7 +248,7 @@ hi:
     लिए वापस आ गया है! कोड के साथ Minecraft के माध्यम से यात्रा करें।
   codeorg_homepage_hoc2019_dance_heading: नई <span class="highlight-word">डांस&nbsp;पार्टी
     आजमाएं!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  स्कूल बंद होने की वजह से अभिभावकों और शिक्षकों
     की समस्याओं का समाधान।  "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1039,6 +1042,7 @@ hi:
   footer_menu_support: समर्थन
   footer_menu_terms: शर्तें
   footer_menu_privacy: गोपनीयता नीति
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: ऑवर ऑफ़ कोड गतिविधियां
   learn_banner_blurb: 45 से अधिक भाषाओं में सभी उम्र के लिए डिज़ाइन किए गए एक घंटे
     के ट्यूटोरियल का प्रयास करें।ऑवर ऑफ़ कोड के साथ 180 से अधिक देशों में लाखों छात्रों

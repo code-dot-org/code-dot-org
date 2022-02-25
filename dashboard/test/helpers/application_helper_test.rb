@@ -51,9 +51,8 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test "code_org_url" do
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('teacher-dashboard')
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
+    assert_equal '//test.code.org/about/team', CDO.code_org_url('/about/team')
+    assert_equal '//test.code.org/about/team', CDO.code_org_url('about/team')
   end
 
   test "windows phone 8.1 supported" do
@@ -80,21 +79,6 @@ class ApplicationHelperTest < ActionView::TestCase
     end
     assert(browser.chrome?)
     assert(browser.version.to_s.to_i == 34)
-  end
-
-  test 'script_certificate_image_url helper encodes correct information' do
-    user = create :user
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_2013_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::FROZEN_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::FLAPPY_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::PLAYLAB_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::STARWARS_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE1_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE2_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE3_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE4_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::ARTIST_NAME)
   end
 
   test 'client state level progress' do
@@ -244,18 +228,5 @@ class ApplicationHelperTest < ActionView::TestCase
 
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
-  end
-
-  def assert_certificate_url_encodes(user, script)
-    url = script_certificate_image_url(user, script)
-    uri = URI.parse(url)
-    filename = uri.path
-    extname = File.extname(filename)
-    encoded = File.basename(filename, extname)
-    data = JSON.parse(Base64.urlsafe_decode64(encoded))
-
-    assert_equal user.name, data['name']
-    assert_equal script.name, data['course']
-    assert_equal data_t_suffix('script.name', script.name, 'title'), data['course_title']
   end
 end

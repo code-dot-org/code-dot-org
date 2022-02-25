@@ -26,7 +26,7 @@ pt:
           com o que o grupo que criou o algoritmo queria?
       Unplug3:
         title: Programação de papel milimetrico
-        desc: Através da programação para desenhar as figuras, os alunos vão começar
+        desc: Por meio da programação para desenhar as figuras, os alunos vão começar
           a entender o que de fato é programar. A aula vai começar com alunos dando
           instruções uns aos outros para colorir os quadrados em um papel quadriculado
           na tentativa de reproduzir uma figura existente. Se houver tempo, a aula
@@ -161,11 +161,10 @@ pt:
           que você usa várias vezes) para criar caça-sóis usando fios e contas.
       SongwritingParameters:
         title: Composição
-        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre
-          a passagem de parâmetros (os quais personalizam uma função sem a necessidade
-          de reescrevê-la).
+        desc: Os alunos usam o conceito do refrão em uma música para aprender sobre
+          funções de definição e de chamada.
       DiceRace:
-        title: 'Algoritmos da via real: jogo de dados'
+        title: 'Algoritmos da vida real: Corrida de dados'
         desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso,
           os alunos vão identificar e escrever um algoritmo para um jogo de dados.
       Internet:
@@ -254,30 +253,29 @@ pt:
           pontos no plano, e então decidir se esses dois pontos (ou personagens do
           jogo) estão se tocando.
       courseA_unplugged_loops:
+        title: Loops off-line
         desc: Nesta aula, vais aprender mais sobre os ciclos!
       courseB_unplugged_MRF:
         title: Atividade offline
         desc: Nesta aula, vais “programar” os teus amigos!
       courseB_unplugged_loopyMRF:
         title: Atividade offline
-        desc: Tal como fizeste em “Os meus amigos robótidos”, vais “programar” os
-          teus amigos, mas desta vez com ciclos!
+        desc: Assim como em “Os meus amigos robótidos”, você irá “programar” seus
+          amigos, mas desta vez com laços!
       courseC_Unplugged_ScreenOutTheMean:
         title: Atividade offline
-        desc: Hoje vais aprender a saber o que fazer quando alguém está a ser mau
-          contigo online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       courseD_unplugged_digitalCitizenship:
         title: Atividade offline
-        desc: Hoje vais aprender o que significa ser um Cidadão Digital.
+        desc: Hoje você irá aprender o que significa ser um Cidadão Digital.
       courseE_unplugged_privateInformation:
-        title: 'Educação do Senso Comum: Informação Privada e Pessoal'
-        desc: Hoje vais aprender a diferença entre informação privada e pessoal.
+        title: 'Educação do Senso Comum: Informações privadas e pessoais '
+        desc: Hoje você irá aprender a diferença entre informação privada e pessoal!
       courseF_unplugged_powerOfWords:
         title: Atividade offline
-        desc: Hoje vais aprender a saber o que fazer quando alguém está a ser mau
-          contigo online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       deeper learning description:
-        desc: 'tradução em falta: en-US.data.unplugged.desc'
+        desc: 'tradução pendente: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos da Vida Real: Plante uma Semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando
@@ -349,14 +347,13 @@ pt:
           também pode armazenar informações ainda mais complexas (como imagens e cores)
           em binário.
       courseE_unplugged_diceRace:
-        title: 'Algoritmos da Vida Real: Corrida dos Dados'
+        title: 'Algoritmos da vida real: Corrida de dados'
         desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso,
           os alunos vão identificar e escrever um algoritmo para um jogo de dados.
       courseE_unplugged_songwritingParameters:
         title: Composição de música com parâmetros
-        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre
-          a passagem de parâmetros (os quais personalizam uma função sem a necessidade
-          de reescrevê-la).
+        desc: Os alunos usam o conceito do refrão em uma música para aprender sobre
+          funções de definição e de chamada.
       courseE_unplugged_internet:
         title: Internet
         desc: Os alunos enviam mensagens que representam vários métodos de transmissão
@@ -368,9 +365,8 @@ pt:
           de maneira mais eficiente do que se um aluno tentasse resolver sozinho.
       courseE_unplugged_songwriting:
         title: Composição
-        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre
-          a passagem de parâmetros (os quais personalizam uma função sem a necessidade
-          de reescrevê-la).
+        desc: Os alunos usam o conceito do refrão em uma música para aprender sobre
+          funções de definição e de chamada.
       courseF_unplugged_tangrams:
         title: Algoritmos Tangram
         desc: 'Esta aula nos mostra algo importante sobre os algoritmos: se você o
@@ -396,7 +392,7 @@ pt:
           de códigos em funções é uma prática útil.  '
       courseB_unplugged_MRF_2018:
         title: Meus amigos robóticos
-        desc: Aprende a programar escrevendo código com os teus amigos!
+        desc: Aprenda a programar escrevendo programas para seus amigos!
       PlantASeed_2018:
         title: 'Algoritmos da Vida Real: Plante uma Semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando
@@ -412,6 +408,7 @@ pt:
         desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram
           como navegar em segurança pela Internet.
       courseA_unplugged_loops_2018:
+        title: Loops off-line
         desc: Nesta aula, vais aprender mais sobre os ciclos!
       BigEvent_2018:
         title: O Grande Evento
@@ -426,11 +423,10 @@ pt:
           reprodução de um desenho.
       courseD_unplugged_digitalCitizenship_2018:
         title: Atividade offline
-        desc: Hoje vais aprender o que significa ser um Cidadão Digital.
+        desc: Hoje você irá aprender o que significa ser um Cidadão Digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Atividade offline
-        desc: Hoje vais aprender a saber o que fazer quando alguém está a ser mau
-          contigo online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       Conditionals_2018:
         title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
@@ -466,31 +462,48 @@ pt:
       MoveItMoveIt_2018:
         title: Criando caminhos
       courseB_unplugged_CnC_2018:
-        title: É Óptimo Criar e Jogar Limpo
+        title: É Ótimo Criar e Jogar Limpo
+        desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em
+          Direitos Autorais e Criatividade, esta aula existe para ajudar os estudantes
+          a entenderem o processo criativo de compartilhar e inspiração. Junto disso
+          vem a promoção da expressão criativa e a necessidade de ser justo com o
+          trabalho criativo.
       courseE_unplugged_CnC_2018:
-        title: Partilha Digital
+        title: Compartilhamento Digital
+        desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em
+          Direitos Autorais e Criatividade, esta lição existe para ajudar os estudantes
+          a entenderem os desafios e benefícios de respeitar posse e direitos autorais,
+          particularmente em ambientes digitais. Estudantes deveriam ser encorajados
+          a respeitar os direitos dos artistas como uma parte importante de ser um
+          cidadão digital ético.
       RelayProgramming_2018:
         title: Programação por revezamento
+        desc: Esta atividade começará com uma pequena aula sobre depuração e persistência,
+          então irá mudar rapidamente para uma corrida contra o tempo à medida que
+          os alunos se dividem em times e trabalham juntos para escrever um programa
+          uma instrução por vez.
       courseB_unplugged_MRF_2019:
         title: Meus amigos robóticos
-        desc: Aprende a programar escrevendo código com os teus amigos!
+        desc: Aprenda a programar escrevendo programas para seus amigos!
       BuildingAFoundation_2019:
-        title: 'tradução em falta: en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'tradução em falta: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Meus amigos robóticos loucos
       Conditionals_2019:
         title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
           cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
           ponto", e "se eu comprar uma carta preta, você ganha um ponto".
       courseF_unplugged_powerOfWords_2019:
-        title: 'tradução em falta: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'tradução em falta: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
       EnvelopeVariables_2019:
-        title: 'tradução em falta: en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'tradução em falta: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.EnvelopeVariables_2018.desc'
       ForLoopFun_2019:
-        title: 'tradução em falta: en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'tradução em falta: en-US.data.unplugged.ForLoopFun_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programação de papel milimetrico
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um
@@ -498,9 +511,13 @@ pt:
           reprodução de um desenho.
       RelayProgramming_2018_2019:
         title: Programação por revezamento
+        desc: Esta atividade começará com uma pequena aula sobre depuração e persistência,
+          então irá mudar rapidamente para uma corrida contra o tempo à medida que
+          os alunos se dividem em times e trabalham juntos para escrever um programa
+          uma instrução por vez.
       courseD_unplugged_digitalCitizenship_2019:
         title: Atividade offline
-        desc: Hoje vais aprender o que significa ser um Cidadão Digital.
+        desc: Hoje você irá aprender o que significa ser um Cidadão Digital.
       BinaryImages_2019:
         title: Imagens binárias
         desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns,
@@ -510,19 +527,27 @@ pt:
           também pode armazenar informações ainda mais complexas (como imagens e cores)
           em binário.
       courseE_unplugged_privateInformation_2019:
-        desc: Desenvolvido por Common Sense Education, esta lição é sobre a diferença
-          entre informação que é segura partilhar online e a informação que não.
+        title: Informações Privadas e Pessoais
+        desc: Desenvolvida pela Common Sense Education, esta lição trata da diferença
+          entre informações seguras para compartilhar on-line e informações que não
+          são.
       SongwritingParameters_2019:
-        title: 'tradução em falta: en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'tradução em falta: en-US.data.unplugged.SongwritingParameters_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
-        title: Partilha Digital
+        title: Compartilhamento Digital
+        desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em
+          Direitos Autorais e Criatividade, esta lição existe para ajudar os estudantes
+          a entenderem os desafios e benefícios de respeitar posse e direitos autorais,
+          particularmente em ambientes digitais. Estudantes deveriam ser encorajados
+          a respeitar os direitos dos artistas como uma parte importante de ser um
+          cidadão digital ético.
       Internet_2019:
-        title: 'tradução em falta: en-US.data.unplugged.Internet_2018.title'
-        desc: 'tradução em falta: en-US.data.unplugged.Internet_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.Internet_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.Internet_2018.desc'
       Crowdsourcing_2019:
-        title: 'tradução em falta: en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'tradução em falta: en-US.data.unplugged.Crowdsourcing_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'tradução pendente: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Repetindo
         desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções
@@ -530,8 +555,7 @@ pt:
           coreografia simples e então serão instruídos a repeti-la.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Atividade offline
-        desc: Hoje vais aprender a saber o que fazer quando alguém está a ser mau
-          contigo online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       BigEvent_2019:
         title: O Grande Evento
         desc: Os alunos são introduzidos ao conceito de "eventos" em programação,
@@ -563,6 +587,7 @@ pt:
         desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram
           como navegar em segurança pela Internet.
       courseA_unplugged_loops_2019:
+        title: Loops off-line
         desc: Nesta aula, vais aprender mais sobre os ciclos!
       MoveItMoveIt_2019:
         title: Criando caminhos
@@ -571,16 +596,32 @@ pt:
         desc: Os professores informam os alunos que colocar informações pessoais online
           cria uma pegada digital, ou um "trilho" que tem consequências.
       courseB_unplugged_CnC_2019:
-        title: É Óptimo Criar e Jogar Limpo
+        title: É Ótimo Criar e Jogar Limpo
+        desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em
+          Direitos Autorais e Criatividade, esta aula existe para ajudar os estudantes
+          a entenderem o processo criativo de compartilhar e inspiração. Junto disso
+          vem a promoção da expressão criativa e a necessidade de ser justo com o
+          trabalho criativo.
+      GraphingData_2019:
+        title: Estruturação de dados
+        desc: " Nesta aula, os alunos irão coletar dados de um projeto Laboratório
+          ou de um cenário real e usá-lo para fazer previsões."
+      courseE_unplugged_accessAbility_2019:
+        title: Habilidade de acesso
+        desc: Aprenda sobre acessibilidade e o valor de epatia através de debates
+          e a desenhar soluções acessíveis para apps hipotéticos.
       courseE_simon_says_2019:
-        title: O Rei Manda
+        title: Simon diz
+        desc: Jogue um jogo e pense sobre quais comandos são necessários para obter
+          o resultado certo.
       courseB_unplugged_passwords_2019:
-        title: Senhas Poderosas
-        desc: Explore porque é que as pessoas usam senhas, aprenda os benefícios de
-          usar senhas, e descubra estratégias para criar e manter senhas fortes e
-          seguras.
+        title: Senhas fortes
+        desc: Explore porquê usar senhas, aprenda os benefícios de usar senhas, e
+          descubra estratégias para criar e manter senhas fortes e seguras.
       timeforcs_demo_crowdsourcing:
         title: Aberto ao público
+        desc: '_Nota do Josh: em contraste com a primeira lição, eu formatei essa
+          aqui como uma lição desconectada._'
       timeforcs_demo_conditionals:
         title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de

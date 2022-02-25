@@ -14,79 +14,79 @@
         "type": "String",
         "options": [
           [
-            "Bamboo",
+            "bamboo",
             "\"bamboo\""
           ],
           [
-            "Beaded",
+            "beaded",
             "\"beaded\""
           ],
           [
-            "Brick",
+            "brick",
             "\"brick\""
           ],
           [
-            "Decorative",
+            "decorative",
             "\"decorative\""
           ],
           [
-            "Donuts",
+            "donuts",
             "\"donuts\""
           ],
           [
-            "Fire",
+            "fire",
             "\"fire\""
           ],
           [
-            "Flowers",
+            "flowers",
             "\"flowers\""
           ],
           [
-            "Gilded",
+            "gilded",
             "\"gilded\""
           ],
           [
-            "Hearts",
+            "hearts",
             "\"hearts\""
           ],
           [
-            "Ice Cream",
+            "ice cream",
             "\"iceCream\""
           ],
           [
-            "Leaves",
+            "leaves",
             "\"leaves\""
           ],
           [
-            "Metal Frame",
+            "metal frame",
             "\"metal\""
           ],
           [
-            "Paw Prints",
+            "paw prints",
             "\"pawPrints\""
           ],
           [
-            "Rainbow",
+            "rainbow",
             "\"rainbow\""
           ],
           [
-            "Stars",
+            "stars",
             "\"stars\""
           ],
           [
-            "Swirls",
+            "swirls",
             "\"swirls\""
           ],
           [
-            "Waves",
+            "waves",
             "\"waves\""
           ],
           [
-            "Wood Frame",
+            "wood frame",
             "\"wood\""
           ],
           [
-            "Zig-Zag",
+            "zig-zag",
             "\"zigzag\""
           ]
         ]

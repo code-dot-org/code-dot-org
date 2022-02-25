@@ -1,3 +1,4 @@
+---
 ne:
   data:
     blocks:
@@ -47,7 +48,7 @@ ne:
             '"saturation"': अतितृप्त
             '"brightness"': चम्किलो
       Dancelab_changeMoveEachLR:
-        text: "सधैंभरिलाई"
+        text: सधैंभरिलाई
         options:
           GROUP:
             '"BEAR"': भालुहरु
@@ -58,9 +59,9 @@ ne:
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
           MOVE:
-            '"next"': "अर्को"
-            '"prev"': "अघिल्लो"
-            '"rand"': "अनियमित"
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
             MOVES.Roll: बडी रोल
             MOVES.ClapHigh: उच्च तालि
             MOVES.Dab: हात तेस्र्याउनु
@@ -72,12 +73,12 @@ ne:
             MOVES.Kick: तारा
             MOVES.ThisOrThat: यो वा त्यो
       Dancelab_changeMoveLR:
-        text: "सधैंलाई"
+        text: सधैंलाई
         options:
           MOVE:
-            '"next"': "अर्को"
-            '"prev"': "अघिल्लो"
-            '"rand"': "अनियमित"
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
             MOVES.Roll: बडी रोल
             MOVES.ClapHigh: उच्च तालि
             MOVES.Dab: हात तेस्र्याउनु
@@ -115,7 +116,7 @@ ne:
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_doMoveEachLR:
-        text: "एकपटक"
+        text: एकपटक
         options:
           GROUP:
             '"BEAR"': भालुहरु
@@ -126,7 +127,7 @@ ne:
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
           MOVE:
-            '"rand"': "अनियमित"
+            '"rand"': अनियमित
             MOVES.XBend: बेन्ड गर्नुहोस्
             MOVES.Roll: बडी रोल
             MOVES.XClapSide: तालि
@@ -140,20 +141,20 @@ ne:
             MOVES.Clown: गमनम
             MOVES.XHeadHips: टाउको + कम्मर
             MOVES.XHop: हप
-            MOVES.XHighKick: "\nलात"
+            MOVES.XHighKick: लात
             MOVES.XKnee: घुँडा
             MOVES.XKneel: घुँडा टेक्नु
             MOVES.XOle: औला ठड्याउनु
             MOVES.XArmsSide: पहुँच
             MOVES.XSlide: सार्नु
             MOVES.Kick: तारा
-            MOVES.XArmsUp: "\nतन्काउनुहोस्"
+            MOVES.XArmsUp: तन्काउनुहोस्
             MOVES.ThisOrThat: यो वा त्यो
       Dancelab_doMoveLR:
-        text: "एकपटक"
+        text: एकपटक
         options:
           MOVE:
-            '"rand"': "अनियमित"
+            '"rand"': अनियमित
             MOVES.XBend: बेन्ड गर्नुहोस्
             MOVES.Roll: बडी रोल
             MOVES.XClapSide: तालि
@@ -167,19 +168,19 @@ ne:
             MOVES.Clown: गमनम
             MOVES.XHeadHips: टाउको + कम्मर
             MOVES.XHop: हप
-            MOVES.XHighKick: "\nलात"
+            MOVES.XHighKick: लात
             MOVES.XKnee: घुँडा
             MOVES.XKneel: घुँडा टेक्नु
             MOVES.XOle: औला ठड्याउनु
             MOVES.XArmsSide: पहुँच
             MOVES.XSlide: सार्नु
             MOVES.Kick: तारा
-            MOVES.XArmsUp: "\nतन्काउनुहोस्"
+            MOVES.XArmsUp: तन्काउनुहोस्
             MOVES.ThisOrThat: यो वा त्यो
       Dancelab_everyMeasuresRange:
-        text: '[START][1]  पछि प्रत्येक [N][0] मापनहरु दोहो¥याउनुहोस् '
+        text: "{START}  पछि प्रत्येक {N} मापनहरु दोहो¥याउनुहोस् "
       Dancelab_everySeconds:
-        text: 'प्रत्येक [N][0] [UNIT][1]  दोहो¥याउनुहोस्'
+        text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
         options:
           UNIT:
             '"measures"': मापनहरु
@@ -285,12 +286,11 @@ ne:
         text: कुनै एक  रङ
       Dancelab_setBackgroundEffect:
         options:
-          EFFECT:
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "अनियमित"
+          EFFECT: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
-            '"rand"': "अनियमित"
+            '"rand"': अनियमित
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -303,12 +303,11 @@ ne:
             '"UNICORN"': घोडाहरु
       Dancelab_setForegroundEffect:
         options:
-          EFFECT:
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "अनियमित"
+          EFFECT: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
-            '"rand"': "अनियमित"
+            '"rand"': अनियमित
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -671,9 +670,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
-            '"a"': क 
+            '"a"': क
             '"s"': द
-            '"d"': "घ \n"
+            '"d"': 'घ '
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -682,14 +681,14 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
-            '"a"': क 
+            '"a"': क
             '"s"': द
-            '"d"': "घ \n"
+            '"d"': 'घ '
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'हो'
-            '"no"': 'होइन'
+            '"yes"': हो
+            '"no"': होइन
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -697,6 +696,31 @@ ne:
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': hearts
+            '"rainbow"': इन्द्रणी
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': राति
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': jump
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': बादल लागेको
+            '"hearts"': hearts
+          PALETTE:
+            '"rainbow"': इन्द्रणी
+            '"winter"': चिसो
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': hearts
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:

@@ -433,6 +433,26 @@ mn:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': харийнхан
             '"BEAR"': баавгай
@@ -978,7 +998,7 @@ mn:
       gamelab_clickedOn:
         text: "{SPRITE} дээр дарах үед"
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'сэтгэгдэл: {COMMENT}'
       gamelab_costumeImage:
@@ -1015,6 +1035,19 @@ mn:
             '"seconds"': секундууд
       gamelab_hideTitleScreen:
         text: гарчигны дэлгэцийг нуух
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1140,9 +1173,9 @@ mn:
       gamelab_moveToward:
         text: "{SPRITE}-г {DISTANCE} пикселээр {TARGET} руу хөдөлгөх"
       gamelab_newSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_playSound:
         text: хөгжимтоглох {SOUND}
       gamelab_playSoundOptions:
@@ -1158,6 +1191,10 @@ mn:
             "'sound://category_animals/dolphin.mp3'": далайн гахай
             "'sound://category_animals/dog.mp3'": нохой
             "'sound://category_digital/jump_7.mp3'": үсрэх
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): татаж болохуйц
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION}-г заах"
         options:
@@ -1241,6 +1278,14 @@ mn:
             '"scale"': хэмжээ
             '"width"': өргөн
             '"height"': өндөр
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': удаан
+            '5': хэвийн
+            '7': хурдан
+            '9': extra fast
       gamelab_setTint:
         text: "{THIS}-г {COLOR} руу өөрчлөх"
       gamelab_setupSim:
@@ -1259,7 +1304,7 @@ mn:
             '"when"': хэзээ
             '"while"': байхад
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} дээр дарсан"
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_turn:
@@ -1611,49 +1656,53 @@ mn:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Зайрмаг
-            Stars: Одод
-            Fireworks: Салют
-            '"rainbow"': Солонго
-            '"hearts"': Зүрхнүүд
-            '"flowers"': Цэцэг
-            '"waves"': Давалгаа
+            '"hearts"': зүрхнүүд
+            '"iceCream"': Зайрмаг
+            '"rainbow"': солонго
+            '"stars"': одод
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': бороотой
       Poetry_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': шөнө
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': удаан
       Poetry_playSound:
         text: хөгжимтоглох {SOUND}
         options:
           SOUND:
-            Light: Гэрэл
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': үсрэх
       Poetry_setBackground:
         text: суурь өнгийг тохируулах {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Өнгөнүүд
-            '"squiggles"': Жижиг долгио
-            '"space"': Сансар
-            '"stars"': Одод
-            '"ripples"': Долгионууд
-            '"rain"': Бороо
             '"bubbles"': Хөөс
+            '"clouds"': үүлэрхэг
             '"confetti"': Конфетти
-            '"hearts"': Өнгөлөг зүрх
+            '"hearts"': зүрхнүүд
+            '"space"': Сансар
+            '"rain"': бороотой
+            '"ripples"': Долгионууд
+            '"colors"': Өнгөнүүд
+            '"stars"': Одод
+            '"squiggles"': Жижиг долгио
           PALETTE:
-            '"rainbow"': Солонго
+            '"rainbow"': солонго
+            '"winter"': өвөл
       Poetry_setBackgroundImageAs:
         text: суурь өнгийг {IMG} руу тохируулах
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Бороо
             '"bubbles"': Хөөс
-            '"hearts"': Өнгөлөг зүрх
             '"confetti"': Конфетти
+            '"hearts"': зүрхнүүд
+            '"rain"': бороотой
             '"starburst"': Оддын тэсрэлт
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"

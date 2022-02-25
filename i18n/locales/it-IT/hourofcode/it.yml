@@ -17,7 +17,7 @@ it:
   latam_campaign_date_full: 1 ottobre - 12 dicembre
   latam_campaign_date_year: '2021'
   latam_campaign_date_full_year: 1 ottobre 2020 - 12 dicembre 2021
-  europe_campaign_date_start_short: 10 ottobre
+  europe_campaign_date_start_short: 6 dic.
   europe_campaign_date_start_long: 6 dicembre
   europe_campaign_date_short: 6 -12 dic.
   europe_campaign_date_full: 6-12 dicembre
@@ -26,11 +26,11 @@ it:
   africa_campaign_date_start_short: 6 dic.
   africa_campaign_date_start_long: 6 dicembre
   africa_campaign_date_short: 1-31 ott.
-  africa_campaign_date_full: 1-31 ottobre
+  africa_campaign_date_full: 6-12 dicembre
   africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 1-31 ottobre, 2020
-  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
-    the connections!'
+  africa_campaign_date_full_year: 6- 12 dicembre 2021
+  social_hoc2021_cse: Durante l'#OraDelCodice (#HourOfCode), stiamo celebrando l'#informaticaovunque
+    (#CSEverywhere). Scopri le connessioni.
   hoc2020_header: Impara oggi, costruisci un domani più luminoso.
   hoc2020_header_with_line_break_markdown: |-
     Impara oggi,
@@ -149,6 +149,9 @@ it:
     del mondo. L'informatica è molto più che codifica! Goditi il primo passo di Code.org
     in un nuovo viaggio per insegnare di più sull'intelligenza artificiale durante
     il nostro piano di studi.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: L'Ora del Codice dal vivo
   hoc_live_sign_up_title: Iscriviti a l'Ora del Codice dal vivo
   hoc_live_learn_title: Impara dal vivo con Hour of Code
@@ -167,12 +170,12 @@ it:
     automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni
     etiche e in che modo l'Intelligenza Artificiale può essere utilizzata per affrontare
     i problemi del mondo.
-  hoc_overview_csc_header: Introducing CS Connections
-  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
-    computer science and other subjects like math, language arts, science, and social
-    studies. Through these modules, projects, and lessons, classrooms can explore
-    their usual subjects in exciting new ways!
-  hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_overview_csc_header: Introduzione ai percorsi di informatica interdisciplinare
+  hoc_overview_csc_desc: Questo nostro nuovissimo curriculum evidenzia le connessioni
+    tra l'informatica e altre materie, come matematica, letteratura, arte, scienze
+    e scienze umane. Attraverso questi corsi gli studenti hanno l'opportunità di esplorare
+    le loro consuete materie di studio in modi nuovi ed entusiasmanti!
+  hoc_overview_csc_learn_more: Impara di più sull'informatica interdisciplinare
   ai_video_title_what_is_ai: Che cosa è l'Intelligenza Artificiale?
   ai_video_title_algorithm_bias: Combattere i pregiudizi negli algoritmi
   ai_video_title_phone_knows_dog: In che modo il tuo telefono capisce che si tratta
@@ -242,9 +245,9 @@ it:
     dell'Ora del Codice. Esercitazioni di un'ora disponibili in oltre 45 lingue. Non
     è necessaria alcuna esperienza.
   hourofcode_homepage_hoc2018_header_line2: Da 4 a 104 anni.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: L'Ora del Codice è in arrivo
   codeorg_homepage_celebrate_cse: Celebra l'informatica ovunque tu sia!
-  codeorg_homepage_csc: L'informatica incontra la lingusitica, la matematica e molto
+  codeorg_homepage_csc: L'informatica incontra la letteratura, la matematica e molto
     altro nell'informatica interdisciplinare
   codeorg_homepage_csc_long: Osserva l'incontro tra l'informatica, la lingusitica,
     la matematica e molto altro nel nostro curriculu,!
@@ -1072,6 +1075,7 @@ it:
   footer_menu_support: Supporto
   footer_menu_terms: Termini di servizio
   footer_menu_privacy: Informativa sulla privacy
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: ORA del CODICE
   learn_banner_blurb: Prova un'esercitazione di un'ora pensata per tutte le età in
     oltre 45 lingue. Unisciti a milioni di studenti ed insegnanti in oltre 180 paesi
@@ -1515,7 +1519,7 @@ it:
   tutorial_spheroit_name: 'Blocchi 2: Se/Altrimenti'
   tutorial_gameofcodes_name: Gioco di codici
   tutorial_blocklygames_name: Giochi Blockly
-  tutorial_spherohello_name: 'Testo 1: ciao mondo'
+  tutorial_spherohello_name: 'Testo 1: Ciao Mondo'
   tutorial_spheroarcade_name: Parco giochi arcade Sphero
   tutorial_bcpy1_name: Mondo di Python
   tutorial_bcpy2_name: Mondo di Python 2
@@ -9994,10 +9998,10 @@ it:
     gli studenti mettono insieme
   tutorial_ai-oceans_string_detail_programming_languages: Intelligenza Artificiale
     e Apprendimento Automatico (Machine Learning)
-  tutorial_hello_name: Hello World
+  tutorial_hello_name: Ciao Mondo
   tutorial_raspispace_name: 'Space Talk: Launch into Scratch coding'
   tutorial_codemonkeyjump_name: 'Blocks Jumper: Game Creation'
-  tutorial_poemart_name: Poem Art
+  tutorial_poemart_name: L'arte della poesia
   tutorial_kodablehero_name: Design your Hero
   tutorial_cacloud_name: Operation Cloud
   tutorial_blocksmithbot_name: Bot is sus?!
@@ -10094,7 +10098,8 @@ it:
   tutorial_codemonkeyjump_longdescription: Create games and projects with block coding!
     In this short course students will learn to create a simple jumper game using
     basic event and function blocks.
-  tutorial_poemart_longdescription: Illustrate the mood of a poem with code.
+  tutorial_poemart_longdescription: Illustra lo stato d'animo di una poesia con il
+    codice.
   tutorial_kodablehero_longdescription: Welcome to Bug World! The Kodable fuzzFamily
     needs your coding help. Use your real-life heroes and your imagination to design
     a character who will protect the fuzzFamily. You'll choose the properties your
@@ -10612,8 +10617,9 @@ it:
     telefono Windows, telefono Android, iPhone
   tutorial_raspispace_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_codemonkeyjump_string_platforms: Tutti i browser moderni
-  tutorial_poemart_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone, Game console app, Screen reader
+  tutorial_poemart_string_platforms: Tutti i browser moderni, tablet Android, iPad,
+    telefono Windows, telefono Android, iPhone, console per videogame, lettore di
+    schermo
   tutorial_kodablehero_string_platforms: Tutti i browser moderni, iPad, iPhone
   tutorial_cacloud_string_platforms: Tutti i browser moderni
   tutorial_blocksmithbot_string_platforms: Tutti i browser moderni

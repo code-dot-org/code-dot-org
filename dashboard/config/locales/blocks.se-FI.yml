@@ -389,6 +389,26 @@ se:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': Buot alien:at
             '"BEAR"': guovžžat
@@ -926,6 +946,19 @@ se:
             '"frames"': govat
       gamelab_hideTitleScreen:
         text: čiega šearpma bajilčállaga
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         text: go {KEY} lea deaddiluvvon
         options:
@@ -1037,8 +1070,13 @@ se:
         text: čuojatJiena {SOUND}
         options:
           SOUND:
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": Strandstreifen
             "'sound://category_animals/bear.mp3'": guovža
             "'sound://category_animals/dolphin.mp3'": delfiidna
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): maid sáhttá gaikut
       gamelab_pointInDirection:
         text: čujut {SPRITE} {DIRECTION}
         options:
@@ -1086,6 +1124,14 @@ se:
         options:
           PROPERTY:
             '"width"': govdodat
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': njozet
+            '5': normal
+            '7': jođánit
+            '9': extra fast
       gamelab_setTint:
         text: rievdat {THIS} ivnni  dákkár {COLOR}
       gamelab_setupSim:
@@ -1367,47 +1413,40 @@ se:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: LákcaJiekŋa
-            Stars: Násttit
-            Fireworks: Dollarusonat
-            '"rainbow"': Arvedávgi
-            '"hearts"': Váimmut
-            '"flowers"': Lieđit
-            '"waves"': Bárut
+            '"hearts"': váimmut
+            '"iceCream"': LákcaJiekŋa
+            '"stars"': násttit
       Poetry_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       Poetry_makeNumSprites:
         text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
-      Poetry_playSound:
-        text: čuojatJiena {SOUND}
+      Poetry_playMusic:
         options:
           SOUND:
-            Light: Čuovga
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': njozet
+      Poetry_playSound:
+        text: čuojatJiena {SOUND}
       Poetry_setBackground:
         text: bija duogábeal-ivnni {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Ivnnit
-            '"squiggles"': Squiggles
-            '"space"': Gomuvuohta
-            '"stars"': Násttit
-            '"ripples"': Bárožat
-            '"rain"': Arvi
             '"bubbles"': Bulljarasat
             '"confetti"': Konfetti
-            '"hearts"': Ivdnás Váimmut
-          PALETTE:
-            '"rainbow"': Arvedávgi
+            '"hearts"': váimmut
+            '"space"': Gomuvuohta
+            '"ripples"': Bárožat
+            '"colors"': Ivnnit
+            '"stars"': Násttit
+            '"squiggles"': Squiggles
       Poetry_setBackgroundImageAs:
         text: bija duogábeali dása {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Arvi
             '"bubbles"': Bulljarasat
-            '"hearts"': Ivdnás Váimmut
             '"confetti"': Konfetti
+            '"hearts"': váimmut
             '"starburst"': Starburst
       Poetry_whenLineShows:
         options:

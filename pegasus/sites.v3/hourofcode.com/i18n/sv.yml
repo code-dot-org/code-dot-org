@@ -124,6 +124,9 @@ sv:
     samtidigt som du utforskar etiska dilemman och hur AI kan användas för att adressera
     världsproblem. Datavetenskap handlar om så mycket mer än programmering! Njut av
     Code.org:s första steg i sin nya resa att lära ut mer om AI genom vår läroplan.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -212,13 +215,13 @@ sv:
     ett Hour of Code-evenemang. En-timmes-övningar på över 45 språk. Inga förkunskaper
     behövs.
   hourofcode_homepage_hoc2018_header_line2: Åldrarna 4 till 104.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Hour of Code är på väg
   codeorg_homepage_celebrate_cse: Fira datorvetenskap överallt!
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
-  codeorg_homepage_csc_title: CS Connections
+  codeorg_homepage_csc: Datavetenskap möter språk, konst, matte, och mycket mer i
+    Datavetenskap Sammanhang
+  codeorg_homepage_csc_long: Se hur datavetenskap möter språk konst, matte, och mer
+    i vår läroplan!
+  codeorg_homepage_csc_title: DV Sammanhang
   hoc2018_tutorial_mchoc_description: Använd kodblock för att ta Alex eller Steve
     på ett äventyr genom denna Minecraftvärld.
   codeorg_homepage_hoc2019_dance_heading: Prova nya <span class="highlight-word">Dance&nbsp;Party!</span>
@@ -987,6 +990,7 @@ sv:
   footer_menu_support: Hjälp
   footer_menu_terms: Villkor
   footer_menu_privacy: Sekretesspolicy
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Prova en timmes handledning avsedd för alla åldrar på över 45
     språk.  Gör som miljontals elever och lärare i över 180 länder och börja med Hour
@@ -10433,6 +10437,14 @@ sv:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: Alla moderna webbläsare
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Block
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

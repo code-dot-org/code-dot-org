@@ -1013,13 +1013,17 @@
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "helloworld_animals_behaviors": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_animals_events": {
           "moving forward": "posuv vpřed"
         },
         "helloworld_emoji_behaviors": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_emoji_events": {
           "moving forward": "posuv vpřed"
@@ -1028,25 +1032,37 @@
           "moving forward": "posuv vpřed"
         },
         "helloworld_retro_behaviors": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_retro_events": {
           "moving forward": "posuv vpřed"
         },
         "helloworld_animals_sounds": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_emoji_sounds": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_food_sounds": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_retro_sounds": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_food_behaviors": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "poetry_hoc_spriteSizes": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
@@ -1711,16 +1727,24 @@
           "patrolling": "patrolování"
         },
         "helloworld_animals_backgrounds": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_emoji_backgrounds": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_food_backgrounds": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         },
         "helloworld_retro_backgrounds": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving north and looping": "posuv na sever a zacyklení",
+          "moving south and looping": "posuv na jih a zacyklení"
         }
       }
     }

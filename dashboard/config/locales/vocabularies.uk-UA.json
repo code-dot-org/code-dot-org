@@ -2,885 +2,221 @@
   "uk-UA": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/minecraft/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/hero/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "function/hero/unversioned": {
-          "word": "Функція",
-          "definition": ""
+          "word": "Функція"
         },
         "code/poem-art/2021": {
-          "word": "Код",
-          "definition": ""
-        },
-        "event/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Код"
         },
         "debugging/flappy/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/flappy/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/frozen/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/iceage/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "code/artist/unversioned": {
-          "word": "Код",
-          "definition": ""
+          "word": "Код"
         },
         "debugging/artist/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/gumball/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/aquatic/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Умови",
-          "definition": ""
+          "word": "Умови"
         },
         "loops/aquatic/unversioned": {
-          "word": "Цикли",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Цикли"
         },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Шифрування",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Шифрування"
         },
         "debugging/starwars/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/mc/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/playlab/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Стискання без втрат",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Стискання без втрат"
         },
         "code/sports/unversioned": {
-          "word": "Код",
-          "definition": ""
+          "word": "Код"
         },
         "debugging/sports/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/infinity/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "debugging/basketball/unversioned": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "machine_learning/oceans/unversioned": {
-          "word": "Машинне навчання",
-          "definition": ""
+          "word": "Машинне навчання"
         },
         "code/poem-art/unversioned": {
-          "word": "Код",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Код"
         },
         "behavior/coursef/2021": {
-          "word": "Поведінка",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Поведінка"
         },
         "variable/coursef/2021": {
-          "word": "Змінна",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Змінна"
         },
         "input/coursef/2021": {
-          "word": "Ввід",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Ввід"
         },
         "machine_learning/coursef/2021": {
-          "word": "Машинне навчання",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Машинне навчання"
         },
         "internet/coursef/2021": {
-          "word": "Інтернет",
-          "definition": ""
+          "word": "Інтернет"
         },
         "packets/coursef/2021": {
-          "word": "Пакет",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Пакет"
         },
         "define/coursef/2021": {
-          "word": "Визначити",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Визначити"
         },
         "debugging/courseb/2021": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "drop/courseb/2021": {
-          "word": "Дроп",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Дроп"
         },
         "programming/courseb/2021": {
-          "word": "Програмування",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Програмування"
         },
         "debugging/coursea/2021": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "drop/coursea/2021": {
-          "word": "Дроп",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Дроп"
         },
         "programming/coursea/2021": {
-          "word": "Програмування",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Програмування"
         },
         "debugging/coursec/2021": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "sequencing/coursec/2021": {
-          "word": "Послідовність дій",
-          "definition": ""
+          "word": "Послідовність дій"
         },
         "programming/coursec/2021": {
-          "word": "Програмування",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Програмування"
         },
         "binary/coursec/2021": {
-          "word": "Двійкова система",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Двійкова система"
         },
         "debugging/coursed/2021": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "programming/coursed/2021": {
-          "word": "Програмування",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Програмування"
         },
         "conditionals/coursed/2021": {
-          "word": "Умови",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Умови"
         },
         "debugging/express/2021": {
-          "word": "Налагодження",
-          "definition": ""
+          "word": "Налагодження"
         },
         "sequencing/express/2021": {
-          "word": "Послідовність дій",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Послідовність дій"
         },
         "programming/express/2021": {
-          "word": "Програмування",
-          "definition": ""
+          "word": "Програмування"
         },
         "behavior/express/2021": {
-          "word": "Поведінка",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Поведінка"
         },
         "conditionals/express/2021": {
-          "word": "Умови",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Умови"
         },
         "function/express/2021": {
-          "word": "Функція",
-          "definition": ""
+          "word": "Функція"
         },
         "variable/express/2021": {
-          "word": "Змінна",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Змінна"
         },
         "define/express/2021": {
-          "word": "Визначити",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Визначити"
         },
         "drop/pre-express/2021": {
-          "word": "Дроп",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Дроп"
         },
         "debugging/pre-express/2021": {
-          "word": "Налагодження",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Налагодження"
         },
         "programming/pre-express/2021": {
-          "word": "Програмування",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Програмування"
         },
         "behavior/coursee/2021": {
-          "word": "Поведінка",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Поведінка"
         },
         "copyright/coursee/2021": {
-          "word": "Авторські права",
-          "definition": ""
-        },
-        "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Авторські права"
         },
         "function/coursee/2021": {
-          "word": "Функція",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Функція"
         },
         "conditionals/coursee/2021": {
-          "word": "Умови",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Умови"
         },
         "define/coursee/2021": {
-          "word": "Визначити",
-          "definition": ""
+          "word": "Визначити"
         },
-        "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "machine_learning/csd/2021": {
+          "word": "Машинне навчання"
         },
-        "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "user_interface/csd/2021": {
+          "word": "Інтерфейс користувача"
         },
-        "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "debugging/csd/2021": {
+          "word": "Налагодження"
+        },
+        "variable/csd/2021": {
+          "word": "Змінна"
+        },
+        "conditionals/csd/2021": {
+          "word": "Умови"
+        },
+        "abstraction/csd/2021": {
+          "word": "Абстракції"
+        },
+        "function/csd/2021": {
+          "word": "Функція"
+        },
+        "input/csd/2021": {
+          "word": "Ввід"
+        },
+        "processing/csd/2021": {
+          "word": "В обробці"
+        },
+        "copyright/csd/2021": {
+          "word": "Авторські права"
         }
       }
     }

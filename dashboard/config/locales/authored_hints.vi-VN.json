@@ -3800,7 +3800,7 @@
         },
         "poetry_hoc_addSprites": {
           "location_hint": "Mỗi nhân vật có một **vị trí**. Bạn có thể đặt vị trí bằng cách nhấp vào ghim trên khối này:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Nhấp chuột vào ghim ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) trên khối vị trí, sau đó chọn vị trí mới cho nhân vật trên màn hình.\n-   Nhấn nút “Run” (chạy) khi hoàn tất mã lệnh.",
-          "remove_hint": "Bạn có thể xóa nhân vật ở một số dòng nhất định. Bạn có thể thêm nhân vật mới vào vị trí đó:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "remove_hint": "Bạn có thể xóa nhân vật ở một số dòng nhất định. Bạn có thể thêm nhân vật mới vào vị trí đó: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Tìm khối hình nền như sau:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nvà tìm khối hiệu ứng văn bản như sau:\n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nNối các khối này bên dưới `when run` (khi chạy) trong Không gian làm việc.",
@@ -3819,7 +3819,7 @@
           "add_behavior": "Thêm một khối `sprite begins` (nhân vật bắt đầu) vào mã lệnh. Đảm bảo rằng bạn đã tạo nhân vật mà bạn đang thêm hành vi.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Tìm khối này và nhấp chuột vào `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nĐiều gì xảy ra khi con số là `25`?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block>></xml>"
+          "size hint": "Tìm khối này và nhấp chuột vào `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nĐiều gì xảy ra khi con số là `25`?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         }
       }
     }

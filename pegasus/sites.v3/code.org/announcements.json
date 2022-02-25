@@ -1,18 +1,19 @@
 {
   "pages": {
-    "/projects": "home-learning-2020",
-    "/home": "hoc2021"
+    "/projects": "coldplay",
+    "/home": "superhero",
+    "/certificates": "congrats-certificate-share"
   },
 
   "banners": {
-    "hoc2021": {
-      "image": "/images/marketing/hoc-dash.png",
-      "title": "Celebrate #CSEverywhere during Hour of Code!",
-      "body": "From smartphones to satellites, we're celebrating #CSEverywhere! Try out our new CS Connections curriculum with two new activities for Hour of Code, Poem Art and Hello World!",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/hourofcode/overview",
-      "buttonId": "hoc2021-details"
-    },  
+    "superhero": {
+      "image": "/images/marketing/superhero_teacherdash.png",
+      "title": "Help your students become superheroes!",
+      "body": "Add to your teaching toolbox with Code.org’s Professional Learning Program. More than 90% of attendees would recommend our program to another teacher!",
+      "buttonText": "Learn More",
+      "buttonUrl": "https://code.org/educate/professional-learning/",
+      "buttonId": "superhero-pl-details"
+    },
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
       "title": "Explore the wide world of computer science",
@@ -103,6 +104,22 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/ai",
       "buttonId": "2020-ai"
+    },
+    "congrats-certificate-share": {
+      "image": "/images/teacherdashboard1.png",
+      "title": "Try an Hour of Code",
+      "body": "Anyone can learn!",
+      "buttonText": "Start",
+      "buttonUrl": "https://code.org/learn",
+      "buttonId": "congrats-certificate-share-button"
+    },
+    "coldplay": {
+      "image": "/images/marketing/coldplay_minibanner.png",
+      "title": "Code and dance with Coldplay",
+      "body": "Use Dance Party to create something awesome! Share it online and Coldplay might spotlight your project on social media. You could even get to see the band live! Let's see what you create!",
+      "buttonText": "Try it",
+      "buttonUrl": "https://code.org/coldplay",
+      "buttonId": "coldplay"
     }
   }
 }

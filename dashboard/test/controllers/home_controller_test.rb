@@ -53,12 +53,13 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned script and no progress is redirected to course overview" do
-    student = create :student
     script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
     sign_in student
-    student.assign_script(script)
     assert_equal script, student.most_recently_assigned_script
     assert_nil student.user_script_with_most_recent_progress
+
     get :index
 
     assert_redirected_to script_path(script)
@@ -80,25 +81,26 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with recent progress then an assigned script should go to the assigned script overview" do
-    student = create :student
-    sign_in student
-    assigned_user_script = create :user_script, user: student, assigned_at: 1.day.ago
+    assigned_script = create :script
+    assigned_section = create :section, script: assigned_script
+    student = create(:follower, section: assigned_section).student_user
     user_script_with_progress = create :user_script, user: student, last_progress_at: 2.days.ago
-    User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
-    User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
+    sign_in student
+
     student.most_recently_assigned_user_script
     assert_equal user_script_with_progress, student.user_script_with_most_recent_progress
 
     get :index
 
-    assert_redirected_to script_path(assigned_user_script.script)
+    assert_redirected_to script_path(assigned_script)
   end
 
   test "student with assigned script then recent progress in that script will go to script overview" do
-    student = create :student
     script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
     sign_in student
-    student.assign_script(script)
+
     User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
     assert_equal script, student.most_recently_assigned_script
     assert_equal script, student.script_with_most_recent_progress
@@ -109,16 +111,48 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned course or script and no age is still redirected to course overview" do
-    student = create :student
+    script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
     student.birthday = nil
     student.age = nil
     student.save(validate: false)
-    script = create :script
     sign_in student
-    student.assign_script(script)
     get :index
 
     assert_redirected_to script_path(script)
+  end
+
+  test "student with most recent assigned script only associated with archived sections they are enrolled in will go to index" do
+    script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
+    section.hidden = 1
+    section.save(validate: false)
+    sign_in student
+
+    assert_equal script, student.most_recently_assigned_script
+
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "student with most recent assigned script only associated with archived sections they are enrolled in then recent progress in that script will go to index" do
+    script = create :script
+    section = create :section, script: script
+    student = create(:follower, section: section).student_user
+    section.hidden = 1
+    section.save(validate: false)
+    sign_in student
+
+    User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
+    assert_equal script, student.most_recently_assigned_script
+    assert_equal script, student.script_with_most_recent_progress
+
+    get :index
+
+    assert_redirected_to '/home'
   end
 
   test "student without pilot access will go to index" do
@@ -169,7 +203,7 @@ class HomeControllerTest < ActionController::TestCase
 
     assert_equal "es-ES", cookies[:language_]
     assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-15], @response.headers["Set-Cookie"]
-    assert_redirected_to 'http://studio.code.org/blahblah'
+    assert_redirected_to 'http://studio.code.org/blahblah?lang=es-ES'
   end
 
   test "handle nonsense in user_return_to by returning to home" do
@@ -188,13 +222,13 @@ class HomeControllerTest < ActionController::TestCase
       user_return_to: "http://blah.com/blerg",
       locale: "es-ES"
     }
-    assert_redirected_to 'http://studio.code.org/blerg'
+    assert_redirected_to 'http://studio.code.org/blerg?lang=es-ES'
   end
 
   test "if user_return_to in set_locale is nil redirects to homepage" do
     request.host = "studio.code.org"
     get :set_locale, params: {user_return_to: nil, locale: "es-ES"}
-    assert_redirected_to ''
+    assert_redirected_to 'http://studio.code.org?lang=es-ES'
   end
 
   test "should get index with edmodo header" do
@@ -373,7 +407,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    query_count = 15
+    query_count = 16
     assert_queries query_count do
       get :home
     end
@@ -382,7 +416,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 17
+    query_count = 18
     assert_queries query_count do
       get :home
     end
@@ -391,7 +425,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    query_count = 14
+    query_count = 15
     assert_queries query_count do
       get :home
     end
@@ -401,7 +435,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    query_count = 15
+    query_count = 16
     assert_queries query_count do
       get :home
     end
@@ -410,7 +444,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'teachers cannot see dashboard links' do
     sign_in create(:terms_of_service_teacher)
-    query_count = 13
+    query_count = 14
     assert_queries query_count do
       get :home
     end
@@ -419,7 +453,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see application dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    query_count = 14
+    query_count = 15
     assert_queries query_count do
       get :home
     end
@@ -430,7 +464,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    query_count = 17
+    query_count = 18
     assert_queries query_count do
       get :home
     end
@@ -440,7 +474,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see application dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 17
+    query_count = 18
     assert_queries query_count do
       get :home
     end
@@ -451,7 +485,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    query_count = 15
+    query_count = 16
     assert_queries query_count do
       get :home
     end

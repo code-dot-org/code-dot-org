@@ -32,17 +32,8 @@
         "debugging/artist/unversioned": {
           "word": "Dífhabhtú"
         },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/gumball/unversioned": {
-          "word": "Dífhabhtú",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Dífhabhtú"
         },
         "debugging/aquatic/unversioned": {
           "word": "Dífhabhtú"
@@ -53,41 +44,11 @@
         "loops/aquatic/unversioned": {
           "word": "Lúba"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Criptiú",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Criptiú"
         },
         "debugging/starwars/unversioned": {
-          "word": "Dífhabhtú",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Dífhabhtú"
         },
         "debugging/mc/unversioned": {
           "word": "Dífhabhtú"
@@ -97,10 +58,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Dífhabhtú"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Cód"
@@ -114,41 +71,11 @@
         "debugging/basketball/unversioned": {
           "word": "Dífhabhtú"
         },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "machine_learning/oceans/unversioned": {
-          "word": "Meaisínfhoghlaim",
-          "definition": ""
+          "word": "Meaisínfhoghlaim"
         },
         "code/poem-art/unversioned": {
-          "word": "Cód",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Cód"
         },
         "behavior/coursef/2021": {
           "word": "Iompar"
@@ -198,73 +125,14 @@
         "binary/coursec/2021": {
           "word": "Dénártha"
         },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/coursed/2021": {
-          "word": "Dífhabhtú",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Dífhabhtú"
         },
         "programming/coursed/2021": {
-          "word": "Códáil",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Códáil"
         },
         "conditionals/coursed/2021": {
-          "word": "Coinníollacha",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Coinníollacha"
         },
         "debugging/express/2021": {
           "word": "Dífhabhtú"
@@ -313,6 +181,30 @@
         },
         "define/coursee/2021": {
           "word": "Sainmhínigh"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "debugging/csd/2021": {
+          "word": "Dífhabhtú"
+        },
+        "variable/csd/2021": {
+          "word": "Athróg"
+        },
+        "conditionals/csd/2021": {
+          "word": "Coinníollacha"
+        },
+        "abstraction/csd/2021": {
+          "word": "Teibíocht"
+        },
+        "function/csd/2021": {
+          "word": "Feidhm"
+        },
+        "input/csd/2021": {
+          "word": "Ionchur"
+        },
+        "copyright/csd/2021": {
+          "word": "Cóipcheart"
         }
       }
     }

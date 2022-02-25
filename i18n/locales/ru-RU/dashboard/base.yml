@@ -185,7 +185,7 @@ ru:
     email_preference_yes: "Да"
     email_preference_no: "Нет"
     email_preference_required: "Необходимо указать предпочтение электронной почте."
-    share_teacher_email_reg_partner_question: "Не хотели чтобы мы поделились вашей контактной информацией с [Code.org regional partner](%{cdo_regional_partner_desc}) чтобы мы могли уведомлять вас о профессиональной разработке, ресурсах, и мероприятиях?"
+    share_teacher_email_reg_partner_question: "Не хотели чтобы мы поделились вашей контактной информацией с [Code.org regional partner](%{cdo_regional_partner_desc}), чтобы мы могли уведомлять вас о профессиональной разработке, ресурсах, и мероприятиях?"
     share_teacher_email_reg_partner_preference_yes: "Да"
     share_teacher_email_reg_partner_preference_no: "Нет"
     share_teacher_email_reg_partner_preference_required: "Необходимо указать предпочтение электронной почте."
@@ -295,6 +295,7 @@ ru:
       provider_managed_section: "Этот раздел добавлен другим провайдер и не может быть добавлен. Пожалуйста, попросите Вашего учителя, что он добавил Вас через %{provider}, и перезагрузите раздел."
       restricted_section: "Мы не можем присоединить вас к сессии %{section_code} потому что она закрыта. Пожалуйста свяжитесь с вашим учителем для помощи."
       full_section: "Мы не можем пустить вас в сессию %{section_code} потому что в ней уже %{section_capacity}. Пожалуйста свяжитесь с вашим учителем для помощи."
+      not_participant_type: "Мы не можем присоединить вас к разделу %{section_code}, поскольку вы не соответствуете типу участника для этого раздела."
     mail:
       student_disassociated:
         subject: "Уведомление от Code.org: %{student_name} больше не является вашим учеником."
@@ -433,6 +434,7 @@ ru:
       prizes_link: 'Дополнительная информация'
   teacher:
     answer: Ответ
+    dashboard: 'Панель управления учителя'
     for_teachers_only: Только для учителей
     title:
       one: 'Ваш учитель:'
@@ -551,6 +553,7 @@ ru:
     all_students_must_be_in_current_section: "Все ученики должны быть зачислены в вашу группу."
     already_enrolled_in_new_section: "Вы не можете переместить этих учеников, потому что этот учитель зарегистрировал их в другой группе."
     third_party_login: "Вы не можете перемещать студентов на секцию которая синхронизированна при помоши третьей стороны."
+    not_correct_participant_type: "Вы не можете переместить этих пользователей, так как у вас нет разрешений на то, чтобы быть участниками в новом разделе."
   share:
     title: "Учиться в студии кода"
     description: "Каждый может изучать информатику. Создавайте игры, приложения и произведения искусства с помощью программирования."
@@ -589,6 +592,7 @@ ru:
     make_my_own_app: 'Создать своё собственное приложение'
     how_it_works: 'Как это работает'
     try_hour_of_code: 'Попробуйте Час кода!'
+    cookie_notice: 'Уведомление о cookie'
   reference_area:
     title: 'Нужна помощь?'
     subtitle: 'Смотрите эти видео и подсказки'
@@ -1124,3 +1128,4 @@ ru:
     this_sprite: "этот спрайт"
   unit_prefix: "Блок %{n}"
   code_org_logo_alt: "Code.org Home"
+  teacher_feedback: "Оценки учителя"

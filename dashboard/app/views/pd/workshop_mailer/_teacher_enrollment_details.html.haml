@@ -13,9 +13,6 @@
 - unless @workshop.virtual? || !@is_reminder
   = render partial: 'supply_list'
 
-- if @workshop.virtual? && @workshop.local_summer? && (@workshop.course == Pd::Workshop::COURSE_CSD || @workshop.course == Pd::Workshop::COURSE_CSP)
-  = render partial: 'pre_order_materials'
-
 - if @workshop.virtual?
   = render partial: 'virtual_tips'
 

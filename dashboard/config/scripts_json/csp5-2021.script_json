@@ -13,12 +13,11 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:08:43 UTC",
+    "serialized_at": "2022-02-23 18:06:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -74,6 +73,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2021"
       }
     }
@@ -441,6 +452,21 @@
       "seeding_key": {
         "lesson.key": "Lesson 18: Assessment Day",
         "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2021"
       }
     }
@@ -1453,6 +1479,18 @@
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021"
       }
+    },
+    {
+      "key": "70611202-f846-483a-aea1-a61d8ced0290",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70611202-f846-483a-aea1-a61d8ced0290",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2021"
+      }
     }
   ],
   "activity_sections": [
@@ -1494,7 +1532,7 @@
       "key": "3bd74877-a126-49b1-8319-7144d9ecb08e",
       "position": 1,
       "properties": {
-        "description": "**Group:** Group students in pairs.\r\n    \r\n**Distribute:** Give each pair of students:\r\n\r\n* A small stack of red and orange sticky notes\r\n* A pen/pencil\r\n* 7+ snack-sized plastic baggies\r\n* One gallon-sized plastic baggy\r\n* A dry erase marker to share with another group\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Conditionals. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_-Lists,-Loops,-and-Traversals1b.svg)|**Say:** Today, we are going to explore lists. <br><br> **Note:** Supplies Substitutions <br><br><ul><li>There's no need to use stickie notes if you have other scraps of colored paper. Also consider cutting stickies in 4 to make them go further. If you don't have dry erase markers handy consider using pieces of masking tape on the baggies.</li><li>The gallon-sized baggie can be replaced with any baggie that is large enough to hold the snack-sized baggies. </li></ul>|\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-1.svg) | **Say:** We’ve already learned that variables can help us store one piece of information. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-2_xivQY4r.svg) | **Say:** But what if we have lots of information? <br><br> **Do This:** With a partner, discuss the challenges that you’d encounter if you need to store 10, or 100, or 1,000 pieces of information using variables.<br><br>**Discuss:** Lead a short discussion on the challenges they’d encounter. The main challenges are that you’d need to make a variable for each piece of information and it could get difficult to name them all. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-3.svg) | **Say:** Let's look at how to use lists |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-4.svg) | **Say:** Today we’re going to practice using a new way to store information called a list. Follow the instructions here to make a list of your own. <br><br>**Do This:** Have students create their own list. Circulate the room to check on how they’re doing. Make sure they share with another group.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-5.svg)| **Say:** Your list is made up of elements. Each element has its own index. Indexes are just numbers that count up from zero. The length of the list is how many elements it contains. This list has 3 elements and indexes from 0 to 2.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-6.jpg)| **Say:** Notice that all the bags can folded up and be placed inside the big variable baggie. Sometimes we want to think about the whole list, sometimes we want to think about individual elements |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-7.svg)| **Say:** We create a list with this command. It creates a new list and assigns it to a variable. The square brackets indicate we’re making a list. Each value is separated by commas. <br><br> **Do This:** Have students write the command to make their own list and the list of partner group. By sharing their answers with another group they can check that they’re following along.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-8.svg) | **Say:** If we want to access the values in our list we use the square brackets next to the name of our list. <br><br> **Do This:** Have students discuss with other groups. They should see the answers are “nachos” and “soup” |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-9.svg) | **Say:** We can use list accesses inside of expressions, just like variables. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This first expression evaluates to 23 because myNumbers[1] contains 20. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This second expression evaluates to 35 because myNumbers[0] and myNumbers[2] contain 25 and 10. <br><br> **Do This:** Have students write three expressions using their own lists. Then have them trade with another group to practice evaluating. Circulate the room to make sure students are following the directions correctly. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-10.svg) | **Say:** We can assign the index of a list just like a variable. <Br><br> **Do This:** Have students discuss what the list will contain after line 02 runs. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This code will assign a new value at index 2 of the list. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-11.svg) |**Do This:** Circulate the room while students run this program <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss quickly with the class why the program ends with the list shown.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-12.svg)| **Do This:** Circulate the room while students run this program <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss quickly with the class why the program ends with the list shown. <br><br> **Note:** Line 02 is tricky. You need to first evaluate myStuff[0] which is “dog”  to determine the value being assigned. Then evaluate myStuff[2], which is 3. At this point, the command reads myStuff[3] = “dog”. Now it is just a simple assignment. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-13.svg)| **Say:** Now let’s learn about three different commands that can change your list. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-14.svg) | **Say:** The removeItem command will remove an item from a list. The item at the index given is removed, items to the right are shifted over, and the last index is removed.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-15.svg)| **Say:** The appendITem command will add an item to a list. A new index is added to the end of the list and the new item is place in it.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-16.svg)| **Say:** The insertItem command will add an item to the middle of a list. The item is placed in the index given. Then every item is moved over one space to make room. A new index is aded to the end of the list to make room.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-17.svg)|**Do This:** Have students run this program. Circulate the room to support them with any questions.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-18.svg)|**Do This:** Have students run this program. Circulate the room to support them with any questions.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|",
+        "description": "**Group:** Group students in pairs.\n    \n**Distribute:** Give each pair of students:\n\n* A small stack of red and orange sticky notes\n* A pen/pencil\n* 7+ snack-sized plastic baggies\n* One gallon-sized plastic baggy\n* A dry erase marker to share with another group\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Conditionals. \n\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_-Lists,-Loops,-and-Traversals1b.svg)|**Say:** Today, we are going to explore lists. <br><br> **Note:** Supplies Substitutions <br><br><ul><li>There's no need to use stickie notes if you have other scraps of colored paper. Also consider cutting stickies in 4 to make them go further. If you don't have dry erase markers handy consider using pieces of masking tape on the baggies.</li><li>The gallon-sized baggie can be replaced with any baggie that is large enough to hold the snack-sized baggies. </li></ul>|\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-1.svg) | **Say:** We’ve already learned that variables can help us store one piece of information. |\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-2_xivQY4r.svg) | **Say:** But what if we have lots of information? <br><br> **Do This:** With a partner, discuss the challenges that you’d encounter if you need to store 10, or 100, or 1,000 pieces of information using variables.<br><br>**Discuss:** Lead a short discussion on the challenges they’d encounter. The main challenges are that you’d need to make a variable for each piece of information and it could get difficult to name them all. |\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-3.svg) | **Say:** Let's look at how to use lists |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-4.svg) | **Say:** Today we’re going to practice using a new way to store information called a list. Follow the instructions here to make a list of your own. <br><br>**Do This:** Have students create their own list. Circulate the room to check on how they’re doing. Make sure they share with another group.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-5.svg)| **Say:** Your list is made up of elements. Each element has its own index. Indexes are just numbers that count up from zero. The length of the list is how many elements it contains. This list has 3 elements and indexes from 0 to 2.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-6.jpg)| **Say:** Notice that all the bags can folded up and be placed inside the big variable baggie. Sometimes we want to think about the whole list, sometimes we want to think about individual elements |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-7.svg)| **Say:** We create a list with this command. It creates a new list and assigns it to a variable. The square brackets indicate we’re making a list. Each value is separated by commas. <br><br> **Do This:** Have students write the command to make their own list and the list of partner group. By sharing their answers with another group they can check that they’re following along.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-8.svg) | **Say:** If we want to access the values in our list we use the square brackets next to the name of our list. <br><br> **Do This:** Have students discuss with other groups. They should see the answers are “nachos” and “soup” |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-9.svg) | **Say:** We can use list accesses inside of expressions, just like variables. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This first expression evaluates to 23 because myNumbers[1] contains 20. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This second expression evaluates to 35 because myNumbers[0] and myNumbers[2] contain 25 and 10. <br><br> **Do This:** Have students write three expressions using their own lists. Then have them trade with another group to practice evaluating. Circulate the room to make sure students are following the directions correctly. |\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-10.svg) | **Say:** We can assign the index of a list just like a variable. <Br><br> **Do This:** Have students discuss what the list will contain after line 02 runs. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This code will assign a new value at index 2 of the list. |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-11.svg) |**Do This:** Circulate the room while students run this program <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss quickly with the class why the program ends with the list shown.|\n|![](https://images.code.org/837c1d6a1d389a300e74cb5b1c4951e3-image-1641233752930.12.31 AM.png)| **Do This:** Circulate the room while students run this program <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss quickly with the class why the program ends with the list shown. <br><br> **Note:** Line 02 is tricky. You need to first evaluate myStuff[0] which is “dog”  to determine the value being assigned. Then evaluate myStuff[2], which is 3. At this point, the command reads myStuff[3] = “dog”. Now it is just a simple assignment. |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-13.svg)| **Say:** Now let’s learn about three different commands that can change your list. |\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-14.svg) | **Say:** The removeItem command will remove an item from a list. The item at the index given is removed, items to the right are shifted over, and the last index is removed.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-15.svg)| **Say:** The appendITem command will add an item to a list. A new index is added to the end of the list and the new item is place in it.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-16.svg)| **Say:** The insertItem command will add an item to the middle of a list. The item is placed in the index given. Then every item is moved over one space to make room. A new index is aded to the end of the list to make room.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-17.svg)|**Do This:** Have students run this program. Circulate the room to support them with any questions.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-18.svg)|**Do This:** Have students run this program. Circulate the room to support them with any questions.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|",
         "name": "Lists \r"
       },
       "seeding_key": {
@@ -3801,6 +3839,23 @@
         "activity_section.key": "880d624a-306a-4c0e-b660-a1e8e32ff067",
         "lesson_activity.key": "0247d771-7446-4e81-a4f1-56973d033744"
       }
+    },
+    {
+      "key": "8671b614-2cb1-441e-838a-b789ec389bea",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8671b614-2cb1-441e-838a-b789ec389bea",
+        "lesson_activity.key": "70611202-f846-483a-aea1-a61d8ced0290"
+      }
     }
   ],
   "script_levels": [
@@ -5503,6 +5558,31 @@
       "level_keys": [
         "CSP Unit 5 AP-Style Assessment _2021"
       ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2021",
+        "activity_section.key": "8671b614-2cb1-441e-838a-b789ec389bea"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6320,6 +6400,18 @@
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021",
         "activity_section.key": "4e85ff7d-88fd-4c72-b725-7975099cde08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2021",
+        "activity_section.key": "8671b614-2cb1-441e-838a-b789ec389bea"
       }
     }
   ],

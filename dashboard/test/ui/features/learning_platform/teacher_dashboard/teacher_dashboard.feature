@@ -6,7 +6,7 @@ Feature: Using the teacher dashboard
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     When I click selector "a:contains(Untitled Section)" once I see it to load a new page
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
@@ -25,7 +25,7 @@ Feature: Using the teacher dashboard
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
@@ -99,7 +99,7 @@ Feature: Using the teacher dashboard
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
@@ -222,8 +222,6 @@ Feature: Using the teacher dashboard
     Then I wait until element "#flashes" is visible
     And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
-  # Omit IE because it does not respond to press keys step for React forms
-  @no_ie
   Scenario: Attempt to join an invalid section through the homepage
     Given I am a teacher and go home
     And I wait until element "div.ui-test-join-section" is visible
@@ -232,7 +230,6 @@ Feature: Using the teacher dashboard
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "Section INVALID doesn't exist"
 
-  @no_ie
   Scenario: Attempt to join a section you own from teacher dashboard provides notification
     Given I am a teacher
     And I create a new section and go home

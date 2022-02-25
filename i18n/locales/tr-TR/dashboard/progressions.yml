@@ -2,17 +2,22 @@ tr:
   data:
     progressions:
       '"If/Else" with the Bee': 'Bee ile "If / Else"'
+      AI Machine Learning - Video: AI Makine Öğrenimi - Video
+      'AI: Impact on Society - Video': 'AI: Toplum Üzerindeki Etki - Video'
+      'AI: Training Data & Bias - Video': 'AI: Eğitim Verileri ve Önyargı - Video'
       Accelerometer Events: İvmeölçer olayları
       Adding Images: Görüntü Ekleme 
       Adding Screens: Ekran Ekleme
       Alien Defender: Alien Defender
       Analog Sensors: Analog Sensörler
       Animate Your Scene: Sahnenizi Canlandırın
+      App Lab Intro - Video: Uygulama Laboratuvarı Giriş - Video
       Arrays: Diziler
       Artist Intro with JR Hildebrand: JR Hildebrand ile Sanatçı Tanıtımı
       Artist Intro with JR Hildebrande: JR Hildebrand ile Sanatçı Tanıtımı
       Artist Project: Sanatçı Projesi
       'Artist: Variables': 'Sanatçı: Değişkenler'
+      Assessment: Değerlendirme
       Attribution: İlişkilendirme
       Back and Forth: Geri ve ileri
       Basic Conditionals: Temel Koşullar
@@ -87,6 +92,7 @@ tr:
       'Exploration: Adding Style': 'Keşfet: Biçem Eklemek'
       Explore HTML: HTML'i Keşfet
       Exploring more CSS: Daha fazla CSS keşfetmek
+      Extra: Ek özellikler
       Finish a Screen: Bir Ekranı Bitir
       Finish the Prototype: Prototipi Bitir
       Finishing Functions: Bitirme Fonksiyonları
@@ -108,6 +114,7 @@ tr:
       HTML Tags: HTML Etiketleri
       Headings: Başlıklar
       Headings in HTML: HTML Başlıkları
+      Hello World: Merhaba Dünya
       How to Create a Simple Function: Basit Bir Fonksiyon Nasıl Oluşturulur
       How to Make a Sprite: Nesne Oluşturma
       Hyperlinks: Köprü
@@ -234,6 +241,7 @@ tr:
       Speed it Up, Slow it Down: Hızlandır, Yavaşlat
       Sprite Lab Example Project: Hareketli Nesne Laboratuvarı Örnek Proje
       Sprite Lab Project: Grafik Lab Projesi
+      Sprite Movement: Hareketli Nesnelerin Hareketi
       Sprite Properties: Nesne özellikleri
       Sprite Scenes: Hareketli Sahneleri
       Sprites and the Draw Loop: Sprite ve Çizim Döngüsü
@@ -241,6 +249,7 @@ tr:
       Styling Text: Metin stilini ayarlama
       Styling with Classes: Sınıflarla Stil Oluşturma
       Styling your Website: Web sitenizi şekillendirme
+      Teach AI a New Word: Yapay Zekaya Yeni Bir Kelime Öğretin
       Text Compression: Metin Sıkıştırma
       The Animation Tab: Animasyon sekmesi
       The Artist in Code Studio: Code Studio'daki Sanatçı
@@ -267,6 +276,7 @@ tr:
       'Video: Intro to Web Lab - Part 1': 'Lab - Bölüm 1 Web Tanıtım'
       'Video: Intro to Web Lab - Part 2': 'Lab - Bölüm 2 Web Tanıtım'
       'Video: Introduction to Sprites': 'Video: Hareketlilere Giriş'
+      'Video: Outbreak Simulator: Introduction': 'Video: Salgın Simülatörü: Giriş'
       'Video: Problem Solving Process': 'Video: Problem Çözme Süreci'
       'Video: What Makes a Computer, a Computer?': 'Video: Bir bilgisayarı, bilgisayar yapan nedir?'
       Warm Up: Isınmak

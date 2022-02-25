@@ -2,54 +2,6 @@
   "kk-KZ": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Көңілді For циклі"
         },
@@ -179,201 +131,62 @@
         "implementation_guide/coursec/2021": {
           "name": "Іске асыру туралы нұсқаулық"
         },
-        "password_power-up_lesson_slides/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
         "graph-paper-programming/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау",
-          "url": ""
+          "name": "Миллиметрлік Бағдарламалау"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау",
-          "url": ""
+          "name": "Миллиметрлік Бағдарламалау"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау",
-          "url": ""
+          "name": "Миллиметрлік Бағдарламалау"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау",
-          "url": ""
+          "name": "Миллиметрлік Бағдарламалау"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау",
-          "url": ""
+          "name": "Миллиметрлік Бағдарламалау"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Миллиметрлік Бағдарламалау",
-          "url": ""
+          "name": "Миллиметрлік Бағдарламалау"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Жұптасып Бағдарламалау",
-          "url": ""
+          "name": "Жұптасып Бағдарламалау"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Релелік Бағдарламалау",
-          "url": ""
+          "name": "Релелік Бағдарламалау"
         },
         "relay-assessment/coursed/2021": {
-          "name": "Релелік Бағдарламалау",
-          "url": ""
+          "name": "Релелік Бағдарламалау"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Релелік Бағдарламалау",
-          "url": ""
+          "name": "Релелік Бағдарламалау"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Релелік Бағдарламалау",
-          "url": ""
+          "name": "Релелік Бағдарламалау"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Релелік Бағдарламалау",
-          "url": ""
+          "name": "Релелік Бағдарламалау"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Релелік Бағдарламалау",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-project-guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance_party_unplugged/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_2/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling-faces-image/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Релелік Бағдарламалау"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Картаға қатысты шартты белгілер",
-          "url": ""
+          "name": "Картаға қатысты шартты белгілер"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Картаға қатысты шартты белгілер",
-          "url": ""
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Картаға қатысты шартты белгілер"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Картаға қатысты шартты белгілер",
-          "url": ""
+          "name": "Картаға қатысты шартты белгілер"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Картаға қатысты шартты белгілер",
-          "url": ""
+          "name": "Картаға қатысты шартты белгілер"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Картаға қатысты шартты белгілер",
-          "url": ""
-        },
-        "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Картаға қатысты шартты белгілер"
         },
         "implementation_guide/coursed/2021": {
-          "name": "Іске асыру туралы нұсқаулық",
-          "url": ""
-        },
-        "lesson_type_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Іске асыру туралы нұсқаулық"
         },
         "pair_programming/express/2021": {
           "name": "Жұптасып Бағдарламалау"
@@ -386,6 +199,27 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Іске асыру туралы нұсқаулық"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функциялар"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For ілмектері"
+        },
+        "for_loops/csd/2021": {
+          "name": "For ілмектері"
+        },
+        "variables_1/csd/2021": {
+          "name": "Айнымалылар"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функциялар"
+        },
+        "functions_1/csd/2021": {
+          "name": "Функциялар"
+        },
+        "lists/csd/2021": {
+          "name": "Тізімдер"
         }
       }
     }

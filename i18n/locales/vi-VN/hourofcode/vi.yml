@@ -140,6 +140,9 @@ vi:
     vấn đề toàn cầu. Khoa học máy tính bao gồm nhiều lĩnh vực khác ngoài Lập Trình!
     Hãy cùng Code.org bước những bước đầu tiên trên con đường tìm hiểu thêm về AI
     thông qua chương trình đào tạo của chúng tôi nhé.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Giờ lập trình trực tiếp
   hoc_live_sign_up_title: Đăng ký Giờ lập trình trực tiếp
   hoc_live_learn_title: Học với Giờ lập trình trực tiếp
@@ -236,18 +239,18 @@ vi:
     chức sự kiện Hour of Code. Hướng dẫn một giờ đồng hồ bằng 45 ngôn ngữ. Không cần
     kinh nghiệm.
   hourofcode_homepage_hoc2018_header_line2: Từ 4 đến 104 tuổi.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Sự kiện Giờ Mã đang đến gần
   codeorg_homepage_celebrate_cse: Cùng tôn vinh khoa học máy tính ở khắp nơi!
   codeorg_homepage_csc: Khoa học máy tính giao thoa với ngữ văn, toán học và nhiều
     môn học khác trong chương trình Kết nối KHMT
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
+  codeorg_homepage_csc_long: Hãy xem cách khoa học máy tính giao thoa với ngữ văn,
+    toán học và nhiều môn học khác trong giáo trình của chúng tôi!
   codeorg_homepage_csc_title: Kết nối KHMT
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Hãy thử khám phá <span class="highlight-word">Bữa
     Tiệc&nbsp;Khiêu Vũ!</span> mới
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Hỗ trợ dành cho phụ huynh và các thầy cô giáo
     để đối mặt với thực trạng đóng cửa trường học
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -507,7 +510,7 @@ vi:
     hoạt động</a> hoặc đọc <a href='%{howto_guide_url}'>Hướng dẫn thực hiện</a> của
     chúng tôi để lên kế hoạch sự kiện cho lớp học của bạn.
   signup_registration_not_required_markdown: Bạn không cần đăng ký để tham gia! Các
-    hoạt động của Giờ lập trình diễn ra quanh năm. [Hãy thử một hoạt động](%{hoc_actiilities_url})
+    hoạt động của Giờ lập trình diễn ra quanh năm. [Hãy thử một hoạt động](%{hoc_activities_url})
     hoặc đọc [Hướng dẫn thực hiện](%{howto_guide_url}) của chúng tôi để lên kế hoạch
     sự kiện cho lớp học của bạn.
   signup_registration_closed: Và mỗi năm vào tháng 12, lớp của bạn có thể tham gia
@@ -614,7 +617,7 @@ vi:
     Tất cả các sự kiện đã đăng ký với địa chỉ hợp lệ có thể được xem trên <a href='%{events_url}'>
     trang sự kiện.</a>
   map_warning_markdown: Bạn có thể xem danh sách đầy đủ các sự kiện trên [trang sự
-    kiện](%{Events_url}).
+    kiện](%{events_url}).
   meta_tag_og_title: Sự kiện Giờ Mã đang đến gần
   meta_tag_og_description: Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu
     học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi
@@ -1031,13 +1034,14 @@ vi:
   footer_menu_support: Hỗ trợ
   footer_menu_terms: Các điều khoản của Code.org
   footer_menu_privacy: Chính sách bảo mật của Code.org
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: GIỜ LẬP TRÌNH
   learn_banner_blurb: Hãy thử làm hướng dẫn một giờ được thiết kế cho mọi lứa tuổi
     trên 45 ngôn ngữ.  Tham gia vào hàng triệu sinh viên và giáo viên tại hơn 180
     quốc gia bắt đầu với Hour of Code.
   learn_banner_beyond: Bạn có muốn tiếp tục học tập không?  <a id='learn_banner_beyond'>Tiến
     xa hơn</a>
-  learn_banner_beyond_markdown: Bạn muốn học tiếp? [Đừng dừng lại ở một giờ)(%{url})
+  learn_banner_beyond_markdown: Bạn muốn học tiếp? [Đừng dừng lại ở một giờ](%{url})
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_banner_teachers_markdown: 'Giáo viên: [Tổ chức một giờ](%{host_url}) hoặc

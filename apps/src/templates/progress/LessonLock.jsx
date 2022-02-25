@@ -20,7 +20,7 @@ class LessonLock extends React.Component {
     lesson: lessonType.isRequired,
 
     // redux provided
-    sectionId: PropTypes.string.isRequired,
+    sectionId: PropTypes.number,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     saving: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
@@ -84,7 +84,7 @@ const styles = {
 export const UnconnectedLessonLock = LessonLock;
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId.toString(),
+    sectionId: state.teacherSections.selectedSectionId,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     saving: state.lessonLock.saving,
     scriptId: state.progress.scriptId

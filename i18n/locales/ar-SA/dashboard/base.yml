@@ -185,6 +185,7 @@ ar:
     email_preference_yes: "نعم"
     email_preference_no: "لا"
     email_preference_required: "عليكم تحديد البريد الالكتروني المفضل."
+    share_teacher_email_reg_partner_question: "هل تريد منا مشاركة معلومات الاتصال الخاصة بك مع [الشريك الإقليمي Code.org](%{cdo_regional_partner_desc}) في ولايتك حتى يتمكنوا من إخطارك بالتطوير المهني والموارد والأحداث المحلية؟"
     share_teacher_email_reg_partner_preference_yes: "نعم"
     share_teacher_email_reg_partner_preference_no: "لا"
     share_teacher_email_reg_partner_preference_required: "عليكم تحديد البريد الالكتروني المفضل."
@@ -295,6 +296,7 @@ ar:
       provider_managed_section: "يدير هذا القسم مزود آخر، ولا يمكن الانضمام إليه. لذا؛ يُرجى منك أن تطلب من معلمك أن يضيفك عبر %{provider}، ثم أعِد مزامنة القسم."
       restricted_section: "لم نتمكن من إضافتك إلى القسم %{section_code} لأنه مقفل. يرجى الاتصال بمعلمك للحصول على المساعدة. "
       full_section: "لم نتمكن من إضافتك إلى القسم %{section_code} لأنه يوجد بالفعل %{section_capacity} طلاب فيه. يرجى الاتصال بمعلمك للحصول على المساعدة."
+      not_participant_type: "لم نتمكن من إضافتك إلى القسم %{section_code} لأنك لا تتوافق مع نوع المشارك الخاص بالقسم."
     mail:
       student_disassociated:
         subject: "إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب."
@@ -411,6 +413,8 @@ ar:
       minecraft_hero: 'بطل Minecraft'
       playlab: 'مختبر اللعب'
       playlab_k1: 'Play Lab (ما قبل القراءة)'
+      poetry: 'الشعر'
+      poetry_hoc: 'فن القصيدة'
       scratch: 'لغة سكراتش (برمجة)'
       sports: 'الأنشطة الرياضية'
       spritelab: 'مختبر الرسوم المتحركة'
@@ -433,6 +437,7 @@ ar:
       prizes_link: 'المزيد من المعلومات'
   teacher:
     answer: أجب
+    dashboard: 'لَوْحَة التَحَكُّم'
     for_teachers_only: للمعلمين فقط
     title:
       one: 'المعلم الخاص بك:'
@@ -551,6 +556,7 @@ ar:
     all_students_must_be_in_current_section: "يجب على جميع الطلاب أن يلتحقوا بقسمك في الوقت الحالي."
     already_enrolled_in_new_section: "لا يمكنك نقل هؤلاء الطلاب؛ لأنهم في القسم الجديد بالفعل."
     third_party_login: "لا يمكنك نقل الطلاب إلى قسم تمت مزامنته مع أداة جهة خارجية."
+    not_correct_participant_type: "لا يمكنك نقل هؤلاء المستخدمين لأنه ليس لديهم أذونات ليكونوا مشاركين في القسم الجديد."
   share:
     title: "تعلّم على كود استوديو"
     description: "أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع التعليمات البرمجية."
@@ -592,6 +598,7 @@ ar:
     how_it_works: 'كيف تعمل (اعرِض الكود)'
     try_hour_of_code: 'جرب ساعة من البرمجة!'
     store: 'متجر'
+    cookie_notice: 'إشعار ملفات تعريف الارتباط'
   reference_area:
     title: 'بحاجة إلى مساعدة؟'
     subtitle: 'مشاهدة اشرطة الفيديو والتلميحات'
@@ -999,6 +1006,7 @@ ar:
       school: 'المدرسة'
       school_name: 'اسم المدرسة'
       school_city: 'مدينة المدرسة'
+      school_city_district: 'مدينة / مقاطعة المدرسة'
       school_country: 'بلد المدرسة'
       school_department_region: 'قسم المدرسة / المنطقة'
       colombian_school_city: 'مدينة المدرسة'
@@ -1125,3 +1133,4 @@ ar:
     this_sprite: "هذا العفريت"
   unit_prefix: "وحدة %{n}"
   code_org_logo_alt: "الصفحة الرئيسية Code.org"
+  teacher_feedback: "ملاحظات المعلمين"

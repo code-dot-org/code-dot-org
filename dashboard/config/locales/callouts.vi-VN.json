@@ -1069,6 +1069,83 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Tìm khối mã lệnh ở đây.",
           "run_button": "Kiểm tra hình chuyển động bằng nút này."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Thay đổi số ở đây"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Đây là mã nguồn"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Dòng này làm gì?"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Kiểm tra xem người chơi thắng chưa"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Thay đổi số ở đây"
         }
       }
     }

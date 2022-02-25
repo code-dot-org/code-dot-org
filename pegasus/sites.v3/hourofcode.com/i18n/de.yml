@@ -56,7 +56,7 @@ de:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Die Hour of Code kommt
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: Stunde des Codes kommt vom 9.-15. Dezember 2019. Informatik
@@ -146,6 +146,9 @@ de:
     benutzt werden kann. Informatik ist so viel mehr als nur Kodierung! Genieße den
     ersten Schritt auf einer neuen Reise, in der Code.org dir mehr über KI  durch
     unser Curriculum  beibringt.  "
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -234,7 +237,7 @@ de:
   hourofcode_homepage_hoc2018_header_line1: Jeder kann überall eine Hour of Code-Veranstaltung
     organisieren. Einstündige Tutorials in über 45 Sprachen. Keine Vorkenntnisse erforderlich.
   hourofcode_homepage_hoc2018_header_line2: Altersgruppe 4 bis 104.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Die Hour of Code kommt
   codeorg_homepage_celebrate_cse: Überall Informatik!
   codeorg_homepage_csc: In CS Connections trifft Informatik auf Sprachwissenschaften,
     Mathematik und mehr
@@ -244,7 +247,7 @@ de:
   hoc2018_tutorial_mchoc_description: Verwende Code-Blöcke, um Steve oder Alex in
     ein Abenteuer durch die Minecraft-Welt zu schicken.
   codeorg_homepage_hoc2019_dance_heading: Probieren Sie die neue <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  Unterstützung für Eltern und Lehrer, dessen
     Schule vor der Schließung steht.  "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1047,6 +1050,7 @@ de:
   footer_menu_support: Support
   footer_menu_terms: AGB
   footer_menu_privacy: Datenschutzerklärung
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Stunde des Codes
   learn_banner_blurb: Probieren Sie ein einstündiges Tutorial für alle Altersgruppen
     in mehr als 45 Sprachen aus.  Schließen Sie sich in der Stunde des Codes Millionen

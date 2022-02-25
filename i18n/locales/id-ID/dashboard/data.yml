@@ -565,6 +565,18 @@ id:
         csd_teamwork_and_disagreement: Timkerja- Menghadapi perbedaan pendapat
         playlab_2021: Pengantar Play Lab
         playlab_2021_reader: Pengantar Play Lab
+        PL_CSD_TeacherTips_Advise: Kiat untuk Guru - Saran bagi Guru Baru
+        PL_CSD_TeacherTips_IntroToCSD: Kiat untuk Guru - Pengantar CS Discoveries
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Kiat untuk Guru - Proses Pemecahan Masalah
+        PL_CSD_TeacherTips_PairProgramming: Kiat untuk Guru - Pemrograman Berpasangan
+        PL_CSD_TeacherTips_Debugging: Kiat untuk Guru - Debugging
+        PL_CSD_TeacherTips_LeadLearner: Kiat untuk Guru - Lead Learner
+        poembot-playtest-intro: Intro PoemBot Playtest
+        poembot-playtest-sprites: Sprite PoemBot Playtest
+        poembot-playtest-events: Event PoemBot Playtest
+        hello_world_intro: Halo Dunia - Selamat Datang di Sprite Lab
+        hello_world_events: Halo Dunia - Pemrograman dengan Event
+        hello_world_congrats: Halo Dunia - Lakukan Yang Kamu Inginkan
         rough_poemart_intro: v1 Pengantar Seni Puisi
         rough_poemart_events: v1 Event Seni Puisi
         rough_poemart_imagery: v1 Imaji Seni Puisi
@@ -574,6 +586,7 @@ id:
         poetry_module_planningapp: Merencanakan Aplikasi Penghasil Puisi Anda - Coding dengan Puisi
         poetry_module_multichoiceprompts: Beberapa Prompt Pilihan - Coding dengan Puisi
         poetry_module_conditionals: Conditional - Coding dengan Puisi
+        poemart_intro: Pengantar Seni Puisi
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

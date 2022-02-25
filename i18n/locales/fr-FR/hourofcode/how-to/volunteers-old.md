@@ -9,12 +9,12 @@ title: Guide pratique pour les bénévoles Une Heure de Code
 
 ***
 
-## Pourquoi devenir bénévole ?
+## Pourquoi se porter volontaire ?
 Lisez quelques témoignages d'anciens bénévoles :
 
 - « Le meilleur aspect de mon expérience était que toute la classe était composée de femmes et de personnes de couleur. C'est de bon augure, pour l'avenir de notre industrie, d'avoir la chance de rencontrer et de stimuler l'intérêt de ces enfants. »
 - « J'ai particulièrement apprécié d'encourager les jeunes filles dans la technologie. J'avais l'impression d'aider la prochaine génération dans mon secteur. »
-- "J'ai ADORÉ voir les enfants pleins de joie. Eine erstaunliche Erfahrung war, dass die LehrerInnen bemerkten, dass einige der SchülerInnen, die akademisch nicht herausragend waren, ungewöhnlich gut darin waren, wie ein Entwickler zu denken und anderen zu helfen - sie hatten einen Bereich für sich entdeckt, wo sie Selbstbewusstsein empfanden.
+- « J'ai ADORÉ voir les enfants tout contents.  Eine erstaunliche Erfahrung war, dass die LehrerInnen bemerkten, dass einige der SchülerInnen, die akademisch nicht herausragend waren, ungewöhnlich gut darin waren, wie ein Entwickler zu denken und anderen zu helfen - sie hatten einen Bereich für sich entdeckt, wo sie Selbstbewusstsein empfanden.
 
 ## Tout le monde peut devenir bénévole
 ### Bénévoles et conférenciers en technologie :
@@ -60,9 +60,9 @@ Lorsque vous organiserez un événement Heure de Code, suivez l'exemple d’ordr
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | De 1 à 5 minutes   | [Montrez une vidéo qui inspire]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                                                                                                       |
 | De 5 à 10 minutes  | Présentez-vous et intéressez-vous aux étudiants : </ul><li>Où travaillez-vous ? Que faites-vous ? Et qu’aimez-vous le plus dans votre travail ?
-</li><li>Quelle est la personne ou la chose qui t'inspire ?</li><li>Comment en es-tu venu à t'intéresser à l'informatique ?</li><li>As-tu un mentor ?</li><li>Partagez une histoire sur la façon dont la technologie influe sur chacun de nous.
-</li><br>Posez des questions aux élèves et gardez du temps pour un questions-réponses.</br> <li> Quels emplois les intéressent ? Quels sont leurs gadgets technologiques ou applications préférés ? Et comment sont-ils construits, à leur avis ?
- </li><li> Les étudiants ont-ils des questions, pour vous ? </ul>                                                    |
+</li><li>Qu'est-ce qui vous inspire (une personne, un phénomène, ou autre) ? </li><li>D'où vient votre intérêt pour l'informatique ?</li><li>Avez-vous eu un mentor ?</li><li>Partagez une histoire sur la façon dont la technologie influe sur chacun de nous.
+</li><br>Posez des questions aux élèves et laissez assez de temps pour une séance de questions-réponses.</br> <li> Quels emplois les intéressent ? Quels sont leurs gadgets technologiques ou applications préférés ? Et comment sont-ils construits, à leur avis ?
+ </li><li> Les étudiants ont-ils des questions, pour vous ? </ul>                                  |
 | De 30 à 60 minutes | **Codez !** Déambulez, répondez aux questions et guidez-les à travers des énigmes complexes. Essayez de ne pas donner aux étudiants la solution directement. Tentez plutôt de leur poser des questions afin qu'ils puissent déterminer, eux-mêmes, l'origine du problème, et encouragez les étudiants à se demander les uns aux autres s'ils ont des questions. Apprendre les uns des autres est une excellente opportunité d'apprentissage. |
 | De 1 à 3 minutes   | Remerciez tout le monde, et partagez des mots d'au revoir qui inspireront. Distribuez des cadeaux aux couleurs de votre entreprise (les autocollants sont parfaits) !                                                                                                                                                                                                                                                                        |
 | Après              | **Apportez un changement durable :** discutez avec l'enseignant de la possibilité de transformer l'Heure de Code en un cours d'informatique complet ! Allez sur [code.org/yourschool](https://code.org/yourschool) avec votre professeur pour indiquer ce que cette école enseigne, aujourd'hui, et encouragez-le à s'engager à introduire l'informatique dans sa classe.                                                                    |
@@ -75,19 +75,19 @@ Lorsque vous organiserez un événement Heure de Code, suivez l'exemple d’ordr
 - Et revenez dans un mois : l'enseignant est-il intéressé de proposer un cours d'informatique ? Partagez des [ressources et opportunités d'apprentissage professionnel pour les aider à le faire](https://code.org/yourschool).
 
 ## Comment êtes-vous sélectionné comme bénévole technique ou conférencier ?
-- Les enseignants recherchent des bénévoles sur notre [carte des bénévoles](http://code.org/volunteer/local).
-- Essayez de soumettre un profil aussi complet que possible pour augmenter les chances qu'un enseignant vous sélectionne.
+- Les enseignants cherchent des volontaires sur notre [carte des volontaires](http://code.org/volunteer/local).
+- Essayez de créer un profil aussi complet que possible pour augmenter les chances qu'un enseignant vous sélectionne.
 - Un enseignant vous contactera via ce formulaire (votre adresse électronique ne sera jamais partagée avec l'enseignant). *Si vous recevez trop de demandes d'enseignants, vous pouvez toujours mettre à jour vos préférences, en cliquant sur le lien fourni au bas de tout courriel d'un enseignant, afin de modifier vos informations ou de vous désabonner.</ em> </li> </ul>
 
 ## FAQ concernant le volontariat pour Une Heure de Code
 
 ### Aucun enseignant ne m’a encore contacté Comment puis-encore être bénévole ?
-Essayez de chercher des écoles locales et appelez le directeur/un enseignant/le secrétariat et demandez comment vous pouvez aider.
+Essayez de trouver des écoles dans les environs et appelez le directeur/un enseignant/le secrétariat et demandez-leur comment vous pouvez les aider.
 
-### Combien de temps durent les visites, en classe ?
+### Combien de temps durent les visites de classe ?
 Une visite en classe, en personne, dure généralement de 60 à 90 minutes, tandis qu'une visite en classe virtuelle dure généralement de 20 à 30 minutes.
 
-### Pour quel groupe d'âge l'activité de l'Heure de Code est-elle appropriée ?
+### À quelle tranche d'âge l'activité Une Heure de Code est-elle adaptée ?
 Code.org et nos partenaires conçoivent toutes les activités de l’Heure de Code pour engager les élèves de tous les niveaux (de la maternelle à la Terminale), garçons et filles et de tous horizons. Tout le monde, même les adultes, peut passer un bon moment en jouant !
 
 

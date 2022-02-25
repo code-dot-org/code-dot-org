@@ -25,7 +25,7 @@ sk:
         csp17_category_name: Princípy Informatiky ('17-'18)
         full_course_category_name: Všetky kurzy
         hoc_category_name: Hodina Kódu
-        math_category_name: Matematické
+        math_category_name: Matematika
         research_studies_category_name: Výskumné štúdie
         twenty_hour_category_name: 20-Hodina
         tts_category_name: Prevod textu na reč
@@ -201,6 +201,8 @@ sk:
           lessons:
             Play Lab:
               name: Play Lab
+              description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s
+                informatikou a pomocou základných programových blokov vytvoria hru.
           student_description: Vytvor príbeh alebo hru s Play Labom!
         artist:
           title: Umelec
@@ -219,6 +221,16 @@ sk:
           lessons:
             Maze:
               name: Bludisko
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov vo veku
+                od 4 do 10 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre
+                starších žiakov.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov vo veku
+                od 4 do 10 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre
+                starších žiakov.
           student_description: Vyskúšaj si základy informatiky s postavičkami ako
             sú Angry Birds, Plants vs Zombies a Scrat z Doby ľadovej!
         frozen:
@@ -232,6 +244,18 @@ sk:
           lessons:
             Artist:
               name: Programuj s Annou a Elsou
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov druhého
+                stupňa vo veku od 10 do 13 rokov, ale pomocou uvedených návrhov sa
+                dá upraviť aj pre mladších alebo starších žiakov. Žiaci by mali mať
+                základné znalosti jednoduchých geometrických tvarov a kreslenia uhlov.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov druhého
+                stupňa vo veku od 10 do 13 rokov, ale pomocou uvedených návrhov sa
+                dá upraviť aj pre mladších alebo starších žiakov. Žiaci by mali mať
+                základné znalosti jednoduchých geometrických tvarov a kreslenia uhlov.
           student_description: Pomocou programovania sa pripojme k Anne a Else a preskúmajme
             spoločne kúzlo a krásu ľadu. Korčuľovaním v ľade vykreslíš snehové vločky
             a krásne vzory a vytvoríš tak zázračnú zimnú krajinu, ktorú môžeš zdieľať
@@ -253,7 +277,7 @@ sk:
             Artist Binary:
               name: Binárny Umelec
             'Artist: For Loops':
-              name: 'Umelec: Cykly "for"'
+              name: 'Umelec: Cykly "pre"'
             'Artist: Functions':
               name: 'Umelec: Funkcie'
             'Artist: Functions with Parameters':
@@ -261,7 +285,7 @@ sk:
             'Artist: Variables':
               name: 'Umelec: Premenné'
             'Bee: For Loops':
-              name: 'Včela: Cykly "for"'
+              name: 'Včela: Cykly "pre"'
             'Bee: Functions with Parameters':
               name: 'Včela: Funkcie s parametrami'
             Extreme Challenge - Comprehensive:
@@ -269,13 +293,13 @@ sk:
             Maze and Bee:
               name: Bludisko a včela
             'Play Lab: For Loops':
-              name: 'Play Lab: Cykly "for"'
+              name: 'Play Lab: Cykly "pre"'
             'Play Lab: Functions with Parameters':
               name: 'Play Lab: Funkcie s parametrami'
             'Play Lab: Variables':
               name: 'Play Lab: Premenné'
             Super Challenge - For Loops:
-              name: Super výzva - Cykly "for"
+              name: Super výzva - Cykly "pre"
             Super Challenge - Functions and Parameters:
               name: Super výzva - funkcie a parametre
             Super Challenge - Variables:
@@ -330,7 +354,7 @@ sk:
             Binary:
               name: Binárny
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Functions and Functions with Parameters:
               name: Funkcie a funkcie s parametrami
             Intro:
@@ -387,6 +411,8 @@ sk:
           lessons:
             Infinity:
               name: Disney Infinity Play Lab
+              description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s
+                informatikou a pomocou základných programových blokov vytvoria hru.
           student_description: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
         algebrademo:
           lessons:
@@ -671,6 +697,17 @@ sk:
           lessons:
             Text Compression:
               name: Kompresia textu
+              description_student: V určitom bode narazíme na hranicu fyzických možností
+                ohľadom rýchlosti posielania bitov. Ak chceme posielať väčšie množstvo
+                informácií rýchlejšie, musíme nájsť spôsob, ako reprezentovať rovnakú
+                informáciu pomocou menšieho množstva bitov – musíme komprimovať dáta.
+              description_teacher: "V určitom bode narazíme na hranicu fyzických možností
+                ohľadom rýchlosti posielania bitov. Ak chceme posielať väčšie množstvo
+                informácií rýchlejšie, musíme nájsť spôsob, ako reprezentovať rovnakú
+                informáciu pomocou menšieho množstva bitov – musíme **komprimovať**
+                dáta. Študenti sa v tejto lekcii naučia používať widget kompresie
+                textu na kompresiu segmentov anglického textu – vyhľadajú opakujúce
+                sa časti textu a nahradia ich symbolmi.\\\r"
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -1217,6 +1254,8 @@ sk:
           lessons:
             Ice Age Play Lab:
               name: Play Lab Doba ľadová
+              description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s
+                informatikou a pomocou základných programových blokov vytvoria hru.
           student_description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
         CSPPD3-Unit3:
           lessons:
@@ -1252,6 +1291,13 @@ sk:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2015
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia má dve verzie.
+              description_teacher: |-
+                V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia má dve verzie. Táto verzia používa bloky Potiahni a pusti a JavaScript. Žiaci musia vedieť písať na klávesnici. Pre starších študentov môže byť výučba jazyka JavaScript zábavou, pri ktorej nie je núdza o rôzne výzvy. Táto verzia výukového kurzu je výborná aj v situácii, keď máte v triede študentov, ktorí už trochu programovať vedia. Odporúčame ju žiakom vo veku od 11 rokov.
+
+                [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) je tiež k dispozícii a odporúča sa pre študentov, ktorí používajú mobilné zariadenia bez fyzickej klávesnice, mladších žiakov a zahraničných študentov.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
         starwarsblocks:
@@ -1259,6 +1305,11 @@ sk:
             v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star
             Wars v ďalekej galaxii.
+          lessons:
+            Hour of Code 2015:
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia má dve verzie.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
         mc:
@@ -1269,10 +1320,34 @@ sk:
           lessons:
             Hour of Code 2015:
               name: Hodina kódu 2015
+              description_student: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na
             dobrodružstvo po svete Minecraftu.
         oceans:
           title: AI pomáha oceánom
+          lessons:
+            Oceans:
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Najprv roztriedi objekty na "ryby" a "ostatné"
+                a pokúsi sa vyčistiť oceán od neporiadku. Potom bude ich úlohou rozšíriť
+                cvičný dátový súbor o ďalšie morské živočíchy. V druhej časti aktivity
+                budú vyberať vlastné značky, ktoré pridajú k obrázkom náhodne vytvorených
+                rýb. Tieto cvičné dáta poslúžia pre tréning modelu strojového učenia,
+                ktorý by potom mal nové obrázky označovať automaticky.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1587,6 +1662,11 @@ sk:
           lessons:
             Unit 1 Overview:
               name: Lekcia 1 - Prehľad
+        cspunit1-tools:
+          description: úvod k internetovému simulátoru a diskusia o tom ako pomocou
+            neho učíme o fungovaní internetu
+          student_description: úvod k internetovému simulátoru a diskusia o tom ako
+            pomocou neho učíme o fungovaní internetu
         CSDU4-Draft:
           lessons:
             Design Mode:
@@ -1705,13 +1785,13 @@ sk:
           description_audience: Vek 10-110
           lessons:
             'Artist: For Loops':
-              name: 'Umelec: Cykly "for"'
+              name: 'Umelec: Cykly "pre"'
             'Artist: Functions with Parameters':
               name: 'Umelec: Funkcie s parametrami'
             'Artist: Variables':
               name: 'Umelec: Premenné'
             'Bee: For Loops':
-              name: 'Včela: Cykly "for"'
+              name: 'Včela: Cykly "pre"'
             'Bee: Functions with Parameters':
               name: 'Včela: Funkcie s parametrami'
             Digital Citizenship:
@@ -2158,7 +2238,7 @@ sk:
             Events:
               name: Udalosti
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Functions:
               name: Funkcie
             Functions with Parameters:
@@ -2372,6 +2452,32 @@ sk:
           lessons:
             Simple Encryption:
               name: Jednoduché šifrovanie
+              description_student: V tejto lekcii sa študenti dozvedia o nutnosti
+                šifrovania a jednoduchých technikách prelomenia (alebo crackingu)
+                tajných správ. Sami si skúsia prelomiť správu zašifrovanú klasickou
+                Caesarovou šifrou i náhodnou substitučnou šifrou. Študenti by mali
+                jednoznačne pochopiť, že v čase výkonných výpočtových nástrojov je
+                potrebné používať zložitejšie techniky šifrovania. Najdôležitejšie
+                posolstvo tejto lekcie je v tom, aby si žiaci uvedomili, ako a prečo
+                hrá šifrovanie rolu v našom každodennom používaní internetu a že vytvoriť
+                kvalitné šifrovanie nie je ľahké. Študenti budú zasvätení do úvah,
+                na čo všetko je potrebné myslieť pri vytváraní silného šifrovania,
+                ktoré nedokážu prelomiť ani výkonné výpočtové nástroje. Potreba spoľahnúť
+                sa na súkromie pri posielaní dát po internete je dôležitá pre každého
+                používateľa internetu.
+              description_teacher: V tejto lekcii sa študenti dozvedia o nutnosti
+                šifrovania a jednoduchých technikách prelomenia (alebo crackingu)
+                tajných správ. Sami si skúsia prelomiť správu zašifrovanú klasickou
+                Caesarovou šifrou i náhodnou substitučnou šifrou. Študenti by mali
+                jednoznačne pochopiť, že v čase výkonných výpočtových nástrojov je
+                potrebné používať zložitejšie techniky šifrovania. Najdôležitejšie
+                posolstvo tejto lekcie je v tom, aby si žiaci uvedomili, ako a prečo
+                hrá šifrovanie rolu v našom každodennom používaní internetu a že vytvoriť
+                kvalitné šifrovanie nie je ľahké. Študenti budú zasvätení do úvah,
+                na čo všetko je potrebné myslieť pri vytváraní silného šifrovania,
+                ktoré nedokážu prelomiť ani výkonné výpočtové nástroje. Potreba spoľahnúť
+                sa na súkromie pri posielaní dát po internete je dôležitá pre každého
+                používateľa internetu.
         csd2-2017:
           lesson_groups:
             csd2_1:
@@ -2438,6 +2544,20 @@ sk:
           lessons:
             Minecraft Hour of Code Designer:
               name: Hodina kódu Minecraft dizajnér
+              description_student: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú
             verziu hry Minecraft.
         flappy-impact-study:
@@ -2647,9 +2767,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Funkcie s parametrami: Písanie pesničiek s parametrami'
             Functions with Parameters in Artist:
@@ -2816,7 +2936,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Map:
               name: Mapa
             Arrays:
@@ -2874,7 +2994,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Arrays:
               name: Rady
             Functions with Parameters:
@@ -3403,9 +3523,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Conditionals and Functions in Bee:
@@ -3611,9 +3731,9 @@ sk:
             For Loop Fun:
               name: 'Cykly "for": Zábava s cyklami "for"'
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
               description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš
                 používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
               description_teacher: V tejto lekcii, s pomocou Umelca, študenti pokračujú
@@ -3861,9 +3981,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
@@ -3991,6 +4111,16 @@ sk:
           lessons:
             Intro to App Lab:
               name: Úvod do App Labu
+              description_student: 'Na konci kurzu budeš môcť svoj rozpracovaný projekt
+                rozšíriť na niektorú z týchto aplikácií: „Vyberte si svoje dobrodružstvo“,
+                „Pohľadnice“, alebo „Osobnostný kvíz“. Tiež môžeš pokračovať vo vytváraní
+                ďalších projektov dostupných na stránke code.org/applab.'
+              description_teacher: |-
+                Tento výukový kurz je navrhnutý ako rýchly úvod do programovania v programovacom prostredí App Lab, čo je výkonný nástroj na vytváranie a zdieľanie aplikácií. Vo výukovom kurze ako takom sa študenti naučia vytvárať a ovládať tlačidlá, text, obrázky, zvuky a obrazovky v jazyku JavaScript pomocou blokov alebo textu. Na konci kurzu dostanú čas na to, aby rozpracovaný projekt rozšírili na niektorú z týchto aplikácií: „Vyberte si svoje dobrodružstvo“, „Pohľadnice“, alebo „Osobnostný kvíz“. Môžu tiež pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.
+
+                Dôležité je, aby sa pri Hodine kóde s App Lab dobre zabavili!
+
+                **Vhodnosť pre vekovú kategóriu:** Tento výukový kurz je navrhnutý pre žiakov nad 13 rokov. Pretože im umožňuje nahrávať vlastné zvuky a obrázky, mladší žiaci by ho nemali používať bez dohľadu dospelých. Kvôli ochrane súkromia žiakov nebudú môcť žiaci mladší ako 13 rokov tento kurz používať, pokiaľ im najprv nevytvoríte účty vo vami spravovanej sekcii.
           student_description: Vytvor si svoju vlastnú aplikáciu v JavaScripte pomocou
             blokového programovania alebo textu. Ak máš už nejaké programovanie s
             blokmi za sebou, posuň svoje zručnosti na ďalšiu úroveň.
@@ -4148,9 +4278,9 @@ sk:
             'For Loops: For Loop Fun':
               name: 'Cykly "for": Zábava s cyklami "for"'
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             'Functions: Songwriting with Parameters':
               name: 'Funkcie: Písanie pesničiek s parametrami'
             Functions in Bee:
@@ -4276,9 +4406,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
@@ -4337,6 +4467,12 @@ sk:
               name: Úvod do App Labu
             Intro to App Lab (13+):
               name: Úvod do App Labu (13+)
+        allthesurveys:
+          lessons:
+            CSP pre-survey 21-2:
+              name: Princípy informatiky Predbežný prieskum 21-22
+            CSD pre-survey 21-2:
+              name: Objavujeme informatiku Predbežný prieskum 21-22
         hero:
           title: 'Minecraft: Cesta Hrdinu'
           description_short: Minecraft je späť s úplne novou aktivitou pre Hodinu
@@ -4348,6 +4484,13 @@ sk:
               name: 'Minecraft: Cesta Hrdinu v Hodine Kódu'
             Minecraft Hour of Code:
               name: 'Minecraft: Cesta Hrdinu'
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
             Prejdi sa po Minecrafte s kódom.
         applab-intro-staging:
@@ -4481,9 +4624,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
@@ -4510,7 +4653,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
         csd3-1819draft:
           lesson_groups:
             csd3_1:
@@ -6182,6 +6325,16 @@ sk:
           lessons:
             Dance Party:
               name: Tanečná Párty
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         frozen-2018-test-b:
           title: Nový Frozen Skript
@@ -6198,6 +6351,13 @@ sk:
           lessons:
             Aquatic:
               name: Minecraft Vodné Dobrodužstvo
+              description_teacher: V tejto lekcii získajú študenti všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov,
+                ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz
+                pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich
+                bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s
+                dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Minecraft je späť s úplne novou aktivitou! Použi tvoju
             kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval
             podvodný svet.
@@ -6231,6 +6391,16 @@ sk:
           lessons:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
           student_description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie
             projekty.
         coursef-2019:
@@ -6246,7 +6416,7 @@ sk:
             csf_data:
               display_name: Dáta
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -6839,7 +7009,7 @@ sk:
             csf_variables:
               display_name: Premenné
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Objekt "sprite"
           lessons:
@@ -8808,6 +8978,16 @@ sk:
           lessons:
             Dance Party:
               name: Tanečná Párty
+              description_student: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových
+                kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom
+                a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých
+                vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať
+                zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         k5-onlinepd-2019:
           lesson_groups:
@@ -8845,7 +9025,7 @@ sk:
             Variables:
               name: Premenné
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             End-of-course projects:
               name: Záverečné projekty
             End of Course projects:
@@ -10154,7 +10334,7 @@ sk:
             csf_data:
               display_name: Dáta
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Objekt "sprite"
             end_of_course_project:
@@ -10284,7 +10464,7 @@ sk:
             csf_variables:
               display_name: Premenné
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Objekt "sprite"
             end_of_course_project:
@@ -10325,9 +10505,9 @@ sk:
             Functions in Artist:
               name: Funkcie s Umelcom
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Virtual Pet with Sprite Lab:
@@ -10454,11 +10634,23 @@ sk:
             Binary Numbers:
               name: Binárne čísla
         csp2-2020:
+          description_short: Vystavajte si internet od základov pomocou internetového
+            simulátora
+          description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby
+            medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
           lesson_groups:
             csp_unit2_2020:
               display_name: "(staré) Lekcia 2: Internet"
             cspSurvey2020:
               display_name: Hodnotenie kurzu
+          student_description: Táto lekcia vám odhalí ako je internet nadizajnovaný
+            tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
         csp3-2020:
           lesson_groups:
             cspSurvey2020:
@@ -10591,7 +10783,7 @@ sk:
             Variables:
               name: Premenné
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Sprite Lab:
               name: Sprite Lab
           lesson_groups:
@@ -10919,6 +11111,8 @@ sk:
               name: Vizualizovanie dát.
             intro-categorical:
               name: Úvod do UI Labu
+            CSP Tester:
+              name: Princípy informatiky Tester
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -11133,6 +11327,15 @@ sk:
             Collisions:
               key: Kolízie "sprite" objektov
               name: Kolízie "sprite" objektov
+              description_teacher: "**Otázka dňa: Ako môžu programátori stavať na
+                abstrakciách, aby vytvorili ďalšie abstrakcie?**\\\r\n\\\r\nV tejto
+                lekcii študenti naprogramujú postavy, aby interagovali novým spôsobom.
+                Po krátkom zhodnotení toho, ako používali blok [`isTouching`(#f78183)](/docs/gamelab/isTouching/),
+                študenti premýšľajú o iných spôsoboch interakcie dvoch postáv. Potom
+                používajú  [`isTouching`(#f78183)](/docs/gamelab/isTouching/), aby
+                jedna postava vytlačila druhú cez obrazovku pred cvičením so štyrmi
+                kolíznymi blokmi ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/),
+                [`bounce`(#f78183)](/docs/gamelab/bounce/), a [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: Funkcie
               name: Funkcie
@@ -11219,11 +11422,36 @@ sk:
             csp_unit1_2020:
               display_name: "(staré) Lekcia 2: Digitálne informácie"
         csp2-2021:
+          description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby
+            medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
+          description_short: Vystavajte si internet od základov pomocou internetového
+            simulátora
+          lessons:
+            Packets:
+              description_teacher: Študenti sa naučia, že veľké správy posielané cez
+                internet sa v skutočnosti rozdelia na osobitné pakety, objavia tiež
+                výzvy, ktoré to spôsbuje. Najprv si študenti vyskúšajú verziu internetového
+                simulátora, ktorý správy rozbíja do paketov, aby získali predstavu
+                ako to funguje. Potom použijú návod, ktorý ich prevedie výzvami, ktoré
+                vzniknú keď nejaký paket spadne alebo pakety dorazia v nesprávnom
+                poradí. Následne musia nadizajnovať svoj vlastný protokol, ktorý bude
+                tieto výzvy adresovať. Na konci hodiny si pozriete video o užívateľskom
+                datagramovom protokole (UDP) a o protokole riadenia prenosu (TCP).
+                Toto sú dva protokoly používané pri posielaní správ rozdelených do
+                paketov.
           lesson_groups:
             csp_unit2_2020:
               display_name: "(staré) Lekcia 2: Internet"
             lessonGroup-2:
               display_name: Dotazník
+          student_description: Táto lekcia vám odhalí ako je internet nadizajnovaný
+            tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
         csp3-2021:
           lessons:
             Debugging:
@@ -11249,12 +11477,26 @@ sk:
               display_name: Prechody
             csp_project:
               display_name: Projekt
+            lessonGroup-5:
+              display_name: Hodnotenie kurzu
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmy
+            lessonGroup-2:
+              display_name: Hodnotenie kurzu
         csp7-2021:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parametre a Hodnoty návratnosti
             csp_libraries:
               display_name: Knižnice
+            lessonGroup-3:
+              display_name: Dotazník
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dotazník
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -11262,12 +11504,17 @@ sk:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(staré) Lekcia 9: Údaje"
+            lessonGroup-2:
+              display_name: Dotazník
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
               description_student: Prehľad lekcie
             'Project: Innovation Simulation Part 7':
               description_student: Prehľad lekcie
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dotazník
         coursea-2021:
           description_short: Predstavenie informatiky pre predškolákov.
           description_audience: 'Vek: 4-7'
@@ -11953,7 +12200,7 @@ sk:
               key: Zábava s cyklami "for"
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              key: Cykly "for" s včelou
+              key: Cykly "pre" s včelou
               name: Cykly "for" s včelou
               description_student: V týchto úlohách pomôžeš včele zbierať nektár a vyrábať
                 med pomocou cyklov „for“!
@@ -11961,7 +12208,7 @@ sk:
                 sa zameriava na cykly a používanie riadiacej premennej na riešenie
                 zložitejších úloh.
             For Loops in Artist:
-              key: Cykly "for" s Umelcom
+              key: Cykly "pre" s Umelcom
               name: Cykly "for" s Umelcom
               description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš
                 používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
@@ -12045,9 +12292,9 @@ sk:
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_variables:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Vplyv Informatiky
             end_of_course_project:
@@ -12307,7 +12554,7 @@ sk:
             csf_variables:
               display_name: Premenné
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Objekt "sprite"
             end_of_course_project:
@@ -12496,27 +12743,86 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         csa2-pilot:
           lessons:
+            lesson-1:
+              name: Lekcia 2 Pilotný prieskum
             lesson-16:
               name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
         csa3-pilot:
           lessons:
+            lesson-16:
+              name: Lekcia 3 Pilotný prieskum
             lesson-17:
               name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         csa4-pilot:
           lessons:
+            lesson-7:
+              description_student: Porovnali sme dve hodnoty typy „int” alebo „double“,
+                aby sme zistili, či sú rovnocenné, ale ako porovnávame objekty? Čo
+                znamená rovnocennosť dvoch reťazcov? A čo dve šišky? Ukážeme si, ako
+                testovať rovnocennosť dvoch objektov a ako zistené skutočnosti implementovať
+                v hre Pop the Balloons.
+              description_teacher: Študenti sa naučia rozlišovať medzi porovnávaním
+                objektov a primitívnych hodnôt. Preskúmajú možnosti, ako pomocou operátorov
+                „==“ a „!=“ u objektov určiť, či je na porovnanie dát objektu potrebné
+                použiť metódu „equals()“. Pridajú do hry Pop the Balloons metódu „equals()“,
+                aby porovnali objekty „Balloon“ a určili, či v nich zostávajú platné
+                ťahy.
+            lesson-8:
+              description_student: Zoznámiš sa s príkazmi „if/else“, ktoré implementujú
+                voľbu akcie na základe výstupu z logického výrazu. Precvičíš si použitie
+                príkazov „if/else“ v kontexte metódy „Math.random()“ pre prístup k
+                náhodným prvkom z poľa v Susedstve. A potom pomocou príkazov „if/else“
+                overíš platnosť hráčovho ťahu v hre Pop the Balloons.
+              description_teacher: Študenti sa zoznámia s príkazmi „if/else“, ktoré
+                implementujú voľbu akcie na základe výstupu z logického výrazu. Precvičia
+                si použitie príkazov „if/else“ v kontexte metódy „Math.random()“ pre
+                prístup k náhodným prvkom z poľa v Susedstve. A potom pomocou príkazov
+                „if/else“ overia platnosť hráčovho ťahu v hre Pop the Balloons.
+            lesson-9:
+              description_student: Niekedy je na určenie správneho výstupu potrebné
+                skontrolovať viac podmienok. V Susedstve sa naučíš vyriešiť problémy
+                s "Maliarom" pomocou príkazov „if/else-if/else“. Potom príkazy „if/else-if/else“
+                implementuješ do hry Pop the Balloons – skontroluješ herný stav a
+                určíš, či hráč vyhral.
+              description_teacher: Študenti pomocou príkazov „if/else-if/else“ vyhodnotia
+                splnenie niekoľkých podmienok, aby mohol program vybrať konkrétny
+                požadovaný výstup. Na kontrolu herného stavu a určenie, či hráč vyhral,
+                použijú študenti príkazy pre výber viacerých možností – kontrolu stavu
+                hry a výber vhodného výstupu.
+            lesson-10:
+              description_student: Preskúmaš problémy zahŕňajúce niekoľko podmienok
+                a naučíš sa vo svojich riešeniach používať vnorené príkazy „if“. Napíšeš
+                výrazy, ktoré budú mať v podmienených príkazoch nových logických operátorov
+                a určíš dopad týchto operátorov na výsledok. Potom pomocou vnorených
+                príkazov „if“ a logických operátorov vylepšíš herné možnosti a funkčnosť
+                hry Pop the Balloons.
+              description_teacher: Študenti preskúmajú problémy zahŕňajúce niekoľko
+                podmienok a vytvoria riešenie s vnorenými príkazmi „if“. Napíšu výrazy,
+                ktoré budú mať v podmienených príkazoch logické operátory, a určia
+                dopad logických operátorov na výsledok. Potom implementáciou vnorených
+                príkazov „if“ a logických operátorov do hry Pop the Balloons vylepšia
+                jej herné možnosti a funkčnosť.
             lesson-16:
               name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
         csa5-pilot:
           lessons:
             Java Lab:
@@ -12524,6 +12830,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
         csa6-pilot:
           lessons:
             Java Lab:
@@ -12718,6 +13026,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         csa7-pilot:
           lessons:
             Java Lab:
@@ -12725,6 +13035,17 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -12749,8 +13070,8 @@ sk:
               key: Premenné
               name: Premenné
             For Loops:
-              key: Cykly "For"
-              name: Cykly "For"
+              key: Cykly "Pre"
+              name: Cykly "Pre"
             Sprite Lab:
               key: Sprite Lab
             Getting Started:
@@ -12830,6 +13151,8 @@ sk:
               name: Fyzické výpočty
         self-paced-pl-csd6-2021:
           lessons:
+            lesson-4:
+              name: Údaje a spoločnosť
             lesson-6:
               name: Údaje a spoločnosť
         outbreak-module:
@@ -12889,56 +13212,462 @@ sk:
               display_name: Hodiny
             lessonGroup-3:
               display_name: Projekt
+            lessonGroup-4:
+              display_name: Ukážky a zdroje informácií
         hello-world-draft:
           lessons:
             lesson-1:
               name: Ahoj svet!
           title: '"Ahoj svet!"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: Ako sa vyznať vo výukovej platforme Code.org
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Preskúmate web Code.org a nástroje pre učiteľov.
+
+                \*\* Odporúčaná doba trvania:\*\* 30 minút
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Nájdete a naučíte sa používať plány lekcií a materiály pre učiteľov.
+
+                \*\* Odporúčaná doba trvania:\*\* 30 minút
+            Navigating support:
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Využívať podporu pri vyučovaní kurzu Objavujeme informatiku.
+
+                **Doporučená doba trvania:** 15 minút
+            lesson-4:
+              key: lekcia-4
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Preskúmate web Code.org a nástroje pre učiteľov.
+
+                \*\* Odporúčaná doba trvania:\*\* 30 minút
+            lesson-3:
+              key: lekcia-3
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Nájdete a naučíte sa používať plány lekcií a materiály pre učiteľov.
+
+                \*\* Odporúčaná doba trvania:\*\* 25 minút
+            lesson-8:
+              key: lekcia-8
+              description_teacher: |-
+                **Čo sa naučíte:**
+
+                -   Využívať podporu pri vyučovaní kurzu Objavujeme informatiku.
+
+                **Doporučená doba trvania:** 15 minút
+          title: Čo ponúka Code.org pre učiteľov pilotného projektu CSA
+          description: |-
+            V tomto module získate prehľad o nástrojoch, ktorými môžete podporiť výučbu CSA.
+
+            **Čo sa naučíte:**
+
+            -   Preskúmate web Code.org a nástroje pre učiteľov.
+            -   Nájdete a naučíte sa používať plány lekcií a materiály pre učiteľov.
+
+            \*\* Odporúčaná doba trvania:\*\* 1 hodina
+          name: csa-self-paced-pl
         csa1-pilot-facilitator:
           lessons:
             lesson-1:
+              key: lekcia-1
               name: Java Lab
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-16:
+              key: lekcia-16
+            lesson-17:
+              key: lekcia-17
+            lesson-18:
+              key: lekcia-18
+            lesson-19:
+              key: lekcia-19
+            lesson-20:
+              key: lekcia-20
+            lesson-21:
+              key: lekcia-21
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
+            Unit 2 Pilot Survey:
+              name: Lekcia 2 Pilotný prieskum
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
             lesson-1:
+              key: lekcia-1
               name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
+            Unit 3 Pilot Survey:
+              name: Lekcia 3 Pilotný prieskum
             lesson-1:
+              key: lekcia-1
               name: Java Lab
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+              description_student: Pamätáš si na cykly „while“? V tejto lekcii sa
+                zameriame na okrajové prípady cyklov „while“ a prepojíme cykly „while“
+                s cyklami „for“. Na základe lekcie „Rectangle“ vytvoríš vizualizáciu
+                vlastnej hudby.
+              description_teacher: Študenti si zopakujú cykly „while“ a zoznámia sa
+                s nekonečnými cyklami. Preskúmajú možnosti vizualizácie a potom budú
+                prechádzať medzi cyklami „while“ a „for“. Na základe lekcie „Rectangle“
+                vytvorí vizualizáciu vlastnej hudby.
+            lesson-5:
+              key: lekcia-5
+              description_student: Zoznámiš sa s fungovaním a výhodami princípov objektového
+                prístupu, ktorému sa hovorí polymorfizmus, a aplikuješ ich na vytvorenie
+                a prechádzanie poľa objektov zvierat. Zistíš, ako funguje dedičnosť
+                a že podtriedy môžu mať každá svoju vlastnú verziu správania. Pomocou
+                poľa objektov zvierat vytvoríš novú scénu pre koncert v Divadle a
+                použiješ rôzne verzie metódy „speak()“ – rôzne preto, že ju každé
+                zviera používa trochu inak.
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+              description_teacher: V predchádzajúcej lekcii študenti napísali algoritmus
+                pre vytvorenie remixu a skombinovali ho s algoritmami, ktoré vyvinuli
+                v predchádzajúcich lekciách. Študenti pomocou statických premenných
+                a konštánt pridajú obmedzenia k dĺžke koncertu. Pomocou poľa tvarov
+                pridajú ku koncertu vizualizácie a potom sa zamerajú na hodnotenie
+                kódu, aby sa naučili pri programovaní poskytovať a prijímať spätnú
+                väzbu.
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-16:
+              key: lekcia-16
+              name: Lekcia 3 Pilotný prieskum
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
+            Comparing Object References and Data:
+              description_student: Porovnali sme dve hodnoty typy „int” alebo „double“,
+                aby sme zistili, či sú rovnocenné, ale ako porovnávame objekty? Čo
+                znamená rovnocennosť dvoch reťazcov? A čo dve šišky? Ukážeme si, ako
+                testovať rovnocennosť dvoch objektov a ako zistené skutočnosti implementovať
+                v hre Pop the Balloons.
+              description_teacher: Študenti sa naučia rozlišovať medzi porovnávaním
+                objektov a primitívnych hodnôt. Preskúmajú možnosti, ako pomocou operátorov
+                „==“ a „!=“ u objektov určiť, či je na porovnanie dát objektu potrebné
+                použiť metódu „equals()“. Pridajú do hry Pop the Balloons metódu „equals()“,
+                aby porovnali objekty „Balloon“ a určili, či v nich zostávajú platné
+                ťahy.
+            Providing an Alternate Path of Execution:
+              description_student: Zoznámiš sa s príkazmi „if/else“, ktoré implementujú
+                voľbu akcie na základe výstupu z logického výrazu. Precvičíš si použitie
+                príkazov „if/else“ v kontexte metódy „Math.random()“ pre prístup k
+                náhodným prvkom z poľa v Susedstve. A potom pomocou príkazov „if/else“
+                overíš platnosť hráčovho ťahu v hre Pop the Balloons.
+              description_teacher: Študenti sa zoznámia s príkazmi „if/else“, ktoré
+                implementujú voľbu akcie na základe výstupu z logického výrazu. Precvičia
+                si použitie príkazov „if/else“ v kontexte metódy „Math.random()“ pre
+                prístup k náhodným prvkom z poľa v Susedstve. A potom pomocou príkazov
+                „if/else“ overia platnosť hráčovho ťahu v hre Pop the Balloons.
+            Testing Multiple Conditions:
+              description_student: Niekedy je na určenie správneho výstupu potrebné
+                skontrolovať viac podmienok. V Susedstve sa naučíš vyriešiť problémy
+                s "Maliarom" pomocou príkazov „if/else-if/else“. Potom príkazy „if/else-if/else“
+                implementuješ do hry Pop the Balloons – skontroluješ herný stav a
+                určíš, či hráč vyhral.
+              description_teacher: Študenti pomocou príkazov „if/else-if/else“ vyhodnotia
+                splnenie niekoľkých podmienok, aby mohol program vybrať konkrétny
+                požadovaný výstup. Na kontrolu herného stavu a určenie, či hráč vyhral,
+                použijú študenti príkazy pre výber viacerých možností – kontrolu stavu
+                hry a výber vhodného výstupu.
+            Using Logical Operators:
+              description_student: Preskúmaš problémy zahŕňajúce niekoľko podmienok
+                a naučíš sa vo svojich riešeniach používať vnorené príkazy „if“. Napíšeš
+                výrazy, ktoré budú mať v podmienených príkazoch nových logických operátorov
+                a určíš dopad týchto operátorov na výsledok. Potom pomocou vnorených
+                príkazov „if“ a logických operátorov vylepšíš herné možnosti a funkčnosť
+                hry Pop the Balloons.
+              description_teacher: Študenti preskúmajú problémy zahŕňajúce niekoľko
+                podmienok a vytvoria riešenie s vnorenými príkazmi „if“. Napíšu výrazy,
+                ktoré budú mať v podmienených príkazoch logické operátory, a určia
+                dopad logických operátorov na výsledok. Potom implementáciou vnorených
+                príkazov „if“ a logických operátorov do hry Pop the Balloons vylepšia
+                jej herné možnosti a funkčnosť.
             lesson-1:
+              key: lekcia-1
               name: Java Lab
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-2:
+              key: lekcia-2
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
           lessons:
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-10:
+              key: lekcia-10
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
             Java Lab:
               name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-4:
+              display_name: Sandbox
+          name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Nálady a postoje
+          name: poetry-hoc
+          title: Poetry HoC
+          description_short: 'Aktivita projektu Hodina kódu – V2 '
         csdu6-playground:
           lessons:
+            lesson-1:
+              name: Šablóna
+            lesson-3:
+              name: Doskové výstupy (LED bzučiak)
+              description_teacher: |-
+                -   Použi bzučiak v Circuit Playground
+                -   Použi LED v Circuit Playground
+                -   ŽIADNE premenné; ŽIADNE príkazy if; ŽIADNE prvky na obrazovke
+            lesson-4:
+              name: Výstupy projektu App Lab (setProperty)
+              description_teacher: |-
+                -   Pomocou metódy setProperty() zmeň prvky na obrazovke
+                    -   Zameraj sa na farby a umiestnenie na osiach x a y pomocou náhodných čísel
+                -   Pomocou metódy setText() zmeň text na obrazovke
+                -   ŽIADNY Circuit Playground; ŽIADNE príkazy if; ŽIADNE premenné
+            lesson-5:
+              name: Senzory
+            lesson-6:
+              name: Doskové vstupy (prepínanie tlačidiel)
+              description_teacher: |-
+                -   Pomocou tlačidiel zmeň prvky na obrazovke
+                -   Pomocou prepínača zmeň prvky na obrazovke
+                -   Použi tlačidlá a prepínaj bzučiak v Circuit Playground
+                -   ŽIADNE príkazy if; ŽIADNE premenné; výstupy na obrazovku OK
+            lesson-7:
+              name: Premenné a príkazy if
+              description_teacher: |-
+                -   Pomocou premenných a počítacieho vzoru aktualizuj prvky na obrazovke
+                -   Príklad: počítaj, koľkokrát dôjde k stlačeniu tlačidla
+                -   Pomocou príkazov if kontroluj umiestnenie prepínača
+                -   Pomocou premenných kontroluj hodnotu premennej
+                -   Príklad: prehraj zvuk bzučiaka po určitom počte kliknutí
+            lesson-8:
+              name: 'Miniprojekt: Aplikácie na cestu'
             lesson-9:
               name: Farebné LEDky
+              description_teacher: |-
+                -   Pomocou udalostí na obrazovke zmeň farbu LED v Circuit Playground
+                -   Použi tieto funkcie LED: on(), off(), pulse(), toggle() a blink()
+                -   Zmeň intenzitu svetla farebných LED
+                -   NA ČO SA NEZAMERIAVAŤ: pole.
+                -   Potrebuješ len koncept počítania od nuly a koncept mapovania pozície (napr.: [0] sa mapuje na konkrétne LED na CP; [5] sa mapuje na inú LED na CP)
+            lesson-10:
+              name: Vstupy App Lab (getProperty, getText) (Rozbaľovacie ponuky, vstupy
+                a posúvače?)
+              description_teacher: |-
+                Iba v App Lab – bez Circuit Playground (zatiaľ)
+
+                Celý program stojí na odovzdávaní vlastností, premenných a príkazoch if
+
+                -   Načítaj vlastnosť z rozbaľovacej ponuky. If (X) -> do (Y)
+                -   Načítaj vlastnosť z posúvača. Použiješ ju na aktualizáciu pozície niektorého prvku na obrazovke?
+                -   Načítaj text zo vstupu. Použi ho na aktualizáciu popisu.
+
+                **Zameraj sa na nový príkaz getProperty() a na to, ako ho použiť s novými prvkami dizajnu. Ulož si doskové vstupy a výstupy na zajtra!**
+
+                Zajtrajšia lekcia bude zahŕňať hru s motocyklami, kde môžeš stlačením prvkov na CP meniť prvky na obrazovke.
+            lesson-11:
+              name: Zlúčenie vstupov
+              description_teacher: |-
+                -   Pomocou rozbaľovacích ponúk a posúvačov aktualizuj aspekty Circuit Playground
+                -   Nechaj vstupy CP aktualizovať prvky na obrazovke pomocou metód getProperty() a setProperty()
+                -   Vstup obrazovky \<> výstup dosky je prípravou na Projekt: Tvorca na konci kapitoly 1
+
+                **POZNÁMKA PRE SEBA: V týchto úrovniach by sa malo pracovať s farebnými, nie s bežnými LED.** V pôvodnom učebnom pláne sme mali prístup len k LED a bzučiaku. Ale teraz máme farebné LED, tak ich poďme použiť aj tu.
+            lesson-12:
+              name: 'Projekt: Tvorca'
+            lesson-14:
+              name: Hudba a pole
+            lesson-15:
+              name: 'Miniprojekt: Senzory'
+            lesson-17:
+              name: Fyzické výstupy (LED)
+            lesson-16:
+              name: Fyzické vstupy
+            lesson-18:
+              name: Prototypovanie
             lesson-19:
               name: Projekt
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Šablóny
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-4:
+              display_name: Kapitola 2
+          name: csdu6-playground
+          title: Objavujeme informatiku Lekcia 6 Playground
+          description_short: Objavujeme informatiku L6 Playground. S otázkami sa obráťte
+            na Dana Schneidera.
+          student_description: Objavujeme informatiku L6 Playground. S otázkami sa
+            obráťte na Dana Schneidera.
         hello-world-food:
           lessons:
             lesson-1:
               name: Ahoj Svet
+          name: ahoj-svet-jedlo
           title: Ahoj Svet
         csa-u7-dev:
           lessons:
@@ -12951,6 +13680,8 @@ sk:
               display_name: Hodiny
             lessonGroup-3:
               display_name: Projekt
+            lessonGroup-4:
+              display_name: Ukážky a zdroje informácií
         hello-world-animals:
           lessons:
             lesson-1:
@@ -12981,28 +13712,141 @@ sk:
               display_name: Obsah
             lessonGroup-2:
               display_name: Obsah
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: Preskúmajte spoločne oblasť etiky umelej inteligencie
+                a vytvorte kódex správania, ktorý môžete zdieľať.
         dance-unplugged:
           lessons:
             lesson-1:
               name: 'Tanečná párty: bez počítača'
+              description_student: Usporiadajte tanečný večierok, v ktorom sa trieda
+                zoznámi s udalosťami.
           title: Hodina kódu – Tanečná párty – bez počítača
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Poézia Stierací papier
+          name: csc-things
+          title: 'Prepojenie informatiky Rýchlokurz '
+          description: Na tomto sa ešte pracuje :)
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Hodina kódu – Poézia v2
+          name: poetry-hoc2
+          title: Hodina kódu – Poézia v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Štúdia nálady
+          name: poetry-hoc3
+          title: Hodina kódu – Poézia v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Výzva Efekty postavičiek
+          name: spritelab-effects-challenge
+          title: Výzva Efekty postavičiek
+          description_audience: Stredne pokročilí / pokročilí užívatelia Sprite Lab
+          description_short: Prijmi výzvu a vytvor v Sprite Lab vlastný efekt postavičiek!
         csa-u8-dev:
           lessons:
             lesson-1:
               name: Widgety
             lesson-2:
               name: Nástroje
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ukážky a zdroje informácií
+          name: csa-u8-dev
+          title: CSD Lekcia 8 - Vývoj
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Básnické umenie
+          name: poem-art
+          title: Básnické umenie
+        poetry:
+          lessons:
+            lesson-1:
+              name: Básnické umenie
+            lesson-2:
+              name: Napíš kód pre vlastnú báseň
+            lesson-4:
+              name: Vytvor aplikáciu na generovanie básní
+            lesson-5:
+              name: Starostlivý výber slov
+          name: poézia
+          title: Informatika a poézia
         spelling-bee:
           lessons:
             lesson-1:
               name: Včela Hláskovanie
+              description_student: Pomôž včele vyhláskovať nové slová!
+              description_teacher: |-
+                Táto lekcia stavia na doterajších znalostiach žiakov, ako je hláskovanie a znalosť veľkých písmen. Hláskovanie s včielkou pomáha deťom v materských školách a prvých triedach precvičovať hláskovanie a počítanie písmen, ktoré sa zoskupujú do slov. Deti pomocou niekoľkých kódovacích príkazov prinútia hláskujúcu včelu, aby sa posúvala po písmenách a aby deti mohli hláskovať slová. Naučia sa ťahať bloky kódu pomocou potiahni-pusti, ktoré uvedú postavu včely do pohybu, a uvedomia si, že pre úspešné hláskovanie slov je potrebné príkazy správne zoradiť.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je koncipovaná ako výučba abecedy, skladania písmen do slov alebo počítanie. Žiaci, ktorí sa lekcie zúčastnia, už by mali mať tieto znalosti a schopnosti:
+
+                -   Znalosť veľkých písmen abecedy
+                -   Znalosť čísel a počítanie do 10 pomocou prstov, predmetov alebo manipulatívov
+                -   Znalosť princípu tvorenia slov z radu písmen
+          name: spelling-bee
           title: Včela Hláskovanie
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Epidémia 1. deň
+            lesson-2:
+              name: Epidémia 2. deň
+          name: outbreak-csc
           title: Nákaza
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Skúmanie štvorcových grafov a histogramov
+              description_student: Vytvor vo vizualizátore dát v App Lab stĺpcové
+                grafy a histogramy.
+              description_teacher: |-
+                Táto lekcia stavia na znalosti stĺpcových grafov a histogramov. Študenti si precvičia vytváranie záverov z grafov a naučia sa pomocou vizualizátora dát v App Labe vytvárať dva rôzne druhy grafov: stĺpcový graf a histogram. Tento nástroj je navrhnutý na to, aby študentov nechal rýchlo nahliadnuť do reálnych dátových súborov a uľahčil im vytváranie vizualizácií z dát bez toho, aby sa museli najskôr zoznamovať s používaním nejakého zložitejšieho nástroja. Na vytvorenie grafov budú môcť využiť niekoľko reálnych dátových súborov.
+
+                Lekcia začína krátkym zhrnutím dôvodov, prečo sú grafy užitočné pri skúmaní údajov. Po úvode si študenti precvičia vytvorenie stĺpcového grafu vo vizualizátore dát v App Labe. Potom sa naučia vytvárať histogramy v scenároch, v ktorých stĺpcové grafy nemusia byť vhodné. Dostanú možnosť preskúmať rôzne reálne dátové súbory a spoznajú, ako sa pomocou grafov dá oznámiť informácie o určitej téme, ktorá ich zaujíma.
+
+                #### Predchádzajúce zručnosti a slovná zásoba
+
+                Táto lekcia je určená na prehĺbenie a upevnenie existujúcich znalostí o stĺpcových grafoch a histogramoch. Nie je koncipovaná ako predstavenie nového základného učiva. Študenti už by na túto hodinu mali prísť s nasledovnými znalosťami a zručnosťami:
+
+                -   Mali by vedieť interpretovať stĺpcový graf a vedieť, čo predstavujú hodnoty na osiach x a y.
+                -   Mali by vedieť interpretovať histogram a vedieť, čo predstavuje rozsah jeho hodnôt.
+          name: explore-data-1
+          title: Skúmanie štvorcových grafov a histogramov
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Počítanie s Laurel
+              description_student: Pomôž Laurel, lovkyni pokladov, spočítať a zadať
+                kroky potrebné na pozbieranie drahokamov!
+              description_teacher: |-
+                Táto lekcia stavia na predchádzajúcich aktivitách zahŕňajúcich počítanie a sčítanie. Počítanie s Laurel pomáha deťom v materských školách a prvých triedach precvičiť si počítanie a sčítaniepomocou slučiek, aby pomohli Laurel, lovkyni pokladov, pozbierať drahokamy v bludisku. Použijú sériu kódovacích príkazov a povedú Laurel bludiskom, aby pozbierala drahokamy. Využijú blok „Repeat“, u ktorého budú musieť spočítať, koľko krokov má Laurel urobiť – potom v bloku kódu zvoliť správnu číslovku zodpovedajúcu tomuto číslu.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je určená na to, aby deťom predstavila čísla, počítanie a sčítanie. Pred absolvovaním tejto lekcie už by žiaci mali mať tieto znalosti a schopnosti:
+
+                -   Mali by poznať čísla do 10 a vedieť počítať s využitím obrázkov, prstov alebo manipulatívov.
+                -   Mali by vedieť sčítať predmety, obrázky, prsty alebo manipulatívy do súčtu 10.
+          name: counting-csc
+          title: Počítanie s Laurel
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+          name: csa5-exemplars
+          title: Lekcia 5 – Usporiadanie objektov [Exemplars]
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -13222,22 +14066,9 @@ sk:
               name: Java Lab
               key: Java Lab
             lesson-1:
-              description_student: Projekty, ktoré ste vypracovali počas kurzu, podnietili
-                v komunite veľa kreativity! Uskutoční sa oblastný festival literatúry,
-                ktorý predstaví kreatívne príbehy, scenáre, texty piesní, listy a
-                básne. Projekt oblastného festivalu literatúry je rozsiahly projekt,
-                na ktorom sa pracuje počas celého modulu a stratégie projektového
-                manažmentu vám pomôžu zorganizovať a štruktúrovať vašu prácu. Objavte
-                stratégie písania a tvorenia štruktúry kódu, aby iní softvéroví inžinieri
-                mohli ľahko pochopiť a použiť nástroj Java na vytvorenie dokumentácie
-                programu.
-              description_teacher: Žiaci sa oboznámia s projektom oblastného festivalu
-                literatúry a vyhodnotia požiadavky a príklady, aby identifikovali
-                otázky a kľúčové črty. Pred začatím práce na projekte si žiaci rozšíria
-                svoje chápanie programovej štruktúry a komentovania identifikáciou
-                osvedčených postupov a skúmaním použitia Javadocs na generovanie programovej
-                dokumentácie.
+              key: lekcia-1
             lesson-2:
+              key: lekcia-2
               description_student: Objekty „Integer“ a „Double“ vytvoríte tak, aby
                 reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné
                 hodnoty. Pomocou metód v triedach „Integer“ a „Double“ získate hodnoty,
@@ -13253,6 +14084,7 @@ sk:
                 vyhli chybám typu overflow pred plánovaním úloh, ktoré musia dokončiť
                 pre svoj projekt v oblastnom festivale literatúry.
             lesson-3:
+              key: lekcia-3
               description_student: Pri práci s poľami a zoznamami sa niekedy stretávame
                 s problémami, kedy je neznámy počet prvkov alebo sa neustále mení
                 veľkosť zoznamu. V tejto lekcii sa dozviete viac informácií o zoznamoch
@@ -13265,6 +14097,7 @@ sk:
                 a naučia sa, ako funkcia autoboxing vykonáva konverzie medzi primitívnymi
                 hodnotami a triedami typu wrapper pri práci s uloženými údajmi.
             lesson-4:
+              key: lekcia-4
               description_student: Na získanie a úpravu prvkov použijete metódy zoznamu
                 „ArrayList“ „get()“ a „set()“ a dozviete sa o metóde „String“ „length()“
                 na počítanie počtu znakov v objekte „String“. Používate štandardné
@@ -13280,6 +14113,7 @@ sk:
                 konverzie medzi primitívnymi hodnotami a triedami wrapper pri práci
                 s údajmi uloženými v zozname „ArrayList“. '
             lesson-5:
+              key: lekcia-5
               description_student: Doteraz ste vytvorili zoznamy „ArrayList“ na ukladanie
                 objektov „Integer“, „Double“ a „String“. Podobne ako pri 1D a 2D poliach
                 môžete tiež ukladať vytvorené objekty do zoznamu „ArrayList“. V tejto
@@ -13292,6 +14126,7 @@ sk:
                 aby našli minimálne a maximálne hodnoty, vypočítali súčty a priemery
                 alebo našli prvky, ktoré spĺňajú špecifické kritériá.
             lesson-6:
+              key: lekcia-6
               description_student: Objavíte funkčnosť metódy zoznamu „ArrayList()“
                 v triede „ArrayList“ a identifikujete potenciálne chyby pri pokusoch
                 o odstránenie položiek pri prechádzaní zoznamom. V tomto procese si
@@ -13302,6 +14137,7 @@ sk:
                 položiek pri prechádzaní zoznamom. Žiaci si potom uvedomia, kedy je
                 „ArrayList“ pre daný scenár alebo problém najvhodnejší.
             lesson-7:
+              key: lekcia-7
               description_student: Objavíte štruktúru reťazca „string“ a spomeniete
                 si, že „string“ sú objekty. Použijete metódy „indexOf()“ a „substring()“
                 na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie
@@ -13311,6 +14147,7 @@ sk:
                 a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“
                 a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
             lesson-8:
+              key: lekcia-8
               description_student: Pomocou funkcie „compareTo()“ preskúmate, či sú
                 reťazce „String“ v abecednom poradí. Potom pracujete na svojom projekte
                 oblastného festivalu literatúry a zameriate sa konkrétne na úlohy,
@@ -13320,6 +14157,7 @@ sk:
                 svojom projekte oblastného festivalu literatúry, pričom sa zameriavajú
                 konkrétne na úlohy, ktoré majú na svojej projektovej plánovacej tabuli.
             lesson-9:
+              key: lekcia-9
               description_student: 'Skombinujete svoje znalosti o štandardných algoritmoch
                 a reťazcoch „String“, aby ste skontrolovali, či „String“ je palindróm.
                 Potom sa zúčastníte stretnutia o spätnej väzbe medzi kolegami a premýšľate
@@ -13329,6 +14167,7 @@ sk:
                 palindróm. Žiaci sa potom zúčastnia stretnutia so spätnou väzbou a
                 uvažujú o svojom pokroku v projekte Neighborhood Lit Fest.
             lesson-10:
+              key: lekcia-10
               description_student: Na zoznamy „ArrayList“ aplikujete štandardné algoritmy,
                 ktoré ste napísali pre 1D a 2D polia. Implementujete nový štandardný
                 algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou
@@ -13342,6 +14181,7 @@ sk:
                 odstránenie duplikátov alebo nájdenie prvkov, ktoré spĺňajú špecifické
                 kritériá v ich projekte oblastného festivalu literatúry.
             lesson-11:
+              key: lekcia-11
               name: Projekt oblastného festivalu literatúry – 1. deň
               description_student: Pokračujete v rozvíjaní svojho projektu oblastného
                 festivalu literatúry, aby ste vytvorili príbeh, poéziu, pieseň alebo
@@ -13361,6 +14201,7 @@ sk:
                 určili priority svojich zostávajúcich úloh a pokračovali vo vývoji
                 svojich projektov.
             lesson-12:
+              key: lekcia-12
               name: Projekt oblastného festivalu literatúry – 2. deň
               description_student: V predchádzajúcej lekcii ste vykonali sebahodnotenie
                 a napísali ste kritériá prijatia pre váš projekt. V tejto lekcii získate
@@ -13373,6 +14214,7 @@ sk:
                 úlohy, ktoré majú dokončiť, a pokračovali v rozvíjaní svojho projektu
                 oblastného festivalu literatúry.
             lesson-13:
+              key: lekcia-13
               name: Projekt oblastného festivalu literatúry – 3. deň
               description_student: Vykonáte finálne úpravy a aktualizácie na základe
                 preskúmania kódu a plánovacej projektovej tabule. Svoj projekt oblastného
@@ -13383,7 +14225,10 @@ sk:
                 svoje projekty oblastného festivalu literatúry so svojimi spolužiakmi.
                 Žiaci potom oslávia svoj úspech a dokončia záverečnú reflexiu procesu
                 vývoja.
+            lesson-14:
+              key: lekcia-14
             lesson-15:
+              key: lekcia-15
               description_student: V tomto module ste použili zoznam „ArrayList“ na
                 ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D
                 a 2D polia a zoznam „ArrayList“. Objavili ste výhody a funkcie zoznamu
@@ -13411,11 +14256,69 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: Preskúmajte spoločne oblasť etiky umelej inteligencie
+                a vytvorte kódex správania, ktorý môžete zdieľať.
+            lesson-1:
+              key: lekcia-1
+              description_student: Preskúmajte spoločne oblasť etiky umelej inteligencie
+                a vytvorte kódex správania, ktorý môžete zdieľať.
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Básnické umenie
+              description_teacher: |-
+                V tejto integrovanej lekcii počítačovej vedy a anglického jazyka a literatúry budú študenti animovať báseň s kódom, aby ilustrovali náladu básne. Študenti prečítajú a zistia náladu básne. Potom nájdu zodpovedajúce efekty a obrázky, ktoré im pomôžu ilustrovať náladu básne. Nakoniec študenti použijú udalosti (kód) na ilustráciu zmeny nálady alebo naanimujú uvedenie nových obrázkov do básne.
+
+                Túto lekciu je možné absolvovať ako 1-hodinovú samostatnú lekciu. Existuje tiež možnosť použiť túto lekciu ako prvú lekciu viachodinového modulu s názvom [Coding with Poetry] \(<http://studio.code.org/s/poetry-2021>).
+            lesson-1:
+              key: lekcia-1
+              name: Básnické umenie
+          title: Básnické umenie
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Básnické umenie
+              description_teacher: V tejto integrovanej lekcii počítačovej vedy a
+                anglického jazyka a literatúry pre nových kóderov budú študenti animovať
+                báseň kódom, aby ilustrovali náladu básne. Študenti prečítajú a zistia
+                náladu básne. Potom nájdu zodpovedajúce efekty a obrázky, ktoré im
+                pomôžu ilustrovať náladu básne. Nakoniec študenti použijú udalosti
+                (kód) na ilustráciu zmeny nálady alebo naanimujú uvedenie nových obrázkov
+                do básne.
+            Code Your Own Poem:
+              name: Napíš kód pre vlastnú báseň
+            Build a Poem Generator:
+              name: Vytvor aplikáciu na generovanie básní
+            Choosing Words Carefully:
+              name: Starostlivý výber slov
+            lesson-1:
+              key: lekcia-1
+              name: Básnické umenie
+            lesson-2:
+              key: lekcia-2
+              name: Napíš kód pre vlastnú báseň
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+              name: Starostlivý výber slov
+            lesson-7:
+              key: lekcia-7
+            lesson-6:
+              key: lekcia-6
         hello-world-food-2021:
           lessons:
             Hello World:
               name: Ahoj Svet
             lesson-1:
+              key: lekcia-1
               name: Ahoj Svet
           title: Ahoj Svet
         hello-world-emoji-2021:
@@ -13423,6 +14326,7 @@ sk:
             Hello World:
               name: Ahoj Svet
             lesson-1:
+              key: lekcia-1
               name: Ahoj Svet
           title: Ahoj Svet
         hello-world-animals-2021:
@@ -13430,6 +14334,7 @@ sk:
             Hello World:
               name: Ahoj Svet
             lesson-1:
+              key: lekcia-1
               name: Ahoj Svet
           title: Ahoj Svet
         hello-world-retro-2021:
@@ -13437,14 +14342,1968 @@ sk:
             Hello World:
               name: Ahoj Svet
             lesson-1:
+              key: lekcia-1
               name: Ahoj Svet
           title: Ahoj Svet
         spelling-bee-2021:
           lessons:
+            Spelling Bee:
+              description_student: Pomôž včele vyhláskovať nové slová!
+              description_teacher: |-
+                Táto lekcia stavia na doterajších znalostiach žiakov, ako je hláskovanie a znalosť veľkých písmen. Hláskovanie s včielkou pomáha deťom v materských školách a prvých triedach precvičovať hláskovanie a počítanie písmen, ktoré sa zoskupujú do slov. Deti pomocou niekoľkých kódovacích príkazov prinútia hláskujúcu včelu, aby sa posúvala po písmenách a aby deti mohli hláskovať slová. Naučia sa ťahať bloky kódu pomocou potiahni-pusti, ktoré uvedú postavu včely do pohybu, a uvedomia si, že pre úspešné hláskovanie slov je potrebné príkazy správne zoradiť.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je koncipovaná ako výučba abecedy, skladania písmen do slov alebo počítanie. Žiaci, ktorí sa lekcie zúčastnia, už by mali mať tieto znalosti a schopnosti:
+
+                -   Znalosť veľkých písmen abecedy
+                -   Znalosť čísel a počítanie do 10 pomocou prstov, predmetov alebo manipulatívov
+                -   Znalosť princípu tvorenia slov z radu písmen
             lesson-1:
+              key: lekcia-1
               name: Včela Hláskovanie
+              description_student: Pomôž včele vyhláskovať nové slová!
+              description_teacher: |-
+                Táto lekcia stavia na doterajších znalostiach žiakov, ako je hláskovanie a znalosť veľkých písmen. Hláskovanie s včielkou pomáha deťom v materských školách a prvých triedach precvičovať hláskovanie a počítanie písmen, ktoré sa zoskupujú do slov. Deti pomocou niekoľkých kódovacích príkazov prinútia hláskujúcu včelu, aby sa posúvala po písmenách a aby deti mohli hláskovať slová. Naučia sa ťahať bloky kódu pomocou potiahni-pusti, ktoré uvedú postavu včely do pohybu, a uvedomia si, že pre úspešné hláskovanie slov je potrebné príkazy správne zoradiť.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je koncipovaná ako výučba abecedy, skladania písmen do slov alebo počítanie. Žiaci, ktorí sa lekcie zúčastnia, už by mali mať tieto znalosti a schopnosti:
+
+                -   Znalosť veľkých písmen abecedy
+                -   Znalosť čísel a počítanie do 10 pomocou prstov, predmetov alebo manipulatívov
+                -   Znalosť princípu tvorenia slov z radu písmen
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
               name: Vykreslenie údajov
+              description_student: Vytvor vo vizualizátore dát v App Lab stĺpcové
+                grafy a histogramy.
+              description_teacher: |-
+                Táto lekcia stavia na znalosti stĺpcových grafov a histogramov. Študenti si precvičia vytváranie záverov z grafov a naučia sa pomocou vizualizátora dát v App Labe vytvárať dva rôzne druhy grafov: stĺpcový graf a histogram. Tento nástroj je navrhnutý na to, aby študentov nechal rýchlo nahliadnuť do reálnych dátových súborov a uľahčil im vytváranie vizualizácií z dát bez toho, aby sa museli najskôr zoznamovať s používaním nejakého zložitejšieho nástroja. Na vytvorenie grafov budú môcť využiť niekoľko reálnych dátových súborov.
+
+                Lekcia začína krátkym zhrnutím dôvodov, prečo sú grafy užitočné pri skúmaní údajov. Po úvode si študenti precvičia vytvorenie stĺpcového grafu vo vizualizátore dát v App Labe. Potom sa naučia vytvárať histogramy v scenároch, v ktorých stĺpcové grafy nemusia byť vhodné. Dostanú možnosť preskúmať rôzne reálne dátové súbory a spoznajú, ako sa pomocou grafov dá oznámiť informácie o určitej téme, ktorá ich zaujíma.
+
+                #### Predchádzajúce zručnosti a slovná zásoba
+
+                Táto lekcia je určená na prehĺbenie a upevnenie existujúcich znalostí o stĺpcových grafoch a histogramoch. Nie je koncipovaná ako predstavenie nového základného učiva. Študenti už by na túto hodinu mali prísť s nasledovnými znalosťami a zručnosťami:
+
+                -   Mali by vedieť interpretovať stĺpcový graf a vedieť, čo predstavujú hodnoty na osiach x a y.
+                -   Mali by vedieť interpretovať histogram a vedieť, čo predstavuje rozsah jeho hodnôt.
+            lesson-1:
+              key: lekcia-1
+              name: Skúmanie štvorcových grafov a histogramov
+              description_student: Vytvor vo vizualizátore dát v App Lab stĺpcové
+                grafy a histogramy.
+              description_teacher: |-
+                Táto lekcia stavia na znalosti stĺpcových grafov a histogramov. Študenti si precvičia vytváranie záverov z grafov a naučia sa pomocou vizualizátora dát v App Labe vytvárať dva rôzne druhy grafov: stĺpcový graf a histogram. Tento nástroj je navrhnutý na to, aby študentov nechal rýchlo nahliadnuť do reálnych dátových súborov a uľahčil im vytváranie vizualizácií z dát bez toho, aby sa museli najskôr zoznamovať s používaním nejakého zložitejšieho nástroja. Na vytvorenie grafov budú môcť využiť niekoľko reálnych dátových súborov.
+
+                Lekcia začína krátkym zhrnutím dôvodov, prečo sú grafy užitočné pri skúmaní údajov. Po úvode si študenti precvičia vytvorenie stĺpcového grafu vo vizualizátore dát v App Labe. Potom sa naučia vytvárať histogramy v scenároch, v ktorých stĺpcové grafy nemusia byť vhodné. Dostanú možnosť preskúmať rôzne reálne dátové súbory a spoznajú, ako sa pomocou grafov dá oznámiť informácie o určitej téme, ktorá ich zaujíma.
+
+                #### Predchádzajúce zručnosti a slovná zásoba
+
+                Táto lekcia je určená na prehĺbenie a upevnenie existujúcich znalostí o stĺpcových grafoch a histogramoch. Nie je koncipovaná ako predstavenie nového základného učiva. Študenti už by na túto hodinu mali prísť s nasledovnými znalosťami a zručnosťami:
+
+                -   Mali by vedieť interpretovať stĺpcový graf a vedieť, čo predstavujú hodnoty na osiach x a y.
+                -   Mali by vedieť interpretovať histogram a vedieť, čo predstavuje rozsah jeho hodnôt.
           title: Vykreslenie údajov
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Počítanie s Laurel
+              description_student: Pomôž Laurel, lovkyni pokladov, spočítať a zadať
+                kroky potrebné na pozbieranie drahokamov!
+              description_teacher: |-
+                Táto lekcia stavia na predchádzajúcich aktivitách zahŕňajúcich počítanie a sčítanie. Počítanie s Laurel pomáha deťom v materských školách a prvých triedach precvičiť si počítanie a sčítaniepomocou slučiek, aby pomohli Laurel, lovkyni pokladov, pozbierať drahokamy v bludisku. Použijú sériu kódovacích príkazov a povedú Laurel bludiskom, aby pozbierala drahokamy. Využijú blok „Repeat“, u ktorého budú musieť spočítať, koľko krokov má Laurel urobiť – potom v bloku kódu zvoliť správnu číslovku zodpovedajúcu tomuto číslu.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je určená na to, aby deťom predstavila čísla, počítanie a sčítanie. Pred absolvovaním tejto lekcie už by žiaci mali mať tieto znalosti a schopnosti:
+
+                -   Mali by poznať čísla do 10 a vedieť počítať s využitím obrázkov, prstov alebo manipulatívov.
+                -   Mali by vedieť sčítať predmety, obrázky, prsty alebo manipulatívy do súčtu 10.
+            lesson-1:
+              key: lekcia-1
+              name: Počítanie s Laurel
+              description_student: Pomôž Laurel, lovkyni pokladov, spočítať a zadať
+                kroky potrebné na pozbieranie drahokamov!
+              description_teacher: |-
+                Táto lekcia stavia na predchádzajúcich aktivitách zahŕňajúcich počítanie a sčítanie. Počítanie s Laurel pomáha deťom v materských školách a prvých triedach precvičiť si počítanie a sčítaniepomocou slučiek, aby pomohli Laurel, lovkyni pokladov, pozbierať drahokamy v bludisku. Použijú sériu kódovacích príkazov a povedú Laurel bludiskom, aby pozbierala drahokamy. Využijú blok „Repeat“, u ktorého budú musieť spočítať, koľko krokov má Laurel urobiť – potom v bloku kódu zvoliť správnu číslovku zodpovedajúcu tomuto číslu.
+
+                #### Predchádzajúce zručnosti
+
+                Táto lekcia nie je určená na to, aby deťom predstavila čísla, počítanie a sčítanie. Pred absolvovaním tejto lekcie už by žiaci mali mať tieto znalosti a schopnosti:
+
+                -   Mali by poznať čísla do 10 a vedieť počítať s využitím obrázkov, prstov alebo manipulatívov.
+                -   Mali by vedieť sčítať predmety, obrázky, prsty alebo manipulatívy do súčtu 10.
+          title: Počítanie s Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Lekcia
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Projekt oblastného festivalu literatúry – 1. deň
+            lesson-12:
+              name: Projekt oblastného festivalu literatúry – 2. deň
+            lesson-13:
+              name: Projekt oblastného festivalu literatúry – 3. deň
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Simulácia nákazy
+            lesson-5:
+              name: '"O mne" so Sprite Labom'
+            Drawing with Loops:
+              name: Kreslenie s cyklami
+              description_student: "**Cykly** v tejto lekcii nám uľahčujú vytváranie
+                skutočne úžasných obrázkov v Umelcovi!"
+              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
+                si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
+                pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
+                lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
+                Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
+                pre portfólio, či ako ukážku pre rodičov.
+            Using Variables with the Artist:
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci vyskúšajú tvorbu opakujúcich sa vzorov s použitím premenných
+                v prostredí Umelca. Žiaci sa naučia, ako premenné zjednodušujú písanie
+                aj čítanie kódu. Po vyriešení úloh s pokynmi žiakov na záver čaká
+                voľná hra, kde budú môcť ukázať, čo všetko sa naučili, a vytvoriť
+                si vlastné obrázky.
+            Programming with the Bee:
+              name: Vnorené cykly v bludisku
+            Variables with the Bee:
+              name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
+              description_teacher: Táto lekcia na **budovanie zručností** žiakom pomôže
+                pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy,
+                keďže umožňujú menenie hodnôt aj po spustení programu.
+            For Loop Fun:
+              name: Zábava s cyklami "for"
+            For Loops with Bee:
+              name: Cykly "for" s včelou
+              description_student: V týchto úlohách pomôžeš včele zbierať nektár a vyrábať
+                med pomocou cyklov „for“!
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                sa zameriava na cykly a používanie riadiacej premennej na riešenie
+                zložitejších úloh.
+            For Loops with Artist:
+              name: Cykly "for" s Umelcom
+              description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš
+                používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia cykly „for“ s Umelcom. V úlohách budú vytvárať
+                komplexné návrhy a jedinečné umenie.
+            Follow the Algorithm:
+              name: Sleduj algoritmus
+              description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy
+                sú potrebné na dosiahnutie správneho výsledku.
+              description_teacher: Na tejto lekcii zameranej na **vytvorenie kontextu**
+                si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými
+                inštrukciami.
+            'Hello World: Food':
+              name: Ahoj Svet
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská tanečná párty so Sprite Labom
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať udalosti na to, aby sa postavy rozhýbali po obrazovke
+                na základe vstupov používateľa.
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hodina Kódu
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Predstavenie Sprite Labu
+              description_student: Budete diskutovať o role počítačov a technológií
+                vo vašich životoch, pričom sa zameriate na to, ako aplikácie a nástroje
+                poskytujú používateľom nové možnosti a ako ich môžu používať.
+            Making Sprites:
+              name: Vytváranie postáv
+              description_teacher: 'V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy a učiť sa o konceptoch, ktoré sú stredobodom Sprite Labu:
+                o sprajtoch (postavách) a správaní.'
+            Sprites in Action:
+              name: Postavy v akcii
+              description_student: Prejdeš si programovacie úrovne, ktoré sa končia
+                voľnou úlohou, kde môžeš vytvoriť čokoľvek, čo sa ti páči.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Projekt: Virtuálny maznáčik'
+              description_student: Vytvor si interaktívne virtuálne zvieratko, ktoré
+                vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku
+                život!
+              description_teacher: V tomto **miniprojekte** si žiaci vytvoria interaktívne
+                virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chcú.
+                Žiaci budú vzhľad zvieratka upravovať pomocou funkcie „kostýmy“, ktorá
+                je k dispozícii v Sprite Labe. Potom svojmu projektu vdýchnu život
+                pomocou udalostí, správania a ďalších konceptov, s ktorými sa už oboznámili.
+            Blank Space Stories:
+              name: Príbehy na doplnenie
+              description_student: V rámci tejto aktivity budete používať dopĺňacie
+                príbehy príbehy (podobné ako Mad Libs®) na uľahčenie pochopenia toho,
+                ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich
+                neskôr používajú počas vykonávania programu.
+              description_teacher: 'Na tejto lekcii zameranej na **vytvorenie kontextu**
+                budú žiakom ako kontext na pochopenie toho, ako počítače prijímajú
+                a ukladajú vstupy od používateľov a potom ich neskôr používajú počas
+                vykonávania programu, slúžiť dopĺňacie príbehy (podobné ako Mad Libs®). '
+            Text and Prompts:
+              name: Text a výzvy
+              description_student: V tejto lekcii si precvičíš používanie premenných
+                v Sprite Labe.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia použitie premenných v Sprite Labe.
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
+            Simulating Experiments:
+              name: Simulácia experimentov
+              description_student: Spusti simulácie na počítači a experimentuj zmenou
+                premenných.
+              description_teacher: Spustením jednoduchej simulácie v Sprite Lab si
+                študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje,
+                ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie
+                budú mať študenti možnosť predpovedať, ako môže zmena premennej v
+                simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.
+            End of Course Project:
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Objekt "sprite"
+            lessonGroup-3:
+              display_name: Premenné
+            lessonGroup-4:
+              display_name: Záverečný projekt
+        csd6-pilot-2022:
+          lessons:
+            Arrays and Color LEDs:
+              name: Farebné LEDky
+            lesson-10:
+              name: Zlúčenie vstupov
+            Functions with Parameters:
+              name: Funkcie
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: lekcia-10
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-16:
+              key: lekcia-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-10:
+              key: lekcia-10
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-16:
+              key: lekcia-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              name: Bezpečnosť v mojej online štvrti
+              description_student: Naučte sa bezpečne pohybovať po online svete.
+              key: Bezpečnosť v mojej online štvrti
+            Learn to Drag and Drop:
+              name: Učíme sa presúvať objekty
+              description_student: Dokonči úlohy presúvaním objektov.
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                poskytne študentom predstavu o tom, čo očakávať, keď prvýkrát prídu
+                do počítačovej učebne. Začína krátkou diskusiou, ktorá im predstaví
+                základy správania v počítačovej učebni, a potom budú obiť on‑line
+                úlohy pomocou počítača.
+              key: Učíme sa presúvať objekty
+            Happy Maps:
+              name: Veselé mapy
+              description_teacher: Premostenie od algoritmov ku programovaniu môže
+                byť jednoduché, ak študenti rozumejú rozdielu medzi naplánovaním krokov
+                a ich zakódovaním do určitého jazyka. Táto aktivita pomôže študentom
+                v čítaní a písaní jednoduchého kódu.
+            Sequencing with Scrat:
+              name: Postupnosť krokov so Scratom
+              description_student: Naprogramuj Scrata tak, aby sa dostal k žaluďu.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci vytvárať sekvenčné algoritmy na presúvanie veveričky z jednej
+                strany bludiska k žaluďu na druhej strane bludiska. Na splnenie tejto
+                úlohy budú v lineárnej postupnosti spájať programovacie bloky.
+              key: Postupnosť krokov so Scratom
+            Programming with Scrat:
+              name: Programovanie so Scratom
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
+            Programming with Rey and BB-8:
+              name: Programovanie s Rey a BB-8
+              key: Programovanie s Rey a BB-8
+            Happy Loops:
+              name: Veselé cykly
+              description_teacher: Cykly sú v programovaní veľmi užitočným a veľmi
+                silným nástrojom. Aby pochopili, ako nám cyklu môžu byť užitočné,
+                žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu
+                cestu ku vyriešeniu problému.
+            Loops with Scrat:
+              name: Cykly so Scratom
+              description_student: Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov.
+            Loops with Laurel:
+              name: Cykly s Laurel
+            Ocean Scene with Loops:
+              name: Na mori s cyklami
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
+                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
+                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
+                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
+                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
+                obrazy.
+              key: Na mori s cyklami
+            The Big Event Jr.:
+              name: Veľká udalosť Jr.
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
+                pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym.
+                Niekedy chceme, aby náš program reagoval na používateľa presne v tom
+                momente, keď to používateľ chce. Práve na toto používame udalosti.
+            'Mini-Project: On the Move with Play Lab':
+              description_student: Vytvor si vlastnú hru alebo príbeh.
+              description_teacher: V tejto online aktivite sa študenti naučia, ako
+                v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
+                všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
+                na kreativitu! Vytvorme v Play Labe celý príbeh!
+            End of Course Project:
+              name: Záverečný projekt
+            'Programming: Happy Maps':
+              key: 'Programovanie: Veselé mapy'
+              name: Veselé mapy
+              description_teacher: Premostenie od algoritmov ku programovaniu môže
+                byť jednoduché, ak študenti rozumejú rozdielu medzi naplánovaním krokov
+                a ich zakódovaním do určitého jazyka. Táto aktivita pomôže študentom
+                v čítaní a písaní jednoduchého kódu.
+            Programming in Ice Age:
+              key: Programovanie v Dobe ľadovej
+              name: Programovanie so Scratom
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
+            'Loops: Happy Loops':
+              name: Veselé cykly
+              description_teacher: Cykly sú v programovaní veľmi užitočným a veľmi
+                silným nástrojom. Aby pochopili, ako nám cyklu môžu byť užitočné,
+                žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu
+                cestu ku vyriešeniu problému.
+            Loops in Ice Age:
+              key: Cykly v Dobe ľadovej
+              name: Cykly so Scratom
+              description_student: Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov.
+            Loops in Collector:
+              key: Cykly v Zberateľke
+              name: Cykly s Laurel
+            'Events: The Big Event':
+              key: 'Udalosti: Veľká udalosť'
+              name: Veľká udalosť Jr.
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
+                pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym.
+                Niekedy chceme, aby náš program reagoval na používateľa presne v tom
+                momente, keď to používateľ chce. Práve na toto používame udalosti.
+            Events in Play Lab:
+              key: Udalosti v Play Labe
+              description_student: Vytvor si vlastnú hru alebo príbeh.
+              description_teacher: V tejto online aktivite sa študenti naučia, ako
+                v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
+                všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
+                na kreativitu! Vytvorme v Play Labe celý príbeh!
+            lesson-1:
+              key: lekcia-1
+              name: Záverečný projekt
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+            lessonGroup-5:
+              display_name: Záverečný projekt
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
+          description_short: Predstavenie informatiky pre predškolákov.
+          description_audience: 'Vek: 4-7'
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: Programovanie s Angry Birds
+              description_student: Nauč sa viac o postupnostiach a algoritmoch s _Angry
+                Birds_.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci vytvárať sekvenčné algoritmy na presúvanie vtáčika z jednej
+                strany bludiska k prasaťu na druhej strane bludiska. Na splnenie tejto
+                úlohy budú v lineárnej postupnosti spájať programovacie bloky, a pohybovať
+                tak postavou rovno, doľava a doprava.
+              key: Programovanie s Angry Birds
+            Debugging in Maze:
+              name: Odstraňovanie chýb v bludisku
+              description_student: Nájdi v úlohách chyby a precvič si svoju schopnosť
+                ladiť program (hľadať chyby).
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci stretnú s vopred napísaným kódom, ktorý obsahuje chyby. Krok
+                po kroku si ho budú musieť prejsť, aby chyby našli.
+            Collecting Treasure with Laurel:
+              name: Zbieranie pokladov s Laurel
+              key: Zbieranie pokladov s Laurel
+            Creating Art with Code:
+              name: Umenie s pomocou kódu
+              description_student: Programuj Umelca a vytváraj nádherné obrázky.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke.
+              key: Umenie s pomocou kódu
+            Swimming Fish in Sprite Lab:
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci naprogramujú jednoduchú animovanú scénu, ktorá sa odohráva pod
+                vodou.
+            Making Sprites:
+              name: Vytváranie postáv
+              description_student: V tejto lekcii budeš písať programy a učiť sa o sprajtoch
+                (postavách) a správaní.
+              description_teacher: 'V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy a učiť sa o konceptoch, ktoré sú stredobodom Sprite Labu:
+                o sprajtoch (postavách) a správaní.'
+            Sprites in Action:
+              name: Postavy v akcii
+              description_student: Prejdeš si programovacie úrovne, ktoré sa končia
+                voľnou úlohou, kde môžeš vytvoriť čokoľvek, čo sa ti páči.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+            Virtual Pet with Sprite Lab:
+              name: Virtuálne zvieratko so Sprite Labom
+              description_student: Vytvor si interaktívne virtuálne zvieratko, ktoré
+                vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku
+                život!
+              description_teacher: V tomto **miniprojekte** si žiaci vytvoria interaktívne
+                virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chcú.
+                Žiaci budú vzhľad zvieratka upravovať pomocou funkcie „kostýmy“, ktorá
+                je k dispozícii v Sprite Labe. Potom svojmu projektu vdýchnu život
+                pomocou udalostí, správania a ďalších konceptov, s ktorými sa už oboznámili.
+              key: Virtuálne zvieratko so Sprite Labom
+            Dance Party:
+              name: Tanečná Párty
+              description_student: Je čas na oslavu! V tejto lekcii si naprogramuješ
+                vlastnú interaktívnu tanečnú párty.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci programovať interaktívnu tanečnú párty.
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8
+              description_student: 'Pomáhaj _BB-8_ prechádzať bludiskami pomocou cyklov! '
+              key: Cykly s Rey a BB-8
+            'Mini-Project: Sticker Art':
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
+              description_teacher: Táto lekcia s **miniprojektom** stavia na poznatkoch
+                o cykloch, ktoré už žiaci majú. Žiaci budú pomocou Umelca vytvárať
+                jedinečné umelecké diela.
+            Nested Loops in Maze:
+              name: Vnorené cykly v bludisku
+              description_student: Cykly v cykloch, ktoré sú v ďalších cykloch. Čo
+                to znamená? Táto lekcia ti vysvetlí, čo sa stane, keď vytvoríš vnorený
+                cyklus.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa budú žiaci učiť, ako naprogramovať cyklus vnorený v ďalšom cykle.
+              key: Vnorené cykly v bludisku
+            Snowflakes with Anna and Elsa:
+              name: Snehové vločky s Annou a Elsou
+              description_student: '_Anna_ a _Elsa_ sú výborné v ľadovom korčuľovaní.
+                Potrebujú však tvoju pomoc s vytváraním vzorov na ľade. Pomôž im vytvoriť
+                čo najkrajšie obrazce pomocou vnorených cyklov. '
+              description_teacher: Táto lekcia s **miniprojektom** žiakov prevedie
+                sériou cvičení, v ktorých budú vytvárať obrázky vločiek pomocou postáv
+                z filmovej série _Ľadové kráľovstvo_.
+              key: Snehové vločky s Annou a Elsou
+            Looking Ahead with Minecraft:
+              name: Pohľad do budúcnosti s Minecraftom
+              description_student: Nespadni do lávy! V tejto lekcii sa oboznámiš s podmienenými
+                príkazmi vo svete _Minecraftu_.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci dostanú príležitosť precvičiť si koncepty, ktoré sa naučili
+                doteraz, a vyskúšať si využitie podmienených príkazov!
+            If/Else with Bee:
+              name: Podmienky „ak/inak“ s včelou
+              description_student: Teraz, keď už rozumieš podmieneným príkazom, nadišiel
+                čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla
+                vyrábať med a zbierať nektár.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať v programovaní s podmienkami, vďaka ktorým budú
+                môcť vytvárať kód fungujúci rôzne v závislosti od konkrétnych situácií,
+                s ktorými sa program stretne.
+              key: Podmienky „ak/inak“ s včelou
+            While Loops in Farmer:
+              name: Cykly "pokiaľ" s Farmárkou
+              description_student: Cykly sú pri programovaní veľmi užitočné. V tejto
+                lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci v rozhraní Farmárky zapĺňať jamy a odstraňovať kopy hliny.
+                Nebudú však vedieť, aké veľké sú jamy ani aké vysoké sú kopy hliny,
+                ktoré treba zarovnať. Na riešenie týchto úloh budú žiaci využívať
+                nový druh cyklu.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
+              description_student: V tejto lekcii budeš používať podmienené príkazy
+                vo svete Minecraftu.
+              description_teacher: V tejto lekcii zameranej na **vytvorenie kontextu**
+                žiaci dostanú príležitosť precvičiť si, čo sa doteraz naučili, a dokonca
+                nahliadnuť do podmienených príkazov!
+              key: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
+            Until Loops in Maze:
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
+              description_student: Pomocou týchto cyklov „opakuj až kým“ môžeš vytvárať
+                úžasné veci!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci budú učiť o cykloch „opakuj až kým“. Budú vytvárať programy,
+                v ktorých hlavná postava opakuje nejaké činnosti, až kým nedosiahne
+                požadovanú podmienku na zastavenie.
+              key: Cykly „opakuj pokiaľ neplatí“ v bludisku
+            Harvesting with Conditionals:
+              name: Zber úrody s podmienkami
+              description_student: Niekedy nie je jasné, kedy treba podmienený príkaz
+                použiť. V tejto lekcii sa naučíš lepšie rozhodnúť, čo robiť.
+              description_teacher: Žiaci si precvičia cykly „pokiaľ“, cykly „až kým“
+                a podmienky „ak/inak“. Všetky tieto bloky využívajú podmienené príkazy.
+                Keď si žiaci precvičia všetky tri, naučia sa vytvárať komplexné a flexibilné
+                programy.
+              key: Zber úrody s podmienkami
+            Functions in Minecraft:
+              name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci začnú zisťovať, načo môžu byť užitočné funkcie.
+              key: Funkcie v Minecrafte
+            Functions with Artist:
+              name: Funkcie s Umelcom
+              description_student: Vytvor zložitejšie kresby s funkciami!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať funkcie v Umelcovi.
+              key: Funkcie s Umelcom
+            Functions with Harvester:
+              name: Funkcie so Záhradníčkou
+              description_student: Funkcie ti ušetria veľa práce, keď budeš farmárke
+                pomáhať so zberom úrody!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**  budú
+                žiaci pomocou podmienených príkazov s funkciami zbierať plodiny v Záhradníčke.
+              key: Funkcie so Záhradníčkou
+            Text and Prompts:
+              name: Text a výzvy
+              description_student: V tejto lekcii si precvičíš používanie premenných
+                v Sprite Labe.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia použitie premenných v Sprite Labe.
+            Using Variables with the Artist:
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci vyskúšajú tvorbu opakujúcich sa vzorov s použitím premenných
+                v prostredí Umelca. Žiaci sa naučia, ako premenné zjednodušujú písanie
+                aj čítanie kódu. Po vyriešení úloh s pokynmi žiakov na záver čaká
+                voľná hra, kde budú môcť ukázať, čo všetko sa naučili, a vytvoriť
+                si vlastné obrázky.
+            Variables with the Bee:
+              name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
+              description_teacher: Táto lekcia na **budovanie zručností** žiakom pomôže
+                pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy,
+                keďže umožňujú menenie hodnôt aj po spustení programu.
+            For Loops with Bee:
+              name: Cykly "for" s včelou
+              description_student: Bzz bzz! V týchto úlohách pomôžeš včele zbierať
+                nektár a vyrábať med pomocou cyklov „for“!
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                sa zameriava na cykly a používanie riadiacej premennej na riešenie
+                zložitejších úloh.
+              key: Cykly "for" s včelou
+            For Loops with Artist:
+              name: Cykly "for" s Umelcom
+              description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš
+                používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia cykly „for“ s Umelcom. V úlohách budú vytvárať
+                komplexné návrhy a jedinečné umenie.
+              key: Cykly "for" s Umelcom
+            End of Course Project:
+              name: Záverečný projekt
+              description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
+                tvoj projekt.
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
+              key: Záverečný projekt
+            Debugging with Scrat:
+              key: Odstraňovanie chýb so Scratom
+              name: Odstraňovanie chýb v bludisku
+              description_student: Nájdi v úlohách chyby a precvič si svoju schopnosť
+                ladiť program (hľadať chyby).
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci stretnú s vopred napísaným kódom, ktorý obsahuje chyby. Krok
+                po kroku si ho budú musieť prejsť, aby chyby našli.
+            lesson-2:
+              key: lekcia-2
+              name: Vytváranie postáv
+              description_student: V tejto lekcii budeš písať programy a učiť sa o sprajtoch
+                (postavách) a správaní.
+              description_teacher: 'V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy a učiť sa o konceptoch, ktoré sú stredobodom Sprite Labu:
+                o sprajtoch (postavách) a správaní.'
+            lesson-3:
+              key: lekcia-3
+              name: Postavy v akcii
+              description_student: Prejdeš si programovacie úrovne, ktoré sa končia
+                voľnou úlohou, kde môžeš vytvoriť čokoľvek, čo sa ti páči.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+            lesson-1:
+              key: lekcia-1
+              name: Tanečná Párty
+              description_student: Je čas na oslavu! V tejto lekcii si naprogramuješ
+                vlastnú interaktívnu tanečnú párty.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci programovať interaktívnu tanečnú párty.
+            Sticker Art with Loops:
+              key: Pečiatkovanie v cykloch
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
+              description_teacher: Táto lekcia s **miniprojektom** stavia na poznatkoch
+                o cykloch, ktoré už žiaci majú. Žiaci budú pomocou Umelca vytvárať
+                jedinečné umelecké diela.
+            'Looking Ahead with Minecraft ':
+              name: Pohľad do budúcnosti s Minecraftom
+              description_student: Nespadni do lávy! V tejto lekcii sa oboznámiš s podmienenými
+                príkazmi vo svete _Minecraftu_.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci dostanú príležitosť precvičiť si koncepty, ktoré sa naučili
+                doteraz, a vyskúšať si využitie podmienených príkazov!
+            While Loops with the Farmer:
+              key: Cykly "pokiaľ" s Farmárkou
+              name: Cykly "pokiaľ" s Farmárkou
+              description_student: Cykly sú pri programovaní veľmi užitočné. V tejto
+                lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci v rozhraní Farmárky zapĺňať jamy a odstraňovať kopy hliny.
+                Nebudú však vedieť, aké veľké sú jamy ani aké vysoké sú kopy hliny,
+                ktoré treba zarovnať. Na riešenie týchto úloh budú žiaci využívať
+                nový druh cyklu.
+            lesson-4:
+              key: lekcia-4
+              name: Text a výzvy
+              description_student: V tejto lekcii si precvičíš používanie premenných
+                v Sprite Labe.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia použitie premenných v Sprite Labe.
+            Variables with Artist:
+              key: Premenné s Umelcom
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci vyskúšajú tvorbu opakujúcich sa vzorov s použitím premenných
+                v prostredí Umelca. Žiaci sa naučia, ako premenné zjednodušujú písanie
+                aj čítanie kódu. Po vyriešení úloh s pokynmi žiakov na záver čaká
+                voľná hra, kde budú môcť ukázať, čo všetko sa naučili, a vytvoriť
+                si vlastné obrázky.
+            Changing Variables with Bee:
+              key: Meniace sa premenné s včelou
+              name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
+              description_teacher: Táto lekcia na **budovanie zručností** žiakom pomôže
+                pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy,
+                keďže umožňujú menenie hodnôt aj po spustení programu.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_sprites:
+              display_name: Objekt "sprite"
+            lessonGroup-9:
+              display_name: Udalosti
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmienky
+            csf_functions:
+              display_name: Funkcie
+            csf_variables:
+              display_name: Premenné
+            csf_for_loops:
+              display_name: Cykly "Pre"
+            end_of_course_project:
+              display_name: Záverečný projekt
+          description_audience: 'Vek: 9-18'
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Binárne čísla
+              key: Binárne čísla
+          lesson_groups:
+            cspSurvey:
+              display_name: Dotazník
+            csp_unit1_2020:
+              display_name: "(staré) Lekcia 2: Digitálne informácie"
+        csp2-2022:
+          lessons:
+            Packets:
+              description_teacher: Študenti sa naučia, že veľké správy posielané cez
+                internet sa v skutočnosti rozdelia na osobitné pakety, objavia tiež
+                výzvy, ktoré to spôsbuje. Najprv si študenti vyskúšajú verziu internetového
+                simulátora, ktorý správy rozbíja do paketov, aby získali predstavu
+                ako to funguje. Potom použijú návod, ktorý ich prevedie výzvami, ktoré
+                vzniknú keď nejaký paket spadne alebo pakety dorazia v nesprávnom
+                poradí. Následne musia nadizajnovať svoj vlastný protokol, ktorý bude
+                tieto výzvy adresovať. Na konci hodiny si pozriete video o užívateľskom
+                datagramovom protokole (UDP) a o protokole riadenia prenosu (TCP).
+                Toto sú dva protokoly používané pri posielaní správ rozdelených do
+                paketov.
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(staré) Lekcia 2: Internet"
+          description: Táto lekcia vám odhalí ako je internet nadizajnovaný tak, aby
+            medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
+          student_description: Táto lekcia vám odhalí ako je internet nadizajnovaný
+            tak, aby medzi sebou prepájal miliardy ľudí a zariadení. Naučíte sa ako  fungujú
+            rozdielne internetové protokoly a dokonca si ich aj sami postavíte pomocou
+            internetového simulátora. Potom sa spoločne zamyslíme aký dopad má internet
+            na súčasný život, aj ten dobrý aj ten zlý.
+          description_short: Vystavajte si internet od základov pomocou internetového
+            simulátora
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Hľadanie a odstraňovanie chýb
+              key: Hľadanie a odstraňovanie chýb
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Premenné
+            csp_conditionals:
+              display_name: Podmienky
+            csp_functions:
+              display_name: Funkcie
+            csp_project:
+              display_name: Projekt
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Zoznamy
+            csp_loops:
+              display_name: Cykly
+            csp_traversals:
+              display_name: Prechody
+            csp_project:
+              display_name: Projekt
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Pohni sa, pohni sa
+              description_teacher: Táto lekcia mentálne pripraví študentov na programovacie
+                cvičenia, s ktorými sa stretnú ďalej v tomto kurze. Študenti budú
+                v malých tímoch používať fyzickú aktivitu, aby naprogramovali svojich
+                spolužiakov tak, aby sa pozorne pohybovali z jedného miesta na druhé,
+                až kým nedosiahnu cieľ.
+              key: Pohni sa, pohni sa
+            Sequencing with Angry Birds:
+              name: Postupnosť krokov s Angry Birds
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
+                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
+                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
+                a potom pokročia k používaniu počítača na dokončenie online úloh.
+            Programming with Angry Birds:
+              name: Programovanie s Angry Birds
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
+            Programming with Harvester:
+              name: Programovanie so Záhradníčkou
+              description_student: Pomôž Záhradníčke pozbierať zeleninu, ktorú má
+                po ceste.
+              description_teacher: Študenti aplikujú naučené koncepty programovania
+                v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali
+                charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového
+                bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných
+                algoritmov a začnú používať debugovací proces.
+            Getting Loopy:
+              name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy,
+                tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia
+                ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce
+                inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
+            Loops with Harvester:
+              name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej
+                lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie
+                zbieranie kukurice.
+            Loops with Laurel:
+              name: Cykly s Laurel
+            Drawing Gardens with Loops:
+              name: Kreslenie v záhrade pomocou cyklov
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
+            The Right App:
+              name: Správna aplikácia
+              key: Správna aplikácia
+            The Big Event Jr.:
+              name: Veľká udalosť Jr.
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
+                pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym.
+                Niekedy chceme, aby náš program reagoval na používateľa presne v tom
+                momente, keď to používateľ chce. Práve na toto používame udalosti.
+            'Mini-Project: A Royal Battle with Events':
+              description_student: Vytvor pomocou udalostí príbeh alebo interaktívnu
+                hru.
+              description_teacher: 'V tomto **miniprojekte** dostanú žiaci príležitosť
+                naučiť sa, ako používať udalosti v Play Labe, a budú môcť využiť všetky
+                doteraz získané programovacie zručnosti na vytvorenie animovanej hry. '
+            End of Course Project:
+              name: Záverečný projekt
+            Sequencing in Maze:
+              key: Postupnosť krokov v bludisku
+              name: Postupnosť krokov s Angry Birds
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
+                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
+                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
+                a potom pokročia k používaniu počítača na dokončenie online úloh.
+            Programming in Maze:
+              key: Programovanie v bludisku
+              name: Programovanie s Angry Birds
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
+            Programming in Harvester:
+              key: Programovanie so Záhradníčkou
+              name: Programovanie so Záhradníčkou
+              description_student: Pomôž Záhradníčke pozbierať zeleninu, ktorú má
+                po ceste.
+              description_teacher: Študenti aplikujú naučené koncepty programovania
+                v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali
+                charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového
+                bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných
+                algoritmov a začnú používať debugovací proces.
+            'Loops: Getting Loopy':
+              key: Cykly sa zacykľujú
+              name: Cykly sa zacykľujú
+              description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy,
+                tak sa náš kód často bude opakovať. V tejto lekcii sa študenti naučia
+                ako môžu použiť cykly, aby jednoduchšie zapísali často sa opakujúce
+                inštrukcie tak, že sa budú pozerať na opakujúce vzory pohybu v tanci.
+            Loops in Harvester:
+              key: Cykly so Záhradníčkou
+              name: Cykly so Záhradníčkou
+              description_teacher: S využítím konceptu "zacyklených cyklov" z predošlej
+                lekcie budú študenti v tejto lekcii používať cykly na efektívnejšie
+                zbieranie kukurice.
+            Loops in Collector:
+              key: Cykly v Zberateľke
+              name: Cykly s Laurel
+            Loops in Artist:
+              key: Cykly s Umelcom
+              name: Kreslenie v záhrade pomocou cyklov
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
+            'Events: The Big Event':
+              key: 'Udalosti: Veľká udalosť'
+              name: Veľká udalosť Jr.
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
+                pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym.
+                Niekedy chceme, aby náš program reagoval na používateľa presne v tom
+                momente, keď to používateľ chce. Práve na toto používame udalosti.
+            Events in Play Lab:
+              key: Udalosti v Play Labe
+              description_student: Vytvor pomocou udalostí príbeh alebo interaktívnu
+                hru.
+              description_teacher: 'V tomto **miniprojekte** dostanú žiaci príležitosť
+                naučiť sa, ako používať udalosti v Play Labe, a budú môcť využiť všetky
+                doteraz získané programovacie zručnosti na vytvorenie animovanej hry. '
+            lesson-1:
+              key: lekcia-1
+              name: Záverečný projekt
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_impacts:
+              display_name: Vplyv Informatiky
+            csf_events:
+              display_name: Udalosti
+            lessonGroup-6:
+              display_name: Záverečný projekt
+          student_description: Nauč sa základy informatiky a bezpečnosti na internete.
+            Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
+            s priateľmi.
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať.
+            Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
+          description_audience: Vek 5-8
+        coursec-2022:
+          lessons:
+            My Robotic Friends Jr.:
+              name: Moji robotickí kamaráti (ml.)
+            Programming with Angry Birds:
+              name: Programovanie s Angry Birds
+              description_student: Nauč sa viac o postupnostiach a algoritmoch s _Angry
+                Birds_.
+              description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
+                sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu
+                na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti
+                spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť
+                doľava alebo otočiť doprava.
+            Debugging in Maze:
+              name: Odstraňovanie chýb v bludisku
+              description_student: Nájdi v úlohách chyby a precvič si svoju schopnosť
+                ladiť program (hľadať chyby).
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci stretnú s vopred napísaným kódom, ktorý obsahuje chyby. Krok
+                po kroku si ho budú musieť prejsť, aby chyby našli.
+              key: Odstraňovanie chýb v bludisku
+            Collecting Treasure with Laurel:
+              name: Zbieranie pokladov s Laurel
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci naďalej rozvíjať svoje poznatky o algoritmoch a ladení.
+                Spoznajú sa s novou postavou, ktorou je _dobrodružka Laurel_, a pomocou
+                sekvenčných algoritmov _Laurel_ pomôžu pohybovať sa po trase a zbierať
+                poklady.
+            Creating Art with Code:
+              name: Umenie s pomocou kódu
+              description_student: Programuj Umelca a vytváraj nádherné obrázky.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke.
+            My Loopy Robotic Friends Jr.:
+              name: Moji zacyklení robotickí kamaráti (ml.)
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8
+              description_student: 'Pomáhaj _BB-8_ prechádzať bludiskami pomocou cyklov! '
+              key: Cykly s Rey a BB-8
+            Harvesting Crops with Loops:
+              name: Zber úrody s cyklami
+            'Mini-Project: Sticker Art':
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
+            The Big Event:
+              name: Veľká udalosť
+            Build a Flappy Game:
+              name: Vytvor si vlastnú hru Flappy
+              description_teacher: V tejto špeciálnej lekcii si žiaci vytvoria svoju
+                vlastnú hru Flappy. Využijú v nej udalosti na detekovanie kliknutia
+                myšou a kolízie medzi postavami. Na konci lekcie si žiaci hru upravia
+                pomocou rôznych pozadí či vytvorením vlastných pravidiel.
+              key: Vytvor si vlastnú hru Flappy
+            Picturing Data:
+              name: Zobrazenie dát v grafoch
+              key: Zobrazenie dát v grafoch
+            Binary Bracelets:
+              name: Binárne náramky
+              key: Binárne náramky
+            End of Course Project:
+              name: Záverečný projekt
+              description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
+                tvoj projekt.
+            'Programming: My Robotic Friends':
+              key: 'Programovanie: Moji robotickí kamaráti'
+              name: Moji robotickí kamaráti (ml.)
+            Programming in Maze:
+              key: Programovanie v bludisku
+              name: Programovanie s Angry Birds
+              description_student: Nauč sa viac o postupnostiach a algoritmoch s _Angry
+                Birds_.
+              description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
+                sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu
+                na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti
+                spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť
+                doľava alebo otočiť doprava.
+            Programming in Collector:
+              key: Programovanie so zberateľkou
+              name: Zbieranie pokladov s Laurel
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci naďalej rozvíjať svoje poznatky o algoritmoch a ladení.
+                Spoznajú sa s novou postavou, ktorou je _dobrodružka Laurel_, a pomocou
+                sekvenčných algoritmov _Laurel_ pomôžu pohybovať sa po trase a zbierať
+                poklady.
+            Programming in Artist:
+              key: Programovanie s Umelcom
+              name: Umenie s pomocou kódu
+              description_student: Programuj Umelca a vytváraj nádherné obrázky.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke.
+            'Loops: My Loopy Robotic Friends':
+              key: 'Cykly: Moji zacyklení robotickí kamaráti'
+              name: Moji zacyklení robotickí kamaráti (ml.)
+            Loops in Harvester:
+              key: Cykly so Záhradníčkou
+              name: Zber úrody s cyklami
+            Sticker Art with Loops:
+              key: Pečiatkovanie v cykloch
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
+            'Events: The Big Event':
+              key: 'Udalosti: Veľká udalosť'
+              name: Veľká udalosť
+            Events in Play Lab:
+              key: Udalosti v Play Labe
+            'End of Course Project: Create a Play Lab Game':
+              key: 'Záverečný projekt: Vytvor si hru v Play Labe'
+              name: Záverečný projekt
+              description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
+                tvoj projekt.
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+            csf_data:
+              display_name: Dáta
+            end_of_course_project:
+              display_name: Záverečný projekt
+          student_description: Vytvor programy s postupnosťami, cyklami a udalosťami.
+            Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia
+            problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš
+            svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+          description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky,
+            príbehy a hry.
+          description_audience: 'Vek: 6-10'
+        csp7-2022:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametre a Hodnoty návratnosti
+            csp_libraries:
+              display_name: Knižnice
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: lekcia-4
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Strojové učenie
+            Machine Learning and Bias:
+              name: Strojové učenie
+            lesson-10:
+              key: lekcia-10
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(staré) Lekcia 9: Údaje"
+        csp10-2022:
+          lessons:
+            Project   Innovation Simulation Part 6:
+              description_student: Prehľad lekcie
+            Project   Innovation Simulation Part 7:
+              description_student: Prehľad lekcie
+            'Project: Innovation Simulation Part 6':
+              description_student: Prehľad lekcie
+            'Project: Innovation Simulation Part 7':
+              description_student: Prehľad lekcie
+        coursed-2022:
+          lessons:
+            Password Power-Up:
+              name: Silnejšie heslá
+            Graph Paper Programming:
+              name: Programovanie na štvorčekový papier
+            Introduction to Online Puzzles:
+              name: Predstavenie online úloh
+              description_teacher: V týchto úlohách študenti začnú úvodom (alebo opakovaním
+                - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia
+                code.org. Videá vám vysvetlia, ako funguje pracovné prostredie, vrátane
+                tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu, ako presúvať
+                bloky a ako ich vymazať či spájať. Následne si študenti precvičia
+                svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti
+                uvidia nové typy úloh, ako napríklad Zberateľka, Umelec a Záhradníčka.
+              key: Predstavenie online úloh
+            Relay Programming:
+              name: Štafetové programovanie
+              key: Štafetové programovanie
+            Debugging with Laurel:
+              name: Odstraňovanie chýb s Laurel
+              description_teacher: '"V rámci tejto aktivity budú študenti trénovať
+                ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať
+                kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými
+                slučkami."'
+            Events in Bounce:
+              name: Udalosti v Bounce
+              key: Udalosti v Bounce
+            Build a Star Wars Game:
+              name: Vytvor hru Star Wars
+              description_student: Nech ťa sila sprevádza pri tvorení tvojej vlastnej
+                hry Star Wars.
+              description_teacher: V tejto lekcii si študenti precvičia využitie udalostí
+                na vytvorenie hry, ktorú môžu zdieľať online. R2-D2 a ďalšie postavy
+                zo Star Wars (Hviezdnych vojen) študentov prevedú konceptom udalostí
+                a potom im ponechajú priestor na vytvorenie vlastnej hry.
+              key: Vytvor hru Star Wars
+            Dance Party:
+              name: Tanečná Párty
+              description_student: Je čas na oslavu! V tejto lekcii si naprogramuješ
+                vlastnú interaktívnu tanečnú párty.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci programovať interaktívnu tanečnú párty.
+              key: Tanečná Párty
+            Loops in Ice Age:
+              name: Cykly v Dobe ľadovej
+              key: Cykly v Dobe ľadovej
+            Drawing Shapes with Loops:
+              name: Kreslenie tvarov pomocou cyklov
+            Nested Loops in Maze:
+              name: Vnorené cykly v bludisku
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa budú žiaci učiť, ako naprogramovať cyklus vnorený v ďalšom cykle.
+            Conditionals with Cards:
+              name: Podmienky s kartami
+              description_student: Je čas na hru, v ktorej budeš zbierať body len
+                za určitých podmienok!
+              key: Podmienky s kartami
+            Looking Ahead with Minecraft:
+              name: Pohľad do budúcnosti s Minecraftom
+              description_student: Nespadni do lávy! V tejto lekcii sa oboznámiš s podmienenými
+                príkazmi vo svete _Minecraftu_.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci dostanú príležitosť precvičiť si koncepty, ktoré sa naučili
+                doteraz, a vyskúšať si využitie podmienených príkazov!
+            If/Else with Bee:
+              name: Podmienky „ak/inak“ s včelou
+              description_student: Teraz, keď už rozumieš podmieneným príkazom, nadišiel
+                čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla
+                vyrábať med a zbierať nektár.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať v programovaní s podmienkami, vďaka ktorým budú
+                môcť vytvárať kód fungujúci rôzne v závislosti od konkrétnych situácií,
+                s ktorými sa program stretne.
+            While Loops in Farmer:
+              name: Cykly "pokiaľ" s Farmárkou
+              description_student: Cykly sú pri programovaní veľmi užitočné. V tejto
+                lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci v rozhraní Farmárky zapĺňať jamy a odstraňovať kopy hliny.
+                Nebudú však vedieť, aké veľké sú jamy ani aké vysoké sú kopy hliny,
+                ktoré treba zarovnať. Na riešenie týchto úloh budú žiaci využívať
+                nový druh cyklu.
+              key: Cykly "pokiaľ" s Farmárkou
+            Until Loops in Maze:
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
+              key: Cykly „opakuj pokiaľ neplatí“ v bludisku
+            End of Course Project:
+              name: Záverečný projekt
+              description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
+                tvoj projekt.
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
+              key: Záverečný projekt
+            lesson-5:
+              key: lekcia-5
+              name: Silnejšie heslá
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritmy: Programovanie na štvorčekovom papieri'
+              name: Programovanie na štvorčekový papier
+            Debugging in Collector:
+              key: Odstraňovanie chýb s Laurel
+              name: Odstraňovanie chýb s Laurel
+              description_teacher: '"V rámci tejto aktivity budú študenti trénovať
+                ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať
+                kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými
+                slučkami."'
+            Loops in Artist:
+              key: Cykly s Umelcom
+              name: Kreslenie tvarov pomocou cyklov
+            Nested Loops in Bee:
+              key: Vnorené cykly s včelou
+              name: Vnorené cykly v bludisku
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa budú žiaci učiť, ako naprogramovať cyklus vnorený v ďalšom cykle.
+            lesson-6:
+              key: lekcia-6
+              name: Pohľad do budúcnosti s Minecraftom
+              description_student: Nespadni do lávy! V tejto lekcii sa oboznámiš s podmienenými
+                príkazmi vo svete _Minecraftu_.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci dostanú príležitosť precvičiť si koncepty, ktoré sa naučili
+                doteraz, a vyskúšať si využitie podmienených príkazov!
+            Conditionals in Bee:
+              key: Podmienky s včelou
+              name: Podmienky „ak/inak“ s včelou
+              description_student: Teraz, keď už rozumieš podmieneným príkazom, nadišiel
+                čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla
+                vyrábať med a zbierať nektár.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať v programovaní s podmienkami, vďaka ktorým budú
+                môcť vytvárať kód fungujúci rôzne v závislosti od konkrétnych situácií,
+                s ktorými sa program stretne.
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitálne občianstvo
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_events:
+              display_name: Udalosti
+            csf_loops:
+              display_name: Cykly
+            csf_conditionals:
+              display_name: Podmienky
+            end_of_course_project:
+              display_name: Záverečný projekt
+          title: Kurz D (2021)
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh,
+            hru, či tanečnú party.
+          description_audience: Vek 7-11
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              name: Sleduj algoritmus
+              description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy
+                sú potrebné na dosiahnutie správneho výsledku.
+              description_teacher: Na tejto lekcii zameranej na **vytvorenie kontextu**
+                si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými
+                inštrukciami.
+            Swimming Fish with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
+              description_teacher: 'V tejto lekcii sa žiaci oboznámia s dvomi konceptami
+                ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekty „Sprite“
+                predstavujú postavy alebo predmety zobrazené na obrazovke. Tieto postavy
+                či predmety môžu študenti meniť, či nimi pohybovať. Správanie je akcia,
+                ktorú „Sprite“ vykonáva až do momentu,  kedy ju zastavíme. '
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská tanečná párty so Sprite Labom
+              description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
+                so svojimi spolužiakmi.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať udalosti na to, aby sa postavy rozhýbali po obrazovke
+                na základe vstupov používateľa.
+              key: Mimozemská tanečná párty so Sprite Labom
+            Be A Super Digital Citizen:
+              description_student: Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním.
+            Private and Personal Information:
+              name: Súkromné a osobné údaje
+              description_student: Na internete zažijeme veľa zábavy, ale je tiež
+                dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať
+                medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami,
+                ktoré majú zostať súkromné.
+              key: Súkromné a osobné údaje
+            'Mini-Project: About Me':
+              name: '"O mne" so Sprite Labom'
+              description_student: Prostredníctvom tvorby interaktívneho plagátu v
+                SpriteLabe si žiaci overia, čo sa naučili o zdieľaní súkromných a
+                osobných údajov na internete
+            Digital Sharing:
+              name: Digitálne zdieľanie
+              description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch
+                vlastníctva a autorských práv. '
+              description_teacher: 'Táto **prieskumná** lekcia pomôže žiakom pochopiť
+                výzvy a prínosy rešpektovania vlastníctva a autorských práv, obzvlášť
+                v digitálnom prostredí. '
+              key: Digitálne zdieľanie
+            Drawing with Loops:
+              name: Kreslenie s cyklami
+              description_student: "**Cykly** v tejto lekcii nám uľahčujú vytváranie
+                skutočne úžasných obrázkov v Umelcovi!"
+              description_teacher: 'Táto lekcia zameraná na **vytvorenie kontextu**
+                presúva pozornosť zo Sprite Labu na nový nástroj Umelec, ktorý budú
+                žiaci používať počas zvyšnej časti kurzu.  '
+            Fancy Shapes using Nested Loops:
+              name: Ornamenty pomocou vnorených cyklov
+              description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami
+                vytvoríš ÚŽASNÉ kresby.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci vytvoria návrhy v nástroji Umelec. Na konci lekcie budú môcť
+                žiaci vytvoriť svoje vlastné návrhy.
+            'Mini-Project: Design a Snowflake':
+              description_student: '_Anna_ a _Elsa_ sú výborné v ľadovom korčuľovaní.
+                Potrebujú však tvoju pomoc s vytváraním vzorov na ľade. Pomôž im vytvoriť
+                čo najkrajšie obrazce pomocou vnorených cyklov. '
+            Songwriting:
+              name: Písanie pesničiek
+              description_student: Aj rokové hviezdy potrebujú programovanie. V tejto
+                lekcii sa naučíme viac o funkciách pomocou slov z pesničiek.
+              description_teacher: Táto lekcia na **vytvorenie kontextu** pomôže žiakom
+                pochopiť, prečo je kombinovanie kúskov kódu do funkcií tak užitočné.
+            Functions in Minecraft:
+              name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci začnú zisťovať, načo môžu byť užitočné funkcie.
+              key: Funkcie v Minecrafte
+            Functions with Artist:
+              name: Funkcie s Umelcom
+              description_student: Vytvor zložitejšie kresby s funkciami!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať funkcie v Umelcovi.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
+              description_student: V tejto lekcii sa oboznámiš s podmienenými príkazmi
+                vo svete _Minecraftu_.
+              description_teacher: V tejto lekcii zameranej na **vytvorenie kontextu**
+                žiaci dostanú príležitosť precvičiť si, čo sa doteraz naučili, a dokonca
+                nahliadnuť do podmienených príkazov!
+              key: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
+            Conditionals with the Farmer:
+              name: Podmienky s Farmárkou
+              description_student: Pomôž farmárovi pripraviť polia na výsadbu a spoznaj
+                pri tom podmienené výrazy!
+              description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ`
+                a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú,
+                kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor
+                nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale
+                vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval
+                .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak,
+                že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak
+                sa spustí niečo iné.
+            Functions with Harvester:
+              name: Funkcie so Záhradníčkou
+              description_student: Funkcie ti ušetria veľa práce, keď budeš farmárke
+                pomáhať so zberom úrody!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**  budú
+                žiaci pomocou podmienených príkazov s funkciami zbierať plodiny v _Záhradníčke_.
+            Designing for Accessibility:
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
+              description_student: 'Naučíte sa o zjednodušení ovládania a význame
+                empatie prostredníctvom brainstormingu a návrhu dostupných riešení
+                zjednodušenia ovládania pre hypotetické aplikácie. '
+              description_teacher: 'V rámci tejto **vysvetľujúcej** lekcie sa žiaci
+                naučia o zjednodušení ovládania a význame empatie prostredníctvom
+                brainstormingu a návrhu riešení zjednodušenia ovládania pre hypotetické
+                aplikácie. '
+            End of Course Project:
+              name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov!
+              key: Záverečný projekt
+            Simon Says:
+              key: Simon vraví
+              name: Sleduj algoritmus
+              description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy
+                sú potrebné na dosiahnutie správneho výsledku.
+              description_teacher: Na tejto lekcii zameranej na **vytvorenie kontextu**
+                si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými
+                inštrukciami.
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Labom
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
+              description_teacher: 'V tejto lekcii sa žiaci oboznámia s dvomi konceptami
+                ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekty „Sprite“
+                predstavujú postavy alebo predmety zobrazené na obrazovke. Tieto postavy
+                či predmety môžu študenti meniť, či nimi pohybovať. Správanie je akcia,
+                ktorú „Sprite“ vykonáva až do momentu,  kedy ju zastavíme. '
+            lesson-4:
+              key: lekcia-4
+              description_student: Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním.
+            About Me:
+              name: '"O mne" so Sprite Labom'
+              description_student: Prostredníctvom tvorby interaktívneho plagátu v
+                SpriteLabe si žiaci overia, čo sa naučili o zdieľaní súkromných a
+                osobných údajov na internete
+            Programming and Loops with the Artist:
+              name: Kreslenie s cyklami
+              description_student: "**Cykly** v tejto lekcii nám uľahčujú vytváranie
+                skutočne úžasných obrázkov v Umelcovi!"
+              description_teacher: 'Táto lekcia zameraná na **vytvorenie kontextu**
+                presúva pozornosť zo Sprite Labu na nový nástroj Umelec, ktorý budú
+                žiaci používať počas zvyšnej časti kurzu.  '
+            Nested Loops in Artist:
+              key: Vnorené cykly s Umelcom
+              name: Ornamenty pomocou vnorených cyklov
+              description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami
+                vytvoríš ÚŽASNÉ kresby.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci vytvoria návrhy v nástroji Umelec. Na konci lekcie budú môcť
+                žiaci vytvoriť svoje vlastné návrhy.
+            Nested Loops in Frozen:
+              key: Vnorené slučky vo Frozen
+              description_student: '_Anna_ a _Elsa_ sú výborné v ľadovom korčuľovaní.
+                Potrebujú však tvoju pomoc s vytváraním vzorov na ľade. Pomôž im vytvoriť
+                čo najkrajšie obrazce pomocou vnorených cyklov. '
+            'Functions: Songwriting':
+              key: 'Funkcie: Písanie pesničiek'
+              name: Písanie pesničiek
+              description_student: Aj rokové hviezdy potrebujú programovanie. V tejto
+                lekcii sa naučíme viac o funkciách pomocou slov z pesničiek.
+              description_teacher: Táto lekcia na **vytvorenie kontextu** pomôže žiakom
+                pochopiť, prečo je kombinovanie kúskov kódu do funkcií tak užitočné.
+            Functions in Artist:
+              key: Funkcie s Umelcom
+              name: Funkcie s Umelcom
+              description_student: Vytvor zložitejšie kresby s funkciami!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať funkcie v Umelcovi.
+            Conditionals:
+              key: Podmienky
+              name: Podmienky s Farmárkou
+              description_student: Pomôž farmárovi pripraviť polia na výsadbu a spoznaj
+                pri tom podmienené výrazy!
+              description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ`
+                a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú,
+                kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor
+                nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale
+                vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval
+                .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak,
+                že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak
+                sa spustí niečo iné.
+            Functions in Harvester:
+              key: Funkcie so Záhradníčkou
+              name: Funkcie so Záhradníčkou
+              description_student: Funkcie ti ušetria veľa práce, keď budeš farmárke
+                pomáhať so zberom úrody!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**  budú
+                žiaci pomocou podmienených príkazov s funkciami zbierať plodiny v _Záhradníčke_.
+            lesson-1:
+              key: lekcia-1
+              name: Navrhovanie s ohľadom na zjednodušenie ovládania
+              description_student: 'Naučíte sa o zjednodušení ovládania a význame
+                empatie prostredníctvom brainstormingu a návrhu dostupných riešení
+                zjednodušenia ovládania pre hypotetické aplikácie. '
+              description_teacher: 'V rámci tejto **vysvetľujúcej** lekcie sa žiaci
+                naučia o zjednodušení ovládania a význame empatie prostredníctvom
+                brainstormingu a návrhu riešení zjednodušenia ovládania pre hypotetické
+                aplikácie. '
+            'Hello World: Food':
+              name: Ahoj Svet
+          lesson_groups:
+            csf_sprites:
+              display_name: Objekt "sprite"
+            csf_digcit:
+              display_name: Digitálne občianstvo
+            ramp_up:
+              display_name: Vnorené cykly
+            csf_functions:
+              display_name: Funkcie
+            csf_nested_loops:
+              display_name: Podmienky
+            lessonGroup-7:
+              display_name: Vplyv Informatiky
+            end_of_course_project:
+              display_name: Záverečný projekt
+          description_audience: Vek 8-12
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Predstavenie Sprite Labu
+              description_student: Budete diskutovať o role počítačov a technológií
+                vo vašich životoch, pričom sa zameriate na to, ako aplikácie a nástroje
+                poskytujú používateľom nové možnosti a ako ich môžu používať.
+            Making Sprites:
+              name: Vytváranie postáv
+              description_teacher: 'V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy a učiť sa o konceptoch, ktoré sú stredobodom Sprite Labu:
+                o sprajtoch (postavách) a správaní.'
+            Sprites in Action:
+              name: Postavy v akcii
+              description_student: Prejdeš si programovacie úrovne, ktoré sa končia
+                voľnou úlohou, kde môžeš vytvoriť čokoľvek, čo sa ti páči.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Projekt: Virtuálny maznáčik'
+              description_student: Vytvor si interaktívne virtuálne zvieratko, ktoré
+                vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku
+                život!
+              description_teacher: V tomto **miniprojekte** si žiaci vytvoria interaktívne
+                virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chcú.
+                Žiaci budú vzhľad zvieratka upravovať pomocou funkcie „kostýmy“, ktorá
+                je k dispozícii v Sprite Labe. Potom svojmu projektu vdýchnu život
+                pomocou udalostí, správania a ďalších konceptov, s ktorými sa už oboznámili.
+            The Power of Words:
+              name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
+            Blank Space Stories:
+              name: Príbehy na doplnenie
+              description_student: V rámci tejto aktivity budete používať dopĺňacie
+                príbehy príbehy (podobné ako Mad Libs®) na uľahčenie pochopenia toho,
+                ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich
+                neskôr používajú počas vykonávania programu.
+              description_teacher: 'Na tejto lekcii zameranej na **vytvorenie kontextu**
+                budú žiakom ako kontext na pochopenie toho, ako počítače prijímajú
+                a ukladajú vstupy od používateľov a potom ich neskôr používajú počas
+                vykonávania programu, slúžiť dopĺňacie príbehy (podobné ako Mad Libs®). '
+            Text and Prompts:
+              name: Text a výzvy
+              description_student: V tejto lekcii si precvičíš používanie premenných
+                v Sprite Labe.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia použitie premenných v Sprite Labe.
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
+            Drawing with Loops:
+              name: Kreslenie s cyklami
+              description_student: "**Cykly** v tejto lekcii nám uľahčujú vytváranie
+                skutočne úžasných obrázkov v Umelcovi!"
+              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
+                si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
+                pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
+                lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
+                Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
+                pre portfólio, či ako ukážku pre rodičov.
+            Using Variables with the Artist:
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci vyskúšajú tvorbu opakujúcich sa vzorov s použitím premenných
+                v prostredí Umelca. Žiaci sa naučia, ako premenné zjednodušujú písanie
+                aj čítanie kódu. Po vyriešení úloh s pokynmi žiakov na záver čaká
+                voľná hra, kde budú môcť ukázať, čo všetko sa naučili, a vytvoriť
+                si vlastné obrázky.
+            Programming with the Bee:
+              name: Vnorené cykly v bludisku
+            Variables with the Bee:
+              name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
+              description_teacher: Táto lekcia na **budovanie zručností** žiakom pomôže
+                pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy,
+                keďže umožňujú menenie hodnôt aj po spustení programu.
+            For Loop Fun:
+              name: Zábava s cyklami "for"
+              key: Zábava s cyklami "for"
+            For Loops with Bee:
+              name: Cykly "for" s včelou
+              description_student: V týchto úlohách pomôžeš včele zbierať nektár a vyrábať
+                med pomocou cyklov „for“!
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                sa zameriava na cykly a používanie riadiacej premennej na riešenie
+                zložitejších úloh.
+            For Loops with Artist:
+              name: Cykly "for" s Umelcom
+              description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš
+                používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia cykly „for“ s Umelcom. V úlohách budú vytvárať
+                komplexné návrhy a jedinečné umenie.
+            Simulating Experiments:
+              name: Simulácia experimentov
+              description_student: Spusti simulácie na počítači a experimentuj zmenou
+                premenných.
+              description_teacher: Spustením jednoduchej simulácie v Sprite Lab si
+                študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje,
+                ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie
+                budú mať študenti možnosť predpovedať, ako môže zmena premennej v
+                simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.
+              key: Simulácia experimentov
+            Outbreak:
+              name: Nákaza
+            AI For Oceans:
+              name: AI pomáha oceánom
+            The Internet:
+              name: Internet
+              description_teacher: I keď mnoho ľudí denne internet používa, veľa z
+                nich nevie, ako funguje. V tejto lekcii budú študenti predstierať,
+                že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach,
+                URL aj IP adresách a DNS.
+            End of Course Project:
+              name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
+              key: Záverečný projekt
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+              name: Vytváranie postáv
+              description_teacher: 'V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy a učiť sa o konceptoch, ktoré sú stredobodom Sprite Labu:
+                o sprajtoch (postavách) a správaní.'
+            lesson-8:
+              key: lekcia-8
+              name: Postavy v akcii
+              description_student: Prejdeš si programovacie úrovne, ktoré sa končia
+                voľnou úlohou, kde môžeš vytvoriť čokoľvek, čo sa ti páči.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+            Virtual Pet:
+              key: Virtuálne zvieratko
+              name: 'Mini-Projekt: Virtuálny maznáčik'
+              description_student: Vytvor si interaktívne virtuálne zvieratko, ktoré
+                vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku
+                život!
+              description_teacher: V tomto **miniprojekte** si žiaci vytvoria interaktívne
+                virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chcú.
+                Žiaci budú vzhľad zvieratka upravovať pomocou funkcie „kostýmy“, ktorá
+                je k dispozícii v Sprite Labe. Potom svojmu projektu vdýchnu život
+                pomocou udalostí, správania a ďalších konceptov, s ktorými sa už oboznámili.
+            lesson-2:
+              key: lekcia-2
+              name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
+            lesson-9:
+              key: lekcia-9
+              name: Príbehy na doplnenie
+              description_student: V rámci tejto aktivity budete používať dopĺňacie
+                príbehy príbehy (podobné ako Mad Libs®) na uľahčenie pochopenia toho,
+                ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich
+                neskôr používajú počas vykonávania programu.
+              description_teacher: 'Na tejto lekcii zameranej na **vytvorenie kontextu**
+                budú žiakom ako kontext na pochopenie toho, ako počítače prijímajú
+                a ukladajú vstupy od používateľov a potom ich neskôr používajú počas
+                vykonávania programu, slúžiť dopĺňacie príbehy (podobné ako Mad Libs®). '
+            lesson-10:
+              key: lekcia-10
+              name: Text a výzvy
+              description_student: V tejto lekcii si precvičíš používanie premenných
+                v Sprite Labe.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia použitie premenných v Sprite Labe.
+            lesson-11:
+              key: lekcia-11
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
+            Loops with the Artist:
+              key: Cykly s umelcom
+              name: Kreslenie s cyklami
+              description_student: "**Cykly** v tejto lekcii nám uľahčujú vytváranie
+                skutočne úžasných obrázkov v Umelcovi!"
+              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
+                si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
+                pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
+                lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
+                Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
+                pre portfólio, či ako ukážku pre rodičov.
+            Variables that Change in Artist:
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci vyskúšajú tvorbu opakujúcich sa vzorov s použitím premenných
+                v prostredí Umelca. Žiaci sa naučia, ako premenné zjednodušujú písanie
+                aj čítanie kódu. Po vyriešení úloh s pokynmi žiakov na záver čaká
+                voľná hra, kde budú môcť ukázať, čo všetko sa naučili, a vytvoriť
+                si vlastné obrázky.
+            Nested Loops in the Maze:
+              key: Vnorené cykly v bludisku
+              name: Vnorené cykly v bludisku
+            Variables that Change in Bee:
+              name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
+              description_teacher: Táto lekcia na **budovanie zručností** žiakom pomôže
+                pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy,
+                keďže umožňujú menenie hodnôt aj po spustení programu.
+            For Loops in Bee:
+              key: Cykly "pre" s včelou
+              name: Cykly "for" s včelou
+              description_student: V týchto úlohách pomôžeš včele zbierať nektár a vyrábať
+                med pomocou cyklov „for“!
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                sa zameriava na cykly a používanie riadiacej premennej na riešenie
+                zložitejších úloh.
+            For Loops in Artist:
+              key: Cykly "pre" s Umelcom
+              name: Cykly "for" s Umelcom
+              description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš
+                používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia cykly „for“ s Umelcom. V úlohách budú vytvárať
+                komplexné návrhy a jedinečné umenie.
+            lesson-5:
+              key: lekcia-5
+            AI for Oceans:
+              key: AI pomáha oceánom
+              name: AI pomáha oceánom
+            Internet:
+              key: Internet
+              name: Internet
+              description_teacher: I keď mnoho ľudí denne internet používa, veľa z
+                nich nevie, ako funguje. V tejto lekcii budú študenti predstierať,
+                že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach,
+                URL aj IP adresách a DNS.
+          lesson_groups:
+            ramp_up:
+              display_name: Objekt "sprite"
+            lessonGroup-7:
+              display_name: Digitálne občianstvo
+            lessonGroup-8:
+              display_name: Premenné
+            end_of_course_project:
+              display_name: Záverečný projekt
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
+            vytvor vlastné umelecké dielo, príbeh alebo hru.
+          description_audience: Vek 9-13
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: Cykly
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        pre-express-2022:
+          lessons:
+            Learn to Drag and Drop:
+              key: Učíme sa presúvať objekty
+              name: Učíme sa presúvať objekty
+            Sequencing with Scrat:
+              key: Postupnosť krokov so Scratom
+              name: Postupnosť krokov so Scratom
+            Programming with Angry Birds:
+              key: Programovanie s Angry Birds
+              name: Programovanie s Angry Birds
+            Programming with Rey and BB-8:
+              key: Programovanie s Rey a BB-8
+              name: Programovanie s Rey a BB-8
+            Programming with Harvester:
+              key: Programovanie so Záhradníčkou
+              name: Programovanie so Záhradníčkou
+            Loops with Scrat:
+              key: Cykly so Scratom
+              name: Cykly so Scratom
+            Loops with Laurel:
+              key: Cykly s Laurel
+              name: Cykly s Laurel
+            Ocean Scene with Loops:
+              key: Na mori s cyklami
+              name: Na mori s cyklami
+            Drawing Gardens with Loops:
+              key: Kreslenie v záhrade pomocou cyklov
+              name: Kreslenie v záhrade pomocou cyklov
+            On the Move with Events:
+              key: Udalosti v pohybe
+              name: Udalosti v pohybe
+            A Royal Battle with Events:
+              key: Kráľovská bitka s udalosťami
+              name: Kráľovská bitka s udalosťami
+          lesson_groups:
+            csf_sequencing:
+              display_name: Postupnosť
+            csf_loops:
+              display_name: Cykly
+            csf_events:
+              display_name: Udalosti
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Podmienky
+            lesson-14:
+              name: Podmienky v Minecrafte
+            lesson-16:
+              name: Hľadanie a odstraňovanie chýb
+            lesson-17:
+              name: Inšpirácia pre projekt
+            lesson-19:
+              name: Hľadanie a odstraňovanie chýb
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: Cykly
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: lekcia-10
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-16:
+              key: lekcia-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: lekcia-1
+            lesson-2:
+              key: lekcia-2
+            lesson-3:
+              key: lekcia-3
+            lesson-4:
+              key: lekcia-4
+            lesson-5:
+              key: lekcia-5
+            lesson-10:
+              key: lekcia-10
+            lesson-6:
+              key: lekcia-6
+            lesson-7:
+              key: lekcia-7
+            lesson-8:
+              key: lekcia-8
+            lesson-9:
+              key: lekcia-9
+            lesson-11:
+              key: lekcia-11
+            lesson-12:
+              key: lekcia-12
+            lesson-13:
+              key: lekcia-13
+            lesson-14:
+              key: lekcia-14
+            lesson-15:
+              key: lekcia-15
+            lesson-16:
+              key: lekcia-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox

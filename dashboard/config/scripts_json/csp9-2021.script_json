@@ -13,12 +13,11 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:08:45 UTC",
+    "serialized_at": "2022-02-23 18:08:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -38,6 +37,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2021"
       }
     }
@@ -243,6 +254,21 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021"
       }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2021"
+      }
     }
   ],
   "lesson_activities": [
@@ -301,8 +327,21 @@
       }
     },
     {
-      "key": "8fdb3aa2-685e-4200-ba20-3a5606def2bb",
+      "key": "063d3e9f-381d-4517-8685-dc8913abc1ff",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "063d3e9f-381d-4517-8685-dc8913abc1ff",
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "8fdb3aa2-685e-4200-ba20-3a5606def2bb",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -316,7 +355,7 @@
     },
     {
       "key": "4763bec6-f01e-480a-bde1-6c8a9b86f6c1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -330,7 +369,7 @@
     },
     {
       "key": "940303aa-4a8c-407c-823b-13ed37d11302",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -344,7 +383,7 @@
     },
     {
       "key": "10f73d60-9046-4a41-b4e3-2fe73968e07d",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -355,8 +394,21 @@
       }
     },
     {
-      "key": "7dbe999c-5917-4876-8316-3585d76863c4",
+      "key": "ef19a1b7-8ccd-4695-8c94-bf1bb39ffcfa",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef19a1b7-8ccd-4695-8c94-bf1bb39ffcfa",
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "7dbe999c-5917-4876-8316-3585d76863c4",
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -370,7 +422,7 @@
     },
     {
       "key": "3a7e77ee-a98f-4859-9d07-f807f269f500",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 33,
         "name": "Activity"
@@ -384,7 +436,7 @@
     },
     {
       "key": "730cf276-e9f2-4b83-a51f-3a21479516fe",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -398,7 +450,7 @@
     },
     {
       "key": "389ca2d3-4c24-4b12-8ee3-3225fb921db1",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -409,8 +461,21 @@
       }
     },
     {
-      "key": "1c02fe3c-45cd-4b8e-a4d9-0061a274a5f0",
+      "key": "12330d9d-73f8-4494-a517-923e9a316177",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12330d9d-73f8-4494-a517-923e9a316177",
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "1c02fe3c-45cd-4b8e-a4d9-0061a274a5f0",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -424,7 +489,7 @@
     },
     {
       "key": "74dda196-fc01-4d4a-9e30-72a8125cb29a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -438,7 +503,7 @@
     },
     {
       "key": "95dfefe4-7e4f-4dab-ba87-b630a13e6bca",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -452,7 +517,7 @@
     },
     {
       "key": "c290da99-dfab-486a-8b26-bb6283554efb",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -463,8 +528,21 @@
       }
     },
     {
-      "key": "c36ba380-66ba-4b06-afc9-a41a7bf27cce",
+      "key": "fbf6aae6-68b8-40a0-b0ae-6779dc414b1f",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fbf6aae6-68b8-40a0-b0ae-6779dc414b1f",
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "c36ba380-66ba-4b06-afc9-a41a7bf27cce",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -478,7 +556,7 @@
     },
     {
       "key": "0dc73a48-c036-40ca-aa9f-bcd3bd7a7989",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -492,7 +570,7 @@
     },
     {
       "key": "3662b5ca-6227-4ae5-abc8-11588582ef56",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -505,8 +583,21 @@
       }
     },
     {
-      "key": "41a6f82e-64c8-4835-9183-1b9d6b9f690f",
+      "key": "108a5195-e068-4484-a3bd-b330d0f90cbd",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "108a5195-e068-4484-a3bd-b330d0f90cbd",
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "41a6f82e-64c8-4835-9183-1b9d6b9f690f",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -520,7 +611,7 @@
     },
     {
       "key": "86b19247-d04b-4df6-b4fc-c19ac7866b85",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -534,7 +625,7 @@
     },
     {
       "key": "4b3ca207-6a48-4b65-85af-cf4fecbc9af9",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -547,8 +638,21 @@
       }
     },
     {
-      "key": "e6f736cd-954c-422a-83a5-310441497fc2",
+      "key": "38294726-0902-4dd8-8d1b-60113c3a503a",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38294726-0902-4dd8-8d1b-60113c3a503a",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "e6f736cd-954c-422a-83a5-310441497fc2",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -562,7 +666,7 @@
     },
     {
       "key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -576,7 +680,7 @@
     },
     {
       "key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -589,8 +693,21 @@
       }
     },
     {
-      "key": "476677e0-b2c8-4536-811e-a2bf1bac7c1d",
+      "key": "6727fdc9-14e8-4b0a-856e-9b45ae441b68",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6727fdc9-14e8-4b0a-856e-9b45ae441b68",
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "476677e0-b2c8-4536-811e-a2bf1bac7c1d",
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -604,7 +721,7 @@
     },
     {
       "key": "1e3de5bc-ad14-4f7b-bc57-6433b21816a4",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 43,
         "name": "Activity"
@@ -618,7 +735,7 @@
     },
     {
       "key": "2d34931c-6043-4a25-bb95-5cdb15e3cc72",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up"
       },
@@ -630,8 +747,21 @@
       }
     },
     {
-      "key": "9f5c5816-4346-4db2-a48f-3cf487a96364",
+      "key": "9edee9a2-1921-4960-bd70-43209c9bb896",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9edee9a2-1921-4960-bd70-43209c9bb896",
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "9f5c5816-4346-4db2-a48f-3cf487a96364",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -644,7 +774,7 @@
     },
     {
       "key": "2af3dcfd-56c1-4c16-907e-4104ef11df4f",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -658,7 +788,7 @@
     },
     {
       "key": "818b1d71-71d0-490b-a212-b2d56a50b8d1",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -671,8 +801,21 @@
       }
     },
     {
-      "key": "35d6ee41-93ec-4ab7-81a9-e49a2d163a90",
+      "key": "47481b46-693b-49d4-a621-c7e7077381aa",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47481b46-693b-49d4-a621-c7e7077381aa",
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "35d6ee41-93ec-4ab7-81a9-e49a2d163a90",
+      "position": 2,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -686,7 +829,7 @@
     },
     {
       "key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -695,6 +838,18 @@
         "lesson_activity.key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2",
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "ca127741-cc41-4175-8af2-6accbd74018c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ca127741-cc41-4175-8af2-6accbd74018c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp9-2021"
       }
     }
@@ -859,6 +1014,17 @@
       "seeding_key": {
         "activity_section.key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d",
         "lesson_activity.key": "def071fc-c626-4322-8c14-78c879c4f922"
+      }
+    },
+    {
+      "key": "e06ce98a-1ebb-4425-96c6-a051eebf2417",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1OFcL88JGB2Xwg22JaDIFK1xvpZYAU0QXEyxydDAjURQ/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "e06ce98a-1ebb-4425-96c6-a051eebf2417",
+        "lesson_activity.key": "063d3e9f-381d-4517-8685-dc8913abc1ff"
       }
     },
     {
@@ -1055,6 +1221,17 @@
       "seeding_key": {
         "activity_section.key": "4d45aa0c-a442-491c-8b23-2c846e8aa6fe",
         "lesson_activity.key": "10f73d60-9046-4a41-b4e3-2fe73968e07d"
+      }
+    },
+    {
+      "key": "68cfc69f-d06e-440e-bad8-79584e37e363",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1zl9qfXQ2OYlyNVKD13kwB8qaPN49YkDwoyo1hCKiScM/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "68cfc69f-d06e-440e-bad8-79584e37e363",
+        "lesson_activity.key": "ef19a1b7-8ccd-4695-8c94-bf1bb39ffcfa"
       }
     },
     {
@@ -1287,6 +1464,17 @@
       }
     },
     {
+      "key": "d039bc48-4972-4fd3-ae9e-5ec95ccee4a5",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1vcKF0sFn-NHsf6EtwHe_SMs2TTUDU5OoSSawVxScolk/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "d039bc48-4972-4fd3-ae9e-5ec95ccee4a5",
+        "lesson_activity.key": "12330d9d-73f8-4494-a517-923e9a316177"
+      }
+    },
+    {
       "key": "db4a0963-2b66-4b7b-b2c8-04047556f867",
       "position": 1,
       "properties": {
@@ -1470,6 +1658,17 @@
       }
     },
     {
+      "key": "94a29334-1828-4734-a60f-f1b797c01113",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/14wo0fY1nnpqvKG5mAyeBH0JhrqV__tdN_vGhs_agiZw/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "94a29334-1828-4734-a60f-f1b797c01113",
+        "lesson_activity.key": "fbf6aae6-68b8-40a0-b0ae-6779dc414b1f"
+      }
+    },
+    {
       "key": "8db3ee4a-4d99-4d03-a852-4ab788d9ebcd",
       "position": 1,
       "properties": {
@@ -1552,6 +1751,17 @@
       "seeding_key": {
         "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7",
         "lesson_activity.key": "3662b5ca-6227-4ae5-abc8-11588582ef56"
+      }
+    },
+    {
+      "key": "e25adc20-cd6c-45ac-884c-cc8fdd46348b",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ugJC_i_79pp4mfNCGvrN7AOatmycgHNfZQAqXNba0H0/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "e25adc20-cd6c-45ac-884c-cc8fdd46348b",
+        "lesson_activity.key": "108a5195-e068-4484-a3bd-b330d0f90cbd"
       }
     },
     {
@@ -1792,6 +2002,17 @@
       }
     },
     {
+      "key": "00e2a1f4-e9a4-4695-8998-952abf3f1b3e",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1PPiJSS7ZdIQl8DKN_x7pB5I1-1gi4S9Y3I6F-PBJKj0/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "00e2a1f4-e9a4-4695-8998-952abf3f1b3e",
+        "lesson_activity.key": "38294726-0902-4dd8-8d1b-60113c3a503a"
+      }
+    },
+    {
       "key": "200309df-e5c8-410f-8eb4-9732bf012fde",
       "position": 1,
       "properties": {
@@ -2004,6 +2225,17 @@
       }
     },
     {
+      "key": "082d8c56-dc63-4689-a714-7bb3e1933792",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1nxMIFY-iBLAqrVNtkx4B1sYe_fLmaxHZP33cbMjZwVQ/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "082d8c56-dc63-4689-a714-7bb3e1933792",
+        "lesson_activity.key": "6727fdc9-14e8-4b0a-856e-9b45ae441b68"
+      }
+    },
+    {
       "key": "31f847fb-4f05-49bb-92c9-baf527d2110e",
       "position": 1,
       "properties": {
@@ -2056,6 +2288,17 @@
       }
     },
     {
+      "key": "9d785a0b-b40e-465c-a8a4-f14187f3eb30",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1abs2EGVx4jdhDUhCq9l94gb7mhibbL-Yrrt1ES18uME/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "9d785a0b-b40e-465c-a8a4-f14187f3eb30",
+        "lesson_activity.key": "9edee9a2-1921-4960-bd70-43209c9bb896"
+      }
+    },
+    {
       "key": "b561c5ce-1f5e-4e3b-ae2c-e2c0c766a1e3",
       "position": 1,
       "properties": {
@@ -2090,6 +2333,17 @@
       }
     },
     {
+      "key": "c02790fb-9677-46eb-ab4d-4550d69b3e3a",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ekc8NpZAUtV5SQiOVBMouevLI_L_hwp7iVa10JZxClw/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "c02790fb-9677-46eb-ab4d-4550d69b3e3a",
+        "lesson_activity.key": "47481b46-693b-49d4-a621-c7e7077381aa"
+      }
+    },
+    {
       "key": "93c15cc1-b99c-493f-aa20-05ba7a7da8bc",
       "position": 1,
       "properties": {
@@ -2115,6 +2369,23 @@
       "seeding_key": {
         "activity_section.key": "86943e09-9f9c-4d9a-8a72-2b1d222ea784",
         "lesson_activity.key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2"
+      }
+    },
+    {
+      "key": "af61aaf6-1eb4-47dc-a8ee-c442ecbf023e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "af61aaf6-1eb4-47dc-a8ee-c442ecbf023e",
+        "lesson_activity.key": "ca127741-cc41-4175-8af2-6accbd74018c"
       }
     }
   ],
@@ -2792,6 +3063,31 @@
       "level_keys": [
         "CSP Unit 9 AP-Style Assessment _2021"
       ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2021",
+        "activity_section.key": "af61aaf6-1eb4-47dc-a8ee-c442ecbf023e"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3118,6 +3414,18 @@
         "script.name": "csp9-2021",
         "activity_section.key": "93c15cc1-b99c-493f-aa20-05ba7a7da8bc"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2021",
+        "activity_section.key": "af61aaf6-1eb4-47dc-a8ee-c442ecbf023e"
+      }
     }
   ],
   "resources": [
@@ -3211,6 +3519,7 @@
       "key": "data_visualizer_in_app_lab_-_part_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_datavisualizerp1_sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -3223,6 +3532,7 @@
       "key": "data_visualizer_in_app_lab_-_part_2",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_datavisualizerp2_sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

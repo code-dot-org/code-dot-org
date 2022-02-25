@@ -15,12 +15,22 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-11-22 19:57:24 UTC",
+    "serialized_at": "2022-01-20 17:40:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -115,7 +125,7 @@
         "creative_commons_license": "Creative Commons BY-NC-ND",
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Bring a stuffed animal or toy to class.",
-        "purpose": "Common Sense Education created this lesson to teach students about meanness and what they should do if they encounter it online.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.\n",
         "student_overview": "In this lesson, you'll learn about meanness and what to do if you encounter it online."
       },
       "seeding_key": {
@@ -2998,7 +3008,7 @@
       "key": "736fbe77-a681-409c-b263-2de52938dd92",
       "position": 1,
       "properties": {
-        "description": "###Become a Game Designer (45-135 minutes)\n![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + Math + Science**\n\n[**Become a Game Designer**](https://docs.google.com/document/d/1QfcYmWyn2U1X2IZO9Kpt2rH3uoxPpcEtp3ypVWcmBC8/edit?usp=sharing) is an optional activity aligned to Common Core Math and Next Generation Science Standards, written by our teacher community. Students will become Game Designers as they create create and test a game. Students will also record scores, make observations, create a bar graph, analyze the results and justify the changes they would make to their game.\n\n*Standards Addressed:*\n\n- **2.MD.D.10:**  Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. \n\n- **K-2 ETS1-1:** Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.\n\n- **K-2 ETS1-3:** Analyze data from tests of an object or tool to determine if it works as intended to compare the strengths and weaknesses of how each performs.\n\n\n\n"
+        "description": "###Become a Game Designer (45-135 minutes)\n![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + Math + Science**\n\n[**Become a Game Designer**](https://docs.google.com/document/d/1QfcYmWyn2U1X2IZO9Kpt2rH3uoxPpcEtp3ypVWcmBC8/edit?usp=sharing) is an optional activity aligned to Common Core Math and Next Generation Science Standards, written by our teacher community. Students will become Game Designers as they create and test a game. Students will also record scores, make observations, create a bar graph, analyze the results and justify the changes they would make to their game.\n\n*Standards Addressed:*\n\n- **2.MD.D.10:**  Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. \n\n- **K-2 ETS1-1:** Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.\n\n- **K-2 ETS1-3:** Analyze data from tests of an object or tool to determine if it works as intended to compare the strengths and weaknesses of how each performs.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "736fbe77-a681-409c-b263-2de52938dd92",

@@ -44,29 +44,8 @@
         "loops/aquatic/unversioned": {
           "word": "Mga loop"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Pag-Encrypt",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Pag-Encrypt"
         },
         "debugging/starwars/unversioned": {
           "word": "Pagdedebug"
@@ -79,10 +58,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Pagdedebug"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Code"
@@ -98,6 +73,9 @@
         },
         "code/poem-art/unversioned": {
           "word": "Code"
+        },
+        "behavior/coursef/2021": {
+          "word": "Paggawi"
         },
         "variable/coursef/2021": {
           "word": "Variable"
@@ -138,6 +116,9 @@
         "debugging/express/2021": {
           "word": "Pagdedebug"
         },
+        "behavior/express/2021": {
+          "word": "Paggawi"
+        },
         "conditionals/express/2021": {
           "word": "Mga conditional"
         },
@@ -156,6 +137,9 @@
         "debugging/pre-express/2021": {
           "word": "Pagdedebug"
         },
+        "behavior/coursee/2021": {
+          "word": "Paggawi"
+        },
         "copyright/coursee/2021": {
           "word": "Karapatang-ari"
         },
@@ -167,6 +151,33 @@
         },
         "define/coursee/2021": {
           "word": "magtakda"
+        },
+        "debugging/csd/2021": {
+          "word": "Pagdedebug"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2021": {
+          "word": "Mga conditional"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraction"
+        },
+        "function/csd/2021": {
+          "word": "Function"
+        },
+        "input/csd/2021": {
+          "word": "Input"
+        },
+        "processing/csd/2021": {
+          "word": "Pagproseso"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digital na Bakas"
+        },
+        "copyright/csd/2021": {
+          "word": "Karapatang-ari"
         }
       }
     }

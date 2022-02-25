@@ -242,7 +242,10 @@
           "78574118d153534fd0925a2f5ca25e79": "Quelle chose ?"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Tu as gagné !"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Tu as gagné !",
+          "077449fb290b51b9d70c9f2f3d3213bc": " secondes",
+          "490082498449bd20ff0199737dfa4916": "Sélectionnez le type de jeu :",
+          "41f2b2212de0105c2a942ebb4a44e449": "Le grand jeu de collectionneur !"
         },
         "courseF_editable_chatbot": {
           "a72e7c5c68af0546e963e510297f5233": "Bonjour, je suis X-9 ! Comment tu t'appelles ? ",
@@ -428,6 +431,56 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Bonjour tout le monde!"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Cliquez sur les sprites pour leur donner des masques. ",
+          "968c8b54671ab303d48320f86937c40b": "Les masques ralentissent la propagation des virus ! "
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "écrire le texte ici",
+          "30fcc1693fa8402931d13ac3a5f396fd": "écrire le titre ici"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "choix 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "choix 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "choix 3",
+          "6cd3556deb0da54bca060b4c39479839": "Bonjour tout le monde !"
+        },
+        "OPD-K5-projects-6": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
+        },
+        "OPD-K5-projects-7": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
+        },
+        "course3_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
+        },
+        "courseC19_playLab_EOC5": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
+        },
+        "courseC19_playLab_EOC6": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
+        },
+        "courseE_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
+        },
+        "courseE_playLab_scaffold5": {
+          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
         }
       }
     }

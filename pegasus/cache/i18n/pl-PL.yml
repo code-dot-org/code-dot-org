@@ -48,7 +48,7 @@ pl-PL:
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
   og_title: 'Code.org: Każdy może się uczyć'
-  og_title_soon: Zbliża się Godzina Kodowania
+  og_title_soon: Nadchodzi Godzina Kodowania.
   og_title_here: Oto Godzina Kodowania!
   og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
     informatyki.
@@ -410,7 +410,7 @@ pl-PL:
   homepage_hero_text_stat_loc: 2,5 mln dziewcząt zapisało się, aby uczyć się na Code.org
   homepage_hero_text_stat_students: "#student_count kont uczniów na Code.org"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
-  homepage_hero_hoc_is_coming: Zbliża się Godzina Kodowania
+  homepage_hero_hoc_is_coming: Nadchodzi Godzina Kodowania.
   homepage_hero_hoc_is_here: Godzina Kodowania jest tutaj
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
@@ -486,6 +486,8 @@ pl-PL:
   homepage_below_hero_announcement_text: Dbamy o Twoją prywatność i dokonujemy kilku
     aktualizacji naszej Polityki prywatności, które wejdą w życie 25 maja.
   homepage_below_hero_announcement_link_text: Dowiedz się więcej
+  homepage_higher_power_body: Twórz z Potańcówką, zyskaj szansę zobaczenia zespołu
+    na żywo.
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
   contact_form_topic_teacher: Jestem nauczycielem/edukatorem
@@ -2369,7 +2371,7 @@ pl-PL:
   hoc_overview_view_teacher_guide: Zobacz przewodnik nauczyciela
   hoc2018_creativity: kreatywność
   hoc2018_creativity_create: Utwórz
-  hoc2018_creativity_hoc_coming: Zbliża się Godzina Kodowania…
+  hoc2018_creativity_hoc_coming: Nadchodzi Godzina Kodowania.…
   hoc2018_creativity_what_will_you_create: Co będziesz tworzyć?
   hoc2018_creativity_homepage: Uwolnij wyobraźnię i rodzące się pomysły. Zacznij z
     Godziną kodowania i z własnym pomysłem, cokolwiek by to nie było. Obejrzyj nasze
@@ -2443,7 +2445,7 @@ pl-PL:
   hoc2018_mc_video_title_hoc_is_here: Godzina Kodowania jest tutaj - każdy może się uczyć
   hoc2018_mc_video_title_anybody_can_learn: Każdy może się uczyć
   hoc2018_mc_video_title_my_name_is_aracely: Nazywam się Aracely
-  hoc2018_mc_homepage_hoc_coming: Zbliża się Godzina Kodowania...
+  hoc2018_mc_homepage_hoc_coming: Nadchodzi Godzina Kodowania....
   hoc2018_mc_homepage_what_create: Co będziesz tworzyć?
   hoc2018_mc_homepage_give_flight: Uwolnij wyobraźnię i rodzące się pomysły. Zacznij
     z Godziną Kodowania i z własnym pomysłem na kreatywność, cokolwiek by to nie było.
@@ -2543,6 +2545,9 @@ pl-PL:
   hoc2018_dance_video2: Potańcówka - Zdarzenia
   hoc2018_dance_video3: Potańcówka - Właściwości
   hoc2018_dance_video4: Potańcówka - Gratulacje
+  dance_box_higher_power_line_1: Zakoduj taniec do „Higher Power” Coldplay, a będziesz
+    miał szansę zobaczyć zespół na żywo!
+  dance_box_higher_power_line_2: Więcej informacji znajdziesz na <a href="%{path}">code.org/coldplay</a>.
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_description: Strona, której szukasz, nie istnieje pod tym adresem.
@@ -2688,3 +2693,6 @@ pl-PL:
   outbreak_tile_title: Epidemia
   outbreak_tile_subtitle: Wirus zainfekował Miasto Potworów! Zakoduj symulator epidemii
     i przewiduj, co stanie się z sąsiadami tego miasta.
+  outbreak_tile_alt: Symulacja rozprzestrzeniania się wirusa przez grupę fioletowych
+    potworów.
+  footer_cookie_notice: Informacja o plikach cookie

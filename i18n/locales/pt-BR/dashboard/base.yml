@@ -173,6 +173,7 @@ pt:
     email_preference_yes: "Sim"
     email_preference_no: "Não"
     email_preference_required: "Você deve especificar um e-mail de preferência."
+    share_teacher_email_reg_partner_question: "Você gostaria de nós compartilhássemos seus dados para contato com o[Code.org regional partner](%{cdo_regional_partner_desc}) em seu estado, para que eles possam enviar notificações de desenvolvimentos de profissionais, recursos e eventos locais?"
     share_teacher_email_reg_partner_preference_yes: "Sim"
     share_teacher_email_reg_partner_preference_no: "Não"
     share_teacher_email_reg_partner_preference_required: "Você deve especificar um e-mail de preferência."
@@ -279,6 +280,7 @@ pt:
       blank_code: "Insira um código de seção"
       cant_join_own_section: "Desculpe, você não pode entrar em sua própria seção."
       provider_managed_section: "Esta turma é dirigida por outro provedor e não pode ser entrada. Por favor pergunte a seu professor via %{provider} e re-sincronize a turma."
+      not_participant_type: "Não foi possível adicioná-lo à seção %{section_code}, porque você não é o tipo de participante esperado."
     mail:
       student_disassociated:
         subject: "Notificação Code.org: %{student_name} não é mais seu aluno."
@@ -392,6 +394,8 @@ pt:
       minecraft_hero: 'Herói de Minecraft'
       playlab: 'Laboratório'
       playlab_k1: 'Laboratório de Jogos (Pré-leitor)'
+      poetry: 'Poesia'
+      poetry_hoc: 'Arte poética'
       scratch: 'Scratch'
       sports: 'Esportes'
       spritelab: 'Laboratório de Sprite'
@@ -414,6 +418,7 @@ pt:
       prizes_link: 'Mais informação'
   teacher:
     answer: Resposta
+    dashboard: 'Painel de controle do professor'
     for_teachers_only: Somente para professores
     title:
       one: 'Seu professor:'
@@ -531,6 +536,7 @@ pt:
     all_students_must_be_in_current_section: "Todos os alunos devem estar inscritos em sua seção atualmente."
     already_enrolled_in_new_section: "Não é possível mover esses alunos porque eles já estão em outra seção deste professor."
     third_party_login: "Você não pode mover alunos para uma turma que está sincronizada com uma ferramenta de terceiros."
+    not_correct_participant_type: "Não é permitido movimentar esses usuários, porque eles não têm permissão para participar na nova seção."
   share:
     title: "Aprenda no Code Studio"
     description: "Qualquer pessoa pode aprender ciência da computação. Crie jogos, aplicativos e arte com a programação."
@@ -568,6 +574,7 @@ pt:
     make_my_own_app: 'Criar meu próprio aplicativo'
     how_it_works: 'Como funciona (Ver o Código)'
     try_hour_of_code: 'Faça uma Hora do Código!'
+    cookie_notice: 'Aviso sobre Cookies'
   reference_area:
     title: 'Precisa de ajuda?'
     subtitle: 'Veja os vídeos e as dicas'
@@ -972,6 +979,7 @@ pt:
       school: 'Escola'
       school_name: 'Nome da escola'
       school_city: 'Cidade da Escola'
+      school_city_district: 'Cidade/Distrito da escola'
       school_country: 'País da Escola'
       colombian_school_city: 'Cidade da Escola'
       colombian_chilean_school_name: 'Nome da escola'
@@ -1088,3 +1096,4 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
+  teacher_feedback: "Feedback do Professor"

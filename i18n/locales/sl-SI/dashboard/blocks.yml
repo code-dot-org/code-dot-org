@@ -1,3 +1,4 @@
+---
 sl:
   data:
     blocks:
@@ -614,8 +615,8 @@ sl:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'da'
-            '"no"': 'ne'
+            '"yes"': da
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -623,9 +624,36 @@ sl:
             '"down"': puščica dol
             '"left"': puščica levo
             '"right"': puščica desno
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': srca
+            '"rainbow"': mavrica
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"rain"': dež
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': noč
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': skoči
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': oblačno
+            '"hearts"': srca
+            '"rain"': dež
+          PALETTE:
+            '"rainbow"': mavrica
+            '"winter"': zima
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': srca
             '"rain"': dež
       RyanLab_moveForward:
         text: premakni se naprej
@@ -676,8 +704,8 @@ sl:
             "'ahead'": spredaj
       craft_ifStandingOn:
         text: |-
-          če stojiš na [TYPE][0]
-          [STATEMENT][1]
+          če stojiš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": moder koral
@@ -688,8 +716,8 @@ sl:
             "'seaLantern'": morska svetilka
       craft_ifStandingOnLimit:
         text: |-
-          če stojiš na [TYPE][0]
-          [STATEMENT][1]
+          če stojiš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": pesek

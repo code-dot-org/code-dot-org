@@ -286,6 +286,7 @@ lt:
       playlab: Laboratorija
       sports: Sportas
       starwars: Žvaigždžių karai
+      loading: Kraunama...
     popup:
       progress_for_user: "%{name} pažanga"
       progress: Jūsų pažanga
@@ -299,6 +300,7 @@ lt:
       prizes_link: daugiau informacijos
   teacher:
     answer: Atsakymas
+    dashboard: Mokytojo prietaisų skydelis
     for_teachers_only: Tik mokytojams
     title:
       one: 'Tavo mokytojas:'

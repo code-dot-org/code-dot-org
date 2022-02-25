@@ -5,6 +5,10 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Tranh thơ ca 1 - Giới thiệu",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
         "ai-ml/oceans/unversioned": {
           "name": "AI: Máy học"
         },
@@ -1247,6 +1251,90 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Sửa đổi bài học trực tuyến",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Quan sát AI"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: Dữ liệu đào tạo & Định kiến"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Bộ sưu tập Thiết kế dữ liệu"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Nguyên mẫu giấy"
+        },
+        "market-research/csd/2021": {
+          "name": "Nghiên cứu thị trường"
+        },
+        "market_research/csd/2021": {
+          "name": "Nghiên cứu thị trường"
+        },
+        "design_mode/csd/2021": {
+          "name": "Chế độ thiết kế"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Chế độ thiết kế"
+        },
+        "app-presentation/csd/2021": {
+          "name": "Trình bày ứng dụng"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "Trình bày ứng dụng"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "functions_2/csd/2021": {
+          "name": "Các hàm"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Giới thiệu Danh sách"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Cho vòng lặp"
+        },
+        "for_loops/csd/2021": {
+          "name": "Cho vòng lặp"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Miêu tả thông tin"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Học Máy"
+        },
+        "variables_1/csd/2021": {
+          "name": "Các biến"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Nhân vật"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Phát hiện va chạm"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Phát hiện va chạm"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Các hàm"
+        },
+        "functions_1/csd/2021": {
+          "name": "Các hàm"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Máy tính là gì?"
+        },
+        "lists/csd/2021": {
+          "name": "Danh sách"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Dấu vết số"
+        },
+        "images_in_html/csd/2021": {
+          "name": "Hình ảnh trong HTML"
         }
       }
     }

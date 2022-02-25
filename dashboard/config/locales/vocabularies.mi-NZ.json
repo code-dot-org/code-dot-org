@@ -2,720 +2,62 @@
   "mi-NZ": {
     "data": {
       "vocabularies": {
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "function/hero/unversioned": {
-          "word": "Taumahi",
-          "definition": ""
+          "word": "Taumahi"
         },
         "code/poem-art/2021": {
           "word": "Waehere"
         },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/artist/unversioned": {
-          "word": "Waehere",
-          "definition": ""
-        },
-        "debugging/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Waehere"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Ngā Here",
-          "definition": ""
+          "word": "Ngā Here"
         },
         "loops/aquatic/unversioned": {
-          "word": "Ngā Koromeke",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Ngā Koromeke"
         },
         "code/sports/unversioned": {
-          "word": "Waehere",
-          "definition": ""
-        },
-        "debugging/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Waehere"
         },
         "code/poem-art/unversioned": {
-          "word": "Waehere",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Waehere"
         },
         "variable/coursef/2021": {
-          "word": "Taurangi",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "input/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Taurangi"
         },
         "internet/coursef/2021": {
-          "word": "Te Ipurangi",
-          "definition": ""
-        },
-        "packets/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Te Ipurangi"
         },
         "define/coursef/2021": {
-          "word": "Whakamahukitia",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Whakamahukitia"
         },
         "drop/courseb/2021": {
-          "word": "Taka Iho",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Taka Iho"
         },
         "drop/coursea/2021": {
-          "word": "Taka Iho",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Taka Iho"
         },
         "binary/coursec/2021": {
-          "word": "Tāhūrua",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Tāhūrua"
         },
         "conditionals/coursed/2021": {
-          "word": "Ngā Here",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Ngā Here"
         },
         "conditionals/express/2021": {
-          "word": "Ngā Here",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Ngā Here"
         },
         "function/express/2021": {
-          "word": "Taumahi",
-          "definition": ""
+          "word": "Taumahi"
         },
         "variable/express/2021": {
-          "word": "Taurangi",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Taurangi"
         },
         "define/express/2021": {
-          "word": "Whakamahukitia",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Whakamahukitia"
         },
         "drop/pre-express/2021": {
-          "word": "Taka Iho",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Taka Iho"
         },
         "copyright/coursee/2021": {
           "word": "Manatārua"
@@ -728,6 +70,21 @@
         },
         "define/coursee/2021": {
           "word": "Whakamahukitia"
+        },
+        "variable/csd/2021": {
+          "word": "Taurangi"
+        },
+        "conditionals/csd/2021": {
+          "word": "Ngā Here"
+        },
+        "abstraction/csd/2021": {
+          "word": "Te Whakawaitara"
+        },
+        "function/csd/2021": {
+          "word": "Taumahi"
+        },
+        "copyright/csd/2021": {
+          "word": "Manatārua"
         }
       }
     }

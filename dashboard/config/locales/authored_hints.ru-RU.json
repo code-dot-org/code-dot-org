@@ -8575,7 +8575,7 @@
           "courseC_maze_programming1_b": "Не бойся ошибиться! Попробуй что-либо сделать, а если это не сработало, попробуй сделать что-то другое!"
         },
         "New Minecraft Hero Project": {
-          "MC_HOC_2017_13_Cole_a": "Попробуйте заставить Агента построить несколько мостов, чтобы Алекс или Стив могли ходить по краям карты."
+          "MC_HOC_2017_13_Cole_a": "Попробуй заставить Агента построить несколько мостов, чтобы Алекс или Стив могли ходить по краям карты."
         },
         "comment_intro_maze_2018": {
           "courseC_maze_programming4_a": "Комментарии также полезны, если другие люди попытаются прочитать твой код.",
@@ -10705,7 +10705,7 @@
           "add_behavior": "Добавьте в ваш код блок `спрайт начинает`. Убедитесь, что вы уже создали спрайта, которому назначаете определенное поведение. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Найдите этот блок и нажмите `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nЧто происходит, когда число равно `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block>></xml>"
+          "size hint": "Найдите этот блок и нажмите `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nЧто происходит, когда число равно `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         }
       }
     }

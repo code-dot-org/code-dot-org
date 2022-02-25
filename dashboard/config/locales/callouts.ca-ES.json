@@ -308,7 +308,8 @@
           "poetry_new_block": "Nou bloc!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nou bloc!"
+          "poetry_sound": "Nou bloc!",
+          "poetry_music": "Nou bloc!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nou bloc!",

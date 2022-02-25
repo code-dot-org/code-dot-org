@@ -663,6 +663,13 @@ in:
         poemart_celebration: crwdns2713345:0crwdne2713345:0
         csd_u6_variables_part2: crwdns2713531:0crwdne2713531:0
         csd_ml_ethics_ai: 'crwdns2713533:0crwdne2713533:0'
+        outbreak_intro: 'crwdns2715441:0crwdne2715441:0'
+        outbreak_events: 'crwdns2715443:0crwdne2715443:0'
+        outbreak_scientist: 'crwdns2715445:0crwdne2715445:0'
+        outbreak_outro: 'crwdns2715447:0crwdne2715447:0'
+        PL_overview_CSP: crwdns2857749:0crwdne2857749:0
+        PL_CSP_EIPMOverview: crwdns2857751:0crwdne2857751:0
+        tesstest: crwdns2865694:0crwdne2865694:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

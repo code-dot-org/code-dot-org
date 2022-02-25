@@ -24,7 +24,7 @@ V module Programovanie s poéziou pogromu CS Connections môžu žiaci nahliadnu
 
 Vytvorením generátora básní sa študenti dozvedia o tom, ako počítače prijímajú užívateľský vstup, ukladajú ho do pamäte a vydávajú požadovaný produkt. Písaním vlastných básní študenti skúmajú prvky poézie, ako je gramatika, nálada a výber slov.
 
-<em>Naša aktivita v rámci Hodiny programovania umenia poézie je zároveň prvou lekciou v module Programovanie s poéziou v našom učebnom učebných osnovách Prepojenia počítačových vied. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Zaregistrujte sa tu na špeciálnu reláciu CodeBytes</a> v utorok, 7. decembra o 10.00. Východného času a znovu o 10:00 Tichomorského času; ukážeme žiakom, ako začať s aktivitou Hodiny programovania umenia poézie.</em>
+<em>Naša aktivita v rámci Hodiny programovania umenia poézie je zároveň prvou lekciou v module Programovanie s poéziou v našom učebnom učebných osnovách Prepojenia počítačových vied. <a href=“https://csteachers.org/events/csedweek-2021-inspire-am/“>Zaregistrujte sa tu na špeciálnu reláciu CodeBytes</a> v utorok, 7. decembra o 10.00. Východného času a znovu o 10:00 Tichomorského času; ukážeme žiakom, ako začať s aktivitou Hodiny programovania umenia poézie.</em>
 
 {{ teacher_info, heading: "Teacher Info", title: "Ako pokračovať v učení po Kódovaní s poéziou", description: "V našom novom učebnom pláne Medzipredmetové vzťahy a informatika preskúmajte ďalšie aktivity, ktoré kombinujú ELA s informatikou, a vyskúšajte ešte viac vzťahov medzi informatikou a inými predmetmi, ako sú matematika, prírodné vedy a spoločenské vedy, ktoré môžete priniesť do svojej triedy.", button_text: "Nauč sa viac", url: "/educate/csc" }}
 

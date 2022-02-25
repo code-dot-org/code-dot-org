@@ -11,7 +11,7 @@ bg:
   campaign_date_short: Декември 7-13
   campaign_date_full: Декември 7-13
   campaign_date_year: '2021'
-  campaign_date_full_year: 7-13 декември 2020
+  campaign_date_full_year: 6-12 декември 2021
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 12
@@ -23,13 +23,13 @@ bg:
   europe_campaign_date_short: Декември 7-13
   europe_campaign_date_full: Декември 7-13
   europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 7-13 декември 2020
+  europe_campaign_date_full_year: 6-12 декември 2021
   africa_campaign_date_start_short: 6 дек.
   africa_campaign_date_start_long: 6 декември
   africa_campaign_date_short: Декември 7-13
   africa_campaign_date_full: Декември 7-13
   africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 7-13 декември 2020
+  africa_campaign_date_full_year: 6-12 декември 2021
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -60,7 +60,7 @@ bg:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Hour of Code идва
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
@@ -138,6 +138,9 @@ bg:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -230,7 +233,7 @@ bg:
   hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
     of Code event. One-hour tutorials in over 45 languages. No experience needed.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Hour of Code идва
   codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
     Connections
@@ -239,8 +242,8 @@ bg:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Използвай блокове с код, за да отведеш Стив
     или Алекс на приключение в този свят на Minecraft.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -986,6 +989,7 @@ bg:
   footer_menu_support: Поддръжка
   footer_menu_terms: Условия
   footer_menu_privacy: Декларация за поверителност
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Пробвайте едночасов урок за всички възрасти на повече от 45
     езика.  Присъединете се към милиони ученици и учители в над 180 страни, като започнете
@@ -10390,6 +10394,14 @@ bg:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: Всички съвременни браузъри
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Блокове
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

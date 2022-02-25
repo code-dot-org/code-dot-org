@@ -185,6 +185,7 @@ de:
     email_preference_yes: "Ja"
     email_preference_no: "Nein"
     email_preference_required: "Sie müssen eine bevorzugte Emailadresse angeben."
+    share_teacher_email_reg_partner_question: "Möchten Sie uns die Kontaktinformationen des [Code.org regional partner](%{cdo_regional_partner_desc}) in Ihrem Bundesland mitteilen, damit wir Sie über berufliche Entwicklungsmöglichkeiten, Ressourcen und Veranstaltungen informieren können?"
     share_teacher_email_reg_partner_preference_yes: "Ja"
     share_teacher_email_reg_partner_preference_no: "Nein"
     share_teacher_email_reg_partner_preference_required: "Sie müssen eine bevorzugte Emailadresse angeben."
@@ -411,6 +412,7 @@ de:
       playlab: 'Spielelabor'
       playlab_k1: 'Spielelabor (Leseanfänger)'
       poetry: 'Poesie'
+      poetry_hoc: 'Dichtkunst'
       scratch: 'Scratch'
       sports: 'Sport'
       spritelab: 'Sprite Lab'
@@ -433,6 +435,7 @@ de:
       prizes_link: 'Mehr Informationen'
   teacher:
     answer: Antwort
+    dashboard: 'Lehrer-Dashboard'
     for_teachers_only: Nur für Lehrer
     title:
       one: 'Dein Lehrer:'
@@ -1124,3 +1127,4 @@ de:
   behaviors:
     this_sprite: "dieser Sprite"
   unit_prefix: "Lektion %{n}"
+  teacher_feedback: "Rückmeldung vom Lehrer"

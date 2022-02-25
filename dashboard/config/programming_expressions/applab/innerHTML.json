@@ -1,8 +1,0 @@
-{
-  "func": "innerHTML",
-  "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"html\""
-  ]
-}

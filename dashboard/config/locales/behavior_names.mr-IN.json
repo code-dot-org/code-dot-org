@@ -1622,7 +1622,53 @@
           "patrolling": "गस्त घालणे"
         },
         "helloworld_retro_behaviors": {
-          "wobbling": "डगमगणे"
+          "wobbling": "डगमगणे",
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_animals_backgrounds": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_animals_behaviors": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_animals_sounds": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_emoji_behaviors": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_emoji_sounds": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_food_backgrounds": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_food_behaviors": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_food_sounds": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_retro_backgrounds": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
+        },
+        "helloworld_retro_sounds": {
+          "moving north and looping": "उत्तरेकडे जाणे आणि लुपिंग करणे ",
+          "moving south and looping": "दक्षिणेकडे जाणे आणि लुपिंग करणे "
         }
       }
     }

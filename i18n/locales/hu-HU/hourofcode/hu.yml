@@ -145,6 +145,9 @@ hu:
     tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
     és arról, hogyan oldja meg az MI a világ problémáit. A számítástechnika sokkal
     több mint csak kódolás! Taníts többet a Code.org segédanyagaival.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -232,7 +235,7 @@ hu:
   hourofcode_homepage_hoc2018_header_line1: Az Hour of Code  eseményeket bárki bárhol
     megszervezheti. Egyórás gyakorlatok több mint 45 nyelven. Gyakorlat nem szükséges.
   hourofcode_homepage_hoc2018_header_line2: "-től 104 éves korig."
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Közeleg a Kódolás Órája
   codeorg_homepage_celebrate_cse: Ünnepeljük az informatikát mindenhol!
   codeorg_homepage_csc: Az informatika találkozik az irodalommal, a nyelvekkel, a
     matematikával és még sok mással a CS Connections programban.
@@ -984,6 +987,7 @@ hu:
   footer_menu_support: Támogatás
   footer_menu_terms: Fetételek
   footer_menu_privacy: Adatvédelmi irányelvek
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Kódolás Órája
   learn_banner_blurb: Próbálj ki egy bármely életkorban használható, több mint 45
     nyelven elérhető gyakorlatot! Csatlakozz 180 ország több millió tanulójához és

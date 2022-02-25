@@ -2,7 +2,7 @@
 vi:
   data:
     block_categories:
-      Actions: hành động
+      Actions: Hành động
       Advanced: Nâng cao
       Behaviors: Hành vi
       Brushes: Bàn chải
@@ -18,13 +18,15 @@ vi:
       Game/Score: Trò chơi/Điểm
       Games/Score: Trò chơi/Điểm
       Groups: Nhóm
+      Input: Đầu vào
       Location: Địa điểm
       Locations: Địa điểm
       Logic: Logic
       Loops: Vòng lặp
-      Math: thuật toán
+      Math: Phép toán
       Numbers: Các con số
       Properties: Thuộc tính
+      Sprites: Nhân vật
       Text: Văn bản
       Variables: Các biến
       'Variables ': 'Các biến '

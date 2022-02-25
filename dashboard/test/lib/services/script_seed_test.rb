@@ -83,12 +83,13 @@ module Services
       #   1 query to get all the programming environments
       #   1 query to get all the standards frameworks
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
+      #   1 query to check if units in family have the same course type settings
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
       # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(86) do
+      assert_queries(87) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -1118,13 +1119,8 @@ module Services
     end
 
     test 'seed rejects bad plc module name' do
-      unit = create :script
-      lesson_group = create :lesson_group, script: unit, key: 'bad_module_type', display_name: "Bad Module Type"
-      lesson = create :lesson, lesson_group: lesson_group, script: unit
-      activity = create :lesson_activity, lesson: lesson
-      section = create :activity_section, lesson_activity: activity
-      level = create :level
-      create :script_level, script: unit, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level]
+      unit = create :script, :with_levels
+      unit.lesson_groups.first.update!(key: 'bad_module_type',  display_name: "Bad Module Type")
 
       # must skip callbacks, or generate_plc_objects will fail.
       unit.update_columns(properties: unit.properties.merge(professional_learning_course: true))

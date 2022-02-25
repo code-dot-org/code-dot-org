@@ -58,6 +58,7 @@ export default class CommentEditor extends Component {
     return (
       <div>
         <textarea
+          className="code-review-comment-input"
           style={{width: '100%', boxSizing: 'border-box'}}
           placeholder={`${javalabMsg.addAComment()}...`}
           onChange={this.commentChanged}
@@ -84,6 +85,7 @@ export default class CommentEditor extends Component {
                 color="orange"
                 style={{...styles.buttons.all, ...styles.buttons.submit}}
                 disabled={saveInProgress}
+                id="code-review-comment-submit"
               />
             )}
           </div>

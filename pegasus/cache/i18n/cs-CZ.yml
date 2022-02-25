@@ -2156,6 +2156,8 @@ cs-CZ:
   user_header_flappy: Flappy
   user_header_view_all: Ukázat všechny projekty...
   user_header_view_project_gallery: Ukázat projekty
+  user_header_view_my_projects: Zobrazit moje projekty
+  view_all_sections: Zobrazit všechny sekce
   view_section: Pohled řezu
   view_named_section: Zobrazit %{section_name}
   privacy_doc_explanation: Klikněte zde pro náš dokument o ochraně osobních údajů,
@@ -2431,7 +2433,7 @@ cs-CZ:
   hoc2018_mc_thank_microsoft: Děkujeme společnosti Microsoft, že podporuje naši vizi
     a misi zajištění toho, aby všechny děti měly příležitost učit se počítačové vědy
     a dovednosti potřebné k dosahování úspěchu ve 21. století.
-  hoc2019_mc_mee_title: Minecraft AI pro dobro
+  hoc2019_mc_mee_title: Umělá inteligence Minecraft pro dobro
   hoc2019_mc_mee_description1: 'Nový výukový kurz Minecraft „Hodina programování“
     je teď k dostání na Minecraft: Edice pro školy pro Windows, Mac, a iPad. Učte
     se základy programování a umělé inteligence se svými studenty!'
@@ -2464,10 +2466,10 @@ cs-CZ:
     program Hodiny kódu s Minecraftem je nyní dostupný ve hře Minecraft: Education
     Edition pro Windows, Mac, Chromebook a iPad. Začněte s bezplatnými zdroji, školeními
     a videi pro učitele.'
-  hoc2021_mc_mee_villages_title: Příběh dvou vesnic
+  hoc2021_mc_mee_villages_title: Příběh Dvou Vesnic
   hoc2021_mc_mee_villages_description: 'Naučte se základy kódování a prozkoumejte
     se svými studenty diverzitu a inkluzi ve hře Minecraft: Education Edition.'
-  hoc2021_mc_mee_ai_title: AI pro dobro
+  hoc2021_mc_mee_ai_title: Umělá inteligence Pro Dobro
   hoc2021_mc_mee_ai_description: 'Prozkoumejte se svými studenty umělou inteligenci
     a naučte se kódovat ve hře Minecraft: Education Edition.'
   footer_powered_by_aws: Poháněn Amazon Web Services

@@ -139,6 +139,10 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(unit)
+
+    # make sure the new unit is in the cache
+    setup_script_cache
+
     level = unit.levels.first
 
     teacher = create :teacher
@@ -148,7 +152,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(unit)
     sign_in student
 
-    assert_cached_queries(20) do
+    assert_cached_queries(19) do
       get "/s/#{unit.name}/lessons/1/levels/1"
       assert_response :success
     end

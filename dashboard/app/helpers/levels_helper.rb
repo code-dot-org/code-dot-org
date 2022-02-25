@@ -181,7 +181,22 @@ module LevelsHelper
 
     view_options(public_caching: @public_caching)
 
-    level_requires_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    # In general, we need to allocate a channel if a level is channel-backed.
+    # As an optimization, we can skip allocating the channel in the following
+    # two special cases where we know the channel will not be written to:
+    # - For levels with contained levels, the outer level is read-only and does
+    #   not write to the channel. (We currently do not support inner levels that
+    #   are channel-backed.)
+    # - In edit_blocks mode, the source code is saved as a level property and
+    #   is not written to the channel.
+    #
+    # Note that Javalab requires a channel to _execute_ the code on Javabuilder
+    # so it always needs a channel, regardless of whether it will be written to.
+    level_requires_channel = @level.is_a?(Javalab) ||
+        (@level.channel_backed? &&
+          !@level.try(:contained_levels).present? &&
+          params[:action] != 'edit_blocks')
+
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
       view_options(
@@ -295,7 +310,6 @@ module LevelsHelper
 
     @app_options[:serverScriptLevelId] = @script_level.id if @script_level
     @app_options[:serverScriptId] = @script.id if @script
-    @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
 
     if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
       @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
@@ -303,6 +317,10 @@ module LevelsHelper
 
     if @level && @script_level
       @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id)
+    end
+
+    if @script_level && current_user
+      @app_options[:isViewingAsInstructorInTraining] = @script_level&.view_as_instructor_in_training?(current_user)
     end
 
     # Blockly caches level properties, whereas this field depends on the user
@@ -384,13 +402,14 @@ module LevelsHelper
   end
 
   # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses:
-  #  1. Setting the useGoogleBlockly view_option, usually configured by a URL parameter.
+  #  1. Setting the blocklyVersion view_option, usually configured by a URL parameter.
   #  2. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
   #     have fully transitioned to Google Blockly.
   #  3. The disable_google_blockly DCDO flag, which contains an array of strings corresponding to model class names.
   #     This option will override #2 as an "emergency switch" to go back to CDO Blockly.
   def use_google_blockly
-    return true if view_options[:useGoogleBlockly]
+    return true if view_options[:blocklyVersion]&.downcase == 'google'
+    return false if view_options[:blocklyVersion]&.downcase == 'cdo'
     return false unless @level.uses_google_blockly?
 
     # Only check DCDO flag if level type uses Google Blockly to avoid performance hit.
@@ -561,7 +580,9 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
-    level_options['final_level'] = script_level.final_level? if script_level
+    level_options['isLastLevelInLesson'] = script_level.end_of_lesson? if script_level
+    level_options['isLastLevelInScript'] = script_level.end_of_script? if script_level
+    level_options['showEndOfLessonMsgs'] = script.show_unit_overview_between_lessons? if script
 
     # Edit blocks-dependent options
     if level_view_options(@level.id)[:edit_blocks]
@@ -768,13 +789,15 @@ module LevelsHelper
       lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{lesson} ##{position}"
+        "#{lesson} ##{position} | #{script}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else
         script
       end
     elsif @level.try(:is_project_level) && data_t("game.name", @game.name)
+      # Note: the page title returned here may be overridden by the name of
+      # the standalone project in project.js
       data_t "game.name", @game.name
     else
       @level.key
@@ -808,8 +831,8 @@ module LevelsHelper
     [
       SoftButton.new('Left', 'leftButton'),
       SoftButton.new('Right', 'rightButton'),
-      SoftButton.new('Down', 'downButton'),
       SoftButton.new('Up', 'upButton'),
+      SoftButton.new('Down', 'downButton'),
     ]
   end
 

@@ -56,7 +56,7 @@ nl:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: De Hour of Code komt eraan
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: Het Hour of Code vindt plaats van 9-15 december 2019.
@@ -141,6 +141,9 @@ nl:
     aan te pakken. Informatica gaat over zoveel meer dan codering! Geniet van de eerste
     stap van Code.org in een nieuwe reis om meer over AI te leren in ons lesprogramma.
     \ "
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -229,17 +232,17 @@ nl:
     Code-evenement organiseren. Eén uur durende tutorials in meer dan 45 talen. Geen
     ervaring nodig.
   hourofcode_homepage_hoc2018_header_line2: Leeftijd 4 tot 104.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: De Hour of Code komt eraan
   codeorg_homepage_celebrate_cse: Vier informatica overal!
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
+  codeorg_homepage_csc: Informatica maakt kennis met taalkunst, wiskunde, en meer
+    in CS Connections.
+  codeorg_homepage_csc_long: Ontdek hoe informatica kennis maakt met de taalkunst,
+    wiskunde, en meer in ons curriculum.
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Gebruik blokken code om Alex of Steve op avontuur
     te sturen door deze Minecraft wereld.
   codeorg_homepage_hoc2019_dance_heading: Probeer de nieuwe <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1016,6 +1019,7 @@ nl:
   footer_menu_support: Ondersteuning
   footer_menu_terms: Voorwaarden
   footer_menu_privacy: Privacybeleid
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: "'Hour of Code'-activiteiten"
   learn_banner_blurb: Probeer een één uur durende tutorial ontworpen voor alle leeftijden
     in meer dan 45 talen.  Vervoeg miljoenen studenten en leraren in meer dan 180
@@ -10496,6 +10500,14 @@ nl:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: Alle moderne browsers
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Blocks
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

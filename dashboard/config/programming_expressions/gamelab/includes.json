@@ -1,14 +1,8 @@
 {
-  "func": "includes",
+  "key": "includes",
+  "name": "strincludes()",
   "category": "Variables",
-  "paletteParams": [
-    {
-      "name": "searchValue"
-    }
-  ],
-  "params": [
-    "\"World\""
-  ],
-  "modeOptionName": "*.includes",
-  "type": "value"
+  "category_key": "variables",
+  "short_description": "Game Lab - strincludes()",
+  "syntax": "includes(searchValue)"
 }

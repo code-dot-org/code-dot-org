@@ -39,7 +39,7 @@ social:
 {{ csc_module, title: "生态系统", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "科学", duration: "1-2小时", description: "利用基本的编码技能，学生创建一个交互式生态系统模型，探索不同的动物、植物和有机体如何相互影响。 该模型也适用于地圈、生物圈、水圈和/或大气层之间的相互作用。", button_text: "了解更多", url: "https://bit.ly/3wEMAyc" }}
 {{ csc_module, title: "生命周期", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "科学", duration: "1-2小时", description: "在这个项目中，从卵到蝌蚪再到青蛙，学生们使用代码来创建一个科学周期模型 - 就像青蛙的生命周期或能量转移！", button_text: "了解更多", url: "https://bit.ly/3Dc54Zq" }}
 {{ csc_module, title: "角色学习", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2小时", description: "每个行为都有一个反应！ 不，这不是物理学 - 这个项目允许学生使用代码来构建故事中的场景，展示一个角色的行为如何影响事件链。", button_text: "了解更多", url: "https://bit.ly/3wFlpTX" }}
-{{ csc_module, title: "故事寓意", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2小时", description: "在这之间\"从前\"然后\"结尾？\"学生编写一个交互式应用程序，讲述一个故事及其寓意。 学生可以将这一技能应用于任何故事、民间传说、书籍或寓言。", button_text: "了解更多", url: "https://bit.ly/3wBJbQO" }}
+{{ csc_module, title: "故事寓意", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2小时", description: "在这之间\"从前\"然后\"结尾？\"学生编写一个交互式应用程序，讲述一个故事及其寓意。 学生可以将这一技能应用于任何故事、民间传说、书籍或寓言。", button_text: "了解更多", url: "https://bit.ly/3wBJbQO"}}
 {{ clearfix }}
 
 ## 衔接课程

@@ -77,6 +77,7 @@ namespace :seed do
     'allthehiddenthings',
     'allthemigratedthings',
     'alltheplcthings',
+    'alltheselfpacedplthings',
     'allthethings',
     'allthettsthings',
     'artist',
@@ -90,19 +91,12 @@ namespace :seed do
     'coursed-2017',
     'coursee-2017',
     'coursef-2017',
-    'express-2017',
     'pre-express-2017',
-    'coursea-2018',
+    'express-2017',
     'coursea-2019',
     'coursec-2019',
     'coursee-2019',
     'coursea-2020',
-    'csd1-2019',
-    'csd2-2019',
-    'csd3-2019',
-    'csd4-2019',
-    'csd5-2019',
-    'csd6-2019',
     'csp1-2017',
     'csp2-2017',
     'csp3-2017',
@@ -115,15 +109,6 @@ namespace :seed do
     'csp-create-2017',
     'csp-post-survey',
     'csppostap-2017',
-    'csp1-2018',
-    'csp2-2018',
-    'csp3-2018',
-    'csp4-2018',
-    'csp5-2018',
-    'csp-explore-2018',
-    'csp-create-2018',
-    'csppostap-2018',
-    'csp-post-survey-2018',
     'csp1-2019',
     'csp2-2019',
     'csp3-2019',
@@ -132,20 +117,8 @@ namespace :seed do
     'csp-explore-2019',
     'csp-create-2019',
     'csppostap-2019',
-    'csp1-2020',
-    'csp2-2020',
-    'csp3-2020',
-    'csp4-2020',
-    'csp5-2020',
-    'csp6-2020',
-    'csp7-2020',
-    'csp8-2020',
-    'csp9-2020',
-    'csp10-2020',
-    'csp-post-survey-2020',
     'dance',
     'events',
-    'express-2017',
     'flappy',
     'frozen',
     'hero',
@@ -199,6 +172,7 @@ namespace :seed do
     :standards,
     :shared_blockly_functions,
     :libraries,
+    :course_offerings
   ].freeze
 
   # Do the minimum amount of work to seed a single script or glob, without
@@ -234,7 +208,7 @@ namespace :seed do
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2018 csd-2019 csp-2019 csp-2020).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
@@ -309,6 +283,10 @@ namespace :seed do
       # preferably the id of the callout is not important ;)
       Callout.find_or_create_all_from_tsv!('config/callouts.tsv')
     end
+  end
+
+  timed_task course_offerings: :environment do
+    CourseOffering.seed_all
   end
 
   # Seeds Standards

@@ -3873,10 +3873,28 @@ bg:
               display_name: Списъци
             csp_loops:
               display_name: Повторения
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритми
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Проучване
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Проучване
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Раздел 9: данни'
+            lessonGroup-2:
+              display_name: Проучване
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Проучване
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -4073,6 +4091,20 @@ bg:
             lessonGroup-2:
               display_name: Съдържание
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot:
           lessons:
             Java Lab:
               name: Java (Джава) Практически Урок
@@ -4290,3 +4322,275 @@ bg:
           lessons:
             lesson-1:
               name: Правопис
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Урок
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Повторения за забавление
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайт
+            lessonGroup-3:
+              display_name: Променливи
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функции
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Щастливи карти
+            'Programming: Happy Maps':
+              name: Щастливи карти
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        express-2022:
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайт
+            lessonGroup-9:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_functions:
+              display_name: Функции
+            csf_variables:
+              display_name: Променливи
+            csf_for_loops:
+              display_name: За циклите
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Бинарни числа
+              key: Бинарни числа
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифрова информация'
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Раздел 2: Интернет'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Отстраняване на грешки
+              key: Отстраняване на грешки
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Списъци
+            csp_loops:
+              display_name: Повторения
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Преместете го, преместете го
+              key: Преместете го, преместете го
+            Getting Loopy:
+              name: Да повтаряме
+            'Loops: Getting Loopy':
+              name: Да повтаряме
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Голямото събитие
+            Binary Bracelets:
+              name: Двоични гривни
+              key: Двоични гривни
+            'Events: The Big Event':
+              name: Голямото събитие
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            csf_data:
+              display_name: Данни
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Раздел 9: данни'
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Програмиране на милиметрова хартия
+            Relay Programming:
+              name: Повтори програмирането
+              key: Повтори програмирането
+            Conditionals with Cards:
+              name: Условия с карти
+              key: Условия с карти
+            'Algorithms: Graph Paper Programming':
+              name: Програмиране на милиметрова хартия
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифрови граждани
+            csf_events:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Писане на песен
+            'Functions: Songwriting':
+              name: Писане на песен
+            Conditionals:
+              key: Условия
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайт
+            csf_digcit:
+              display_name: Цифрови граждани
+            ramp_up:
+              display_name: Вмъкнати цикли
+            csf_functions:
+              display_name: Функции
+            csf_nested_loops:
+              display_name: Условия
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Повторения за забавление
+              key: Повторения за забавление
+            The Internet:
+              name: Интернет
+            Internet:
+              key: Интернет
+              name: Интернет
+          lesson_groups:
+            ramp_up:
+              display_name: Спрайт
+            lessonGroup-7:
+              display_name: Цифрови граждани
+            lessonGroup-8:
+              display_name: Променливи
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-9:
+              name: Повторения
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Условия
+            lesson-14:
+              name: Условия в Minecraft
+            lesson-16:
+              name: Отстраняване на грешки
+            lesson-19:
+              name: Отстраняване на грешки
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-9:
+              name: Повторения
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание

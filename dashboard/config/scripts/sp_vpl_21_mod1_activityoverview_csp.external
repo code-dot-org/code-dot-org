@@ -11,11 +11,11 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/8934c91734c191e5f837c965716d9691-image-1628732446341.40.29 PM.png" alt="Screenshot of a level in this course containing text about lesson plans." style="float: left; height: 210px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/8934c91734c191e5f837c965716d9691-image-1628732446341.40.29 PM.png" alt="Screenshot of a level in this course containing text about lesson plans." style="float: left; height: 210px; clear: both; margin: 0 20px 20px 0; border:1px solid #000000">
 
 ## Read about a topic 
 
-##### **New information about a topic is presented in text based levels.** These levels are designed to:
+##### **New information about a topic is presented in text-based levels.** These levels are designed to:
 
 ##### - Provide information about the module.
 ##### - Introduce new topics. 
@@ -39,7 +39,7 @@ markdown <<MARKDOWN
 
 ## Complete a task
 
-##### Follow step by step instructions to try something new. These tasks will help you:
+##### Follow step-by-step instructions to try something new. These tasks will help you:
 
 ##### - Navigate to curriculum, resources, and support.
 ##### - Explore module content.

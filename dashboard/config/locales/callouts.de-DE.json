@@ -517,7 +517,8 @@
         },
         "New Artist Project": {
           "New Artist Project_callout2": "Drücke \"Ausführen\" um dein Programm zu speichern und auszuführen",
-          "sign_in_to_save_project": "Möchtest du später auf dein Projekt zugreifen? Melde dich an, um dieses Projekt in deinem Konto zu speichern!"
+          "sign_in_to_save_project": "Möchtest du später auf dein Projekt zugreifen? Melde dich an, um dieses Projekt in deinem Konto zu speichern!",
+          "New Artist Project_callout1": "Klicke auf die Kategorien, um die Bausteine in deinem Werkzeugkasten zu sehen! Ziehe Bausteine in den Arbeitsbereich um sie zu deinem Programm hinzuzufügen"
         },
         "New Frozen Project": {
           "snowflake_dropdown": "Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken zu erstellen!"
@@ -2166,6 +2167,163 @@
           "poetry_background": "Die Code-Bausteine findest du hier. ",
           "pause_button": "Überprüfe deine Animation mit dieser Schaltfläche. ",
           "run_button": "Überprüfe deine Animation mit dieser Schaltfläche. "
+        },
+        "CSD U3 Boolean Predict_2021": {
+          "": "Dieses Programm wird hier ein Ergebnis anzeigen"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "": " "
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Hier klicken um das Raster anzuzeigen."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Ändere die Zahl hier"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 abstraction jump_2021": {
+          "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
+        },
+        "CSD U3 abstraction looping_2021": {
+          "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
+        },
+        "CSD U3 abstraction rotation control_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD U3 abstraction tumbleweed_2021": {
+          "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD U3 abstraction velocityX if-statements_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "Füge hier deinen Block hinzu."
+        },
+        "CSD U3 abstraction velocityY control_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "Füge hier deinen Block hinzu."
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "Füge hier deinen Block hinzu."
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 game backgrounds_2021": {
+          "CSD_U3_L18_S4_C2": "Funktionensbereich"
+        },
+        "CSD U3 game variables_2021": {
+          "CSD_U3_S18_L3_C1": "Dieser Baustein erstellt eine neue Variable.",
+          "CSD_U3_L18_S3_C2": "Variablenbereich"
+        },
+        "CSD U3 platform scoreboard_2021": {
+          "CSD_U3_L17_S7_C1": "Die Punktzahl wird hier ausgegeben."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "Füge hier deinen Block hinzu."
+        },
+        "CSD games sidescroll background_2021": {
+          "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
+        },
+        "CSD games velocity bee_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Ändere die Zahl hier"
         }
       }
     }

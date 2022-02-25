@@ -3,23 +3,41 @@ fr:
   data:
     progressions:
       '"If/Else" with the Bee': "« Si/Sinon » avec l'abeille"
+      AI Machine Learning - Video: Apprentissage automatisé fondé sur l'IA - Vidéo
+      'AI: Impact on Society - Video': 'IA : impact sur la société - Vidéo'
+      'AI: Training Data & Bias - Video': 'IA : Données de formation et erreurs courantes
+        - Vidéo'
+      Accelerometer Events: Événements d'accéléromètre
       Adding Images: Ajouter des images
       Adding Screens: Ajouter des écrans
       Alien Defender: Défenseur alien
       Analog Sensors: Capteurs analogiques
       Animate Your Scene: Animez votre scène
+      App Lab Intro - Video: Introduction à l'App Lab - Vidéo
       'App Project: Screen Design': 'Projet d’appli : Conception d’écran'
       Arrays: Tableaux
+      Artist Intro with JR Hildebrand: Intro Artiste avec JR Hildebrand
+      Artist Intro with JR Hildebrande: Intro Artiste avec JR Hildebrande
       Artist Project: Projet d’Artiste
       'Artist: Variables': 'Artiste: Variables'
+      Assessment: Évaluation
+      Attribution: Attribution
       Back and Forth: Va et viens
+      Basic Conditionals: Conditions de base
       Bass, Mid, and Treble: Grave, médium et aigü
+      Be a Super Digital Citizen: Soyez un Super Citoyen Numérique
+      Begin planning your project: Commencez à planifier votre projet
+      Begin planning your project_2018: Commencez à planifier votre projet_2018
+      Binary Bracelets - Unplugged Activity: Bracelets binaires - Activité hors ligne
       Binary Numbers: Nombres binaires
       Board Events: Évènements en provenance du circuit
       Board Input and Output: Entrée et sortie du plateau
       Boolean Comparison: comparaison booléenne
       Booleans and Comparison Operators: Booléens et opérateurs de comparaison
+      Build a Platform Jumper: Construire une plate-forme de saut
       Build a Screen: Construisez un écran
+      Building a UI with Design Mode: Construire une interface utilisateur avec le
+        mode conception
       Building an App: Fabriquer une application
       'Bunny ': 'Lapin
 
@@ -28,10 +46,17 @@ fr:
       Button Circuits: Circuits de bouton
       Buttons and Switch: Boutons et interrupteur
       CS Discoveries Post-Course Survey: CS Discoveries Enquête Post-Cours
+      CS Discoveries Post-course Survey: CS Discoveries Enquête Post-Cours
+      CSD U3 Interactive Card Exemplar: Exemple de carte interactive CSD U3
+      CSD U3 platform intro: Présentation de la plate-forme CSD U3
+      'CSD: For Loop': 'CSD : For Loop'
       CSS Classes: Les classes CSS
       CSS Text Properties: Propriétés texte CSS
       CSS and Style Sheets: CSS et feuilles de style
+      Cake Defender: Défenseur gâteau
+      Cake Survey: Enquête gâteau
       Challenge: Défi
+      Challenge Levels: Niveaux de défi
       'Challenge: Add More Inputs': 'Défi : Ajoute plus d’entrées'
       'Challenge: Checking for Multiple Conditions': 'Défi : Vérifier des conditions
         multiples'
@@ -40,40 +65,67 @@ fr:
       'Challenge: Making Sense of Sensors': 'Défi : Donner du sens aux capteurs'
       'Challenge: Updating Variables': 'Défi : Mettre des variables à jour'
       Challenges: Défis
+      Change: Changer
       Changing Screens: Changer d’écran
       Changing Sensor Scale: Modifier l’échelle des capteurs
+      Checking for a Winner: Recherche d'un gagnant
+      Choose Your Own Adventure: Choisissez votre propre aventure
+      Choosing Good IDs: Choisir les bons identifiants
       'Circuit Playground: Buzzer': 'Circuit Playground : Buzzer'
       'Circuit Playground: Color LEDs': 'Circuit Playground : LEDs couleur'
       'Circuit Playground: Introduction': 'Circuit Playground : LEDs'
       'Circuit Playground: LEDs': 'Circuit Playground : LEDs'
       Circuits and Logic: Circuits et logique
+      Code Your Own Flappy Game: Codez votre propre jeu Flappy
+      Collector Game: Jeu Collector
       Collision Detection: Détection de collision
       Collision Detection Review: Révision de la détection de collision
       Collisions: Collisions
+      Collisions in Games: Collisions dans les jeux
+      Color LEDs: Couleurs des LED
+      Combining Projects: Combiner des projets
       Combining Representations: Combiner des Représentations
+      Conditionals with Cards - Unplugged Activity: Conditions avec des cartes - Activité
+        hors ligne
       'Conditionals: If Statements': " Instructions « si »"
       'Conditionals: If and If/Else Statements': Instructions conditionnelles « Si/Sinon »
       Course E Artist Project: Cours E Projet Artiste
       Course E Sprite Lab Project: 'Cours E Projet du Labo des Lutins
 
 '
+      'Course E: Play Lab Project': 'Cours E : Projet Play Lab'
       Course F Artist Project: Cours E Projet Artistique
       Course F Sprite Lab Project: 'Cours F Projet d''Artiste
 
 '
+      'Course F: Artist Project': 'Cours F : Projet Artiste'
+      'Course F: Artist Project - Revise': 'Cours F : Projet Artiste - Révision'
+      'Course F: Play Lab Project': 'Cours F : Projet Play Lab'
+      'Course F: Play Lab Project - Revise': 'Cours F : Projet Play Lab - Révision'
+      Crack Random Substitution: Substitution aléatoire de crack
+      Crack a Caesar Cipher: Déchiffrer un chiffre César
       Create Your Own Animation: Créez votre propre animation
       Create a Story: Créez une histoire
       Create your project: Créez votre projet
       Creating Sprites: Créer des sprites
       Creative Commons Search: Recherche sur la licence Creative Commons
+      Customize: Personnaliser
       Dance Crews: Équipes de danse
+      Data Visualization: Données de visualisation
+      De-bugging with the Step Button: Débogage avec le bouton Step (étape)
       Debugging: Le Débogage
       Debugging with Watchers: Débogage avec les observateurs
+      Debugging with the Step Button: Débogage avec le bouton Step (étape)
       Demo - Bug Grab: Démo - Attrape-bugs
+      Demo Apps: Applis de démo
       Design Mode: Mode création
       Design Mode Elements: Éléments en mode création
+      Design Your Game: Concevez votre jeu
+      Design Your Prototype: Concevez votre prototype
+      Design a Screen for your App: Concevez un écran pour votre appli
       Designing Screens with Code: Dessiner des écrans en codant
       Designing for Accessibility: Concevoir pour l'Accessibilité
+      Digital Sharing - Unplugged Activity: Partage numérique - Activité hors ligne
       Dogger Example: 'Exemple de Dogger
 
 '
@@ -82,14 +134,21 @@ fr:
       Editing Images: Modifier les images
       Emotion Machine Example: Exemple de machine d’émotion
       End of Course Projects: Projets de fin de cours
+      Escape Room Example: Exemple de salle d'évasion
       Event Types: Types d'évènement
       Events: Événements
+      Events and Linking Screens: Événements et écrans de liaison
+      Events and Properties: Évènements et Propriétés
       Example: Exemple
+      Example App Types: Exemples de types d'applis
+      Example Projects: Exemples de projets
+      Example projects: Exemples de projets
       Exploration: Exploration
       'Exploration: Adding Style': 'Exploration : Ajout de style'
       'Exploration: For Loops': 'Exploration: Boucles « Pour »'
       'Exploration: Sample Apps': " Exemples d'Aplications"
       Explore HTML: Explorer le HTML
+      Extra: Supplémentaire
       Finish a Screen: Terminer l'écran
       Finish the Prototype: Terminer le prototype
       Finishing Functions: Terminer les fonctions
@@ -111,6 +170,7 @@ fr:
       Hardware and Software: Matériel et logiciels
       Headings: Rubriques
       Headings in HTML: Titres en HTML
+      Hello World: Bonjour tout le monde !
       How to Make a Sprite: Comment Créer un Lutin
       Hyperlinks: Liens hypertexte
       If Statements: Instructions « si »
@@ -131,6 +191,7 @@ fr:
       Learning from Simulations: Apprendre à l'aide de simulations
       Lesson Extras: Les Extras de la Leçon
       Lesson Overview: Aperçu de la leçon
+      Levels: Niveaux
       Linking Pages: Relier des Pages
       Linking Screens: Relier les Écrans
       Lists: Listes
@@ -143,26 +204,81 @@ fr:
       'Mini-Project: About Me': À propos de Moi avec le Labo des Lutins
       'Mini-Project: Alien Dance Party': " Soirée Dansante des Extraterrestres"
       'Mini-Project: Outbreak Simulator': " Simulateur d'épidémie"
+      'Mini-Project: Virtual Pet': 'Mini-projet : animal de compagnie virtuel '
+      'Mini-project: Chase Game': 'Mini-projet : Jeu Chase'
+      'Mini-project: Flappy Game': 'Mini-projet : Jeu Flappy'
+      'Mini-project: Interactive Poster': 'Mini-project : Poster interactif'
+      'Mini-project: Jorge the Dog': 'Mini-projet : Jorge le chien'
+      'Mini-project: Sticker Art': 'Mini-projet : l''art de l''autocollant '
+      'Mini-project: Sticker Design': 'Mini-projet : Conception d''autocollants '
+      Modify simulation variables: Modifier les variables de simulation
       Modifying Arrays: Modifier et créer des tableaux
       Modifying and Creating Arrays: Modifier et créer des tableaux
       More Buttons: Plus de boutons
+      More Input: Plus d'entrées
+      More Parameters: Plus de paramètres
+      Motorcycle: Moto
+      Move It Move it Video  - Unplugged Activity: Vidéo Move it, move it - Activité
+        hors ligne
+      Movement with the Counter Pattern: Mouvement avec le motif de compteur
       Multi-Screen Apps: Applications Multi-Écrans
+      Multiframe Animations: Animations multi-images
+      Musical Arrays: Tableaux musicaux
+      My Loopy Robotic Friends - Unplugged Activity: Mes amis robotiques Loopy - Activité
+        hors ligne
       My Online Neighborhood: Mon Quartier en Ligne
+      My Robotic Friends - Unplugged Activity: Mes amis robotiques - Activité hors
+        ligne
       Naming Variables: Nommer les variables
+      Nested Loops with the Bee: Boucles imbriquées avec l'abeille
+      New Challenge Introduction: Introduction de nouveau défi
+      New Shapes: Nouvelles formes
+      Orientation: Orientation
       Overview: Aperçu
+      'Overview: Design Mode': 'Aperçu : Mode Conception'
+      'Overview: If Statements': Aperçu : instructions If
+      'Overview: Images': 'Aperçu : Images'
+      'Overview: onEvent': 'Aperçu : onEvent'
+      'Overview: setPosition': 'Aperçu : setPosition'
       Pair Programming: Programmation en Binôme
       Picturing Data: Représenter les Données
+      Plan Your Project: Planifiez votre projet
       Plane Jumper: Saut d’avion
       Planning: Planifier
+      Platform Jumper - Background and Variables: Platform Jumper - Contexte et variables
+      Platform Jumper - Items: Plate-forme de sauts - Objets
+      Platform Jumper - Platforms: Plate-forme de sauts - Plate-formes
+      Platform Jumper - Player: Plate-forme de sauts - Player
+      Playing Notes: Jouer des notes
+      Playing with Notes: Jouer avec des notes
       Polling Events: Attendre les évènements
+      Post-Course Survey Instructions: Instructions pour l'enquête après le cours
+      Practice: S'entraîner
+      Predict: Prédire
+      Prediction: Prédiction
+      Prepare for your presentation: Préparez-vous pour votre présentation
+      Prepare for your presentation_2018: Préparez-vous pour votre présentation_2018
+      Problem Solving: Résolution de problèmes
+      Problem Solving Process for Programming: Processus de résolution de problèmes
+        pour la programmation
       Programming with Rey and BB-8: Programmer avec Rey et BB-8
+      Programs that Repeat: Programmes se répétant
       Project: Projet
+      Project - Background and Variables: Projet - Contexte et variables
       Project - Finishing Touches: Projet - Finitions
+      Project - Sprites and Interactions: Projet - Sprites et Interactions
+      Project Guide: Guide projet
+      Project Work: Travail projet
       Properties: Propriétés
+      Publishing Your Website: Publiez votre site Web
       Quarter Notes: Noires
+      RGB Exploration: Exploration RVB
       RGB Widget: Widget RVB
       Random Numbers: Nombres aléatoires
+      Reading Sensors: Lecture des capteurs
       Reflection: Réflexion
+      Relay Programming - Unplugged Activity: Programmation de relais - Activité hors
+        ligne
       Repeat Blocks: Les blocs `Répéter`
       Repeat Blocks with BB-8: Les blocs `Répéter` avec BB-8
       Representing Images: Représenter des Images
@@ -191,14 +307,16 @@ fr:
 
 '
       Sprite Lab Project: Projet Labo du Lutin
+      Sprite Movement: Le Déplacement du Lutin
       Sprite Properties: Propriétés du sprite
       Sprite Scenes: Scènes de sprites
       Sprite Velocity: Vélocité des sprites
+      Teach AI a New Word: Apprendre un nouveau mot à l'IA
       Text Compression: Compression de texte
       The Accelerometer: L’accéléromètre
       The Animation Tab: L’onglet Animation
       The Draw Loop: La Boucle Dessiner
-      The Harvester: La Moissonneuse
+      The Harvester: L'Agricultrice
       Tour of Design Mode: Visite du mode création
       Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
@@ -207,24 +325,52 @@ fr:
       Velocity and the Counter Pattern: Vélocité et le contre-modèle
       Velocity and the Counter Pattern Review: Révision de la vélocité et du contre-modèle
       Video: Vidéo
+      'Video:  Minecraft - The Agent': 'Vidéo : Minecraft - L''agent'
+      'Video:  Text  and Prompts': 'Vidéo : Texte et invites '
       'Video: "If/Else"': 'Video: « Si/Sinon »'
       'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
+      'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
+        automatique ? '
+      'Video: Artist Intro with JR Hildebrand': 'Vidéo : Intro l''Artiste avec JR
+        Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Vidéo : Intro l''Artiste avec JR
+        Hildebrande'
       'Video: Booleans': 'Vidéo : Boléens'
       'Video: CS Matters': 'Vidéo : Questions d’informatique'
+      'Video: Code Your Own Flappy Game': 'Vidéo : Codez votre propre jeu Flappy'
       'Video: Conditional Statements': 'Vidéo : Instructions conditionnelles'
       'Video: Conditionals': 'Vidéo : Instructions conditionnelles'
       'Video: Conditionals: If Statements': "  Instructions « si »"
       'Video: Conditionals: If and If/Else Statements': 'Video: Instructions conditionnelles
         « Si » et « Si/Sinon »'
+      'Video: Dance Party Events': 'Vidéo : Événements de soirée dansante'
+      'Video: Dance Party Measures': 'Video: Dance Party Measures'
+      'Video: Dance Party Party On!': 'Vidéo : Dance Party Party On !'
+      'Video: Dance Party Properties': 'Vidéo : Propriétés de la soirée dansante'
+      'Video: Dance Party Warm Up': 'Vidéo : Échauffement de soirée dansante'
+      'Video: De-bugging with the Step Button': 'Vidéo : Débogage avec le bouton Step
+        (étape)'
       'Video: Debugging with Scrat ': " Déboguer avec Scrat "
+      'Video: Debugging with the Step Button': 'Vidéo : Débogage avec le bouton Step
+        (étape)'
       'Video: Drawing in Game Lab - Part 1': 'Vidéo : Dessiner dans le labo des jeux
         - Partie 1'
       'Video: Drawing in Game Lab - Part 2': 'Vidéo : Dessiner dans le labo des jeux
         - Partie 2'
       'Video: Events': " Événements"
+      'Video: Follow The Digital Trail': 'Vidéo :  Suivez la piste numérique'
       'Video: For Loops': 'Video: Les Boucles « Pour »'
+      'Video: Functions': 'Vidéo: Les Fonctions'
+      'Video: Getting Loopy': 'Vidéo : Faire des boucles '
+      'Video: Happy Maps - Unplugged Activity': 'Vidéo : Happy Maps - Activité hors
+        ligne'
       'Video: Harvesting with Conditionals': " Récolter avec les Conditions"
+      'Video: How to Create a Simple Function': 'Vidéo : Comment créer une fonction
+        simple'
+      'Video: How to Make a Sprite': 'Vidéo : Comment créer un sprite'
+      'Video: Ice Age Loops': 'Video : Boucles l''Âge de glace'
       'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
+      'Video: Impacts on Society': 'Vidéo : Impacts sur la Société'
       'Video: Intro to Web Lab - Part 1': 'Vidéo : Introduction au labo du web - Partie
         1'
       'Video: Intro to Web Lab - Part 2': 'Vidéo : Introduction au labo du web - Partie
@@ -232,31 +378,73 @@ fr:
       'Video: Introducing Sprite Lab': " Introduction au Labo des Lutins"
       'Video: Introduction to Play Lab': " Introduction au Labo de jeux"
       'Video: Introduction to Sprites': 'Vidéo : Introduction aux sprites'
-      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle draw'
+      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle dessine'
       'Video: Loops in Artist': " Les Boucles dans Artiste"
+      'Video: Loops with the Artist': 'Vidéo : Les Boucles avec l''Artiste'
+      'Video: Maze Intro - Programming with Blocks': 'Vidéo - Intro Maze : Programmation
+        avec des blocs '
+      'Video: Maze Intro - Programming with Blocks ': 'Vidéo - Intro Maze : Programmation
+        avec des blocs '
+      'Video: Maze Intro: Programming with Blocks': 'Vidéo - Intro Maze : Programmation
+        avec des blocs '
       'Video: Measures': " Mesures"
       'Video: Minecraft - Congratulations': " Minecraft - Félicitations"
+      'Video: Minecraft - Functions': 'Vidéo : Minecraft - Fonctions'
+      'Video: Minecraft - Repeat Loops': 'Vidéo : Minecraft - Répétition de boucles'
+      'Video: Minecraft - The Agent': 'Vidéo : Minecraft - L''agent'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Minecraft : Minecraft :Conditions
+        Voyage Aquatique '
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Vidéo : Minecraft : Félicitations
+        Voyage Aquatique'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Vidéo : Minecraft : Voyage
+        Aquatique - Introduction'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Vidéo : Minecraft : Voyage
+        aquatique Repeat until (répéter jusque)'
+      'Video: Nested Loops': 'Vidéo : Boucles imbriquées'
+      'Video: Nested Loops with the Bee': 'Vidéo : Boucles imbriquées avec l''abeille '
       'Video: Pair Programming': " Programmation en Binôme"
       'Video: Pair Programming ': " Programmation en Binôme "
       'Video: Problem Solving Process': Processus de Résolution De Problème
+      'Video: Programming with Blocks': 'Vidéo : Programmation avec des blocs'
       'Video: Programming with Rey and BB-8': " Programmer avec Rey et BB-8"
       'Video: Properties': " Propriétés"
       'Video: Repeat Blocks': 'Video: Les blocs `Répéter`'
+      'Video: Repeat Blocks with BB-8': 'Vidéo : Blocks "Répéter" avec BB-8'
+      'Video: Repeat Blocks with the Artist': 'Vidéo : Répéter les blocs avec l''Artiste '
       'Video: Repeat Until Blocks': 'Video: Les blocs Répéter Jusqu’à'
+      'Video: Repeat Until Statements': 'Vidéo : Instructions Répéter tant que'
       'Video: Sprite Movement': 'Vidéo : Animer un sprite'
       'Video: Sprites in Action': " Les Lutins en Action"
       'Video: Star Wars Project': " Projet Star Wars"
+      'Video: Text and Prompts': 'Vidéo : Texte et invites '
       'Video: The Animation Tab': 'Vidéo : L’onglet Animation'
-      'Video: The Harvester': " La Moissonneuse"
+      'Video: The Artist in Code Studio': 'Vidéo : L''artiste dans Code Studio '
+      'Video: The Big Event - Unplugged Activity': 'Vidéo : Le grand événement – Activité
+        hors ligne'
+      'Video: The Collector': 'Vidéo : Le collectionneur '
+      'Video: The Harvester': 'Video: l''Agricultrice'
+      'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
+      'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables débranchées dans
+        les enveloppes '
       'Video: Using the Repeat Block': " Utiliser le Bloc Répéter"
       'Video: Variables in Artist': " Les Variables dans Artiste"
       'Video: Velocity': 'Vidéo : la vitesse'
+      'Video: Warm Up': 'Vidéo : échauffement'
       'Video: What Makes a Computer, a Computer?': 'Vidéo : De quoi est fait un ordinateur
         ?'
+      'Video: What is Machine Learning?': 'Vidéo : Qu''est-ce que l''apprentissage
+        automatique ?'
       'Video: While Loops with the Farmer': " Les Boucles Tant Que avec la Fermière"
+      'Video: Wrap-up': 'Vidéo : Conclusion '
       Warm Up: Warm-up (Séance d’échauffement)
+      Website Project: Projet de site Web
       Welcome to Monster Town: Bienvenue à Monstreville
       Where'd They Go?: Où iraient-ils ?
       While Loops with the Farmer: Les Boucles Tant Que avec la Fermière
+      'Widget: Text Compression': 'Widget : Compression de texte'
       Wrap-up: Résumé et ouverture
+      Your Personal Website: Votre site Web personnel
       getProperty: getProperty
+      getText vs getNumber: getText vs getNumber
+      isTouching: isTouching
+      setProperty: setProperty

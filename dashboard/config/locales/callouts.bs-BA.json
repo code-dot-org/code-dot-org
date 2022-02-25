@@ -482,7 +482,8 @@
           "poetry_new_block": "Novi blok!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Novi blok!"
+          "poetry_sound": "Novi blok!",
+          "poetry_music": "Novi blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Novi blok!",
@@ -491,6 +492,87 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Novi blok!",
           "poetry_remove_sprite": "Novi blok!"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Promjeni broj ovdje"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Promjeni broj ovdje"
         }
       }
     }

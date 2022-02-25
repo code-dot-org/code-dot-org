@@ -134,19 +134,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "तुम्हाला तुमच्या वाढदिवसासाठी काय हवे आहे?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न",
+          "46463b2e9f71f2f15b7238f56f09ba30": "समाप्त",
+          "c757766b0a7e2017c79e1c94f60e44f7": "चॅटिंगबद्दल धन्यवाद!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "माझा प्रश्न",
+          "50d489a15105b987ec6d4410900c95dd": "एक कृतीवाचक शब्द एन्टर करा:"
         },
         "courseF_label_predict": {
           "f15045cb7e57652546d4a0b2c695356f": "तुम्ही काय खाल?",
@@ -238,6 +242,16 @@
         "courseC_PlayLab_eventsFP_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "इथे टेक्स्ट टाईप करा",
           "30fcc1693fa8402931d13ac3a5f396fd": "इथे शीर्षक टाईप करा"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "पर्याय 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "पर्याय 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "पर्याय 3",
+          "6cd3556deb0da54bca060b4c39479839": "हॅलो, वर्ल्ड !"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "स्प्राईट्सना मास्क देण्यासाठी त्यांच्यावर क्लिक करा. ",
+          "968c8b54671ab303d48320f86937c40b": "मास्क्समुळे विषाणूंचा प्रसार संथ करण्यासाठी मदत होते!"
         }
       }
     }

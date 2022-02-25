@@ -8,7 +8,7 @@ import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadIm
 
 const APP_DISPLAY_OPTIONS = {
   directly: 'Embed app with code directly',
-  withCode: 'Display app with code from code field above'
+  displayApp: 'Display app with code from code field above'
 };
 
 export default function ExampleEditor({example, updateExample}) {

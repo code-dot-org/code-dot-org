@@ -21,6 +21,7 @@ pt:
       Artist Intro with JR Hildebrande: Introdução do Artista com JR Hildebrande
       Artist Project: Projeto Artista
       'Artist: Variables': 'Artista: variáveis'
+      Assessment: Avaliação
       Attribution: Atribuição
       Back and Forth: Vai e volta
       Basic Conditionals: Condicionais Básicas
@@ -143,6 +144,7 @@ pt:
       Explore HTML: Explore o HTML
       Exploring CS in Entertainment: Explorando Ciências da Computação no Entretenimento
       Exploring more CSS: Explorando mais CSS
+      Extra: Extra
       Final Personal Website: Website pessoal final
       Final Room Escape App: App Final Sala de Escape
       Find the Wizard: Encontre o Mago
@@ -176,6 +178,7 @@ pt:
       Hardware and Software: Hardware e Software
       Headings: Cabeçalhos
       Headings in HTML: Títulos em HTML
+      Hello World: Olá Mundo
       How to Create a Simple Function: Como Criar uma Função Simples
       How to Make a Sprite: Como fazer um Sprite
       Hyperlinks: HiperLinks
@@ -326,6 +329,7 @@ pt:
       Sprite Interactions Review: Revisão de interações de Sprite
       Sprite Lab Example Project: Projeto de Exemplo do Laboratório de Sprite
       Sprite Lab Project: Projeto do Laboratório de Sprite
+      Sprite Movement: Movimento sprite
       Sprite Properties: Propriedades do Sprite
       Sprite Scenes: Cenas com Sprite
       Sprite Velocity: Velocidade de Sprite
@@ -334,6 +338,7 @@ pt:
       Styling Text: Estilo de Texto
       Styling with Classes: Estilizando com Classes
       Styling your Website: Estilizando seu SIte
+      Teach AI a New Word: Ensine à IA uma Nova Palavra
       Text Compression: Compressão de texto
       The Accelerometer: O Acelerômetro
       The Animation Tab: A Guia de Animação
@@ -378,6 +383,7 @@ pt:
       'Video: Introduction to Arrays': 'Vídeo: Introdução a Matrizes'
       'Video: Introduction to Sprites': 'Vídeo: Introdução a Sprites'
       'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao laço Draw'
+      'Video: Outbreak Simulator: Introduction': 'Video: Simulação de Vírus: Intro'
       'Video: Problem Solving Process': 'Vídeo: Processo de resolução de problemas'
       'Video: Sprite Movement': 'Vídeo: Movimento de Sprite'
       'Video: The Animation Tab': 'Vídeo: A guia de Animação'

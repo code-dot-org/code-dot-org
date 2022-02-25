@@ -2,1381 +2,191 @@
   "sl-SI": {
     "data": {
       "resources": {
-        "dance-party-playlist/dance-extras/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "list_of_poems/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_celebration/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_events/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-artist-intro-video/artist/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-doc/artist/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-video/artist/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance-2019/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "introducing_sprite_lab/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "exploring_apps/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "exploring_apps_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "making_sprites/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprite_lab_documentation/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprites_in_action/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_lesson_slides/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_words_can_hurt/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "variables_blank_space_stories/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "blank_space_stories_-_worksheet/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "blank_space_stories/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "text_and_prompts/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "user_input_programs/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "mini_project_user_input_programs/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_sandbox_level/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "mini_project_user_input_programs_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Zabava s \"for\" zankami",
-          "url": ""
-        },
-        "flf-assessment-teacher-key/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Zabava s \"for\" zankami"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Zabava s \"for\" zankami",
-          "url": ""
+          "name": "Zabava s \"for\" zankami"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Zabava s \"for\" zankami",
-          "url": ""
+          "name": "Zabava s \"for\" zankami"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Zabava s \"for\" zankami",
-          "url": ""
+          "name": "Zabava s \"for\" zankami"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Zabava s \"for\" zankami",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "running-simulations/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "ai-ml/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Zabava s \"for\" zankami"
         },
         "unplugged-video-internet/coursef/2021": {
-          "name": "Internet",
-          "url": ""
-        },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Internet"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "Internet",
-          "url": ""
+          "name": "Internet"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "Internet",
-          "url": ""
-        },
-        "get-site-ip-com/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "design-process/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "final-project-design-worksheet/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "rubric-csf-final-projects/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Internet"
         },
         "implementation_guide/coursef/2021": {
-          "name": "Vodnik za implementacijo",
-          "url": ""
-        },
-        "lesson_type_guide/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-lesson-slides/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-animal-tracks/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Vodnik za implementacijo"
         },
         "mimi-activity/courseb/2021": {
-          "name": "Premakni se, premakni",
-          "url": ""
+          "name": "Premakni se, premakni"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "Premakni se, premakni",
-          "url": ""
+          "name": "Premakni se, premakni"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Premakni se, premakni",
-          "url": ""
+          "name": "Premakni se, premakni"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "Dajmo, dajmo",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling-faces-image/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "jigsaw/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "class-section-video/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course-ab-blockly-blocks/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Dajmo, dajmo"
         },
         "pair-programming-vid/courseb/2021": {
-          "name": "Programiranje parov",
-          "url": ""
-        },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "20_20_20_rule/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "happy-map-game-pieces/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "compass-rose/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "stevie_and_the_big_project/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unspotted_bugs/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-lesson-recommend/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common-sense-media-pause-think/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the-right-app-scenarios/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programiranje parov"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "assessment-answer-big-event/courseb/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
-        },
-        "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play_lab_project_planning_guide/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "implementation_guide/courseb/2021": {
-          "name": "Vodnik za implementacijo",
-          "url": ""
-        },
-        "lesson_type_guide/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Vodnik za implementacijo"
         },
         "pair-programming-vid/coursea/2021": {
-          "name": "Programiranje parov",
-          "url": ""
-        },
-        "20_20_20_rule/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programiranje parov"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Veseli zemljevidi",
-          "url": ""
-        },
-        "happy-map-cards/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "activity-answer-happy-maps/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "happy-map-game-pieces/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course-ab-blockly-blocks/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "20_20_20_rule_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "happy-map-cards-xl/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling-faces-image/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pair-programming/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_lesson_recommendations/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_lesson_recommendations_1/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Veseli zemljevidi"
         },
         "unplugged-video-big-event/coursea/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "assessment-answer-big-event/coursea/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
-        },
-        "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-lesson-recommend/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_lesson_recommendations_2/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "artist_project_planning_guide/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "artist_project_planning_guide_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "implementation_guide/coursea/2021": {
-          "name": "Vodnik za implementacijo",
-          "url": ""
-        },
-        "lesson_type_guide/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Vodnik za implementacijo"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Moji robotski prijatelji",
-          "url": ""
+          "name": "Moji robotski prijatelji"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Moji robotski prijatelji",
-          "url": ""
+          "name": "Moji robotski prijatelji"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "Moji robotski prijatelji",
-          "url": ""
+          "name": "Moji robotski prijatelji"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Moji robotski prijatelji",
-          "url": ""
+          "name": "Moji robotski prijatelji"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Moji robotski prijatelji",
-          "url": ""
-        },
-        "c2-maze-bridge/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-maze-blocks/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Moji robotski prijatelji"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Programiranje parov",
-          "url": ""
-        },
-        "csf-lesson-recommend/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-artist-intro-video/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-video/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-doc/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programiranje parov"
         },
         "unplugged-video-big-event/coursec/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "assessment-answer-big-event/coursec/2021": {
-          "name": "Veliki dogodek",
-          "url": ""
-        },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "right-app-scenarios/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play-lab-project-guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Veliki dogodek"
         },
         "implementation_guide/coursec/2021": {
-          "name": "Vodnik za implementacijo",
-          "url": ""
-        },
-        "lesson_type_guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_slides/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Vodnik za implementacijo"
         },
         "graph-paper-programming/coursed/2021": {
-          "name": "Obarvajmo kvadratke",
-          "url": ""
+          "name": "Obarvajmo kvadratke"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Obarvajmo kvadratke",
-          "url": ""
+          "name": "Obarvajmo kvadratke"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Obarvajmo kvadratke",
-          "url": ""
+          "name": "Obarvajmo kvadratke"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Obarvajmo kvadratke",
-          "url": ""
+          "name": "Obarvajmo kvadratke"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Obarvajmo kvadratke",
-          "url": ""
+          "name": "Obarvajmo kvadratke"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Obarvajmo kvadratke",
-          "url": ""
+          "name": "Obarvajmo kvadratke"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Programiranje parov",
-          "url": ""
+          "name": "Programiranje parov"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Relejsko programiranje",
-          "url": ""
+          "name": "Relejsko programiranje"
         },
         "relay-assessment/coursed/2021": {
-          "name": "Relejsko programiranje",
-          "url": ""
+          "name": "Relejsko programiranje"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Relejsko programiranje",
-          "url": ""
+          "name": "Relejsko programiranje"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Relejsko programiranje",
-          "url": ""
+          "name": "Relejsko programiranje"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Relejsko programiranje",
-          "url": ""
+          "name": "Relejsko programiranje"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Relejsko programiranje",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-project-guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance_party_unplugged/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_2/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling-faces-image/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Relejsko programiranje"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Pogojniki s kartami",
-          "url": ""
+          "name": "Pogojniki s kartami"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Pogojniki s kartami",
-          "url": ""
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pogojniki s kartami"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Pogojniki s kartami",
-          "url": ""
+          "name": "Pogojniki s kartami"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Pogojniki s kartami",
-          "url": ""
+          "name": "Pogojniki s kartami"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Pogojniki s kartami",
-          "url": ""
-        },
-        "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pogojniki s kartami"
         },
         "implementation_guide/coursed/2021": {
-          "name": "Vodnik za implementacijo",
-          "url": ""
-        },
-        "lesson_type_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_maze_blocks/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Vodnik za implementacijo"
         },
         "pair_programming/express/2021": {
-          "name": "Programiranje parov",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "artist_introduction/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "turns_angles/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "turns_angles_1/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprite_lab_documentation/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "making_sprites/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprite_lab_documentation_1/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprites_in_action/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-project-guide/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pair_programming_video/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "text_and_prompts/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programiranje parov"
         },
         "variables_video/express/2021": {
-          "name": "Spremenljivke",
-          "url": ""
-        },
-        "csf-express-end-of-course-project-planning-guide/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "rubric-csf-final-projects/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary_1/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Spremenljivke"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "Programiranje parov",
-          "url": ""
-        },
-        "class-section-video/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling-faces-image/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "20_20_20_rule/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common-sense-media-pause-think/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "follow_the_algorithm/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprite_lab_documentation/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common-sense-media-pause-think/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "about_me_planning_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-lesson/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-video/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-doc/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-video/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "assessment-answer-songwriting/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "designing_for_accessibility_1/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "types_of_disabilities/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "end-of-course-project-guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "rubric-csf-final-projects/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "design-process/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programiranje parov"
         },
         "implementation_guide/coursee/2021": {
-          "name": "Vodnik za implementacijo",
-          "url": ""
+          "name": "Vodnik za implementacijo"
         },
-        "lesson_type_guide/coursee/2021": {
-          "name": "",
-          "url": ""
+        "functions_2/csd/2021": {
+          "name": "Funkcije"
         },
-        "debugging_guide/coursee/2021": {
-          "name": "",
-          "url": ""
+        "variables_1/csd/2021": {
+          "name": "Spremenljivke"
         },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "",
-          "url": ""
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcije"
         },
-        "2021_change_log/coursee/2021": {
-          "name": "",
-          "url": ""
+        "functions_1/csd/2021": {
+          "name": "Funkcije"
         },
-        "teacher_forum_1/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursee/2021": {
-          "name": "",
-          "url": ""
+        "lists/csd/2021": {
+          "name": "Seznami"
         }
       }
     }

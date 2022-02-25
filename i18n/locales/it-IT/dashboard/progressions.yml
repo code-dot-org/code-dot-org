@@ -2,16 +2,24 @@ it:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" con l''Ape'
+      AI Machine Learning - Video: 'Apprendimento automatico IA: video'
+      'AI: Impact on Society - Video': 'IA: impatto sulla società - Video'
+      'AI: Training Data & Bias - Video': 'IA: dati di training e bias - video'
       Accelerometer Events: Eventi Accelerometro
       Adding Images: Aggiungere Immagini
       Adding Screens: Aggiungere Schermate
       Alien Defender: Difensore Alieno
       Animate Your Scene: Animare la Tua Scena
+      App Lab Intro - Video: 'App di Introduzione al Laboratorio: video'
+      'App Project: Bugs and Features': 'App Project: Malfunzionamenti e Funzionalità'
+      'App Project: Linking Screens': 'App Project: Linking Screens'
+      'App Project: Screen Import': 'App Project: Importazione videata'
       Arrays: Insiemi
       Artist Intro with JR Hildebrand: Introduzione Artistica con JR Hildebrand
       Artist Intro with JR Hildebrande: Introduzione artistica con JR Hildebrande
       Artist Project: Progetto Artisti
       'Artist: Variables': 'Artista: Variabili'
+      Assessment: Valutazione
       Attribution: Attribuzione
       Back and Forth: Avanti e indietro!
       Basic Conditionals: Condizionali di Base
@@ -67,6 +75,7 @@ it:
       Exploration: Esplorazione
       Explore HTML: Esplora HTML
       Exploring more CSS: Esplorare altri CSS
+      Extra: Supplementare
       Finish a Screen: Concludi una Schermata
       Finish the Prototype: Finisci un Prototipo
       Finishing Functions: Finire le Funzioni
@@ -84,6 +93,7 @@ it:
       Get In Formation: Tutti in formazione!
       HTML Tags: Tag HTML
       Headings in HTML: Intestazioni in HTML
+      Hello World: Ciao Mondo
       How to Create a Simple Function: Come Creare una Semplice Funzione
       How to Make a Sprite: Come creare un personaggio
       Ice Age Loops: Cicli dell'Era Glaciale
@@ -201,6 +211,7 @@ it:
       Styling Text: Stilizzare il Testo
       Styling with Classes: Stilizzare con le Classi
       Styling your Website: Stilizzare il tuo Sito Web
+      Teach AI a New Word: 'Apprendimento automatico IA: video'
       Text Compression: Compressione del testo
       The Animation Tab: The Animation Tab
       The Artist in Code Studio: L'Artista in Code Studio
@@ -229,6 +240,7 @@ it:
       'Video: Intro to Web Lab - Part 1': 'Video: Introduzione a Web Lab - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Video: Introduzione a Web Lab - Parte 2'
       'Video: Introduction to Arrays': 'Video: introduzione agli Insiemi'
+      'Video: Outbreak Simulator: Introduction': 'Video: Outbreak Simulator: Introduzione'
       'Video: Problem Solving Process': 'Video: Processo di Risoluzione di Problemi'
       'Video: What Makes a Computer, a Computer?': 'Video: Che cosa rende un Computer, un Computer?'
       Warm Up: Riscaldamento

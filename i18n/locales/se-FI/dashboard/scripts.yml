@@ -1,3 +1,4 @@
+---
 se:
   data:
     script:
@@ -41,7 +42,7 @@ se:
             Getting Loopy:
               name: Šaddat Gáiggasin
             Going Places Safely:
-              name: Mannat Sihkkaris Sajiide 
+              name: Mannat Sihkkaris Sajiide
             Happy Maps:
               name: Movttegis Kárttat
             'Jigsaw: Learn to drag and drop':
@@ -215,7 +216,7 @@ se:
             Super Challenge - Variables:
               name: Super Hástalus - Variábelat
             'Unplugged: Binary':
-              name: 'Neahtahaga - Binára'
+              name: Neahtahaga - Binára
             'Unplugged: Envelope Variables':
               name: 'Neahtahaga: Konvoluhtta Variábelat'
             'Unplugged: For Loop Fun':
@@ -229,8 +230,8 @@ se:
           student_description: Kursa 4 lea ráhkaduvvon ohppiide geat leat čađahan Kursa 2 ja 3. Oahppit galget oahppat movt čoavdit bargobihtáid mat šaddet váddáseappot ja váddáseappot seammás go ohppet ovttastahttit máŋga doahpaga maiguin čoavdit juohke hástalusa. Go dán kurssa lea čađahan, de oahppit galget máhttit ráhkadit prográmmaid mas sáhttet čájehit eanet gálggaid, nu go mohkiid ja funkšuvnnaid main leat paramehterat. Evttohuvvon 4.-8. klássaide.
         Course4pre:
           title: Kursa 4  Eavttut
-          description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan Kursa 2 ja 3. 
-          description_short: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan Kursa 2 ja 3. 
+          description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan Kursa 2 ja 3.
+          description_short: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan Kursa 2 ja 3.
           lessons:
             'Artist: Functions':
               name: 'Dáiddár: Funkšuvnnat'
@@ -250,7 +251,7 @@ se:
               name: 'Boanda: Geardduhit-mohkiid'
             'Maze: Sequence':
               name: 'Labirynta: Sekveansa'
-          student_description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan Kursa 2 ja 3. 
+          student_description: Oanehis čoahkkáigeassu prinsihpain ohppiide geat eai leat čađahan Kursa 2 ja 3.
         usability:
           lessons:
             Functions and Functions with Parameters:
@@ -343,7 +344,7 @@ se:
             Unplugged lessons:
               name: Neahtahaga lekšuvnnat
             Writing computer programs:
-              name: Čállit dihtor prográmmaid 
+              name: Čállit dihtor prográmmaid
         netsim:
           lessons:
             Automatic DNS node:
@@ -1013,10 +1014,6 @@ se:
               name: Unit 1, 15.-16. Beaivi Dihtor Prográmmat ja Čuovvut Direkšuvnnaid
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, 17.-19. Beaivi Mii Intelligeansa Lea?
-            0: |-
-              Unit 1, 1.-2. Beaivi Mii Dihtor Lea?
-            1: |-
-              Unit 1, 1.-2. Beaivi Mii Dihtor Lea?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, 3-.4. Beaivi Oastit Dihtora
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1117,10 +1114,6 @@ se:
               name: Unit 1, 15.-16. Beaivi Dihtor Prográmmat ja Čuovvut Direkšuvnnaid
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, 17.-19. Beaivi Mii Intelligeansa Lea?
-            0: |-
-              Unit 1, 1.-2. Beaivi Mii Dihtor Lea?
-            1: |-
-              Unit 1, 1.-2. Beaivi Mii Dihtor Lea?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, 3-.4. Beaivi Oastit Dihtora
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1139,10 +1132,6 @@ se:
               name: Unit 1, 15.-16. Beaivi Dihtor Prográmmat ja Čuovvut Direkšuvnnaid
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, 17.-19. Beaivi Mii Intelligeansa Lea?
-            0: |-
-              Unit 1, 1.-2. Beaivi Mii Dihtor Lea?
-            1: |-
-              Unit 1, 1.-2. Beaivi Mii Dihtor Lea?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, 3-.4. Beaivi Oastit Dihtora
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1489,7 +1478,7 @@ se:
           description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
           lessons:
             Hour of Code 2015:
-              name: 'KodenDiibmu 2015'
+              name: KodenDiibmu 2015
           student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
         starwarsblocks:
           description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
@@ -1499,7 +1488,7 @@ se:
           description_short: Guorahala Minecraft máilmmi kodemiin.
           lessons:
             Hour of Code 2015:
-              name: 'KodenDiibmu 2015'
+              name: KodenDiibmu 2015
         oceans:
           title: AI Mearaide
           description: Oahpa movt AI ja mašiidnaoahppan sáhttá geavahuvvot čujuhit máilmmi váttisvuođaide.
@@ -2124,7 +2113,7 @@ se:
             Background and Context:
               name: Duogáš ja Konteaksta
             'Classroom and Workshop Style ':
-              name: 'Klássalatnja ja Bargobáji Málle'
+              name: Klássalatnja ja Bargobáji Málle
             ECS Curriculum:
               name: ECS Oahppoplána
             Welcome to Phase 1!:
@@ -2134,7 +2123,7 @@ se:
             Classroom and workshop style:
               name: Klássalatnja ja Bargobáji málle
             'Classroom and workshop style ':
-              name: 'Klássalatnja ja Bargobáji málle'
+              name: Klássalatnja ja Bargobáji málle
         algebraFacilitator:
           lessons:
             Evaluation Blocks:
@@ -2284,7 +2273,7 @@ se:
         CSDU4-Draft:
           lessons:
             Adding Functionality (optional):
-              name: Lasihit Funkšunálitehta (válljenvejolašvuohta) 
+              name: Lasihit Funkšunálitehta (válljenvejolašvuohta)
             Design Mode:
               name: Designa Modus
             Making it Interactive:
@@ -2560,10 +2549,6 @@ se:
               name: Unit 1, 15.-16. Beaivi Dihtor Prográmmat ja Čuovvut Direkšuvnnaid
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, 17.-19. Beaivi Mii Intelligeansa Lea?
-            0: |-
-              Unit 1, 1.-2. Beaivi Mii Dihtor Lea?
-            1: |-
-              Unit 1, 1.-2. Beaivi Mii Dihtor Lea?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, 3-.4. Beaivi Oastit Dihtora
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2652,7 +2637,7 @@ se:
           description_audience: Ahki 5-18
           lessons:
             " Bee: Conditionals":
-              name: "Uvlu: Eavttut"
+              name: 'Uvlu: Eavttut'
             'Artist: Nested Loops':
               name: 'Dáiddár: Mohkit Mohkiin'
             Build a Game:
@@ -2743,7 +2728,7 @@ se:
               description_teacher: Oahppit ohppet oktiibeaškkeheami birra dihtoris. Barggadettin guovttis ja guovttis, sii suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Sii dalle geavahit `leaGuoskame()` blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
             Complex Sprite Movement:
               name: Kompleaksa Sprite Lihkastagat
-              description_student: 'Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.'
+              description_student: Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.
               description_teacher: Oahppit ohppet movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid. Ovdamearkka dihte oahppit ohppet movt simuleret deaddofámu,  bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin Code Studio ovdáneamis oahppit galget kombineret dáid lihkastagaid nu ahte animerejit ja kontrollerejit ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid. Oahppit movttiidahttojuvvojit loahppa dásiin ráhkadit iežaset lasáhusaid spellui.
             Collisions:
               name: Oktiibeaškkeheamit
@@ -2751,7 +2736,9 @@ se:
               description_teacher: Oahppit programmerejit sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, oahppit juogadit ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (`beaškkehit`, `duvdit`, `bánccardit` ja `bánccarditEret`).
             Functions:
               description_student: Dát lekšuvdna gokčá funkšuvnnaid vuogi movt organiseret koda, dát dahká dán vejolažžan lohkat ja sihkku geardduhuvvon kodablohkaid. Klássa oahppá ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid, ja de ráhkadišgoahtit funkšuvnnaid Speallan Lab:as. Loahpageahčen lekšuvnna klássa geavaha dáid gálggaid organiseret ja bidjat funkšunalitehta sin loahpalaš scroller-spealu veršuvdnii.
-              description_teacher: "Oahppit ohppet movt ráhkadit funkšuvnnaid organiseret, dahkat dán vejolažžan lohkat ja sihkkut geardduhuvvon kodablohkaid. Neahtahaga liggen guorahallá movt ieš guđet detálljadásiid guovllut sáhttet leat ávkkálaččat čadnon kontekstii. Oahppit oahppet ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid. Maŋŋil oahppit ohppet ráhkadit funkšuvnnaid Speallan Lab:as.\nSii geavahit funkšuvnnaid sihkkut guhkes blohkaid kode tevdnen mohkiin ja buhtadit geardduhuvvon kodenosiid eaŋkilis funkšuvnnain. Loahpageahčen lekšuvnna oahppit geavahit dáid gálggaid organiseret ja lasihit funkšunalitehta loahpalaš scroller-spealu veršuvdnii."
+              description_teacher: |-
+                Oahppit ohppet movt ráhkadit funkšuvnnaid organiseret, dahkat dán vejolažžan lohkat ja sihkkut geardduhuvvon kodablohkaid. Neahtahaga liggen guorahallá movt ieš guđet detálljadásiid guovllut sáhttet leat ávkkálaččat čadnon kontekstii. Oahppit oahppet ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid. Maŋŋil oahppit ohppet ráhkadit funkšuvnnaid Speallan Lab:as.
+                Sii geavahit funkšuvnnaid sihkkut guhkes blohkaid kode tevdnen mohkiin ja buhtadit geardduhuvvon kodenosiid eaŋkilis funkšuvnnain. Loahpageahčen lekšuvnna oahppit geavahit dáid gálggaid organiseret ja lasihit funkšunalitehta loahpalaš scroller-spealu veršuvdnii.
             The Game Design Process:
               name: Spealu Designa Proseassa
               description_student: Dát lekšuvdna introdusere proseassa maid klássa geavaha designet spealu reastta ovttadahkii. Klássa čađaha dán proseassa máŋgga dási čađa. Oassin dán lekšuvnnas klássa beassá veaháš oahppat geavahit máŋggarámmat animašuvnnaid Speallan Lab:as. Loahpageahčen lekšuvnna sáhttet buoridit spealu nu ahte dat šaddá sin iežaset.
@@ -2770,8 +2757,8 @@ se:
               description_teacher: Oahppit galget árvvoštallat "váttisvuođaid" láittasvuođa ja iežasdadjamuša mielde, ja reflekteret movt sáhttet lahkonit váttisvuođaid iežaset eallimiin. Dasto galget suokkardallat movt Dihto Diehtagis oppalaččat ja programmeremis earenoamážit lea mearkkašahtti rolla juogo guoimmuheamis dahje reaidun iežasdadjumuššii.
             Plotting Shapes:
               name: Plottet Hámiid
-              description_student: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
-              description_teacher: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
+              description_student: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla\_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
+              description_teacher: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla\_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
             Shapes and Randomness:
               name: Hámit ja Sahtedohko
               description_student: Dát lekšuvdna viiddida tevdnengálggaid mas leat mielde govdodat ja allodat ja láidesta doahpagii genereret sahtedohko logu. Klássa oahppá tevdnet veršuvnnaid ellipssaid() ja rect() main leat govdadat- ja allodatparamehterat ja geavahit duogášblohka() deavdit ivnniid šerbmii. Progrešuvnna loahpas oažžu klássa láidesteami sahtedohko Loguid() blohkkii ja geavahit ođđa blohkaid tevdnet sahtedohko arvedávggi gearbmaša.
@@ -2804,15 +2791,11 @@ se:
             Other Forms of Input:
               name: Eará Input vuogit
               description_student: Klássa joatká suokkardallat vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis boalluVulos()kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
-              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis ` boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
+              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis `boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
             Booleans Unplugged:
               name: Boolána Neahtahaga
               description_student: Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Klássa de juohká objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, ja geahččá de movt dadjamat sáhttet váikkuhit prográmma njuovžilvuođa.
-              description_teacher: |-
-                Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.
-                Dan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. 
-
-                De loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid.
+              description_teacher: "Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.\nDan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. \n\nDe loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid."
             Project - Interactive Card:
               name: Prošeakta  - Interaktiivva Koarta
               description_student: Dán kumulatiivva prošeavttas 1. kapihttalis, klássa pláne ja ovdánahttá interaktiivva dearvuođakoartta geavahettiin buot programmeren vugiid maid sii leat oahppan dássážii.
@@ -2826,7 +2809,7 @@ se:
             Shapes and Randomization:
               name: Hámit ja  ja Sahtedohko
             CS Discoveries End of Semester Survey:
-              name: CS Fuomášumit LoahppaKursaIskkadeamis 
+              name: CS Fuomášumit LoahppaKursaIskkadeamis
             CSD Post-Course Survey:
               name: CDS Maŋŋil-Kurssa Iskkadeapmi
         grade2:
@@ -2855,7 +2838,7 @@ se:
             Puppy Loops:
               name: Vielpá Mohkit
             How to behave in the lab_How to use Code_org puzzles:
-              name: Movt láhttet lab:as/Movt geavahit Code.org bargguid 
+              name: Movt láhttet lab:as/Movt geavahit Code.org bargguid
             Programming at home with my pet:
               name: Prográmmeret ruovttus mu vielpáin
             Binary Bracelets:
@@ -2918,21 +2901,17 @@ se:
           lessons:
             Intro to Problem Solving:
               name: Láidehus ČuolbmaČoavdimii
-              description_student: 'Klássa bargá joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.'
-              description_teacher: 'Dán lekšuvnnas, oahppit barget joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Joavkkus leat guokte vuoru bargat iežaset fatnasiiguin, main mihttu lea geahččalit doalahit eanet evrriid go ovddit vuorus. Doaimma struktuvra fuomášuhttet iešguđet dásiid čuolbmačoavdinproseassas mii ohppiide introduserejuvvo lagabui boahtte lekšuvnnas. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.'
+              description_student: Klássa bargá joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.
+              description_teacher: Dán lekšuvnnas, oahppit barget joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Joavkkus leat guokte vuoru bargat iežaset fatnasiiguin, main mihttu lea geahččalit doalahit eanet evrriid go ovddit vuorus. Doaimma struktuvra fuomášuhttet iešguđet dásiid čuolbmačoavdinproseassas mii ohppiide introduserejuvvo lagabui boahtte lekšuvnnas. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.
             The Problem Solving Process:
               description_student: Dát lekšuvdna introdusere formála čuolbmačoavdinproseassa maid klássa galgá geavahit jagi čađa. Definere - Ráhkkan - Geahččal - Reflektere. Klássa bargá dáid cehkiid ektui aluminumfanas-čuolmma dáfus ovddit lekšuvnnas, dasto de barget čuolmmaid maid leat čeahpit čoavdit, ja de čuolmmain maid áigot čoavdit buoridan dihte. Loahpas lekšuvnna klássa ráhkadan listtu masa bidjet ávkkálaš strategiijaid juohke dássái proseassas maid de bijdet plakáhttii mii fas galgá geavahuvvot jagi čađa.
               description_teacher: Dát lekšuvdna introdusere formála čuolbmačoavdinproseassa maid oahppit galget geavahit jagi čađa. Definere - Ráhkkan - Geahččal - Reflektere. Lekšuvdna álgá dainna ahte oahppit jurddariđu vuođul smihttet iešguđet lágan čuolmmaid maid deivet árgabeaivvis. Ohppiide de čájehuvvojit dat njealje ceahki čuolbmačoavdinproseassas ja de barget ovttas čatnat daid abstrákta cehkiid čuolbmačoavdima duohta vásáhusaide. Álggos oahppit čatnet dáid cehkiid aluminumfanas-čuolbmii mii lei ovddit lekšuvnnas, ja de váldet čuolmma maid leat čeahpit čoavdit, ja de čuolmma čovdet buoridan dihte. Loahpas lekšuvnna klássa ráhkadan listtu masa bidjet ávkkálaš strategiijaid juohke dássái proseassas maid de bidjet plakáhttii, mii fas galgá geavahuvvot jagi čađa.
             Exploring Problem Solving:
               name: Vásihit ČuolbmaČoavdima
               description_student: 'Dán lekšuvnnas klássa geavaha čuolbmačoavdinproseassa golmma iešguđet čuolmmas: ohcat sáni, seating riegádanbeaivvi lágideamis ja plánet tuvrra. Čuolmmat šaddet váddásit ahte váddásit ja hejot čilgejuvvon čuvgehit movt čuolbmačoavdinproseassa lea ávkkálaš go don hálddašat dákkár čuolmma.'
-              description_teacher: |-
-                Dán lekšuvnnas oahppit geavahit čuolbmačoavdinproseassa golmma iešguđet čuolmmas ipmirdan dihte buorebut juohke ceahki árvvu. Sii galget ohcat sáni, seating riegádanbeaivvi lágideamis ja plánet tuvrra. Čuolmmat šaddet váddásit ahte váddásit ja hejot čilgejuvvon čuvgehit movt čuolbmačoavdinproseassa lea ávkkálaš go don hálddašat dákkár čuolmma. Dát lekšuvdna čoahkkáigesso nu ahte oahppit reflekterejit sin čuolbmačoavdinproseassa geahččaleami. 
-                Sii áigot vuoiggalaččat inkluderet juohke ceahki ja áigot jurddariđu vuođul smihttet jearaldagaid dahje strategiijaid mat sáhttet veahkehit sin buorebut čilget rabas čuolmmaid, go dát lea dávjá eanemus kritihkalaš ceahkki. 
-                 
-                Dán lekšuvnnas dáidet šaddat guokte klássa-áigogada dahje eanet mat galget čađahuvvot. Guokte vuosttaš čuolmma sáhttet heivet ovtta klássaáigodahkii, muhto goalmmát ferte biddjot eará beaivái.
+              description_teacher: "Dán lekšuvnnas oahppit geavahit čuolbmačoavdinproseassa golmma iešguđet čuolmmas ipmirdan dihte buorebut juohke ceahki árvvu. Sii galget ohcat sáni, seating riegádanbeaivvi lágideamis ja plánet tuvrra. Čuolmmat šaddet váddásit ahte váddásit ja hejot čilgejuvvon čuvgehit movt čuolbmačoavdinproseassa lea ávkkálaš go don hálddašat dákkár čuolmma. Dát lekšuvdna čoahkkáigesso nu ahte oahppit reflekterejit sin čuolbmačoavdinproseassa geahččaleami. \nSii áigot vuoiggalaččat inkluderet juohke ceahki ja áigot jurddariđu vuođul smihttet jearaldagaid dahje strategiijaid mat sáhttet veahkehit sin buorebut čilget rabas čuolmmaid, go dát lea dávjá eanemus kritihkalaš ceahkki. \n\nDán lekšuvnnas dáidet šaddat guokte klássa-áigogada dahje eanet mat galget čađahuvvot. Guokte vuosttaš čuolmma sáhttet heivet ovtta klássaáigodahkii, muhto goalmmát ferte biddjot eará beaivái."
             What is a Computer?:
-              description_student: Dán lekšuvnnas klássa ovdánahttá gaskaboddosaš čilgehusa mii dihtor lea. Maŋŋil go jurddariđu vuođul leat smiehttan vejolaš čilgehusaid dihtora várás, klássa bargá joavkkuid mielde sirret govaid dan mielde “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja bidjá joavkkuid divodit plakáhtaid dan ođđa čilgehusa mielde. 
+              description_student: Dán lekšuvnnas klássa ovdánahttá gaskaboddosaš čilgehusa mii dihtor lea. Maŋŋil go jurddariđu vuođul leat smiehttan vejolaš čilgehusaid dihtora várás, klássa bargá joavkkuid mielde sirret govaid dan mielde “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja bidjá joavkkuid divodit plakáhtaid dan ođđa čilgehusa mielde.
               description_teacher: 'Dán lekšuvnnas oahppit ovdánahttet gaskaboddosaš čilgehusa mii dihtor lea. Lekšuvnna álggus klássa smiehttá jurddariđu vuođul vejolaš čilgehusaid dihtora várás ja bidjá dáid bohtosiid távvalii. De oahppit barget joavkkuid mielde sirret govaid dan mielde at “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja diktá ohppiid divodit plakáhtaid dan ođđa čilgehusa mielde. '
             Human vs. Computer Processing:
               name: Olmmošlaš ja Dihtor Gieđahallan
@@ -2945,7 +2924,7 @@ se:
             Input and Output:
               name: Input ja Output
               description_student: Dás oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Loahpas lekšuvnna klássa guorahallá dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas.
-              description_teacher: Dán lekšuvnnas oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Ovdalis doaimmas oahppit galge deattuhit čielga fysalaš  input:aid ja output:aid (omd. Boallobeavdi input:an dahje šearbma output:an), muhto maŋit digaštallamiin oahppit galget árvvoštallat ovdamearkkaid mat eai leat diehttalasat (ahte guoskkahan šearbma sáhttá leat sihke input:a ja output:a, dahje dan ahte interneahtta sáhttá leat sihke input:a ja output:a) Lekšuvnnaid čađa oahpaheaddji registrere input:aid ja output:aid mat leat identifiserejuvvon T-diagrámmas ovddabealde lanjas. Lekšuvnna čoahkkáigeassun oahppit guorahallet dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas. 
+              description_teacher: Dán lekšuvnnas oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Ovdalis doaimmas oahppit galge deattuhit čielga fysalaš  input:aid ja output:aid (omd. Boallobeavdi input:an dahje šearbma output:an), muhto maŋit digaštallamiin oahppit galget árvvoštallat ovdamearkkaid mat eai leat diehttalasat (ahte guoskkahan šearbma sáhttá leat sihke input:a ja output:a, dahje dan ahte interneahtta sáhttá leat sihke input:a ja output:a) Lekšuvnnaid čađa oahpaheaddji registrere input:aid ja output:aid mat leat identifiserejuvvon T-diagrámmas ovddabealde lanjas. Lekšuvnna čoahkkáigeassun oahppit guorahallet dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas.
             Processing:
               name: Gieđahallan
               description_student: Dát lekšuvdna čiekŋuda gieđahallan doahpaga mii introduserejuvvui oassin dihtorgieđahallama čilgehusas. Bárat doibmet ovttas oažžun dihte kortstykke ordegii, málle movt dieđuid gieđahallá. Loahpas klássa digaštallá maid gieđahallan mearkkaša dieđuid gieđahallama čuolmmaid oktavuođas.
@@ -3034,7 +3013,7 @@ se:
             Conditionals and Boolean Logic:
               name: Eavttut ja Boolána Logihkka
             While Loops and Introduction to Arrays:
-              name: Dalle go Mohkit ja Introdukšuvnnat Matrisaide 
+              name: Dalle go Mohkit ja Introdukšuvnnat Matrisaide
             Processing Arrays and Functions with Return Values:
               name: Gieđahallat Matrisaid ja Funkšuvnnaid Ruovttoluotta Árvvuiguin
             Unit 5 Overview:
@@ -3108,7 +3087,12 @@ se:
             Digital Footprint:
               name: Digitála Luodda
               description_student: Dán lekšuvnnas geahččat maŋás doalahan dihte persovnnalaš neahttasajiid, hupmat persovnnalaš dieđuid birra maid olbmot válljejit juogadit digitálalaččat. Klássa digaštallagoahtá makkár dieđuid lea vuogas juohkit eará olbmuiguin, ja geahččá de ovdamearkkaid sosiálamediain iskat makkár persovnnalaš dieđuid sáhttá vásedin dahje fuomáškeahttá juohkit. Loahpas klássa ráhkada njuolggadusaid maid čuvvot go áigot bidjat dieđuid nehttii.
-              description_teacher: "Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r\n\\ r\nOahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r\n\\r\nLoahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii."
+              description_teacher: |-
+                Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r
+                \\ r
+                Oahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r
+                \\r
+                Loahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii.
             Sources and Search Engines:
               name: Gáldut ja OhcanMutuvrrat
               description_student: Go de leat geahččalan neahttaohcama, oahppá klássa ohcanmutuvrraid siskkáldas funkšuvnnaid birra ja oažžu vejolašvuođa rievdadallat iežaset analyhtalaš gálggaid ozadettiin ártegis elliid ja elliid mat eai leat jáhkehahtti.
@@ -3120,7 +3104,7 @@ se:
             Styling Text with CSS:
               name: Stylet Teavstta CSS:ain
               description_student: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Klássa oahppá syntáksa vuođu CSS njuolggadusaide ja suokkardallá de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
-              description_teacher: "Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis."
+              description_teacher: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
             Styling Elements with CSS:
               name: Stylet Elemeanttaid CSS:ain
               description_student: Dát lekšuvdna joatká introdukšuvnnain CSS stiilla iešvuođaid birra, dán vuoru mas eanet deattuhit elemeanttaid mat eai leat teavsttat. Klássa iskagoahtá ja rievdadišgoahtá daid ođđa CSS-stiillaid mat leat Desserts of the World-siiddus. Maŋŋil de geavahit dán ođđa máhtu iežaset persovnnalaš neahttasajiide.
@@ -3130,8 +3114,8 @@ se:
               description_student: Dát lekšuvdna gokčá daid ulbmiliid mat neahttasiiddut fállet, sihke geavaheddjiide ja ráhkadeddjiide. Klássa suokkardallá muhtun neahttasiidduid USA:s mat ollu geavahuvvojit ja digaštallet movt iešguđet neahttasiidu lea ávkkálaš geavaheddjiide ja movt sáhttet leat ávkin ráhkadeddjiide.
               description_teacher: Juohke neahttasiiddus lea ulbmil, ja duogáš manne muhtun lea dan ráhkadan ja manne earát dan geavahit. Dán lekšuvnnas oahppit árvvoštallagohtet makkár ulbmil neahttasiiddus lea, sihke geavaheddjiide ja ráhkadeddjiide. Oahppit suokkardallet muhtun neahttasiidduid USA:s mat ollu geavahuvvojit ja geahččalit iskat movt iešguđet neahttasiidu lea ávkkálaš geavaheddjiide ja movt sáhttet leat ávkin ráhkadeddjiide.
             'Websites for Expression ':
-              name: 'Neahttasiiddut Dadjamiidda'
-              description_student: 'Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.'
+              name: Neahttasiiddut Dadjamiidda
+              description_student: Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
               description_teacher: Dán lekšuvnnas oahppit guorahallet vugiid movt geavahit neahttasiidduid reaidun persovnnalaš dadjamiidda ja listtu mas leat fáttát ja beroštumit maid galget váldit mielde persovnnalaš neahttasiidui. Álggus lekšuvnnas oahppit digaštallet iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid. De oahppit gehččet moadde ovdamearkka neahttasiidduin maid oahppit leat ráhkadan ovddeš CS Discoveries kurssain identifiseret vugiid movt leat ovdanbuktit sin jurdagiid. De loahpas oahppit smihttet ovttas ja juhket listtu mas leat fáttát ja beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
             Intro to HTML:
               name: Láidehus HTML:ii
@@ -3140,18 +3124,23 @@ se:
             Headers:
               name: Bajilčállagat
               description_student: Dát lekšuvdna čájeha HTML merkemiid, dán vuoru bajilčállagiid. Klássa hárjehallá geavahit bajilčála-merkemiid ráhkadit siido- ja sekšuvdnastiillaid ja oahpahallá movt iešguđet bajilčállagat čájehuvvojit standárdan. Dasto klássa plána movt dat sáhttá organiseret sisdoalu persovnnalaš neahttasiidduin, maid galget ráhkadit ovttadaga badjel ja álggahit vuosttaš siiddu prošeavttas.
-              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas. 
+              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas.
             Lists:
-              description_student: Dát lekšuvdna čilge diŋgojuvvon ja ordnekeahtes listtuid ja gullevaš &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML-merkemiid. Klássa hárjehallá geavahit merkemiid ja de maŋŋil fas jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu, mas leat dat ođđa kodat.
-              description_teacher: Oahppit leat ožžon čilgejuvvot diŋgojuvvon ja ordnekeahtes listtuid ja barget muhtun dásiid čáđa masa geavahit &lt;ul&gt; &lt;ol&gt;, ja &lt;li&gt; merkemiid. Dasto sii as jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu. Ođđa siidui sii čállet HTML čájehan dihte bajilčállaga, listtu 10 bajimusas dahje eará sisdoalu masa geavahit daid ođđa kodaid maid leat oahppan.
+              description_student: Dát lekšuvdna čilge diŋgojuvvon ja ordnekeahtes listtuid ja gullevaš \<ul>, \<ol>, and \<li> HTML-merkemiid. Klássa hárjehallá geavahit merkemiid ja de maŋŋil fas jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu, mas leat dat ođđa kodat.
+              description_teacher: Oahppit leat ožžon čilgejuvvot diŋgojuvvon ja ordnekeahtes listtuid ja barget muhtun dásiid čáđa masa geavahit \<ul> \<ol>, ja \<li> merkemiid. Dasto sii as jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu. Ođđa siidui sii čállet HTML čájehan dihte bajilčállaga, listtu 10 bajimusas dahje eará sisdoalu masa geavahit daid ođđa kodaid maid leat oahppan.
             Intellectual Property and Images:
               name: Dahkkivuoigatvuohta ja Govat
               description_student: Dát lekšuvdna čájeha movt don geavahat mediaid nugo govaid, videoid dahje musihka maid eará leat bidjan muhtun neahttasadjái, seammás go doahttalit su rivttiid gii leat ráhkadan media. Easkka maŋŋil go leat geahčadan Creative Commons-lisensierema, oahppá klássa movt galgá bidjat govaid neahttasiidui ja movt bidjet rievttes namaid go barget dan.
-              description_teacher: "Go leat álggahan digaštallat persovnnalaš oainnuid movt earát galget oažžut lobi geavahit daid bargguid, klássa guorahallá dahkkivuoigatvuohta ulbmila ja rolla kreatiiva sisdollui sihke ráhkadeaddji ja geavaheaddji dáfus. Dasto jotket doaimmain guorahallat iešguđetlágan Creative Commons-liseanssaid čovdosiid váttisvuođaid gieđahallat dahkkivuoigatvuođa. \\r\n\\r\nLoahpas oktasaš ipmárdusain gáržžidemiid birra iešguđet Creative Commons-liseanssaide, oahppit ohppet movt sáhttet bidjat govaid iežaset neahttasiidui geavahettiin &lt;img&gt; merkemiid."
+              description_teacher: |-
+                Go leat álggahan digaštallat persovnnalaš oainnuid movt earát galget oažžut lobi geavahit daid bargguid, klássa guorahallá dahkkivuoigatvuohta ulbmila ja rolla kreatiiva sisdollui sihke ráhkadeaddji ja geavaheaddji dáfus. Dasto jotket doaimmain guorahallat iešguđetlágan Creative Commons-liseanssaid čovdosiid váttisvuođaid gieđahallat dahkkivuoigatvuođa. \\r
+                \\r
+                Loahpas oktasaš ipmárdusain gáržžidemiid birra iešguđet Creative Commons-liseanssaide, oahppit ohppet movt sáhttet bidjat govaid iežaset neahttasiidui geavahettiin \<img> merkemiid.
             Project - Multi-Page Websites:
               name: Prošeakta - Máŋgga-Siidosaš Neahttasiiddut
               description_student: 'Dát lekšuvdna gokčá hyper-čanastagaid, maid neahttaovdánahttit sáhttet geavahit čatnat siidduid oktii neahttasiidui. Klássa čatná ovddit siidduid oktii ovtta prošektii, ja ráhkada navigerenlinjjáid juohke siidui ovdal go almmuhit neahttasiiddu nehttii. '
-              description_teacher: "Maŋŋil go leat oahppan čatnat neahttasiidduid oktii, de oahppit leat gergosat liŋkkaid almmuhit neahttasiiddu mainna leat bargan. Dán lekšuvnnas čatnet oktii ovddit siidduid maiguin leat bargan ja ráhkadit oktan prošeaktan, ráhkadit ođđa siiddu ja bidjet navigeremiid siidduid gaskii ovdal go almmuhit neahttasiiddu nehttii. \\r\n\\r"
+              description_teacher: |-
+                Maŋŋil go leat oahppan čatnat neahttasiidduid oktii, de oahppit leat gergosat liŋkkaid almmuhit neahttasiiddu mainna leat bargan. Dán lekšuvnnas čatnet oktii ovddit siidduid maiguin leat bargan ja ráhkadit oktan prošeaktan, ráhkadit ođđa siiddu ja bidjet navigeremiid siidduid gaskii ovdal go almmuhit neahttasiiddu nehttii. \\r
+                \\r
             RGB Colors and Classes:
               name: RGB Ivnnit ja Klássat
               description_student: Dát lekšuvdna gokčá klássaid ja heivehuvvon ivnniid. Klássa oahppá álggos movt sáhttá spesifiseret ieš-definerejuvvon ivnniid geavahettiin RGB (rukses, ruoná, alit) árvvuid, ja de geavahit dáid ivnniid ođđa Njealje Jagiáiggi neahttasiiddu, mii geavaha CSS-klássaid. Geavahettiin klássaid de lasiha klássa eanet stiillaid Njealje Jagiáiggi-neahttasiidui, ja geavaha daid stylet iežaset persovnnalaš neahttasiidduid.
@@ -3159,11 +3148,11 @@ se:
             Project - Personal Portfolio Website:
               name: Prošeakta - Persovnnalaš Portefolie Neahttasiidu
               description_student: Dán ovttadaga maŋemus beivviin, klássa loahpaha iežaset persovnnalaš neahttasajiid ja barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja movt dát leat ovdánahtton.
-              description_teacher: "Oahppit leat geavahan ollu áiggi ovttadagas bargat persovnnalaš neahttasaji. Loahpas oahppit loahpahit iežaset neahttasajiid. Sii barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja maiddái čájehit proseassa loahpalaš designa rádjái.\\r"
+              description_teacher: Oahppit leat geavahan ollu áiggi ovttadagas bargat persovnnalaš neahttasaji. Loahpas oahppit loahpahit iežaset neahttasajiid. Sii barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja maiddái čájehit proseassa loahpalaš designa rádjái.\\r
             Headings:
               name: Bajilčállagat
               description_student: Dát lekšuvdna čájeha HTML merkemiid, dán vuoru bajilčállagiid. Klássa hárjehallá geavahit bajilčála-merkemiid ráhkadit siido- ja sekšuvdnastiillaid ja oahpahallá movt iešguđet bajilčállagat čájehuvvojit standárdan. Dasto klássa plána movt dat sáhttá organiseret sisdoalu persovnnalaš neahttasiidduin, maid galget ráhkadit ovttadaga badjel ja álggahit vuosttaš siiddu prošeavttas.
-              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas. 
+              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas.
             CSD Post-Course Survey:
               name: CDS Maŋŋil-Kurssa Iskkadeapmi
         csp2-support:
@@ -3212,7 +3201,7 @@ se:
             Understanding Your User:
               name: Ipmirdit Du Geavaheaddji
               description_student: Geavahit geavaheaddjeprofiillaid, klássa fuomáša movt iešguđet geavaheaddjit soitet reageret buktagiidda. Rollaspealuin, neaktit leat eará persovdnan, mieláhttut klássas besset vásihit designa earáid čalmmiid čađa.
-              description_teacher: "Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r"
+              description_teacher: Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r
             Discovering Users:
               name: Analysere Designa
             User-Centered Design Micro Activity:
@@ -3235,12 +3224,12 @@ se:
               description_teacher: Álggahan dihte app:a designaprošeavtta, mii bistá ovttadaga lohppii, oahppit isket muhtun app:aid mat leat designejuvvon sosiála váikkuhusaide maid eará oahppit leat ráhkadan. Klássa de čađaha čuolbmáčoavdinproseassa dásiid čilget, ráhkkanahttit ja reflekteret go ovdánahttet idea iežaset app:ii mas galgá leat sosiála váikkuhus. Loahpas oahppit ráhkadit prošeaktajoavkkuid ja šihttet movt joavku galgá doaibmat iežaset app:a ovdánahttima čađa.
             Market Research:
               name: MárkanIskkadeapmi
-              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot. 
+              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot.
               description_teacher: Dán lekšuvnnas oahppit isket app:aid mat sulastahttet dan maid ieža áigot ráhkadit ipmirdan dihte geavaheddjiid dárbbuid. Oahppit barget joavkkuin ohcat interneahtas eará app:aid ja de árvvoštallet daid maid sin mielas leat miellagiddevaččat. Loahpas lekšuvnna juohke joavku lea ožžon čielgasit idea makkár app:a áigot ráhkadit ja maid ráddjen geavaheaddjejoavkku. Juohke joavku doalaha listtu mas leat sitáhtat app:ain maid iske maid de sáhttet geavahit loahppa ovdanbuktimis.
             Paper Prototypes:
               name: BáberPrototyhpat
               description_student: Báberprototyhpat veahkehit ovdánahttiid iskat ideaid ovdal go beare ollu áiggi bidjet kodaid čállimii. Dán lekšuvnnas joavku guorahallá muhtun ovdamearkkaid app:ain mat leat ráhkaduvvon App Lab:as, ja geavahit dáid app:aid informeret vuosttaš báberprototyhpaid.
-              description_teacher: "Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r"
+              description_teacher: Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r
             Prototype Testing:
               name: Prototyhpa Teasten
             Event Driven Programming:
@@ -3265,7 +3254,7 @@ se:
             Fuzz Fiesta:
               name: Fuzz Fiesta
             Going Places Safely:
-              name: Mannat Sihkkaris Sajiide 
+              name: Mannat Sihkkaris Sajiide
         courseb-draft:
           description_short: Láidehus dihtordiehtagii aittoálgi lohkkiide.
           lessons:
@@ -3302,7 +3291,7 @@ se:
             Digital Citizenship:
               name: Digitála Stáhtaborgárvuohta
             'Unplugged: Binary':
-              name: 'Neahtahaga - Binára'
+              name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
         coursee-draft:
@@ -3488,7 +3477,7 @@ se:
             Conditionals and Boolean Logic:
               name: Eavttut ja Boolána Logihkka
             While Loops and Introduction to Arrays:
-              name: Dalle go Mohkit ja Introdukšuvnnat Matrisaide 
+              name: Dalle go Mohkit ja Introdukšuvnnat Matrisaide
             Processing Arrays and Functions with Return Values:
               name: Gieđahallat Matrisaid ja Funkšuvnnaid Ruovttoluotta Árvvuiguin
             Group Work and Peer Learning:
@@ -3668,7 +3657,7 @@ se:
             Exploring Websites:
               name: Suokkardallat Neahttasiidduid
             'Websites for Expression ':
-              name: 'Neahttasiiddut Dadjamiidda'
+              name: Neahttasiiddut Dadjamiidda
             Intro to HTML:
               name: Láidehus HTML:ii
             Headers and Lists:
@@ -4081,7 +4070,7 @@ se:
             Digital Citizenship:
               name: Digitála Stáhtaborgárvuohta
             'Unplugged: Binary':
-              name: 'Neahtahaga - Binára'
+              name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
             Building a Foundation:
@@ -4291,7 +4280,7 @@ se:
             Project - Design a Game:
               name: Prošeakta  - Designe Spealu
             CS Discoveries End of Semester Survey:
-              name: CS Fuomášumit LoahppaKursaIskkadeamis 
+              name: CS Fuomášumit LoahppaKursaIskkadeamis
         csd3-2018:
           title: CSD Unit 3 - Animašuvnnat ja Spealut ('18-'19)
           lesson_groups:
@@ -4308,8 +4297,8 @@ se:
               description_teacher: Oahppit galget árvvoštallat "váttisvuođaid" láittasvuođa ja iežasdadjamuša mielde, ja reflekteret movt sáhttet lahkonit váttisvuođaid iežaset eallimiin. Dasto galget suokkardallat movt Dihto Diehtagis oppalaččat ja programmeremis earenoamážit lea mearkkašahtti rolla juogo guoimmuheamis dahje reaidun iežasdadjumuššii.
             Plotting Shapes:
               name: Plottet Hámiid
-              description_student: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
-              description_teacher: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
+              description_student: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla\_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
+              description_teacher: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla\_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
             Drawing in Game Lab:
               name: Tevdnet SpeallanLáb:as
               description_student: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, klássa galgá ráhkadit neahttaveršuvnna govas maid sii leat designen ovddit lekšuvnnas.
@@ -4337,11 +4326,7 @@ se:
             Booleans Unplugged:
               name: Boolána Neahtahaga
               description_student: Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Klássa de juohká objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, ja geahččá de movt dadjamat sáhttet váikkuhit prográmma njuovžilvuođa.
-              description_teacher: |-
-                Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.
-                Dan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. 
-
-                De loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid.
+              description_teacher: "Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.\nDan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. \n\nDe loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid."
             Conditionals:
               description_student: Klássa álgá geavahit boolánaid buohtastahttit gustovaš sprite:a iešvuođa árvvu muhtun mihttoárvvuin, geavahan dihte buohtastahttima mearridit goas sprite lea joksan čuoggá šearpmas, šaddan mearriduvvon sturrodahkan, dahje eará ládje joksan árvvu geavahettiin Lohkan Minstara. Maŋŋil go lea geavahan boolánaid njuolgut iskan dihte árvvuid dahje sprite:a iešvuođaid, bidjá klássa evttolaš jus dadjamuša čállit koda mii vástida boolána buohtastahttimiid.
               description_teacher: Oahppit álget geavahit boolánaid buohtastahttit gustovaš sprite:a iešvuođa árvvu muhtun mihttoárvvuin, geavahan dihte buohtastahttima mearridit goas sprite lea joksan čuoggá šearpmas, lea šaddan mearriduvvon sturrodahkan, dahje eará ládje joksan árvvu geavahettiin lohkan minstara. Maŋŋil go lea geavahan boolánaid njuolgut iskan árvvuid dahje sprite:a iešvuođaid, oahppit lasihit evttolaš_jus_ dadjamuša čállit koda mii vástida boolána buohtastahttimiid.
@@ -4352,7 +4337,7 @@ se:
             Other Forms of Input:
               name: Eará Input vuogit
               description_student: Klássa joatká suokkardallat vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis boalluVulos()kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
-              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis ` boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
+              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis `boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
             Project - Interactive Card:
               name: Prošeakta  - Interaktiivva Koarta
               description_student: Dán kumulatiivva prošeavttas 1. kapihttalis, klássa pláne ja ovdánahttá interaktiivva dearvuođakoartta geavahettiin buot programmeren vugiid maid sii leat oahppan dássážii.
@@ -4365,7 +4350,7 @@ se:
               description_teacher: Oahppit ohppet oktiibeaškkeheami birra dihtoris. Barggadettin guovttis ja guovttis, sii suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Sii dalle geavahit `leaGuoskame()` blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
             Complex Sprite Movement:
               name: Kompleaksa Sprite Lihkastagat
-              description_student: 'Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.'
+              description_student: Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.
               description_teacher: Oahppit ohppet movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid. Ovdamearkka dihte oahppit ohppet movt simuleret deaddofámu,  bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin Code Studio ovdáneamis oahppit galget kombineret dáid lihkastagaid nu ahte animerejit ja kontrollerejit ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid. Oahppit movttiidahttojuvvojit loahppa dásiin ráhkadit iežaset lasáhusaid spellui.
             Collisions:
               name: Oktiibeaškkeheamit
@@ -4373,7 +4358,9 @@ se:
               description_teacher: Oahppit programmerejit sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, oahppit juogadit ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (`beaškkehit`, `duvdit`, `bánccardit` ja `bánccarditEret`).
             Functions:
               description_student: Dát lekšuvdna gokčá funkšuvnnaid vuogi movt organiseret koda, dát dahká dán vejolažžan lohkat ja sihkku geardduhuvvon kodablohkaid. Klássa oahppá ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid, ja de ráhkadišgoahtit funkšuvnnaid Speallan Lab:as. Loahpageahčen lekšuvnna klássa geavaha dáid gálggaid organiseret ja bidjat funkšunalitehta sin loahpalaš scroller-spealu veršuvdnii.
-              description_teacher: "Oahppit ohppet movt ráhkadit funkšuvnnaid organiseret, dahkat dán vejolažžan lohkat ja sihkkut geardduhuvvon kodablohkaid. Neahtahaga liggen guorahallá movt ieš guđet detálljadásiid guovllut sáhttet leat ávkkálaččat čadnon kontekstii. Oahppit oahppet ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid. Maŋŋil oahppit ohppet ráhkadit funkšuvnnaid Speallan Lab:as.\nSii geavahit funkšuvnnaid sihkkut guhkes blohkaid kode tevdnen mohkiin ja buhtadit geardduhuvvon kodenosiid eaŋkilis funkšuvnnain. Loahpageahčen lekšuvnna oahppit geavahit dáid gálggaid organiseret ja lasihit funkšunalitehta loahpalaš scroller-spealu veršuvdnii."
+              description_teacher: |-
+                Oahppit ohppet movt ráhkadit funkšuvnnaid organiseret, dahkat dán vejolažžan lohkat ja sihkkut geardduhuvvon kodablohkaid. Neahtahaga liggen guorahallá movt ieš guđet detálljadásiid guovllut sáhttet leat ávkkálaččat čadnon kontekstii. Oahppit oahppet ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid. Maŋŋil oahppit ohppet ráhkadit funkšuvnnaid Speallan Lab:as.
+                Sii geavahit funkšuvnnaid sihkkut guhkes blohkaid kode tevdnen mohkiin ja buhtadit geardduhuvvon kodenosiid eaŋkilis funkšuvnnain. Loahpageahčen lekšuvnna oahppit geavahit dáid gálggaid organiseret ja lasihit funkšunalitehta loahpalaš scroller-spealu veršuvdnii.
             The Game Design Process:
               name: Spealu Designa Proseassa
               description_student: Dát lekšuvdna introdusere proseassa maid klássa geavaha designet spealu reastta ovttadahkii. Klássa čađaha dán proseassa máŋgga dási čađa. Oassin dán lekšuvnnas klássa beassá veaháš oahppat geavahit máŋggarámmat animašuvnnaid Speallan Lab:as. Loahpageahčen lekšuvnna sáhttet buoridit spealu nu ahte dat šaddá sin iežaset.
@@ -4387,7 +4374,7 @@ se:
               description_student: Klássa pláne ja ráhkada originála spealuid geavahettiin prošeakta neavvaga ovddit guovtti lekšuvnnas. Bargat okto dahje báras, Klássa pláne, ovdánahttá, ja addá responssa spellui. Maŋŋil go leat sisafievrredan ruovttoluottadieđu nuppiin, klássa juohká válmmas spealuid.
               description_teacher: Oahppit plánejit ja ráhkadit iežaset spealuid geavahettiin prošeakta neavvaga ovddit guovtti lekšuvnnas iežaset prošeavttaide. Bargat okto dahje báras, oahppit easkka de mearridit makkár spealu sii áigot ráhkadit go gehččet muhtun speallo-ovdamearkkaid. Sii válbmejit de ráinnas prošeakta neavvaga mas čilgejit spealu láhttema ja mas leat variábelat, sprite:at, ja funkšuvnnat sii dárbbašit ráhkadit. Koden Studios, iešguđet dásit bivdet sin oppalaš sekveanssa maid sáhttet geavahit sisafievrredit dán plána. Muhtun muddui proseassa čađa oahppit juogadit sin proseassaid maid nubbi oahppi árvvoštallá ja váldet mielde ruovttoluottadieđuid go leat geargan spealuin. Loahpas lekšuvnna oahppit juogadit válbmejuvvon spealuid earáiguin klássas. Dát proseassa lea máŋŋa klássa badjel ja sáhttá fátmmastit 3-5 klásseáiggiid.
             CS Discoveries End of Semester Survey:
-              name: CS Fuomášumit LoahppaKursaIskkadeamis 
+              name: CS Fuomášumit LoahppaKursaIskkadeamis
         csd2-2018:
           title: CSD Unit 2 - Web Ovdánahttin ('18-'19)
           lesson_groups:
@@ -4403,8 +4390,8 @@ se:
               description_student: Dát lekšuvdna gokčá daid ulbmiliid mat neahttasiiddut fállet, sihke geavaheddjiide ja ráhkadeddjiide. Klássa suokkardallá muhtun neahttasiidduid USA:s mat ollu geavahuvvojit ja digaštallet movt iešguđet neahttasiidu lea ávkkálaš geavaheddjiide ja movt sáhttet leat ávkin ráhkadeddjiide.
               description_teacher: Juohke neahttasiiddus lea ulbmil, ja duogáš manne muhtun lea dan ráhkadan ja manne earát dan geavahit. Dán lekšuvnnas oahppit árvvoštallagohtet makkár ulbmil neahttasiiddus lea, sihke geavaheddjiide ja ráhkadeddjiide. Oahppit suokkardallet muhtun neahttasiidduid USA:s mat ollu geavahuvvojit ja geahččalit iskat movt iešguđet neahttasiidu lea ávkkálaš geavaheddjiide ja movt sáhttet leat ávkin ráhkadeddjiide.
             'Websites for Expression ':
-              name: 'Neahttasiiddut Dadjamiidda'
-              description_student: 'Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.'
+              name: Neahttasiiddut Dadjamiidda
+              description_student: Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
               description_teacher: Dán lekšuvnnas oahppit guorahallet vugiid movt geavahit neahttasiidduid reaidun persovnnalaš dadjamiidda ja listtu mas leat fáttát ja beroštumit maid galget váldit mielde persovnnalaš neahttasiidui. Álggus lekšuvnnas oahppit digaštallet iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid. De oahppit gehččet moadde ovdamearkka neahttasiidduin maid oahppit leat ráhkadan ovddeš CS Discoveries kurssain identifiseret vugiid movt leat ovdanbuktit sin jurdagiid. De loahpas oahppit smihttet ovttas ja juhket listtu mas leat fáttát ja beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
             Intro to HTML:
               name: Láidehus HTML:ii
@@ -4413,14 +4400,19 @@ se:
             Headings:
               name: Bajilčállagat
               description_student: Dát lekšuvdna čájeha HTML merkemiid, dán vuoru bajilčállagiid. Klássa hárjehallá geavahit bajilčála-merkemiid ráhkadit siido- ja sekšuvdnastiillaid ja oahpahallá movt iešguđet bajilčállagat čájehuvvojit standárdan. Dasto klássa plána movt dat sáhttá organiseret sisdoalu persovnnalaš neahttasiidduin, maid galget ráhkadit ovttadaga badjel ja álggahit vuosttaš siiddu prošeavttas.
-              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas. 
+              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas.
             Digital Footprint:
               name: Digitála Luodda
               description_student: Dán lekšuvnnas geahččat maŋás doalahan dihte persovnnalaš neahttasajiid, hupmat persovnnalaš dieđuid birra maid olbmot válljejit juogadit digitálalaččat. Klássa digaštallagoahtá makkár dieđuid lea vuogas juohkit eará olbmuiguin, ja geahččá de ovdamearkkaid sosiálamediain iskat makkár persovnnalaš dieđuid sáhttá vásedin dahje fuomáškeahttá juohkit. Loahpas klássa ráhkada njuolggadusaid maid čuvvot go áigot bidjat dieđuid nehttii.
-              description_teacher: "Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r\n\\ r\nOahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r\n\\r\nLoahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii."
+              description_teacher: |-
+                Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r
+                \\ r
+                Oahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r
+                \\r
+                Loahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii.
             Lists:
-              description_student: Dát lekšuvdna čilge diŋgojuvvon ja ordnekeahtes listtuid ja gullevaš &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML-merkemiid. Klássa hárjehallá geavahit merkemiid ja de maŋŋil fas jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu, mas leat dat ođđa kodat.
-              description_teacher: Oahppit leat ožžon čilgejuvvot diŋgojuvvon ja ordnekeahtes listtuid ja barget muhtun dásiid čáđa masa geavahit &lt;ul&gt; &lt;ol&gt;, ja &lt;li&gt; merkemiid. Dasto sii as jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu. Ođđa siidui sii čállet HTML čájehan dihte bajilčállaga, listtu 10 bajimusas dahje eará sisdoalu masa geavahit daid ođđa kodaid maid leat oahppan.
+              description_student: Dát lekšuvdna čilge diŋgojuvvon ja ordnekeahtes listtuid ja gullevaš \<ul>, \<ol>, and \<li> HTML-merkemiid. Klássa hárjehallá geavahit merkemiid ja de maŋŋil fas jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu, mas leat dat ođđa kodat.
+              description_teacher: Oahppit leat ožžon čilgejuvvot diŋgojuvvon ja ordnekeahtes listtuid ja barget muhtun dásiid čáđa masa geavahit \<ul> \<ol>, ja \<li> merkemiid. Dasto sii as jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu. Ođđa siidui sii čállet HTML čájehan dihte bajilčállaga, listtu 10 bajimusas dahje eará sisdoalu masa geavahit daid ođđa kodaid maid leat oahppan.
             Intellectual Property and Images:
               name: Dahkkivuoigatvuohta ja Govat
               description_student: Dát lekšuvdna čájeha movt don geavahat mediaid nugo govaid, videoid dahje musihka maid eará leat bidjan muhtun neahttasadjái, seammás go doahttalit su rivttiid gii leat ráhkadan media. Easkka maŋŋil go leat geahčadan Creative Commons-lisensierema, oahppá klássa movt galgá bidjat govaid neahttasiidui ja movt bidjet rievttes namaid go barget dan.
@@ -4431,11 +4423,13 @@ se:
             Project - Multi-Page Websites:
               name: Prošeakta - Máŋgga-Siidosaš Neahttasiiddut
               description_student: 'Dát lekšuvdna gokčá hyper-čanastagaid, maid neahttaovdánahttit sáhttet geavahit čatnat siidduid oktii neahttasiidui. Klássa čatná ovddit siidduid oktii ovtta prošektii, ja ráhkada navigerenlinjjáid juohke siidui ovdal go almmuhit neahttasiiddu nehttii. '
-              description_teacher: "Maŋŋil go leat oahppan čatnat neahttasiidduid oktii, de oahppit leat gergosat liŋkkaid almmuhit neahttasiiddu mainna leat bargan. Dán lekšuvnnas čatnet oktii ovddit siidduid maiguin leat bargan ja ráhkadit oktan prošeaktan, ráhkadit ođđa siiddu ja bidjet navigeremiid siidduid gaskii ovdal go almmuhit neahttasiiddu nehttii. \\r\n\\r"
+              description_teacher: |-
+                Maŋŋil go leat oahppan čatnat neahttasiidduid oktii, de oahppit leat gergosat liŋkkaid almmuhit neahttasiiddu mainna leat bargan. Dán lekšuvnnas čatnet oktii ovddit siidduid maiguin leat bargan ja ráhkadit oktan prošeaktan, ráhkadit ođđa siiddu ja bidjet navigeremiid siidduid gaskii ovdal go almmuhit neahttasiiddu nehttii. \\r
+                \\r
             Styling Text with CSS:
               name: Stylet Teavstta CSS:ain
               description_student: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Klássa oahppá syntáksa vuođu CSS njuolggadusaide ja suokkardallá de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
-              description_teacher: "Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis."
+              description_teacher: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
             Styling Elements with CSS:
               name: Stylet Elemeanttaid CSS:ain
               description_student: Dát lekšuvdna joatká introdukšuvnnain CSS stiilla iešvuođaid birra, dán vuoru mas eanet deattuhit elemeanttaid mat eai leat teavsttat. Klássa iskagoahtá ja rievdadišgoahtá daid ođđa CSS-stiillaid mat leat Desserts of the World-siiddus. Maŋŋil de geavahit dán ođđa máhtu iežaset persovnnalaš neahttasajiide.
@@ -4451,13 +4445,13 @@ se:
             Project - Personal Portfolio Website:
               name: Prošeakta - Persovnnalaš Portefolie Neahttasiidu
               description_student: Dán ovttadaga maŋemus beivviin, klássa loahpaha iežaset persovnnalaš neahttasajiid ja barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja movt dát leat ovdánahtton.
-              description_teacher: "Oahppit leat geavahan ollu áiggi ovttadagas bargat persovnnalaš neahttasaji. Loahpas oahppit loahpahit iežaset neahttasajiid. Sii barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja maiddái čájehit proseassa loahpalaš designa rádjái.\\r"
+              description_teacher: Oahppit leat geavahan ollu áiggi ovttadagas bargat persovnnalaš neahttasaji. Loahpas oahppit loahpahit iežaset neahttasajiid. Sii barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja maiddái čájehit proseassa loahpalaš designa rádjái.\\r
         coursea-2018:
           lessons:
             'Programming: Happy Maps':
               name: Movttegis Kárttat
             Going Places Safely:
-              name: Mannat Sihkkaris Sajiide 
+              name: Mannat Sihkkaris Sajiide
         express-2018:
           lessons:
             Building a Foundation:
@@ -4516,9 +4510,9 @@ se:
               display_name: Iskkadeapmi
           lessons:
             'Project: Make a Game__':
-              name: 'Prošeakta: Ráhkat Spealu__'
+              name: 'Prošeakta: Ráhkat Spealu\_\_'
             Making Music_:
-              name: Ráhkat Musihka_
+              name: Ráhkat Musihka\_
             'Project: Make a Game':
               name: 'Prošeakta: Ráhkat Spealu'
             Making Music:
@@ -4613,7 +4607,7 @@ se:
               name: CS Fuomášumiid Ovda-iskkadeapmi
             Intro to Problem Solving:
               name: Láidehus ČuolbmaČoavdimii
-              description_student: 'Klássa bargá joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.'
+              description_student: Klássa bargá joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.
             The Problem Solving Process:
               description_student: Dát lekšuvdna introdusere formála čuolbmačoavdinproseassa maid klássa galgá geavahit jagi čađa. Definere - Ráhkkan - Geahččal - Reflektere. Klássa bargá dáid cehkiid ektui aluminumfanas-čuolmma dáfus ovddit lekšuvnnas, dasto de barget čuolmmaid maid leat čeahpit čoavdit, ja de čuolmmain maid áigot čoavdit buoridan dihte. Loahpas lekšuvnna klássa ráhkadan listtu masa bidjet ávkkálaš strategiijaid juohke dássái proseassas maid de bijdet plakáhttii mii fas galgá geavahuvvot jagi čađa.
               description_teacher: Dát lekšuvdna introdusere formála čuolbmačoavdinproseassa maid oahppit galget geavahit jagi čađa. Definere - Ráhkkan - Geahččal - Reflektere. Lekšuvdna álgá dainna ahte oahppit jurddariđu vuođul smihttet iešguđet lágan čuolmmaid maid deivet árgabeaivvis. Ohppiide de čájehuvvojit dat njealje ceahki čuolbmačoavdinproseassas ja de barget ovttas čatnat daid abstrákta cehkiid čuolbmačoavdima duohta vásáhusaide. Álggos oahppit čatnet dáid cehkiid aluminumfanas-čuolbmii mii lei ovddit lekšuvnnas, ja de váldet čuolmma maid leat čeahpit čoavdit, ja de čuolmma čovdet buoridan dihte. Loahpas lekšuvnna klássa ráhkadan listtu masa bidjet ávkkálaš strategiijaid juohke dássái proseassas maid de bidjet plakáhttii, mii fas galgá geavahuvvot jagi čađa.
@@ -4621,11 +4615,11 @@ se:
               name: Vásihit ČuolbmaČoavdima
               description_student: 'Dán lekšuvnnas klássa geavaha čuolbmačoavdinproseassa golmma iešguđet čuolmmas: ohcat sáni, seating riegádanbeaivvi lágideamis ja plánet tuvrra. Čuolmmat šaddet váddásit ahte váddásit ja hejot čilgejuvvon čuvgehit movt čuolbmačoavdinproseassa lea ávkkálaš go don hálddašat dákkár čuolmma.'
             What is a Computer?:
-              description_student: Dán lekšuvnnas klássa ovdánahttá gaskaboddosaš čilgehusa mii dihtor lea. Maŋŋil go jurddariđu vuođul leat smiehttan vejolaš čilgehusaid dihtora várás, klássa bargá joavkkuid mielde sirret govaid dan mielde “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja bidjá joavkkuid divodit plakáhtaid dan ođđa čilgehusa mielde. 
+              description_student: Dán lekšuvnnas klássa ovdánahttá gaskaboddosaš čilgehusa mii dihtor lea. Maŋŋil go jurddariđu vuođul leat smiehttan vejolaš čilgehusaid dihtora várás, klássa bargá joavkkuid mielde sirret govaid dan mielde “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja bidjá joavkkuid divodit plakáhtaid dan ođđa čilgehusa mielde.
             Input and Output:
               name: Input ja Output
               description_student: Dás oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Loahpas lekšuvnna klássa guorahallá dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas.
-              description_teacher: Dán lekšuvnnas oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Ovdalis doaimmas oahppit galge deattuhit čielga fysalaš  input:aid ja output:aid (omd. Boallobeavdi input:an dahje šearbma output:an), muhto maŋit digaštallamiin oahppit galget árvvoštallat ovdamearkkaid mat eai leat diehttalasat (ahte guoskkahan šearbma sáhttá leat sihke input:a ja output:a, dahje dan ahte interneahtta sáhttá leat sihke input:a ja output:a) Lekšuvnnaid čađa oahpaheaddji registrere input:aid ja output:aid mat leat identifiserejuvvon T-diagrámmas ovddabealde lanjas. Lekšuvnna čoahkkáigeassun oahppit guorahallet dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas. 
+              description_teacher: Dán lekšuvnnas oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Ovdalis doaimmas oahppit galge deattuhit čielga fysalaš  input:aid ja output:aid (omd. Boallobeavdi input:an dahje šearbma output:an), muhto maŋit digaštallamiin oahppit galget árvvoštallat ovdamearkkaid mat eai leat diehttalasat (ahte guoskkahan šearbma sáhttá leat sihke input:a ja output:a, dahje dan ahte interneahtta sáhttá leat sihke input:a ja output:a) Lekšuvnnaid čađa oahpaheaddji registrere input:aid ja output:aid mat leat identifiserejuvvon T-diagrámmas ovddabealde lanjas. Lekšuvnna čoahkkáigeassun oahppit guorahallet dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas.
             Processing:
               name: Gieđahallan
             Storage:
@@ -4658,7 +4652,7 @@ se:
             Understanding Your User:
               name: Ipmirdit Du Geavaheaddji
               description_student: Geavahit geavaheaddjeprofiillaid, klássa fuomáša movt iešguđet geavaheaddjit soitet reageret buktagiidda. Rollaspealuin, neaktit leat eará persovdnan, mieláhttut klássas besset vásihit designa earáid čalmmiid čađa.
-              description_teacher: "Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r"
+              description_teacher: Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r
             User-Centered Design Micro Activity:
               name: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
               description_student: Smávva joavkkuin geavaha klássa designaproseassa oažžun dihte ideaid jierpmálaš biktasiidda. Jurddariđuin identifiserejit geavaheddjiid geaidda evttohit designa. Dát lea ovttadaga vuosttaš eanet vejolašvuođain hárjehallat designet čovdosa earáid dárbbuide.
@@ -4669,12 +4663,12 @@ se:
               description_teacher: Álggahan dihte app:a designaprošeavtta, mii bistá ovttadaga lohppii, oahppit isket muhtun app:aid mat leat designejuvvon sosiála váikkuhusaide maid eará oahppit leat ráhkadan. Klássa de čađaha čuolbmáčoavdinproseassa dásiid čilget, ráhkkanahttit ja reflekteret go ovdánahttet idea iežaset app:ii mas galgá leat sosiála váikkuhus. Loahpas oahppit ráhkadit prošeaktajoavkkuid ja šihttet movt joavku galgá doaibmat iežaset app:a ovdánahttima čađa.
             Market Research:
               name: MárkanIskkadeapmi
-              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot. 
+              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot.
               description_teacher: Dán lekšuvnnas oahppit isket app:aid mat sulastahttet dan maid ieža áigot ráhkadit ipmirdan dihte geavaheddjiid dárbbuid. Oahppit barget joavkkuin ohcat interneahtas eará app:aid ja de árvvoštallet daid maid sin mielas leat miellagiddevaččat. Loahpas lekšuvnna juohke joavku lea ožžon čielgasit idea makkár app:a áigot ráhkadit ja maid ráddjen geavaheaddjejoavkku. Juohke joavku doalaha listtu mas leat sitáhtat app:ain maid iske maid de sáhttet geavahit loahppa ovdanbuktimis.
             Paper Prototypes:
               name: BáberPrototyhpat
               description_student: Báberprototyhpat veahkehit ovdánahttiid iskat ideaid ovdal go beare ollu áiggi bidjet kodaid čállimii. Dán lekšuvnnas joavku guorahallá muhtun ovdamearkkaid app:ain mat leat ráhkaduvvon App Lab:as, ja geavahit dáid app:aid informeret vuosttaš báberprototyhpaid.
-              description_teacher: "Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r"
+              description_teacher: Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r
             Prototype Testing:
               name: Prototyhpa Teasten
         csd5-2018:
@@ -5034,7 +5028,7 @@ se:
               name: Joavkočohkken
             Digital Sharing:
               name: Digitála Juohkin
-              description_teacher: "Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.\n"
+              description_teacher: Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -5097,7 +5091,7 @@ se:
             Binary Bracelets:
               name: Binára Giehtabáttit
             'Unplugged: Binary':
-              name: 'Neahtahaga - Binára'
+              name: Neahtahaga - Binára
             Artist Binary:
               name: Dáiddár Binára
             Internet:
@@ -5117,7 +5111,7 @@ se:
               name: CS Fuomášumiid Ovda-iskkadeapmi
             Intro to Problem Solving:
               name: Láidehus ČuolbmaČoavdimii
-              description_student: 'Klássa bargá joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.'
+              description_student: Klássa bargá joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.
             The Problem Solving Process:
               description_student: Dát lekšuvdna introdusere formála čuolbmačoavdinproseassa maid klássa galgá geavahit jagi čađa. Definere - Ráhkkan - Geahččal - Reflektere. Klássa bargá dáid cehkiid ektui aluminumfanas-čuolmma dáfus ovddit lekšuvnnas, dasto de barget čuolmmaid maid leat čeahpit čoavdit, ja de čuolmmain maid áigot čoavdit buoridan dihte. Loahpas lekšuvnna klássa ráhkadan listtu masa bidjet ávkkálaš strategiijaid juohke dássái proseassas maid de bijdet plakáhttii mii fas galgá geavahuvvot jagi čađa.
               description_teacher: Dát lekšuvdna introdusere formála čuolbmačoavdinproseassa maid oahppit galget geavahit jagi čađa. Definere - Ráhkkan - Geahččal - Reflektere. Lekšuvdna álgá dainna ahte oahppit jurddariđu vuođul smihttet iešguđet lágan čuolmmaid maid deivet árgabeaivvis. Ohppiide de čájehuvvojit dat njealje ceahki čuolbmačoavdinproseassas ja de barget ovttas čatnat daid abstrákta cehkiid čuolbmačoavdima duohta vásáhusaide. Álggos oahppit čatnet dáid cehkiid aluminumfanas-čuolbmii mii lei ovddit lekšuvnnas, ja de váldet čuolmma maid leat čeahpit čoavdit, ja de čuolmma čovdet buoridan dihte. Loahpas lekšuvnna klássa ráhkadan listtu masa bidjet ávkkálaš strategiijaid juohke dássái proseassas maid de bidjet plakáhttii, mii fas galgá geavahuvvot jagi čađa.
@@ -5125,11 +5119,11 @@ se:
               name: Vásihit ČuolbmaČoavdima
               description_student: 'Dán lekšuvnnas klássa geavaha čuolbmačoavdinproseassa golmma iešguđet čuolmmas: ohcat sáni, seating riegádanbeaivvi lágideamis ja plánet tuvrra. Čuolmmat šaddet váddásit ahte váddásit ja hejot čilgejuvvon čuvgehit movt čuolbmačoavdinproseassa lea ávkkálaš go don hálddašat dákkár čuolmma.'
             What is a Computer?:
-              description_student: Dán lekšuvnnas klássa ovdánahttá gaskaboddosaš čilgehusa mii dihtor lea. Maŋŋil go jurddariđu vuođul leat smiehttan vejolaš čilgehusaid dihtora várás, klássa bargá joavkkuid mielde sirret govaid dan mielde “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja bidjá joavkkuid divodit plakáhtaid dan ođđa čilgehusa mielde. 
+              description_student: Dán lekšuvnnas klássa ovdánahttá gaskaboddosaš čilgehusa mii dihtor lea. Maŋŋil go jurddariđu vuođul leat smiehttan vejolaš čilgehusaid dihtora várás, klássa bargá joavkkuid mielde sirret govaid dan mielde “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja bidjá joavkkuid divodit plakáhtaid dan ođđa čilgehusa mielde.
             Input and Output:
               name: Input ja Output
               description_student: Dás oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Loahpas lekšuvnna klássa guorahallá dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas.
-              description_teacher: Dán lekšuvnnas oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Ovdalis doaimmas oahppit galge deattuhit čielga fysalaš  input:aid ja output:aid (omd. Boallobeavdi input:an dahje šearbma output:an), muhto maŋit digaštallamiin oahppit galget árvvoštallat ovdamearkkaid mat eai leat diehttalasat (ahte guoskkahan šearbma sáhttá leat sihke input:a ja output:a, dahje dan ahte interneahtta sáhttá leat sihke input:a ja output:a) Lekšuvnnaid čađa oahpaheaddji registrere input:aid ja output:aid mat leat identifiserejuvvon T-diagrámmas ovddabealde lanjas. Lekšuvnna čoahkkáigeassun oahppit guorahallet dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas. 
+              description_teacher: Dán lekšuvnnas oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Ovdalis doaimmas oahppit galge deattuhit čielga fysalaš  input:aid ja output:aid (omd. Boallobeavdi input:an dahje šearbma output:an), muhto maŋit digaštallamiin oahppit galget árvvoštallat ovdamearkkaid mat eai leat diehttalasat (ahte guoskkahan šearbma sáhttá leat sihke input:a ja output:a, dahje dan ahte interneahtta sáhttá leat sihke input:a ja output:a) Lekšuvnnaid čađa oahpaheaddji registrere input:aid ja output:aid mat leat identifiserejuvvon T-diagrámmas ovddabealde lanjas. Lekšuvnna čoahkkáigeassun oahppit guorahallet dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas.
             Processing:
               name: Gieđahallan
             Apps and Storage:
@@ -5174,7 +5168,7 @@ se:
             'Programming: Happy Maps':
               name: Movttegis Kárttat
             Going Places Safely:
-              name: Mannat Sihkkaris Sajiide 
+              name: Mannat Sihkkaris Sajiide
         courseb-2019:
           lesson_groups:
             csf_digcit:
@@ -5220,8 +5214,8 @@ se:
               description_student: Dát lekšuvdna gokčá daid ulbmiliid mat neahttasiiddut fállet, sihke geavaheddjiide ja ráhkadeddjiide. Klássa suokkardallá muhtun neahttasiidduid USA:s mat ollu geavahuvvojit ja digaštallet movt iešguđet neahttasiidu lea ávkkálaš geavaheddjiide ja movt sáhttet leat ávkin ráhkadeddjiide.
               description_teacher: Juohke neahttasiiddus lea ulbmil, ja duogáš manne muhtun lea dan ráhkadan ja manne earát dan geavahit. Dán lekšuvnnas oahppit árvvoštallagohtet makkár ulbmil neahttasiiddus lea, sihke geavaheddjiide ja ráhkadeddjiide. Oahppit suokkardallet muhtun neahttasiidduid USA:s mat ollu geavahuvvojit ja geahččalit iskat movt iešguđet neahttasiidu lea ávkkálaš geavaheddjiide ja movt sáhttet leat ávkin ráhkadeddjiide.
             'Websites for Expression ':
-              name: 'Neahttasiiddut Dadjamiidda'
-              description_student: 'Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.'
+              name: Neahttasiiddut Dadjamiidda
+              description_student: Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
               description_teacher: Dán lekšuvnnas oahppit guorahallet vugiid movt geavahit neahttasiidduid reaidun persovnnalaš dadjamiidda ja listtu mas leat fáttát ja beroštumit maid galget váldit mielde persovnnalaš neahttasiidui. Álggus lekšuvnnas oahppit digaštallet iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid. De oahppit gehččet moadde ovdamearkka neahttasiidduin maid oahppit leat ráhkadan ovddeš CS Discoveries kurssain identifiseret vugiid movt leat ovdanbuktit sin jurdagiid. De loahpas oahppit smihttet ovttas ja juhket listtu mas leat fáttát ja beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
             Intro to HTML:
               name: Láidehus HTML:ii
@@ -5230,14 +5224,19 @@ se:
             Headings:
               name: Bajilčállagat
               description_student: Dát lekšuvdna čájeha HTML merkemiid, dán vuoru bajilčállagiid. Klássa hárjehallá geavahit bajilčála-merkemiid ráhkadit siido- ja sekšuvdnastiillaid ja oahpahallá movt iešguđet bajilčállagat čájehuvvojit standárdan. Dasto klássa plána movt dat sáhttá organiseret sisdoalu persovnnalaš neahttasiidduin, maid galget ráhkadit ovttadaga badjel ja álggahit vuosttaš siiddu prošeavttas.
-              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas. 
+              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas.
             Digital Footprint:
               name: Digitála Luodda
               description_student: Dán lekšuvnnas geahččat maŋás doalahan dihte persovnnalaš neahttasajiid, hupmat persovnnalaš dieđuid birra maid olbmot válljejit juogadit digitálalaččat. Klássa digaštallagoahtá makkár dieđuid lea vuogas juohkit eará olbmuiguin, ja geahččá de ovdamearkkaid sosiálamediain iskat makkár persovnnalaš dieđuid sáhttá vásedin dahje fuomáškeahttá juohkit. Loahpas klássa ráhkada njuolggadusaid maid čuvvot go áigot bidjat dieđuid nehttii.
-              description_teacher: "Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r\n\\ r\nOahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r\n\\r\nLoahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii."
+              description_teacher: |-
+                Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r
+                \\ r
+                Oahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r
+                \\r
+                Loahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii.
             Lists:
-              description_student: Dát lekšuvdna čilge diŋgojuvvon ja ordnekeahtes listtuid ja gullevaš &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML-merkemiid. Klássa hárjehallá geavahit merkemiid ja de maŋŋil fas jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu, mas leat dat ođđa kodat.
-              description_teacher: Oahppit leat ožžon čilgejuvvot diŋgojuvvon ja ordnekeahtes listtuid ja barget muhtun dásiid čáđa masa geavahit &lt;ul&gt; &lt;ol&gt;, ja &lt;li&gt; merkemiid. Dasto sii as jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu. Ođđa siidui sii čállet HTML čájehan dihte bajilčállaga, listtu 10 bajimusas dahje eará sisdoalu masa geavahit daid ođđa kodaid maid leat oahppan.
+              description_student: Dát lekšuvdna čilge diŋgojuvvon ja ordnekeahtes listtuid ja gullevaš \<ul>, \<ol>, and \<li> HTML-merkemiid. Klássa hárjehallá geavahit merkemiid ja de maŋŋil fas jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu, mas leat dat ođđa kodat.
+              description_teacher: Oahppit leat ožžon čilgejuvvot diŋgojuvvon ja ordnekeahtes listtuid ja barget muhtun dásiid čáđa masa geavahit \<ul> \<ol>, ja \<li> merkemiid. Dasto sii as jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu. Ođđa siidui sii čállet HTML čájehan dihte bajilčállaga, listtu 10 bajimusas dahje eará sisdoalu masa geavahit daid ođđa kodaid maid leat oahppan.
             Intellectual Property and Images:
               name: Dahkkivuoigatvuohta ja Govat
               description_student: Dát lekšuvdna čájeha movt don geavahat mediaid nugo govaid, videoid dahje musihka maid eará leat bidjan muhtun neahttasadjái, seammás go doahttalit su rivttiid gii leat ráhkadan media. Easkka maŋŋil go leat geahčadan Creative Commons-lisensierema, oahppá klássa movt galgá bidjat govaid neahttasiidui ja movt bidjet rievttes namaid go barget dan.
@@ -5248,11 +5247,13 @@ se:
             Project - Multi-Page Websites:
               name: Prošeakta - Máŋgga-Siidosaš Neahttasiiddut
               description_student: 'Dát lekšuvdna gokčá hyper-čanastagaid, maid neahttaovdánahttit sáhttet geavahit čatnat siidduid oktii neahttasiidui. Klássa čatná ovddit siidduid oktii ovtta prošektii, ja ráhkada navigerenlinjjáid juohke siidui ovdal go almmuhit neahttasiiddu nehttii. '
-              description_teacher: "Maŋŋil go leat oahppan čatnat neahttasiidduid oktii, de oahppit leat gergosat liŋkkaid almmuhit neahttasiiddu mainna leat bargan. Dán lekšuvnnas čatnet oktii ovddit siidduid maiguin leat bargan ja ráhkadit oktan prošeaktan, ráhkadit ođđa siiddu ja bidjet navigeremiid siidduid gaskii ovdal go almmuhit neahttasiiddu nehttii. \\r\n\\r"
+              description_teacher: |-
+                Maŋŋil go leat oahppan čatnat neahttasiidduid oktii, de oahppit leat gergosat liŋkkaid almmuhit neahttasiiddu mainna leat bargan. Dán lekšuvnnas čatnet oktii ovddit siidduid maiguin leat bargan ja ráhkadit oktan prošeaktan, ráhkadit ođđa siiddu ja bidjet navigeremiid siidduid gaskii ovdal go almmuhit neahttasiiddu nehttii. \\r
+                \\r
             Styling Text with CSS:
               name: Stylet Teavstta CSS:ain
               description_student: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Klássa oahppá syntáksa vuođu CSS njuolggadusaide ja suokkardallá de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
-              description_teacher: "Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis."
+              description_teacher: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
             Styling Elements with CSS:
               name: Stylet Elemeanttaid CSS:ain
               description_student: Dát lekšuvdna joatká introdukšuvnnain CSS stiilla iešvuođaid birra, dán vuoru mas eanet deattuhit elemeanttaid mat eai leat teavsttat. Klássa iskagoahtá ja rievdadišgoahtá daid ođđa CSS-stiillaid mat leat Desserts of the World-siiddus. Maŋŋil de geavahit dán ođđa máhtu iežaset persovnnalaš neahttasajiide.
@@ -5268,7 +5269,7 @@ se:
             Project - Personal Portfolio Website:
               name: Prošeakta - Persovnnalaš Portefolie Neahttasiidu
               description_student: Dán ovttadaga maŋemus beivviin, klássa loahpaha iežaset persovnnalaš neahttasajiid ja barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja movt dát leat ovdánahtton.
-              description_teacher: "Oahppit leat geavahan ollu áiggi ovttadagas bargat persovnnalaš neahttasaji. Loahpas oahppit loahpahit iežaset neahttasajiid. Sii barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja maiddái čájehit proseassa loahpalaš designa rádjái.\\r"
+              description_teacher: Oahppit leat geavahan ollu áiggi ovttadagas bargat persovnnalaš neahttasaji. Loahpas oahppit loahpahit iežaset neahttasajiid. Sii barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja maiddái čájehit proseassa loahpalaš designa rádjái.\\r
         csd3-2019:
           title: CSD Unit 3 - Animašuvnnat ja Spealut ('19-'20)
           lesson_groups:
@@ -5285,8 +5286,8 @@ se:
               description_teacher: Oahppit galget árvvoštallat "váttisvuođaid" láittasvuođa ja iežasdadjamuša mielde, ja reflekteret movt sáhttet lahkonit váttisvuođaid iežaset eallimiin. Dasto galget suokkardallat movt Dihto Diehtagis oppalaččat ja programmeremis earenoamážit lea mearkkašahtti rolla juogo guoimmuheamis dahje reaidun iežasdadjumuššii.
             Plotting Shapes:
               name: Plottet Hámiid
-              description_student: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
-              description_teacher: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
+              description_student: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla\_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
+              description_teacher: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla\_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
             Drawing in Game Lab:
               name: Tevdnet SpeallanLáb:as
               description_student: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, klássa galgá ráhkadit neahttaveršuvnna govas maid sii leat designen ovddit lekšuvnnas.
@@ -5314,11 +5315,7 @@ se:
             Booleans Unplugged:
               name: Boolána Neahtahaga
               description_student: Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Klássa de juohká objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, ja geahččá de movt dadjamat sáhttet váikkuhit prográmma njuovžilvuođa.
-              description_teacher: |-
-                Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.
-                Dan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. 
-
-                De loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid.
+              description_teacher: "Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.\nDan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. \n\nDe loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid."
             Conditionals:
               description_student: Klássa álgá geavahit boolánaid buohtastahttit gustovaš sprite:a iešvuođa árvvu muhtun mihttoárvvuin, geavahan dihte buohtastahttima mearridit goas sprite lea joksan čuoggá šearpmas, šaddan mearriduvvon sturrodahkan, dahje eará ládje joksan árvvu geavahettiin Lohkan Minstara. Maŋŋil go lea geavahan boolánaid njuolgut iskan dihte árvvuid dahje sprite:a iešvuođaid, bidjá klássa evttolaš jus dadjamuša čállit koda mii vástida boolána buohtastahttimiid.
               description_teacher: Oahppit álget geavahit boolánaid buohtastahttit gustovaš sprite:a iešvuođa árvvu muhtun mihttoárvvuin, geavahan dihte buohtastahttima mearridit goas sprite lea joksan čuoggá šearpmas, lea šaddan mearriduvvon sturrodahkan, dahje eará ládje joksan árvvu geavahettiin lohkan minstara. Maŋŋil go lea geavahan boolánaid njuolgut iskan árvvuid dahje sprite:a iešvuođaid, oahppit lasihit evttolaš_jus_ dadjamuša čállit koda mii vástida boolána buohtastahttimiid.
@@ -5329,7 +5326,7 @@ se:
             Other Forms of Input:
               name: Eará Input vuogit
               description_student: Klássa joatká suokkardallat vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis boalluVulos()kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
-              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis ` boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
+              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis `boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
             Project - Interactive Card:
               name: Prošeakta  - Interaktiivva Koarta
               description_student: Dán kumulatiivva prošeavttas 1. kapihttalis, klássa pláne ja ovdánahttá interaktiivva dearvuođakoartta geavahettiin buot programmeren vugiid maid sii leat oahppan dássážii.
@@ -5342,7 +5339,7 @@ se:
               description_teacher: Oahppit ohppet oktiibeaškkeheami birra dihtoris. Barggadettin guovttis ja guovttis, sii suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Sii dalle geavahit `leaGuoskame()` blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
             Complex Sprite Movement:
               name: Kompleaksa Sprite Lihkastagat
-              description_student: 'Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.'
+              description_student: Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.
               description_teacher: Oahppit ohppet movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid. Ovdamearkka dihte oahppit ohppet movt simuleret deaddofámu,  bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin Code Studio ovdáneamis oahppit galget kombineret dáid lihkastagaid nu ahte animerejit ja kontrollerejit ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid. Oahppit movttiidahttojuvvojit loahppa dásiin ráhkadit iežaset lasáhusaid spellui.
             Collisions:
               name: Oktiibeaškkeheamit
@@ -5350,7 +5347,9 @@ se:
               description_teacher: Oahppit programmerejit sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, oahppit juogadit ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (`beaškkehit`, `duvdit`, `bánccardit` ja `bánccarditEret`).
             Functions:
               description_student: Dát lekšuvdna gokčá funkšuvnnaid vuogi movt organiseret koda, dát dahká dán vejolažžan lohkat ja sihkku geardduhuvvon kodablohkaid. Klássa oahppá ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid, ja de ráhkadišgoahtit funkšuvnnaid Speallan Lab:as. Loahpageahčen lekšuvnna klássa geavaha dáid gálggaid organiseret ja bidjat funkšunalitehta sin loahpalaš scroller-spealu veršuvdnii.
-              description_teacher: "Oahppit ohppet movt ráhkadit funkšuvnnaid organiseret, dahkat dán vejolažžan lohkat ja sihkkut geardduhuvvon kodablohkaid. Neahtahaga liggen guorahallá movt ieš guđet detálljadásiid guovllut sáhttet leat ávkkálaččat čadnon kontekstii. Oahppit oahppet ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid. Maŋŋil oahppit ohppet ráhkadit funkšuvnnaid Speallan Lab:as.\nSii geavahit funkšuvnnaid sihkkut guhkes blohkaid kode tevdnen mohkiin ja buhtadit geardduhuvvon kodenosiid eaŋkilis funkšuvnnain. Loahpageahčen lekšuvnna oahppit geavahit dáid gálggaid organiseret ja lasihit funkšunalitehta loahpalaš scroller-spealu veršuvdnii."
+              description_teacher: |-
+                Oahppit ohppet movt ráhkadit funkšuvnnaid organiseret, dahkat dán vejolažžan lohkat ja sihkkut geardduhuvvon kodablohkaid. Neahtahaga liggen guorahallá movt ieš guđet detálljadásiid guovllut sáhttet leat ávkkálaččat čadnon kontekstii. Oahppit oahppet ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid. Maŋŋil oahppit ohppet ráhkadit funkšuvnnaid Speallan Lab:as.
+                Sii geavahit funkšuvnnaid sihkkut guhkes blohkaid kode tevdnen mohkiin ja buhtadit geardduhuvvon kodenosiid eaŋkilis funkšuvnnain. Loahpageahčen lekšuvnna oahppit geavahit dáid gálggaid organiseret ja lasihit funkšunalitehta loahpalaš scroller-spealu veršuvdnii.
             The Game Design Process:
               name: Spealu Designa Proseassa
               description_student: Dát lekšuvdna introdusere proseassa maid klássa geavaha designet spealu reastta ovttadahkii. Klássa čađaha dán proseassa máŋgga dási čađa. Oassin dán lekšuvnnas klássa beassá veaháš oahppat geavahit máŋggarámmat animašuvnnaid Speallan Lab:as. Loahpageahčen lekšuvnna sáhttet buoridit spealu nu ahte dat šaddá sin iežaset.
@@ -5364,7 +5363,7 @@ se:
               description_student: Klássa pláne ja ráhkada originála spealuid geavahettiin prošeakta neavvaga ovddit guovtti lekšuvnnas. Bargat okto dahje báras, Klássa pláne, ovdánahttá, ja addá responssa spellui. Maŋŋil go leat sisafievrredan ruovttoluottadieđu nuppiin, klássa juohká válmmas spealuid.
               description_teacher: Oahppit plánejit ja ráhkadit iežaset spealuid geavahettiin prošeakta neavvaga ovddit guovtti lekšuvnnas iežaset prošeavttaide. Bargat okto dahje báras, oahppit easkka de mearridit makkár spealu sii áigot ráhkadit go gehččet muhtun speallo-ovdamearkkaid. Sii válbmejit de ráinnas prošeakta neavvaga mas čilgejit spealu láhttema ja mas leat variábelat, sprite:at, ja funkšuvnnat sii dárbbašit ráhkadit. Koden Studios, iešguđet dásit bivdet sin oppalaš sekveanssa maid sáhttet geavahit sisafievrredit dán plána. Muhtun muddui proseassa čađa oahppit juogadit sin proseassaid maid nubbi oahppi árvvoštallá ja váldet mielde ruovttoluottadieđuid go leat geargan spealuin. Loahpas lekšuvnna oahppit juogadit válbmejuvvon spealuid earáiguin klássas. Dát proseassa lea máŋŋa klássa badjel ja sáhttá fátmmastit 3-5 klásseáiggiid.
             CS Discoveries End of Semester Survey:
-              name: CS Fuomášumit LoahppaKursaIskkadeamis 
+              name: CS Fuomášumit LoahppaKursaIskkadeamis
         csd4-2019:
           title: CSD Unit 4 - DesignenProseassa ('19-'20)
           lesson_groups:
@@ -5382,7 +5381,7 @@ se:
             Understanding Your User:
               name: Ipmirdit Du Geavaheaddji
               description_student: Geavahit geavaheaddjeprofiillaid, klássa fuomáša movt iešguđet geavaheaddjit soitet reageret buktagiidda. Rollaspealuin, neaktit leat eará persovdnan, mieláhttut klássas besset vásihit designa earáid čalmmiid čađa.
-              description_teacher: "Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r"
+              description_teacher: Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r
             User-Centered Design Micro Activity:
               name: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
               description_student: Smávva joavkkuin geavaha klássa designaproseassa oažžun dihte ideaid jierpmálaš biktasiidda. Jurddariđuin identifiserejit geavaheddjiid geaidda evttohit designa. Dát lea ovttadaga vuosttaš eanet vejolašvuođain hárjehallat designet čovdosa earáid dárbbuide.
@@ -5393,12 +5392,12 @@ se:
               description_teacher: Álggahan dihte app:a designaprošeavtta, mii bistá ovttadaga lohppii, oahppit isket muhtun app:aid mat leat designejuvvon sosiála váikkuhusaide maid eará oahppit leat ráhkadan. Klássa de čađaha čuolbmáčoavdinproseassa dásiid čilget, ráhkkanahttit ja reflekteret go ovdánahttet idea iežaset app:ii mas galgá leat sosiála váikkuhus. Loahpas oahppit ráhkadit prošeaktajoavkkuid ja šihttet movt joavku galgá doaibmat iežaset app:a ovdánahttima čađa.
             Market Research:
               name: MárkanIskkadeapmi
-              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot. 
+              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot.
               description_teacher: Dán lekšuvnnas oahppit isket app:aid mat sulastahttet dan maid ieža áigot ráhkadit ipmirdan dihte geavaheddjiid dárbbuid. Oahppit barget joavkkuin ohcat interneahtas eará app:aid ja de árvvoštallet daid maid sin mielas leat miellagiddevaččat. Loahpas lekšuvnna juohke joavku lea ožžon čielgasit idea makkár app:a áigot ráhkadit ja maid ráddjen geavaheaddjejoavkku. Juohke joavku doalaha listtu mas leat sitáhtat app:ain maid iske maid de sáhttet geavahit loahppa ovdanbuktimis.
             Paper Prototypes:
               name: BáberPrototyhpat
               description_student: Báberprototyhpat veahkehit ovdánahttiid iskat ideaid ovdal go beare ollu áiggi bidjet kodaid čállimii. Dán lekšuvnnas joavku guorahallá muhtun ovdamearkkaid app:ain mat leat ráhkaduvvon App Lab:as, ja geavahit dáid app:aid informeret vuosttaš báberprototyhpaid.
-              description_teacher: "Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r"
+              description_teacher: Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r
             Prototype Testing:
               name: Prototyhpa Teasten
         csd5-2019:
@@ -5709,7 +5708,7 @@ se:
               name: CS Fuomášumiid Ovda-iskkadeapmi
             Intro to Problem Solving:
               name: Láidehus ČuolbmaČoavdimii
-              description_student: 'Klássa bargá joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.'
+              description_student: Klássa bargá joavkkus designet aluminumfolia fatnasiid masa čáhket nu ollu evrret go vejolaš. Loahpas lekšuvnna joavku reflektere iežaset vásáhusaid doaimmas ja čatná oktavuođaid dakkár mállet čuolbmačoavdimii maid galget čađahit reastta kurssas.
             The Problem Solving Process:
               description_student: Dát lekšuvdna introdusere formála čuolbmačoavdinproseassa maid klássa galgá geavahit jagi čađa. Definere - Ráhkkan - Geahččal - Reflektere. Klássa bargá dáid cehkiid ektui aluminumfanas-čuolmma dáfus ovddit lekšuvnnas, dasto de barget čuolmmaid maid leat čeahpit čoavdit, ja de čuolmmain maid áigot čoavdit buoridan dihte. Loahpas lekšuvnna klássa ráhkadan listtu masa bidjet ávkkálaš strategiijaid juohke dássái proseassas maid de bijdet plakáhttii mii fas galgá geavahuvvot jagi čađa.
               description_teacher: Dát lekšuvdna introdusere formála čuolbmačoavdinproseassa maid oahppit galget geavahit jagi čađa. Definere - Ráhkkan - Geahččal - Reflektere. Lekšuvdna álgá dainna ahte oahppit jurddariđu vuođul smihttet iešguđet lágan čuolmmaid maid deivet árgabeaivvis. Ohppiide de čájehuvvojit dat njealje ceahki čuolbmačoavdinproseassas ja de barget ovttas čatnat daid abstrákta cehkiid čuolbmačoavdima duohta vásáhusaide. Álggos oahppit čatnet dáid cehkiid aluminumfanas-čuolbmii mii lei ovddit lekšuvnnas, ja de váldet čuolmma maid leat čeahpit čoavdit, ja de čuolmma čovdet buoridan dihte. Loahpas lekšuvnna klássa ráhkadan listtu masa bidjet ávkkálaš strategiijaid juohke dássái proseassas maid de bidjet plakáhttii, mii fas galgá geavahuvvot jagi čađa.
@@ -5717,11 +5716,11 @@ se:
               name: Vásihit ČuolbmaČoavdima
               description_student: 'Dán lekšuvnnas klássa geavaha čuolbmačoavdinproseassa golmma iešguđet čuolmmas: ohcat sáni, seating riegádanbeaivvi lágideamis ja plánet tuvrra. Čuolmmat šaddet váddásit ahte váddásit ja hejot čilgejuvvon čuvgehit movt čuolbmačoavdinproseassa lea ávkkálaš go don hálddašat dákkár čuolmma.'
             What is a Computer?:
-              description_student: Dán lekšuvnnas klássa ovdánahttá gaskaboddosaš čilgehusa mii dihtor lea. Maŋŋil go jurddariđu vuođul leat smiehttan vejolaš čilgehusaid dihtora várás, klássa bargá joavkkuid mielde sirret govaid dan mielde “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja bidjá joavkkuid divodit plakáhtaid dan ođđa čilgehusa mielde. 
+              description_student: Dán lekšuvnnas klássa ovdánahttá gaskaboddosaš čilgehusa mii dihtor lea. Maŋŋil go jurddariđu vuođul leat smiehttan vejolaš čilgehusaid dihtora várás, klássa bargá joavkkuid mielde sirret govaid dan mielde “lea dihtor” dahje “ii leat dihtor” plakáhttii ja čilge duogáža manne válljet daid váddáseamos kategoriijaid. Oahpaheaddji introdusere dasto čilgehusa mii lea dihtor ja bidjá joavkkuid divodit plakáhtaid dan ođđa čilgehusa mielde.
             Input and Output:
               name: Input ja Output
               description_student: Dás oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Loahpas lekšuvnna klássa guorahallá dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas.
-              description_teacher: Dán lekšuvnnas oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Ovdalis doaimmas oahppit galge deattuhit čielga fysalaš  input:aid ja output:aid (omd. Boallobeavdi input:an dahje šearbma output:an), muhto maŋit digaštallamiin oahppit galget árvvoštallat ovdamearkkaid mat eai leat diehttalasat (ahte guoskkahan šearbma sáhttá leat sihke input:a ja output:a, dahje dan ahte interneahtta sáhttá leat sihke input:a ja output:a) Lekšuvnnaid čađa oahpaheaddji registrere input:aid ja output:aid mat leat identifiserejuvvon T-diagrámmas ovddabealde lanjas. Lekšuvnna čoahkkáigeassun oahppit guorahallet dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas. 
+              description_teacher: Dán lekšuvnnas oahppit árvvoštallet muhtun dihtorovttadagaid mearridit makkár input:aid dahje output:aid áigot geavahit. Jovkui lea biddjon okta dihtorovttadat ja oahpaheaddji mearriduvvon čilgehus ovttadaga input:aide ja output:aide. Ovdalis doaimmas oahppit galge deattuhit čielga fysalaš  input:aid ja output:aid (omd. Boallobeavdi input:an dahje šearbma output:an), muhto maŋit digaštallamiin oahppit galget árvvoštallat ovdamearkkaid mat eai leat diehttalasat (ahte guoskkahan šearbma sáhttá leat sihke input:a ja output:a, dahje dan ahte interneahtta sáhttá leat sihke input:a ja output:a) Lekšuvnnaid čađa oahpaheaddji registrere input:aid ja output:aid mat leat identifiserejuvvon T-diagrámmas ovddabealde lanjas. Lekšuvnna čoahkkáigeassun oahppit guorahallet dábálaš doaimmaid maid čađahit dihtorovttadagas ja válljejit input:aid dahje output:aid mat geavahuvvojit dán doibmii dán diagrámmas.
             Processing:
               name: Gieđahallan
             Apps and Storage:
@@ -5744,8 +5743,8 @@ se:
               description_student: Dát lekšuvdna gokčá daid ulbmiliid mat neahttasiiddut fállet, sihke geavaheddjiide ja ráhkadeddjiide. Klássa suokkardallá muhtun neahttasiidduid USA:s mat ollu geavahuvvojit ja digaštallet movt iešguđet neahttasiidu lea ávkkálaš geavaheddjiide ja movt sáhttet leat ávkin ráhkadeddjiide.
               description_teacher: Juohke neahttasiiddus lea ulbmil, ja duogáš manne muhtun lea dan ráhkadan ja manne earát dan geavahit. Dán lekšuvnnas oahppit árvvoštallagohtet makkár ulbmil neahttasiiddus lea, sihke geavaheddjiide ja ráhkadeddjiide. Oahppit suokkardallet muhtun neahttasiidduid USA:s mat ollu geavahuvvojit ja geahččalit iskat movt iešguđet neahttasiidu lea ávkkálaš geavaheddjiide ja movt sáhttet leat ávkin ráhkadeddjiide.
             'Websites for Expression ':
-              name: 'Neahttasiiddut Dadjamiidda'
-              description_student: 'Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.'
+              name: Neahttasiiddut Dadjamiidda
+              description_student: Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
               description_teacher: Dán lekšuvnnas oahppit guorahallet vugiid movt geavahit neahttasiidduid reaidun persovnnalaš dadjamiidda ja listtu mas leat fáttát ja beroštumit maid galget váldit mielde persovnnalaš neahttasiidui. Álggus lekšuvnnas oahppit digaštallet iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid. De oahppit gehččet moadde ovdamearkka neahttasiidduin maid oahppit leat ráhkadan ovddeš CS Discoveries kurssain identifiseret vugiid movt leat ovdanbuktit sin jurdagiid. De loahpas oahppit smihttet ovttas ja juhket listtu mas leat fáttát ja beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
             Intro to HTML:
               name: Láidehus HTML:ii
@@ -5754,14 +5753,19 @@ se:
             Headings:
               name: Bajilčállagat
               description_student: Dát lekšuvdna čájeha HTML merkemiid, dán vuoru bajilčállagiid. Klássa hárjehallá geavahit bajilčála-merkemiid ráhkadit siido- ja sekšuvdnastiillaid ja oahpahallá movt iešguđet bajilčállagat čájehuvvojit standárdan. Dasto klássa plána movt dat sáhttá organiseret sisdoalu persovnnalaš neahttasiidduin, maid galget ráhkadit ovttadaga badjel ja álggahit vuosttaš siiddu prošeavttas.
-              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas. 
+              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas.
             Digital Footprint:
               name: Digitála Luodda
               description_student: Dán lekšuvnnas geahččat maŋás doalahan dihte persovnnalaš neahttasajiid, hupmat persovnnalaš dieđuid birra maid olbmot válljejit juogadit digitálalaččat. Klássa digaštallagoahtá makkár dieđuid lea vuogas juohkit eará olbmuiguin, ja geahččá de ovdamearkkaid sosiálamediain iskat makkár persovnnalaš dieđuid sáhttá vásedin dahje fuomáškeahttá juohkit. Loahpas klássa ráhkada njuolggadusaid maid čuvvot go áigot bidjat dieđuid nehttii.
-              description_teacher: "Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r\n\\ r\nOahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r\n\\r\nLoahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii."
+              description_teacher: |-
+                Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r
+                \\ r
+                Oahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r
+                \\r
+                Loahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii.
             Lists:
-              description_student: Dát lekšuvdna čilge diŋgojuvvon ja ordnekeahtes listtuid ja gullevaš &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML-merkemiid. Klássa hárjehallá geavahit merkemiid ja de maŋŋil fas jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu, mas leat dat ođđa kodat.
-              description_teacher: Oahppit leat ožžon čilgejuvvot diŋgojuvvon ja ordnekeahtes listtuid ja barget muhtun dásiid čáđa masa geavahit &lt;ul&gt; &lt;ol&gt;, ja &lt;li&gt; merkemiid. Dasto sii as jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu. Ođđa siidui sii čállet HTML čájehan dihte bajilčállaga, listtu 10 bajimusas dahje eará sisdoalu masa geavahit daid ođđa kodaid maid leat oahppan.
+              description_student: Dát lekšuvdna čilge diŋgojuvvon ja ordnekeahtes listtuid ja gullevaš \<ul>, \<ol>, and \<li> HTML-merkemiid. Klássa hárjehallá geavahit merkemiid ja de maŋŋil fas jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu, mas leat dat ođđa kodat.
+              description_teacher: Oahppit leat ožžon čilgejuvvot diŋgojuvvon ja ordnekeahtes listtuid ja barget muhtun dásiid čáđa masa geavahit \<ul> \<ol>, ja \<li> merkemiid. Dasto sii as jotket persovnnalaš neahttasiidoprošeavttain masa de bidjet ođđa HTML-siiddu. Ođđa siidui sii čállet HTML čájehan dihte bajilčállaga, listtu 10 bajimusas dahje eará sisdoalu masa geavahit daid ođđa kodaid maid leat oahppan.
             Intellectual Property and Images:
               name: Dahkkivuoigatvuohta ja Govat
               description_student: Dát lekšuvdna čájeha movt don geavahat mediaid nugo govaid, videoid dahje musihka maid eará leat bidjan muhtun neahttasadjái, seammás go doahttalit su rivttiid gii leat ráhkadan media. Easkka maŋŋil go leat geahčadan Creative Commons-lisensierema, oahppá klássa movt galgá bidjat govaid neahttasiidui ja movt bidjet rievttes namaid go barget dan.
@@ -5772,11 +5776,13 @@ se:
             Project - Multi-Page Websites:
               name: Prošeakta - Máŋgga-Siidosaš Neahttasiiddut
               description_student: 'Dát lekšuvdna gokčá hyper-čanastagaid, maid neahttaovdánahttit sáhttet geavahit čatnat siidduid oktii neahttasiidui. Klássa čatná ovddit siidduid oktii ovtta prošektii, ja ráhkada navigerenlinjjáid juohke siidui ovdal go almmuhit neahttasiiddu nehttii. '
-              description_teacher: "Maŋŋil go leat oahppan čatnat neahttasiidduid oktii, de oahppit leat gergosat liŋkkaid almmuhit neahttasiiddu mainna leat bargan. Dán lekšuvnnas čatnet oktii ovddit siidduid maiguin leat bargan ja ráhkadit oktan prošeaktan, ráhkadit ođđa siiddu ja bidjet navigeremiid siidduid gaskii ovdal go almmuhit neahttasiiddu nehttii. \\r\n\\r"
+              description_teacher: |-
+                Maŋŋil go leat oahppan čatnat neahttasiidduid oktii, de oahppit leat gergosat liŋkkaid almmuhit neahttasiiddu mainna leat bargan. Dán lekšuvnnas čatnet oktii ovddit siidduid maiguin leat bargan ja ráhkadit oktan prošeaktan, ráhkadit ođđa siiddu ja bidjet navigeremiid siidduid gaskii ovdal go almmuhit neahttasiiddu nehttii. \\r
+                \\r
             Styling Text with CSS:
               name: Stylet Teavstta CSS:ain
               description_student: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Klássa oahppá syntáksa vuođu CSS njuolggadusaide ja suokkardallá de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
-              description_teacher: "Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis."
+              description_teacher: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
             Styling Elements with CSS:
               name: Stylet Elemeanttaid CSS:ain
               description_student: Dát lekšuvdna joatká introdukšuvnnain CSS stiilla iešvuođaid birra, dán vuoru mas eanet deattuhit elemeanttaid mat eai leat teavsttat. Klássa iskagoahtá ja rievdadišgoahtá daid ođđa CSS-stiillaid mat leat Desserts of the World-siiddus. Maŋŋil de geavahit dán ođđa máhtu iežaset persovnnalaš neahttasajiide.
@@ -5792,7 +5798,7 @@ se:
             Project - Personal Portfolio Website:
               name: Prošeakta - Persovnnalaš Portefolie Neahttasiidu
               description_student: Dán ovttadaga maŋemus beivviin, klássa loahpaha iežaset persovnnalaš neahttasajiid ja barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja movt dát leat ovdánahtton.
-              description_teacher: "Oahppit leat geavahan ollu áiggi ovttadagas bargat persovnnalaš neahttasaji. Loahpas oahppit loahpahit iežaset neahttasajiid. Sii barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja maiddái čájehit proseassa loahpalaš designa rádjái.\\r"
+              description_teacher: Oahppit leat geavahan ollu áiggi ovttadagas bargat persovnnalaš neahttasaji. Loahpas oahppit loahpahit iežaset neahttasajiid. Sii barget seammá ahkásaččaiguin oažžun dihte ruovttoluottadieđuid, mannet čađa rubrihka ja válbmet neahttasaji. Ovttadaga heaittit dainna ahte buohkat juogadit iežaset prošeavttaid ja maiddái čájehit proseassa loahpalaš designa rádjái.\\r
         csd3-pilot:
           lesson_groups:
             csd3_1:
@@ -5808,8 +5814,8 @@ se:
               description_teacher: Oahppit galget árvvoštallat "váttisvuođaid" láittasvuođa ja iežasdadjamuša mielde, ja reflekteret movt sáhttet lahkonit váttisvuođaid iežaset eallimiin. Dasto galget suokkardallat movt Dihto Diehtagis oppalaččat ja programmeremis earenoamážit lea mearkkašahtti rolla juogo guoimmuheamis dahje reaidun iežasdadjumuššii.
             Plotting Shapes:
               name: Plottet Hámiid
-              description_student: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
-              description_teacher: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
+              description_student: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla\_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
+              description_teacher: Oahppit suokkardallet hástalusaid gulahallamiin tevdnet hámiid ja geavahit reaidduid introduseret movt dán váttisvuođa gieđahallat SpeallanLab:as. Liggendoaibma čájeha jođánit hástalusaid gulahallanhástalusaid maid eai leat lonohallon referánsačuoggát. Váldodoaibman oahppit suokkardallet ovtta SpeallanLab-reaiddu mii diktá ohppiid interaktiivvalaččat bidjat hámiid Spealla\_Lab:ii 400 400 ruvttoneahtas. Dasto jorgalit nu ahte čilgejit ovttasbargoguoibmái movt sii galget tevdnet čihkkon gova go geavahit dán reaiddu, ja dasa lassin daid oallut hástalusaid oahppit deivet go galget programmeret SpeallanLab:as. Oahppit sáhtte válljenfriddjavuođain ráhkadit iežaset gova gulahallamii ovdal digaštallama.
             Drawing in Game Lab:
               name: Tevdnet SpeallanLáb:as
               description_student: Klássa lea introduserejuvvon Speallan-Lab:ii, programmeren biras dán unit:ii, ja de álget geavahit dan bidjat hámiid šerbmii. Lekšuvdna gokčá vuđolaš sekveansa ja vihkeohcama, ja maiddái muhtin eaŋkilis kommándoid. Lekšuvnna loahpas, klássa galgá ráhkadit neahttaveršuvnna govas maid sii leat designen ovddit lekšuvnnas.
@@ -5837,11 +5843,7 @@ se:
             Booleans Unplugged:
               name: Boolána Neahtahaga
               description_student: Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Klássa de juohká objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, ja geahččá de movt dadjamat sáhttet váikkuhit prográmma njuovžilvuođa.
-              description_teacher: |-
-                Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.
-                Dan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. 
-
-                De loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid.
+              description_teacher: "Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.\nDan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. \n\nDe loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid."
             Conditionals:
               description_student: Klássa álgá geavahit boolánaid buohtastahttit gustovaš sprite:a iešvuođa árvvu muhtun mihttoárvvuin, geavahan dihte buohtastahttima mearridit goas sprite lea joksan čuoggá šearpmas, šaddan mearriduvvon sturrodahkan, dahje eará ládje joksan árvvu geavahettiin Lohkan Minstara. Maŋŋil go lea geavahan boolánaid njuolgut iskan dihte árvvuid dahje sprite:a iešvuođaid, bidjá klássa evttolaš jus dadjamuša čállit koda mii vástida boolána buohtastahttimiid.
               description_teacher: Oahppit álget geavahit boolánaid buohtastahttit gustovaš sprite:a iešvuođa árvvu muhtun mihttoárvvuin, geavahan dihte buohtastahttima mearridit goas sprite lea joksan čuoggá šearpmas, lea šaddan mearriduvvon sturrodahkan, dahje eará ládje joksan árvvu geavahettiin lohkan minstara. Maŋŋil go lea geavahan boolánaid njuolgut iskan árvvuid dahje sprite:a iešvuođaid, oahppit lasihit evttolaš_jus_ dadjamuša čállit koda mii vástida boolána buohtastahttimiid.
@@ -5852,7 +5854,7 @@ se:
             Other Forms of Input:
               name: Eará Input vuogit
               description_student: Klássa joatká suokkardallat vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis boalluVulos()kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
-              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis ` boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
+              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis `boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
             Project - Interactive Card:
               name: Prošeakta  - Interaktiivva Koarta
               description_student: Dán kumulatiivva prošeavttas 1. kapihttalis, klássa pláne ja ovdánahttá interaktiivva dearvuođakoartta geavahettiin buot programmeren vugiid maid sii leat oahppan dássážii.
@@ -5865,7 +5867,7 @@ se:
               description_teacher: Oahppit ohppet oktiibeaškkeheami birra dihtoris. Barggadettin guovttis ja guovttis, sii suokkardit movt okta dihtor sáhttá geavahit sprite:a sajusteami ja sturrodaga iešvuođaid ja rehkenastima fuomášan dihte guoskkadit go dat guokte sprite:a. Sii dalle geavahit `leaGuoskame()` blohka ráhkadan dihte iešguđetge effeavttaid go sprite:t oktiibeaškkehit, maiddái čuojahit jienaid. Loahpas, sii geavahit sin ođđa máhtu buoridit siidobláđen-spealu maid álggahedje ovddit lekšuvnnas.
             Complex Sprite Movement:
               name: Kompleaksa Sprite Lihkastagat
-              description_student: 'Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.'
+              description_student: Klássa oahppá movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid, nu go simuleret deaddofámu, bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin klássa galgá kombineret dáid lihkastagaid nu ahte animere ja kontrollere ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid.
               description_teacher: Oahppit ohppet movt sii galget kombineret sprite leahtu iešvuođaid vuosteminsttarin ráhkadan dihte eambbo kompleaksa sprite lihkastagaid. Ovdamearkka dihte oahppit ohppet movt simuleret deaddofámu,  bidjat ovtta sprite:a njuiket, ja diktit ovtta sprite:a govddodit gurut dahje olgeš guvlui. Loahppa dásiin Code Studio ovdáneamis oahppit galget kombineret dáid lihkastagaid nu ahte animerejit ja kontrollerejit ovtta eaŋkil sprite:a ja hukset ovtta álkis spealu mas okta figuvra girdá birra ja čoaggá minttaid. Oahppit movttiidahttojuvvojit loahppa dásiin ráhkadit iežaset lasáhusaid spellui.
             Collisions:
               name: Oktiibeaškkeheamit
@@ -5873,7 +5875,9 @@ se:
               description_teacher: Oahppit programmerejit sin sprite:id nu ahte ovttasdoibmet ođđa vugiid mielde. Maŋŋil oanehis čađaheami movt sii geavahedje `leaGuoskame` blohka, oahppit juogadit ideaid gávdnan dihte eará vugiid movt dat guokte sprite:a sáhttiba ovttasdoaibmat. Sii dalle geavahit `leaGuoskame` bidjan dihte ovtta sprite:a hoigat nuppi doarrás šearpmas ovdal go hárjehallet daiguin njealji oktiibeaškkeheamit-blohkaiguin (`beaškkehit`, `duvdit`, `bánccardit` ja `bánccarditEret`).
             Functions:
               description_student: Dát lekšuvdna gokčá funkšuvnnaid vuogi movt organiseret koda, dát dahká dán vejolažžan lohkat ja sihkku geardduhuvvon kodablohkaid. Klássa oahppá ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid, ja de ráhkadišgoahtit funkšuvnnaid Speallan Lab:as. Loahpageahčen lekšuvnna klássa geavaha dáid gálggaid organiseret ja bidjat funkšunalitehta sin loahpalaš scroller-spealu veršuvdnii.
-              description_teacher: "Oahppit ohppet movt ráhkadit funkšuvnnaid organiseret, dahkat dán vejolažžan lohkat ja sihkkut geardduhuvvon kodablohkaid. Neahtahaga liggen guorahallá movt ieš guđet detálljadásiid guovllut sáhttet leat ávkkálaččat čadnon kontekstii. Oahppit oahppet ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid. Maŋŋil oahppit ohppet ráhkadit funkšuvnnaid Speallan Lab:as.\nSii geavahit funkšuvnnaid sihkkut guhkes blohkaid kode tevdnen mohkiin ja buhtadit geardduhuvvon kodenosiid eaŋkilis funkšuvnnain. Loahpageahčen lekšuvnna oahppit geavahit dáid gálggaid organiseret ja lasihit funkšunalitehta loahpalaš scroller-spealu veršuvdnii."
+              description_teacher: |-
+                Oahppit ohppet movt ráhkadit funkšuvnnaid organiseret, dahkat dán vejolažžan lohkat ja sihkkut geardduhuvvon kodablohkaid. Neahtahaga liggen guorahallá movt ieš guđet detálljadásiid guovllut sáhttet leat ávkkálaččat čadnon kontekstii. Oahppit oahppet ahte alit dásis badjelii dahje eanet abstrákta ceahkit dahket álkibun ipmirdit ja vihkkedallat cehkiid. Maŋŋil oahppit ohppet ráhkadit funkšuvnnaid Speallan Lab:as.
+                Sii geavahit funkšuvnnaid sihkkut guhkes blohkaid kode tevdnen mohkiin ja buhtadit geardduhuvvon kodenosiid eaŋkilis funkšuvnnain. Loahpageahčen lekšuvnna oahppit geavahit dáid gálggaid organiseret ja lasihit funkšunalitehta loahpalaš scroller-spealu veršuvdnii.
             The Game Design Process:
               name: Spealu Designa Proseassa
               description_student: Dát lekšuvdna introdusere proseassa maid klássa geavaha designet spealu reastta ovttadahkii. Klássa čađaha dán proseassa máŋgga dási čađa. Oassin dán lekšuvnnas klássa beassá veaháš oahppat geavahit máŋggarámmat animašuvnnaid Speallan Lab:as. Loahpageahčen lekšuvnna sáhttet buoridit spealu nu ahte dat šaddá sin iežaset.
@@ -6075,7 +6079,7 @@ se:
             Styling Text with CSS:
               name: Stylet Teavstta CSS:ain
             'Websites for Expression ':
-              name: 'Neahttasiiddut Dadjamiidda'
+              name: Neahttasiiddut Dadjamiidda
             Styling Elements with CSS:
               name: Stylet Elemeanttaid CSS:ain
         csd1-2020:
@@ -6099,7 +6103,6 @@ se:
               name: Gieđahallan
             Project - Propose an App:
               name: Prošeakta - Evttohit App:a
-            0:
             Storage:
               name: Vuorká
         csd4-2020:
@@ -6118,7 +6121,7 @@ se:
             Understanding Your User:
               name: Ipmirdit Du Geavaheaddji
               description_student: Geavahit geavaheaddjeprofiillaid, klássa fuomáša movt iešguđet geavaheaddjit soitet reageret buktagiidda. Rollaspealuin, neaktit leat eará persovdnan, mieláhttut klássas besset vásihit designa earáid čalmmiid čađa.
-              description_teacher: "Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r"
+              description_teacher: Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r
             User-Centered Design Micro Activity:
               name: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
               description_student: Smávva joavkkuin geavaha klássa designaproseassa oažžun dihte ideaid jierpmálaš biktasiidda. Jurddariđuin identifiserejit geavaheddjiid geaidda evttohit designa. Dát lea ovttadaga vuosttaš eanet vejolašvuođain hárjehallat designet čovdosa earáid dárbbuide.
@@ -6129,12 +6132,12 @@ se:
               description_teacher: Álggahan dihte app:a designaprošeavtta, mii bistá ovttadaga lohppii, oahppit isket muhtun app:aid mat leat designejuvvon sosiála váikkuhusaide maid eará oahppit leat ráhkadan. Klássa de čađaha čuolbmáčoavdinproseassa dásiid čilget, ráhkkanahttit ja reflekteret go ovdánahttet idea iežaset app:ii mas galgá leat sosiála váikkuhus. Loahpas oahppit ráhkadit prošeaktajoavkkuid ja šihttet movt joavku galgá doaibmat iežaset app:a ovdánahttima čađa.
             Market Research:
               name: MárkanIskkadeapmi
-              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot. 
+              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot.
               description_teacher: Dán lekšuvnnas oahppit isket app:aid mat sulastahttet dan maid ieža áigot ráhkadit ipmirdan dihte geavaheddjiid dárbbuid. Oahppit barget joavkkuin ohcat interneahtas eará app:aid ja de árvvoštallet daid maid sin mielas leat miellagiddevaččat. Loahpas lekšuvnna juohke joavku lea ožžon čielgasit idea makkár app:a áigot ráhkadit ja maid ráddjen geavaheaddjejoavkku. Juohke joavku doalaha listtu mas leat sitáhtat app:ain maid iske maid de sáhttet geavahit loahppa ovdanbuktimis.
             Paper Prototypes:
               name: BáberPrototyhpat
               description_student: Báberprototyhpat veahkehit ovdánahttiid iskat ideaid ovdal go beare ollu áiggi bidjet kodaid čállimii. Dán lekšuvnnas joavku guorahallá muhtun ovdamearkkaid app:ain mat leat ráhkaduvvon App Lab:as, ja geavahit dáid app:aid informeret vuosttaš báberprototyhpaid.
-              description_teacher: "Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r"
+              description_teacher: Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r
             Prototype Testing:
               name: Prototyhpa Teasten
         csd5-2020:
@@ -6174,17 +6177,13 @@ se:
             Booleans Unplugged:
               name: Boolána Neahtahaga
               description_student: Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Klássa de juohká objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, ja geahččá de movt dadjamat sáhttet váikkuhit prográmma njuovžilvuođa.
-              description_teacher: |-
-                Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.
-                Dan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. 
-
-                De loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid.
+              description_teacher: "Dát lekšuvdna introdusere boolána árvvuid ja logihka, ja maiddái evttolaš dadjamiid. Klássa álgá speallat eaŋkilis spealu of Stand Up, Sit Down main boolána (duohta/gielis) dadjamat čilgejit persovnnalaš iešvuođaid (vuokta- dahje čalbmeivnni, bivttas málliid, agi, jna). Dát fuomášuhttá ohppiid jurddašit movt sii sáhttet movt sii sáhttet bidjat iešvuođaid maŋŋálaga vejolaš árvvuiguin (nu go ahki) binára jearaldagaiguin.\nDan rájes oahppit ožžot Objeavttačohkkiid, main dattege leat iešguđetlágán fysalaš iešvuođat. Ovttasbargogummiin juohkiba objeavttaid eanet ahte eanet kompleaksa boolána dadjamiid vuođul, lassin ovttastahtton boolánaid JA ja DAHJE. \n\nDe loahpas čájehit eavttuid reaidun maiguin sáhttá mearridit dahje váikkuhit prográmma geavahettiin bolána dadjamiid."
             Keyboard Input:
               name: Boallobeavddi Input
             Other Forms of Input:
               name: Eará Input vuogit
               description_student: Klássa joatká suokkardallat vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis boalluVulos()kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
-              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis ` boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
+              description_teacher: Dán lekšuvnnas oahppit jotket suokkardallat   vugiid movt geavahit evttolaš dadjama geavaheaddji input:a várás. Dasa lassin eaŋkilis `boalluVulos()`kommándo-čohkiid maid ovddit beaivvi ohppe, klássa oahppá eará boallobeavdekommanduid birra ja vel vugiid movt sáhpán-input:aid bidjat.
             Project - Interactive Card:
               name: Prošeakta  - Interaktiivva Koarta
             Complex Sprite Movement:
@@ -6207,7 +6206,7 @@ se:
               display_name: Dáhpáhusaid
           lessons:
             Going Places Safely:
-              name: Mannat Sihkkaris Sajiide 
+              name: Mannat Sihkkaris Sajiide
             'Programming: Happy Maps':
               name: Movttegis Kárttat
         courseb-2020:
@@ -6268,7 +6267,7 @@ se:
               name: Lávlagiid čállit
             Digital Sharing:
               name: Digitála Juohkin
-              description_teacher: "Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.\n"
+              description_teacher: Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
         coursef-2020:
           lesson_groups:
             csf_digcit:
@@ -6284,7 +6283,7 @@ se:
               name: Joavkočohkken
             Digital Sharing:
               name: Digitála Juohkin
-              description_teacher: "Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.\n"
+              description_teacher: Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
             AI for Oceans:
               name: AI Mearaide
         express-2020:
@@ -6376,18 +6375,23 @@ se:
             Headings:
               name: Bajilčállagat
               description_student: Dát lekšuvdna čájeha HTML merkemiid, dán vuoru bajilčállagiid. Klássa hárjehallá geavahit bajilčála-merkemiid ráhkadit siido- ja sekšuvdnastiillaid ja oahpahallá movt iešguđet bajilčállagat čájehuvvojit standárdan. Dasto klássa plána movt dat sáhttá organiseret sisdoalu persovnnalaš neahttasiidduin, maid galget ráhkadit ovttadaga badjel ja álggahit vuosttaš siiddu prošeavttas.
-              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas. 
+              description_teacher: Dán lekšuvnnas oahppit jotket geavahit HTML struktureret teavstta neahttasiiddus, dán vuoru bajilčállagiiguin. Oahppit ohppet movt iešguđet bajilčállagat čájehuvvojit standárdan ja hárjehallet geavahit daid ráhkadit siido- ja sekšuvdnastiillaid. Oahppit mearridišgohtet de movt áigot organiseret sisdoalu persovnnalaš neahttasiidduin. Maŋemus dásis oahppit álggahit prošeavtta mainna barget olles ovttadagas.
             Digital Footprint:
               name: Digitála Luodda
               description_student: Dán lekšuvnnas geahččat maŋás doalahan dihte persovnnalaš neahttasajiid, hupmat persovnnalaš dieđuid birra maid olbmot válljejit juogadit digitálalaččat. Klássa digaštallagoahtá makkár dieđuid lea vuogas juohkit eará olbmuiguin, ja geahččá de ovdamearkkaid sosiálamediain iskat makkár persovnnalaš dieđuid sáhttá vásedin dahje fuomáškeahttá juohkit. Loahpas klássa ráhkada njuolggadusaid maid čuvvot go áigot bidjat dieđuid nehttii.
-              description_teacher: "Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r\n\\ r\nOahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r\n\\r\nLoahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii."
+              description_teacher: |-
+                Danne go oahppit aitto leat geavahan áiggi smiehttat dan duohta sisdoalu birra mat galget biddjot sin persovnnalaš neahttasadjái, dán lekšuvnnas geahččat maŋás unit-long prošeavttas (publikašuvnnat persovnnalaš neahttasajiin) veahkehit ohppiid čilget makkár dieđuid sii válljejit juohkit digitálalaččat ja geainna juhket. Dát nanne oainnu ahte ollu dain dieđuin maid válljejit juohkit digitálalaččat eanas leat nu ahte sis ii leat kontrolla daid badjel go almmuhuvvojit  \\ r
+                \\ r
+                Oahppit álget identifiseret heivvolaš ulbmiljoavkku mainna dustet juogadit muhtun persovnnalaš dieđuid. Dasto sii guorahallet máŋga sosiálamedia iskat makkár dieđuid olbmot juhket iežaset ja earáid birra. Loahpas, oahppit reflekterejit makkár njuolggadusat  lea buorit go galgá bidjat dieđuid nehttii.\\r
+                \\r
+                Loahpalaš mihttu dáinna lekšuvnnain ii leat balddihit ohppiid, muhto baicca oažžut ohppiid fuomášit dárkilit makkár kontrolladássi sis ii leat go almmuhit dieđuid nehttii.
             Styling Text with CSS:
               name: Stylet Teavstta CSS:ain
               description_student: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Klássa oahppá syntáksa vuođu CSS njuolggadusaide ja suokkardallá de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
-              description_teacher: "Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis."
+              description_teacher: Dát lekšuvdna introdusere CSS mállen movt stylet elemeanttaid ovtta siiddus. Oahppit oahppet syntáksa vuođu CSS njuolggadusaide ja suokkardallet de makkár iešvuođat váikkuhit HTML teakstaelemeanttaid. Sii barget HTML-siidduin mii Guinness World Record eaiggádiid birra, ja bidjet sin iežaset málle siidui maid leat ožžon Loahpas geavahit sii juohke teakstahámi iežaset persovnnalaš neahttasajis.
             'Websites for Expression ':
-              name: 'Neahttasiiddut Dadjamiidda'
-              description_student: 'Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.'
+              name: Neahttasiiddut Dadjamiidda
+              description_student: Dát lekšuvdna introdusere neahttasiidduid mat leat reaidun persovnnalaš dadjamiidda. Klássa digaštallá iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid ja de gehččet ovdamearkkaid neahttasiidduin maid ovddeš oahppit leat ráhkadan. Ja de smihttet ovttas ja juhket listtu mas leat fáttát beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
               description_teacher: Dán lekšuvnnas oahppit guorahallet vugiid movt geavahit neahttasiidduid reaidun persovnnalaš dadjamiidda ja listtu mas leat fáttát ja beroštumit maid galget váldit mielde persovnnalaš neahttasiidui. Álggus lekšuvnnas oahppit digaštallet iešguđet vugiid movt olbmot dadjet ja juogadit iežaset beroštumiid ja jurdagiid. De oahppit gehččet moadde ovdamearkka neahttasiidduin maid oahppit leat ráhkadan ovddeš CS Discoveries kurssain identifiseret vugiid movt leat ovdanbuktit sin jurdagiid. De loahpas oahppit smihttet ovttas ja juhket listtu mas leat fáttát ja beroštumit maid galget váldit mielde, ja ráhkadit resurssa ovdánahttit persovnnalaš neahttasaji reastta ovttadagas.
             Styling Elements with CSS:
               name: Stylet Elemeanttaid CSS:ain
@@ -6613,7 +6617,7 @@ se:
               key: Stylet Teavstta CSS:ain
               name: Stylet Teavstta CSS:ain
             'Websites for Expression ':
-              key: 'Neahttasiiddut Dadjamiidda'
+              key: Neahttasiiddut Dadjamiidda
             Styling Elements with CSS:
               key: Stylet Elemeanttaid CSS:ain
               name: Stylet Elemeanttaid CSS:ain
@@ -6729,10 +6733,35 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Iskkadeapmi
+        csp5-2021:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Iskkadeapmi
         csp8-2021:
           lessons:
             Create PT - Complete the Task:
               key: Ráhkat PT - Válbme Barggu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Iskkadeapmi
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -6779,7 +6808,7 @@ se:
               key: Ráhkat Náste Soahti Spealu
               name: Ráhkat Náste Soahti Spealu
             'Unplugged: Binary':
-              key: 'Neahtahaga - Binára'
+              key: Neahtahaga - Binára
               name: Binára Govat
             Artist Binary:
               key: Dáiddár Binára
@@ -6852,7 +6881,7 @@ se:
               key: Ipmirdit Du Geavaheaddji
               name: Ipmirdit Du Geavaheaddji
               description_student: Geavahit geavaheaddjeprofiillaid, klássa fuomáša movt iešguđet geavaheaddjit soitet reageret buktagiidda. Rollaspealuin, neaktit leat eará persovdnan, mieláhttut klássas besset vásihit designa earáid čalmmiid čađa.
-              description_teacher: "Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r"
+              description_teacher: Designárat fertejit ipmirdit geavaheddjiid dárbbuid go galget ráhkadit anolaš buktagiid. Dát lekšuvdna movttiida ohppiid jurddašit movt sáhttet designet nuppi olbmui neaktit eará persovdnan geavahettiin geavaheaddjeprofiilla ja buktit reakšuvnnaid buktagiidda. Juohke oahppi oažžu geavaheaddjeprofiilla mii čilge persovnna, maid de sáhttet geavahit válljet heivvolaš buktagiid, kritiseret buvttadesigna ja evttohit buoridemiid designii.\\r
             User-Centered Design Micro Activity:
               key: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
               name: GeavaheaddjeStivrejuvvon Designa Mikrodoaibma
@@ -6866,13 +6895,13 @@ se:
             Market Research:
               key: MárkanIskkadeapmi
               name: MárkanIskkadeapmi
-              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot. 
+              description_student: Čiekŋut app:a ovdánahttimii guorahallamiin app:aid mat gávdnojit ja mat sáhttet dákkár geavaheddjiid doarjut. Juohke joavku identifisere muhtun app:aid mat guoskkahit fáttá mainna leat bargame ja geavahit dáid app:aid ráddjet iežaset app:a ideaid maid de čuvvot.
               description_teacher: Dán lekšuvnnas oahppit isket app:aid mat sulastahttet dan maid ieža áigot ráhkadit ipmirdan dihte geavaheddjiid dárbbuid. Oahppit barget joavkkuin ohcat interneahtas eará app:aid ja de árvvoštallet daid maid sin mielas leat miellagiddevaččat. Loahpas lekšuvnna juohke joavku lea ožžon čielgasit idea makkár app:a áigot ráhkadit ja maid ráddjen geavaheaddjejoavkku. Juohke joavku doalaha listtu mas leat sitáhtat app:ain maid iske maid de sáhttet geavahit loahppa ovdanbuktimis.
             Paper Prototypes:
               key: BáberPrototyhpat
               name: BáberPrototyhpat
               description_student: Báberprototyhpat veahkehit ovdánahttiid iskat ideaid ovdal go beare ollu áiggi bidjet kodaid čállimii. Dán lekšuvnnas joavku guorahallá muhtun ovdamearkkaid app:ain mat leat ráhkaduvvon App Lab:as, ja geavahit dáid app:aid informeret vuosttaš báberprototyhpaid.
-              description_teacher: "Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r"
+              description_teacher: Ovdal go designegohtet app:aid fertet mii veahkehit ohppiid loktet iežaset vuordámušaid. Danne go oahppit dáid app:aid prototyhpejit App Lab:as, de sii leat eanet ráhkkanan jus sin ideat heivejit app:iade mat leat prototyhpejuvvon App Lab:as. Joavkkut geahččagohtet iešguđetlágán app:aid designejuvvon čájehan dihte app:aid mat leat ráhkaduvvon App Lab:as. Joavkkut sáhttet válljet ovtta dahje moadde app:aid vuođđun alcceseaset. Dalle joavkkuin lea veahá áigi digaštallat iežas app:a vuođđofunkšunalitehta ovdal go geavahit 3x5 indeaksakoartta ovdánahttit báberprototyhpaid.\\r
             Prototype Testing:
               key: Prototyhpa Teasten
               name: Prototyhpa Teasten
@@ -6910,6 +6939,14 @@ se:
             lessonGroup-2:
               display_name: Sisdoallu
         csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
@@ -7038,6 +7075,14 @@ se:
               display_name: Sisdoallu
             lessonGroup-2:
               display_name: Sisdoallu
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Herausforderung Sprite-Effekt
+          name: spritelab-effekte-Herausforderung
+          title: Herausforderung Sprite-Effekt
+          description_audience: Sprite Lab für mittlere/fortgeschrittene Benutzer
+          description_short: Nimm die Herausforderung an und erstelle deinen eigenen Sprite-Effekt mit Sprite Lab!
         csa-u8-dev:
           lessons:
             lesson-1:
@@ -7063,3 +7108,193 @@ se:
           lessons:
             lesson-1:
               name: Stávengilvu
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: Ráhkat Musihka
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Movttegis Kárttat
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        express-2022:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
+              key: CS Prinsihpat Ovdal Iskkadeapmi
+            Binary Numbers:
+              name: Binára Nummarat
+              key: Binára Nummarat
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp2-2022:
+          lessons:
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
+              key: Dárbu Váldit oktavuođa
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
+              key: Routarat ja Dárbbašmeahttumat
+        courseb-2022:
+          lessons:
+            Getting Loopy:
+              name: Šaddat Gáiggasin
+            The Right App:
+              name: Dat Rievttes App:a
+              key: Dat Rievttes App:a
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Stuora Dáhpáhus
+            Picturing Data:
+              name: Presenteret Dátaid
+              key: Presenteret Dátaid
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+              key: Binára Giehtabáttit
+            'Loops: My Loopy Robotic Friends':
+              key: 'Mohkit: Mu Mohkke Robota Olbmát'
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        csp8-2022:
+          lessons:
+            Create PT - Complete the Task:
+              key: Ráhkat PT - Válbme Barggu
+        coursed-2022:
+          lessons:
+            Build a Star Wars Game:
+              name: Ráhkat Náste Soahti Spealu
+              key: Ráhkat Náste Soahti Spealu
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
+              key: Priváhta ja Persovnnlaš Dieđut
+            Digital Sharing:
+              name: Digitála Juohkin
+              key: Digitála Juohkin
+            Songwriting:
+              name: Lávlagiid čállit
+            Simon Says:
+              key: Simmon Sihtá
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+              key: Suohttasat Mohkiid váste
+            AI For Oceans:
+              name: AI Mearaide
+            AI for Oceans:
+              key: AI Mearaide
+              name: AI Mearaide
+            Internet:
+              key: Interneahtta
+          lesson_groups:
+            ramp_up:
+              display_name: Sprite:at
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-2022:
+          lessons:
+            lesson-2:
+              name: Unit 5 Árvvoštallan
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu

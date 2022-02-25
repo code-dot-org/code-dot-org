@@ -323,6 +323,7 @@ sv:
       playlab: Spel-labb
       sports: Sport
       starwars: Star Wars
+      loading: Laddar...
       weblab: Web Lab
     popup:
       progress_for_user: "%{name}s framsteg"
@@ -337,6 +338,7 @@ sv:
       prizes_link: Mer information
   teacher:
     answer: Svar
+    dashboard: Lärare Dashboard
     for_teachers_only: Endast för lärare
     title:
       one: 'Din lärare:'

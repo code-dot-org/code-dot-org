@@ -44,30 +44,6 @@
         "loops/aquatic/unversioned": {
           "word": "Lykkjur"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Villuleit"
         },
@@ -79,10 +55,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Villuleit"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Kóði"
@@ -102,6 +74,15 @@
         "code/poem-art/unversioned": {
           "word": "Kóði"
         },
+        "sprite/coursef/2021": {
+          "word": "Kviki"
+        },
+        "user/coursef/2021": {
+          "word": "Notandi"
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algrím"
+        },
         "variable/coursef/2021": {
           "word": "Breyta"
         },
@@ -117,6 +98,9 @@
         "define/coursef/2021": {
           "word": "Skilgreina"
         },
+        "algorithm/courseb/2021": {
+          "word": "Algrím"
+        },
         "debugging/courseb/2021": {
           "word": "Villuleit"
         },
@@ -126,6 +110,9 @@
         "programming/courseb/2021": {
           "word": "Forritun"
         },
+        "algorithm/coursea/2021": {
+          "word": "Algrím"
+        },
         "debugging/coursea/2021": {
           "word": "Villuleit"
         },
@@ -134,6 +121,9 @@
         },
         "programming/coursea/2021": {
           "word": "Forritun"
+        },
+        "algorithm/coursec/2021": {
+          "word": "Algrím"
         },
         "debugging/coursec/2021": {
           "word": "Villuleit"
@@ -147,6 +137,9 @@
         "binary/coursec/2021": {
           "word": "Tvíundir"
         },
+        "algorithm/coursed/2021": {
+          "word": "Algrím"
+        },
         "debugging/coursed/2021": {
           "word": "Villuleit"
         },
@@ -156,6 +149,9 @@
         "conditionals/coursed/2021": {
           "word": "Skilyrði"
         },
+        "algorithm/express/2021": {
+          "word": "Algrím"
+        },
         "debugging/express/2021": {
           "word": "Villuleit"
         },
@@ -164,6 +160,9 @@
         },
         "programming/express/2021": {
           "word": "Forritun"
+        },
+        "sprite/express/2021": {
+          "word": "Kviki"
         },
         "conditionals/express/2021": {
           "word": "Skilyrði"
@@ -180,11 +179,17 @@
         "drop/pre-express/2021": {
           "word": "Droppa"
         },
+        "algorithm/pre-express/2021": {
+          "word": "Algrím"
+        },
         "debugging/pre-express/2021": {
           "word": "Villuleit"
         },
         "programming/pre-express/2021": {
           "word": "Forritun"
+        },
+        "sprite/coursee/2021": {
+          "word": "Kviki"
         },
         "copyright/coursee/2021": {
           "word": "Höfundarréttur"
@@ -197,6 +202,36 @@
         },
         "define/coursee/2021": {
           "word": "Skilgreina"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Vélarnám"
+        },
+        "debugging/csd/2021": {
+          "word": "Villuleit"
+        },
+        "variable/csd/2021": {
+          "word": "Breyta"
+        },
+        "sprite/csd/2021": {
+          "word": "Kviki"
+        },
+        "conditionals/csd/2021": {
+          "word": "Skilyrði"
+        },
+        "abstraction/csd/2021": {
+          "word": "Útdráttur"
+        },
+        "function/csd/2021": {
+          "word": "Aðgerð"
+        },
+        "input/csd/2021": {
+          "word": "Inntak"
+        },
+        "processing/csd/2021": {
+          "word": "Vinnsla"
+        },
+        "copyright/csd/2021": {
+          "word": "Höfundarréttur"
         }
       }
     }

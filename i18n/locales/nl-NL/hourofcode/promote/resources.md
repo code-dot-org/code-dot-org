@@ -40,7 +40,7 @@ Er is een nieuwe set aan posters beschikbaar met daarop Malala, Stephen Curry, S
 
 [![afbeelding]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![afbeelding]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download Hi-res versies](http://images.code.org/share/hour-of-code-logo.zip)
+[Download Hi-res versies](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code' en "Hora del Código" zijn handelsmerken. Wij willen het gebruik daarvan niet voorkomen, maar we willen er wel voor zorgen dat het gebruik past binnen een paar grenzen:**
 
@@ -84,7 +84,7 @@ Er is een nieuwe set aan posters beschikbaar met daarop Malala, Stephen Curry, S
 
 **Onderwerpregel:** Doe samen met mij en 100 miljoen studenten mee aan een 'Hour of Code'. <br />
 
-Computers zijn overal en veranderen elke industrie op deze planeet. But only 51% of all high schools teach computer science. Het goede nieuws is, dat we op weg zijn dit te veranderen. Als u al eerder van het 'Hour of Code' heeft gehoord, dan weet u dat het geschiedenis heeft gemaakt. Meer dan 100 miljoen leerlingen hebben meegedaan aan een 'Hour of Code'.
+Computers zijn overal en veranderen elke industrie op deze planeet. But only 51% of all high schools offer computer science. Het goede nieuws is, dat we op weg zijn dit te veranderen. Als u al eerder van het 'Hour of Code' heeft gehoord, dan weet u dat het geschiedenis heeft gemaakt. Meer dan 100 miljoen leerlingen hebben meegedaan aan een 'Hour of Code'.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Elke Apple Store in de wereld heeft een 'Hour of Code' gehost, en wereldleiders zoals President Obama en de Canadese premier Justin Trudeau schreven hun eerste programmaregels als onderdeel van de campagne.
 
@@ -110,7 +110,7 @@ Tegen {{ campaign_date/short }} zal tien procent van de studenten wereldwijd Com
 
 De studenten zullen hun eigen apps of spelletjes creëren die ze aan hun ouders kunnen laten zien, en wij zullen tevens 'Hour of Code'-certificaten afdrukken die ze mee naar huis kunnen nemen. En het is leuk! Dankzij interactieve, praktische vaardigheden, zullen studenten op een makkelijke manier rekenkundige denkvaardigheden opdoen. 
 
-Computers zijn overal en veranderen elke industrie op deze planeet. But only 51% of all high schools teach computer science. Het goede nieuws is, dat we op weg zijn dit te veranderen. Als u eerder gehoord heeft over de 'Hour of Code', dan weet u misschien dat het geschiedenis heeft geschreven - meer dan 100 miljoen studenten werendwijd hebben een 'Hour of Code' geprobeerd. Zelfs leiders zoals de Amerikaanse president Barack Obama en de Canadese premier Justin Trudeau schreven hun eerste programmaregels als onderdeel van de campagne.
+Computers zijn overal en veranderen elke industrie op deze planeet. But only 51% of all high schools offer computer science. Het goede nieuws is, dat we op weg zijn dit te veranderen. Als u eerder gehoord heeft over de 'Hour of Code', dan weet u misschien dat het geschiedenis heeft geschreven - meer dan 100 miljoen studenten werendwijd hebben een 'Hour of Code' geprobeerd. Zelfs leiders zoals de Amerikaanse president Barack Obama en de Canadese premier Justin Trudeau schreven hun eerste programmaregels als onderdeel van de campagne.
 
 Ga naar http://hourofcode.com voor meer informatie over het evenment, of laat het ons weten of u wat tijd wilt vrijmaken om te praten over hoe de [naam van de school] kan deelnemen.<br />
 
@@ -126,7 +126,7 @@ Beste ouders,
 
 We leven in een wereld omringd door technologie. En we weten dat, welk vakgebied onze studenten ook kiezen om zich te ontwikkelen als volwassenen, hun vermogen om succes te hebben in toenemende mate zal afhangen van hun kennis over hoe technologie werkt.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 Dat is de reden waarom onze hele school meedoet met het grootste leerevenement in de geschiedenis: de 'Hour of Code' tijdens de week van het programmeren van ({{ campaign_date/full }}). Meer dan 100 miljoen leerlingen wereldwijd hebben al meegedaan aan 'Hour of Code'. Ons 'Hour of Code' verklaart dat [SCHOOL NAAM] er klaar voor is onze leerlingen belangrijke vaardigheden voor de 21ste eeuw te leren. Wij willen van het 'Hour of Code'-evenement iets groots maken om door te gaan met het brengen van programmeeractiviteiten aan uw leerlingen. Ik wil u aanmoedigen om vrijwilliger te worden, de lokale media in te schakelen, het nieuws op social media te delen en te overwegen meer 'Hour of Code'-evenementen te organiseren in de gemeenschap.
 
@@ -144,7 +144,7 @@ Ga naar http://hourofcode.com/{{ country_language }} voor informatie, en zegt he
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Het goede nieuws is dat we zijn op weg om dit te veranderen.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Het goede nieuws is dat we zijn op weg om dit te veranderen.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Meer dan 100 organisaties ondersteunen de stichting CodeUur. Elke Apple winkel in de wereld heeft een CodeUur georganiseerd. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -172,7 +172,7 @@ Geachte heer/mevrouw [ACHTERNAAM]:
 
 Wist u dat informatica de hoogste positie heeft als het gaat om lonen in de VS? Er zijn landelijk meer dan 500.000 banen gerelateerd aan computers beschikbaar, maar het afgelopen jaar studeerde slechts 42.969 studenten af in informatica. 
 
-Informatica is het fundament voor elke sector vandaag de dag, niettemin geven de meeste scholen er geen les in. Op de [NAAM SCHOOL] willen we daar verandering in brengen.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 Dat is de reden waarom onze hele school meedoet met het grootste leerevenement in de geschiedenis: de 'Hour of Code' tijdens de week van het programmeren van ({{ campaign_date/full }}). Meer dan 100 miljoen leerlingen wereldwijd hebben al meegedaan aan 'Hour of Code'.
 

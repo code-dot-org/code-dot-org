@@ -457,12 +457,12 @@ fr:
         applab_intro_designmode: Labo des Applis - Mode Création
         applab_intro_share: Labo des Applis - Partage Ton Application
         csd_applab_arrays: Introduction aux Tableaux
-        CSF_skinOverview_Harvester: La Moissonneuse
+        CSF_skinOverview_Harvester: L'Agricultrice
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Boucle avec BB-8
-        CSF_harvester_skinOverview_K-1: La Moissonneuse
-        CSF_harvester_loops_K1: Les Boucles dans la Moissonneuse
+        CSF_harvester_skinOverview_K-1: L'Agricultrice
+        CSF_harvester_loops_K1: Les Boucles avec l'Agricultrice
         CSF_scrat_loops_K1: Boucles dans l'Âge de Glace
         CSF_scrat_loops_CF: Boucles dans l'Âge de Glace
         CSF_if_allskins: Le Bloc Si
@@ -543,6 +543,18 @@ fr:
         csd_ml_import_model: Importer un modèle IA
         playlab_2021: Introduction au Labo de jeux
         playlab_2021_reader: Introduction au Labo de jeux
+        PL_CSD_TeacherTips_Advise: Conseils aux enseignants - Conseils destinés aux nouveaux enseignants
+        PL_CSD_TeacherTips_IntroToCSD: Conseils aux enseignants - Cours d'initiation à la science informatique
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Conseils aux enseignants - Le processus de résolution de problèmes
+        PL_CSD_TeacherTips_PairProgramming: Conseils aux enseignants - La programmation en binôme
+        PL_CSD_TeacherTips_Debugging: Conseils aux enseignants - Le débogage.
+        PL_CSD_TeacherTips_LeadLearner: "Conseils aux enseignants - Délégué de classe\n"
+        poembot-playtest-intro: Présentation de PoemBot Playtest
+        poembot-playtest-sprites: Sprites de PoemBot Playtest
+        poembot-playtest-events: Événements de PoemBot Playtest
+        hello_world_intro: Bonjour à tous - Bienvenue à Sprite Lab
+        hello_world_events: Bonjour à tous - Programmer avec des événements
+        hello_world_congrats: Bonjour à tous - Faites ce que vous voulez
         rough_poemart_intro: v1 Intro Art de la poésie
         rough_poemart_events: v1 Événements Art de la poésie
         rough_poemart_imagery: v1 Imagerie Art de la poésie
@@ -552,6 +564,7 @@ fr:
         poetry_module_planningapp: Planification de votre appli de générateur de poèmes - Codage avec poésie
         poetry_module_multichoiceprompts: Invites à choix multiples - Codage avec poésie
         poetry_module_conditionals: Conditions - Codage avec poésie
+        poemart_intro: Introduction à l'art de la poésie
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

@@ -343,13 +343,17 @@
           "actions_category": "La \"cassetta degli attrezzi\" ha un nuovo aspetto! I blocchi \"Azioni\" ora sono qui."
         },
         "New Artist Project": {
-          "New Artist Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma."
+          "New Artist Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.",
+          "New Artist Project_callout2": "Clicca su \"Esegui\" per salvare ed eseguire il tuo programma",
+          "sign_in_to_save_project": "Vuoi accedere al tuo progetto più tardi? Accedi per salvarlo nel tuo profilo!"
         },
         "New Frozen Project": {
           "snowflake_dropdown": "Usa questo elenco a discesa per creare fiocchi di neve di varie forme!"
         },
         "New Play Lab Project": {
-          "New Play Lab Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma."
+          "New Play Lab Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.",
+          "New Play Lab Project_callout2": "Clicca su \"Esegui\" per salvare ed eseguire il tuo programma",
+          "sign_in_to_save_project": "Vuoi accedere al tuo progetto più tardi? Accedi per salvarlo nel tuo profilo!"
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_1": "I cicli li trovi qui dentro!"
@@ -1990,6 +1994,90 @@
           "poetry_background": "I blocchi di codice li trovi qui. ",
           "pause_button": "Metti alla prova la tua animazione con questo pulsante. ",
           "run_button": "Prova la tua animazione con questo pulsante. "
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Clicca qui per mostrare la griglia."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Inserire qui il numero"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Inserire qui il numero"
         }
       }
     }

@@ -2,378 +2,29 @@
   "mk-MK": {
     "data": {
       "vocabularies": {
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "function/hero/unversioned": {
-          "word": "Функција",
-          "definition": ""
+          "word": "Функција"
         },
         "code/poem-art/2021": {
           "word": "Код"
         },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/artist/unversioned": {
-          "word": "Код",
-          "definition": ""
-        },
-        "debugging/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Код"
         },
         "loops/aquatic/unversioned": {
-          "word": "Лупови",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Лупови"
         },
         "code/sports/unversioned": {
-          "word": "Код",
-          "definition": ""
-        },
-        "debugging/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Код"
         },
         "code/poem-art/unversioned": {
-          "word": "Код",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Код"
         },
         "variable/coursef/2021": {
           "word": "Променлива"
         },
         "define/coursef/2021": {
           "word": "Дефинирајте"
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "binary/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "conditionals/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
         },
         "function/express/2021": {
           "word": "Функција"
@@ -389,6 +40,12 @@
         },
         "define/coursee/2021": {
           "word": "Дефинирајте"
+        },
+        "variable/csd/2021": {
+          "word": "Променлива"
+        },
+        "function/csd/2021": {
+          "word": "Функција"
         }
       }
     }

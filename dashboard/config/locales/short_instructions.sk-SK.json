@@ -3133,7 +3133,15 @@
         "poetry_hoc_spriteSizes": "Veľkosť postavičky, ktorú si už vytvoril, môžeš zmeniť.",
         "ramp_artist_loops5_2021": "Nakresli toto schodisko pomocou cyklov.",
         "ramp_artist_loops6_2021": "Nakresli toto schodisko úpravou cyklu.",
-        "simcustom_2021": "Skús vykonať nejaké zmeny v kostýmoch postáv alebo v nižšie uvedenom kóde. "
+        "simcustom_2021": "Skús vykonať nejaké zmeny v kostýmoch postáv alebo v nižšie uvedenom kóde. ",
+        "NetSim Standalone Automatic DNS": "V tejto verzii internetového simulátora, máte k dispozícii systém doménových mien (DNS), ktorý pozná IP adresy všetkých pripojených zariadení. Pošlite správu vo formáte GET [hostname] do DNS servisu na adresu  <yourRouterNumber>.15 aby ste dostali adresu študenta alebo študentky.",
+        "NetSim Standalone Packets TCP": "Správy sa na internete dostávajú do svojho cieľa rôznymi cestami a niekedy sa po ceste táto správa stratí, čiže spadne. V tejto verzii internetového simulátora, majú pakety 10% šancu toho, že spadnú. Hromadné pakety sa môžu do cieľa dostať rôznymi cestami. Prednastavená maximálna veľkosť paketu bola navýšená o 6 znakov.",
+        "CSD U3 Mouse Input Bee 2_2021": "Urob toto",
+        "CSD U5 black white images pixelation 2_2021": "Nakreslite smajlíka (kliknite sem pre zobrazenie obrázku)",
+        "CSD U5 black white images pixelation 3_2021": "Zmeňte posuvníky šírky a výšky pre nájdenie obrázku (kliknite sem pre ďaľšie zobrazenie)",
+        "CSD U5 black white images pixelation 4_2021": "Pridajte smajlíkovi obočie (kliknite sem pre zobrazenie obrázka)",
+        "CSD U5 black white images pixelation 5_2021": "Nakreslite čo len chcete",
+        "CSD U5 black white images pixelation_2021": "Dokončite tvar X písaním núl a jednotiek"
       }
     }
   }

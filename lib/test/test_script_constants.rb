@@ -71,10 +71,11 @@ class ScriptConstantsTest < Minitest::Test
     assert_equal dance_index, ScriptConstants.assignable_info({name: 'dance-2019'})[:position]
     assert_equal dance_index + 1, ScriptConstants.assignable_info({name: 'dance-extras-2019'})[:position]
     assert_equal dance_index + 2, ScriptConstants.assignable_info({name: 'oceans'})[:position]
-    assert_equal dance_index + 3, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
-    assert_equal dance_index + 4, ScriptConstants.assignable_info({name: 'hero'})[:position]
-    assert_equal dance_index + 5, ScriptConstants.assignable_info({name: 'mc'})[:position]
-    assert_equal dance_index + 6, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
+    assert_equal dance_index + 3, ScriptConstants.assignable_info({name: 'outbreak'})[:position]
+    assert_equal dance_index + 4, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
+    assert_equal dance_index + 5, ScriptConstants.assignable_info({name: 'hero'})[:position]
+    assert_equal dance_index + 6, ScriptConstants.assignable_info({name: 'mc'})[:position]
+    assert_equal dance_index + 7, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
   end
 
   def test_congrats_page
@@ -130,17 +131,6 @@ class ScriptConstantsTest < Minitest::Test
     end
 
     assert_nil ScriptConstants.csf_next_course_recommendation("something-unknown")
-  end
-
-  describe 'ScriptConstants::script_in_any_category?' do
-    it 'finds artist and csd1' do
-      assert ScriptConstants.script_in_any_category?('artist')
-      assert ScriptConstants.script_in_any_category?('csd1-2017')
-    end
-
-    it 'does not find nonexistent scripts' do
-      refute ScriptConstants.script_in_any_category?('foo')
-    end
   end
 
   describe 'ScriptConstants::i18n' do

@@ -76,7 +76,7 @@ es-MX:
           MOVE:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
-            '"rand"': "(Aleatorio)"
+            '"rand"': "(Al azar)"
             MOVES.Roll: Vuelta completa
             MOVES.ClapHigh: Palmas hacia arriba
             MOVES.Dab: Dab
@@ -94,7 +94,7 @@ es-MX:
           MOVE:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
-            '"rand"': "(Aleatorio)"
+            '"rand"': "(Al azar)"
             MOVES.Roll: Vuelta completa
             MOVES.ClapHigh: Palmas hacia arriba
             MOVES.Dab: Dab
@@ -115,8 +115,8 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
+            '"x"': posición horizontal
+            '"y"': posición vertical
       Dancelab_changePropEachBy:
         text: cambiar {GROUP} {PROPERTY} por {VAL}
         options:
@@ -139,8 +139,8 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
+            '"x"': posición horizontal
+            '"y"': posición vertical
       Dancelab_doMoveEachLR:
         text: "{GROUP} hacer {MOVE} {DIR} una vez"
         options:
@@ -159,7 +159,7 @@ es-MX:
             '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           MOVE:
-            '"rand"': "(Aleatorio)"
+            '"rand"': "(Al azar)"
             MOVES.XBend: Flexión
             MOVES.Roll: Vuelta completa
             MOVES.XClapSide: Aplauso
@@ -187,7 +187,7 @@ es-MX:
         text: "{SPRITE} hacer {MOVE} {DIR} una vez"
         options:
           MOVE:
-            '"rand"': "(Aleatorio)"
+            '"rand"': "(Al azar)"
             MOVES.XBend: Flexión
             MOVES.Roll: Vuelta completa
             MOVES.XClapSide: Aplauso
@@ -229,8 +229,8 @@ es-MX:
         text: 'cada {UNIT} '
         options:
           UNIT:
-            '"verse"': verso
-            '"chorus"': coro
+            '"verse"': estrofa
+            '"chorus"': estribillo
       Dancelab_getEnergy:
         text: obtener {RANGE}
         options:
@@ -246,9 +246,9 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
-            '"tint"': tinte
+            '"x"': posición horizontal
+            '"y"': posición vertical
+            '"tint"': tonalidad
       Dancelab_getTime:
         text: hora actual en {UNIT}
         options:
@@ -282,7 +282,7 @@ es-MX:
             '"seconds"': segundos
           OP:
             '">"': ">"
-            '"<"': "\\<"
+            '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
@@ -344,19 +344,21 @@ es-MX:
             '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           FORMAT:
-            '"border"': borde
+            '"border"': orilla
             '"inner"': cuadrado interno
             '"diamond"': diamante
             '"circle"': círculo
             '"grid"': cuadrícula
             '"top"': fila superior
-            '"row"': fila
+            '"row"': renglon
             '"bottom"': fila inferior
             '"left"': columna izquierda
             '"column"': columna
             '"right"': columna derecha
             '"x"': entrecruzado
-            '"plus"': más
+            '"plus"': signo más
+            '"spiral"': espiral
+            '"infinity"': fila infinita
             '"random"': al azar
       Dancelab_makeAnonymousDanceSprite:
         text: crear un nuevo {COSTUME} en {LOCATION}
@@ -439,6 +441,26 @@ es-MX:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': extraterrestres
             '"BEAR"': osos
@@ -453,19 +475,21 @@ es-MX:
             '"SLOTH"': perezosos
             '"UNICORN"': unicornios
           LAYOUT:
-            '"border"': borde
+            '"border"': orilla
             '"inner"': cuadrado interno
             '"diamond"': diamante
             '"circle"': círculo
             '"grid"': cuadrícula
             '"top"': fila superior
-            '"row"': fila
+            '"row"': renglon
             '"bottom"': fila inferior
             '"left"': columna izquierda
             '"column"': columna
             '"right"': columna derecha
             '"x"': entrecruzado
-            '"plus"': más
+            '"plus"': signo más
+            '"spiral"': espiral
+            '"infinity"': fila infinita
             '"random"': al azar
       Dancelab_mixColors:
         text: mezclar {COLOR1} y {COLOR2}
@@ -491,15 +515,15 @@ es-MX:
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fuegos artificiales
-            '"swirl"': Hipnosis
+            '"swirl"': Hipnótico
             '"kaleidoscope"': Caleidoscopio
-            '"lasers"': Pista de baile de láser
+            '"lasers"': Pista de baile láser
             '"splatter"': Salpicaduras de pintura
             '"rainbow"': Arcoíris
             '"snowflakes"': Nieve
             '"text"': Título de la canción
             '"galaxy"': Espacio
-            '"sparkles"': Chispas
+            '"sparkles"': Brillos
             '"spiral"': Espiral
             '"disco"': Cuadrados
             '"stars"': Estrellas
@@ -518,7 +542,7 @@ es-MX:
         options:
           EFFECT:
             '"none"': Ninguna
-            '"rand"': "(Aleatorio)"
+            '"rand"': "(Al azar)"
             '"circles"': Túnel
             '"quads"': Ángulos
             '"color_cycle"': Colores
@@ -527,9 +551,10 @@ es-MX:
             '"fireworks"': Fuegos artificiales
             '"flowers"': Flores
             '"growing_stars"': Estrellas crecientes
-            '"swirl"': Hipnosis
+            '"higher_power"': Poder Superior
+            '"swirl"': Hipnótico
             '"kaleidoscope"': Caleidoscopio
-            '"lasers"': Pista de baile de láser
+            '"lasers"': Pista de baile láser
             '"splatter"': Salpicaduras de pintura
             '"rainbow"': Arcoíris
             '"ripples_random"': Ondas aleatorias
@@ -538,7 +563,7 @@ es-MX:
             '"text"': Título de la canción
             '"squiggles"': Garabatos
             '"galaxy"': Espacio
-            '"sparkles"': Chispas
+            '"sparkles"': Brillos
             '"spiral"': Espiral
             '"disco"': Cuadrados
             '"stars"': Estrellas
@@ -554,7 +579,7 @@ es-MX:
             '"vintage"': Vintage
             '"warm"': Rojos
       Dancelab_setDanceSpeed:
-        text: cambiar {SPRITE} velocidad de baile a {SPEED}
+        text: cambiar velocidad de baile de {SPRITE} a {SPEED}
         options:
           SPEED:
             '1': normal
@@ -593,12 +618,12 @@ es-MX:
             '"bubbles"': Burbujas
             '"confetti"': Confeti
             '"hearts_red"': Corazones
-            '"music_notes"': Notas de música
+            '"music_notes"': Notas musicales
             '"pineapples"': Piñas
             '"pizzas"': Pizzas
             '"smiling_poop"': Caca
             '"rain"': Lluvia
-            '"floating_rainbows"': Arco iris
+            '"floating_rainbows"': Arcoíris
             '"smile_face"': Sonrisas
             '"spotlight"': Reflector
             '"color_lights"': Luces de escenario
@@ -608,19 +633,19 @@ es-MX:
         options:
           EFFECT:
             '"none"': Ninguna
-            '"rand"': "(Aleatorio)"
+            '"rand"': "(Al azar)"
             '"bubbles"': Burbujas
             '"hearts_colorful"': Corazones coloridos
             '"confetti"': Confeti
             '"emojis"': Emojis
             '"hearts_red"': Corazones
-            '"music_notes"': Notas de música
+            '"music_notes"': Notas musicales
             '"paint_drip"': Gotas de pintura
             '"pineapples"': Piñas
             '"pizzas"': Pizzas
             '"smiling_poop"': Caca
             '"rain"': Lluvia
-            '"floating_rainbows"': Arco iris
+            '"floating_rainbows"': Arcoíris
             '"smile_face"': Sonrisas
             '"spotlight"': Reflector
             '"color_lights"': Luces de escenario
@@ -634,10 +659,10 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
+            '"x"': posición horizontal
+            '"y"': posición vertical
       Dancelab_setPropEach:
-        text: definir {GROUP} {PROPERTY} a {VAL}
+        text: definir {PROPERTY} de {GROUP} a {VAL}
         options:
           GROUP:
             sprites: todo
@@ -658,9 +683,9 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
-            '"tint"': tinte
+            '"x"': posición horizontal
+            '"y"': posición vertical
+            '"tint"': tonalidad
       Dancelab_setPropRandom:
         text: distribuye aleatoriamente {SPRITE} {PROPERTY}
         options:
@@ -669,9 +694,9 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
-            '"tint"': tinte
+            '"x"': posición horizontal
+            '"y"': posición vertical
+            '"tint"': tonalidad
       Dancelab_setPropRandomEach:
         text: distribuir {GROUP} {PROPERTY} aleatoriamente
         options:
@@ -694,9 +719,9 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
-            '"tint"': tinte
+            '"x"': posición horizontal
+            '"y"': posición vertical
+            '"tint"': tonalidad
       Dancelab_setTint:
         text: definir tinte {SPRITE} a {VAL}
       Dancelab_setTintEach:
@@ -769,9 +794,9 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
-            '"tint"': tinte
+            '"x"': posición horizontal
+            '"y"': posición vertical
+            '"tint"': tonalidad
           RANGE:
             '"bass"': bajo
             '"mid"': medio
@@ -798,9 +823,9 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
-            '"tint"': tinte
+            '"x"': posición horizontal
+            '"y"': posición vertical
+            '"tint"': tonalidad
           RANGE:
             '"bass"': bajo
             '"mid"': medio
@@ -813,10 +838,10 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
+            '"x"': posición horizontal
+            '"y"': posición vertical
             '"direction"': dirección de movimiento
-            '"tint"': tinte
+            '"tint"': tonalidad
           RANGE:
             '"bass"': bajo
             '"mid"': medio
@@ -843,10 +868,10 @@ es-MX:
             '"width"': ancho
             '"height"': altura
             '"rotation"': rotación
-            '"x"': Posición horizontal
-            '"y"': Posición vertical
+            '"x"': posición horizontal
+            '"y"': posición vertical
             '"direction"': dirección de movimiento
-            '"tint"': tinte
+            '"tint"': tonalidad
           RANGE:
             '"bass"': bajo
             '"mid"': medio
@@ -906,7 +931,7 @@ es-MX:
             '"down"': abajo
             '"right"': derecha
             '"space"': espacio
-            '"enter"': intro
+            '"enter"': enter
             '"a"': a
             '"b"': b
             '"c"': c
@@ -975,13 +1000,13 @@ es-MX:
         options:
           UNIT:
             '"seconds"': segundos
-            '"frames"': marcos
+            '"frames"': fotogramas
       gamelab_avoidingTargets:
         text: evitando objetivos
       gamelab_beginCollectingData:
         text: empieza recopilación de datos {BREAK} valor {VALUE} con etiqueta {LABEL}
       gamelab_bounceOff:
-        text: "{SPRITE} rebota en {TARGET}"
+        text: "{SPRITE} rebota {TARGET}"
       gamelab_changePropBy:
         text: cambiar {SPRITE} {PROPERTY} por {VAL}.
         options:
@@ -992,6 +1017,8 @@ es-MX:
             '"y"': posición y
             '"direction"': dirección de movimiento
             '"speed"': velocidad
+      gamelab_changeVarBy:
+        text: cambia {VARIABLE} por {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
@@ -1001,13 +1028,32 @@ es-MX:
       gamelab_clickedOn:
         text: cuando se hace clic en {SPRITE}
       gamelab_clickedSpritePointer:
-        text: "{SPRITE}"
+        text: clic en sprite {SPRITE}
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): girando a la derecha
+            new Behavior(spinning_left, []): girando a la izquierda
+            new Behavior(fluttering, []): revoloteando
+            new Behavior(jittering, []): temblando
+            new Behavior(wobbling, []): tambaleándose
+            new Behavior(wandering, []): deambulando
+            new Behavior(patrolling, []): patrullando
+            new Behavior(moving_west_and_looping, []): moviéndose hacia el oeste y
+              haciendo un bucle
+            new Behavior(moving_east_and_looping, []): moviéndose hacia el este y
+              haciendo un bucle
+            new Behavior(moving_north_and_looping, []): moviéndose hacia el norte
+              y haciendo un bucle
+            new Behavior(moving_south_and_looping, []): moviéndose hacia el sur y
+              haciendo un bucle
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_costumeImage:
         text: "{COSTUME}"
       gamelab_countByAnimation:
-        text: numero de {SPRITE}
+        text: número de {SPRITE}
       gamelab_createNewSprite:
         text: "hacer un nuevo sprite \n llamado {NAME} \n con disfraz {COSTUME} \n
           en {LOCATION}"
@@ -1032,7 +1078,7 @@ es-MX:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
-            '"tint"': tinte
+            '"tint"': tonalidad
             '"speed"': velocidad
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
@@ -1045,17 +1091,33 @@ es-MX:
         options:
           UNIT:
             '"seconds"': segundos
-            '"frames"': marcos
+            '"frames"': fotogramas
+      gamelab_glideTo:
+        text: "{SPRITE} vuela a {LOCATION}"
       gamelab_hideTitleScreen:
         text: ocultar pantalla de título
       gamelab_ifVarEquals:
         text: |-
           if {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} el disfraz es {COSTUME}"
       gamelab_isKeyPressed:
-        text: "{KEY} esta presionada"
+        text: "{KEY} se pulsa"
         options:
           KEY:
             '"up"': arriba
@@ -1092,7 +1154,7 @@ es-MX:
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando los bordes"
       gamelab_isTouchingSprite:
-        text: "{SPRITE} esta tocando a {TARGET}"
+        text: "{SPRITE} está tocando {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
       gamelab_keyPressed:
@@ -1136,7 +1198,7 @@ es-MX:
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
-        text: "{DISTANCE} pixeles {DIRECTION} de {LOCATION}"
+        text: "{DISTANCE} píxeles {DIRECTION} de {LOCATION}"
         options:
           DIRECTION:
             '"North"': Norte
@@ -1150,16 +1212,21 @@ es-MX:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: crea efecto de {EFFECT} con {NUM} sprites {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': ráfaga
+            '"pop"': pop
             '"rain"': lluvia
             '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNumSprites:
-        text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
+        text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
       gamelab_makeProjectile:
+        text: |-
+          crea proyectil
+          {ANIMATION_NAME} desde {LOCATION} con velocidad {SPEED} direccion {DIRECTION}
         options:
           DIRECTION:
             '0': derecha
@@ -1189,9 +1256,9 @@ es-MX:
       gamelab_moveToward:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
       gamelab_newSpritePointer:
-        text: "{SPRITE}"
+        text: clic en sprite {SPRITE}
       gamelab_objectSpritePointer:
-        text: "{SPRITE}"
+        text: clic en sprite {SPRITE}
       gamelab_patrollingUpDown:
         text: Patrullar hacia arriba y abajo
       gamelab_playSound:
@@ -1200,25 +1267,57 @@ es-MX:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": acento
+            "'sound://category_digital/boing_2.mp3'": boing!
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": parpadeando
             "'sound://category_app/app_button_1.mp3'": botón
             "'sound://category_collect/clicky_crunch.mp3'": aplastar
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
+            "'sound://category_swish/quick_swing.mp3'": ritmo
+            "'sound://category_nature/summer_night_loop.mp3'": noche de verano
+            "'sound://category_background/ocean_waves.mp3'": olas
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": olas en la
+              playa
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbuja
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": gato
             "'sound://category_animals/cow.mp3'": vaca
             "'sound://category_animals/pig.mp3'": cerdo
             "'sound://category_animals/sheep.mp3'": oveja
-            "'sound://category_animals/goat.mp3'": cabra
+            "'sound://category_animals/goat.mp3'": Cabra
             "'sound://category_animals/chicken.mp3'": gallina
-            "'sound://category_animals/rooster.mp3'": gallo
+            "'sound://category_animals/rooster.mp3'": rejilla
             "'sound://category_animals/elephant.mp3'": elefante
             "'sound://category_animals/dolphin.mp3'": delfín
+            "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
             "'sound://category_animals/chick.mp3'": polluelo
             "'sound://category_animals/dog.mp3'": perro
             "'sound://category_animals/tiger.mp3'": tigre
+            "'sound://category_collect/trill_stings.mp3'": vibración
             "'sound://category_instrumental/harpe_pluck_1.mp3'": arpa
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccionar
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tap
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": golpe
+              de tono
+            "'sound://category_transition/trippy_robotic_transition.mp3'": transicion
+              robotica
+            "'sound://category_transition/star_dust_particle_10.mp3'": polvo de estrella
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": nave alienígena
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": hechizo
+              magico
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccione
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bajo peculiar
             "'sound://category_digital/jump_7.mp3'": salta
+      gamelab_playSpeech:
+        text: reproducir grabación {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moverse con las flechas del
+              teclado
+            new Behavior(driving_with_arrow_keys, []): conducir con las flechas del
+              teclado
+            draggable(): poder arrastrastrarlos
       gamelab_pointInDirection:
         text: apuntar {SPRITE} {DIRECTION}
         options:
@@ -1243,6 +1342,8 @@ es-MX:
         text: eliminar color de {THIS}
       gamelab_repeatForever:
         text: Repetir para siempre
+      gamelab_resetTimer:
+        text: reiniciar temporizador
       gamelab_setAnimation:
         text: cambiar {THIS} disfraz a {ANIMATION}
       gamelab_setBackground:
@@ -1253,18 +1354,42 @@ es-MX:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cueva
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': grass
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': cancha
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desierto
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ruta
+              en desierto
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': campo
+              agrario
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': grass
+              flotante
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': frente
+              a la casa
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': cuadrícula
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': cocina
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala
+              de estar
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': pradera
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': parque
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pinos
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco
               iris
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ciencia
               ficción
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': campo
+              de fútbol
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapa
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrellas
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sol
+              y arcoiris
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': lluvia
+              solar
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': cancha
+              de tenis
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': isla
+              de árboles
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': subterráneo
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': bajo
               el agua
@@ -1295,7 +1420,7 @@ es-MX:
             '"direction"': dirección de movimiento
             '"speed"': velocidad
       gamelab_setProp_dropdown:
-        text: definir {SPRITE} {PROPERTY} a {SIZE}
+        text: fijar {SPRITE} {PROPERTY} a {SIZE}
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -1311,6 +1436,15 @@ es-MX:
             '"scale"': tamaño
             '"width"': ancho
             '"height"': altura
+      gamelab_setSpeed_dropdown:
+        text: ajustar {SPRITE} a velocidad {SIZE}
+        options:
+          SIZE:
+            '1': extra lenta
+            '3': lento
+            '5': normal
+            '7': rápido
+            '9': extra rápida
       gamelab_setTint:
         text: cambiar color de {THIS} a {COLOR}
       gamelab_setupScoreboard:
@@ -1332,24 +1466,30 @@ es-MX:
             '"while"': mientras
       gamelab_spriteSay:
         text: "{SPRITE} dice {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE} dice {TEXT1} por {NUM} segundos"
       gamelab_startAvoiding:
         text: "{SPRITE} empieza a evitar {TARGET}"
       gamelab_startFollowing:
         text: "{SPRITE} empieza seguimiento {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} comienza a planear"
       gamelab_stopAvoiding:
         text: "{SPRITE} deja de evitar a otros sprites"
       gamelab_stopCollectingData:
         text: parar recopilación de datos
       gamelab_stopFollowing:
         text: "{SPRITE} deja de seguir a otros sprites"
+      gamelab_stopGliding:
+        text: "{SPRITE} para de planear"
       gamelab_subjectSpritePointer:
-        text: "{SPRITE}"
+        text: clic en sprite {SPRITE}
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
-        text: tumbling
+        text: cayendo
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:
@@ -1357,7 +1497,7 @@ es-MX:
             '"right"': derecha
             '"left"': izquierda
       gamelab_updateTitleWithColor:
-        text: mostrar pantalla de título {BREAK} con título {TITLE} y color {COLOR}
+        text: mostrar pantalla de título {BREAK} título {TITLE} color {COLOR}
       gamelab_whenAllPromptsAnswered:
         text: cuando se responda a todas las preguntas
       gamelab_whenDownArrow:
@@ -1412,7 +1552,7 @@ es-MX:
         text: mientras se presiona la flecha arriba
       gamelab_withPercentChance:
         text: |-
-          Si hay {NUM}% de probabilidad
+          si {NUM}% oportunidad
           {STATEMENT}
       gamelab_withPercentChanceDropdown:
         text: |2-
@@ -1466,6 +1606,7 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatorio
       Mikelab_getNext:
         text: obtener siguiente objeto
       Mikelab_getProp:
@@ -1507,6 +1648,7 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatorio
       Mikelab_groupDestroy:
         text: eliminar {SELECT} {COSTUME}
         options:
@@ -1655,9 +1797,33 @@ es-MX:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': grass
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ruta
+              en desierto
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': campo
+              agrario
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': grass
+              flotante
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': frente
+              a la casa
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': cocina
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala
+              de estar
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': pradera
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': parque
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pinos
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': campo
+              de fútbol
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapa
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sol
+              y arcoiris
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': lluvia
+              solar
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': cancha
+              de tenis
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': isla
+              de árboles
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': subterráneo
       Mikelab_setProp:
         options:
@@ -1709,6 +1875,7 @@ es-MX:
             "{x: 300, y: 100}": arriba a la derecha
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatorio
       Mikelab_whenClickedOn:
         text: cuando se hace clic en {SPRITE}
       Mikelab_whenKeyPressed:
@@ -1719,6 +1886,7 @@ es-MX:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+            '"space"': barra espaciadora
             '"w"': O
             '"a"': A
             '"s"': S
@@ -1730,6 +1898,7 @@ es-MX:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+            '"space"': barra espaciadora
             '"w"': O
             '"a"': A
             '"s"': S
@@ -1749,6 +1918,7 @@ es-MX:
             '"down"': flecha hacia abajo
             '"left"': flecha izquierda
             '"right"': flecha derecha
+            '"space"': barra espaciadora
       Mikelab_xLocationOf:
         text: coordenada x de {SPRITE}
       Mikelab_yLocationOf:
@@ -1781,25 +1951,25 @@ es-MX:
         text: establecer marco {BRUSH}
         options:
           BRUSH:
-            '"bamboo"': Bambu
+            '"bamboo"': Bambú
             '"beaded"': Granulado
             '"brick"': Ladrillo
-            '"decorative"': Decorativo
-            '"donuts"': Donuts
+            '"decorative"': Decorativas
+            '"donuts"': Donut
             '"fire"': Fuego
-            '"flowers"': Flores
-            '"gilded"': Dorado
-            '"hearts"': Corazones
+            '"flowers"': flores
+            '"gilded"': Mutados
+            '"hearts"': corazones
             '"iceCream"': Helado
             '"leaves"': Hojas
-            '"metal"': Marco de Metal
+            '"metal"': Marco de metal
             '"pawPrints"': Huellas
-            '"rainbow"': Arcoíris
-            '"stars"': Estrellas
+            '"rainbow"': arco iris
+            '"stars"': estrellas
             '"swirls"': Espiral
-            '"waves"': Olas
+            '"waves"': olas
             '"wood"': Marco de madera
-            '"zigzag"': Zig-Zag
+            '"zigzag"': Zig Zag
       Poetry_addLine:
         text: agregar verso {LINE}
       Poetry_addTextHighlight:
@@ -1807,60 +1977,64 @@ es-MX:
       Poetry_animateText:
         text: animar texto
       Poetry_destroy:
-        text: quitar {ANIMATION_NAME}
+        text: eliminar {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} vuela a {LOCATION}"
       Poetry_hideText:
         text: esconder texto
       Poetry_makeBurst:
+        text: crea efecto de {EFFECT} con {NUM} sprites {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': ráfaga
+            '"pop"': pop
             '"rain"': lluvia
             '"spiral"': espiral
       Poetry_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       Poetry_makeNumSprites:
-        text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
+        text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
       Poetry_playMusic:
         text: reproducir música {SOUND}
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Claro
-            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Suave
-            '"sound://category_nature/steady_campfire_loop.mp3"': Fogata
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Brillante
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calma
+            '"sound://category_nature/steady_campfire_loop.mp3"': Hoguera
             '"sound://category_nature/rain_loop.mp3"': Llovizna
             '"sound://category_background/fire_burning.mp3"': Junto al fuego
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': Bosque
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harpas
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Embrujado
-            '"sound://category_background/inside_plane.mp3"': murmullo
+            '"sound://category_background/inside_plane.mp3"': Zumbido
             '"sound://category_loops/red_flag_loop1.mp3"': Misión
             '"sound://category_nature/summer_night_loop.mp3"': Noche
-            '"sound://category_background/ocean_waves.mp3"': Océano
+            '"sound://category_background/ocean_waves.mp3"': océano
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Lluvioso
             '"sound://category_background/rainforest_ambient_sound.mp3"': Bosque lluvioso
-            '"sound://category_background/repitition.mp3"': Paseando
-            '"sound://category_background/wavering_wind.mp3"': Dormilón
-            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lenta
-            '"sound://category_background/waterfall.mp3"': Catarata
+            '"sound://category_background/repitition.mp3"': Montar
+            '"sound://category_background/wavering_wind.mp3"': Somnoliento
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lento
+            '"sound://category_background/waterfall.mp3"': Cascada
       Poetry_playSound:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Campana
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Interrumpir
-            '"sound://category_digital/boing_2.mp3"': Boing!
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Romper
+            '"sound://category_digital/boing_2.mp3"': Boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Burbuja
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Charla
             '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Desinflar
-            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Fallar
-            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Aleteo
-            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Salta
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Luz
-            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puf!
-            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Escanear
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Error
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Alboroto
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Saltar
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': luz
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Aletazo
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Buscar
             '"sound://category_background/typewriter.mp3"': Máquina de escribir
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrante
-            '"sound://category_achievements/peaceful_win_1.mp3"': Victoria
+            '"sound://category_achievements/peaceful_win_1.mp3"': Ganar
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Remolino
             '"sound://category_achievements/peaceful_win_6.mp3"': Campanas al viento
       Poetry_setAuthor:
@@ -1871,31 +2045,31 @@ es-MX:
         text: establecer fondo a {EFFECT} de {PALETTE}
         options:
           EFFECT:
-            '"colors"': Cambio
-            '"squiggles"': Ondulado
-            '"space"': Hiper velocidad
-            '"stars"': Estrellas
+            '"blooming"': Florecimiento
+            '"bubbles"': Burbujas
+            '"clouds"': Nublado
+            '"confetti"': Confeti
             '"darkCircles"': Desvaneciendo
             '"fadeColors"': Escarchado
-            '"blooming"': Florecimiento
+            '"hearts"': corazones
+            '"space"': Hiper velocidad
+            '"rain"': lluvia
             '"ripples"': Ondas
-            '"clouds"': Nublado
-            '"rain"': Lluvia
-            '"bubbles"': Burbujas
-            '"confetti"': Confeti
-            '"hearts"': Corazones coloridos
+            '"colors"': Cambio
+            '"stars"': Estrellas
+            '"squiggles"': Ondulado
           PALETTE:
-            '"rainbow"': Arcoíris
-            '"grayscale"': Grises
-            '"sky"': Cielo
+            '"autumn"': Otoño
+            '"sunrise"': Amanecer
+            '"sunset"': Atardecer
+            '"grayscale"': Gris
             '"ocean"': Océano
-            '"sunrise"': amanecer
-            '"sunset"': atardecer
+            '"rainbow"': arco iris
+            '"roses"': Rosas
+            '"sky"': Cielo
             '"spring"': Primavera
             '"summer"': Verano
-            '"autumn"': Otoño
             '"winter"': Invierno
-            '"roses"': Rosas
       Poetry_setBackgroundImageAs:
         text: establecer fondo a {IMG}
       Poetry_setFont:
@@ -1903,23 +2077,23 @@ es-MX:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Fuentes caligráficas
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Negro
-            '"Impact"': Impact
-            '"Cursive"': Escritura
       Poetry_setFontColor:
         text: establecer color de texto {FILL}
       Poetry_setForegroundEffect:
         text: hacer efecto de {EFFECT}
         options:
           EFFECT:
-            '"rain"': Lluvia
             '"bubbles"': Burbujas
-            '"hearts"': Corazones coloridos
-            '"emojis"': Emoji Feliz
             '"confetti"': Confeti
+            '"hearts"': corazones
+            '"emojis"': Emoji Feliz
+            '"rain"': lluvia
             '"starburst"': Explosión de estrellas
             '"glass"': Rompiendo vidrio
             '"twinkling"': Parpadeante
@@ -1935,11 +2109,11 @@ es-MX:
         options:
           EFFECT:
             '"fade"': desparacer
-            '"typewriter"': máquinadeescribir
             '"flyLeft"': deslizar desde la izquierda
             '"flyRight"': deslizar desde la derecha
             '"flyTop"': deslizar desde arriba
             '"flyBottom"': deslizar desde abajo
+            '"typewriter"': máquina de escribir
       Poetry_setTitle:
         text: establecer título {TITLE}
       Poetry_showText:
@@ -1948,36 +2122,36 @@ es-MX:
         text: 'sprite {ANIMATION_NAME} comienza a {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: revolotear
-            growing: creciente
-            jittering: poniéndose nervioso
-            moving_north_and_looping: moverse al norte
-            moving_south_and_looping: moverse al sur
-            moving_east_and_looping: moverse al este
-            moving_west_and_looping: moverse al oeste
-            shrinking: encogiendose
-            spinning_left: girando a la izquierda
-            spinning_right: girando a la derecha
-            swimming_left_and_right: natación
-            wandering: deambulando
-            wobbling: tambalearse
+            '"fluttering"': revoloteando
+            '"growing"': creciendo
+            '"jittering"': temblando
+            '"moving_north_and_looping"': bucle al norte
+            '"moving_south_and_looping"': bucle al sur
+            '"moving_east_and_looping"': bucle al este
+            '"moving_west_and_looping"': bucle al oeste
+            '"shrinking"': encogiéndose
+            '"spinning_left"': girando a la izquierda
+            '"spinning_right"': girando a la derecha
+            '"swimming_left_and_right"': natación
+            '"wandering"': deambulando
+            '"wobbling"': tambaleándose
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} para de {BEHAVIOR}
         options:
           BEHAVIOR:
-            fluttering: revolotear
-            growing: creciente
-            jittering: poniéndose nervioso
-            moving_north_and_looping: moverse al norte
-            moving_south_and_looping: moverse al sur
-            moving_east_and_looping: moverse al este
-            moving_west_and_looping: moverse al oeste
-            shrinking: encogiendose
-            spinning_left: girando a la izquierda
-            spinning_right: girando a la derecha
-            swimming_left_and_right: natación
-            wandering: deambulando
-            wobbling: tambalearse
+            '"fluttering"': revoloteando
+            '"growing"': creciendo
+            '"jittering"': temblando
+            '"moving_north_and_looping"': bucle al norte
+            '"moving_south_and_looping"': bucle al sur
+            '"moving_east_and_looping"': bucle al este
+            '"moving_west_and_looping"': bucle al oeste
+            '"shrinking"': encogiéndose
+            '"spinning_left"': girando a la izquierda
+            '"spinning_right"': girando a la derecha
+            '"swimming_left_and_right"': natación
+            '"wandering"': deambulando
+            '"wobbling"': tambaleándose
             '"all"': "--cada comportamiento--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
@@ -2040,9 +2214,15 @@ es-MX:
         options:
           FORMAT:
             '"grid"': cuadrícula
-            '"border"': borde
-            '"row"': fila
+            '"border"': orilla
+            '"row"': renglon
             '"random"': al azar
+      aalab_levelFailure:
+        text: estudiante {STATE} con clave {KEY}
+        options:
+          STATE:
+            '0': éxitos
+            '3': fallas
       aalab_setSpeed:
         text: ajustar velocidad monstruo a {VAL}
       aalab_setupSim:
@@ -2061,7 +2241,7 @@ es-MX:
             '"gradually"': gradualmente
             '"slowly"': lentamente
           BEHAVIOR:
-            '"wandering"': deambulando al azar
+            '"wandering"': vagando al azar
             '"congregating"': concentrados
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
@@ -2075,18 +2255,49 @@ es-MX:
             '0.5': la mitad
             '0.25': algunos
           BEHAVIOR:
-            '"wandering"': deambulando al azar
+            '"wandering"': vagando al azar
             '"congregating"': concentrados
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
             '"none"': quedarse quieto
       aalab_spriteSayChoices:
         text: "{SPRITE} dice {SPEECH}"
+        options:
+          SPEECH:
+            '"I have spoken."': He hablado.
+            '"Bounty hunting is a complicated profession."': La casa de recompensas
+              es una profesión complicada.
+            '"I will initiate self-destruct."': Iniciaré auto-destrucción.
+            '"This is the way."': Por aqui.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': Todos
+              somos diferentes, y hay que respetarlo.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': No
+              necesitas un espejo para verte bien. Lo que importa es lo que está dentro
+              de ti.
+            '"Sometimes life is scary and dark. That is why we must find the light."': A
+              veces la vida es oscura y tenebrosa, por eso tenemos que encontrar la
+              luz.
+            '"Everything small is just a smaller version of something big."': Todo
+              lo pequeño es sólo una versión más pequeña de algo grande.
+            '"Suckin’ at something is the first step to being sorta good at something."': Fracasar
+              en algo es el primer paso para ser bueno en algo.
+            '"Life happens wherever you are, whether you make it or not."': La vida
+              sucede donde quiera que estés, lo hagas o no.
+            '"You can’t knock me down!"': "¡No puedes derribarme!"
+            '"Roar!"': "¡Roar!"
+            '"My first girlfriend turned into the moon."': Mi primera novia se convirtió
+              en la luna.
+            '"True humility is the only antidote to shame."': La verdadera humildad
+              es el único antídoto contra la vergüenza.
+            '"You are stronger and wiser and freer than you have ever been."': Eres
+              más fuerte, más sabio y más libre de lo que nunca has sido.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': Tienes
+              que intentarlo siempre. No puedes renunciar por miedo a fracasar.
       aalab_startIntervention:
         text: comienzan monstruos {BEHAVIOR}
         options:
           BEHAVIOR:
-            wandering: deambulando al azar
+            wandering: vagando al azar
             '"congregating"': concentrados
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
@@ -2149,8 +2360,8 @@ es-MX:
         options:
           DIR:
             "'ahead'": delante
-            "'right'": a la derecha
-            "'left'": a la izquierda
+            "'right'": hacia la derecha
+            "'left'": hacia la izquierda
       craft_ifStandingOn:
         text: |-
           si al pararse en {TYPE}
@@ -2160,9 +2371,9 @@ es-MX:
             "'blueCoralBlock'": coral azul
             "'redCoralBlock'": coral rojo
             "'sand'": arena
-            "'wool_blue'": agua profunda
+            "'wool_blue'": aguas profundas
             "'planksOak'": tablones de roble
-            "'seaLantern'": linterna marina
+            "'seaLantern'": linterna del mar
       craft_ifStandingOnLimit:
         text: |-
           si al pararse en {TYPE}
@@ -2171,7 +2382,7 @@ es-MX:
           TYPE:
             "'sand'": arena
             "'darkPrismarine'": prismarina oscura
-            "'seaLantern'": linterna marina
+            "'seaLantern'": linterna del mar
       craft_log:
         text: registro de mensaje {MESSAGE}
       craft_moveForward:
@@ -2198,11 +2409,11 @@ es-MX:
             '"yellowDeadCoralBlock"': bloque de coral muerto amarillo
             '"prismarine"': prismarina
             '"darkPrismarine"': prismarina oscura
-            '"seaLantern"': linterna marina
+            '"seaLantern"': linterna del mar
             '"packedIce"': hielo compacto
             '"blueIce"': hielo azul
-            '"blackConcrete"': concreto negro
-            '"seaGrass"': hierba de mar
+            '"blackConcrete"': hormigón negro
+            '"seaGrass"': pradera marina
             '"kelp"': alga marina
             '"polishedGranite"': granito pulido
       craft_placePrismarine:
@@ -2224,7 +2435,7 @@ es-MX:
             '"salmon"': salmón
             '"seaTurtle"': tortuga de mar
             '"squid"': calamar
-            '"tropicalFish"': pez tropical
+            '"tropicalFish"': pescado tropical
       craft_turn:
         text: girar a la {DIR}
         options:
@@ -2233,3 +2444,5 @@ es-MX:
             left: izquierda ↺
       validation_validatedBackground:
         text: establecer fondo a {IMG}
+      validation_validatedSound:
+        text: ReproducirSonido {SOUND}

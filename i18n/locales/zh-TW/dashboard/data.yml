@@ -563,6 +563,15 @@ zh-TW:
         csd_ml_import_model: 匯入 AI 模型
         playlab_2021: Play Lab 的介紹
         playlab_2021_reader: Play Lab 的介紹
+        PL_CSD_TeacherTips_Advise: 教師提示 - 給新教師的建議
+        PL_CSD_TeacherTips_IntroToCSD: 教師提示 - 電腦科學發現簡介
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 教師提示 - 解決問題的流程
+        PL_CSD_TeacherTips_PairProgramming: 教師提示 - 結對程式設計
+        PL_CSD_TeacherTips_Debugging: 教師提示 - 調試
+        PL_CSD_TeacherTips_LeadLearner: 教師提示 - 引導學習者
+        poembot-playtest-intro: 詩歌機器人遊戲測試簡介
+        poembot-playtest-sprites: 詩歌機器人遊戲測試簡介
+        poembot-playtest-events: 詩歌機器人遊戲測試活動
         hello_world_intro: 你好世界 - 歡迎來到精靈圖實驗室
         hello_world_events: 你好世界 - 使用事件進行程式設計
         hello_world_congrats: 你好世界 - 做你想做的

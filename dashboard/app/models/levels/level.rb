@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -93,46 +93,6 @@ class Level < ApplicationRecord
     bubble_choice_description
     thumbnail_url
   )
-
-  def self.add_levels(raw_levels, script, new_suffix, editor_experiment)
-    levels_by_key = script.levels.index_by(&:key)
-
-    raw_levels.map do |raw_level|
-      raw_level.symbolize_keys!
-
-      # Concepts are comma-separated, indexed by name
-      raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
-        (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
-      end
-
-      raw_level_data = raw_level.dup
-
-      key = raw_level.delete(:name)
-
-      if raw_level[:level_num] && !key.starts_with?('blockly')
-        # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
-        key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
-      end
-
-      level =
-        if new_suffix && !key.starts_with?('blockly')
-          Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
-        else
-          levels_by_key[key] || Level.find_by_key(key)
-        end
-
-      if raw_level[:video_key] && !key.starts_with?('blockly')
-        level.update(video_key: raw_level[:video_key])
-      end
-
-      unless level
-        raise ActiveRecord::RecordNotFound, "Level: #{raw_level_data.to_json}, Script: #{script.name}"
-      end
-
-      level.save! if level.changed?
-      level
-    end
-  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -296,8 +256,7 @@ class Level < ApplicationRecord
   end
 
   def should_write_custom_level_file?
-    changed = saved_changes? || (level_concept_difficulty && level_concept_difficulty.saved_changes?)
-    changed && write_to_file? && published
+    write_to_file? && published
   end
 
   def write_custom_level_file
@@ -690,28 +649,37 @@ class Level < ApplicationRecord
   # @param [String] editor_experiment Optional value to set the
   #   editor_experiment property to on the newly-created level.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
+    # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
+    return self if key.start_with?('blockly:')
+
     # Make sure we don't go over the 70 character limit.
-    max_index = 70 - new_suffix.length - 1
-    new_name = "#{base_name[0..max_index]}#{new_suffix}"
+    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
+    max_index = 70 - suffix.length - 1
+    new_name = "#{base_name[0..max_index]}#{suffix}"
 
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = clone_with_name(new_name, editor_experiment: editor_experiment)
+    begin
+      level = clone_with_name(new_name, editor_experiment: editor_experiment)
 
-    update_params = {name_suffix: new_suffix}
-    update_params[:editor_experiment] = editor_experiment if editor_experiment
+      update_params = {name_suffix: suffix}
+      update_params[:editor_experiment] = editor_experiment if editor_experiment
 
-    child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
-    update_params.merge!(child_params_to_update)
+      child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+      update_params.merge!(child_params_to_update)
 
-    level.update!(update_params)
+      level.update!(update_params)
 
-    # Copy the level_concept_difficulty of the parent level to the new level
-    new_lcd = level_concept_difficulty.dup
-    level.level_concept_difficulty = new_lcd
-    level.save! if level.changed?
+      # Copy the level_concept_difficulty of the parent level to the new level
+      new_lcd = level_concept_difficulty.dup
+      level.level_concept_difficulty = new_lcd
+      # trigger a save to rewrite the custom level file
+      level.save!
 
-    level
+      level
+    rescue Exception => e
+      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}"
+    end
   end
 
   def age_13_required?

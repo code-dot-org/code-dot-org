@@ -134,7 +134,7 @@ class LevelsController < ApplicationController
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?,
-      useGoogleBlockly: params[:blocklyVersion] == "Google"
+      blocklyVersion: params[:blocklyVersion]
     )
   end
 
@@ -147,6 +147,8 @@ class LevelsController < ApplicationController
     fb = FirebaseHelper.new('shared')
     @dataset_library_manifest = fb.get_library_manifest
   end
+
+  use_reader_connection_for_route(:get_rubric)
 
   # GET /levels/:id/get_rubric
   # Get all the information for the mini rubric
@@ -193,12 +195,15 @@ class LevelsController < ApplicationController
       toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
     end
 
+    validation = @level.respond_to?(:validation) ? @level.validation : nil
+
     level_view_options(
       @level.id,
       start_blocks: blocks_xml,
       toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
-      skip_instructions_popup: true
+      skip_instructions_popup: true,
+      validation: validation
     )
     view_options(full_width: true)
     @game = @level.game
@@ -233,9 +238,10 @@ class LevelsController < ApplicationController
     render json: {redirect: level_url(@level)}
   end
 
-  def update_properties
+  def update_properties(ignored_keys: [])
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
+      next if ignored_keys.include?(key)
       @level.properties[key] = value
     end
 
@@ -268,6 +274,18 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
+  end
+
+  # POST /levels/:id/update_start_code
+  # Update start code for a level. If params contains "validation",
+  # set validation directly to ensure it is encrypted.
+  # Then set any remaining properties with update_properties.
+  def update_start_code
+    changes = JSON.parse(request.body.read)
+    if @level.respond_to?(:validation)
+      @level.validation = changes["validation"]
+    end
+    return update_properties(ignored_keys: ["validation"])
   end
 
   # POST /levels

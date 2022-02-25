@@ -2,54 +2,6 @@
   "ga-IE": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Fáilte go dtí Saotharlann na Sprideanna"
         },
@@ -224,201 +176,68 @@
         "teacher_forum_1/coursec/2021": {
           "name": "Fóram do Mhúinteoirí"
         },
-        "password_power-up_lesson_slides/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
         "graph-paper-programming/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar",
-          "url": ""
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar",
-          "url": ""
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar",
-          "url": ""
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar",
-          "url": ""
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar",
-          "url": ""
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Ríomhchlárú ar Ghrafpháipéar",
-          "url": ""
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Códáil Bheirte",
-          "url": ""
+          "name": "Códáil Bheirte"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Códáil Sealaíochta",
-          "url": ""
+          "name": "Códáil Sealaíochta"
         },
         "relay-assessment/coursed/2021": {
-          "name": "Códáil Sealaíochta",
-          "url": ""
+          "name": "Códáil Sealaíochta"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Códáil Sealaíochta",
-          "url": ""
+          "name": "Códáil Sealaíochta"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Códáil Sealaíochta",
-          "url": ""
+          "name": "Códáil Sealaíochta"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Códáil Sealaíochta",
-          "url": ""
+          "name": "Códáil Sealaíochta"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Códáil Sealaíochta",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-project-guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance_party_unplugged/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_2/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling-faces-image/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Códáil Sealaíochta"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Coinníollacha le Cártaí",
-          "url": ""
+          "name": "Coinníollacha le Cártaí"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Coinníollacha le Cártaí",
-          "url": ""
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Coinníollacha le Cártaí"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Coinníollacha le Cártaí",
-          "url": ""
+          "name": "Coinníollacha le Cártaí"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Coinníollacha le Cártaí",
-          "url": ""
+          "name": "Coinníollacha le Cártaí"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Coinníollacha le Cártaí",
-          "url": ""
-        },
-        "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Coinníollacha le Cártaí"
         },
         "implementation_guide/coursed/2021": {
-          "name": "Lámhleabhar Feidhmithe",
-          "url": ""
-        },
-        "lesson_type_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Lámhleabhar Feidhmithe"
         },
         "curriculum_guide_1/coursed/2021": {
-          "name": "Leabhrán an Churaclaim",
-          "url": ""
-        },
-        "2021_change_log/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Leabhrán an Churaclaim"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "Fóram do Mhúinteoirí",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Fóram do Mhúinteoirí"
         },
         "pair_programming/express/2021": {
           "name": "Códáil Bheirte"
@@ -458,6 +277,72 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "An chaoi a n-oibríonn ríomhairí: Crua-earraí agus Bogearraí"
+        },
+        "functions_2/csd/2021": {
+          "name": "Feidhmeanna"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Lúba \"Do Gach\""
+        },
+        "for_loops/csd/2021": {
+          "name": "Lúba \"Do Gach\""
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "An chaoi a n-oibríonn ríomhairí: Ciorcaid agus Loighic"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Físeán: Meaisínfhoghlaim"
+        },
+        "variables_1/csd/2021": {
+          "name": "Athróga"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "An Cluaisín Beochana"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprideanna"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Airíonna na Spride"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Sloinn Boole"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Ráitis Choinníollacha"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Ráitis \"má/i ngach cás eile\""
+        },
+        "velocity_1/csd/2021": {
+          "name": "Treoluas"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Treoluas"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Feidhmeanna"
+        },
+        "functions_1/csd/2021": {
+          "name": "Feidhmeanna"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "lists/csd/2021": {
+          "name": "Liostaí"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Buntús CSS - Cuid a haon"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Buntús CSS - Cuid a dó"
         }
       }
     }

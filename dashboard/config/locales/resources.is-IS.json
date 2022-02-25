@@ -2,34 +2,6 @@
   "is-IS": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Kynning á Kvikasmiðjunni"
         },
@@ -287,6 +259,123 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Upplýsingar um Kvikasmiðju"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Söfnun gagna hönnuð"
+        },
+        "design_mode/csd/2021": {
+          "name": "Hönnun"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Hönnun"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "Öpp með fleiri en eina skjámynd"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Kennaraspjall"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Hvernig tölvur virka: vélbúnaður og hugbúnaður"
+        },
+        "functions_2/csd/2021": {
+          "name": "Föll"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Kynning á fylkjum"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Frá lykkjur"
+        },
+        "for_loops/csd/2021": {
+          "name": "Frá lykkjur"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Hvernig tölvur virka: rásir og rökvísi"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Myndband: Vélarnám"
+        },
+        "variables_1/csd/2021": {
+          "name": "Breytur"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Hreyfingasíðan"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Kvikar"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Eiginleikar kvika"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Hreyfing kvika"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Rökyrðingar"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Skilyrðingar"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Ef/Annars yrðingar"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Hraði"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Hraði"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Skynjun árekstra"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Skynjun árekstra"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Hröðun og Teljaramynstrið"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Föll"
+        },
+        "functions_1/csd/2021": {
+          "name": "Föll"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Kennaraspjall"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Inntak og Úttak"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Inntak og Úttak"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Öpp og Þrautalausnir"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Öpp og Þrautalausnir"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Öpp og Þrautalausnir"
+        },
+        "lists/csd/2021": {
+          "name": "Listar"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Kynning á tölvunarfræði - 1. hluti"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Kynning á tölvunarfræði - 2. hluti"
+        },
+        "images_in_html/csd/2021": {
+          "name": "Myndir í HTML"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Að gefa út vefinn þinn"
+        },
+        "classes/csd/2021": {
+          "name": "Klasar"
         }
       }
     }

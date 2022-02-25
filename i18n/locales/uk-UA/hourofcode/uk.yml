@@ -10,7 +10,7 @@ uk:
   campaign_date_short: 4-10 грудня
   campaign_date_full: 4-10 грудня
   campaign_date_year: '2021'
-  campaign_date_full_year: 7-13 грудня 2020 року
+  campaign_date_full_year: 6-12 грудня 2021 року
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 12
@@ -28,7 +28,7 @@ uk:
   africa_campaign_date_short: 4-10 грудня
   africa_campaign_date_full: 4-10 грудня
   africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 7-13 грудня 2020 року
+  africa_campaign_date_full_year: 6-12 грудня 2021 року
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Вчіться сьогодні, будуйте світле майбутнє.
@@ -139,6 +139,9 @@ uk:
     для вирішення світових проблем. Інформатика – це набагато більше, ніж просто програмування!
     Насолоджуйтесь першим кроком Code.org у новій подорожі, щоб дізнатися більше про
     AI в рамках нашої навчальної програми.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -238,7 +241,7 @@ uk:
     чи Стіва через пригоди в цьому світі Майнкрафт.
   codeorg_homepage_hoc2019_dance_heading: Спробуйте новий урок <span class="highlight-word">Танцювальна
     вечірка!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Підтримка батьків та вчителів, які стикаються
     із закриттям школи.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -963,6 +966,7 @@ uk:
   footer_menu_support: Підтримка
   footer_menu_terms: Умови
   footer_menu_privacy: Політика конфіденційності
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Година Коду
   learn_banner_blurb: Спробуйте одно-годинні підручники, розроблені для будь-якого
     віку на 45 мовах. Приєднуйтесь до мільйонів учнів та вчителів у більш, як 180
@@ -10356,6 +10360,14 @@ uk:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Дошкільнята - Клас 5
+  tutorial_icomputefireworks_string_platforms: Всі сучасні браузери
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Блоки
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

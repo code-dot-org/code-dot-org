@@ -34,7 +34,7 @@ class ActivitySectionTest < ActiveSupport::TestCase
     level1 = create :maze, name: 'level 1'
     error = assert_raises do
       create :script_level, script: script, lesson: lesson, levels: [level1],
-             activity_section: activity_section
+             activity_section: activity_section, activity_section_position: nil
     end
     assert_includes error.message, 'activity_section_position is required'
   end

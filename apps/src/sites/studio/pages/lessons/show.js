@@ -16,15 +16,25 @@ import {registerReducers} from '@cdo/apps/redux';
 import {
   setVerified,
   setVerifiedResources
-} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 
 $(document).ready(function() {
+  prepareBlockly();
   displayLessonOverview();
   prepareExpandableImageDialog();
   tooltipifyVocabulary();
 });
+
+function prepareBlockly() {
+  const customBlocksConfig = getScriptData('customBlocksConfig');
+  if (!customBlocksConfig) {
+    return;
+  }
+  prepareBlocklyForEmbedding(customBlocksConfig);
+}
 
 /**
  * Collect and preprocess all data for the lesson and its activities, and
@@ -81,7 +91,7 @@ function displayLessonOverview() {
   if (isTeacher) {
     store.dispatch(setViewType(ViewType.Instructor));
 
-    if (lessonData.isVerifiedTeacher) {
+    if (lessonData.isVerifiedInstructor) {
       store.dispatch(setVerified());
     }
   }

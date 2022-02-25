@@ -11,6 +11,12 @@
         "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
           "description": "Membangunkan atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya."
         },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
+        },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
           "description": "Membangunkan atur cara yang bertindak balas terhadap acara yang ditetapkan masanya"
         },
@@ -19,6 +25,24 @@
         },
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
           "description": "Mencipta animasi tarian dengan kod"
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
         },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
@@ -49,6 +73,12 @@
         },
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "Alasan tentang sejauh mana kepincangan manusia memainkan peranan di dalam pembelajaran mesin."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": "Membangunkan atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya."
@@ -1024,6 +1054,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Nyatakan proses reka bentuk dan cara ia membantu membentuk projek kemuncak yang disiapkan."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Latih dan uji model pembelajaran mesin."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Alasan tentang sejauh mana kepincangan manusia memainkan peranan di dalam pembelajaran mesin."
         }
       }
     }

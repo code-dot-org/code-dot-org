@@ -2,885 +2,179 @@
   "sr-SP": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/minecraft/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/hero/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "function/hero/unversioned": {
-          "word": "Функција",
-          "definition": ""
+          "word": "Функција"
         },
         "code/poem-art/2021": {
-          "word": "Kod",
-          "definition": ""
-        },
-        "event/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Kod"
         },
         "debugging/flappy/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/flappy/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/frozen/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/iceage/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "code/artist/unversioned": {
-          "word": "Kod",
-          "definition": ""
+          "word": "Kod"
         },
         "debugging/artist/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/gumball/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/aquatic/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Кондиционали",
-          "definition": ""
+          "word": "Кондиционали"
         },
         "loops/aquatic/unversioned": {
-          "word": "Петље",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Петље"
         },
         "debugging/starwars/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/mc/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/playlab/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "code/sports/unversioned": {
-          "word": "Kod",
-          "definition": ""
+          "word": "Kod"
         },
         "debugging/sports/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/infinity/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "debugging/basketball/unversioned": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "code/poem-art/unversioned": {
-          "word": "Kod",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Kod"
         },
         "behavior/coursef/2021": {
-          "word": "Понашање",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Понашање"
         },
         "variable/coursef/2021": {
-          "word": "Променљива",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Променљива"
         },
         "input/coursef/2021": {
-          "word": "Унос",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Унос"
         },
         "internet/coursef/2021": {
-          "word": "Интернет",
-          "definition": ""
-        },
-        "packets/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Интернет"
         },
         "define/coursef/2021": {
-          "word": "Дефинисати",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Дефинисати"
         },
         "debugging/courseb/2021": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "programming/courseb/2021": {
-          "word": "Programming",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programming"
         },
         "debugging/coursea/2021": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "programming/coursea/2021": {
-          "word": "Programming",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programming"
         },
         "debugging/coursec/2021": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "programming/coursec/2021": {
-          "word": "Programming",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "binary/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programming"
         },
         "debugging/coursed/2021": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "programming/coursed/2021": {
-          "word": "Programming",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programming"
         },
         "conditionals/coursed/2021": {
-          "word": "Кондиционали",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Кондиционали"
         },
         "debugging/express/2021": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "sequencing/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "programming/express/2021": {
-          "word": "Programming",
-          "definition": ""
+          "word": "Programming"
         },
         "behavior/express/2021": {
-          "word": "Понашање",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Понашање"
         },
         "conditionals/express/2021": {
-          "word": "Кондиционали",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Кондиционали"
         },
         "function/express/2021": {
-          "word": "Функција",
-          "definition": ""
+          "word": "Функција"
         },
         "variable/express/2021": {
-          "word": "Променљива",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Променљива"
         },
         "define/express/2021": {
-          "word": "Дефинисати",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Дефинисати"
         },
         "debugging/pre-express/2021": {
-          "word": "Отклањање грешака",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Отклањање грешака"
         },
         "programming/pre-express/2021": {
-          "word": "Programming",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programming"
         },
         "behavior/coursee/2021": {
-          "word": "Понашање",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Понашање"
         },
         "copyright/coursee/2021": {
-          "word": "Ауторска права",
-          "definition": ""
-        },
-        "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Ауторска права"
         },
         "function/coursee/2021": {
-          "word": "Функција",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Функција"
         },
         "conditionals/coursee/2021": {
-          "word": "Кондиционали",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Кондиционали"
         },
         "define/coursee/2021": {
-          "word": "Дефинисати",
-          "definition": ""
+          "word": "Дефинисати"
         },
-        "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "debugging/csd/2021": {
+          "word": "Отклањање грешака"
         },
-        "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "variable/csd/2021": {
+          "word": "Променљива"
         },
-        "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "conditionals/csd/2021": {
+          "word": "Кондиционали"
+        },
+        "abstraction/csd/2021": {
+          "word": "Апстракција"
+        },
+        "function/csd/2021": {
+          "word": "Функција"
+        },
+        "input/csd/2021": {
+          "word": "Унос"
+        },
+        "copyright/csd/2021": {
+          "word": "Ауторска права"
         }
       }
     }

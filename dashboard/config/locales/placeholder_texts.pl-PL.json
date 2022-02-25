@@ -455,7 +455,7 @@
           "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
           "83db90f8846d091d3532256816f105d9": "To jest Neila.",
           "0192cdc04916ec27aa11738bb6e48d6e": "Neila próbuje chronić swój dom przez kosmicznego robota - spacebota.",
-          "df8312187449c70820d7c58229a6b17e": "Kosmiczny robot - spacebot wypłasza inne stworzenia.",
+          "df8312187449c70820d7c58229a6b17e": "Kosmiczny robot odstrasza inne stworzenia.",
           "c084e152431f9116b9fdb3f7d465f13d": "Neila chce pomóc kosmicznemu robotowi - spacebotowi nauczyć się być miłym.",
           "b2f02bf648ce32c4362afe1578d41f70": "Udało się! Neila pokazała spacebotowi siłę uprzejmości.",
           "2a28483f9f4f9ee44cec653a445d4c82": "Inne stworzenia już się nie boją!"
@@ -605,13 +605,15 @@
         },
         "courseF_variables_chatbot_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
-          "46463b2e9f71f2f15b7238f56f09ba30": "Koniec"
+          "46463b2e9f71f2f15b7238f56f09ba30": "Koniec",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Dzięki za rozmowę!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "50d489a15105b987ec6d4410900c95dd": "Wpisz słowo akcji:"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
@@ -639,6 +641,20 @@
         "courseF_text_choice_interview": {
           "5bd698afd23bccde289bb0b4aa72a518": "Nazwij robota.",
           "34088af1fb721900963462375b3bbe23": "robot!"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Kliknij duszki, aby dać im maski.",
+          "968c8b54671ab303d48320f86937c40b": "Maski pomagają spowolnić rozprzestrzenianie się wirusów! "
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3",
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
         }
       }
     }

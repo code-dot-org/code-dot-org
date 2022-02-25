@@ -166,6 +166,7 @@ vi:
     email_preference_yes: "Đồng ý"
     email_preference_no: "Không"
     email_preference_required: "Bạn phải có một tài khoản email tham chiếu."
+    share_teacher_email_reg_partner_question: "Bạn có muốn chúng tôi chia sẻ thông tin liên hệ của bạn với [Đối tác khu vực Code.org](%{cdo_regional_partner_desc}) ở tiểu bang của bạn để họ có thể thông báo cho bạn về cơ hội phát triển nghề nghiệp, nguồn hỗ trợ và sự kiện tại địa phương không?"
     share_teacher_email_reg_partner_preference_yes: "Đồng ý"
     share_teacher_email_reg_partner_preference_no: "Không"
     share_teacher_email_reg_partner_preference_required: "Bạn phải có một tài khoản email tham chiếu."
@@ -272,6 +273,7 @@ vi:
       cant_join_own_section: "Xin lỗi, bạn không thể tham gia phần riêng của bạn."
       provider_managed_section: "Mục này được quản lý bởi nhà cung cấp khác và bạn không thể tham gia. Vui lòng liên hệ giáo viên của bạn để %{provider} thêm bạn vào và tham gia mục này."
       restricted_section: "Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code} vì nhóm này bị khóa. Vui lòng liên hệ với giáo viên của bạn để được giúp đỡ."
+      not_participant_type: "Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code} vì bạn không phù hợp với kiểu người tham gia nhóm đào tạo này."
     mail:
       student_disassociated:
         subject: "Thông báo từ Code.org: %{student_name} không còn trong danh sách là học viên của bạn."
@@ -376,6 +378,8 @@ vi:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Phòng trò chơi'
       playlab_k1: 'Kho trò chơi (dành cho trẻ chưa biết đọc)'
+      poetry: 'Thơ ca'
+      poetry_hoc: 'Tranh thơ ca'
       scratch: 'Scratch'
       sports: 'Thể thao'
       starwars: 'Chiến tranh giữa các vì sao'
@@ -503,6 +507,7 @@ vi:
     student_ids_not_entered: "Vui lòng cung cấp student_ids."
     student_not_found: "Không thể tìm thấy một hoặc vài sinh viên."
     all_students_must_be_in_current_section: "Tất cả các sinh viên hiện phải đăng ký trong phần của bạn."
+    not_correct_participant_type: "Bạn không thể di chuyển những người dùng này vì họ không có quyền trở thành người tham gia nhóm đào tạo mới."
   share:
     title: "Học về Xưởng Code"
     description: "Bất kỳ ai cũng có thể học khoa học máy tính. Tạo trò chơi, ứng dụng và nghệ thuật bằng mã."
@@ -538,6 +543,7 @@ vi:
     make_my_own_app: 'Tạo ứng dụng của tôi'
     how_it_works: 'Nó hoạt động như thế nào'
     try_hour_of_code: 'Hãy thử Giờ lập trình!'
+    cookie_notice: 'Thông báo về cookie'
   reference_area:
     title: 'Cần trợ giúp?'
     subtitle: 'Xem các video và gợi ý'
@@ -904,6 +910,7 @@ vi:
       school: 'Trường'
       school_name: 'Tên trường'
       school_city: 'Thành phố của trường'
+      school_city_district: 'Thành phố/Học khu'
       school_country: 'Quốc gia'
       colombian_school_city: 'Thành phố của trường'
       colombian_chilean_school_name: 'Tên trường'
@@ -923,7 +930,7 @@ vi:
         ages_19_over: '19 tuổi trở lên'
       subjects:
         cs: 'Khoa học máy tính'
-        math: 'thuật toán'
+        math: 'Phép toán'
         science: 'Khoa học'
         la: 'Nghệ thuật ngôn ngữ'
       resources:

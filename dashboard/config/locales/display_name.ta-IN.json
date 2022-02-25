@@ -215,7 +215,25 @@
         "helloworld_retro_sounds": "ஒலிகள் ",
         "ramp_artist_loops6v1_2021": "படிக்கட்டு ",
         "ramp_artist_loops8_2021": "எண்கோணம் ",
-        "scrat_loops_C-F_video_2021": "ஐஸ் ஏஜ் வீடியோவில் லூப்ஸ்"
+        "scrat_loops_C-F_video_2021": "ஐஸ் ஏஜ் வீடியோவில் லூப்ஸ்",
+        "App Lab Intro 8 - Video Design Mode": "காணொளி: வடிவமைப்பு மோடு",
+        "App Lab Intro 8 - Video Getting Started": "காணொளி: துவங்குதல்",
+        "App Lab Intro 8 - Video Images and Sounds": "காணொளி: படங்கள் மற்றும் சத்தங்கள்",
+        "App Lab Intro 8 - Video Make It Interactive": "காணொளி: ஊடாடும்படியாக அதனை உருவாக்கவும்.",
+        "App Lab Intro 8 - Video Share Your App": "காணொளி: உங்கள் செயலியை பகிரவும்",
+        "AppLab Intro 7 - Change Screen Color": "திரையின் நிறத்தை மாற்றுங்கள்",
+        "AppLab Intro 7 - Change Text 2": "உரையை மாற்றவும்",
+        "AppLab Intro 7 - Full Text": "இரண்டு பட்டன்கள்",
+        "AppLab Intro 7 - onEvent intro": "பட்டன்களை வேலை செய்யுமாறு செய்யவும்.",
+        "AppLab Intro 7 - onEvent twoButtons": "கூடுதல் ஆன்ஈவென்ட் பயிற்சி",
+        "AppLab Intro 7 - playSound": "ப்ளேசௌண்டை பயன்படுத்துதல்",
+        "AppLab Intro 7 - thisOrThatAddButton": "இது அல்லது அது",
+        "AppLab Intro 7 - thisOrThatAddScreen": "இது அல்லது அது",
+        "AppLab Intro 7 - thisOrThatPersonalize": "இது அல்லது அது",
+        "AppLab Intro 7 - thisOrThatSetScreen": "இது அல்லது அது",
+        "CSD U3 Movement Fish challenge2_2021": "குமிழிகள்",
+        "Oceans_Video_Machine_Learning_2021": "வீடியோ: இயந்திரவழிக் கற்றல்",
+        "Oceans_Video_Training_Data_2021": "வீடியோ: பயிற்சி தரவு"
       }
     }
   }

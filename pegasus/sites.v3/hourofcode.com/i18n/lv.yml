@@ -10,7 +10,7 @@ lv:
   campaign_date_short: Dec 5-11
   campaign_date_full: 5.-11. decembris
   campaign_date_year: '2016'
-  campaign_date_full_year: 7.-13. decembris, 2020
+  campaign_date_full_year: 6.-12. decembris, 2021
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 12
@@ -22,13 +22,13 @@ lv:
   europe_campaign_date_short: Dec 5-11
   europe_campaign_date_full: 5.-11. decembris
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: 7.-13. decembris, 2020
+  europe_campaign_date_full_year: 6.-12. decembris, 2021
   africa_campaign_date_start_short: Dec 5
   africa_campaign_date_start_long: 5. decembris
   africa_campaign_date_short: Dec 5-11
   africa_campaign_date_full: 5.-11. decembris
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: 7.-13. decembris, 2020
+  africa_campaign_date_full_year: 6.-12. decembris, 2021
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -135,6 +135,9 @@ lv:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -231,8 +234,8 @@ lv:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Izmanto programmas blokus, lai vestu Aleksu
     vai Stīvu piedzīvojumā cauri šai Minecraft pasaulei.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -966,6 +969,7 @@ lv:
   footer_menu_support: Atbalsts
   footer_menu_terms: Nosacījumi
   footer_menu_privacy: Privātuma politika
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Programmēšanas stundas aktivitātes
   learn_banner_blurb: Izmēģini vienu stundu ilgu apmācības materiālu, kas izstrādāts
     visām vecumu grupām vairāk nekā 45 valodās.  Pievienojies miljoniem studentu un
@@ -10357,6 +10361,14 @@ lv:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: Visi modernie pārlūki
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Bloki
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

@@ -127,16 +127,20 @@
           "costumes_callout": "Klik untuk mencipta kostum baru"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda"
+          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda",
+          "craft_drag_block_callout": "Seret blok \"bergerak ke hadapan\" dan pasangkannya di bawah blok lain"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda"
+          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda",
+          "craft_drag_block_callout": "Seret blok \"bergerak ke hadapan\" dan pasangkannya di bawah blok lain"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda"
+          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda",
+          "craft_drag_block_callout": "Seret blok \"bergerak ke hadapan\" dan pasangkannya di bawah blok lain"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda"
+          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda",
+          "craft_drag_block_callout": "Seret blok \"bergerak ke hadapan\" dan pasangkannya di bawah blok lain"
         },
         "helloworld_animals_costumes": {
           "hello_world_new": "Blok baru!"
@@ -306,6 +310,88 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Cari blok kod di sini. ",
           "run_button": "Uji animasi anda dengan butang ini.  "
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Adakah skrin bertukar hijau? Jika ya, tekan 'Selesai'. Jika tidak, tekan 'Reset', tukar kod anda dan tekan 'Run' sekali lagi."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Anda kini dalam Mod Reka Bentuk"
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_1": "Arahan kecil ini memberitahu komputer untuk menjalankan sebahagian besar kod dengan nama yang sama dalam ruang kerja."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_1": "Arahan kecil ini memberitahu komputer untuk menjalankan sebahagian besar kod dengan nama yang sama dalam ruang kerja."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "Arahan kecil ini memberitahu komputer untuk menjalankan sebahagian besar kod dengan nama yang sama dalam ruang kerja."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Arahan kecil ini memberitahu komputer untuk menjalankan sebahagian besar kod dengan nama yang sama dalam ruang kerja."
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Apabila anda sudah bersedia, tekan \"Run\" untuk mencuba program anda."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Tekan \"Run\" untuk mula bergerak."
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Ejen boleh berlegar di atas air, tetapi pemain tidak boleh!"
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Ejen boleh berlegar di atas air, tetapi pemain tidak boleh!"
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Ejen boleh berlegar di atas air, tetapi pemain tidak boleh!"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Ejen boleh berlegar di atas air, tetapi pemain tidak boleh!"
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Anda tidak boleh membuang blok ini, tetapi anda boleh mengeditnya!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_1": "Anda tidak boleh membuang blok ini, tetapi anda boleh mengeditnya!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_1": "Anda tidak boleh membuang blok ini, tetapi anda boleh mengeditnya!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Anda tidak boleh membuang blok ini, tetapi anda boleh mengeditnya!"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Ejen boleh melayang di atas lava, tetapi Steve dan Alex tidak boleh!"
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_1": "Ejen boleh melayang di atas lava, tetapi Steve dan Alex tidak boleh!"
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Ejen boleh melayang di atas lava, tetapi Steve dan Alex tidak boleh!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Ejen boleh melayang di atas lava, tetapi Steve dan Alex tidak boleh!"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Klik kategori untuk melihat blok dalam kotak alat anda! Seret blok ke ruang kerja untuk menambahkannya pada program anda",
+          "New Artist Project_callout2": "Tekan \"Jalankan\" untuk menyimpan dan menjalankan program anda",
+          "sign_in_to_save_project": "Mahu mengakses projek anda nanti? Log masuk untuk menyimpan projek ini ke akaun anda!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Klik kategori untuk melihat blok dalam kotak alat anda! Seret blok ke ruang kerja tambahkannya pada program anda",
+          "New Play Lab Project_callout2": "Tekan \"Jalankan\" untuk menyimpan dan menjalankan program anda",
+          "sign_in_to_save_project": "Mahu mengakses projek anda nanti? Log masuk untuk menyimpan projek ini ke akaun anda!"
         }
       }
     }

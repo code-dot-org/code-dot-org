@@ -12,6 +12,10 @@ export default class CoreLibrary {
     this.behaviors = [];
     this.userInputEventCallbacks = {};
     this.totalPauseTime = 0;
+    this.timerResetTime = {
+      seconds: 0,
+      frames: 0
+    };
     this.numActivePrompts = 0;
     this.screenText = {};
     this.defaultSpriteSize = 100;
@@ -20,6 +24,14 @@ export default class CoreLibrary {
     this.eventLog = [];
     this.speechBubbles = [];
     this.soundLog = [];
+    this.criteria = [];
+    this.previous = {};
+    this.validationFrames = {
+      delay: 90,
+      fail: 150,
+      pass: 90,
+      successFrame: 0
+    };
 
     this.commands = {
       executeDrawLoopAndCallbacks() {
@@ -84,6 +96,13 @@ export default class CoreLibrary {
 
   drawSpeechBubble(text, x, y) {
     const padding = 8;
+    if (typeof text === 'number') {
+      text = text.toString();
+    }
+    //protect against crashes in the unlikely event that a non-string or non-number was passed
+    if (typeof text !== 'string') {
+      text = '';
+    }
     text = ellipsify(text, 150 /* maxLength */);
     let textSize;
     let charsPerLine;
@@ -153,7 +172,7 @@ export default class CoreLibrary {
     this.removeSpeechBubblesForSprite(sprite);
 
     const id = createUuid();
-    const removeAt = seconds ? this.getAdjustedWorldTime() + seconds : null;
+    const removeAt = seconds ? this.getUnpausedWorldTime() + seconds : null;
     // Note: renderFrame is used by validation code.
     this.speechBubbles.push({
       id,
@@ -173,7 +192,7 @@ export default class CoreLibrary {
 
   removeExpiredSpeechBubbles() {
     this.speechBubbles = this.speechBubbles.filter(
-      ({removeAt}) => !removeAt || removeAt > this.getAdjustedWorldTime()
+      ({removeAt}) => !removeAt || removeAt > this.getUnpausedWorldTime()
     );
   }
 
@@ -191,11 +210,25 @@ export default class CoreLibrary {
   /**
    * Returns World.seconds adjusted to exclude time during which the app was paused
    */
-  getAdjustedWorldTime() {
+  getUnpausedWorldTime() {
     const current = new Date().getTime();
     return Math.round(
       (current - this.p5._startTime - this.totalPauseTime) / 1000
     );
+  }
+
+  /**
+   * Returns time (in seconds) since last resetTimer(), excluding time during which the app was paused
+   */
+  getSecondsSinceReset() {
+    return this.getUnpausedWorldTime(this.p5) - this.timerResetTime.seconds;
+  }
+
+  /**
+   * Returns time (in frames) since last resetTimer()
+   */
+  getFramesSinceReset() {
+    return this.p5.frameCount - this.timerResetTime.frames;
   }
 
   /**
@@ -460,7 +493,7 @@ export default class CoreLibrary {
   atTimeEvent(inputEvent) {
     if (inputEvent.args.unit === 'seconds') {
       const previousTime = inputEvent.previousTime || 0;
-      const worldTime = this.getAdjustedWorldTime(this.p5);
+      const worldTime = this.getSecondsSinceReset();
       inputEvent.previousTime = worldTime;
       // There are many ticks per second, but we only want to fire the event once (on the first tick where
       // the time matches the event argument)
@@ -473,7 +506,8 @@ export default class CoreLibrary {
         return [{}];
       }
     } else if (inputEvent.args.unit === 'frames') {
-      if (this.p5.frameCount === inputEvent.args.n) {
+      const worldFrames = this.getFramesSinceReset();
+      if (worldFrames === inputEvent.args.n) {
         // Call callback with no extra args
         this.eventLog.push(`atTime: ${inputEvent.args.n}`);
         return [{}];
@@ -485,7 +519,7 @@ export default class CoreLibrary {
 
   collectDataEvent(inputEvent) {
     const previous = inputEvent.previous || 0;
-    const worldTime = this.getAdjustedWorldTime(this.p5);
+    const worldTime = this.getUnpausedWorldTime(this.p5);
     inputEvent.previous = worldTime;
 
     // Only log data once per second

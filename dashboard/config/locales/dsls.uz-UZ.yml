@@ -5135,6 +5135,22 @@ uz-UZ:
           | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: tafsilotlar bu yerda
+        markdown: |-
+          #Qisqacha mazmun
+
+          Ushbu dars veb-saytlarni shaxsan ifoda etish vositasi sifatida tanishtiradi. Sinfda dastlab odamlar o‘zlarining qiziqishlari va g‘oyalarini ifoda etadigan va o‘rtoqlashadigan turli xil usullar haqida muhokama qilinadi, so‘ngra avvalgi kurs o‘quvchilari tomonidan yaratilgan bir nechta namunali veb-saytlar ko‘rib chiqiladi. Va nihoyat, har bir kishi aqliy hujumlarni uyushtiradi va o‘z ichiga olishi kerak bo‘lgan mavzular va qiziqishlar ro‘yxatini baham ko‘radi, qolgan bo‘limda shaxsiy veb-sayt ishlab chiqish uchun resurs yaratadi.
+
+          ## Lug'at
+
+          * **Veb-sayt kontenti** - Veb-sayt tarkibidagi matn, rasm va boshqa elementlar
+
+
+          ## Resurslar
+
+          * [Shaxsiy veb-sayt eskizi - Mashg'ulot yoriqnomasi](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
+        teacher_markdown: "* [Shaxsiy veb-sayt eskizi](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Namuna ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: tafsilotlar bu yerda
       CSD U2 L4 Overview:
@@ -5647,24 +5663,6 @@ uz-UZ:
           > <a href="http://support.code.org" target="blank"> <button class="plc"> Yordam oling >> </button> </a>
 
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va keyingi bosqichga o'tish uchun pastga bosing.
-      OPD-K5 CS Courses_dani:
-        markdown: |-
-          # Rejalashtirish> Code.org saytida ishlashni boshlash
-
-          ## 1-qadam: kursni tanlang
-          Bizning barcha kurslarimiz - maktabgacha yoshdagilardan tortib o'rta maktab o'quvchilarigacha bizning ** [kurslar katalogida](https://studio.code.org/courses) ** berilgan. Amaliy mashg'ulotlarda qatnashgan CS asoslari darslarini topish uchun bizning ** [bu sahifamizga](https://code.org/educate/curriculum/elementary-school) ** o'ting va "Kurslar" bo'limiga o'ting. Barcha kurslarimiz bepul. Maktabdagi hamkasblaringiz bilan suhbatlashing, o'quv dasturining turli mavzulari bilan qanday qilib birlashtirish mumkinligini aniqlang.
-          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
-          ***
-          ## 2-qadam: sinf bo'limini o'rnating
-          Talabangizning yutuqlarini ko'rish, o'quvchilaringiz uchun kirish kartalarini chop etish, ularning hisob qaydnomalarini boshqarish va kursni tugatgandan so'ng beriladigan sertifikatlarni chop etish uchun sinf bo'limini o'rnating. ** (Bu haqida qisqacha videoni tomosha qilish](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b) ** uchun bu havolani bosing. Code.org-da birinchi kompyuter fanlari sinfini tashkil etish. Shuningdek, zarur qadamlarni ** [ushbu qo'llab-quvvatlash maqolasi] (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section) ** da topishingiz mumkin.
-          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
-          ***
-          ## 3-qadam: Kursni bo'limingizga belgilang
-          Siz o'qitayotgan kursni bosing - quyida ko'rsatilgan ekranni ko'rishingiz kerak. Keyin "Kurs tayinlash" tugmachasini bosishingiz va ushbu kursni bo'limlaringizdan biriga tayinlashingiz mumkin.
-          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
-          ***
-          ## 4-qadam: O'qitishni boshlang!
-          Sinfingizga informatika tushunchalarini olib kirish uchun bitta dars yetarli. Talabalaringiz informatikaga bo'lgan ishtiyoqini ko'rganingizdan so'ng, talabalarga rahbarlik qilish uchun kundalik dars rejalari, kompyutersiz bajarish mumkin bo'lgan katta mashg'ulotlar va boshqa o'qituvchilar bilan bog'lanish uchun forumlar bilan davom eting.
       OPD-K5 CS Tips_dani:
         markdown: |-
           # Ishni boshlash > Ushbu onlayn kursda harakat qilish
@@ -6255,43 +6253,6 @@ uz-UZ:
           > ** Ushbu bosqichda nimani kutish mumkin: ** Keyingi bosqichlarda biz sikl tushunchasini o'rganishga bag'ishlangan kompyutersiz darsni va C kursidan (2-sinf uchun mo'ljallangan) jumboqlarni taqdim etamiz. Jumboqni yechish uchun siz vizual, bloklarga asoslangan dasturlash yordamida kod yozishingiz kerak. Fikrlashga imkoniyat berish bilan yakunlaymiz. Ushbu bosqich 20-45 daqiqaga mo'ljallangan.
 
           Tayyormisiz? Boshladik!
-      OPD-K5 Stage5Go_dani:
-        markdown: |-
-          # Shartli bayonotlar> Kompyutersiz darslar
-
-
-          ** 1. "[Kartalar bilan shartli bayonotlar](https://curriculum.code.org/csf-18/coursed/13/)" D kursidan dars rejasi: **
-          <br/>
-          D kursi 3-sinf o'quvchilari uchun mo'ljallangan. Xuddi shu dars "E" va "F" kurslarida ham uchraydi, shartli bayonotlar "A", "B" yoki "C" kurslarida qo'llanilmaydi.
-          <br/> <br/>
-
-          ** 2. Talabalar videosini tomosha qiling: Kartalar bilan shartli bayonotlar **
-          <br/>
-          Bu talabalaringizga shartli holat tushunchasini tanishtirish va kompyutersiz dars boshlashga yordam beradigan video.
-          [![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41 PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)
-          <br/>
-          [Videoni ko'rinmayaptimi? Bu yerni bosing](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
-
-          <br/> <br/>
-          ** 3. Ushbu dars uchun o'qituvchi modelini tomosha qiling: "Kartalar bilan shartli bayonotlar" **
-          <br/>
-          Bu video sizga o'qituvchi sifatida qo'llab-quvvatlashga mo'ljallangan, agar sizga darsni o'tkazish bo'yicha maslahatlar kerak bo'lsa.
-
-          [![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37 PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)
-
-          [Videoni ko'rinmayaptimi? Bu yerni bosing](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
-
-          <br/> <br/>
-
-          ---
-
-          > ## Fikrlash
-
-          > Shartlar tushunchasini o'quvchilarga qanday tushuntirgan bo'lar edingiz? Fikrlaringiz bilan [forumimizda](http://forum.code.org/t/teaching-conditionals/406/1) o'rtoqlashing.
-
-          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc"> Forumda muhokama qiling >> </button></a>
-
-          Forumda sharh qoldirgandan so'ng, bu yerga qayting va keyingi bosqichga o'tish uchun pastga bosing.
       OPD-K5 Stage5Review_dani:
         markdown: |
           # Shartli bayonotlar > Fikrlash
@@ -6509,45 +6470,6 @@ uz-UZ:
           - O'z bilimingiz haqida mulohaza qilish
           - O'qishni davom etish uchun keyingi qadamlarni rejalashtirish
           - informatika ta'limiga qiziqqan hamkasb o'qituvchilarning global hamjamiyati bilan bog'lanish
-      OPD-K5 Stage9Start_dani:
-        markdown: |-
-          # Rejalashtirish > O'qituvchilar resurslarini o'rganish
-
-          4-8-bosqichlar davomida siz CS asoslari kursining "kompyutersiz" va onlayn ta'lim manbalarini ko'rib chiqdingiz, chunki ular siz o'rganayotgan kompyuter fanlari tushunchalariga mos keladi.
-
-          Kodlashni, shuningdek, informatika fanini o'qitish usullarini tushunganingizdan so'ng, ko'rsatmalarni rejalashtirishni boshlash vaqti keldi. Ushbu bosqichda biz Code.org platformasining boshqa sohalari va ** [O'qituvchilar uchun boshqaruv paneli](http://studio.code.org/) ** da sayohat qilamiz.
-
-          10-bosqichni yakunlab, quyidagilarni bajarasiz:
-
-          - o'qituvchilar uchun manbalarni o'rganish
-          - Code.org-ni va ** [O'qituvchilarning boshqaruv paneli] (http://studio.code.org/)**ni o'rganish
-          - Kompyuter fanini amaliyotingizga qo'shishni rejalashtirish
-
-          ***
-
-          O'qituvchilar panelidan skrinshot quyida keltirilgan. Siz uni ko'rish uchun Code.org o'qituvchi hisob qaydnomangizga kirishingiz kerak bo'ladi - tizimga kirganda Code.org veb-saytida sukunat bo'yicha ko'rsatiladi. Agar o'qituvchi hisobingiz bo'lmasa, ** [bu yerda ro'yxatdan o'ting](https://studio.code.org/users/sign_up) **.
-
-          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
-      OPD-K5 Using CS_dani:
-        markdown: |-
-          # Rejalashtirish> Code.org darsi uchun tayyorlanish
-
-          Keling, Code Studio sinfxona sharoitida siz va o'quvchilaringiz uchun qanday ishlashini ko'rib chiqaylik.
-
-          ## 1-qadam: kursni tanlang
-          Bizning [boshlang'ich maktab sahifamiz](https://code.org/educate/curriculum/elementary-school) bilan tanishib chiqing va CS Fundamentals A-F kurslari uchun dars rejalarini va to'liq kurslarini toping. Yoki, agar siz bizning o'rta maktab yoki yuqori sinf kurslariga qiziqsangiz, siz barcha - maktabgacha yoshdan tortib o'rta maktabgacha bo'lgan o'quvchilargacha va ularning orasida bo'lganlar uchun  kurslarni topasiz. Barcha kurslarimiz bepul. Maktabdagi hamkasblaringiz bilan suhbatlashing, o'quv dasturining turli mavzulari bilan qanday qilib birlashtirish mumkinligini aniqlang.
-
-          ***
-          ## 2-qadam: sinf bo'limini o'rnating
-          Talabangizning yutuqlarini ko'rish, o'quvchilaringiz uchun kirish kartalarini chop etish, ularning hisob qaydnomalarini boshqarish va kursni tugatgandan so'ng beriladigan sertifikatlarni chop etish uchun sinf bo'limini o'rnating. ** (Bu haqida qisqacha videoni tomosha qilish](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b) ** uchun bu havolani bosing. Code.org-da birinchi kompyuter fanlari sinfini tashkil etish. Shuningdek, zarur qadamlarni ** [ushbu qo'llab-quvvatlash maqolasi] (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section) ** da topishingiz mumkin.
-
-          ***
-          ## 3-qadam: Kursni bo'limingizga belgilang
-          Siz o'qitayotgan kursni bosing - quyida ko'rsatilgan ekranni ko'rishingiz kerak. Keyin "Kurs tayinlash" tugmachasini bosishingiz va ushbu kursni bo'limlaringizdan biriga tayinlashingiz mumkin.
-
-          ***
-          ## 4-qadam: O'qitishni boshlang!
-          Sinfingizga informatika tushunchalarini olib kirish uchun bitta dars yetarli. Talabalaringiz informatikaga bo'lgan ishtiyoqini ko'rganingizdan so'ng, talabalarga rahbarlik qilish uchun kundalik dars rejalari, kompyutersiz bajarish mumkin bo'lgan katta mashg'ulotlar va boshqa o'qituvchilar bilan bog'lanish uchun forumlar bilan davom eting.
       OPD-K5 Vocabulary_dani:
         markdown: |-
           # CS asoslari> Kalit so'zlar
@@ -7506,3 +7428,173 @@ uz-UZ:
           ## Raqamli izingizda qanday ma'lumotlar bo‘lishi mumkin?
       express_EOC_examples_2021:
         display_name: Loyiha namunalari
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Sprait hususiyatlari
+      CSD Games variables practice_2021:
+        display_name: Variables Practice
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Quyidagi kodga qarang va sarlavhalar qanday ko'rsatilishini taxmin
+          qiling. O'ngdagi variantlardan birini tanlang.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eggs &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
+        title: Sarlavhalarni tezkor tekshirish
+      CSD U1 Test_2021:
+        title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Styling Text with CSS
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Rasm qo'shish
+      CSD U2 Image practice_pilot_2021:
+        display_name: Rasm qo'shish
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: tafsilotlar bu yerda
+        teacher_markdown: |-
+          # Rejalarni tekshirish
+
+          Qolgan bosqichlarga o'tishga ruxsat berishdan oldin, talabalarning rejalarini tekshiring.
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - {}
+        - text: dog.x == cat.x
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: sarlavha
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: tafsilotlar bu yerda
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
+        questions:
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
+      CSD U3 drawing practice choice_2021:
+        display_name: Amaliyot
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: tafsilotlar bu yerda
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: tafsilotlar bu yerda
+      CSD U6 LED create intro_2021:
+        content1: tafsilotlar bu yerda
+      CSD U6 array multi_2021:
+        answers:
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
+          correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: tafsilotlar bu yerda
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
+        questions:
+        - {}
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Foydalanuvchiga qaratilgan dizayn: loyihadan keyingi sinov'
+      CSD games cake challenge choice_2021:
+        display_name: Chaqiriqlar
+      CSD games functions practice choice_2021:
+        display_name: Funksiyalar. Amaliyot
+      CSD games platform challenge choice_2021:
+        display_name: Chaqiriqlar
+      CSD web conditionals practice choice_2021:
+        display_name: Conditionals Practice
+      CSD web draw loop practice choice_2021:
+        display_name: Amaliyot
+      CSD web movement practice choice_2021:
+        display_name: Amaliyot
+      CSD web text practice choice_2021:
+        display_name: Amaliyot
+      csd-pre-survey-levelgroup_21_22:
+        title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma

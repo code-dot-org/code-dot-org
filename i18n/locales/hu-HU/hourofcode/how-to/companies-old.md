@@ -5,7 +5,7 @@ title: Hogyan tarts Kódolás Óráját - Cégek
 {{ signup_button }}
 
 # Hogyan hozd el a "Hour of Code" rendezvényt, az intézményedhez?
-### Találd meg, hogy hogyan tudod te és a munkatársaid inspirálni a diákokat, hogy kipróbálják a számítástudományt!
+### Ismerje meg, hogyan inspirálhatja Ön és alkalmazottai a diákokat arra, hogy kipróbálják az informatikát!
 
 ***
 

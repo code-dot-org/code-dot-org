@@ -288,13 +288,16 @@
           "craft_callout_preplaced_house": "Den här koden kommer bygga ditt hus. Kan du avsluta det?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet"
+          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet",
+          "craft_drag_block_callout": "Dra ett 'gå framåt'-block och klicka i det under ett annat block."
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet"
+          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet",
+          "craft_drag_block_callout": "Dra ett 'gå framåt'-block och klicka i det under ett annat block."
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet"
+          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet",
+          "craft_drag_block_callout": "Dra ett 'gå framåt'-block och klicka i det under ett annat block."
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Upprepa handlingar genom att placera block här"
@@ -450,7 +453,8 @@
           "craft_callout_preplaced_house": "Den här koden kommer bygga ditt hus. Kan du avsluta det?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet"
+          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet",
+          "craft_drag_block_callout": "Dra ett 'gå framåt'-block och klicka i det under ett annat block."
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Upprepa handlingar genom att placera block här"
@@ -519,7 +523,8 @@
           "poetry_new_block": "Nytt Block!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nytt Block!"
+          "poetry_sound": "Nytt Block!",
+          "poetry_music": "Nytt Block!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nytt Block!",
@@ -528,6 +533,81 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Nytt Block!",
           "poetry_remove_sprite": "Nytt Block!"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Här är koden"
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
         }
       }
     }

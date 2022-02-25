@@ -1,4 +1,6 @@
 ms:
   data:
     shared_functions:
+      moving north and looping: bergerak ke utara dan gelung
+      moving south and looping: bergerak ke selatan dan gelung
       moving with arrow keys: bergerak dengan kunci arah

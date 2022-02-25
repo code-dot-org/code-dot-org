@@ -893,7 +893,7 @@
           "NEW_Course_4_Bee_For_Loops_8_a": "Si tu loop cuenta hacia arriba, el incremento es añadido a tu variable de contador cada vez.\n¿Qué necesitas agregar a cada número para obtener el número que sigue?"
         },
         "New Minecraft Hero Project": {
-          "MC_HOC_2017_13_Cole_a": "Haz que el Agente construya algunos puentes para que Alex o Steve puedan caminar más allá de los límites del mapa."
+          "MC_HOC_2017_13_Cole_a": "Intenta que el Agente construya algunos puentes para que Alex o Steve puedan caminar más allá de los límites del mapa."
         },
         "OPD-K5-events-2": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -3024,25 +3024,25 @@
           "courseB_maze_seq5_c": "¿No estás seguro de cómo llegar a la bellota? Prueba este camino."
         },
         "courseB_maze_seq6": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro/a de cómo llegar al cerdo? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2018": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2019": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2020": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
@@ -3053,17 +3053,17 @@
           "courseB_maze_seq7_c": "¿No puedes llegar al cerdo? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2018": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2019": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2020": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
@@ -9133,24 +9133,24 @@
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_a": "Si tienes problemas, intenta escribir primero los pasos en un papel.",
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq13_2021": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
-          "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> te acercarán al cerdo."
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, utiliza tu dedo para trazar el camino desde el pájaro hasta el cerdo.",
+          "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta añadiendo bloques y ejecutando el código para ver qué ocurre.",
+          "courseA_maze_seq13_c": "Estos <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n bloques te ayudarán para acercarte al cerdo."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto en <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "El ave tendrá que moverse hacia el oeste 3 veces para llegar al cerdo. Utilice este bloque:\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Si tienes problemas para conseguir que el pájaro se mueva, asegúrate de que los bloques están encajados en su sitio bajo <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "El pájaro tendrá que moverse hacia el Oeste 3 veces para llegar al cerdo. Usa este bloque:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
           "1": "¡Intenta escribir los pasos en papel para encontrar una solución!",
-          "2": "Necesitarás usar este bloque:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "Necesitarás utilizar este bloque:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5a_2021": {
-          "1": "Diga los pasos en voz alta y vea si le ayudan a encontrar la respuesta."
+          "1": "Repite los pasos en voz alta y comprueba si te ayuda a averiguar la respuesta."
         },
         "courseA_maze_seq6_2021": {
           "courseA_maze_seq6_a": "Tu código final debe tener 3 bloques de movimiento.",
@@ -9202,23 +9202,23 @@
           "courseA_playlab_events_challenge2_c": "Puedes hacer gruñir a un monstruo enojado.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic en ambos bloques al mismo tiempo, luego haz clic en \"ejecutar\" otra vez.",
-          "2": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "1": "Si Scrat no hace lo que quieres, asegúrate de que los dos bloques se han unido completamente y vuelve a hacer clic en \"Ejecutar\".",
+          "2": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "courseB_Scrat_ramp2_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_artist_loops2_2021": {
           "courseB_artist_loops2_a": "Si deseas que el loop se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
@@ -9356,39 +9356,39 @@
           "courseB_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> Scrat hará movimiento!",
-          "courseB_maze_seq1_b": "Arrastre tres de estas <xml><block type=\"maze_moveSouth\"/></xml> flechas y conectalas al bloque <xml><block type=\"when_run\"/></xml> para que Scrat llegue a la bellota."
+          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> ¡para hacer que Scrat se mueva!",
+          "courseB_maze_seq1_b": "Arrastra tres flechas como esta <xml><block type=\"maze_moveSouth\"/></xml> hacia fuera y conéctalas al bloque <xml><block type=\"when_run\"/></xml> para llevar a Scrat hasta la bellota."
         },
         "courseB_maze_seq4_2021": {
-          "courseB_maze_seq4_a": "Intente agregar una instrucción a la vez hasta que llegue a la bellota.",
-          "courseB_maze_seq4_b": "Necesitas usar el bloque <xml><block type=\"maze_moveEast\"/></xml> para solucionar este puzzle."
+          "courseB_maze_seq4_a": "Intenta añadir una instrucción cada vez hasta llegar a la bellota.",
+          "courseB_maze_seq4_b": "Deberás utilizar el bloque <xml><block type=\"maze_moveEast\"/></xml> para resolver este rompecabezas."
         },
         "courseB_maze_seq5_2021": {
-          "courseB_maze_seq5_a": "Si te quedas atascado/a, intenta dibujar la ruta en papel.",
-          "courseB_maze_seq5_b": "¡Hay 2 formas de resolver este desafío!",
-          "courseB_maze_seq5_c": "¿No estás seguro de cómo llegar a la bellota? Prueba este camino."
+          "courseB_maze_seq5_a": "Si te bloqueas, intenta dibujar el recorrido en un papel.",
+          "courseB_maze_seq5_b": "¡Hay 2 formas de resolver este rompecabezas!",
+          "courseB_maze_seq5_c": "¿No sabes cómo llegar hasta la bellota?  Prueba este recorrido."
         },
         "courseB_maze_seq6_2021": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
-          "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
-          "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
-          "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
+          "courseB_maze_seq6_b": "Si te bloqueas, intenta resolver el rompecabezas en dos partes, una de lado y otra de arriba a abajo.",
+          "courseB_maze_seq5_c": "Hay dos formas de resolver este rompecabezas.",
+          "courseB_maze_seq5_d": "¿No sabes cómo llegar a la bellota? ¡Prueba este recorrido!"
         },
         "courseB_maze_seq7_2021": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
-          "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
-          "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
+          "courseB_maze_seq7_b": "Prueba a ejecutar el código que se te ha facilitado y mira a ver dónde acabas.",
+          "courseB_maze_seq7_c": "¿No puedes llegar hasta la bellota?  ¡Prueba este camino!"
         },
         "courseB_maze_seq8_2021": {
-          "courseB_maze_seq8_a": "Intenta agregar un bloque a la vez hasta que resuelvas el desafío.",
-          "courseB_maze_seq8_b": "¡Hay más de una manera para resolver este puzzle!",
-          "courseB_maze_seq8_c": "¿No sabes qué camino tomar? ¡Prueba este camino!"
+          "courseB_maze_seq8_a": "Intenta añadir un bloque cada vez hasta que resuelvas el rompecabezas.",
+          "courseB_maze_seq8_b": "¡Hay más de una manera de resolver este rompecabezas!",
+          "courseB_maze_seq8_c": "¿No sabes qué dirección tomar? ¡Prueba este camino!"
         },
         "courseB_maze_seq9_2021": {
           "courseB_maze_seq9_a": "Primero intenta escribir todos los pasos en un papel.",
-          "courseB_maze_seq9_b": "Construye tu programa de un bloque a la vez y prueba a medida que lo construyes.",
-          "courseB_maze_seq9_c": "Hay dos formas de resolver este desafío.",
-          "courseB_maze_seq9_d": "¿Atascado/a? ¡Prueba este camino!"
+          "courseB_maze_seq9_b": "Construye tu programa bloque a bloque y prueba mientras lo haces.",
+          "courseB_maze_seq9_c": "Hay dos formas de resolver este rompecabezas.",
+          "courseB_maze_seq9_d": "¿Tienes problemas?  ¡Prueba este camino!"
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "El camino más corto podría no funcionar esta vez.",
@@ -9435,32 +9435,32 @@
           "courseB_playlab_events_challenge2_d": "¡A mezclarlo!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
         },
         "courseB_starWars_prog1_2021": {
-          "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este desafío. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_a": "Prueba añadiendo los bloques de uno en uno, y luego haz clic en \"Ejecutar\" para ver qué sucede.",
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿A qué distancia tienes que moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
-          "courseB_starWars_prog2_a": "Divide este problema en dos partes. Consigue una sola pila de chatarra y luego descubre cómo llegar a la otra."
+          "courseB_starWars_prog2_a": "Divide este problema en dos partes. Recoge un montón de chatarra y luego averigua cómo llegar al otro."
         },
         "courseB_starWars_prog3_2021": {
-          "courseB_starWars_prog3_a": "Necesitarás moverte de 3 maneras para resolver este desafío.",
-          "courseB_starWars_prog3_b": "Construye una pieza de código a la vez. Ejecútalo para descubrir a dónde ir desde allí."
+          "courseB_starWars_prog3_a": "Tendrás que moverte de 3 formas distintas para resolver este rompecabezas.",
+          "courseB_starWars_prog3_b": "Construye una parte del código cada vez. Ejecútalo para descubrir a dónde ir desde allí."
         },
         "courseB_starWars_prog4_2021": {
-          "courseB_starWars_prog4_a": "Construye una pieza de código a la vez. Ejecútalo para descubrir a dónde ir desde allí.",
+          "courseB_starWars_prog4_a": "Construye una parte del código cada vez. Ejecútalo para descubrir a dónde ir desde allí.",
           "courseB_starWars_prog4_b": "Intenta usar el bloque `repetir` para que el código sea más corto.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
-          "courseB_starWars_prog5_a": "¿Este patrón no se parece un poco al último desafío?",
-          "courseB_starWars_prog5_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog5_c": "Traza este patrón con tu dedo. Cuenta las piezas de metal mientras te mueves.",
-          "courseB_starWars_prog5_da": "Mira lo que sucede si usas la misma solución del desafío de la escalera:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_a": "¿No se parece este patrón al último rompecabezas?",
+          "courseB_starWars_prog5_b": "BB-8 recogerá la chatarra al pasar por encima de ella.",
+          "courseB_starWars_prog5_c": "Traza este patrón con el dedo. Cuenta los trozos de metal mientras te mueves.",
+          "courseB_starWars_prog5_da": "Mira lo que ocurre si utilizas la misma solución que el rompecabezas de la escalera:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6_2021": {
-          "courseB_starWars_prog6_a": "¡Este patrón es solo un paso escalón con dos movimientos por dirección!",
+          "courseB_starWars_prog6_a": "¡Este patrón es sólo un paso de escalera con dos movimientos por dirección!",
           "courseB_starWars_prog6_b": "Intenta usar el bloque `repetir` para que el código sea más corto.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
-          "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último desafío?",
+          "courseB_starWars_prog7_a": "¿No se parece un poco este patrón al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
           "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
         },
@@ -9650,11 +9650,11 @@
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog_challenge1_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque `collect` muchas veces para recoger el tesoro extra."
+          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque \"obtener\" muchas veces para conseguir el tesoro extra."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar más de un bloque `recolectar` en cada espacio.",
-          "courseC_collector_prog_challenge1_b": "¿Perdiste tu camino? ¡Prueba este camino para resolver el desafío!"
+          "courseC_collector_prog_challenge1_a": "Puedes utilizar más de un bloque `obtener` en cada espacio.",
+          "courseC_collector_prog_challenge1_b": "¿Te has perdido?  ¡Prueba este camino para resolver el rompecabezas!"
         },
         "courseC_flappy_events1_2021": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -9737,11 +9737,11 @@
         "courseC_maze_debugging2_2021": {
           "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
+          "courseC_maze_debugging2_c": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
         },
         "courseC_maze_debugging3_2021": {
           "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
+          "courseC_maze_debugging3_b": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
         },
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
@@ -9749,7 +9749,7 @@
         },
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
-          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
+          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de giro haciendo clic en el desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging6_2021": {
@@ -9795,7 +9795,7 @@
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
+          "courseC_maze_programming6_a": "¡Hay dos maneras de resolver este rompecabezas!",
           "courseC_maze_programming6_b": "Sigue con el dedo el camino del pájaro al cerdo, ¿qué pasos has dado?",
           "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
           "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
@@ -9809,11 +9809,11 @@
           "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_maze_programming_challenge1_2021": {
-          "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego programarlo!"
+          "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego prográmalo!"
         },
         "courseC_maze_programming_challenge2_2021": {
           "courseC_maze_programming_challenge2_a": "_\"Si me envías hacia atrás, ¡ten mucho cuidado de que gire en la dirección correcta!\"_",
-          "courseC_maze_programming_challenge2_b": "La solución más corta usa solo 5 bloques, pero usa este bloque:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "La solución más corta utiliza sólo 5 bloques, pero utiliza este bloque:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "¿Este patrón no te parece una escalera gigante? Intenta usar lo que aprendiste de los puzles anteriores para lograr todos los giros.",
@@ -10811,7 +10811,7 @@
           "add_behavior": "Añade un bloque `empieza sprite` a tu código. Asegúrate de que ya has creado el sprite al que vas a dar un comportamiento. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Encuentra este bloque y haz clic en el `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n¿Qué ocurre cuando el número es `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block>></xml>"
+          "size hint": "Encuentra este bloque y haz clic en el `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n¿Qué ocurre cuando el número es `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         }
       }
     }

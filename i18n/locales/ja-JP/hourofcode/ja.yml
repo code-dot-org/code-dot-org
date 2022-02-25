@@ -52,7 +52,7 @@ ja:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Hour of Code がやってきます。
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: もうすぐ2018年12月3～9日がHour of Codeです。コンピューターサイエンスはすべての生徒たちが学ぶべき基礎です。
@@ -97,6 +97,9 @@ ja:
   social_hoc2019_oceans_title: "  AI for Oceans#CSforGood  "
   social_hoc2019_oceans_desc: "  倫理的な問題を探りながら、AI、機械学習、トレーニングデータ、偏見について学び、世界の問題にAIがどのように活用できるのかを知ることができます。コンピュータサイエンスはコーディング以上のことをしています。Code.orgの新しい旅の第一歩を、カリキュラムを通してAIについて詳しく教えていきます。
     \ "
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -182,7 +185,7 @@ ja:
   codeorg_homepage_hoc2018_video: Watch our video
   hourofcode_homepage_hoc2018_header_line1: 世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。経験は必要ありません。
   hourofcode_homepage_hoc2018_header_line2: 4歳から104歳まで。
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Hour of Code がやってきます。
   codeorg_homepage_celebrate_cse: 世界中でコンピューターサイエンスの発展を願う！
   codeorg_homepage_csc: コンピュータサイエンスが言語技術、数学などに出会います。
   codeorg_homepage_csc_long: コンピュータサイエンスが私たちのカリキュラムで言語技術、数学などとどう出会うのかご覧ください！
@@ -190,7 +193,7 @@ ja:
   hoc2018_tutorial_mchoc_description: コードブロックで、アレックスやスティーブをマインクラフト世界の冒険に連れ出しましょう。
   codeorg_homepage_hoc2019_dance_heading: 新しい <span class="highlight-word"> Dance&nbsp;Party!</span>
     をお試しください
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  学校閉鎖に直面している保護者や先生への支援。  "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
@@ -771,6 +774,7 @@ ja:
   footer_menu_support: サポート
   footer_menu_terms: 利用規約
   footer_menu_privacy: プライバシーポリシー
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Hour of Code
   learn_banner_blurb: 45ヶ国語以上の全世代を対象とした1時間のチュートリアルに挑戦してみて下さい。180以上の国で数百万人の生徒と先生がHour
     of Codeを始めています。

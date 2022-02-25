@@ -9441,7 +9441,11 @@
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "Þú ættir að hafa fjóra `þegar ör` atburðarkubba með hreyfingu í tiltekna stefnu undir hverjum þeirra.",
-          "courseE_playLab_scaffold1_c": "Þegar þetta er tilbúið ættir þú að geta hreyft hetjuna þína með örvarlyklunum!"
+          "courseE_playLab_scaffold1_c": "Þegar þetta er tilbúið ættir þú að geta hreyft hetjuna þína með örvarlyklunum!",
+          "playlab_up": "Til að færa leikmanninn upp, getur þú tengt þessa kubba:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Til að færa leikmanninn niður, getur þú tengt þessa kubba:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Til að færa leikmanninn til vinstri, getur þú tengt þessa kubba:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Til að færa leikmanninn til hægri, getur þú tengt þessa kubba:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>"
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "Notaðu `skora stig` til að bæta við stigi og `fjarlægja stig` til að draga stig frá."
@@ -10535,6 +10539,15 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Þú þarft aðeins að bæta við tveimur kubbum til að koma þessari þraut í rétt horf. ",
           "iceage_warn_ice_age_b": "Bættu báðum nýju kubbunum neðan við `þegar keyrt` atburðinn til að láta þá gerast strax í upphafi forritsins."
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "Notaðu örvarlyklana til að færa mörgæsina. Þú þarft ekki að skrifa neinn kóða til að ljúka þessu borði."
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Gættu þess að búningarnir passi saman í hverjum kubbi.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Til að láta björnin segja eitthvað er hægt að tengja kóðakubbana svona:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

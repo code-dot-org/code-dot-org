@@ -55,7 +55,7 @@ th:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'เรียนรู้วิทยาการคอมพิวเตอร์ มาเปลี่ยนโลกกันเถอะ
     #CSforGood #ชั่วโมงเขียนโค้ด'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: ชั่วโมงของการเขียนโค้ดกำลังมา
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: Hour of Code กำลังจะเปิดตัวให้มีส่วนร่วมกันแล้วในระหว่างวันที่
@@ -124,6 +124,9 @@ th:
     บนโลกใบนี้ วิทยาการคอมพิวเตอร์เป็นมากกว่าการเขียนโค้ด! สนุกไปกับการเดินก้าวแรกของ
     Code.org บนเส้นทางใหม่เพื่อศึกษาเรื่อง AI ให้ลึกซึ้งยิ่งขึ้นจากภายในหลักสูตรของเรา
     \ "
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -207,7 +210,7 @@ th:
   hourofcode_homepage_hoc2018_header_line1: ไม่ว่าใครก็สามารถจัดกิจกรรมชั่วโมงเขียนโค้ดที่ใดก็ได้
     บทช่วยสอนความยาว 1 ชั่วโมงแปลเป็นภาษาต่าง ๆ มากกว่า 45 ภาษา และไม่จำเป็นต้องมีประสบการณ์มาก่อน
   hourofcode_homepage_hoc2018_header_line2: อายุตั้งแต่ 4 ขวบถึง 104 ปี
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: ชั่วโมงของการเขียนโค้ดกำลังมา
   codeorg_homepage_celebrate_cse: ดื่มด่ำกับวิทยาการคอมพิวเตอร์ได้ทุกที่!
   codeorg_homepage_csc: CS Connections ที่ที่วิทยาการคอมพิวเตอร์ได้มาบรรจบกับศิลปะทางภาษา
     คณิตศาสตร์และวิชาแขนงอื่นๆ
@@ -217,7 +220,7 @@ th:
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: ลองเกม <span class="highlight-word">Dance&nbsp;Party!</span>
     ใหม่ๆ
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  สนับสนุนผู้ปกครองและผู้สอนที่เจอกับสถานการณ์การปิดโรงเรียน
     \ "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -909,6 +912,7 @@ th:
   footer_menu_support: Support
   footer_menu_terms: เงื่อนไข
   footer_menu_privacy: นโยบายความเป็นส่วนตัว
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: ชั่วโมงแห่ง Code
   learn_banner_blurb: Try a one-hour tutorial designed for all ages in over 45 languages.  Join
     millions of students and teachers in over 180 countries starting with an Hour

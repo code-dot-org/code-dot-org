@@ -32,7 +32,7 @@
   float: left;
 }
 #terms-modal .right,
-#thank-donors-modal .right, {
+#thank-donors-modal .right {
   float: right;
 }
 #school-info-modal .right,
@@ -182,4 +182,26 @@ $almost_white: #eee;
 
 #close-thank-donors-dialog {
   margin: 10px;
+}
+
+#implicit-terms-modal {
+  width: 600px;
+  text-align: left;
+  top: 20px;
+  padding: 20px;
+
+  #implicit_accept_terms_message {
+    font-size: 14px;
+    color: $default_text;
+    margin-left: 0;
+  }
+
+  #close_btn_go_to_account {
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    font-family: "Gotham 7r", sans-serif;
+    margin: 25px 0 0 0;
+    padding: 10px 25px;
+  }
 }

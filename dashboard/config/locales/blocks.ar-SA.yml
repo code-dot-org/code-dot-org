@@ -367,6 +367,7 @@ ar:
             '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
+            '"infinity"': خط لانهائي
             '"random"': عشوائي
       Dancelab_makeAnonymousDanceSprite:
         text: قم بإنشاء {COSTUME} جديد في {LOCATION}
@@ -449,6 +450,26 @@ ar:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': كل الكائنات الفضائية
             '"BEAR"': كل الدببة
@@ -476,6 +497,7 @@ ar:
             '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
+            '"infinity"': خط لانهائي
             '"random"': عشوائي
       Dancelab_mixColors:
         text: امزج {COLOR1} و{COLOR2}
@@ -539,6 +561,7 @@ ar:
             '"fireworks"': مفرقعات
             '"flowers"': زهور
             '"growing_stars"': النجوم المتنامية
+            '"higher_power"': قوة أعلى
             '"swirl"': هيبنو
             '"kaleidoscope"': منظار النماذج المتغيرة «مشكال
             '"lasers"': أرضية رقص بالليزر
@@ -1014,10 +1037,21 @@ ar:
         text: عند النقر على {SPRITE}
       gamelab_clickedSpritePointer:
         text: النقر {SPRITE}
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): الدوران ناحية اليمين
+            new Behavior(spinning_left, []): الدوران ناحية اليسار
+            new Behavior(jittering, []): الاهتزاز
+            new Behavior(wandering, []): التحرك
+            new Behavior(patrolling, []): التجوُّل
+            new Behavior(moving_north_and_looping, []): تحريك إلى الشمال والدوران
+            new Behavior(moving_south_and_looping, []): تحريك إلى الجنوب والدوران
       gamelab_comment:
         text: 'التعليق: {COMMENT}'
       gamelab_costumeImage:
-        text: النقر {COSTUME}
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: عدد {SPRITE}
       gamelab_createNewSprite:
@@ -1065,6 +1099,20 @@ ar:
         text: |-
           إذا {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} الزي {COSTUME}"
       gamelab_isKeyPressed:
@@ -1256,6 +1304,12 @@ ar:
             "'sound://category_digital/jump_7.mp3'": قفز
       gamelab_playSpeech:
         text: ألعاب النطق {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): التحرك من خلال الأسهم
+            draggable(): كونها قابلة للسحب
       gamelab_pointInDirection:
         text: نقطه {SPRITE} {DIRECTION}
         options:
@@ -1280,6 +1334,8 @@ ar:
         text: إزالة اللون من {THIS}
       gamelab_repeatForever:
         text: التكرار للأبد
+      gamelab_resetTimer:
+        text: مؤقت إعادة الضبط
       gamelab_setAnimation:
         text: تغيير {THIS} زي ل {ANIMATION}
       gamelab_setBackground:
@@ -1372,6 +1428,14 @@ ar:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': بطيء
+            '5': عادي
+            '7': سريع
+            '9': extra fast
       gamelab_setTint:
         text: تغيير لون {THIS} ل {COLOR}
       gamelab_setupScoreboard:
@@ -1827,14 +1891,24 @@ ar:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': لبنة
+            '"fire"': نار
             '"flowers"': زهور
             '"hearts"': قلوب
             '"iceCream"': آيس كريم
-            '"rainbow"': ألوان
+            '"leaves"': أوراق
+            '"rainbow"': قوس قزح
             '"stars"': نجوم
-            '"waves"': أمواج
+      Poetry_addLine:
+        text: إضافة سطر {LINE}
+      Poetry_animateText:
+        text: تحريك النص
+      Poetry_destroy:
+        text: إزالة {ANIMATION_NAME}
       Poetry_glideTo:
         text: "{SPRITE} الانتقال إلى {LOCATION}"
+      Poetry_hideText:
+        text: إخفاء النص
       Poetry_makeBurst:
         text: إنشاء {EFFECT} تأثير مع {NUM} {ANIMATION_NAME} النقوش المتحركة
         options:
@@ -1852,9 +1926,11 @@ ar:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': اهدأ
             '"sound://category_nature/steady_campfire_loop.mp3"': نار المعسكر
             '"sound://category_nature/rain_loop.mp3"': رذاذ
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': غابة
             '"sound://category_loops/faultering_desicion_loop1.mp3"': مسكون بالأشباح
             '"sound://category_background/inside_plane.mp3"': دندنة
             '"sound://category_loops/red_flag_loop1.mp3"': المهمة
+            '"sound://category_nature/summer_night_loop.mp3"': ليل
             '"sound://category_background/repitition.mp3"': ركوب
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': بطيء
       Poetry_playSound:
@@ -1872,26 +1948,43 @@ ar:
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ضوء
             '"sound://category_poof/puzzle_game_poof_04.mp3"': بوف
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': فحص
+            '"sound://category_background/typewriter.mp3"': آلة كاتبة
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': مهتز
             '"sound://category_achievements/peaceful_win_1.mp3"': فوز
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': دوامة
             '"sound://category_achievements/peaceful_win_6.mp3"': نغمات الرياح
+      Poetry_setAuthor:
+        text: تحديد المنشيء{AUTHOR}
       Poetry_setBackground:
         text: عيّن لون الخلفية {COLOR}
       Poetry_setBackgroundEffect:
+        text: ضبط الخلفية {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': ألوان
-            '"squiggles"': سكويغلز
-            '"space"': الفضاء
-            '"stars"': نجوم
-            '"ripples"': تموجات
-            '"rain"': مطر
+            '"blooming"': مزهر
             '"bubbles"': فقاعات
+            '"clouds"': غائم
             '"confetti"': قصاصات من الورق
-            '"hearts"': قلوب ملونة
+            '"darkCircles"': خافت
+            '"fadeColors"': ثلجي
+            '"hearts"': قلوب
+            '"space"': الفضاء
+            '"rain"': مطر
+            '"ripples"': تموجات
+            '"colors"': ألوان
+            '"stars"': نجوم
+            '"squiggles"': سكويغلز
           PALETTE:
-            '"rainbow"': ألوان
+            '"autumn"': الخريف
+            '"sunrise"': الفجر
+            '"sunset"': الغسق
+            '"grayscale"': رمادي
+            '"rainbow"': قوس قزح
+            '"roses"': الورود
+            '"sky"': سماوي
+            '"spring"': الربيع
+            '"summer"': الصيف
+            '"winter"': الشتاء
       Poetry_setBackgroundImageAs:
         text: تعيين الخلفية إلى {IMG}
       Poetry_setFont:
@@ -1899,43 +1992,76 @@ ar:
         options:
           FONT:
             '"Arial"': هوائي
+            '"Arial Black"': هوائي أسود
+            '"Courier"': الساعي
+            '"Cursive"': الكتابة اليدوية
+            '"Impact"': التأثير
             '"Georgia"': جورجيا
             '"Times"': المرات
-            '"Courier"': الساعي
-            '"Arial Black"': هوائي أسود
-            '"Impact"': التأثير
-            '"Cursive"': الكتابة اليدوية
       Poetry_setFontColor:
         text: ضبط لون النص {FILL}
       Poetry_setForegroundEffect:
+        text: عمل {EFFECT} تأثير
         options:
           EFFECT:
-            '"rain"': مطر
             '"bubbles"': فقاعات
-            '"hearts"': قلوب ملونة
             '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب
+            '"emojis"': رموز تعبيرية سعيدة
+            '"rain"': مطر
             '"starburst"': النجمي
+            '"glass"': زجاج محطم
+            '"twinkling"': وميض
+      Poetry_setPrompt:
+        text: مستخدم فوري {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} للمتغير {VAR}
+      Poetry_setPromptWithChoices:
+        text: مستخدم فوري {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} للمتغير {VAR} مع خيارات
+          {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: تحديد {SPRITE} حجم إلى {VAL}
+      Poetry_setTextEffect:
+        text: ضبط تأثيرات النص {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': باهت
+            '"flyLeft"': تحليق من اليسار
+            '"flyRight"': تحليق من اليمين
+            '"flyTop"': تحليق من الأعلى
+            '"flyBottom"': تحليق من الأسفل
+            '"typewriter"': آلة كاتبة
+      Poetry_setTitle:
+        text: تحديد العنوان {TITLE}
+      Poetry_showText:
+        text: إظهار النص
       Poetry_startBehavior:
+        text: 'النقش المتحرك {ANIMATION_NAME} يبدا {BEHAVIOR} '
         options:
           BEHAVIOR:
-            growing: النمو
-            jittering: الاهتزاز
-            shrinking: الانقباض
-            spinning_left: الدوران ناحية اليسار
-            spinning_right: الدوران ناحية اليمين
-            wandering: التحرك
+            '"growing"': النمو
+            '"jittering"': الاهتزاز
+            '"shrinking"': الانقباض
+            '"spinning_left"': الدوران ناحية اليسار
+            '"spinning_right"': الدوران ناحية اليمين
+            '"wandering"': التحرك
       Poetry_stopBehavior:
+        text: 'النقش المتحرك {ANIMATION_NAME} يتوقف {BEHAVIOR} '
         options:
           BEHAVIOR:
-            growing: النمو
-            jittering: الاهتزاز
-            shrinking: الانقباض
-            spinning_left: الدوران ناحية اليسار
-            spinning_right: الدوران ناحية اليمين
-            wandering: التحرك
+            '"growing"': النمو
+            '"jittering"': الاهتزاز
+            '"shrinking"': الانقباض
+            '"spinning_left"': الدوران ناحية اليسار
+            '"spinning_right"': الدوران ناحية اليمين
+            '"wandering"': التحرك
+            '"all"': "--جميع السلوكيات--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: عندما يظهر {N} سطر
         options:
           N:
             '0': "???"

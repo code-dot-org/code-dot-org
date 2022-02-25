@@ -624,8 +624,13 @@ pl:
         poemart_celebration: Święto związane z poematami
         csd_u6_variables_part2: Zmienne - Część 2
         csd_ml_ethics_ai: 'Etyka i AI'
+        outbreak_intro: 'Symulacja epidemii: Wprowadzenie'
         outbreak_events: 'Epidemia: Zdarzenia'
         outbreak_scientist: 'Symulator epidemii: Myśląc jak naukowiec'
+        outbreak_outro: 'Symulator epidemii: czas na zabawę'
+        PL_overview_CSP: Co to jest Zasady Informatyki?
+        PL_CSP_EIPMOverview: Przewodnik po lekcjach EIPM
+        tesstest: Testy
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

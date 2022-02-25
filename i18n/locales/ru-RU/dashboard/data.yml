@@ -602,6 +602,12 @@ ru:
         PL_CSD_TeacherTips_PairProgramming: Подсказки Учителя - Парное Программирование
         PL_CSD_TeacherTips_Debugging: Подсказки учителя - Дебаггинг
         PL_CSD_TeacherTips_LeadLearner: Подсказки учителя - Ведущий Ученик
+        poembot-playtest-intro: Игровой тест PoemBot - введение
+        poembot-playtest-sprites: Игровой тест PoemBot - спрайты
+        poembot-playtest-events: Игровой тест PoemBot - события
+        hello_world_intro: Привет, мир - Добро пожаловать в Sprite Lab
+        hello_world_events: Привет, мир - Программирование с событиями
+        hello_world_congrats: Привет, мир - Делайте, что вам хочется
         rough_poemart_intro: v1 Poem Art Введение
         rough_poemart_events: v1 Poem Art События
         rough_poemart_imagery: v1 Poem Art Изображение
@@ -611,6 +617,7 @@ ru:
         poetry_module_planningapp: Планирование приложения Poem Generator - Кодирование и поэзия
         poetry_module_multichoiceprompts: Подсказки с несколькими вариантами - Кодирование и поэзия
         poetry_module_conditionals: Условные операторы - Кодирование и поэзия
+        poemart_intro: Введение в поэтическое искусство
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

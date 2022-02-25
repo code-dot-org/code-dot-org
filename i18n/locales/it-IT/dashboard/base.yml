@@ -186,6 +186,7 @@ it:
     email_preference_yes: "Sì"
     email_preference_no: "No"
     email_preference_required: "Devi specificare una preferenza relativa all'indirizzo email."
+    share_teacher_email_reg_partner_question: "Desideri che noi condividiamo le tue informazioni con  [partner regionale Code.org](%{cdo_regional_partner_desc}) nel tuo Stato, in modo da poterti inviare una notifica sul tuo sviluppo professionale locale, risorse ed eventi?"
     share_teacher_email_reg_partner_preference_yes: "Sì"
     share_teacher_email_reg_partner_preference_no: "No"
     share_teacher_email_reg_partner_preference_required: "Devi specificare una preferenza relativa all'indirizzo email."
@@ -293,6 +294,7 @@ it:
       blank_code: "Inserisci un codice-classe"
       cant_join_own_section: "Siamo spiacenti, non puoi far parte della tua classe."
       provider_managed_section: "Questa sezione è gestita da un altro provider e non può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider} e risincronizza la loro sezione."
+      not_participant_type: "Non siamo riusciti ad aggiungerti alla sezione %{section_code} perché non soddisfi la tipologia di partecipante per la sezione."
     mail:
       student_disassociated:
         subject: "Notifica da Code.org: %{student_name} non è più iscritto come tuo studente."
@@ -410,6 +412,7 @@ it:
       playlab: 'Laboratorio'
       playlab_k1: 'Laboratorio (pre-scolare)'
       poetry: 'Poesia'
+      poetry_hoc: 'L''arte della poesia'
       scratch: 'Scratch'
       sports: 'Sport'
       spritelab: 'Laboratorio dei Personaggi'
@@ -432,6 +435,7 @@ it:
       prizes_link: 'Più informazioni'
   teacher:
     answer: Rispondi
+    dashboard: 'Cruscotto dell''Insegnante'
     for_teachers_only: Per gli insegnanti
     title:
       one: 'Il tuo insegnante:'
@@ -549,6 +553,7 @@ it:
     all_students_must_be_in_current_section: "Tutti gli studenti da spostare devono appartenere alla tua classe."
     already_enrolled_in_new_section: "Non puoi spostare questi studenti perché appartengono già ad una classe di questo insegnante."
     third_party_login: "Non puoi spostare gli studenti in una classe sincronizzata con un strumento di terze parti."
+    not_correct_participant_type: "Non puoi spostare questi utenti perché non hanno le autorizzazioni a partecipare alla nuova sezione."
   share:
     title: "Impara su Code Studio"
     description: "Chiunque può imparare l'informatica. Realizza giochi, app e lavori artistici con la programmazione."
@@ -589,6 +594,7 @@ it:
     how_it_works: 'Come funziona'
     try_hour_of_code: 'Prova l''Ora del Codice!'
     store: 'Negozio'
+    cookie_notice: 'Informativa sui cookie'
   reference_area:
     title: 'Hai bisogno di aiuto?'
     subtitle: 'Guarda questi video e suggerimenti'
@@ -996,6 +1002,7 @@ it:
       school: 'Scuola'
       school_name: 'Nome della scuola'
       school_city: 'Città della scuola'
+      school_city_district: 'Città/Quartiere della scuola'
       school_country: 'Paese della Scuola'
       colombian_school_city: 'Città della scuola'
       colombian_school_municipality: 'Provincia della Scuola'
@@ -1116,3 +1123,4 @@ it:
     this_sprite: "questo personaggio"
   unit_prefix: "Unità %{n}"
   code_org_logo_alt: "Code.org Home"
+  teacher_feedback: "Commento dell'insegnante"

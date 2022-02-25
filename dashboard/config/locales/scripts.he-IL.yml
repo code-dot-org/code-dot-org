@@ -3430,7 +3430,7 @@ he:
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
-          title: סימולטור התפרצות
+          title: לנצח את הקורונה
           description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           name: התפרצות
@@ -3446,7 +3446,7 @@ he:
             lessonGroup-3:
               display_name: משתנים
             outbreak:
-              display_name: סימולטור התפרצות
+              display_name: לנצח את הקורונה
             debugging:
               display_name: מציאת טעויות
         csd1-2021:
@@ -3556,6 +3556,30 @@ he:
               display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: אלגוריתמים
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3702,6 +3726,8 @@ he:
               key: לולאות עבור עם הדבורה
             For Loops in Artist:
               key: לולאות עבור עם האומן
+            lesson-5:
+              name: התפרצות
           lesson_groups:
             ramp_up:
               display_name: דמויות
@@ -3863,6 +3889,8 @@ he:
           lessons:
             lesson-9:
               name: קהילת מורים
+        outbreak-module:
+          title: התפרצות
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -3923,6 +3951,10 @@ he:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
+        hello-world-animals:
+          title: 'שלום, עולם: חיות'
+        hello-world-emoji:
+          title: 'שלום, עולם: אמוג''י'
         hello-world-retro:
           name: 'שלום, עולם: רטרו'
           title: 'שלום, עולם: רטרו'
@@ -3952,6 +3984,8 @@ he:
             lesson-1:
               name: תחרות איות
           title: תחרות איות
+        outbreak-csc:
+          title: התפרצות
         csd-post-survey-2021:
           lessons:
             lesson-1:
@@ -3974,6 +4008,16 @@ he:
             Hello World:
               name: 'שלום, עולם: אוכל'
           title: 'שלום, עולם: אוכל'
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: אמוג''י'
+          title: 'שלום, עולם: אמוג''י'
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: חיות'
+          title: 'שלום, עולם: חיות'
         hello-world-retro-2021:
           lessons:
             Hello World:
@@ -3984,3 +4028,299 @@ he:
           lessons:
             lesson-1:
               name: תחרות איות
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: שיעור
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: לנצח את הקורונה
+            Programming with the Bee:
+              name: לולאות מקוננות במבוך
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            'Hello World: Food':
+              name: 'שלום, עולם: אוכל'
+          lesson_groups:
+            lessonGroup-8:
+              display_name: שעת הקוד
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+            lessonGroup-3:
+              display_name: משתנים
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: פונקציות
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: מפות שמחות
+            Loops with Scrat:
+              name: לולאות עם סקראט
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
+                של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
+                ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו
+                לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            'Mini-Project: On the Move with Play Lab':
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
+                במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
+                אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            'Programming: Happy Maps':
+              name: מפות שמחות
+            Loops in Ice Age:
+              key: לולאות בעידן הקרח
+              name: לולאות עם סקראט
+            Events in Play Lab:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
+                במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
+                אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+              key: תכנות עם ציפורים כועסות
+            Debugging in Maze:
+              name: איתור באגים במבוך
+            Dance Party:
+              name: מסיבת ריקודים
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
+              key: לולאות מקוננות במבוך
+            Until Loops in Maze:
+              name: לולאות "עד" במבוך
+              key: לולאות "עד" במבוך
+            Debugging with Scrat:
+              key: ניפוי שגיאות עם סקראט
+              name: איתור באגים במבוך
+            lesson-1:
+              name: מסיבת ריקודים
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            lessonGroup-9:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+        csp1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: מציאת טעויות
+              key: מציאת טעויות
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: זוזו, זוזו
+              key: זוזו, זוזו
+            Sequencing with Angry Birds:
+              name: יצירת רצפים עם ציפורים כועסות
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Getting Loopy:
+              name: עוברים ללולאות
+            Sequencing in Maze:
+              name: יצירת רצפים עם ציפורים כועסות
+            Programming in Maze:
+              key: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        coursec-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging in Maze:
+              name: איתור באגים במבוך
+              key: איתור באגים במבוך
+            The Big Event:
+              name: האירוע הגדול
+            Binary Bracelets:
+              name: צמידים בינארים
+              key: צמידים בינארים
+            Programming in Maze:
+              key: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
+            'Events: The Big Event':
+              name: האירוע הגדול
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: תכנות לנייר משבצות
+            Introduction to Online Puzzles:
+              name: היכרות עם חידות מבוכים
+              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או
+                חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org.
+                יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל
+                הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים,
+                מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב
+                _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של
+                חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
+              key: היכרות עם חידות מבוכים
+            Relay Programming:
+              name: הרץ פעולה בשנית
+              key: הרץ פעולה בשנית
+            Debugging with Laurel:
+              name: ניפוי שגיאות עם לורל
+            Dance Party:
+              name: מסיבת ריקודים
+              key: מסיבת ריקודים
+            Loops in Ice Age:
+              name: לולאות בעידן הקרח
+              key: לולאות בעידן הקרח
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+              key: התניות עם כרטיסים
+            Until Loops in Maze:
+              name: לולאות "עד" במבוך
+              key: לולאות "עד" במבוך
+            'Algorithms: Graph Paper Programming':
+              name: תכנות לנייר משבצות
+            Debugging in Collector:
+              name: ניפוי שגיאות עם לורל
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+          title: קורס ד' (2021)
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: כתיבת שירים
+            Conditionals with the Farmer:
+              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'.
+                _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם
+                מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים
+                הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים
+                בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי
+                הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+            'Functions: Songwriting':
+              name: כתיבת שירים
+            Conditionals:
+              key: תנאים
+              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'.
+                _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם
+                מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים
+                הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים
+                בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי
+                הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+        coursef-2022:
+          lessons:
+            Programming with the Bee:
+              name: לולאות מקוננות במבוך
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+              key: כיף עם לולאת "עבור"
+            Outbreak:
+              name: התפרצות
+            AI For Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
+            The Internet:
+              name: האינטרנט
+            Nested Loops in the Maze:
+              name: לולאות מקוננות במבוך
+            For Loops in Bee:
+              key: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              key: לולאות עבור עם האומן
+            AI for Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
+            Internet:
+              key: אינטרנט
+              name: האינטרנט
+          lesson_groups:
+            ramp_up:
+              display_name: דמויות
+            lessonGroup-8:
+              display_name: משתנים
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: חזרות
+        pre-express-2022:
+          lessons:
+            Programming with Angry Birds:
+              key: תכנות עם ציפורים כועסות
+              name: תכנות עם ציפורים כועסות
+            Loops with Scrat:
+              key: לולאות עם סקראט
+              name: לולאות עם סקראט
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: תנאים
+            lesson-16:
+              name: מציאת טעויות
+            lesson-19:
+              name: מציאת טעויות
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: חזרות

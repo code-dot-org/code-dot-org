@@ -44,30 +44,6 @@
         "loops/aquatic/unversioned": {
           "word": "loops"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Debugging"
         },
@@ -79,10 +55,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugging"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Կոդ"
@@ -173,6 +145,24 @@
         },
         "define/coursee/2021": {
           "word": "Սահմանել"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging"
+        },
+        "variable/csd/2021": {
+          "word": "Փոփոխական"
+        },
+        "conditionals/csd/2021": {
+          "word": "conditionals"
+        },
+        "abstraction/csd/2021": {
+          "word": "աբստրակցիա"
+        },
+        "function/csd/2021": {
+          "word": "Ֆունկցիա"
+        },
+        "copyright/csd/2021": {
+          "word": "հեղինակային իրավունք"
         }
       }
     }

@@ -366,6 +366,7 @@ gl:
       playlab: Laboratorio de Xogos
       playlab_k1: Play Lab (para Educación Infantil)
       starwars: Star Wars
+      loading: Cargando...
     popup:
       progress_for_user: progreso de %{name}'s
       progress: O teu progreso

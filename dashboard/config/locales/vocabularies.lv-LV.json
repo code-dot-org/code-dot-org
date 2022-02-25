@@ -27,28 +27,13 @@
           "word": "Atkļūdošana"
         },
         "code/artist/unversioned": {
-          "word": "Kods",
-          "definition": ""
+          "word": "Kods"
         },
         "debugging/artist/unversioned": {
-          "word": "Atkļūdošana",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Atkļūdošana"
         },
         "debugging/gumball/unversioned": {
-          "word": "Atkļūdošana",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Atkļūdošana"
         },
         "debugging/aquatic/unversioned": {
           "word": "Atkļūdošana"
@@ -59,41 +44,8 @@
         "loops/aquatic/unversioned": {
           "word": "Cikli"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
-          "word": "Atkļūdošana",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Atkļūdošana"
         },
         "debugging/mc/unversioned": {
           "word": "Atkļūdošana"
@@ -101,37 +53,14 @@
         "debugging/playlab/unversioned": {
           "word": "Atkļūdošana"
         },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Atkļūdošana",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Atkļūdošana"
         },
         "code/sports/unversioned": {
-          "word": "Kods",
-          "definition": ""
+          "word": "Kods"
         },
         "debugging/sports/unversioned": {
-          "word": "Atkļūdošana",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Atkļūdošana"
         },
         "debugging/infinity/unversioned": {
           "word": "Atkļūdošana"
@@ -139,41 +68,8 @@
         "debugging/basketball/unversioned": {
           "word": "Atkļūdošana"
         },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/poem-art/unversioned": {
-          "word": "Kods",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Kods"
         },
         "variable/coursef/2021": {
           "word": "Mainīgais"
@@ -190,113 +86,17 @@
         "debugging/coursea/2021": {
           "word": "Atkļūdošana"
         },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/coursec/2021": {
-          "word": "Atkļūdošana",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Atkļūdošana"
         },
         "binary/coursec/2021": {
-          "word": "Binārie",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Binārie"
         },
         "debugging/coursed/2021": {
-          "word": "Atkļūdošana",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Atkļūdošana"
         },
         "conditionals/coursed/2021": {
-          "word": "Sazarojumi",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sazarojumi"
         },
         "debugging/express/2021": {
           "word": "Atkļūdošana"
@@ -324,6 +124,21 @@
         },
         "define/coursee/2021": {
           "word": "Definēt"
+        },
+        "debugging/csd/2021": {
+          "word": "Atkļūdošana"
+        },
+        "variable/csd/2021": {
+          "word": "Mainīgais"
+        },
+        "conditionals/csd/2021": {
+          "word": "Sazarojumi"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
         }
       }
     }

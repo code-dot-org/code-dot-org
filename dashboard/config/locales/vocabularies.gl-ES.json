@@ -17,34 +17,6 @@
         "loops/aquatic/unversioned": {
           "word": "Bucles"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "Código"
         },
@@ -89,6 +61,21 @@
         },
         "define/coursee/2021": {
           "word": "Definir"
+        },
+        "variable/csd/2021": {
+          "word": "Variábel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstracción"
+        },
+        "function/csd/2021": {
+          "word": "Función"
+        },
+        "copyright/csd/2021": {
+          "word": "Dereitos de Autor"
         }
       }
     }

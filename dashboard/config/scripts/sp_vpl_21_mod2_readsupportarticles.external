@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Task: Practice finding a support article 
 
-<img src="https://images.code.org/e881ea7611e5646701a5f8b288921001-image-1627662136954.56.47 AM.png" alt="Screenshot of the Code.org Help and support page." style="float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/e881ea7611e5646701a5f8b288921001-image-1627662136954.56.47 AM.png" alt="Screenshot of the Code.org Help and support page." style="border:1px solid black; float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
 ### Steps to access support articles:
 
@@ -13,5 +13,5 @@ markdown <<MARKDOWN
 ##### **Step 2:** Select "Help and support" from the dropdown menu.
 ##### **Step 3:** Select and read a support article that interests you.
 
- <div style="clear:both"/>
+<div style="clear:both"/>
 MARKDOWN

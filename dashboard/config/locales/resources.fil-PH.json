@@ -2,33 +2,9 @@
   "fil-PH": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Sining ng Tula 1 - Introduksiyon",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
         },
         "exploring_apps/coursef/2021": {
           "name": "Pagtuklas ng mga Apps"
@@ -63,8 +39,15 @@
         "implementation_guide/coursef/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/coursef/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "Galawin ito, Galawin ito"
@@ -111,8 +94,15 @@
         "implementation_guide/courseb/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/courseb/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Pair programming"
@@ -132,8 +122,15 @@
         "implementation_guide/coursea/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/coursea/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Ang Robot Kong Mga Kaibigan"
@@ -180,8 +177,15 @@
         "implementation_guide/coursec/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/coursec/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Graph Paper Programming"
@@ -240,8 +244,15 @@
         "implementation_guide/coursed/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/coursed/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "pair_programming/express/2021": {
           "name": "Pair programming"
@@ -261,8 +272,186 @@
         "implementation_guide/coursee/2021": {
           "name": "Gabay sa Pagpapatupad"
         },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
         "teacher_forum_1/coursee/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Pagdidisenyo ng Koleksyon ng mga Datos"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Papel na mga Prototype"
+        },
+        "market-research/csd/2021": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "market_research/csd/2021": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "design_mode/csd/2021": {
+          "name": "Mode ng Pag-disenyo"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Mode ng Pag-disenyo"
+        },
+        "app-presentation/csd/2021": {
+          "name": "Pagpresenta ng App"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "Pagpresenta ng App"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "Pagdidisenyo ng mga Screen gamit ang Code"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Paano Gumagana ang Kompyuter: Hardware & Software"
+        },
+        "board_events/csd/2021": {
+          "name": "Mga Pangyayari sa Board"
+        },
+        "physical_input/csd/2021": {
+          "name": "Pisikal na Input"
+        },
+        "functions_2/csd/2021": {
+          "name": "Mga function"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Introduksyon sa mga Array"
+        },
+        "arrays/csd/2021": {
+          "name": "Mga Array"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For Loops"
+        },
+        "for_loops/csd/2021": {
+          "name": "For Loops"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Paano Gumagana ang Kompyuter: Circuits & Logic"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Pagrepresenta ng Impormasyon"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Pagrepresenta ng mga Numero"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "Pagiging Sekreto ng mga Datos"
+        },
+        "structuring_data/csd/2021": {
+          "name": "Pagsasaayos ng mga Datos"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Paggawa ng mga Desisyon na may mga Datos"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Mga Datos sa Tunay na Mundo"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Mga Datos sa Tunay na Mundo"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Machine Learning"
+        },
+        "variables_1/csd/2021": {
+          "name": "Mga variable"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Ang Animation na Tab"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Mga Sprites"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "Ang Draw na Loop"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Galaw ng mga Sprite"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Belosidad"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Belosidad"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Mga function"
+        },
+        "functions_1/csd/2021": {
+          "name": "Mga function"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Ano ang isang Kompyuter?"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Input at Output"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Input at Output"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Mga App at Paglutas ng Problema"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Mga App at Paglutas ng Problema"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Mga App at Paglutas ng Problema"
+        },
+        "lists/csd/2021": {
+          "name": "Mga listahan"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Digital na Bakas"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Intro sa CSS - Yugto 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Intro sa CSS - Yugto 2"
+        },
+        "images_in_html/csd/2021": {
+          "name": "Mga Larawan sa HTML"
+        },
+        "classes/csd/2021": {
+          "name": "Mga Klase"
         }
       }
     }

@@ -68,6 +68,8 @@ in:
   oceans_behind_the_scenes_2_markdown: crwdns2364794:0crwdne2364794:0
   social_hoc2019_oceans_title: crwdns2289849:0crwdne2289849:0
   social_hoc2019_oceans_desc: crwdns2289851:0crwdne2289851:0
+  social_coldplay_title: crwdns2866852:0crwdne2866852:0
+  social_coldplay_desc: crwdns2866854:0crwdne2866854:0
   hoc_live: crwdns2471238:0crwdne2471238:0
   hoc_live_sign_up_title: crwdns2471240:0crwdne2471240:0
   hoc_live_learn_title: crwdns2481826:0crwdne2481826:0
@@ -628,6 +630,7 @@ in:
   footer_menu_support: crwdns105065:0crwdne105065:0
   footer_menu_terms: crwdns105066:0crwdne105066:0
   footer_menu_privacy: crwdns105067:0crwdne105067:0
+  footer_menu_cookie: crwdns2864139:0crwdne2864139:0
   learn_banner_heading: crwdns105068:0crwdne105068:0
   learn_banner_blurb: crwdns105069:0crwdne105069:0
   learn_banner_beyond: crwdns105070:0crwdne105070:0
@@ -6493,6 +6496,13 @@ in:
   tutorial_irobottools_string_detail_programming_languages: crwdns2712875:0crwdne2712875:0
   tutorial_kindercar_string_detail_programming_languages: crwdns2712877:0crwdne2712877:0
   tutorial_caavatar_string_detail_programming_languages: crwdns2712879:0crwdne2712879:0
+  tutorial_icomputefireworks_name: crwdns2721823:0crwdne2721823:0
+  tutorial_icomputefireworks_longdescription: crwdns2721825:0crwdne2721825:0
+  tutorial_icomputefireworks_language: crwdns2721827:0crwdne2721827:0
+  tutorial_icomputefireworks_string_detail_grades: crwdns2721829:0crwdne2721829:0
+  tutorial_icomputefireworks_string_platforms: crwdns2721831:0crwdne2721831:0
+  tutorial_icomputefireworks_string_detail_platforms: crwdns2721833:0crwdne2721833:0
+  tutorial_icomputefireworks_string_detail_programming_languages: crwdns2721835:0crwdne2721835:0
   school_not_found_heading: crwdns107258:0crwdne107258:0
   school_name: crwdns107259:0crwdne107259:0
   school_name_error: crwdns107260:0crwdne107260:0

@@ -13,10 +13,10 @@
           "2-3_Artist_Nested_Loops_5_a": "एक वर्ग के ऊपर से उस स्थान तक जाने के लिए `आगे की ओर कूदें` ब्लॉक का उपयोग करने का प्रयास करें, जहां आप अगला शुरू करेंगे।\n\nयदि आपके वर्ग 20 पिक्सल लंबे हैं और वे 20 पिक्सल की दूरी पर हैं, तो आपको कितनी दूर कूदने की जरूरत है?"
         },
         "2-3 Bee Functions 8": {
-          "2-3_Bee_Functions_8_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]"
+          "2-3_Bee_Functions_8_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         },
         "2-3 Bee Functions 9": {
-          "2-3_Bee_Functions_8_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "2-3_Bee_Functions_8_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे",
           "2-3_Bee_Functions_8_b": "हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना याद रखें।\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
         },
         "2-3 Maze 6": {
@@ -349,15 +349,15 @@
           "courseF_artist_variables3_b": "50 के मूल्य वाला नंबर ब्लॉक केवल एक स्थान पर होगा: `लंबाई सेट करें` ब्लॉक।"
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_c": "यह वह पैटर्न है, जिसका अनुसरण आपका कलाकार करेगा:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
+          "courseF_artist_variables4_c": "यह वह पैटर्न है, जिसका अनुसरण आपका कलाकार करेगा:\n\n[][0]",
           "courseF_artist_variables4_a": "आपका कोड उससे ज्यादा अलग नहीं होगा, जैसे यह पिछली पहेली में था, सिवाय इसके कि आपको नीचे कूदने के लिए कलाकार को मोड़ने, फिर उसे अगला त्रिकोण चित्रित करने के लिए तैयार करने हेतु वापस मोड़ने की जरूरत होगी।",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "आपके कोड का दूसरा आधा हिस्सा लगभग पहले आधे हिस्से की तरह दिखाई देगा, सिवाय इसके कि आप मुड़ना_बाएं_, कूदना, फिर मुड़ना _दाएं_ करेंगे।",
           "courseF_artist_variables5_b": "आपके कोड का पहला आधा हिस्सा तीन त्रिकोण खींचेगा, और दूसरा आधा हिस्सा अन्य तीन खींचेगा।",
           "courseF_artist_variables5_c": "अपने प्रोग्राम के पहले आधे हिस्से में कोड की प्रतिलिपि तैयार करके शुरुआत करें, फिर इसे दिखाया गया डिज़ाइन बनाने के लिए बदलें।",
-          "courseF_artist_variables5_d": "यह वह पैटर्न है, जिसका अनुसरण आपका कलाकार करेगा:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "यह वह पैटर्न है, जिसका अनुसरण आपका कलाकार करेगा:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "कुछे रास्ते हैं, जिन्हें आप ले सकते हैं। कौन-सा सबसे छोटा है?",
@@ -601,17 +601,17 @@
           "courseC_maze_programming_challenge2_a": "_\"यदि आप मुझे पीछे की ओर भेजते हैं, तो अतिरिक्त सावधानी बरतें कि मैं सही तरफ मुड़ जाऊं!\"_"
         },
         "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course3_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "इस प्रोग्राम का पहला आधा भाग क्या काम करता है? इस बारे में सोचें कि मधुमक्खी को पीछे की ओर मूव करने की जरूरत क्यों है। मधुमक्खी जब हर बार फूल की ओर मूव करती है तो कितना मधुरस एकत्र कर लेती है?"
         },
         "course3_bee_functions_challenge1": {
-          "courseE_bee_functions_challenge1_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "courseE_bee_functions_challenge1_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे",
           "courseE_bee_functions_challenge1_b": "हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना याद रखें।"
         },
         "course3_bee_functions_challenge2": {
-          "courseE_bee_functions_challenge1_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "courseE_bee_functions_challenge1_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे",
           "courseE_bee_functions_challenge1_b": "हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना याद रखें।"
         },
         "course3_bee_functions_challenge3": {
@@ -636,7 +636,7 @@
           "courseE_artist_concept_challenge2_b": "आप इस कमांड का उपयोग करते हुए कैनवास पर अलग-अलग पोजीशनों पर कूद सकते हैं:\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
         },
         "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course4_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_a": "प्रत्येक लंबवत लाइन की लंबाई `10` है। प्रत्येक क्षैतिज लाईन `लंबाई` लंबी होनी चाहिए।",
@@ -3456,7 +3456,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "इससमस्याकेबारेमेंछोटेभागोंमेंसोचनेकीकोशिशकरें।पूरासमयलें।आपकेलिएइसेपहलीबारमेंहीहलजरूरीनहींहै!",
           "course_starWars_loops8_b": "आधासमयइससमस्याकोसीढीकेस्टेपकेतौरपरसोचें।आपनेपहलेउसेकैसेहलकियाथा?",
-          "course_starWars_loops8_c": "इसरास्तेपरएकनज़रडालें।\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "इसरास्तेपरएकनज़रडालें।\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "आप `दोहराएं` लूप के अंदर एक से अधिक ब्लॉक रख सकते हैं।",
@@ -4128,7 +4128,7 @@
           "courseD_bee_conditionals4_hintVid1": "क्याशुरुआतकरनेमेंमददकीजरूरतहै?वीडियोदेखें!",
           "courseD_bee_conditionals4_a": "आपतबभीप्रत्येकस्थानसेइसतरहव्यवहारकरसकतेहैंकिमानोइसपरबादलहो,चाहेआपपूरारास्तादेखसकतेहों।",
           "courseD_bee_conditionals4_b": "मधुरसकेप्रत्येकस्थानकोदेखनेकेलिएअपनीलूपकेअंदर`इफ`स्टेटमेंटकाउपयोगकरें।",
-          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml>blockब्लॉककाउपयोगकरतेहुए,आपकोआगेकीओरमूवकरकेफूलकोदेखें।यदिवहांफूलहै,तोमधुमक्खीकोक्याकरनाचाहिए?",
+          "courseD_bee_conditionals4_c": "[blocklyblock][0]blockब्लॉककाउपयोगकरतेहुए,आपकोआगेकीओरमूवकरकेफूलकोदेखें।यदिवहांफूलहै,तोमधुमक्खीकोक्याकरनाचाहिए?",
           "courseD_bee_conditionals4_hintVid2": "इसपहेलीकोहलकरनेमेंमददकेलिएयहवीडियोदेखें।"
         },
         "courseD_bee_conditionals5": {
@@ -5295,7 +5295,7 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "जो फंक्शन आप लिखें, उसमें आपका पूरा प्रोग्राम शामिल नहीं होना चाहिए, केवल आंशिक होना चाहिए, जो 100 पिक्सल की भुजाओं वाला वर्ग खींचता हो",
-          "courseD_artist_functions2_c": "`जब चलाएं` ब्लॉक के अंतर्गत अपने फंक्शन को \"बोलने” के लिए हरा `वर्ग खींचें` ब्लॉक का उपयोग करें। अन्यथा, आपके फंक्शन में कोड नहीं चलेगा।\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "`जब चलाएं` ब्लॉक के अंतर्गत अपने फंक्शन को \"बोलने” के लिए हरा `वर्ग खींचें` ब्लॉक का उपयोग करें। अन्यथा, आपके फंक्शन में कोड नहीं चलेगा।\n\n[blockly block][0]",
           "courseD_artist_functions2_a": "आपके प्रोग्राम को यह करना चाहिए:\n\n-   फंक्शन का उपयोग\n-   100 + 75 पिक्सल आगे की ओर मूव करना\n-   फंक्शन का उपयोग"
         },
         "courseE_artist_functions3": {
@@ -5430,16 +5430,16 @@
           "courseE_artist_functions_challenge1_b": "आप अन्य पोजीशनों पर `कूद` भी सकते हैं या अपनी पसंद से पूरा डिज़ाइन बदल भी सकते हैं!"
         },
         "courseE_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge2_2018": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge2_2019": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_functions_challenge2_2020": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_a": "To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.",
@@ -5540,11 +5540,11 @@
           "courseE_bee_functions5_b": "आपका फंक्शन मधुमक्खी को निम्नलिखित के लिए सक्रिय करेगा: \n\n-   मुड़ें\n-   आगे की ओर मूव करें\n-   सारा मधुरस एकत्र करें\n-   पीछे की ओर मूव करें\n-   उस दिशा में वापस मुड़ें, जहां से मधुमक्खी ने शुरू किया था"
         },
         "courseE_bee_functions6": {
-          "courseE_bee_functions6_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "courseE_bee_functions6_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)",
           "courseE_bee_functions6_b": "यह फंक्शन को अंदर मूव करने की स्थिति में सहायक हो सकता है, लेकिन आपके सभी `मूव करें` ब्लॉक्स के वहां होने की जरूरत नहीं है।"
         },
         "courseE_bee_functions7": {
-          "courseE_bee_functions7_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "courseE_bee_functions7_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे",
           "courseE_bee_functions7_b": "हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना याद रखें।\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)",
           "courseE_bee_functions7_c": "यह फंक्शन मधुमक्खी को रास्ते में नीचे मुड़ने, मधुरस एकत्र करने, शहद बनाने, फिर मधुमक्खी को चारों ओर मुड़ने के लिए सक्रिय करेगा और फिर उसे वापस लाएगा।"
         },
@@ -5558,11 +5558,11 @@
           "courseE_bee_functions9_b": "हाालंकि आपको पता है कि कुछ फूलों में कितना मधुरस होता है, `व्हाइल` लूप उन सभी के लिए एक फंक्शन को क्रियाशील बना सकती है।"
         },
         "courseE_bee_functions_challenge1": {
-          "courseE_bee_functions_challenge1_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "courseE_bee_functions_challenge1_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे",
           "courseE_bee_functions_challenge1_b": "हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना याद रखें।"
         },
         "courseE_bee_functions_challenge2": {
-          "courseE_bee_functions_challenge1_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "courseE_bee_functions_challenge1_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे",
           "courseE_bee_functions_challenge1_b": "हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना याद रखें।"
         },
         "courseE_farmer_concept1": {
@@ -6521,11 +6521,11 @@
           "courseF_bee_functions7_b": "अपनी उंगली से इस पहेली का रास्ता चित्रित करने का प्रयास करें। मधुमक्खी को कहां निर्णय लेना होगा?"
         },
         "courseF_bee_functions8a": {
-          "courseF_bee_functions8a_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "courseF_bee_functions8a_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे",
           "courseF_bee_functions8a_b": "फंक्शन संपादक के अंदर कोड बनाना याद रखें।"
         },
         "courseF_bee_functionsPre7": {
-          "courseF_bee_functions7_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]",
+          "courseF_bee_functions7_a": "यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे",
           "courseF_bee_functions7_b": "हरे फंक्शन ब्लॉक के अंदर कोड बनाना याद रखें।\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n    </statement>\n  </block>\n</xml>",
           "courseF_bee_functions7_c": "यदि वहां मधु का छत्ता हो तो आपको किस ओर मुड़ना चाहिए? फूल के बारे में क्या कहेंगे? तब क्या होगा, यदि वहां कुछ भी न हो?"
         },
@@ -8015,7 +8015,7 @@
           "courseE_artist_functions_challenge1_b": "आप अन्य पोजीशनों पर `कूद` भी सकते हैं या अपनी पसंद से पूरा डिज़ाइन बदल भी सकते हैं!"
         },
         "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]"
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_farmer_functions1_2021": {
           "courseE_farmer_functions1_a": "इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से ब्लॉक्स हैं।",
@@ -8608,7 +8608,7 @@
           "4-5_Artist_1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
@@ -8746,7 +8746,7 @@
         },
         "poetry_hoc_events1": {
           "do_effect_hint": "यह नया `इफेक्ट डालें` ब्लॉक एक बार एक नया इफ़ेक्ट जोड़ देगा। \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\n\nआप इफ़ेक्ट को लंबे समय तक बनाए रखने के लिए एक से अधिक `इफ़ेक्ट डालें` एक दूसरे के ऊपर डाल सकते हैं। \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
-          "background_effect_hint": "आप इस तरह दिखने वाले कोड के साथ इवेंट ब्लॉक के तहत अन्य इफ़ेक्ट जोड़ सकते हैं: \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
+          "background_effect_hint": "आप इस तरह दिखने वाले <xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml> कोड के साथ इवेंट ब्लॉक के तहत अन्य इफ़ेक्ट जोड़ सकते हैं: ",
           "more_events_hint": "आप अपने प्रोग्राम में एक से अधिक ईवेंट का इस्तेमाल कर सकते हैं। कविता में नई पंक्तियों का मिलान करने के लिए अलग-अलग इफ़ेक्ट वाली दो इवेंट का इस्तेमाल करने का प्रयास करें। \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
@@ -8757,7 +8757,13 @@
           "add_behavior": "अपने कोड में एक `स्प्राइट शुरू होता है` ब्लॉक जोड़ें। सुनिश्चित करें कि आपने पहले से ही वह स्प्राइट बना लिया है जिसमें व्यवहार आप डाल रहे हैं। \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "इस ब्लॉक को ढूंढें और `150` पर क्लिक करें .\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nक्या होगा जब संख्या `25`हो? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block>></xml>"
+          "size hint": "इस ब्लॉक को ढूंढें और `150` पर क्लिक करें .\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nक्या होगा जब संख्या `25`हो? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "एजेंट से कुछ पुल बनवाने का प्रयास करें ताकि एलेक्स या स्टीव मानचित्र के किनारों से आगे घूम पाएं।"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "पिज़्ज़ा को कुछ कहने के लिए, कोड के ब्लॉक इस तरह से कनेक्ट करें:"
         }
       }
     }

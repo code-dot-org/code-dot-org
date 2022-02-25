@@ -79,9 +79,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "44c5937d-c5c0-4676-bd0c-f7a86e99dd98": {
       "name": "bee",
@@ -94,9 +92,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "b2QZ1J9ww5XYdjExrVb7lWgP2q6Gfx1C",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "45b457bb-5b22-48f7-8664-4b38957d7799": {
       "name": "brown bunny",
@@ -109,9 +105,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "uPIxfWA_cXFQ3rZjtIfd5beAWtSMrP1l",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "d15af884-fb27-455f-b73a-899d07ce8975": {
       "name": "purple bunny",
@@ -124,10 +118,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "kBiszeGACcLTGTrqmS4laPVQKPGQnDln",
-      "categories": [
-        "animals",
-        "characters"
-      ]
+      "categories": ["animals", "characters"]
     },
     "2e9c703b-d8cd-44e5-8cf2-c0d5940b84dc": {
       "name": "corgi",
@@ -140,9 +131,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "VtKpUDKH2C9JjfbimUkhbbH.dHQ5t7ex",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "b287e053-266b-4eaa-ad59-310083ce3398": {
       "name": "cow",
@@ -155,9 +144,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "ROqEBwbLmX6qg9Acz.DUkfyl2gaMh4lP",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "986fdd82-f8e0-4674-806c-62d18f0ca9c3": {
       "name": "crab",
@@ -170,9 +157,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "SdV.w3j8_4Djmt1L5C_gEVpS2VTh53Od",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "0a84474a-a327-47c9-8377-c1c478001cec": {
       "name": "elephant",
@@ -185,9 +170,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "jK3q6UNbOMNbaiWBwclkhL3D8isE1cLQ",
-      "categories": [
-
-      ]
+      "categories": []
     },
     "7ecbad62-f575-48eb-8861-b42dbf62d545": {
       "name": "fish",
@@ -200,9 +183,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "CwVno2kER.r_tECMOL4D4YL.lcaFNv7h",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "9b98c484-57b8-40cc-ad45-1d1ed02336d6": {
       "name": "hippo",
@@ -215,9 +196,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "zqsDGpXOezy.SxANtxyxyThklFz1v1.1",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "1124b3e0-1430-451f-a8b2-137ce8091759": {
       "name": "ladybug",
@@ -230,9 +209,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "BF9M9h767oyE2PE2u8uCA2pDQzJG19ji",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "2c93ddd7-1058-4df8-b4a1-73c1f70a1772": {
       "name": "mouse",
@@ -245,9 +222,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "sTV_ECoTPZ4e322cfbiihNiMroU13hpD",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "7887ec4e-1a27-4bfe-898c-3049b131cbe4": {
       "name": "pig",
@@ -260,9 +235,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3",
-      "categories": [
-        "animals"
-      ]
+      "categories": ["animals"]
     },
     "f1c617e5-4a3f-4f04-90f0-7e0305df84af": {
       "name": "bell",
@@ -275,9 +248,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "PXwfEV0ey9ywPrIX.eBetY3EPIBehUdU",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "8545eeec-aa1c-4193-9896-30e93f7af76b": {
       "name": "book",
@@ -290,9 +261,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "LjwHKxijspVx1mP9MzObUvyxK5WG3oim",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "fa2a0e9e-e38d-40ee-89a0-cdb72a1fa6cc": {
       "name": "compass",
@@ -305,9 +274,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "2dfHfS8SHX0KZKAOFL4p1tpdmcyE.P5q",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "fc4aa65d-fb3c-40af-9845-786503764ad3": {
       "name": "computer monitor",
@@ -320,9 +287,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "AV67_BG0DzS_w3UNmSsT7JXTV_wmaBeo",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "a1d0480c-1263-4847-b188-c892024f6bb8": {
       "name": "first aid kit",
@@ -335,9 +300,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "qJH1.9rzwUqhdOsDInXK3DZLW2JQLHjE",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "a5cf7f32-903e-4d01-b163-08e61c9d39aa": {
       "name": "keys",
@@ -350,9 +313,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "yLPZZ9U2U5MNSf321I3XMwS_kAw9LyZZ",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "dfe7d8cc-9097-4fae-a02c-d1951aaf32dc": {
       "name": "money",
@@ -365,9 +326,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "WOADjHCtrTpzfug5zO08.VemfZQxczxM",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "98b0bab9-36ca-43b1-8370-c520949c5ec4": {
       "name": "paint pallette",
@@ -380,9 +339,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "N1aMvPy04__knoU3yolIxey_2v3kCnN3",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "a2110245-266a-42ab-b8dc-84b4165924b5": {
       "name": "potion",
@@ -395,9 +352,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "lwbDlPwSetDvZN1Qg.5X9rLcUirjG5ZZ",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "f755eca1-9df6-4723-bd2e-0176c7ee1cfd": {
       "name": "tablet",
@@ -410,9 +365,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "nBBhpOU7OIfXpQlr3_A3Qc2rXHON5Pyo",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "d197b759-38ef-4973-a43b-4a07653f62b7": {
       "name": "teapot",
@@ -425,9 +378,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "8sssIK6UnCKrpe.Zuv3D3QCDOsIj4CnM",
-      "categories": [
-        "generic items"
-      ]
+      "categories": ["generic items"]
     },
     "8c1a5163-04a8-4d78-9886-dc2ca8a2d536": {
       "name": "boat",
@@ -440,84 +391,72 @@
       "looping": true,
       "frameDelay": 2,
       "version": "oI8SYIuf5aImfljkVGuZQjPe_qAA.3Do",
-      "categories": [
-        "vehicles"
-      ]
+      "categories": ["vehicles"]
     },
     "20c00311-89c5-4eeb-98c9-3edb5ebad13e": {
       "name": "black car",
-      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/f6UiaZsQPPCFNgNO9Mcdy1EgAC_1JWTw/category_vehicles/car_black.png",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/0lBn3xCLJZlin7ivKqBjD.7HTJDRBHeZ/category_vehicles/car_black.png",
       "frameSize": {
-        "x": 71,
-        "y": 131
+        "x": 131,
+        "y": 71
       },
       "frameCount": 1,
       "looping": true,
       "frameDelay": 2,
-      "version": "f6UiaZsQPPCFNgNO9Mcdy1EgAC_1JWTw",
-      "categories": [
-        "vehicles"
-      ]
+      "version": "0lBn3xCLJZlin7ivKqBjD.7HTJDRBHeZ",
+      "categories": ["vehicles"]
     },
     "6fa37cd5-4ca2-417a-a603-a3a66e0446be": {
       "name": "blue car",
-      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/hIV5hwpg4j64uoioQoAr_dkM20tRdbCJ/category_vehicles/car_blue.png",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/QNi1wKq8_tXRnejQdBn8_zgJ6Jf1F_yc/category_vehicles/car_blue.png",
       "frameSize": {
-        "x": 71,
-        "y": 131
+        "x": 131,
+        "y": 71
       },
       "frameCount": 1,
       "looping": true,
       "frameDelay": 2,
-      "version": "hIV5hwpg4j64uoioQoAr_dkM20tRdbCJ",
-      "categories": [
-        "vehicles"
-      ]
+      "version": "QNi1wKq8_tXRnejQdBn8_zgJ6Jf1F_yc",
+      "categories": ["vehicles"]
     },
     "8ec43d69-3ae4-4a5f-867d-41bc549a5348": {
       "name": "green car",
-      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/8NcV6Ju_WCltp8Tx9Z_SiAjpVo_H_HRK/category_vehicles/car_green.png",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/UEAWMH.YSbQdPRF2y5wIQ5_k4CC4YkIj/category_vehicles/car_green.png",
       "frameSize": {
-        "x": 71,
-        "y": 131
+        "x": 131,
+        "y": 71
       },
       "frameCount": 1,
       "looping": true,
       "frameDelay": 2,
-      "version": "8NcV6Ju_WCltp8Tx9Z_SiAjpVo_H_HRK",
-      "categories": [
-        "vehicles"
-      ]
+      "version": "UEAWMH.YSbQdPRF2y5wIQ5_k4CC4YkIj",
+      "categories": ["vehicles"]
     },
     "2256652a-d12f-433f-a8d7-ba1db9869aca": {
       "name": "red car",
-      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/cuyAiiAvL6Yqn.vTw2.HeDXqGXSQxH0L/category_vehicles/car_red.png",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/pdfd16yWiuCkzL.IVlYq1SSosQSPrLZe/category_vehicles/car_red.png",
       "frameSize": {
-        "x": 71,
-        "y": 131
+        "x": 131,
+        "y": 71
       },
       "frameCount": 1,
       "looping": true,
       "frameDelay": 2,
-      "version": "cuyAiiAvL6Yqn.vTw2.HeDXqGXSQxH0L",
-      "categories": [
-        "vehicles"
-      ]
+      "version": "pdfd16yWiuCkzL.IVlYq1SSosQSPrLZe",
+      "categories": ["vehicles"]
     },
     "b16c1f8d-cbf3-4d00-b597-547a4aafb909": {
       "name": "yellow car",
-      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/Tfk8fRkUNkkl85SiTwxCG24LrsVNvhJK/category_vehicles/car_yellow.png",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/d0RI2Pc1wkXZsac.5orilt2QcrzynLy3/category_vehicles/car_yellow.png",
       "frameSize": {
-        "x": 71,
-        "y": 131
+        "x": 131,
+        "y": 71
       },
       "frameCount": 1,
       "looping": true,
       "frameDelay": 2,
-      "version": "Tfk8fRkUNkkl85SiTwxCG24LrsVNvhJK",
-      "categories": [
-        "vehicles"
-      ]
+      "version": "d0RI2Pc1wkXZsac.5orilt2QcrzynLy3",
+      "categories": ["vehicles"]
     },
     "7ae82ac5-bf20-4627-9575-574e29c241c0": {
       "name": "blue plane",
@@ -530,9 +469,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "grzc0jLLnQ2NSxjwUjplDJj.R2E10flT",
-      "categories": [
-        "vehicles"
-      ]
+      "categories": ["vehicles"]
     },
     "fbf2ef19-964e-4593-9822-9eaf8b8e187f": {
       "name": "red plane",
@@ -545,9 +482,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "AX6K06DecwVXhRO4AvAt7SLsE7NtvfNt",
-      "categories": [
-        "vehicles"
-      ]
+      "categories": ["vehicles"]
     },
     "5dd1aea2-1f2d-4b7a-90eb-9895b2fc3608": {
       "name": "blue alien",
@@ -560,9 +495,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "ejbq67QKuPrQTpRKtoL.M2HVHzpNduns",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "50274781-8652-48d9-b5ad-03c22efe835a": {
       "name": "green alien",
@@ -575,9 +508,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "DW4DypUlfossYbRM0NcaMXXGBvbs9tJW",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "7a423fba-22b9-42f0-bf37-5ebc5cdf525e": {
       "name": "pink alien",
@@ -590,9 +521,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "da54705b-2478-480b-bda3-758d6c348f3b": {
       "name": "yellow alien",
@@ -605,9 +534,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "7iIxntwgHtrM.IEp6Ga2OFAGz1Ciq_y1",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "9b89d959-be06-45ed-af41-6861b1288e38": {
       "name": "ghost",
@@ -620,9 +547,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "X2R5uPhDuVXpg9iy6qK_kYrY9KWXxASH",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "41f01d32-2495-486b-9a58-b9a188e5ce73": {
       "name": "orange monster",
@@ -635,9 +560,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "PYXi1AIsJ3QoaegkbPhHIqcC.yWg_t0X",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "9deaf802-3ed1-4e9f-ac5b-0a8fd6985c13": {
       "name": "green monster",
@@ -650,9 +573,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "rT9oAB0skB62_LtrjffjYO0SrACE6D_Y",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "dbfa88e2-0c41-48a6-9047-4b4295cfe73f": {
       "name": "purple monster",
@@ -665,9 +586,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "CdlNOvtih6CV7QUekCCPH7e11tMwCGQh",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "b707e334-a22a-43bb-87eb-035ed95bc104": {
       "name": "cloud",
@@ -680,9 +599,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "zQs0ejWu81wIiZyi4WyF0G0efY1RG5kY",
-      "categories": [
-        "environment"
-      ]
+      "categories": ["environment"]
     },
     "5b94a14f-5bb3-432d-9594-fc724897c840": {
       "name": "rock",
@@ -695,9 +612,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "bwzgoXDO24mMPbQmo21kn4tqxa8CZm_X",
-      "categories": [
-        "environment"
-      ]
+      "categories": ["environment"]
     },
     "be61640e-babf-45ca-84d7-9bbf6c8295db": {
       "name": "sun",
@@ -710,9 +625,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "5i6Vfj3NhrIHW5XFDTfF6K0y4Xegltto",
-      "categories": [
-        "characters"
-      ]
+      "categories": ["characters"]
     },
     "22e9fe74-0bf7-46aa-9d19-94d0eb00381b": {
       "name": "apple",
@@ -725,9 +638,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "vbw9BDeBFLTx8OXL1VvVXKtSU8Bchm7_",
-      "categories": [
-        "food"
-      ]
+      "categories": ["food"]
     },
     "749d51c7-59ce-4c94-bc4f-12c5234d4a29": {
       "name": "carrot",
@@ -740,9 +651,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "LktfiFiKxVZilg.oRMm7BIzGPEA3igqc",
-      "categories": [
-        "food"
-      ]
+      "categories": ["food"]
     },
     "92997275-4280-46dd-9672-4a31de5913b9": {
       "name": "cupcake",
@@ -755,9 +664,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "9YuGeoTtld.6UW7A462ht9nigqil_6xs",
-      "categories": [
-        "food"
-      ]
+      "categories": ["food"]
     },
     "5b430010-3b8f-4e86-a1e1-468d229416d3": {
       "name": "mushroom",
@@ -770,9 +677,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "12FsgKxv2Cvon5LWsmLIZQckWyx.tAyv",
-      "categories": [
-        "food"
-      ]
+      "categories": ["food"]
     },
     "f34f4a47-214f-4e38-94d0-dd07cb2b1dcd": {
       "name": "watermelon",
@@ -785,9 +690,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "5BW1xx6Sl6Ec6d_sOSReEIOe5W.UXMiG",
-      "categories": [
-        "food"
-      ]
+      "categories": ["food"]
     },
     "68917b8c-768a-407e-8258-1e6ebbb2340e": {
       "name": "gold coin",
@@ -800,9 +703,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "Vs3f3C74lKLX_.v83wHjBOqPduB14F0T",
-      "categories": [
-        "gameplay"
-      ]
+      "categories": ["gameplay"]
     },
     "74539f4c-9f4e-4229-aad7-2650454c3e8a": {
       "name": "silver coin",
@@ -815,9 +716,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "kDI1bxJye5Z4LS0frg.jfN6qZ0piUaxl",
-      "categories": [
-        "gameplay"
-      ]
+      "categories": ["gameplay"]
     },
     "08aa254e-653d-4ca0-b943-fc2233db3cde": {
       "name": "target",
@@ -830,9 +729,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC",
-      "categories": [
-        "gameplay"
-      ]
+      "categories": ["gameplay"]
     },
     "20c80bcb-26c2-4701-b3ce-9d8dbe96d459": {
       "name": "cactus",
@@ -845,9 +742,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "fvP_YDSp32ON.B1R69F.ha4Et2iu.U5W",
-      "categories": [
-        "obstacles"
-      ]
+      "categories": ["obstacles"]
     },
     "a8dabd2a-6faf-4ab5-b870-ee9540d256dc": {
       "name": "wheat",
@@ -860,9 +755,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "1T4NkoECSpVfV_gWsnBrrMcXWDhL5Heb",
-      "categories": [
-        "obstacles"
-      ]
+      "categories": ["obstacles"]
     },
     "12eda44b-58ef-4696-9d37-06623620383b": {
       "name": "soap",
@@ -875,9 +768,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ",
-      "categories": [
-
-      ]
+      "categories": []
     },
     "8ca751af-ef34-4fd4-9e96-6e985f93f4c2": {
       "name": "cave",
@@ -890,9 +781,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "3LUT4MZxHDWhZbAtYtEmQD1ZrfwQ7jFG",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "d0b3ee56-4324-426a-bd7c-72ea9aec2755": {
       "name": "court",
@@ -905,9 +794,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "ljzwi6meI5Bef4xgi7Vm17lrAQgnsQb6",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "90ce56d0-f5f9-45ec-a012-32e7e2f57e15": {
       "name": "desert",
@@ -920,9 +807,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "5vYFILCZh.Lr7UIRnzfvkUs.NB9rNzmA",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "4b4e5d34-d8d3-4c1a-9d41-e94193afb092": {
       "name": "grid",
@@ -935,9 +820,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "nG_cj1NXQ56VOdqMbGXqKxKupa4bCoNQ",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "bd424603-10eb-4e88-8160-4f5e8d1b0e59": {
       "name": "rainbow",
@@ -950,9 +833,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "MYI66A.p.d.nsybsDI1jgCMx1bikkVBV",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "62326fd3-5701-4f32-ac89-c5520fa2430a": {
       "name": "sci_fi",
@@ -965,9 +846,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "VgCmbJgqgLF9jDbyXCgmEdiExTouoSzM",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "1acf1c10-82d5-42f2-b5f6-9462be53f87a": {
       "name": "space",
@@ -980,9 +859,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "Qbu7Ts39zZI4Ge1hsHJOCv4Hn.Uc4vP6",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "9f985df8-6ac3-417f-bcae-6f19e26246df": {
       "name": "underwater",
@@ -995,9 +872,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "BX96uCjiPxLoAtJ6WtsGBIoupYXpXjZC",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "918cc09b-0fea-41b7-a64f-ea8fc3d427c9": {
       "name": "city",
@@ -1010,9 +885,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "qd8rCUFQjPYGQ3DxHN5FR0wnUsRqyZ66",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "1d88dc5d-48f6-42fa-b0e6-a2f18ce9f811": {
       "name": "floating_grass",
@@ -1025,9 +898,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "RH.MmPr8zDcQ7sl7X3Cl3.pXLfUQHDdQ",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "d6c15c0b-6556-4a40-b9cd-245c53bfdad2": {
       "name": "living_room",
@@ -1040,9 +911,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "5zAL.r_K1YSVWBuf3S3Ehr6JZqAG3v5q",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     },
     "3d97df38-3c67-497b-937f-48061076fe79": {
       "name": "stage",
@@ -1055,9 +924,7 @@
       "looping": true,
       "frameDelay": 2,
       "version": "o5tnEelSHuct9HvjREeeWLfGyl4lNx9e",
-      "categories": [
-        "backgrounds"
-      ]
+      "categories": ["backgrounds"]
     }
   }
 }

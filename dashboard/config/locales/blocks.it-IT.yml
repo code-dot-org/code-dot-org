@@ -359,6 +359,8 @@ it:
             '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
+            '"spiral"': spirale
+            '"infinity"': Linea dell'infinito
             '"random"': a caso
       Dancelab_makeAnonymousDanceSprite:
         text: |-
@@ -443,6 +445,26 @@ it:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': tutti gli alieni
             '"BEAR"': orsi
@@ -470,6 +492,8 @@ it:
             '"right"': colonna a destra
             '"x"': croce
             '"plus"': più
+            '"spiral"': spirale
+            '"infinity"': Linea dell'infinito
             '"random"': a caso
       Dancelab_mixColors:
         text: mescola {COLOR1} e {COLOR2}
@@ -533,6 +557,7 @@ it:
             '"fireworks"': Fuochi d'artificio
             '"flowers"': Fiori
             '"growing_stars"': Stelle nascenti
+            '"higher_power"': Higher Power
             '"swirl"': Ipnotico
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista da ballo del laser
@@ -1003,6 +1028,21 @@ it:
         text: quando si clicca su {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): rotazione oraria
+            new Behavior(spinning_left, []): rotazione anti-oraria
+            new Behavior(fluttering, []): ondeggiamento
+            new Behavior(jittering, []): pulsazione
+            new Behavior(wobbling, []): barcollamento
+            new Behavior(wandering, []): movimento casuale
+            new Behavior(patrolling, []): pattugliamento
+            new Behavior(moving_west_and_looping, []): spostamento verso ovest e ciclo
+            new Behavior(moving_east_and_looping, []): spostamento verso est e ciclo
+            new Behavior(moving_north_and_looping, []): spostamento verso nord e ciclo
+            new Behavior(moving_south_and_looping, []): spostamento verso sud e ciclo
       gamelab_comment:
         text: 'commento: {COMMENT}'
       gamelab_costumeImage:
@@ -1055,6 +1095,20 @@ it:
         text: |-
           se {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: Il costume di {SPRITE} è {COSTUME}
       gamelab_isKeyPressed:
@@ -1250,6 +1304,13 @@ it:
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_playSpeech:
         text: riproduci discorso {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): movimento con tasti freccia
+            new Behavior(driving_with_arrow_keys, []): guida con tasti freccia
+            draggable(): trascinabile
       gamelab_pointInDirection:
         text: orienta {SPRITE} in direzione {DIRECTION}
         options:
@@ -1274,6 +1335,8 @@ it:
         text: togli il colore da {THIS}
       gamelab_repeatForever:
         text: ripeti per sempre
+      gamelab_resetTimer:
+        text: Azzera il timer
       gamelab_setAnimation:
         text: "{THIS} usa il costume {ANIMATION}"
       gamelab_setBackground:
@@ -1365,6 +1428,14 @@ it:
             '"scale"': dimensione
             '"width"': larghezza
             '"height"': altezza
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lenta
+            '5': normale
+            '7': veloce
+            '9': extra fast
       gamelab_setTint:
         text: colora {THIS} di {COLOR}
       gamelab_setupScoreboard:
@@ -1834,17 +1905,17 @@ it:
             '"decorative"': Decorazione
             '"donuts"': Ciambelle
             '"fire"': Fuoco
-            '"flowers"': Fiori
+            '"flowers"': fiori
             '"gilded"': Dorata
-            '"hearts"': Cuori
+            '"hearts"': cuori
             '"iceCream"': Gelati
             '"leaves"': Foglie
             '"metal"': Metallica
             '"pawPrints"': Impronte
-            '"rainbow"': Arcobaleno
-            '"stars"': Stelle
+            '"rainbow"': arcobaleno
+            '"stars"': stelle
             '"swirls"': Mulinelli
-            '"waves"': Onde
+            '"waves"': onde
             '"wood"': Legno
             '"zigzag"': Zig zag
       Poetry_addLine:
@@ -1886,7 +1957,7 @@ it:
             '"sound://category_background/inside_plane.mp3"': Brusio
             '"sound://category_loops/red_flag_loop1.mp3"': Missione
             '"sound://category_nature/summer_night_loop.mp3"': Notte
-            '"sound://category_background/ocean_waves.mp3"': Oceano
+            '"sound://category_background/ocean_waves.mp3"': oceano
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Piovoso
             '"sound://category_background/rainforest_ambient_sound.mp3"': Foresta
               pluviale
@@ -1899,7 +1970,6 @@ it:
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Campanello
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Interrompi
             '"sound://category_digital/boing_2.mp3"': Boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bolla
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Schiocco
@@ -1907,7 +1977,7 @@ it:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Fallito
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fluttuazione
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Salto
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Chiaro
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': luce
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Puff
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scansione
             '"sound://category_background/typewriter.mp3"': Macchina da scrivere
@@ -1923,31 +1993,31 @@ it:
         text: imposta lo sfondo {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Colori
-            '"squiggles"': Onde
-            '"space"': Spazio
-            '"stars"': Stelle
+            '"blooming"': Fiorito
+            '"bubbles"': Bolle
+            '"clouds"': Nuvoloso
+            '"confetti"': Coriandoli
             '"darkCircles"': Dissolvenza
             '"fadeColors"': Ghiacciato
-            '"blooming"': Fiorito
+            '"hearts"': cuori
+            '"space"': Spazio
+            '"rain"': pioggia
             '"ripples"': Increspature
-            '"clouds"': Nuvoloso
-            '"rain"': Pioggia
-            '"bubbles"': Bolle
-            '"confetti"': Coriandoli
-            '"hearts"': Cuori colorati
+            '"colors"': Colori
+            '"stars"': Stelle
+            '"squiggles"': Onde
           PALETTE:
-            '"rainbow"': Arcobaleno
-            '"grayscale"': Grigio
-            '"sky"': Cielo
-            '"ocean"': Oceano
+            '"autumn"': Autunno
             '"sunrise"': Alba
             '"sunset"': Crepuscolo
+            '"grayscale"': Grigio
+            '"ocean"': Oceano
+            '"rainbow"': arcobaleno
+            '"roses"': Rose
+            '"sky"': Cielo
             '"spring"': Primavera
             '"summer"': Estate
-            '"autumn"': Autunno
             '"winter"': Inverno
-            '"roses"': Rose
       Poetry_setBackgroundImageAs:
         text: imposta lo sfondo {IMG}
       Poetry_setFont:
@@ -1955,26 +2025,33 @@ it:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: imposta il colore del testo {FILL}
       Poetry_setForegroundEffect:
         text: crea effetto {EFFECT}
         options:
           EFFECT:
-            '"rain"': Pioggia
             '"bubbles"': Bolle
-            '"hearts"': Cuori colorati
-            '"emojis"': Emojis Allegre
             '"confetti"': Coriandoli
+            '"hearts"': cuori
+            '"emojis"': Emojis Allegre
+            '"rain"': pioggia
             '"starburst"': Esplosione di stelle
             '"glass"': Vetro infranto
             '"twinkling"': Scintillante
+      Poetry_setPrompt:
+        text: utente del comando {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} per la variabile
+          {VAR}
+      Poetry_setPromptWithChoices:
+        text: utente comando {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} per la variabile {VAR}
+          con le scelte di {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
       Poetry_setSize:
         text: imposta dimensione {SPRITE} a {VAL}
       Poetry_setTextEffect:
@@ -1982,11 +2059,11 @@ it:
         options:
           EFFECT:
             '"fade"': dissolvenza
-            '"typewriter"': macchina da scrivere
             '"flyLeft"': arriva da sinistra
             '"flyRight"': arriva da destra
             '"flyTop"': arriva da sopra
             '"flyBottom"': arriva da sotto
+            '"typewriter"': macchina da scrivere
       Poetry_setTitle:
         text: imposta titolo {TITLE}
       Poetry_showText:
@@ -1995,36 +2072,28 @@ it:
         text: 'il personaggio {ANIMATION_NAME} inizia {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: ondeggiamento
-            growing: crescita
-            jittering: pulsazione
-            moving_north_and_looping: scorrimento verso nord
-            moving_south_and_looping: scorrimento verso sud
-            moving_east_and_looping: scorrimento verso est
-            moving_west_and_looping: scorrimento verso ovest
-            shrinking: contrazione
-            spinning_left: rotazione anti-oraria
-            spinning_right: rotazione oraria
-            swimming_left_and_right: nuoto
-            wandering: movimento casuale
-            wobbling: barcollamento
+            '"fluttering"': ondeggiamento
+            '"growing"': crescita
+            '"jittering"': pulsazione
+            '"shrinking"': contrazione
+            '"spinning_left"': rotazione anti-oraria
+            '"spinning_right"': rotazione oraria
+            '"swimming_left_and_right"': nuoto
+            '"wandering"': movimento casuale
+            '"wobbling"': barcollamento
       Poetry_stopBehavior:
         text: 'personaggio {ANIMATION_NAME} interrompe {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: ondeggiamento
-            growing: crescita
-            jittering: pulsazione
-            moving_north_and_looping: scorrimento verso nord
-            moving_south_and_looping: scorrimento verso sud
-            moving_east_and_looping: scorrimento verso est
-            moving_west_and_looping: scorrimento verso ovest
-            shrinking: contrazione
-            spinning_left: rotazione anti-oraria
-            spinning_right: rotazione oraria
-            swimming_left_and_right: nuoto
-            wandering: movimento casuale
-            wobbling: barcollamento
+            '"fluttering"': ondeggiamento
+            '"growing"': crescita
+            '"jittering"': pulsazione
+            '"shrinking"': contrazione
+            '"spinning_left"': rotazione anti-oraria
+            '"spinning_right"': rotazione oraria
+            '"swimming_left_and_right"': nuoto
+            '"wandering"': movimento casuale
+            '"wobbling"': barcollamento
             '"all"': "--tutti i comportamenti--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

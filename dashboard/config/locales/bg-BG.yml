@@ -374,6 +374,7 @@ bg:
       starwars: Междузвездни войни
       starwarsblocks: Междузвездни войни (блокове)
       starwarsblocks_hour: Междузвездни войни (блокове)
+      loading: Зареждане...
       weblab: Web Lab
     popup:
       progress_for_user: на %{name} в прогрес
@@ -388,6 +389,7 @@ bg:
       prizes_link: повече информация
   teacher:
     answer: Oтговор
+    dashboard: Учителско табло
     for_teachers_only: За учители само
     title:
       one: 'Вашият учител:'

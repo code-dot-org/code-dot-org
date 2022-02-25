@@ -849,69 +849,105 @@ es-MX:
         hoc_dance_events_2019: 'Fiesta de baile 2019: Eventos'
         hoc_dance_measures_2019: 'Fiesta de Baile: Compaces'
         hoc_dance_properties_2019: 'Fiesta de baile 2019: Propiedades'
-        csd_what_computers_do: "¿Que Hacen las Computadoras?"
+        csd_what_computers_do: "¿Qué hacen los ordenadores?"
         csf_my_online_neighborhood_2020: Mi barrio en línea
-        csf_follow_the_digital_trail: Sigue el Rastro Digital
+        csf_follow_the_digital_trail: Sigue el rastro digital
         csf_private_and_personal_information: Información privada y personal
         csd_what_computers_are: "¿Qué es una computadora?"
         codebreak_e01: 'Code Break 1.0: Algoritmos con Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototipos con Mark Cuban y Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Cifrado con Ashton Kutcher y Mia Gil Epner'
-        codebreak_e04: Code Break 4.0 Información Digital con Mike Krieger y Alice
+        codebreak_e04: Code Break 4.0 Información digital con Mike Krieger y Alice
           Keeler
-        codebreak_e05: 'Code Break 5.0: Simulaciones y Datos con Bill Gates'
-        csd_how_teamwork_works: Cómo Funciona el Trabajo en Equipo
-        csd_teamwork_and_disagreement: 'Trabajo en equipo: cómo afrontar los desacuerdos'
-        codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott y Vint Cerf'
+        codebreak_e05: 'Code Break 5.0: Simulaciones y datos con Bill Gates'
+        csd_how_teamwork_works: Cómo funciona el trabajo en equipo
+        csd_teamwork_and_disagreement: 'Trabajo en equipo: cómo afrontar la falta
+          de consenso'
+        codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott & Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Condicionales con Sal Khan y Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variables con Yara Shahidi y Fuzzy Khosrowshahi '
-        codebreak_e09: 'Code Break 9.0: Eventos con Macklemore y Scott Forstall'
-        codebreak_e10: 'Code Break 10.0: Inteligencia Artificial con Kat Graham y
-          Kate Park'
+        codebreak_e09: 'Code Break 9.0: Sucesos con Macklemore y Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: IA con Kat Graham y Kate Park'
         codebreak_e11: 'Code Break 11.0: Abstracción con Susan Wojcicki y China Anne
           McClain'
         codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor y Paula
-          Mejia'
-        csf21pilot_events: 'Laboratorio de Sprite: Sprites en Acción'
-        csf21pilot_prompts: 'Laboratorio de Sprite: Texto y Avisos'
+          Mejía'
+        csf21pilot_events: 'Laboratorio de Sprites: Sprites en acción (piloto del
+          CSF 2021)'
+        csf21pilot_prompts: 'Laboratorio Sprites: Texto e Indicaciones (proyecto piloto
+          CSF 2021)'
         outbreak_mike: CodeBytes Episodio 3 con Mike - Simulador de brotes
-        poembot-pilot-prompts: Haiku Bots - Aviso con Opciones [PILOT]
+        poembot-pilot-prompts: Haiku Bots - Prompt con Opciones [PILOT]
         poembot-pilot-text: Haiku Bots - Almacenar Texto [PILOT]
         poembot-pilot-haiku: Haiku Bots - Muestra tu Haiku [PILOT]
-        csd_ml_intro_to_ai_lab: Introducción al Laboratorio de IA
-        csd_ml_import_model: Importar un Modelo de Inteligencia Artificial
-        csf_lots_of_sprites: 'Laboratorio de sprites: muchos sprites'
+        csd_ml_intro_to_ai_lab: Introducción al Laboratorio de Inteligencia Artificial
+        csd_ml_import_model: Importar un Modelo de Iinteligencia Artificial
+        csf_lots_of_sprites: 'Laboratorio de Sprite: Muchos Sprites'
         playlab_2021: Introducción al Laboratorio de juegos
         playlab_2021_reader: Introducción al Laboratorio de juegos
         csp_defining_calling_functions: Definiendo y Llamando a Funciones
+        csp_tutorial_datatab: Pestaña de Datos en Laboratorio de Aplicaciones
+        csp_tutorial_libraries: Bibliotecas en Laboratorio de Aplicaciones
         PL-Video-21: Bienvenido al Aprendizaje Profesional Virtual de Code.org
-        csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de IA
+        csp_tutorial_datavis1: Visualizador de Datos en Laboratorio de Aplicaciones
+          - Parte 1
+        csp_tutorial_datavis2: Visualizador de Datos en Laboratorio de Aplicaciones
+          - Parte 2
+        csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de Inteligencia
+          Artificial
+        csd_ml_training_testing_ai_lan: Entrenamiento y Pruebas en Laboratorio de
+          Inteligencia Artificial
+        csd_ml_model_cards_july2021: Tarjetas Modelo en Laboratorio de Inteligencia
+          Artificial
         csd_ml_numerical_ai_lab: Datos Numéricos en el Laboratorio de Inteligencia
           Artificial
+        Gettting_Started_Progress: Progreso, Experiencia y Evaluación
         Gettting_Started_ClassSection: Creación de una Sección de Clase
         Gettting_Started_StudentExperience: Experiencia estudiantil
-        hello_world_intro: Hola Mundo - Bienvenidos al Laboratorio de Sprites
-        hello_world_events: Hola Mundo - Programanado con Eventos
-        hello_world_congrats: Hola Mundo - Haz Lo Que Quieras
+        Getting_Started_BasicFeatures: Características Básicas de Code.org
+        PL_overview_CSD: "¿Qué son los Descubrimientos Informáticos?"
+        PL_CSD_TeacherTips_Advise: Consejos al Profesor - Asesoramiento a Nuevos Profesores
+        PL_CSD_TeacherTips_IntroToCSD: Consejos al Profesor - Introducción a Descubrimientos
+          de Informática
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Consejos al Profesor - El Proceso
+          de Resolución de Problemas
+        PL_CSD_TeacherTips_PairProgramming: Consejos al Profesor - Programación en
+          Parejas
+        PL_CSD_TeacherTips_Debugging: Consejos al Profesor - Depuración
+        PL_CSD_TeacherTips_LeadLearner: 'Conseils aux enseignants - Délégué de classe
+
+'
+        poembot-playtest-intro: PoemBot Prueba de Juego Introducción
+        poembot-playtest-sprites: PoemBot Prueba del Juego Sprites
+        poembot-playtest-events: PoemBot Prueba de Juego Eventos
+        hello_world_intro: Hola Mundo - Bienvenido a  Laboratorio Sprite
+        hello_world_events: Hola Mundo - Programación con Eventos
+        hello_world_congrats: Hello World - Haz lo que quieras
+        csp_global_vs_local: Depuración Global vs. Variables Locales
         rough_poemart_intro: v1 Arte del Poema Introducción
         rough_poemart_events: v1 Arte del Poema Eventos
         rough_poemart_imagery: v1 Arte del Poema Imágenes
         rough_poemart_congrats: v1 Arte del Poema Felicidades
-        poetry_module_variables: Variables - Programando con Poesía
-        poetry_module_textandvariables: Texto & Variables - Programando con Poesía
-        poetry_module_planningapp: Planea tu Generador de Poemas - Programando con
-          Poesía
-        poetry_module_multichoiceprompts: Preguntas de opción múltiple - Programando
+        poetry_module_variables: Variables - Codificación con Poesía
+        poetry_module_textandvariables: Texto y Variables - Codificación con Poesía
+        poetry_module_planningapp: Planificación de tu Aplicación Generadora de Poemas
+          - Codificación con Poesía
+        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Codificación
           con Poesía
-        poetry_module_conditionals: Condicionales - Programando con Poesía
-        poemart_intro: Introducción a El Arte del Poema
+        poetry_module_conditionals: Condicionales - Codificación con Poesía
+        poemart_intro: Arte del Poema  Introducción
         poemart_events: Arte del Poema Eventos
         poemart_imagery: Arte del Poema Imágenes
         poemart_celebration: Arte del Poema  Celebración
+        csd_u6_variables_part2: Variables - Parte 2
+        csd_ml_ethics_ai: La Ética en la Inteligencia Artificial
         outbreak_intro: 'Simulación de brote epidémico: Introducción'
         outbreak_events: 'Simulación de brote epidémico: Eventos'
         outbreak_scientist: 'Simulación de brote epidémico: Pensando como científicos'
         outbreak_outro: 'Simulación de brote epidémico: Juego libre'
+        PL_overview_CSP: "¿Qué son los Principios de la Informática?"
+        PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
+        tesstest: Prueba Tess
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

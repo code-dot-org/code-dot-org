@@ -44,30 +44,6 @@
         "loops/aquatic/unversioned": {
           "word": "Tsüklid"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Debugimine"
         },
@@ -79,10 +55,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugimine"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Kood"
@@ -164,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Määra"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugimine"
+        },
+        "variable/csd/2021": {
+          "word": "Muutuja"
+        },
+        "conditionals/csd/2021": {
+          "word": "Tingimuslaused"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktsus"
+        },
+        "function/csd/2021": {
+          "word": "Funktsioon"
+        },
+        "copyright/csd/2021": {
+          "word": "Autoriõigus"
         }
       }
     }

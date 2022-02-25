@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -88,6 +88,14 @@ class Blockly < Level
 
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
+
+  def self.field_or_title(xml_doc)
+    num_fields = xml_doc.xpath('//field').count
+    num_titles = xml_doc.xpath('//title').count
+    raise "unexpected error: XML contains both field and title elements" if num_fields > 0 && num_titles > 0
+    return "title" unless num_titles == 0
+    "field"
+  end
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
@@ -174,19 +182,20 @@ class Blockly < Level
   }
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
+    tag = Blockly.field_or_title(xml)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
     default_category = category_node = Nokogiri::XML("<category name='Default'>").child
     xml.child << default_category
     xml.xpath('/xml/block').each do |block|
       if block.attr('type') == 'category'
-        category_name = block.xpath('title').text
+        category_name = block.xpath(tag).text
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
         xml.child << category_node
         block.remove
       elsif block.attr('type') == 'custom_category'
-        custom_type = block.xpath('title').text
+        custom_type = block.xpath(tag).text
         category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = custom_type
@@ -203,6 +212,7 @@ class Blockly < Level
 
   def self.convert_category_to_toolbox(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks).child
+    tag = Blockly.field_or_title(xml)
     return xml_string if xml.nil?
     xml.xpath('/xml/category').map(&:remove).each do |category|
       category_name = category.xpath('@name')
@@ -211,13 +221,13 @@ class Blockly < Level
         if custom_category.present?
           <<-XML.strip_heredoc.chomp
             <block type="custom_category">
-              <title name="CUSTOM">#{custom_category}</title>
+              <#{tag} name="CUSTOM">#{custom_category}</#{tag}>
             </block>
           XML
         else
           <<-XML.strip_heredoc.chomp
             <block type="category">
-              <title name="CATEGORY">#{category_name}</title>
+              <#{tag} name="CATEGORY">#{category_name}</#{tag}>
             </block>
           XML
         end
@@ -532,8 +542,9 @@ class Blockly < Level
   # @param block_xml [Nokogiri::XML::Document] an XML doc to be localized and modified.
   # @return [Nokogiri::XML::Document] the given XML doc localized.
   def localized_function_blocks_xml(block_xml)
+    tag = Blockly.field_or_title(block_xml)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
-      function_name = function.at_xpath('./title[@name="NAME"]')
+      function_name = function.at_xpath("./#{tag}[@name=\"NAME\"]")
       next unless function_name
       localized_name = I18n.t(
         "name",
@@ -569,7 +580,7 @@ class Blockly < Level
         parameter["name"] = localized_parameter if localized_parameter
       end
       # Replace usages of parameters with their translated name
-      function.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+      function.xpath(".//#{tag}[@name=\"VAR\"]").each do |parameter|
         parameter_name = parameter.content
         localized_parameter = I18n.t(
           parameter_name,
@@ -602,7 +613,7 @@ class Blockly < Level
       mutation.set_attribute('name', localized_name) if localized_name
     end
     block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
-      behavior_name = behavior.at_xpath('./title[@name="VAR"]')
+      behavior_name = behavior.at_xpath("./#{tag}[@name=\"VAR\"]")
       next unless behavior_name
       localized_name = I18n.t(
         behavior_name.content,
@@ -613,7 +624,7 @@ class Blockly < Level
       behavior_name.content = localized_name if localized_name
     end
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
-      behavior_name = behavior.at_xpath('./title[@name="NAME"]')
+      behavior_name = behavior.at_xpath("./#{tag}[@name=\"NAME\"]")
       next unless behavior_name
       localized_name = I18n.t(
         behavior_name.content,
@@ -643,11 +654,12 @@ class Blockly < Level
     return nil if blocks.nil?
 
     block_xml = Nokogiri::XML(blocks, &:noblanks)
+    tag = Blockly.field_or_title(block_xml)
     variables_get = block_xml.xpath("//block[@type=\"variables_get\"]")
     variables_set = block_xml.xpath("//block[@type=\"variables_set\"]")
     variables = variables_get + variables_set
     variables.each do |variable|
-      variable_name = variable.at_xpath('./title[@name="VAR"]')
+      variable_name = variable.at_xpath("./#{tag}[@name=\"VAR\"]")
       next unless variable_name
       localized_name = I18n.t(
         variable_name.content,
@@ -659,7 +671,7 @@ class Blockly < Level
     end
 
     block_xml.xpath("//block[@type=\"parameters_get\"]").each do |parameter|
-      parameter_name = parameter.at_xpath('./title[@name="VAR"]')
+      parameter_name = parameter.at_xpath("./#{tag}[@name=\"VAR\"]")
       next unless parameter_name
       localized_name = I18n.t(
         parameter_name.content,
@@ -700,24 +712,25 @@ class Blockly < Level
   # Localization will be applied directly to the given document.
   # @param block_xml [Nokogiri::XML::Document]
   # @param block_type [String]
-  # @param title_names [Array<String>]
+  # @param field_names [Array<String>]
   # @return [Nokogiri::XML::Document]
-  def localize_placeholder_text_blocks_xml(block_xml, block_type, title_names)
+  def localize_placeholder_text_blocks_xml(block_xml, block_type, field_names)
+    tag = Blockly.field_or_title(block_xml)
     block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
-      title_names.each do |title_name|
-        title = block.at_xpath("./title[@name=\"#{title_name}\"]")
-        next unless title&.content&.present?
+      field_names.each do |field_name|
+        field = block.at_xpath("./#{tag}[@name=\"#{field_name}\"]")
+        next unless field&.content&.present?
 
         # Must generate text_key in the same way it is created in
         # the get_i18n_strings function in sync-in.rb script.
-        text_key = Digest::MD5.hexdigest title.content
+        text_key = Digest::MD5.hexdigest field.content
         localized_text = I18n.t(
           text_key,
           scope: [:data, :placeholder_texts, name],
           default: nil,
           smart: true
         )
-        title.content = localized_text if localized_text
+        field.content = localized_text if localized_text
       end
     end
     block_xml
@@ -780,12 +793,7 @@ class Blockly < Level
   end
 
   def localize_behaviors(block_xml)
-    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
-    end
+    tag = Blockly.field_or_title(block_xml)
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       mutation = behavior.at_xpath('./mutation')
       mutation.xpath('./arg').each do |arg|
@@ -793,15 +801,15 @@ class Blockly < Level
         arg["name"] = I18n.t('behaviors.this_sprite')
       end
 
-      behavior.xpath(".//title[@name=\"NAME\"]").each do |name|
+      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name|
         localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
         name.content = localized_name if localized_name
       end
+    end
 
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
+    block_xml.xpath(".//#{tag}[@name=\"VAR\"]").each do |parameter|
+      next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
+      parameter.content = I18n.t('behaviors.this_sprite')
     end
   end
 

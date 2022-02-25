@@ -360,6 +360,8 @@ ja:
             '"right"': 右の列
             '"x"': 十字
             '"plus"': プラス
+            '"spiral"': スパイラル
+            '"infinity"': 無限ライン
             '"random"': ランダム に
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} で新しい{COSTUME} を作成します"
@@ -442,6 +444,26 @@ ja:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': すべてのエイリアン
             '"BEAR"': クマ
@@ -469,6 +491,8 @@ ja:
             '"right"': 右の列
             '"x"': 十字
             '"plus"': プラス
+            '"spiral"': スパイラル
+            '"infinity"': 無限ライン
             '"random"': ランダム に
       Dancelab_mixColors:
         text: "{COLOR1} と {COLOR2} をまぜる"
@@ -532,6 +556,7 @@ ja:
             '"fireworks"': 花火
             '"flowers"': フラワー
             '"growing_stars"': 成長する星
+            '"higher_power"': より高いパワー
             '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
             '"lasers"': レーザーのダンスフロア
@@ -1006,7 +1031,22 @@ ja:
       gamelab_clickedOn:
         text: いつ {SPRITE} クリック
       gamelab_clickedSpritePointer:
-        text: クリック {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 右に回す
+            new Behavior(spinning_left, []): 左に回す
+            new Behavior(fluttering, []): パタパタさせる
+            new Behavior(jittering, []): ブルブルさせる
+            new Behavior(wobbling, []): ぐらぐらさせる
+            new Behavior(wandering, []): あちこちに動かす
+            new Behavior(patrolling, []): パトロール
+            new Behavior(moving_west_and_looping, []): 西に動かしてループ
+            new Behavior(moving_east_and_looping, []): 東に動かしてループ
+            new Behavior(moving_north_and_looping, []): 東に動かしてループ
+            new Behavior(moving_south_and_looping, []): 南に動かしてループ
       gamelab_comment:
         text: コメント： {COMMENT}
       gamelab_costumeImage:
@@ -1058,6 +1098,20 @@ ja:
         text: |-
           if {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} コスチュームは {COSTUME}"
       gamelab_isKeyPressed:
@@ -1199,9 +1253,9 @@ ja:
       gamelab_moveToward:
         text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
       gamelab_newSpritePointer:
-        text: クリック {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: クリック {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: 上下にパトロールする
       gamelab_playSound:
@@ -1248,6 +1302,13 @@ ja:
             "'sound://category_digital/jump_7.mp3'": ジャンプする
       gamelab_playSpeech:
         text: ピーチを再生する {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): 矢印キーで動かす
+            new Behavior(driving_with_arrow_keys, []): 矢印キーで進ませる
+            draggable(): ドラッグ可能
       gamelab_pointInDirection:
         text: ポイント {SPRITE} {DIRECTION}
         options:
@@ -1272,6 +1333,8 @@ ja:
         text: 色の削除元 {THIS}
       gamelab_repeatForever:
         text: ずっと
+      gamelab_resetTimer:
+        text: タイマーリセット
       gamelab_setAnimation:
         text: 変更 {THIS} 衣装に {ANIMATION}
       gamelab_setBackground:
@@ -1351,6 +1414,14 @@ ja:
             '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': おそい
+            '5': ノーマル
+            '7': はやい
+            '9': extra fast
       gamelab_setTint:
         text: 色を変更する {THIS} 宛先 {COLOR}
       gamelab_setupScoreboard:
@@ -1389,7 +1460,7 @@ ja:
       gamelab_stopGliding:
         text: "{SPRITE} が進むのを止めます"
       gamelab_subjectSpritePointer:
-        text: クリック {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -1846,10 +1917,13 @@ ja:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': フラワー
-            '"hearts"': ハート
+            '"brick"': レンガ
+            '"fire"': 火
+            '"flowers"': 花
+            '"hearts"': ハーツ
             '"iceCream"': アイスクリーム
-            '"rainbow"': 虹
+            '"leaves"': 葉
+            '"rainbow"': にじ
             '"stars"': 星
             '"waves"': 波
       Poetry_addLine:
@@ -1880,11 +1954,15 @@ ja:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 落ち着き
             '"sound://category_nature/steady_campfire_loop.mp3"': キャンプファイヤー
             '"sound://category_nature/rain_loop.mp3"': 霧雨
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': 森
             '"sound://category_loops/faultering_desicion_loop1.mp3"': 幽霊
             '"sound://category_background/inside_plane.mp3"': ハム
             '"sound://category_loops/red_flag_loop1.mp3"': ミッション
+            '"sound://category_nature/summer_night_loop.mp3"': よる
             '"sound://category_background/ocean_waves.mp3"': 海
+            '"sound://category_background/rainforest_ambient_sound.mp3"': 熱帯雨林
             '"sound://category_background/repitition.mp3"': 乗る
+            '"sound://category_background/wavering_wind.mp3"': 眠い
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': 遅い
       Poetry_playSound:
         text: Playsound {SOUND}
@@ -1898,7 +1976,7 @@ ja:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 失敗
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': はためき
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ジャンプ
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ライト
             '"sound://category_poof/puzzle_game_poof_04.mp3"': パッ
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': スキャン
             '"sound://category_background/typewriter.mp3"': タイプライター
@@ -1914,31 +1992,31 @@ ja:
         text: 背景エフェクトを {EFFECT} {PALETTE} にセット
         options:
           EFFECT:
-            '"colors"': 色
-            '"squiggles"': 波線
-            '"space"': 宇宙
-            '"stars"': 星
+            '"blooming"': 咲いている
+            '"bubbles"': 泡
+            '"clouds"': 雲
+            '"confetti"': 紙吹雪
             '"darkCircles"': ダークサークル
             '"fadeColors"': 色のフェード
-            '"blooming"': 咲いている
-            '"ripples"': さざ波
-            '"clouds"': 雲
+            '"hearts"': ハーツ
+            '"space"': 宇宙
             '"rain"': 雨
-            '"bubbles"': 泡
-            '"confetti"': 紙吹雪
-            '"hearts"': カラフルなハート
+            '"ripples"': さざ波
+            '"colors"': 色
+            '"stars"': 星
+            '"squiggles"': 波線
           PALETTE:
-            '"rainbow"': 虹
-            '"grayscale"': 白黒
-            '"sky"': 空
-            '"ocean"': 海
+            '"autumn"': 秋
             '"sunrise"': 日の出
             '"sunset"': 夕焼け
+            '"grayscale"': 白黒
+            '"ocean"': 海
+            '"rainbow"': にじ
+            '"roses"': バラ
+            '"sky"': 空
             '"spring"': 春
             '"summer"': 夏
-            '"autumn"': 秋
             '"winter"': 冬
-            '"roses"': バラ
       Poetry_setBackgroundImageAs:
         text: 背景を次の値に設定する {IMG}
       Poetry_setFont:
@@ -1946,23 +2024,23 @@ ja:
         options:
           FONT:
             '"Arial"': エイリアル
+            '"Arial Black"': エイリアルブラック
+            '"Courier"': クーリエ
+            '"Cursive"': 手書き
+            '"Impact"': インパクト
             '"Georgia"': ジョージア
             '"Times"': タイムズ
-            '"Courier"': クーリエ
-            '"Arial Black"': エイリアルブラック
-            '"Impact"': インパクト
-            '"Cursive"': 手書き
       Poetry_setFontColor:
         text: フォントの色を {FILL} にセットする
       Poetry_setForegroundEffect:
         text: "{EFFECT} 前景エフェクトを実行する"
         options:
           EFFECT:
-            '"rain"': 雨
             '"bubbles"': 泡
-            '"hearts"': カラフルなハート
-            '"emojis"': ハッピー絵文字
             '"confetti"': 紙吹雪
+            '"hearts"': ハーツ
+            '"emojis"': ハッピー絵文字
+            '"rain"': 雨
             '"starburst"': スターバースト
             '"glass"': ガラス割れ
             '"twinkling"': キラキラ
@@ -1979,11 +2057,11 @@ ja:
         options:
           EFFECT:
             '"fade"': フェード
-            '"typewriter"': タイプライター
             '"flyLeft"': 左から飛ぶ
             '"flyRight"': 右から飛ぶ
             '"flyTop"': 上から飛ぶ
             '"flyBottom"': 下から飛ぶ
+            '"typewriter"': タイプライター
       Poetry_setTitle:
         text: 詩のタイトルを {TITLE} にセット
       Poetry_showText:
@@ -1992,36 +2070,28 @@ ja:
         text: スプライト {ANIMATION_NAME} が {BEHAVIOR} を始めます
         options:
           BEHAVIOR:
-            fluttering: パタパタさせる
-            growing: 大きくする
-            jittering: ブルブルさせる
-            moving_north_and_looping: 北にループ
-            moving_south_and_looping: 南にループ
-            moving_east_and_looping: 東にループ
-            moving_west_and_looping: 西にループ
-            shrinking: 小さくする
-            spinning_left: 左に回す
-            spinning_right: 右に回す
-            swimming_left_and_right: 水泳
-            wandering: あちこちに動かす
-            wobbling: ぐらぐらさせる
+            '"fluttering"': パタパタさせる
+            '"growing"': 大きくする
+            '"jittering"': ブルブルさせる
+            '"shrinking"': 小さくする
+            '"spinning_left"': 左に回す
+            '"spinning_right"': 右に回す
+            '"swimming_left_and_right"': 水泳
+            '"wandering"': あちこちに動かす
+            '"wobbling"': ぐらぐらさせる
       Poetry_stopBehavior:
         text: スプライト {ANIMATION_NAME} が {BEHAVIOR} をやめます
         options:
           BEHAVIOR:
-            fluttering: パタパタさせる
-            growing: 大きくする
-            jittering: ブルブルさせる
-            moving_north_and_looping: 北にループ
-            moving_south_and_looping: 南にループ
-            moving_east_and_looping: 東にループ
-            moving_west_and_looping: 西にループ
-            shrinking: 小さくする
-            spinning_left: 左に回す
-            spinning_right: 右に回す
-            swimming_left_and_right: 水泳
-            wandering: あちこちに動かす
-            wobbling: ぐらぐらさせる
+            '"fluttering"': パタパタさせる
+            '"growing"': 大きくする
+            '"jittering"': ブルブルさせる
+            '"shrinking"': 小さくする
+            '"spinning_left"': 左に回す
+            '"spinning_right"': 右に回す
+            '"swimming_left_and_right"': 水泳
+            '"wandering"': あちこちに動かす
+            '"wobbling"': ぐらぐらさせる
             '"all"': "--すべての行動--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

@@ -39,7 +39,6 @@ def migrate_resources_for_scripts
     script.teacher_resources = [] unless ScriptConstants.i18n?(script.name)
 
     script.save!
-    script.write_script_dsl
     script.write_script_json
     puts "Migrated teacher resources for #{script.name}"
   end

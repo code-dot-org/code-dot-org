@@ -4,13 +4,14 @@ import {connect} from 'react-redux';
 import PreviewPaneHeader from '../PreviewPaneHeader';
 import MazeVisualization from '@cdo/apps/maze/Visualization';
 import {toggleVisualizationCollapsed} from '../javalabRedux';
+import {DisplayTheme} from '../DisplayTheme';
 
 const ICON_PATH = '/blockly/media/turtle/';
 
 class NeighborhoodVisualizationColumn extends React.Component {
   static propTypes = {
     // populated by redux
-    isDarkMode: PropTypes.bool,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isCollapsed: PropTypes.bool,
     toggleVisualizationCollapsed: PropTypes.func
   };
@@ -20,12 +21,17 @@ class NeighborhoodVisualizationColumn extends React.Component {
   };
 
   render() {
-    const {isDarkMode, isCollapsed, toggleVisualizationCollapsed} = this.props;
+    const {
+      displayTheme,
+      isCollapsed,
+      toggleVisualizationCollapsed
+    } = this.props;
     const {isFullscreen} = this.state;
 
-    const fullIconPath = isDarkMode
-      ? ICON_PATH + 'icons_white.png'
-      : ICON_PATH + 'icons.png';
+    const fullIconPath =
+      displayTheme === DisplayTheme.DARK
+        ? ICON_PATH + 'icons_white.png'
+        : ICON_PATH + 'icons.png';
 
     const opacity = isCollapsed ? 0 : 1;
 
@@ -86,7 +92,7 @@ const styles = {
 
 export default connect(
   state => ({
-    isDarkMode: state.javalab.isDarkMode,
+    displayTheme: state.javalab.displayTheme,
     isCollapsed: state.javalab.isVisualizationCollapsed
   }),
   dispatch => ({

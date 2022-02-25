@@ -281,27 +281,70 @@
         },
         "New Artist Project": {
           "draw a circle": {
-            "name": "aylana chizish"
+            "name": "aylana chizish",
+            "description": "berilgan radiusda doira chizish",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
-              "repeat": "takrorlash"
-            }
+              "repeat": "takrorlash",
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            },
+            "name": "parrak chizish"
           },
           "draw a house": {
-            "name": "uy chizish"
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a star": {
+            "name": "yulduz chizish",
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "parameters": {
+              "points": "ballar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
           }
         },
         "New Play Lab Project": {
           "jump": {
             "parameters": {
-              "actor": "aktyor"
-            }
+              "actor": "aktyor",
+              "height": "balandlik"
+            },
+            "name": "sakramoq",
+            "description": "balandlik va aktyor parametrlari bilan sakrash funksiyasi bloki"
           },
           "patrol": {
             "parameters": {
-              "actor": "aktyor"
-            }
+              "actor": "aktyor",
+              "speed": "tezlik"
+            },
+            "name": "patrul",
+            "description": "tezlik va aktyor parametrlari bilan patrul funksiyasi bloki"
           }
         },
         "Standalone_Artist_9": {
@@ -3181,6 +3224,14 @@
         "CourseF_app_computer": {
           "reset game": {
             "name": "o'yinni qaytarish"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
           }
         }
       }

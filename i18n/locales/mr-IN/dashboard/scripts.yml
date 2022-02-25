@@ -3,7 +3,9 @@ mr:
   data:
     script:
       category:
+        csf_category_name: संगणक शास्त्राची मूलतत्त्वे
         hoc_category_name: अवर ऑफ कोड
+        math_category_name: गणित
       name:
         course1:
           description_audience: वय वर्षे 4-6
@@ -15,6 +17,8 @@ mr:
               name: 'आर्टीस्ट:नेस्टेड लूप्स '
             Conditionals:
               name: कंडीशनल्स
+            Flappy:
+              name: फ्लॅपी
         course3:
           description_audience: वय वर्षे 8-18
           lessons:
@@ -31,6 +35,9 @@ mr:
         playlab:
           description: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
           description_short: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
+          lessons:
+            Play Lab:
+              description_student: या धड्यात, शिकणाऱ्यांना संगणक विज्ञानाचा परिचयात्मक अनुभव मिळतो आणि मूलभूत ब्लॉक कोड वापरून गेम तयार करतो.
           student_description: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
         artist:
           title: आर्टीस्ट
@@ -45,6 +52,10 @@ mr:
           title: क्लासिक मेझ
           description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रे आणि आईस एजमधील स्क्रॅट यांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
           description_short: अनेक गंमतीदार पात्रांबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून पाहा!
+          lessons:
+            Maze:
+              description_student: या धड्यात सर्व वयाचे विद्यार्थी कोडींग आणि संगणक शास्त्राचा एका सुरक्षित, मदत करणाऱ्या वातावरणात परिचयात्मक अनुभव घेऊ शकतात. हा धडा लहान मुलांसाठी, वय वर्षे 4-10 तयार करण्यात आलेला आहे, पण 'बदलाच्या सूचनांचा' वापर करून तो जास्त वयाच्या विद्यार्थ्यांसाठीसुद्धा वापरता येईल.
+              description_teacher: या धड्यात सर्व वयाचे विद्यार्थी कोडींग आणि संगणक शास्त्राचा एका सुरक्षित, मदत करणाऱ्या वातावरणात परिचयात्मक अनुभव घेऊ शकतात. हा धडा लहान मुलांसाठी, वय वर्षे 4-10 तयार करण्यात आलेला आहे, पण 'बदलाच्या सूचनांचा' वापर करून तो जास्त वयाच्या विद्यार्थ्यांसाठीसुद्धा वापरता येईल.
           student_description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रे आणि आईस एजमधील स्क्रॅट यांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
         frozen:
           title: अॅना आणि एल्साबरोबर कोड लिहा
@@ -53,6 +64,8 @@ mr:
           lessons:
             Artist:
               name: अॅना आणि एल्साबरोबर कोड लिहा
+              description_student: या धड्यात सर्व वयाचे विद्यार्थी कोडींग आणि संगणक शास्त्राचा एका सुरक्षित, मदत करणाऱ्या वातावरणात परिचयात्मक अनुभव घेऊ शकतात. हा धडा  वय वर्षे 10-13 च्या वयोगटा साठी तयार करण्यात आलेला आहे, परंतु प्रदान केलेल्या भिन्नता असलेल्या सूचनांचा वापर करून लहान किंवा मोठ्या विद्यार्थ्यांसाठी सानुकूलित केले जाऊ शकते. विद्यार्थ्यांना साध्या भूमिती आणि रेखाचित्र कोनांची मूलभूत माहिती असणे आवश्यक आहे.
+              description_teacher: या धड्यात सर्व वयाचे विद्यार्थी कोडींग आणि संगणक शास्त्राचा एका सुरक्षित, मदत करणाऱ्या वातावरणात परिचयात्मक अनुभव घेऊ शकतात. हा धडा  वय वर्षे 10-13 च्या वयोगटा साठी तयार करण्यात आलेला आहे, परंतु प्रदान केलेल्या भिन्नता असलेल्या सूचनांचा वापर करून लहान किंवा मोठ्या विद्यार्थ्यांसाठी सानुकूलित केले जाऊ शकते. विद्यार्थ्यांना साध्या भूमिती आणि रेखाचित्र कोनांची मूलभूत माहिती असणे आवश्यक आहे.
           student_description: अॅना आणि एल्सा बर्फाची जादू आणि सौंदर्य अनुभवत असताना त्यांच्याबरोबर सहभागी होण्यासाठी कोड वापरूया. तुम्ही आईस-स्केटिंग करताना हिमकण आणि पॅटर्न्स तयार कराल आणि हिवाळ्यातील एक अद्भुत प्रदेश तयार कराल.  नंतर तुम्ही तुमच्या मित्रमैत्रिणींशी तो शेअर करू शकाल.
         course4:
           description_audience: वय वर्षे 9-18
@@ -75,6 +88,10 @@ mr:
               name: 'आर्टीस्ट: फंक्शन्स'
             'Artist: Nested Loops':
               name: 'आर्टीस्ट:नेस्टेड लूप्स '
+        usability:
+          lessons:
+            Variables:
+              name: व्हेरीएबल्स
         algebra:
           lessons:
             'Eval: Conditionals':
@@ -82,6 +99,9 @@ mr:
         infinity:
           description: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
           description_short: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
+          lessons:
+            Infinity:
+              description_student: या धड्यात, शिकणाऱ्यांना संगणक विज्ञानाचा परिचयात्मक अनुभव मिळतो आणि मूलभूत ब्लॉक कोड वापरून गेम तयार करतो.
           student_description: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
         20-hour:
           title: संगणक शास्त्राचा वेगवान परिचय
@@ -95,6 +115,11 @@ mr:
           title: ईव्हेंट्स
           description: ईव्हेंट्स
           description_short: ईव्हेंट्स
+          lessons:
+            Calc:
+              name: कॅल्क
+            Eval:
+              name: इव्हॅल
           student_description: ईव्हेंट्स
         flappy:
           title: फ्लॅपी कोड
@@ -125,26 +150,44 @@ mr:
           lessons:
             Text Compression:
               name: टेक्स्ट कॉम्प्रेशन
+              description_student: काही क्षणी आपण किती वेगाने बिट पाठवू शकतो याच्या भौतिक मर्यादेपर्यंत पोहोचतो आणि जर आपल्याला मोठ्या प्रमाणात माहिती जलद पाठवायची असेल, तर आपल्याला तीच माहिती कमी बिटसह सादर करण्याचा मार्ग शोधावा लागेल. - आपल्याला डेटा संकुचित करावा लागेल.
+              description_teacher: काही क्षणी आपण किती वेगाने बिट पाठवू शकतो याच्या भौतिक मर्यादेपर्यंत पोहोचतो आणि जर आपल्याला मोठ्या प्रमाणात माहिती जलद पाठवायची असेल, तर आपल्याला तीच माहिती कमी बिटसह सादर करण्याचा मार्ग शोधावा लागेल. - आपल्याला डेटा \*\*संकुचित \*\* करावा लागेल.या धड्यात, विद्यार्थी इंग्रजी मजकूराचे भाग संकुचित करण्यासाठी मजकूराच्या मोठ्या नमुन्यांसाठी नमुने शोधून आणि चिन्हे बदलण्यासाठी मजकूर कॉम्प्रेशन विजेट वापरतील.\\r
         allthethings:
           lessons:
             Artist:
               name: आर्टीस्ट
+            Flappy:
+              name: फ्लॅपी
             Text Compression:
               name: टेक्स्ट कॉम्प्रेशन
+            Web Lab:
+              name: वेब लॅब
+            Java Lab:
+              name: जावा लॅब
         cspfacilitator:
           lessons:
             Text Compression Lesson:
               name: टेक्स्ट कॉम्प्रेशनचा धडा
             Text Compression Widget:
               name: टेक्स्ट कॉम्प्रेशन विजेट
+        K5-OnlinePD:
+          lessons:
+            Computer Science Fundamentals:
+              name: संगणक शास्त्राची मूलतत्त्वे
         asUnplugged:
           description_audience: वय वर्षे 6-13
         afterschool1:
           description_audience: वय वर्षे 7-13
+        cspunit4draft:
+          description_short: डेटा
         Special Fun:
           description_audience: वय वर्षे 10-18
         SpecialSeries:
           description_audience: वय वर्षे 10-18
+        iceage:
+          lessons:
+            Ice Age Play Lab:
+              description_student: या धड्यात, शिकणाऱ्यांना संगणक विज्ञानाचा परिचयात्मक अनुभव मिळतो आणि मूलभूत ब्लॉक कोड वापरून गेम तयार करतो.
         starwars:
           title: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (जावास्क्रिप्ट)'
           description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
@@ -152,6 +195,11 @@ mr:
           lessons:
             Hour of Code 2015:
               name: अवर ऑफ कोड 2015
+              description_student: या धड्यात सर्व वयाचे विद्यार्थी कोडींग आणि संगणक शास्त्राचा एका सुरक्षित, मदत करणाऱ्या वातावरणात परिचयात्मक अनुभव घेऊ शकतात. या धड्याच्या दोन आवृत्त्या आहेत.
+              description_teacher: |-
+                या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडींग आणि संगणक शास्त्राचा प्रास्ताविक अनुभव मिळतो. या धड्यात दोन आवृत्त्या आहेत. ही आवृत्ती ड्रॅग-ड्रॉप ब्लॉक्स आणि JavaScript दोन्ही वापरते. विद्यार्थ्यांना कीबोर्डवर टाईप करता येणे आवश्यक आहे. संगणकावरील जुन्या विद्यार्थ्यांसाठी, JavaScript शिकणे मनोरंजक असू शकते आणि अतिरिक्त आव्हान देऊ शकते. तुमच्या वर्गातील काही विद्यार्थी ज्यांनी आधीच काही कोडींग शिकले असेल तर ट्यूटोरियलची ही आवृत्तीही उत्तम आहे. 11+ वयोगटांसाठी याची शिफारस केली जाते.
+
+                एक [ब्लॉकली आवृत्ती](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) देखील उपलब्ध आहे आणि कीबोर्डशिवाय मोबाइल डिव्हाइसवरील विद्यार्थ्यांसाठी, तरुण विद्यार्थ्यांसाठी आणि आंतरराष्ट्रीय विद्यार्थ्यांसाठी शिफारस केली आहे.
           student_description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
         starwarsblocks:
           title: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (ब्लॉकली)'
@@ -160,17 +208,21 @@ mr:
           lessons:
             Hour of Code 2015:
               name: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (ब्लॉकली)'
+              description_student: या धड्यात सर्व वयाचे विद्यार्थी कोडींग आणि संगणक शास्त्राचा एका सुरक्षित, मदत करणाऱ्या वातावरणात परिचयात्मक अनुभव घेऊ शकतात. या धड्याच्या दोन आवृत्त्या आहेत.
           student_description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
         mc:
           title: माईनक्राफ्ट अवर ऑफ कोड
           lessons:
             Hour of Code 2015:
               name: अवर ऑफ कोड 2015
+              description_student: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडिंग आणि संगणक शास्त्राचा परिचयात्मक अनुभव मिळतो. हा धडा वाचण्यास पुरेसा वय असलेल्या कोणत्याही विद्यार्थ्यासाठी (6+ वयोगटातील) चांगला कार्य करतो. तरुण शिकणारे ट्यूटोरियल कदाचित पूर्ण करणार नाहीत, परंतु त्यांना एक तासासाठी कोडी सोडवण्यात खूप मजा येईल. हायस्कूलचे विद्यार्थी बहुतेक ट्यूटोरियल पूर्ण करतील आणि शेवटी विनामूल्य प्ले स्तरावर खेळण्यासाठी थोडा वेळ मिळेल.
+              description_teacher: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडिंग आणि संगणक शास्त्राचा परिचयात्मक अनुभव मिळतो. हा धडा वाचण्यास पुरेसा वय असलेल्या कोणत्याही विद्यार्थ्यासाठी (6+ वयोगटातील) चांगला कार्य करतो. तरुण शिकणारे ट्यूटोरियल कदाचित पूर्ण करणार नाहीत, परंतु त्यांना एक तासासाठी कोडी सोडवण्यात खूप मजा येईल. हायस्कूलचे विद्यार्थी बहुतेक ट्यूटोरियल पूर्ण करतील आणि शेवटी विनामूल्य प्ले स्तरावर खेळण्यासाठी थोडा वेळ मिळेल.
         oceans:
           title: महासागरांसाठी कृत्रिम बुद्धिमत्ता
           lessons:
             Oceans:
               description_student: 'ट्युटोरीयल सारांश: आधी विद्यार्थी महासागरातून कचरा काढून टाकण्याचा प्रयत्न करण्यासाठी ऑब्जेक्टचे "मासा आहे" किंवा "मासा नाही" असे वर्गीकरण करतील. नंतर, विद्यार्थ्यांना पाण्यातील इतर प्राणी समाविष्ट करण्यासाठी त्यांच्या ट्रेनिंग सेटचा विस्तार करावा लागेल. कृतीच्या दुसऱ्या भागात, विद्यार्थी यादृच्छिकपणे तयार केलेल्या माशांच्या इमेजेसना लागू करण्यासाठी त्यांची स्वत:ची लेबल्स निवडतील.हा ट्रेनिंग डेटा मशीन लर्निंग मॉडेलसाठी वापरला जाईल आणि मग ते नवीन इमेजेसना स्वत: लेबल करू शकेल.'
+              description_teacher: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडिंग आणि संगणक शास्त्राचा परिचयात्मक अनुभव मिळतो. प्रथम, समुद्रातील कचरा काढून टाकण्याचा प्रयत्न करण्यासाठी विद्यार्थी वस्तूंचे वर्गीकरण "मासे" किंवा "मासे नाही" असे करतात. त्यानंतर, पाण्यातील इतर समुद्री जीवांचा समावेश करण्यासाठी विद्यार्थ्यांना त्यांचा प्रशिक्षण डेटा संच विस्तारित करणे आवश्यक आहे. क्रियाकलापाच्या दुसऱ्या भागात, विद्यार्थी यादृच्छिकपणे व्युत्पन्न केलेल्या माशांच्या प्रतिमांना लागू करण्यासाठी स्वतःची लेबले निवडतील. हा प्रशिक्षण डेटा मशीन लर्निंग मॉडेलसाठी वापरला जातो जो नंतर स्वतः नवीन प्रतिमांना लेबल करण्यास सक्षम असेल.
         csp2-2017:
           lessons:
             Text Compression:
@@ -205,6 +257,8 @@ mr:
           lessons:
             Exploring Apps:
               name: एक्सप्लोरींग ॲप्स
+        CSDU5-Draft:
+          description_short: डेटा
         CSF_Secret_Sample_Story:
           description_audience: वय वर्षे 8-18+
         MikeTest:
@@ -228,6 +282,8 @@ mr:
               name: डीबगिंग
             Events:
               name: ईव्हेंट्स
+            Loops:
+              name: लूप्स
             Programming:
               name: प्रोग्रामिंग
         grade4:
@@ -244,6 +300,8 @@ mr:
               name: डीबगिंग
             Events:
               name: ईव्हेंट्स
+            Loops:
+              name: लूप्स
             Programming:
               name: प्रोग्रामिंग
             'Debugging: Unspotted Bugs':
@@ -268,18 +326,27 @@ mr:
               display_name: आढावा
         csd3-2017:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
         grade2:
           description_audience: वय वर्षे 5-18
+          lessons:
+            Flappy:
+              name: फ्लॅपी
         k5concepts:
           lessons:
             Conditionals:
               name: कंडीशनल्स
             Events:
               name: ईव्हेंट्स
+            Loops:
+              name: लूप्स
             Nested Loops:
               name: नेस्टेड लूप्स
+            Variables:
+              name: व्हेरीएबल्स
         csp-online-test:
           lesson_groups:
             required:
@@ -299,6 +366,12 @@ mr:
           lessons:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
+              description_student: या धड्यात, विद्यार्थ्यांना गुप्त संदेश तोडण्यासाठी (किंवा क्रॅक करण्यासाठी) एन्क्रिप्शनची आवश्यकता आणि सोप्या तंत्रांचा परिचय करून दिला जातो. विद्यार्थी क्लासिक सीझर सायफर आणि यादृच्छिक प्रतिस्थापन सायफरसह एन्कोड केलेला संदेश क्रॅक करण्याचा प्रयत्न करतात. शक्तिशाली संगणकीय साधनांच्या युगात, एनक्रिप्शनच्या तंत्रांना अधिक परिष्कृत करणे आवश्यक आहे या कल्पनेशी विद्यार्थ्यांना चांगले परिचित असले पाहिजे. इंटरनेटवरील आपल्या दैनंदिन जीवनात एन्क्रिप्शन कशी आणि का भूमिका बजावते हे समजून घेणे हा या धड्याचा सर्वात महत्त्वाचा पैलू आहे आणि चांगले एन्क्रिप्शन तयार करणे ही काही क्षुल्लक बाब नाही. ते क्रॅक करण्यासाठी वापरल्या जाऊ शकणार्‍या शक्तिशाली संगणकीय साधनांसमोर मजबूत एनक्रिप्शन तयार करण्यासाठी आवश्यक असलेल्या कल्पना समजून घेतल्याने विद्यार्थी त्यांचे पाय ओले होतील. इंटरनेटवरून बिट पाठवताना गोपनीयतेची गरज इंटरनेट वापरणाऱ्या प्रत्येकासाठी महत्त्वाची आहे.
+              description_teacher: या धड्यात, विद्यार्थ्यांना गुप्त संदेश तोडण्यासाठी (किंवा क्रॅक करण्यासाठी) एन्क्रिप्शनची आवश्यकता आणि सोप्या तंत्रांचा परिचय करून दिला जातो. विद्यार्थी क्लासिक सीझर सायफर आणि यादृच्छिक प्रतिस्थापन सायफरसह एन्कोड केलेला संदेश क्रॅक करण्याचा प्रयत्न करतात. शक्तिशाली संगणकीय साधनांच्या युगात, एनक्रिप्शनच्या तंत्रांना अधिक परिष्कृत करणे आवश्यक आहे या कल्पनेशी विद्यार्थ्यांना चांगले परिचित असले पाहिजे. इंटरनेटवरील आपल्या दैनंदिन जीवनात एन्क्रिप्शन कशी आणि का भूमिका बजावते हे समजून घेणे हा या धड्याचा सर्वात महत्त्वाचा पैलू आहे आणि चांगले एन्क्रिप्शन तयार करणे ही काही क्षुल्लक बाब नाही. ते क्रॅक करण्यासाठी वापरल्या जाऊ शकणार्‍या शक्तिशाली संगणकीय साधनांसमोर मजबूत एनक्रिप्शन तयार करण्यासाठी आवश्यक असलेल्या कल्पना समजून घेतल्याने विद्यार्थी त्यांचे पाय ओले होतील. इंटरनेटवरून बिट पाठवताना गोपनीयतेची गरज इंटरनेट वापरणाऱ्या प्रत्येकासाठी महत्त्वाची आहे.
+        csd2-2017:
+          lessons:
+            Lists:
+              name: याद्या
         csp2-support:
           lesson_groups:
             required:
@@ -309,6 +382,10 @@ mr:
         minecraft:
           description_short: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट प्राणी प्रोग्राम करा.
           description: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट प्राणी प्रोग्राम करा.
+          lessons:
+            Minecraft Hour of Code Designer:
+              description_student: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडिंग आणि संगणक शास्त्राचा परिचयात्मक अनुभव मिळतो. हा धडा वाचण्यास पुरेसा वय असलेल्या कोणत्याही विद्यार्थ्यासाठी (6+ वयोगटातील) चांगला कार्य करतो. तरुण शिकणारे ट्यूटोरियल कदाचित पूर्ण करणार नाहीत, परंतु त्यांना एक तासासाठी कोडी सोडवण्यात खूप मजा येईल. हायस्कूलचे विद्यार्थी बहुतेक ट्यूटोरियल पूर्ण करतील आणि शेवटी विनामूल्य प्ले स्तरावर खेळण्यासाठी थोडा वेळ मिळेल.
+              description_teacher: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडिंग आणि संगणक शास्त्राचा परिचयात्मक अनुभव मिळतो. हा धडा वाचण्यास पुरेसा वय असलेल्या कोणत्याही विद्यार्थ्यासाठी (6+ वयोगटातील) चांगला कार्य करतो. तरुण शिकणारे ट्यूटोरियल कदाचित पूर्ण करणार नाहीत, परंतु त्यांना एक तासासाठी कोडी सोडवण्यात खूप मजा येईल. हायस्कूलचे विद्यार्थी बहुतेक ट्यूटोरियल पूर्ण करतील आणि शेवटी विनामूल्य प्ले स्तरावर खेळण्यासाठी थोडा वेळ मिळेल.
           student_description: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट प्राणी प्रोग्राम करा.
         flappy-impact-study:
           lessons:
@@ -528,18 +605,38 @@ mr:
           lesson_groups:
             required:
               display_name: आढावा
+        csd6-draft:
+          lessons:
+            Lists:
+              name: याद्या
+            Map:
+              name: नकाशा
         coursee-ramp:
           lessons:
             Conditionals:
               name: कंडीशनल्स
+        csd6-2017:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-draft:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
+        csd2-draft:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-chapters:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
+            'null':
+              name: 'null'
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -963,6 +1060,16 @@ mr:
           lessons:
             Intro to App Lab:
               name: अॅप लॅबची ओळख
+              description_student: |-
+                ट्युटोरियलच्या शेवटी, तुम्ही "तुमचे स्वतःचे साहस निवडा", "ग्रीटिंग कार्ड" किंवा "पर्सनॅलिटी क्विझ" अॅपमध्ये बनवण्यास सुरुवात केलेल्या प्रकल्पाचा विस्तार करण्यास सक्षम असाल. तुम्ही code.org/applab पृष्‍ठावर वैशिष्‍ट्यीकृत आणखी प्रकल्प तयार करणे देखील सुरू ठेवू शकता.
+
+                अॅप लॅबसह अवर ऑफ कोड  पूर्ण करण्यात मजा करा!
+              description_teacher: |-
+                हे ट्यूटोरियल अॅप्स तयार करण्यासाठी आणि सामायिक करण्यासाठी एक शक्तिशाली साधन म्हणून अॅप लॅब प्रोग्रामिंग वातावरणाचा त्वरित परिचय करून देण्यासाठी डिझाइन केले आहे. ट्यूटोरियल स्वतः विद्यार्थ्यांना ब्लॉक किंवा मजकूर वापरून JavaScript मध्ये बटणे, मजकूर, प्रतिमा, ध्वनी आणि स्क्रीन तयार करणे आणि नियंत्रित करण्यास शिकवते. ट्यूटोरियलच्या शेवटी, विद्यार्थ्यांना एकतर त्यांनी बांधायला सुरुवात केलेला प्रकल्प "तुमचे स्वतःचे साहस निवडा", "ग्रीटिंग कार्ड" किंवा "पर्सनॅलिटी क्विझ" अॅपमध्ये विस्तारित करण्यासाठी वेळ दिला जातो. ते code.org/applab पृष्ठावर वैशिष्ट्यीकृत अधिक प्रकल्प तयार करणे देखील सुरू ठेवू शकतात
+
+                अॅप लॅबसह  अवर ऑफ कोड  पूर्ण करण्यात मजा करा!
+
+                **वय योग्यता:** हे ट्यूटोरियल 13 वर्षांपेक्षा जास्त वयाच्या विद्यार्थ्यांसाठी डिझाइन केलेले आहे. कारण ते विद्यार्थ्यांना सानुकूल ध्वनी आणि प्रतिमा अपलोड करण्यास अनुमती देते, तरुण विद्यार्थ्यांनी हे पर्यवेक्षणाशिवाय वापरू नये. विद्यार्थ्यांच्या गोपनीयतेचे रक्षण करण्यासाठी, तुमचे विद्यार्थी 13 वर्षांखालील असल्यास, तुम्ही व्यवस्थापित करत असलेल्या विभागात तुम्ही प्रथम त्यांच्यासाठी खाती सेट केल्याशिवाय ते हे ट्यूटोरियल वापरण्यास सक्षम असणार नाहीत.
         e-f-ramp:
           lesson_groups:
             extra_course_content:
@@ -1181,8 +1288,17 @@ mr:
               name: अॅप लॅबची ओळख
             Intro to App Lab (13+):
               name: अॅप लॅबची ओळख (13+)
+        allthesurveys:
+          lessons:
+            CSP pre-survey 21-2:
+              name: सीएसपी(CSP) प्री-सर्वेक्षण 21-22
+            CSD pre-survey 21-2:
+              name: सीएसडी (CSD) पूर्व सर्वेक्षण 21-22
         hero:
           description: अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा.
+          lessons:
+            Minecraft Hour of Code:
+              description_teacher: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडिंग आणि संगणक शास्त्राचा परिचयात्मक अनुभव मिळतो. हा धडा वाचण्यास पुरेसा वय असलेल्या कोणत्याही विद्यार्थ्यासाठी (6+ वयोगटातील) चांगला कार्य करतो. तरुण शिकणारे ट्यूटोरियल कदाचित पूर्ण करणार नाहीत, परंतु त्यांना एक तासासाठी कोडी सोडवण्यात खूप मजा येईल. हायस्कूलचे विद्यार्थी बहुतेक ट्यूटोरियल पूर्ण करतील आणि शेवटी विनामूल्य प्ले स्तरावर खेळण्यासाठी थोडा वेळ मिळेल.
           student_description: अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा.
         applab-intro-staging:
           lessons:
@@ -1279,14 +1395,26 @@ mr:
               name: तुमच्या प्रकल्पाचा आढावा घ्या
             Present Your Project:
               name: तुमचा प्रकल्प सादर करा
+        csd6-old:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-1819draft:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
         csd3-2018:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
+        csd2-2018:
+          lessons:
+            Lists:
+              name: याद्या
         coursea-2018:
           assignment_family_title: अभ्यासक्रम A
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
@@ -1693,12 +1821,18 @@ mr:
           lessons:
             Dance Party:
               name: डांस पार्टी
+              description_student: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडींग आणि संगणक शास्त्राचा प्रास्ताविक अनुभव मिळतो. हा धडा सर्व वयोगटातील शिकणाऱ्यांसाठी डिझाइन केला गेला आहे परंतु त्याला वाचन आवश्यक आहे. या क्रियाकलापासाठी आवाज आवश्यक आहे कारण हे साधन संगीताला प्रतिसाद देण्यासाठी तयार करण्यात आले होते.
+              description_teacher: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडींग आणि संगणक शास्त्राचा प्रास्ताविक अनुभव मिळतो. हा धडा सर्व वयोगटातील शिकणाऱ्यांसाठी डिझाइन केला गेला आहे परंतु त्याला वाचन आवश्यक आहे. या क्रियाकलापासाठी आवाज आवश्यक आहे कारण हे साधन संगीताला प्रतिसाद देण्यासाठी तयार करण्यात आले होते.
           student_description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या डान्स पार्टीचा कोड लिहा!
         frozen-2018-test-b:
           title: नवीन फ्रोझन संहिता
           lessons:
             Artist:
               name: आर्टीस्ट
+        aquatic:
+          lessons:
+            Aquatic:
+              description_teacher: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडिंग आणि संगणक शास्त्राचा परिचयात्मक अनुभव मिळतो. हा धडा वाचण्यास पुरेसा वय असलेल्या कोणत्याही विद्यार्थ्यासाठी (6+ वयोगटातील) चांगला कार्य करतो. तरुण शिकणारे ट्यूटोरियल कदाचित पूर्ण करणार नाहीत, परंतु त्यांना एक तासासाठी कोडी सोडवण्यात खूप मजा येईल. हायस्कूलचे विद्यार्थी बहुतेक ट्यूटोरियल पूर्ण करतील आणि शेवटी विनामूल्य प्ले स्तरावर खेळण्यासाठी थोडा वेळ मिळेल.
         dance--draft:
           lessons:
             Dance Party:
@@ -1709,15 +1843,26 @@ mr:
               name: डांस पार्टी
         cspplayground:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         dance-extras:
           title: नाचत राहा (2018)
           description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
+          lessons:
+            Dance Party - Go Further:
+              description_student: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडींग आणि संगणक शास्त्राचा प्रास्ताविक अनुभव मिळतो. हा धडा सर्व वयोगटातील शिकणाऱ्यांसाठी डिझाइन केला गेला आहे परंतु त्याला वाचन आवश्यक आहे. या क्रियाकलापासाठी आवाज आवश्यक आहे कारण हे साधन संगीताला प्रतिसाद देण्यासाठी तयार करण्यात आले होते.
+              description_teacher: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडींग आणि संगणक शास्त्राचा प्रास्ताविक अनुभव मिळतो. हा धडा सर्व वयोगटातील शिकणाऱ्यांसाठी डिझाइन केला गेला आहे परंतु त्याला वाचन आवश्यक आहे. या क्रियाकलापासाठी आवाज आवश्यक आहे कारण हे साधन संगीताला प्रतिसाद देण्यासाठी तयार करण्यात आले होते.
           student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
         coursef-2019:
           title: अभ्यासक्रम F (2019)
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+          lesson_groups:
+            csf_variables:
+              display_name: व्हेरीएबल्स
+            csf_data:
+              display_name: डेटा
           lessons:
             'Programming: My Robotic Friends':
               name: 'प्रोग्रॅमिंग: माझे रोबो मित्र'
@@ -1783,6 +1928,8 @@ mr:
               display_name: सिक्वेन्सिंग
             csf_events:
               display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
@@ -1887,8 +2034,12 @@ mr:
               display_name: वार्म अप
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            csf_variables:
+              display_name: व्हेरीएबल्स
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'अल्गोरिदम्स: आलेख कागद प्रोग्रॅमिंग '
@@ -1966,6 +2117,9 @@ mr:
           lesson_groups:
             required:
               display_name: आढावा
+          lessons:
+            'null':
+              name: 'null'
         dance-extras-gallery:
           title: नाचत रहा
           description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
@@ -1976,8 +2130,12 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            csf_data:
+              display_name: डेटा
           lessons:
             Programming in Maze:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
@@ -2015,6 +2173,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2061,6 +2221,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2101,6 +2263,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2138,12 +2302,20 @@ mr:
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'डीबगिंग: न सापडलेले बग्ज'
+        csd2-2019:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-2019:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
         csp4-pilot:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
             required:
@@ -2192,30 +2364,50 @@ mr:
               name: संकल्पना ठरवा
         csp1-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp2-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp4-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
         csp6-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp8-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp9-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp10-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         express-2018-vn:
@@ -2226,6 +2418,10 @@ mr:
               name: रे आणि बीबी -8 सह लूप
         csp5-pilot:
           lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
             required:
               display_name: आढावा
         fit2019-novice:
@@ -2242,8 +2438,14 @@ mr:
           lessons:
             Wrap Up:
               name: समाप्ती
+        csd2-pilot:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-pilot:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
         csp3-pilot:
@@ -2257,6 +2459,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2332,15 +2536,23 @@ mr:
           lessons:
             Dance Party:
               name: डांस पार्टी
+              description_student: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडींग आणि संगणक शास्त्राचा प्रास्ताविक अनुभव मिळतो. हा धडा सर्व वयोगटातील शिकणाऱ्यांसाठी डिझाइन केला गेला आहे परंतु त्याला वाचन आवश्यक आहे. या क्रियाकलापासाठी आवाज आवश्यक आहे कारण हे साधन संगीताला प्रतिसाद देण्यासाठी तयार करण्यात आले होते.
+              description_teacher: या धड्यात, सर्व वयोगटातील विद्यार्थ्यांना सुरक्षित, आश्वासक वातावरणात कोडींग आणि संगणक शास्त्राचा प्रास्ताविक अनुभव मिळतो. हा धडा सर्व वयोगटातील शिकणाऱ्यांसाठी डिझाइन केला गेला आहे परंतु त्याला वाचन आवश्यक आहे. या क्रियाकलापासाठी आवाज आवश्यक आहे कारण हे साधन संगीताला प्रतिसाद देण्यासाठी तयार करण्यात आले होते.
           student_description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या डान्स पार्टीचा कोड लिहा!
         k5-onlinepd-2019:
           lessons:
+            Computer Science Fundamentals:
+              name: संगणक शास्त्राची मूलतत्त्वे
             Sequencing:
               name: सिक्वेन्सिंग
+            Loops:
+              name: लूप्स
             Conditionals:
               name: कंडीशनल्स
             Events:
               name: ईव्हेंट्स
+            Variables:
+              name: व्हेरीएबल्स
             End of Course projects:
               name: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
         dance-extras-2019:
@@ -2349,6 +2561,8 @@ mr:
           student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
         csp4-preview:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         time4cs-original-unit-1:
@@ -2394,6 +2608,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
             csf_events:
@@ -2411,6 +2627,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
             csf_events:
@@ -2430,18 +2648,32 @@ mr:
               display_name: आढावा
         csp4-2020:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
         csd3-2020:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
+            Text:
+              name: टेक्स्ट
         coursea-2020:
           title: अभ्यासक्रम A (2020)
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2484,6 +2716,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2520,8 +2754,12 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            csf_data:
+              display_name: डेटा
           lessons:
             Screen Out the Mean:
               name: शेरेबाजी काढून टाका
@@ -2556,6 +2794,8 @@ mr:
               display_name: सिक्वेन्सिंग
             csf_events:
               display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
@@ -2626,6 +2866,11 @@ mr:
         coursef-2020:
           title: अभ्यासक्रम F (2020)
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+          lesson_groups:
+            csf_variables:
+              display_name: व्हेरीएबल्स
+            csf_data:
+              display_name: डेटा
           lessons:
             Functions in Minecraft:
               name: माईनक्राफ्ट मधील फंक्शन्स
@@ -2662,8 +2907,12 @@ mr:
               display_name: वार्म अप
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            csf_variables:
+              display_name: व्हेरीएबल्स
           lessons:
             Dance Party:
               name: डांस पार्टी
@@ -2737,6 +2986,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2778,12 +3029,16 @@ mr:
               name: डीबगिंग
         jess-test-script:
           lessons:
+            Tools:
+              name: साधने
             Debugging:
               name: डीबगिंग
         csp5-virtual:
           lessons:
             Intro to App Lab:
               name: अॅप लॅबची ओळख
+            Variables:
+              name: व्हेरीएबल्स
         code-break:
           lessons:
             Events:
@@ -2792,16 +3047,40 @@ mr:
           lessons:
             Sequencing:
               name: सिक्वेन्सिंग
+            Loops:
+              name: लूप्स
             Events:
               name: ईव्हेंट्स
             Conditionals:
               name: कंडीशनल्स
             End of Course projects:
               name: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
+            Variables:
+              name: व्हेरीएबल्स
         csd3-virtual:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
+            Text:
+              name: टेक्स्ट
             Conditionals:
               name: कंडीशनल्स
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: धडा
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: धडा
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: धडा
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: धडा
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -2812,6 +3091,8 @@ mr:
               name: अभ्यासक्रम E
             Course F:
               name: अभ्यासक्रम F
+            csf:
+              name: संगणक शास्त्राची मूलतत्त्वे
         virustest:
           title: उद्रेकाचे सिम्युलेशन करणे
           description_short: विषाणूच्या उद्रेकाचे सिम्युलेशन करण्यासाठी स्प्राईट लॅब वापरा.
@@ -2819,6 +3100,8 @@ mr:
           lessons:
             AI for Oceans:
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+            CSP Tester:
+              name: सीएसपी (CSP)टेस्टर
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -2846,12 +3129,20 @@ mr:
             Outbreaklab:
               name: आऊटब्रेक स्टँडअलोन लॅब
           lesson_groups:
+            lessonGroup-3:
+              display_name: व्हेरीएबल्स
             outbreak:
               display_name: आऊटब्रेक सिम्युलेटर
             debugging:
               display_name: डीबगिंग
         csd3-2021:
           lessons:
+            Variables:
+              key: व्हेरीएबल्स
+              name: व्हेरीएबल्स
+            Text:
+              key: टेक्स्ट
+              name: टेक्स्ट
             Conditionals:
               key: कंडीशनल्स
               name: कंडीशनल्स
@@ -2869,8 +3160,16 @@ mr:
               name: डीबगिंग
         csp4-2021:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -2919,6 +3218,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
         courseb-2021:
@@ -2959,6 +3260,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
         coursec-2021:
@@ -3004,8 +3307,12 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            csf_data:
+              display_name: डेटा
         coursed-2021:
           title: अभ्यासक्रम D (2021)
           lessons:
@@ -3057,6 +3364,8 @@ mr:
               display_name: सिक्वेन्सिंग
             csf_events:
               display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
         coursee-2021:
@@ -3151,6 +3460,9 @@ mr:
               name: उद्रेक
             lesson-2:
               name: शब्दांची ताकद
+          lesson_groups:
+            lessonGroup-8:
+              display_name: व्हेरीएबल्स
         express-2021:
           lessons:
             Dance Party:
@@ -3242,8 +3554,12 @@ mr:
               display_name: वार्म अप
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            csf_variables:
+              display_name: व्हेरीएबल्स
             lessonGroup-9:
               display_name: ईव्हेंट्स
         pre-express-2021:
@@ -3288,6 +3604,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
         csf-2021-pilot:
@@ -3307,15 +3625,94 @@ mr:
           lesson_groups:
             outbreak:
               display_name: आऊटब्रेक सिम्युलेशन
+            lessonGroup-3:
+              display_name: व्हेरीएबल्स
+            variables:
+              display_name: व्हेरीएबल्स
         contagion-pilot:
           description_short: विषाणूच्या उद्रेकाच्या सिम्युलेशनचा प्रोग्रॅम करण्यासाठी स्प्राईट लॅब वापरा.
           description: विषाणूच्या उद्रेकाच्या सिम्युलेशनचा प्रोग्रॅम करण्यासाठी स्प्राईट लॅब वापरा.
           student_description: विषाणूच्या उद्रेकाच्या सिम्युलेशनचा प्रोग्रॅम करण्यासाठी स्प्राईट लॅब वापरा.
+        csa1-pilot:
+          lessons:
+            lesson-24:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa2-pilot:
+          lessons:
+            lesson-1:
+              name: युनिट 2 पायलट सर्वेक्षण
+            lesson-16:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सँडबॉक्स
+        csa3-pilot:
+          lessons:
+            lesson-16:
+              name: युनिट 3 पायलट सर्वेक्षण
+            lesson-17:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa4-pilot:
+          lessons:
+            lesson-7:
+              description_student: समानतेसाठी आम्ही दोन `इंट` किंवा `डबल`ची तुलना केली आहे, परंतु आपण वस्तूंची तुलना कशी करू? दोन `स्ट्रिंग` समान असण्याचा काय अर्थ होतो? दोन डोनट्स बद्दल काय? समानतेसाठी दोन वस्तूंची चाचणी कशी करायची आणि पॉप द बलून्स गेममध्ये तुमचे निष्कर्ष कसे अंमलात आणायचे हे तुम्ही शोधता.
+              description_teacher: विद्यार्थी वस्तूंची तुलना आणि आदिम मूल्यांमध्ये फरक करतात. ऑब्जेक्ट डेटाची तुलना करण्यासाठी `इक्वल्स()` पद्धतीची आवश्यकता ओळखण्यासाठी विद्यार्थी ऑब्जेक्ट्ससह `==` किंवा `!=` वापरण्याचे परिणाम शोधतात. `इक्वल()` पद्धतीचा वापर करून, विद्यार्थी `बलून` ऑब्जेक्ट्सची तुलना करण्यासाठी आणि वैध हालचाली शिल्लक आहेत का हे निर्धारित करण्यासाठी पॉप द बलून गेममध्ये जोडतात.
+            lesson-8:
+              description_student: बुलियन अभिव्यक्तीच्या परिणामावर आधारित वैकल्पिक क्रिया लागू करण्यासाठी तुम्ही `if/else` विधानांचे पुनरावलोकन करता. तुम्ही द नेबरहुडमधील अॅरेमधून यादृच्छिक घटकांमध्ये प्रवेश करण्यासाठी `Math.random()` सह `if/else` विधाने वापरण्याचा सराव करता. `if/else विधाने` वापरून, तुम्ही पॉप द बलून गेममध्ये खेळाडूच्या हालचालीची वैधता तपासता.
+              description_teacher: बुलियन अभिव्यक्तीच्या परिणामावर आधारित वैकल्पिक क्रिया लागू करण्यासाठी विद्यार्थी `if/else` विधानांचे पुनरावलोकन करतात. विद्यार्थी द नेबरहुडमधील अॅरेमधून यादृच्छिक घटकांमध्ये प्रवेश करण्यासाठी `Math.random()` सह `if/else` विधाने वापरण्याचा सराव करतात. `if/else विधाने` वापरून, विद्यार्थी पॉप द बलून गेममध्ये खेळाडूच्या हालचालीची वैधता तपासतात.
+            lesson-9:
+              description_student: काहीवेळा आम्हाला योग्य परिणाम निर्धारित करण्यासाठी अनेक कंडीशंस तपासण्याची आवश्यकता असते. द नेबरहुडमध्ये, आपण `पेंटर` ची समस्या सोडवण्यासाठी `if/else-if/else` विधाने वापरण्यास शिकाल. त्यानंतर आपण गेमची स्थिती तपासण्यासाठी आणि खेळाडू जिंकला आहे की नाही हे निर्धारित करण्यासाठी पॉप द बलून गेममध्ये `if/else-if/else` विधाने लागू करा.
+              description_teacher: विशिष्ट इच्छित परिणाम निवडण्यासाठी अनेक कंडीशंस चे मूल्यमापन करण्यासाठी विद्यार्थी `if/else-if/else` विधाने वापरतात. गेमची स्थिती तपासण्यासाठी आणि खेळाडू जिंकला आहे की नाही हे निर्धारित करण्यासाठी आणि योग्य निकाल निवडण्यासाठी  विद्यार्थी  एकाधिक-निवड  स्टेटमेंट चा वापर करतात.
+            lesson-10:
+              description_student: तुम्ही अनेक परिस्थितींचा समावेश असलेल्या समस्या एक्सप्लोर करता आणि तुमच्या सोल्यूशन्समध्ये नेस्टेड 'if' स्टेटमेंट वापरण्यास शिका. तुम्ही कंडिशनल स्टेटमेंटमध्ये नवीन लॉजिकल ऑपरेटर्स वापरून एक्स्प्रेशन्स लिहिता आणि या ऑपरेटर्सचा परिणामावर होणारा परिणाम ओळखता. त्यानंतर तुम्ही नेस्टेड `if` स्टेटमेंट आणि लॉजिकल ऑपरेटर वापरून तुमच्या पॉप द बलून गेमचा गेमप्ले आणि कार्यक्षमता सुधारता.
+              description_teacher: विद्यार्थी एकाधिक परिस्थितींचा समावेश असलेल्या समस्या शोधतात आणि उपाय विकसित करण्यासाठी नेस्टेड 'if' स्टेटमेंट लिहितात. विद्यार्थी कंडीशनल स्टेटमेंट मध्ये लॉजीकल ऑपरेटर वापरून अभिव्यक्ती लिहितात आणि निकालावर लॉजीकल ऑपरेटरचा प्रभाव ओळखतात. गेमप्ले आणि एकूण कार्यक्षमता सुधारण्यासाठी पॉप द बलून गेममध्ये नेस्टेड `if` विधाने आणि लॉजिकल ऑपरेटर लागू केले आहेत.
+            lesson-16:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सँडबॉक्स
+        csa5-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सँडबॉक्स
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
         k5-onlinepd-2021:
           lessons:
             Sequencing:
               key: सिक्वेन्सिंग
               name: सिक्वेन्सिंग
+            Loops:
+              key: लूप्स
+              name: लूप्स
             Events:
               key: ईव्हेंट्स
               name: ईव्हेंट्स
@@ -3325,6 +3722,9 @@ mr:
             End of Course projects:
               key: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
               name: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
+            Variables:
+              key: व्हेरीएबल्स
+              name: व्हेरीएबल्स
         outbreakmodule:
           lessons:
             intro monster town:
@@ -3342,6 +3742,15 @@ mr:
           lessons:
             Similarity Models:
               description_teacher: "या धड्यात, विद्यार्थी झोम्बीच्या उद्रेकाचे सिम्युलेशन करणाऱ्या एका अनप्लग्ड कृतीत सहभागी होतात. शेजारच्या शहराचा डेटा वापरून शहराच्या कोणत्या भागात सर्वांत कमी झोम्बीज असतील याचा अंदाज विद्यार्थ्यांनी वर्तवायचा आहे. एखाद्या विशिष्ट ठिकाणी असलेल्या झोम्बीजच्या संख्येबद्दल अंदाज वर्तवण्यासाठी विद्यार्थ्या साम्य आणि सरासरी यांचे प्रमाण वापरतील. मग, विद्यार्थ्यांची सुटका करण्यात येईल आणि त्यांच्या अंदाजाची त्यांना प्रत्यक्ष संख्येशी तुलना करता येईल. त्यावरून त्यांना श्रेणीबद्ध डेटाच्या तुलनेत सांख्यिक डेटासाठी अचूकता कशी वेगळी असते, हे समजेल.\n\n**आजचा प्रश्न:** सांख्यिक डेटा वापरून अंदाज वर्तवायला कॉम्प्युटर्स कसे शिकतात?    "
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: संगणक शास्त्राची मूलतत्त्वे
+              name: संगणक शास्त्राची मूलतत्त्वे
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: शिक्षक समुदाय
         self-paced-pl-csd5-2021:
           lessons:
             lesson-4:
@@ -3349,6 +3758,14 @@ mr:
         outbreak-module:
           name: आऊटब्रेक-मोड्यूल
           title: उद्रेक
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: संसाधने
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: चाचणी
         dlp21-csd-overview:
           lessons:
             lesson-1:
@@ -3359,43 +3776,1462 @@ mr:
               name: आढावा
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: साधने
             lesson-17:
               name: कन्सोल
+          lesson_groups:
+            lessonGroup-2:
+              display_name: धडे
+            lessonGroup-4:
+              display_name: डेमो आणि संसाधने
         hello-world-draft:
           lessons:
             lesson-1:
               name: हॅलो, वर्ल्ड !
           title: '"हॅलो, वर्ल्ड !"'
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: Code.org शिकण्याचे प्लॅटफॉर्म नेव्हिगेट करणे
+              description_teacher: |-
+                **तुम्ही हे शिकाल :**
+
+                -   Code.org वेबसाइट आणि शिक्षक टूल्स वर नेव्हिगेट करणे.
+
+                **सुचवलेला वेळ:** 30 मिनिटे
+            Navigating lesson plans and resources:
+              description_teacher: |-
+                **तुम्ही हे शिकाल :**
+
+                -   अभ्यासक्रमाचे  लेसन प्लान  आणि शिक्षक संसाधने शोधणे आणि त्यांचा वापर करणे.
+
+                **सुचवलेला वेळ:** 30 मिनिटे
+            Navigating support:
+              description_teacher: |-
+                **तुम्ही हे शिकाल :**
+
+                -   सीएस (CS) डिस्कवरीज शिकवताना सपोर्टमध्ये प्रवेश करणे.
+
+                **सुचवलेला वेळ:** 30 मिनिटे
+            lesson-4:
+              key: धडा-4
+              description_teacher: |-
+                **तुम्ही हे शिकाल :**
+
+                -   Code.org वेबसाइट आणि शिक्षक टूल्स वर नेव्हिगेट करणे.
+
+                **सुचवलेला वेळ:** 30 मिनिटे
+            lesson-3:
+              key: धडा-3
+              description_teacher: |-
+                **तुम्ही हे शिकाल :**
+
+                -   अभ्यासक्रमाचे  लेसन प्लान  आणि शिक्षक संसाधने शोधणे आणि त्यांचा वापर करणे.
+
+                **सुचवलेला वेळ:** 30 मिनिटे
+            lesson-8:
+              key: धडा -8
+              description_teacher: |-
+                **तुम्ही हे शिकाल :**
+
+                -   सीएस (CS) डिस्कवरीज शिकवताना सपोर्टमध्ये प्रवेश करणे.
+
+                **सुचवलेला वेळ:** 30 मिनिटे
+          title: CSA पायलट शिक्षकांसाठी Code.org नेव्हिगेट करणे
+          description: |-
+            हे मॉड्युल तुम्हाला CSA शिकवताना विद्यार्थ्यांच्या शिक्षणाला मदत करण्यासाठी वापरत असलेल्या साधनांकडे तुमची दिशा देण्यासाठी डिझाइन केलेले आहे.
+
+            **तुम्ही हे शिकाल :**
+
+            -   Code.org वेबसाइट आणि शिक्षक साधने नेव्हिगेट करणे.
+            -   अभ्यासक्रम धडे योजना आणि शिक्षक संसाधने शोधणे आणि त्यांचा वापर करणे.
+
+            **सुचवलेला वेळ:** 1 तास
+          name: csa-self-paced-pl
+        csa1-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: धडा -1
+              name: जावा लॅब
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-10:
+              key: धडा -10
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-16:
+              key: धडा -16
+            lesson-17:
+              key: धडा -17
+            lesson-18:
+              key: धडा -18
+            lesson-19:
+              key: धडा -19
+            lesson-20:
+              key: धडा -20
+            lesson-21:
+              key: धडा -21
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+          name: csa1-पायलट-फॅसिलिटेटर
+        csa2-pilot-facilitator:
+          lessons:
+            Unit 2 Pilot Survey:
+              name: युनिट 2 पायलट सर्वेक्षण
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-10:
+              key: धडा -10
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-1:
+              key: धडा -1
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सँडबॉक्स
+          name: csa2-पायलट-फॅसिलिटेटर
+        csa3-pilot-facilitator:
+          lessons:
+            Unit 3 Pilot Survey:
+              name: युनिट 3 पायलट सर्वेक्षण
+            lesson-1:
+              key: धडा -1
+              name: जावा लॅब
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+              description_student: तुम्हाला आठवते का `व्हाइल` लूप? या धड्यात, तुम्ही `व्हाइल` लूप्स च्या एज केसेसचा तपास करता आणि `व्हाइल` आणि `फॉर` लूप्स दरम्यान कनेक्शन बनवता. तुम्ही 'आयत' वर्ग वापरून तुमच्या संगीतासाठी व्हिज्युअल तयार करता.
+              description_teacher: विद्यार्थी `व्हाइल` लूप्स चे पुनरावलोकन करतात आणि इंफिनीट लूप्स बद्दल शिकतात. विद्यार्थी `व्हाइल` आणि `फॉर` लूपमध्ये रूपांतरित करण्यापूर्वी व्हिज्युअल तयार तयार करण्याचा शोध घेतात. विद्यार्थी `आयत` वर्ग वापरून त्यांचे स्वतःचे संगीत व्हिज्युअल तयार करतात.
+            lesson-5:
+              key: धडा -5
+              description_student: तुम्ही `अ‍ॅनिमल` ऑब्जेक्ट्सची अॅरे तयार करण्यासाठी आणि त्यामधून मार्ग काढण्यासाठी पॉलीमॉर्फिजम नावाच्या ऑब्जेक्ट-ओरिएंटेड तत्त्वाची कार्यक्षमता आणि फायदे शोधता. वारशाचे पुनरावलोकन केल्यानंतर, उपवर्ग प्रत्येकाच्या वर्तनाच्या स्वतःच्या आवृत्त्या कशा असू शकतात हे आपण शोधू शकता. तुम्ही 'अ‍ॅनिमल' ऑब्जेक्ट्सचा अॅरे वापरून थिएटरमध्ये तुमच्या मैफिलीसाठी एक नवीन दृश्य तयार करता आणि प्रत्येक `अ‍ॅनिमल` च्या त्यांच्या `स्पीक()` पद्धतीचे  वर्जन वापरता.
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-10:
+              key: धडा -10
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+              description_teacher: मागील धड्यात, विद्यार्थ्यांनी एक रीमिक्स अल्गोरिदम लिहिला आणि तो आधीच्या धड्यांमध्ये विकसित केलेल्या अल्गोरिदमसह एकत्र केला. मैफिलीच्या लांबीमध्ये मर्यादा जोडण्यासाठी विद्यार्थी स्टॅटिक व्हेरिएबल्स आणि कॉन्स्टंट्स वापरतात. ते `शेप` च्या अ‍ॅरेचा वापर करून कॉन्सर्टमध्ये व्हिज्युअल जोडतात, नंतर त्यांचा प्रोग्राम विकसित करताना फीडबॅक देण्यासाठी आणि वापरण्यासाठी कोड रिव्ह्यूमध्ये भाग घेतात.
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-16:
+              key: धडा -16
+              name: युनिट 3 पायलट सर्वेक्षण
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+          name: csa3-पायलट-फॅसिलिटेटर
+        csa4-pilot-facilitator:
+          lessons:
+            Comparing Object References and Data:
+              description_student: समानतेसाठी आम्ही दोन `इंट` किंवा `डबल`ची तुलना केली आहे, परंतु आपण वस्तूंची तुलना कशी करू? दोन `स्ट्रिंग` समान असण्याचा काय अर्थ होतो? दोन डोनट्स बद्दल काय? समानतेसाठी दोन वस्तूंची चाचणी कशी करायची आणि पॉप द बलून्स गेममध्ये तुमचे निष्कर्ष कसे अंमलात आणायचे हे तुम्ही शोधता.
+              description_teacher: विद्यार्थी वस्तूंची तुलना आणि आदिम मूल्यांमध्ये फरक करतात. ऑब्जेक्ट डेटाची तुलना करण्यासाठी `इक्वल्स()` पद्धतीची आवश्यकता ओळखण्यासाठी विद्यार्थी ऑब्जेक्ट्ससह `==` किंवा `!=` वापरण्याचे परिणाम शोधतात. `इक्वल()` पद्धतीचा वापर करून, विद्यार्थी `बलून` ऑब्जेक्ट्सची तुलना करण्यासाठी आणि वैध हालचाली शिल्लक आहेत का हे निर्धारित करण्यासाठी पॉप द बलून गेममध्ये जोडतात.
+            Providing an Alternate Path of Execution:
+              description_student: बुलियन अभिव्यक्तीच्या परिणामावर आधारित वैकल्पिक क्रिया लागू करण्यासाठी तुम्ही `if/else` विधानांचे पुनरावलोकन करता. तुम्ही द नेबरहुडमधील अॅरेमधून यादृच्छिक घटकांमध्ये प्रवेश करण्यासाठी `Math.random()` सह `if/else` विधाने वापरण्याचा सराव करता. `if/else विधाने` वापरून, तुम्ही पॉप द बलून गेममध्ये खेळाडूच्या हालचालीची वैधता तपासता.
+              description_teacher: बुलियन अभिव्यक्तीच्या परिणामावर आधारित वैकल्पिक क्रिया लागू करण्यासाठी विद्यार्थी `if/else` विधानांचे पुनरावलोकन करतात. विद्यार्थी द नेबरहुडमधील अॅरेमधून यादृच्छिक घटकांमध्ये प्रवेश करण्यासाठी `Math.random()` सह `if/else` विधाने वापरण्याचा सराव करतात. `if/else विधाने` वापरून, विद्यार्थी पॉप द बलून गेममध्ये खेळाडूच्या हालचालीची वैधता तपासतात.
+            Testing Multiple Conditions:
+              description_student: काहीवेळा आम्हाला योग्य परिणाम निर्धारित करण्यासाठी अनेक कंडीशंस तपासण्याची आवश्यकता असते. द नेबरहुडमध्ये, आपण `पेंटर` ची समस्या सोडवण्यासाठी `if/else-if/else` विधाने वापरण्यास शिकाल. त्यानंतर आपण गेमची स्थिती तपासण्यासाठी आणि खेळाडू जिंकला आहे की नाही हे निर्धारित करण्यासाठी पॉप द बलून गेममध्ये `if/else-if/else` विधाने लागू करा.
+              description_teacher: विशिष्ट इच्छित परिणाम निवडण्यासाठी अनेक कंडीशंस चे मूल्यमापन करण्यासाठी विद्यार्थी `if/else-if/else` विधाने वापरतात. गेमची स्थिती तपासण्यासाठी आणि खेळाडू जिंकला आहे की नाही हे निर्धारित करण्यासाठी आणि योग्य निकाल निवडण्यासाठी  विद्यार्थी  एकाधिक-निवड  स्टेटमेंट चा वापर करतात.
+            Using Logical Operators:
+              description_student: तुम्ही अनेक परिस्थितींचा समावेश असलेल्या समस्या एक्सप्लोर करता आणि तुमच्या सोल्यूशन्समध्ये नेस्टेड 'if' स्टेटमेंट वापरण्यास शिका. तुम्ही कंडिशनल स्टेटमेंटमध्ये नवीन लॉजिकल ऑपरेटर्स वापरून एक्स्प्रेशन्स लिहिता आणि या ऑपरेटर्सचा परिणामावर होणारा परिणाम ओळखता. त्यानंतर तुम्ही नेस्टेड `if` स्टेटमेंट आणि लॉजिकल ऑपरेटर वापरून तुमच्या पॉप द बलून गेमचा गेमप्ले आणि कार्यक्षमता सुधारता.
+              description_teacher: विद्यार्थी एकाधिक परिस्थितींचा समावेश असलेल्या समस्या शोधतात आणि उपाय विकसित करण्यासाठी नेस्टेड 'if' स्टेटमेंट लिहितात. विद्यार्थी कंडीशनल स्टेटमेंट मध्ये लॉजीकल ऑपरेटर वापरून अभिव्यक्ती लिहितात आणि निकालावर लॉजीकल ऑपरेटरचा प्रभाव ओळखतात. गेमप्ले आणि एकूण कार्यक्षमता सुधारण्यासाठी पॉप द बलून गेममध्ये नेस्टेड `if` विधाने आणि लॉजिकल ऑपरेटर लागू केले आहेत.
+            lesson-1:
+              key: धडा -1
+              name: जावा लॅब
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-10:
+              key: धडा -10
+            lesson-11:
+              key: धडा -11
+            lesson-2:
+              key: धडा -2
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सँडबॉक्स
+          name: csa4 -पायलट-फॅसिलिटेटर
+        csa5-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: धडा -1
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-10:
+              key: धडा -10
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            Java Lab:
+              name: जावा लॅब
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सँडबॉक्स
+          name: csa5 -पायलट-फॅसिलिटेटर
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: मूड्स आणि अॅटिट्यूड्स
+          name: कविता-hoc
+          title: कविता-HoC
+          description_short: अवर ऑफ कोड उपक्रम - V2
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: टेम्प्लेट
+            lesson-3:
+              name: बोर्ड आउटपुट (एलईडी बजर)
+              description_teacher: |-
+                -   सर्किट प्लेग्राउंडवर बजर वापरा
+                -   सर्किट प्लेग्राउंडवर एलईडी वापरा
+                -   व्हेरिएबल्स नाहीत; कुठलेही if विधाने नाहीत; स्क्रीनचे कोणतेही घटक नाहीत
+            lesson-4:
+              name: अ‍ॅप लॅब आउटपुट (setProperty)
+              description_teacher: |-
+                -   स्क्रीनवरील घटक बदलण्यासाठी setProperty() वापरा
+                    -   यादृच्छिक संख्या वापरून रंग आणि x/y स्थानांवर लक्ष केंद्रित करा
+                -   स्क्रीनवरील मजकूर बदलण्यासाठी setText() वापरा
+                -   कोणतेही सर्किट प्लेग्राउंड नाही; if विधाने  नाहीत; व्हेरिएबल्स नाहीत
+            lesson-5:
+              name: सेन्सर्स
+            lesson-6:
+              name: बोर्ड इनपुट्स (बटन टॉगल)
+              description_teacher: |-
+                -   स्क्रीनवरील घटक बदलण्यासाठी बटणांचा वापर करा
+                -   स्क्रीनवरील घटक बदलण्यासाठी टॉगल स्विचचा वापर करा
+                -   सर्किट प्लेग्राउंडमध्ये बटणे वापरा आणि बझरसह टॉगल करा
+                -   if विधाने नाहीत; व्हेरिएबल्स नाहीत; ओके स्क्रीन आउटपुट
+            lesson-7:
+              name: व्हेरिएबल्स + if -स्टेटमेंट्स
+              description_teacher: |-
+                -   स्क्रीनवरील घटक अपडेट करण्यासाठी व्हेरिएबल्स + काउंटर पॅटर्न वापरा
+                -   उदाहरण: बटण किती वेळा दाबले जाते त्याची संख्या मोजा
+                -   टॉगल स्विचची स्थिती तपासण्यासाठी if-statements वापरा
+                -   व्हेरिएबलचे मूल्य तपासण्यासाठी व्हेरिएबल्स वापरा
+                -   उदाहरणार्थ: ठराविक क्लिक्सनंतर बझर प्ले करा
+            lesson-8:
+              name: 'मिनी-प्रोजेक्ट: ऑन द गो अॅप्स'
+            lesson-9:
+              description_teacher: |-
+                -   सर्किट प्लेग्राउंड वरील रंगीत एलईडी बदलण्यासाठी स्क्रीन इव्हेंट वापरा
+                -   ऑन(), ऑफ(), पल्स(), टॉगल(), आणि ब्लिंक() एलईडी फंक्शन्स वापरा
+                -   रंगीत एलईडीची तीव्रता बदला
+                -   फोकस नाही: अॅरे.
+                -   फक्त 0 पासून मोजण्याची संकल्पना आणि पोझिशन मॅपिंगची संकल्पना आवश्यक आहे (उदा: [0] CP वर विशिष्ट LED चे नकाशे; [5] CP वर वेगळ्या LED चे नकाशे)
+            lesson-10:
+              name: अॅप लॅब इनपुट (getProperty, getText) (ड्रॉपडाउन इनपुट स्लाइडर्स?)
+              description_teacher: |-
+                फक्त अॅप लॅबमध्ये - कोणतेही सर्किट प्लेग्राउंड नाही (अद्याप).
+
+                getProperty, व्हेरिएबल्स आणि if-statements बद्दल सर्व
+
+                -   ड्रॉपडाउन वरून getProperty मिळवा. जर (X) -> करा (Y)
+                -   स्लाइडरवरून getProperty मिळवा. स्क्रीनवरील एखाद्या गोष्टीची स्थिती अपडेट करण्यासाठी वापरायचे.
+                -   इनपुटमधून मजकूर मिळवा. लेबल अपडेट करण्यासाठी वापरा
+
+                **नवीन getProperty() कमांडवर लक्ष केंद्रित करा आणि ते नवीन डिझाईन एलट्ससह कसे वापरावे. उद्यासाठी बोर्ड इनपुट/आउटपुट सेव्ह करा!**
+
+                उद्याच्या धड्यात, मोटरसायकल गेमचा समावेश करा जिथे तुम्ही CP वर दाबू शकता आणि स्क्रीनवर काहीतरी बदल करू शकता.
+            lesson-11:
+              name: इनपुट एकत्रित करणे
+              description_teacher: |-
+                -   सर्किट प्लेग्राउंडचे पैलू अपडेट करण्यासाठी ड्रॉपडाउन आणि स्लाइडर वापरा
+                -   getProperty() आणि setProperty() वापरून CP इनपुट स्क्रीन घटक अपडेट करा.
+                -   स्क्रीन इनपुट \<> बोर्ड आउटपुट हे Ch 1 च्या शेवटी मेकर प्रोजेक्टची तयारी आहे
+
+                **स्वतःसाठी टीप: या लेव्हल्समध्ये नेहमीच्या LED ऐवजी कलर LED चा वापर केला पाहिजे.** मूळ अभ्यासक्रमात, आम्हाला फक्त लीड आणि बजरचाच प्रवेश होता. पण आता, आमच्याकडे रंगीत LEDs आहेत, म्हणून ते देखील येथे वापरू या
+            lesson-12:
+              name: 'प्रोजेक्ट: मेकर'
+            lesson-14:
+              name: संगीत + अॅरे
+            lesson-15:
+              name: 'मिनी प्रोजेक्ट: सेन्सर्स '
+            lesson-17:
+              name: भौतिक आउटपुट (एलईडी)
+            lesson-16:
+              name: भौतिक इनपुट
+            lesson-18:
+              name: प्रोटोटाइपिंग
+          lesson_groups:
+            lessonGroup-3:
+              display_name: टेम्पलेट्स
+            lessonGroup-2:
+              display_name: प्रकरण 1
+            lessonGroup-4:
+              display_name: प्रकरण 2
+          name: csdu6-प्लेग्राउंड
+          title: CSD युनिट 6 प्लेग्राउंड
+          description_short: CSD U6 प्लेग्राउंड. प्रश्नांसाठी डॅन श्नाइडर पहा
+          student_description: CSD U6 प्लेग्राउंड. प्रश्नांसाठी डॅन श्नाइडर पहा
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: हॅलो वर्ल्ड
+          name: हॅलो -वर्ल्ड-फुड
+        csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: साधने
+          lesson_groups:
+            lessonGroup-2:
+              display_name: धडे
+            lessonGroup-4:
+              display_name: डेमो आणि संसाधने
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: हॅलो वर्ल्ड
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: हॅलो वर्ल्ड
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: हॅलो वर्ल्ड
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: हॅलो वर्ल्ड
+          title: हॅलो वर्ल्ड
+        ai-ethics:
+          lessons:
+            lesson-1:
+              description_student: AI आचारसंहिता बद्दल सहकार्याने संशोधन करा आणि शेअर करण्यायोग्य आचारसंहिता तयार करा.
         dance-unplugged:
           lessons:
             lesson-1:
               name: 'डान्स पार्टी: अनप्लग केलेले'
+              description_student: इव्हेंट्सबद्दल जाणून घेण्यासाठी क्लास डान्स पार्टी करा.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: कवितेचे स्क्रॅच पेपर
+          name: सीएससी (csc)-गोष्टी
+          title: सीएससी (CSC) ब्रेन डंप
+          description: हे फक्त प्रगतीपथावर असलेले काम आहेत :)
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: कविता HoC v2
+          name: poetry-hoc2
+          title: कविता HoC v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: मूडचा अभ्यास
+          name: कविता-hoc3
+          title: कविता HoC v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: स्प्राइट इफेक्ट आव्हान
+          name: स्प्राइटलॅब-इफेक्ट-आव्हान
+          title: स्प्राइट इफेक्ट आव्हान
+          description_audience: स्प्राइट लॅबचे इंटरमीडिएट/प्रगत वापरकर्ते
+          description_short: स्प्राइट लॅब वापरून तुमचा स्वतःचा स्प्राइट इफेक्ट तयार करण्याचे आव्हान स्वीकारा!
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: साधने
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डेमो आणि संसाधने
+          name: csa-u8-dev
+          title: CSA युनिट 8 डेव्हलपमेंट
         poem-art:
           lessons:
             lesson-1:
+              name: कविता कला
               description_teacher: |-
                 या CS आणि ELA एकात्मिक धड्यात, विद्यार्थी कवितेचा मूड स्पष्ट करण्यासाठी कोडसह कविता अॅनिमेट करतील. या प्रास्ताविक कोडींग क्रियाकलापादरम्यान, विद्यार्थी कविता वाचतील आणि त्यातील मूड ओळखतील. त्यानंतर, त्यांना कवितेचा मूड स्पष्ट करण्यात मदत करण्यासाठी संबंधित प्रभाव आणि प्रतिमा सापडतील. शेवटी, विद्यार्थी मूडमधील बदल स्पष्ट करण्यासाठी किंवा कवितेतील नवीन प्रतिमांचा परिचय देण्यासाठी इव्हेंट (कोड) वापरतील.
 
                 हा धडा 1-तासांचा स्वतंत्र धडा म्हणून पूर्ण केला जाऊ शकतो. हा धडा [कवितेसह कोडिंग](http://code.org/poetry) नावाच्या 5-धड्याच्या मॉड्यूलचा पहिला धडा म्हणून वापरण्याचा पर्याय देखील आहे. कोडींग विथ पोएट्री मॉड्युल संपेपर्यंत, विद्यार्थी स्वतःच्या कविता लिहितील आणि मित्रांसोबत शेअर करण्यासाठी कविता जनरेटर अॅप तयार करतील.
 
                 कविते सह कोडिंग हा Code.org च्या CS Connections अभ्यासक्रमाचा एक भाग आहे, ज्याचा उद्देश CS ला CCSS, NGSS आणि CSTA मानकांशी संरेखित करून गणित, ELA आणि विज्ञान यांसारख्या इतर विषयांमध्ये समाकलित करण्यासाठी आहे.
+          name: कविता -कला
+          title: कविता कला
+        poetry:
+          lessons:
+            lesson-1:
+              name: कविता कला
+            lesson-2:
+              name: आपली स्वतःची कविता कोड करा
+            lesson-4:
+              name: एक कविता जनरेटर अॅप तयार करा
+            lesson-5:
+              name: शब्दांची निवड काळजीपूर्वक करणे
+          name: कविता
+          title: संगणक विज्ञान आणि कविता
+        spelling-bee:
+          lessons:
+            lesson-1:
+              description_student: मधमाशीला नवीन शब्द उच्चारण्यात मदत करा!
+              description_teacher: "हा धडा स्पेलिंग आणि कॅपिटल अक्षरे ओळखण्याच्या पूर्वीच्या क्रियाकलापांना तयार करतो. मधमाशीसह शब्दलेखन बालवाडी आणि प्रथम श्रेणीतील विद्यार्थ्यांना शब्द बनवणाऱ्या अक्षरांचे अनुक्रम अनुसरण करण्यास आणि मोजण्यास मदत करते. शब्दांचे स्पेलिंग करण्यासाठी ते अक्षरांच्या ग्रिडवर स्पेलिंग बी हलविण्यासाठी कोडिंग कमांडची मालिका वापरतात. विद्यार्थी त्यांचे वर्ण हलविण्यासाठी ड्रॅग-अँड-ड्रॉप कोडिंग ब्लॉक्स कसे वापरायचे आणि योग्य क्रमाने आज्ञांचे क्रमबद्ध करण्याचे महत्त्व शिकतात जेणेकरून ते एखाद्या शब्दाचे उच्चार करू शकतील.\n\n#### पूर्वावश्यक कौशल्ये\n\nहा धडा विद्यार्थ्यांना वर्णमाला, शब्द तयार करण्यासाठी अक्षरांचा क्रम किंवा मोजणीशी ओळख करून देण्याचा हेतू नाही. विद्यार्थ्यांनी या धड्यात पूर्व ज्ञान आणि कौशल्यांसह यावे:\n\n-   वर्णमाला अप्परकेस अक्षरे ओळखा.\n-   बोटे, वस्तू किंवा फेरफार वापरून 10 पर्यंत संख्या ओळखा आणि मोजा.\n-   हे ओळखा की शब्द अक्षरांच्या क्रमाने बनलेले आहेत."
+          name: स्पेलिंग-बी
         outbreak-csc:
+          lessons:
+            lesson-1:
+              name: आऊटब्रेक  डे  1
+            lesson-2:
+              name: आऊटब्रेक  डे  2
+          name: आऊटब्रेक-सीएससी (csc)
           title: उद्रेक
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: बॉक्स प्लॉट्स आणि हिस्टोग्राम एक्सप्लोर करणे
+              description_student: अॅप लॅबच्या डेटा व्हिज्युअलायझरमध्ये बार चार्ट आणि हिस्टोग्राम तयार करा.
+              description_teacher: "हा धडा बार चार्ट आणि हिस्टोग्रामच्या संकल्पना तयार करतो ज्यांची विद्यार्थ्यांना आधीच ओळख करून देण्यात आली आहे. विद्यार्थी तक्त्यांवरून निष्कर्ष काढण्याचा सराव करतील आणि दोन भिन्न प्रकारचे तक्ते तयार करण्यासाठी अॅप लॅबमध्ये डेटा व्हिज्युअलायझर वापरण्यास शिकतील: एक बार चार्ट आणि एक हिस्टोग्राम. हे साधन विद्यार्थ्यांना रिअल-वर्ल्ड डेटासेटसह द्रुतपणे कनेक्ट करण्यासाठी आणि अधिक जटिल साधन कसे नेव्हिगेट करावे हे शिकल्याशिवाय डेटामधून व्हिज्युअलायझेशन तयार करणे सोपे करण्यासाठी डिझाइन केले आहे. त्यांच्याकडे अनेक वास्तविक-जागतिक डेटासेटमध्ये प्रवेश असेल ज्याचा वापर ते त्यांचे चार्ट तयार करण्यासाठी करू शकतात.\n\nडेटा पाहण्यासाठी तक्ते कशामुळे उपयुक्त आहेत याचे पुनरावलोकन करण्यासाठी धडा एका द्रुत प्रॉम्प्टसह सुरू होतो. विद्यार्थी त्यानंतर अॅप लॅबमधील डेटा व्हिज्युअलायझरमध्ये बार चार्ट तयार करण्याचा सराव करतात. मग ते बार चार्ट उपयोगी नसतील अशा प्रसंगात चार्ट तयार करण्यासाठी हिस्टोग्राम कसे बनवायचे ते शिकतात. त्यानंतर विद्यार्थ्यांना विविध वास्तविक-जगातील डेटासेट एक्सप्लोर करण्याची आणि त्यांना महत्त्वाच्या असलेल्या विषयाबद्दल माहिती संप्रेषण करण्यात चार्ट्स कशी मदत करू शकतात हे पाहण्याची संधी मिळते.\n\n#### पूर्वआवश्यक कौशल्ये आणि शब्दसंग्रह\n\nया धड्याचा उद्देश बार चार्ट आणि हिस्टोग्रामवरील विद्यमान धडे समृद्ध करणे किंवा मजबूत करणे आहे. विद्यार्थ्यांना नवीन मूळ सामग्रीची ओळख करून देण्याचा हेतू नाही. विद्यार्थ्यांनी या धड्यात खालील पूर्व ज्ञान आणि कौशल्ये घेऊन यावे:\n\n-   बार चार्ट कसा वाचायचा ते जाणून घ्या, x आणि y अक्षावरील मूल्ये काय दर्शवतात हे समजून घ्या\n-   हिस्टोग्राम कसे वाचायचे ते जाणून घ्या, मूल्यांची श्रेणी काय दर्शवते हे समजून घ्या"
+          name: एक्सप्लोर-डेटा-1
+          title: बॉक्स प्लॉट्स आणि हिस्टोग्राम एक्सप्लोर करणे
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: लॉरेलसह मोजणे (गणना करणे )
+              description_student: लॉरेल, द ट्रेजर हंटर ला  रत्ने गोळा करण्यासाठी टप्पे जोडा व ते मोजण्यासाठी मदत करा.
+              description_teacher: "हा धडा मोजणी आणि जोडणीचा समावेश असलेल्या पूर्वीच्या क्रियाकलापांना तयार करतो. लॉरेल सोबत मोजणे बालवाडी आणि प्रथम श्रेणीतील विद्यार्थ्यांना सराव मोजणी आणि जोडण्यासह मदत करते कारण ते लॉरेल, द ट्रेजर हंटर, चक्रव्यूहाच्या ग्रीडमधून रत्ने गोळा करण्यात मदत करण्यासाठी लूप वापरतात. लॉरेलला रत्ने गोळा करण्यासाठी ग्रिडवर मार्गदर्शन करण्यासाठी ते कोडिंग कमांडच्या मालिकेचा वापर करतात, \"पुनरावृत्ती\" ब्लॉकचा वापर करतात ज्यासाठी त्यांना लॉरेलने किती पावले उचलावीत हे मोजणे आवश्यक आहे- नंतर कोडच्या ब्लॉकमध्ये योग्य अंक वापरून त्या संख्येचे प्रतिनिधित्व करा.\n\n#### पूर्वावश्यक कौशल्ये\n\nया धड्याचा उद्देश विद्यार्थ्यांना संख्या, मोजणी किंवा जोडण्याशी परिचय करून देण्याचा नाही. विद्यार्थ्यांनी या धड्यात काही पूर्व ज्ञान आणि कौशल्यांसह आले पाहिजे:\n\n-   इमेज, बोटे किंवा फेरफार वापरून 10 पर्यंत संख्या ओळखा आणि मोजा.\n-   10 च्या बेरीज पर्यंत वस्तू, इमेज, बोटे किंवा फेरफार जोडा."
+          name: गणना-सीएससी (csc )
+          title: लॉरेलसह मोजणे (गणना करणे )
+        csa5-exemplars:
+          name: csa5-उदाहरणे
+          title: युनिट 5 - गिव्हिंग ऑब्जेक्टस ऑर्गनायझेशन [उदाहरणार्थ]
+        csa6-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+            lesson-1:
+              key: धडा -1
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-10:
+              key: धडा -10
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              description_student: AI आचारसंहिता बद्दल सहकार्याने संशोधन करा आणि शेअर करण्यायोग्य आचारसंहिता तयार करा.
+            lesson-1:
+              key: धडा -1
+              description_student: AI आचारसंहिता बद्दल सहकार्याने संशोधन करा आणि शेअर करण्यायोग्य आचारसंहिता तयार करा.
         poem-art-2021:
           lessons:
             Poem Art:
+              name: कविता कला
               description_teacher: |-
                 या CS आणि ELA एकात्मिक धड्यात, विद्यार्थी कवितेचा मूड स्पष्ट करण्यासाठी कोडसह कविता अॅनिमेट करतील. विद्यार्थी कविता वाचतील आणि त्यातील मूड ओळखतील. नंतर त्यांना कवितेचा मूड स्पष्ट करण्यात मदत करण्यासाठी संबंधित प्रभाव आणि प्रतिमा मिळतील. शेवटी, विद्यार्थी मूडमधील बदल स्पष्ट करण्यासाठी किंवा कवितेतील नवीन प्रतिमांचा परिचय देण्यासाठी इव्हेंट (कोड) वापरतील.
 
                 हा धडा 1-तासांचा स्वतंत्र धडा म्हणून पूर्ण केला जाऊ शकतो. हा धडा [कवितेसह कोडिंग](http://studio.code.org/s/poetry-2021) नावाच्या मल्टी-लेसन मॉड्यूलचा पहिला धडा म्हणून वापरण्याचा पर्याय देखील आहे.
             lesson-1:
+              key: धडा -1
+              name: कविता कला
               description_teacher: |-
                 या CS आणि ELA एकात्मिक धड्यात, विद्यार्थी कवितेचा मूड स्पष्ट करण्यासाठी कोडसह कविता अॅनिमेट करतील. या प्रास्ताविक कोडींग क्रियाकलापादरम्यान, विद्यार्थी कविता वाचतील आणि त्यातील मूड ओळखतील. त्यानंतर, त्यांना कवितेचा मूड स्पष्ट करण्यात मदत करण्यासाठी संबंधित प्रभाव आणि प्रतिमा सापडतील. शेवटी, विद्यार्थी मूडमधील बदल स्पष्ट करण्यासाठी किंवा कवितेतील नवीन प्रतिमांचा परिचय देण्यासाठी इव्हेंट (कोड) वापरतील.
 
                 हा धडा 1-तासांचा स्वतंत्र धडा म्हणून पूर्ण केला जाऊ शकतो. हा धडा [कवितेसह कोडिंग](http://code.org/poetry) नावाच्या 5-धड्याच्या मॉड्यूलचा पहिला धडा म्हणून वापरण्याचा पर्याय देखील आहे. कोडींग विथ पोएट्री मॉड्युल संपेपर्यंत, विद्यार्थी स्वतःच्या कविता लिहितील आणि मित्रांसोबत शेअर करण्यासाठी कविता जनरेटर अॅप तयार करतील.
 
                 कविते सह कोडिंग हा Code.org च्या CS Connections अभ्यासक्रमाचा एक भाग आहे, ज्याचा उद्देश CS ला CCSS, NGSS आणि CSTA मानकांशी संरेखित करून गणित, ELA आणि विज्ञान यांसारख्या इतर विषयांमध्ये समाकलित करण्यासाठी आहे.
+          title: कविता कला
         poetry-2021:
           lessons:
             Poem Art:
+              name: कविता कला
               description_teacher: नवीन कोडरसाठी या CS आणि ELA एकात्मिक धड्यामध्ये, विद्यार्थी कवितेचा मूड स्पष्ट करण्यासाठी कोडसह कविता अॅनिमेट करतील. विद्यार्थी कविता वाचतील आणि त्यातील मूड ओळखतील. नंतर त्यांना कवितेचा मूड स्पष्ट करण्यात मदत करण्यासाठी संबंधित प्रभाव आणि प्रतिमा मिळतील. शेवटी, विद्यार्थी मूडमधील बदल स्पष्ट करण्यासाठी किंवा कवितेतील नवीन प्रतिमांचा परिचय देण्यासाठी इव्हेंट (कोड) वापरतील.
+            Code Your Own Poem:
+              name: आपली स्वतःची कविता कोड करा
+            Build a Poem Generator:
+              name: एक कविता जनरेटर अॅप तयार करा
+            Choosing Words Carefully:
+              name: शब्दांची निवड काळजीपूर्वक करणे
+            lesson-1:
+              key: धडा -1
+              name: कविता कला
+            lesson-2:
+              key: धडा -2
+              name: आपली स्वतःची कविता कोड करा
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+              name: शब्दांची निवड काळजीपूर्वक करणे
+            lesson-7:
+              key: धडा -7
+            lesson-6:
+              key: धडा -6
+        hello-world-food-2021:
+          lessons:
+            lesson-1:
+              key: धडा -1
+              name: हॅलो वर्ल्ड
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1:
+              key: धडा -1
+              name: हॅलो वर्ल्ड
+        hello-world-animals-2021:
+          lessons:
+            lesson-1:
+              key: धडा -1
+              name: हॅलो वर्ल्ड
+        hello-world-retro-2021:
+          lessons:
+            lesson-1:
+              key: धडा -1
+              name: हॅलो वर्ल्ड
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              description_student: मधमाशीला नवीन शब्द उच्चारण्यात मदत करा!
+              description_teacher: "हा धडा स्पेलिंग आणि कॅपिटल अक्षरे ओळखण्याच्या पूर्वीच्या क्रियाकलापांना तयार करतो. मधमाशीसह शब्दलेखन बालवाडी आणि प्रथम श्रेणीतील विद्यार्थ्यांना शब्द बनवणाऱ्या अक्षरांचे अनुक्रम अनुसरण करण्यास आणि मोजण्यास मदत करते. शब्दांचे स्पेलिंग करण्यासाठी ते अक्षरांच्या ग्रिडवर स्पेलिंग बी हलविण्यासाठी कोडिंग कमांडची मालिका वापरतात. विद्यार्थी त्यांचे वर्ण हलविण्यासाठी ड्रॅग-अँड-ड्रॉप कोडिंग ब्लॉक्स कसे वापरायचे आणि योग्य क्रमाने आज्ञांचे क्रमबद्ध करण्याचे महत्त्व शिकतात जेणेकरून ते एखाद्या शब्दाचे उच्चार करू शकतील.\n\n#### पूर्वावश्यक कौशल्ये\n\nहा धडा विद्यार्थ्यांना वर्णमाला, शब्द तयार करण्यासाठी अक्षरांचा क्रम किंवा मोजणीशी ओळख करून देण्याचा हेतू नाही. विद्यार्थ्यांनी या धड्यात पूर्व ज्ञान आणि कौशल्यांसह यावे:\n\n-   वर्णमाला अप्परकेस अक्षरे ओळखा.\n-   बोटे, वस्तू किंवा फेरफार वापरून 10 पर्यंत संख्या ओळखा आणि मोजा.\n-   हे ओळखा की शब्द अक्षरांच्या क्रमाने बनलेले आहेत."
+            lesson-1:
+              key: धडा -1
+              description_student: मधमाशीला नवीन शब्द उच्चारण्यात मदत करा!
+              description_teacher: "हा धडा स्पेलिंग आणि कॅपिटल अक्षरे ओळखण्याच्या पूर्वीच्या क्रियाकलापांना तयार करतो. मधमाशीसह शब्दलेखन बालवाडी आणि प्रथम श्रेणीतील विद्यार्थ्यांना शब्द बनवणाऱ्या अक्षरांचे अनुक्रम अनुसरण करण्यास आणि मोजण्यास मदत करते. शब्दांचे स्पेलिंग करण्यासाठी ते अक्षरांच्या ग्रिडवर स्पेलिंग बी हलविण्यासाठी कोडिंग कमांडची मालिका वापरतात. विद्यार्थी त्यांचे वर्ण हलविण्यासाठी ड्रॅग-अँड-ड्रॉप कोडिंग ब्लॉक्स कसे वापरायचे आणि योग्य क्रमाने आज्ञांचे क्रमबद्ध करण्याचे महत्त्व शिकतात जेणेकरून ते एखाद्या शब्दाचे उच्चार करू शकतील.\n\n#### पूर्वावश्यक कौशल्ये\n\nहा धडा विद्यार्थ्यांना वर्णमाला, शब्द तयार करण्यासाठी अक्षरांचा क्रम किंवा मोजणीशी ओळख करून देण्याचा हेतू नाही. विद्यार्थ्यांनी या धड्यात पूर्व ज्ञान आणि कौशल्यांसह यावे:\n\n-   वर्णमाला अप्परकेस अक्षरे ओळखा.\n-   बोटे, वस्तू किंवा फेरफार वापरून 10 पर्यंत संख्या ओळखा आणि मोजा.\n-   हे ओळखा की शब्द अक्षरांच्या क्रमाने बनलेले आहेत."
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              description_student: अॅप लॅबच्या डेटा व्हिज्युअलायझरमध्ये बार चार्ट आणि हिस्टोग्राम तयार करा.
+              description_teacher: "हा धडा बार चार्ट आणि हिस्टोग्रामच्या संकल्पना तयार करतो ज्यांची विद्यार्थ्यांना आधीच ओळख करून देण्यात आली आहे. विद्यार्थी तक्त्यांवरून निष्कर्ष काढण्याचा सराव करतील आणि दोन भिन्न प्रकारचे तक्ते तयार करण्यासाठी अॅप लॅबमध्ये डेटा व्हिज्युअलायझर वापरण्यास शिकतील: एक बार चार्ट आणि एक हिस्टोग्राम. हे साधन विद्यार्थ्यांना रिअल-वर्ल्ड डेटासेटसह द्रुतपणे कनेक्ट करण्यासाठी आणि अधिक जटिल साधन कसे नेव्हिगेट करावे हे शिकल्याशिवाय डेटामधून व्हिज्युअलायझेशन तयार करणे सोपे करण्यासाठी डिझाइन केले आहे. त्यांच्याकडे अनेक वास्तविक-जागतिक डेटासेटमध्ये प्रवेश असेल ज्याचा वापर ते त्यांचे चार्ट तयार करण्यासाठी करू शकतात.\n\nडेटा पाहण्यासाठी तक्ते कशामुळे उपयुक्त आहेत याचे पुनरावलोकन करण्यासाठी धडा एका द्रुत प्रॉम्प्टसह सुरू होतो. विद्यार्थी त्यानंतर अॅप लॅबमधील डेटा व्हिज्युअलायझरमध्ये बार चार्ट तयार करण्याचा सराव करतात. मग ते बार चार्ट उपयोगी नसतील अशा प्रसंगात चार्ट तयार करण्यासाठी हिस्टोग्राम कसे बनवायचे ते शिकतात. त्यानंतर विद्यार्थ्यांना विविध वास्तविक-जगातील डेटासेट एक्सप्लोर करण्याची आणि त्यांना महत्त्वाच्या असलेल्या विषयाबद्दल माहिती संप्रेषण करण्यात चार्ट्स कशी मदत करू शकतात हे पाहण्याची संधी मिळते.\n\n#### पूर्वआवश्यक कौशल्ये आणि शब्दसंग्रह\n\nया धड्याचा उद्देश बार चार्ट आणि हिस्टोग्रामवरील विद्यमान धडे समृद्ध करणे किंवा मजबूत करणे आहे. विद्यार्थ्यांना नवीन मूळ सामग्रीची ओळख करून देण्याचा हेतू नाही. विद्यार्थ्यांनी या धड्यात खालील पूर्व ज्ञान आणि कौशल्ये घेऊन यावे:\n\n-   बार चार्ट कसा वाचायचा ते जाणून घ्या, x आणि y अक्षावरील मूल्ये काय दर्शवतात हे समजून घ्या\n-   हिस्टोग्राम कसे वाचायचे ते जाणून घ्या, मूल्यांची श्रेणी काय दर्शवते हे समजून घ्या"
+            lesson-1:
+              key: धडा -1
+              name: बॉक्स प्लॉट्स आणि हिस्टोग्राम एक्सप्लोर करणे
+              description_student: अॅप लॅबच्या डेटा व्हिज्युअलायझरमध्ये बार चार्ट आणि हिस्टोग्राम तयार करा.
+              description_teacher: "हा धडा बार चार्ट आणि हिस्टोग्रामच्या संकल्पना तयार करतो ज्यांची विद्यार्थ्यांना आधीच ओळख करून देण्यात आली आहे. विद्यार्थी तक्त्यांवरून निष्कर्ष काढण्याचा सराव करतील आणि दोन भिन्न प्रकारचे तक्ते तयार करण्यासाठी अॅप लॅबमध्ये डेटा व्हिज्युअलायझर वापरण्यास शिकतील: एक बार चार्ट आणि एक हिस्टोग्राम. हे साधन विद्यार्थ्यांना रिअल-वर्ल्ड डेटासेटसह द्रुतपणे कनेक्ट करण्यासाठी आणि अधिक जटिल साधन कसे नेव्हिगेट करावे हे शिकल्याशिवाय डेटामधून व्हिज्युअलायझेशन तयार करणे सोपे करण्यासाठी डिझाइन केले आहे. त्यांच्याकडे अनेक वास्तविक-जागतिक डेटासेटमध्ये प्रवेश असेल ज्याचा वापर ते त्यांचे चार्ट तयार करण्यासाठी करू शकतात.\n\nडेटा पाहण्यासाठी तक्ते कशामुळे उपयुक्त आहेत याचे पुनरावलोकन करण्यासाठी धडा एका द्रुत प्रॉम्प्टसह सुरू होतो. विद्यार्थी त्यानंतर अॅप लॅबमधील डेटा व्हिज्युअलायझरमध्ये बार चार्ट तयार करण्याचा सराव करतात. मग ते बार चार्ट उपयोगी नसतील अशा प्रसंगात चार्ट तयार करण्यासाठी हिस्टोग्राम कसे बनवायचे ते शिकतात. त्यानंतर विद्यार्थ्यांना विविध वास्तविक-जगातील डेटासेट एक्सप्लोर करण्याची आणि त्यांना महत्त्वाच्या असलेल्या विषयाबद्दल माहिती संप्रेषण करण्यात चार्ट्स कशी मदत करू शकतात हे पाहण्याची संधी मिळते.\n\n#### पूर्वआवश्यक कौशल्ये आणि शब्दसंग्रह\n\nया धड्याचा उद्देश बार चार्ट आणि हिस्टोग्रामवरील विद्यमान धडे समृद्ध करणे किंवा मजबूत करणे आहे. विद्यार्थ्यांना नवीन मूळ सामग्रीची ओळख करून देण्याचा हेतू नाही. विद्यार्थ्यांनी या धड्यात खालील पूर्व ज्ञान आणि कौशल्ये घेऊन यावे:\n\n-   बार चार्ट कसा वाचायचा ते जाणून घ्या, x आणि y अक्षावरील मूल्ये काय दर्शवतात हे समजून घ्या\n-   हिस्टोग्राम कसे वाचायचे ते जाणून घ्या, मूल्यांची श्रेणी काय दर्शवते हे समजून घ्या"
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: लॉरेलसह मोजणे (गणना करणे )
+              description_student: लॉरेल, द ट्रेजर हंटर ला  रत्ने गोळा करण्यासाठी टप्पे जोडा व ते मोजण्यासाठी मदत करा.
+              description_teacher: "हा धडा मोजणी आणि जोडणीचा समावेश असलेल्या पूर्वीच्या क्रियाकलापांना तयार करतो. लॉरेल सोबत मोजणे बालवाडी आणि प्रथम श्रेणीतील विद्यार्थ्यांना सराव मोजणी आणि जोडण्यासह मदत करते कारण ते लॉरेल, द ट्रेजर हंटर, चक्रव्यूहाच्या ग्रीडमधून रत्ने गोळा करण्यात मदत करण्यासाठी लूप वापरतात. लॉरेलला रत्ने गोळा करण्यासाठी ग्रिडवर मार्गदर्शन करण्यासाठी ते कोडिंग कमांडच्या मालिकेचा वापर करतात, \"पुनरावृत्ती\" ब्लॉकचा वापर करतात ज्यासाठी त्यांना लॉरेलने किती पावले उचलावीत हे मोजणे आवश्यक आहे- नंतर कोडच्या ब्लॉकमध्ये योग्य अंक वापरून त्या संख्येचे प्रतिनिधित्व करा.\n\n#### पूर्वावश्यक कौशल्ये\n\nया धड्याचा उद्देश विद्यार्थ्यांना संख्या, मोजणी किंवा जोडण्याशी परिचय करून देण्याचा नाही. विद्यार्थ्यांनी या धड्यात काही पूर्व ज्ञान आणि कौशल्यांसह आले पाहिजे:\n\n-   इमेज, बोटे किंवा फेरफार वापरून 10 पर्यंत संख्या ओळखा आणि मोजा.\n-   10 च्या बेरीज पर्यंत वस्तू, इमेज, बोटे किंवा फेरफार जोडा."
+            lesson-1:
+              key: धडा -1
+              name: लॉरेलसह मोजणे (गणना करणे )
+              description_student: लॉरेल, द ट्रेजर हंटर ला  रत्ने गोळा करण्यासाठी टप्पे जोडा व ते मोजण्यासाठी मदत करा.
+              description_teacher: "हा धडा मोजणी आणि जोडणीचा समावेश असलेल्या पूर्वीच्या क्रियाकलापांना तयार करतो. लॉरेल सोबत मोजणे बालवाडी आणि प्रथम श्रेणीतील विद्यार्थ्यांना सराव मोजणी आणि जोडण्यासह मदत करते कारण ते लॉरेल, द ट्रेजर हंटर, चक्रव्यूहाच्या ग्रीडमधून रत्ने गोळा करण्यात मदत करण्यासाठी लूप वापरतात. लॉरेलला रत्ने गोळा करण्यासाठी ग्रिडवर मार्गदर्शन करण्यासाठी ते कोडिंग कमांडच्या मालिकेचा वापर करतात, \"पुनरावृत्ती\" ब्लॉकचा वापर करतात ज्यासाठी त्यांना लॉरेलने किती पावले उचलावीत हे मोजणे आवश्यक आहे- नंतर कोडच्या ब्लॉकमध्ये योग्य अंक वापरून त्या संख्येचे प्रतिनिधित्व करा.\n\n#### पूर्वावश्यक कौशल्ये\n\nया धड्याचा उद्देश विद्यार्थ्यांना संख्या, मोजणी किंवा जोडण्याशी परिचय करून देण्याचा नाही. विद्यार्थ्यांनी या धड्यात काही पूर्व ज्ञान आणि कौशल्यांसह आले पाहिजे:\n\n-   इमेज, बोटे किंवा फेरफार वापरून 10 पर्यंत संख्या ओळखा आणि मोजा.\n-   10 च्या बेरीज पर्यंत वस्तू, इमेज, बोटे किंवा फेरफार जोडा."
+          title: लॉरेलसह मोजणे (गणना करणे )
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: धडा
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: आऊटब्रेक सिम्युलेटर
+            Drawing with Loops:
+              name: लूप सोबत ड्रॉइंग
+            Programming with the Bee:
+              name: मधमाशी सोबत प्रोग्रामिंग
+            Variables with the Bee:
+              name: मधमाशीसह  व्हेरीएबल्स
+              description_student: या मधमाशीला व्हेरिएबल्स आवडतात!
+            For Loops with Bee:
+              name: मधमाशीसह फॉर लूप्स
+            For Loops with Artist:
+              name: आर्टीस्टसह फॉर लूप्स
+            Follow the Algorithm:
+              name: अल्गोरिदमचे अनुसरण करा
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
+          lesson_groups:
+            lessonGroup-8:
+              display_name: अवर ऑफ कोड
+        csf-2022-pilot:
+          lessons:
+            Making Sprites:
+              name: स्प्राईट्स तयार करणे
+            Blank Space Stories:
+              name: ब्लॅंक स्पेस स्टोरीज
+            Text and Prompts:
+              name: टेक्स्ट आणि प्रॉम्प्ट्स
+              description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: व्हेरीएबल्स
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: इनपुट एकत्रित करणे
+          lesson_groups:
+            lessonGroup-2:
+              display_name: प्रकरण 1
+            lessonGroup-3:
+              display_name: प्रकरण 2
+        csa7-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+            lesson-10:
+              key: धडा -10
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-1:
+              key: धडा -1
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-16:
+              key: धडा -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa8-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+            lesson-1:
+              key: धडा -1
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-10:
+              key: धडा -10
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-16:
+              key: धडा -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              description_student: सुरक्षितपणे ऑनलाईन ठिकाणी कसे जायचे ते शिका.
+            Learn to Drag and Drop:
+              name: ड्रॅग आणि ड्रॉप करायला शिका
+              description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
+              key: ड्रॅग आणि ड्रॉप करायला शिका
+            Happy Maps:
+              description_student: फळाला फ्लर्ब मिळवण्यासाठी सूचना लिहा.
+            Sequencing with Scrat:
+              description_student: अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट
+            Programming with Scrat:
+              description_student: स्क्रॅटला एकोर्नपर्यंत पोहोचण्यास मदत करण्यासाठी प्रोग्राम लिहा.
+            Programming with Rey and BB-8:
+              name: रे आणि BB-8 सह प्रोग्रॅमिंग
+              description_student: स्क्रॅप मेटलला गोळा करण्यासाठी BB-8 ला मदत करा
+              key: रे आणि BB-8 सह प्रोग्रॅमिंग
+            Happy Loops:
+              name: हॅपी लूप्स
+              description_student: लूप वापरून फ्लर्बला मोठ्या समस्या सोडवण्यात मदत करा.
+            Loops with Scrat:
+              name: स्क्रॅटसह लूप
+              description_student: लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत करा.
+            Loops with Laurel:
+              name: लॉरेल सोबत लूप
+            Ocean Scene with Loops:
+              name: लूपसह ओशियन सीन
+              description_student: इमेजेस पूर्ण करण्यासाठी लूप्स आणि पॅटर्न वापरा.
+              key: लूपसह ओशियन सीन
+            'Mini-Project: On the Move with Play Lab':
+              description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
+            End of Course Project:
+              description_student: आर्टीस्ट सोबत एक गोष्ट सांगा!
+            'Programming: Happy Maps':
+              key: 'प्रोग्रॅमिंग: आनंदी नकाशे'
+              description_student: फळाला फ्लर्ब मिळवण्यासाठी सूचना लिहा.
+            Programming in Ice Age:
+              description_student: स्क्रॅटला एकोर्नपर्यंत पोहोचण्यास मदत करण्यासाठी प्रोग्राम लिहा.
+            'Loops: Happy Loops':
+              key: 'लूप्स: आनंदी लूप्स '
+              name: हॅपी लूप्स
+              description_student: लूप वापरून फ्लर्बला मोठ्या समस्या सोडवण्यात मदत करा.
+            Loops in Ice Age:
+              name: स्क्रॅटसह लूप
+              description_student: लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत करा.
+            Loops in Collector:
+              key: कलेक्टरमधील लूप्स
+              name: लॉरेल सोबत लूप
+            'Events: The Big Event':
+              key: 'इव्हेंट्स: मोठी इव्हेंट'
+            Events in Play Lab:
+              key: प्ले लॅबमधील इव्हेंट्स
+              description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
+            lesson-1:
+              key: धडा -1
+              description_student: आर्टीस्ट सोबत एक गोष्ट सांगा!
+          lesson_groups:
+            csf_sequencing:
+              display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
+            csf_events:
+              display_name: ईव्हेंट्स
+          description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
+              description_student: _अँग्री बर्ड्स_ सह अनुक्रम आणि अल्गोरिदम बद्दल जाणून घ्या.
+              key: अँग्री बर्ड्स सह प्रोग्रामिंग
+            Debugging in Maze:
+              name: मेझ मध्ये डीबगिंग
+            Collecting Treasure with Laurel:
+              name: लॉरेलसह खजिना गोळा करणे
+              key: लॉरेलसह खजिना गोळा करणे
+            Creating Art with Code:
+              name: कोडसह कलात्मक गोष्टी तयार करणे
+              description_student: आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार करणे
+              key: कोडसह कलात्मक गोष्टी तयार करणे
+            Swimming Fish in Sprite Lab:
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या.
+            Making Sprites:
+              name: स्प्राईट्स तयार करणे
+            Virtual Pet with Sprite Lab:
+              name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
+              key: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
+            Dance Party:
+              name: डांस पार्टी
+            Loops with Rey and BB-8:
+              name: रे आणि बीबी -8 सह लूप
+              description_student: लुप्स वापरून मेझेस द्वारे _BB-8_ ला मदत करा!
+              key: रे आणि बीबी -8 सह लूप
+            Nested Loops in Maze:
+              name: मेझ मध्ये नेस्टेड लूप
+              key: मेझ मध्ये नेस्टेड लूप
+            Snowflakes with Anna and Elsa:
+              name: अॅना आणि एल्सा सह स्नोफ्लेक्स
+              key: अॅना आणि एल्सा सह स्नोफ्लेक्स
+            Looking Ahead with Minecraft:
+              name: माइनक्राफ्ट सह पुढे  पाहणे
+            If/Else with Bee:
+              name: जर/अन्यथा  बी सह
+              key: जर/अन्यथा  बी सह
+            While Loops in Farmer:
+              name: फार्मर मधील व्हाईल लुप्स
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
+              key: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
+            Until Loops in Maze:
+              name: मेझ मध्ये लूप पर्यंत
+              description_student: जेव्हा तुम्ही अंटील लूप वापरता तेव्हा तुम्ही काही आश्चर्यकारक गोष्टी करू शकता!
+              key: मेझ मध्ये लूप पर्यंत
+            Harvesting with Conditionals:
+              name: कंडीशनल्स सह हार्वेस्टिंग
+              key: कंडीशनल्स सह हार्वेस्टिंग
+            Functions in Minecraft:
+              name: माईनक्राफ्ट मधील फंक्शन्स
+              key: माईनक्राफ्ट मधील फंक्शन्स
+            Functions with Artist:
+              name: आर्टीस्टसह फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
+              key: आर्टीस्टसह फंक्शन्स
+            Functions with Harvester:
+              name: हार्वेस्टर सोबत फंक्शन्स
+              key: हार्वेस्टर सोबत फंक्शन्स
+            Text and Prompts:
+              name: टेक्स्ट आणि प्रॉम्प्ट्स
+              description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल.
+            Variables with the Bee:
+              name: मधमाशीसह  व्हेरीएबल्स
+              description_student: या मधमाशीला व्हेरिएबल्स आवडतात!
+            For Loops with Bee:
+              name: मधमाशीसह फॉर लूप्स
+              key: मधमाशीसह फॉर लूप्स
+            For Loops with Artist:
+              name: आर्टीस्टसह फॉर लूप्स
+              key: आर्टीस्टसह फॉर लूप्स
+            Debugging with Scrat:
+              key: स्क्रॅट सोबत डीबगिंग
+              name: मेझ मध्ये डीबगिंग
+            lesson-2:
+              key: धडा -2
+              name: स्प्राईट्स तयार करणे
+            lesson-3:
+              key: धडा-3
+            lesson-1:
+              key: धडा -1
+              name: डांस पार्टी
+            Sticker Art with Loops:
+              key: लूपसह स्टिकर आर्ट
+            'Looking Ahead with Minecraft ':
+              name: माइनक्राफ्ट सह पुढे  पाहणे
+            While Loops with the Farmer:
+              name: फार्मर मधील व्हाईल लुप्स
+            lesson-4:
+              key: धडा-4
+              name: टेक्स्ट आणि प्रॉम्प्ट्स
+              description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल.
+            Variables with Artist:
+              key: आर्टीस्टसह व्हेरीएबल्स
+            Changing Variables with Bee:
+              name: मधमाशीसह  व्हेरीएबल्स
+              description_student: या मधमाशीला व्हेरिएबल्स आवडतात!
+          lesson_groups:
+            csf_sequencing:
+              display_name: सिक्वेन्सिंग
+            lessonGroup-9:
+              display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_variables:
+              display_name: व्हेरीएबल्स
+        csp2-2022:
+          lessons:
+            Packets:
+              name: पॅकेट्स
+              key: पॅकेट्स
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: डीबगिंग
+              key: डीबगिंग
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              description_student: तुमच्या वर्गमित्रांना एका ठिकाणाहून काळजीपूर्वक पाऊल ठेवण्यासाठी प्रोग्राम करा.
+            Sequencing with Angry Birds:
+              name: अँग्री बर्ड्स सह अनुक्रम
+            Programming with Angry Birds:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
+            Programming with Harvester:
+              name: हार्वेस्टरसह प्रोग्रामिंग
+              description_student: हार्वेस्टरला एका मार्गावर भाज्या गोळा करण्यात मदत करा.
+            Loops with Harvester:
+              name: हार्वेस्टर सोबत लूप
+              description_student: हार्वेस्टरला लूप वापरून आणखी गोळा करण्यात मदत करा!
+            Loops with Laurel:
+              name: लॉरेल सोबत लूप
+              description_student: खुल्या गुहेत खजिना गोळा करण्यासाठी लॉरेल अॅडव्हेंचरर प्रोग्राम करा.
+            Drawing Gardens with Loops:
+              name: लूपसह गार्डन काढणे
+              description_student: इमेजेस पूर्ण करण्यासाठी पॅटर्न आणि लूप वापरा.
+            The Right App:
+              description_student: आपले स्वतःचे स्मार्टफोन अॅप स्केच करा.
+            The Big Event Jr.:
+              description_student: जेव्हा तुमचा शिक्षक एका विशाल रिमोटवर बटण दाबतो तेव्हा हलवा किंवा ओरडा.
+            'Mini-Project: A Royal Battle with Events':
+              description_student: कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा वापर करा.
+            End of Course Project:
+              description_student: आपली स्वतःची स्टोरी किंवा गेम तयार करा.
+            Sequencing in Maze:
+              name: अँग्री बर्ड्स सह अनुक्रम
+            Programming in Maze:
+              key: मेझमधील प्रोग्रॅमिंग
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
+            Programming in Harvester:
+              name: हार्वेस्टरसह प्रोग्रामिंग
+              description_student: हार्वेस्टरला एका मार्गावर भाज्या गोळा करण्यात मदत करा.
+            'Loops: Getting Loopy':
+              key: 'लूप्स: लूप्स वापरणे'
+            Loops in Harvester:
+              name: हार्वेस्टर सोबत लूप
+              description_student: हार्वेस्टरला लूप वापरून आणखी गोळा करण्यात मदत करा!
+            Loops in Collector:
+              key: कलेक्टरमधील लूप्स
+              name: लॉरेल सोबत लूप
+              description_student: खुल्या गुहेत खजिना गोळा करण्यासाठी लॉरेल अॅडव्हेंचरर प्रोग्राम करा.
+            Loops in Artist:
+              key: आर्टीस्टमध्ये लूप्स
+              name: लूपसह गार्डन काढणे
+              description_student: इमेजेस पूर्ण करण्यासाठी पॅटर्न आणि लूप वापरा.
+            'Events: The Big Event':
+              key: 'इव्हेंट्स: मोठी इव्हेंट'
+              description_student: जेव्हा तुमचा शिक्षक एका विशाल रिमोटवर बटण दाबतो तेव्हा हलवा किंवा ओरडा.
+            Events in Play Lab:
+              key: प्ले लॅबमधील इव्हेंट्स
+              description_student: कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा वापर करा.
+            lesson-1:
+              key: धडा -1
+              description_student: आपली स्वतःची स्टोरी किंवा गेम तयार करा.
+          lesson_groups:
+            csf_sequencing:
+              display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
+            csf_events:
+              display_name: ईव्हेंट्स
+        coursec-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
+              description_student: _अँग्री बर्ड्स_ सह अनुक्रम आणि अल्गोरिदम बद्दल जाणून घ्या.
+            Debugging in Maze:
+              name: मेझ मध्ये डीबगिंग
+              key: मेझ मध्ये डीबगिंग
+            Collecting Treasure with Laurel:
+              name: लॉरेलसह खजिना गोळा करणे
+            Creating Art with Code:
+              name: कोडसह कलात्मक गोष्टी तयार करणे
+              description_student: आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार करणे
+            Loops with Rey and BB-8:
+              name: रे आणि बीबी -8 सह लूप
+              description_student: लुप्स वापरून मेझेस द्वारे _BB-8_ ला मदत करा!
+              key: रे आणि बीबी -8 सह लूप
+            Harvesting Crops with Loops:
+              name: लूप सह हार्वेस्टिंग क्रॉप्स
+            The Big Event:
+              description_student: इव्हेंटबद्दल जाणून घेण्यासाठी एक मजेदार गेम खेळा.
+            Build a Flappy Game:
+              name: " फ्लॅपी गेम तयार करा"
+              key: " फ्लॅपी गेम तयार करा"
+            'Mini-Project: Chase Game':
+              description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
+            'Programming: My Robotic Friends':
+              key: 'प्रोग्रॅमिंग: माझे रोबो मित्र'
+            Programming in Maze:
+              key: मेझमधील प्रोग्रॅमिंग
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
+              description_student: _अँग्री बर्ड्स_ सह अनुक्रम आणि अल्गोरिदम बद्दल जाणून घ्या.
+            Programming in Collector:
+              key: कलेक्टरमध्ये प्रोग्रॅमिंग
+              name: लॉरेलसह खजिना गोळा करणे
+            Programming in Artist:
+              key: आर्टीस्टमध्ये प्रोग्रॅमिंग
+              name: कोडसह कलात्मक गोष्टी तयार करणे
+              description_student: आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार करणे
+            'Loops: My Loopy Robotic Friends':
+              key: 'लूप्स: माझे लूपी रोबोटिक मित्र'
+            Loops in Harvester:
+              name: लूप सह हार्वेस्टिंग क्रॉप्स
+            Sticker Art with Loops:
+              key: लूपसह स्टिकर आर्ट
+            'Events: The Big Event':
+              key: 'इव्हेंट्स: मोठी इव्हेंट'
+              description_student: इव्हेंटबद्दल जाणून घेण्यासाठी एक मजेदार गेम खेळा.
+            Events in Play Lab:
+              key: प्ले लॅबमधील इव्हेंट्स
+              description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
+          lesson_groups:
+            csf_sequencing:
+              display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
+            csf_events:
+              display_name: ईव्हेंट्स
+            csf_data:
+              display_name: डेटा
+          description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: धडा-4
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: मशीन लर्निंग
+            Machine Learning and Bias:
+              name: मशीन लर्निंग
+            lesson-10:
+              key: धडा -10
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              description_student: या धड्यामध्ये, तुम्ही तुमच्या वर्गमित्रांना चित्र काढण्यासाठी प्रोग्राम कराल!
+            Introduction to Online Puzzles:
+              name: ऑनलाईन कोड्यांचा परिचय
+              key: ऑनलाईन कोड्यांचा परिचय
+            Debugging with Laurel:
+              name: लॉरेल सोबत डीबगिंग
+            Events in Bounce:
+              name: बाउन्स मधील इव्हेंट
+              key: बाउन्स मधील इव्हेंट
+            Build a Star Wars Game:
+              name: एक स्टार वॉर्स गेम तयार करा
+              description_student: या धड्यामध्ये तुम्ही तुमचा स्वतःचा स्टार वॉर्स गेम तयार करता ती शक्ती जाणवा
+              key: एक स्टार वॉर्स गेम तयार करा
+            Dance Party:
+              name: डांस पार्टी
+              key: डांस पार्टी
+            Drawing Shapes with Loops:
+              name: लूपसह आकार काढणे
+            Nested Loops in Maze:
+              name: मेझ मध्ये नेस्टेड लूप
+            Looking Ahead with Minecraft:
+              name: माइनक्राफ्ट सह पुढे  पाहणे
+            If/Else with Bee:
+              name: जर/अन्यथा  बी सह
+            While Loops in Farmer:
+              name: फार्मर मधील व्हाईल लुप्स
+              key: फार्मर मधील व्हाईल लुप्स
+            Until Loops in Maze:
+              name: मेझ मध्ये लूप पर्यंत
+              key: मेझ मध्ये लूप पर्यंत
+            lesson-5:
+              key: धडा -5
+            'Algorithms: Graph Paper Programming':
+              key: 'अल्गोरिदम्स: आलेख कागद प्रोग्रॅमिंग '
+              description_student: या धड्यामध्ये, तुम्ही तुमच्या वर्गमित्रांना चित्र काढण्यासाठी प्रोग्राम कराल!
+            Debugging in Collector:
+              name: लॉरेल सोबत डीबगिंग
+            Loops in Artist:
+              key: आर्टीस्टमध्ये लूप्स
+              name: लूपसह आकार काढणे
+            Nested Loops in Bee:
+              name: मेझ मध्ये नेस्टेड लूप
+            lesson-6:
+              key: धडा -6
+              name: माइनक्राफ्ट सह पुढे  पाहणे
+            Conditionals in Bee:
+              key: मधमाशीमधील कंडीशनल्स
+              name: जर/अन्यथा  बी सह
+          lesson_groups:
+            csf_sequencing:
+              display_name: सिक्वेन्सिंग
+            csf_events:
+              display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
+            csf_conditionals:
+              display_name: कंडीशनल्स
+          title: अभ्यासक्रम D (2021)
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              name: अल्गोरिदमचे अनुसरण करा
+            Swimming Fish with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या.
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
+              key: स्प्राइट लॅबसह एलियन डान्स पार्टी
+            Be A Super Digital Citizen:
+              description_student: सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू शकता हे शिका
+            Drawing with Loops:
+              name: लूप सोबत ड्रॉइंग
+            Functions in Minecraft:
+              name: माईनक्राफ्ट मधील फंक्शन्स
+              key: माईनक्राफ्ट मधील फंक्शन्स
+            Functions with Artist:
+              name: आर्टीस्टसह फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
+              description_student: येथे तुम्ही _माईनक्राफ्ट_ च्या जगातील कंडिशनल्सबद्दल जाणून घ्याल
+              key: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
+            Conditionals with the Farmer:
+              name: शेतकऱ्यासह कंडीशनल्स
+            Functions with Harvester:
+              name: हार्वेस्टर सोबत फंक्शन्स
+            Simon Says:
+              name: अल्गोरिदमचे अनुसरण करा
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या.
+            lesson-4:
+              key: धडा-4
+              description_student: सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू शकता हे शिका
+            Programming and Loops with the Artist:
+              name: लूप सोबत ड्रॉइंग
+            Nested Loops in Artist:
+              key: आर्टीस्टमध्ये नेस्टेड लूप्स
+            'Functions: Songwriting':
+              key: 'फंक्शन्स: गीतलेखन'
+            Functions in Artist:
+              key: आर्टीस्टमध्ये फंक्शन्स
+              name: आर्टीस्टसह फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
+            Conditionals:
+              key: कंडीशनल्स
+              name: शेतकऱ्यासह कंडीशनल्स
+            Functions in Harvester:
+              name: हार्वेस्टर सोबत फंक्शन्स
+            lesson-1:
+              key: धडा -1
+            'Hello World: Food':
+              name: हॅलो वर्ल्ड
+          lesson_groups:
+            ramp_up:
+              display_name: नेस्टेड लूप्स
+            csf_nested_loops:
+              display_name: कंडीशनल्स
+        coursef-2022:
+          lessons:
+            Making Sprites:
+              name: स्प्राईट्स तयार करणे
+            The Power of Words:
+              name: शब्दांची ताकद
+            Blank Space Stories:
+              name: ब्लॅंक स्पेस स्टोरीज
+            Text and Prompts:
+              name: टेक्स्ट आणि प्रॉम्प्ट्स
+              description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल.
+            Drawing with Loops:
+              name: लूप सोबत ड्रॉइंग
+            Programming with the Bee:
+              name: मधमाशी सोबत प्रोग्रामिंग
+            Variables with the Bee:
+              name: मधमाशीसह  व्हेरीएबल्स
+              description_student: या मधमाशीला व्हेरिएबल्स आवडतात!
+            For Loops with Bee:
+              name: मधमाशीसह फॉर लूप्स
+            For Loops with Artist:
+              name: आर्टीस्टसह फॉर लूप्स
+            Outbreak:
+              name: उद्रेक
+            AI For Oceans:
+              name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+              name: स्प्राईट्स तयार करणे
+            lesson-8:
+              key: धडा -8
+            Virtual Pet:
+              key: व्हर्च्युअल पाळीव प्राणी
+            lesson-2:
+              key: धडा -2
+              name: शब्दांची ताकद
+            lesson-9:
+              key: धडा -9
+              name: ब्लॅंक स्पेस स्टोरीज
+            lesson-10:
+              key: धडा -10
+              name: टेक्स्ट आणि प्रॉम्प्ट्स
+              description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल.
+            lesson-11:
+              key: धडा -11
+            Loops with the Artist:
+              name: लूप सोबत ड्रॉइंग
+            Nested Loops in the Maze:
+              name: मधमाशी सोबत प्रोग्रामिंग
+            Variables that Change in Bee:
+              name: मधमाशीसह  व्हेरीएबल्स
+              description_student: या मधमाशीला व्हेरिएबल्स आवडतात!
+            For Loops in Bee:
+              key: मधमाशीमधील फॉर लूप्स
+              name: मधमाशीसह फॉर लूप्स
+            For Loops in Artist:
+              key: आर्टीस्टमध्ये फॉर लूप्स
+              name: आर्टीस्टसह फॉर लूप्स
+            lesson-5:
+              key: धडा -5
+            AI for Oceans:
+              key: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+              name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+          lesson_groups:
+            lessonGroup-8:
+              display_name: व्हेरीएबल्स
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: जावा लॅब
+            lesson-9:
+              name: लूप्स
+        pre-express-2022:
+          lessons:
+            Learn to Drag and Drop:
+              key: ड्रॅग आणि ड्रॉप करायला शिका
+              name: ड्रॅग आणि ड्रॉप करायला शिका
+            Programming with Angry Birds:
+              key: अँग्री बर्ड्स सह प्रोग्रामिंग
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
+            Programming with Rey and BB-8:
+              key: रे आणि BB-8 सह प्रोग्रॅमिंग
+              name: रे आणि BB-8 सह प्रोग्रॅमिंग
+            Programming with Harvester:
+              key: हार्वेस्टरसह प्रोग्रामिंग
+              name: हार्वेस्टरसह प्रोग्रामिंग
+            Loops with Scrat:
+              key: स्क्रॅटसह लूप
+              name: स्क्रॅटसह लूप
+            Loops with Laurel:
+              key: लॉरेल सोबत लूप
+              name: लॉरेल सोबत लूप
+            Ocean Scene with Loops:
+              key: लूपसह ओशियन सीन
+              name: लूपसह ओशियन सीन
+            Drawing Gardens with Loops:
+              key: लूपसह गार्डन काढणे
+              name: लूपसह गार्डन काढणे
+            On the Move with Events:
+              key: इव्हेंटसह मूव्ह
+              name: इव्हेंटसह मूव्ह
+            A Royal Battle with Events:
+              key: इव्हेंटसह एक शाही लढाई
+              name: इव्हेंटसह एक शाही लढाई
+          lesson_groups:
+            csf_sequencing:
+              display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
+            csf_events:
+              display_name: ईव्हेंट्स
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: कंडीशनल्स
+            lesson-16:
+              name: डीबगिंग
+            lesson-17:
+              name: प्रोजेक्टसाठी प्रेरणा
+            lesson-19:
+              name: डीबगिंग
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: जावा लॅब
+            lesson-9:
+              name: लूप्स
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+            lesson-10:
+              key: धडा -10
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-1:
+              key: धडा -1
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-16:
+              key: धडा -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+            lesson-1:
+              key: धडा -1
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-10:
+              key: धडा -10
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-16:
+              key: धडा -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स

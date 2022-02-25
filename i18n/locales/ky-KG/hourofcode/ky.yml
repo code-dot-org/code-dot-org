@@ -10,7 +10,7 @@ ky:
   campaign_date_short: Дек. 4-10
   campaign_date_full: 4-10-декабрда
   campaign_date_year: '2017'
-  campaign_date_full_year: 2017, 4-10-декабрда
+  campaign_date_full_year: 2021, 6-12-декабрда
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 12
@@ -22,13 +22,13 @@ ky:
   europe_campaign_date_short: Дек. 4-10
   europe_campaign_date_full: 4-10-декабрда
   europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: 2017, 4-10-декабрда
+  europe_campaign_date_full_year: 2021, 6-12-декабрда
   africa_campaign_date_start_short: 4-дек
   africa_campaign_date_start_long: 4-декабрдан
   africa_campaign_date_short: Дек. 4-10
   africa_campaign_date_full: 4-10-декабрда
   africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: 2017, 4-10-декабрда
+  africa_campaign_date_full_year: 2021, 6-12-декабрда
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -135,6 +135,9 @@ ky:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -231,8 +234,8 @@ ky:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Алекс менен Стивди бул Minecraft дүйнөсүнөн
     алып өтүү үчүн коддун блокторун колдонгула.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -965,6 +968,7 @@ ky:
   footer_menu_support: Колдоо
   footer_menu_terms: Шарттар
   footer_menu_privacy: Купуялуулук саясаты
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: КОД СААТЫ
   learn_banner_blurb: Бардык курактарга ылайык, 45тен ашык тилдеги бир сааттык сабакты
     байкап көргүлө. 180+ өлкөдөн миллиондогон окуучулар жана мугалимдер  менен бирге
@@ -10463,6 +10467,14 @@ ky:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Окуучу+ - 5 класс
+  tutorial_icomputefireworks_string_platforms: Бардык жаңы браузерлер
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Блоктор
   school_not_found_heading: Мектебиңерди таба алган жокпуз. Кошумча маалымат бериңиз.
   school_name: Мектептин аты
   school_name_error: Мектептин аты керек.

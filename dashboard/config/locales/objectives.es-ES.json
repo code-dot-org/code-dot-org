@@ -2,6 +2,9 @@
   "es-ES": {
     "data": {
       "objectives": {
+        "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
+          "description": "Define \"codificación\" e \"informática\"."
+        },
         "bdb824f7-9d5c-4465-b019-0294329fd999": {
           "description": "Identificar el vocabulario clave de las ciencias de la computación."
         },
@@ -41,6 +44,9 @@
         "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
           "description": "Identificar el vocabulario clave de la informática"
         },
+        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
+          "description": "Relacionar los conceptos de la informática con el mundo real"
+        },
         "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
         },
@@ -59,6 +65,9 @@
         "a5bebcad-7295-4ecd-af0d-4012f97de704": {
           "description": "Identificar el vocabulario clave de la informática"
         },
+        "303a2b74-af73-401c-8929-1fc1c5611f18": {
+          "description": "Relacionar los conceptos de la informática con el mundo real"
+        },
         "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
         },
@@ -67,6 +76,9 @@
         },
         "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
           "description": "Identificar el vocabulario clave de la informática"
+        },
+        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
+          "description": "Relacionar los conceptos de la informática con el mundo real"
         },
         "59992d8c-d194-4063-82fa-001a0b6482d9": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
@@ -88,6 +100,9 @@
         },
         "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
           "description": "Identificar el vocabulario clave de la informática"
+        },
+        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
+          "description": "Relacionar los conceptos de la informática con el mundo real"
         },
         "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
@@ -116,6 +131,18 @@
         "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
         },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Explica por qué el cifrado es una necesidad importante para la vida cotidiana en Internet."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "Romper un mensaje encriptado con un cifrado César utilizando un Widget de Cifrado César"
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "Romper un mensaje encriptado con una sustitución aleatoria mediante el Análisis de Frecuencias"
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "Explica los puntos débiles y los fallos de seguridad de los cifrados de sustitución"
+        },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Crea una animación interactiva utilizando sprites y eventos."
         },
@@ -127,6 +154,9 @@
         },
         "dca3e183-1119-471b-b510-a5b6f40f34b4": {
           "description": "Identificar el vocabulario clave de la informática"
+        },
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": "Relacionar los conceptos de la informática con el mundo real"
         },
         "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
@@ -145,6 +175,9 @@
         },
         "b1e4a88d-565b-4d95-a6d7-129869cff301": {
           "description": "Identificar el vocabulario clave de la informática"
+        },
+        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
+          "description": "Relacionar los conceptos de la informática con el mundo real"
         },
         "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
@@ -167,6 +200,9 @@
         "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
           "description": "Identificar el vocabulario clave de la informática"
         },
+        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+          "description": "Relacionar los conceptos de la informática con el mundo real"
+        },
         "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
         },
@@ -177,7 +213,7 @@
           "description": "Explica por qué la cantidad óptima de compresión es imposible o \"difícil\" de identificar."
         },
         "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": "Explica algunos factores que hacen que la compresión sea un reto."
+          "description": "Explica algunos factores que hacen complicada la compresión."
         },
         "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
           "description": "Describe el propósito y la razón de ser de la compresión sin pérdidas."
@@ -206,6 +242,9 @@
         "0b17cf0a-2614-40be-afbc-1045245d0a38": {
           "description": "Identificar el vocabulario clave de la informática"
         },
+        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
+          "description": "Relacionar los conceptos de la informática con el mundo real"
+        },
         "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
         },
@@ -226,6 +265,9 @@
         },
         "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
           "description": "Identificar lugares a donde ir para continuar aprendiendo sobre ciencias de la computación y programación."
+        },
+        "83f493e8-9941-4154-b2f4-f34836741746": {
+          "description": "Define \"codificación\" e \"informática\"."
         },
         "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
           "description": "Identificar el vocabulario clave de las ciencias de la computación."
@@ -1249,6 +1291,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Entrena y prueba un modelo de aprendizaje automático."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
         }
       }
     }

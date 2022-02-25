@@ -44,30 +44,6 @@
         "loops/aquatic/unversioned": {
           "word": "cikle "
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Rregullimi"
         },
@@ -79,10 +55,6 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Rregullimi"
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Kod"
@@ -164,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Përcakto"
+        },
+        "debugging/csd/2021": {
+          "word": "Rregullimi"
+        },
+        "variable/csd/2021": {
+          "word": "Variabël"
+        },
+        "conditionals/csd/2021": {
+          "word": "Kushtet"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksioni"
+        },
+        "function/csd/2021": {
+          "word": "Funksion"
+        },
+        "copyright/csd/2021": {
+          "word": "E drejta e autorit"
         }
       }
     }

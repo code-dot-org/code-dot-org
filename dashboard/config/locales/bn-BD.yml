@@ -198,6 +198,7 @@ bn:
       minecraft_designer: মাইনক্র্যাফট
       playlab: প্লে ল্যাব
       starwars: স্টার ওয়ার্স
+      loading: লোড হচ্ছে...
     popup:
       progress: আপনার অগ্রগতি
       close: বন্ধ
@@ -206,6 +207,7 @@ bn:
       prizes_link: আরও তথ্য
   teacher:
     answer: উত্তর
+    dashboard: শিক্ষক ড্যাশবোর্ড
     for_teachers_only: শুধু শিক্ষকদের জন্য
     title:
       one: 'আপনার শিক্ষক:'

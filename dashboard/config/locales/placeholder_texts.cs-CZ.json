@@ -378,19 +378,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "co chceš k narozeninám?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Konec",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Díky za pokec!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka",
+          "50d489a15105b987ec6d4410900c95dd": "Zadej slovo akce:"
         },
         "courseC19_playLab_EOC5_2021": {
           "5cec903c4d41c49412a70a94d54999ee": "Můžete něco napsat.",
@@ -419,6 +423,31 @@
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Jak se jmenuješ?"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "zde zadej text",
+          "30fcc1693fa8402931d13ac3a5f396fd": "zde napiš název"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "volba 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "volba 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "volba 3"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Klikni na sprajty a nasaď jim roušky.",
+          "968c8b54671ab303d48320f86937c40b": "Roušky pomáhají zpomalit šíření virů."
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ahoj světe!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ahoj světe!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ahoj světe!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ahoj světe!"
         }
       }
     }

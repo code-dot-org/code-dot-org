@@ -438,6 +438,26 @@ uk:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': прибульці
             '"BEAR"': Ведмеді
@@ -997,6 +1017,15 @@ uk:
         text: коли клацнули {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): пурхання
+            new Behavior(wobbling, []): хитання
+            new Behavior(wandering, []): бродіння
+            new Behavior(patrolling, []): патрулювання
+            new Behavior(moving_west_and_looping, []): рух на захід і циклічно
+            new Behavior(moving_east_and_looping, []): рух на схід і циклічно
       gamelab_comment:
         text: 'коментар: {COMMENT}'
       gamelab_costumeImage:
@@ -1045,6 +1074,19 @@ uk:
         text: |-
           якщо {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} костюм є {COSTUME}"
       gamelab_isKeyPressed:
@@ -1147,7 +1189,6 @@ uk:
           EFFECT:
             '"burst"': вибух
             '"rain"': дощ
-            '"zigzag"': зигзаг
       gamelab_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNumSprites:
@@ -1210,6 +1251,12 @@ uk:
             "'sound://category_animals/dog.mp3'": пес
             "'sound://category_animals/tiger.mp3'": тигр
             "'sound://category_digital/jump_7.mp3'": стрибок
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): рух за стрілками
+            new Behavior(driving_with_arrow_keys, []): рух за стрілками
+            draggable(): будучи перетягуваним
       gamelab_pointInDirection:
         text: Точки {SPRITE} {DIRECTION}
         options:
@@ -1305,6 +1352,14 @@ uk:
             '"scale"': розмір
             '"width"': ширина
             '"height"': висота
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': повільно
+            '5': нормальний
+            '7': швидко
+            '9': extra fast
       gamelab_setTint:
         text: змінити колір {THIS} до {COLOR}
       gamelab_setupSim:
@@ -1711,72 +1766,90 @@ uk:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Морозиво
-            Stars: Зірки
-            Fireworks: Феєрверк
-            '"rainbow"': Веселка
-            '"hearts"': Серця
-            '"flowers"': Квіти
-            '"waves"': Хвилі
+            '"brick"': цеглина
+            '"fire"': вогонь
+            '"flowers"': квіти
+            '"hearts"': серця
+            '"iceCream"': Морозиво
+            '"leaves"': листя
+            '"rainbow"': веселка
+            '"stars"': зірки
+            '"waves"': хвилі
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': вибух
             '"rain"': дощ
-            '"zigzag"': зигзаг
       Poetry_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       Poetry_makeNumSprites:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
+            '"sound://category_nature/summer_night_loop.mp3"': ніч
+            '"sound://category_background/ocean_waves.mp3"': океан
+            '"sound://category_background/rainforest_ambient_sound.mp3"': тропічний
+              ліс
+            '"sound://category_background/wavering_wind.mp3"': сонний
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': повільно
       Poetry_playSound:
         text: грати звук {SOUND}
         options:
           SOUND:
-            Light: Світлий
+            '"sound://category_bell/long_bell_notification.mp3"': дзвоник
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': бульбашка
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': стрибок
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': світло
       Poetry_setBackground:
         text: встановити колір тла {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Кольори
-            '"squiggles"': Звивання
-            '"space"': Відступ
-            '"stars"': Зірки
-            '"ripples"': Брижі
-            '"rain"': Дощ
             '"bubbles"': Бульбашки
+            '"clouds"': хмарно
             '"confetti"': Конфеті
-            '"hearts"': Різнокольорові серця
+            '"hearts"': серця
+            '"space"': Відступ
+            '"rain"': дощ
+            '"ripples"': Брижі
+            '"colors"': Кольори
+            '"stars"': Зірки
+            '"squiggles"': Звивання
           PALETTE:
-            '"rainbow"': Веселка
+            '"ocean"': океан
+            '"rainbow"': веселка
+            '"spring"': весна
+            '"winter"': зима
       Poetry_setBackgroundImageAs:
         text: встановити фон {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Дощ
             '"bubbles"': Бульбашки
-            '"hearts"': Різнокольорові серця
             '"confetti"': Конфеті
+            '"hearts"': серця
+            '"rain"': дощ
             '"starburst"': Вибухаюча зірка
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            fluttering: пурхання
-            growing: ріст
-            shrinking: стиснення
-            swimming_left_and_right: плавання
-            wandering: бродіння
-            wobbling: хитання
+            '"fluttering"': пурхання
+            '"growing"': ріст
+            '"shrinking"': стиснення
+            '"swimming_left_and_right"': плавання
+            '"wandering"': бродіння
+            '"wobbling"': хитання
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            fluttering: пурхання
-            growing: ріст
-            shrinking: стиснення
-            swimming_left_and_right: плавання
-            wandering: бродіння
-            wobbling: хитання
+            '"fluttering"': пурхання
+            '"growing"': ріст
+            '"shrinking"': стиснення
+            '"swimming_left_and_right"': плавання
+            '"wandering"': бродіння
+            '"wobbling"': хитання
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:

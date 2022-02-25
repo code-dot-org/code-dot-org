@@ -1265,6 +1265,7 @@ cs-CZ:
           |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")</a>|
           | Zkus přidat do hry zvuky! | Zkus přidat do příběhu další scénu! |
 
+        content1: sem uveďte popis
       PicturingData-Unplugged:
         markdown: |
           # Picturing Data
@@ -3401,28 +3402,6 @@ cs-CZ:
           zaznamenáte nadšení pro počítačovou vědu, přikročte dále k zavedení denních
           plánů lekcí, které budou pro Vaše studenty vodítkem, offline aktivit, které
           můžete dělat bez počítače a fór na kontakt s ostatními učiteli.\n"
-      OPD-K5 CS Courses_dani:
-        markdown: "# Plánování > Začínáme na Code.org\n\n\n## Krok 1: Vyberte si kurz\nVšechny
-          naše kurzy -- od předškoláků po vysokoškoláky -- jsou uvedeny v našem **[katalogu
-          kurzů](https://studio.code.org/courses)**. Jestliže chcete najít lekce základů
-          počítačových věd, které jste praktikovali, jděte na naši **[základní stránku](https://code.org/educate/curriculum/elementary-school)**
-          a přesuňte se dolů do části „Kurzy“. Všechny naše kurzy jsou bezplatné.
-          Chatujte s kolegy ve své škole a určete, jak lze osnovy kurzu integrovat
-          do množství různých předmětů.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Krok 2: Založte si svou třídní sekci\nZaložte si třídní sekci, abyste mohli
-          sledovat, jaký pokrok studenti udělali, tisknout svým studentům přihlašovací
-          karty, vést jim účty a tisknout certifikáty, které si po skončení kurzu
-          mohou vzít domů. Kliknutím na tento odkaz můžete **[sledovat stručné video,](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          které Vám ukáže, jak založit Vaši první třídu počítačových věd na Code.org.
-          Tyto kroky najdete také v **[tomto článku podpory](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Krok 3: Přidělte kurz své sekci\nKlikněte do kurzu, který vyučujete -- měla
-          by se Vám zobrazit obrazovka podobná níže uvedené. Pak můžete kliknout na
-          „Přidělit kurz“ a přidělit ten kurz jedné z Vašich sekcí. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Krok 4: Zahajte výuku! \nVše, co potřebujete k uvedení koncepcí počítačové
-          vědy do Vaší třídy, je jedna jediná lekce. Až u svých studentů zaznamenáte
-          nadšení pro počítačovou vědu, přikročte dále k zavedení denních plánů lekcí,
-          které budou pro Vaše studenty vodítkem, offline aktivit, které můžete dělat
-          bez počítače a fór na kontakt s ostatními učiteli.\n"
       RelayProgramming-Unplugged_2021:
         markdown: |
           # Štafetové programování
@@ -3973,3 +3952,514 @@ cs-CZ:
           * Heslo by mělo zahrnovat písmena, čísla a **symboly**.
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Přehled
+
+          Třída naprogramuje nové interakce mezi sprajty. Po krátkém připomenutí bloku isTouching studenti společně vymyslí další způsoby, jak můžou dva sprajti mezi sebou interagovat. Potom pomocí bloku isTouching nechají jednoho sprajta, ať posouvá druhého po obrazovce. Nakonec si procvičí čtyři bloky střetů (collide, displace, bounce, a bounceOff – náraz, vytlačení, odražení a odražení se).
+          ## Slovní zásoba
+
+          * **Abstrakce** – vyloučení konkrétních rozdílů s cílem vytvořit jedno řešení, které bude fungovat pro různé problémy.
+
+          ## Představený kód
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Přehled
+
+          Tato lekce představuje funkce jako způsob, jak odstranit opakující se bloky kódu a jak si kód uspořádat, aby byl přehlednější. Studenti zjistí, že vyšší míra abstrakce usnadňuje pochopení použitých kroků i kontrolu jejich správnosti, a pak si v Game Labu zkusí vytvořit vlastní funkce. Na konci lekce třída využije získané dovednosti k uspořádání finálního kódu hry Boční posuvník a přidá do něj nové funkce.
+          ## Slovní zásoba
+
+          * **Funkce** – kód, který se dá snadno opakovaně volat.
+
+          ## Představený kód
+
+          * [Definování funkce](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Volání funkce](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Přehled
+
+          Tato lekce rozšiřuje kreslířské umění o šířku a výšku a představuje koncept generování náhodných čísel. Studenti se naučí používat varianty elips – ellipse() – a obdélníků – rect() –, které zahrnují parametry šířky a výšky, a blok pozadí – background() –, pomocí kterého můžou obrazovku vyplnit barvou. Na konci kurzu bude představen blok randomNumber() a studenti pomocí nových bloků nakreslí náhodného duhového hada.
+          ## Slovní zásoba
+
+          * **Parametr** – doplňující informace, která se předává funkci a přizpůsobuje ji konkrétním potřebám.
+
+          ## Představený kód
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Přehled
+
+          Tato lekce představuje proměnné jako způsob, jak označit číslo v programu nebo uložit náhodně vygenerovanou hodnotu. Na začátku lekce se třída seznámí s velmi základní definicí proměnných a procvičí si používání nových bloků. Poté si vyzkouší použití proměnných k uložení náhodného čísla, aby ho mohli v programu používat opakovaně.
+          ## Slovní zásoba
+
+          * **Proměnná** – zástupný symbol pro informaci, která se může změnit.
+
+          ## Představený kód
+
+          * [Deklarace proměnné](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Deklarace a přiřazení hodnoty proměnné](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Materiály
+
+          * [Úvod k proměnným](https://youtu.be/G41G_PEWFjE) – video ([stáhnout](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      Begin planning your project:
+        content1: sem uveďte popis
+      Begin planning your project_2018:
+        content1: sem uveďte popis
+      Begin planning your project_2018_2019:
+        content1: sem uveďte popis
+      Begin planning your project_2018_2019_2020:
+        content1: sem uveďte popis
+      CSD U2 Design Project:
+        content1: sem uveďte popis
+      CSD U2 Design Project_2018:
+        content1: sem uveďte popis
+      CSD U2 Design Project_2018_2019:
+        content1: sem uveďte popis
+      CSD U2 L1 Overview:
+        content1: sem uveďte popis
+      CSD U2 L2 Overview:
+        content1: sem uveďte popis
+      CSD U2 L3 Overview:
+        content1: sem uveďte popis
+      CSD U2 L4 Overview:
+        content1: sem uveďte popis
+      CSD U2 L5 Overview:
+        content1: sem uveďte popis
+      CSD U2 L6 Overview:
+        content1: sem uveďte popis
+      CSD U2 Lesson 6 Overview:
+        content1: sem uveďte popis
+      CSD U2 expand project:
+        content1: sem uveďte popis
+      CSD U2 expand project_2018:
+        content1: sem uveďte popis
+      CSD U2 expand project_2018_2019:
+        content1: sem uveďte popis
+      CSD U2 project guide:
+        content1: sem uveďte popis
+      CSD U2 project guide_2018:
+        content1: sem uveďte popis
+      CSD U2 project guide_2018_2019:
+        content1: sem uveďte popis
+      CSD U3 Card Examples_2018:
+        content1: sem uveďte popis
+      CSD U3 Card Examples_2018_2019:
+        content1: sem uveďte popis
+      CSD U3 combining rep:
+        content1: sem uveďte popis
+      CSD U3 combining rep_2018:
+        content1: sem uveďte popis
+      CSD U3 combining rep_2018_2019:
+        content1: sem uveďte popis
+      CSD U3 game intro:
+        content1: sem uveďte popis
+      CSD U3 game intro_2018:
+        content1: sem uveďte popis
+      CSD U3 game intro_2018_2019:
+        content1: sem uveďte popis
+      CSD U3 platform intro:
+        content1: sem uveďte popis
+      CSD U3 platform intro_2018:
+        content1: sem uveďte popis
+      CSD U3 platform intro_2018_2019:
+        content1: sem uveďte popis
+      CSD U5 Encryption 1:
+        content1: sem uveďte popis
+      CSD U5 Encryption 1_2018:
+        content1: sem uveďte popis
+      CSD U5 Encryption 1_2018_2019:
+        content1: sem uveďte popis
+      CSD U5 Encryption 2:
+        content1: sem uveďte popis
+      CSD U5 Encryption 2_2018:
+        content1: sem uveďte popis
+      CSD U5 Encryption 2_2018_2019:
+        content1: sem uveďte popis
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: sem uveďte popis
+      CSD U5 crosstab warmup:
+        content1: sem uveďte popis
+      CSD U5 crosstab warmup_2018:
+        content1: sem uveďte popis
+      CSD U5 crosstab warmup_2018_2019:
+        content1: sem uveďte popis
+      CSD U5 data visualization:
+        content1: sem uveďte popis
+      CSD U5 data visualization_2018:
+        content1: sem uveďte popis
+      CSD U5 data visualization_2018_2019:
+        content1: sem uveďte popis
+      CSD U5 student record:
+        content1: sem uveďte popis
+      CSD U5 student record_2018:
+        content1: sem uveďte popis
+      CSD U5 student record_2018_2019:
+        content1: sem uveďte popis
+      CSD U6 LED create intro:
+        content1: sem uveďte popis
+      CSD U6 LED create intro_2018:
+        content1: sem uveďte popis
+      CSD U6 LED create intro_2018_2019:
+        content1: sem uveďte popis
+      CSD U6 final intro:
+        content1: sem uveďte popis
+      CSD U6 final intro_2018:
+        content1: sem uveďte popis
+      CSD U6 final intro_2018_2019:
+        content1: sem uveďte popis
+      Internet Simulator Setup:
+        content1: sem uveďte popis
+        markdown: "# Simulátor internetu Code.org\n\n_Poznámka: Pokyny uvedené v tomto
+          kurzu slouží učitelům, kteří chtějí používat Simulátor internetu jako samostatný
+          nástroj – odděleně od učebního plánu Code.org Principy informatiky (Computer
+          Science Principles – CSP). Pokud plánujete používat aktivity navržené v
+          rámci učebního plánu Code.org Principy informatiky, přejděte prosím na [stránku
+          učebního plánu CSP](https://code.org/educate/csp).\n\n### Obsah\nTady najdete
+          tři stránky základů a informací:\n\n* Co je Simulátor internetu? Přehled
+          (viz níže)\n* [pokyny k nastavení](/s/netsim/lessons/1/levels/2)\n* [často
+          kladené dotazy](/s/netsim/lessons/1/levels/3)\n \n### Co je Simulátor internetu?
+          Přehled:\n\nSimulátor internetu je nástroj vyvinutý organizací Code.org
+          pro náš nový učební plán pro střední školy s názvem [Principy informatiky](https://code.org/educate/csp).
+          Je navržený tak, aby si v něm studenti mohli prakticky osahat (a řešit)
+          různé problémy související s počítačovými sítěmi. Simulátor internetu se
+          používá v různých lekcích kurzů 1 a 2 našeho učebního plánu k úspěšnému
+          vytváření různých vrstev internetu. \n\nPokud zvažujete používat nástroj
+          ve třídě ve spojení s aktivitami, které jste sami navrhli, doporučujeme
+          seznámit se s nástrojem důkladněji prostřednictvím našich [učebních plánů](https://curriculum.code.org/csp/unit1).
+          **Pokyny k nastavení** na další straně slouží učitelům, kteří chtějí Simulátor
+          internetu používat odděleně od učebního plánu CSP Code.org. \n\nSamotný
+          nástroj tyto koncepty _nevyučuje_, vytváří ale prostředí, ve kterém se může
+          více studentů propojit a posílat jak mezi sebou, tak dalším spolužákům binární,
+          decimální i ascii zprávy. **Prostředí je možné nakonfigurovat** různými
+          způsoby, kdy každá konfigurace odhaluje jiný druh problémů, vizualizace
+          dat a propojení hostitelů a podporuje tak osvojení si různých konceptů fungování
+          internetu.\n\nSimulátor internetu byl navržený tak, aby ho používali studenti
+          ve *třídě*, kde prezenčně spolupracují na řešení problémů. Mezi tyto problémy
+          často patří vymýšlení komunikačního protokolu nebo způsobů strukturovaného
+          šifrování informací, které umožní reálný přenos těchto informací po internetu.
+          \n\n**V učebním plánu Principy informatiky Code.org** obvykle členíme lekce
+          a aktivity následujícím způsobem:\n\n* ** Nejdřív studentům představte výzvu**\n
+          * např. Fyzický internet je ve své podstatě nespolehlivý a odesílané zprávy
+          se můžou ztratit\n* ** Nechte studenty, ať se Simulátorem experimentují,
+          aby získali povědomí o dané problematice** \n * např. Podívejte se na protokoly
+          routerů, kde uvidíte, že 10–20 % všech zpráv se ztratí a že pakety můžou
+          být posílány v nesprávném pořadí\n* ** Dejte studentům příležitost, aby
+          řešení výzvy sami vymysleli** \n  * např. můžou vymyslet vlastní protokol,
+          jak po této nespolehlivé síti spolehlivě posílat zprávy\n* **A konečně,
+          studenti si také vyzkouší, jak jejich protokol nebo výtvor funguje „v reálném
+          světě“\b**\n * např. se podívají na video a prozkoumají, jak v reálu funguje
+          TCP\n\n### Za jakými účely je možné Simulátor internetu nakonfigurovat?\n\nV
+          úplném základu může Simulátor internetu posílat jeden bit informace přes
+          jedno sdílené drátové připojení bez jakékoli koordinace nebo synchronizace.
+          V nejsložitější variantě umí simulovat nespolehlivá připojení přes více
+          routerů, používat IP adresy, DNS a fixní velikost paketů, což vyžaduje vytvoření
+          protokolů, které se podobají protokolům TCP/IP nebo HTTP. \n\nNastavili
+          jsme Simulátor internetu v řadě konfigurací, které jsou vhodné pro vyučování
+          konkrétních témat. Pokud ale budete Simulátor internetu používat ve třídě,
+          měli byste se seznámit s některými nastaveními uživatelského rozhraní a
+          buď je sami řídit, nebo říct studentům, jak je mají nastavit.  \n\nNapříklad:
+          Jednou z funkcí Simulátoru internetu je možnost zobrazit binární, decimální,
+          šestnáctkovou a ASCII reprezentaci libovolných odesílaných dat. V některých
+          konfiguracích může uživatel také nastavit „velikost bloku“ a tím určit,
+          jak se bity budou interpretovat. U lekcí, které jste navrhli sami, můžete
+          zvolit jednu z přednastavených konfigurací, může být ale potřeba, abyste
+          studenty oprávnili pouze k zobrazování konkrétní reprezentace těchto bitů,
+          případně velikost bloku nastavili na konkrétní hodnotu.\n\nJe důležité poznamenat,
+          že námi poskytované konfigurace jsou koncipované jako výchozí body pro výuku
+          konkrétních témat. Pokud si chcete Simulátor přizpůsobit, aby vyhovoval
+          vašim potřebám, možná budete muset zapojit vynalézavost a různé vyučovací
+          strategie.\n\n\n <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\n_Další:
+          Pokyny k nastavení_\n\n\n"
+      Internet Simulator Setup 2:
+        content1: sem uveďte popis
+        markdown: "# Simulátor internetu: Pokyny k nastavení\n\n1. **Vytvořte v Code
+          Studiu sekci.** Aby mohli studenti ve vaší třídě vzájemně komunikovat, musí
+          mít všichni v Code Studiu přiřazenou stejnou sekci. Po přihlášení pomocí
+          účtu učitele musíte vytvořit sekci, ke které se všichni studenti připojí.
+          Vytvoření sekce:\n * Přejděte do prostoru [sekce](https://code.org/teacher-dashboard#/sections)
+          s řídicím panelem učitele.\n * Klikněte na tlačítko „Nová sekce“. Jako typ
+          přihlášení pro kurz doporučujeme zvolit „e-mail“ a „cspunit1“. \n <br>\n<img
+          src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" />\n<br><br>\n2. ** Požádejte studenty, aby se k sekci přihlásili.**
+          Po vytvoření sekce klikněte na odkaz „Správa studentů“, který u ní najdete.
+          Zobrazí se kód sekce, prostřednictvím kterého se studenti po vytvoření vlastních
+          účtů Code Studio můžou připojit.\n<br>\n<img src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" />\n<br><br>\n3. ** Předejte studentům adresu URL k verzi
+          Simulátoru internetu, kterou chcete používat.** Vytvořili jsme několik různých
+          konfigurací Simulátoru internetu, které jsou dostupné na adrese [code.org/internetsimulator](http://code.org/internetsimulator).
+          Až najdete konfiguraci, která vyhovuje vaší aktivitě, pošlete studentům
+          adresu URL. Pokud budou všichni ve stejné sekci, automaticky budu moct po
+          zadání stejné adresy URL mezi sebou navazovat spojení.  \n\n_Další: Často
+          kladené dotazy\n\n\n\n"
+      Internet Simulator Setup 3:
+        content1: sem uveďte popis
+        markdown: |+
+          # Simulátor internetu: často kladené dotazy
+
+          #### Kde můžu najít aktivity navržené pro používání se Simulátorem internetu?
+          Aktivity, které jsme navrhli pro náš učební plán Principy informatiky, včetně konkrétních konfigurací Simulátoru internetu, najdete v učebních plánech ke konkrétním lekcím [tady](https://code.org/educate/csp). Mnoho učebních plánů k lekcím zahrnuje video s tipy a triky pro učitele, které obsahuje ukázky, jak lze Simulátor internetu používat v rámci aktivit ve třídě. Aktivity můžete používat tak, jak jsou, anebo si je upravit, aby vyhovovaly potřebám vašich hodin.
+
+          #### Můžu si Simulátor internetu přizpůsobit pro svoji třídu?
+          Momentálně bohužel nenabízíme možnost, aby si uživatelé mimo Code.org vytvářeli konkrétní konfigurace a pokyny pro Simulátor internetu. Nabízíme ale řadu různých konfigurací, které, jak doufáme, budou aktivitám ve vaší třídě vyhovovat. V delším časovém horizontu chceme i dalším uživatelům nabídnout, aby si mohli nástroj konfigurovat.
+
+          #### Moji studenti se vzájemně nevidí, když přejdou na adresu URL, kterou jsem jim k Simulátoru internetu poskytl(a). Co mám dělat?
+          Aby se studenti v předsálí Simulátoru internetu viděli, musí být ve stejné sekci. Ujistěte se, že jste dokončili všechny kroky podle pokynů k nastavení sekce na předchozí stránce a že se příslušní studenti k tomuto konkrétnímu kódu sekce připojili. Někteří studenti, kteří už dříve nějaký kurz Code.org absolvovali, můžou také být v několika sekcích, proto si ověřte, že znají název vaší sekce a že před vstupem do předsálí tento název v rozevírací nabídce zvolili.
+
+
+
+      Multi-Screen Apps:
+        content1: sem uveďte popis
+      New Challenge Introduction:
+        content1: sem uveďte popis
+        markdown: "### Nová výzva: Rozlušti náhodnou substituční šifru… pomocí nového
+          widgetu\n\nCo když místo posouvání celé abecedy namapujeme každé písmeno
+          abecedy náhodně na jiné písmeno abecedy? Tomu se říká **náhodná substituční
+          šifra**.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nTajná
+          zpráva teď není zašifrovaná jednoduchým posunem abecedy, ale **náhodným
+          nahrazením**.  \n\n\n\nTuto zprávu je mnohem těžší rozluštit a je k tomu
+          potřeba složitější nástroj, takže…\n\nKdyž klikneš na tlačítko pro pokračování,
+          uvidíš **novou, složitější verzi šifrovacího nástroje** s docela jinými
+          prvky.\n\nNa první pohled se může zdát, že nástroj funguje trochu záhadně.
+          \ \n\n### Tvůj úkol:\n\n * Zjisti, co tato nová verze nástroje dělá\n *
+          Jaké informace ti prezentuje?\n * Zjisti, co můžeš pomocí nástroje dělat\n
+          * Jako vždycky platí, že nemůžeš nic pokazit, takže zkoušej klikat a experimentovat.\n
+          * Až na to přijdeš, možná dokážeš rozluštit celou zprávu zakódovanou pomocí
+          náhodného nahrazování.\n \n### Nápověda\n\n* Víš, že písmeno „e“ je nejčastější
+          písmeno v angličtině?\n\n### Práce ve skupině a diskuse\nPo nějakém čase
+          zkoušení a experimentování dejte hlavy dohromady – najdi si někoho do dvojice,
+          sesedněte se v malé skupině, nebo pracujte všichni dohdomady – popovídejte
+          si o tom, na co jste přišli, a ověřte si, že rozumíte tomu, co nástroj dělá
+          a jakými různými způsoby se dá používat.\n\n\n"
+      OPD-K5 Reviewing Reflections:
+        content1: sem uveďte popis
+      OPD-K5 Stage3aGo:
+        content1: sem uveďte popis
+      OPD-K5 Stage3aGo_copy:
+        content1: sem uveďte popis
+      OPD-K5 Stage3aGo_dani:
+        content1: sem uveďte popis
+      OPD-K5 conditionals introduced:
+        content1: sem uveďte popis
+      OPD-K5 debugging:
+        content1: sem uveďte popis
+      OPD-K5 diving deeper intro:
+        content1: sem uveďte popis
+      OPD-K5 events introduced:
+        content1: sem uveďte popis
+      OPD-K5 for loops:
+        content1: sem uveďte popis
+      OPD-K5 for loops intro:
+        content1: sem uveďte popis
+      OPD-K5 for loops introduction:
+        content1: sem uveďte popis
+      OPD-K5 functions introduced:
+        content1: sem uveďte popis
+      OPD-K5 journaling:
+        content1: sem uveďte popis
+      OPD-K5 lesson implementation planning:
+        content1: sem uveďte popis
+      OPD-K5 lesson plans:
+        content1: sem uveďte popis
+      OPD-K5 loops introduced:
+        content1: sem uveďte popis
+      OPD-K5 project:
+        content1: sem uveďte popis
+      OPD-K5 projects introduction:
+        content1: sem uveďte popis
+      OPD-K5 role_of_teacher:
+        content1: sem uveďte popis
+      OPD-K5 sequencing introduced:
+        content1: sem uveďte popis
+      OPD-K5 sprite lab:
+        content1: sem uveďte popis
+      OPD-K5 sprite lab introduction:
+        content1: sem uveďte popis
+      OPD-K5 sprite lab unplugged:
+        content1: sem uveďte popis
+      OPD-K5 sprite lab video:
+        content1: sem uveďte popis
+      OPD-K5 types of lessons:
+        content1: sem uveďte popis
+      OPD-K5 using lesson plans:
+        content1: sem uveďte popis
+      OPD-K5 variables:
+        content1: sem uveďte popis
+      OPD-K5 variables introduction:
+        content1: sem uveďte popis
+      OPD-K5 variables unplugged:
+        content1: sem uveďte popis
+      OPD-K5 where to next:
+        content1: sem uveďte popis
+      Prepare for your presentation:
+        content1: sem uveďte popis
+      'Technique: Frequency Analysis':
+        content1: sem uveďte popis
+        markdown: "# Prolomení substitučních šifer\n\nNejlepší technika prolomení
+          náhodné substituční šifry je známá jako **frekvenční analýzya** \n\nParafrázováno
+          z: [wikipedia](https://cs.wikipedia.org/wiki/Frekvenčn%C3%AD_analýza)\n\n*
+          **Frekvenční analýza** je technika vycházející z toho, jak *často* se v
+          daném jazyce vyskytují určitá písmena oproti jiným písmenům – jaká je jejich
+          četnost.\n* Například v anglickém textu jsou písmena  *E*, *T*, *A* a *O*
+          nejčastější, zatímco *Z*, *Q* a *X* jsou vzácná. Podobně *TH*, *ER*, *ON*
+          a *AN* jsou nejčastější dvojice písmen, která se vyskytují pohromadě.\n*
+          Rozmístění písmen bývá přibližně stejné v téměř *všech* úryvcích anglického
+          textu. \n\n\nVerze widgetu na předchozí stránce slouží jako pomůcka k **prolomení
+          substituční šifry pomocí frekvenční analýzy**.\n\nAnalýzou četnosti písmen
+          v šifrované zprávě ve srovnání s četností písmen v typickém úryvku anglického
+          textu (prózy) je možné zúžit hledání správných písmen v nešifrované zprávě.
+          \n\nNástroj zobrazuje, jaká je četnost písmen v šifrovaném textu (oranžovém)
+          ve srovnání s četností v běžném anglickém textu (modrém).\n\n### Nápověda:
+          Kde začít?\n\n1. Najdi krátká slova a nejdřív prolom šifru u nich. Kolik
+          jednopísmenných slov v angličtině znáš? („a“). Velmi běžné slovo složené
+          ze tří písmen je „the“.\n2. Až tohle uděláš, budeš mít substituce pro některá
+          nejběžnější písmena. Dál zkus použít intuici – podívej se na další slova,
+          ve kterých jsou už rozluštěná písmena a zkus odhadnout zbylá písmena. Jaké
+          asi bylo původní slovo?\n3. Po nalezení několika hůře odhadnutelných písmen
+          už půjde zbytek abecedy lehce.\n4. Srovnání četnosti písmen funguje jako
+          dobré vodítko při odhadování.\n\n### Vyzkoušej tohle:\nAnimace níže ukazuje,
+          jak začít. Luštitel zkusil následující postup:\n\n* Nejdřív si seřadil písmena
+          podle četnosti. \n* Určil skupinu znaků, které by se mohly mapovat na slovo
+          „the“.  \nTo je dobrý začátek!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Je náhodná substituce dobrá šifra?\n* Jak dlouho ti po získání určitého
+          cviku zabralo prolomit náhodnou substituční šifru?\n* Je to dobrý způsob
+          šifrování, nebo ne?\n\n\n"
+      Terminology Recap:
+        content1: sem uveďte popis
+        markdown: "# Rekapitulace\n\nZprávy šifrované **Caesarovou šifrou** lze velmi
+          snadno prolomit, zvlášť pomocí výpočetního nástroje. Když jste si teď trochu
+          vyzkoušeli, jak snadné je rozluštit alfabetickou šifru, která funguje na
+          principu posunu, pojďme si vyzkoušet něco obtížnějšího.\n\n**Opakování terminologie:**\n\n*
+          **Šifrování** – proces šifrování zpráv za účelem ochrany soukromí; šifrování
+          má zajistit, aby zprávy mohly číst pouze „oprávněné“ strany.\n* **Dešifrování**
+          – opak šifrování; tajná zpráva se dešifruje na původní prostý text.\n* **Šifra**
+          – obecný pojem pro techniku (nebo algoritmus) šifrování.\n* **Caesarova
+          šifra** – technika šifrování, která spočívá v posunu o určitý počet znaků
+          abecedy.\n* **Prolomení šifry** – pokus o rozkódování tajné zprávy *bez*
+          znalosti všech specifik šifry. \n\n\nKliknutím na Pokračovat zobrazte **Další
+          výzvu**...\n\n \n"
+      csf_be_a_super_digital_citizen:
+        content1: sem uveďte popis
+      csf_password_power-up:
+        content1: sem uveďte popis
+      csf_putting_a_stop_to_online_meanness:
+        content1: sem uveďte popis
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: sem uveďte popis
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: název
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: sem uveďte popis
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: sem uveďte popis
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: sem uveďte popis
+      CSD U6 LED create intro_2021:
+        content1: sem uveďte popis
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: sem uveďte popis
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

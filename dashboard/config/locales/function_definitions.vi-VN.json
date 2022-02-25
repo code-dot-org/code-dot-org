@@ -604,13 +604,19 @@
             }
           },
           "draw a circle": {
-            "name": "vẽ một hình tròn"
+            "name": "vẽ một hình tròn",
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "parameters": {
+              "radius": "bán kính"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            },
+            "name": "vẽ một cái chong chóng"
           },
           "draw a triangle": {
             "name": "vẽ một hình tam giác",
@@ -620,8 +626,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "chiều dài"
-            }
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            },
+            "name": "vẽ một hình khối"
           },
           "draw a house": {
             "name": "vẽ một căn nhà",

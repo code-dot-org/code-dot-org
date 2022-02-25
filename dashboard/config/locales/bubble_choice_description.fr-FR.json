@@ -95,7 +95,10 @@
         "helloworld_food_costumes": "Apprendre à modifier l'apparence des sprites.",
         "helloworld_food_sounds": "Découvrez comment jouer des sons.",
         "helloworld_retro_costumes": "Apprendre à modifier l'apparence des sprites.",
-        "helloworld_retro_sounds": "Découvrez comment jouer des sons."
+        "helloworld_retro_sounds": "Découvrez comment jouer des sons.",
+        "CourseF_app_computer": "Connectez toutes les pièces et découvrez comment allumer l'ordinateur !",
+        "courseF_sprites_freeplay_aquatic": "Créez une scène sous-marine avec des poissons et d'autres créatures. ",
+        "courseF_sprites_freeplay_food": "Créez une scène drôle avec des sprites alimentaires qui rigolent. "
       }
     }
   }

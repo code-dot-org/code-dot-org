@@ -1642,7 +1642,7 @@
           "courseC_maze_debugging5_1": "Te bloki są zablokowane i nie mogą być usunięte!"
         },
         "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+          "courseC_maze_debugging9_2019_1": "Przeciągaj  bloki z przybornika do swojego obszaru roboczego."
         },
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
@@ -1978,13 +1978,13 @@
           "whenKey": "Użyj bloku nowego zdarzenia znaleziony tutaj."
         },
         "courseF_events_practice_reorder": {
-          "stopAllBug": "Kolejność w tym bloku jest niepoprawna."
+          "stopAllBug": "Ten blok jest w złej kolejności"
         },
         "courseF_events_time": {
-          "events_category": "Kliknij tutaj, aby otworzyć kategorię \"Zdarzenia\"."
+          "events_category": "Kliknij tutaj, aby otworzyć kategorię Zdarzenia."
         },
         "courseF_sprites_behaviors": {
-          "behaviors_category": "Kliknij tutaj, aby otworzyć kategorię \"Zachowania\"."
+          "behaviors_category": "Kliknij tutaj, aby otworzyć kategorię Zachowania."
         },
         "courseF_sprites_make": {
           "sprites_category": "Kliknij tutaj, aby otworzyć kategorię Duszki."
@@ -1996,19 +1996,19 @@
           "sprites_category2": "Poszukaj tutaj nowego bloku."
         },
         "courseF_text_events": {
-          "events_category": "Kliknij tutaj, aby otworzyć kategorię \"Zdarzenia\"."
+          "events_category": "Kliknij tutaj, aby otworzyć kategorię Zdarzenia."
         },
         "courseC_artist_prog2_2021": {
-          "slider": "Tutaj możesz spowolnić program."
+          "slider": "Tutaj możesz spowolnić swój program."
         },
         "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "Spróbuj przejść przez swój kod po jednym bloku po kolei."
+          "stepButton": "Spróbuj przejść przez swój kod blok po bloku."
         },
         "courseF_label_predict": {
           "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
         },
         "courseF_text_answer": {
-          "answered_block": "Poszukaj tutaj nowych bloków!"
+          "answered_block": "Poszukaj tutaj nowego bloku!"
         },
         "courseF_text_choice_color": {
           "text_color_finish": "Czy zmienił się kolor tła po udzieleniu odpowiedzi na pytanie? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
@@ -2018,20 +2018,129 @@
         },
         "courseF_text_choice_title": {
           "title_block": "Poszukaj tutaj dwóch nowych bloków!",
-          "text_answer_finish": "Czy ekran tytułowy pojawił się na 3 sekundy? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+          "text_answer_finish": "Czy ekran tytułowy pojawił się na 3 sekundy? Jeśli tak, kliknij Zakończ. Jeśli nie, kliknij Zresetuj, zmień kod i kliknij Uruchom ponownie."
         },
         "courseF_text_concat": {
-          "join_blocks": "Poszukaj tutaj nowego bloku!"
+          "join_blocks": "Poszukaj tutaj nowych bloków!"
         },
         "courseF_text_print": {
-          "print_block": "Znajdź blok `drukuj` tutaj!",
+          "print_block": "Znajdź blok drukowania tutaj!",
           "text_print_finish": "Czy twoja wiadomość wydrukowała się powyżej? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
         },
         "courseF_text_prompts": {
-          "prompt_block": "Znajdź blok `podpowiedź` tutaj!"
+          "prompt_block": "Znajdź tutaj blok podpowiedzi!"
         },
         "courseF_variables_predict": {
           "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Wybierz kategorię, aby zobaczyć bloki dostępne w przyborniku! Przeciągnij je na obszar roboczy, aby dodać je do swojego programu ",
+          "New Artist Project_callout2": "Naciśnij przycisk \"Uruchom\", aby zapisać i uruchomić swój program",
+          "sign_in_to_save_project": "Chcesz zapisać projekt na później? Zaloguj się i zapisz go na swoim koncie!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Wybierz kategorię, aby zobaczyć bloki dostępne w przyborniku! Przeciągaj je na obszar roboczy, aby dodać do swojego programu",
+          "New Play Lab Project_callout2": "Naciśnij przycisk \"Uruchom\", aby zapisać i uruchomić swój program",
+          "sign_in_to_save_project": "Chcesz zapisać projekt na później? Zaloguj się i zapisz go na swoim koncie!"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Kliknij tutaj, by wyświetlić siatkę."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Zmień liczbę tutaj"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Oto kod"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Tutaj dodaj swój kod"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Co robi ta linia?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Definiuj początekGry tutaj"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Definuj przesuńGracza() tutaj"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Sprawdź, czy gracz wygrał"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Zmień liczbę tutaj"
         }
       }
     }

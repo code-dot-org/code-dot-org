@@ -174,6 +174,7 @@ nl:
     email_preference_yes: "Ja"
     email_preference_no: "Nee"
     email_preference_required: "Je moet een emailvoorkeur instellen."
+    share_teacher_email_reg_partner_question: "Wilt u dat wij uw contactinformatie delen met de [regionale partner van Code.org](%{cdo_regional_partner_desc}) in uw provincie zodat zij u op de hoogte kunnen houden over locale professionele ontwikkelingen, resources en evenementen?"
     share_teacher_email_reg_partner_preference_yes: "Ja"
     share_teacher_email_reg_partner_preference_no: "Nee"
     share_teacher_email_reg_partner_preference_required: "Je moet een emailvoorkeur instellen."
@@ -395,11 +396,14 @@ nl:
       minecraft_hero: 'Minecraft Held'
       playlab: 'Speel Lab'
       playlab_k1: 'Play Lab (Peuter)'
+      poetry: 'Poëzie'
+      poetry_hoc: 'Poëzie'
       scratch: 'Scratch'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blokken)'
       starwarsblocks_hour: 'Star Wars (blokken)'
+      loading: 'Laden...'
       weblab: 'Web Lab'
       view_all: 'Bekijk alle projecten...'
     popup:
@@ -415,6 +419,7 @@ nl:
       prizes_link: 'Meer info'
   teacher:
     answer: Antwoord
+    dashboard: 'Dashboard Leerkrachten'
     for_teachers_only: Alleen Voor Leraren
     title:
       one: 'Je leraar:'
@@ -880,6 +885,7 @@ nl:
       school: 'School'
       school_name: 'Naam van de school'
       school_city: 'School Stad'
+      school_city_district: 'School stad/district'
       school_country: 'Land van de school'
       colombian_school_city: 'School Stad'
       colombian_chilean_school_name: 'Naam van de school'
@@ -942,3 +948,4 @@ nl:
   behaviors:
     this_sprite: "deze sprite"
   unit_prefix: "Unit %{n}"
+  teacher_feedback: "Docenten feedback"

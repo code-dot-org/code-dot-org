@@ -1130,7 +1130,7 @@
         "helloworld_animals_costumes": "Hãy cùng tìm hiểu cách đổi diện mạo của nhân vật nhé.",
         "helloworld_animals_events": "Sử dụng sự kiện `when clicked` (khi nhấp chuột) để cho nhân vật nói điều gì đó.",
         "helloworld_animals_freeplay": "Đã đến lúc sáng tạo theo ý muốn rồi!",
-        "helloworld_animals_location": "Cho mỗi nhân vật một vị trí khác nhau.",
+        "helloworld_animals_location": "Đặt cho mỗi nhân vật một vị trí khác nhau.",
         "helloworld_animals_multi": "Cho hai nhân vật lần lượt nói điều gì đó.",
         "helloworld_animals_say": "Hãy dùng khối `say` (nói) để làm tôi nói bất cứ điều gì bạn muốn!",
         "helloworld_animals_sizes": "Hãy cùng tìm hiểu cách đổi kích thước nhân vật.",
@@ -1141,7 +1141,7 @@
         "helloworld_emoji_costumes": "Hãy cùng tìm hiểu cách đổi diện mạo của nhân vật nhé.",
         "helloworld_emoji_events": "Sử dụng sự kiện `when clicked` (khi nhấp chuột) để cho nhân vật nói điều gì đó.",
         "helloworld_emoji_freeplay": "Đã đến lúc sáng tạo theo ý muốn rồi!",
-        "helloworld_emoji_location": "Cho mỗi nhân vật một vị trí khác nhau.",
+        "helloworld_emoji_location": "Đặt cho mỗi nhân vật một vị trí khác nhau.",
         "helloworld_emoji_multi": "Cho hai nhân vật lần lượt nói điều gì đó.",
         "helloworld_emoji_say": "Hãy dùng khối `say` (nói) để làm tôi nói bất cứ điều gì bạn muốn!",
         "helloworld_emoji_sizes": "Hãy cùng tìm hiểu cách đổi kích thước nhân vật.",
@@ -1152,7 +1152,7 @@
         "helloworld_food_costumes": "Hãy cùng tìm hiểu cách đổi diện mạo của nhân vật nhé.",
         "helloworld_food_events": "Sử dụng sự kiện `when clicked` (khi nhấp chuột) để cho nhân vật nói điều gì đó.",
         "helloworld_food_freeplay": "Đã đến lúc sáng tạo theo ý muốn rồi!",
-        "helloworld_food_location": "Cho mỗi nhân vật một vị trí khác nhau.",
+        "helloworld_food_location": "Đặt cho mỗi nhân vật một vị trí khác nhau.",
         "helloworld_food_multi": "Cho hai nhân vật lần lượt nói điều gì đó.",
         "helloworld_food_say": "Hãy dùng khối `say` (nói) để làm tôi nói bất cứ điều gì bạn muốn!",
         "helloworld_food_sizes": "Hãy cùng tìm hiểu cách đổi kích thước nhân vật.",
@@ -1163,7 +1163,7 @@
         "helloworld_retro_costumes": "Hãy cùng tìm hiểu cách đổi diện mạo của nhân vật nhé.",
         "helloworld_retro_events": "Sử dụng sự kiện `when clicked` (khi nhấp chuột) để cho nhân vật nói điều gì đó.",
         "helloworld_retro_freeplay": "Đã đến lúc sáng tạo theo ý muốn rồi!",
-        "helloworld_retro_location": "Cho mỗi nhân vật một vị trí khác nhau.",
+        "helloworld_retro_location": "Đặt cho mỗi nhân vật một vị trí khác nhau.",
         "helloworld_retro_multi": "Cho hai nhân vật lần lượt nói điều gì đó.",
         "helloworld_retro_say": "Hãy dùng khối `say` (nói) để làm tôi nói bất cứ điều gì bạn muốn!",
         "helloworld_retro_sizes": "Hãy cùng tìm hiểu cách đổi kích thước nhân vật.",
@@ -1175,7 +1175,9 @@
         "poetry_hoc_exemplar2": "Những hình ảnh nào hiện lên trong tâm trí bạn?",
         "poetry_hoc_sounds": "Thêm âm thanh vào chương trình để thay đổi cảm xúc trong bài thơ khi đọc.",
         "poetry_hoc_spriteBehaviors": "Nhân vật có thể thực hiện lặp đi lặp lại các hành động hoặc hành vi nhất định khi chương trình chạy.",
-        "poetry_hoc_spriteSizes": "Bạn có thể thay đổi kích thước của nhân vật đã tạo."
+        "poetry_hoc_spriteSizes": "Bạn có thể thay đổi kích thước của nhân vật đã tạo.",
+        "New Artist Project": "Hãy vẽ thứ gì đó thú vị! Mã lập trình của bạn sẽ được lưu như một dự án để bạn có thể quay lại bất cứ lúc nào.",
+        "New Sports Project": "Hãy tạo trò chơi cho riêng bạn! Bạn được quyền phụ trách từ đây: bạn có thể thay đổi tất cả luật chơi, xáo trộn và kết hợp các môn thể thao, hãy thỏa sức sáng tạo! Khi bạn xong, bấm Hoàn thành để bạn bè của bạn có thể thử chơi trò chơi của bạn trên điện thoại của họ."
       }
     }
   }

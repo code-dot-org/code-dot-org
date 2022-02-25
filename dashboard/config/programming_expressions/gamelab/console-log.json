@@ -1,0 +1,8 @@
+{
+  "key": "console.log",
+  "name": "console.log()",
+  "category": "Variables",
+  "category_key": "variables",
+  "short_description": "Game Lab - console.log()",
+  "syntax": "console.log(message)"
+}

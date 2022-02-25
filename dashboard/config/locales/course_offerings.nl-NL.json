@@ -1,0 +1,46 @@
+{
+  "nl-NL": {
+    "data": {
+      "course_offerings": {
+        "coursea": "Cursus A",
+        "courseb": "Cursus B",
+        "coursec": "Cursus C",
+        "coursed": "Cursus D",
+        "coursee": "Cursus E",
+        "coursef": "Cursus F",
+        "express": "Express-cursus",
+        "csd": "Ontdekkingen in de informatica",
+        "csp": "Basisprincipes uit de informatica",
+        "20-hour": "20-uur Intro cursus",
+        "flappy": "Flappy Code",
+        "jigsaw": "Legpuzzel",
+        "algebra": "Informatica in Algebra",
+        "aquatic": "Minecraft: Aquatische reis",
+        "artist": "Kunstenaar",
+        "course1": "Cursus 1",
+        "course2": "Cursus 2",
+        "course3": "Cursus 3",
+        "course4": "Les 4",
+        "frozen": "Code met Anna en Elsa",
+        "gumball": "Kauwgom Speel Lab",
+        "hourofcode": "Klassiek doolhof",
+        "iceage": "Ijs tijd Speel Lab",
+        "infinity": "Disney Infinity Play Lab",
+        "mc": "Minecraft programmeer uur",
+        "minecraft": "Minecraft Code Uur Code Ontwerper",
+        "oceans": "AI voor oceanen",
+        "outbreak": "Uitbraaksimulator",
+        "pixelation": "Pixelachtig",
+        "playlab": "Speel Lab",
+        "sports": "Codeer je eigen sportspel",
+        "text-compression": "Tekstcompressie",
+        "csa-self-paced-pl": "Navigeen door Code.org voor leraren van de CSA Pilot",
+        "counting-csc": "Tellen met Laurel",
+        "explore-data-1": "Boxplots en histogrammen verkennen",
+        "outbreak-csc": "Uitbraak",
+        "poem-art": "Poëzie",
+        "edit-code": "Code Bewerken"
+      }
+    }
+  }
+}

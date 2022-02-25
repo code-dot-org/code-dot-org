@@ -412,6 +412,7 @@
       starwars: Star Wars
       starwarsblocks: Star Wars (blokker)
       starwarsblocks_hour: Star Wars (blokker)
+      loading: Laster...
       weblab: Weblaboratoriet
       view_all: Vis alle prosjekter...
     popup:
@@ -427,6 +428,7 @@
       prizes_link: Mer info
   teacher:
     answer: Svar
+    dashboard: Lærersider
     for_teachers_only: Kun for lærere
     title:
       one: 'Din lærer:'

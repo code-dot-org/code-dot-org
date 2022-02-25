@@ -232,6 +232,10 @@ tr:
     email_preference_yes: Evet
     email_preference_no: Hayır
     email_preference_required: Bir e-posta tercihi  belirtmelisiniz.
+    share_teacher_email_reg_partner_question: Mesleki gelişim, kaynaklar ve etkinlikler
+      hakkında sizi bilgilendirebilmeleri için iletişim bilgilerinizi eyaletinizdeki
+      [Code.org bölgesel ortağı](%{cdo_regional_partner_desc}) ile paylaşmamızı ister
+      misiniz?
     share_teacher_email_reg_partner_preference_yes: Evet
     share_teacher_email_reg_partner_preference_no: Hayır
     share_teacher_email_reg_partner_preference_required: Bir e-posta tercihi  belirtmelisiniz.
@@ -342,6 +346,8 @@ tr:
       provider_managed_section: Bu bölüm, bir başka sağlayıcı tarafından yönetilmektedir
         ve katılım sağlanamaz. Lütfen öğretmeninden seni %{provider} üzerinden eklemesini
         iste  ve bu bölümü yeniden senkronize et.
+      not_participant_type: Bölüm için katılımcı türünü karşılamadığınız için sizi
+        %{section_code} bölümüne ekleyemedik.
     mail:
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
@@ -460,6 +466,8 @@ tr:
       minecraft_hero: Minecraft Kahraman
       playlab: Oyun Laboratuvarı
       playlab_k1: Oyun Lab (Okul Öncesi)
+      poetry: Şiir
+      poetry_hoc: Şiir Sanatı
       scratch: Scratch
       sports: Spor
       spritelab: Kukla Laboratuvarı
@@ -482,6 +490,7 @@ tr:
       prizes_link: Daha fazla bilgi
   teacher:
     answer: Cevap
+    dashboard: Öğretmen Panosu
     for_teachers_only: Sadece Öğretmenler İçin
     title:
       one: 'Öğretmenin :'
@@ -643,6 +652,8 @@ tr:
       onları başka yere taşıyamazsınız.
     third_party_login: Öğrencileri, üçüncü taraf bir uygulama ile senkronize edilen
       bir bölüme taşıyamazsınız.
+    not_correct_participant_type: Yeni bölümde katılımcı olma izinleri olmadığı için
+      bu kullanıcıları taşıyamazsınız.
   share:
     title: Code Studio'da Öğrenin
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar
@@ -704,6 +715,7 @@ tr:
     make_my_own_app: Kendi programımı yap
     how_it_works: Nasıl çalışır
     try_hour_of_code: Kodlama Saati'ni Deneyin!
+    cookie_notice: Çerez Bildirimi
   reference_area:
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın
@@ -1222,6 +1234,7 @@ tr:
       school: Okul
       school_name: Okulun Adı
       school_city: Okulun bulunduğu şehir
+      school_city_district: Okul İl/İlçe
       school_country: Okulun bulunduğu ülke
       colombian_school_city: Okulun bulunduğu şehir
       colombian_school_municipality: Okulun Bulunduğu Belediye
@@ -1379,3 +1392,4 @@ tr:
   behaviors:
     this_sprite: bu hareketli nesne
   unit_prefix: Birim %{n}
+  teacher_feedback: Öğretmen Geribildirimi

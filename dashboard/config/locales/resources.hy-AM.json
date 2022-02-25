@@ -2,34 +2,6 @@
   "hy-AM": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "For Loop Fun"
         },
@@ -227,6 +199,27 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Implementation Guide"
+        },
+        "functions_2/csd/2021": {
+          "name": "գործառույթները"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For Loops"
+        },
+        "for_loops/csd/2021": {
+          "name": "For Loops"
+        },
+        "variables_1/csd/2021": {
+          "name": "փոփոխականների"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "գործառույթները"
+        },
+        "functions_1/csd/2021": {
+          "name": "գործառույթները"
+        },
+        "lists/csd/2021": {
+          "name": "ցուցակները"
         }
       }
     }

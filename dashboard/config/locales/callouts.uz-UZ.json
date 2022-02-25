@@ -1586,7 +1586,8 @@
           "poetry_new_block": "Yangi blok!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Yangi blok!"
+          "poetry_sound": "Yangi blok!",
+          "poetry_music": "Yangi blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Yangi blok!",
@@ -1625,6 +1626,28 @@
         },
         "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Ushbu dropdaun menyudan turli xil qor parchalarini yaratish uchun foydalaning!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Play Lab Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
         }
       }
     }

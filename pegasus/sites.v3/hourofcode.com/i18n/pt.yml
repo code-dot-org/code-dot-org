@@ -57,7 +57,7 @@ pt:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: A Hora do Código está chegando
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
@@ -135,6 +135,9 @@ pt:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -224,17 +227,17 @@ pt:
     organizar um evento Hora do Código. Tutoriais de uma hora em 45 idiomas. Nenhuma
     experiência necessária.
   hourofcode_homepage_hoc2018_header_line2: Idades de 4 a 104.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: A Hora do Código está chegando
   codeorg_homepage_celebrate_cse: Celebre a ciência da computação onde quer que esteja!
   codeorg_homepage_csc: A ciência da computação se encontra com a linguística, a matemática
     e muito mais nas Conexões CS
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
+  codeorg_homepage_csc_long: Veja como a ciência da computação se encontra com a literatura,
+    a matemática e muito mais no nosso currículo!
   codeorg_homepage_csc_title: Conexões de CS
   hoc2018_tutorial_mchoc_description: Use blocos de programação para levar Alex ou
     Steve a uma aventura nesse mundo de Minecraft.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1032,6 +1035,7 @@ pt:
   footer_menu_support: Suporte
   footer_menu_terms: Termos
   footer_menu_privacy: Política de Privacidade
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HORA do CÓDIGO
   learn_banner_blurb: Experimente um tutorial de uma hora projetado para pessoas de
     todas as idades em mais de 45 idiomas. Junte-se a milhões de estudantes e professores

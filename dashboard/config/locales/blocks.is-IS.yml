@@ -353,6 +353,7 @@ is:
             '"right"': hægri röð
             '"x"': þvers-og-kruss
             '"plus"': plús
+            '"spiral"': spírall
             '"random"': eitthvað
       Dancelab_makeAnonymousDanceSprite:
         text: búa til {COSTUME} á stað {LOCATION}
@@ -435,6 +436,26 @@ is:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': allar geimverur
             '"BEAR"': birnir
@@ -462,6 +483,7 @@ is:
             '"right"': hægri röð
             '"x"': þvers-og-kruss
             '"plus"': plús
+            '"spiral"': spírall
             '"random"': eitthvað
       Dancelab_mixColors:
         text: blanda litum {COLOR1} og {COLOR2}
@@ -957,7 +979,7 @@ is:
           OPT:
             '"avoid"': forðast
       gamelab_allSpritesWithAnimation:
-        text: aalab allar {ANIMATION}
+        text: "{ANIMATION}"
       gamelab_atTime:
         text: á tíma {N} {UNIT}
         options:
@@ -985,7 +1007,7 @@ is:
       gamelab_clickedOn:
         text: þegar smellt á {SPRITE}
       gamelab_clickedSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'athugasemd: {COMMENT}'
       gamelab_costumeImage:
@@ -1031,6 +1053,19 @@ is:
         text: |-
           ef {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: búningur {SPRITE} er {COSTUME}
       gamelab_isKeyPressed:
@@ -1131,7 +1166,9 @@ is:
       gamelab_makeBurst:
         options:
           EFFECT:
+            '"burst"': springa
             '"rain"': regn
+            '"spiral"': spírall
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_makeNumSprites:
@@ -1166,9 +1203,9 @@ is:
       gamelab_moveToward:
         text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
       gamelab_newSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: rásar upp og niður
       gamelab_playSound:
@@ -1177,15 +1214,29 @@ is:
         text: spilaHljóð {SOUND}
         options:
           SOUND:
+            "'sound://category_app/app_button_1.mp3'": hnappur
             "'sound://category_collect/clicky_crunch.mp3'": kremja
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bóla
             "'sound://category_animals/bear.mp3'": Björn
             "'sound://category_animals/cat.mp3'": köttur
             "'sound://category_animals/cow.mp3'": kýr
+            "'sound://category_animals/pig.mp3'": svín
             "'sound://category_animals/sheep.mp3'": kind
+            "'sound://category_animals/goat.mp3'": geit
             "'sound://category_animals/chicken.mp3'": hænsn
+            "'sound://category_animals/rooster.mp3'": hani
+            "'sound://category_animals/elephant.mp3'": fíll
             "'sound://category_animals/dolphin.mp3'": höfrungur
+            "'sound://category_animals/chick.mp3'": ungi
             "'sound://category_animals/dog.mp3'": hundur
+            "'sound://category_animals/tiger.mp3'": tígur
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harpa
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": velja
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): er hægt að draga
       gamelab_pointInDirection:
         text: beina {SPRITE} {DIRECTION}
         options:
@@ -1224,9 +1275,13 @@ is:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': eyðimörk
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': vetrarbraut
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': fylking
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': hagi
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbogi
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': vísindaskáldskapur
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stig
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stjörnur
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': jarðlest
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': neðanjarðar
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': neðansjávar
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vetur
             undefined: ekkert
@@ -1270,6 +1325,14 @@ is:
             '"scale"': stærð
             '"width"': breidd
             '"height"': hæð
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': hægt
+            '5': venjulegt
+            '7': hratt
+            '9': extra fast
       gamelab_setTint:
         text: breyta lit {THIS} í {COLOR}
       gamelab_setupSim:
@@ -1290,7 +1353,7 @@ is:
       gamelab_spriteSay:
         text: "{SPRITE} segir {SPEECH}"
       gamelab_subjectSpritePointer:
-        text: ásmellt vera
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
@@ -1373,7 +1436,7 @@ is:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mitt-merki
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ekki mitt-merki
       Mikelab_allSpritesWithAnimation:
-        text: aalab allar {ANIMATION}
+        text: "{ANIMATION}"
       Mikelab_beginDataCollection:
         text: biðja notanda {QUESTION} um breytu {VAR} með valkosti {A}{B}{C}
       Mikelab_changePropBy:
@@ -1576,6 +1639,10 @@ is:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': borg
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': hagi
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stig
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': jarðlest
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': neðanjarðar
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1663,52 +1730,80 @@ is:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Blóm
-            '"hearts"': Hjörtu
+            '"brick"': múrsteinn
+            '"fire"': skjóta
+            '"flowers"': blóm
+            '"hearts"': hjörtu
             '"iceCream"': Rjómaís
-            '"rainbow"': Regnbogi
-            '"stars"': Stjörnur
-            '"waves"': Bylgjur
+            '"leaves"': laufblöð
+            '"rainbow"': regnbogi
+            '"stars"': stjörnur
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"burst"': springa
             '"rain"': regn
+            '"spiral"': spírall
       Poetry_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       Poetry_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': varðeldur
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': skógur
+            '"sound://category_nature/summer_night_loop.mp3"': nótt
+            '"sound://category_background/ocean_waves.mp3"': úthaf
+            '"sound://category_background/rainforest_ambient_sound.mp3"': regnskógur
+            '"sound://category_background/wavering_wind.mp3"': syfjuleg/ur
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': hægt
       Poetry_playSound:
         text: spilaHljóð {SOUND}
         options:
           SOUND:
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Rjúfa
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ljós
+            '"sound://category_bell/long_bell_notification.mp3"': bjalla
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': bóla
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hoppa
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ljós
       Poetry_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Litir
-            '"squiggles"': Hrafnaspark
-            '"space"': Geimur
-            '"stars"': Stjörnur
-            '"ripples"': Gárur
-            '"rain"': Rigning
             '"bubbles"': Sápukúlur
+            '"clouds"': skýjað
             '"confetti"': Skraut
-            '"hearts"': Litrík hjörtu
+            '"hearts"': hjörtu
+            '"space"': Geimur
+            '"rain"': regn
+            '"ripples"': Gárur
+            '"colors"': Litir
+            '"stars"': Stjörnur
+            '"squiggles"': Hrafnaspark
           PALETTE:
-            '"rainbow"': Regnbogi
+            '"ocean"': úthaf
+            '"rainbow"': regnbogi
+            '"spring"': gormur
+            '"winter"': vetur
       Poetry_setBackgroundImageAs:
         text: stilla bakgrunn á {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Rigning
             '"bubbles"': Sápukúlur
-            '"hearts"': Litrík hjörtu
             '"confetti"': Skraut
+            '"hearts"': hjörtu
+            '"rain"': regn
             '"starburst"': Stjörnublossi
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': syndandi
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': syndandi
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:

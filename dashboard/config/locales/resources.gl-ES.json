@@ -2,34 +2,6 @@
   "gl-ES": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Diversión con bucles \"para\" (for)"
         },
@@ -227,6 +199,33 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Guía de implementación"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funcións"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Bucles \"Para\" (For)"
+        },
+        "for_loops/csd/2021": {
+          "name": "Bucles \"Para\" (For)"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funcións"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funcións"
+        },
+        "html_tags/csd/2021": {
+          "name": "Etiquetas HTML"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Cabeceiras e parágrafos"
+        },
+        "lists/csd/2021": {
+          "name": "Listas"
         }
       }
     }

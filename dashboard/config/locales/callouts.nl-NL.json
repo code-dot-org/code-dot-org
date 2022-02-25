@@ -924,7 +924,8 @@
           "hello_world_new": "Nieuw blok!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nieuw blok!"
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nieuw blok!"
@@ -969,10 +970,12 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nieuw blok!",
           "poetry_multiple_sprites": "Nieuw blok!",
-          "poetry_new_block": "Nieuw blok!"
+          "poetry_new_block": "Nieuw blok!",
+          "poetry_selector": "Kies een gedicht of typ er zelf een!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nieuw blok!"
+          "poetry_sound": "Nieuw blok!",
+          "poetry_music": "Nieuw blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nieuw blok!",
@@ -981,6 +984,194 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Nieuw blok!",
           "poetry_remove_sprite": "Nieuw blok!"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Klik hier om de code uit te voeren."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "helloworld_animals_location": {
+          "pin": "pin"
+        },
+        "helloworld_animals_multi": {
+          "pin": "pin"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Klik hier om de code uit te voeren."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "helloworld_emoji_location": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Klik hier om de code uit te voeren."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "helloworld_food_location": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Klik hier om de code uit te voeren."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "helloworld_retro_location": {
+          "pin": "pin"
+        },
+        "helloworld_retro_multi": {
+          "pin": "pin"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Hier vindt u codeblokken. ",
+          "run_button": "Gebruik deze knop om uw animatie te testen. "
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Klik hier om het raster te tonen."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Wijzig het nummer hier"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Hier is de code"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Wijzig het nummer hier"
         }
       }
     }

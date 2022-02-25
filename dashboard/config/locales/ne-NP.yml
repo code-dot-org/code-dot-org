@@ -257,6 +257,7 @@ ne:
       starwars: Star Wars
       starwarsblocks: Star Wars (Blocks)
       starwarsblocks_hour: Star Wars (Blocks)
+      loading: लोड हुदैछ...
     popup:
       progress_for_user: "%{name}'s progress"
       progress: तपाईँको प्रगति
@@ -270,6 +271,7 @@ ne:
       prizes_link: more info
   teacher:
     answer: Answer
+    dashboard: Teacher Dashboard
     for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'

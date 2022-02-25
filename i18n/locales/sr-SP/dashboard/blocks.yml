@@ -1,3 +1,4 @@
+---
 sr:
   data:
     blocks:
@@ -168,7 +169,7 @@ sr:
             '"SHARK"': ајкуле
           FORMAT:
             '"diamond"': дијамант
-            '"row"': разред
+            '"row"': ред
             '"random"': насумичан
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -203,14 +204,13 @@ sr:
             '"SHARK"': ајкуле
           LAYOUT:
             '"diamond"': дијамант
-            '"row"': разред
+            '"row"': ред
             '"random"': насумичан
       Dancelab_randomColor:
         text: насумична боја
       Dancelab_setBackgroundEffect:
         options:
-          EFFECT:
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Насумичан)"
+          EFFECT: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -245,8 +245,7 @@ sr:
             '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
-          EFFECT:
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Насумичан)"
+          EFFECT: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -410,7 +409,7 @@ sr:
           STRING:
             '"diamond"': дијамант
             '"x"': x
-            '"y"': 'у'
+            '"y"': у
       Dancelab_whenKey:
         options:
           KEY:
@@ -420,7 +419,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
-            '"y"': 'у'
+            '"y"': у
       gamelab_addTarget:
         options:
           OPT:
@@ -457,7 +456,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
-            '"y"': 'у'
+            '"y"': у
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -470,7 +469,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
-            '"y"': 'у'
+            '"y"': у
       gamelab_makeBurst:
         options:
           EFFECT:
@@ -537,6 +536,14 @@ sr:
             '"scale"': величина
             '"width"': Širina
             '"height"': висина
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': нормално
+            '7': fast
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -676,8 +683,8 @@ sr:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'да'
-            '"no"': 'не'
+            '"yes"': да
+            '"no"': не
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -685,9 +692,36 @@ sr:
             '"down"': стрелица доле
             '"left"': стрелица лево
             '"right"': стрелица десно
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': срца
+            '"rainbow"': Дуга
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"rain"': киша
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': Ноћ
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': скок
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': Облачно
+            '"hearts"': срца
+            '"rain"': киша
+          PALETTE:
+            '"rainbow"': Дуга
+            '"winter"': Зима
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': срца
             '"rain"': киша
       RyanLab_moveForward:
         text: помери се напред
@@ -702,7 +736,7 @@ sr:
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"row"': разред
+            '"row"': ред
             '"random"': насумичан
       aalab_someGraduallyStartIntervention:
         options:

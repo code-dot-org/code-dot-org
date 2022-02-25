@@ -228,6 +228,10 @@ ro:
     email_preference_yes: Da
     email_preference_no: Nu
     email_preference_required: Trebuie să specificaţi un email preferat.
+    share_teacher_email_reg_partner_question: Dorești să împărtășim datele tale de
+      contact cu [Code.org regional partner](%{cdo_regional_partner_desc}) din statul
+      tău pentru a putea să îți trimită notificări despre dezvoltarea profesională
+      locală, resurse și evenimente?
     share_teacher_email_reg_partner_preference_yes: Da
     share_teacher_email_reg_partner_preference_no: Nu
     share_teacher_email_reg_partner_preference_required: Trebuie să specificaţi un
@@ -464,6 +468,8 @@ ro:
       minecraft_hero: Minecraft Hero
       playlab: Laborator de Joacă
       playlab_k1: Play Lab (Pre-cititor)
+      poetry: Poezie
+      poetry_hoc: Arta Poeziei
       scratch: Scratch
       sports: Sporturi (Sports)
       spritelab: Laborator Sprite
@@ -487,6 +493,7 @@ ro:
       prizes_link: Mai multe informaţii
   teacher:
     answer: Răspuns
+    dashboard: Tabloul de bord al profesorilor
     for_teachers_only: Doar pentru profesori
     title:
       one: 'Profesorul tău:'
@@ -1260,6 +1267,7 @@ ro:
       school: Școală
       school_name: Numele școlii
       school_city: Orașul în care se află școala
+      school_city_district: Orașul/Sectorul Școlii
       school_country: Țara școlii
       colombian_school_city: Orașul în care se află școala
       colombian_school_municipality: Municipiul Școlar
@@ -1420,3 +1428,4 @@ ro:
   behaviors:
     this_sprite: acest spirit
   unit_prefix: Unitate %{n}
+  teacher_feedback: Punctele de vedere ale profesorului

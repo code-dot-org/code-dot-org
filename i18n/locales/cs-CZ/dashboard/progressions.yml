@@ -1,8 +1,13 @@
 cs:
   data:
     progressions:
+      AI Machine Learning - Video: 'Umělá inteligence: strojové učení – video'
+      'AI: Impact on Society - Video': 'Umělá inteligence: dopad na společnost – video'
+      'AI: Training Data & Bias - Video': 'Umělá inteligence: trénovací data a podjatost – video'
+      App Lab Intro - Video: Úvod k App Labu – video
       Artist Project: Projekt Umělec
       'Artist: Variables': 'Umělec: proměnné'
+      Assessment: Hodnocení
       Back and Forth: Sem a tam
       Bass, Mid, and Treble: Basy, středy a výšky
       Binary Numbers: Binární čísla
@@ -23,6 +28,7 @@ cs:
       Functions: Funkce
       Functions with Parameters: Funkce s Parametry
       Get In Formation: Utvoř sestavu
+      Hello World: Ahoj, světe
       Images and Sounds: Obrázky a zvuky
       Intro to Design Mode: Úvod do dizajnového módu
       Learning from Simulations: Učení se na základě simulací
@@ -47,16 +53,20 @@ cs:
       Setting Properties: Nastavení vlastností
       Share Your App: Sdílej svou appku
       Speed it Up, Slow it Down: Zrychli to, zpomal to
+      Sprite Lab Project: Projekt Laboratoře sprajtů
+      Teach AI a New Word: Nauč umělou inteligenci nové slovo
       Text Compression: Komprese textu
       The Harvester: Zahradnice
       Tour of Design Mode: Představení dizajnového módu
       Variables: Proměnné
+      Velocity: Rychlost
       Video: Video
       'Video: "If/Else"': 'Video: "Pokud/jiné"'
       'Video: Conditional Statements': 'Video: Podmíněný příkaz'
       'Video: Conditionals': 'Video: Podmínky'
       'Video: Functions': 'Video: Funkce'
       'Video: Intro to CSS': 'Video: Úvod do CSS'
+      'Video: Outbreak Simulator: Introduction': 'Video: Simulátor epidemie: Úvod'
       'Video: Problem Solving Process': 'Video: Proces řešení problémů'
       Warm Up: Zahřátí
       Welcome to Monster Town: Vítejte ve Městě Příšer

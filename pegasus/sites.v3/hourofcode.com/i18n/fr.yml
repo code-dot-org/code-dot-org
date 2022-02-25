@@ -58,7 +58,7 @@ fr:
     à se lancer. #CSforGood'
   social_hoc2019_learn_computer_science: 'Apprenez l''informatique. Changez le monde.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: L'évènement "une Heure de Code" arrive !
+  social_hoc_is_coming: Heure de Code approche
   social_hoc2019_hoc_is_about_csforgood: L'Heure de Code se consacre à l'informatique
     pour le bien de tous(#CSforGood). Apprenez la science de l'informatique et Changez
     le monde.
@@ -150,6 +150,9 @@ fr:
     L'informatique, c'est bien plus que du codage ! Cette première étape de Code.org
     vous emmène dans un nouveau voyage où vous en enseignerez davantage sur l'IA,
     tout au long de notre programme d'études.  "
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Lévènement "Une heure de code" en direct
   hoc_live_sign_up_title: S'inscrire à "Une heure de Code" en direct
   hoc_live_learn_title: Apprenez avec L'Heure du code en direct
@@ -245,7 +248,7 @@ fr:
     elle se trouve, peut organiser un évènement « Une Heure de Code ». Tutoriels d'une
     heure dans plus de 45 langues. Aucune expérience n’est nécessaire.
   hourofcode_homepage_hoc2018_header_line2: 'Âge : de 4 à 104 ans.'
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Heure de Code approche…
   codeorg_homepage_celebrate_cse: Fêtez l'informatique où que vous soyez !
   codeorg_homepage_csc: La science informatique intègre les arts du langage, les mathématiques
     et bien d'autres éléments encore, dans le programme de CS Connections.
@@ -1089,6 +1092,7 @@ fr:
   footer_menu_support: Aide
   footer_menu_terms: Conditions générales
   footer_menu_privacy: Politique de Confidentialité
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Activités Heure de Code
   learn_banner_blurb: Essayez notre tutoriel d’une heure destiné à tous les âges,
     disponible dans plus de 45 langues.  Rejoignez des millions d’élèves et d’éducateurs
@@ -9760,7 +9764,7 @@ fr:
     together
   tutorial_ai-oceans_string_detail_programming_languages: L’IA et l'apprentissage
     automatique
-  tutorial_hello_name: Hello World
+  tutorial_hello_name: Bonjour tout le monde
   tutorial_raspispace_name: 'Parler de l''espace : Débuter le codage avec Scratch'
   tutorial_codemonkeyjump_name: 'Blocks Jumper: Game Creation'
   tutorial_poemart_name: Poem Art

@@ -276,6 +276,7 @@ et:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (plokid)'
       starwarsblocks_hour: 'Star Wars (plokid)'
+      loading: 'Laadimine...'
     popup:
       progress_for_user: "%{name} edusammud"
       progress: 'Sinu progress'
@@ -289,6 +290,7 @@ et:
       prizes_link: 'rohkem infot'
   teacher:
     answer: Vastus
+    dashboard: 'Õpetaja töölaud'
     for_teachers_only: Ainult õpetajatele
     title:
       one: 'Sinu õpetaja:'

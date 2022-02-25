@@ -3213,6 +3213,18 @@ $width: 400px;
   box-shadow: 0 0 7px 2px $shadow;
 }
 
+#instructor_in_training_tag {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  color: $white;
+  background-color: $teal;
+  padding: 3px;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0 0 7px 2px $shadow;
+}
+
 #assumed_identity_tag {
   position: fixed;
   top: 0;

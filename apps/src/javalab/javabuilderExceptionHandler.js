@@ -10,12 +10,22 @@ import {
 } from './constants';
 
 export function handleException(exceptionDetails, callback) {
-  const type = exceptionDetails.value;
-  const {connectionId, cause, causeMessage} =
+  const error = `${EXCEPTION_PREFIX} ${getExceptionMessage(
+    exceptionDetails,
+    exceptionDetails.value
+  )}`;
+  callback(error);
+}
+
+export function getExceptionMessage(exceptionDetails, type) {
+  const {connectionId, cause, causeMessage, fallbackMessage} =
     exceptionDetails.detail && exceptionDetails.detail;
   let error;
   switch (type) {
     // User initiated exceptions
+    case JavabuilderExceptionType.NO_FILES_TO_COMPILE:
+      error = msg.errorNoJavaFiles();
+      break;
     case JavabuilderExceptionType.ILLEGAL_METHOD_ACCESS:
       error = msg.illegalMethodAccess({cause: cause});
       break;
@@ -105,6 +115,12 @@ export function handleException(exceptionDetails, callback) {
     case TheaterExceptionType.INVALID_SHAPE:
       error = msg.errorTheaterInvalidShape();
       break;
+    case TheaterExceptionType.VIDEO_TOO_LONG:
+      error = msg.errorTheaterVideoTooLong();
+      break;
+    case TheaterExceptionType.VIDEO_TOO_LARGE:
+      error = msg.errorTheaterVideoTooLarge();
+      break;
 
     // Playground exceptions
     case PlaygroundExceptionType.PLAYGROUND_RUNNING:
@@ -118,9 +134,8 @@ export function handleException(exceptionDetails, callback) {
       break;
 
     default:
-      error = msg.unknownError({type, connectionId});
+      error = fallbackMessage || msg.unknownError({type, connectionId});
       break;
   }
-  error = `${EXCEPTION_PREFIX} ${error}`;
-  callback(error);
+  return error;
 }

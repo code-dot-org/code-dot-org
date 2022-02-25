@@ -4,9 +4,16 @@ sv-SE:
     dsls:
       2-3 Algorithms Multi 1:
         answers:
-        - text: Börja med en fyrkant <br/> sätt en triangel ovanför fyrkanten <br/>
-            sätt en triangel under fyrkanten
-        - correct: true
+        - text: |-
+            Börja med en kvadrat
+            Sätt en triangel ovanför kvadraten
+            Sätt en triangel under kvadraten
+        - text: |-
+            Börja med en kvadrat
+            Sätt en triangel till höger om kvadraten
+            Sätt ett parallellogram under kvadraten
+            Sätt en triangel till höger om parallellogrammet
+          correct: true
         - text: Börja med en fyrkant <br/> sätta ett parallellogram ovanför fyrkanten
             <br/> sätt en triangel till höger om parallellogrammet
         - text: Börja med en fyrkant <br/> sätt en triangel under fyrkanten <br/>
@@ -60,6 +67,14 @@ sv-SE:
         questions:
         - text: Enligt reglerna för spelet, vilken uppsättning kort har rätt poäng?
         title: Flervalsfråga
+        teacher_markdown: |-
+          ## Lärare:
+
+          Elever kanske arbetar utifrån en missuppfattning och detta är ett ypperligt tillfälle att testa den tesen. Om studenter tror att det *inte* finns något rätt svar, då har de förmodligen missförstått villkoren.
+
+          Här är en video som försöker förklara vad som sker i den här uppgiften.
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - correct: true
@@ -74,7 +89,7 @@ sv-SE:
         - {}
         - {}
         - {}
-        content1: Matcha nätet till programmet.
+        content1: Matcha rutnätet till programmet.
         questions:
         - {}
         - {}
@@ -106,7 +121,7 @@ sv-SE:
         - {}
         - {}
         questions:
-        - {}
+        - text: Vilken uppsättning block tar mig till grisen?
         title: Labyrint Flerval
       2-3 Relay Programming Multi 1:
         answers:
@@ -114,7 +129,7 @@ sv-SE:
         - {}
         - correct: true
         questions:
-        - {}
+        - text: Vilket program skapar **inte** den här bilden?
         title: Flervalsfråga
       2-3 Relay Programming Multi 2:
         answers:
@@ -131,7 +146,8 @@ sv-SE:
         - {}
         - {}
         questions:
-        - {}
+        - text: Vad hade du behövt ändra för att göra detta till en fullständig cirkel?
+        title: Konstnär Felsökning Flervalsfråga 1
       2-3 artist functions multi 1:
         answers:
         - correct: true
@@ -152,6 +168,7 @@ sv-SE:
         - {}
         - {}
         - {}
+        title: Konstnärs-slinga matchning 1
       2-3 artist loops multi 1:
         answers:
         - {}
@@ -159,8 +176,8 @@ sv-SE:
         - correct: true
         - {}
         questions:
-        - text: Vilken form är gjord av denna loop?
-        title: Artist Loops Flerval
+        - text: Vilken form skapar den här slingan?
+        title: Konstnär Slingor flervalsfrågor
       2-3 artist loops multi 2:
         answers:
         - {}
@@ -169,7 +186,7 @@ sv-SE:
         - correct: true
         questions:
         - text: Vilken form är gjord av detta program?
-        title: Artist Loops Flerval
+        title: Konstnär Slingor flervalsfrågor
       2-3 artist match 1:
         answers:
         - {}
@@ -191,6 +208,7 @@ sv-SE:
         - {}
         questions:
         - text: Vilken jämförelse nedan är sann?
+        title: Bi villkorssatser flervalsfråga 1
       2-3 bee conditionals multi 3:
         answers:
         - {}
@@ -199,6 +217,7 @@ sv-SE:
         - {}
         questions:
         - text: Välj de bästa blocken.
+        title: Bi villkorssatser flervalsfråga 2
       2-3 bee loops multi 1:
         answers:
         - correct: true
@@ -207,7 +226,7 @@ sv-SE:
         - {}
         questions:
         - text: Vilket block samlar all nektar?
-        title: Bee Loopar Flerval Ett
+        title: Bi-slingor flervalssvar 1
       2-3 maze match 1:
         answers:
         - {}
@@ -366,7 +385,7 @@ sv-SE:
         - {}
         questions:
         - text: Vilka block kommer att skapa designen?
-        title: Artist Loops Flerval
+        title: Konstnär Slingor flervalsfrågor
       4-5 artist multi 1:
         answers:
         - {}
@@ -2643,5 +2662,157 @@ sv-SE:
         - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Overview
+
+          Klassen programmerar sina sprites att interagera på nya sätt. Efter en kort genomgång av hur de använde isTouching-blocket, brainstormar klassen på andra sätt som två sprites kan interagera. De använder sedan isTouching för att få en sprite att trycka en annan över skärmen innan de övar med de fyra kollisionsblocken (kollidera, förskjuta, studsa och studsa Av).
+          ## Vocabulary
+
+          * **Abstraction** - Dra ut specifika skillnader för att få en lösning att fungera för flera problem.
+
+          ## Introduced Code
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Overview
+
+          Den här lektionen tar upp funktioner som ett sätt att organisera sin kod, göra den mer läsbar och ta bort upprepade kodblock. Klassen lär sig att högre nivå eller mer abstrakta steg gör det lättare att förstå och resonera kring steg, och börjar sedan skapa funktioner i Game Lab. I slutet av lektionen använder klassen dessa färdigheter för att organisera och lägga till funktionalitet till den slutliga versionen av deras side scroller spel.
+          ## Vocabulary
+
+          * **Function** - En bit kod som du lätt kan ringa om och om igen.
+
+          ## Introduced Code
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Overview
+
+          Den här lektionen utökar ritkomptetenserna till att omfatta bredd och höjd och introducerar begreppet generering av slumptal. Klassen lär sig att rita med versioner av ellips() och rekt() som inkluderar bredd- och höjdparametrar och att använda bakgrund()blocket för att fylla skärmen med färg. I slutet av progressionen introduceras klassen för randomNumber() blocket och använder de nya blocken för att rita en randomiserad regnbågsorm.
+          ## Vocabulary
+
+          * **Parameter** - En extra information som du skickar till funktionen för att anpassa den efter ett specifikt behov.
+
+          ## Introduced Code
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: "* [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video
+          ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))"
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: Beskrivning här
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titel
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: Beskrivning här
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: Beskrivning här
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: Beskrivning här
+      CSD U6 LED create intro_2021:
+        content1: Beskrivning här
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: Beskrivning här
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - {}

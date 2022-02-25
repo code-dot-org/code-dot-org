@@ -47,20 +47,44 @@
           "word": "لائن",
           "definition": "(شاعری) - نظم کی ایک ذیلی تقسیم جو ایک قطار میں ترتیب دی گئی ہے جو دائیں ہاتھ کے حاشیے پر ختم ہوتی ہے۔"
         },
+        "behavior/coursef/2021": {
+          "word": "رویہ"
+        },
+        "algorithm/coursef/2021": {
+          "word": "الگورتھم"
+        },
         "variable/coursef/2021": {
           "word": "متغیر"
         },
         "define/coursef/2021": {
           "word": "واضح کرنا"
         },
+        "algorithm/courseb/2021": {
+          "word": "الگورتھم"
+        },
         "drop/courseb/2021": {
           "word": "چھوڑیں"
+        },
+        "algorithm/coursea/2021": {
+          "word": "الگورتھم"
         },
         "drop/coursea/2021": {
           "word": "چھوڑیں"
         },
+        "algorithm/coursec/2021": {
+          "word": "الگورتھم"
+        },
+        "algorithm/coursed/2021": {
+          "word": "الگورتھم"
+        },
         "conditionals/coursed/2021": {
           "word": "شرائط"
+        },
+        "algorithm/express/2021": {
+          "word": "الگورتھم"
+        },
+        "behavior/express/2021": {
+          "word": "رویہ"
         },
         "conditionals/express/2021": {
           "word": "شرائط"
@@ -77,6 +101,12 @@
         "drop/pre-express/2021": {
           "word": "چھوڑیں"
         },
+        "algorithm/pre-express/2021": {
+          "word": "الگورتھم"
+        },
+        "behavior/coursee/2021": {
+          "word": "رویہ"
+        },
         "copyright/coursee/2021": {
           "word": "کاپی رائٹ"
         },
@@ -88,6 +118,18 @@
         },
         "define/coursee/2021": {
           "word": "واضح کرنا"
+        },
+        "variable/csd/2021": {
+          "word": "متغیر"
+        },
+        "conditionals/csd/2021": {
+          "word": "شرائط"
+        },
+        "function/csd/2021": {
+          "word": "فنکشن"
+        },
+        "copyright/csd/2021": {
+          "word": "کاپی رائٹ"
         }
       }
     }

@@ -1,17 +1,18 @@
-"no":
+---
+'no':
   data:
     script:
       category:
         csf_category_name: Grunnleggende informatikk
         csf_international_category_name: Grunnleggende informatikk internasjonalt
         csf2_draft_category_name: 'Under utvikling: Kurs A - F'
-        csp_category_name: '''15-''16 Prinsipper i informatikk'
-        csp_2018_category_name: '''18-''19 Prinsipper i informatikk'
-        csp_2019_category_name: '''19-''20 Prinsipper i informatikk'
-        csp_2020_category_name: '''20-''21 Prinsipper i informatikk'
-        csp_2021_category_name: '''21-''22 Prinsipper i informatikk'
+        csp_category_name: "'15-'16 Prinsipper i informatikk"
+        csp_2018_category_name: "'18-'19 Prinsipper i informatikk"
+        csp_2019_category_name: "'19-'20 Prinsipper i informatikk"
+        csp_2020_category_name: "'20-'21 Prinsipper i informatikk"
+        csp_2021_category_name: "'21-'22 Prinsipper i informatikk"
         cspexams_category_name: Prinsipper i informatikk teoriprøve
-        csp17_category_name: '''17-''18 Prinsipper i informatikk'
+        csp17_category_name: "'17-'18 Prinsipper i informatikk"
         full_course_category_name: Alle kurs
         hoc_category_name: Kodetimen
         math_category_name: Matematikk
@@ -488,8 +489,8 @@
             Wrap-Up:
               name: Oppsummering
         algebraPD2a:
-          description: 'Lär ut funktionell programmering genom algebra'
-          description_short: 'Lär ut funktionell programmering genom algebra'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Booleans:
               name: Boolske verdier
@@ -503,7 +504,7 @@
               name: Strenger og bilder
             The Design Recipe:
               name: Design-oppskriften
-          student_description: 'Lär ut funktionell programmering genom algebra'
+          student_description: Lär ut funktionell programmering genom algebra
         allthethings:
           title: Alt!
           description: Alle nivå typer for UI tester
@@ -539,8 +540,8 @@
               name: Weblaboratoriet
           student_description: Alle nivå typer for UI tester
         algebraPD2b:
-          description: 'Lär ut funktionell programmering genom algebra'
-          description_short: 'Lär ut funktionell programmering genom algebra'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Booleans:
               name: Boolske verdier
@@ -558,7 +559,7 @@
               name: Strenger og bilder
             Teacher Dashboard:
               name: Lærersider
-          student_description: 'Lär ut funktionell programmering genom algebra'
+          student_description: Lär ut funktionell programmering genom algebra
         cspfacilitator:
           lessons:
             App Lab:
@@ -574,20 +575,14 @@
             Next Steps:
               name: De Neste Trinnene
         ECSPD2:
-          description: 'Lär ut funktionell programmering genom algebra'
-          description_short: 'Lär ut funktionell programmering genom algebra'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
               name: Oppsummering
-          student_description: 'Lär ut funktionell programmering genom algebra'
+          student_description: Lär ut funktionell programmering genom algebra
         algebraPD2:
           lessons:
             Teacher Dashboard:
@@ -597,14 +592,14 @@
             Welcome!:
               name: Velkommen!
         sciencePD2b:
-          description: 'Lär ut funktionell programmering genom algebra'
-          description_short: 'Lär ut funktionell programmering genom algebra'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Velkommen!
             Wrap-Up:
               name: Oppsummering
-          student_description: 'Lär ut funktionell programmering genom algebra'
+          student_description: Lär ut funktionell programmering genom algebra
         science-PD2:
           lessons:
             Welcome!:
@@ -616,44 +611,32 @@
             Next Steps:
               name: De Neste Trinnene
         sciencePD2b-iZone:
-          description: 'Lär ut funktionell programmering genom algebra'
-          description_short: 'Lär ut funktionell programmering genom algebra'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Velkommen!
             Wrap-Up:
               name: Oppsummering
-          student_description: 'Lär ut funktionell programmering genom algebra'
+          student_description: Lär ut funktionell programmering genom algebra
         ECSPD2-iZone:
-          description: 'Lär ut funktionell programmering genom algebra'
-          description_short: 'Lär ut funktionell programmering genom algebra'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
               name: Oppsummering
-          student_description: 'Lär ut funktionell programmering genom algebra'
+          student_description: Lär ut funktionell programmering genom algebra
         ECSPD2-NexTech:
-          description: 'Lär ut funktionell programmering genom algebra'
-          description_short: 'Lär ut funktionell programmering genom algebra'
+          description: Lär ut funktionell programmering genom algebra
+          description_short: Lär ut funktionell programmering genom algebra
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
               name: Oppsummering
-          student_description: 'Lär ut funktionell programmering genom algebra'
+          student_description: Lär ut funktionell programmering genom algebra
         asUnplugged:
           description_audience: Alderen 6 til 13
           lessons:
@@ -712,7 +695,7 @@
           description_short: Lær å programmere droner og skap ditt eget Star Wars-spill i en galakse langt, langt borte.
           lessons:
             Hour of Code 2015:
-              name: 'Kodetimen 2015'
+              name: Kodetimen 2015
           student_description: Lær å programmere droner og skap ditt eget Star Wars-spill i en galakse langt, langt borte.
         starwarsblocks:
           description: Lær å programmere droner og skap ditt eget Star Wars-spill i en galakse langt, langt borte.
@@ -724,7 +707,7 @@
           description_short: Utforsk en Minecraft-verden gjennom kode.
           lessons:
             Hour of Code 2015:
-              name: 'Kodetimen 2015'
+              name: Kodetimen 2015
           student_description: Bruk blokker med kode for å ta Steve eller Alex ut på et eventyr i Minecraft.
         ScienceP3OLPT3:
           lessons:
@@ -951,20 +934,14 @@
               name: 'Uten datamaskin: Låtskriving med parametere'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
               name: Oppsummering
         ecs-unit4:
-          description: '(gammel) Enhet 4: Programmering'
-          description_short: '(gammel) Enhet 4: Programmering'
-          student_description: '(gammel) Enhet 4: Programmering'
+          description: "(gammel) Enhet 4: Programmering"
+          description_short: "(gammel) Enhet 4: Programmering"
+          student_description: "(gammel) Enhet 4: Programmering"
         grade3:
           description_audience: Alder 5+ (leseferdigheter kreves)
           lessons:
@@ -1108,7 +1085,7 @@
           description: Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft.
           lessons:
             Minecraft Hour of Code Designer:
-              name: 'Kodetimens Minecraft-designer'
+              name: Kodetimens Minecraft-designer
           student_description: Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft.
         flappy-impact-study:
           lessons:
@@ -1928,7 +1905,7 @@
               display_name: Undersøkelse
           lessons:
             Functions with Parameters_:
-              name: Funksjoner med parametre_
+              name: Funksjoner med parametre\_
             Functions with Parameters:
               name: Funksjoner med parametre
         coursee-2018:
@@ -2613,7 +2590,7 @@
             csp_functions:
               display_name: Funksjoner
         csp2-pilot-staging:
-          title: '(gammel) Enhet 2: Internett'
+          title: "(gammel) Enhet 2: Internett"
           lesson_groups:
             csp_variables:
               display_name: Variabler
@@ -2652,7 +2629,7 @@
             csp_functions:
               display_name: Funksjoner
         csp9-pilot-staging:
-          title: '(gammel) Enhet 9: Data'
+          title: "(gammel) Enhet 9: Data"
           lesson_groups:
             csp_variables:
               display_name: Variabler
@@ -3141,7 +3118,7 @@
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: '(gammel) Enhet 1: Digital informasjon'
+              display_name: "(gammel) Enhet 1: Digital informasjon"
             cspSurvey:
               display_name: Undersøkelse
           lessons:
@@ -3150,7 +3127,7 @@
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
-              display_name: '(gammel) Enhet 2: Internett'
+              display_name: "(gammel) Enhet 2: Internett"
         csp3-2020:
           lessons:
             Debugging:
@@ -3158,7 +3135,7 @@
         csp9-2020:
           lesson_groups:
             csp_unit9_2020:
-              display_name: '(gammel) Enhet 9: Data'
+              display_name: "(gammel) Enhet 9: Data"
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -3375,11 +3352,11 @@
             cspSurvey:
               display_name: Undersøkelse
             csp_unit1_2020:
-              display_name: '(gammel) Enhet 1: Digital informasjon'
+              display_name: "(gammel) Enhet 1: Digital informasjon"
         csp2-2021:
           lesson_groups:
             csp_unit2_2020:
-              display_name: '(gammel) Enhet 2: Internett'
+              display_name: "(gammel) Enhet 2: Internett"
             lessonGroup-2:
               display_name: Undersøkelse
         csp3-2021:
@@ -3401,10 +3378,28 @@
               display_name: Lister
             csp_loops:
               display_name: Løkker
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmer
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Undersøkelse
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Undersøkelse
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
-              display_name: '(gammel) Enhet 9: Data'
+              display_name: "(gammel) Enhet 9: Data"
+            lessonGroup-2:
+              display_name: Undersøkelse
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Undersøkelse
         coursea-2021:
           description_short: En introduksjon til datavitenskap for førskolebarn.
           lessons:
@@ -3597,6 +3592,14 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -3646,10 +3649,6 @@
           lessons:
             lesson-9:
               name: Brukergruppe for lærere
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Enhet 2: Web utvikling'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3753,3 +3752,256 @@
           lessons:
             lesson-1:
               name: Stavekonkurranse
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Leksjon
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Morro med for løkker
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Kodetimen
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variabler
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funksjoner
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Glade Kart
+            'Programming: Happy Maps':
+              name: Glade Kart
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendelser
+          description_short: En introduksjon til datavitenskap for førskolebarn.
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Dansefest
+            lesson-1:
+              name: Dansefest
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Hendelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funksjoner
+            csf_variables:
+              display_name: Variabler
+            csf_for_loops:
+              display_name: For-løkker
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Binære Tall
+              key: Binære Tall
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+            csp_unit1_2020:
+              display_name: "(gammel) Enhet 1: Digital informasjon"
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(gammel) Enhet 2: Internett"
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Feilsøking
+              key: Feilsøking
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funksjoner
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Flytt den, flytt den
+              key: Flytt den, flytt den
+            Getting Loopy:
+              name: Gå i spinn
+            'Loops: Getting Loopy':
+              name: Gå i spinn
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendelser
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Den store begivenheten
+            Binary Bracelets:
+              name: Binær armbånd
+              key: Binær armbånd
+            'Events: The Big Event':
+              name: Den store begivenheten
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendelser
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(gammel) Enhet 9: Data"
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Millimeterpapirprogrammering
+            Relay Programming:
+              name: Relé programmering
+              key: Relé programmering
+            Dance Party:
+              name: Dansefest
+              key: Dansefest
+            Conditionals with Cards:
+              name: Betingelser med kort
+              key: Betingelser med kort
+            'Algorithms: Graph Paper Programming':
+              name: Millimeterpapirprogrammering
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalt statsborgerskap
+            csf_events:
+              display_name: Hendelser
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+          title: Kurs D (2021)
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Låtskriving
+            'Functions: Songwriting':
+              name: Låtskriving
+            Conditionals:
+              key: Betingelser
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            ramp_up:
+              display_name: Løkker i løkker
+            csf_functions:
+              display_name: Funksjoner
+            csf_nested_loops:
+              display_name: Betingelser
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Morro med for løkker
+              key: Morro med for løkker
+            The Internet:
+              name: Internett
+            Internet:
+              key: Internett
+              name: Internett
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-8:
+              display_name: Variabler
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Løkker
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendelser
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Betingelser
+            lesson-14:
+              name: Betingelser i Minecraft
+            lesson-16:
+              name: Feilsøking
+            lesson-19:
+              name: Feilsøking
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Løkker
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold

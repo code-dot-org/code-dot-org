@@ -2,41 +2,14 @@
   "mn-MN": {
     "data": {
       "vocabularies": {
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/minecraft/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/hero/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "function/hero/unversioned": {
-          "word": "Функц",
-          "definition": ""
+          "word": "Функц"
         },
         "code/poem-art/2021": {
           "word": "Код"
@@ -47,687 +20,134 @@
         "debugging/hourofcode/unversioned": {
           "word": "Алдааг засах"
         },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/frozen/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/iceage/unversioned": {
           "word": "Алдааг засах"
         },
         "code/artist/unversioned": {
-          "word": "Код",
-          "definition": ""
+          "word": "Код"
         },
         "debugging/artist/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/gumball/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/aquatic/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Нөхцлүүд",
-          "definition": ""
+          "word": "Нөхцлүүд"
         },
         "loops/aquatic/unversioned": {
-          "word": "Гогцоонууд",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Гогцоонууд"
         },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Шифрлэлт",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Шифрлэлт"
         },
         "debugging/starwars/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/mc/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/playlab/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Алдагдалгүй шахалт",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдагдалгүй шахалт"
         },
         "code/sports/unversioned": {
-          "word": "Код",
-          "definition": ""
+          "word": "Код"
         },
         "debugging/sports/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/infinity/unversioned": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "debugging/basketball/unversioned": {
           "word": "Алдааг засах"
         },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "machine_learning/oceans/unversioned": {
-          "word": "Машины сургалт",
-          "definition": ""
+          "word": "Машины сургалт"
         },
         "code/poem-art/unversioned": {
-          "word": "Код",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Код"
         },
         "variable/coursef/2021": {
-          "word": "Хувьсагч",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Хувьсагч"
         },
         "input/coursef/2021": {
-          "word": "Оролт",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Оролт"
         },
         "machine_learning/coursef/2021": {
-          "word": "Машины сургалт",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Машины сургалт"
         },
         "internet/coursef/2021": {
-          "word": "Интернэт",
-          "definition": ""
+          "word": "Интернэт"
         },
         "packets/coursef/2021": {
-          "word": "Пакетууд",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Пакетууд"
         },
         "define/coursef/2021": {
-          "word": "Тодорхойлох",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Тодорхойлох"
         },
         "debugging/courseb/2021": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "drop/courseb/2021": {
-          "word": "Унах",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Унах"
         },
         "debugging/coursea/2021": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "drop/coursea/2021": {
-          "word": "Унах",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Унах"
         },
         "debugging/coursec/2021": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "sequencing/coursec/2021": {
-          "word": "Дараалуулах",
-          "definition": ""
-        },
-        "programming/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Дараалуулах"
         },
         "binary/coursec/2021": {
-          "word": "Хоёрт",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Хоёрт"
         },
         "debugging/coursed/2021": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "conditionals/coursed/2021": {
-          "word": "Нөхцлүүд",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Нөхцлүүд"
         },
         "debugging/express/2021": {
-          "word": "Алдааг засах",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "sequencing/express/2021": {
-          "word": "Дараалуулах",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Дараалуулах"
         },
         "conditionals/express/2021": {
-          "word": "Нөхцлүүд",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Нөхцлүүд"
         },
         "function/express/2021": {
-          "word": "Функц",
-          "definition": ""
+          "word": "Функц"
         },
         "variable/express/2021": {
-          "word": "Хувьсагч",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Хувьсагч"
         },
         "define/express/2021": {
-          "word": "Тодорхойлох",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Тодорхойлох"
         },
         "drop/pre-express/2021": {
-          "word": "Унах",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Унах"
         },
         "debugging/pre-express/2021": {
-          "word": "Алдааг засах",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Алдааг засах"
         },
         "copyright/coursee/2021": {
           "word": "Зохиогчийн эрх"
@@ -740,6 +160,36 @@
         },
         "define/coursee/2021": {
           "word": "Тодорхойлох"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Машины сургалт"
+        },
+        "debugging/csd/2021": {
+          "word": "Алдааг засах"
+        },
+        "variable/csd/2021": {
+          "word": "Хувьсагч"
+        },
+        "conditionals/csd/2021": {
+          "word": "Нөхцлүүд"
+        },
+        "abstraction/csd/2021": {
+          "word": "Хийсвэрлэл"
+        },
+        "function/csd/2021": {
+          "word": "Функц"
+        },
+        "input/csd/2021": {
+          "word": "Оролт"
+        },
+        "processing/csd/2021": {
+          "word": "Боловсруулалт"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Дижитал ул мөр"
+        },
+        "copyright/csd/2021": {
+          "word": "Зохиогчийн эрх"
         }
       }
     }

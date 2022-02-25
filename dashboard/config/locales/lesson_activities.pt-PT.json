@@ -2,8 +2,176 @@
   "pt-PT": {
     "data": {
       "lesson_activities": {
+        "a34f3d0c-c670-4774-a52e-bf7881f5a3cc": {
+          "name": "Introdução (5 minutos)"
+        },
+        "b5a5dd70-3968-40ab-bcb5-5d0e7df30880": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
+          "name": "Resumo"
+        },
+        "ab15beb1-d005-41c6-a156-e4c110c423b8": {
+          "name": "Aprendizagem complementar"
+        },
+        "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
+          "name": "Iniciando"
+        },
+        "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
+          "name": "Resumo"
+        },
+        "e4041676-353d-409e-a7aa-bcfcc62bab09": {
+          "name": "Aprendizagem complementar"
+        },
+        "e85d6071-2762-4dbb-843e-2f65408a30f8": {
+          "name": "Introdução (5 minutos)"
+        },
+        "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
+          "name": "Resumo"
+        },
+        "ce329650-3549-4f96-8da9-8bc77c162411": {
+          "name": "Aprendizagem complementar"
+        },
+        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
+          "name": "Aquecimento"
+        },
+        "4928afb1-7ade-483d-aeda-aad8e9f2b761": {
+          "name": "Atividade principal"
+        },
+        "16f892de-712b-4c95-b063-a6e969bd0aa1": {
+          "name": "Resumo"
+        },
+        "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
+          "name": "Iniciando"
+        },
+        "3ff80342-0510-45ed-bf69-4cf19ebaf5c1": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
+          "name": "Resumo"
+        },
+        "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
+          "name": "Avaliação"
+        },
+        "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
+          "name": "Aprendizagem complementar"
+        },
+        "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
+          "name": "Iniciando"
+        },
+        "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
+          "name": "Resumo"
+        },
+        "5408728c-7b75-4da5-b4bb-b42cb3c2984b": {
+          "name": "Avaliação"
+        },
+        "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
+          "name": "Aprendizagem complementar"
+        },
+        "5cb4e862-56b7-445e-a99a-22cc738504a1": {
+          "name": "Introdução (5 minutos)"
+        },
+        "84586f7e-4b74-4a9f-936e-d358a0e7670b": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "633ec4e2-ea0b-496f-8878-d4178882a69e": {
+          "name": "Resumo"
+        },
+        "f49ce667-e4b7-4a66-88a4-16848365e63a": {
+          "name": "Aprendizagem complementar"
+        },
+        "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
+          "name": "Iniciando"
+        },
+        "b3fd8108-41b8-46f8-9382-f19c73c597cb": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
+          "name": "Resumo"
+        },
+        "a1d9b125-849a-4eb9-bd45-7b387ec2cc44": {
+          "name": "Avaliação"
+        },
+        "d091559f-3ec9-46c5-9e79-a245aadfb146": {
+          "name": "Aprendizagem complementar"
+        },
+        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
+          "name": "Aquecimento"
+        },
+        "88111b93-3762-4109-9f31-2a08ca80ddb5": {
+          "name": "Atividade principal"
+        },
+        "6a36e450-dd26-4e9f-b236-a9c77b5041a1": {
+          "name": "Resumo"
+        },
+        "c53a1348-2816-4c38-9417-92561d0bca19": {
+          "name": "Aquecimento"
+        },
+        "12a90414-dae4-4f2b-8598-0b3b9fd6a767": {
+          "name": "Atividade principal"
+        },
+        "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d": {
+          "name": "Resumo"
+        },
+        "777be184-c917-4732-ad47-bb1fad0a30e4": {
+          "name": "Aprendizagem complementar"
+        },
+        "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
+          "name": "Iniciando"
+        },
+        "d31e813b-9457-415f-8632-009132bb5e48": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
+          "name": "Resumo"
+        },
+        "0e9caf95-fa34-4ffc-b218-0859134ee293": {
+          "name": "Avaliação"
+        },
+        "6e0020c2-9d9e-488e-bb8d-126ac1760e8b": {
+          "name": "Aprendizagem complementar"
+        },
+        "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f": {
+          "name": "Iniciando"
+        },
         "0f404bbf-d9f1-45c9-a496-271179254aed": {
           "name": "Níveis"
+        },
+        "14d674a9-18e0-43f3-ae74-d593dfc0fbda": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
+          "name": "Resumo"
+        },
+        "a653c76e-8536-4e82-adad-98306fc15f07": {
+          "name": "Aquecimento"
+        },
+        "48bd058b-2012-4d4a-9fba-52d20d8a922f": {
+          "name": "Atividade principal"
+        },
+        "ae872c5e-1b66-4026-b2d7-e26574ff8b57": {
+          "name": "Resumo"
+        },
+        "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
+          "name": "Iniciando"
+        },
+        "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
+          "name": "Aprendizagem complementar"
+        },
+        "d42497ec-48f5-404c-90b9-2133dd4759cc": {
+          "name": "Iniciando"
         },
         "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
           "name": "Actividade"
@@ -11,8 +179,83 @@
         "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
           "name": "Resumo"
         },
+        "10b66543-86a4-459e-bc67-a31d688547ce": {
+          "name": "Aprendizagem complementar"
+        },
+        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
+          "name": "Aquecimento"
+        },
+        "32a95e21-140b-4b72-bd7a-b000ff574b18": {
+          "name": "Atividade principal"
+        },
+        "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3": {
+          "name": "Resumo"
+        },
+        "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
+          "name": "Introdução (5 minutos)"
+        },
+        "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
+          "name": "Resumo"
+        },
+        "262ad475-1b09-4834-8401-0cf39d3955c5": {
+          "name": "Aprendizagem complementar"
+        },
+        "37f266a7-4b80-449e-805a-4a06aad37292": {
+          "name": "Iniciando"
+        },
+        "301e5420-a6e3-46c3-a76f-c2e042652974": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "4e2ce993-660e-4574-9264-448e234c4bac": {
+          "name": "Aprendizagem complementar"
+        },
+        "f266050e-62e6-415d-8735-b80cb922587d": {
+          "name": "Iniciando"
+        },
+        "974b1dfa-682c-4556-89d8-af3f0d0a9d69": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "308d7e22-610e-46cb-be15-54fab1e436bb": {
+          "name": "Resumo"
+        },
+        "408e3cc9-9733-4518-93f3-0a3bb6b6f62d": {
+          "name": "Avaliação"
+        },
+        "aad5bc18-7988-4acf-be28-9e125e9d930e": {
+          "name": "Aprendizagem complementar"
+        },
+        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
+          "name": "Aquecimento"
+        },
         "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
           "name": "Actividade"
+        },
+        "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Resumo"
+        },
+        "ad24912f-a30c-4821-83a5-77e20997a044": {
+          "name": "Aquecimento"
+        },
+        "5c3a2275-a7f9-4e50-a0b4-8f198452a102": {
+          "name": "Atividade principal"
+        },
+        "20701fc4-d308-49af-8988-34896fd12713": {
+          "name": "Resumo"
+        },
+        "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
+          "name": "Introdução (5 minutos)"
+        },
+        "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
+          "name": "Aprendizagem complementar"
+        },
+        "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
+          "name": "Iniciando"
         },
         "8b8d6959-c861-4474-950b-b097aaa9fae3": {
           "name": "Actividade"
@@ -20,17 +263,80 @@
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Resumo"
         },
+        "ddc8f987-c000-409d-aaf7-8546464a70d9": {
+          "name": "Aprendizagem complementar"
+        },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Aquecimento"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Atividade principal"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Resumo"
+        },
+        "05180d31-d1ff-422e-8227-69f7d07884a6": {
+          "name": "Aquecimento"
+        },
+        "6a240b51-f019-4729-a5df-cbe901844a7e": {
+          "name": "Atividade principal"
+        },
+        "4abbf2ec-b39e-4740-a51a-635072063171": {
+          "name": "Resumo"
+        },
+        "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
+          "name": "Aprendizagem complementar"
+        },
+        "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
+          "name": "Introdução (5 minutos)"
+        },
+        "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
+          "name": "Aprendizagem complementar"
+        },
+        "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
+          "name": "Aquecimento"
+        },
+        "dca1904a-ae71-49d2-b77f-708aa02d2707": {
+          "name": "Atividade principal"
+        },
+        "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b": {
+          "name": "Resumo"
+        },
+        "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
+          "name": "Aprendizagem complementar"
+        },
+        "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Níveis"
+        },
+        "42552407-b313-4fc4-9163-e6a8e4a6029d": {
+          "name": "Aprendizagem complementar"
         },
         "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
           "name": "Níveis"
         },
+        "82dec89b-f375-4238-a251-ffae17c2dfd1": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Níveis"
         },
+        "239ba7ce-544c-4508-9e5c-e956de964002": {
+          "name": "Resumo"
+        },
+        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
+          "name": "Aquecimento"
+        },
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Actividade"
+        },
+        "04400eef-5989-4325-a801-ab4ad451f130": {
+          "name": "Aprendizagem complementar"
         },
         "899fd6a9-1214-43ec-a159-77c421de2c8a": {
           "name": "Níveis"
@@ -73,6 +379,15 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Níveis"
+        },
+        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": "Aquecimento"
+        },
+        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
+          "name": "Atividade principal"
+        },
+        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Resumo"
         },
         "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
           "name": "Níveis"
@@ -2480,6 +2795,15 @@
         "ff1dfcf5-d986-40f8-8b7c-6514a123aa59": {
           "name": "Níveis"
         },
+        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+          "name": "Aquecimento"
+        },
+        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
+          "name": "Atividade principal"
+        },
+        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+          "name": "Resumo"
+        },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
           "name": "Níveis"
         },
@@ -2801,41 +3125,2792 @@
         "606f8633-b648-4ef3-80e3-9fc76b86f556": {
           "name": "Níveis"
         },
+        "f652e4d2-c712-4cff-a011-f1dcea192263": {
+          "name": "Aquecimento"
+        },
+        "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2": {
+          "name": "Atividade principal"
+        },
+        "4286b9b3-8562-4acf-8967-f6b6b1b18f9e": {
+          "name": "Resumo"
+        },
+        "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
+          "name": "Avaliação"
+        },
+        "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
+          "name": "Aprendizagem complementar"
+        },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
           "name": "Níveis"
+        },
+        "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
+          "name": "Aquecimento"
+        },
+        "d242b6cc-881c-4f49-acb9-e03383340b0c": {
+          "name": "Atividade principal"
+        },
+        "e9c5315a-ef0d-488f-b4c2-87096019782b": {
+          "name": "Resumo"
+        },
+        "8be95f76-3e59-4701-906f-cfa1005ac3a6": {
+          "name": "Aquecimento"
+        },
+        "2280825d-5ed7-404f-93b8-ea1fac41b4a4": {
+          "name": "Atividade principal"
+        },
+        "156c9efe-8298-4b5e-9fdc-51dc2879f769": {
+          "name": "Resumo"
+        },
+        "6cd8aaa8-8689-41c8-bbbf-2c396782b090": {
+          "name": "Aquecimento"
+        },
+        "eac41bb2-4c60-4d27-b19b-d83afc4c5fa8": {
+          "name": "Atividade principal"
+        },
+        "a7e3ac02-6a46-4eaf-a50f-d09e000205bb": {
+          "name": "Resumo"
+        },
+        "0c41f900-2229-42ab-b5bd-15b78bb97e4e": {
+          "name": "Aquecimento"
+        },
+        "29053d1d-251c-4b6a-8212-fbb9ecedad6b": {
+          "name": "Atividade principal"
+        },
+        "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
+          "name": "Resumo"
+        },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Oportunidade transcurricular"
+        },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Aquecimento: Mesma palavra. Significado diferente."
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": "Assista: O poder das palavras"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Investigue: Qual é o problema?"
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": "Encerrar: Cruzando a linha"
+        },
+        "86dafe20-4778-4665-94eb-cf837951259b": {
+          "name": "Aprendizagem complementar"
+        },
+        "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
+          "name": "Aquecimento"
+        },
+        "a9ccd961-d02e-484a-9d5f-e16bcfce3f58": {
+          "name": "Atividade principal"
+        },
+        "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
+          "name": "Resumo"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Oportunidade transcurricular"
+        },
+        "5750d053-1daa-409c-9b83-bc4306ba4aef": {
+          "name": "Aquecimento"
+        },
+        "0a159287-c2ef-4cfc-b1a3-f9147a79e747": {
+          "name": "Atividade principal"
+        },
+        "6d9977ca-4924-456e-bb2e-ec1ea79a1d81": {
+          "name": "Resumo"
+        },
+        "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae": {
+          "name": "Aquecimento"
+        },
+        "dd059082-7eee-4f7a-a287-a79748174d64": {
+          "name": "Atividade principal"
+        },
+        "0fdc25c1-5137-42cf-8c8d-470a1cddc96f": {
+          "name": "Resumo"
+        },
+        "9f8478ca-8f75-4594-b236-d3a1bfde400e": {
+          "name": "Aquecimento"
+        },
+        "5326608a-942c-45d8-8527-4844f5f0c3b0": {
+          "name": "Atividade principal"
+        },
+        "8b23d2e3-e4ae-475a-9d08-ab476ae5c9b1": {
+          "name": "Resumo"
+        },
+        "37d588db-3870-49d8-abc6-0d9bf5403123": {
+          "name": "Aquecimento"
+        },
+        "5689bfc0-5bcb-4eff-9bc9-5718b2aaf53a": {
+          "name": "Atividade principal"
+        },
+        "b416985a-5994-4e14-a68a-c3486e41c008": {
+          "name": "Resumo"
+        },
+        "7f8fd47b-526e-48ab-9ac2-33db70ea3b72": {
+          "name": "Aquecimento"
+        },
+        "f77093dc-7c10-4fac-b5a3-510056ad6c61": {
+          "name": "Atividade principal"
+        },
+        "c5b98b60-7365-4fa7-a36b-b12750624895": {
+          "name": "Resumo"
+        },
+        "eb628dad-be05-4a67-83d9-b33a3a2b9a2c": {
+          "name": "Aquecimento"
+        },
+        "8c27f2d2-6cbf-44b8-9696-c81310ee4338": {
+          "name": "Atividade principal"
+        },
+        "bc176762-51ee-4ed4-baeb-ddb9a0554139": {
+          "name": "Resumo"
+        },
+        "dfb06a32-f536-4cb1-8784-bc67619ceacc": {
+          "name": "Aquecimento"
+        },
+        "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9": {
+          "name": "Atividade principal"
+        },
+        "757244a2-8803-4a75-af32-3b24bebec03a": {
+          "name": "Resumo"
+        },
+        "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
+          "name": "Avaliação"
+        },
+        "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
+          "name": "Aprendizagem complementar"
+        },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Oportunidade transcurricular"
+        },
+        "8362c620-cea5-4a56-b0b4-74a606bf62da": {
+          "name": "Aquecimento"
+        },
+        "5b774bd6-b243-4d1d-9145-20747f320129": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
+          "name": "Atividade principal"
+        },
+        "18e03ebe-58a5-4a29-a9a6-f06d7a9abd30": {
+          "name": "Resumo"
+        },
+        "7995b5c0-d654-49d1-ac76-89931d3723e4": {
+          "name": "Aquecimento"
+        },
+        "1360b113-804c-4697-8c6d-a184de310850": {
+          "name": "Atividade principal"
+        },
+        "4b190612-457d-44e9-beab-8997c88be0a1": {
+          "name": "Resumo"
+        },
+        "7815d72f-def9-4c77-b4c9-4954d60ef232": {
+          "name": "Aquecimento"
         },
         "eba207ca-a259-40be-93b5-0a9c0c906b80": {
           "name": "Actividade"
         },
+        "7e800d16-2b68-4b95-9071-327a7a9ce611": {
+          "name": "Resumo"
+        },
+        "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2": {
+          "name": "Aprendizagem complementar"
+        },
+        "9fc4791f-a664-44db-9185-6162b40db705": {
+          "name": "Aquecimento"
+        },
+        "d01a520e-a4bb-4422-80ae-fc1fe2157446": {
+          "name": "Atividade principal"
+        },
+        "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b": {
+          "name": "Resumo"
+        },
+        "3c96f7f3-f8fc-45f7-8222-8de9223b9551": {
+          "name": "Aquecimento"
+        },
+        "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4": {
+          "name": "Atividade principal"
+        },
+        "3f386349-319f-49fa-a87b-4de41f39f1d4": {
+          "name": "Resumo"
+        },
+        "5e959966-cfc9-4300-a563-9427222987c8": {
+          "name": "Aprendizagem complementar"
+        },
+        "d9d579ea-18fb-4735-90ea-c04c59ba1a71": {
+          "name": "Aquecimento"
+        },
+        "d51df268-72e1-4472-8d8e-e3c44c3ba133": {
+          "name": "Atividade principal"
+        },
+        "0aa21975-4a9b-4130-84ed-799e4602fb8e": {
+          "name": "Resumo"
+        },
+        "19c350ea-4420-4a94-a91e-f7d798799cc4": {
+          "name": "Avaliação"
+        },
+        "80cbea1a-7c3f-4121-bab6-abd831772020": {
+          "name": "Dia 1 – Explore ideias de projetos"
+        },
+        "d3e8770f-3f2d-450a-b605-bd792b3ed687": {
+          "name": "Dia 2 – O processo de design"
+        },
+        "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
+          "name": "Dia 3 – Construa seu projeto"
+        },
+        "459d00f2-e296-4205-bca6-eab8d4599354": {
+          "name": "Dia 4 – Revise seu projeto"
+        },
+        "25d5e16a-9db1-441d-a4c4-916612df574b": {
+          "name": "Dias 5 e 6 – Apresente seu projeto"
+        },
+        "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
+          "name": "Aprendizagem complementar"
+        },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "Assista: Siga a trilha digital"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Jogue: Animal Tracks"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Revisão: OK para compartilhar?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Encerrar: pausar e pensar no momento"
+        },
+        "add79bbe-c639-4e83-9191-993c430f08e9": {
+          "name": "Aprendizagem complementar"
+        },
+        "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
+          "name": "Aquecimento"
+        },
+        "4782266a-9011-4f00-8335-bced225a346d": {
+          "name": "Atividade principal"
+        },
         "339d5151-756f-4b66-b647-0f86a1dce7f9": {
           "name": "Resumo"
+        },
+        "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
+          "name": "Aprendizagem complementar"
+        },
+        "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
+          "name": "Aquecimento"
+        },
+        "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "248075ed-be23-4145-bbe5-f629eb3df448": {
+          "name": "Atividade principal"
+        },
+        "ec7e4b2d-6d77-4493-a10c-6f62f3280d58": {
+          "name": "Resumo"
+        },
+        "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
+          "name": "Aprendizagem complementar"
+        },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Oportunidade transcurricular"
+        },
+        "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
+          "name": "Aquecimento"
+        },
+        "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
+          "name": "Visualização de quebra-cabeças com a classe"
+        },
+        "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
+          "name": "Atividade principal"
+        },
+        "8a245dd2-d857-40ab-8120-ef2bd8777377": {
+          "name": "Resumo"
+        },
+        "25e921a3-616c-4b8d-accb-c360ef37c266": {
+          "name": "Aprendizagem complementar"
+        },
+        "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
+          "name": "Aquecimento"
+        },
+        "1a0d4eb7-44ac-4f69-8562-7d55a8324950": {
+          "name": "Atividade principal"
+        },
+        "715995ae-a584-4451-9240-29bbfb084ce2": {
+          "name": "Resumo"
+        },
+        "f5cb74b0-f882-49c4-97ca-2695652b352c": {
+          "name": "Aquecimento"
+        },
+        "288af6d5-c632-4696-a9d4-64bdf7cefdc9": {
+          "name": "Atividade principal"
+        },
+        "240e1172-8a94-4e2b-931b-2d87bef6f364": {
+          "name": "Avaliação"
         },
         "ee775447-c327-4e95-a523-663a02856cad": {
           "name": "Resumo"
         },
+        "4a617b6e-9d56-472c-8a50-31052d127232": {
+          "name": "Aprendizagem complementar"
+        },
+        "10140329-cade-4307-8132-d9ac56d8182c": {
+          "name": "Aquecimento"
+        },
+        "06b2458e-a834-46c5-842e-385c1fc97bc8": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "287b6295-2274-4349-a7c3-fab998a09e1c": {
+          "name": "Atividade principal"
+        },
+        "1e93bc2c-4f03-4b43-8695-529bbfbe53dc": {
+          "name": "Resumo"
+        },
+        "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
+          "name": "Aprendizagem complementar"
+        },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Oportunidade transcurricular"
+        },
+        "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
+          "name": "Aquecimento"
+        },
+        "3a35e6b5-a46a-47b7-b0b8-99ddadcc8fad": {
+          "name": "Atividade principal"
+        },
+        "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
+          "name": "Encerramento"
+        },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Oportunidade transcurricular"
+        },
+        "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
+          "name": "Aquecimento"
+        },
+        "8227e109-9b6a-448c-a107-e70498299438": {
+          "name": "Atividade principal"
+        },
+        "ad9b2654-4506-4741-9f53-5699cb20615d": {
+          "name": "Resumo"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Oportunidade transcurricular"
+        },
+        "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
+          "name": "Aquecimento"
+        },
         "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
           "name": "Actividade"
+        },
+        "736970ba-195f-4800-b755-e89e87e58590": {
+          "name": "Resumo"
+        },
+        "edc16824-0eba-4aa8-b4a5-0cbac9b9afe7": {
+          "name": "Aquecimento"
+        },
+        "6b4566b2-8785-4170-bfaf-3f2575da50a0": {
+          "name": "Atividade principal"
+        },
+        "19f85d4a-d5ea-4069-8f68-bcaab2a90119": {
+          "name": "Resumo"
+        },
+        "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
+          "name": "Avaliação"
+        },
+        "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
+          "name": "Aprendizagem complementar"
+        },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Oportunidade transcurricular"
+        },
+        "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
+          "name": "Aquecimento"
+        },
+        "8e77b151-07f6-4404-98ec-473f310fc8b1": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "b170b2ef-82f1-4067-aadc-add8074acb80": {
+          "name": "Atividade principal"
+        },
+        "61306f7a-d493-40e5-a6ed-68d2b0e97624": {
+          "name": "Resumo"
+        },
+        "2672684d-adc1-4050-9d44-d42d9e1a2e0c": {
+          "name": "Aprendizagem complementar"
+        },
+        "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
+          "name": "Aquecimento"
+        },
+        "381e6872-ab89-4df5-81a1-36e77c90b9a5": {
+          "name": "Atividade principal"
+        },
+        "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
+          "name": "Resumo"
+        },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Assista: Minha Vizinhança Online"
+        },
+        "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
+          "name": "Leia: Segurança, é legal!"
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "Explorar: Viagem de campo pela Internet"
+        },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": "Momento de pausa e pense"
+        },
+        "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
+          "name": "Aprendizagem complementar"
+        },
+        "07c33815-2515-4a63-91f1-51db34b0a00e": {
+          "name": "Aquecimento"
+        },
+        "86881655-9660-42ab-92ea-aa38d08cdeff": {
+          "name": "Atividade principal"
+        },
+        "de46f4b1-acce-419e-9508-f9e6293b5ba8": {
+          "name": "Resumo"
+        },
+        "9ef71984-8749-46e9-ada3-889815c8f1b9": {
+          "name": "Aprendizagem complementar"
+        },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Oportunidade transcurricular"
+        },
+        "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
+          "name": "Aquecimento"
+        },
+        "5c519011-7eba-44c2-a3e9-7aeebf8bcf5e": {
+          "name": "Atividade principal"
+        },
+        "3290a55e-fedd-4672-8b81-dfac2115a13b": {
+          "name": "Resumo"
+        },
+        "0915a618-f1c1-47be-b8fb-80664fa62e50": {
+          "name": "Aprendizagem complementar"
+        },
+        "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
+          "name": "Aquecimento"
+        },
+        "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
+          "name": "Atividade principal"
+        },
+        "3f38c955-4e54-4c3b-a446-92f78ed8c109": {
+          "name": "Resumo"
+        },
+        "519099ff-6a78-427c-91d6-4ef9a2cba286": {
+          "name": "Aprendizagem complementar"
+        },
+        "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
+          "name": "Aquecimento"
+        },
+        "774eb8ca-0c20-467c-9f25-0d454403dfc3": {
+          "name": "Atividade principal"
+        },
+        "785c0d5e-8bb0-4e62-b57f-636eb000c961": {
+          "name": "Resumo"
+        },
+        "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
+          "name": "Aprendizagem complementar"
+        },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Oportunidade transcurricular"
+        },
+        "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
+          "name": "Aquecimento"
+        },
+        "fe01455d-0a26-4c9c-9031-25490a38f95e": {
+          "name": "Atividade principal"
+        },
+        "f589d41f-0064-4e89-bc57-b6815763792f": {
+          "name": "Resumo"
         },
         "5ec2cf3c-e372-4dc6-9b3e-4aaca8be2740": {
           "name": "Aquecimento"
         },
+        "9e4b93ba-099d-4c47-b962-d47f961599bb": {
+          "name": "Atividade principal"
+        },
+        "bf1be38a-3e18-4158-8364-0de3124ff833": {
+          "name": "Resumo"
+        },
+        "924d773a-f021-4b86-bde2-95ddf2dc12ae": {
+          "name": "Aprendizagem complementar"
+        },
+        "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
+          "name": "Aquecimento"
+        },
+        "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
+          "name": "Atividade principal"
+        },
+        "647827d3-b6a3-4697-9cb8-fec35c819d12": {
+          "name": "Encerramento"
+        },
+        "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
+          "name": "Aprendizagem complementar"
+        },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Oportunidade transcurricular"
+        },
+        "6aab5f16-5596-4536-b404-f46152246d24": {
+          "name": "Aquecimento"
+        },
+        "9513331c-917a-4e11-a63a-9c53ef1e708c": {
+          "name": "Atividade principal"
+        },
+        "f706eaa2-1f56-468e-b034-b8b4ddb9eddb": {
+          "name": "Resumo"
+        },
+        "b6b94275-4d8a-4564-86ee-65c63e153d33": {
+          "name": "Aquecimento"
+        },
+        "dc4d4171-f55a-4ed3-a799-469b6932d7d7": {
+          "name": "Atividade principal"
+        },
+        "450f879a-a14d-4d47-93fd-2916bbf46caa": {
+          "name": "Resumo"
+        },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Oportunidade transcurricular"
+        },
+        "e1843002-564c-4803-9eaa-44f48a8e4159": {
+          "name": "Aquecimento"
+        },
+        "9a383162-e9c7-47d0-be4d-582abaef1ae8": {
+          "name": "Atividade principal"
+        },
+        "10660ca3-5263-479f-a685-3e067185468a": {
+          "name": "Resumo"
+        },
+        "32810ead-80cc-47b1-863f-ea8d023aaa94": {
+          "name": "Aprendizagem complementar"
+        },
+        "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
+          "name": "Aquecimento"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Atividade de Bridging - Eventos - Escolha um"
+        },
+        "c92853be-b1ed-4b05-afe9-79928330a3a3": {
+          "name": "Atividade principal"
+        },
+        "75370025-0071-498b-8e43-3e57a3ce5a78": {
+          "name": "Resumo"
+        },
+        "98f951f7-63b2-4d62-82c9-d472b3505b68": {
+          "name": "Aprendizagem complementar"
+        },
+        "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
+          "name": "Aquecimento"
+        },
+        "71a032af-54cc-494d-8449-f02ce20f8aad": {
+          "name": "Atividade principal"
+        },
+        "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
+          "name": "Resumo"
+        },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "Aprenda: O que é maldade?"
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Executar: Online vs. cara a cara"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Explorar: STOP Meanness"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Encerrar: pausar e pensar no momento"
+        },
+        "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
+          "name": "Aprendizagem complementar"
+        },
         "9d9055c3-143a-452e-9703-ef90cd9a9469": {
           "name": "Níveis"
+        },
+        "998a29f8-9f4a-451a-91ae-13ba9225c8c4": {
+          "name": "Aquecimento"
         },
         "15bbd3a3-247c-4e2a-be79-52d802f01920": {
           "name": "Actividade"
         },
+        "10dd8520-1410-493c-bd48-5233e4bf2965": {
+          "name": "Resumo"
+        },
+        "260a48d0-8cd7-4f15-b303-32e5c685a349": {
+          "name": "Aquecimento"
+        },
+        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
+          "name": "Atividade de ligação – Programação"
+        },
+        "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
+          "name": "Visualização de quebra-cabeças com a classe"
+        },
+        "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
+          "name": "Atividade principal"
+        },
+        "d582f103-5fb1-4236-80df-100080cc01b9": {
+          "name": "Resumo"
+        },
+        "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
+          "name": "Aprendizagem complementar"
+        },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Oportunidade transcurricular"
+        },
+        "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
+          "name": "Aquecimento"
+        },
+        "62f7dfaa-f865-461e-a17f-6d5c09893246": {
+          "name": "Atividade principal"
+        },
+        "24b3a120-756e-4a3c-8b8e-29e9a3256869": {
+          "name": "Resumo"
+        },
+        "756542f6-213e-4c07-9442-d1cf97e1ff26": {
+          "name": "Aprendizagem complementar"
+        },
+        "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
+          "name": "Aquecimento"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Atividade de Bridging "
+        },
+        "e0fe20d3-be99-4212-83f8-21599085fcad": {
+          "name": "Atividade principal"
+        },
+        "8a35ec67-caeb-48fa-95bc-d2c3177f6cf9": {
+          "name": "Resumo"
+        },
+        "b5b68733-e757-4aec-84e2-8bea7936175b": {
+          "name": "Aquecimento"
+        },
+        "440ff812-8ffc-4ac3-a6c8-1ed73872fcdd": {
+          "name": "Atividade principal"
+        },
+        "5f64e89f-e102-47ee-b219-5e637db83913": {
+          "name": "Resumo"
+        },
+        "27034f13-f0bf-41c0-a198-385c740be6ab": {
+          "name": "Aprendizagem complementar"
+        },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Oportunidade transcurricular"
+        },
+        "1c265744-1a1f-44f4-8380-7328759249ea": {
+          "name": "Aquecimento"
+        },
         "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
           "name": "Actividade"
+        },
+        "899be5b5-0668-4472-909d-46a1e44e98e2": {
+          "name": "Resumo"
+        },
+        "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
+          "name": "Aprendizagem complementar"
+        },
+        "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
+          "name": "Aquecimento"
+        },
+        "8df58520-6127-4563-b145-8d7d81635bde": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "e36b6776-3c22-498e-94ef-44fae2c28065": {
+          "name": "Atividade principal"
+        },
+        "3cf1342b-1aed-4419-a0cf-a26c438f58fa": {
+          "name": "Resumo"
+        },
+        "d905457a-3a72-4927-a3a6-910b2fba3a53": {
+          "name": "Aprendizagem complementar"
+        },
+        "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
+          "name": "Aquecimento"
+        },
+        "84af3892-0fdd-462d-8815-99e6e2edf15f": {
+          "name": "Atividade principal"
+        },
+        "92a24c72-3fd9-4843-b701-ebb3832e29e5": {
+          "name": "Resumo"
+        },
+        "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
+          "name": "Aprendizagem complementar"
+        },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Oportunidade transcurricular"
+        },
+        "63075b82-d582-409b-afd8-a8967040c94c": {
+          "name": "Aquecimento"
+        },
+        "b20f1e20-6bb7-4cfb-9fe5-17928dc3ab60": {
+          "name": "Atividade principal"
+        },
+        "533abcef-ea93-4b33-902c-7b70e22ffe31": {
+          "name": "Resumo"
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Oportunidade transcurricular"
+        },
+        "8d10f0a0-909f-482c-a17f-3477280c7375": {
+          "name": "Aquecimento"
+        },
+        "4e9e15eb-a14e-4b52-ba13-768f4a7900c3": {
+          "name": "Atividade principal"
+        },
+        "2c76698a-3f76-4cfd-8b21-5ff264c2f1bb": {
+          "name": "Resumo"
+        },
+        "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
+          "name": "Aprendizagem complementar"
+        },
+        "38b78816-4a04-4c9b-b112-3704e9511c42": {
+          "name": "Aquecimento"
+        },
+        "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "7ec11452-1367-44ef-afe4-c8cf354bb183": {
+          "name": "Atividade principal"
+        },
+        "9b5aab20-f47d-48fd-aadc-eaba286d48b5": {
+          "name": "Resumo"
+        },
+        "7c0129f4-ba20-475d-b304-a85ddd87507e": {
+          "name": "Aprendizagem complementar"
+        },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Oportunidade transcurricular"
+        },
+        "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
+          "name": "Aquecimento"
+        },
+        "b0a66dc2-0e44-413c-8364-97799728aa5f": {
+          "name": "Atividade principal"
+        },
+        "7a0a25e1-d2a6-47ec-a890-69a3182d5ef0": {
+          "name": "Resumo"
+        },
+        "cf4ad357-07b4-48e1-bd8f-108301e7aa0a": {
+          "name": "Aprendizagem complementar"
+        },
+        "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
+          "name": "Aquecimento"
+        },
+        "e0ae16fd-eea3-47f4-8fa4-3355e57f9894": {
+          "name": "Atividade principal"
+        },
+        "81828841-d023-4593-896d-b4ce1481da6f": {
+          "name": "Resumo"
+        },
+        "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
+          "name": "Aquecimento"
+        },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Atividade principal "
+        },
+        "e7277b3e-9177-451e-bef9-1e53d41b6131": {
+          "name": "Resumo"
+        },
+        "8667da08-85cd-4d60-a4f1-ff2608e4d240": {
+          "name": "Avaliação"
+        },
+        "af629d31-87ab-476d-a2d3-6da008802f3c": {
+          "name": "Aprendizagem complementar"
+        },
+        "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
+          "name": "Aquecimento"
+        },
+        "f96503b6-c295-4deb-8e47-c3440041a689": {
+          "name": "Atividade principal"
+        },
+        "90d3854b-a2c4-44ec-924a-f66d2087098c": {
+          "name": "Resumo"
+        },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Aquecimento: Pssst... O que é uma senha?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Avaliar: Uh-Oh! Se... Então..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Criar: Ligue sua senha"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Concluir: Notas sobre dicas de senha"
+        },
+        "e735098e-abab-465e-949c-a7e92e771b84": {
+          "name": "Aprendizagem complementar"
         },
         "f5985094-20d7-4316-a052-e7b18a78572e": {
           "name": "Níveis"
         },
+        "ae81cfe6-45ff-4093-bd79-7c5e3f2b3c7e": {
+          "name": "Aquecimento"
+        },
+        "523e695a-12e0-443c-bad6-8e816c672adb": {
+          "name": "Atividade principal"
+        },
+        "67be50b8-f120-4f1d-ad22-06b84dba994c": {
+          "name": "Resumo"
+        },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Avaliação Opcional"
+        },
+        "c401b0f4-97af-418d-b58b-a58493c7570c": {
+          "name": "Aprendizagem complementar"
+        },
+        "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
+          "name": "Aquecimento"
+        },
+        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
+          "name": "Atividades de ligação – Programação"
+        },
+        "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
+          "name": "Atividade principal"
+        },
+        "09c54a0a-44a3-43f6-b468-9bbf2b718717": {
+          "name": "Resumo"
+        },
+        "f9529bed-1eeb-4e6c-b078-e5adda35308a": {
+          "name": "Aquecimento"
+        },
+        "8b62bbe8-a1c9-4288-bb21-9f7a31e96b1e": {
+          "name": "Atividade principal"
+        },
+        "1b4d0af0-9d4a-492b-8c23-2fb711c488d3": {
+          "name": "Resumo"
+        },
+        "da433c13-5e0a-48fe-a697-d2288e831912": {
+          "name": "Aprendizagem complementar"
+        },
+        "380a0a21-1ede-432e-bd0a-433c37514bba": {
+          "name": "Aquecimento"
+        },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Atividades de Bridging - Escolha uma"
+        },
+        "d05decb3-7f64-4886-8da0-088e7d73216d": {
+          "name": "Atividade principal"
+        },
+        "7104b634-df9c-44bd-bc2d-fd226d3a1ee4": {
+          "name": "Resumo"
+        },
+        "1d6a34ca-5dad-4492-8a1c-6b56f85874fa": {
+          "name": "Aquecimento"
+        },
+        "04f6a743-e334-43ba-a72c-2b68a8163c0a": {
+          "name": "Atividade principal"
+        },
+        "592a6eba-5e83-43f7-b622-1c58f47e3dea": {
+          "name": "Resumo"
+        },
+        "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
+          "name": "Aprendizagem complementar"
+        },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Oportunidade transcurricular"
+        },
+        "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
+          "name": "Aquecimento"
+        },
+        "2ffe8a66-a950-4b74-91e5-5149b2808279": {
+          "name": "Atividade principal"
+        },
+        "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
+          "name": "Resumo"
+        },
+        "235b3b14-975a-43b6-93bc-d386b857fd6b": {
+          "name": "Introdução (5 minutos)"
+        },
+        "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "e96a358f-201b-4474-8950-90dd94426aff": {
+          "name": "Resumo"
+        },
+        "75477df5-5a1f-4ee8-a294-37c3bb1f1153": {
+          "name": "Aquecimento"
+        },
+        "6260dc9f-f1ec-41fb-bb11-c03bbe503e26": {
+          "name": "Atividade principal"
+        },
+        "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
+          "name": "Encerramento"
+        },
+        "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
+          "name": "Aprendizagem complementar"
+        },
+        "46464e07-b5ac-4ca4-84b2-3b43873360da": {
+          "name": "Aquecimento"
+        },
+        "9dc5163b-b8e6-4034-8bfc-a3a56f9ea906": {
+          "name": "Atividade principal"
+        },
+        "ecc6986d-3d86-4f87-96e2-9cf3e8ebe4c8": {
+          "name": "Resumo"
+        },
+        "7ff09578-5e62-4772-8f16-03bec23fca87": {
+          "name": "Aquecimento"
+        },
+        "91b9cf1d-59e2-45e5-93e2-9f916e748dac": {
+          "name": "Atividade principal"
+        },
+        "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
+          "name": "Resumo"
+        },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Aquecer "
+        },
+        "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
+          "name": "Atividade principal"
+        },
+        "9939da92-62ec-4a09-a7be-8e2dd4693cff": {
+          "name": "Resumo"
+        },
+        "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
+          "name": "Avaliação"
+        },
+        "22ad368d-3a00-4720-a21a-72985c642b8d": {
+          "name": "Aprendizagem complementar"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Oportunidade transcurricular"
+        },
+        "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
+          "name": "Aquecimento"
+        },
+        "c351a38f-ac03-4bc3-b2f1-8b5f06903317": {
+          "name": "Atividade principal"
+        },
+        "386b2a92-c44c-403c-a19e-44bbf2ed7786": {
+          "name": "Resumo"
+        },
+        "f72b0518-8373-4e23-9798-b4973072e86e": {
+          "name": "Aprendizagem complementar"
+        },
+        "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
+          "name": "Aquecimento"
+        },
+        "8448f988-ef04-4c9e-ad7e-6b78991f20e7": {
+          "name": "Atividade principal"
+        },
+        "1887e2d0-98de-4534-8fb3-780ed4e8fe3c": {
+          "name": "Resumo"
+        },
+        "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de": {
+          "name": "Aprendizagem complementar"
+        },
+        "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
+          "name": "Aquecimento"
+        },
+        "0f1a16f5-93c2-44c5-913c-85ee15b41454": {
+          "name": "Atividade principal"
+        },
+        "eca2ac69-486f-493b-a1a0-70294bc8573a": {
+          "name": "Resumo"
+        },
+        "07c64430-a32e-455c-bd8b-4a9baa439a1f": {
+          "name": "Aquecimento"
+        },
+        "5c23c0c6-f91c-4f07-bdd7-baa4e4b3d715": {
+          "name": "Atividade principal"
+        },
+        "96a24d88-fba0-4caf-ae83-05431cff5aea": {
+          "name": "Resumo"
+        },
+        "94431ce1-3b6a-4bff-b20c-eda2abf867e3": {
+          "name": "Aquecimento"
+        },
+        "ab17495a-39d9-4a16-8158-cdccde270c58": {
+          "name": "Atividade principal"
+        },
+        "dc2d4163-9868-4d28-be8c-fc39a5aaec58": {
+          "name": "Resumo"
+        },
+        "171c9649-255a-4357-b532-6e6dc632285a": {
+          "name": "Aquecimento"
+        },
+        "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c": {
+          "name": "Atividade principal"
+        },
+        "160b0f38-c5d3-4b28-b797-981888824dcf": {
+          "name": "Resumo"
+        },
+        "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
+          "name": "Aprendizagem complementar"
+        },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Oportunidade transcurricular"
+        },
+        "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
+          "name": "Aquecimento"
+        },
+        "a26761fc-1bdc-4474-a043-307dbef1453a": {
+          "name": "Atividade principal"
+        },
+        "4a54982d-83d3-4040-b499-46d8dc535774": {
+          "name": "Resumo"
+        },
+        "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
+          "name": "Aprendizagem complementar"
+        },
+        "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
+          "name": "Aquecimento"
+        },
+        "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
+          "name": "Atividade de ligação"
+        },
+        "813fd866-1517-4302-b080-b035a842ae06": {
+          "name": "Atividade principal"
+        },
+        "43620129-a609-440d-80aa-b76ac08ef87e": {
+          "name": "Resumo"
+        },
+        "a42e7dc3-d50c-4be9-b17c-338d432a17ca": {
+          "name": "Aquecimento"
+        },
+        "cf315c97-3c5a-49bf-a6ca-71bbab3a73ca": {
+          "name": "Atividade principal"
+        },
+        "ab1fc6fb-495e-4ae1-9685-c0c64d5bfa06": {
+          "name": "Resumo"
+        },
+        "1d75c580-140f-4796-9e75-5863162c676b": {
+          "name": "Aprendizagem complementar"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Oportunidade transcurricular"
+        },
+        "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
+          "name": "Aquecimento"
+        },
+        "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6": {
+          "name": "Atividade principal"
+        },
+        "3ba524d7-98f9-4c54-a616-1ffb77d3f190": {
+          "name": "Resumo"
+        },
+        "82634dba-ecce-4213-9e2b-4435bf9c1b5d": {
+          "name": "Aquecimento"
+        },
+        "9e0e1792-f9b4-4a5b-a282-e297ccf9d497": {
+          "name": "Atividade principal"
+        },
+        "6c03cbfc-a38d-4aba-9cab-7e7520800342": {
+          "name": "Resumo"
+        },
+        "46e18a1e-d87a-4452-aa83-d5f742e61da6": {
+          "name": "Aquecimento"
+        },
+        "184d2f0c-1709-4440-95bc-9030c4ff73ed": {
+          "name": "Atividade principal"
+        },
+        "70774562-2a5b-4a27-80d4-d731fc280abf": {
+          "name": "Resumo"
+        },
+        "ca2f991e-1866-4b1d-994c-d7a6a3c33b45": {
+          "name": "Aquecimento"
+        },
+        "30742072-e383-4bf2-b103-2d9c6209706c": {
+          "name": "Atividade principal"
+        },
+        "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
+          "name": "Resumo"
+        },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Oportunidade transcurricular"
+        },
+        "4e59783c-7761-4afe-9775-d8c51ca075d0": {
+          "name": "Aquecimento"
+        },
+        "21f7a935-c3ff-4593-a261-53d0d4c29e21": {
+          "name": "Atividade (30 a 45 minutos)"
+        },
+        "bc6111e2-2d2b-4d09-ba39-ad4f401202c0": {
+          "name": "Resumo"
+        },
+        "1924e7bb-be68-49eb-b3fb-1099623da9f6": {
+          "name": "Aquecimento"
+        },
+        "f1bf8e7e-997a-4d4b-b37f-5b38e2f0047f": {
+          "name": "Atividade principal"
+        },
+        "a3dd3aa4-52be-42e3-8093-b5f2bd7441f0": {
+          "name": "Resumo"
+        },
+        "3392a940-9b70-4634-bfa5-a197b8d2941e": {
+          "name": "Aprendizagem complementar"
+        },
+        "e1b92a7f-657f-4825-aa00-576f89e67200": {
+          "name": "Aquecimento"
+        },
+        "3582d645-06f9-4bac-8787-2530ccff7f71": {
+          "name": "Atividade principal"
+        },
+        "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
+          "name": "Resumo"
+        },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Oportunidade transcurricular"
+        },
+        "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
+          "name": "Aquecimento"
+        },
+        "4a006482-722c-43cd-81cd-cfc8b1180f80": {
+          "name": "Atividade principal"
+        },
+        "3206b220-9995-40b3-ac06-29cdc44b3f03": {
+          "name": "Resumo"
+        },
+        "4f1634b7-4e0e-471d-9c41-53ea1eaebcdb": {
+          "name": "Aquecimento"
+        },
+        "08d1726a-8015-44e3-85de-32f581681241": {
+          "name": "Atividade principal"
+        },
+        "d682de82-34c6-4a16-bff5-b40e2abf88c1": {
+          "name": "Resumo"
+        },
+        "46092127-2648-4c2c-ada8-f13deb240e11": {
+          "name": "Aquecimento"
+        },
+        "4043e8c0-b143-40dc-a8f5-9c8de6b1cc32": {
+          "name": "Atividade principal"
+        },
+        "8e27bf8f-68a5-42b3-ae4e-c58c2dd2d355": {
+          "name": "Resumo"
+        },
+        "62694f2e-0bae-4e9d-b285-ce262bc3dfce": {
+          "name": "Aprendizagem complementar"
+        },
+        "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
+          "name": "Aquecimento"
+        },
+        "fd8ff4dc-206c-4e0d-a30e-fd0480efaafe": {
+          "name": "Atividade principal"
+        },
+        "00f7b6d4-a585-4d87-ba85-2c780734b876": {
+          "name": "Resumo"
+        },
+        "95494f38-9a95-4778-a3db-bc35cd58cbc0": {
+          "name": "Aprendizagem complementar"
+        },
+        "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
+          "name": "Aquecimento"
+        },
+        "daa8b2ed-7ca7-4691-a728-672a7d1ccf90": {
+          "name": "Atividade principal"
+        },
+        "4c8f291e-8892-44b6-aa97-925faa5554eb": {
+          "name": "Resumo"
+        },
+        "5ad8f2f2-18ef-4477-b1ea-b57cb5cb328a": {
+          "name": "Aquecimento"
+        },
+        "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673": {
+          "name": "Atividade principal"
+        },
+        "6b43b84e-bffc-427b-8b1f-983968a21f29": {
+          "name": "Resumo"
+        },
+        "d8254f7a-d3ba-4079-932c-1e0f6e2f03b2": {
+          "name": "Aprendizagem complementar"
+        },
+        "4b6c37da-c087-41f8-94bd-6eddba55804d": {
+          "name": "Aquecimento"
+        },
+        "c2bcd776-9900-4043-99e5-939545175088": {
+          "name": "Atividade principal"
+        },
+        "13c6871a-b886-4e22-b079-7b4ee6ff6ba4": {
+          "name": "Resumo"
+        },
+        "e2d15199-1c11-455d-b75b-2cae049dd245": {
+          "name": "Aquecimento"
+        },
+        "1b28c789-cdfc-4565-bf6e-9b522f835bee": {
+          "name": "Atividade principal"
+        },
+        "318a7a4f-83f0-4b32-a712-d74801897a6e": {
+          "name": "Resumo"
+        },
+        "cc1c021d-e09b-40fc-8e6a-dff336140731": {
+          "name": "Aquecimento"
+        },
+        "f058e007-0df3-419f-ac78-81469311034f": {
+          "name": "Atividade principal"
+        },
+        "aad10a4b-0819-4302-88b7-8b6e3e067c47": {
+          "name": "Resumo"
+        },
+        "94a2ea7b-e3cb-425d-a1f0-2a519b162fb3": {
+          "name": "Aquecimento"
+        },
+        "cb1cdc21-6fa8-4d95-8989-2eb6542f9018": {
+          "name": "Atividade principal"
+        },
+        "c91f6f2e-3f06-42b8-9733-1bd1b2ccfee1": {
+          "name": "Resumo"
+        },
+        "0f7c86d3-05c8-4faa-9054-4c649cbb7f17": {
+          "name": "Aprendizagem complementar"
+        },
+        "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
+          "name": "Aquecimento"
+        },
+        "c3bb8f31-8ec7-461d-bee1-685bc9287527": {
+          "name": "Atividade principal"
+        },
+        "87223e22-2a4b-4de5-8e15-b14dbaddccc5": {
+          "name": "Resumo"
+        },
+        "3e2704f0-2560-4797-8c72-11016aee5c28": {
+          "name": "Aquecimento"
+        },
+        "5af971e3-1f0b-40a9-bc25-b2451160aecc": {
+          "name": "Atividade principal"
+        },
+        "d004bd95-f6d5-4659-94ea-00877e3ff3a6": {
+          "name": "Resumo"
+        },
+        "80c82efc-16a4-446c-81b9-718fc3a5d1a9": {
+          "name": "Aquecimento"
+        },
+        "dce03060-72a3-4d6d-a355-fa84b4a3f8dc": {
+          "name": "Atividade principal"
+        },
+        "8286ea48-0cef-4af7-af6a-007181aa482c": {
+          "name": "Resumo"
+        },
+        "eef7a8c5-5a54-442c-ac88-6ed7ba0cc4fb": {
+          "name": "Aquecimento"
+        },
+        "8cf2e681-004c-4624-90f3-80c1e22ec90f": {
+          "name": "Atividade principal"
+        },
+        "9b90e959-3c5f-4200-af67-56b2a54fa720": {
+          "name": "Resumo"
+        },
+        "414b4e57-110f-441f-a5ca-cbdc9f741a4c": {
+          "name": "Aquecimento"
+        },
+        "1fe3f83f-c34b-4592-9bb6-d29c832a838e": {
+          "name": "Atividade principal"
+        },
+        "f43312b4-a6ca-47a5-be92-1e6f77b43ff8": {
+          "name": "Resumo"
+        },
+        "24f48744-cb50-4dd5-8a1f-95571f2ff1ba": {
+          "name": "Aquecimento"
+        },
+        "cfadb05d-8467-41a8-9b69-9ce179c53375": {
+          "name": "Atividade principal"
+        },
+        "8ea04c5a-f6d5-45de-b07c-e39b2b94b799": {
+          "name": "Resumo"
+        },
+        "91422f13-9b33-46bf-890c-709607a6cdb1": {
+          "name": "Aquecimento"
+        },
+        "50ece396-6470-4834-8f7f-a09ea19db492": {
+          "name": "Atividade principal"
+        },
+        "ad1dcf3b-f77c-42da-a554-438231d3393a": {
+          "name": "Resumo"
+        },
+        "f544f06e-e5d9-4ca1-9baf-288bba9ff616": {
+          "name": "Aquecimento"
+        },
+        "c1ef15c8-3724-45e8-b3a3-238ecb91993b": {
+          "name": "Atividade principal"
+        },
+        "72bef51e-2edb-4bfe-8995-1c1c0c126e11": {
+          "name": "Resumo"
+        },
+        "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
+          "name": "Aprendizagem complementar"
+        },
+        "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
+          "name": "Aquecimento"
+        },
+        "472354f3-e631-40c3-8001-dc5d7f1206db": {
+          "name": "Visualização de quebra-cabeças com a classe"
+        },
+        "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
+          "name": "Atividade principal"
+        },
+        "514be718-37b6-4bca-9bea-138eac8ae77c": {
+          "name": "Resumo"
+        },
+        "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
+          "name": "Aprendizagem complementar"
+        },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Aquecimento: Pré-visualização da programação no labirinto"
+        },
+        "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
+          "name": "Atividade principal"
+        },
+        "0396f06e-4a9e-443d-859c-dc77fa229769": {
+          "name": "Resumo"
+        },
+        "3aaee60c-904c-4592-8092-b7abf66d9fac": {
+          "name": "Aprendizagem complementar"
+        },
+        "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
+          "name": "Aquecimento"
+        },
+        "b9c2620d-f076-4551-a849-08ba4ad04850": {
+          "name": "Atividade principal"
+        },
+        "0e6c0fdb-f006-457d-9ded-d3719ac7180e": {
+          "name": "Resumo"
+        },
+        "a653b35f-9c27-4961-a91a-578072f1ae35": {
+          "name": "Aquecimento"
+        },
+        "077ed20b-2456-412f-b744-33221b7412ac": {
+          "name": "Atividade principal"
+        },
+        "3ca1441d-2369-43e8-b182-8fde56916045": {
+          "name": "Resumo"
+        },
+        "65eecebd-7353-4fca-9e51-e34aa5e14a8e": {
+          "name": "Aquecimento"
+        },
+        "0a77a438-3684-4874-b963-e5a75723888a": {
+          "name": "Atividade principal"
+        },
+        "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
+          "name": "Encerramento"
+        },
+        "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
+          "name": "Aprendizagem complementar"
+        },
+        "59675efe-890a-48b9-bd56-947f991df50b": {
+          "name": "Aquecimento"
+        },
+        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
+          "name": "Iniciação on-line: Visualização de laços no “coletor”"
+        },
+        "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
+          "name": "Atividade principal"
+        },
+        "e6a1f5df-d8d4-41a1-8649-d518965997af": {
+          "name": "Encerramento"
+        },
+        "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
+          "name": "Aquecimento"
+        },
+        "089afb18-d132-46ab-88ca-2af47333e237": {
+          "name": "Atividade principal"
+        },
+        "98e73710-a395-4b96-90ac-de9c5a8060e8": {
+          "name": "Resumo"
+        },
+        "ead863af-cc82-48f6-855f-0e2a4563ed9b": {
+          "name": "Aquecimento"
+        },
+        "e651df8b-1577-4888-8321-37a135e4df24": {
+          "name": "Atividade principal"
+        },
+        "bcb796e6-f8d8-456a-8e44-e22eb94ed098": {
+          "name": "Resumo"
+        },
+        "3ad79f2e-3afc-4238-a58d-7f88ea78de65": {
+          "name": "Aquecimento"
+        },
+        "602649f9-a35f-49ab-bddf-09ebdf771f17": {
+          "name": "Atividade principal"
+        },
+        "ad29aebb-c28d-4b6a-9769-4b6b7d62e6d8": {
+          "name": "Resumo"
+        },
+        "9209915b-655f-4e9e-b106-3843617f4034": {
+          "name": "Aprendizagem complementar"
+        },
+        "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
+          "name": "Aquecimento"
+        },
+        "def2e87e-02de-40be-b652-89117499f7a0": {
+          "name": "Atividade principal"
+        },
+        "291b174a-b478-463d-aff6-af66feda095a": {
+          "name": "Resumo"
+        },
+        "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
+          "name": "Aprendizagem complementar"
+        },
+        "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
+          "name": "Aquecimento"
+        },
+        "f0a9525c-5225-44d5-9a87-99a70c73b197": {
+          "name": "Atividade principal"
+        },
+        "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780": {
+          "name": "Resumo"
+        },
+        "d7c5d028-ebdb-4366-9856-f36f780cd472": {
+          "name": "Aquecimento"
+        },
+        "23175482-f558-4d04-aec7-69a02820317e": {
+          "name": "Atividade de ligação"
+        },
+        "7007138d-bc16-4bc0-8d30-252440672814": {
+          "name": "Atividade principal"
+        },
+        "6db6a634-e996-4369-9bc6-b32a570beaff": {
+          "name": "Resumo"
+        },
+        "8f8f7be8-e984-40ce-9b30-b423814535f8": {
+          "name": "Aquecimento"
+        },
+        "7ae8b822-0da7-4701-9c2d-068197f8fe14": {
+          "name": "Atividade principal"
+        },
+        "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
+          "name": "Resumo"
+        },
+        "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
+          "name": "Aprendizagem complementar"
+        },
+        "02429a22-ab18-4df6-9062-d88960fe9ae8": {
+          "name": "Aprendizagem complementar"
+        },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Níveis"
         },
+        "b93a77e0-76ff-4b91-9ec1-c19b04e0cca1": {
+          "name": "Aquecimento"
+        },
+        "0177419f-4d26-4ccc-bcf3-ac4275a5fd17": {
+          "name": "Atividade principal"
+        },
+        "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
+          "name": "Resumo"
+        },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Oportunidade transcurricular"
+        },
+        "7ccdedb5-15bf-4d75-9efb-e65349644266": {
+          "name": "Atividade principal"
+        },
         "d41159ef-433a-4547-a067-2695e41120ae": {
           "name": "Resumo"
+        },
+        "27b493bd-61be-4305-b021-8b40d59ee55a": {
+          "name": "Aprendizagem complementar"
+        },
+        "1014e6a8-473d-46e2-a448-ca92a6697405": {
+          "name": "Aquecimento"
+        },
+        "d47466c2-3004-476e-a652-d45c8374b24d": {
+          "name": "Atividade principal"
+        },
+        "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
+          "name": "Resumo"
+        },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Oportunidade transcurricular"
+        },
+        "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
+          "name": "Aquecimento"
+        },
+        "d8e700f9-bc93-424a-9ab3-3a06b63816b0": {
+          "name": "Atividade principal"
+        },
+        "aa8015a6-3a2c-401c-a8ff-4d0116ee1358": {
+          "name": "Resumo"
+        },
+        "6354e763-cca6-4b98-b56e-16609de67f85": {
+          "name": "Aprendizagem complementar"
+        },
+        "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
+          "name": "Aquecimento"
+        },
+        "8fecfdd9-352e-4816-8964-e4fa6d36c0aa": {
+          "name": "Atividade principal"
+        },
+        "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
+          "name": "Resumo"
+        },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Oportunidade transcurricular"
+        },
+        "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
+          "name": "Aquecimento"
+        },
+        "b4ae143b-f79d-4ab9-9346-dca177438f61": {
+          "name": "Atividade principal"
+        },
+        "6aed97c6-89bd-4bc0-a4dd-ac23af33e065": {
+          "name": "Resumo"
+        },
+        "a0d784ef-8d53-486a-ac4c-eba8617be681": {
+          "name": "Avaliação"
+        },
+        "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
+          "name": "Aprendizagem complementar"
+        },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Oportunidade transcurricular"
+        },
+        "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
+          "name": "Aquecimento"
+        },
+        "a80b5d47-5fb8-4557-9fb2-233074caad47": {
+          "name": "Atividade de ligação – Escolha uma"
+        },
+        "0da29d00-d95a-4538-ac89-116513fba104": {
+          "name": "Atividade principal"
+        },
+        "151ce93d-fb9d-4e64-89a5-6367fc58fb57": {
+          "name": "Resumo"
+        },
+        "9d8a6daa-38de-42a0-995f-16d869ca1101": {
+          "name": "Aquecimento"
+        },
+        "3f3d661f-eb79-4d76-a889-dad31cd540f2": {
+          "name": "Atividade principal"
+        },
+        "6254961e-5863-4a98-8d8f-7ef4565c1f8f": {
+          "name": "Resumo"
+        },
+        "1a3eff43-27c8-476a-9d18-2e277fa416b9": {
+          "name": "Aprendizagem complementar"
+        },
+        "da87c8ba-9486-43e4-9dde-e6eac223396e": {
+          "name": "Aquecimento"
+        },
+        "c80d72fc-575e-4dc2-bfe7-444acb269cc9": {
+          "name": "Atividade principal"
+        },
+        "dc47da0d-484b-481e-bfaf-17f9de229688": {
+          "name": "Resumo"
+        },
+        "3f414667-5259-49ac-a7a3-af4a9ef62fdf": {
+          "name": "Aprendizagem complementar"
+        },
+        "82c8173b-040e-41ec-b6ca-f1369b308268": {
+          "name": "Aquecimento"
+        },
+        "9db395da-6afb-43e0-9115-6e0604f89208": {
+          "name": "Atividade principal"
+        },
+        "b320db90-d678-4814-9003-f7569a443c19": {
+          "name": "Resumo"
+        },
+        "8026f93e-6bc5-4824-9f7a-d21fa69476ed": {
+          "name": "Aprendizagem complementar"
+        },
+        "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
+          "name": "Aquecimento"
+        },
+        "0d2d5e5c-1742-4883-a2d8-73284a6cd40e": {
+          "name": "Atividade principal"
+        },
+        "ba1bc1f7-f9be-4735-8bcb-de57cc5c2d4a": {
+          "name": "Resumo"
+        },
+        "0118e81c-812d-4001-976a-ad2dd2a8dd77": {
+          "name": "Aquecimento"
+        },
+        "c79703f5-9051-4665-95b6-cfae7c304f6d": {
+          "name": "Atividade principal"
+        },
+        "b2227118-727d-4eff-be1c-fafe331297fd": {
+          "name": "Resumo"
+        },
+        "430c7fd8-dd67-4fff-924a-e6080df26e8a": {
+          "name": "Dia 2 – O processo de design"
+        },
+        "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
+          "name": "Dia 3 – Construa seu projeto"
+        },
+        "e8be4727-c687-43bb-a1be-e1b3da780020": {
+          "name": "Dias 4 e 5 – Apresente seu projeto"
+        },
+        "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
+          "name": "Aprendizagem complementar"
+        },
+        "c7c9975a-6ebc-42fb-8d9a-fbc7b99af9ee": {
+          "name": "Aquecimento"
+        },
+        "3dd1254c-b1de-486d-803a-cd5b89ea1a47": {
+          "name": "Actividade"
+        },
+        "dbda3944-701f-4885-9581-dfb5c9fe8a2d": {
+          "name": "Resumo"
+        },
+        "816793d2-3155-4838-9a16-ba286bead156": {
+          "name": "Aquecimento"
+        },
+        "3f5a4bdd-213f-4275-b48e-0cac9c216610": {
+          "name": "Actividade"
+        },
+        "9c5227af-c38a-4665-b248-607e62dd5437": {
+          "name": "Resumo"
+        },
+        "5c3bcd7d-8427-4721-89b0-2f108b8a7a09": {
+          "name": "Aquecimento"
+        },
+        "8118c20a-f8a2-4de0-a5e9-e34b206c5e86": {
+          "name": "Actividade"
+        },
+        "977b0c60-7998-4289-9c51-afc005a26b29": {
+          "name": "Resumo"
+        },
+        "38eab9f7-b033-4e5b-965a-3eb2f27f5912": {
+          "name": "Aquecimento"
+        },
+        "3dbcce13-3c8e-4eee-a9e5-06d38c3b0d58": {
+          "name": "Actividade"
+        },
+        "c39b8cbd-b997-4044-8c9b-f37e4ad734f3": {
+          "name": "Resumo"
+        },
+        "51d6802a-006e-49b9-ab1e-2df825642381": {
+          "name": "Aquecimento"
+        },
+        "da9c162b-7810-4bea-955e-05c213dbf55d": {
+          "name": "Actividade"
+        },
+        "3a343e64-c6c5-4268-a2a4-ab4266ee68ad": {
+          "name": "Resumo"
+        },
+        "e264e7c7-b049-4df7-9a0b-cf563b78b337": {
+          "name": "Aquecimento"
+        },
+        "6d1d534e-0aad-47aa-8eef-22cd0a519a83": {
+          "name": "Actividade"
+        },
+        "afb9e76f-406e-4c5d-b64f-a09d3d103672": {
+          "name": "Resumo"
+        },
+        "383c8d03-96b1-4d5e-93cc-54c238116c0c": {
+          "name": "Aquecimento"
+        },
+        "d5076b4a-5a03-45cd-b650-5469ab56c98f": {
+          "name": "Actividade"
+        },
+        "18e29e94-8700-4962-b45c-65dabcf11b71": {
+          "name": "Resumo"
+        },
+        "7f204217-26d5-46d3-ac48-93ecc6f84045": {
+          "name": "Aquecimento"
+        },
+        "c83f82b2-742a-4785-8983-14391e0b774f": {
+          "name": "Actividade"
+        },
+        "a91d4349-0ba0-4931-87aa-ddca5bbfce8a": {
+          "name": "Resumo"
+        },
+        "ad95b04a-2feb-4401-adfc-ec8c28ba2db7": {
+          "name": "Aquecimento"
+        },
+        "8e65c08e-13d9-43d5-928b-ca3421f606d8": {
+          "name": "Actividade"
+        },
+        "0de4cb27-5d87-44ae-872b-b044d9b1a518": {
+          "name": "Resumo"
+        },
+        "03ba9598-5b31-43d9-a146-ecc04d863d7e": {
+          "name": "Aquecimento"
+        },
+        "473b748b-3eb9-4753-8cdb-7d2b5b02ab1c": {
+          "name": "Actividade"
+        },
+        "4dcae509-2234-4694-bb69-f99a44c09e75": {
+          "name": "Resumo"
+        },
+        "86a8b2c7-4754-4019-8709-47a98dadc6ef": {
+          "name": "Aquecimento"
+        },
+        "54db2b83-e7bd-4ca3-9ba7-63ca15b72187": {
+          "name": "Actividade"
+        },
+        "b47b54a3-0564-4171-9f71-cada13d2832c": {
+          "name": "Resumo"
+        },
+        "a9116092-7bd2-45d8-9824-9d2943a640a3": {
+          "name": "Aquecimento"
+        },
+        "ed160324-6429-4ff1-90bb-abd785bb6b53": {
+          "name": "Actividade"
+        },
+        "6d2b8730-73fd-411d-a454-375f5b3b0210": {
+          "name": "Resumo"
+        },
+        "89f2503d-4e63-425c-8d29-ea151fe30e0d": {
+          "name": "Aquecimento"
+        },
+        "d007f573-e403-48b9-8178-2922b329c878": {
+          "name": "Actividade"
+        },
+        "ef9b74bc-996c-43dc-b87b-cf1c857d60a0": {
+          "name": "Resumo"
+        },
+        "d6bba00e-c1a8-4b8b-9adb-01a2afd7cfdb": {
+          "name": "Aquecimento"
+        },
+        "31623c1a-bcef-465a-abf4-bd42d0578c3e": {
+          "name": "Actividade"
+        },
+        "53a369c4-4de1-4607-99cf-3d538af13c51": {
+          "name": "Resumo"
+        },
+        "edbbfe95-ddf0-43c8-ad9c-7be71e637c59": {
+          "name": "Aquecimento"
+        },
+        "9720e203-87bf-47f6-9e42-0d63712f4816": {
+          "name": "Actividade"
+        },
+        "3b5bca76-2ec0-4cd9-9d2d-9c5bc868128a": {
+          "name": "Resumo"
+        },
+        "a024167d-3c2d-4559-84fb-9146533f1cea": {
+          "name": "Aquecimento"
+        },
+        "b12c79ae-36b0-4853-b799-527d520d2d9b": {
+          "name": "Actividade"
+        },
+        "46c907b7-d117-4810-be00-a458b3bbb1c3": {
+          "name": "Resumo"
+        },
+        "e809434f-4c36-4d12-8913-f96ddf9d6cd8": {
+          "name": "Aquecimento"
+        },
+        "8b5fccc2-132a-4c64-ba9f-a89ee576b760": {
+          "name": "Actividade"
+        },
+        "52c3e23a-18e3-461d-89b6-2c8938b77373": {
+          "name": "Resumo"
+        },
+        "7609c319-8a5f-46ca-aef2-0abbca334761": {
+          "name": "Aquecimento"
+        },
+        "bcb8ee1c-146e-4442-98de-83ac220d074b": {
+          "name": "Actividade"
+        },
+        "603fdc2d-9b96-4476-9db1-c3aebf0ed6c9": {
+          "name": "Resumo"
+        },
+        "ec3dd48d-ddff-49ff-8eed-a4a95e83f057": {
+          "name": "Aquecimento"
+        },
+        "fbf2d75e-dd6d-416c-8065-67a5e230ac12": {
+          "name": "Actividade"
+        },
+        "7f343d7e-fa21-42ad-8e05-e2f28f0d9193": {
+          "name": "Resumo"
+        },
+        "f6defd2f-09e1-4dd2-bdbf-b7d539cd651c": {
+          "name": "Aquecimento"
+        },
+        "4024c757-460a-4c1e-b9ba-0921922e446f": {
+          "name": "Actividade"
+        },
+        "b03f2c86-6df7-483a-838c-6a729b695cfe": {
+          "name": "Resumo"
+        },
+        "b36818af-e833-4d6e-8656-485a0cc3b660": {
+          "name": "Dia 1"
+        },
+        "a2dd3937-a0d5-4f80-b800-99cc0b9ceb72": {
+          "name": "Dia 2"
+        },
+        "99fb1aed-d8f8-460e-9db7-df41955f4c6a": {
+          "name": "Dia 3"
+        },
+        "dafc86e5-32a2-4e29-a95f-6566059dbf22": {
+          "name": "Dia 4"
+        },
+        "d9ce0330-5c0e-41e2-837c-d4eba9da6310": {
+          "name": "Níveis"
+        },
+        "b6431e82-34e6-4e30-a587-42d2b8b4bd45": {
+          "name": "Aquecimento"
+        },
+        "084345cc-db08-4c77-bc28-be51fb79dd0d": {
+          "name": "Actividade"
+        },
+        "05f51c50-a05f-4530-8047-36c01d5461a1": {
+          "name": "Resumo"
+        },
+        "2227e40d-8afc-4781-b754-90202fff194b": {
+          "name": "Aquecimento"
+        },
+        "88f424ec-df8f-42ff-b119-c556008dfea7": {
+          "name": "Actividade"
+        },
+        "00c1098e-8dda-4cf2-9e10-7a2428255e2d": {
+          "name": "Resumo"
+        },
+        "a47a0ad5-f3d8-4221-b156-9ab515cae5ed": {
+          "name": "Aquecimento"
+        },
+        "6ca92cea-d2a1-458e-8db9-709a95333aae": {
+          "name": "Actividade"
+        },
+        "f7e5ef43-65ac-4a19-90b2-3b1c9231c3f4": {
+          "name": "Resumo"
+        },
+        "cc1e90a8-c328-4329-99ae-007c2b32a0b0": {
+          "name": "Aquecimento"
+        },
+        "f35f26af-8e10-45bd-8c84-89e2e6e20f43": {
+          "name": "Actividade"
+        },
+        "a1c54105-2e8b-4c6f-a4dc-1c7fc865bfcc": {
+          "name": "Resumo"
+        },
+        "999079a5-883e-4dd2-a2a1-8f862f54b572": {
+          "name": "Aquecimento"
+        },
+        "d83211f4-e007-452b-a5e2-f97629f1e597": {
+          "name": "Actividade"
+        },
+        "34e38d74-53c5-45f5-94c0-6f381f367946": {
+          "name": "Resumo"
+        },
+        "7de677d4-93fd-4122-a399-36d5dc3def5f": {
+          "name": "Aquecimento"
+        },
+        "80deb03d-786b-4eaa-aee7-17d734850224": {
+          "name": "Actividade"
+        },
+        "67d13ce0-9f73-468a-b218-c66da60286b8": {
+          "name": "Resumo"
+        },
+        "6be6c7d6-44c4-4fc2-96a0-a45805228aa8": {
+          "name": "Aquecimento"
+        },
+        "32a5b027-028e-4d12-84eb-7b36009cc36e": {
+          "name": "Dia 1"
+        },
+        "0b3be74b-ef7b-4557-9b30-bb7f8727e6f1": {
+          "name": "Dia 2"
+        },
+        "0de0afb2-3b1f-420a-aaf6-557b0726539b": {
+          "name": "Resumo"
+        },
+        "5aa1b4d5-0d87-4e15-87db-51011f0a8751": {
+          "name": "Aquecimento"
+        },
+        "c50c799f-b401-406a-b4c2-6a01e8f1c548": {
+          "name": "Actividade"
+        },
+        "ce07a190-9e9b-4c4d-9e46-07f59f07449b": {
+          "name": "Resumo"
+        },
+        "46b11dc4-968e-4e0e-9d4f-40f3c6578cef": {
+          "name": "Aquecimento"
+        },
+        "70ec98e0-3066-4f1f-84c7-be9d76266337": {
+          "name": "Actividade"
+        },
+        "64f22378-e288-4ae8-b228-a82b9d4a7c20": {
+          "name": "Resumo"
+        },
+        "a96114fa-8db5-435d-af1e-e0fa642884c2": {
+          "name": "Aquecimento"
+        },
+        "f7e9181a-0686-4d7a-b513-75351c14acb4": {
+          "name": "Actividade"
+        },
+        "20b10687-03e5-49d8-9d1d-19417edd5228": {
+          "name": "Resumo"
+        },
+        "a753e5d9-0e63-40ee-8f7c-36bfdb2ad5d9": {
+          "name": "Aquecimento"
+        },
+        "e1fd553e-ed7e-4eb4-ab51-58017d886b11": {
+          "name": "Actividade"
+        },
+        "600c4dd8-9b6f-464a-84f0-7a3dff3322e7": {
+          "name": "Resumo"
+        },
+        "a1617d40-6785-49e4-b561-204d00047c02": {
+          "name": "Aquecimento"
+        },
+        "4755fcca-85c5-4f39-acba-485c57676f3b": {
+          "name": "Actividade"
+        },
+        "80de3e79-0b3c-4715-81e0-8c1df3c55c7a": {
+          "name": "Resumo"
+        },
+        "0d30f79e-34e9-48fe-a12a-8b0f371978d4": {
+          "name": "Aquecimento"
+        },
+        "2f24c116-10b3-4af8-bdc5-a51bcf1774da": {
+          "name": "Actividade"
+        },
+        "d98004e8-af51-4190-8527-347d4a5efa53": {
+          "name": "Resumo"
+        },
+        "c789c70d-29b1-4cf5-aece-7711d029ccaf": {
+          "name": "Aquecimento"
+        },
+        "72abdb81-0e9a-4df9-9cd0-33e8a24ef31d": {
+          "name": "Actividade"
+        },
+        "274c5143-35ee-4d88-b497-a0d4cd5186d9": {
+          "name": "Resumo"
+        },
+        "39782149-2c5f-4895-8551-bba742a5ade5": {
+          "name": "Aquecimento"
+        },
+        "7d2b43ce-ec07-43c9-bd67-39a4b85102c5": {
+          "name": "Actividade"
+        },
+        "1fb32eb6-57c6-4255-98b8-a59b2e6fa5cf": {
+          "name": "Resumo"
+        },
+        "411138d2-8c9a-49a9-94d8-50c39c0169bd": {
+          "name": "Aquecimento"
+        },
+        "85dc0809-df8e-4c21-b33c-6525dcc0c747": {
+          "name": "Actividade"
+        },
+        "67d735b5-592b-48f4-a289-130bc5167962": {
+          "name": "Resumo"
+        },
+        "91cbb1a3-213d-4268-b4fb-39fa76273d7d": {
+          "name": "Aquecimento"
+        },
+        "4e159304-5bcf-4392-8fc4-dec6c0d38c63": {
+          "name": "Actividade"
+        },
+        "ab581b34-2229-4b31-995e-820728323297": {
+          "name": "Resumo"
+        },
+        "d967d9e5-5f37-45a6-944d-5aec753a921b": {
+          "name": "Aquecimento"
+        },
+        "6696a89e-fd41-4622-9305-71a6590ec797": {
+          "name": "Actividade"
+        },
+        "bfed8f71-9ea6-4a1b-9f89-bb8c0403f766": {
+          "name": "Resumo"
+        },
+        "6bcda0c6-95be-448f-b833-e73476a35b59": {
+          "name": "Aquecimento"
+        },
+        "9bbaadd9-354f-4ff6-b019-700d851293fa": {
+          "name": "Actividade"
+        },
+        "2990c114-c979-4ee6-9aef-8da8109a7adb": {
+          "name": "Resumo"
+        },
+        "9964a143-7893-42ba-b74f-c36b7707cde0": {
+          "name": "Aquecimento"
+        },
+        "f2cb20fc-4b5e-419f-9e06-45952d3e883a": {
+          "name": "Resumo"
+        },
+        "e618f9e4-3aaa-4aa6-a43b-498fef6c72b0": {
+          "name": "Níveis"
+        },
+        "7b0be7ad-5d23-4932-b902-3a8ecac6de48": {
+          "name": "Aquecimento"
+        },
+        "2fff60de-5366-470f-ad77-577397a87071": {
+          "name": "Actividade"
+        },
+        "c79a297c-f83f-4bbc-977a-bf17cf4bb658": {
+          "name": "Resumo"
+        },
+        "0209e705-bb92-4abd-ab05-1d7a5e4a75d7": {
+          "name": "Aquecimento"
+        },
+        "cc88c5f7-4a54-4ec9-b548-194fb175932d": {
+          "name": "Actividade"
+        },
+        "9f6fad32-86fa-4b2a-90eb-bfa0882de7a8": {
+          "name": "Resumo"
+        },
+        "f29a14ec-18f2-432b-bd53-2733dcccf763": {
+          "name": "Aquecimento"
+        },
+        "c9774311-07cd-4d0b-ae5e-c487a5e628c0": {
+          "name": "Actividade"
+        },
+        "ab4ccdb8-44eb-47ee-aefd-d7cd635ca363": {
+          "name": "Resumo"
+        },
+        "aa94922e-e0f8-4904-8cd8-85deb77c2fb5": {
+          "name": "Aquecimento"
+        },
+        "87a42a0e-c065-49e6-a16d-42c7c66a8374": {
+          "name": "Actividade"
+        },
+        "9510fed3-bbb9-4c12-8242-537177b47a10": {
+          "name": "Resumo"
+        },
+        "ab9fd0ea-6fb7-4c2f-af28-884019f22f2c": {
+          "name": "Aquecimento"
+        },
+        "994368f3-b53e-4f5a-a1ab-f4a76c265a20": {
+          "name": "Actividade"
+        },
+        "31b07dbf-9897-4c43-8233-b44e567d0006": {
+          "name": "Resumo"
+        },
+        "b28bb858-5cd3-4f28-80d3-76cc74628df1": {
+          "name": "Aquecimento"
+        },
+        "a8f87090-0743-4286-86bc-e579a765d277": {
+          "name": "Actividade"
+        },
+        "38350fd8-425e-4a88-9d0d-4c6986c36feb": {
+          "name": "Resumo"
+        },
+        "c03168ed-89c2-4ce7-85d2-641c03d490e5": {
+          "name": "Aquecimento"
+        },
+        "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664": {
+          "name": "Actividade"
+        },
+        "43a9dff6-4565-4408-9623-1f0a529edbb0": {
+          "name": "Resumo"
+        },
+        "8392e6dd-4082-4c70-861f-eaff1d89ffd1": {
+          "name": "Aquecimento"
+        },
+        "fe4547e7-73f8-4c7b-a67f-a61b4a10332c": {
+          "name": "Actividade"
+        },
+        "594d3531-8212-4241-979a-17ae94cb6d89": {
+          "name": "Resumo"
+        },
+        "449cef53-c3a4-4edd-8476-31e9df0e87f6": {
+          "name": "Aquecimento"
+        },
+        "d43f4114-8c37-45a7-b61b-3aca56ee5790": {
+          "name": "Actividade"
+        },
+        "4426fb52-6448-4467-8602-49daf6b12bf1": {
+          "name": "Resumo"
+        },
+        "687f8be1-c863-4391-971d-5ffa5360ed71": {
+          "name": "Aquecimento"
+        },
+        "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
+          "name": "Actividade"
+        },
+        "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8": {
+          "name": "Aquecimento"
+        },
+        "4b4cc069-5970-4809-bb0c-b2f8e1aae26c": {
+          "name": "Actividade"
+        },
+        "c4a019fc-d25b-486f-adec-c33a5b86ba5d": {
+          "name": "Resumo"
+        },
+        "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
+          "name": "Aquecer "
+        },
+        "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
+          "name": "Actividade"
+        },
+        "1e259b12-ec38-426b-944e-f5778651c422": {
+          "name": "Aquecimento"
+        },
+        "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97": {
+          "name": "Actividade"
+        },
+        "b3baf83d-a516-4478-a997-75e530327575": {
+          "name": "Resumo"
+        },
+        "26057f9e-5b1c-4617-a7b1-e4e457e863fa": {
+          "name": "Aquecimento"
+        },
+        "b3d78956-5557-4142-bd84-3741cc92fb87": {
+          "name": "Resumo"
+        },
+        "a4a373a9-8067-4100-ac1d-ec5f142fb754": {
+          "name": "Aquecimento"
+        },
+        "c61550fb-464b-4871-92d2-f532c0ec62cf": {
+          "name": "Actividade"
+        },
+        "d411cf59-7c5f-4e4e-8aba-845836bc9658": {
+          "name": "Resumo"
+        },
+        "87851095-c111-49f0-b9eb-bbe31736cef0": {
+          "name": "Níveis"
+        },
+        "4128a59a-9016-49c1-b024-dfdf80c1c433": {
+          "name": "Aquecimento"
+        },
+        "0ccf48b9-639c-43b3-b737-74a1bcec7f5b": {
+          "name": "Actividade"
+        },
+        "aa25d648-15c2-44b2-b27c-8b4423498b20": {
+          "name": "Resumo"
+        },
+        "a236992e-e7c9-421c-acf6-b514973090f3": {
+          "name": "Aquecimento"
+        },
+        "7ca84cbe-1c13-4126-9078-d6413f5ed5b4": {
+          "name": "Actividade"
+        },
+        "bdafdafd-667b-4609-a307-92646bf7e80c": {
+          "name": "Resumo"
+        },
+        "e3c1e42f-d1cc-43fb-b67d-8891a213f382": {
+          "name": "Aquecimento"
+        },
+        "6039132d-56d7-42d2-acdb-ef7f1a25738f": {
+          "name": "Actividade"
+        },
+        "2884b29c-c047-4ad0-a002-deed110cc32a": {
+          "name": "Resumo"
+        },
+        "5a4d3e42-27fd-46e5-a022-a20242f61ebc": {
+          "name": "Aquecimento"
+        },
+        "80de8d2e-b18f-4142-9b64-064cfb8908f8": {
+          "name": "Resumo"
+        },
+        "8174009e-cbb9-49cf-95d6-f36a96d41eb5": {
+          "name": "Aquecimento"
+        },
+        "3ab3f540-cdac-498b-b4b5-49dba2a528bf": {
+          "name": "Actividade"
+        },
+        "9ad7281f-d33f-41a3-87b1-4a36a2ac36a7": {
+          "name": "Níveis"
+        },
+        "8bf33e47-d789-4d92-b788-f6cf714bdda5": {
+          "name": "Resumo"
+        },
+        "434e1e94-f6aa-4bff-9376-154e62262354": {
+          "name": "Aquecimento"
+        },
+        "cf8ee96e-a948-4c2c-9565-beb1bee1bba1": {
+          "name": "Actividade"
+        },
+        "0d629a35-2bfc-413d-bd7a-d7c29d81726a": {
+          "name": "Resumo"
+        },
+        "3cc22b01-089f-4dab-b3e8-fc62116c4901": {
+          "name": "Aquecimento"
+        },
+        "e7fed683-5b06-451a-83b6-44bd6135abba": {
+          "name": "Actividade"
+        },
+        "89d015e9-9fce-4748-a2dc-0a59c7fa8e10": {
+          "name": "Resumo"
+        },
+        "a7af54f2-f0da-4b17-bddd-88a8ba1390b2": {
+          "name": "Actividade"
+        },
+        "364c003c-6567-4148-b6bf-7d18f5034bd5": {
+          "name": "Resumo"
+        },
+        "422a0e5f-bc1c-44e7-80ce-5a43d59f4fa8": {
+          "name": "Aquecimento"
+        },
+        "2e669b5a-1c6c-41f0-a5f9-3a79fcbf7fcd": {
+          "name": "Actividade"
+        },
+        "94639435-f2c7-4bac-ad1c-0f31c772796c": {
+          "name": "Resumo"
+        },
+        "47dfd54a-dde6-4b61-81e3-db9405196209": {
+          "name": "Aquecimento"
+        },
+        "44ae7025-981f-4dae-b225-555618d67b2a": {
+          "name": "Actividade"
+        },
+        "ed40a37e-edc1-426c-943e-6cb6094b4795": {
+          "name": "Resumo"
+        },
+        "ae2bd4be-26b3-4558-9767-0b8a79334bfb": {
+          "name": "Aquecimento"
+        },
+        "711c240c-07ab-449d-9ebb-b4bc6472d58a": {
+          "name": "Actividade"
+        },
+        "49d23cd6-1f02-41fc-9a87-782b74221fc3": {
+          "name": "Resumo"
+        },
+        "4d45a04e-3cd0-46cd-9a84-18f5b851b651": {
+          "name": "Aquecimento"
+        },
+        "926cd18a-3e1a-44b9-96df-d0099cbc2ac8": {
+          "name": "Actividade"
+        },
+        "440f3a4d-669e-4651-a560-427bcb757de3": {
+          "name": "Resumo"
+        },
+        "80a5f11f-25ea-4558-8512-14fdaf973674": {
+          "name": "Aquecimento"
+        },
+        "f99bbd39-3dca-43a4-ac09-0248fea7bf8f": {
+          "name": "Actividade"
+        },
+        "94c7c2fe-3c42-4a2c-9b8b-83b6d5a0627c": {
+          "name": "Resumo"
+        },
+        "81f15cf0-2f76-47e0-ac5b-ce9297fe585a": {
+          "name": "Aquecimento"
+        },
+        "f41592ef-5ee3-4e3e-a31a-57e5984ae0fb": {
+          "name": "Actividade"
+        },
+        "4558faf6-f002-434c-b85a-a48087d45341": {
+          "name": "Resumo"
+        },
+        "e2fa70c3-8c9d-4efa-a176-b4690bc9d425": {
+          "name": "Aquecimento"
+        },
+        "de11024e-5469-41b6-bc28-627c9515eff1": {
+          "name": "Actividade"
+        },
+        "558ee427-4fa3-4820-a16b-fe7dbfea3e4a": {
+          "name": "Resumo"
+        },
+        "0f4a9cea-1a4a-4312-be99-79edfadbb6db": {
+          "name": "Níveis"
+        },
+        "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21": {
+          "name": "Aquecimento"
+        },
+        "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17": {
+          "name": "Actividade"
+        },
+        "7e1b94ab-eb54-41ae-a003-fcbdc79f109c": {
+          "name": "Resumo"
+        },
+        "fa7bb816-68d0-4964-a4c9-acf09377edc3": {
+          "name": "Aquecimento"
+        },
+        "d72bfe99-62ed-4a91-87e0-27d873cc3aa8": {
+          "name": "Actividade"
+        },
+        "71aa25b3-9d43-4c6a-b01c-c0dca65cf932": {
+          "name": "Resumo"
+        },
+        "7e77a0b3-3a58-4d8d-9efa-b796c1496bde": {
+          "name": "Aquecimento"
+        },
+        "20458bdc-a944-45dd-b4a5-ddc0acf2a104": {
+          "name": "Actividade"
+        },
+        "0e14ff41-9ad6-4802-a118-4b50a607b384": {
+          "name": "Resumo"
+        },
+        "fa1d9228-1d94-46f9-8a49-d075d82546d9": {
+          "name": "Aquecimento"
+        },
+        "b2692599-66de-4bb5-aeb5-c63a06dd7040": {
+          "name": "Actividade"
+        },
+        "ca4d5d58-a1a8-4574-8413-b8e79a0a06d7": {
+          "name": "Resumo"
+        },
+        "3cca2572-607f-4925-8b36-6cf02506c1b6": {
+          "name": "Aquecimento"
+        },
+        "752eddc2-eb93-48e1-90f0-19932c4f53cd": {
+          "name": "Actividade"
+        },
+        "1ba97808-b668-42ed-9ba3-5f2da7b8912b": {
+          "name": "Resumo"
+        },
+        "936100bf-97fb-4931-84be-dda8766c0ec4": {
+          "name": "Aquecimento"
+        },
+        "9a78dce2-0812-414f-8c20-1728b4ff1de2": {
+          "name": "Actividade"
+        },
+        "207bc633-dfe5-4c4d-b366-c1f5081676c1": {
+          "name": "Resumo"
+        },
+        "c1ba8c1a-11db-4139-8f1c-dfebadfdb0df": {
+          "name": "Aquecimento"
+        },
+        "a2816f13-47a2-43e5-bbfa-0e7d57301037": {
+          "name": "Actividade"
+        },
+        "bf836bc8-4853-4f43-b055-a8aa18ddfa9a": {
+          "name": "Resumo"
+        },
+        "5fdd8ca9-e42d-49ff-9edf-d9cc7c935d9e": {
+          "name": "Aquecimento"
+        },
+        "2e5b6973-dcd9-405c-958d-2366095f4375": {
+          "name": "Actividade"
+        },
+        "3e93f640-d708-4ed5-a00a-4205f6dcd4fb": {
+          "name": "Encerramento"
+        },
+        "6dfd29b9-13c7-4603-989a-bbeecf4800ff": {
+          "name": "Aquecimento"
+        },
+        "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4": {
+          "name": "Actividade"
+        },
+        "e7216a36-908d-4036-8dc3-e7b6a49c1b78": {
+          "name": "Encerramento"
+        },
+        "e0b108a8-9649-4dbe-81b2-18f26ef90572": {
+          "name": "Aquecimento"
+        },
+        "c4cdf9ba-b683-4025-bc79-a6e72c0d4cf3": {
+          "name": "Actividade"
+        },
+        "6b3615be-6022-43a7-b634-56545dd94ace": {
+          "name": "Resumo"
+        },
+        "434c6d86-9182-4098-bdf9-a778a50a078a": {
+          "name": "Aquecimento"
+        },
+        "81d5093b-fe94-4257-bc54-ca5311532cdc": {
+          "name": "Actividade"
+        },
+        "8cc7e493-e930-4f8a-9f43-38e3d9ea0995": {
+          "name": "Resumo"
+        },
+        "f34a570f-40d4-4d59-a68b-73775272bd4c": {
+          "name": "Aquecimento"
+        },
+        "e22dd0d5-97b3-4829-9d90-3a213360c254": {
+          "name": "Actividade"
+        },
+        "7867053c-45a1-4d10-a159-8dc70ab53a0b": {
+          "name": "Encerramento"
+        },
+        "bec6d0f0-443d-4368-aa3e-6ff205f0524d": {
+          "name": "Aquecimento"
+        },
+        "f664c4cd-edcd-4afe-b5e6-5e2902ae866f": {
+          "name": "Actividade"
+        },
+        "80d10416-519e-40e1-b040-0ab3e3b8a4c3": {
+          "name": "Resumo"
+        },
+        "e9f7c2c0-864d-48ee-b321-8d5f9be28800": {
+          "name": "Aquecimento"
+        },
+        "d7b339c7-1053-4301-bba3-6c5befbc61fe": {
+          "name": "Actividade"
+        },
+        "9e5054c4-f57d-41fd-aa15-6eedcc5041a1": {
+          "name": "Resumo"
+        },
+        "7d4b68b8-c0ed-439b-996f-a3f992dc9824": {
+          "name": "Aquecimento"
+        },
+        "06f944ce-4a81-48b5-a87d-96072d1bfa7b": {
+          "name": "Actividade"
+        },
+        "7f760e13-4b60-497a-ae95-c9d54292a9f7": {
+          "name": "Resumo"
+        },
+        "b73c5968-42c4-4b4c-ac51-a6694f99c29b": {
+          "name": "Aquecimento"
+        },
+        "ee232401-7aef-488e-b0f1-4b169a7a854e": {
+          "name": "Actividade"
+        },
+        "6ad1cd24-169f-4b80-b9a4-8cc111becfd1": {
+          "name": "Resumo"
+        },
+        "177ca896-863b-456d-8703-29c35534f2d5": {
+          "name": "Aquecimento"
+        },
+        "c56d186e-9346-4a55-b871-3547db946cb0": {
+          "name": "Actividade"
+        },
+        "639761f1-fc44-4250-ab0d-0e4b0565f95e": {
+          "name": "Resumo"
+        },
+        "bd0c46dd-1416-4ca4-9882-cc070c732bcb": {
+          "name": "Aquecimento"
+        },
+        "22daa03a-31f9-4048-98d6-180a94b49a68": {
+          "name": "Actividade"
+        },
+        "c6e39bf8-d155-4322-af89-d5f58cd9b3c0": {
+          "name": "Resumo"
+        },
+        "78332cff-112e-4d7a-b0d5-dc027283de09": {
+          "name": "Aquecimento"
+        },
+        "d469a158-6f03-4bb2-a6bb-2fb04adc68bd": {
+          "name": "Actividade"
+        },
+        "20be7e0b-da27-4cf7-b721-de78b253d8ab": {
+          "name": "Encerramento"
+        },
+        "91e4043a-b85e-4965-bb48-7dba5ae5b20d": {
+          "name": "Aquecimento"
+        },
+        "ec2b845c-4b81-4798-848a-37dd04f0ab69": {
+          "name": "Actividade"
+        },
+        "1b7d7bd8-edb9-4d7e-b267-fb05ddf8073b": {
+          "name": "Resumo"
+        },
+        "4500c96e-1367-4b79-867f-061dfdb75d5c": {
+          "name": "Aquecimento"
+        },
+        "ac036a2c-ddfd-4afa-8990-2c0488a6cac5": {
+          "name": "Actividade"
+        },
+        "125cb229-4471-49d1-b3a4-c331c9307b78": {
+          "name": "Resumo"
+        },
+        "82bb121e-9ad5-4b29-bf75-30eb4170b1dd": {
+          "name": "Aquecimento"
+        },
+        "2f663cbe-39d3-44bc-b3d0-3847de8616ed": {
+          "name": "Actividade"
+        },
+        "c611b357-4152-4524-ba71-e3531cc97d9d": {
+          "name": "Encerramento"
+        },
+        "28cdb81b-9ed2-4623-8c97-76a04c4b296f": {
+          "name": "Aquecimento"
+        },
+        "e44e0ad1-b586-42a4-9be2-75e0eee0cccc": {
+          "name": "Actividade"
+        },
+        "e7c14a3d-ad5f-429b-9ad3-a851e1247e58": {
+          "name": "Resumo"
+        },
+        "5057296f-03f5-4ac1-b9b7-4b1e170c1224": {
+          "name": "Aquecimento"
+        },
+        "ee6441ac-3fe1-451b-846f-24a977986f9c": {
+          "name": "Actividade"
+        },
+        "165ce06e-00dc-48c5-ac86-7b2ca67f7484": {
+          "name": "Resumo"
+        },
+        "69970ef2-e960-449e-8650-84b53151315d": {
+          "name": "Aquecimento"
+        },
+        "06cc83f5-66b2-401e-850a-466b164ef104": {
+          "name": "Actividade"
+        },
+        "928bd72d-482c-4234-8e05-57b235528194": {
+          "name": "Resumo"
+        },
+        "d318c194-f178-4185-be90-b70771605b6d": {
+          "name": "Aquecimento"
+        },
+        "064fad66-35a6-480e-ad60-dff751b5230c": {
+          "name": "Actividade"
+        },
+        "06f4dccb-71cc-4afb-907e-2ee69be55359": {
+          "name": "Resumo"
+        },
+        "163efba3-af62-4989-8fab-c173dfbc4ed6": {
+          "name": "Teste pós-projeto"
+        },
+        "3c2debf5-2b7b-43a9-b8bf-7462c01c6068": {
+          "name": "Aquecimento"
+        },
+        "b58f7f0f-78a4-4965-8f0d-9512076d5e0f": {
+          "name": "Actividade"
+        },
+        "694fdbc9-0938-41a0-8646-8f04d7fb37fd": {
+          "name": "Resumo"
+        },
+        "a03605f6-2db6-446e-ba25-a91492277402": {
+          "name": "Níveis"
+        },
+        "a80e7362-2c08-40a7-9c59-b0d89cf1df88": {
+          "name": "Aquecimento"
+        },
+        "c8d05b47-5ef6-429d-8162-74d7c1198428": {
+          "name": "Actividade"
+        },
+        "28a6cba3-27e6-4129-a08e-57c0fa0ae303": {
+          "name": "Resumo"
+        },
+        "17fde997-cb09-459a-a1fb-8e8d9a582343": {
+          "name": "Aquecimento"
+        },
+        "9612f586-66a9-4418-8a79-40080b796a76": {
+          "name": "Actividade"
+        },
+        "23c77bb1-85ea-4391-a235-0161f782c996": {
+          "name": "Resumo"
+        },
+        "2329539a-1db5-45ec-b998-3d2f32f6b03c": {
+          "name": "Aquecimento"
+        },
+        "004e7885-e515-4aa8-b5b4-230b884cb6b8": {
+          "name": "Actividade"
+        },
+        "72440372-3248-4b04-b266-0604ddc73ebe": {
+          "name": "Resumo"
+        },
+        "05118f86-6a73-4845-98b1-8ae7b80a3548": {
+          "name": "Aquecimento"
+        },
+        "a8aae27a-c021-4027-8ce0-37a888ec37f5": {
+          "name": "Actividade"
+        },
+        "cb343ba8-a1d1-442d-a038-3f54c35175c8": {
+          "name": "Resumo"
+        },
+        "4046b95d-cc3b-4913-ad2f-591fae47b6a4": {
+          "name": "Aquecimento"
+        },
+        "185f50c6-2c50-4650-91f6-f061d1051c91": {
+          "name": "Actividade"
+        },
+        "886dade4-6e12-469f-af94-8afa519f5531": {
+          "name": "Resumo"
+        },
+        "0b410a5f-fa45-4bac-a573-be593612cb48": {
+          "name": "Aquecimento"
+        },
+        "faf4b5ae-838a-4a44-bfe5-9450699ab59f": {
+          "name": "Actividade"
+        },
+        "19e9e29c-06ec-4f99-bee1-b8ef9c72758f": {
+          "name": "Resumo"
+        },
+        "73080877-a97f-4bdc-a8b7-4210cf0f40c7": {
+          "name": "Aprendizagem complementar"
+        },
+        "cd19519f-0869-4d79-a3ee-639ee1ed92c1": {
+          "name": "Teste pós-projeto"
+        },
+        "6c10e88f-a232-4ac7-91cb-97ff2bc7d461": {
+          "name": "Aquecimento"
+        },
+        "a6b60e0a-6bb5-4967-bc4c-eabd863ab97c": {
+          "name": "Actividade"
+        },
+        "3288a325-7eb2-47c6-bbc4-9eb0c1686045": {
+          "name": "Resumo"
+        },
+        "2b979bba-aad6-49d0-a32a-d436d4288649": {
+          "name": "Aquecimento"
+        },
+        "98ffa01e-f262-4df2-bcca-a7f669b80fec": {
+          "name": "Actividade"
+        },
+        "bc72b27d-760e-4e23-aa40-d8141b949e20": {
+          "name": "Resumo"
+        },
+        "747f358d-231e-4d8e-9f58-ac2a57daa0cf": {
+          "name": "Aquecimento"
+        },
+        "fd95bfe8-a008-4994-a874-ff3f1ba81d58": {
+          "name": "Actividade"
+        },
+        "b02a841f-7769-4fa2-8507-307cea1b01bd": {
+          "name": "Resumo"
+        },
+        "37d45c14-f225-4476-a638-7c7b11953ca1": {
+          "name": "Aquecimento"
+        },
+        "0e95e394-2a11-4fab-908d-ed712cd9f6b0": {
+          "name": "Actividade"
+        },
+        "6ec491fa-334a-474f-96dd-3ba4550e81fa": {
+          "name": "Resumo"
+        },
+        "759e83e6-0f30-4645-8966-a6feb2298480": {
+          "name": "Aquecimento"
+        },
+        "f7eebe16-f2a3-4e47-b558-a584b1bb2d0c": {
+          "name": "Actividade"
+        },
+        "a4b0740b-a9d1-41f7-9d20-00f1d77f878d": {
+          "name": "Resumo"
+        },
+        "5618c307-5639-4715-8735-c545ded5de85": {
+          "name": "Níveis"
+        },
+        "a0692a63-008e-4013-9089-9f9c9b22d67c": {
+          "name": "Aquecimento"
+        },
+        "53d85fa1-fecf-43b6-83f0-bef5454c41ed": {
+          "name": "Actividade"
+        },
+        "2682c85b-7410-43b6-bc18-87f0be2e0e86": {
+          "name": "Resumo"
+        },
+        "5ea39814-570e-4b27-a399-fe1e3f197d77": {
+          "name": "Aquecimento"
+        },
+        "c3347e87-c7d1-4002-aa31-a53dd8deee41": {
+          "name": "Actividade"
+        },
+        "abef0d1e-8187-462f-ac08-0130f1499397": {
+          "name": "Resumo"
+        },
+        "ff0f61fd-a59d-4c4b-aae7-ad0c35798747": {
+          "name": "Aquecimento"
+        },
+        "f2b936fa-d72a-4aa3-a4d8-c1f34ab3aa14": {
+          "name": "Actividade"
+        },
+        "68062c41-3e39-40ec-9cae-d096b0bdca24": {
+          "name": "Resumo"
+        },
+        "13fad4d8-f6df-4655-9054-9fdb847371db": {
+          "name": "Aquecimento"
+        },
+        "03d57f25-1cca-49af-8487-43c3a7efceb8": {
+          "name": "Actividade"
+        },
+        "011f9436-4daa-4a08-8f54-2b767dc556b6": {
+          "name": "Resumo"
+        },
+        "2882d381-78b9-4874-8f84-6b9e4c251861": {
+          "name": "Aquecimento"
+        },
+        "9d2f6fef-3722-429e-b4c1-f6d1103c942b": {
+          "name": "Actividade"
+        },
+        "2d66b959-ae8c-430d-b72c-fe68923080c5": {
+          "name": "Resumo"
+        },
+        "479d0cbe-6860-44be-bd76-9d7e266e0785": {
+          "name": "Aquecimento"
+        },
+        "9982617c-045f-447f-8f83-522ea617c3b9": {
+          "name": "Actividade"
+        },
+        "442c4f1b-bf6a-4e06-a8a7-92ebb259d010": {
+          "name": "Resumo"
+        },
+        "d8c9fbdb-b731-44f3-aa89-3bfd07111678": {
+          "name": "Aquecimento"
+        },
+        "87977467-a47d-46de-90b9-df606358da99": {
+          "name": "Actividade"
+        },
+        "c83ce210-dedc-4eec-bdcf-a5a96c75ecdf": {
+          "name": "Resumo"
+        },
+        "cb8113ad-e18f-49a9-9cb5-bfb45ee43bc4": {
+          "name": "Aquecimento"
+        },
+        "60f3718d-0319-4213-a83d-3ce3cb6bdd80": {
+          "name": "Actividade"
+        },
+        "38e02771-58d3-4d6c-a01a-a7dd0b87bace": {
+          "name": "Resumo"
+        },
+        "17a16dd3-54c2-4e6a-b6cf-f6bbb3394f62": {
+          "name": "Aquecimento"
+        },
+        "b3d7133e-335d-4c28-98d8-a61e8fecaab5": {
+          "name": "Actividade"
+        },
+        "7899e7b1-0a30-4699-bcae-48dd6a61c8f3": {
+          "name": "Resumo"
+        },
+        "54db6e45-9f93-4f70-aef0-f2820b64ad6d": {
+          "name": "Aquecimento"
+        },
+        "30ea67ca-4696-43c4-af86-24edbe8bea45": {
+          "name": "Resumo"
+        },
+        "481b15da-1d94-404a-859d-31a4cfe544ef": {
+          "name": "Aquecimento"
+        },
+        "d6982573-b0dc-4c36-a400-b426cb43e2b4": {
+          "name": "Actividade"
+        },
+        "4f356bf0-fd92-4065-80a2-21c525b4f1dc": {
+          "name": "Resumo"
+        },
+        "ff6415fc-9140-4824-ac75-30b80fff14ce": {
+          "name": "Aquecimento"
+        },
+        "50301e64-0051-4071-ab27-c0f0eb834ca5": {
+          "name": "Actividade"
+        },
+        "c9582674-40a5-483b-b016-17a03f824858": {
+          "name": "Resumo"
+        },
+        "d0d7583f-c507-4ad5-92fa-0dff5d463423": {
+          "name": "Aquecimento"
+        },
+        "d5dd115f-dd41-4a16-b59f-0f77bb79ed00": {
+          "name": "Actividade"
+        },
+        "47478503-0688-4122-8566-0aed5c015b89": {
+          "name": "Resumo"
+        },
+        "0e81302e-2d3e-4a15-a0be-8b8efd6c082f": {
+          "name": "Aquecimento"
+        },
+        "dd80250a-acb3-4fe7-a9b3-3703faad40ce": {
+          "name": "Actividade"
+        },
+        "972e8bec-fac2-49b3-ab29-8d58ddfa01f1": {
+          "name": "Resumo"
+        },
+        "ba30039c-8c54-4e5a-a810-18052eac7d45": {
+          "name": "Aquecimento"
+        },
+        "54106bc6-dce5-43e9-965a-07567d1856dc": {
+          "name": "Actividade"
+        },
+        "f069eb58-8da9-4a3d-a082-89f69e6b8e75": {
+          "name": "Resumo"
+        },
+        "6fed748d-07a5-4be9-a535-2a1bd073cbd5": {
+          "name": "Aquecimento"
+        },
+        "8d3448c6-d7e5-44f9-8b60-e207f0026848": {
+          "name": "Actividade"
+        },
+        "e600c19e-5d9d-48c3-8e58-0a91b9c93574": {
+          "name": "Resumo"
+        },
+        "ed6098ff-6be9-40e7-838e-eef99d12259b": {
+          "name": "Aquecimento"
+        },
+        "71440e94-c031-42dd-a79d-3f8cb5056b9f": {
+          "name": "Actividade"
+        },
+        "378bdb3f-7f63-4ac5-aeb3-957a4b98a354": {
+          "name": "Resumo"
+        },
+        "0051624b-1122-464c-a805-9dfd4e8afb4c": {
+          "name": "Aquecimento"
+        },
+        "12d9a87a-588e-43d1-b12d-ad4b83414276": {
+          "name": "Actividade"
+        },
+        "c68e1b20-2fee-4a79-8b34-e6f38c9cd672": {
+          "name": "Resumo"
+        },
+        "3a252e7c-c299-41f2-8617-a6b165dfd91f": {
+          "name": "Aquecimento"
+        },
+        "9c7bec47-be70-4024-a4f2-21f687434008": {
+          "name": "Actividade"
+        },
+        "6bef749f-9fe6-445c-b873-bb9040b750b2": {
+          "name": "Resumo"
+        },
+        "5994929e-9d47-4037-9bf0-50728d56d31d": {
+          "name": "Aquecimento"
+        },
+        "bb408703-11ec-4822-a86b-b8625a121f6f": {
+          "name": "Showcase"
+        },
+        "1840d382-40db-43dd-b6cd-4f002ec7eb04": {
+          "name": "Teste pós-projeto"
         },
         "e159a5eb-31ca-47d9-bc81-e2777d7027a0": {
           "name": "Níveis"

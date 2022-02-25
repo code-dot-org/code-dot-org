@@ -2947,3 +2947,92 @@ ko:
       7:
         image: notes/hoc_dance_congrats_7.png
         text: 튜토리얼의 끝부분에서, 여러분의 작품 링크를 친구와 공유할 수 있습니다. 상상력을 펼치고 재미 있게 보내세요!
+    poemart_intro:
+      1:
+        image: notes/hoc_poem_art_2021_introduction_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_introduction_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_introduction_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_introduction_04.jpg
+      5:
+        image: notes/hoc_poem_art_2021_introduction_05.jpg
+      6:
+        image: notes/hoc_poem_art_2021_introduction_06.jpg
+      7:
+        image: notes/hoc_poem_art_2021_introduction_07.jpg
+      8:
+        image: notes/hoc_poem_art_2021_introduction_08.jpg
+      9:
+        image: notes/hoc_poem_art_2021_introduction_09.jpg
+      10:
+        image: notes/hoc_poem_art_2021_introduction_10.jpg
+      11:
+        image: notes/hoc_poem_art_2021_introduction_11.jpg
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+        text: 스프라이트 의상은 일치해야 합니다. 실행을 누르면 떠 다니는 구름을 읽고 보게될 것입니다.
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+        text: '이제 글자 그대로의 이미지를 추가하여 시에 나오는 단어를 분명하게 보여줄 수 있습니다. 재미있게 하세요! '
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+        text: '축하합니다! 지금까지 컴퓨터 과학의 기초와 시의 분위기를 찾는 방법을 배우셨습니다. 이제 자신만의 애니메이션화된 시를 만들어
+          친구와 공유할 수 있습니다.  '
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+        text: 전체 시를 위한 간단한 장면을 신중하게 선택하시겠습니까?
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+        text: '또는 많은 이벤트를 사용하여 시의 행마다 새로운 장면을 만들겠습니까? '
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+        text: 튜토리얼의 끝부분에서, 여러분의 작품 링크를 친구와 공유할 수 있습니다.
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+        text: 상상력을 펼치고 재미있게 보내세요!
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+        text: 안녕하세요! 제 이름은 에린이고 여기 Code.org.의 소프트웨어 엔지니어입니다. 여러분이 하게 될 활동에 관한 튜토리얼을
+          담당하게 되어 너무나 기쁩니다! 여로분이 할 활동은 "헬로우 월드"입니다.
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+        text: '"헬로우 월드"는 컴퓨터 과학에서 유명한 구절이며 컴퓨터 과학을 배울 때 첫 번째 단계에서 공통적으로 표시되는 구절입니다.
+          다음 한 시간 동안에 여러분은 스프라이트 랩에서 프로그래밍을 함으로써 컴퓨터 과학을 배우기 시작할 것입니다. '
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+        text: 스프라이트 랩은 상상력이 풍부하고 재미있는 프로젝트를 만드는 데 사용할 수 있는 툴입니다. 화면은 크게 세 부분으로 나눠져
+          있어요. 왼쪽은 플레이 공간이예요. 여기에서 스프라이트가 나올 거예요.
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+        text: '스프라이트는 이야기 또는 게임에서 캐릭터 또는 아이템 등과 같이 여러분과 상호작용할 수 있는 화면 상의 물체입니다. '
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+        text: 우측 공간은 작업공간이예요. 툴박스에서 블록을 드래거하여 작업공간에 놓아 프로그램을 만들 수 있습니다.
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg

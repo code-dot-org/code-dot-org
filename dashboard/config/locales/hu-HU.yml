@@ -228,6 +228,9 @@ hu:
     email_preference_yes: Igen
     email_preference_no: Nem
     email_preference_required: Meg kell adnod egy e-mail címet.
+    share_teacher_email_reg_partner_question: Szeretné, ha megosztanánk elérhetőségét
+      az Ön országának [Code.org regionális partnerével](%{cdo_regional_partner_desc})?  Így
+      értesítést kaphat a helyi szakma fejlődéséről, az erőforrásokról és eseményekről?
     share_teacher_email_reg_partner_preference_yes: Igen
     share_teacher_email_reg_partner_preference_no: Nem
     share_teacher_email_reg_partner_preference_required: Meg kell adnod egy e-mail
@@ -465,6 +468,8 @@ hu:
       minecraft_hero: Minecraft Hős
       playlab: Játéklabor
       playlab_k1: Játéklabor (nem olvasó)
+      poetry: Költészet
+      poetry_hoc: Versművészet
       spritelab: Sprite labor
       starwars: Star Wars
       starwarsblocks: Csillagok háborúja (blokkok)
@@ -486,6 +491,7 @@ hu:
       prizes_link: További információk
   teacher:
     answer: Válasz
+    dashboard: Tanári nyitólap
     for_teachers_only: Csak tanároknak
     title:
       one: 'A tanárod:'
@@ -1014,6 +1020,7 @@ hu:
       school: Iskola
       school_name: Iskola neve
       school_city: Iskola városa
+      school_city_district: Iskola városa/kerülete
       school_country: Iskola országa
       colombian_school_city: Iskola városa
       colombian_chilean_school_name: Iskola neve
@@ -1056,3 +1063,4 @@ hu:
     not_now: Most nem
   behaviors:
     this_sprite: ez a sprite
+  teacher_feedback: Tanári visszajelzés

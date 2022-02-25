@@ -264,13 +264,13 @@
           "aquatic7": "خزانے تک پہنچنے کے لیے مرجان کو بطور راستے کے مقامات استعمال کریں۔"
         },
         "CourseE_HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ** [][0] چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
+          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ**  چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
         },
         "CourseE_HOC 2018 Level_9b_2020": {
-          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ** [][0] چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
+          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ**  چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
         },
         "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ** [][0] چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
+          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ**  چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_b": "اگر آپ فنکشنز میں صحیح طریقے سے کال/ہدایت دیتے ہیں تو یہ وہ راستہ ہے جس پر آپ سفر کریں گے...",
@@ -979,7 +979,7 @@
           "aquatic7": "خزانے تک پہنچنے کے لیے مرجان کو بطور راستے کے مقامات استعمال کریں۔"
         },
         "HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ** [][0] چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
+          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ**  چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "ایک وقت میں ایک بلاک شامل کرنے کی کوشش کریں، پھر کیا ہوتا ہے دیکھنے کے لیے \"چلائیں\" پر کلک کریں۔",
@@ -1183,7 +1183,8 @@
           "storyboard_behavior_example": "_نوٹ:_ سپرائٹ کو طرز عمل دینے کے لیے، آپ کو سبز طرز عمل کے بلاکس میں سے کسی ایک، جیسے `spinning right`، کے ساتھ `sprite begins` بلاک استعمال کرنے کی ضرورت ہے۔\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "آپ کو اس سطح میں کسی کوڈ کو تبدیل کرنے کی ضرورت نہیں ہے۔"
+          "hw_no_changes": "آپ کو اس سطح میں کسی کوڈ کو تبدیل کرنے کی ضرورت نہیں ہے۔",
+          "hw_click_sprites": "پروگرام کے چلنے کے دوران سپرائٹس پر کلک کریں۔"
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "ایک 'change costume' بلاک کو 'when clicked' ایونٹ بلاک کے تحت منسلک کرنے کی کوشش کریں۔\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1211,7 +1212,8 @@
           "storyboard_behavior_example": "_نوٹ:_ سپرائٹ کو طرز عمل دینے کے لیے، آپ کو سبز طرز عمل کے بلاکس میں سے کسی ایک، جیسے `spinning right`، کے ساتھ `sprite begins` بلاک استعمال کرنے کی ضرورت ہے۔\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "آپ کو اس سطح میں کسی کوڈ کو تبدیل کرنے کی ضرورت نہیں ہے۔"
+          "hw_no_changes": "آپ کو اس سطح میں کسی کوڈ کو تبدیل کرنے کی ضرورت نہیں ہے۔",
+          "hw_click_sprites": "پروگرام کے چلنے کے دوران سپرائٹس پر کلک کریں۔"
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "ایک 'change costume' بلاک کو 'when clicked' ایونٹ بلاک کے تحت منسلک کرنے کی کوشش کریں۔\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1239,7 +1241,8 @@
           "storyboard_behavior_example": "_نوٹ:_ سپرائٹ کو طرز عمل دینے کے لیے، آپ کو سبز طرز عمل کے بلاکس میں سے کسی ایک، جیسے `spinning right`، کے ساتھ `sprite begins` بلاک استعمال کرنے کی ضرورت ہے۔\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "آپ کو اس سطح میں کسی کوڈ کو تبدیل کرنے کی ضرورت نہیں ہے۔"
+          "hw_no_changes": "آپ کو اس سطح میں کسی کوڈ کو تبدیل کرنے کی ضرورت نہیں ہے۔",
+          "hw_click_sprites": "پروگرام کے چلنے کے دوران سپرائٹس پر کلک کریں۔"
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "ایک 'change costume' بلاک کو 'when clicked' ایونٹ بلاک کے تحت منسلک کرنے کی کوشش کریں۔\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1267,7 +1270,8 @@
           "storyboard_behavior_example": "_نوٹ:_ سپرائٹ کو طرز عمل دینے کے لیے، آپ کو سبز طرز عمل کے بلاکس میں سے کسی ایک، جیسے `spinning right`، کے ساتھ `sprite begins` بلاک استعمال کرنے کی ضرورت ہے۔\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_retro_click": {
-          "hw_no_changes": "آپ کو اس سطح میں کسی کوڈ کو تبدیل کرنے کی ضرورت نہیں ہے۔"
+          "hw_no_changes": "آپ کو اس سطح میں کسی کوڈ کو تبدیل کرنے کی ضرورت نہیں ہے۔",
+          "hw_click_sprites": "پروگرام کے چلنے کے دوران سپرائٹس پر کلک کریں۔"
         },
         "helloworld_retro_costumes": {
           "hello_world_costumes": "ایک 'change costume' بلاک کو 'when clicked' ایونٹ بلاک کے تحت منسلک کرنے کی کوشش کریں۔\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1287,6 +1291,79 @@
         "helloworld_retro_sizes": {
           "hw_retro_setProp": "سپرائٹ کا سائز صرف ایک بار سیٹ کرنے کے لیے، آپ اس بلاک کو استعمال کر سکتے ہیں:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
           "hw_retro_changePropBy": "اگر آپ سپرائٹ کا سائز بار بار تبدیل کرنا چاہتے ہیں (events کے ساتھ)، تو یہ بلاک استعمال کریں:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "poetry_hoc_addSprites": {
+          "location_hint": "ہر اسپرائٹ کا ایک **مقام** ہوتا ہے. آپ اس بلاک پر پن پر کلک کر کے مقام کا تعین کر سکتے ہیں:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   لوکیشن بلاک پر پن ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) پر کلک کریں پھر اسکرین پر اپنے سپرائٹ کے لیے ایک نئی پوزیشن منتخب کریں.\n-   جب آپ کا کوڈ ختم ہو جائے تو \"Run\" بٹن کو دبائیں.",
+          "remove_hint": "آپ ایک مخصوص لائن نمبر پر سپرائٹ کو ہٹا سکتے ہیں. آپ اس کی جگہ لینے کے لیے ایک نیا سپرائٹ شامل کر سکتے ہیں:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "add_background_effect": "اس طرح کا ایک پس منظر بلاک تلاش کریں:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nاور اس طرح کا ٹیکسٹ ایفیکٹ بلاک تلاش کریں:\n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\n ان بلاکس کو اپنے ورک اسپیس میں 'when run' کے تحت مربوط کریں.",
+          "add_more_effects": "اس نظم کا موڈ بنانے میں مدد کے لیے مزید رنگ یا اثرات شامل کریں.\n\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"squiggles\"</title><title name=\"PALETTE\">\"sky\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value><next><block type=\"Poetry_setFont\"><title name=\"FONT\">\"Courier\"</title><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"typewriter\"</title></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_events1": {
+          "do_effect_hint": "یہ نیا 'do effect' بلاک ایک بار ایک نئے اثر کا اضافہ کر لے گا.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\n\nآپ اثر کو زیادہ دیر تک قائم رکھنے کے لیے ایک دوسرے کے اوپر ایک سے زیادہ `do effect` لگا سکتے ہیں.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
+          "background_effect_hint": "آپ اس طرح کے کوڈ کے ساتھ ایونٹ بلاک کے تحت دوسرے اثرات شامل کر سکتے ہیں:\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
+          "more_events_hint": "آپ اپنے پروگرام میں ایک سے زیادہ ایونٹ استعمال کر سکتے ہیں. نظم میں نئی سطروں سے مماثلت کے لیے مختلف اثرات کے دو واقعات کو استعمال کرنے کی کوشش کریں.\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound_hint": "اس بلاک کو تلاش کریں:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nیا یہ بلاک:\n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nاسے اپنے ورک سپیس میں 'when run' کے بلاک کے تحت مربوط کریں.",
+          "more_code": "اپنی منتخب کردہ آواز کے ساتھ ملانے کے لیے مزید اثرات اور رنگ شامل کریں.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "add_behavior": "اپنے کوڈ میں 'sprite begins' بلاک شامل کریں. اس بات کو یقینی بنائیں کہ آپ نے پہلے ہی اسپرائٹ بنا لیا ہے جن کو آپ ایک برتاؤ دینا چاہتے ہیں.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_spriteSizes": {
+          "size hint": "اس بلاک کو تلاش کریں اور `150` پر کلک کریں.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nجب نمبر `25` ہو تو کیا ہوتا ہے؟\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "اس پہیلی کو مکمل کرنے کے لیے 'when clicked' ایونٹ میں ایک یا زیادہ 'actor 1 say' بلاکس شامل کریں۔"
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "کیا آپ سڈ اور مینی میں آئس کرسٹل کی لڑائی کروا سکتے ہیں؟",
+          "iceage_free_play_b": "نانی سے ڈیاگو کا پیچھا کروائیں۔ اگر وہ اسے پکڑے تو کھیل کو جیت کے طور پر ختم کریں۔",
+          "iceage_free_play_c": "کیا آپ ڈیاگو پر سِڈ کے ذریعے سنو فلیکس پھینکوا سکتے ہیں اور ہر بار جب ایک اسے ہٹ کرتا ہے تو ڈیاگو بڑا ہو جائے؟ کھیل کو جیت کے طور پر ختم کریں اگر ڈیاگو 5 بار مارا جاتا ہے۔"
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "اس پہیلی کو حل کرنے کے لیے آپ کو صرف ایک بلاک شامل کرنے کی ضرورت ہے۔ ٹول بار سے 'say' بلاک کو گھسیٹیں اور اسے 'when run' ایونٹ بلاک سے جوڑیں جو پہلے سے ورک اسپیس میں ہے۔ پھر اندر، ٹائپ کریں \"ہیلو!\""
+        },
+        "iceage_hello2": {
+          "iceage_hello2_a": "اس پہیلی کو حل کرنے کے لیے، آپ کو `actor 1 say` بلاک کا استعمال کرتے ہوئے سِڈ سے کچھ کہلوانے کی ضرورت ہوگی۔ آپ کو مینی سے `actor 2 say` بلاک کے ساتھ کچھ کہلوانے کی بھی ضرورت ہوگی۔"
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": "اس پہیلی کو حل کرنے کے لیے ہر ایک `when ___ arrow` ایونٹس کو اس سے منسلک ایک مختلف `move actor 1` کمانڈ کی ضرورت ہوگی۔"
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "اس پہیلی کو حل کرنے کے لیے ہر ایک `when ___ arrow` ایونٹس کو اس سے منسلک ایک مختلف `move actor 1` کمانڈ کی ضرورت ہوگی۔"
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "اس پہیلی کے لیے، آپ یا تو ڈیاگو کو 200 پکسلز نیچے لے جا سکتے ہیں، یا مینی کو 200 پکسلز اوپر لے جا سکتے ہیں۔",
+          "iceage_move_to_actor_b": "اس چیلنج کو ختم کرنے کے لیے `play ___ sound` بلاک کو `when actor 1 touches actor 2` ایونٹ سے مربوط کریں۔"
+        },
+        "iceage_move_to_flag": {
+          "iceage_hello3_a": "اس پہیلی کو حل کرنے کے لیے 'move actor 1 right by 200 pixels' بلاک استعمال کریں۔"
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "اس پہیلی کو حل کرنے کے لیے `move actor 1 left`  اور `move actor 1 right` دونوں بلاکس کا استعمال کریں۔"
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "آپ کو `when actor 1 touches actor 2` ایونٹ کے نیچے دو بلاکس شامل کرنے کی ضرورت ہو گی۔",
+          "iceage_sound_and_points_b": "اس سطح کو پاس کرنے کے لیے آپ کو `score a point` بلاک اور 'play \\_\\_\\_\\_ sound\\`  بلاک دونوں کی ضرورت ہوگی۔"
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "آپ کو `when actor 1 touches actor 2` ایونٹ کے نیچے دو بلاکس شامل کرنے کی ضرورت ہو گی۔",
+          "iceage_sound_and_points_b": "اس سطح کو پاس کرنے کے لیے آپ کو `score a point` بلاک اور 'play \\_\\_\\_\\_ sound\\`  بلاک دونوں کی ضرورت ہوگی۔"
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "آپ نانی پر کب دل پھینکنا چاہتے ہیں؟ جب تیر دبایا جاتا ہے؟ جب آپ سڈ پر کلک کرتے ہیں؟ جب آپ نانی پر کلک کرتے ہیں؟ پسند آپکی ہے!",
+          "iceage_throw_hearts_b": "نانی کو دل ملنے پر خوش کرنے کے لیے، آپ کو 'when actor 2 touches projectile' ایونٹ کے نیچے واقع 'set actor 2 mood to happy' بلاک سے جوڑنا ہوگا۔"
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "اس پہیلی کو وہاں جانے کے لیے جہاں اس کی ضرورت ہے آپ کو صرف دو بلاکس شامل کرنے ہوں گے۔",
+          "iceage_warn_ice_age_b": "پروگرام شروع ہونے کے فوراً بعد واقع ہونے کے لیے دونوں نئے بلاکس کو 'when run' ایونٹ کے نیچے شامل کریں۔"
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "اس پہیلی کو وہاں جانے کے لیے جہاں اس کی ضرورت ہے آپ کو صرف دو بلاکس شامل کرنے ہوں گے۔",
+          "iceage_warn_ice_age_b": "پروگرام شروع ہونے کے فوراً بعد واقع ہونے کے لیے دونوں نئے بلاکس کو 'when run' ایونٹ کے نیچے شامل کریں۔"
         }
       }
     }

@@ -23,6 +23,7 @@ def sync_in
   localize_block_content
   localize_animation_library
   localize_shared_functions
+  localize_course_offerings
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
@@ -376,6 +377,20 @@ def localize_shared_functions
   end
 end
 
+# Aggregate every CourseOffering record's `key` as the translation key, and
+# each record's `display_name` as the translation string.
+def localize_course_offerings
+  puts "Preparing course offerings"
+
+  hash = {}
+  CourseOffering.all.sort.each do |co|
+    hash[co.key] = co.display_name
+  end
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.json"), "w+") do |f|
+    f.write(JSON.pretty_generate(hash))
+  end
+end
+
 def select_redactable(i18n_strings)
   redactable_content = %w(
     authored_hints
@@ -472,6 +487,7 @@ def localize_markdown_content
     ai.md.partial
     athome.md.partial
     break.md.partial
+    coldplay.md.partial
     csforgood.md
     curriculum/unplugged.md.partial
     educate/csc.md.partial

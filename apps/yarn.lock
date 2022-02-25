@@ -1591,19 +1591,19 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.1.tgz#77d1f975d75923792b6c72e0aa2ed9cf2bde7841"
-  integrity sha512-gmCY1Lx94chMNxC6ZOdQ/H0MBp+UzJKbJVLQ8JC77DpO5y3+LrFcM3y7DIcyCQEtbKq6qlgfY1nx4lAqdIIalw==
+"@code-dot-org/blockly@4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.4.tgz#21f536ecc5d246b2b64024d8223e05a768af2d93"
+  integrity sha512-mErd2a+vn0Dzcw93g3Pvs8flstgq+UnvB5AbxEo3XDsup9knNoyzgBJgm4oMPgc95OsARtTNzkK5nUCqUkyPtQ==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.3.tgz#93fbd9827a89cc3f240bafc33ab7b82f7643b200"
-  integrity sha512-92Ja8B0ktsadnEqNsJDgFEX39ZLtYL4SkFlpo50s2t8YRNTKx67QkAu9Kvxi/vlqDxZemMvpldkbHgRsZLtpsg==
+"@code-dot-org/dance-party@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.5.tgz#0872991761e8f4458c73ba3b7f288b2e747af240"
+  integrity sha512-Wr4zQgSpBh/Pus0+91Cshl93efew051PfVM4BBzcf0hqNGMVGj8Pztgvtqew07AnMrjxBVDITSlLzCfhHmyBQw==
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
@@ -1879,6 +1879,20 @@
     "@codemirror/text" "^0.19.0"
     style-mod "^4.0.0"
     w3c-keyname "^2.2.4"
+
+"@dsco_/common@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@dsco_/common/-/common-1.1.0.tgz#2309bc19fe90323330b9b0000fc27f80475c5b67"
+  integrity sha512-t+ZKe9Dg67Ap9mxzKtkdHOt95tVsJFtRLpUQcr/LEdPNcsojgqmc1L/nWMv/UbWv7I0GO3Kxd2Www/tLqE1IVg==
+
+"@dsco_/link@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@dsco_/link/-/link-1.1.2.tgz#4dacabd8e9d798bdd71319d04b5e7fd97bea653d"
+  integrity sha512-JB21X/KHjMrVkRN46L5proQ2WIUOgeixjEuZoPrGp9xbDLlPJJxOJktgfn9tNo4QbRKmxaEXB3569BWiQ/KdHQ==
+  dependencies:
+    "@dsco_/common" "^1.1.0"
+    classnames "^2.3.1"
+    prop-types "^15.8.1"
 
 "@emotion/cache@^0.8.8":
   version "0.8.8"
@@ -4606,6 +4620,11 @@ classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
+classnames@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+
 clean-css@4.2.x:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
@@ -6374,6 +6393,11 @@ eslint-plugin-prettier@^3.3.1:
   integrity sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==
   dependencies:
     prettier-linter-helpers "^1.0.0"
+
+eslint-plugin-react-hooks@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
+  integrity sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==
 
 eslint-plugin-react@^7.11.0:
   version "7.12.4"
@@ -9193,17 +9217,10 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isolate-components@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/isolate-components/-/isolate-components-1.4.0.tgz#324082d596f8224b8e027b1b94a46fa13471ab57"
-  integrity sha512-kO99YeQIXZyDwR8wn45M7zFvuKVxCOl71cqCCwZ9Xzx0Ff33d3Mgd7jghkv5KpoBuBt6KkPUcubJczlC+G3+cQ==
-  dependencies:
-    isolate-hooks "^1.5.0"
-
-isolate-hooks@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/isolate-hooks/-/isolate-hooks-1.5.0.tgz#232d98ea3fb6393210a72965d67f4218e1efed59"
-  integrity sha512-IRGJvwngCuWr1FadRpI9L4V2HS+vR2pUK6O3hcNBlk3Mk/zM6VytSfV8Rpcb3/duxJHy+JUVHW7Yk4BPK4FrVA==
+isolate-react@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/isolate-react/-/isolate-react-2.0.0.tgz#4c88cb773baff929c15908f4a9af60c04a2b6826"
+  integrity sha512-quxb6hTC5FyEzoMrh0nwAzmmPwmkUZCgHHPMeIfi1FyhEHxEaJif1coYOKZq2F8sHl0fB7uoT4rpuKdX5poM3g==
 
 isomorphic-fetch@^2.1.1:
   version "2.2.1"
@@ -12368,6 +12385,15 @@ prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
+prop-types@^15.8.1:
+  version "15.8.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
 property-information@^4.0.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-4.2.0.tgz#f0e66e07cbd6fed31d96844d958d153ad3eb486e"
@@ -12588,9 +12614,10 @@ querystring@0.2.0, querystring@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
-querystringify@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
+querystringify@^2.1.1:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
 radium@^0.25.2:
   version "0.25.2"
@@ -13905,6 +13932,7 @@ requires-port@0.x.x:
 requires-port@1.x.x, requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+  integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
 reqwest@^1.1.5:
   version "1.1.6"
@@ -15680,8 +15708,9 @@ typo-js@*:
   resolved "https://registry.yarnpkg.com/typo-js/-/typo-js-1.0.2.tgz#a7299b3e23e8b6765205d9b634367bab5887d1d9"
 
 ua-parser-js@^0.7.18:
-  version "0.7.19"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.31.tgz#649a656b191dffab4f21d5e053e27ca17cbff5c6"
+  integrity sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==
 
 uglify-js@3.4.x:
   version "3.4.10"
@@ -15976,10 +16005,11 @@ url-loader@^1.1.2:
     schema-utils "^1.0.0"
 
 url-parse@^1.1.8, url-parse@^1.4.3:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.4.tgz#cac1556e95faa0303691fec5cf9d5a1bc34648f8"
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.9.tgz#05ff26484a0b5e4040ac64dcee4177223d74675e"
+  integrity sha512-HpOvhKBvre8wYez+QhHcYiVvVmeF6DVnuSOOPhe3cTum3BnqHhvKaZm8FU5yTiOu/Jut2ZpB2rA/SbBA1JIGlQ==
   dependencies:
-    querystringify "^2.0.0"
+    querystringify "^2.1.1"
     requires-port "^1.0.0"
 
 url-toolkit@^2.1.1, url-toolkit@^2.1.3:
@@ -16664,8 +16694,9 @@ xtend@~4.0.0:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"

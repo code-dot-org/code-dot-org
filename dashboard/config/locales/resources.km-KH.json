@@ -2,54 +2,6 @@
   "km-KH": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-ml/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-societal/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "ai-training/oceans/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "sprite_lab_documentation/coursef/2021": {
           "name": "ឯកសារ Sprite Lab"
         },
@@ -131,201 +83,26 @@
         "teacher_forum_1/coursec/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "password_power-up_lesson_slides/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "graph-paper-programming/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "activity-answer-graph-paper/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "assessment-answer-graph-paper/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pair-programming-vid/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "relay-assessment/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-video-relay-programming/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-project-guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-playlist/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance_party_unplugged/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_2/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling-faces-image/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត",
-          "url": ""
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត",
-          "url": ""
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត",
-          "url": ""
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត",
-          "url": ""
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត",
-          "url": ""
-        },
-        "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
         "implementation_guide/coursed/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត",
-          "url": ""
-        },
-        "lesson_type_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "វេទិការគ្រូបង្រៀន",
-          "url": ""
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "វេទិការគ្រូបង្រៀន"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "ឯកសារ Sprite Lab"
@@ -353,6 +130,69 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "លេខចៃដន្យ"
+        },
+        "functions_2/csd/2021": {
+          "name": "អនុ​គមន៍"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "វីដេអូ៖ ម៉ាស៊ីនចេះរៀន"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "naming_variables/csd/2021": {
+          "name": "ការដាក់ឈ្មោះអថេរ"
+        },
+        "variables_1/csd/2021": {
+          "name": "អ​ថេរ"
+        },
+        "random_numbers/csd/2021": {
+          "name": "លេខចៃដន្យ"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "collision_detection/csd/2021": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "ល្បឿននិងលំនាំរាប់"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "អនុ​គមន៍"
+        },
+        "functions_1/csd/2021": {
+          "name": "អនុ​គមន៍"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "lists/csd/2021": {
+          "name": "បញ្ជី"
         }
       }
     }

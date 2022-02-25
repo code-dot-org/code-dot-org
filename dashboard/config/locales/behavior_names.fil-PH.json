@@ -157,28 +157,44 @@
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
         },
         "helloworld_animals_behaviors": {
-          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         },
         "helloworld_emoji_behaviors": {
-          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         },
         "helloworld_retro_behaviors": {
-          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         },
         "helloworld_animals_sounds": {
-          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         },
         "helloworld_emoji_sounds": {
-          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         },
         "helloworld_food_sounds": {
-          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         },
         "helloworld_retro_sounds": {
-          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         },
         "helloworld_food_behaviors": {
-          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         },
         "poetry_hoc_spriteSizes": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
@@ -197,6 +213,26 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south and looping": "gumagalaw sa timog at umiikot"
         }
       }
     }

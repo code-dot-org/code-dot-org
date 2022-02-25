@@ -1,5 +1,5 @@
 ---
-title: "#CSforGood in your class"
+title: "#CSforGood في فصلك"
 video_player: true
 theme: responsive
 social:
@@ -14,15 +14,15 @@ social:
   og:video:type: ''
 ---
 
-<h1>#CSforGood in your class</h1>
+<h1>#CSforGood في فصلك</h1>
 
 <div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
     <img src="/images/csforgood_1-1.png" style="width:100%">
 </div>
 
 <div class="col-60">
-<p>The events of this year—a global pandemic, economic recession, worldwide protests against racial inequities—have shown us both the great promise and the perils of our technology. We rely on technology to keep us connected (Zoom, anyone?), but we’ve also seen how biased algorithms can divide us on the basis of race or gender. We rely on our technology to keep us informed, but we’ve also seen how easy it is to spread misinformation. We rely on our technology to stay productive, but we’ve left behind those who don’t have access to the internet.</p>
-<p>How CS and technology are used and applied in the real world is a crucial part of learning computer science. We can help students understand some of the challenges that people around the world face and inspire them to think deeply about the role computer science can play in creating a more equitable and sustainable world.</p>
+<p>قد أظهرت لنا أحداث هذا العام - جائحة عالمية، ركود اقتصادي، احتجاجات حول العالم ضد عدم المساواة العرقية - مخاطر تكنولوجيتنا وسماتها الواعدة. نعتمد على التكنولوجيا لنبقى على تواصل (Zoom، أي شخص؟) لكننا قد رأينا أيضًا كيف يمكن للخوارزميات المُغرضة أن تفرق بيننا على أساس العرق أو الجنس. نحن نعتمد على تكنولوجيتنا لنبقى على اطلاع لكننا رأينا أيضًا مدى سهولة انتشار المعلومات المُضللة. نحن نعتمد على تكنولوجيتنا لنبقى منتجين لكننا تجاوزنا أولئك الذين لا يقدرون على الوصول إلى الإنترنت.</p>
+<p>كيفية استخدام التكنولوجيا وعلوم الكمبيوتر وتطبيقهما في الوصول للعالم الواقعي هو جزء حيوي من تعلم علوم الكمبيوتر. يمكننا مساعدة الدارسين على فهم بعض من التحديات التي يواجهها الناس حول العالم ونلهمهم للتفكير بعمق في الدور الذي يمكن أن تلعبه علوم الكمبيوتر في خلق عالم أكثر مساواةً واستدامةً.</p>
 </div>
 
 <div style="clear:both"></div>
@@ -34,73 +34,73 @@ social:
 </div>
 
 <a id="discuss"></a>
-<h2>Discussing #CSforGood with your students</h2>
-<p>Here are some themes and questions to spark discussion in your classroom about the role of computer science in creating positive social change. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">Download this discussion guide as a PDF</a>.</p>
+<h2>مناقشة #CSforGood مع تلاميذك</h2>
+<p>إليك بعض الأفكار والأسئلة لفتح مناقشة في فصلك عن دور علوم الكمبيوتر في خلق تغيير اجتماعي إيجابي. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">حمل دليل المناقشة كـ PDF</a>.</p>
 
-<h3><strong>We learn CS to detect problems</strong></h3>
+<h3><strong>نتعلم علوم الكمبيوتر لكشف المشكلات</strong></h3>
 
 <div class="educate-callout-box" style="width:300px; height:235px; background-color:#7665a0; color:#ffffff; padding:20px; border-radius:15px; float:right; margin-left:20px">
-  <p><strong>Is your class virtual this year?</strong></p>
-  <p>Try using breakout rooms to pair or group students together.</p>
-  <p>If breakout rooms aren’t available, use a shared document or slide deck (<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">template</a>), designating sections of the document or a single slide for each group of students.</p>
+  <p><strong>هل فصلك افتراضي هذا العام؟</strong></p>
+  <p>حاول استخدام الغرف الجانبية لجمع الدارسين معًا.</p>
+  <p>لو كانت الغرف الجانبية غير متوفرة استخدم وثيقة مشتركة أو مجموعة شريحة العرض(<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">template</a>)، وخصص أجزاء من الوثيقة أو شريحة عرض واحدة لكل مجموعة من الدارسين.</p>
 </div>
 
-<p>Building a society we want to live in begins with understanding the problems we need to address. We can use technology to detect and even predict problems.</p>
-<p>Have students read this story about <a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank">how smartphones are being used to detect earthquakes</a> and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
-<p><i>Questions for discussion:</i></p>
+<p>إن بناء مجتمع نرغب في العيش فيه يبدأ بفهم المشكلات التي نحتاج لمعالجتها. يمكننا استخدام التكنولوجيا للكشف عن المشكلات بل والتنبؤ بها.</p>
+<p>دع الدارسين يقرؤون هذه القصة التي تتحدث عن<a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank"> كيفية استخدام الهواتف الذكية للكشف عن الزلازل </a> ثم دعهم يعملون في أزواج أو مجموعات للإجابة عن الأسئلة أدناه. ثم ناقش المسألة كحصة.</p>
+<p><i>أسئلة للمناقشة:</i></p>
 <ul>
-<li>What technology does the article discuss?</li>
-<li>What problem is Google trying to solve? Why is this important?</li>
-<li>What are other ways that computer science or technology can help detect problems?</li>
+<li>ما الذي تفعله التكنولوجيا يناقشه المقال؟</li>
+<li>ما هي المشكلة التي يحاول جوجل حلها؟ لماذا هي مهمة؟</li>
+<li>ما هي الطرق الأخرى التي يمكن لعلوم الكمبيوتر أو التكنولوجيا المساعدة فيها لاكتشاف المشكلات؟</li>
 </ul>
 
-<h3><strong>We learn CS to find creative solutions</strong></h3>
-<p>Learning computer science gives us a foundation to find solutions. It is our creativity then that enables us in every industry and aspect of life to design solutions built upon that foundation.</p>
-<p>Have students read this story about <a href="https://www.technologyreview.com/2020/09/22/1008675/ai-planners-minecraft-urban-design-healthier-happier-cities/" target="_blank">how urban planners are using AI in Minecraft to design better cities</a>, and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
-<p><i>Questions for discussion:</i></p>
+<h3><strong>نتعلم علوم الكمبيوتر لإيجاد حلول خلاقة</strong></h3>
+<p>يعطينا تعلم علوم الكمبيوتر ركيزة لإيجاد الحلول. إن إبداعنا إذًا هو ما يمكننا في كل صناعة ووجه من أوجه الحياة على تصميم حلول مبنية على تلك الركيزة.</p>
+<p>اجعل طلابك يقرؤون هذه القصة عن<a href="https://www.technologyreview.com/2020/09/22/1008675/ai-planners-minecraft-urban-design-healthier-happier-cities/" target="_blank">كيف يستخدم مخططو المدن الذكاء الاصطناعي في Minecraft لتصميم مدن أفضل</a>، ثم اعملوا في أزواج أو مجموعات لإجابة الأسئلة أدناه. ثم ناقش المسألة كحصة.</p>
+<p><i>أسئلة للمناقشة:</i></p>
 <ul>
-<li>What technology does the article discuss?</li>
-<li>What challenge or challenges are participants trying to address?</li>
-<li>Think of the technology that you use on a daily basis. What does it help you do? What problems or challenges does it help you solve?</li>
-<li>Can you think of a time you used technology in a way it wasn’t necessarily intended, in order to solve a problem?</li>
+<li>ما الذي تفعله التكنولوجيا يناقشه المقال؟</li>
+<li>ما هو التحدي أو التحديات التي يحاول المشاركون معالجتها؟</li>
+<li>فكر في التكنولوجيا التي تستخدمها بشكل يومي. ما الذي تساعدك على فعله؟ ما هي المشكلات أو التحديات التي تساعدك على حلها؟</li>
+<li>هل يمكنك التفكير في وقت استخدمت فيه التكنولوجيا بطريقة لم تكن بالضرورة مقصودة بهدف حل مشكلة ما؟</li>
 </ul>
 
-<h3><strong>We learn CS to connect with each other</strong></h3>
+<h3><strong>نتعلم علوم الكمبيوتر لنتواصل مع بعضنا الآخر</strong></h3>
 
 <iframe src="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/" id="cbsNewsVideo" allowfullscreen allow="fullscreen" frameborder="0" width="325px" height="183px" style="float:right; margin-left:20px" mark="crwd-mark"></iframe>
 
-<p>From video chats and classes to apps that allow us to sing together remotely, people have built technical innovations that have kept us connected with some semblance of community through a global pandemic. And, we will continue to find ways to humanize technology to unite us.</p>
-<p>Have students watch this video (<a href="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/?intcid=CNM-00-10abd1h" target="_blank">link to original video at CBS News</a>) of students from Chino Valley Unified School District singing an a capella version of “Over the Rainbow” via video conference after covid-19 canceled their annual Choral Festival. Then have them work in pairs or groups to answer the questions below.</p>
-<p><i>Questions for discussion:</i></p>
+<p>بدءًا بدردشات الفيديو والحصص المعروضة بالفيديو وصولًا إلى التطبيقات التي سمحت لنا بالغناء معًا من على بعد، طور الناس ابتكارات تقنية جعلتنا متواصلين معًا فيما يشبه المجتمع أثناء جائحة عالمية. وسنستمر في إيجاد طرق لإضفاء الطابع البشري على التكنولوجيا لتوحيدنا.</p>
+<p>اجعل الدارسين يشاهدون هذا الفيديو(<a href="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/?intcid=CNM-00-10abd1h" target="_blank">link to original video at CBS News</a>) الذي يعرض تلاميذ من مدرسة وادي تشينو الموحدة يغنون نسخة بدون موسيقى من أغنية "Over the Rainbow" من خلال مؤتمر فيديو بعدما ألغى كوفيد-19 احتفالهم الغنائي السنوي. ثم اجعلهم يعملون في أزواج أو مجموعات للإجابة على الأسئلة أدناه.</p>
+<p><i>أسئلة للمناقشة:</i></p>
 <ul>
-<li>Name as many of the technologies as you can that enabled these students to sing together despite stay-at-home orders due to covid.</li>
-<li>Do you use any of these technologies? How frequently--weekly? daily?</li>
-<li>Have you used technology lately to make art? Record music? Write poetry? Play games with friends? Talk to family members? If you did not have access to these technologies, what would you do?</li>
-<li>Should everyone have access to these technologies? Why or why not?</li>
+<li>اذكر أكبر قدر ممكن من التكنولوجيات التي يمكنها تمكين هؤلاء الدارسين من الغناء معًا على الرغم من أوامر البقاء في المنزل بسبب كوفيد.</li>
+<li>هل تستخدم أيًّا من هذه التكنولوجيات؟ كم عدد المرات--أسبوعيًّا؟ يوميًّا؟</li>
+<li>هل استخدمت التكنولوجيا مؤخرًا لعمل فن؟ تسجيل موسيقى؟ كتابة شعر؟ لعب لعبة مع الأصدقاء؟ التحدث مع أحد أفراد الأسرة؟ لو لم يكن لديك قدرة على الوصول إلى هذه التكنولوجيات، ماذا كنت ستفعل؟</li>
+<li>هل يجب أن يكون كل شخص قادرًا على الوصول لهذه التكنولوجيات؟ لماذا أو لما لا؟</li>
 </ul>
 
-<h3><strong>We learn CS to ensure equity and inclusion</strong></h3>
-<p>The pandemic has exposed the digital divide like never before. Everyone must have the opportunity to learn computer science to have a part in building a future where all of us are included and all our voices heard.</p>
-<p>Have students read this story about a new tool that <a href="https://www.therobotreport.com/princeton-tool-helps-clear-biases-computer-vision/" target="_blank">helps root out potential biases in image sets that are used to train artificial intelligence (AI)</a>, and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
+<h3><strong>نتعلم علوم الكمبيوتر للتأكيد على المساواة وعدم الإقصاء</strong></h3>
+<p>كشفت الجائحة عن الانقسام الرقمي كما لم يفعل شيء من قبل. يجب أن يحصل كل شخص على فرصة لتعلم علوم الكمبيوتر للمشاركة في بناء مستقبل يضمنا ويُسمع فيه أصواتنا جميعًا.</p>
+<p>اجعل الدارسين يقرؤون هذه القصة عن أداة جديدة<a href="https://www.therobotreport.com/princeton-tool-helps-clear-biases-computer-vision/" target="_blank">تساعد على تحديد الانحيازات المحتملة في مجموعات صور تُستخدم لتدريب الذكاء الاصطناعي</a>، ثم اعملوا معًا في أزواج أو مجموعات للإجابة على الاسئلة أدناه. ثم ناقش المسألة كحصة.</p>
 <ul>
-<li>What does this tool do and what problem is it trying to solve?</li>
-<li>What do you think ‘open-source’ means? Why would the researchers make their tool open-source?</li>
-<li>What are some of the examples mentioned in the article of biases in image sets? Can you think of any others?</li>
-<li>Why is it important to be able to identify these biases? How does this relate to equity and inclusion?</li>
+<li>ما الذي تفعله هذه الأداة وما هي المشكلة التي تحاول حلها؟</li>
+<li>ما معنى "مصدر مفتوح" في اعتقادك؟ لماذا قد يجعل الباحثون أداتهم مصدرًا مفتوحًا؟</li>
+<li>ما هي بعض النماذج المذكورة في المقال عن الانحيازات في مجموعات الصور؟ هل يمكنك التفكير في نماذج أخرى؟</li>
+<li>لماذا من المهم أن نكون قادرين على تحديد هذه الانحيازات؟ كيف يرتبط هذا بالمساواة والشمول؟</li>
 </ul>
 
 <a id="tutorials"></a>
-<h2>#CSforgood tutorials & lesson plans</h2>
-<p>If you're looking for an engaging way to introduce your students to the concept of #CSforGood, there are lots of tutorials and activities to choose from!</p>
+<h2>دورات تعليمية وخطط درس #CSforgood</h2>
+<p>لو كنت تبحث عن طريقة ممتعة لتقديم مفهوم #CSforGood للدارسيك، هناك العديد من الدورات التعليمية والأنشطة التي يمكنك الاختيار من بينها!</p>
 
-<h3>Featured:</h3>
+<h3>متميز:</h3>
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <a href="https://code.org/oceans" target="_blank"><img src="/images/tutorials/hoc2019/oceans.png" style="width: 100%"></a>
 <br>
 <a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>AI for Oceans</strong></h3></a>
-<p>Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</p>
-<p><i>From Code.org. For grades 3 and up.</i></p>
+<p>علوم الكمبيوتر هي أكثر من جرد تكويد! تعلم عن الذكاء الاصطناعي والتعلم الآلي وتدريب البيانات والانحيازات أثناء استكشاف القضايا الأخلاقية وكيف يمكن استخدام الذكاء الاصطناعي لمعالجة المشكلات العالمية.</p>
+<p><i>من Code.org. للصفوف من الثالث لما هو أعلى.</i></p>
 
 </div>
 
@@ -109,8 +109,8 @@ social:
 <a href="https://aka.ms/HourofCode2020" target="_blank"><img src="/images/tutorials/hoc2020/mee_empathy.jpg" style="width: 100%"></a>
 <br>
 <a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>A Minecraft Tale of Two Villages</strong></h3></a>
-<p>Use the power of code to bring two villages together. Players will experience empathy and compassion for their neighbors, learn cooperation and inclusion, and embrace the diversity that makes us all uniquely special.</p>
-<p><i>From Minecraft: Education Edition. For grades 2 and up.</i></p>
+<p>استخدم قوة الكود للتوحيد بين قريتين. سيختبر اللاعبون التعاطف والرحمة لجيرانهم ويتعلمون التعاون والشمول وقبول التنوع الذي يجعلنا جميعًا متميزين بصورة فريدة.</p>
+<p><i>من Minecraft: نسخة التعليم. للصفوف من الثاني لما هو أعلى.</i></p>
 
 </div>
 
@@ -119,52 +119,52 @@ social:
 <a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><img src="/images/tutorials/hoc2020/csfirst_unplugged.png" style="width: 100%"></a>
 <br>
 <a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS First Unplugged</strong></h3></a>
-<p>No computer or internet? No problem. Try the CS First Unplugged activities to explore how computer science can solve problems like helping people stay connected while apart. "Plugged in" Scratch activities are available too!</p>
-<p><i>From Google. For grades 2 through 8.</i></p>
+<p>لا يوجد كمبيوتر أو إنترنت؟ لا توجد مشكلة. جرب أنشطة علوم الكمبيوتر غير الموصولة أولًا لاستكشاف كيف يمكن لعلوم الكمبيوتر حل مشكلات مثل مساعدة الناس على البقاء على اتصال على الرغم من بعدهم. "موصول" أنشطة الخدش متوفرة أيضًا!</p>
+<p><i>من جوجل. من الصف الثاني إلى الثامن.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<h3>More #CSforGood activities and lesson plans:</h3>
-<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: Code Quest</a> (SciGirls/Twin Cities PBS): In this online coding adventure, take Subby the submarine through underwater challenges, using code to find various items and collect scientific data on the ocean floor. A self-guided tutorial for beginners in grades 2-8.</p>
-<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">Climate Clock</a> (Vidcode): In this Hour of Code activity, students will be guided through the construction of their own climate clock. They will engage with objects, properties, variables, functions, and loops, and customize text to convey their message for the world and their hopes for the future. A self-guided tutorial for beginners in grades 6 and up.<p>
-<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Code a Happy Place Meditation App</a> (CodeSpeak Labs): It’s been a stressful year for students, but practicing mindfulness can be a challenge. Learn to program a meditation app that transports you to your "happy place." For beginners in grades 2 through 8. Great as a teacher-guided tutorial.</p>
-<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Robot Feelings: The Kind Playground</a> (iRobot): Our robot is learning how to make kind choices when playing with friends. In this game, help Root practice by making four kind decisions in a row. If Root makes a bad choice, it has to start all the way at the beginning again! Let's play together! For beginners in kindergarten through grade 5. Root robot is optional.</p>
-<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Saving Sea Turtles</a> (micro:bit): Create a prototype of a low-power, red LED beach light that can be used for lighting on beach paths which is also safe for sea turtles. For beginners in grades 6-8. Great for learning at home.</p>
+<h3>المزيد من أنشطة وخطط دروس #CSforGod:</h3>
+<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: Code Quest</a> (SciGirls/Twin Cities PBS):في هذه المغامرة الخاصة بالتكويد، خذ الغواصة Subby من خلال تحديات ما تحت الماء مستخدمًا الكود لإيجاد عناصر متنوعة وجمع بيانات علمية عن قاع المحيط. A self-guided tutorial for beginners in grades 2-8.</p>
+<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">Climate Clock</a> (Vidcode): في هذا النشاط المتعلق بـHour of Code، سيتم إرشاد الدارسين من خلال بناء ساعة المناخ الخاصة بهم. سيتعاملون مع أشياء وخصائص ومتغيرات وإجراءات وحلقات ويخصصون النص لنقل رسالتهم للعالم وآمالهم للمستقبل. دورة تعليمية ذاتية للمبتدئين بدءًا من الصف السادس لما أعلى.<p>
+<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Code a Happy Place Meditation App</a> (CodeSpeak Labs):لقد كان عامًا مُجهدًا للدارسين ولكن ممارسة اليقظة يمكن أن تمثل تحديًا. تعلم برمجة تطبيق تأمل ينقلك إلى "مكانك المفضل" للمبتدئين من الصفوف الثاني إلى الثامن. مفيد كفيديو تعليمي بتوجيه المعلم.</p>
+<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Robot Feelings: The Kind Playground</a> (iRobot): يتعلم الروبوت الخاص بنا كيف يقوم باختيارات جيدة عند اللعب مع الأصدقاء. في هذه اللعبة، ساعد ممارسة Root من خلال اتخاذ أربعة قرارات جيدة على التوالي. لو قام Root باختيار سيء، يجب أن يبدأ من جديد! لنلعب معًا! للمبتئدين في روضة الأطفال عبر الصف الخامس. روبوت Root اختياري.</p>
+<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Saving Sea Turtles</a> (micro:bit): انشئ نموذجًا مبدئيًّا لضوء شاطئ منخفض الطاقة بنور LED أحمر يمكن استخدامه لإنارة طرق الشاطئ التي هي أيضًا مكان آمن لسلاحف البحر. للمبتئدين في الصفوف من السادس إلى الثامن. ممتاز للتعلم من المنزل.</p>
 <br> 
-<p>See the full list of Hour of Code activities and lesson plans, including many more #CSforGood-themed tutorials, at <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>!</p>
+<p>اقرأ القائمة الكاملة لنشاطات Hour of Code وخطط الدرس بما في ذلك المزيد من الفيديوهات التعليمية لـ#CSforGood على<a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>!</p>
 
 <a id="realworld"></a>
-<h2>Go further: How people are using #CSforgood in the real world</h2>
-<p>Every day, organizations and individuals are finding new ways to use computer science to help solve the world's challenges. Here are some real-world examples to take a look at with your classroom.</p>
+<h2>تعمق أكثر: كيف يستخدم الناس #CSforGood في العالم الواقعي</h2>
+<p>تجد المنظمات والأشخاص كل يوم طرقًا جديدة لاستخدام علوم الكمبيوتر للمساعدة على إيجاد حلول للتحديات العالمية. إليك بعض نماذج العالم الواقعي لتلقي نظرة عليها مع فصلك.</p>
 
-<h3>Detecting problems</h3>
+<h3>الكشف عن المشكلات</h3>
 <ul>
-<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">Predicting the spread of COVID-19 with smart thermometers</a></li>
-<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">Scientists Can Now Take Virtual Walks Through Human Cells</a></li>
-<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">The AI that spots Alzheimer's from cookie drawing</a></li>
+<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">توقع انتشار كوفيد-19 من خلال موازين الحرارة الذكية</a></li>
+<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">يمكن للعلماء الآن أخذ جولة افتراضية داخل خلايا الإنسان</a></li>
+<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">الذكاء الاصطناعي الذي يكشف عن ألزهايمر من رسم بسكويت</a></li>
 </ul>
 
-<h3>Finding creative solutions</h3>
+<h3>إيجاد حلول خلاقة</h3>
 <ul>
-<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">Google's parent company is flying balloons with 'floating cell phone towers' across the ocean to bring internet to Kenya's Rift Valley</a></li>
-<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">The ambitious effort to piece together America’s fragmented health data</a></li>
-<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">The next generation of power plants will be virtual</a></li>
+<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">تُطيِّر شركة جوجل الأم بالون طائر "يطوف بأبراج الهواتف الخلوية" عبر المحيط لجلب الإنترنت إلى الوادي المتصدع في كينيا</a></li>
+<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">المجهود الطموح لجمع البيانات الصحية المجزئة لأمريكا</a></li>
+<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">الجيل القادم لمصانع الطاقة سيكون افتراضيًّا</a></li>
 </ul>
 
-<h3>Connecting to each other</h3>
+<h3>الاتصال ببعضها البعض</h3>
 <ul>
-<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">Tech From The 1990s Is Helping Musicians Play In Time While Apart</a></li>
-<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">Video Games Connect Chronically Ill Children Isolated at Home, Hospital</a></li>
+<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">تساعد التكنولوجيا الموسيقيين من التسعينيات على لعب الموسيقى في نفس الوقت على الرغم من انفصالهم</a></li>
+<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">تربط ألعاب الفيديو الأطفال المرضى المعزولين في المنزل والمستشفى بعضهم ببعض بشكل متزامن</a></li>
 </ul>
 
-<h3>Ensuring equity and inclusion</h3>
+<h3>ضمان العدالة والشمول</h3>
 <ul>
-<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">Fake Data Could Help Solve Machine Learning’s Bias Problem—if We Let It</a></li>
-<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">Native American teachers, entrepreneurs seek new ways to close digital divide</a></li>
-<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">Gamers Forge Their Own Paths When It Comes to Accessibility</a></li>
+<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">يمكن أن تساعد البيانات المزيفة في حل مشكلة انحيازات التعلم الآلي - لو سمحنا لها بذلك</a></li>
+<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">يسعى المدرسون ورجال الأعمال الأمريكيون الأصليون إلى طرق جديدة لإنهاء الانقسام الرقمي</a></li>
+<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">يصنع اللاعبون طرقهم الخاصة عندما يتعلق الأمور بالقدرة على الوصول</a></li>
 </ul>
 
 <a id="reachout"></a>
-<h2>Reach out to us!</h2>
-<p>We want to hear about how your students are engaging with #CSforGood! Use the hashtag #CSforGood or send your #CSforGood stories to <a href="mailto:csforgood@code.org">csforgood@code.org</a>.
+<h2>تواصل معنا!</h2>
+<p>نريد أن نسمع عن كيف يتعامل الدارسون لديك مع #CSforGood! استخدم هاشتاج #CSforGood أو ارسل قصص #CSforGood الخاصة بك إلى<a href="mailto:csforgood@code.org">csforgood@code.org</a>.

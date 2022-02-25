@@ -25,6 +25,7 @@ const REFRESH_SECTION_LOCK_STATUS = 'lessonLock/REFRESH_SECTION_LOCK_STATUS';
 
 const initialState = {
   lessonsBySectionId: {},
+  lessonsBySectionIdLoaded: false,
   lockDialogLessonId: null,
   // The locking info for the currently selected section/lesson
   lockStatus: [],
@@ -51,7 +52,8 @@ export default function reducer(state = initialState, action) {
       lessonsBySectionId: _.mapValues(
         action.sections,
         section => section.lessons
-      )
+      ),
+      lessonsBySectionIdLoaded: true
     };
   }
 

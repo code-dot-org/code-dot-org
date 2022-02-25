@@ -7,9 +7,10 @@ import JavalabButton from './JavalabButton';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {connect} from 'react-redux';
-import {setSource} from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 
 const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
 
@@ -19,7 +20,7 @@ const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
  */
 class Backpack extends Component {
   static propTypes = {
-    isDarkMode: PropTypes.bool.isRequired,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     isDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
@@ -192,7 +193,7 @@ class Backpack extends Component {
   };
 
   render() {
-    const {isDarkMode, isDisabled} = this.props;
+    const {displayTheme, isDisabled} = this.props;
     const {
       dropdownOpen,
       backpackFilenames,
@@ -212,31 +213,40 @@ class Backpack extends Component {
       !backpackLoadError &&
       backpackFilenames.length === 0;
 
+    const backpackIcon = (
+      <i style={{marginRight: 8, fontSize: 13}}>
+        <img
+          src="/blockly/media/javalab/backpack.png"
+          alt="backpack icon"
+          style={styles.backpackIcon}
+        />
+      </i>
+    );
+
+    // Use PaneButton as primary Backpack button
+    // to align with other buttons in the JavalabEditor header,
+    // which all use PaneButton.
     return (
       <>
-        <JavalabButton
-          icon={
-            <img
-              src="/blockly/media/javalab/backpack.png"
-              alt="backpack icon"
-              style={styles.backpackIcon}
-            />
-          }
-          text={javalabMsg.backpackLabel()}
+        <PaneButton
+          id="javalab-editor-backpack"
+          icon={backpackIcon}
+          onClick={this.toggleDropdown}
+          headerHasFocus
+          isRtl={false}
+          label={javalabMsg.backpackLabel()}
+          leftJustified
+          isDisabled={isDisabled}
           style={{
-            ...styles.buttonStyles,
             ...(dropdownOpen && styles.dropdownOpenButton)
           }}
-          isHorizontal
-          onClick={this.toggleDropdown}
-          isDisabled={isDisabled}
         />
         {dropdownOpen && (
           <div
             className="ignore-react-onclickoutside"
             style={{
               ...styles.dropdownContainer,
-              ...(isDarkMode && styles.dropdownDark)
+              ...(displayTheme === DisplayTheme.DARK && styles.dropdownDark)
             }}
           >
             {showFiles && (
@@ -252,7 +262,8 @@ class Backpack extends Component {
                       <div
                         style={{
                           ...styles.fileListItem,
-                          ...(isDarkMode && styles.fileListItemDark)
+                          ...(displayTheme === DisplayTheme.DARK &&
+                            styles.fileListItemDark)
                         }}
                         key={`backpack-file-${index}`}
                       >
@@ -301,19 +312,21 @@ class Backpack extends Component {
           </div>
         )}
         <JavalabDialog
+          className="ignore-react-onclickoutside"
           isOpen={openDialog === Dialog.IMPORT_WARNING}
           handleConfirm={() => this.importFiles(selectedFiles)}
           handleClose={() => this.setState({openDialog: null})}
           message={fileImportMessage}
-          isDarkMode={isDarkMode}
+          displayTheme={displayTheme}
           confirmButtonText={javalabMsg.replace()}
           closeButtonText={javalabMsg.cancel()}
         />
         <JavalabDialog
+          className="ignore-react-onclickoutside"
           isOpen={openDialog === Dialog.IMPORT_ERROR}
           handleConfirm={() => this.setState({openDialog: null})}
           message={fileImportMessage}
-          isDarkMode={isDarkMode}
+          displayTheme={displayTheme}
           confirmButtonText={msg.dialogOK()}
         />
       </>
@@ -327,49 +340,30 @@ const styles = {
     position: 'absolute',
     flexDirection: 'column',
     top: 30,
-    backgroundColor: color.lightest_gray,
+    backgroundColor: color.white,
     zIndex: 20,
     borderWidth: 1,
-    borderColor: color.darkest_gray,
+    borderColor: color.light_gray,
     borderStyle: 'solid',
-    borderTopWidth: 0,
     borderRadius: 4,
     maxWidth: '35%',
     maxHeight: '80%',
     minWidth: 150,
-    color: color.darkest_gray
+    color: color.dark_charcoal,
+    marginLeft: 3
   },
   dropdown: {
     overflow: 'auto',
-    padding: 10
+    padding: '10px 0',
+    minWidth: 'inherit'
   },
   dropdownDark: {
-    backgroundColor: color.darkest_gray,
-    color: color.lightest_gray,
-    borderColor: color.lightest_gray
+    backgroundColor: color.darkest_slate_gray,
+    color: color.background_gray
   },
   listContainer: {
-    width: 'fit-content'
-  },
-  buttonStyles: {
-    cursor: 'pointer',
-    float: 'right',
-    backgroundColor: color.light_purple,
-    margin: '3px 3px 3px 0px',
-    height: 24,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    // prevent jitter when the button is clicked
-    borderColor: color.purple,
-    borderRadius: 4,
-    fontSize: 13,
-    color: color.white,
-    padding: '0px 12px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    lineHeight: '18px',
-    ':hover': {
-      backgroundColor: color.cyan
-    }
+    width: 'fit-content',
+    minWidth: 'inherit'
   },
   dropdownOpenButton: {
     backgroundColor: color.cyan
@@ -377,15 +371,16 @@ const styles = {
   fileListItem: {
     display: 'flex',
     flexDirection: 'row',
-    padding: '5px',
+    boxSizing: 'border-box',
+    padding: '5px 15px',
     width: '100%',
     ':hover': {
-      backgroundColor: color.lighter_gray
+      backgroundColor: color.background_gray
     }
   },
   fileListItemDark: {
     ':hover': {
-      backgroundColor: color.black
+      backgroundColor: color.dark_charcoal
     }
   },
   fileListLabel: {
@@ -397,7 +392,11 @@ const styles = {
     color: color.white,
     fontSize: 13,
     padding: '5px 16px',
-    width: 'fit-content'
+    width: 'fit-content',
+    borderColor: color.orange,
+    ':disabled': {
+      borderColor: color.light_gray
+    }
   },
   backpackIcon: {
     height: 15,
@@ -425,12 +424,7 @@ const styles = {
 };
 
 export const UnconnectedBackpack = Backpack;
-export default connect(
-  state => ({
-    backpackApi: state.javalab.backpackApi,
-    sources: state.javalab.sources
-  }),
-  dispatch => ({
-    setSource: (filename, source) => dispatch(setSource(filename, source))
-  })
-)(onClickOutside(Radium(UnconnectedBackpack)));
+export default connect(state => ({
+  backpackApi: state.javalab.backpackApi,
+  sources: state.javalab.sources
+}))(onClickOutside(Radium(UnconnectedBackpack)));

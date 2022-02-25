@@ -5,12 +5,100 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "نظم کا فن 1 - تعارف",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "نظموں کی فہرست",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "making_sprites/coursef/2021": {
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "نصابی رہنما"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "ورچوئل اسباق میں ترمیم",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "نصابی رہنما"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "ورچوئل اسباق میں ترمیم",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "نصابی رہنما"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "ورچوئل اسباق میں ترمیم",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "نصابی رہنما"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "ورچوئل اسباق میں ترمیم",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "نصابی رہنما"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "ورچوئل اسباق میں ترمیم",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
         "variables_video/express/2021": {
           "name": "متغیرات"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "نصابی رہنما"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "ورچوئل اسباق میں ترمیم",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "ویڈیو: مشین لرننگ"
+        },
+        "variables_1/csd/2021": {
+          "name": "متغیرات"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "lists/csd/2021": {
+          "name": "فہرستیں"
         }
       }
     }

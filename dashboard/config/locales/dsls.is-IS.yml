@@ -4472,15 +4472,19 @@ is-IS:
       courseD_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði D! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseE_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseExpress_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í hraðnámskeiðinu! Veldu
           verkefni til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseF_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði F! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       csf_digital_trails:
         markdown: |-
           # Stafræna fótsporið
@@ -4619,7 +4623,8 @@ is-IS:
         - text: Listamaðurinn mun teikna ferning.
           correct: true
           feedback: Rétt!
-        - {}
+        - text: Listamaðurinn mun teikna fimmhyrning
+          feedback: Ekki rétt. Listamaðurinn teiknar ferning.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
@@ -4654,7 +4659,8 @@ is-IS:
           correct: true
           feedback: Rétt! Scrat byrjar á að snúa í ranga átt, og svo fer hann ekki
             nógu langt áfram til að ná akarninu.
-        - feedback: Það eru tvær villur í þessum kóða. Scrat byrjar á að snúa í ranga
+        - text: Scrat mun ekki færast frá fyrsta kubbnum.
+          feedback: Það eru tvær villur í þessum kóða. Scrat byrjar á að snúa í ranga
             átt, og svo fer hann ekki nógu langt áfram til að ná akarninu.
         questions:
         - text: Leitaðu að villum í þessum kóða. Mun Scrat ná akarninu eða er vandamál?
@@ -4667,7 +4673,8 @@ is-IS:
           feedback: Rétt!
         - text: Fuglinn mun rekast á TNT sprengju.
           feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
-        - feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
+        - text: Fuglinn mun rekast á vegginn.
+          feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
         questions:
         - text: Lestu kóðann hér fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
@@ -4682,7 +4689,8 @@ is-IS:
         - text: BB-8 mun færast 5 sinnum og ná öllum málminum
           correct: true
           feedback: Rétt!
-        - feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+        - text: BB-8 mun færast um aðeins 3 bil.
+          feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
             sinnum.
         questions:
         - text: Hvað heldur þú að muni gerast þegar þú smellir á "Keyra"?
@@ -4698,7 +4706,8 @@ is-IS:
         - text: BB-8 mun safna öllum málminum án nokkurra vandræða.
           feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
             að færast áfram um 3 bil.
-        - feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+        - text: BB-8 mun snúast í ranga átt eftir fyrstu lykkjuna.
+          feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
             að færast áfram um 3 bil.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
@@ -4706,6 +4715,7 @@ is-IS:
       courseD_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði D! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -4717,11 +4727,19 @@ is-IS:
         - text: C
           feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
             það fjórum sinnum og myndar hring.
-        - feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
+        - text: Ekkert af þessu
+          feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
             það fjórum sinnum og myndar hring.
         questions:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega.  Hvaða mynd mun hann búa
             til eftir að smellt er á "Keyra"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
         - text: 'Býflugan mun alltaf færast að skýinu og reyna að ná blómasafa. '
@@ -4735,7 +4753,8 @@ is-IS:
             hvað. '
           feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
             reyna að ná blómasafa ef það er blóm undir skýinu.
-        - feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
+        - text: 'Býflugan mun ekki ná til skýsins. '
+          feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
             reyna að ná blómasafa ef það er blóm undir skýinu.
         questions:
         - text: Skýið felur það sem er undir. Það gæti verið blóm undir skýinu. Ef
@@ -4769,7 +4788,8 @@ is-IS:
           feedback: Rétt!
         - text: Býflugan mun reyna að ná blómasafa bæði á blómum og í býkúpum.
         - text: Býflugan mun reyna að búa til hunang bæði á blómum og í býkúpum.
-        - {}
+        - text: Býflugan mun reyna að ná blómasafa og búa til hunang bæði á blómum
+            og í býkúpum.
         questions:
         - text: 'Skoðaðu kóðann hér fyrir neðan vandlega.  Hvað heldur þú að muni
             gerast eftir að þú smellir á "Keyra"? Mundu: það er aldrei meira en *ein*
@@ -4785,7 +4805,8 @@ is-IS:
         - text: Býflugan mun ná öllum blómasafanum.
           correct: true
           feedback: Rétt!
-        - feedback: Ekki rétt. Býflugan endurtekur aðgerðina í lykkjunni sem er að
+        - text: Býflugan mun snúa í ranga átt.
+          feedback: Ekki rétt. Býflugan endurtekur aðgerðina í lykkjunni sem er að
             færast áfram og safna blómasafa, og þannig er þrautin leyst.
         questions:
         - text: Skoðaðu földuðu lykkjurnar hér fyrir neðan vandlega. Hvað mun gerast
@@ -4835,7 +4856,8 @@ is-IS:
         - text: Þessi kóði mun skilja holurnar eftir óhreyfðar.
           feedback: Ekki rétt. `Meðan` lykkjan ræður við ótakmarkaðar endurtekningar,
             en það er engin kóði sem fjarlægir mold úr haugnum.
-        - feedback: Ekki rétt. Það er enginn kóði sem fjarlægir mold úr haugnum.
+        - text: Þessi kóði mun skilja eftir síðustu holuna ósnerta.
+          feedback: Ekki rétt. Það er enginn kóði sem fjarlægir mold úr haugnum.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vel. Hvað verður eftir í lok þrautarinnar?
       courseD_multi_farmer_while4_predict1_2021:
@@ -4850,7 +4872,8 @@ is-IS:
             er horfinn.
           correct: true
           feedback: Rétt!
-        - feedback: Ekki rétt. Bóndinn mun fjarlægja mold á meðan það er haugur, og
+        - text: Bóndinn mun fjarlægja mold aðeins einu sinni.
+          feedback: Ekki rétt. Bóndinn mun fjarlægja mold á meðan það er haugur, og
             hætta þegar haugurinn er horfinn
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
@@ -4868,7 +4891,8 @@ is-IS:
             endalausa hringi.
           feedback: Ekki rétt. Uppvakningurinn mun fara fram hjá réttu slóðinni og
             enda með þvi að fara fram og til baka að eilífu.
-        - feedback: Í þessum kóða mun uppvakningurinn fara fram hjá réttu slóðinni
+        - text: Uppvakningurinn mun festast við endann á slóðinni áfram.
+          feedback: Í þessum kóða mun uppvakningurinn fara fram hjá réttu slóðinni
             og enda með þvi að fara fram og til baka að eilífu.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
@@ -4885,7 +4909,8 @@ is-IS:
           feedback: Ekki rétt. Kóðinn lætur fuglinn hreyfast áfram á meðan það er
             örugg slóð og síðan snúa til vinstri. Hann gerir þetta þar til hann nær
             svíninu!
-        - feedback: Kóðinn lætur fuglinn hreyfast áfram á meðan það er slóð og síðan
+        - text: Fuglinn snýr í ranga átt.
+          feedback: Kóðinn lætur fuglinn hreyfast áfram á meðan það er slóð og síðan
             snúa til vinstri. Hann gerir þetta þar til hann nær svíninu!
         questions:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hvað heldur þú að muni gerast
@@ -4893,18 +4918,25 @@ is-IS:
       courseE_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseE_EOC_examples_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Ekkert mun gerast.
-        - {}
-        - correct: true
+          feedback: Ekki rétt. Geimveran mun byrja að færast upp og niður á skjánum.
+        - text: Geimveran mun byrja að rása frá hægri til vinstri.
+          feedback: Ekki rétt. Geimveran mun byrja að færast upp og niður á skjánum.
+        - text: Geimveran mun byrja að færast upp og niður á skjánum.
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Geimveran mun hverfa upp af skjánum.
+          feedback: Ekki rétt. Bláa geimveran mun byrja að færast upp og niður á skjánum.
         questions:
-        - {}
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast eftir að þú smellir
+            á geimveruna?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Hirðirinn mun tína tvö grasker.
@@ -4953,19 +4985,25 @@ is-IS:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Ekkert mun gerast.
-        - {}
-        - correct: true
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
+        - text: Fokurtin mun færast efst á skjáinn
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
+        - text: Fokurtin mun byrja að velta
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Fokurtin mun blikka á og af
+          feedback: Ekki rétt. Fokurtin mun byrja að velta
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
       courseF_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði F! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseF_EOC_examples_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði F! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseF_events_predict_multi:
         answers:
         - {}
@@ -5096,6 +5134,7 @@ is-IS:
       express_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
+        display_name: Lokaverkefni námskeiðs
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Lára mun safna 4 fjársjóðum með þessum kóða.
@@ -5108,8 +5147,189 @@ is-IS:
         - text: Lára mun safna öllum fjársjóðunum.
           feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
             og það veldur villu.
-        - feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+        - text: Lára mun safna 1 fjársjóði með þessum kóða.
+          feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
             og það veldur villu.
         questions:
         - text: Skoðaðu þennan kóða vandlega. Hvað heldur þú að muni gerast þegar
             forritið keyrir?
+      courseAB_EOC_2021:
+        description: Þú ert nú í síðustu æfingunni! Veldu verkefni til að skapa.
+        display_name: Lokaverkefni námskeiðs
+      courseB_EOC_2021:
+        description: Þú ert nú í síðustu æfingunni! Veldu verkefni sem þú vilt búa
+          til.
+        display_name: Lokaverkefni námskeiðs
+      courseD_EOC_examples_2021:
+        description: Þú ert að fara að byrja á lokaverkefninu. Áður en þú byrjar er
+          gott ráð að skoða verkefnadæmin vel.
+        display_name: Verkefnadæmi
+      courseF_EOC_samples_2021:
+        description: Þú ert að fara að byrja á lokaverkefninu. Áður en þú byrjar er
+          gott ráð að skoða verkefnadæmin vel.
+        display_name: Lokaverkefni námskeiðs
+      express_EOC_examples_2021:
+        display_name: Verkefnadæmi
+      SimonSays-Unplugged_2021:
+        markdown: |
+          # Fylgja algríminu
+
+          Leiktu einhvern leik og hugsaðu út í hvaða skipanir þarf að gefa svo rétt útkoma fáist.
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Eiginleikar kvika
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Skoðaðu kóðann hér fyrir neðan og spáðu því hvernig fyrirsagnirnar
+          verði birtar. Veldu einn kostinn hægra meginn.
+        title: Skyndikönnun með fyrirsagnir
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png">
+        - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png">
+        - text: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png">
+        - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png">
+        content1: Tengdu gallaða HTML kóðann við lýsingu gallans.
+        questions:
+        - text: Eigindin `src` er ekki skrifuð rétt.
+        - text: Eigindirnar `src` og `alt` hafa víxlast
+        - text: Það vantar skráarendinguna (.jpg) í heiti myndarinnar
+        - text: Heiti myndarinnar er ekki í `src` eigindinni
+        - text: Það er bil í skrárheitinu
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: lýsing hér
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Finndu samsvörun milli enskrar lýsingar og boole yrðingar.
+        questions:
+        - text: Er snúningur kvika hundsins hægari en snúningur kvika kattarins?
+        - text: Er x-hnit kvika hundsins minna en x-hnit kvika kattarins?
+        - text: Er stærðarskali kvika hundsins stærri en skali kvika kattarins?
+        - text: Er x-hnit kvika hundsins hærra en x-hnit kvika kattarins?
+        - text: Er x-hnit kvika hundsins jafnt og x-hnit kvika kattarins?
+        title: 'Samsvörun: Samanburðarvirkjar'
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - text: true<br>false<br>true
+          correct: true
+        - text: "  0<br>200<br>100"
+        - text: "  true<br>error<br>true"
+        - text: "  false<br>true<br>false"
+        questions:
+        - text: Hvaða útkoma verður skrifuð út í stjórnborðið (console) með þessu
+            forriti?
+        title: titill
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: lýsing hér
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - text: Rauði ferningurinn verður teiknaður en ekki sá græni. Þú getur ekki
+            kallað á föll eftir að þau eru búin til.
+          feedback: Þú getur búið til föll hvar sem er í kóðanum. Það er samt góð
+            hugmynd að hafa þau öll neðst upp á skipulagið að gera!
+        - text: Græni ferningurinn verður teiknaður en ekki sá rauði. Þú getur ekki
+            kallað á föll eftir að þau eru búin til.
+          feedback: Þú getur búið til föll hvar sem er í kóðanum. Það er samt góð
+            hugmynd að hafa þau öll neðst upp á skipulagið að gera!
+        - text: Báðir ferningar verða teiknaðir. Þú getur búið til föll hvar sem þú
+            vilt í kóðanum.
+          correct: true
+          feedback: Þú getur búið til föll hvar sem er í kóðanum. Það er samt góð
+            hugmynd að hafa þau öll neðst upp á skipulagið að gera!
+        - text: Hvorugur ferningurinn verður teiknaður. Það er villa í kóðanum.
+          feedback: Þú getur búið til föll hvar sem er í kóðanum. Það er samt góð
+            hugmynd að hafa þau öll neðst upp á skipulagið að gera!
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - text: Lestu þetta forrit og spáðu svo hver af eftirfarandi hreyfimyndum
+            verður búin til.
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
+        content1: Tengdu kóðann við myndina sem hann mun búa til.
+        questions:
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
+        title: drawSprites
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: lýsing hér
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: lýsing hér
+      CSD U6 LED create intro_2021:
+        content1: lýsing hér
+      CSD U6 array multi_2021:
+        answers:
+        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png" width="200px"
+          correct: true
+        questions:
+        - text: Hvað mun Appsmiðjan sýna þegar kóðinn vinstra megin er keyrður?
+        title: Notkun fylkja
+      CSD U6 final intro_2021:
+        content1: lýsing hér
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
+            style="max-width: 100px;">'
+          correct: true
+        questions:
+        - text: Lestu kóðann og spáðu hvernig þetta app muni líta út þegar það er
+            keyrt.
+        title: Spáðu hvað mun gerast

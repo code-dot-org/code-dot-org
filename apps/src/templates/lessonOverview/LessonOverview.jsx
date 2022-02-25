@@ -35,7 +35,7 @@ class LessonOverview extends Component {
     announcements: PropTypes.arrayOf(announcementShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
-    isVerifiedTeacher: PropTypes.bool.isRequired,
+    isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired
   };
 
@@ -93,13 +93,13 @@ class LessonOverview extends Component {
       announcements,
       isSignedIn,
       viewAs,
-      isVerifiedTeacher,
+      isVerifiedInstructor,
       hasVerifiedResources
     } = this.props;
 
     const displayVerifiedResourcesNotification =
       viewAs === ViewType.Instructor &&
-      !isVerifiedTeacher &&
+      !isVerifiedInstructor &&
       hasVerifiedResources;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -368,6 +368,6 @@ export default connect(state => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
-  isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources
 }))(LessonOverview);

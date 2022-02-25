@@ -282,6 +282,22 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
     end
 
+    test "removes course version for new UnitGroupUnits" do
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1', family_name: 'family-unit1', version_year: '1991', is_course: true)
+      CourseOffering.add_course_offering(unit1)
+
+      unit1.reload
+      assert unit1.course_version
+
+      unit_group.update_scripts(['unit1'])
+
+      unit1.reload
+      assert_nil unit1.published_state
+      refute unit1.course_version
+    end
+
     test "set published state to nil for new UnitGroupUnits" do
       unit_group = create :unit_group
 
@@ -318,7 +334,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit1.instructor_audience
       assert_nil unit1.participant_audience
 
-      unit2.update!(instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.student)
+      unit2.update!(instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
 
       unit_group.update_scripts(['unit1', 'unit2'])
 
@@ -402,17 +418,133 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "remove UnitGroupUnits" do
-      unit_group = create :unit_group
+      unit_group = create(
+        :unit_group,
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      )
+      unit1 = create(
+        :script,
+        name: 'unit1',
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        family_name: 'unit1-family',
+        version_year: '1991',
+        is_course: true
+      )
+      create(:script, name: 'unit2')
 
-      create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'unit1'))
-      create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'unit2'))
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit1.reload
+
+      assert_nil unit1.published_state
+      assert_nil unit1.instruction_type
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+      assert_equal unit1.family_name, 'unit1-family'
+      assert_nil unit1.is_course
+      assert_equal unit1.version_year, '1991'
 
       unit_group.update_scripts(['unit2'])
 
       unit_group.reload
+      unit1.reload
+
       assert_equal 1, unit_group.default_unit_group_units.length
       assert_equal 1, unit_group.default_unit_group_units[0].position
       assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
+      assert_equal unit1.published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+      assert_equal unit1.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      assert_equal unit1.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+      assert_equal unit1.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    end
+
+    test "removed units have their published state instruction type participant audience and instructor audience reset" do
+      unit_group = create :unit_group
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_nil unit1.published_state
+      assert_nil unit1.instruction_type
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+
+      assert_nil unit2.published_state
+      assert_nil unit2.instruction_type
+      assert_nil unit2.instructor_audience
+      assert_nil unit2.participant_audience
+
+      unit_group.update_scripts(['unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_equal unit_group.published_state, unit1.published_state
+      refute_nil unit1.published_state
+      assert_equal unit_group.instruction_type, unit1.instruction_type
+      refute_nil unit1.instruction_type
+      assert_equal unit_group.instructor_audience, unit1.instructor_audience
+      refute_nil unit1.instructor_audience
+      assert_equal unit_group.participant_audience, unit1.participant_audience
+      refute_nil unit1.participant_audience
+
+      assert_nil unit2.published_state
+      assert_nil unit2.instruction_type
+      assert_nil unit2.instructor_audience
+      assert_nil unit2.participant_audience
+    end
+
+    test "units with published state set independent of the unit group maintain that published state when removed" do
+      unit_group = create :unit_group
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_nil unit1.published_state
+      assert_nil unit1.instruction_type
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+
+      assert_nil unit2.published_state
+      assert_nil unit2.instruction_type
+      assert_nil unit2.instructor_audience
+      assert_nil unit2.participant_audience
+
+      unit2.published_state = SharedCourseConstants::PUBLISHED_STATE.in_development
+      unit2.save!
+
+      assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
+
+      unit_group.update_scripts(['unit1'])
+
+      unit_group.reload
+      unit2.reload
+
+      refute_equal unit_group.published_state, unit2.published_state
+      assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
+      assert_equal unit_group.instruction_type, unit2.instruction_type
+      refute_nil unit2.instruction_type
+      assert_equal unit_group.instructor_audience, unit2.instructor_audience
+      refute_nil unit2.instructor_audience
+      assert_equal unit_group.participant_audience, unit2.participant_audience
+      refute_nil unit2.participant_audience
     end
   end
 
@@ -458,7 +590,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,
-                  :announcements, :course_version_id, :prevent_course_version_change, :course_path], summary.keys
+                  :announcements, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -712,26 +844,60 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   class CanViewVersion < ActiveSupport::TestCase
     setup do
+      @student = create :student
+      @teacher = create :teacher
+      @facilitator = create :facilitator
+      @plc_reviewer = create :plc_reviewer
+
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
       @csp1_2017 = create(:script, name: 'csp1-2017')
       create :unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
       create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019')
-      @student = create :student
+
+      @pl_csp_2017 = create(:unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_csp1_2017 = create(:script, name: 'pl-csp1-2017')
+      create :unit_group_unit, unit_group: @pl_csp_2017, script: @pl_csp1_2017, position: 1
+      @pl_csp_2018 = create(:unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_csp_2019 = create(:unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
     end
 
-    test 'teacher can always view version' do
-      assert @csp_2017.can_view_version?(create(:teacher))
+    test 'instructor audience can view old version' do
+      assert @pl_csp_2017.can_view_version?(@plc_reviewer)
     end
 
-    test 'nil user can only view latest version in course family' do
+    test 'teacher can always view version where they are part of the instructor audiences' do
+      assert @csp_2017.can_view_version?(@teacher)
+    end
+
+    test 'teacher can not view version where they are not part of the instructor or participant audiences' do
+      refute @pl_csp_2017.can_view_version?(@teacher)
+    end
+
+    test 'nil user can only view latest version in course family if its participant audience is students' do
       assert @csp_2018.can_view_version?(nil)
       refute @csp_2017.can_view_version?(nil)
+
+      refute @pl_csp_2018.can_view_version?(nil)
+      refute @pl_csp_2017.can_view_version?(nil)
     end
 
-    test 'student can view version if it is the latest version in course family' do
+    test 'participant audience can view version if it is the latest version in course family' do
+      assert @pl_csp_2018.can_view_version?(@facilitator)
+      refute @pl_csp_2017.can_view_version?(@facilitator)
+    end
+
+    test 'student can view version if it is the latest version in course family and participant audience is student' do
       assert @csp_2018.can_view_version?(@student)
       refute @csp_2017.can_view_version?(@student)
+    end
+
+    test 'student can not view version if not participant audience' do
+      assert @csp_2018.can_view_version?(@student)
+      refute @csp_2017.can_view_version?(@student)
+
+      refute @pl_csp_2018.can_view_version?(@student)
+      refute @pl_csp_2017.can_view_version?(@student)
     end
 
     test 'student can view version if it is assigned to them' do

@@ -828,13 +828,19 @@
             }
           },
           "draw a circle": {
-            "name": "çevrə çək"
+            "name": "çevrə çək",
+            "description": "verilən radiuslu çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "uzunluq",
-              "repeat": "təkrar et"
-            }
+              "repeat": "təkrar et",
+              "sides": "tərəflər"
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",
@@ -845,7 +851,8 @@
           "draw a shape": {
             "name": "bir forma çək",
             "parameters": {
-              "length": "uzunluq"
+              "length": "uzunluq",
+              "sides": "tərəflər"
             }
           },
           "draw a house": {
@@ -866,13 +873,13 @@
             "name": "atıl",
             "parameters": {
               "height": "hündürlük",
-              "actor": "personaj"
+              "actor": "personaj  "
             }
           },
           "patrol": {
             "name": "patrul",
             "parameters": {
-              "actor": "personaj",
+              "actor": "personaj  ",
               "speed": "sürət"
             }
           }
@@ -1477,6 +1484,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "draw a plane of squares": {
+            "name": "kvadratlar müstəvisi çəkin"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -1485,6 +1495,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "draw a plane of squares": {
+            "name": "kvadratlar müstəvisi çəkin"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1660,6 +1673,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1671,6 +1687,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1682,6 +1701,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -1750,6 +1772,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -1761,6 +1786,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -1772,6 +1800,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions9": {
@@ -1830,6 +1861,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -1844,6 +1878,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -1858,6 +1895,9 @@
           },
           "draw a line of squares": {
             "name": "kvadratların xəttini çəkin"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -2943,6 +2983,9 @@
           },
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -2973,6 +3016,9 @@
           },
           "do something": {
             "name": "bir şey etmək"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -2998,6 +3044,9 @@
           },
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "staggered squares": {
+            "name": "pilləli kvadratlar"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
@@ -3261,101 +3310,233 @@
         "courseE_farmer_functions10a1_2018": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
           }
         },
         "courseE_farmer_functions10a1_2019": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
           }
         },
         "courseE_farmer_functions10a1_2020": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
           }
         },
         "courseE_farmer_functions10a1_2021": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
           }
         },
         "courseE_farmer_functions11_predict_2018": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get produce": {
+            "name": "məhsul almaq"
           }
         },
         "courseE_farmer_functions11_predict_2019": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get produce": {
+            "name": "məhsul almaq"
           }
         },
         "courseE_farmer_functions11_predict_2020": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get produce": {
+            "name": "məhsul almaq"
           }
         },
         "courseE_farmer_functions11_predict_2021": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "pumpkin square": {
+            "name": "balqabaq kvadratı"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          },
+          "get produce": {
+            "name": "məhsul almaq"
           }
         },
         "courseE_farmer_functions2ba_2018": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions2ba_2019": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions2ba_2020": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions2ba_2021": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions3c1_2018": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions3c1_2019": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions3c1_2020": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions3c1_2021": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions3c_2018": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions3c_2019": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions3c_2020": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_farmer_functions3c_2021": {
           "get all pumpkins": {
             "name": "Bütün balqabaqları götür"
+          },
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
           }
         },
         "courseE_playLab_challenge1": {
@@ -3387,6 +3568,170 @@
         "courseF_bee_functions_challenge2": {
           "move and check": {
             "name": "hərəkət et və yoxla"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check for corn": {
+            "name": "qarğıdalı yoxlayın"
+          },
+          "corn rectangle": {
+            "name": " düzbucaqlı qarğıdalı"
+          },
+          "lettuce stairs": {
+            "name": "kahı pilləkənləri"
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check for corn": {
+            "name": "qarğıdalı yoxlayın"
+          },
+          "corn rectangle": {
+            "name": " düzbucaqlı qarğıdalı"
+          },
+          "lettuce stairs": {
+            "name": "kahı pilləkənləri"
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check for corn": {
+            "name": "qarğıdalı yoxlayın"
+          },
+          "corn rectangle": {
+            "name": " düzbucaqlı qarğıdalı"
+          },
+          "lettuce stairs": {
+            "name": "kahı pilləkənləri"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "yol boyu seçin"
+          },
+          "check for corn": {
+            "name": "qarğıdalı yoxlayın"
+          },
+          "corn rectangle": {
+            "name": " düzbucaqlı qarğıdalı"
+          },
+          "lettuce stairs": {
+            "name": "kahı pilləkənləri"
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "qarğıdalı üçün kvadratı yoxlayın"
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "dördbucaqlı bağ"
           }
         }
       }

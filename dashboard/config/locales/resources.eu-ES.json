@@ -2,34 +2,6 @@
   "eu-ES": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
-        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Begizta jostarirako"
         },
@@ -230,6 +202,51 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Inplementazio Gida"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Ordenagailuen funtzionamendua: Hardwarea eta softwarea"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funtzioak"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For begiztak"
+        },
+        "for_loops/csd/2021": {
+          "name": "For begiztak"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Nola funtzionatzen duten ordenagailuak: zirkuituak eta logika"
+        },
+        "variables_1/csd/2021": {
+          "name": "Aldagaiak"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animazio fitxa"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Sprite-n Propietateak"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Abiadura"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Abiadura"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funtzioak"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funtzioak"
+        },
+        "lists/csd/2021": {
+          "name": "Zerrendak"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "CSS sarrera - 1. zatia"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "CSS sarrera - 2. zatia"
         }
       }
     }

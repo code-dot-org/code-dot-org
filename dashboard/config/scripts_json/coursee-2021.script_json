@@ -15,12 +15,21 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-11-22 19:57:26 UTC",
+    "serialized_at": "2022-01-20 17:44:09 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -188,7 +197,7 @@
         "creative_commons_license": "Creative Commons BY-NC-ND",
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.",
         "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare colored pencils or markers for students.",
-        "purpose": "Common Sense Education created this lesson to teach students how they can be upstanders when they see cyberbullying.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.",
         "student_overview": "Learn how you can be an upstander when you see cyberbullying.",
         "unplugged": true
       },
@@ -209,7 +218,7 @@
         "creative_commons_license": "Creative Commons BY-NC-ND",
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nIt's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.",
-        "purpose": "Common Sense Education created this lesson to teach students what information about them is OK to share online.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Privacy and Security. Students learn how to protect personal information and gain a deeper understanding of their data privacy rights so they can advocate for themselves and others.",
         "student_overview": "The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.",
         "unplugged": true
       },

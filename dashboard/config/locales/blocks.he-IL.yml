@@ -359,6 +359,7 @@ he:
             '"right"': עמודה ימנית
             '"x"': קְרִיס-קְרוֹס
             '"plus"': פלוס
+            '"spiral"': ספירלה
             '"random"': אקראי
       Dancelab_makeAnonymousDanceSprite:
         text: צור {COSTUME} חדש {LOCATION}
@@ -441,6 +442,26 @@ he:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': חייזרים
             '"BEAR"': דובים
@@ -468,6 +489,7 @@ he:
             '"right"': עמודה ימנית
             '"x"': קְרִיס-קְרוֹס
             '"plus"': פלוס
+            '"spiral"': ספירלה
             '"random"': באקראי
       Dancelab_mixColors:
         text: ערבב {COLOR1} עם {COLOR2}
@@ -990,7 +1012,21 @@ he:
       gamelab_clickedOn:
         text: כאשר לוחצים על {SPRITE}
       gamelab_clickedSpritePointer:
-        text: לחץ {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): להסתובב ימינה
+            new Behavior(spinning_left, []): להסתובב שמאלה
+            new Behavior(fluttering, []): להתרגש
+            new Behavior(jittering, []): לרעוד
+            new Behavior(wobbling, []): להתנדנד
+            new Behavior(wandering, []): לשוטט
+            new Behavior(patrolling, []): לסייר
+            new Behavior(moving_west_and_looping, []): לזוז מערבה ולהתפתל
+            new Behavior(moving_east_and_looping, []): לזוז מזרחה ולהתפתל
+            new Behavior(moving_north_and_looping, []): לזוז צפונה ולהתפתל
+            new Behavior(moving_south_and_looping, []): לזוז דרומה ולהתפתל
       gamelab_comment:
         text: הערה {COMMENT}
       gamelab_costumeImage:
@@ -1031,6 +1067,19 @@ he:
         text: |-
           אם {NUM} = {VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         text: לחוץ
         options:
@@ -1067,7 +1116,7 @@ he:
             '"y"': y
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "{SPRITE} נוגע במסגרת"
+        text: "{SPRITE} נוגעת במסגרת"
       gamelab_jumpTo:
         text: "{SPRITE} קפוץ למיקום {LOCATION}"
       gamelab_keyPressed:
@@ -1152,9 +1201,9 @@ he:
       gamelab_moveToward:
         text: הזז {SPRITE} פיקסלים {DISTANCE} לכיוון {TARGET}
       gamelab_newSpritePointer:
-        text: לחץ {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: לחץ {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: נגן צליל {SOUND}
       gamelab_playSoundOptions:
@@ -1176,7 +1225,17 @@ he:
             "'sound://category_animals/chicken.mp3'": תרנגולת
             "'sound://category_animals/dolphin.mp3'": דולפין
             "'sound://category_animals/dog.mp3'": כלב
+            "'sound://category_collect/trill_stings.mp3'": סלסול
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": נבל
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": נקישה
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": דיגיטלי
             "'sound://category_digital/jump_7.mp3'": קפוץ
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): לנוע באמצעות מקשי החיצים
+            new Behavior(driving_with_arrow_keys, []): לנוע באמצעות מקשי החיצים
+            draggable(): ניתנת לגרירה
       gamelab_pointInDirection:
         text: נקודה {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1200,7 +1259,7 @@ he:
       gamelab_setBackground:
         text: קבע צבע רקע {COLOR}
       gamelab_setBackgroundImage:
-        text: להגדיר רקע ל {IMG}
+        text: הגדר רקע {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': מערה
@@ -1216,7 +1275,7 @@ he:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
             undefined: אף אחד
       gamelab_setBackgroundImageAs:
-        text: להגדיר רקע ל {IMG}
+        text: הגדר רקע {IMG}
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1251,6 +1310,14 @@ he:
             '"scale"': גודל
             '"width"': רוחב
             '"height"': גובה
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': איטי
+            '5': רגיל
+            '7': מהיר
+            '9': extra fast
       gamelab_setTint:
         text: שנה צבע של {THIS} ל-{COLOR}
       gamelab_setupSim:
@@ -1269,7 +1336,7 @@ he:
             '"when"': כאשר
             '"while"': כל עוד
       gamelab_subjectSpritePointer:
-        text: לחץ {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: " סובב את {SPRITE} {N} מעלות {DIRECTION}"
         options:
@@ -1277,7 +1344,7 @@ he:
             '"right"': ימינה
             '"left"': שמאלה
       gamelab_whenDownArrow:
-        text: כאשר חץ למטה נלחץ
+        text: כאשר לוחצים על חץ למטה
       gamelab_whenKey:
         text: כשמקש {KEY} לחוץ
         options:
@@ -1292,13 +1359,13 @@ he:
             '"s"': s
             '"d"': d
       gamelab_whenLeftArrow:
-        text: כאשר חץ שמאלה נלחץ
+        text: כאשר לוחצים על חץ שמאלה
       gamelab_whenRightArrow:
         text: כאשר חץ ימינה לחצה
       gamelab_whenTouching:
         text: כאשר {SPRITE1} נוגעת ב {SPRITE2}
       gamelab_whenUpArrow:
-        text: כאשר חץ למעלה נלחץ
+        text: כאשר לוחצים על חץ למעלה
       gamelab_whileDownArrow:
         text: בעוד חץ למטה לחוץ
       gamelab_whileKey:
@@ -1324,6 +1391,17 @@ he:
         text: בעוד חץ למעלה לחוץ
       gamelab_withPercentChance:
         text: אם {NUM} אחוז סיכוי
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} סיכוי
+           {STATEMENT}
+        options:
+          NUM:
+            '10': נמוך מאוד
+            '25': נמוך
+            '50': 50/50
+            '75': גבוה
+            '90': גבוה מאוד
       gamelab_xLocationOf:
         text: x קואורדינטות של {SPRITE}
       gamelab_yLocationOf:
@@ -1455,7 +1533,7 @@ he:
           SELECT:
             '"all"': כולם
       Mikelab_groupWhenClickedOn:
-        text: כאשר {COSTUME} נלחץ
+        text: כאשר לוחצים על {COSTUME}
       Mikelab_groupWhenXTouchesY:
         text: כאשר{COSTUME} נוגע ב {COSTUME2}
       Mikelab_groupWhileClicked:
@@ -1625,7 +1703,6 @@ he:
             '"decorative"': קישוטים
             '"donuts"': דונאטס
             '"fire"': אש
-            '"flowers"': פרחים
             '"gilded"': זהב
             '"hearts"': לבבות
             '"iceCream"': גלידה
@@ -1690,7 +1767,6 @@ he:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': כישלון
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': התרגשות
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': קפיצה
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': אוֹר
             '"sound://category_poof/puzzle_game_poof_04.mp3"': פוף!
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': חיפוש
             '"sound://category_background/typewriter.mp3"': מכונת כתיבה
@@ -1704,31 +1780,31 @@ he:
         text: קבע רקע {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': צבעים
-            '"squiggles"': קווים מתפתלים
-            '"space"': חלל
-            '"stars"': כוכבים
+            '"blooming"': מלבלב
+            '"bubbles"': בועות
+            '"clouds"': מעונן
+            '"confetti"': קונפטי
             '"darkCircles"': מעומעם
             '"fadeColors"': קריר
-            '"blooming"': מלבלב
-            '"ripples"': אדוות
-            '"clouds"': מעונן
+            '"hearts"': לבבות
+            '"space"': חלל
             '"rain"': גשום
-            '"bubbles"': בועות
-            '"confetti"': קונפטי
-            '"hearts"': לבבות צבעוניים
+            '"ripples"': אדוות
+            '"colors"': צבעים
+            '"stars"': כוכבים
+            '"squiggles"': קווים מתפתלים
           PALETTE:
-            '"rainbow"': קשת
-            '"grayscale"': אפורים
-            '"sky"': שמיים
-            '"ocean"': אוקיינוס
+            '"autumn"': סתיו
             '"sunrise"': זריחה
             '"sunset"': דמדומים
+            '"grayscale"': אפורים
+            '"ocean"': אוקיינוס
+            '"rainbow"': קשת
+            '"roses"': ורדים
+            '"sky"': שמיים
             '"spring"': אביב
             '"summer"': קיץ
-            '"autumn"': סתיו
             '"winter"': חורף
-            '"roses"': ורדים
       Poetry_setBackgroundImageAs:
         text: הגדר רקע {IMG}
       Poetry_setFont:
@@ -1742,11 +1818,11 @@ he:
         text: בצע אפקט {EFFECT}
         options:
           EFFECT:
-            '"rain"': גשום
             '"bubbles"': בועות
-            '"hearts"': לבבות צבעוניים
-            '"emojis"': אמוג'י שמחים
             '"confetti"': קונפטי
+            '"hearts"': לבבות
+            '"emojis"': אמוג'י שמחים
+            '"rain"': גשום
             '"starburst"': כוכבים
             '"glass"': זכוכית מתנפצת
             '"twinkling"': הבהוב
@@ -1757,45 +1833,35 @@ he:
         options:
           EFFECT:
             '"fade"': דועך
-            '"typewriter"': מכונת כתיבה
             '"flyLeft"': טקסט צץ משמאל
             '"flyRight"': טקסט צץ מימין
             '"flyTop"': טקסט צץ מלמעלה
             '"flyBottom"': טקסט צץ מלמטה
+            '"typewriter"': מכונת כתיבה
       Poetry_startBehavior:
         text: 'דמות {ANIMATION_NAME} מתחילה {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: להתרגש
-            growing: לגדול
-            jittering: לרעוד
-            moving_north_and_looping: לנוע צפונה
-            moving_south_and_looping: לנוע דרומה
-            moving_east_and_looping: לנוע מזרחה
-            moving_west_and_looping: לנוע מערבה
-            shrinking: להתכווץ
-            spinning_left: להסתובב שמאלה
-            spinning_right: להסתובב ימינה
-            swimming_left_and_right: לשחות
-            wandering: לנדוד
-            wobbling: להתנדנד
+            '"fluttering"': להתרגש
+            '"growing"': לגדול
+            '"jittering"': לרעוד
+            '"shrinking"': להתכווץ
+            '"spinning_left"': להסתובב שמאלה
+            '"spinning_right"': להסתובב ימינה
+            '"wandering"': לשוטט
+            '"wobbling"': להתנדנד
       Poetry_stopBehavior:
         text: 'דמות {ANIMATION_NAME} מפסיקה {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: להתרגש
-            growing: לגדול
-            jittering: לרעוד
-            moving_north_and_looping: לנוע צפונה
-            moving_south_and_looping: לנוע דרומה
-            moving_east_and_looping: לנוע מזרחה
-            moving_west_and_looping: לנוע מערבה
-            shrinking: להתכווץ
-            spinning_left: להסתובב שמאלה
-            spinning_right: להסתובב ימינה
-            swimming_left_and_right: לשחות
-            wandering: לנדוד
-            wobbling: להתנדנד
+            '"fluttering"': להתרגש
+            '"growing"': לגדול
+            '"jittering"': לרעוד
+            '"shrinking"': להתכווץ
+            '"spinning_left"': להסתובב שמאלה
+            '"spinning_right"': להסתובב ימינה
+            '"wandering"': לשוטט
+            '"wobbling"': להתנדנד
       Poetry_whenLineShows:
         text: כאשר מופיעה שורה {N}
         options:
@@ -2007,4 +2073,4 @@ he:
             right: ימינה
             left: שמאלה
       validation_validatedBackground:
-        text: להגדיר רקע ל {IMG}
+        text: הגדר רקע {IMG}

@@ -1,16 +1,49 @@
 export default function initializeBlocklyXml(blocklyWrapper) {
+  // Clear xml namespace
+  blocklyWrapper.utils.xml.NAME_SPACE = '';
+
   // Aliasing Google's blockToDom() so that we can override it, but still be able
   // to call Google's blockToDom() in the override function.
   blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
-  blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
+  blocklyWrapper.Xml.blockToDom = function(block) {
     const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
     if (!block.canDisconnectFromParent_) {
       blockXml.setAttribute('can_disconnect_from_parent', false);
     }
-    if (ignoreChildBlocks) {
-      Blockly.Xml.deleteNext(blockXml);
-    }
     return blockXml;
+  };
+
+  // Aliasing Google's domToBlockHeadless_() so that we can override it, but still be able
+  // to call Google's domToBlockHeadless_() in the override function.
+  blocklyWrapper.Xml.originalDomToBlockHeadless_ =
+    blocklyWrapper.Xml.domToBlockHeadless_;
+  // Override domToBlockHeadless_ so that we can gracefully handle unknown blocks.
+  blocklyWrapper.Xml.domToBlockHeadless_ = function(
+    xmlBlock,
+    workspace,
+    parentConnection,
+    connectedToParentNext
+  ) {
+    let block;
+    try {
+      block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
+        xmlBlock,
+        workspace,
+        parentConnection,
+        connectedToParentNext
+      );
+    } catch (e) {
+      block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
+        blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
+        workspace,
+        parentConnection,
+        connectedToParentNext
+      );
+      block
+        .getField('NAME')
+        .setValue(`unknown block: ${xmlBlock.getAttribute('type')}`);
+    }
+    return block;
   };
 
   // Aliasing Google's domToBlock() so that we can override it, but still be able
@@ -25,18 +58,6 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       block.canDisconnectFromParent_ = can_disconnect_from_parent === 'true';
     }
     return block;
-  };
-
-  blocklyWrapper.Xml.fieldToDom_ = function(field) {
-    if (field.isSerializable()) {
-      // Titles were renamed to fields in 2013, but CDO Blockly and
-      // all existing student code uses titles, so to keep everything
-      // consistent, we should continue using titles here.
-      var container = Blockly.utils.xml.createElement('title');
-      container.setAttribute('name', field.name || '');
-      return field.toXml(container);
-    }
-    return null;
   };
 
   blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {

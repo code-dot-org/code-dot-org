@@ -2,8 +2,13 @@
 vi:
   data:
     progressions:
+      AI Machine Learning - Video: Tìm hiểu về máy AI - Video
+      'AI: Impact on Society - Video': 'AI: Tác động đối với xã hội - Video'
+      'AI: Training Data & Bias - Video': 'AI: Dữ liệu đào tạo & Định kiến - Video'
+      App Lab Intro - Video: Giới thiệu App Lab - Video
       Artist Project: Dự án nghệ thuật
       'Artist: Variables': 'Nghệ sĩ: biến'
+      Assessment: Đánh giá
       Back and Forth: Lặp đi lặp lại
       Bass, Mid, and Treble: Âm trầm, Âm Trung, Âm Cao
       Binary Numbers: Số nhị phân
@@ -23,6 +28,7 @@ vi:
       Functions: Các hàm
       Functions with Parameters: Hàm và tham số
       Get In Formation: Vào đội hình
+      Hello World: Xin chào cả thế giới
       Images in HTML: Hình ảnh trong HTML
       Introduction to Arrays: Giới thiệu Danh sách
       Learning from Simulations: Học hỏi từ bản mô phỏng
@@ -42,9 +48,12 @@ vi:
       Quarter Notes: Nốt đen
       Reflection: Phản ánh
       Speed it Up, Slow it Down: Nhanh lên, chậm lại
+      Teach AI a New Word: Từ mới Giảng dạy về AI
       Text Compression: Nén văn bản
       Variables: Các biến
       Video: Video
+      'Video: Outbreak Simulator: Introduction': 'Video: Trình mô phỏng dịch bệnh
+        bùng phát: Giới thiệu'
       Welcome to Monster Town: Chào mừng đến với Thị Trấn Quái Vật
       Where'd They Go?: Họ sẽ đi đâu?
       Wrap-up: Gói gọn

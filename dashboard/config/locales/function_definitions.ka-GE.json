@@ -928,7 +928,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -937,32 +937,32 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },

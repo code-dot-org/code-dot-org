@@ -5,6 +5,10 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Поэтическое искусство 1 - Введение",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "Повороты и углы"
         },
@@ -208,6 +212,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursef/2021": {
+          "name": "Изменения виртуального урока",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "digital-trails-lesson-slides/courseb/2021": {
@@ -387,6 +392,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
+          "name": "Изменения виртуального урока",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
@@ -418,6 +424,7 @@
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "Для начала - Создаем класс",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -585,6 +592,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
+          "name": "Изменения виртуального урока",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
@@ -755,6 +763,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
+          "name": "Изменения виртуального урока",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "password_power-up_lesson_slides/coursed/2021": {
@@ -945,6 +954,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
+          "name": "Изменения виртуального урока",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "unplugged_maze_blocks/express/2021": {
@@ -1248,7 +1258,188 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
+          "name": "Изменения виртуального урока",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Введение в AI лаборатории"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Введение в AI лаборатории"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Тренировка и Тесты в AI Lab"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "Карточки моделей в AI Lab"
+        },
+        "design_mode/csd/2021": {
+          "name": "Режим дизайна"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Режим дизайна"
+        },
+        "changing_screens/csd/2021": {
+          "name": "Изменение экранов"
+        },
+        "importing_screens/csd/2021": {
+          "name": "Импорт экранов"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Форум учителей"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Случайные числа"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Как работают компьютеры: аппаратное и программное обеспечение"
+        },
+        "board_events/csd/2021": {
+          "name": "События на доске"
+        },
+        "functions_2/csd/2021": {
+          "name": "функции"
+        },
+        "if_statements_1/csd/2021": {
+          "name": "Операторы Если"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Введение в массивы"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Игра в Notes"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Циклы с параметром"
+        },
+        "for_loops/csd/2021": {
+          "name": "Циклы с параметром"
+        },
+        "modifying_arrays/csd/2021": {
+          "name": "Изменение и создание массивов"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "События акселерометра"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Как работают компьютеры: схемы и логика"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Представления чисел"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "Сохранение данных в тайне"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Использование данных для принятия решений"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Видео: Машинное Обучение"
+        },
+        "naming_variables/csd/2021": {
+          "name": "Именование переменных"
+        },
+        "variables_1/csd/2021": {
+          "name": "Переменные"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Случайные числа"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Вкладка Анимация"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Спрайты"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Логические выражения"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Условные операторы"
+        },
+        "if_statements/csd/2021": {
+          "name": "Операторы Если"
+        },
+        "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "name": "Операторы \"если-иначе\""
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Операторы Если/Иначе"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Скорость"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Скорость"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Обнаружение столкновений"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Обнаружение столкновений"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Боковая прокрутка"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Боковая прокрутка"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Скорость и шаблон Счетчика"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Игра «Flyer»"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Игра «Flyer»"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "функции"
+        },
+        "functions_1/csd/2021": {
+          "name": "функции"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Форум учителей"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Что такое компьютер?"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML тэги"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "Видео: Программирование в парах"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Заголовки и параграфы"
+        },
+        "formatting_html/csd/2021": {
+          "name": "Форматирование HTML"
+        },
+        "lists/csd/2021": {
+          "name": "Списки"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Цифровое присутствие"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Введение в CSS - Часть 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Введение в CSS - Часть 2"
+        },
+        "creative_commons_search/csd/2021": {
+          "name": "Поиск Creative Commons"
+        },
+        "layout-properties/csd/2021": {
+          "name": "Свойства макета"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Публикация своего веб-сайта"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Гиперссылки"
         }
       }
     }

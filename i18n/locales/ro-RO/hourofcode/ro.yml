@@ -12,7 +12,7 @@ ro:
   campaign_date_year: '2021'
   campaign_date_full_year: 6-12 decembrie, 2021
   latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
+  latam_campaign_date_start_long: Octombrie
   latam_campaign_date_short: Oct. 1 - Dec. 12
   latam_campaign_date_full: October 1 - December 12
   latam_campaign_date_year: '2021'
@@ -55,7 +55,7 @@ ro:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Ora de Cod este aproape
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: Ora cod se lansează pe 9-15 decembrie, 2019 Informatica
@@ -144,6 +144,9 @@ ro:
     fi utilizată pentru abordarea problemelor mondiale. Informația este despre mult
     mai mult decât programare! Bucură-te de primul pas al Code.org într-o nouă călătorie
     pentru a învăța mai multe despre IA prin programa noastră.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -233,17 +236,17 @@ ro:
   hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
     of Code event. One-hour tutorials in over 45 languages. No experience needed.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Ora de Cod este aproape
   codeorg_homepage_celebrate_cse: Comemorați informatica oriunde!
   codeorg_homepage_csc: Informatica întâlnește artele lingvistice, matematica și multe
     altele în CS Connections
   codeorg_homepage_csc_long: Vedeți cum informatica întâlnește artele lingvistice,
-    matematica și multe altele din programa dv.!
+    matematica și multe altele din programa dv!
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Folosește blocuri de coduri pentru a-l conduce
     pe Steve sau pe Alex într-o aventură prin lumea Minecraft.
   codeorg_homepage_hoc2019_dance_heading: Încearcă noua <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Sprijin pentru părinții și profesorii care se
     confruntă cu închiderea școlilor.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -977,7 +980,7 @@ ro:
   title_resources: Resurse
   title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
-  title_tutorial_guidelines: Ghiduri de activitate
+  title_tutorial_guidelines: Orientari si ghiduri pentru tutoriale
   title_whole_school: Participarea intregii scoli
   events_nav_title: Evenimentele Hour of Code
   events_nav_all: Toate evenimentele
@@ -1030,6 +1033,7 @@ ro:
   footer_menu_support: Suport
   footer_menu_terms: Termeni
   footer_menu_privacy: Politică de Confidenţialitate
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Încearcă un tutorial de o oră conceput pentru toate vârstele
     în peste 45 de limbi.  Alătură-te milioanelor de elevi și profesori din peste

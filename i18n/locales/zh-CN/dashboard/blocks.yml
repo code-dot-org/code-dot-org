@@ -357,6 +357,7 @@ zh-CN:
             '"right"': 右列
             '"x"': 十字交叉
             '"plus"': 添加
+            '"infinity"': 无穷线
             '"random"': 随机
       Dancelab_makeAnonymousDanceSprite:
         text: 在 {LOCATION} 创建一个新的 {COSTUME}
@@ -437,6 +438,26 @@ zh-CN:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': 外星人
             '"BEAR"': 熊
@@ -464,6 +485,7 @@ zh-CN:
             '"right"': 右列
             '"x"': 十字交叉
             '"plus"': 添加
+            '"infinity"': 无穷线
             '"random"': 随机
       Dancelab_mixColors:
         text: 混合 {COLOR1} 和 {COLOR2}
@@ -527,6 +549,7 @@ zh-CN:
             '"fireworks"': 烟火
             '"flowers"': 花朵
             '"growing_stars"': 变大的星星
+            '"higher_power"': Higher Power
             '"swirl"': 催眠
             '"kaleidoscope"': 万花筒
             '"lasers"': 激光舞池
@@ -999,7 +1022,22 @@ zh-CN:
       gamelab_clickedOn:
         text: 当 {SPRITE} 被点击时
       gamelab_clickedSpritePointer:
-        text: 点击 {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 向右旋转
+            new Behavior(spinning_left, []): 向左旋转
+            new Behavior(fluttering, []): 飘动
+            new Behavior(jittering, []): 抖动
+            new Behavior(wobbling, []): 摇摆
+            new Behavior(wandering, []): 徘徊
+            new Behavior(patrolling, []): 巡逻
+            new Behavior(moving_west_and_looping, []): 循环向东边移动
+            new Behavior(moving_east_and_looping, []): 循环向西边移动
+            new Behavior(moving_north_and_looping, []): 向北移动并循环
+            new Behavior(moving_south_and_looping, []): 向南移动并循环
       gamelab_comment:
         text: 注释： {COMMENT}
       gamelab_costumeImage:
@@ -1051,6 +1089,20 @@ zh-CN:
         text: |-
           假如{NUM}={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE}图案是{COSTUME}"
       gamelab_isKeyPressed:
@@ -1189,9 +1241,9 @@ zh-CN:
       gamelab_moveToward:
         text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
       gamelab_newSpritePointer:
-        text: 点击 {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: 点击 {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: 上移和下移
       gamelab_playSound:
@@ -1231,6 +1283,13 @@ zh-CN:
             "'sound://category_digital/jump_7.mp3'": 跳跃
       gamelab_playSpeech:
         text: 游戏言语{SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): 使用方向键移动
+            new Behavior(driving_with_arrow_keys, []): 使用方向键驱动
+            draggable(): 可拖拽
       gamelab_pointInDirection:
         text: 指向 {SPRITE} {DIRECTION}
         options:
@@ -1255,6 +1314,8 @@ zh-CN:
         text: 从 {THIS} 删除颜色
       gamelab_repeatForever:
         text: 一直重复
+      gamelab_resetTimer:
+        text: 重置计时器
       gamelab_setAnimation:
         text: 将 {THIS} 的服装改为 {ANIMATION}
       gamelab_setBackground:
@@ -1330,6 +1391,14 @@ zh-CN:
             '"scale"': 大小
             '"width"': 宽度
             '"height"': 高度
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': 慢
+            '5': 正常
+            '7': 快
+            '9': extra fast
       gamelab_setTint:
         text: 将 {THIS} 的颜色改为 {COLOR}
       gamelab_setupScoreboard:
@@ -1368,7 +1437,7 @@ zh-CN:
       gamelab_stopGliding:
         text: "{SPRITE}停止滑动"
       gamelab_subjectSpritePointer:
-        text: 点击 {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -1812,14 +1881,25 @@ zh-CN:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': 花朵
+            '"brick"': 砖块
+            '"fire"': 燃烧
+            '"flowers"': 花
             '"hearts"': 心
             '"iceCream"': 冰淇淋
+            '"leaves"': 离开
             '"rainbow"': 彩虹
-            '"stars"': 星星
+            '"stars"': 星球
             '"waves"': 波浪
+      Poetry_addLine:
+        text: 添加行{LINE}
+      Poetry_animateText:
+        text: 动画文本
+      Poetry_destroy:
+        text: 移除{ANIMATION_NAME}
       Poetry_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
+      Poetry_hideText:
+        text: 隐藏文本
       Poetry_makeBurst:
         text: 使用{NUM} {ANIMATION_NAME}精灵图，创建{EFFECT}效果
         options:
@@ -1836,9 +1916,13 @@ zh-CN:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 平静
             '"sound://category_nature/steady_campfire_loop.mp3"': 篝火
             '"sound://category_nature/rain_loop.mp3"': 细雨
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': 森林
             '"sound://category_loops/faultering_desicion_loop1.mp3"': 闹鬼
             '"sound://category_background/inside_plane.mp3"': 嗯？
             '"sound://category_loops/red_flag_loop1.mp3"': 使命
+            '"sound://category_nature/summer_night_loop.mp3"': 夜
+            '"sound://category_background/ocean_waves.mp3"': 大海
+            '"sound://category_background/rainforest_ambient_sound.mp3"': 雨林
             '"sound://category_background/repitition.mp3"': 骑术
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': 缓慢
       Poetry_playSound:
@@ -1853,29 +1937,46 @@ zh-CN:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 失败
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': 飘扬
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': 跳跃
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
             '"sound://category_poof/puzzle_game_poof_04.mp3"': 噗！
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': 扫描
+            '"sound://category_background/typewriter.mp3"': 打字机
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': 活力
             '"sound://category_achievements/peaceful_win_1.mp3"': 成功
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 漩涡
             '"sound://category_achievements/peaceful_win_6.mp3"': 风铃
+      Poetry_setAuthor:
+        text: 设置作者{AUTHOR}
       Poetry_setBackground:
         text: 设置背景颜色为 {COLOR}
       Poetry_setBackgroundEffect:
+        text: 设置背景到{EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': 颜色
-            '"squiggles"': 花体
-            '"space"': 空间
-            '"stars"': 星星
-            '"ripples"': 波纹
-            '"rain"': 下雨
+            '"blooming"': 开花
             '"bubbles"': 气泡
+            '"clouds"': 多云
             '"confetti"': 彩纸屑
-            '"hearts"': 五彩心
+            '"darkCircles"': 淡入淡出
+            '"fadeColors"': 结霜
+            '"hearts"': 心
+            '"space"': 空间
+            '"rain"': 下雨
+            '"ripples"': 波纹
+            '"colors"': 颜色
+            '"stars"': 星星
+            '"squiggles"': 花体
           PALETTE:
+            '"autumn"': 秋天
+            '"sunrise"': 黎明
+            '"sunset"': 黄昏
+            '"grayscale"': 灰色
+            '"ocean"': 大海
             '"rainbow"': 彩虹
+            '"roses"': 玫瑰
+            '"sky"': 天空
+            '"spring"': 春天
+            '"summer"': 夏天
+            '"winter"': 冬天
       Poetry_setBackgroundImageAs:
         text: 设置背景为 {IMG}
       Poetry_setFont:
@@ -1883,49 +1984,81 @@ zh-CN:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': 手写
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: 设置文本颜色{FILL}
       Poetry_setForegroundEffect:
+        text: 制作{EFFECT}效果
         options:
           EFFECT:
-            '"rain"': 下雨
             '"bubbles"': 气泡
-            '"hearts"': 五彩心
             '"confetti"': 彩纸屑
+            '"hearts"': 心
+            '"emojis"': 快乐表情
+            '"rain"': 下雨
             '"starburst"': 星爆
+            '"glass"': 破碎玻璃
+            '"twinkling"': 闪烁
+      Poetry_setPrompt:
+        text: 提示用户{LEFT_QUOTE}{NAME}{RIGHT_QUOTE}，针对变量{VAR}
+      Poetry_setPromptWithChoices:
+        text: 提示用户{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}，针对变量{VAR}，选择{LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: 设置{SPRITE}大小到{VAL}
+      Poetry_setTextEffect:
+        text: 设置文本效果{EFFECT}
+        options:
+          EFFECT:
+            '"fade"': 淡入淡出
+            '"flyLeft"': 从左边飞
+            '"flyRight"': 从右边飞
+            '"flyTop"': 从顶部飞
+            '"flyBottom"': 从底部飞
+            '"typewriter"': 打字机
+      Poetry_setTitle:
+        text: 设置标题{TITLE}
+      Poetry_showText:
+        text: 显示文本
       Poetry_startBehavior:
+        text: '精灵图{ANIMATION_NAME}开始{BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: 飘动
-            growing: 生长
-            jittering: 抖动
-            shrinking: 收缩
-            spinning_left: 向左旋转
-            spinning_right: 向右旋转
-            swimming_left_and_right: 游泳
-            wandering: 徘徊
-            wobbling: 摇摆
+            '"fluttering"': 飘动
+            '"growing"': 生长
+            '"jittering"': 抖动
+            '"shrinking"': 收缩
+            '"spinning_left"': 向左旋转
+            '"spinning_right"': 向右旋转
+            '"swimming_left_and_right"': 游泳
+            '"wandering"': 徘徊
+            '"wobbling"': 摇摆
       Poetry_stopBehavior:
+        text: '精灵图{ANIMATION_NAME}停止{BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: 飘动
-            growing: 生长
-            jittering: 抖动
-            shrinking: 收缩
-            spinning_left: 向左旋转
-            spinning_right: 向右旋转
-            swimming_left_and_right: 游泳
-            wandering: 徘徊
-            wobbling: 摇摆
+            '"fluttering"': 飘动
+            '"growing"': 生长
+            '"jittering"': 抖动
+            '"shrinking"': 收缩
+            '"spinning_left"': 向左旋转
+            '"spinning_right"': 向右旋转
+            '"swimming_left_and_right"': 游泳
+            '"wandering"': 徘徊
+            '"wobbling"': 摇摆
+            '"all"': "--所有行为--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: 当行{N}显示时
         options:
           'N':
             '0': "？？？"

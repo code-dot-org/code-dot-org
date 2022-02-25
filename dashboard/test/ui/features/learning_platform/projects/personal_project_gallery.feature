@@ -22,8 +22,6 @@ Scenario: Can Publish and Unpublish a Project (Button Version)
   Then I click selector ".ui-personal-projects-unpublish-button"
   And I wait until element ".ui-personal-projects-publish-button" is visible
 
-@no_ie
-# Disabling IE due to bug where key changes are not registered,
 Scenario: Can Rename a Project
   Given I make a "playlab" project named "Old Name"
   Given I am on "http://studio.code.org/projects"

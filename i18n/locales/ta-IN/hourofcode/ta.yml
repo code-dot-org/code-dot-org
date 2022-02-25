@@ -145,6 +145,9 @@ ta:
     பயன்படுத்தப்படலாம். கணினி விஞ்ஞானம் குறியீட்டை விட மிக அதிகம்! எங்கள் பாடத்திட்டம்
     முழுவதும் AI பற்றி மேலும் கற்பிக்க ஒரு புதிய பயணத்தில் Code.org இன் முதல் படியை
     அனுபவிக்கவும்.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: கோட் லைவ் நேரம்
   hoc_live_sign_up_title: மணிநேர நேரத்திற்கு பதிவுபெறுக
   hoc_live_learn_title: மணிநேர குறியீட்டைக் கற்றுக்கொள்ளுங்கள்
@@ -237,12 +240,12 @@ ta:
     எங்கு வேண்டுமானாலும் ஏற்பாடு செய்யலாம். 45க்கும் அதிகமான மொழிகளில் ஒரு-மணிநேர
     டுடோரியல்கள். அனுபவம் தேவையில்லை.
   hourofcode_homepage_hoc2018_header_line2: 4 முதல் 104 வயது வரை.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: கணினி அறிவியல் கல்வி வாரம்
   codeorg_homepage_celebrate_cse: 'எங்கும் கணினி அறிவியலைக் கொண்டாடுங்கள்! '
   codeorg_homepage_csc: கணினி அறிவியல் மொழி கலைகள், கணிதம் மற்றும் பலவற்றை CS இணைப்புகளில்
     சந்திக்கிறது
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
+  codeorg_homepage_csc_long: எங்கள் பாடத்திட்டத்தில் மொழிக் கலைகள், கணிதம் மற்றும்
+    பலவற்றை கணினி அறிவியல் எவ்வாறு சந்திக்கிறது என்பதைப் பாருங்கள்!
   codeorg_homepage_csc_title: CS இணைப்புகள்
   hoc2018_tutorial_mchoc_description: Hour of Code க்காக Minecraft மீண்டும் புத்தம்
     புதிய நடவடிக்கையுடன் வருகிறது! குறியீட்டைக் கொண்டு Minecraft ஊடான பயணம்.
@@ -1057,6 +1060,7 @@ ta:
   footer_menu_support: ஆதரிக்கிறேன்
   footer_menu_terms: நிபந்தனைகள்
   footer_menu_privacy: தனியுரிமைக் கொள்கை
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Hour of Code நடவடிக்கைகள்
   learn_banner_blurb: 45க்கும் அதிகமான மொழிகளில் அனைத்து வயதினருக்கும் வடிவமைக்கப்பட்ட
     ஒரு ஒரு-மணிநேர டுடோரியலை முயற்சித்துப் பாருங்கள்.  180க்கும் அதிகமான நாடுகளில்

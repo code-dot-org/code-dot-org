@@ -2915,7 +2915,7 @@
         "ramp_artist_loops9_2019": "正方形を かいてみよう。",
         "ramp_artist_loops9_2020": "正方形を かいてみよう。",
         "courseC_video_angles": "スクラットを ドングリのところへ つれていって！",
-        "courseD_video_nestedLoopsArtist": "こんどは、三角形をかいてみよう。",
+        "courseD_video_nestedLoopsArtist": "正方形をかいてみよう！",
         "courseE_bee_ramp14": "レタスのあるところまで 前に進んで、`以下の間` を使って、レタスを 全部しゅうかく します。",
         "courseE_farmer_predict1": "レタスがある間、レタスを しゅうかく しよう。",
         "courseE_farmer_predict2": "レタスのあるところまで 前に進んで、`以下の間` を使って、レタスを 全部しゅうかく します。",
@@ -3553,7 +3553,7 @@
         "courseF_events_choice_pufferfish": "「キーが押されているあいだ」のイベントブロックを使用して、ユーザーがキーを押している間、スプライトのサイズを繰り返し変更します。",
         "courseF_events_practice_reorder": "スプライトが今までの動きだけを止めるように、「2秒で」の下にあるコードのじゅんばんを変えます。",
         "courseF_events_ship": "イベントを使って、8秒したら宇宙船が動き始めるようにしましょう。",
-        "courseF_text_answer": "「応答されたとき」ブロックを使用して、プロンプトに応答があった後、変数からテキストをプリントしましょう。",
+        "courseF_text_answer": "「応答されたとき」ブロックを使用して、プロンプトに応答があった後に変数からテキストをプリントしましょう。",
         "courseF_text_choice_color": "「色」という変数のプロンプトを追加します。",
         "courseF_text_choice_conversation": "「プリント」ブロックを使用して、2人のキャラクターに会話をさせましょう。",
         "courseF_text_choice_events": "テキストが正しくプリントされるように、イベントブロックを追加します。",
@@ -3643,7 +3643,16 @@
         "poetry_hoc_exemplar2": "どのような画像が思い浮かびますか？",
         "poetry_hoc_sounds": "プログラムにサウンドを加えると、詩を読んでいる時の詩の雰囲気を変えることができます。",
         "poetry_hoc_spriteBehaviors": "プログラム実行中、スプライトは何度も特定のアクションやビヘイビアをすることができます。",
-        "poetry_hoc_spriteSizes": "すでに作成したスプライトのサイズを変更することができます。 "
+        "poetry_hoc_spriteSizes": "すでに作成したスプライトのサイズを変更することができます。 ",
+        "New Artist Project": "カッコイイのを描いてみましょう！コードはプロジェクトとして保存されるので、いつでも戻ることができます。",
+        "New Basketball Project": "自分だけのバスケットボール ゲームを作りましょう。ルールは自由に変更できます。完了したら、「共有」ボタンをクリックして、友だちがゲームをスマホで試せるようにしよう。",
+        "New Bounce Project": "バウンス ゲームを作成しましょう。デザインやルールは自由に変更できます。完了したら、「共有」ボタンをクリックして、友だちがゲームをスマホで試せるようにしよう。",
+        "CSD U5 black white images pixelation 2_2021": "スマイリーフェイスを描く (画像を表示するにはここをクリック)",
+        "CSD U5 black white images pixelation 3_2021": "イメージを検索するスライダーの幅と高さを変更します(詳細はこちら)",
+        "CSD U5 black white images pixelation 4_2021": "スマイリーフェイスに眉毛を追加(画像を表示するにはここをクリック)",
+        "CSD U5 black white images pixelation 5_2021": "好きなものをかく",
+        "CSD U5 black white images pixelation_2021": "0 と 1 を入力して X の形を完成させる",
+        "CSDU6 arrays select rainbow_2021": "配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)"
       }
     }
   }

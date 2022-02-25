@@ -201,7 +201,7 @@
         },
         "4-5 Maze 5": {
           "4-5_Maze_5_a": "Próbáld az `ismételd` ciklust használni, amikor több mint kétszer kell alkalmaznod az `előrelépni` blokkot!",
-          "4-5_Maze_5_b": "Több `repeat` ciklust is használhatsz a feladványban."
+          "4-5_Maze_5_b": "Több `ismételd` ciklust is használhatsz a feladványban."
         },
         "4-5 Maze 6": {
           "4-5_Maze_6_a": "Próbáld követni az utat az ujjaddal!\nEz a legrövidebb út, amit találhatsz?"
@@ -3974,7 +3974,7 @@
           "add_behavior": "Adj hozzá egy „Manó keletkezik” blokkot a kódodhoz. Ellenőrizd, hogy már elkészítetted azt a manót, amelyhez viselkedést akarsz rendelni. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Keresd meg ezt a blokkot, és kattints a 150-re.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nMi történik, ha a szám 25? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block>></xml>"
+          "size hint": "Keresd meg ezt a blokkot, és kattints a 150-re.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nMi történik, ha a szám 25? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         }
       }
     }

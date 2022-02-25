@@ -2493,7 +2493,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_animals_behaviors": {
           "wandering": "daydish",
@@ -2560,7 +2562,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "daydish",
@@ -2627,7 +2631,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_food_costumes": {
           "moving east": "sharqqa yurish",
@@ -2679,7 +2685,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_retro_behaviors": {
           "wandering": "daydish",

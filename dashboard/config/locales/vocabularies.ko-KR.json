@@ -50,8 +50,13 @@
         "debugging/aquatic/unversioned": {
           "word": "디버깅"
         },
+        "condition/aquatic/unversioned": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "loops/aquatic/unversioned": {
           "word": "반복"
@@ -315,7 +320,12 @@
           "definition": "컴퓨터에게 내릴 지시사항. 많은 명령어가 조합되어 알고리즘과 컴퓨터 프로그램을 이룹니다."
         },
         "conditionals/coursed/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
+        },
+        "condition/coursed/2021": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
         },
         "while_loop/coursed/2021": {
           "word": "While 루프",
@@ -360,8 +370,13 @@
           "word": "명령어",
           "definition": "컴퓨터에게 내릴 지시사항. 많은 명령어가 조합되어 알고리즘과 컴퓨터 프로그램을 이룹니다."
         },
+        "condition/express/2021": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/express/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "while_loop/express/2021": {
           "word": "While 루프",
@@ -456,8 +471,13 @@
         "function/coursee/2021": {
           "word": "함수"
         },
+        "condition/coursee/2021": {
+          "word": "조건",
+          "definition": "동작을 실행하기 전 그것이 참인지 여부를 보기 위해 프로그램이 확인하는 것. "
+        },
         "conditionals/coursee/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": "일정 조건이 참일 때만 실행하는 구문."
         },
         "while_loop/coursee/2021": {
           "word": "While 루프",
@@ -478,6 +498,55 @@
         "try/coursee/2021": {
           "word": "시도",
           "definition": "뭔가를 하려고 시도"
+        },
+        "machine_learning/csd/2021": {
+          "word": "머신 러닝"
+        },
+        "ethics/csd/2021": {
+          "word": "윤리"
+        },
+        "user_interface/csd/2021": {
+          "word": "사용자 인터페이스"
+        },
+        "bug/csd/2021": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "for_loop/csd/2021": {
+          "word": "For 루프",
+          "definition": "사전에 결정된 시작 및 종류, 증분 (단계 간격)이 있는 루프."
+        },
+        "debugging/csd/2021": {
+          "word": "디버깅"
+        },
+        "variable/csd/2021": {
+          "word": "변수",
+          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
+        },
+        "sprite/csd/2021": {
+          "word": "스프라이트"
+        },
+        "condition/csd/2021": {
+          "word": "조건"
+        },
+        "conditionals/csd/2021": {
+          "word": "조건"
+        },
+        "abstraction/csd/2021": {
+          "word": "추상화"
+        },
+        "function/csd/2021": {
+          "word": "함수"
+        },
+        "processing/csd/2021": {
+          "word": "프로세싱"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "디지털 발자국"
+        },
+        "copyright/csd/2021": {
+          "word": "저작권",
+          "definition": "문학적, 예술적, 음악적 소재를 인쇄 또는 출판, 공연, 촬영, 기록하고 또한 다른 이에게 그렇게 하도록 허가할 배타적 법적 권리."
         }
       }
     }

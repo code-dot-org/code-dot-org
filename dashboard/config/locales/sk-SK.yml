@@ -221,6 +221,10 @@ sk:
     email_preference_yes: Áno
     email_preference_no: Nie
     email_preference_required: Musíte zadať emailové preferencie.
+    share_teacher_email_reg_partner_question: Chceli by ste, aby sme zdieľali vaše
+      kontaktné údaje s partnerom [Code.org regional partner](%{cdo_regional_partner_desc})
+      vo vašom štáte, aby vás mohol informovať o miestnych príležitostiach, akciách
+      a zdrojoch profesijného rozvoja?
     share_teacher_email_reg_partner_preference_yes: Áno
     share_teacher_email_reg_partner_preference_no: Nie
     share_teacher_email_reg_partner_preference_required: Musíte zadať emailové preferencie.
@@ -456,6 +460,8 @@ sk:
       minecraft_hero: Minecraft hrdina
       playlab: Play Lab
       playlab_k1: Play Lab (predškolský vek)
+      poetry: Poézia
+      poetry_hoc: Básnické umenie
       scratch: Scratch
       sports: Športy
       spritelab: Sprite Lab
@@ -478,6 +484,7 @@ sk:
       prizes_link: viac info
   teacher:
     answer: Odpoveď
+    dashboard: Nástenka učiteľa
     for_teachers_only: Iba pre učiteľov
     title:
       one: 'Tvoj učiteľ:'
@@ -1219,6 +1226,7 @@ sk:
       school: Škola
       school_name: Názov školy
       school_city: Mesto
+      school_city_district: Mesto / školský obvod
       school_country: Krajina
       colombian_school_city: Mesto
       colombian_school_municipality: Okres školy
@@ -1270,7 +1278,7 @@ sk:
       subjects:
         cs: Informatika
         ict: IT
-        math: Matematické
+        math: Matematika
         science: Veda
         history: História / Sociálne vedy
         la: Jazyky
@@ -1374,3 +1382,4 @@ sk:
     this_sprite: tento objekt
   unit_prefix: Jednotka %{n}
   code_org_logo_alt: Code.org Domov
+  teacher_feedback: Spätná väzba od učiteľa

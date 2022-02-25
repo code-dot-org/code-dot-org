@@ -57,7 +57,7 @@ pl:
     #CSforGood'
   social_hoc2019_learn_computer_science: 'Ucz się informatyki. Zmieniaj świat. #CSforGood
     #HourOfCode'
-  social_hoc_is_coming: Zbliża się Godzina Kodowania!
+  social_hoc_is_coming: Nadchodzi Godzina Kodowania!
   social_hoc2019_hoc_is_about_csforgood: "#HourOfCode dotyczy #CSforGood. Ucz się
     informatyki. Zmieniaj świat."
   social_hoc2019_coming_dates: Godzina Kodowania będzie miała miejsce w dniach 9-15
@@ -144,6 +144,9 @@ pl:
     świecie. Informatyka to coś więcej niż tylko kodowanie! Ciesz się pierwszym krokiem
     Code.org w nowej podróży, aby zacząć uczyć o sztucznej inteligencji z naszym programem
     nauczania.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
   hoc_live_learn_title: Ucz się z Godziną Kodowania na Żywo
@@ -222,7 +225,7 @@ pl:
   codeorg_homepage_hoc2018_curriculum: Przejdź dalej dzięki <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link"> Kursom Code.org </a>
   codeorg_homepage_hoc2018_dance_heading: Utwórz własną <span class="highlight-word">Potańcówkę</span>
-  codeorg_homepage_hoc2018_header_line1: Zbliża się Godzina Kodowania...
+  codeorg_homepage_hoc2018_header_line1: Nadchodzi Godzina Kodowania....
   codeorg_homepage_hoc2018_header_line2_desktop: Co będziesz <span class="hoc2018-highlight-word">tworzyć?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Co dziś stworzysz?
   codeorg_homepage_hoc2018_header_line3: Uwolnij wyobraźnię i rodzące się pomysły.
@@ -234,13 +237,13 @@ pl:
   hourofcode_homepage_hoc2018_header_line1: Każdy i wszędzie może zorganizować Godzinę
     Kodowania. Godzinne samouczki w ponad 45 językach. Nie musisz mieć doświadczenia.
   hourofcode_homepage_hoc2018_header_line2: Od 4 do 104 lat.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Nadchodzi Godzina Kodowania.
   codeorg_homepage_celebrate_cse: Celebruj informatykę wszędzie!
-  codeorg_homepage_csc: W CS Connections informatyka spotyka się z językiem, sztuką,
-    matematyką i nie tylko
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
-  codeorg_homepage_csc_title: Połączenia z informatyką (CS Connections)
+  codeorg_homepage_csc: Zobacz, jak informatyka łączy się ze sztuką języka, matematyką
+    i nie tylko w naszym programie nauczania.
+  codeorg_homepage_csc_long: Przekonaj się jak w naszym programie informatyka łączy
+    się z językiem, sztuką, matematyką i innymi dziedzinami!
+  codeorg_homepage_csc_title: Powiązania z informatyką (CS Connections)
   hoc2018_tutorial_mchoc_description: Użyj bloków kodu, aby zabrać Aleksa i Steve'a
     na wycieczkę po tym świecie Minecraftu.
   codeorg_homepage_hoc2019_dance_heading: Wypróbuj nową <span class="highlight-word">Potańcówkę&nbsp;!</span>
@@ -1018,6 +1021,7 @@ pl:
   footer_menu_support: Pomoc techniczna
   footer_menu_terms: Warunki
   footer_menu_privacy: Polityka Prywatności
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Aktywności Godziny Kodowania
   learn_banner_blurb: Wypróbuj jednogodzinny kurs, przeznaczony dla wszystkich grup
     wiekowych, dostępny w ponad 45 językach.  Dołącz do milionów uczniów i nauczycieli

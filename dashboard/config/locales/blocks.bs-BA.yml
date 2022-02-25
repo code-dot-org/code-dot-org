@@ -405,6 +405,26 @@ bs:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': svi vanzemaljci
             '"BEAR"': medvjedi
@@ -879,6 +899,19 @@ bs:
         options:
           UNIT:
             '"seconds"': sekunde
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1015,6 +1048,14 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': sporo
+            '5': normal
+            '7': brzo
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1190,36 +1231,44 @@ bs:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"hearts"': Srca
+            '"hearts"': srca
             '"iceCream"': Sladoled
-            '"rainbow"': Duge
-            '"stars"': Zvijezde
+            '"rainbow"': duga
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': kiša
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': noć
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': sporo
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Svjetlo
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': skoči
       Poetry_setBackground:
         text: podesi boju pozadine {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
+            '"bubbles"': Balončići
+            '"clouds"': oblačno
+            '"confetti"': Konfeti
+            '"hearts"': srca
+            '"rain"': kiša
             '"colors"': Boje
             '"stars"': Zvijezde
-            '"rain"': Kiša
-            '"bubbles"': Balončići
-            '"confetti"': Konfeti
           PALETTE:
-            '"rainbow"': Duge
+            '"rainbow"': duga
+            '"winter"': zima
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Kiša
             '"bubbles"': Balončići
             '"confetti"': Konfeti
+            '"hearts"': srca
+            '"rain"': kiša
       Poetry_whenLineShows:
         options:
           N:

@@ -694,6 +694,17 @@ hu:
         csd_what_computers_are: Mi az a számítógép?
         playlab_2021: Bevezetés a játéklaborba
         playlab_2021_reader: Bevezetés a játéklaborba
+        PL_CSD_TeacherTips_Advise: Tippek tanároknak - Tanács új tanároknak
+        PL_CSD_TeacherTips_IntroToCSD: Tippek tanároknak - Bevezetés az informatika
+          felfedezésébe
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Tippek tanároknak - A problémamegoldás
+          folyamata
+        PL_CSD_TeacherTips_PairProgramming: Tippek tanároknak - Páros programozás
+        PL_CSD_TeacherTips_Debugging: Tippek tanároknak - Hibakeresés
+        PL_CSD_TeacherTips_LeadLearner: Tippek tanároknak - Vezető tanuló
+        poembot-playtest-intro: PoemBot játék tesztje - bevezetés
+        poembot-playtest-sprites: PoemBot játék tesztje - sprite-ok
+        poembot-playtest-events: PoemBot játék tesztje - események
         hello_world_intro: Heló világ - Üdvözlünk a Sprite Lab világában
         hello_world_events: Heló világ - Programozás eseményekkel
         hello_world_congrats: Heló világ - Csinálj, amit akarsz

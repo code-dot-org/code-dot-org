@@ -2,34 +2,6 @@
   "dv-MV": {
     "data": {
       "vocabularies": {
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "drop/courseb/2021": {
           "word": "ޑްރޮޕް"
         },
@@ -40,6 +12,9 @@
           "word": "ޑްރޮޕް"
         },
         "copyright/coursee/2021": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "copyright/csd/2021": {
           "word": "ކޮޕީރައިޓްސް"
         }
       }

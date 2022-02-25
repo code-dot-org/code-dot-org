@@ -356,6 +356,14 @@ ky:
           PROPERTY:
             '"scale"': өлчөмү
             '"height"': бийиктиги
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': кадимки
+            '7': fast
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -512,9 +520,36 @@ ky:
             '"down"': жебе төмөн
             '"left"': жебе солго
             '"right"': жебе оңго
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': жүрөктөр
+            '"rainbow"': көк желе
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"rain"': жаан
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': түн
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': секир
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': булуттуу
+            '"hearts"': жүрөктөр
+            '"rain"': жаан
+          PALETTE:
+            '"rainbow"': көк желе
+            '"winter"': кыш
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': жүрөктөр
             '"rain"': жаан
       RyanLab_moveForward:
         text: алдыга жылдыр

@@ -2597,6 +2597,21 @@
         },
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_b": "Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!"
+        },
+        "helloworld_animals_click": {
+          "hw_click_sprites": "Клацайте на спрайтах поки виконується програма"
+        },
+        "helloworld_emoji_click": {
+          "hw_click_sprites": "Клацайте на спрайтах поки виконується програма"
+        },
+        "helloworld_food_click": {
+          "hw_click_sprites": "Клацайте на спрайтах поки виконується програма"
+        },
+        "helloworld_retro_click": {
+          "hw_click_sprites": "Клацайте на спрайтах поки виконується програма"
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "Agent має побудувати декілька мостів, щоб Алекс або Стів могли пересуватися за межами карти."
         }
       }
     }

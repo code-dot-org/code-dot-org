@@ -2,10 +2,16 @@
 ar:
   data:
     progressions:
+      AI Machine Learning - Video: تعلم الآلة بالذكاء الاصطناعي - فيديو
+      'AI: Impact on Society - Video': 'الذكاء الاصطناعي: التأثير على المجتمع - فيديو'
+      'AI: Training Data & Bias - Video': 'الذكاء الاصطناعي: بيانات التدريب والتحيز
+        - فيديو'
       Alien Defender: مدافع غريب
+      App Lab Intro - Video: مقدمة إلى مختبر التطبيقات - فيديو
       Arrays: المصفوفات
       Artist Project: مشروع الرسام
       'Artist: Variables': 'الفنان: المتغيرات'
+      Assessment: التقييم
       Back and Forth: للخلف وللأمام
       Bass, Mid, and Treble: صوت الجهير والنغمة متوسطة الطبقة والطنين الثلاثي
       Binary Numbers: أرقام ثنائية
@@ -33,6 +39,7 @@ ar:
       Example: مثال
       Example Projects: مشاريع كمثال
       Exploration: استكشاف
+      Extra: إضافي
       For Loops: للحلقات
       Free Play: اللعب الحر
       Functions: دوال
@@ -42,6 +49,7 @@ ar:
       Getters and Setters: أدوات الاستخلاص والضبط
       Getting Properties: الحصول على الخصائص
       Headings: العناوين
+      Hello World: مرحبًا أيها العالم
       How to Make a Sprite: كيف تصنع "سبرايت"
       Images in HTML: الصور بصيغة HTML
       Inspiration!: التلميح!
@@ -84,6 +92,8 @@ ar:
       Speed it Up, Slow it Down: التسريع والإبطاء
       Sprite Lab Example Project: عينة من مشاريع مختبر الرسوم المتحركة
       Sprite Lab Project: مشروع Sprite Lab
+      Sprite Movement: حركة الرسوم المتحركة
+      Teach AI a New Word: تدريس نشاط الذكاء الاصطناعي - كلمة جديدة
       Text Compression: ضغط النص
       The Animation Tab: تبويب الرسوم المتحركة
       The Draw Loop: حلقة الرسم

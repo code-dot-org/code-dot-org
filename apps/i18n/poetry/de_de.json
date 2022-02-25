@@ -19,7 +19,7 @@
   "fieldTitle": "Wynken, Blynken und Nod",
   "frostLines": "Das erste Grün der Natur ist Gold,\nDie Farbe, die für sie am schwersten zu haltend ist..\nIhr frühes Blatt ist eine Blume;\nAber nur eine Stunde lang.\nDann lässt Blatt für Blatt nach.\nSo versank Eden in Trauer,\nSo geht die Morgendämmerung in den Tag.\nNichts goldenes kann bleiben.",
   "frostTitle": "Nichts goldenes kann bleiben",
-  "foregroundEffectWithEvent": "Du musst einen Vordergrundeffekt einfügen indem du einen Event benutzt.",
+  "foregroundEffectWithEvent": "Du musst einen Vordergrundeffekt einfügen indem du einen Event benutzt. Füge einen Effekt unter deinem Event-Baustein hinzu.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"rain\"</title></block></next></block></xml>",
   "genericBonusSuccess": "Gut gemacht! Du hast das Level einschließlich der Zusatzaufgabe geschafft!",
   "hafezLines": "Ich wünschte ich könnte es dir zeigen\nWenn du einsam bist oder in der Dunkelheit,\nDas erstaunliche Licht\nVon deinem eigenen Sein!",
   "hafezTitle": "Mein geniales Bild",

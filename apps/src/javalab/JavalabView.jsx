@@ -7,14 +7,17 @@ import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
 import {
   appendOutputLog,
-  setIsDarkMode,
+  setDisplayTheme,
   setIsRunning,
   setIsTesting
 } from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
   TabType
 } from '@cdo/apps/templates/instructions/TopInstructions';
+import javalabMsg from '@cdo/javalab/locale';
+import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
 import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
@@ -41,9 +44,9 @@ class JavalabView extends React.Component {
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
     disableFinishButton: PropTypes.bool,
-    isDarkMode: PropTypes.bool.isRequired,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     appendOutputLog: PropTypes.func,
-    setIsDarkMode: PropTypes.func,
+    setDisplayTheme: PropTypes.func,
     channelId: PropTypes.string,
     isEditingStartSources: PropTypes.bool,
     isRunning: PropTypes.bool,
@@ -54,6 +57,7 @@ class JavalabView extends React.Component {
     canTest: PropTypes.bool,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     longInstructions: PropTypes.string,
+    hasContainedLevels: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool
@@ -64,16 +68,30 @@ class JavalabView extends React.Component {
   }
 
   compile = () => {
-    this.props.appendOutputLog('Compiling program...');
-    this.props.appendOutputLog('Compiled!');
+    this.props.appendOutputLog(javalabMsg.compilingProgram());
+    this.props.appendOutputLog(javalabMsg.compiled());
   };
 
   // Sends redux call to update dark mode, which handles user preferences
   renderSettings = () => {
-    const {isDarkMode, setIsDarkMode} = this.props;
+    const {displayTheme, setDisplayTheme} = this.props;
+    const displayThemeString =
+      displayTheme === DisplayTheme.DARK
+        ? javalabMsg.displayThemeLightMode()
+        : javalabMsg.displayThemeDarkMode();
+
     return [
-      <a onClick={() => setIsDarkMode(!isDarkMode)} key="theme-setting">
-        Switch to {isDarkMode ? 'light mode' : 'dark mode'}
+      <a
+        onClick={() =>
+          setDisplayTheme(
+            displayTheme === DisplayTheme.DARK
+              ? DisplayTheme.LIGHT
+              : DisplayTheme.DARK
+          )
+        }
+        key="theme-setting"
+      >
+        {javalabMsg.switchToDisplayTheme({displayTheme: displayThemeString})}
       </a>
     ];
   };
@@ -109,11 +127,12 @@ class JavalabView extends React.Component {
   };
 
   isLeftSideVisible = () => {
+    const {longInstructions, hasContainedLevels} = this.props;
     // It's possible that a console level without instructions won't have
     // anything to show on the left side.
     return (
       this.props.viewMode !== CsaViewMode.CONSOLE ||
-      !!this.props.longInstructions
+      hasInstructions(null, longInstructions, hasContainedLevels)
     );
   };
 
@@ -144,7 +163,7 @@ class JavalabView extends React.Component {
 
   render() {
     const {
-      isDarkMode,
+      displayTheme,
       viewMode,
       visualization,
       onCommitCode,
@@ -165,8 +184,8 @@ class JavalabView extends React.Component {
       onPhotoPrompterFileSelected
     } = this.props;
 
-    if (isDarkMode) {
-      document.body.style.backgroundColor = '#1b1c17';
+    if (displayTheme === DisplayTheme.DARK) {
+      document.body.style.backgroundColor = color.background_black;
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
@@ -229,9 +248,10 @@ class JavalabView extends React.Component {
                     disableTestButton={awaitingContainedResponse || !canTest}
                     onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
-                    showTestButton={experiments.isEnabled(
-                      experiments.JAVALAB_UNIT_TESTS
-                    )}
+                    showTestButton={
+                      isEditingStartSources ||
+                      experiments.isEnabled(experiments.JAVALAB_UNIT_TESTS)
+                    }
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
                   />
@@ -296,7 +316,7 @@ export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
     channelId: state.pageConstants.channelId,
-    isDarkMode: state.javalab.isDarkMode,
+    displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
     isTesting: state.javalab.isTesting,
@@ -306,6 +326,7 @@ export default connect(
       .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
     longInstructions: state.instructions.longInstructions,
+    hasContainedLevels: state.pageConstants.hasContainedLevels,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     disableFinishButton: state.javalab.disableFinishButton,
     isSubmittable: state.pageConstants.isSubmittable,
@@ -313,7 +334,7 @@ export default connect(
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
-    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
+    setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
     setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
   })

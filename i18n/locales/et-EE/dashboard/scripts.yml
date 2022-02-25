@@ -3072,6 +3072,26 @@ et:
               display_name: Loendid
             csp_loops:
               display_name: Tsüklid
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmid
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Uuring
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Uuring
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3264,6 +3284,14 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -3421,3 +3449,248 @@ et:
           lessons:
             lesson-1:
               name: Sõnamesilane
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: For Loop Fun
+          lesson_groups:
+            lessonGroup-8:
+              display_name: KoodiTund
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Muutujad
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funktsioonid
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Happy Maps
+            'Programming: Happy Maps':
+              name: Happy Maps
+            Loops in Ice Age:
+              key: Tsüklik - Jääaeg
+            Events in Play Lab:
+              key: Sündmused Mängude Laboris
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Tantsuõhtu
+            lesson-1:
+              name: Tantsuõhtu
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_functions:
+              display_name: Funktsioonid
+            csf_variables:
+              display_name: Muutujad
+            csf_for_loops:
+              display_name: For tsükkel
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Binaararvud
+              key: Binaararvud
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Debugimine
+              key: Debugimine
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Muutujad
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Liiguta, liiguta
+              key: Liiguta, liiguta
+            Getting Loopy:
+              name: Muutub tsükliliseks
+            'Loops: Getting Loopy':
+              name: Muutub tsükliliseks
+            Events in Play Lab:
+              key: Sündmused Mängude Laboris
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Suursündmus
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+              key: Binaarsed käevõrud
+            'Events: The Big Event':
+              name: Suursündmus
+            Events in Play Lab:
+              key: Sündmused Mängude Laboris
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
+            Relay Programming:
+              name: Relee programmeerimine
+              key: Relee programmeerimine
+            Dance Party:
+              name: Tantsuõhtu
+              key: Tantsuõhtu
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+              key: Tsüklik - Jääaeg
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+              key: Tingimuslaused kaartidel
+            'Algorithms: Graph Paper Programming':
+              name: Millimeetripaberi programmeerimine
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_conditionals:
+              display_name: Tingimuslaused
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Laulude kirjutamine
+            'Functions: Songwriting':
+              name: Laulude kirjutamine
+            Conditionals:
+              key: Tingimuslaused
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            ramp_up:
+              display_name: Korduvad tsüklid
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Tingimuslaused
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: For Loop Fun
+              key: For Loop Fun
+            The Internet:
+              name: Internet
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-8:
+              display_name: Muutujad
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Tsüklid
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Tsüklid
+            csf_events:
+              display_name: Sündmused
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Tingimuslaused
+            lesson-16:
+              name: Debugimine
+            lesson-19:
+              name: Debugimine
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Tsüklid
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu

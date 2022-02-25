@@ -1,8 +1,10 @@
-- @page_title = @lesson_data[:displayName]
+- @page_title = "#{@lesson_data[:displayName]} - #{t('stage_number', number: @lesson_data[:position])}"
 
 %link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
 %script{src: webpack_asset_path('js/lessons/show.js'),
-        data: {lesson: @lesson_data.to_json}}
+        data: {lesson: @lesson_data.to_json, customBlocksConfig: Block.for('GamelabJr').to_json}}
+%script{src: webpack_asset_path('js/blockly.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 
 = render partial: 'shared/emulate_print_media'
 

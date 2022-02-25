@@ -299,6 +299,9 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Creează o animație interactivă, utilizând personaje și evenimente."
         },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Dezvoltați programe care reacționează la evenimente cu limită de timp"
+        },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
           "description": "Reprezentați modul în care se schimbă atmosfera unei poezii."
         },
@@ -311,8 +314,119 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utilizați terminologia adecvată atunci când vă referiți la un mouse, trackpad sau ecranul tactil al computerului."
         },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Descrieți importanța utilizatorului în procesul de design."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Identificați sprites dintr-un program de calculator care este în curs de execuție."
+        },
+        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
+          "description": "Creați noi sprites și atribuiți-le costume și comportamente."
+        },
+        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
+          "description": "Creați o animație folosind sprites și comportamente."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Dezvoltați programe care reacționează la evenimente cu limită de timp"
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Dezvoltați programe care reacționează la datele introduse de utilizator."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Creați un joc animat și interactiv folosind evenimente."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Creați un animal de companie virtual interactiv folosind evenimente, comportamente și creații artistice personalizate."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Programați soluții la problemele care apar atunci când proiectați un animal de companie virtual, cum ar fi hrănirea acestuia."
+        },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Decideți ce fel de afirmații pot sau nu pot fi făcute online."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Declară o variabilă"
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Atribuiți o valoare unei variabile"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Apelați o variabilă de mai multe ori într-un program."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Stabiliți relația dintre modul în care o variabilă este definită, stocată și accesată atunci când apăsăm butonul „Run” al unui program."
+        },
+        "28d3cc79-4aea-431d-a445-745e75e747d8": {
+          "description": "Utilizați variabile pentru a stoca fraze și cuvinte."
+        },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Utilizați variabile împreună cu prompturi."
+        },
+        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
+          "description": "Utilizați variabile pentru a stoca fraze și cuvinte."
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Utilizați variabile împreună cu prompturi."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Creați un program de calculator interactiv care să răspundă la datele introduse de utilizator."
+        },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
+          "description": "Faceți diferența între comenzile care trebuie repetate în buclă și comenzile care trebuie utilizate de sine stătător."
+        },
+        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
+          "description": "Atribuiți valori variabilelor existente."
+        },
+        "550ac608-922b-468f-a69d-08cc1f20799e": {
+          "description": "Utilizați variabilele în locul valorilor repetitive în cadrul unui program."
+        },
+        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
+          "description": "Utilizați variabile pentru a schimba valorile în interiorul unei bucle."
+        },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Împărțiți sarcinile complexe în secțiuni mai mici care pot fi repetate."
+        },
+        "12412b47-e83e-43a9-ad42-e98cba364913": {
+          "description": "Recunoașterea modelelor mari repetate ca fiind formate din modele repetate mai mici."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "059b2997-3d05-4186-8450-066fceeb8c5b": {
+          "description": "Identificați domeniile în care elevii pot utiliza variabile pentru a modifica cantitățile în timpul execuției."
+        },
+        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
+          "description": "Analizați codul pentru a găsi locurile în care variabilele pot fi înlocuite cu valori specifice."
+        },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Determină valoarea de pornire, valoarea de oprire și valoarea de pas pentru o „buclă for”."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Reprezintă valorile afișate de contor atinse de fiecare dată printr-o „buclă for” în timpul execuției."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Stabiliți valoarea de pornire, valoarea de oprire și valoarea de pas pentru o „buclă for”."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Recunoașteți situațiile în care puteți să utilizați o buclă for și în care puteți să utilizați alte bucle, cum ar fi buclele repeat și while."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Utilizați buclele for pentru a schimba bucla de mai multe ori, folosind valori diferite."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Recunoașteți situațiile în care puteți să utilizați o buclă for și în care puteți să utilizați alte bucle, cum ar fi buclele repeat și while."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Utilizați o simulare pe calculator pentru a strânge date despre un model"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Creați un grafic cu două linii pentru a compara date despre două surse diferite"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Efectuați și testați o predicție, modificând variabilele simulării"
         },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Discutați rolul pe care îl joacă inteligența artificială (IA) în viața lor."
@@ -323,11 +437,140 @@
         "6638c886-891e-4d59-820a-227e37274e49": {
           "description": "Motivul despre modul în care părtinirea umană joacă un rol în învățarea automată."
         },
+        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
+          "description": "Aflați mai multe despre complexitatea procesului de trimitere de mesaje prin internet."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Transformați URL-urile în adrese IP."
+        },
+        "12c53e25-70d7-4192-a97a-da08dd673338": {
+          "description": "Planificați în avans pentru o sarcină în curs de desfășurare."
+        },
+        "b76f1811-9865-416d-bd06-601301120384": {
+          "description": "Trebuie să puteți explica modul în care limitările sistemului pot afecta designul proiectului."
+        },
+        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
+          "description": "Descrieți modul în care ajungerea la un compromis poate ajuta la menținerea unui proiect pe drumul cel bun și poate inspira creativitatea."
+        },
+        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
+          "description": "Elaborați și puneți în aplicare planuri de rezolvare a oricăror probleme din codul elevilor."
+        },
+        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
+          "description": "Prezentați procesul de design și modul în care acesta a contribuit la elaborarea proiectului final."
+        },
+        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
+          "description": "Învață că informațiile pe care le partajează online sunt însoțite de o urmă digitală."
+        },
+        "5efa6c72-000c-40a0-ace0-55f47117305b": {
+          "description": "Explorați informațiile care pot fi partajate online."
+        },
+        "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
+          "description": "Definiți o listă de pași (algoritm) pentru a duce un prieten din poziția de pornire până la obiectivul său."
+        },
+        "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
+          "description": "Transpuneți o listă de pași într-o serie de acțiuni fizice"
+        },
+        "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
+          "description": "Identificați și remediați erori în execuția unui algoritm"
+        },
+        "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
+          "description": "Demonstrați comportamente corecte în laboratorul de știința calculatoarelor"
+        },
+        "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
+          "description": "Practicați acțiuni standard de programare cu blocuri, cum ar fi: clic, glisează și fixează etc."
+        },
+        "fae372cb-4b72-4b35-abd6-e2424e54d791": {
+          "description": "Transpuneți mișcările într-o serie de comenzi."
+        },
+        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
+          "description": "Creați un program prin reorganizarea unor mișcări secvențiale."
+        },
+        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
+          "description": "Creați un program pe calculator pornind de la un set de instrucțiuni scrise."
+        },
+        "4576e06e-56f1-4e32-a81d-7bbfea125273": {
+          "description": "Transpuneți mișcările într-o serie de comenzi."
+        },
+        "d5f927b9-727a-423e-90d3-80faad21aa34": {
+          "description": "Identificați și localizați bugurile dintr-un program."
+        },
+        "6c67256a-a8d5-4a57-9744-092686fb01a0": {
+          "description": "Repetați acțiunile începute de instructor."
+        },
+        "368e8edc-290d-4737-a616-a543e5298c66": {
+          "description": "Transpuneți un program cu o imagine într-un dans din lumea reală."
+        },
+        "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
+          "description": "Transformați o serie de acțiuni multiple într-o singură buclă."
+        },
+        "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
+          "description": "Descompuneți o secvență lungă de instrucțiuni în cea mai mică secvență repetabilă posibilă."
+        },
+        "8293f536-510e-44a0-880b-397b3f97deeb": {
+          "description": "Scrieți un program pentru o sarcină dată, care să execute o secvență de comenzi în buclă."
+        },
+        "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
+          "description": "Folosiți o combinație de comenzi secvențiale și în buclă pentru a ajunge la capătul unui labirint."
+        },
+        "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
+          "description": "Descompuneți o secvență lungă de instrucțiuni în cea mai mică secvență repetabilă posibilă."
+        },
+        "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
+          "description": "Numărați de câte ori trebuie repetată o acțiune și reprezentați-o sub forma unei bucle."
+        },
+        "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
+          "description": "Descompuneți o formă în cea mai mare secvență repetabilă a acesteia."
+        },
+        "61329a99-1c0a-414f-9694-78f7f9c81372": {
+          "description": "Creați un program care desenează forme complexe prin repetarea unor secvențe simple."
+        },
+        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
+          "description": "Enumerați câteva exemple diferite de aplicații pentru smartphone."
+        },
+        "595564b5-94b4-4104-9613-05eadc30663e": {
+          "description": "Recomandați tehnologii celor din jur în funcție de nevoile lor unice."
+        },
+        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
+          "description": "Folosiți-vă de propria empatie și creativitate pentru a proiecta tehnologie pentru alții."
+        },
+        "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
+          "description": "Repetați comenzile date de către un instructor."
+        },
+        "3997dff6-b815-412c-b3b5-52d4bd1fc019": {
+          "description": "Să recunoască acțiunile profesorului ca fiind semnale de inițiere a comenzilor."
+        },
+        "86c93634-0b7d-46de-82dd-50b86576bd56": {
+          "description": "Exersați diferențierea acțiunilor predefinite și a celor bazate pe evenimente."
+        },
         "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
           "description": "Identificați acțiunile care se corelează cu evenimentele de intrare."
         },
+        "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
+          "description": "Creați o poveste animată și interactivă, folosind secvențe și manipulatori de evenimente."
+        },
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
           "description": "Împărtășiți un artefact creativ cu alți elevi."
+        },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Aplică concepte de știința calculatoarelor într-un proiect cu finalitate deschisă."
+        },
+        "ae68c8b9-0188-48da-a066-b89a819b67e2": {
+          "description": "Depășiți obstacole precum constrângerile de timp sau erori."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Descoperiți faptul că internetul poate fi folosit pentru a vizita locuri îndepărtate și pentru a învăța lucruri noi."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Comparați modul în care siguranța online este similară cu siguranța în lumea reală."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Explicați regulile pentru călătoriile în siguranță pe internet."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Explicați care sunt așteptările de la elevi atunci când aceștia ajung în laboratorul de informatică."
@@ -335,11 +578,122 @@
         "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "Utilizați terminologia adecvată atunci când vă referiți la un mouse, trackpad sau ecranul tactil al computerului."
         },
+        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
+          "description": "Transpuneți un algoritm într-un program"
+        },
+        "95ef707d-603d-4106-955e-3138f0f16a5d": {
+          "description": "Decodificați și rulați un program creat de altcineva"
+        },
+        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
+          "description": "Identificați și rezolvați erorile sau problemele din instrucțiunile secvențiale"
+        },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Demonstrați comportamente corecte în laboratorul de știința calculatoarelor"
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Practicați acțiuni standard de programare cu blocuri, cum ar fi: clic, glisează și fixează etc."
+        },
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Creați un program prin reorganizarea unor mișcări secvențiale"
+        },
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Creați un program pe calculator pornind de la un set de instrucțiuni scrise"
+        },
+        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
+          "description": "Alegeți practici adecvate de depanare atunci când rezolvați probleme"
+        },
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Creați o secvență pentru comenzi, ordonate logic."
+        },
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Identificați problemele sau „bug-urile” dintr-un program și pregătiți un plan de rezolvare a problemelor."
+        },
+        "407c5a4d-9337-4218-92d5-018597e41e19": {
+          "description": "Identificați codul care se repetă și scurtați acțiunile multiple într-o singură buclă."
+        },
+        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
+          "description": "Interpretați un program cu bucle ca o serie de acțiuni multiple."
+        },
+        "cb7cab91-20ca-495a-a429-621631cb0507": {
+          "description": "Concepeți un program folosind structuri care repetă fragmente de cod"
+        },
+        "381b89ab-336f-41cd-b755-78142a1f1f90": {
+          "description": "Îmbunătățiți codul existent găsind zonele care se repetă și introducându-le în structuri care se repetă în buclă"
+        },
+        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Descompuneți o secvență lungă de instrucțiuni în cea mai mică secvență repetabilă posibilă."
+        },
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Numărați de câte ori trebuie repetată o acțiune și reprezentați-o sub forma unei bucle."
+        },
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Descompuneți o formă în cea mai mare secvență repetabilă a acesteia."
+        },
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Creați un program care desenează forme complexe prin repetarea unor secvențe simple."
+        },
+        "134f184c-8865-44d2-8921-5740c749bcd5": {
+          "description": "Repetați comenzile date de către un instructor."
+        },
+        "b7973aec-afbf-4f81-820c-daced7731b0f": {
+          "description": "Să recunoască acțiunile profesorului ca fiind semnale de inițiere a comenzilor."
+        },
+        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
+          "description": "Exersați diferențierea acțiunilor predefinite și a celor bazate pe evenimente."
+        },
         "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
           "description": "Identificați acțiunile care se corelează cu evenimentele de intrare."
         },
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Creați o poveste animată și interactivă, folosind secvențe și manipulatori de evenimente."
+        },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "Împărtășiți un artefact creativ cu alți elevi."
+        },
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Aplică concepte de știința calculatoarelor într-un proiect cu finalitate deschisă."
+        },
+        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
+          "description": "Depășiți obstacole precum constrângerile de timp sau erori."
+        },
+        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
+          "description": "Înțelegeți ce forme pot lua comportamentele răutăcioase online și cum îi pot face pe oameni să se simtă."
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "Identificați modalități de a reacționa online la cuvinte răutăcioase, folosind S-T-O-P."
+        },
+        "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
+          "description": "Fiți exacți atunci când creați instrucțiuni"
+        },
+        "26392005-5f64-4707-b38b-847d1f009a29": {
+          "description": "Identificați și rezolvați erorile sau problemele din instrucțiunile secvențiale"
+        },
+        "560e14ee-7390-4244-aee5-a0c2737112e5": {
+          "description": "Transpuneți mișcările într-o serie de comenzi."
+        },
+        "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
+          "description": "Identificați și localizați bugurile dintr-un program."
+        },
+        "ce53a40d-db75-451a-a901-93f93226306a": {
+          "description": "Preziceți unde nu va funcționa corect programul."
+        },
+        "3ad547f9-c577-4953-88d5-41f7ac1ab710": {
+          "description": "Modificați un program existent pentru a rezolva erorile."
+        },
+        "367c7a8a-4dea-494f-87c7-77cba03711a1": {
+          "description": "Reflectați cu privire la procesul de depanare, prezentându-l într-un mod adecvat vârstei elevilor."
+        },
+        "991aa440-0e71-40b0-8354-da04e3ad125b": {
+          "description": "Ordonați comenzile de mișcare ca etape secvențiale ale unui program."
+        },
+        "a48e07da-5c86-4377-8738-4a6a06633e1d": {
+          "description": "Reprezentați un algoritm sub forma unui program de calculator."
+        },
+        "d50f34e0-2613-485c-9381-7b63832dbd0a": {
+          "description": "Dezvoltați abilități de rezolvare a problemelor și de gândire critică prin recapitularea practicilor de depanare."
         },
         "6503170b-db97-4737-ae5d-5108591497a0": {
           "description": "Creeze un program pentru a face o imagine utilizând pași secvenţiali."
@@ -347,11 +701,122 @@
         "d47b51d2-9114-4dfd-ad21-810573d85543": {
           "description": "Împărțiți formele complexe în părți simple."
         },
+        "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
+          "description": "Identificați modelele repetate din cod care ar putea fi înlocuite cu o buclă"
+        },
+        "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
+          "description": "Scrieți instrucțiuni care utilizează bucle pentru a repeta modele"
+        },
+        "46288097-dbab-437f-897c-4e14352ae388": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
+          "description": "Descompuneți o secvență lungă de instrucțiuni în cea mai mare secvență repetabilă."
+        },
+        "8e76410f-b4db-446b-88c0-00013d9c05bd": {
+          "description": "Folosiți o combinație de comenzi secvențiale și în buclă pentru a ajunge la capătul unui labirint."
+        },
+        "ff15ce2c-8445-442a-89f0-7a50e741850a": {
+          "description": "Scrieți un program pentru o sarcină dată, care să execute o singură comandă în buclă."
+        },
+        "757d864e-38a3-4b30-8617-b9a4174c8b08": {
+          "description": "Identificați situațiile în care o buclă poate fi utilizată pentru a simplifica o acțiune repetitivă."
+        },
+        "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
+          "description": "Folosiți o combinație de comenzi secvențiale și în buclă pentru deplasare și efectuarea acțiunilor."
+        },
+        "bf154cd9-0914-43c2-b895-030de92d1427": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
+          "description": "Faceți diferența între comenzile care trebuie repetate în buclă și comenzile care trebuie utilizate de sine stătător."
+        },
+        "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
+          "description": "Repetați comenzile date de către un instructor."
+        },
+        "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
+          "description": "Recunoașteți mișcările profesorului ca semnale pentru a iniția comenzi."
+        },
+        "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
+          "description": "Exersați diferențierea acțiunilor predefinite și a celor bazate pe evenimente."
+        },
+        "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
+          "description": "Asociați blocurile cu manipulatorul de evenimente corespunzător."
+        },
+        "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
+          "description": "Creați un joc folosind manipulatori de evenimente."
+        },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
           "description": "Împărtășiți un artefact creativ cu alți elevi."
         },
+        "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
+          "description": "Creați un joc animat și interactiv, folosind secvențe și manipulatori de evenimente."
+        },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Identificați acțiunile care se corelează cu evenimentele de intrare."
+        },
+        "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
+          "description": "Colectați și înregistrați date despre cantități de obiecte reale sau despre personaje de pe un ecran"
+        },
+        "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
+          "description": "Creați un grafic cu bare și un grafic circular pentru a reprezenta date simple."
+        },
+        "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
+          "description": "Faceți comparații între vizualizările de date realizate de alții și folosiți-le pentru a face o predicție."
+        },
+        "9a785141-1fe6-4728-996c-2fbb8781b62c": {
+          "description": "Codifică literele în limbaj binar."
+        },
+        "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
+          "description": "Decodifică limbajul binar, transformându-l înapoi în litere."
+        },
+        "ce1f4117-76f3-4359-a554-683a878f82cb": {
+          "description": "Asociați ideea stocării de scrisori scrise pe hârtie cu ideea de stocării de informații într-un calculator."
+        },
+        "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
+          "description": "Folosiți un design planificat ca plan pentru crearea programului."
+        },
+        "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
+          "description": "Depășiți obstacole precum constrângerile de timp sau erori."
+        },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "Definiți termenul „parolă” și descrieți scopul unei parole."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "Creați parole memorabile și puternice."
+        },
+        "3c4b51d5-b72f-42df-a55a-86c146214424": {
+          "description": "Reluați o secvență de pași sub forma unui program codificat"
+        },
+        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
+          "description": "Explicați constrângerile legate de transpunerea problemelor din limbajul uman în limbajul mașinilor"
+        },
+        "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
+          "description": "Ordonați comenzile de mișcare ca etape secvențiale ale unui program."
+        },
+        "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a": {
+          "description": "Modificați un program existent pentru a rezolva erorile."
+        },
+        "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
+          "description": "Descompuneți o secvență lungă de instrucțiuni în cea mai mare secvență repetabilă."
+        },
+        "8a0addda-b47f-4551-8c82-9115be3c130d": {
+          "description": "Definiți idei folosind coduri și simboluri."
+        },
+        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
+          "description": "Verificați munca depusă de colegii de echipă."
+        },
+        "8dba466d-d809-49c6-8f60-218c27964411": {
+          "description": "Identificați semnele frustrării"
+        },
+        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
+          "description": "Citiți și înțelegeți codul dat."
+        },
+        "71cede4e-3e93-41d6-a422-f2443f756a61": {
+          "description": "Identificați bugul și problemele pe care le cauzează într-un program."
+        },
+        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
+          "description": "Descrieți și puneți în aplicare un plan de depanare a unui program."
         },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Identificați acțiunile care se corelează cu evenimentele de intrare."
@@ -361,6 +826,9 @@
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Împărtășiți un artefact creativ cu alți elevi."
+        },
+        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
+          "description": "Creați un joc animat interactiv folosind secvențe și evenimente."
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "Identificați acțiunile care se corelează cu evenimentele de intrare."
@@ -374,11 +842,119 @@
         "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
           "description": "Creează animații de dans utilizând codarea"
         },
+        "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
+          "description": "Concepeți un program folosind structuri care repetă fragmente de cod"
+        },
+        "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
+          "description": "Îmbunătățiți codul existent găsind zonele care se repetă și introducându-le în structuri care se repetă în buclă"
+        },
+        "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
+          "description": "Faceți diferența între comenzile care trebuie repetate în buclă și comenzile care trebuie utilizate de sine stătător."
+        },
+        "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
+          "description": "Împărțiți sarcinile complexe în secțiuni mai mici care pot fi repetate."
+        },
+        "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
+          "description": "Recunoașterea modelelor mari repetate ca fiind formate din modele repetate mai mici."
+        },
+        "673ddc56-5217-45a9-919c-b42024f7de2b": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "fd3464fd-5921-4873-a850-c0799c55eecd": {
+          "description": "Definiți circumstanțele în care anumite părți ale unui program rulează și în care nu rulează."
+        },
+        "494526f8-7392-4788-9126-b2e2dd53b241": {
+          "description": "Stabiliți dacă este îndeplinită o condiție pe baza unor criterii."
+        },
+        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
+          "description": "Parcurgeți un program și preziceți rezultatul, pe baza unui set de date de intrare."
+        },
+        "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
+          "description": "Definiți circumstanțele în care anumite părți ale unui program rulează și în care nu rulează."
+        },
+        "83b6020a-2273-4966-abd6-0049afa1eb4e": {
+          "description": "Stabiliți dacă este îndeplinită o condiție pe baza unor criterii."
+        },
+        "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
+          "description": "Transpuneți enunțurile relațiilor de condiționalitate din limbajul vorbit într-un program."
+        },
+        "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
+          "description": "Rezolvați puzzle-uri folosind o combinație de secvențe în buclă și relații de condiționalitate."
+        },
+        "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
+          "description": "Faceți diferența între buclele care se repetă de un număr fix de ori și buclele care se repetă atâta timp cât o condiție este adevărată."
+        },
+        "38cd04a9-3d07-4df9-b22d-18e39369e387": {
+          "description": "Utilizați o buclă while pentru a crea programe care pot rezolva probleme cu valori necunoscute."
+        },
+        "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
+          "description": "Elaborați programe înțelegând mai multe strategii de implementare a relațiilor de condiționalitate."
+        },
+        "630e79db-15ec-49fd-804c-060b8adf40ea": {
+          "description": "Transpuneți într-un program enunțurile relațiilor de condiționalitate și buclele din limbajul vorbit."
+        },
+        "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
+          "description": "Depășiți obstacole precum constrângerile de timp sau erori."
+        },
+        "8c021568-46ed-4243-a4d1-f2037138c01a": {
+          "description": "Transpuneți mișcările într-o serie de comenzi."
+        },
+        "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
+          "description": "Identificați și localizați bugurile dintr-un program."
+        },
+        "f0852e8e-a4ab-49a6-8fc4-0c805f14999a": {
+          "description": "Preziceți unde nu va funcționa corect programul."
+        },
+        "857073db-dcda-4868-8be6-e0fba5f981d7": {
+          "description": "Modificați un program existent pentru a rezolva erorile."
+        },
+        "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
+          "description": "Reflectați cu privire la procesul de depanare, prezentându-l într-un mod adecvat vârstei elevilor."
+        },
+        "4d4f7faa-e380-483d-b873-b04e114e077e": {
+          "description": "Ordonați comenzile de mișcare ca etape secvențiale ale unui program."
+        },
+        "6a4a4515-9250-4ad0-b943-afef3d26df68": {
+          "description": "Reprezentați un algoritm sub forma unui program de calculator."
+        },
+        "48b6e566-4a4b-424e-b104-33ce83bd2184": {
+          "description": "Dezvoltați abilități de rezolvare a problemelor și de gândire critică prin recapitularea practicilor de depanare."
+        },
         "500825a3-b44f-4b99-ab77-2271fdcbb867": {
           "description": "Creeze un program pentru a face o imagine utilizând pași secvenţiali."
         },
         "36081e5f-1a5d-4102-a1de-27865168ee09": {
           "description": "Împărțiți formele complexe în părți simple."
+        },
+        "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
+          "description": "Definiți „sprites” drept personaje sau obiecte de pe ecran pe care elevii le pot muta și modifica."
+        },
+        "09281dd0-4b33-4537-9543-a2377bc2f923": {
+          "description": "Creați noi sprites și atribuiți-le costume și comportamente."
+        },
+        "30a80046-d715-46b1-8b89-65c410d04690": {
+          "description": "Creați noi sprites și atribuiți-le costume și comportamente."
+        },
+        "e0d4a883-51dc-4647-8c9f-59652f699aec": {
+          "description": "Creați o animație folosind sprites și comportamente."
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Creați un joc animat și interactiv folosind evenimente."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Dezvoltați programe care reacționează la evenimente cu limită de timp"
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Dezvoltați programe care reacționează la datele introduse de utilizator."
+        },
+        "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
+          "description": "Creați un animal de companie virtual interactiv folosind evenimente, comportamente și creații artistice personalizate."
+        },
+        "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
+          "description": "Programați soluții la problemele care apar atunci când proiectați un animal de companie virtual, cum ar fi să-l hrăniți sau să urmăriți cât este de fericit."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Dezvoltă programe care să răspundă la evenimente cronometrate"
@@ -389,14 +965,197 @@
         "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
           "description": "Creează animații de dans utilizând codarea"
         },
+        "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
+          "description": "Descompuneți o secvență lungă de instrucțiuni în cea mai mare secvență repetabilă."
+        },
+        "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
+          "description": "Folosiți o combinație de comenzi secvențiale și în buclă pentru a ajunge la capătul unui labirint."
+        },
+        "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "32250c07-4872-43ce-9968-33e17f779cf3": {
+          "description": "Faceți diferența între comenzile care trebuie repetate în buclă și comenzile care trebuie utilizate de sine stătător."
+        },
+        "06be5715-7c67-4b13-816d-acb7253a13b2": {
+          "description": "Împărțiți sarcinile complexe în secțiuni mai mici care pot fi repetate."
+        },
+        "b884b12d-1247-42f3-a907-652dd25566f2": {
+          "description": "Recunoașterea modelelor mari repetate ca fiind formate din modele repetate mai mici."
+        },
+        "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "f35a3857-a630-4783-98c3-c0e6304af48f": {
+          "description": "Descompuneți codul în cele mai mari secvențe repetabile, folosind atât buclele, cât și buclele imbricate."
+        },
+        "10a74fb8-26fd-4a7c-84f4-1b868f042670": {
+          "description": "Recunoașteți diferențele dintre utilizarea unei bucle și a unei bucle imbricate."
+        },
+        "d1ca506b-d694-4c2b-bcc5-38af2ce425dd": {
+          "description": "Descrieți când este necesară o buclă, o buclă imbricata sau când nu este nevoie de nicio buclă."
+        },
+        "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
+          "description": "Definiți circumstanțele în care anumite părți ale unui program rulează și în care nu rulează."
+        },
+        "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
+          "description": "Stabiliți dacă este îndeplinită o condiție pe baza unor criterii."
+        },
+        "7002da51-158a-4849-b733-48282a764b82": {
+          "description": "Transpuneți enunțurile relațiilor de condiționalitate din limbajul vorbit într-un program."
+        },
+        "08f476a4-492c-47ee-8291-a435761059ac": {
+          "description": "Rezolvați puzzle-uri folosind o combinație de secvențe în buclă și relații de condiționalitate."
+        },
+        "e85d8d23-86c2-4644-9449-94af8b02f763": {
+          "description": "Faceți diferența între buclele care se repetă de un număr fix de ori și buclele care se repetă atâta timp cât o condiție este adevărată."
+        },
+        "8bee7277-31d3-4032-a8ea-2d2c820425ec": {
+          "description": "Utilizați o buclă while pentru a crea programe care pot rezolva probleme cu valori necunoscute."
+        },
+        "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
+          "description": "Definiți circumstanțele în care anumite părți ale unui program rulează și în care nu rulează."
+        },
+        "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
+          "description": "Stabiliți dacă este îndeplinită o condiție pe baza unor criterii."
+        },
+        "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
+          "description": "Elaborați programe înțelegând mai multe strategii de implementare a relațiilor de condiționalitate."
+        },
+        "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
+          "description": "Transpuneți într-un program enunțurile relațiilor de condiționalitate și buclele din limbajul vorbit."
+        },
+        "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
+          "description": "Utilizați relații de condiționalitate imbricate pentru a analiza condiții cu valori multiple cu logica if, else if, else."
+        },
+        "0174cd8f-0a91-423b-b643-2b8a0290fcff": {
+          "description": "Combinați o buclă cu o relație de condiționalitate."
+        },
+        "1ece8579-425f-4324-a041-8f47ce736f42": {
+          "description": "Utilizați funcții pentru a simplifica programele complexe."
+        },
+        "4f16bc65-a8b7-485b-b34e-5b67c0c68259": {
+          "description": "Folosiți funcții prestabilite pentru a îndeplini sarcini care se repetă frecvent."
+        },
+        "ae435e31-012f-4ad5-aeb4-028f25f5671d": {
+          "description": "Clasificați și generalizați codul pentru a obține funcții utile."
+        },
+        "36a2f4e1-f9df-4115-a898-a7d96ee60c27": {
+          "description": "Recunoașteți situațiile în care o funcție poate contribui la simplificarea unui program."
+        },
+        "22b69133-d5b3-407a-9c18-7b4841daffa7": {
+          "description": "Recunoașteți situațiile în care o funcție poate contribui la simplificarea unui program."
+        },
+        "5bbd5970-dd02-4100-b9c4-6d051ec9bba2": {
+          "description": "Folosiți funcții prestabilite pentru a îndeplini sarcini care se repetă frecvent."
+        },
+        "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
+          "description": "Acțiuni - utilizați variabile pentru a stoca fraze și cuvinte."
+        },
+        "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
+          "description": "Utilizați variabile împreună cu prompturi."
+        },
+        "16854174-125c-4c79-9a42-064ef84535e3": {
+          "description": "Atribuiți valori variabilelor existente."
+        },
+        "4fe2cf70-9f34-41b0-bae1-9c5af60706de": {
+          "description": "Utilizați variabilele în locul valorilor repetitive în cadrul unui program."
+        },
+        "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
+          "description": "Utilizați variabile pentru a schimba valorile în interiorul unei bucle."
+        },
+        "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
+          "description": "Identificați domeniile în care elevii pot utiliza variabile pentru a modifica cantitățile în timpul execuției."
+        },
+        "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
+          "description": "Analizați codul pentru a găsi locurile în care variabilele pot fi înlocuite cu valori specifice."
+        },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Stabiliți valoarea de pornire, valoarea de oprire și valoarea de pas pentru o „buclă for”."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "Recunoașteți situațiile în care puteți să utilizați o buclă for și în care puteți să utilizați alte bucle, cum ar fi buclele repeat și while."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Utilizați buclele for pentru a schimba bucla de mai multe ori, folosind valori diferite."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "Recunoașteți situațiile în care puteți să utilizați o buclă for și în care puteți să utilizați alte bucle, cum ar fi buclele repeat și while."
+        },
+        "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
+          "description": "Depășiți obstacole precum constrângerile de timp sau erori."
+        },
         "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
           "description": "Explicați care sunt așteptările de la elevi atunci când aceștia ajung în laboratorul de informatică."
         },
         "d1485387-01e4-484d-9935-75f7c14b9d76": {
           "description": "Utilizați terminologia adecvată atunci când vă referiți la un mouse, trackpad sau ecranul tactil al computerului."
         },
+        "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
+          "description": "Demonstrați comportamente corecte în laboratorul de știința calculatoarelor"
+        },
+        "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
+          "description": "Practicați acțiuni standard de programare cu blocuri, cum ar fi: clic, glisează și fixează etc."
+        },
+        "a5a52414-42a7-4b32-897b-819a70572328": {
+          "description": "Transpuneți mișcările într-o serie de comenzi."
+        },
+        "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
+          "description": "Creați un program prin reorganizarea unor mișcări secvențiale"
+        },
+        "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
+          "description": "Creați un program pe calculator pornind de la un set de instrucțiuni scrise"
+        },
+        "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
+          "description": "Creați o secvență pentru comenzi, ordonate logic."
+        },
+        "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
+          "description": "Identificați problemele sau „bug-urile” dintr-un program și pregătiți un plan de rezolvare a problemelor."
+        },
+        "620da514-ad6e-4049-a9d3-d189a79af01e": {
+          "description": "Transpuneți mișcările într-o serie de comenzi."
+        },
+        "adabe26f-78e0-47f4-92b2-535a38f53f15": {
+          "description": "Identificați și localizați bugurile dintr-un program."
+        },
+        "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
+          "description": "Concepeți un program folosind structuri care repetă fragmente de cod"
+        },
+        "b6f41a7c-0967-4986-b7b6-910819b28396": {
+          "description": "Îmbunătățiți codul existent găsind zonele care se repetă și introducându-le în structuri care se repetă în buclă"
+        },
+        "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
+          "description": "Descompuneți o secvență lungă de instrucțiuni în cea mai mică secvență repetabilă posibilă."
+        },
+        "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
+          "description": "Numărați de câte ori trebuie repetată o acțiune și reprezentați-o sub forma unei bucle."
+        },
+        "6aac3c12-4427-43d1-877c-727d0665ab49": {
+          "description": "Descompuneți o formă în cea mai mare secvență repetabilă a acesteia."
+        },
+        "6dbab2fb-7a17-4269-885e-84768be03a1f": {
+          "description": "Creați un program care desenează forme complexe prin repetarea unor secvențe simple."
+        },
+        "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
+          "description": "Numărați de câte ori trebuie repetată o acțiune și reprezentați-o sub forma unei bucle."
+        },
+        "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
+          "description": "Descompuneți o formă în cea mai mare secvență repetabilă a acesteia."
+        },
+        "dc83123d-d493-40aa-a543-9daa1421c2c8": {
+          "description": "Creați un program care desenează forme complexe prin repetarea unor secvențe simple."
+        },
         "15115c43-46c8-4ab4-93e4-947e2fd42703": {
           "description": "Identificați acțiunile care se corelează cu evenimentele de intrare."
+        },
+        "2fa04500-f1d4-4924-aa39-70292711d432": {
+          "description": "Creați o poveste animată și interactivă, folosind secvențe și manipulatori de evenimente."
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
           "description": "Împărtășiți un artefact creativ cu alți elevi."
@@ -404,11 +1163,140 @@
         "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
           "description": "Identificați acțiunile care se corelează cu evenimentele de intrare."
         },
+        "70e87cab-0d62-4974-9061-425a179bcb2d": {
+          "description": "Creați o poveste animată și interactivă, folosind secvențe și manipulatori de evenimente."
+        },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Împărtășiți un artefact creativ cu alți elevi."
         },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "formarea de legături cu un nou mod de a scrie programe"
+        },
+        "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
+          "description": "Definiți „sprites” drept personaje sau obiecte de pe ecran pe care elevii le pot muta și modifica."
+        },
+        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
+          "description": "Creați noi sprites și atribuiți-le costume și comportamente."
+        },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Identificați acțiunile care se corelează cu evenimentele de intrare."
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Creați o animație interactivă folosind sprites, comportamente și evenimente."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Identificați motivele pentru care oamenii partajează online informații despre ei înșiși."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Explicați diferența dintre informațiile private și cele personale."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Explicați de ce este riscant să partajați informații private online."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Alegeți ce informații despre ei înșiși pot fi partajate online în siguranță."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Creați un program de calculator interactiv care să exprime cine sunt cu ajutorul textului și all imaginilor personalizate."
+        },
+        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
+          "description": "Interpretați partajarea etică a materialelor protejate prin drepturi de autor comparativ cu partajarea care nu este etică."
+        },
+        "0709575a-e9e6-4856-a4f4-02b290f86975": {
+          "description": "Înțelegerea propriilor drepturi cu privire la materialele pe care le-au creat"
+        },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Identificați avantajele utilizării unei structuri în buclă în locul repetiției manuale."
+        },
+        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
+          "description": "Faceți diferența între comenzile care trebuie repetate în buclă și comenzile care trebuie utilizate de sine stătător."
+        },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Combinați formele simple în desene complexe cu ajutorul buclelor imbricate."
+        },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Numărați de câte ori trebuie repetată o acțiune și reprezentați-o sub forma unei bucle."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Împărțiți sarcinile complexe în secțiuni mai mici care pot fi repetate."
+        },
+        "6174da85-eb3a-4c0e-925d-360b04604fdb": {
+          "description": "Descrieți când este necesară o buclă, o buclă imbricata sau când nu este nevoie de nicio buclă."
+        },
+        "90591bd7-cbd5-46c4-95dc-59e16e5a949c": {
+          "description": "Recunoașteți diferențele dintre utilizarea unei bucle și a unei bucle imbricate."
+        },
+        "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
+          "description": "Descompuneți codul în cele mai mari secvențe repetabile, folosind atât buclele, cât și buclele imbricate."
+        },
+        "e26d818e-81fd-43c6-8558-fc69835e693a": {
+          "description": "Identificați secțiuni care se repetă în versurile cântecelor."
+        },
+        "815c91bc-4848-43ba-a234-d1b184ab120b": {
+          "description": "Identificați secțiuni ale unui cântec pe care să le introduceți într-o funcție."
+        },
+        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
+          "description": "Descrieți modul în care funcțiile pot ușura scrierea programelor."
+        },
+        "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
+          "description": "Utilizați funcții pentru a simplifica programele complexe."
+        },
+        "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
+          "description": "Folosiți funcții prestabilite pentru a îndeplini sarcini care se repetă frecvent."
+        },
+        "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56": {
+          "description": "Clasificați și generalizați codul pentru a obține funcții utile."
+        },
+        "75ef4b25-6f64-4795-9a13-f0d27662040e": {
+          "description": "Recunoașteți situațiile în care o funcție poate contribui la simplificarea unui program."
+        },
+        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
+          "description": "Definiți circumstanțele în care anumite părți ale unui program rulează și în care nu rulează."
+        },
+        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
+          "description": "Stabiliți dacă este îndeplinită o condiție pe baza unor criterii."
+        },
+        "9c7ff713-c208-4acf-9691-da7a4a152565": {
+          "description": "Definiți circumstanțele în care anumite părți ale unui program rulează și în care nu rulează."
+        },
+        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
+          "description": "Stabiliți dacă este îndeplinită o condiție pe baza unor criterii."
+        },
+        "dc1b604a-9814-45f4-aed5-b76776ad818c": {
+          "description": "Recunoașteți situațiile în care o funcție poate contribui la simplificarea unui program."
+        },
+        "cff52f84-5090-495e-a37b-02cf8b666ad6": {
+          "description": "Folosiți funcții prestabilite pentru a îndeplini sarcini care se repetă frecvent."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Descrieți impactul aplicațiilor mobile asupra lumii moderne."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Explicați de ce accesibilitatea este o parte importantă a designului unei aplicații pentru utilizatori."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Îmbunătățiți designul unei aplicații existente luând în considerare nevoilor utilizatorilor legate de accesibilitate."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Planificați în avans pentru o sarcină în curs de desfășurare."
+        },
+        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
+          "description": "Explicați modul în care limitările sistemului pot afecta designul proiectului."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Descrieți modul în care ajungerea la un compromis poate ajuta la menținerea unui proiect pe drumul cel bun și poate inspira creativitatea."
+        },
+        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
+          "description": "Elaborați și puneți în aplicare planuri de rezolvare a oricăror probleme din codul elevilor."
+        },
+        "2594052b-3b87-4d83-9038-56175058c1c2": {
+          "description": "Prezentați procesul de design și modul în care acesta a contribuit la elaborarea proiectului final."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Antrenați și testați un model de învățare automată."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Motivul despre modul în care părtinirea umană joacă un rol în învățarea automată."
         }
       }
     }

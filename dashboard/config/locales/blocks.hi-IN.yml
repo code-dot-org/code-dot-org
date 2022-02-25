@@ -357,6 +357,7 @@ hi:
             '"right"': दायां कॉलम
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
+            '"spiral"': घुमावदार
             '"random"': यादृच्छिक
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} पर एक नया {COSTUME} बनाएं"
@@ -435,6 +436,26 @@ hi:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': भालू
@@ -462,6 +483,7 @@ hi:
             '"right"': दायां कॉलम
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
+            '"spiral"': घुमावदार
             '"random"': यादृच्छिक
       Dancelab_mixColors:
         text: "{COLOR1} और {COLOR2} को मिलाएं"
@@ -997,7 +1019,21 @@ hi:
       gamelab_clickedOn:
         text: जब {SPRITE} पर क्लिक किया
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): दाएं घुमाना
+            new Behavior(spinning_left, []): बाएं घुमाना
+            new Behavior(fluttering, []): फड़फड़ाना
+            new Behavior(jittering, []): कलमलाना
+            new Behavior(wobbling, []): लड़खड़ाना
+            new Behavior(wandering, []): घूमना
+            new Behavior(patrolling, []): गश्त लगाना
+            new Behavior(moving_west_and_looping, []): पश्चिम की ओर मूव और लूप करना
+            new Behavior(moving_east_and_looping, []): पूर्व की ओर मूव और लूप करना
+            new Behavior(moving_north_and_looping, []): उत्तर की ओर मूव और लूप करना
+            new Behavior(moving_south_and_looping, []): दक्षिण की ओर मूव और लूप करना
       gamelab_comment:
         text: 'टिप्पणी: {COMMENT}'
       gamelab_costumeImage:
@@ -1050,6 +1086,19 @@ hi:
         text: |-
           यदि {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': १
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} की पोशाक {COSTUME} है"
       gamelab_isKeyPressed:
@@ -1191,9 +1240,9 @@ hi:
       gamelab_moveToward:
         text: "{SPRITE} पिक्सल्स {DISTANCE} को {TARGET} की ओर घुमाएं"
       gamelab_newSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: ऊपर-नीचे गश्त लगाना
       gamelab_playSound:
@@ -1245,6 +1294,14 @@ hi:
             "'sound://category_digital/jump_7.mp3'": कूदें
       gamelab_playSpeech:
         text: प्ले स्पीच {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): तीर वाली कुंजियों के साथ मूव
+              करना
+            new Behavior(driving_with_arrow_keys, []): तीर वाली कुंजियों के साथ ड्राइव
+              करना
+            draggable(): ड्रैग करने योग्य हो रहा है
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION} की ओर संकेत दें"
         options:
@@ -1366,6 +1423,14 @@ hi:
             '"scale"': आकार
             '"width"': चौड़ाई
             '"height"': ऊंचाई
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': धीमा
+            '5': normal
+            '7': तेज़
+            '9': extra fast
       gamelab_setTint:
         text: "{THIS} का रंग {COLOR} पर सेट करें"
       gamelab_setupScoreboard:
@@ -1404,7 +1469,7 @@ hi:
       gamelab_stopGliding:
         text: "{SPRITE} फिसलना बंद करता है"
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} पर क्लिक किया"
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -1874,11 +1939,14 @@ hi:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': ईंट
+            '"fire"': आग
             '"flowers"': फूल
             '"hearts"': दिल
             '"iceCream"': आईस क्रीम
+            '"leaves"': पत्ते
             '"rainbow"': इंद्रधनुष
-            '"stars"': स्टार
+            '"stars"': तारे
             '"waves"': तरंगें
       Poetry_addLine:
         text: लाइन {LINE} जोड़ें
@@ -1908,11 +1976,15 @@ hi:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': शांत
             '"sound://category_nature/steady_campfire_loop.mp3"': कैम्प फायर
             '"sound://category_nature/rain_loop.mp3"': बूंदा बांदी
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': जंगल
             '"sound://category_loops/faultering_desicion_loop1.mp3"': भुतहा
             '"sound://category_background/inside_plane.mp3"': गुनगुनाना
             '"sound://category_loops/red_flag_loop1.mp3"': मिशन
+            '"sound://category_nature/summer_night_loop.mp3"': रात
             '"sound://category_background/ocean_waves.mp3"': समुद्र
+            '"sound://category_background/rainforest_ambient_sound.mp3"': वर्षा वन
             '"sound://category_background/repitition.mp3"': सवारी
+            '"sound://category_background/wavering_wind.mp3"': निद्राग्रस्त
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': धीरे
       Poetry_playSound:
         text: प्लेसाउंड {SOUND}
@@ -1943,31 +2015,31 @@ hi:
         text: पृष्ठभूमि इफेक्ट {EFFECT} {PALETTE} सेट करें
         options:
           EFFECT:
-            '"colors"': रंग
-            '"squiggles"': टेढ़ी-मेढ़ी रेखाएं
-            '"space"': खाली स्थान
-            '"stars"': स्टार
+            '"blooming"': खिलना
+            '"bubbles"': बुलबुले
+            '"clouds"': बादल छाए होना
+            '"confetti"': कॉन्फेटी
             '"darkCircles"': फीका होना
             '"fadeColors"': फ्रोस्ट हुआ
-            '"blooming"': खिलना
-            '"ripples"': लहरें
-            '"clouds"': बादल छाए होना
+            '"hearts"': दिल
+            '"space"': खाली स्थान
             '"rain"': बारिश
-            '"bubbles"': बुलबुले
-            '"confetti"': कॉन्फेटी
-            '"hearts"': रंगीन दिल
+            '"ripples"': लहरें
+            '"colors"': रंग
+            '"stars"': स्टार
+            '"squiggles"': टेढ़ी-मेढ़ी रेखाएं
           PALETTE:
-            '"rainbow"': इंद्रधनुष
-            '"grayscale"': स्लेटी
-            '"sky"': आसमान
-            '"ocean"': समुद्र
+            '"autumn"': पतझड़
             '"sunrise"': सुबह
             '"sunset"': शाम
+            '"grayscale"': स्लेटी
+            '"ocean"': समुद्र
+            '"rainbow"': इंद्रधनुष
+            '"roses"': गुलाब के फूल
+            '"sky"': आसमान
             '"spring"': बसंत
             '"summer"': गर्मी
-            '"autumn"': पतझड़
             '"winter"': सर्दी
-            '"roses"': गुलाब के फूल
       Poetry_setBackgroundImageAs:
         text: पृष्ठभूमि के तौर पर {IMG} सेट करें
       Poetry_setFont:
@@ -1975,23 +2047,23 @@ hi:
         options:
           FONT:
             '"Arial"': एरियल
+            '"Arial Black"': एरियल ब्लैक
+            '"Courier"': कोरियर
+            '"Cursive"': हैण्डराइटिंग (हस्तलेखन)
+            '"Impact"': प्रभाव
             '"Georgia"': जियोर्जिया
             '"Times"': टाइम्स
-            '"Courier"': कोरियर
-            '"Arial Black"': एरियल ब्लैक
-            '"Impact"': प्रभाव
-            '"Cursive"': हैण्डराइटिंग (हस्तलेखन)
       Poetry_setFontColor:
         text: टेक्सट का रंग  {FILL} सेट करें
       Poetry_setForegroundEffect:
         text: "{EFFECT} आगे का इफेक्ट डालें"
         options:
           EFFECT:
-            '"rain"': बारिश
             '"bubbles"': बुलबुले
-            '"hearts"': रंगीन दिल
-            '"emojis"': हैप्पी इमोजीस
             '"confetti"': कॉन्फेटी
+            '"hearts"': दिल
+            '"emojis"': हैप्पी इमोजीस
+            '"rain"': बारिश
             '"starburst"': स्टारबर्स्ट
             '"glass"': टूटता गिलास
             '"twinkling"': टिमटिमाना
@@ -2009,11 +2081,11 @@ hi:
         options:
           EFFECT:
             '"fade"': फीका
-            '"typewriter"': टाइपराइटर
             '"flyLeft"': बाएं से उड़ें
             '"flyRight"': दाएं से उड़ें
             '"flyTop"': ऊपर से उड़ें
             '"flyBottom"': नीचे से उड़ें
+            '"typewriter"': टाइपराइटर
       Poetry_setTitle:
         text: शीर्षक {TITLE} सेट करें
       Poetry_showText:
@@ -2022,36 +2094,28 @@ hi:
         text: स्प्राइट {ANIMATION_NAME} {BEHAVIOR} शुरू करता है
         options:
           BEHAVIOR:
-            fluttering: फड़फड़ाना
-            growing: बढ़ना
-            jittering: कलमलाना
-            moving_north_and_looping: उत्तर की ओर लूप करना
-            moving_south_and_looping: दक्षिण की ओर लूप करना
-            moving_east_and_looping: पूर्व की ओर लूप करना
-            moving_west_and_looping: पश्चिम की ओर लूप करना
-            shrinking: सिकुड़ना
-            spinning_left: बाएं घुमाना
-            spinning_right: दाएं घुमाना
-            swimming_left_and_right: तैराकी
-            wandering: घूमना
-            wobbling: लड़खड़ाना
+            '"fluttering"': फड़फड़ाना
+            '"growing"': बढ़ना
+            '"jittering"': कलमलाना
+            '"shrinking"': सिकुड़ना
+            '"spinning_left"': बाएं घुमाना
+            '"spinning_right"': दाएं घुमाना
+            '"swimming_left_and_right"': तैराकी
+            '"wandering"': घूमना
+            '"wobbling"': लड़खड़ाना
       Poetry_stopBehavior:
         text: स्प्राइट {ANIMATION_NAME} {BEHAVIOR} बंद करता है
         options:
           BEHAVIOR:
-            fluttering: फड़फड़ाना
-            growing: बढ़ना
-            jittering: कलमलाना
-            moving_north_and_looping: उत्तर की ओर लूप करना
-            moving_south_and_looping: दक्षिण की ओर लूप करना
-            moving_east_and_looping: पूर्व की ओर लूप करना
-            moving_west_and_looping: पश्चिम की ओर लूप करना
-            shrinking: सिकुड़ना
-            spinning_left: बाएं घुमाना
-            spinning_right: दाएं घुमाना
-            swimming_left_and_right: तैराकी
-            wandering: घूमना
-            wobbling: लड़खड़ाना
+            '"fluttering"': फड़फड़ाना
+            '"growing"': बढ़ना
+            '"jittering"': कलमलाना
+            '"shrinking"': सिकुड़ना
+            '"spinning_left"': बाएं घुमाना
+            '"spinning_right"': दाएं घुमाना
+            '"swimming_left_and_right"': तैराकी
+            '"wandering"': घूमना
+            '"wobbling"': लड़खड़ाना
             '"all"': "--सभी व्यवहार--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

@@ -9393,7 +9393,11 @@
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_a": "اسحب القائمة المنسدلة لـحدث \"عندما \\_\\_\\_\\_السهم\" لتغيير اتجاه أدوات التحكم بالقطعة البرمجية.",
           "courseE_playLab_scaffold1_b": "يجب أن يكون لديك أربع قطع أحداث \"عندما السهم\"، مع اتجاه للتحرك تحت كل منها.",
-          "courseE_playLab_scaffold1_c": "عند انتهائك، يجب أن تكون قادرًا على تحريك بطلك باستخدام مفاتيح السهم."
+          "courseE_playLab_scaffold1_c": "عند انتهائك، يجب أن تكون قادرًا على تحريك بطلك باستخدام مفاتيح السهم.",
+          "playlab_up": "لتحرك شخصيتك الى الأعلى، يمكنك توصيل هاتين القطعتين:",
+          "playlab_down": "لتحرك شخصيتك الى الأسفل، يمكنك توصيل هاتين القطعتين:",
+          "playlab_left": "لتحرك شخصيتك الى اليسار، يمكنك توصيل هاتين القطعتين:",
+          "playlab_right": "لتحرك شخصيتك الى اليمين، يمكنك توصيل هاتين القطعتين:"
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "استخدم \"نقطة العلامة\" لإضافة نقطة، و \"إزالة نقطة\" لطرح نقطة."
@@ -10631,7 +10635,10 @@
           "add_behavior": "أضف كتلة \"بدء الكائن\" إلى الكود الخاص بك. تأكد من أنك قمت بالفعل بإنشاء الكائن الذي تعطي سلوكًا له.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "ابحث عن هذه الكتلة وانقر فوق `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nماذا يحدث عندما يكون الرقم `25`؟\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block>></xml>"
+          "size hint": "ابحث عن هذه الكتلة وانقر فوق `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nماذا يحدث عندما يكون الرقم `25`؟\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "جرب استخدام سلوكيات مثل \"التحرك الى الشرق والدوران\"، \"الدوران باتجاه اليمين\" و \"التجوّل\"."
         }
       }
     }

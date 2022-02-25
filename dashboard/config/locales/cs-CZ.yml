@@ -226,6 +226,10 @@ cs:
     email_preference_yes: Ano
     email_preference_no: Ne
     email_preference_required: Musíte vyplnit nastavení e-mailové komunikace.
+    share_teacher_email_reg_partner_question: Chtěli byste, abychom sdíleli vaše kontaktní
+      údaje s partnerem [Code.org regional partner](%{cdo_regional_partner_desc})
+      ve vašem státě, aby vás mohl informovat o místních příležitostech, akcích a zdrojích
+      profesního rozvoje?
     share_teacher_email_reg_partner_preference_yes: Ano
     share_teacher_email_reg_partner_preference_no: Ne
     share_teacher_email_reg_partner_preference_required: Musíte vyplnit nastavení
@@ -449,7 +453,9 @@ cs:
       artist_k1: Umělec (předškolák)
       basketball: Basketbal
       bounce: Bounce
+      calc: Calc
       dance: Taneční večírek
+      eval: Eval
       flappy: Flappy
       frozen: Frozen
       gamelab: Game Lab
@@ -465,6 +471,8 @@ cs:
       minecraft_hero: Minecraft Hero
       playlab: Play Lab
       playlab_k1: Play Lab (předškolák)
+      poetry: Poezie
+      poetry_hoc: Básnické umění
       scratch: Scratch
       sports: Sporty
       spritelab: Laboratoř Sprite
@@ -487,6 +495,7 @@ cs:
       prizes_link: Více informací
   teacher:
     answer: Odpověď
+    dashboard: Katedra učitele
     for_teachers_only: Pouze pro učitele
     title:
       one: 'Tvůj učitel:'
@@ -1217,8 +1226,11 @@ cs:
       gender: Rod
       school: Škola
       school_name: Název školy
+      school_city: Město, kde škola sídlí
+      school_city_district: Město / školní obvod
       school_country: Země školy
       school_department_region: Školní okrsek / region
+      colombian_school_city: Město, kde škola sídlí
       colombian_chilean_school_department: Školní okrsek / region
       colombian_school_municipality: Školní městský obvod
       colombian_chilean_school_name: Název školy
@@ -1353,3 +1365,5 @@ cs:
   behaviors:
     this_sprite: tento sprajt
   unit_prefix: Jednotka %{n}
+  code_org_logo_alt: Hlavní strana Code.org
+  teacher_feedback: Zpětná vazba učitele

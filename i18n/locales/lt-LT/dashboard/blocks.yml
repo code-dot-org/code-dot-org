@@ -1,3 +1,4 @@
+---
 lt:
   data:
     blocks:
@@ -420,8 +421,8 @@ lt:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'taip'
-            '"no"': 'ne'
+            '"yes"': taip
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -429,6 +430,31 @@ lt:
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': širdelės
+            '"rainbow"': vaivorykštė
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': naktis
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': šok
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': debesuota
+            '"hearts"': širdelės
+          PALETTE:
+            '"rainbow"': vaivorykštė
+            '"winter"': žiema
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': širdelės
       RyanLab_moveForward:
         text: judėk į priekį
       RyanLab_turnLeft:

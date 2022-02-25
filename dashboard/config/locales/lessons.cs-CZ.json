@@ -2,8 +2,31 @@
   "cs-CZ": {
     "data": {
       "lessons": {
+        "dance-extras/Dance Party - Go Further": {
+          "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
+          "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu."
+        },
+        "minecraft/Minecraft Hour of Code Designer": {
+          "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní.",
+          "student_overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní."
+        },
+        "hero/Minecraft Hour of Code": {
+          "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní."
+        },
         "poem-art-2021/Poem Art": {
+          "overview": "Tato lekce propojuje počítačové a jazykové vědy. Studenti v ní vytvoří animaci básně pomocí kódu, kterým ilustrují její náladu. Nejdřív si báseň přečtou a určí, jakou náladu vyjadřuje. Pak najdou odpovídající efekty a obrázky, kterými tuto náladu můžou dokreslit. A nakonec použijí události (kód), aby ilustrovali změny nálady nebo pomocí animace vyjádřili nové obrazy, které se v básni objeví. \n\nTuto lekci lze pojmout jako samostatnou hodinovou lekci. Nebo je možné ji použít jako první z řady lekcí modulu [Kódování s poezií](http://studio.code.org/s/poetry-2021).",
           "preparation": "–   Prohlédněte si a sami dokončete výukový online program: [Básnické umění](http://studio.code.org/s/poem-art).\n\n–   Než požádáte studenty, aby prováděli aktivity, nezapomeňte si je sami vyzkoušet. \n\n–   Zkontrolujte svou technologii a rozhodněte se, zda není potřeba předem vyřešit nějaké problémy.\n\n–   U některých úrovní je třeba přehrávat zvuk. Rozdejte včas sluchátka. \n\n–   [Optional] Dva samolepicí papírky na studenta pro hodnocení."
+        },
+        "hourofcode/Maze": {
+          "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky ve věku od 4 do 10 let, ale pomocí uvedených návrhů se dá upravit i pro starší žáky.",
+          "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky ve věku od 4 do 10 let, ale pomocí uvedených návrhů se dá upravit i pro starší žáky."
+        },
+        "frozen/Artist": {
+          "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky druhého stupně ve věku od 10 do 13 let, ale pomocí uvedených návrhů se dá upravit i pro mladší nebo starší žáky. Žáci by měli mít základní znalosti jednoduchých geometrických tvarů a kreslení úhlů.",
+          "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky druhého stupně ve věku od 10 do 13 let, ale pomocí uvedených návrhů se dá upravit i pro mladší nebo starší žáky. Žáci by měli mít základní znalosti jednoduchých geometrických tvarů a kreslení úhlů."
+        },
+        "iceage/Ice Age Play Lab": {
+          "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
         },
         "hello-world-emoji-2021/Hello World": {
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
@@ -14,30 +37,71 @@
           "overview": "V této lekci studenti převezmou nadvládu nad Umělcem a budou dokončovat výkresy na obrazovce. Tato fáze Umělce umožní studentům vytvářet pomocí nových bloků jako například `posuv dopředu o 100 pixelů` a `zabočení doprava o 90 stupňů` čím dál tím složitější obrázky.",
           "student_overview": "Vytvářejte krásné obrazy programováním Umělce."
         },
+        "dance/Dance Party": {
+          "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
+          "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu."
+        },
         "hello-world-food-2021/Hello World": {
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
+        },
+        "aquatic/Aquatic": {
+          "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní."
+        },
+        "hoc-encryption/Simple Encryption": {
+          "overview": "V téhle lekci se studenti dozví o nutnosti šifrování a jednoduchých technikách prolomení (nebo crackingu) tajných zpráv. Sami si zkusí prolomit zprávu zašifrovanou klasickou Caesarovou šifrou i náhodnou substituční šifrou. Studenti by měli jednoznačně pochopit, že v době výkonných výpočetních nástrojů je potřeba používat složitější techniky šifrování. Nejdůležitější poselství téhle lekce je v tom, aby si žáci uvědomili, jak a proč hraje šifrování roli v našem každodenním používání internetu a že vytvořit kvalitní šifrování není snadné. Studenti budou zasvěceni do úvah, na co všechno je potřeba myslet při vytváření silného šifrování, které nedokážou prolomit ani výkonné výpočetní nástroje. Potřeba spolehnout se na soukromí při posílání dat po internetu je důležitá pro každého uživatele internetu.",
+          "student_overview": "V téhle lekci se studenti dozví o nutnosti šifrování a jednoduchých technikách prolomení (nebo crackingu) tajných zpráv. Sami si zkusí prolomit zprávu zašifrovanou klasickou Caesarovou šifrou i náhodnou substituční šifrou. Studenti by měli jednoznačně pochopit, že v době výkonných výpočetních nástrojů je potřeba používat složitější techniky šifrování. Nejdůležitější poselství téhle lekce je v tom, aby si žáci uvědomili, jak a proč hraje šifrování roli v našem každodenním používání internetu a že vytvořit kvalitní šifrování není snadné. Studenti budou zasvěceni do úvah, na co všechno je potřeba myslet při vytváření silného šifrování, které nedokážou prolomit ani výkonné výpočetní nástroje. Potřeba spolehnout se na soukromí při posílání dat po internetu je důležitá pro každého uživatele internetu."
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
         },
+        "starwars/Hour of Code 2015": {
+          "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce má dvě verze. "
+        },
+        "mc/Hour of Code 2015": {
+          "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní.",
+          "student_overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tato lekce je vhodná pro všechny žáky, kteří už umějí číst (od 6 let). Mladší děti tento výukový kurz pravděpodobně nedokončí, ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti středních škol nejspíš nebudou mít s dokončením kurzu problém a ke konci jim zbyde čas na volné hraní."
+        },
+        "playlab/Play Lab": {
+          "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
+        },
+        "applab-intro/Intro to App Lab": {
+          "student_overview": "Na konci kurzu budeš moct svůj rozpracovaný projekt rozšířit na některou z těchto aplikací: „Vyberte si své dobrodružství“, „Pohlednice“, nebo „Osobnostní kvíz“. Také můžeš pokračovat ve vytváření dalších projektů dostupných na stránce code.org/applab. "
+        },
         "hello-world-retro-2021/Hello World": {
           "overview": "V této lekci se studenti budou učit základy počítačových věd programováním v Laboratoři sprajtů. Laboratoř sprajtů je nástroj, který můžete používat k budování představivostí nabitých a zábavných projektů. Studenti se naučí vytvářet a animovat sprajty a dělat je interaktivní pomocí událostí. \n\nExistuje více verzí této lekce. Každá verze vyučuje stejné koncepce, ale jsou v ní obsaženy různé obrázky, aby se líbila různým typům studentů. Další informace najdete na stránce [Úvodní stránka o programu Ahoj, světe.](https://code.org/helloworld)",
           "preparation": "-   Hrajte si s hlavolamy, abyste našli všechny případné problémové oblasti, které bude Vaše třída mít.\n-   Použijte prostředky dostupné na [CS Connections](https://code.org/educate/csc) abyste vyrobili plán na další výuku počítačových věd po skončení prvotního výukového kurzu.",
           "purpose": "Tato lekce je určena k přípravě studentů na vytváření jednoduchých programátorských projektů v Laboratoři sprajtů. S touto dovedností budou pak studenti vytvářet projekty na jakékoli téma, jako například na jiné školní téma nebo na něco, co má význam pro ně osobně. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady o tom, jak začlenit počítačovou vědu do jiných předmětů."
         },
+        "starwarsblocks/Hour of Code 2015": {
+          "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce má dvě verze. "
+        },
+        "text-compression/Text Compression": {
+          "student_overview": "V určitém bodě narazíme na hranici fyzických možností ohledně rychlosti posílání bitů. Pokud chceme posílat větší množství informací rychleji, musíme najít způsob, jak reprezentovat stejnou informaci pomocí menšího množství bitů – musíme komprimovat data. "
+        },
+        "outbreak/Outbreak": {
+          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. "
+        },
         "sports/Sports": {
           "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
           "student_overview": "Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!"
+        },
+        "infinity/Infinity": {
+          "student_overview": "V téhle lekci žáci získají úvodní zkušenost s informatikou a pomocí základních programových bloků vytvoří hru."
         },
         "basketball/Bounce": {
           "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
           "student_overview": "Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!"
         },
+        "dance-2019/Dance Party": {
+          "overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu.",
+          "student_overview": "V téhle lekci získají žáci všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií, kteří už umí číst. Vyžaduje možnost přehrávat zvuk, protože jde o nástroj vytvořený tak, aby reagoval na hudbu."
+        },
         "oceans/Oceans": {
+          "overview": "V této lekci získají studenti všech věkových kategorií úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném prostředí. Nejprve roztřídí objekty na ryby a ostatní a pokusí se vyčistit oceán od nepořádku. Pak bude jejich úkolem rozšířit cvičný datový soubor o další mořské tvory. Ve druhé části aktivity budou vybírat vlastní značky, které přidají k obrázkům náhodně vytvořených ryb. Tato cvičná data poslouží pro trénink modelu strojového učení, který by pak měl nové obrázky označovat automaticky.",
           "student_overview": "Shrnutí výukového kurzu: Nejprve studenti zařadí předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé části aktivity budou studenti vybírat své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato cvičná data se používají pro model strojového učení, který by měl být schopen označovat nové obrázky sám od sebe."
         },
         "hello-world-food/lesson-1": {
@@ -49,9 +113,6 @@
           "overview": "V této spojené lekci informatiky a jazyka budou studenti animovat báseň pomocí kódu, aby dokreslili její atmosféru. Během této úvodní kódovací aktivity si studenti přečtou báseň a určí její atmosféru. Pak najdou odpovídající efekty a obrázky, které pomohou atmosféru básně dokreslit. Nakonec budou studenti používat události (kód) k ilustraci změny atmosféry nebo k animaci nástupu nových obrazů v básni. \n\nTuto lekci lze probrat jako hodinovou samostatnou lekci. Také je možné tuto lekci použít jako první lekci z modulu o pěti lekcích, který se nazývá [Kódování s poezií](http://code.org/poetry). Na konci modulu Kódování s poezií budou studenti psát své vlastní básně a vytvoří aplikaci na generování básní, které mohou sdílet se svými kamarády. \n\nKódování s poezií je součástí výukového plánu Propojení informatiky organizace Code.org. Cílem tohoto výukového plánu je propojit informatiku s dalšími předměty, například matematikou, jazykem a přírodními vědami, v souladu se vzdělávacími standardy CCSS, NGSS a CSTA. ",
           "preparation": "–   Prohlédněte si a sami dokončete výukový online program: [Básnické umění](http://studio.code.org/s/poem-art).\n\n–   Než požádáte studenty, aby prováděli aktivity, nezapomeňte si je sami vyzkoušet. \n\n–   Zkontrolujte svou technologii a rozhodněte se, zda není potřeba předem vyřešit nějaké problémy.\n\n–   U některých úrovní je třeba přehrávat zvuk. Rozdejte včas sluchátka. \n\n–   [Optional] Dva samolepicí papírky na studenta pro hodnocení."
         },
-        "outbreak/Outbreak": {
-          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. "
-        },
         "jigsaw/Jigsaw": {
           "overview": "Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.",
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
@@ -59,7 +120,8 @@
         "coursef-2021/lesson-6": {
           "overview": "V této lekci pro navození **kontextu** budou studenti diskutovat o roli počítačů a technologií v jejich životě a zaměří se na to, jak aplikace a nástroje dávají uživatelům možnost volby, jak je používat. Studenti také prozkoumají aplikace podobné těm, které si později sami vytvoří.",
           "preparation": "-   Určete, jak se budou studenti přihlašovat do Code.org.\n-   V případě potřeby vytvořte studentům účty na Code.org.\n-   Přiřaďte studentům představení laboratoře sprajtů.\n-   Vytiskněte kopie pracovního listu **\\*Zkoumání aplikací** (nebo umístěte digitální verzi do systému LMS).",
-          "purpose": "První lekce je zaměřena na to, aby se studenti pro předmět nadchli a propojili své osobní zájmy s informatikou. "
+          "purpose": "První lekce je zaměřena na to, aby se studenti pro předmět nadchli a propojili své osobní zájmy s informatikou. ",
+          "student_overview": "Budete diskutovat o úloze počítačů a technologií ve vašem životě se zaměřením na to, jak aplikace a nástroje dávají uživatelům možnost volby v tom, jak je používat."
         },
         "coursef-2021/lesson-7": {
           "preparation": "Projděte si jednotlivé úrovně a zopakujte si **\\*prezentace přednášky**.",
@@ -73,7 +135,7 @@
           "purpose": "Tato lekce umožňuje studentům aplikovat koncepty programování z předchozích lekcí v jiném tvůrčím kontextu. "
         },
         "coursef-2021/lesson-2": {
-          "overview": " [\\[common sense education](https://www.commonsense.org/education/digital-citizenship/curriculum)][0]\n\nTuto lekci původně vytvořila společnost Common Sense Education.  [Více informací.][2]\n\nJak děti postupně rostou, přirozeně začínají více komunikovat online. Ale z některých věcí, které uvidí, by mohly být smutné, rozhněvané nebo se jich dokonce bát. Pomozte svým studentům vybudovat si empatii k jiným a osvojte si strategie používané při konfrontaci s kybernetickou šikanou.",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost Common Sense Education.  [Více informací.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nJak děti postupně rostou, přirozeně začínají více komunikovat online. Ale z některých věcí, které uvidí, by mohly být smutné, rozhněvané nebo se jich dokonce bát. Pomozte svým studentům vybudovat si empatii k jiným a osvojte si strategie používané při konfrontaci s kybernetickou šikanou.",
           "preparation": "-   Projděte si výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).\n-   Připravte do třídy dlouhý provaz (nebo lano) a papír.",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty naučila, co mají dělat, když někdo na internetu používá sprosté nebo urážlivé výrazy.",
           "student_overview": "Šikana není nikdy v pořádku. Tato lekce Vás poučí o tom, co je a co není správné říkat online."
@@ -140,7 +202,7 @@
           "student_overview": "Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!"
         },
         "courseb-2021/Digital Trails": {
-          "overview": " [\\[common sense education](https://www.commonsense.org/education/digital-citizenship/curriculum)][0]\n\nTuto lekci původně vytvořila společnost Common Sense Education.  [Více informací.][2]\n\n Zůstane to, co děláte online, vždy online? Studenti se naučí, že informace, které sdílejí online, za sebou zanechávají digitální stopu. Podle toho, jak s nimi zacházejí, může být tato stopa velká nebo malá a škodlivá nebo užitečná. Studenti porovnají různé stopy a kriticky se zamyslí nad tím, jaké druhy informací po sobě chtějí zanechat.",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost Common Sense Education.  [Více informací.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n Zůstane to, co děláte online, vždy online? Studenti se naučí, že informace, které sdílejí online, za sebou zanechávají digitální stopu. Podle toho, jak s nimi zacházejí, může být tato stopa velká nebo malá a škodlivá nebo užitečná. Studenti porovnají různé stopy a kriticky se zamyslí nad tím, jaké druhy informací po sobě chtějí zanechat.",
           "preparation": "-   Projděte výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty naučila, co je to „digitální stopa“ a jaké informace mohou mít u sebe.",
           "student_overview": "Naučte se něco o své digitální stopě a o tom, jak zůstat v bezpečí při návštěvách webových stránek."
@@ -204,7 +266,7 @@
           "purpose": "V této lekci mají studenti poslední příležitost kreativně využít své nové dovednosti v oblasti informatiky."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[\\[common sense education](https://www.commonsense.org/education/digital-citizenship/curriculum)][0]\n\nTuto lekci původně vytvořila společnost Common Sense Education.\n\nMoc internetu studentům umožňuje zažívat a navštěvovat místa, která třeba nebudou mít možnost vidět osobně. Avšak stejně jako je tomu s cestováním ve skutečném světě, i při cestování online je důležité zůstat v bezpečí. Na tomto virtuálním výletě se mohou děti procvičovat v dodržování bezpečnosti při online dobrodružstvích.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost Common Sense Education.\n\nMoc internetu studentům umožňuje zažívat a navštěvovat místa, která třeba nebudou mít možnost vidět osobně. Avšak stejně jako je tomu s cestováním ve skutečném světě, i při cestování online je důležité zůstat v bezpečí. Na tomto virtuálním výletě se mohou děti procvičovat v dodržování bezpečnosti při online dobrodružstvích.",
           "preparation": "-   Projděte si výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).\n-   (Nepovinné) Vytiskněte plakát s básní pro vystavení ve třídě.",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty naučila, jak mohou bezpečně chodit na internet.",
           "student_overview": "Naučte se chodit na různá místa online bezpečně."
@@ -269,7 +331,7 @@
           "purpose": "V této lekci mají studenti poslední příležitost kreativně využít své nové dovednosti v oblasti informatiky."
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": " [\\[common sense education](https://www.commonsense.org/education/digital-citizenship/curriculum)][0]\n\nTuto lekci původně vytvořila společnost Common Sense Education. [Více informací.][2]\n\nInternet je plný zajímavých lidí všeho druhu, ale někdy mohou být někteří z nich na sebe navzájem zlí. V tomto hraní rolí pomůžete svým studentům pochopit, proč často bývá snazší být zlý online než osobně a jak se mají s online zlovolností vypořádat, když ji zaznamenají.",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost Common Sense Education. [Více informací.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInternet je plný zajímavých lidí všeho druhu, ale někdy mohou být někteří z nich na sebe navzájem zlí. V tomto hraní rolí pomůžete svým studentům pochopit, proč často bývá snazší být zlý online než osobně a jak se mají s online zlovolností vypořádat, když ji zaznamenají.",
           "preparation": "-   Projděte si výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).\n-   Přineste do třídy plyšové zvíře nebo hračku.",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty naučila, co je to podlost a co by měli dělat, pokud se s ní setkají na internetu.",
           "student_overview": "V této lekci se dozvíte o zlovolnosti a o tom, co dělat, když se s ní setkáte online."
@@ -348,7 +410,7 @@
           "student_overview": "Připravte si ruce na psaní spousty kódu! Je čas začít budovat Váš projekt."
         },
         "coursed-2021/lesson-5": {
-          "overview": " [\\[common sense education](https://www.commonsense.org/education/digital-citizenship/curriculum)][0]\n\nTuto lekci původně vytvořila společnost [Common Sense Education][2].\n\nSilnější a bezpečnější online hesla jsou dobrý nápad pro každého. Ale jak můžeme pomoci dětem vytvářet lepší hesla a skutečně si je pamatovat? Pomocí tipů v této lekci pomůžete dětem vytvářet hesla, která jsou bezpečná i zapamatovatelná zároveň.",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nSilnější a bezpečnější online hesla jsou dobrý nápad pro každého. Ale jak můžeme pomoci dětem vytvářet lepší hesla a skutečně si je pamatovat? Pomocí tipů v této lekci pomůžete dětem vytvářet hesla, která jsou bezpečná i zapamatovatelná zároveň.",
           "preparation": "-   Projděte si výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).\n-   Připravte pro studenty papír na psaní nebo sešity.",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty naučila, jak mohou silná hesla pomoci chránit jejich soukromí.",
           "student_overview": "V této lekci se budete učit o tom, jak hesla chrání Vaše informace a jak udělat dobré heslo."
@@ -640,13 +702,13 @@
           "student_overview": "Vytvořte interaktivní projekt, který budete moci sdílet se spolužáky."
         },
         "coursee-2021/lesson-4": {
-          "overview": " [\\[common sense education](https://www.commonsense.org/education/digital-citizenship/curriculum)][0]\n\nTuto lekci původně vytvořila společnost Common Sense Education. [Více informací.][2]\n\nOnline nástroje děti posilují a je s nimi spojena velká zodpovědnost. Ale vědí děti vždy co dělat, když se setkají s kybernetickou šikanou? Ukažte svým studentům řádné způsoby, jak jednat a jak řešit konflikty, od stání si za svým až po pomoc druhým v nouzi.",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost Common Sense Education. [Více informací.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnline nástroje děti posilují a je s nimi spojena velká zodpovědnost. Ale vědí děti vždy co dělat, když se setkají s kybernetickou šikanou? Ukažte svým studentům řádné způsoby, jak jednat a jak řešit konflikty, od stání si za svým až po pomoc druhým v nouzi.",
           "preparation": "-   Projděte výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).\n-   Připravte pro studenty barevné tužky nebo fixy.",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty naučila, jak se mohou postavit kyberšikaně, když ji vidí.",
           "student_overview": "Naučte se stát si za svým, když se setkáte s kybernetickou šikanou."
         },
         "coursee-2021/Private and Personal Information": {
-          "overview": "[\\[common sense education](https://www.commonsense.org/education/digital-citizenship/curriculum)][0]\n\nTuto lekci původně vytvořila společnost Common Sense Education. [Více informací.][2]\n\nV povaze našich studentů je sdílet věci a kontaktovat ostatní. Ale se sdílením online jsou spojena určitá rizika. Jak můžeme dětem pomoci budovat si silné, pozitivní a bezpečné vztahy online? Pomozte svým studentům naučit se poznat rozdíl mezi tím, o je osobní, a tím, co by mělo ideálně zůstat soukromé.",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTuto lekci původně vytvořila společnost Common Sense Education. [Více informací.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nV povaze našich studentů je sdílet věci a kontaktovat ostatní. Ale se sdílením online jsou spojena určitá rizika. Jak můžeme dětem pomoci budovat si silné, pozitivní a bezpečné vztahy online? Pomozte svým studentům naučit se poznat rozdíl mezi tím, o je osobní, a tím, co by mělo ideálně zůstat soukromé.",
           "preparation": "-   Projděte výukové materiály.\n-   Vytiskněte pro každého studenta leták (letáky).",
           "purpose": "Společnost Common Sense Education vytvořila tuto lekci, aby studenty poučila, jaké informace o nich lze sdílet na internetu.",
           "student_overview": "Internet je zábavný a vzrušující, ale důležité je také zůstávat v bezpečí. Tato lekce Vás naučí rozdíl mezi informacemi, které je bezpečné sdílet, a informacemi, které jsou soukromé."
@@ -706,6 +768,9 @@
           "preparation": "-   Věnujte čas vytvoření vlastního projektu v laboratoři Umělce i laboratoři sprajtů. Seznamte se s možnostmi a omezeními jednotlivých nástrojů.\n-   Upravte **\\*rubriku** tak, aby odpovídala cílům vaší třídy, a vytiskněte kopii pro každého studenta.\n-   Upravte **\\*pracovní list pro návrh projektu** tak, aby vyhovoval vaší třídě, a vytiskněte jeden balíček pro každého studenta.",
           "purpose": "Studenti mohou být připraveni vrhnout se rovnou na sestavování svých projektů, ale tato lekce jim pomůže zformulovat jejich nápady do plánů. Tato struktura udrží snílky při zemi a osvětlí cestu těm, kteří se cítí být ponecháni ve tmě. Poskytněte studentům dostatek času na sestavení a revizi jejich projektů. Pokusy a omyly, které jsou nevyhnutelně součástí této lekce, je naučí řešení problémů a vytrvalosti.",
           "student_overview": "Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!"
+        },
+        "csd7-2021/Similarity Models": {
+          "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
         }
       }
     }

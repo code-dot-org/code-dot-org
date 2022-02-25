@@ -1,7 +1,0 @@
-{
-  "category": "Logic",
-  "config": {
-    "docFunc": "codestudio_ifStatement",
-    "func": "controls_if_if"
-  }
-}

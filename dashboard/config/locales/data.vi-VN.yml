@@ -576,7 +576,7 @@ vi:
         C4_for_loops: Cho vòng lặp
         C4_for_loops_bee: Cho vòng lặp
         C4_for_loops_no_bee: Cho vòng lặp
-        C4_math_artist: Lập trình các nghệ sĩ bằng toán
+        C4_math_artist: Lập trình cho nghệ sĩ bằng các phép toán
         C4_function_edit: Chỉnh sửa hàm
         C4_function_create: Tạo ra hàm
         C4_function_parameters: Hàm và tham số
@@ -661,6 +661,22 @@ vi:
         csf_lots_of_sprites: 'Sprite Lab: Rất nhiều nhân vật'
         playlab_2021: Giới thiệu về Phòng Trò Chơi
         playlab_2021_reader: Giới thiệu về Phòng Trò Chơi
+        PL_CSD_TeacherTips_Advise: Mẹo dành cho giáo viên – Lời khuyên dành cho giáo
+          viên mới
+        PL_CSD_TeacherTips_IntroToCSD: Mẹo dành cho giáo viên – Giới thiệu về Khám
+          phá KHMT
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Mẹo dành cho giáo viên – Quy trình
+          giải quyết vấn đề
+        PL_CSD_TeacherTips_PairProgramming: Mẹo dành cho giáo viên – Lập trình theo
+          cặp
+        PL_CSD_TeacherTips_Debugging: Mẹo dành cho giáo viên – Sửa lỗi
+        PL_CSD_TeacherTips_LeadLearner: Mẹo dành cho giáo viên – Dẫn dắt học viên
+        poembot-playtest-intro: Chơi thử PoemBot Giới thiệu
+        poembot-playtest-sprites: Chơi thử PoemBot Nhân vật
+        poembot-playtest-events: Chơi thử PoemBot Sự kiện
+        hello_world_intro: Xin chào thế giới - Chào mừng đến với Sprite Lab
+        hello_world_events: Xin chào thế giới - Lập trình với sự kiện
+        hello_world_congrats: Xin chào thế giới - Làm điều bạn muốn
         rough_poemart_intro: v1 Nghệ Thuật Thơ Ca - Giới Thiệu
         rough_poemart_events: v1 Nghệ Thuật Thơ Ca - Sự Kiện
         rough_poemart_imagery: v1 Nghệ Thuật Thơ Ca - Hình Ảnh
@@ -671,6 +687,7 @@ vi:
           của bạn - Code và Thơ
         poetry_module_multichoiceprompts: Lời nhắc nhiều lựa chọn - Code và Thơ
         poetry_module_conditionals: Điều kiện - Code và Thơ
+        poemart_intro: Giới thiệu Tranh thơ ca
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

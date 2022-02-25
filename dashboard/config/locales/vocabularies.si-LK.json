@@ -3,884 +3,157 @@
     "data": {
       "vocabularies": {
         "code/dance-extras/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "event/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/minecraft/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/hero/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "function/hero/unversioned": {
-          "word": "ශ්‍රිතය",
-          "definition": ""
+          "word": "ශ්‍රිතය"
         },
         "code/poem-art/2021": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "event/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/flappy/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/flappy/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/hourofcode/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/frozen/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/iceage/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/iceage/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/artist/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/gumball/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/dance/unversioned": {
-          "word": "කේතය",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/aquatic/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "කන්ඩිෂනලස්",
-          "definition": ""
+          "word": "කන්ඩිෂනලස්"
         },
         "loops/aquatic/unversioned": {
-          "word": "ලූපයන්",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "ලූපයන්"
         },
         "code/starwars/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/mc/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/playlab/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/starwarsblocks/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/sports/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/infinity/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/basketball/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "debugging/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/dance-2019/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "event/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "code/poem-art/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "variable/coursef/2021": {
-          "word": "විචල්‍යය",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "input/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "විචල්‍යය"
         },
         "internet/coursef/2021": {
-          "word": "අන්තර්ජාලය",
-          "definition": ""
-        },
-        "packets/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "අන්තර්ජාලය"
         },
         "define/coursef/2021": {
-          "word": "අර්ථ දක්වන්න",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "අර්ථ දක්වන්න"
         },
         "programming/courseb/2021": {
-          "word": "ක්‍රමලේඛනය",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ක්‍රමලේඛනය"
         },
         "programming/coursea/2021": {
-          "word": "ක්‍රමලේඛනය",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ක්‍රමලේඛනය"
         },
         "programming/coursec/2021": {
-          "word": "ක්‍රමලේඛනය",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ක්‍රමලේඛනය"
         },
         "binary/coursec/2021": {
-          "word": "ද්විමය",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ද්විමය"
         },
         "programming/coursed/2021": {
-          "word": "ක්‍රමලේඛනය",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ක්‍රමලේඛනය"
         },
         "code/coursed/2021": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "conditionals/coursed/2021": {
-          "word": "කන්ඩිෂනලස්",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "කන්ඩිෂනලස්"
         },
         "programming/express/2021": {
-          "word": "ක්‍රමලේඛනය",
-          "definition": ""
-        },
-        "behavior/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ක්‍රමලේඛනය"
         },
         "code/express/2021": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "කේතය"
         },
         "conditionals/express/2021": {
-          "word": "කන්ඩිෂනලස්",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "කන්ඩිෂනලස්"
         },
         "function/express/2021": {
-          "word": "ශ්‍රිතය",
-          "definition": ""
+          "word": "ශ්‍රිතය"
         },
         "variable/express/2021": {
-          "word": "විචල්‍යය",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "විචල්‍යය"
         },
         "define/express/2021": {
-          "word": "අර්ථ දක්වන්න",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "debugging/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "අර්ථ දක්වන්න"
         },
         "programming/pre-express/2021": {
-          "word": "ක්‍රමලේඛනය",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ක්‍රමලේඛනය"
         },
         "copyright/coursee/2021": {
-          "word": "ප්‍රකාශන හිමිකම",
-          "definition": ""
-        },
-        "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ප්‍රකාශන හිමිකම"
         },
         "function/coursee/2021": {
-          "word": "ශ්‍රිතය",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "ශ්‍රිතය"
         },
         "conditionals/coursee/2021": {
-          "word": "කන්ඩිෂනලස්",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "කන්ඩිෂනලස්"
         },
         "define/coursee/2021": {
-          "word": "අර්ථ දක්වන්න",
-          "definition": ""
+          "word": "අර්ථ දක්වන්න"
         },
-        "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "variable/csd/2021": {
+          "word": "විචල්‍යය"
         },
-        "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "conditionals/csd/2021": {
+          "word": "කන්ඩිෂනලස්"
         },
-        "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "abstraction/csd/2021": {
+          "word": "ඇබ්ස්ට්‍රැක්ෂන්"
+        },
+        "function/csd/2021": {
+          "word": "ශ්‍රිතය"
+        },
+        "copyright/csd/2021": {
+          "word": "ප්‍රකාශන හිමිකම"
         }
       }
     }

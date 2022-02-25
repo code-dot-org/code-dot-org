@@ -55,7 +55,7 @@ ph:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Parating na ang Hour of Code
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: Ang Oras ng Code ay darating sa Disyembre 9-15, 2019.
@@ -145,6 +145,9 @@ ph:
     ay tungkol sa napakahigit pa kaysa coding! Mag-enjoy sa unang hakbang ng Code.org
     sa isang bagong paglalakbay para magturo ng higit pa tungkol sa AI sa buong kurikulum
     natin.  "
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -233,17 +236,17 @@ ph:
   hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
     of Code event. One-hour tutorials in over 45 languages. No experience needed.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Parating na ang Hour of Code
   codeorg_homepage_celebrate_cse: Ipagdiwang ang computer science kahit saan!
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
+  codeorg_homepage_csc: Nakakatugon ang computer science sa sining ng wika, matematika,
+    at higit pa sa CS Connections
+  codeorg_homepage_csc_long: Tingnan kung paano natutugunan ng computer science ang
+    sining ng wika, matematika, at higit pa sa kurikulum namin!
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Ang Minecraft ay nagbabalik para sa Hour of
     Code kasama ng bagong aktibidad! Paglalakbay patungo sa Minecraft sa Code.
   codeorg_homepage_hoc2019_dance_heading: Subukan ang bagong <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: "  Suporta para sa mga magulang at guro na nahaharap
     sa pagsasara ng paaralan.  "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1076,6 +1079,7 @@ ph:
   footer_menu_support: Suportahan
   footer_menu_terms: Mga alituntunin
   footer_menu_privacy: Mga isyu ukol sa paggamit
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Subukan ang isang-oras na pagtuturo na dinisenyo para sa lahat
     ng edad sa mahigit 45 na mga wika. Sumali ang milyong mga estudyante at mga guro
@@ -11050,6 +11054,14 @@ ph:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Grades 2-5
+  tutorial_icomputefireworks_string_platforms: All modern browsers
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Blocks
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: Ang Pangalan ng Paaralan
   school_name_error: Ang pangalan ng paaralan ay kinakailangan.

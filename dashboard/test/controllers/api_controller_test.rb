@@ -994,8 +994,10 @@ class ApiControllerTest < ActionController::TestCase
 
   test "user_app_options should return existing channel if one exists" do
     sign_in @student_1
+    storage_id = fake_storage_id_for_user_id(@student_1.id)
+    ApiController.any_instance.stubs(:get_storage_id).returns(storage_id)
 
-    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id_for_user_id(@student_1.id)
+    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id
     expected_channel = channel_token.channel
 
     get :user_app_options, params: {
@@ -1059,8 +1061,9 @@ class ApiControllerTest < ActionController::TestCase
   test "user_app_options should not return channel when param get_channel_id is false" do
     user = @student_1
     sign_in user
+    stub_get_storage_id(user.id)
 
-    create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id_for_user_id(user.id)
+    create :channel_token, level: @level, script_id: @script.id, storage_id: fake_storage_id_for_user_id(user.id)
 
     get :user_app_options, params: {
       script: @script.name,
@@ -1588,16 +1591,6 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_select 'script', /dashboard.pairing.init.*false/
     refute session[:show_pairing_dialog] # should only show once
-  end
-
-  test 'student does not see links to teacher dashboard' do
-    student = create :student
-    sign_in student
-
-    get :user_menu
-
-    assert_response :success
-    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
   end
 
   test 'should show sign in link for signed out user' do

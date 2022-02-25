@@ -53,6 +53,7 @@ id:
       name: nama
       nectar: madu
       nectars: Madu
+      planet: planet
       player_score: Nilai_pemain
       points: poin
       random: acak
@@ -63,6 +64,7 @@ id:
       right: kanan
       score: Skor
       score1: Nilai1
+      shout: teriak
       size: ukuran
       speed: kecepatan
       startX: startX

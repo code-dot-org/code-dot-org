@@ -10,12 +10,22 @@
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-11-22 19:57:25 UTC",
+    "serialized_at": "2022-01-20 17:42:56 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -109,7 +119,7 @@
       "properties": {
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nStronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.",
         "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare writing paper or notebooks for students.",
-        "purpose": "Common Sense Education created this lesson to teach students about how strong passwords can help protect their privacy.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Privacy and Security. Students learn how to protect personal information and gain a deeper understanding of their data privacy rights so they can advocate for themselves and others.\n",
         "student_overview": "In this lesson, you'll learn about how passwords protect your information, and how to make a good password.",
         "unplugged": true
       },

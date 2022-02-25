@@ -2,885 +2,170 @@
   "nn-NO": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/minecraft/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/hero/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "function/hero/unversioned": {
-          "word": "Funksjon",
-          "definition": ""
+          "word": "Funksjon"
         },
         "code/poem-art/2021": {
-          "word": "Kode",
-          "definition": ""
-        },
-        "event/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Kode"
         },
         "debugging/flappy/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/flappy/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/frozen/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/iceage/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "code/artist/unversioned": {
-          "word": "Kode",
-          "definition": ""
+          "word": "Kode"
         },
         "debugging/artist/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/gumball/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/aquatic/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Betingelser",
-          "definition": ""
+          "word": "Betingelser"
         },
         "loops/aquatic/unversioned": {
-          "word": "Løkker",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Løkker"
         },
         "debugging/starwars/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/mc/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/playlab/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "code/sports/unversioned": {
-          "word": "Kode",
-          "definition": ""
+          "word": "Kode"
         },
         "debugging/sports/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/infinity/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "debugging/basketball/unversioned": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "code/poem-art/unversioned": {
-          "word": "Kode",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Kode"
         },
         "variable/coursef/2021": {
-          "word": "Variabel",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Variabel"
         },
         "input/coursef/2021": {
-          "word": "Inngang",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Inngang"
         },
         "internet/coursef/2021": {
-          "word": "Internett",
-          "definition": ""
-        },
-        "packets/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Internett"
         },
         "define/coursef/2021": {
-          "word": "Definer",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Definer"
         },
         "debugging/courseb/2021": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "drop/courseb/2021": {
-          "word": "Dropp",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Dropp"
         },
         "debugging/coursea/2021": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "drop/coursea/2021": {
-          "word": "Dropp",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Dropp"
         },
         "debugging/coursec/2021": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "sequencing/coursec/2021": {
-          "word": "Sekvensiering",
-          "definition": ""
-        },
-        "programming/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sekvensiering"
         },
         "binary/coursec/2021": {
-          "word": "Binær",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Binær"
         },
         "debugging/coursed/2021": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "conditionals/coursed/2021": {
-          "word": "Betingelser",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Betingelser"
         },
         "debugging/express/2021": {
-          "word": "Feilsøking",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "sequencing/express/2021": {
-          "word": "Sekvensiering",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sekvensiering"
         },
         "conditionals/express/2021": {
-          "word": "Betingelser",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Betingelser"
         },
         "function/express/2021": {
-          "word": "Funksjon",
-          "definition": ""
+          "word": "Funksjon"
         },
         "variable/express/2021": {
-          "word": "Variabel",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Variabel"
         },
         "define/express/2021": {
-          "word": "Definer",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Definer"
         },
         "drop/pre-express/2021": {
-          "word": "Dropp",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Dropp"
         },
         "debugging/pre-express/2021": {
-          "word": "Feilsøking",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "programming/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Feilsøking"
         },
         "copyright/coursee/2021": {
-          "word": "Opphavsrett",
-          "definition": ""
-        },
-        "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Opphavsrett"
         },
         "function/coursee/2021": {
-          "word": "Funksjon",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Funksjon"
         },
         "conditionals/coursee/2021": {
-          "word": "Betingelser",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Betingelser"
         },
         "define/coursee/2021": {
-          "word": "Definer",
-          "definition": ""
+          "word": "Definer"
         },
-        "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "debugging/csd/2021": {
+          "word": "Feilsøking"
         },
-        "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "variable/csd/2021": {
+          "word": "Variabel"
         },
-        "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+        "conditionals/csd/2021": {
+          "word": "Betingelser"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksjon"
+        },
+        "function/csd/2021": {
+          "word": "Funksjon"
+        },
+        "input/csd/2021": {
+          "word": "Inngang"
+        },
+        "copyright/csd/2021": {
+          "word": "Opphavsrett"
         }
       }
     }

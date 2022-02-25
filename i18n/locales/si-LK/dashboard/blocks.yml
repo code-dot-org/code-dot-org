@@ -1,10 +1,11 @@
+---
 si:
   data:
     blocks:
       Dancelab_alternateMoves:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -12,7 +13,7 @@ si:
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -21,14 +22,14 @@ si:
       Dancelab_changePropEachBy:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
       Dancelab_doMoveEachLR:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -55,7 +56,7 @@ si:
       Dancelab_jumpToEach:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
@@ -63,14 +64,14 @@ si:
       Dancelab_layoutSprites:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           FORMAT:
             '"random"': අහඹු
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
             '"ALIEN"': පිටසක්වල ජීවියා
-            '"BEAR"': බියර් 
+            '"BEAR"': බියර්
             '"CAT"': බළලා
             '"DOG"': බල්ලා
             '"DUCK"': තාරාවා
@@ -84,7 +85,7 @@ si:
         options:
           COSTUME:
             '"ALIEN"': පිටසක්වල ජීවියා
-            '"BEAR"': බියර් 
+            '"BEAR"': බියර්
             '"CAT"': බළලා
             '"DOG"': බල්ලා
             '"DUCK"': තාරාවා
@@ -97,7 +98,7 @@ si:
       Dancelab_makeNewDanceSpriteGroup:
         options:
           COSTUME:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           LAYOUT:
             '"random"': අහඹු
       Dancelab_randomColor:
@@ -105,7 +106,7 @@ si:
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -114,7 +115,7 @@ si:
       Dancelab_setPropEach:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
@@ -126,18 +127,18 @@ si:
       Dancelab_setPropRandomEach:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
       Dancelab_setTintEach:
         options:
           THIS:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_setTintEachInline:
         options:
           THIS:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_setVisible:
         options:
           VISIBILITY:
@@ -145,7 +146,7 @@ si:
       Dancelab_setVisibleEach:
         options:
           THIS:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           VISIBILITY:
             'true': දෘශ්‍යමාන
       Dancelab_startMapping:
@@ -156,7 +157,7 @@ si:
       Dancelab_startMappingEach:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
@@ -168,7 +169,7 @@ si:
       Dancelab_stopMappingEach:
         options:
           GROUP:
-            '"ALIEN"': පිටසක්වල ජීවින් 
+            '"ALIEN"': පිටසක්වල ජීවින්
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
@@ -245,7 +246,7 @@ si:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
-            "'sound://category_animals/bear.mp3'": බියර් 
+            "'sound://category_animals/bear.mp3'": බියර්
             "'sound://category_animals/cat.mp3'": බළලා
             "'sound://category_animals/dog.mp3'": බල්ලා
             "'sound://category_digital/jump_7.mp3'": පනින්න
@@ -389,8 +390,8 @@ si:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'ඔව්'
-            '"no"': 'නැහැ'
+            '"yes"': ඔව්
+            '"no"': නැහැ
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -398,6 +399,32 @@ si:
             '"down"': පහල ඊතලය
             '"left"': වම් ඊතලය
             '"right"': දකුණු ඊතලය
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': හදවත්
+            '"rainbow"': දේදුන්න
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': රැය
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': සීනුව
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': පනින්න
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': වළාකුළු සහිත
+            '"hearts"': හදවත්
+          PALETTE:
+            '"rainbow"': දේදුන්න
+            '"winter"': ශීත ඍතුව
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': හදවත්
       RyanLab_moveForward:
         text: ඉදිරියට යන්න
       RyanLab_turnLeft:

@@ -2513,31 +2513,6 @@ vi-VN:
           # Câu chuyện khoảng trống
 
           Trong bài học này, bạn sẽ học cách sử dụng và viết câu chuyện khoảng trống. Hãy xem video này để tìm hiểu mối liên hệ với khoa học máy tính.
-      OPD-K5 CS Courses_dani:
-        markdown: "# Lập kế hoạch > Bắt đầu trên Code.org\n\n\n## Bước 1: Chọn khóa
-          học\nTất cả các khóa học của chúng tôi – từ khóa dành cho trẻ chưa biết
-          đọc tới khóa dành cho học sinh trung học – đều có trên **[danh mục khóa
-          học](https://studio.code.org/courses)**. Để tìm các bài học Nguyên tắc cơ
-          bản của KHMT mà bạn đã luyện tập, hãy truy cập **[trang tiểu học](https://code.org/educate/curriculum/elementary-school)**
-          và cuộn xuống phần “Khóa học”. Tất cả khóa học của chúng tôi đều miễn phí.
-          Hãy trò chuyện với đồng nghiệp ở trường bạn để quyết định xem chương trình
-          đào tạo nào có thể tích hợp với nhiều môn học khác nhau.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Bước 2: Thiết lập nhóm đào tạo của bạn\nThiết lập nhóm đào tạo để xem tiến
-          trình của học sinh, in thẻ điểm danh cho học sinh của bạn, quản lý tài khoản
-          của các em và in chứng chỉ để các em có thể mang về nhà khi kết thúc khóa
-          học. Hãy nhấp chuột vào liên kết này để **[xem một đoạn video ngắn](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          minh họa cách thiết lập lớp khoa học máy tính đầu tiên của bạn trên Code.org.
-          Bạn cũng có thể tìm thấy các bước trong **[bài viết hỗ trợ sau](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Bước 3: Chỉ định khóa học cho nhóm của bạn\nNhấp chuột vào khóa học mà bạn
-          đang dạy – bạn sẽ thấy màn hình như dưới đây. Sau đó, bạn có thể nhấp chuột
-          vào “Chỉ định khóa học” và chỉ định khóa học đó cho một trong các nhóm của
-          bạn. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Bước 4: Bắt đầu dạy thôi!\nChỉ cần một bài học duy nhất để mang các khái
-          niệm khoa học máy tính vào lớp học của bạn. Sau khi thấy học sinh của mình
-          nhiệt tình với KHMT, hãy tiếp tục với giáo án hàng ngày để hướng dẫn học
-          sinh của mình, các hoạt động không sử dụng thiết bị điện tử để bạn có thể
-          thực hiện mà không cần máy tính và các diễn đàn để kết nối với các thầy
-          cô giáo khác.\n\n\n"
       OPD-K5 Stage3aGo_dani:
         content1: mô tả ở đây
       SimonSays-Unplugged_2021:
@@ -3349,3 +3324,173 @@ vi-VN:
           # Sáng tác nhạc
 
           Hãy dùng khái niệm điệp khúc trong một bài hát để tìm hiểu về cách xác định và khai báo các hàm.
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Tổng quan
+
+          Lớp sẽ lập trình nhân vật của mình tương tác theo những cách mới. Sau khi ôn tập nhanh về cách sử dụng khối isTouching (đang chạm), lớp sẽ động não và tìm ra các cách tương tác khác giữa hai nhân vật. Sau đó họ sẽ dùng isTouching để cho một nhân vật đẩy nhân vật còn lại trên màn hình trước khi luyện tập với bốn khối va chạm (va chạm, chiếm chỗ, nảy và bật lại).
+          ## Từ vựng
+
+          * **Trừu tượng** - Đưa ra các điểm khác biệt nhất định để khiến một giải pháp phát huy tác dụng với nhiều vấn đề.
+
+          ## Mã lệnh giới thiệu
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Tổng quan
+
+          Bài học này đề cập đến hàm như một phương pháp tổ chức mã lệnh, khiến mã lệnh dễ đọc hơn và loại bỏ các khối mã lệnh lặp lại. Lớp sẽ hiểu rằng cấp độ cao hơn hoặc các bước trừu tượng hơn sẽ giúp dễ hiểu và dễ suy luận các bước hơn, sau đó họ bắt đầu tạo hàm trong Game Lab. Vào cuối bài học này, cả lớp sẽ sử dụng các kỹ năng này để sắp xếp và thêm hàm vào phiên bản cuối cùng của tựa game đi cảnh của mình.
+          ## Từ vựng
+
+          * **Hàm** - Đoạn mã lệnh có thể dễ dàng gọi nhiều lần..
+
+          ## Mã lệnh giới thiệu
+
+          * [Xác định hàm](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Gọi hàm](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Tổng quan
+
+          Bài học này sẽ mở rộng kỹ năng vẽ bao gồm chiều rộng và chiều cao, đồng thời giới thiệu khái niệm tạo số ngẫu nhiên. Lớp sẽ học cách vẽ các phiên bản ellipse() và rect() bao gồm các thông số chiều rộng và chiều cao cũng như sử dụng khối background() để tô màu màn hình. Vào cuối giai đoạn này, lớp sẽ làm quen với khối randomNumber() và sử dụng các khối mới để vẽ một con rắn cầu vồng ngẫu nhiên.
+          ## Từ vừng
+
+          * **Thông số** - Thông tin thêm mà bạn đưa vào hàm để tùy chỉnh cho nhu cầu nhất định.
+
+          ## Mã lệnh giới thiệu
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Tổng quan
+
+          Bài học này giới thiệu các biến như một phương pháp dán nhãn cho con số trong chương trình hoặc lưu lại giá trị đã tạo. Lớp sẽ bắt đầu bài học bằng một phần mô tả rất cơ bản về mục đích của biến và luyện tập sử dụng các khối mới Sau đó, lớp sẽ dùng biến để lưu một con số ngẫu nhiên, để chương trình sử dụng con số ngẫu nhiên đó nhiều lần.
+          ## Từ vựng
+
+          * **Biến** - Trình giữ chỗ cho một mẩu thông tin có thể thay đổi.
+
+          ## Mã lệnh giới thiệu
+
+          * [Khai báo biến](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Khai báo và chỉ định giá trị cho biến](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Tài liệu tham khảo
+
+          * [Giới thiệu về biến](https://youtu.be/G41G_PEWFjE) - Video ([tải về](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Tạo phong cách cho văn bản với CSS
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tiêu đề
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U6 LED create intro_2021:
+        content1: mô tả ở đây
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: mô tả ở đây
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

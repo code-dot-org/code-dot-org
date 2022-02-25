@@ -186,7 +186,7 @@
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\n  var pitch = accelerometer.getOrientation(\"pitch\");\n  if (buttonL.isPressed) {\n    var purpleBugY = getProperty(\"purpleBug\", \"y\");\n    setProperty(\"purpleBug\", \"y\", purpleBugY + pitch);\n  }\n  if (buttonR.isPressed) {\n    \n  }\n});\n",
+    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\n  var pitch = accelerometer.getOrientation(\"pitch\");\n  if (buttonL.isPressed) {\n    var purpleBugY = getProperty(\"purpleBug\", \"y\");\n    setProperty(\"purpleBug\", \"y\", purpleBugY + pitch);\n  }\n  if (buttonR.isPressed) {\n    //Add code so te orange bug will move when the red button is pressed\n    \n  }\n});\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -209,7 +209,7 @@
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
-    "validation_enabled": "false",
+    "validation_enabled": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
@@ -226,12 +226,15 @@
     "parent_level_id": 20571,
     "name_suffix": "_2021",
     "encrypted": "false",
-    "long_instructions": "# TODO\r\n\r\n- Update instructions to be: implement orangeBug using purpleBug as example",
+    "long_instructions": "# Orange and Purple Bugs\r\n\r\nThis app should move either the orange or purple bug depending on which button on the circuit playground is pressed and how the circuit playground is tilted. Right now, only the purple bug works.\r\n\r\nUsing the purple bug as an example, update the app so the orange bug will move when the right button is pressed.",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "display_name": "Orange and Purple Bugs",
+    "bubble_choice_description": "Use the circuit playground buttons and the accelerometer to move each bug",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L12/challenge/A.png",
     "preload_asset_list": null
   },
   "game_id": 41,
@@ -240,7 +243,7 @@
   "user_id": 324,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-02T00:05:06.011+00:00\",\"changed\":[\"cloned from \\\"CSD U6 params predict_2021\\\"\"],\"cloned_from\":\"CSD U6 params predict_2021\"},{\"changed_at\":\"2021-09-02 00:06:01 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-02 00:07:33 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-02T00:05:06.011+00:00\",\"changed\":[\"cloned from \\\"CSD U6 params predict_2021\\\"\"],\"cloned_from\":\"CSD U6 params predict_2021\"},{\"changed_at\":\"2021-09-02 00:06:01 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-02 00:07:33 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:53:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"validation_enabled\",\"start_html\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 04:55:39 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
   <blocks/>
 </Applab>

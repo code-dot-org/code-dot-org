@@ -144,6 +144,9 @@ tr:
     verileri ve yanlılık hakkında bilgi sahibi olun. Bilgisayar bilimi kodlamadan
     çok daha fazlasıdır! Müfredatımız boyunca yapay zeka ile ilgili daha fazla şey
     öğretme yolculuğunda Code.org'un ilk adımının keyfini çıkarın.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -233,12 +236,12 @@ tr:
   hourofcode_homepage_hoc2018_header_line1: Herkes, her yerde bir Hour of Code etkinliği
     düzenleyebilir. 45’ten fazla dilde bir saatlik eğitimler Deneyim gerektirmez.
   hourofcode_homepage_hoc2018_header_line2: Yediden yetmişe.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Kodlama Saati geliyor
   codeorg_homepage_celebrate_cse: Bilgisayar bilimini her yerde kutlayın!
   codeorg_homepage_csc: Bilgisayar bilimi, BB Bağlantıları'nda dil bilimi, matematik
     ve daha fazlasıyla buluşuyor
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
+  codeorg_homepage_csc_long: Müfredatımızda bilgisayar biliminin, dil sanatları, matematik
+    ve daha fazlasıyla nasıl buluştuğuna tanık olun!
   codeorg_homepage_csc_title: BB Bağlantıları
   hoc2018_tutorial_mchoc_description: Minecraft Hour of Code için yepyeni bir faaliyetle
     geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
@@ -1017,6 +1020,7 @@ tr:
   footer_menu_support: Destek
   footer_menu_terms: Şartlar
   footer_menu_privacy: Gizlilik Politikası
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Hour of Code Aktiviteleri
   learn_banner_blurb: Her yaşa göre tasarlanmış 45’ten fazla dildeki bir saatlik dersleri
     deneyin.  Bir Hour of Code ile başlayarak 180’den fazla ülkedeki milyonlarca öğrenci

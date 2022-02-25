@@ -12,7 +12,19 @@
           "word": "Functie"
         },
         "code/poem-art/2021": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) instructies voor een computer schrijven."
+        },
+        "line/poem-art/2021": {
+          "word": "Regel",
+          "definition": "(poëzie) - een onderverdeling van een gedicht, gerangschikt in een rij die eindigt in de rechtermarge."
+        },
+        "mood/poem-art/2021": {
+          "word": "Stemming",
+          "definition": "de uitdrukking van een gevoel, sfeer of emotie in kunst of geschrift."
+        },
+        "program/poem-art/2021": {
+          "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
         },
         "debugging/flappy/unversioned": {
           "word": "Foutopsporing"
@@ -44,30 +56,6 @@
         "loops/aquatic/unversioned": {
           "word": "Lussen"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Foutopsporing"
         },
@@ -81,8 +69,7 @@
           "word": "Foutopsporing"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Lossless Compressie",
-          "definition": ""
+          "word": "Lossless Compressie"
         },
         "code/sports/unversioned": {
           "word": "Code"
@@ -97,7 +84,19 @@
           "word": "Foutopsporing"
         },
         "code/poem-art/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": "(v) instructies voor een computer schrijven."
+        },
+        "program/poem-art/unversioned": {
+          "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Stemming",
+          "definition": "de uitdrukking van een gevoel, sfeer of emotie in kunst of geschrift."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Regel",
+          "definition": "(poëzie) - een onderverdeling van een gedicht, gerangschikt in een rij die eindigt in de rechtermarge."
         },
         "behavior/coursef/2021": {
           "word": "Gedrag"
@@ -197,6 +196,30 @@
         },
         "define/coursee/2021": {
           "word": "Definiëren"
+        },
+        "user_interface/csd/2021": {
+          "word": "Gebruikersinterface"
+        },
+        "debugging/csd/2021": {
+          "word": "Foutopsporing"
+        },
+        "variable/csd/2021": {
+          "word": "Variabele"
+        },
+        "conditionals/csd/2021": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstractie"
+        },
+        "function/csd/2021": {
+          "word": "Functie"
+        },
+        "input/csd/2021": {
+          "word": "Invoer"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

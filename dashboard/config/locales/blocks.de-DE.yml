@@ -375,6 +375,7 @@ de:
             '"right"': rechte Spalte
             '"x"': kreuz und quer
             '"plus"': plus
+            '"spiral"': Spirale
             '"random"': zufällig
       Dancelab_makeAnonymousDanceSprite:
         text: erstelle neues {COSTUME} in {LOCATION}
@@ -457,6 +458,26 @@ de:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': alle Aliens
             '"BEAR"': Bären
@@ -484,6 +505,7 @@ de:
             '"right"': rechte Spalte
             '"x"': kreuz und quer
             '"plus"': plus
+            '"spiral"': Spirale
             '"random"': zufällig
       Dancelab_mixColors:
         text: Mische {COLOR1} und {COLOR2}
@@ -1013,7 +1035,25 @@ de:
       gamelab_clickedOn:
         text: wenn {SPRITE} angeklickt
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): nach rechts drehen
+            new Behavior(spinning_left, []): nach links drehen
+            new Behavior(fluttering, []): flattern
+            new Behavior(jittering, []): zittern
+            new Behavior(wobbling, []): wackelnd
+            new Behavior(wandering, []): wandern
+            new Behavior(patrolling, []): patroullieren
+            new Behavior(moving_west_and_looping, []): nach Westen bewegen und eine
+              Schleife drehen
+            new Behavior(moving_east_and_looping, []): nach Osten bewegen und eine
+              Schleife drehen
+            new Behavior(moving_north_and_looping, []): nach Norden bewegen und eine
+              Schleife drehen
+            new Behavior(moving_south_and_looping, []): nach Süden bewegen und eine
+              Schleife drehen
       gamelab_comment:
         text: 'Kommentar: {COMMENT}'
       gamelab_costumeImage:
@@ -1066,6 +1106,19 @@ de:
         text: |-
           wenn {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} Kostüm ist {COSTUME}"
       gamelab_isKeyPressed:
@@ -1208,9 +1261,9 @@ de:
       gamelab_moveToward:
         text: bewege {SPRITE} {DISTANCE} Pixel zu {TARGET}
       gamelab_newSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrouilliert auf und ab
       gamelab_playSound:
@@ -1259,6 +1312,12 @@ de:
             "'sound://category_digital/jump_7.mp3'": springen
       gamelab_playSpeech:
         text: Sprache wiedergeben {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): Scrollen mit Pfeiltasten
+            new Behavior(driving_with_arrow_keys, []): fahren mit den Pfeiltasten
+            draggable(): verschiebbar sein
       gamelab_pointInDirection:
         text: richte {SPRITE} nach {DIRECTION} aus
         options:
@@ -1367,6 +1426,14 @@ de:
             '"scale"': Größe
             '"width"': Breite
             '"height"': Höhe
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': langsam
+            '5': Normal
+            '7': schnell
+            '9': extra fast
       gamelab_setTint:
         text: ändere die Farbe von {THIS} nach {COLOR}
       gamelab_setupScoreboard:
@@ -1405,7 +1472,7 @@ de:
       gamelab_stopGliding:
         text: "{SPRITE} stoppt das Gleiten"
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -1854,14 +1921,25 @@ de:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': Ziegelstein
+            '"fire"': Feuer
             '"flowers"': Blumen
             '"hearts"': Herzen
             '"iceCream"': Eiscreme
+            '"leaves"': Blätter
             '"rainbow"': Regenbogen
             '"stars"': Sterne
             '"waves"': Wellen
+      Poetry_addLine:
+        text: füge Zeile {LINE} hinzu
+      Poetry_animateText:
+        text: Text animieren
+      Poetry_destroy:
+        text: entferne {ANIMATION_NAME}
       Poetry_glideTo:
         text: "{SPRITE} gleite zu {LOCATION}"
+      Poetry_hideText:
+        text: Text verbergen
       Poetry_makeBurst:
         text: erzeuge den Effekt {EFFECT} mit {NUM} {ANIMATION_NAME} Sprites
         options:
@@ -1880,17 +1958,21 @@ de:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Stille
             '"sound://category_nature/steady_campfire_loop.mp3"': Lagerfeuer
             '"sound://category_nature/rain_loop.mp3"': Nieselregen
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Wald
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Gespenstisch
             '"sound://category_background/inside_plane.mp3"': Brummen
             '"sound://category_loops/red_flag_loop1.mp3"': Mission
+            '"sound://category_nature/summer_night_loop.mp3"': Nacht
+            '"sound://category_background/ocean_waves.mp3"': Meer
+            '"sound://category_background/rainforest_ambient_sound.mp3"': Regenwald
             '"sound://category_background/repitition.mp3"': Reiten
+            '"sound://category_background/wavering_wind.mp3"': schläfrig
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Langsam
       Poetry_playSound:
         text: spieleTon {SOUND}
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Glocke
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Pause
             '"sound://category_digital/boing_2.mp3"': Boing
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Blase
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Geplapper
@@ -1898,7 +1980,7 @@ de:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Misserfolg
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Flattern
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Springen
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Hell
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Licht
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Hopp
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
             '"sound://category_background/typewriter.mp3"': Schreibmaschine
@@ -1906,22 +1988,39 @@ de:
             '"sound://category_achievements/peaceful_win_1.mp3"': Gewinnen
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wirbel
             '"sound://category_achievements/peaceful_win_6.mp3"': Windspiel
+      Poetry_setAuthor:
+        text: lege für Autor {AUTHOR} fest
       Poetry_setBackground:
         text: setze Hintergrundfarbe {COLOR}
       Poetry_setBackgroundEffect:
+        text: lege Hintergrund auf {EFFECT} {PALETTE} fest
         options:
           EFFECT:
-            '"colors"': Farben
-            '"squiggles"': Schnörkel
-            '"space"': Leerzeichen
-            '"stars"': Sterne
-            '"ripples"': Welligkeit
-            '"rain"': Regen
+            '"blooming"': Blumenkranz
             '"bubbles"': Blasen
+            '"clouds"': Bewölkt
             '"confetti"': Konfetti
-            '"hearts"': Farbenfrohe Herzen
+            '"darkCircles"': Verblassen
+            '"fadeColors"': Gefrostet
+            '"hearts"': Herzen
+            '"space"': Leerzeichen
+            '"rain"': Regen
+            '"ripples"': Welligkeit
+            '"colors"': Farben
+            '"stars"': Sterne
+            '"squiggles"': Schnörkel
           PALETTE:
+            '"autumn"': Herbst
+            '"sunrise"': Morgen
+            '"sunset"': Abend
+            '"grayscale"': Grau
+            '"ocean"': Meer
             '"rainbow"': Regenbogen
+            '"roses"': Rosen
+            '"sky"': Himmel
+            '"spring"': Frühling
+            '"summer"': Sommer
+            '"winter"': Winter
       Poetry_setBackgroundImageAs:
         text: setze Hintergund auf {IMG}
       Poetry_setFont:
@@ -1929,49 +2028,84 @@ de:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Zierbuchstaben
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Zierbuchstaben
       Poetry_setFontColor:
         text: Textfarbe {FILL} festlegen
       Poetry_setForegroundEffect:
+        text: führe {EFFECT} aus
         options:
           EFFECT:
-            '"rain"': Regen
             '"bubbles"': Blasen
-            '"hearts"': Farbenfrohe Herzen
             '"confetti"': Konfetti
+            '"hearts"': Herzen
+            '"emojis"': Fröhliche Emojis
+            '"rain"': Regen
             '"starburst"': Starburst
+            '"glass"': Zerbrochenes Glas
+            '"twinkling"': Zwinkern
+      Poetry_setPrompt:
+        text: fragt den Benutzer {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} nach einer Variaben
+          {VAR}
+      Poetry_setPromptWithChoices:
+        text: fragt Benutzer {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} nach Variable {VAR} mit
+          Auswahlmöglichkeiten {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: setze die Größe von {SPRITE} auf {VAL}
+      Poetry_setTextEffect:
+        text: lege Texteffekt {EFFECT} fest
+        options:
+          EFFECT:
+            '"fade"': ausblenden
+            '"flyLeft"': fliege von rechts
+            '"flyRight"': fliege von rechts
+            '"flyTop"': fliege von oben
+            '"flyBottom"': fliege von unten
+            '"typewriter"': Schreibmaschine
+      Poetry_setTitle:
+        text: lege Titel {TITLE} fest
+      Poetry_showText:
+        text: Text anzeigen
       Poetry_startBehavior:
+        text: 'Sprite {ANIMATION_NAME} beginnt {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: flattern
-            growing: wachsen
-            jittering: zittern
-            shrinking: schrumpfen
-            spinning_left: nach links drehen
-            spinning_right: nach rechts drehen
-            swimming_left_and_right: Schwimmen
-            wandering: wandern
-            wobbling: wackelnd
+            '"fluttering"': flattern
+            '"growing"': wachsen
+            '"jittering"': zittern
+            '"shrinking"': schrumpfen
+            '"spinning_left"': nach links drehen
+            '"spinning_right"': nach rechts drehen
+            '"swimming_left_and_right"': Schwimmen
+            '"wandering"': wandern
+            '"wobbling"': wackelnd
       Poetry_stopBehavior:
+        text: 'Sprite {ANIMATION_NAME} stoppt {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: flattern
-            growing: wachsen
-            jittering: zittern
-            shrinking: schrumpfen
-            spinning_left: nach links drehen
-            spinning_right: nach rechts drehen
-            swimming_left_and_right: Schwimmen
-            wandering: wandern
-            wobbling: wackelnd
+            '"fluttering"': flattern
+            '"growing"': wachsen
+            '"jittering"': zittern
+            '"shrinking"': schrumpfen
+            '"spinning_left"': nach links drehen
+            '"spinning_right"': nach rechts drehen
+            '"swimming_left_and_right"': Schwimmen
+            '"wandering"': wandern
+            '"wobbling"': wackelnd
+            '"all"': "--alle Verhaltensweisen--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: wenn Zeile {N} anzeigt
         options:
           N:
             '0': "???"

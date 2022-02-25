@@ -157,28 +157,44 @@
           "moving with arrow keys": "mutare cu tastele săgeată"
         },
         "helloworld_animals_behaviors": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_emoji_behaviors": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_retro_behaviors": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_animals_sounds": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_emoji_sounds": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_food_sounds": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_retro_sounds": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_food_behaviors": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "poetry_hoc_spriteSizes": {
           "moving with arrow keys": "mutare cu tastele săgeată"
@@ -199,16 +215,24 @@
           "moving with arrow keys": "mutare cu tastele săgeată"
         },
         "helloworld_animals_backgrounds": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_emoji_backgrounds": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_food_backgrounds": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         },
         "helloworld_retro_backgrounds": {
-          "moving with arrow keys": "mutare cu tastele săgeată"
+          "moving with arrow keys": "mutare cu tastele săgeată",
+          "moving north and looping": "mergând către nord și formarea de bucle",
+          "moving south and looping": "mergând către sud și formarea de bucle"
         }
       }
     }

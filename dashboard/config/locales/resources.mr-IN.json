@@ -216,6 +216,7 @@
           "url": "https://studio.code.org/s/coursef-2021/vocab"
         },
         "implementation_guide/coursef/2021": {
+          "name": "अंमलबजावणी मार्गदर्शिका",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursef/2021": {
@@ -227,6 +228,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursef/2021": {
+          "name": "अभ्यासक्रम मार्गदर्शक",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursef/2021": {
@@ -234,9 +236,11 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursef/2021": {
+          "name": "शिक्षक फोरम",
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursef/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursef/2021": {
@@ -382,6 +386,7 @@
           "url": "https://studio.code.org/s/courseb-2021/vocab"
         },
         "implementation_guide/courseb/2021": {
+          "name": "अंमलबजावणी मार्गदर्शिका",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/courseb/2021": {
@@ -393,6 +398,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/courseb/2021": {
+          "name": "अभ्यासक्रम मार्गदर्शक",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/courseb/2021": {
@@ -400,6 +406,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/courseb/2021": {
+          "name": "शिक्षक फोरम",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
@@ -574,6 +581,7 @@
           "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
         "implementation_guide/coursea/2021": {
+          "name": "अंमलबजावणी मार्गदर्शिका",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursea/2021": {
@@ -585,6 +593,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursea/2021": {
+          "name": "अभ्यासक्रम मार्गदर्शक",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursea/2021": {
@@ -592,6 +601,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursea/2021": {
+          "name": "शिक्षक फोरम",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
@@ -733,6 +743,7 @@
           "url": "https://studio.code.org/s/coursec-2021/vocab"
         },
         "implementation_guide/coursec/2021": {
+          "name": "अंमलबजावणी मार्गदर्शिका",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursec/2021": {
@@ -744,6 +755,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursec/2021": {
+          "name": "अभ्यासक्रम मार्गदर्शक",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursec/2021": {
@@ -751,6 +763,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursec/2021": {
+          "name": "शिक्षक फोरम",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
@@ -908,6 +921,7 @@
           "url": "https://studio.code.org/s/coursed-2021/vocab"
         },
         "implementation_guide/coursed/2021": {
+          "name": "अंमलबजावणी मार्गदर्शिका",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursed/2021": {
@@ -919,6 +933,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
+          "name": "अभ्यासक्रम मार्गदर्शक",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursed/2021": {
@@ -926,6 +941,7 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursed/2021": {
+          "name": "शिक्षक फोरम",
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
@@ -1017,6 +1033,7 @@
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
+          "name": "व्हेरीएबल्स",
           "url": "https://youtu.be/DI7DprN4FtE"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
@@ -1036,6 +1053,7 @@
           "url": "https://studio.code.org/s/express-2021/vocab"
         },
         "teacher_forum_1/express/2021": {
+          "name": "शिक्षक फोरम",
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/express/2021": {
@@ -1074,6 +1092,7 @@
           "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
+          "name": "शिक्षक फोरम",
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/pre-express/2021": {
@@ -1207,6 +1226,7 @@
           "url": "https://studio.code.org/s/coursee-2021/vocab"
         },
         "implementation_guide/coursee/2021": {
+          "name": "अंमलबजावणी मार्गदर्शिका",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursee/2021": {
@@ -1218,6 +1238,7 @@
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursee/2021": {
+          "name": "अभ्यासक्रम मार्गदर्शक",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursee/2021": {
@@ -1225,14 +1246,42 @@
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursee/2021": {
+          "name": "शिक्षक फोरम",
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursee/2021": {
+          "name": "स्प्राईट लॅब डॉक्युमेंटेशन",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा ",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "AI पाहणे"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "शिक्षक फोरम"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "व्हिडिओ: मशीन अभ्यास",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "variables_1/csd/2021": {
+          "name": "व्हेरीएबल्स"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "शिक्षक फोरम"
+        },
+        "lists/csd/2021": {
+          "name": "याद्या"
         }
       }
     }

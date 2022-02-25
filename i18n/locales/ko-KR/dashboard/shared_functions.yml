@@ -5,7 +5,9 @@ ko:
       jittering: 지터링
       moving east: 동쪽으로 이동
       moving north: 북쪽으로 이동
+      moving north and looping: 북쪽으로 이동 및  반복
       moving south: 남쪽으로 이동
+      moving south and looping: 남쪽으로 이동 및  반복
       moving west: 서쪽으로 이동
       patrolling: 순찰
       spinning left: 왼쪽으로 회전

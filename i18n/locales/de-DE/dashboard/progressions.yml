@@ -2,12 +2,16 @@ de:
   data:
     progressions:
       '"If/Else" with the Bee': '"Wenn/Sonst" mit der Biene'
+      AI Machine Learning - Video: Maschinelles Lernen (AI) – Video
+      'AI: Impact on Society - Video': 'KI: Auswirkungen auf die Gesellschaft – Video'
+      'AI: Training Data & Bias - Video': 'KI: Trainingdaten und Vorurteile'
       Accelerometer Events: Ereignisse mit dem Beschleunigungsmesser
       Adding Images: Hinzufügen von Bildern
       Adding Screens: Hinzufügen von Bildschirmen
       Alien Defender: Alien Defender
       Analog Sensors: Analoge Sensoren
       Animate Your Scene: Animiere deine Szene
+      App Lab Intro - Video: App Labor Einführung – Video
       'App Project: Bugs and Features': 'App-Projekt: Fehler und Funktionalitäten'
       'App Project: Linking Screens': 'App-Projekt: Bildschirme verknüpfen'
       'App Project: Screen Design': 'App-Projekt: Bildschirm-Design'
@@ -17,6 +21,7 @@ de:
       Artist Intro with JR Hildebrande: Künstler-Intro mit JR Hildebrand
       Artist Project: Künstler Projekt
       'Artist: Variables': 'Künstler: Variablen'
+      Assessment: Prüfung
       Attribution: 'Namensnennung (Attribution):'
       Back and Forth: Hin und her
       Basic Conditionals: Einfach Bedingungen
@@ -100,6 +105,7 @@ de:
       'Exploration: Sample Project': 'Erkundung: Beispielprojekt'
       Explore HTML: HTML entdecken
       Exploring more CSS: Mehr CSS erkunden
+      Extra: Extra
       Final Personal Website: Die endgültige persönliche Website
       Finish a Screen: Erkundung llen eines Bildschirms
       Finish the Prototype: Fertigstellen des Prototyps
@@ -271,6 +277,7 @@ de:
       Speed it Up, Slow it Down: Beschleunigen, verlangsamen
       Sprite Lab Example Project: Sprite Lab Beispielprojekt
       Sprite Lab Project: Sprite Lab-Projekt
+      Sprite Movement: Sprite-Bewegung
       Sprite Properties: Sprite Eigenschaften
       Sprites and the Draw Loop: Sprites und die Zeichenschleife
       Star Chaser: Sternenjäger
@@ -278,6 +285,7 @@ de:
       Styling with Classes: Gestalten mit Klassen
       Styling your Website: Verschönere deine Website
       Teach A.I. a new word: Bringe K.I. ein neues Wort bei
+      Teach AI a New Word: Bringe KI ein neues Wort bei
       Text Compression: Text-Kompression
       The Accelerometer: Der Beschleunigungssensor
       The Animation Tab: Der Animations Tab

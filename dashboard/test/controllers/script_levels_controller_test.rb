@@ -58,6 +58,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
     pilot_section = create :section, user: @pilot_teacher, script: pilot_script
     @pilot_student = create(:follower, section: pilot_section).student_user
+
+    pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pilot_pl_lesson_group = create(:lesson_group, script: pilot_pl_script)
+    pilot_pl_lesson = create(:lesson, script: pilot_pl_script, lesson_group: pilot_pl_lesson_group)
+    @pilot_pl_script_level = create :script_level, script: pilot_pl_script, lesson: pilot_pl_lesson
+    @pilot_instructor = create :facilitator, pilot_experiment: 'pl-pilot-experiment'
+    pilot_pl_section = create :section, user: @pilot_instructor, script: pilot_pl_script
+    @pilot_participant = create :teacher
+    create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
+
+    pl_script = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_lesson_group = create(:lesson_group, script: pl_script)
+    pl_lesson = create(:lesson, script: pl_script, lesson_group: pl_lesson_group)
+    @pl_script_level = create :script_level, script: pl_script, lesson: pl_lesson
   end
 
   setup do
@@ -631,6 +645,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "show: redirect to latest assigned script version in family for participant if one exists" do
+    sign_in @student
+
+    pl_courseg_2017 = create :script, name: 'pl-courseg-2017', family_name: 'pl-courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'pl-courseg-2018', family_name: 'pl-courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'pl-courseg-2019', family_name: 'pl-courseg', version_year: '2019'
+
+    pl_courseg_2017_lesson_group_1 = create :lesson_group, script: pl_courseg_2017
+    pl_courseg_2017_lesson_1 = create :lesson, script: pl_courseg_2017, lesson_group: pl_courseg_2017_lesson_group_1, name: 'PL Course G Lesson 1', absolute_position: 1, relative_position: '1'
+    pl_courseg_2017_lesson_1_script_level = create :script_level, script: pl_courseg_2017, lesson: pl_courseg_2017_lesson_1, position: 1
+
+    get :show, params: {
+      script_id: pl_courseg_2017.name,
+      lesson_position: pl_courseg_2017_lesson_1.relative_position,
+      id: pl_courseg_2017_lesson_1_script_level.position,
+    }
+    assert_redirected_to '/s/pl-courseg-2018?redirect_warning=true'
+
+    # Does not redirect if no_redirect query param is provided.
+    get :show, params: {
+      script_id: pl_courseg_2017.name,
+      lesson_position: pl_courseg_2017_lesson_1.relative_position,
+      id: pl_courseg_2017_lesson_1_script_level.position,
+      no_redirect: "true"
+    }
+    assert_response :ok
+  end
+
   test "show: directs to script if script and family name match" do
     courseg = create :script, name: 'courseg', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(courseg)
@@ -980,7 +1022,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
-    assert_equal 'Code.org [test] - custom-script-laurel: laurel-lesson-2 #1',
+    assert_equal 'laurel-lesson-2 #1 | custom-script-laurel - Code.org [test]',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
@@ -1141,7 +1183,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
 
-    user_storage_id = storage_id_for_user_id(@student.id)
+    user_storage_id = fake_storage_id_for_user_id(@student.id)
 
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1170,12 +1212,70 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_includes response.body, fake_last_attempt
   end
 
+  test 'loads level in view only if viewing own work, channel backed level and version param is present' do
+    sign_in @teacher
+
+    user_storage_id = fake_storage_id_for_user_id(@teacher.id)
+
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create :applab
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: 'FAKE_LAST_ATTEMPT')
+    )
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      lesson_position: script_level.lesson,
+      id: script_level.position,
+      version: 'some-version'
+    }
+
+    assert assigns(:view_options)[:readonly_workspace]
+  end
+
+  test 'loads level not in readonly if viewing own work, level is channel backed and version param is empty' do
+    sign_in @teacher
+
+    user_storage_id = fake_storage_id_for_user_id(@teacher.id)
+
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create :applab
+    script_level = create :script_level, levels: [level], lesson: lesson, script: script
+    create(:user_level,
+      user: @student,
+      script: script_level.script,
+      level: script_level.level,
+      level_source: create(:level_source, data: 'FAKE_LAST_ATTEMPT')
+    )
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      lesson_position: script_level.lesson,
+      id: script_level.position,
+      version: ''
+    }
+
+    refute assigns(:view_options)[:readonly_workspace]
+  end
+
   test 'loads applab if you are a project validator viewing a student and they have a channel id' do
     sign_in @project_validator
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
 
-    user_storage_id = storage_id_for_user_id(@student.id)
+    user_storage_id = fake_storage_id_for_user_id(@student.id)
 
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1208,7 +1308,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     other_student = create :student
-    user_storage_id = storage_id_for_user_id(other_student.id)
+    user_storage_id = fake_storage_id_for_user_id(other_student.id)
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
 
@@ -1997,43 +2097,122 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
+  no_access_msg = "You don&#39;t have access to this level."
+
   test_user_gets_response_for :show, response: :redirect, user: nil,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'signed out user cannot view pilot script level'
 
-  test_user_gets_response_for :show, response: :forbidden, user: :student,
+  test_user_gets_response_for(:show, response: :success, user: :student,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'student cannot view pilot script level'
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
-  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {script_level_params(@pilot_pl_script_level)},
+                              name: 'participant cannot view pilot script level'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'teacher without pilot access cannot view pilot script level'
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
-  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
+  test_user_gets_response_for(:show, response: :success, user: :facilitator,
+                              params: -> {script_level_params(@pilot_script_level)},
+                              name: 'instructor without pilot access cannot view pilot script level'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
     params: -> {script_level_params(@pilot_script_level)},
     name: 'pilot teacher can view pilot script level'
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
-  test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_instructor},
+                              params: -> {script_level_params(@pilot_pl_script_level)},
+                              name: 'pilot instructor can view pilot script level'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
     params: -> {script_level_params(@pilot_script_level)},
     name: 'pilot student can view pilot script level'
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
-  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_participant},
+                              params: -> {script_level_params(@pilot_pl_script_level)},
+                              name: 'pilot participant can view pilot script level'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'levelbuilder can view pilot script level'
+  ) do
+    refute response.body.include? no_access_msg
+  end
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
                               params: -> {script_level_params(@in_development_script_level)},
                               name: 'signed out user cannot view in_development script level'
 
-  test_user_gets_response_for :show, response: :forbidden, user: :student,
+  test_user_gets_response_for(:show, response: :success, user: :student,
                               params: -> {script_level_params(@in_development_script_level)},
                               name: 'student cannot view in_development script level'
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
-  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
                               params: -> {script_level_params(@in_development_script_level)},
                               name: 'teacher access cannot view in_development script level'
+  ) do
+    assert response.body.include? no_access_msg
+  end
 
-  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
                               params: -> {script_level_params(@in_development_script_level)},
                               name: 'levelbuilder can view in_development script level'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {script_level_params(@pl_script_level)},
+                              name: 'signed out user cannot view pl script level'
+
+  test_user_gets_response_for(:show, response: :success, user: :student,
+                              params: -> {script_level_params(@pl_script_level)},
+                              name: 'student cannot view pl script level'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {script_level_params(@pl_script_level)},
+                              name: 'teacher can view pl script level'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+                              params: -> {script_level_params(@pl_script_level)},
+                              name: 'levelbuilder can view pl script level'
+  ) do
+    refute response.body.include? no_access_msg
+  end
 end

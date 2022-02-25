@@ -2,119 +2,14 @@
   "lt-LT": {
     "data": {
       "lesson_activities": {
-        "c53a1348-2816-4c38-9417-92561d0bca19": {
-          "name": ""
-        },
-        "12a90414-dae4-4f2b-8598-0b3b9fd6a767": {
-          "name": ""
-        },
-        "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d": {
-          "name": ""
-        },
-        "777be184-c917-4732-ad47-bb1fad0a30e4": {
-          "name": ""
-        },
-        "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
-          "name": ""
-        },
-        "d31e813b-9457-415f-8632-009132bb5e48": {
-          "name": ""
-        },
-        "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
-          "name": ""
-        },
-        "0e9caf95-fa34-4ffc-b218-0859134ee293": {
-          "name": ""
-        },
-        "6e0020c2-9d9e-488e-bb8d-126ac1760e8b": {
-          "name": ""
-        },
-        "a653c76e-8536-4e82-adad-98306fc15f07": {
-          "name": ""
-        },
-        "48bd058b-2012-4d4a-9fba-52d20d8a922f": {
-          "name": ""
-        },
-        "ae872c5e-1b66-4026-b2d7-e26574ff8b57": {
-          "name": ""
-        },
-        "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
-          "name": ""
-        },
-        "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
-          "name": ""
-        },
-        "09d516b6-38b7-42e0-900c-5d427b051b65": {
-          "name": ""
-        },
-        "3b10ea82-0421-4583-a1cf-561c09edc727": {
-          "name": ""
-        },
-        "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
-          "name": ""
-        },
-        "d42497ec-48f5-404c-90b9-2133dd4759cc": {
-          "name": ""
-        },
         "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
           "name": "Veikla"
         },
         "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
           "name": "Apibendrinimas"
         },
-        "10b66543-86a4-459e-bc67-a31d688547ce": {
-          "name": ""
-        },
-        "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
-          "name": ""
-        },
-        "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
-          "name": ""
-        },
-        "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
-          "name": ""
-        },
-        "262ad475-1b09-4834-8401-0cf39d3955c5": {
-          "name": ""
-        },
-        "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
-          "name": ""
-        },
-        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
-          "name": ""
-        },
         "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
           "name": "Veikla"
-        },
-        "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
-          "name": ""
-        },
-        "ad24912f-a30c-4821-83a5-77e20997a044": {
-          "name": ""
-        },
-        "5c3a2275-a7f9-4e50-a0b4-8f198452a102": {
-          "name": ""
-        },
-        "20701fc4-d308-49af-8988-34896fd12713": {
-          "name": ""
-        },
-        "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
-          "name": ""
-        },
-        "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
-          "name": ""
-        },
-        "d77010f1-4c38-4b28-8b5f-ef931622b016": {
-          "name": ""
-        },
-        "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
-          "name": ""
-        },
-        "894da896-c653-4f74-a0f9-b02dca7ebcad": {
-          "name": ""
-        },
-        "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
-          "name": ""
         },
         "8b8d6959-c861-4474-950b-b097aaa9fae3": {
           "name": "Veikla"
@@ -122,257 +17,8 @@
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Apibendrinimas"
         },
-        "ddc8f987-c000-409d-aaf7-8546464a70d9": {
-          "name": ""
-        },
-        "05180d31-d1ff-422e-8227-69f7d07884a6": {
-          "name": ""
-        },
-        "6a240b51-f019-4729-a5df-cbe901844a7e": {
-          "name": ""
-        },
-        "4abbf2ec-b39e-4740-a51a-635072063171": {
-          "name": ""
-        },
-        "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
-          "name": ""
-        },
-        "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
-          "name": ""
-        },
-        "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
-          "name": ""
-        },
-        "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
-          "name": ""
-        },
-        "2cf39290-cd45-4bb4-8ef6-f1dc74e50890": {
-          "name": ""
-        },
-        "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
-          "name": ""
-        },
-        "ad2299c9-28bf-4e9f-b320-cb44ff94bdba": {
-          "name": ""
-        },
-        "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
-          "name": ""
-        },
-        "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
-          "name": ""
-        },
-        "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
-          "name": ""
-        },
-        "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
-          "name": ""
-        },
-        "42552407-b313-4fc4-9163-e6a8e4a6029d": {
-          "name": ""
-        },
-        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
-          "name": ""
-        },
-        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
-          "name": ""
-        },
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Veikla"
-        },
-        "b304de28-91d8-4215-a853-27f5a3f8a157": {
-          "name": ""
-        },
-        "04400eef-5989-4325-a801-ab4ad451f130": {
-          "name": ""
-        },
-        "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
-          "name": ""
-        },
-        "899fd6a9-1214-43ec-a159-77c421de2c8a": {
-          "name": ""
-        },
-        "59cec226-923d-4712-8e8f-799b398e4365": {
-          "name": ""
-        },
-        "9af106d8-4c2a-4a7f-9443-efb869f46042": {
-          "name": ""
-        },
-        "c1487633-6ce6-4812-9d07-beed7f582215": {
-          "name": ""
-        },
-        "5aa154dd-1f39-4e03-b144-df04b4703180": {
-          "name": ""
-        },
-        "22d59daf-926a-4ff1-87d9-d3dfec2f1ef4": {
-          "name": ""
-        },
-        "c5959823-4993-4b52-a1eb-4810fbb8dab2": {
-          "name": ""
-        },
-        "baa0c795-4461-4af2-8397-9833219bae88": {
-          "name": ""
-        },
-        "2c1ce9f4-d65a-4020-b7ed-e4da0dc49e7b": {
-          "name": ""
-        },
-        "61dcaa29-1d32-48a9-87b3-4873c4eeec80": {
-          "name": ""
-        },
-        "252f7911-9519-495d-af6d-71a1dd1155df": {
-          "name": ""
-        },
-        "bd5f5260-8e13-4655-9302-a7405ceebc84": {
-          "name": ""
-        },
-        "9b28f9fb-485d-471f-ab65-c845d26516b1": {
-          "name": ""
-        },
-        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
-          "name": ""
-        },
-        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
-          "name": ""
-        },
-        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
-          "name": ""
-        },
-        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
-          "name": ""
-        },
-        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
-          "name": ""
-        },
-        "b482746d-0030-459f-8657-a2775cf1f2a3": {
-          "name": ""
-        },
-        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
-          "name": ""
-        },
-        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
-          "name": ""
-        },
-        "2ca3abdd-710e-49b4-9393-9c11a00308a3": {
-          "name": ""
-        },
-        "1fe068b8-1da2-4611-b839-90992a1a77a7": {
-          "name": ""
-        },
-        "fb145498-9073-4bd2-a031-7808b50a3efa": {
-          "name": ""
-        },
-        "618d99a5-1be4-469b-8e5b-196023cca77e": {
-          "name": ""
-        },
-        "592e1014-6ce0-4f0e-9904-6e8610c536fb": {
-          "name": ""
-        },
-        "601367d1-a711-45ca-8129-5e0b39472088": {
-          "name": ""
-        },
-        "2079060a-d680-4da6-8bc5-c21c71c455de": {
-          "name": ""
-        },
-        "320cb4e7-1eb9-4510-bf0c-96498c7d9b59": {
-          "name": ""
-        },
-        "2f22bd22-5f78-444f-a3a5-7890b0d0a247": {
-          "name": ""
-        },
-        "7f5019c8-e89b-45d8-9048-2180d5e9a24f": {
-          "name": ""
-        },
-        "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c": {
-          "name": ""
-        },
-        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
-          "name": ""
-        },
-        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
-          "name": ""
-        },
-        "f488bd5e-8717-4f17-89de-67eed7656f10": {
-          "name": ""
-        },
-        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
-          "name": ""
-        },
-        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
-          "name": ""
-        },
-        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
-          "name": ""
-        },
-        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
-          "name": ""
-        },
-        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
-          "name": ""
-        },
-        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
-          "name": ""
-        },
-        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
-          "name": ""
-        },
-        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
-          "name": ""
-        },
-        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
-          "name": ""
-        },
-        "0deb9da8-356e-4547-951f-445a58491a24": {
-          "name": ""
-        },
-        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
-          "name": ""
-        },
-        "b47403db-764c-41c2-9c65-eea089621c6f": {
-          "name": ""
-        },
-        "6f2dd9af-fb21-4368-a9ce-738833702651": {
-          "name": ""
-        },
-        "de875c8f-2433-4a61-bd42-a2412a3fe033": {
-          "name": ""
-        },
-        "a8c929bc-ca75-40ae-8dfa-eec74ee6a958": {
-          "name": ""
-        },
-        "289f45ab-557e-43dc-99f9-f86ba374fd67": {
-          "name": ""
-        },
-        "433390db-3967-466a-b58a-db833369579d": {
-          "name": ""
-        },
-        "b8d08a94-3e62-472f-8364-e61cb8bf5ca7": {
-          "name": ""
-        },
-        "b3174c95-1b68-429d-8d32-804d57101288": {
-          "name": ""
-        },
-        "6e806048-9339-4a04-bf04-0e32ee0567f2": {
-          "name": ""
-        },
-        "9708eb16-ce00-4d84-9534-8a145228ea21": {
-          "name": ""
-        },
-        "8324d97f-4ce6-4304-8cec-9d75a4f1ca80": {
-          "name": ""
-        },
-        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
-          "name": ""
-        },
-        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
-          "name": ""
-        },
-        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
-          "name": ""
-        },
-        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
-          "name": ""
-        },
-        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
-          "name": ""
         },
         "eba207ca-a259-40be-93b5-0a9c0c906b80": {
           "name": "Veikla"
@@ -386,425 +32,380 @@
         "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
           "name": "Veikla"
         },
-        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
-          "name": ""
-        },
-        "78358409-25ec-4e4f-92d7-b69ff300191a": {
-          "name": ""
-        },
-        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
-          "name": ""
-        },
-        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
-          "name": ""
-        },
-        "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
-          "name": ""
-        },
-        "9d9055c3-143a-452e-9703-ef90cd9a9469": {
-          "name": ""
-        },
-        "998a29f8-9f4a-451a-91ae-13ba9225c8c4": {
-          "name": ""
-        },
         "15bbd3a3-247c-4e2a-be79-52d802f01920": {
           "name": "Veikla"
-        },
-        "10dd8520-1410-493c-bd48-5233e4bf2965": {
-          "name": ""
-        },
-        "260a48d0-8cd7-4f15-b303-32e5c685a349": {
-          "name": ""
-        },
-        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
-          "name": ""
-        },
-        "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
-          "name": ""
-        },
-        "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
-          "name": ""
-        },
-        "d582f103-5fb1-4236-80df-100080cc01b9": {
-          "name": ""
-        },
-        "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
-          "name": ""
-        },
-        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
-          "name": ""
-        },
-        "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
-          "name": ""
-        },
-        "62f7dfaa-f865-461e-a17f-6d5c09893246": {
-          "name": ""
-        },
-        "24b3a120-756e-4a3c-8b8e-29e9a3256869": {
-          "name": ""
-        },
-        "756542f6-213e-4c07-9442-d1cf97e1ff26": {
-          "name": ""
-        },
-        "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
-          "name": ""
-        },
-        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
-          "name": ""
-        },
-        "e0fe20d3-be99-4212-83f8-21599085fcad": {
-          "name": ""
-        },
-        "8a35ec67-caeb-48fa-95bc-d2c3177f6cf9": {
-          "name": ""
-        },
-        "b5b68733-e757-4aec-84e2-8bea7936175b": {
-          "name": ""
-        },
-        "440ff812-8ffc-4ac3-a6c8-1ed73872fcdd": {
-          "name": ""
-        },
-        "5f64e89f-e102-47ee-b219-5e637db83913": {
-          "name": ""
-        },
-        "27034f13-f0bf-41c0-a198-385c740be6ab": {
-          "name": ""
-        },
-        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
-          "name": ""
-        },
-        "1c265744-1a1f-44f4-8380-7328759249ea": {
-          "name": ""
         },
         "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
           "name": "Veikla"
         },
-        "899be5b5-0668-4472-909d-46a1e44e98e2": {
-          "name": ""
-        },
-        "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
-          "name": ""
-        },
-        "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
-          "name": ""
-        },
-        "8df58520-6127-4563-b145-8d7d81635bde": {
-          "name": ""
-        },
-        "e36b6776-3c22-498e-94ef-44fae2c28065": {
-          "name": ""
-        },
-        "3cf1342b-1aed-4419-a0cf-a26c438f58fa": {
-          "name": ""
-        },
-        "d905457a-3a72-4927-a3a6-910b2fba3a53": {
-          "name": ""
-        },
-        "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
-          "name": ""
-        },
-        "84af3892-0fdd-462d-8815-99e6e2edf15f": {
-          "name": ""
-        },
-        "92a24c72-3fd9-4843-b701-ebb3832e29e5": {
-          "name": ""
-        },
-        "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
-          "name": ""
-        },
-        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
-          "name": ""
-        },
-        "63075b82-d582-409b-afd8-a8967040c94c": {
-          "name": ""
-        },
-        "b20f1e20-6bb7-4cfb-9fe5-17928dc3ab60": {
-          "name": ""
-        },
-        "533abcef-ea93-4b33-902c-7b70e22ffe31": {
-          "name": ""
-        },
-        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
-          "name": ""
-        },
-        "8d10f0a0-909f-482c-a17f-3477280c7375": {
-          "name": ""
-        },
-        "4e9e15eb-a14e-4b52-ba13-768f4a7900c3": {
-          "name": ""
-        },
-        "2c76698a-3f76-4cfd-8b21-5ff264c2f1bb": {
-          "name": ""
-        },
-        "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
-          "name": ""
-        },
-        "38b78816-4a04-4c9b-b112-3704e9511c42": {
-          "name": ""
-        },
-        "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
-          "name": ""
-        },
-        "7ec11452-1367-44ef-afe4-c8cf354bb183": {
-          "name": ""
-        },
-        "9b5aab20-f47d-48fd-aadc-eaba286d48b5": {
-          "name": ""
-        },
-        "7c0129f4-ba20-475d-b304-a85ddd87507e": {
-          "name": ""
-        },
-        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
-          "name": ""
-        },
-        "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
-          "name": ""
-        },
-        "b0a66dc2-0e44-413c-8364-97799728aa5f": {
-          "name": ""
-        },
-        "7a0a25e1-d2a6-47ec-a890-69a3182d5ef0": {
-          "name": ""
-        },
-        "cf4ad357-07b4-48e1-bd8f-108301e7aa0a": {
-          "name": ""
-        },
-        "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
-          "name": ""
-        },
-        "e0ae16fd-eea3-47f4-8fa4-3355e57f9894": {
-          "name": ""
-        },
-        "81828841-d023-4593-896d-b4ce1481da6f": {
-          "name": ""
-        },
-        "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
-          "name": ""
-        },
-        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
-          "name": ""
-        },
-        "e7277b3e-9177-451e-bef9-1e53d41b6131": {
-          "name": ""
-        },
-        "8667da08-85cd-4d60-a4f1-ff2608e4d240": {
-          "name": ""
-        },
-        "af629d31-87ab-476d-a2d3-6da008802f3c": {
-          "name": ""
-        },
-        "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
-          "name": ""
-        },
-        "f96503b6-c295-4deb-8e47-c3440041a689": {
-          "name": ""
-        },
-        "90d3854b-a2c4-44ec-924a-f66d2087098c": {
-          "name": ""
-        },
-        "aebca980-e26c-4993-b001-dc20e492f04e": {
-          "name": ""
-        },
-        "139034de-1cee-48f9-abd8-40e8c15cd439": {
-          "name": ""
-        },
-        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
-          "name": ""
-        },
-        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
-          "name": ""
-        },
-        "e735098e-abab-465e-949c-a7e92e771b84": {
-          "name": ""
-        },
-        "f5985094-20d7-4316-a052-e7b18a78572e": {
-          "name": ""
-        },
-        "ae81cfe6-45ff-4093-bd79-7c5e3f2b3c7e": {
-          "name": ""
-        },
-        "523e695a-12e0-443c-bad6-8e816c672adb": {
-          "name": ""
-        },
-        "67be50b8-f120-4f1d-ad22-06b84dba994c": {
-          "name": ""
-        },
-        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
-          "name": ""
-        },
-        "c401b0f4-97af-418d-b58b-a58493c7570c": {
-          "name": ""
-        },
-        "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
-          "name": ""
-        },
-        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
-          "name": ""
-        },
-        "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
-          "name": ""
-        },
-        "09c54a0a-44a3-43f6-b468-9bbf2b718717": {
-          "name": ""
-        },
-        "f9529bed-1eeb-4e6c-b078-e5adda35308a": {
-          "name": ""
-        },
-        "8b62bbe8-a1c9-4288-bb21-9f7a31e96b1e": {
-          "name": ""
-        },
-        "1b4d0af0-9d4a-492b-8c23-2fb711c488d3": {
-          "name": ""
-        },
-        "da433c13-5e0a-48fe-a697-d2288e831912": {
-          "name": ""
-        },
-        "380a0a21-1ede-432e-bd0a-433c37514bba": {
-          "name": ""
-        },
-        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
-          "name": ""
-        },
-        "d05decb3-7f64-4886-8da0-088e7d73216d": {
-          "name": ""
-        },
-        "7104b634-df9c-44bd-bc2d-fd226d3a1ee4": {
-          "name": ""
-        },
-        "1d6a34ca-5dad-4492-8a1c-6b56f85874fa": {
-          "name": ""
-        },
-        "04f6a743-e334-43ba-a72c-2b68a8163c0a": {
-          "name": ""
-        },
-        "592a6eba-5e83-43f7-b622-1c58f47e3dea": {
-          "name": ""
-        },
-        "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
-          "name": ""
-        },
-        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
-          "name": ""
-        },
-        "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
-          "name": ""
-        },
-        "2ffe8a66-a950-4b74-91e5-5149b2808279": {
-          "name": ""
-        },
-        "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
-          "name": ""
-        },
-        "235b3b14-975a-43b6-93bc-d386b857fd6b": {
-          "name": ""
-        },
-        "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": ""
-        },
-        "e96a358f-201b-4474-8950-90dd94426aff": {
-          "name": ""
-        },
-        "75477df5-5a1f-4ee8-a294-37c3bb1f1153": {
-          "name": ""
-        },
-        "6260dc9f-f1ec-41fb-bb11-c03bbe503e26": {
-          "name": ""
-        },
-        "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
-          "name": ""
-        },
-        "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
-          "name": ""
-        },
-        "46464e07-b5ac-4ca4-84b2-3b43873360da": {
-          "name": ""
-        },
-        "9dc5163b-b8e6-4034-8bfc-a3a56f9ea906": {
-          "name": ""
-        },
-        "ecc6986d-3d86-4f87-96e2-9cf3e8ebe4c8": {
-          "name": ""
-        },
-        "7ff09578-5e62-4772-8f16-03bec23fca87": {
-          "name": ""
-        },
-        "91b9cf1d-59e2-45e5-93e2-9f916e748dac": {
-          "name": ""
-        },
-        "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
-          "name": ""
-        },
-        "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": ""
-        },
-        "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
-          "name": ""
-        },
-        "9939da92-62ec-4a09-a7be-8e2dd4693cff": {
-          "name": ""
-        },
-        "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
-          "name": ""
-        },
-        "22ad368d-3a00-4720-a21a-72985c642b8d": {
-          "name": ""
-        },
-        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
-          "name": ""
-        },
-        "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
-          "name": ""
-        },
-        "c351a38f-ac03-4bc3-b2f1-8b5f06903317": {
-          "name": ""
-        },
-        "386b2a92-c44c-403c-a19e-44bbf2ed7786": {
-          "name": ""
-        },
-        "f72b0518-8373-4e23-9798-b4973072e86e": {
-          "name": ""
-        },
-        "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
-          "name": ""
-        },
-        "8448f988-ef04-4c9e-ad7e-6b78991f20e7": {
-          "name": ""
-        },
-        "1887e2d0-98de-4534-8fb3-780ed4e8fe3c": {
-          "name": ""
-        },
-        "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de": {
-          "name": ""
-        },
-        "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
-          "name": ""
-        },
-        "0f1a16f5-93c2-44c5-913c-85ee15b41454": {
-          "name": ""
-        },
-        "eca2ac69-486f-493b-a1a0-70294bc8573a": {
-          "name": ""
-        },
-        "07c64430-a32e-455c-bd8b-4a9baa439a1f": {
-          "name": ""
-        },
-        "5c23c0c6-f91c-4f07-bdd7-baa4e4b3d715": {
-          "name": ""
-        },
-        "96a24d88-fba0-4caf-ae83-05431cff5aea": {
-          "name": ""
-        },
-        "94431ce1-3b6a-4bff-b20c-eda2abf867e3": {
-          "name": ""
-        },
-        "ab17495a-39d9-4a16-8158-cdccde270c58": {
-          "name": ""
-        },
-        "dc2d4163-9868-4d28-be8c-fc39a5aaec58": {
-          "name": ""
-        },
         "d41159ef-433a-4547-a067-2695e41120ae": {
           "name": "Apibendrinimas"
+        },
+        "3dd1254c-b1de-486d-803a-cd5b89ea1a47": {
+          "name": "Veikla"
+        },
+        "3f5a4bdd-213f-4275-b48e-0cac9c216610": {
+          "name": "Veikla"
+        },
+        "8118c20a-f8a2-4de0-a5e9-e34b206c5e86": {
+          "name": "Veikla"
+        },
+        "3dbcce13-3c8e-4eee-a9e5-06d38c3b0d58": {
+          "name": "Veikla"
+        },
+        "da9c162b-7810-4bea-955e-05c213dbf55d": {
+          "name": "Veikla"
+        },
+        "6d1d534e-0aad-47aa-8eef-22cd0a519a83": {
+          "name": "Veikla"
+        },
+        "d5076b4a-5a03-45cd-b650-5469ab56c98f": {
+          "name": "Veikla"
+        },
+        "c83f82b2-742a-4785-8983-14391e0b774f": {
+          "name": "Veikla"
+        },
+        "8e65c08e-13d9-43d5-928b-ca3421f606d8": {
+          "name": "Veikla"
+        },
+        "473b748b-3eb9-4753-8cdb-7d2b5b02ab1c": {
+          "name": "Veikla"
+        },
+        "54db2b83-e7bd-4ca3-9ba7-63ca15b72187": {
+          "name": "Veikla"
+        },
+        "ed160324-6429-4ff1-90bb-abd785bb6b53": {
+          "name": "Veikla"
+        },
+        "d007f573-e403-48b9-8178-2922b329c878": {
+          "name": "Veikla"
+        },
+        "31623c1a-bcef-465a-abf4-bd42d0578c3e": {
+          "name": "Veikla"
+        },
+        "9720e203-87bf-47f6-9e42-0d63712f4816": {
+          "name": "Veikla"
+        },
+        "b12c79ae-36b0-4853-b799-527d520d2d9b": {
+          "name": "Veikla"
+        },
+        "8b5fccc2-132a-4c64-ba9f-a89ee576b760": {
+          "name": "Veikla"
+        },
+        "bcb8ee1c-146e-4442-98de-83ac220d074b": {
+          "name": "Veikla"
+        },
+        "fbf2d75e-dd6d-416c-8065-67a5e230ac12": {
+          "name": "Veikla"
+        },
+        "4024c757-460a-4c1e-b9ba-0921922e446f": {
+          "name": "Veikla"
+        },
+        "084345cc-db08-4c77-bc28-be51fb79dd0d": {
+          "name": "Veikla"
+        },
+        "88f424ec-df8f-42ff-b119-c556008dfea7": {
+          "name": "Veikla"
+        },
+        "6ca92cea-d2a1-458e-8db9-709a95333aae": {
+          "name": "Veikla"
+        },
+        "f35f26af-8e10-45bd-8c84-89e2e6e20f43": {
+          "name": "Veikla"
+        },
+        "d83211f4-e007-452b-a5e2-f97629f1e597": {
+          "name": "Veikla"
+        },
+        "80deb03d-786b-4eaa-aee7-17d734850224": {
+          "name": "Veikla"
+        },
+        "c50c799f-b401-406a-b4c2-6a01e8f1c548": {
+          "name": "Veikla"
+        },
+        "70ec98e0-3066-4f1f-84c7-be9d76266337": {
+          "name": "Veikla"
+        },
+        "f7e9181a-0686-4d7a-b513-75351c14acb4": {
+          "name": "Veikla"
+        },
+        "e1fd553e-ed7e-4eb4-ab51-58017d886b11": {
+          "name": "Veikla"
+        },
+        "4755fcca-85c5-4f39-acba-485c57676f3b": {
+          "name": "Veikla"
+        },
+        "2f24c116-10b3-4af8-bdc5-a51bcf1774da": {
+          "name": "Veikla"
+        },
+        "72abdb81-0e9a-4df9-9cd0-33e8a24ef31d": {
+          "name": "Veikla"
+        },
+        "7d2b43ce-ec07-43c9-bd67-39a4b85102c5": {
+          "name": "Veikla"
+        },
+        "85dc0809-df8e-4c21-b33c-6525dcc0c747": {
+          "name": "Veikla"
+        },
+        "4e159304-5bcf-4392-8fc4-dec6c0d38c63": {
+          "name": "Veikla"
+        },
+        "6696a89e-fd41-4622-9305-71a6590ec797": {
+          "name": "Veikla"
+        },
+        "9bbaadd9-354f-4ff6-b019-700d851293fa": {
+          "name": "Veikla"
+        },
+        "2fff60de-5366-470f-ad77-577397a87071": {
+          "name": "Veikla"
+        },
+        "cc88c5f7-4a54-4ec9-b548-194fb175932d": {
+          "name": "Veikla"
+        },
+        "c9774311-07cd-4d0b-ae5e-c487a5e628c0": {
+          "name": "Veikla"
+        },
+        "87a42a0e-c065-49e6-a16d-42c7c66a8374": {
+          "name": "Veikla"
+        },
+        "994368f3-b53e-4f5a-a1ab-f4a76c265a20": {
+          "name": "Veikla"
+        },
+        "a8f87090-0743-4286-86bc-e579a765d277": {
+          "name": "Veikla"
+        },
+        "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664": {
+          "name": "Veikla"
+        },
+        "fe4547e7-73f8-4c7b-a67f-a61b4a10332c": {
+          "name": "Veikla"
+        },
+        "d43f4114-8c37-45a7-b61b-3aca56ee5790": {
+          "name": "Veikla"
+        },
+        "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
+          "name": "Veikla"
+        },
+        "4b4cc069-5970-4809-bb0c-b2f8e1aae26c": {
+          "name": "Veikla"
+        },
+        "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
+          "name": "Veikla"
+        },
+        "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97": {
+          "name": "Veikla"
+        },
+        "c61550fb-464b-4871-92d2-f532c0ec62cf": {
+          "name": "Veikla"
+        },
+        "0ccf48b9-639c-43b3-b737-74a1bcec7f5b": {
+          "name": "Veikla"
+        },
+        "7ca84cbe-1c13-4126-9078-d6413f5ed5b4": {
+          "name": "Veikla"
+        },
+        "6039132d-56d7-42d2-acdb-ef7f1a25738f": {
+          "name": "Veikla"
+        },
+        "3ab3f540-cdac-498b-b4b5-49dba2a528bf": {
+          "name": "Veikla"
+        },
+        "cf8ee96e-a948-4c2c-9565-beb1bee1bba1": {
+          "name": "Veikla"
+        },
+        "e7fed683-5b06-451a-83b6-44bd6135abba": {
+          "name": "Veikla"
+        },
+        "a7af54f2-f0da-4b17-bddd-88a8ba1390b2": {
+          "name": "Veikla"
+        },
+        "2e669b5a-1c6c-41f0-a5f9-3a79fcbf7fcd": {
+          "name": "Veikla"
+        },
+        "44ae7025-981f-4dae-b225-555618d67b2a": {
+          "name": "Veikla"
+        },
+        "711c240c-07ab-449d-9ebb-b4bc6472d58a": {
+          "name": "Veikla"
+        },
+        "926cd18a-3e1a-44b9-96df-d0099cbc2ac8": {
+          "name": "Veikla"
+        },
+        "f99bbd39-3dca-43a4-ac09-0248fea7bf8f": {
+          "name": "Veikla"
+        },
+        "f41592ef-5ee3-4e3e-a31a-57e5984ae0fb": {
+          "name": "Veikla"
+        },
+        "de11024e-5469-41b6-bc28-627c9515eff1": {
+          "name": "Veikla"
+        },
+        "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17": {
+          "name": "Veikla"
+        },
+        "d72bfe99-62ed-4a91-87e0-27d873cc3aa8": {
+          "name": "Veikla"
+        },
+        "20458bdc-a944-45dd-b4a5-ddc0acf2a104": {
+          "name": "Veikla"
+        },
+        "b2692599-66de-4bb5-aeb5-c63a06dd7040": {
+          "name": "Veikla"
+        },
+        "752eddc2-eb93-48e1-90f0-19932c4f53cd": {
+          "name": "Veikla"
+        },
+        "9a78dce2-0812-414f-8c20-1728b4ff1de2": {
+          "name": "Veikla"
+        },
+        "a2816f13-47a2-43e5-bbfa-0e7d57301037": {
+          "name": "Veikla"
+        },
+        "2e5b6973-dcd9-405c-958d-2366095f4375": {
+          "name": "Veikla"
+        },
+        "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4": {
+          "name": "Veikla"
+        },
+        "c4cdf9ba-b683-4025-bc79-a6e72c0d4cf3": {
+          "name": "Veikla"
+        },
+        "81d5093b-fe94-4257-bc54-ca5311532cdc": {
+          "name": "Veikla"
+        },
+        "e22dd0d5-97b3-4829-9d90-3a213360c254": {
+          "name": "Veikla"
+        },
+        "f664c4cd-edcd-4afe-b5e6-5e2902ae866f": {
+          "name": "Veikla"
+        },
+        "d7b339c7-1053-4301-bba3-6c5befbc61fe": {
+          "name": "Veikla"
+        },
+        "06f944ce-4a81-48b5-a87d-96072d1bfa7b": {
+          "name": "Veikla"
+        },
+        "ee232401-7aef-488e-b0f1-4b169a7a854e": {
+          "name": "Veikla"
+        },
+        "c56d186e-9346-4a55-b871-3547db946cb0": {
+          "name": "Veikla"
+        },
+        "22daa03a-31f9-4048-98d6-180a94b49a68": {
+          "name": "Veikla"
+        },
+        "d469a158-6f03-4bb2-a6bb-2fb04adc68bd": {
+          "name": "Veikla"
+        },
+        "ec2b845c-4b81-4798-848a-37dd04f0ab69": {
+          "name": "Veikla"
+        },
+        "ac036a2c-ddfd-4afa-8990-2c0488a6cac5": {
+          "name": "Veikla"
+        },
+        "2f663cbe-39d3-44bc-b3d0-3847de8616ed": {
+          "name": "Veikla"
+        },
+        "e44e0ad1-b586-42a4-9be2-75e0eee0cccc": {
+          "name": "Veikla"
+        },
+        "ee6441ac-3fe1-451b-846f-24a977986f9c": {
+          "name": "Veikla"
+        },
+        "06cc83f5-66b2-401e-850a-466b164ef104": {
+          "name": "Veikla"
+        },
+        "064fad66-35a6-480e-ad60-dff751b5230c": {
+          "name": "Veikla"
+        },
+        "b58f7f0f-78a4-4965-8f0d-9512076d5e0f": {
+          "name": "Veikla"
+        },
+        "c8d05b47-5ef6-429d-8162-74d7c1198428": {
+          "name": "Veikla"
+        },
+        "9612f586-66a9-4418-8a79-40080b796a76": {
+          "name": "Veikla"
+        },
+        "004e7885-e515-4aa8-b5b4-230b884cb6b8": {
+          "name": "Veikla"
+        },
+        "a8aae27a-c021-4027-8ce0-37a888ec37f5": {
+          "name": "Veikla"
+        },
+        "185f50c6-2c50-4650-91f6-f061d1051c91": {
+          "name": "Veikla"
+        },
+        "faf4b5ae-838a-4a44-bfe5-9450699ab59f": {
+          "name": "Veikla"
+        },
+        "a6b60e0a-6bb5-4967-bc4c-eabd863ab97c": {
+          "name": "Veikla"
+        },
+        "98ffa01e-f262-4df2-bcca-a7f669b80fec": {
+          "name": "Veikla"
+        },
+        "fd95bfe8-a008-4994-a874-ff3f1ba81d58": {
+          "name": "Veikla"
+        },
+        "0e95e394-2a11-4fab-908d-ed712cd9f6b0": {
+          "name": "Veikla"
+        },
+        "f7eebe16-f2a3-4e47-b558-a584b1bb2d0c": {
+          "name": "Veikla"
+        },
+        "53d85fa1-fecf-43b6-83f0-bef5454c41ed": {
+          "name": "Veikla"
+        },
+        "c3347e87-c7d1-4002-aa31-a53dd8deee41": {
+          "name": "Veikla"
+        },
+        "f2b936fa-d72a-4aa3-a4d8-c1f34ab3aa14": {
+          "name": "Veikla"
+        },
+        "03d57f25-1cca-49af-8487-43c3a7efceb8": {
+          "name": "Veikla"
+        },
+        "9d2f6fef-3722-429e-b4c1-f6d1103c942b": {
+          "name": "Veikla"
+        },
+        "9982617c-045f-447f-8f83-522ea617c3b9": {
+          "name": "Veikla"
+        },
+        "87977467-a47d-46de-90b9-df606358da99": {
+          "name": "Veikla"
+        },
+        "60f3718d-0319-4213-a83d-3ce3cb6bdd80": {
+          "name": "Veikla"
+        },
+        "b3d7133e-335d-4c28-98d8-a61e8fecaab5": {
+          "name": "Veikla"
+        },
+        "d6982573-b0dc-4c36-a400-b426cb43e2b4": {
+          "name": "Veikla"
+        },
+        "50301e64-0051-4071-ab27-c0f0eb834ca5": {
+          "name": "Veikla"
+        },
+        "d5dd115f-dd41-4a16-b59f-0f77bb79ed00": {
+          "name": "Veikla"
+        },
+        "dd80250a-acb3-4fe7-a9b3-3703faad40ce": {
+          "name": "Veikla"
+        },
+        "54106bc6-dce5-43e9-965a-07567d1856dc": {
+          "name": "Veikla"
+        },
+        "8d3448c6-d7e5-44f9-8b60-e207f0026848": {
+          "name": "Veikla"
+        },
+        "71440e94-c031-42dd-a79d-3f8cb5056b9f": {
+          "name": "Veikla"
+        },
+        "12d9a87a-588e-43d1-b12d-ad4b83414276": {
+          "name": "Veikla"
+        },
+        "9c7bec47-be70-4024-a4f2-21f687434008": {
+          "name": "Veikla"
         }
       }
     }

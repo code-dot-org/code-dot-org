@@ -2,6 +2,11 @@ import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import * as utils from '@cdo/apps/p5lab/utils';
 
+// Big numbers in some blocks can cause performance issues. Combined with live-preview,
+// this results in hanging the tab and students unable to edit their blocks. We should
+// guard against this by silently capping numbers where needed.
+const BIG_NUMBER_GUARD = 500;
+
 export const commands = {
   countByAnimation(spriteArg) {
     let sprites = this.getSpriteArray(spriteArg);
@@ -65,6 +70,7 @@ export const commands = {
   },
 
   makeNumSprites(num, animation) {
+    num = Math.min(num, BIG_NUMBER_GUARD);
     for (let i = 0; i < num; i++) {
       this.addSprite({
         animation,
@@ -80,11 +86,7 @@ export const commands = {
       rain: behaviorCommands.rainFunc,
       spiral: behaviorCommands.spiralFunc
     };
-    // Cap created sprites
-    const spriteCountCap = 100;
-    if (num > spriteCountCap) {
-      num = spriteCountCap;
-    }
+    num = Math.min(num, BIG_NUMBER_GUARD);
     //Makes sure that same-frame multiple spiral effects start at a different angles
     const spiralRandomizer = utils.randomInt(0, 359);
     for (let i = 0; i < num; i++) {
