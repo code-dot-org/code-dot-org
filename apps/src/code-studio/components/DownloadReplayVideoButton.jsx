@@ -9,6 +9,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 //   - see the download button,
 //   - click it,
 //   - actually get a download started,
+//   - successfully get a file and trigger the client download,
 //   - have the download fail,
 //   - have the download attempts timeout.
 
@@ -17,6 +18,7 @@ const FIREHOSE_STUDY_GROUP = 'replay_video';
 const FIREHOSE_EVENT_DOWNLOAD_BUTTON_SEEN = 'download_button_seen';
 const FIREHOSE_EVENT_DOWNLOAD_CLICKED = 'download_clicked';
 const FIREHOSE_EVENT_DOWNLOAD_STARTED = 'download_started';
+const FIREHOSE_EVENT_DOWNLOAD_SUCCEEDED = 'download_succeeded';
 const FIREHOSE_EVENT_DOWNLOAD_FAILED = 'download_failed';
 const FIREHOSE_EVENT_DOWNLOAD_FAILED_TIMEOUT = 'download_failed_timeout';
 
@@ -47,6 +49,12 @@ function downloadRemoteUrl(url, downloadName) {
       document.body.appendChild(element);
       element.click();
       document.body.removeChild(element);
+
+      firehoseClient.putRecord({
+        study: FIREHOSE_STUDY,
+        study_group: FIREHOSE_STUDY_GROUP,
+        event: FIREHOSE_EVENT_DOWNLOAD_SUCCEEDED
+      });
     })
     .catch(error => {
       console.log(error);
