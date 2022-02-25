@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "The fish will begin continuously swimming left and right when the project is run.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/QuiVqdMFx60Z7dpZ-OvosClMLhjIFo5T-6jWGeApB9c",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "When the phone is clicked, it will begin jittering. \r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/jLtVI22qRmJVvlTSqVRsShucGyNtS1YdR_eXM2h92IY",
       "image": null,
       "app_display_type": "embedAppWithCode",

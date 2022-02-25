@@ -138,6 +138,24 @@ describe('FormController', () => {
       });
     });
 
+    it('Never shows save button if status is reopened', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+          savedStatus={'reopened'}
+        />
+      );
+      [0, 1, 2].forEach(page => {
+        setPage(page);
+        const buttons = form.findAll('Button');
+        buttons.forEach(button =>
+          expect(button.content()).not.to.eql(saveButtonText)
+        );
+      });
+    });
+
     it('Shows data was loaded message given application id, and user can close message', () => {
       form = isolateComponent(
         <FormController
@@ -156,15 +174,22 @@ describe('FormController', () => {
       expect(form.exists('Alert')).to.be.false;
     });
 
-    it('Does not show data was loaded message if partial saving is disabled', () => {
+    it('Shows data was loaded message if status is reopened', () => {
       form = isolateComponent(
         <FormController
           {...defaultProps}
           applicationId={applicationId}
-          allowPartialSaving={false}
+          savedStatus={'reopened'}
+          allowPartialSaving={true}
           validateOnSubmitOnly={true}
         />
       );
+      const alert = form.findOne('Alert');
+      expect(alert.content()).to.contain(
+        'Your Regional Partner has requested more information.  Please update and resubmit.'
+      );
+
+      alert.props.onDismiss();
       expect(form.exists('Alert')).to.be.false;
     });
 
@@ -241,7 +266,9 @@ describe('FormController', () => {
       });
 
       it('Shows saved message alert after saving is complete, and user can close it', () => {
-        form = isolateComponent(<FormController {...defaultProps} />);
+        form = isolateComponent(
+          <FormController {...defaultProps} applicationId={applicationId} />
+        );
 
         const server = sinon.fakeServer.create();
         server.respondWith([
