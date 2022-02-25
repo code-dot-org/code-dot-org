@@ -325,15 +325,12 @@ Dashboard::Application.routes.draw do
     collection do
       get :search
     end
-    member do
-      get :show, to: 'programming_expressions#show_by_id'
-    end
   end
 
   resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show], param: 'name' do
     resources :programming_expressions, param: 'programming_expression_key' do
       member do
-        get :show, to: 'programming_expressions#show'
+        get :show, to: 'programming_expressions#show_by_keys'
       end
     end
   end
