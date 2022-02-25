@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-01-06T19:46:50.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -71,12 +67,15 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Make the sprite move one way, then another way.",
     "instructions_icon": "star",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-01-06T19:46:50.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:50.292+00:00\",\"changed\":[\"cloned from \\\"courseF_events_stops\\\"\"],\"cloned_from\":\"courseF_events_stops\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:50.292+00:00\",\"changed\":[\"cloned from \\\"courseF_events_stops\\\"\"],\"cloned_from\":\"courseF_events_stops\"},{\"changed_at\":\"2022-02-25 18:59:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "events": 2
@@ -142,7 +141,7 @@
         <block type="gamelab_atTime" deletable="false">
           <title name="UNIT">"seconds"</title>
           <value name="N">
-            <block type="math_number" editable="false">
+            <block type="math_number" deletable="false" editable="false">
               <title name="NUM">2</title>
             </block>
           </value>
