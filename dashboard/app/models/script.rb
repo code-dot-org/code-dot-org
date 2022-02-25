@@ -1436,6 +1436,10 @@ class Script < ApplicationRecord
     [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
+  def deprecated?
+    get_published_state == SharedCourseConstants::PUBLISHED_STATE.deprecated
+  end
+
   def stable?
     get_published_state == SharedCourseConstants::PUBLISHED_STATE.stable
   end
@@ -1526,7 +1530,7 @@ class Script < ApplicationRecord
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
-      deprecated: get_published_state == SharedCourseConstants::PUBLISHED_STATE.deprecated,
+      deprecated: deprecated?,
       is_course: is_course?,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
