@@ -135,6 +135,7 @@ export function disconnect() {
 
   const setDisconnected = () => {
     currentBoard = null;
+    console.log('in setDisconnect(), currentBoard', currentBoard);
     getStore().dispatch(redux.disconnect);
   };
   if (currentBoard) {
