@@ -1,0 +1,8 @@
+{
+  "key": "lessThanOrEqualOperator",
+  "name": "Less than or equal operator",
+  "category": "Math",
+  "category_key": "math",
+  "short_description": "Game Lab - Less than or equal operator",
+  "syntax": "__ <= __"
+}

@@ -2385,7 +2385,7 @@ ms-MY:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
-        - {}
+        - text: Makhluk asing akan mula meronda dari kanan ke kiri.
         - correct: true
         - {}
         questions:
@@ -3050,3 +3050,9 @@ ms-MY:
         content1: penerangan di sini
       csf_putting_a_stop_to_online_meanness_2021:
         content1: penerangan di sini
+      courseF_intro_apps:
+        description: Selamat datang ke Asas CS! Semua projek ini telah dicipta dengan
+          Makmal Peperi. Cuba projek ini sekarang untuk melihat perkara yang boleh
+          dilakukan. Pada akhir kursus ini, anda akan dapat membuat projek anda sendiri
+          seperti ini...dan banyak lagi!
+        display_name: Aplikasi Makmal Peperi

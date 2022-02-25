@@ -63,6 +63,7 @@ class ProgrammingExpressionsController < ApplicationController
     if params[:id]
       @programming_expression = ProgrammingExpression.find(params[:id])
       return render :not_found unless @programming_expression
+      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
       return render :show if @programming_expression
     else
       render :not_found
@@ -72,7 +73,9 @@ class ProgrammingExpressionsController < ApplicationController
   def show
     if params[:programming_environment_name] && params[:programming_expression_key]
       @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
-      return render :show if @programming_expression
+      return render :not_found unless @programming_expression
+      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      return render :show
     end
     render :not_found
   end

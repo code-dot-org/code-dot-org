@@ -511,7 +511,7 @@ mr:
         text: set {SPRITE} dance speed to {SPEED}
         options:
           SPEED:
-            '1': normal
+            '1': सामान्य
             '2': जलद
             '4': अतिशय जलद
             '0.5': संथ
@@ -532,7 +532,7 @@ mr:
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
           SPEED:
-            '1': normal
+            '1': सामान्य
             '2': जलद
             '4': अतिशय जलद
             '0.5': संथ
@@ -898,6 +898,7 @@ mr:
         text: "{CONDITION} {SPRITE1} स्पर्श करते {SPRITE2}"
         options:
           CONDITION:
+            '"when"': कधी
             '"while"': जेव्हा
       gamelab_clickedOn:
         text: जेव्हा {SPRITE} क्लिक केले जाते
@@ -1022,6 +1023,7 @@ mr:
         text: "{CONDITION} {KEY} दाबले आहे "
         options:
           CONDITION:
+            '"when"': कधी
             '"while"': जेव्हा
           KEY:
             '"up"': वर
@@ -1137,8 +1139,11 @@ mr:
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": बिच रिप्प्ल
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": बुडबुडा
             "'sound://category_animals/bear.mp3'": अस्वल
+            "'sound://category_animals/cow.mp3'": गाय
             "'sound://category_animals/pig.mp3'": डुक्कर
+            "'sound://category_animals/sheep.mp3'": मेंढी
             "'sound://category_animals/goat.mp3'": बकरी
+            "'sound://category_animals/chicken.mp3'": कोंबडीचे पिल्लू
             "'sound://category_animals/rooster.mp3'": कोंबडा
             "'sound://category_animals/elephant.mp3'": हत्ती
             "'sound://category_animals/dolphin.mp3'": डॉल्फिन
@@ -1278,7 +1283,7 @@ mr:
           SIZE:
             '1': extra slow
             '3': संथ
-            '5': normal
+            '5': सामान्य
             '7': जलद
             '9': extra fast
       gamelab_setTint:
@@ -1300,6 +1305,7 @@ mr:
         text: "{CONDITION} {SPRITE} क्लिक केले"
         options:
           CONDITION:
+            '"when"': कधी
             '"while"': जेव्हा
       gamelab_spriteSay:
         text: "{SPRITE} {SPEECH} म्हणा"
@@ -1833,6 +1839,9 @@ mr:
         text: |-
           जर पाथ {DIR}
           {STATEMENT} असेल तर
+        options:
+          DIR:
+            "'ahead'": पुढे
       craft_ifStandingOn:
         text: |-
           जर {TYPE}
@@ -1845,6 +1854,8 @@ mr:
         text: "{blockType} ठेवा"
       craft_placePrismarine:
         text: प्रिझमरीन ठेवा
+      craft_placeTorch:
+        text: टॉर्च ठेवा
       craft_repeatUntilConduit:
         text: नळीने {STATEMENT} पूर्ण करेपर्यंत रिपीट करा
       craft_repeatUntilGoal:
