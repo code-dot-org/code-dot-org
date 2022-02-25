@@ -59,6 +59,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
+    console.log('this.serialPort_', this.serialPort_);
     this.logWithFirehose('serial-port-constructor-set-to-null');
 
     /** @private {five.Board} A johnny-five board controller */
@@ -79,6 +80,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   connect() {
+    console.log('in CircuitPlaygroundBoard.js#connect()');
     return Promise.resolve()
       .then(() => this.connectToFirmware())
       .then(() => this.initializeComponents())
