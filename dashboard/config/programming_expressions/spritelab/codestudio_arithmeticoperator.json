@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Help the student study for her test! Give her different math questions, and she’ll tell you the answer.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/4nneVx3iBxaDdbfn1YM2nLouzY6zm1knPuxow420DnU",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Each time the space bar is pressed, the monster will shrink to half its size.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/hnM9t4sd6B0NNx5EEgzbCPLrTjPXGxoLYFJPD977Wtk",
       "image": null,
       "app_display_type": "embedAppWithCode",
