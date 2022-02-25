@@ -317,104 +317,105 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'get assignable course offerings for teacher should return offerings where teacher can be instructor' do
-    expected_course_offering_info = [
-      {
+    expected_course_offering_info = {
+      @unit_group.course_version.course_offering.id => {
         id: @unit_group.course_version.course_offering.id,
         display_name: @unit_group.course_version.course_offering.display_name,
         category: @unit_group.course_version.course_offering.category,
         is_featured: @unit_group.course_version.course_offering.is_featured?,
-        course_versions: [
-          {
+        course_versions: {
+          @unit_group.course_version.id => {
             id: @unit_group.course_version.id,
             version_year: @unit_group.course_version.version_year,
             display_name: @unit_group.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
+            units: {@unit_in_course.id => {id: @unit_in_course.id, name: @unit_in_course.name}}
           }
-        ]
+        }
       },
-      {
+      @unit_teacher_to_students.course_version.course_offering.id => {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
         category: @unit_teacher_to_students.course_version.course_offering.category,
         is_featured: @unit_teacher_to_students.course_version.course_offering.is_featured?,
-        course_versions: [
-          {
+        course_versions: {
+          @unit_teacher_to_students.course_version.id => {
             id: @unit_teacher_to_students.course_version.id,
             version_year: @unit_teacher_to_students.course_version.version_year,
             display_name: @unit_teacher_to_students.course_version.display_name,
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
-            units: [{id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}]
+            units: {@unit_teacher_to_students.id => {id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}}
           },
-          {
+          @unit_teacher_to_students2.course_version.id => {
             id: @unit_teacher_to_students2.course_version.id,
             version_year: @unit_teacher_to_students2.course_version.version_year,
             display_name: @unit_teacher_to_students2.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: [{id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}]
+            units: {@unit_teacher_to_students2.id => {id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}}
           }
-        ]
+        }
       }
-    ]
+    }
 
     assert_equal CourseOffering.assignable_course_offerings_info(@teacher), expected_course_offering_info
   end
 
   test 'get assignable pl course offerings for facilitator should return pl offerings where facilitator can be instructor' do
-    expected_course_offering_info = [
-      {
+    expected_course_offering_info = {
+      @unit_facilitator_to_teacher.course_version.course_offering.id => {
         id: @unit_facilitator_to_teacher.course_version.course_offering.id,
         display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
         category: @unit_facilitator_to_teacher.course_version.course_offering.category,
         is_featured: @unit_facilitator_to_teacher.course_version.course_offering.is_featured?,
-        course_versions: [
-          {
+        course_versions: {
+          @unit_facilitator_to_teacher.course_version.id => {
             id: @unit_facilitator_to_teacher.course_version.id,
             version_year: @unit_facilitator_to_teacher.course_version.version_year,
             display_name: @unit_facilitator_to_teacher.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: [{id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}]
+            units: {@unit_facilitator_to_teacher.id => {id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}}
           }
-        ]
+        }
       }
-    ]
+    }
 
     assert_equal CourseOffering.assignable_pl_course_offerings_info(@facilitator), expected_course_offering_info
   end
 
   test 'get assignable student course offerings for facilitator should return only student facing offerings' do
-    expected_course_offering_info = [
-      {
+    expected_course_offering_info = {
+      @unit_group.course_version.course_offering.id => {
         id: @unit_group.course_version.course_offering.id,
         display_name: @unit_group.course_version.course_offering.display_name,
         category: @unit_group.course_version.course_offering.category,
         is_featured: @unit_group.course_version.course_offering.is_featured?,
-        course_versions: [
-          {
+        course_versions: {
+          @unit_group.course_version.id => {
             id: @unit_group.course_version.id,
             version_year: @unit_group.course_version.version_year,
             display_name: @unit_group.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
+            units: {@unit_in_course.id => {id: @unit_in_course.id, name: @unit_in_course.name}}
           }
-        ]
+        }
       },
-      {
+      @unit_teacher_to_students.course_version.course_offering.id =>  {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
         category: @unit_teacher_to_students.course_version.course_offering.category,
         is_featured: @unit_teacher_to_students.course_version.course_offering.is_featured?,
-        course_versions: [
+        course_versions: {
+          @unit_teacher_to_students.course_version.id =>
           {
             id: @unit_teacher_to_students.course_version.id,
             version_year: @unit_teacher_to_students.course_version.version_year,
@@ -422,8 +423,9 @@ class CourseOfferingTest < ActiveSupport::TestCase
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
-            units: [{id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}]
+            units: {@unit_teacher_to_students.id => {id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}}
           },
+          @unit_teacher_to_students2.course_version.id =>
           {
             id: @unit_teacher_to_students2.course_version.id,
             version_year: @unit_teacher_to_students2.course_version.version_year,
@@ -431,78 +433,78 @@ class CourseOfferingTest < ActiveSupport::TestCase
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: [{id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}]
+            units: {@unit_teacher_to_students2.id => {id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}}
           }
-        ]
+        }
       }
-    ]
+    }
 
     assert_equal CourseOffering.assignable_student_course_offerings_info(@facilitator), expected_course_offering_info
   end
 
   test 'get assignable course offerings for facilitator should return all offerings where facilitator can be instructor' do
-    expected_course_offering_info = [
-      {
+    expected_course_offering_info = {
+      @unit_group.course_version.course_offering.id => {
         id: @unit_group.course_version.course_offering.id,
         display_name: @unit_group.course_version.course_offering.display_name,
         category: @unit_group.course_version.course_offering.category,
         is_featured: @unit_group.course_version.course_offering.is_featured?,
-        course_versions: [
-          {
+        course_versions: {
+          @unit_group.course_version.id => {
             id: @unit_group.course_version.id,
             version_year: @unit_group.course_version.version_year,
             display_name: @unit_group.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: [{id: @unit_in_course.id, name: @unit_in_course.name}]
+            units: {@unit_in_course.id => {id: @unit_in_course.id, name: @unit_in_course.name}}
           }
-        ]
+        }
       },
-      {
+      @unit_teacher_to_students.course_version.course_offering.id =>  {
         id: @unit_teacher_to_students.course_version.course_offering.id,
         display_name: @unit_teacher_to_students.course_version.course_offering.display_name,
         category: @unit_teacher_to_students.course_version.course_offering.category,
         is_featured: @unit_teacher_to_students.course_version.course_offering.is_featured?,
-        course_versions: [
-          {
+        course_versions: {
+          @unit_teacher_to_students.course_version.id => {
             id: @unit_teacher_to_students.course_version.id,
             version_year: @unit_teacher_to_students.course_version.version_year,
             display_name: @unit_teacher_to_students.course_version.display_name,
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
-            units: [{id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}]
+            units: {@unit_teacher_to_students.id => {id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}}
           },
-          {
+          @unit_teacher_to_students2.course_version.id => {
             id: @unit_teacher_to_students2.course_version.id,
             version_year: @unit_teacher_to_students2.course_version.version_year,
             display_name: @unit_teacher_to_students2.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: [{id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}]
+            units: {@unit_teacher_to_students2.id => {id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}}
           }
-        ]
+        }
       },
-      {
+      @unit_facilitator_to_teacher.course_version.course_offering.id => {
         id: @unit_facilitator_to_teacher.course_version.course_offering.id,
         display_name: @unit_facilitator_to_teacher.course_version.course_offering.display_name,
         category: @unit_facilitator_to_teacher.course_version.course_offering.category,
         is_featured: @unit_facilitator_to_teacher.course_version.course_offering.is_featured?,
-        course_versions: [
-          {
+        course_versions: {
+          @unit_facilitator_to_teacher.course_version.id => {
             id: @unit_facilitator_to_teacher.course_version.id,
             version_year: @unit_facilitator_to_teacher.course_version.version_year,
             display_name: @unit_facilitator_to_teacher.course_version.display_name,
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: [{id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}]
+            units: {@unit_facilitator_to_teacher.id => {id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}}
           }
-        ]
+        }
       }
-    ]
+    }
 
     assert_equal CourseOffering.assignable_course_offerings_info(@facilitator), expected_course_offering_info
   end

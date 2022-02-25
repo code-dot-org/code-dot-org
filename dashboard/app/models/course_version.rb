@@ -149,14 +149,17 @@ class CourseVersion < ApplicationRecord
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
-    {
-      id: id,
-      version_year: key,
-      display_name: display_name,
-      is_stable: stable?,
-      is_recommended: recommended?(locale_code),
-      locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
-      units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
-    }
+    [
+      id,
+      {
+        id: id,
+        version_year: key,
+        display_name: display_name,
+        is_stable: stable?,
+        is_recommended: recommended?(locale_code),
+        locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
+        units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
+      }
+    ]
   end
 end
