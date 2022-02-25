@@ -7,8 +7,8 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 
 const APP_DISPLAY_OPTIONS = {
-  directly: 'Embed app with code directly',
-  displayApp: 'Display app with code from code field above'
+  embedAppWithCode: 'Embed app with code directly',
+  codeFromCodeField: 'Display app with code from code field above'
 };
 
 export default function ExampleEditor({example, updateExample}) {
