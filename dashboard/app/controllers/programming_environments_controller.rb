@@ -35,14 +35,15 @@ class ProgrammingEnvironmentsController < ApplicationController
     begin
       if programming_environment_params[:categories]
         programming_environment.categories =
-          programming_environment_params[:categories].map do |category|
+          programming_environment_params[:categories].each_with_index.map do |category, i|
             if category['id']
               existing_category = programming_environment.categories.find(category['id'])
               existing_category.assign_attributes(category.except('id'))
+              existing_category.position = i
               existing_category.save! if existing_category.changed?
               existing_category
             else
-              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id))
+              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id, position: i))
             end
           end
       end
