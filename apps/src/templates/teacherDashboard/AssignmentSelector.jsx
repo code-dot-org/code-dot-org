@@ -75,64 +75,57 @@ export default class AssignmentSelector extends Component {
   }
   onChangeCourseOffering = event => {
     const courseOfferingId = event.target.value;
+    const courseVersions = this.props.courseOfferings[courseOfferingId]
+      .course_versions;
+
     if (
       courseOfferingId === noAssignment ||
       this.state.selectedCourseOfferingId !== courseOfferingId
     ) {
-      this.setState({selectedCourseVersionId: noAssignment});
-      this.setState({selectedUnitId: noAssignment});
-    } else if (
-      Object.values(
-        this.props.courseOfferings[courseOfferingId].course_versions
-      ).length === 1
-    ) {
-      let courseVersionId = Object.keys(
-        this.props.courseOfferings[courseOfferingId].course_versions
-      )[0];
       this.setState({
-        selectedCourseVersionId: courseVersionId
+        selectedCourseVersionId: noAssignment,
+        selectedUnitId: noAssignment,
+        selectedCourseOfferingId: courseOfferingId
       });
-      if (
-        Object.values(
-          this.props.courseOfferings[courseOfferingId].course_versions[
-            courseVersionId
-          ].units
-        ).length === 1
-      ) {
+    } else if (Object.values(courseVersions).length === 1) {
+      let courseVersionId = Object.keys(courseVersions)[0];
+
+      if (Object.values(courseVersions.units).length === 1) {
         this.setState({
-          selectedUnitId: Object.keys(
-            this.props.courseOfferings[courseOfferingId].course_versions[
-              courseVersionId
-            ].units
-          )[0]
+          selectedUnitId: Object.keys(courseVersions.units)[0],
+          selectedCourseVersionId: courseVersionId,
+          selectedCourseOfferingId: courseOfferingId
+        });
+      } else {
+        this.setState({
+          selectedCourseVersionId: courseVersionId,
+          selectedCourseOfferingId: courseOfferingId
         });
       }
     }
-    this.setState({selectedCourseOfferingId: courseOfferingId});
-
-    // if the length of course versions is set selectedCourseVersionId
   };
 
   onChangeCourseVersion = value => {
+    const courseVersionId = value;
+    const units = this.props.courseOfferings[
+      this.state.selectedCourseOfferingId
+    ].course_versions[courseVersionId].units;
+
     if (
-      value === noAssignment ||
-      this.state.selectedCourseVersionId !== value
-    ) {
-      this.setState({selectedUnitId: noAssignment});
-    } else if (
-      Object.values(
-        this.props.courseOfferings[this.state.selectedCourseOfferingId]
-          .course_versions[value].units
-      ).length === 1
+      courseVersionId === noAssignment ||
+      this.state.selectedCourseVersionId !== courseVersionId
     ) {
       this.setState({
-        selectedUnitId: Object.keys(
-          this.props.courseOfferings[this.state.selectedCourseOfferingId]
-            .course_versions[value].units
-        )[0]
+        selectedUnitId: noAssignment,
+        selectedCourseVersionId: courseVersionId
+      });
+    } else if (Object.values(units).length === 1) {
+      let unitId = Object.keys(units)[0];
+      this.setState({
+        selectedUnitId: unitId,
+        selectedCourseVersionId: courseVersionId
       });
     }
-    this.setState({selectedCourseVersionId: value});
   };
 
   onChangeUnit = event => {
