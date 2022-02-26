@@ -77,7 +77,7 @@ export const assignmentUnitShape = PropTypes.shape({
 export const assignmentCourseVersionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   display_name: PropTypes.string.isRequired,
-  units: PropTypes.arrayOf(assignmentUnitShape).isRequired
+  units: PropTypes.objectOf(assignmentUnitShape).isRequired
 });
 
 export const assignmentCourseOfferingShape = PropTypes.shape({
@@ -85,7 +85,7 @@ export const assignmentCourseOfferingShape = PropTypes.shape({
   display_name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   is_featured: PropTypes.bool.isRequired,
-  course_versions: PropTypes.arrayOf(assignmentCourseVersionShape).isRequired
+  course_versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired
 });
 
 // Represents a version of an assignment (script or course) as it

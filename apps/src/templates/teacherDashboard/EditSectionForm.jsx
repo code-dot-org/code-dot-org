@@ -42,7 +42,7 @@ class EditSectionForm extends Component {
     initialCourseId: PropTypes.number,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-    courseOfferings: PropTypes.arrayOf(assignmentCourseOfferingShape)
+    courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
       .isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
@@ -403,7 +403,7 @@ AssignmentField.propTypes = {
   section: sectionShape,
   onChange: PropTypes.func.isRequired,
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-  courseOfferings: PropTypes.arrayOf(assignmentCourseOfferingShape).isRequired,
+  courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape).isRequired,
   disabled: PropTypes.bool,
   localeCode: PropTypes.string,
   isNewSection: PropTypes.bool

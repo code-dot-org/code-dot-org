@@ -17,6 +17,9 @@ const USER_EDITABLE_SECTION_PROPS = [
   'ttsAutoplayEnabled',
   'courseId',
   'scriptId',
+  'courseOfferingId',
+  'courseVersionId',
+  'unitId',
   'grade',
   'hidden',
   'restrictSection',
@@ -261,8 +264,21 @@ export const unassignSection = (sectionId, location) => (
   getState
 ) => {
   dispatch(beginEditingSection(sectionId, true));
-  const {initialCourseId, initialUnitId} = getState().teacherSections;
-  dispatch(editSectionProperties({courseId: '', scriptId: ''}));
+  const {
+    initialCourseId,
+    initialUnitId,
+    initialCourseOfferingId,
+    initialCourseVersionId
+  } = getState().teacherSections;
+  dispatch(
+    editSectionProperties({
+      courseId: '',
+      scriptId: '',
+      courseOfferingId: '',
+      courseVersionId: '',
+      unitId: ''
+    })
+  );
   firehoseClient.putRecord(
     {
       study: 'assignment',
@@ -272,6 +288,9 @@ export const unassignSection = (sectionId, location) => (
           sectionId,
           scriptId: initialUnitId,
           courseId: initialCourseId,
+          courseOfferingId: initialCourseOfferingId,
+          courseVersionId: initialCourseVersionId,
+          unitId: initialUnitId,
           location: location,
           date: new Date()
         },
@@ -286,10 +305,19 @@ export const unassignSection = (sectionId, location) => (
 /**
  * Opens the UI for adding a new section.
  */
-export const beginEditingNewSection = (courseId, scriptId) => ({
+export const beginEditingNewSection = (
+  courseId,
+  scriptId,
+  courseOfferingId,
+  courseVersionId,
+  unitId
+) => ({
   type: EDIT_SECTION_BEGIN,
   courseId,
-  scriptId
+  scriptId,
+  courseOfferingId,
+  courseVersionId,
+  unitId
 });
 
 /**
@@ -589,7 +617,15 @@ const initialState = {
  * @param loginType
  * @returns {sectionShape}
  */
-function newSectionData(id, courseId, scriptId, loginType) {
+function newSectionData(
+  id,
+  courseId,
+  scriptId,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  loginType
+) {
   return {
     id: id,
     name: '',
@@ -604,6 +640,9 @@ function newSectionData(id, courseId, scriptId, loginType) {
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
+    courseOfferingId: courseOfferingId || null,
+    courseVersionId: courseVersionId || null,
+    unitId: unitId || null,
     hidden: false,
     isAssigned: undefined,
     restrictSection: false
@@ -862,12 +901,17 @@ export default function teacherSections(state = initialState, action) {
           PENDING_NEW_SECTION_ID,
           action.courseId,
           action.scriptId,
+          action.courseOfferingId,
+          action.courseVersionId,
+          action.unitId,
           undefined
         );
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
-      initialUnitId: initialSectionData.scriptId,
+      initialUnitId: initialSectionData.unitId,
+      initialCourseOfferingId: initialSectionData.courseOfferingId,
+      initialCourseVersionId: initialSectionData.courseVersionId,
       initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
@@ -964,8 +1008,17 @@ export default function teacherSections(state = initialState, action) {
     if (section.scriptId !== state.initialUnitId) {
       assignmentData.script_id = section.scriptId;
     }
+    if (section.unitId !== state.initialUnitId) {
+      assignmentData.unit_id = section.unitId;
+    }
     if (section.courseId !== state.initialCourseId) {
       assignmentData.course_id = section.courseId;
+    }
+    if (section.courseOfferingId !== state.initialCourseOfferingId) {
+      assignmentData.course_offering_id = section.courseOfferingId;
+    }
+    if (section.courseVersionId !== state.initialCourseVersionId) {
+      assignmentData.course_version_id = section.courseVersionId;
     }
     if (
       // If either of these is not undefined, then assignment changed and should be logged
@@ -1106,7 +1159,13 @@ export default function teacherSections(state = initialState, action) {
 
 // Helpers and Selectors
 
-export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
+export const assignmentId = (
+  courseId,
+  scriptId,
+  courseOfferingId,
+  courseVersionId,
+  unitId
+) => `${courseId}_${scriptId}_${courseOfferingId}_${courseVersionId}_${unitId}`;
 
 function getRoot(state) {
   return state.teacherSections; // Global knowledge eww.
@@ -1257,6 +1316,9 @@ export function serverSectionFromSection(section) {
     pairing_allowed: section.pairingAllowed,
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
+    course_offering_id: section.courseOfferingId,
+    course_version_id: section.courseVersionId,
+    unit_id: section.unitId,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined,
     restrict_section: section.restrictSection
@@ -1355,6 +1417,9 @@ export function sectionsForDropdown(
   state,
   scriptId,
   courseId,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
   onCourseOverview
 ) {
   return sortedSectionsList(state.sections).map(section => ({
