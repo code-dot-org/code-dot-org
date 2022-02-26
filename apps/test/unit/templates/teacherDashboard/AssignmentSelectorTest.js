@@ -18,82 +18,6 @@ const defaultProps = {
     code: 'asdf',
     courseId: null,
     scriptId: null
-  },
-  assignments: {
-    // course with scripts
-    '29_null': {
-      id: 29,
-      name: 'CS Discoveries 2017',
-      script_name: 'csd-2017',
-      category: 'Full Courses',
-      position: 1,
-      category_priority: 0,
-      courseId: 29,
-      scriptId: null,
-      scriptAssignIds: ['null_168'],
-      assignId: '29_null',
-      path: '//localhost-studio.code.org:3000/courses/csd',
-      assignment_family_name: 'csd',
-      assignment_family_title: 'CS Discoveries',
-      version_year: '2017',
-      version_title: "'17-'18",
-      is_stable: true
-    },
-    // script in course
-    null_168: {
-      id: 168,
-      name: 'Unit 1: Problem Solving',
-      script_name: 'csd1',
-      category: 'CS Discoveries',
-      position: 0,
-      category_priority: 7,
-      courseId: null,
-      scriptId: 168,
-      assignId: 'null_168',
-      path: '//localhost-studio.code.org:3000/s/csd1-2019',
-      assignment_family_name: 'csd1',
-      assignment_family_title: 'Unit 1: Problem Solving',
-      version_year: '2017',
-      version_title: '2017',
-      is_stable: true
-    },
-    // script not in course
-    null_6: {
-      id: 6,
-      name: 'Make a Flappy game',
-      script_name: 'flappy',
-      category: 'Hour of Code',
-      position: 4,
-      category_priority: 2,
-      courseId: null,
-      scriptId: 6,
-      assignId: 'null_6',
-      path: '//localhost-studio.code.org:3000/s/flappy',
-      assignment_family_name: 'flappy',
-      assignment_family_title: 'Make a Flappy game',
-      version_year: '2017',
-      version_title: '2017',
-      is_stable: true,
-      supported_locale_codes: ['es-MX']
-    },
-    // script not in course
-    null_7: {
-      id: 7,
-      name: 'Make a Flappy game',
-      script_name: 'flappy-2018',
-      category: 'Hour of Code',
-      position: 4,
-      category_priority: 2,
-      courseId: null,
-      scriptId: 7,
-      assignId: 'null_7',
-      path: '//localhost-studio.code.org:3000/s/flappy',
-      assignment_family_name: 'flappy',
-      assignment_family_title: 'Make a Flappy game',
-      version_year: '2018',
-      version_title: '2018',
-      is_stable: true
-    }
   }
 };
 
@@ -110,8 +34,7 @@ const hiddenSectionProps = {
     code: 'asdf',
     courseId: null,
     scriptId: 36
-  },
-  assignments: defaultProps.assignments
+  }
 };
 
 describe('AssignmentSelector', () => {

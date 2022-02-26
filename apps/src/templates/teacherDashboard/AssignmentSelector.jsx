@@ -2,11 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {
-  sectionShape,
-  assignmentShape,
-  assignmentCourseOfferingShape
-} from './shapes';
+import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
@@ -22,7 +18,6 @@ const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 export default class AssignmentSelector extends Component {
   static propTypes = {
     section: sectionShape,
-    assignments: PropTypes.objectOf(assignmentShape).isRequired,
     courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
       .isRequired,
     chooseLaterOption: PropTypes.bool,
