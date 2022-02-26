@@ -1159,13 +1159,7 @@ export default function teacherSections(state = initialState, action) {
 
 // Helpers and Selectors
 
-export const assignmentId = (
-  courseId,
-  scriptId,
-  courseOfferingId,
-  courseVersionId,
-  unitId
-) => `${courseId}_${scriptId}_${courseOfferingId}_${courseVersionId}_${unitId}`;
+export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
 
 function getRoot(state) {
   return state.teacherSections; // Global knowledge eww.
@@ -1417,9 +1411,6 @@ export function sectionsForDropdown(
   state,
   scriptId,
   courseId,
-  courseOfferingId,
-  courseVersionId,
-  unitId,
   onCourseOverview
 ) {
   return sortedSectionsList(state.sections).map(section => ({
