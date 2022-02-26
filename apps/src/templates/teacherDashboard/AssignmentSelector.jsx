@@ -75,10 +75,63 @@ export default class AssignmentSelector extends Component {
   }
   onChangeCourseOffering = event => {
     const courseOfferingId = event.target.value;
+    if (
+      courseOfferingId === noAssignment ||
+      this.state.selectedCourseOfferingId !== courseOfferingId
+    ) {
+      this.setState({selectedCourseVersionId: noAssignment});
+      this.setState({selectedUnitId: noAssignment});
+    } else if (
+      Object.values(
+        this.props.courseOfferings[courseOfferingId].course_versions
+      ).length === 1
+    ) {
+      let courseVersionId = Object.keys(
+        this.props.courseOfferings[courseOfferingId].course_versions
+      )[0];
+      this.setState({
+        selectedCourseVersionId: courseVersionId
+      });
+      if (
+        Object.values(
+          this.props.courseOfferings[courseOfferingId].course_versions[
+            courseVersionId
+          ].units
+        ).length === 1
+      ) {
+        this.setState({
+          selectedUnitId: Object.keys(
+            this.props.courseOfferings[courseOfferingId].course_versions[
+              courseVersionId
+            ].units
+          )[0]
+        });
+      }
+    }
     this.setState({selectedCourseOfferingId: courseOfferingId});
+
+    // if the length of course versions is set selectedCourseVersionId
   };
 
   onChangeCourseVersion = value => {
+    if (
+      value === noAssignment ||
+      this.state.selectedCourseVersionId !== value
+    ) {
+      this.setState({selectedUnitId: noAssignment});
+    } else if (
+      Object.values(
+        this.props.courseOfferings[this.state.selectedCourseOfferingId]
+          .course_versions[value].units
+      ).length === 1
+    ) {
+      this.setState({
+        selectedUnitId: Object.keys(
+          this.props.courseOfferings[this.state.selectedCourseOfferingId]
+            .course_versions[value].units
+        )[0]
+      });
+    }
     this.setState({selectedCourseVersionId: value});
   };
 
@@ -164,10 +217,15 @@ export default class AssignmentSelector extends Component {
               disabled={disabled}
             />
           )}
-        {selectedCourseOfferingId !== 0 &&
+        {selectedCourseVersionId !== 0 &&
           courseOfferings[selectedCourseOfferingId]?.course_versions[
             selectedCourseVersionId
-          ]?.units && (
+          ]?.units &&
+          Object.entries(
+            courseOfferings[selectedCourseOfferingId]?.course_versions[
+              selectedCourseVersionId
+            ]?.units
+          ).length > 1 && (
             <div style={styles.secondary}>
               <div style={styles.dropdownLabel}>
                 {i18n.assignmentSelectorUnit()}
@@ -179,6 +237,7 @@ export default class AssignmentSelector extends Component {
                 style={dropdownStyle}
                 disabled={disabled}
               >
+                <option value={noAssignment} />
                 {Object.values(
                   courseOfferings[selectedCourseOfferingId]?.course_versions[
                     selectedCourseVersionId
@@ -188,7 +247,6 @@ export default class AssignmentSelector extends Component {
                     {unit.name}
                   </option>
                 ))}
-                <option value={noAssignment} />
               </select>
             </div>
           )}
