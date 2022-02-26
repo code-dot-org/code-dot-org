@@ -169,6 +169,10 @@ export default class AssignmentSelector extends Component {
       'category'
     );
 
+    const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];
+    const selectedCourseVersion =
+      selectedCourseOffering?.course_versions[selectedCourseVersionId];
+
     return (
       <div>
         <span style={styles.family}>
@@ -203,29 +207,20 @@ export default class AssignmentSelector extends Component {
           </select>
         </span>
         {selectedCourseOfferingId !== noAssignment &&
-          courseOfferings[selectedCourseOfferingId]?.course_versions &&
-          Object.entries(
-            courseOfferings[selectedCourseOfferingId]?.course_versions
-          )?.length > 1 && (
+          selectedCourseOffering?.course_versions &&
+          Object.entries(selectedCourseOffering?.course_versions)?.length >
+            1 && (
             <AssignmentVersionSelector
               dropdownStyle={dropdownStyle}
               selectedCourseVersionId={selectedCourseVersionId}
-              courseVersions={
-                courseOfferings[selectedCourseOfferingId]?.course_versions
-              }
+              courseVersions={selectedCourseOffering?.course_versions}
               onChangeVersion={this.onChangeCourseVersion}
               disabled={disabled}
             />
           )}
         {selectedCourseVersionId !== 0 &&
-          courseOfferings[selectedCourseOfferingId]?.course_versions[
-            selectedCourseVersionId
-          ]?.units &&
-          Object.entries(
-            courseOfferings[selectedCourseOfferingId]?.course_versions[
-              selectedCourseVersionId
-            ]?.units
-          ).length > 1 && (
+          selectedCourseVersion?.units &&
+          Object.entries(selectedCourseVersion?.units).length > 1 && (
             <div style={styles.secondary}>
               <div style={styles.dropdownLabel}>
                 {i18n.assignmentSelectorUnit()}
@@ -238,11 +233,7 @@ export default class AssignmentSelector extends Component {
                 disabled={disabled}
               >
                 <option value={noAssignment} />
-                {Object.values(
-                  courseOfferings[selectedCourseOfferingId]?.course_versions[
-                    selectedCourseVersionId
-                  ]?.units
-                ).map(unit => (
+                {Object.values(selectedCourseVersion?.units).map(unit => (
                   <option key={unit.id} value={unit.id}>
                     {unit.name}
                   </option>
