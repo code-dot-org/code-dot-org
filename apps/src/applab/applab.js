@@ -1490,6 +1490,8 @@ function onDataViewChange(view, oldTableName, newTableName) {
 }
 
 Applab.onPuzzleFinish = function() {
+  console.log('in onPuzzleFinish()');
+  makerToolkit.disconnect();
   Applab.onPuzzleComplete(false); // complete without submitting
 };
 
@@ -1586,7 +1588,6 @@ Applab.onPuzzleComplete = function(submit) {
     }
   };
 
-  makerToolkit.disconnect();
   sendReport();
 };
 
