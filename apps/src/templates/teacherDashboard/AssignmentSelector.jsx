@@ -43,10 +43,6 @@ export default class AssignmentSelector extends Component {
       selectedCourseOfferingId = noAssignment;
       selectedCourseVersionId = noAssignment;
       selectedUnitId = noAssignment;
-    } else if (section.courseId) {
-      selectedCourseOfferingId = section.courseOfferingId;
-      selectedCourseVersionId = section.courseVersionId;
-      selectedUnitId = section.unitId;
     } else {
       selectedCourseOfferingId = section.courseOfferingId;
       selectedCourseVersionId = section.courseVersionId;
