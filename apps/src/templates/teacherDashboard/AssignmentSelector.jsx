@@ -7,11 +7,10 @@ import {
   assignmentShape,
   assignmentCourseOfferingShape
 } from './shapes';
-import {assignmentId} from './teacherSectionsRedux';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
-const noAssignment = assignmentId(null, null);
+const noAssignment = 0;
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
@@ -39,36 +38,22 @@ export default class AssignmentSelector extends Component {
 
     const {section} = props;
 
-    let selectedPrimaryId,
-      selectedSecondaryId,
-      selectedCourseOfferingId,
-      selectedCourseVersionId,
-      selectedUnitId;
+    let selectedCourseOfferingId, selectedCourseVersionId, selectedUnitId;
     if (!section) {
-      selectedPrimaryId = noAssignment;
-      selectedSecondaryId = noAssignment;
-      selectedCourseOfferingId = 0;
-      selectedCourseVersionId = 0;
-      selectedUnitId = 0;
+      selectedCourseOfferingId = noAssignment;
+      selectedCourseVersionId = noAssignment;
+      selectedUnitId = noAssignment;
     } else if (section.courseId) {
-      selectedPrimaryId = assignmentId(section.courseId, null);
-      selectedSecondaryId = assignmentId(null, section.scriptId);
-
       selectedCourseOfferingId = section.courseOfferingId;
       selectedCourseVersionId = section.courseVersionId;
       selectedUnitId = section.unitId;
     } else {
-      selectedPrimaryId = assignmentId(null, section.scriptId);
-      selectedSecondaryId = noAssignment;
-
       selectedCourseOfferingId = section.courseOfferingId;
       selectedCourseVersionId = section.courseVersionId;
       selectedUnitId = section.unitId;
     }
 
     this.state = {
-      selectedPrimaryId,
-      selectedSecondaryId,
       selectedCourseOfferingId,
       selectedCourseVersionId,
       selectedUnitId
@@ -76,24 +61,21 @@ export default class AssignmentSelector extends Component {
   }
 
   getSelectedAssignment() {
-    const {selectedPrimaryId, selectedSecondaryId} = this.state;
-    const primary = this.props.assignments[selectedPrimaryId];
+    const {
+      selectedCourseOfferingId,
+      selectedCourseVersionId,
+      selectedUnitId
+    } = this.state;
 
-    if (isValidAssignment(selectedSecondaryId)) {
-      // If we have a secondary, that implies that (a) our primary is a course
-      // and (b) our secondary is a script
-      const secondary = this.props.assignments[selectedSecondaryId];
-      return {
-        courseId: primary.courseId,
-        scriptId: secondary.scriptId
-      };
-    } else {
-      // If we don't have a secondary, primary could be course, script, or null
-      return {
-        courseId: primary ? primary.courseId : null,
-        scriptId: primary ? primary.scriptId : null
-      };
-    }
+    return {
+      courseOfferingId: isValidAssignment(selectedCourseOfferingId)
+        ? selectedCourseOfferingId
+        : null,
+      courseVersionId: isValidAssignment(selectedCourseVersionId)
+        ? selectedCourseVersionId
+        : null,
+      unitId: isValidAssignment(selectedUnitId) ? selectedUnitId : null
+    };
   }
   onChangeCourseOffering = event => {
     const courseOfferingId = event.target.value;
@@ -104,10 +86,10 @@ export default class AssignmentSelector extends Component {
     this.setState({selectedCourseVersionId: value});
   };
 
-  onChangeSecondary = event => {
+  onChangeUnit = event => {
     this.setState(
       {
-        selectedSecondaryId: event.target.value
+        selectedUnitId: event.target.value
       },
       this.reportChange
     );
@@ -120,22 +102,12 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {assignments, dropdownStyle, disabled, courseOfferings} = this.props;
+    const {dropdownStyle, disabled, courseOfferings} = this.props;
     const {
-      selectedPrimaryId,
-      selectedSecondaryId,
       selectedCourseOfferingId,
       selectedCourseVersionId,
       selectedUnitId
     } = this.state;
-
-    console.log(selectedUnitId);
-
-    let secondaryOptions;
-    const primaryAssignment = assignments[selectedPrimaryId];
-    if (primaryAssignment) {
-      secondaryOptions = primaryAssignment.scriptAssignIds;
-    }
 
     let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
     orderedCourseOfferings = _.orderBy(
@@ -181,7 +153,7 @@ export default class AssignmentSelector extends Component {
             ))}
           </select>
         </span>
-        {selectedCourseOfferingId !== 0 &&
+        {selectedCourseOfferingId !== noAssignment &&
           courseOfferings[selectedCourseOfferingId]?.course_versions &&
           Object.entries(
             courseOfferings[selectedCourseOfferingId]?.course_versions
@@ -196,30 +168,34 @@ export default class AssignmentSelector extends Component {
               disabled={disabled}
             />
           )}
-        {secondaryOptions && (
-          <div style={styles.secondary}>
-            <div style={styles.dropdownLabel}>
-              {i18n.assignmentSelectorUnit()}
+        {selectedCourseOfferingId !== 0 &&
+          courseOfferings[selectedCourseOfferingId]?.course_versions[
+            selectedCourseVersionId
+          ]?.units && (
+            <div style={styles.secondary}>
+              <div style={styles.dropdownLabel}>
+                {i18n.assignmentSelectorUnit()}
+              </div>
+              <select
+                id="uitest-secondary-assignment"
+                value={selectedUnitId}
+                onChange={this.onChangeUnit}
+                style={dropdownStyle}
+                disabled={disabled}
+              >
+                {Object.values(
+                  courseOfferings[selectedCourseOfferingId]?.course_versions[
+                    selectedCourseVersionId
+                  ]?.units
+                ).map(unit => (
+                  <option key={unit.id} value={unit.id}>
+                    {unit.name}
+                  </option>
+                ))}
+                <option value={noAssignment} />
+              </select>
             </div>
-            <select
-              id="uitest-secondary-assignment"
-              value={selectedSecondaryId}
-              onChange={this.onChangeSecondary}
-              style={dropdownStyle}
-              disabled={disabled}
-            >
-              {secondaryOptions.map(
-                scriptAssignId =>
-                  assignments[scriptAssignId] && (
-                    <option key={scriptAssignId} value={scriptAssignId}>
-                      {assignments[scriptAssignId].name}
-                    </option>
-                  )
-              )}
-              <option value={noAssignment} />
-            </select>
-          </div>
-        )}
+          )}
       </div>
     );
   }
