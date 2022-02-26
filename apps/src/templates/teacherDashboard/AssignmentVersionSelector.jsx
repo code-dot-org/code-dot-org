@@ -80,8 +80,6 @@ export default class AssignmentVersionSelector extends Component {
       y: 0
     };
 
-    console.log(courseVersions);
-
     return (
       <span style={styles.version} id="uitest-version-selector">
         <div style={styles.dropdownLabel}>

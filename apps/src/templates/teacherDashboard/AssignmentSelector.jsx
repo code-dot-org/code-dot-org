@@ -100,9 +100,8 @@ export default class AssignmentSelector extends Component {
     this.setState({selectedCourseOfferingId: courseOfferingId});
   };
 
-  onChangeCourseVersion = event => {
-    const courseVersionId = event.target.value;
-    this.setState({selectedCourseVersionId: courseVersionId});
+  onChangeCourseVersion = value => {
+    this.setState({selectedCourseVersionId: value});
   };
 
   onChangeSecondary = event => {
