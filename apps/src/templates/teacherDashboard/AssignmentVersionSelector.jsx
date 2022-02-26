@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
-import {assignmentVersionShape} from './shapes';
+import {assignmentCourseVersionShape} from './shapes';
 import PopUpMenu, {STANDARD_PADDING} from '../../lib/ui/PopUpMenu';
 import AssignmentVersionMenuItem, {
   columnWidths
@@ -14,60 +14,12 @@ const menuItemWidth = _(columnWidths)
   .reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
-/**
- * Given an array of versions, return that array with the same versions, plus
- * isRecommended and isSelected properties set on the recommended and selected version(s).
- * Note: This method will change the content of the versions array that is passed to it.
- * @param {Array<AssignmentVersionShape>} versions
- * @param {String} localeCode. The user's "??-??" locale code.
- * @param {String} selectedVersionYear. Currently selected version year. Optional.
- */
-export const setRecommendedAndSelectedVersions = (
-  versions,
-  localeCode = null,
-  selectedVersionYear = null
-) => {
-  // Sort versions by year descending.
-  versions = versions
-    .sort((a, b) => parseInt(a.year) - parseInt(b.year))
-    .reverse();
-
-  /**
-   * We recommend the user use the latest stable version that is supported in their
-   * locale. If no versions support their locale, we recommend the latest stable version.
-   * Versions are sorted from most to least recent, so the first stable version will be the latest.
-   */
-  let recommendedVersion;
-  if (localeCode) {
-    recommendedVersion = versions.find(v => {
-      const localeSupported =
-        (v.localeCodes || []).includes(localeCode) ||
-        localeCode.startsWith('en');
-
-      return v.isStable && localeSupported;
-    });
-  }
-  recommendedVersion = recommendedVersion || versions.find(v => v.isStable);
-  if (recommendedVersion) {
-    recommendedVersion.isRecommended = true;
-  }
-
-  const selectedVersion =
-    versions.find(v => v.year === selectedVersionYear) ||
-    recommendedVersion ||
-    versions[0];
-  if (selectedVersion) {
-    selectedVersion.isSelected = true;
-  }
-
-  return versions;
-};
-
 export default class AssignmentVersionSelector extends Component {
   static propTypes = {
     dropdownStyle: PropTypes.object,
     onChangeVersion: PropTypes.func.isRequired,
-    versions: PropTypes.arrayOf(assignmentVersionShape),
+    selectedCourseVersionId: PropTypes.number,
+    courseVersions: PropTypes.objectOf(assignmentCourseVersionShape),
     disabled: PropTypes.bool,
     rightJustifiedPopupMenu: PropTypes.bool
   };
@@ -103,18 +55,22 @@ export default class AssignmentVersionSelector extends Component {
   closeMenu = () => this.setState({isMenuOpen: false});
 
   handleNativeDropdownChange = event => {
-    const versionYear = event.target.value;
-    this.props.onChangeVersion(versionYear);
+    const version = event.target.value;
+    this.props.onChangeVersion(version.id);
   };
 
-  chooseMenuItem = versionYear => {
-    this.props.onChangeVersion(versionYear);
+  chooseMenuItem = version => {
+    this.props.onChangeVersion(version.id);
     this.closeMenu();
   };
 
   render() {
-    const {dropdownStyle, versions, disabled} = this.props;
-    const selectedVersionYear = versions.find(v => v.isSelected).year;
+    const {
+      dropdownStyle,
+      courseVersions,
+      disabled,
+      selectedCourseVersionId
+    } = this.props;
 
     const popupMenuXOffset = this.props.rightJustifiedPopupMenu
       ? -menuWidth / 2
@@ -124,6 +80,8 @@ export default class AssignmentVersionSelector extends Component {
       y: 0
     };
 
+    console.log(courseVersions);
+
     return (
       <span style={styles.version} id="uitest-version-selector">
         <div style={styles.dropdownLabel}>
@@ -131,7 +89,7 @@ export default class AssignmentVersionSelector extends Component {
         </div>
         <select
           id="assignment-version-year"
-          value={selectedVersionYear}
+          value={selectedCourseVersionId}
           onChange={this.handleNativeDropdownChange}
           onMouseDown={this.handleMouseDown}
           onClick={this.handleClick}
@@ -139,11 +97,11 @@ export default class AssignmentVersionSelector extends Component {
           disabled={disabled}
           ref={select => (this.select = select)}
         >
-          {versions.map(version => (
-            <option key={version.year} value={version.year}>
-              {version.isRecommended
-                ? `${version.title} (${i18n.recommended()})`
-                : version.title}
+          {Object.values(courseVersions).map(version => (
+            <option key={version.id} value={version.id}>
+              {version.is_recommended
+                ? `${version.display_name} (${i18n.recommended()})`
+                : version.display_name}
             </option>
           ))}
         </select>
@@ -155,11 +113,12 @@ export default class AssignmentVersionSelector extends Component {
           onClose={this.closeMenu}
         >
           <AssignmentVersionMenuHeader />
-          {versions.map(version => (
+          {Object.values(courseVersions).map(version => (
             <AssignmentVersionMenuItem
-              version={version}
-              onClick={() => this.chooseMenuItem(version.year)}
-              key={version.year}
+              selectedCourseVersionId={selectedCourseVersionId}
+              courseVersion={version}
+              onClick={() => this.chooseMenuItem(version)}
+              key={version.id}
             />
           ))}
         </PopUpMenu>
