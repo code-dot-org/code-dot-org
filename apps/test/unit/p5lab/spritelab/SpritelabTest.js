@@ -20,6 +20,7 @@ import reducers from '@cdo/apps/p5lab/reducers';
 import {setExternalGlobals} from '../../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 describe('SpriteLab', () => {
   setExternalGlobals();
@@ -40,11 +41,11 @@ describe('SpriteLab', () => {
     });
     afterEach(() => document.body.removeChild(container));
 
-    let studioApp;
+    let testStudioApp;
     beforeEach(() => {
       registerReducers({...commonReducers, ...reducers});
       instance = new SpriteLab();
-      studioApp = {
+      testStudioApp = {
         setCheckForEmptyBlocks: sinon.spy(),
         showRateLimitAlert: sinon.spy(),
         setPageConstants: sinon.spy(),
@@ -61,7 +62,7 @@ describe('SpriteLab', () => {
     describe('After being injected with a studioApp instance', () => {
       let muteSpy;
       beforeEach(() => {
-        instance.injectStudioApp(studioApp);
+        instance.injectStudioApp(testStudioApp);
         registerReducers({...commonReducers, ...reducers});
         instance.areAnimationsReady_ = sinon.stub().returns(true);
         instance.p5Wrapper = sinon.spy();
@@ -146,25 +147,29 @@ describe('SpriteLab', () => {
       });
 
       describe('react to executionError', () => {
+        let alertSpy;
         beforeEach(() => {
-          console.log('start test');
-          sinon.stub(studioApp(), 'displayWorkspaceAlert');
+          alertSpy = sinon.stub(studioApp(), 'displayWorkspaceAlert');
+          sinon.stub(instance, 'getMsg').returns({
+            workspaceAlertError: () => {
+              return 'translated string';
+            }
+          });
         });
         afterEach(() => {
-          studioApp().displayWorkspaceAlert.restore();
+          alertSpy.restore();
+          instance.getMsg.restore();
         });
-        it('displays a workspace alert if there is an executionError message'),
-          () => {
-            const msg = 'test string';
-            instance.reactToExecutionError(msg);
-            expect(studioApp().displayWorkspaceAlert).to.have.been.calledOnce;
-          };
-        it('does nothing if there is no executionError message'),
-          () => {
-            const msg = undefined;
-            instance.reactToExecutionError(msg);
-            expect(studioApp().displayWorkspaceAlert).to.not.have.been.called;
-          };
+        it('displays a workspace alert if there is an executionError message', () => {
+          const msg = 'test string';
+          instance.reactToExecutionError(msg);
+          expect(alertSpy).to.have.been.calledOnce;
+        });
+        it('does nothing if there is no executionError message', () => {
+          const msg = undefined;
+          instance.reactToExecutionError(msg);
+          expect(alertSpy).to.not.have.been.called;
+        });
       });
 
       describe('dispatching Blockly events', () => {
