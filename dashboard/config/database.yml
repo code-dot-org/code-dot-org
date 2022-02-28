@@ -9,9 +9,8 @@ reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
 %>
 
 mysql_defaults: &mysql_defaults
-  adapter: seamless_database_pool
+  adapter: mysql2
   prepared_statements: false
-  pool_adapter: mysql2
   encoding: utf8mb4
   collation: utf8mb4_unicode_ci
   default_group: 'cdo'
@@ -20,6 +19,7 @@ mysql_defaults: &mysql_defaults
   # See: https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html
   # maximum number of connections the pool may manage (default 5).
   pool: 5
+
   # number of seconds to wait for a connection to become available before giving up and raising a timeout error (default 5 seconds).
   checkout_timeout: 3
 
@@ -45,37 +45,33 @@ mysql_defaults: &mysql_defaults
   # There is a retry if necessary, so the total effective timeout value is two times the option value.
   write_timeout: 5
 
-  # Seamless Database Pool settings:
-  # See: https://github.com/bdurand/seamless_database_pool#configuration
-  master:
-    username: <%= writer.user || 'root' %>
-    password: <%= writer.password || '' %>
-    host: <%= writer.host || 'localhost' %>
-    port: <%= writer.port || 3306 %>
+environment_defaults: &environment_defaults
+  primary:
+    <<: *mysql_defaults
     database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
+    host: <%= writer.host || 'localhost' %>
+    password: <%= writer.password || '' %>
+    port: <%= writer.port || 3306 %>
+    username: <%= writer.user || 'root' %>
   <% if reader && reader != writer %>
-    # When there is a separate read-only database configured, do NOT
-    # include the master database in the read pool.
-    # Ref: https://github.com/bdurand/seamless_database_pool#the-master-connection
-    # "By default, the master connection will be included in the read pool.
-    #  If you would like to dedicate this connection only for write operations, you should set the pool weight to zero."
-    pool_weight: 0
-  read_pool:
-   - username: <%= reader.user %>
-     password: <%= reader.password %>
-     host: <%= reader.host %>
-     port: <%= reader.port || 3306 %>
-     database: <%= reader.path.sub(%r{^/},"") %>
+  primary_replica:
+    replica: true
+    <<: *mysql_defaults
+    database: <%= reader.path.sub(%r{^/},"") %>
+    host: <%= reader.host %>
+    password: <%= reader.password %>
+    port: <%= reader.port || 3306 %>
+    username: <%= reader.user %>
   <% end %>
 
 development:
-  <<: *mysql_defaults
+  <<: *environment_defaults
 
 staging: &staging
-  <<: *mysql_defaults
+  <<: *environment_defaults
 
 adhoc:
-  <<: *mysql_defaults
+  <<: *environment_defaults
 
 # levelbuilder environment extends the staging environment
 levelbuilder:
@@ -85,18 +81,14 @@ levelbuilder:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: mysql2
-  encoding: utf8mb4
-  collation: utf8mb4_unicode_ci
-  username: <%= writer.user || 'root' %>
-  password: <%= writer.password || '' %>
-  host: <%= writer.host || 'localhost' %>
-  port: <%= writer.port || 3306 %>
-  pool: <%= ENV['CI'] ? 20 : 5 %>
-  database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
-  connect_timeout: 2
-  reconnect: true
-  default_group: 'cdo'
+  primary:
+    <<: *mysql_defaults
+    database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
+    host: <%= writer.host || 'localhost' %>
+    password: <%= writer.password || '' %>
+    pool: <%= ENV['CI'] ? 20 : 5 %>
+    port: <%= writer.port || 3306 %>
+    username: <%= writer.user || 'root' %>
 
 production:
-  <<: *mysql_defaults
+  <<: *environment_defaults
