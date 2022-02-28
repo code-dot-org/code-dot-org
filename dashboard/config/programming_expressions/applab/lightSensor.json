@@ -1,7 +1,0 @@
-{
-  "key": "lightSensor",
-  "name": "lightSensor",
-  "category": "Circuit",
-  "category_key": "circuit",
-  "syntax": "lightSensor"
-}

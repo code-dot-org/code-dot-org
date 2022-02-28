@@ -1,8 +1,0 @@
-{
-  "key": "isCostumeEqual",
-  "name": "isCostumeEqual",
-  "category": "Sprites",
-  "category_key": "sprites",
-  "block_name": "gamelab_isCostumeEqual",
-  "syntax": "isCostumeEqual"
-}

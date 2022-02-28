@@ -69,6 +69,7 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
+    boxSizing: 'border-box',
     height: '100%',
     padding: 10
   },

@@ -9127,6 +9127,21 @@ az:
               display_name: dəyişənlər
             lessonGroup-4:
               display_name: Kurs layihələrinin sonu!
+        csd6-pilot-2022:
+          lessons:
+            Board Events:
+              name: İdarə Heyətinin Tədbirləri
+            Arrays and Color LEDs:
+              name: Rəngli LEDlər
+            Making Music:
+              name: Musiqi bəstələmək
+            Functions with Parameters:
+              name: Funksiyalar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-ci Fəsil
+            lessonGroup-3:
+              display_name: 2-ci Fəsil
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -9682,6 +9697,10 @@ az:
           lessons:
             lesson-1:
               name: CSA-ya Xoş Gəldiniz
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: dövrlər
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -9729,6 +9748,91 @@ az:
             lessonGroup-2:
               display_name: Məzmun
         csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa1-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: CSA-ya Xoş Gəldiniz
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: dövrlər
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: dərs-10
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+              name: Qiymətləndirmə günü
+            lesson-16:
+              key: dərs-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-10:
+              key: dərs-10
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+              name: Qiymətləndirmə günü
+            lesson-16:
+              key: dərs-16
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun

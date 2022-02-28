@@ -11,5 +11,6 @@
       "name": "high"
     }
   ],
+  "short_description": "soundSensor.setScale(min, max)",
   "syntax": "soundSensor.setScale(low, high)"
 }

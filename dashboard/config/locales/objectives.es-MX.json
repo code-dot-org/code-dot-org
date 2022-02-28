@@ -660,13 +660,13 @@
           "description": "Superar obstáculos como limitaciones de tiempo o errores."
         },
         "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
-          "description": "Entender cómo puede ser la maldad en línea y cómo puede hacer sentir a la gente."
+          "description": "Entender cómo es el maltrato en línea y cómo puede hacer sentir a las personas."
         },
         "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
-          "description": "Identificar maneras de responder a las palabras mezquinas en línea, utilizando S-T-O-P."
+          "description": "Identificar formas de reaccionar ante palabras crueles en línea, con el método A-L-T-O."
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
-          "description": "Prestar atención a la precisión a la hora de crear instrucciones"
+          "description": "Prestar atención a la precisión al dar instrucciones."
         },
         "26392005-5f64-4707-b38b-847d1f009a29": {
           "description": "Identificar y solucionar errores en secuencias de instrucciones"
@@ -681,19 +681,19 @@
           "description": "Predecir dónde fallará un programa."
         },
         "3ad547f9-c577-4953-88d5-41f7ac1ab710": {
-          "description": "Modificar un programa existente para solucionar errores."
+          "description": "Modificar un programa existente para resolver errores."
         },
         "367c7a8a-4dea-494f-87c7-77cba03711a1": {
-          "description": "Reflexionar sobre el proceso de depuración de manera apropiada para cada edad."
+          "description": "Reflexionar sobre el proceso de depuración de una forma apropiada para la edad."
         },
         "991aa440-0e71-40b0-8354-da04e3ad125b": {
-          "description": "Ordenar comandos de movimiento como pasos secuenciales en un programa."
+          "description": "Ordenar comandos de movimiento en pasos secuenciales dentro de un programa."
         },
         "a48e07da-5c86-4377-8738-4a6a06633e1d": {
-          "description": "Representar un algoritmo como un programa de computadora."
+          "description": "Explicar un algoritmo como un programa de computador."
         },
         "d50f34e0-2613-485c-9381-7b63832dbd0a": {
-          "description": "Desarrollar habilidades de resolución de problemas y pensamiento crítico mediante la revisión de las prácticas de depuración."
+          "description": "Desarrollar habilidades de resolución de problemas y pensamiento crítico al revisar prácticas de depuración."
         },
         "6503170b-db97-4737-ae5d-5108591497a0": {
           "description": "Crear un programa para completar una imagen mediante pasos secuenciales."
@@ -702,28 +702,28 @@
           "description": "Dividir formas complejas en partes simples."
         },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
-          "description": "Identificar patrones repetidos en el código que podrían reemplazarse con un bucle"
+          "description": "Identificar patrones repetidos en un código que pueden ser reemplazados por un bucle."
         },
         "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
-          "description": "Escribir instrucciones que usen bucles para repetir patrones"
+          "description": "Escribir instrucciones que usen bucles para repetir patrones."
         },
         "46288097-dbab-437f-897c-4e14352ae388": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
-          "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más grande."
+          "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
         },
         "8e76410f-b4db-446b-88c0-00013d9c05bd": {
           "description": "Utilizar una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
         },
         "ff15ce2c-8445-442a-89f0-7a50e741850a": {
-          "description": "Escribir un programa para una tarea determinada que repita un solo comando."
+          "description": "Escribir un programa que repita en bucle un comando simple para una tarea en particular."
         },
         "757d864e-38a3-4b30-8617-b9a4174c8b08": {
-          "description": "Identificar cuándo se puede usar un bucle para simplificar una acción repetitiva."
+          "description": "Identificar cuándo puede usarse un bucle para simplificar una acción repetitiva."
         },
         "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
-          "description": "Emplear una combinación de comandos secuenciales y en bucle para mover y realizar acciones."
+          "description": "Emplear una combinación de comandos secuenciales y en bucle para moverse y realizar acciones."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
@@ -735,46 +735,46 @@
           "description": "Repetir comandos dados por un instructor."
         },
         "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
-          "description": "Reconocer los movimientos del docente como señales para iniciar comandos."
+          "description": "Reconocer acciones del docente como una señal para iniciar comandos."
         },
         "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
           "description": "Practicar el diferenciar acciones preestablecidas y acciones disparadas por eventos."
         },
         "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
-          "description": "Hacer coincidir los bloques con el controlador de eventos apropiado."
+          "description": "Relacionar bloques con el control de eventos apropiado."
         },
         "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
-          "description": "Crear un juego mediante controladores de eventos."
+          "description": "Crear un juego usando el control de eventos."
         },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
-          "description": "Crear un juego animado e interactivo mediante secuencia y controladores de eventos."
+          "description": "Crear un juego animado e interactivo usando secuencias y controladores de eventos."
         },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Identificar acciones que se correlacionan con eventos de entrada."
         },
         "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
-          "description": "Recopilar y registrar datos sobre cantidades de objetos reales, o personajes en una pantalla"
+          "description": "Recolectar y registrar datos sobre una cantidad de objetos reales o personajes en la pantalla."
         },
         "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
-          "description": "Crear un gráfico de barras y un gráfico circular para representar datos sencillos."
+          "description": "Crear un gráfico de barra y circular para representar datos simples."
         },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": "Haz comparaciones entre las visualizaciones de datos realizadas por otros y utilízalas para hacer una predicción."
+          "description": "Comparar datos representados por otros y usarlos para hacer una predicción."
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
-          "description": "Codificar letras en código binario."
+          "description": "Codificar letras en binario."
         },
         "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
-          "description": "Decodificar el código binario en letras."
+          "description": "Decodificar binario a letras."
         },
         "ce1f4117-76f3-4359-a554-683a878f82cb": {
-          "description": "Relacionar la idea de almacenar cartas en papel con la idea de almacenar información en una computadora."
+          "description": "Relacionar la idea de almacenar letras en un papel con la idea de almacenar información en un computador."
         },
         "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
-          "description": "Utiliza un diseño planificado como un plano para la creación."
+          "description": "Usar un diseño planificado como plano para crear."
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Superar obstáculos como limitaciones de tiempo o errores."
@@ -792,13 +792,13 @@
           "description": "Explicar las limitaciones de traducir problemas del lenguaje humano al lenguaje de máquina"
         },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
-          "description": "Ordenar comandos de movimiento como pasos secuenciales en un programa."
+          "description": "Ordenar comandos de movimiento en pasos secuenciales dentro de un programa."
         },
         "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a": {
-          "description": "Modificar un programa existente para solucionar errores."
+          "description": "Modificar un programa existente para resolver errores."
         },
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
-          "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más grande."
+          "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
         },
         "8a0addda-b47f-4551-8c82-9115be3c130d": {
           "description": "Definir ideas mediante código y símbolos."
@@ -909,19 +909,19 @@
           "description": "Predecir dónde fallará un programa."
         },
         "857073db-dcda-4868-8be6-e0fba5f981d7": {
-          "description": "Modificar un programa existente para solucionar errores."
+          "description": "Modificar un programa existente para resolver errores."
         },
         "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
-          "description": "Reflexionar sobre el proceso de depuración de manera apropiada para cada edad."
+          "description": "Reflexionar sobre el proceso de depuración de una forma apropiada para la edad."
         },
         "4d4f7faa-e380-483d-b873-b04e114e077e": {
-          "description": "Ordenar comandos de movimiento como pasos secuenciales en un programa."
+          "description": "Ordenar comandos de movimiento en pasos secuenciales dentro de un programa."
         },
         "6a4a4515-9250-4ad0-b943-afef3d26df68": {
-          "description": "Representar un algoritmo como un programa de computadora."
+          "description": "Explicar un algoritmo como un programa de computador."
         },
         "48b6e566-4a4b-424e-b104-33ce83bd2184": {
-          "description": "Desarrollar habilidades de resolución de problemas y pensamiento crítico mediante la revisión de las prácticas de depuración."
+          "description": "Desarrollar habilidades de resolución de problemas y pensamiento crítico al revisar prácticas de depuración."
         },
         "500825a3-b44f-4b99-ab77-2271fdcbb867": {
           "description": "Crear un programa para completar una imagen mediante pasos secuenciales."
@@ -969,7 +969,7 @@
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
-          "description": "Dividir una secuencia larga de instrucciones en la secuencia repetible más grande."
+          "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
         },
         "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
           "description": "Utilizar una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
@@ -1291,6 +1291,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Entrena y prueba un modelo de aprendizaje automático."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
         }
       }
     }

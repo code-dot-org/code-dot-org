@@ -18214,6 +18214,8 @@ ja:
               name: プロトタイピング
             lesson-19:
               name: プロジェクト
+            Circuits and Physical Prototypes:
+              description_teacher: この章の最終プロジェクトの準備として、生徒は、サーキット プレイグラウンドを含む物理オブジェクトのプロトタイプを開発する方法を学びます。生徒は、モデル化されたプロジェクト計画ガイドを使って、段ボールやダクトテープなどの安価で簡単に見つけられる材料を使って、いくつかの単純な回路を組み、製品の意図した設計を伝えることができるプロトタイプを構築する方法を学びます。
           lesson_groups:
             lessonGroup-3:
               display_name: テンプレート
@@ -18243,6 +18245,11 @@ ja:
               display_name: プロジェクト
             lessonGroup-4:
               display_name: デモとリソース
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: CSAクローンをテスト中
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -18675,6 +18682,12 @@ ja:
               description_student: クラスメートと共有できるインタラクティブなプロジェクトを作成しましょう。
               description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
           lesson_groups:
+            lessonGroup-5:
+              display_name: コースF 変数 (非推奨)
+            lessonGroup-6:
+              display_name: コースF Forループ (非推奨)
+            lessonGroup-7:
+              display_name: コースE Sprites (非推奨)
             lessonGroup-8:
               display_name: Hour of Code（アワー オブ コード）
         csa7-exemplars:
@@ -18726,6 +18739,31 @@ ja:
               display_name: 変数（へんすう）
             lessonGroup-4:
               display_name: コース最後のプロジェクト
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: コースのこの最終プロジェクトでは、生徒チームが、サーキット プレイグラウンドに基づく革新的なコンピューティングデバイスのプロトタイプを開発およびテストします。ボードで利用できる入力と出力を使って、グループは興味深いユニークなユーザーインタラクションを可能にするプログラムを作成します。
+            Innovations in Computing:
+              name: コンピューティングにおける革新
+              description_teacher: このコースの最後のユニットを開始するに当たり、生徒はコンピューティングの興味深い革新性について調査します。このレッスンでは、さまざまなコンピューティングフォームファクター (コンピューターはどのようなものか) と、コンピューティングの影響を受けるフィールドについて生徒に説明します。このユニットの後半では、生徒は自分の物理的なコンピューティングデバイスを開発しながら、このレッスンで触れたデバイスを振り返ります。
+            The Circuit Playground:
+              name: サーキット プレイグラウンド
+            Board Events:
+              name: ボードイベント
+            Arrays and Color LEDs:
+              name: カラーLED
+            lesson-10:
+              name: 入力を結合中
+            Accelerometer:
+              name: 加速度計
+              description_teacher: このレッスンでは、加速度計とその機能について学習します。生徒はそのイベントやプロパティに慣れるだけでなく、実際のユースケースで遭遇する可能性のあるものと同様の加速度計を利用して複数のプログラムを作成します。
+            Functions with Parameters:
+              name: 関数(かんすう)
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一章
+            lessonGroup-3:
+              display_name: 第二章
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -19132,6 +19170,7 @@ ja:
           student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
           description_short: コンピューター サイエンス入門。小学校の中高学年向けコースの良い所をとりだしました。
           description_audience: '年齢: 9～18才'
+          name: エクスプレス-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -20080,6 +20119,8 @@ ja:
               description_teacher: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
             'Hello World: Food':
               name: ハローワールド
+              description_student: このレッスンではSpritesを作成およびアニメートし、イベントでインタラクティブにする方法を学習します。
+              description_teacher: この**スキルビルド**レッスンではSpritesを作成およびアニメートし、イベントでインタラクティブにする方法を学習します。
           lesson_groups:
             csf_sprites:
               display_name: スプライト
@@ -20267,6 +20308,11 @@ ja:
         csp-post-survey-2021:
           title: CS原則 のコース後アンケート
         csa1-2022:
+          lessons:
+            lesson-2:
+              name: Javaラボ
+            lesson-9:
+              name: くりかえし
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -20323,6 +20369,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -20349,3 +20397,102 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Javaラボ
+            lesson-9:
+              name: くりかえし
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: 評価日
+            Java Lab:
+              name: Javaラボ
+              key: Javaラボ
+            lesson-10:
+              key: レッスン10
+            lesson-6:
+              key: レッスン6
+            lesson-7:
+              key: レッスン7
+            lesson-8:
+              key: レッスン8
+            lesson-9:
+              key: レッスン9
+            lesson-11:
+              key: レッスン11
+            lesson-12:
+              key: レッスン12
+            lesson-13:
+              key: レッスン13
+            lesson-14:
+              key: レッスン14
+            lesson-15:
+              key: レッスン15
+            lesson-1:
+              key: レッスン1
+            lesson-2:
+              key: レッスン2
+            lesson-3:
+              key: レッスン3
+            lesson-4:
+              key: レッスン4
+            lesson-5:
+              key: レッスン5
+              name: 評価日
+            lesson-16:
+              key: レッスン16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: サンド ボックス
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: 評価日
+            Java Lab:
+              name: Javaラボ
+              key: Javaラボ
+            lesson-1:
+              key: レッスン1
+            lesson-2:
+              key: レッスン2
+            lesson-3:
+              key: レッスン3
+            lesson-4:
+              key: レッスン4
+            lesson-5:
+              key: レッスン5
+            lesson-10:
+              key: レッスン10
+            lesson-6:
+              key: レッスン6
+            lesson-7:
+              key: レッスン7
+            lesson-8:
+              key: レッスン8
+            lesson-9:
+              key: レッスン9
+            lesson-11:
+              key: レッスン11
+            lesson-12:
+              key: レッスン12
+            lesson-13:
+              key: レッスン13
+            lesson-14:
+              key: レッスン14
+            lesson-15:
+              key: レッスン15
+              name: 評価日
+            lesson-16:
+              key: レッスン16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: サンド ボックス

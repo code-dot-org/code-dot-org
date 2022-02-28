@@ -1254,6 +1254,156 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Modifiche alla lezione virtuale",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Vedere l'IA"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Lezione 6"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Lezione 6"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "IA: Dati di apprendimento e distorsioni"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Progettare la Raccolta dei Dati"
+        },
+        "design_mode/csd/2021": {
+          "name": "Design Mode"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Design Mode"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Numeri Casuali"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Come Funzionano i Computer: Hardware e Software"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funzioni"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Introduzione agli array"
+        },
+        "arrays/csd/2021": {
+          "name": "Insiemi"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Riprodurre Note"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Cicli con contatore"
+        },
+        "for_loops/csd/2021": {
+          "name": "Cicli con contatore"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Eventi Accelerometro"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Come Funzionano i Computer: Circuiti e Logica"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Cos'è l'Apprendimento Automatico (Machine Learning)"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "Disegnare Forme"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "Disegnare Forme"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "Forme e Parametri"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "name": "Forme e Parametri"
+        },
+        "naming_variables/csd/2021": {
+          "name": "Nominare le Variabili"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variabili"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Numeri Casuali"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "The Animation Tab"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Personaggi"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Espressioni Booleane"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Istruzioni Condizionali"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Dichiarazioni Se/altrimenti"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Velocità"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Velocità"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Rilevamento delle Collisioni"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Rilevamento delle Collisioni"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Scorrimento Laterale"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Scorrimento Laterale"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Gioco del Volantino"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Gioco del Volantino"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funzioni"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funzioni"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Cos'è un Computer?"
+        },
+        "html_tags/csd/2021": {
+          "name": "Tag HTML"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Intestazioni e Paragrafi"
+        },
+        "lists/csd/2021": {
+          "name": "Liste"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Orme digitali"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Introduzione a CSS - Parte 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Introduzione a CSS - Parte 2"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Pubblicare il tuo sito web"
         }
       }
     }

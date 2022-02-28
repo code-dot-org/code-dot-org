@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_03_122150) do
+ActiveRecord::Schema.define(version: 2022_02_24_161129) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1351,6 +1351,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_122150) do
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "position"
     t.index ["key", "programming_environment_id"], name: "index_programming_environment_categories_on_key_and_env_id", unique: true
     t.index ["programming_environment_id"], name: "index_programming_environment_categories_on_environment_id"
   end
@@ -1405,6 +1406,19 @@ ActiveRecord::Schema.define(version: 2022_02_03_122150) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true
+  end
+
+  create_table "reference_guides", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.bigint "course_version_id", null: false
+    t.string "parent_reference_guide_key"
+    t.string "display_name"
+    t.text "content"
+    t.integer "position", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_version_id", "key"], name: "index_reference_guides_on_course_version_id_and_key", unique: true
+    t.index ["course_version_id", "parent_reference_guide_key"], name: "index_reference_guides_on_course_version_id_and_parent_key"
   end
 
   create_table "regional_partner_program_managers", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

@@ -2042,6 +2042,105 @@
           "New Play Lab Project_callout1": "Wybierz kategorię, aby zobaczyć bloki dostępne w przyborniku! Przeciągaj je na obszar roboczy, aby dodać do swojego programu",
           "New Play Lab Project_callout2": "Naciśnij przycisk \"Uruchom\", aby zapisać i uruchomić swój program",
           "sign_in_to_save_project": "Chcesz zapisać projekt na później? Zaloguj się i zapisz go na swoim koncie!"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Kliknij tutaj, by wyświetlić siatkę."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Zmień liczbę tutaj"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Oto kod"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Oto kod",
+          "CSD_U3_rect_c2": "Przeciągnij ten blok do obszaru kodu."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Tutaj dodaj swój kod"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Co robi ta linia?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Definiuj początekGry tutaj"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Definuj przesuńGracza() tutaj"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Sprawdź, czy gracz wygrał"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Zmień liczbę tutaj"
         }
       }
     }

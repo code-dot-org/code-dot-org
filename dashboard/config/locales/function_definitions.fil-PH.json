@@ -215,6 +215,9 @@
           },
           "square": {
             "name": "parisukat"
+          },
+          "sun": {
+            "name": "araw"
           }
         },
         "Geometric Sun_2018": {
@@ -226,6 +229,9 @@
           },
           "square": {
             "name": "parisukat"
+          },
+          "sun": {
+            "name": "araw"
           }
         },
         "InspirationalArtwork": {

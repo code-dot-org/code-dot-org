@@ -7,7 +7,6 @@ class PrintCertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
-    assert_equal "max-age=0, private, must-revalidate, no-store", @response.headers["Cache-Control"]
   end
 
   test 'can show given bogus course' do

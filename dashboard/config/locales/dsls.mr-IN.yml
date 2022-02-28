@@ -1006,7 +1006,7 @@ mr-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: मला माहीत नाही
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1014,7 +1014,7 @@ mr-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: मला माहीत नाही
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1022,7 +1022,7 @@ mr-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: मला माहीत नाही
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1030,7 +1030,7 @@ mr-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: मला माहीत नाही
         questions:
         - {}
       courseC_multi_starWars_predict2:
@@ -1067,65 +1067,73 @@ mr-IN:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -1924,31 +1932,6 @@ mr-IN:
           दिसल्यावर, तुमच्या विद्यार्थ्यांना मार्गदर्शन करण्यासाठी दररोजच्या धड्याच्या
           प्लॅनबरोबर, कॉम्प्युटर न लागणाऱ्या अनप्लग्ड कृतींबरोबर आणि इतर शिक्षकांसाठी
           कनेक्ट करण्यासाठी फोरम्सबरोबर पुढे जा."
-      OPD-K5 CS Courses_dani:
-        markdown: "# नियोजन  > Code.org वर सुरुवात करणे\n\n\n## पायरी 1: एक अभ्यासक्रम
-          निवडणे \nआमच्या सर्व अभ्यासक्रमांची -- पूर्व वाचकांपासून ते हायस्कूलच्या
-          विद्यार्थांपर्यंतच्या  -- यादी आमच्या **[अभ्यासक्रम कॅटलॉगमध्ये ](https://studio.code.org/courses)**
-          दिलेली आहे. तुम्ही ज्या संगणक शास्त्राच्या मूलभूत गोष्टींच्या धड्यांचा सराव
-          करत आहात, ते पाहण्यासाठी आमच्या  **[प्राथमिक पेज]  (https://code.org/educate/curriculum/elementary-school)
-          वर जा** आणि \"अभ्यासक्रम\" विभागापर्यंत खाली स्क्रोल करा. आमचे सर्व अभ्यासक्रम
-          विनामूल्य उपलब्ध आहेत. विविध विषयांबरोबर अभ्यासक्रमाचे कसे एकत्रीकरण करता
-          येईल हे ठरवण्यासाठी तुमच्या शाळेतील सहकाऱ्यांबरोबर बोला.  ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          पायरी 2: तुमच्या वर्गाचा विभाग तयार करा \nतुमच्या विद्यार्थ्यांची प्रगती
-          पाहण्यासाठी, तुमच्या विद्यार्थ्यांसाठी लॉगीन कार्ड्स छापण्यासाठी, त्यांची
-          खाती व्यवस्थापित करण्यासाठी आणि अभ्यासक्रम संपल्यावर त्यांना घरी घेऊन जाण्यासाठी
-          प्रमाणपत्रे छापण्यासाठी एक वर्गाचा विभाग तयार करा. **[छोटासा व्हिडीओ पाहण्यासाठी](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          या लिंकवर क्लिक करा, जिथे  Code.org वर तुमचा पहिला संगणक शास्त्राचा वर्ग
-          कसा तयार करायचा याचे प्रात्यक्षिक दिसेल. तुम्ही **[या मदतीच्या लेखामध्ये]
-          सुद्धा पायऱ्या पाहू शकता (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          पायरी 3: तुमच्या विभागाला अभ्यासक्रम असाईन करा  \nतुम्ही शिकवत असलेल्या
-          अभ्यासक्रमात क्लिक करा -- तुम्हाला खाली दाखवल्याप्रमाणे एक स्क्रीन दिसेल.
-          नंतर तुम्ही \"अभ्यासक्रम असाईन करा\" वर क्लिक करा आणि तो अभ्यासक्रम तुमच्या
-          एका विभागाला असाईन करा. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          पायरी 4: शिकवायला सुरुवात करा! \nसंगणक शास्त्रातील संकल्पना तुमच्या वर्गात
-          आणण्यासाठी फक्त एक धडा पुरेसा आहे. संगणक शास्त्राबद्दल तुमच्या विद्यार्थ्यांमध्ये
-          उत्साह दिसल्यावर, तुमच्या विद्यार्थ्यांना मार्गदर्शन करण्यासाठी दररोजच्या
-          धड्याच्या प्लॅनबरोबर, कॉम्प्युटर न लागणाऱ्या अनप्लग्ड कृतींबरोबर आणि इतर
-          शिक्षकांसाठी कनेक्ट करण्यासाठी फोरम्सबरोबर पुढे जा."
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: आर्टीस्ट तीन समान बाजू असलेला एक त्रिकोण काढेल.
@@ -3231,3 +3214,105 @@ mr-IN:
         content1: येथे वर्णन आहे
       csf_putting_a_stop_to_online_meanness:
         content1: येथे वर्णन आहे
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: येथे वर्णन आहे
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: येथे वर्णन आहे
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: येथे वर्णन आहे
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: येथे वर्णन आहे
+      CSD U6 LED create intro_2021:
+        content1: येथे वर्णन आहे
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: येथे वर्णन आहे
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

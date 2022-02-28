@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {assign, isEmpty} from 'lodash';
 import FormController from '../../form_components_func/FormController';
 import AboutYou from './AboutYou';
 import ChooseYourProgram from './ChooseYourProgram';
@@ -17,6 +18,23 @@ const pageComponents = [
   ProfessionalLearningProgramRequirements,
   AdditionalDemographicInformation
 ];
+const autoComputedFields = [
+  'cs_total_course_hours',
+  'regionalPartnerGroup',
+  'regionalPartnerId',
+  'regionalPartnerWorkshopIds'
+];
+
+const sendFirehoseEvent = (userId, event) => {
+  firehoseClient.putRecord(
+    {
+      user_id: userId,
+      study: 'application-funnel',
+      event: event
+    },
+    {includeUserId: false}
+  );
+};
 
 const TeacherApplication = props => {
   const {
@@ -25,6 +43,7 @@ const TeacherApplication = props => {
     savedFormData,
     accountEmail,
     userId,
+    savedStatus,
     schoolId
   } = props;
 
@@ -46,17 +65,8 @@ const TeacherApplication = props => {
     }
   };
 
-  // [MEG] TODO: Should started-teacher-application be sent if they're coming back to a saved app?
   const onInitialize = () => {
-    // Log the user ID to firehose.
-    firehoseClient.putRecord(
-      {
-        user_id: userId,
-        study: 'application-funnel',
-        event: 'started-teacher-application'
-      },
-      {includeUserId: false}
-    );
+    sendFirehoseEvent(userId, 'started-teacher-application');
   };
 
   const getPageProps = () => ({
@@ -66,17 +76,29 @@ const TeacherApplication = props => {
   const onSuccessfulSubmit = () => {
     // Let the server display a confirmation page as appropriate
     window.location.reload(true);
+
+    sendFirehoseEvent(userId, 'submitted-teacher-application');
   };
 
-  // [MEG] TODO: Should a different GA link be sent if they're working on a saved application?
+  const onSuccessfulSave = () => {
+    // only send firehose event on the first save of the teacher application
+    !savedStatus && sendFirehoseEvent(userId, 'saved-teacher-application');
+  };
+
   const onSetPage = newPage => {
     const nominated = queryString.parse(window.location.search).nominated;
 
     // Report a unique page view to GA.
     let url = '/pd/application/teacher/';
     url += newPage + 1;
-    if (nominated) {
-      url += '?nominated=true';
+
+    const parameters = assign(
+      {},
+      nominated && {nominated: 'true'},
+      savedStatus === 'incomplete' && {incomplete: 'true'}
+    );
+    if (!isEmpty(parameters)) {
+      url += `?${queryString.stringify(parameters)}`;
     }
 
     ga('set', 'page', url);
@@ -87,11 +109,13 @@ const TeacherApplication = props => {
     <FormController
       {...props}
       pageComponents={pageComponents}
+      autoComputedFields={autoComputedFields}
       getPageProps={getPageProps}
       getInitialData={getInitialData}
       onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
+      onSuccessfulSave={onSuccessfulSave}
       sessionStorageKey={sessionStorageKey}
       submitButtonText={submitButtonText}
       validateOnSubmitOnly={true}

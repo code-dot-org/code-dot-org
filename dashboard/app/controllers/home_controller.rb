@@ -70,10 +70,6 @@ class HomeController < ApplicationController
     render 'home/index'
   end
 
-  def certificate_link_test
-    render 'certificate_link_test', formats: [:html]
-  end
-
   # This static page combines TOS and Privacy partials all in one page
   # for easy printing.
   def terms_and_privacy
@@ -190,6 +186,7 @@ class HomeController < ApplicationController
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
+      @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
       @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids

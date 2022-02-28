@@ -2899,6 +2899,10 @@ hy:
           lesson_groups:
             lessonGroup-3:
               display_name: փոփոխականների
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: գործառույթները
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3055,6 +3059,9 @@ hy:
             lessonGroup-8:
               display_name: փոփոխականների
         csa1-2022:
+          lessons:
+            lesson-9:
+              name: loops
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
@@ -3085,6 +3092,21 @@ hy:
             lessonGroup-2:
               display_name: պարունակություն
         csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: loops
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն

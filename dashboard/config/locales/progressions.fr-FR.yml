@@ -20,6 +20,7 @@ fr:
       Artist Intro with JR Hildebrande: Intro Artiste avec JR Hildebrande
       Artist Project: Projet d’Artiste
       'Artist: Variables': 'Artiste: Variables'
+      Assessment: Évaluation
       Attribution: Attribution
       Back and Forth: Va et viens
       Basic Conditionals: Conditions de base
@@ -147,6 +148,7 @@ fr:
       'Exploration: For Loops': 'Exploration: Boucles « Pour »'
       'Exploration: Sample Apps': " Exemples d'Aplications"
       Explore HTML: Explorer le HTML
+      Extra: Supplémentaire
       Finish a Screen: Terminer l'écran
       Finish the Prototype: Terminer le prototype
       Finishing Functions: Terminer les fonctions
@@ -305,6 +307,7 @@ fr:
 
 '
       Sprite Lab Project: Projet Labo du Lutin
+      Sprite Movement: Le Déplacement du Lutin
       Sprite Properties: Propriétés du sprite
       Sprite Scenes: Scènes de sprites
       Sprite Velocity: Vélocité des sprites
@@ -313,7 +316,7 @@ fr:
       The Accelerometer: L’accéléromètre
       The Animation Tab: L’onglet Animation
       The Draw Loop: La Boucle Dessiner
-      The Harvester: La Moissonneuse
+      The Harvester: L'Agricultrice
       Tour of Design Mode: Visite du mode création
       Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
@@ -322,8 +325,12 @@ fr:
       Velocity and the Counter Pattern: Vélocité et le contre-modèle
       Velocity and the Counter Pattern Review: Révision de la vélocité et du contre-modèle
       Video: Vidéo
+      'Video:  Minecraft - The Agent': 'Vidéo : Minecraft - L''agent'
+      'Video:  Text  and Prompts': 'Vidéo : Texte et invites '
       'Video: "If/Else"': 'Video: « Si/Sinon »'
       'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
+      'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
+        automatique ? '
       'Video: Artist Intro with JR Hildebrand': 'Vidéo : Intro l''Artiste avec JR
         Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Vidéo : Intro l''Artiste avec JR
@@ -353,6 +360,7 @@ fr:
       'Video: Events': " Événements"
       'Video: Follow The Digital Trail': 'Vidéo :  Suivez la piste numérique'
       'Video: For Loops': 'Video: Les Boucles « Pour »'
+      'Video: Functions': 'Vidéo: Les Fonctions'
       'Video: Getting Loopy': 'Vidéo : Faire des boucles '
       'Video: Happy Maps - Unplugged Activity': 'Vidéo : Happy Maps - Activité hors
         ligne'
@@ -370,7 +378,7 @@ fr:
       'Video: Introducing Sprite Lab': " Introduction au Labo des Lutins"
       'Video: Introduction to Play Lab': " Introduction au Labo de jeux"
       'Video: Introduction to Sprites': 'Vidéo : Introduction aux sprites'
-      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle draw'
+      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle dessine'
       'Video: Loops in Artist': " Les Boucles dans Artiste"
       'Video: Loops with the Artist': 'Vidéo : Les Boucles avec l''Artiste'
       'Video: Maze Intro - Programming with Blocks': 'Vidéo - Intro Maze : Programmation
@@ -414,7 +422,7 @@ fr:
       'Video: The Big Event - Unplugged Activity': 'Vidéo : Le grand événement – Activité
         hors ligne'
       'Video: The Collector': 'Vidéo : Le collectionneur '
-      'Video: The Harvester': " La Moissonneuse"
+      'Video: The Harvester': 'Video: l''Agricultrice'
       'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
       'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables débranchées dans
         les enveloppes '
@@ -424,6 +432,8 @@ fr:
       'Video: Warm Up': 'Vidéo : échauffement'
       'Video: What Makes a Computer, a Computer?': 'Vidéo : De quoi est fait un ordinateur
         ?'
+      'Video: What is Machine Learning?': 'Vidéo : Qu''est-ce que l''apprentissage
+        automatique ?'
       'Video: While Loops with the Farmer': " Les Boucles Tant Que avec la Fermière"
       'Video: Wrap-up': 'Vidéo : Conclusion '
       Warm Up: Warm-up (Séance d’échauffement)

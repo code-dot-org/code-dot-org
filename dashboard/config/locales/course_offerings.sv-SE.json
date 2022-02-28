@@ -1,0 +1,40 @@
+{
+  "sv-SE": {
+    "data": {
+      "course_offerings": {
+        "coursea": "Kurs A",
+        "courseb": "Kurs B",
+        "coursec": "Kurs C",
+        "coursed": "Kurs D",
+        "coursee": "Kurs E",
+        "coursef": "Kurs F",
+        "csp": "AP ® Computer Science principer",
+        "20-hour": "20 timmars Intro kurs",
+        "flappy": "Flappy kod",
+        "jigsaw": "Pussel",
+        "algebra": "Datavetenskap i Algebra",
+        "aquatic": "Minecraft: Resande vattenlevande",
+        "artist": "Konstnären",
+        "basketball": "Göra en basketmatch",
+        "course1": "Kurs 1",
+        "course2": "Kurs 2",
+        "course3": "Kurs 3",
+        "course4": "Kurs 4",
+        "frozen": "Koda med Anna och Elsa",
+        "gumball": "Gumball Play Lab",
+        "hourofcode": "Klassisk labyrint",
+        "iceage": "Ice Age Play Lab",
+        "infinity": "Disney Infinity Play Lab",
+        "mc": "Minecraft Hour of Code",
+        "minecraft": "Minecraft Hour of Code Designer",
+        "outbreak": "Utbrottssimulator",
+        "pixelation": "Pixelering",
+        "playlab": "Spel-labb",
+        "sports": "Sport",
+        "text-compression": "Text komprimering",
+        "outbreak-csc": "Utbrott",
+        "edit-code": "Redigera kod"
+      }
+    }
+  }
+}

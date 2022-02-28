@@ -19034,6 +19034,8 @@ en:
           lessons:
             Sprite Lab:
               name: Sprite Lab Blocks
+              description_student: 
+              description_teacher: 
             Course F Introduction:
               name: Introducing Sprite Lab
             Learning Sprites with Sprite Lab:
@@ -23279,14 +23281,78 @@ en:
           description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
         csa9-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: The AP CSA Exam
+              description_student: You did it! You have completed the content for the course, and now it is time to prepare for the AP CSA Exam. In the process, you identify and answer questions you may have about the exam. You explore test-testing strategies and study resources that you can use to prepare for the exam.
+              description_teacher: Students learn about the structure and expectations of the AP CSA Exam. In the process, students identify and answer questions about the exam. Students explore test-taking strategies and study resources that they can use to prepare for the exam.
+            lesson-2:
+              name: MCQ Pre-Assessment
+              description_student: To identify your current strengths and weaknesses on the multiple-choice portion of the AP CSA Exam, you take a Multiple-Choice Pre-Assessment on AP Classroom. Best of luck!
+              description_teacher: Students complete a Multiple-Choice Pre-Assessment on AP Classroom.
+            lesson-3:
+              name: MCQ Study Plan
+              description_student: You review your results from the multiple-choice pre-assessment to create a study plan.
+              description_teacher: Students review their results from the multiple-choice pre-assessment to create a study plan.
+            lesson-4:
+              name: MCQ Practice – Day 1
+              description_student: Now it's time to practice! You identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
+              description_teacher: Students identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
+            lesson-5:
+              name: MCQ Practice – Day 2
+              description_student: You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam.
+              description_teacher: Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.
+            lesson-6:
+              name: FRQ Pre-Assessment
+              description_student: To identify your current strengths and weaknesses on the FRQ portion of the AP CSA Exam, you take an FRQ Pre-Assessment. Best of luck!
+              description_teacher: 'Students complete an FRQ Pre-Assessment. '
+            lesson-7:
+              name: FRQ Study Plan
+              description_student: You review your results from the FRQ pre-assessment to create a study plan.
+              description_teacher: Students review their results from the FRQ pre-assessment to create a study plan.
+            lesson-8:
+              name: FRQ Practice – Day 1
+              description_student: You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam.
+              description_teacher: Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.
+            lesson-9:
+              name: FRQ Practice – Day 2
+              description_student: You identify strategies for approaching FRQs on the AP CSA Exam.
+              description_teacher: Students identify strategies for approaching FRQs on the AP CSA Exam.
+            lesson-10:
+              name: Mock MCQ Exam – Day 1
+              description_student: You complete the first half of a mock AP CSA multiple-choice exam. Best of luck!
+              description_teacher: Students complete the first half of a mock AP CSA multiple-choice exam.
+            lesson-11:
+              name: Mock MCQ Exam – Day 2
+              description_student: You complete the second half of a mock AP CSA multiple-choice exam. Best of luck!
+              description_teacher: Students complete the second half of a mock AP CSA multiple-choice exam.
+            lesson-12:
+              name: Mock MCQ Exam – Day 3
+              description_student: You review your results on the MCQ Mock Exam and update your study plans.
+              description_teacher: Students review their results on the MCQ Mock Exam and update their study plans.
+            lesson-13:
+              name: Mock FRQ Exam – Day 1
+              description_student: You complete the first half of a mock AP CSA free response exam. Best of luck!
+              description_teacher: Students complete the first half of a mock AP CSA free response exam.
+            lesson-14:
+              name: Mock FRQ Exam – Day 2
+              description_student: You complete the second half of a mock AP CSA free response exam. Best of luck!
+              description_teacher: Students complete the second half of a mock AP CSA free response exam.
+            lesson-15:
+              name: Mock FRQ Exam – Day 3
+              description_student: You review your results on the FRQ Mock Exam and update your study plans.
+              description_teacher: Students review their results on the FRQ Mock Exam and update their study plans.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Review and Practice
+            lessonGroup-3:
+              display_name: Mock Exams
           name: csa9-pilot
-          title: ''
+          title: AP Exam Review and Practice
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: This unit prepares students for the AP CSA Exam by reviewing concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
+          student_description: This unit prepares you for the AP CSA Exam by reviewing concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
         k5-onlinepd-2021:
           title: Teaching Computer Science Fundamentals ('21-'22)
           description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
@@ -28323,16 +28389,19 @@ en:
           lessons:
             lesson-1:
               name: 'Mini-Project: On-The-Go App'
-              description_student: 
-              description_teacher: 
+              description_student: Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected
+              description_teacher: |-
+                In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.
+
+                **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?
             lesson-2:
               name: 'Project: Human Device Interaction'
               description_student: 
               description_teacher: 
             lesson-3:
               name: 'Mini-Project: Interactive Art'
-              description_student: 
-              description_teacher: 
+              description_student: Create a piece of interactive artwork using a Circuit Playground and physical materials
+              description_teacher: In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.
             Project - Prototype an Innovation:
               name: Project - Prototype an Innovation
               description_student: 'In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. '
@@ -28342,61 +28411,100 @@ en:
               description_student: 'In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
 
 '
-              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+              description_teacher: |-
+                In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+
+                **Question of the Day:** What is a computing innovation?
             Designing Screens with Code:
               name: Updating Screen Elements
               description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality
-              description_teacher: 
+              description_teacher: |-
+                Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen
+
+                **Question of the Day:** How can you update design elements of an app?
             The Circuit Playground:
               name: The Circuit Playground
               description_student: 'In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. '
-              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.
+              description_teacher: |-
+                In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.
+
+                **Question of the Day:** What outputs can I control on the circuit playground?
             Board Events:
               name: Board Events
               description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
-              description_teacher: 
+              description_teacher: |-
+                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+
+                **Question of the Day:** How can the user interact with the circuit playground for input?
             Arrays and Color LEDs:
               name: Color LEDs
               description_student: In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground.
-              description_teacher: 
+              description_teacher: |-
+                In this lesson, students learn how to use the 10 color LEDs on the Circuit Playground. Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+
+                **Question of the Day:** How can you use the colored LEDs in an app?
             Getting Properties:
               name: Getting Screen Inputs
               description_student: In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen
-              description_teacher: 
+              description_teacher: |-
+                Students learn to use several new design elements - text inputs, dropdowns, and sliders - so they can get user input from the screen of their apps. This lesson also introduces students to the getProperty and getText blocks, which allow them to access their user input in their code. Students first practice using these tools to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new event trigger, change, is also introduced to represent when a dropdown or slider changes values.
+
+                **Question of the Day:** How can we use the app screen for user input?
             lesson-9:
               name: Variables and If Statements
-              description_student: 
-              description_teacher: 
+              description_student: Learn to make more complex programs that keep track of information and make decisions, using variables and if-statements.
+              description_teacher: |-
+                In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the circuit playground and creating more complex input/output behaviors, such as counting the number of button presses before having the circuit playground make a noise. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.
+
+                **Question of the Day:** How can I create more complex programs that keep track of information and make decisions?
             lesson-10:
-              name: Combining Inputs
-              description_student: 
-              description_teacher: 
+              name: Combining Inputs and Outputs
+              description_student: Combine inputs and outputs from the screen and Circuit Playground to make complex apps
+              description_teacher: |-
+                In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.
+
+                **Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?
             Analog Input:
               name: Board Sensors
-              description_student: 'In this lesson, you will get to explore the sensors on the Circuit Playground and write programs that respond to the environment.
+              description_student: 'Explore the sensors on the Circuit Playground and write programs that respond to the environment.
 
 '
-              description_teacher: 
+              description_teacher: |-
+                In this lesson, students explore how the three sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all or may interact without actually realizing they are doing so.
+
+                **Question of the Day:** How can I use sensors to detect changes in the environment?
             Accelerometer:
               name: Accelerometer
               description_student: 'In this lesson, you will explore the accelerometer and its capabilities. '
-              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_teacher: |-
+                In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+
+                **Question of the Day:** How can I use the accelerometer to create apps?
             Making Music:
               name: Making Music
               description_student: 'In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. '
-              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, learn to play sequences of notes, forming simple songs.
+              description_teacher: |-
+                In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+
+                **Question of the Day:** How can I use the buzzer to play musical notes or songs?
             Functions with Parameters:
               name: Functions
-              description_student: 'In this lesson, you will create and call functions, then learn how to use parameters to make functions useful across many different situations
+              description_student: 'In this lesson, you will learn how to create and call functions, then learn how to use parameters to make functions useful across many different situations
 
 '
-              description_teacher: 
+              description_teacher: |-
+                This lesson introduces students to functions as way to organize and group repeated blocks of code together, such as changing all of the LEDs to red or blue. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts - for example, changing all the LEDs to a certain color rather than always changing them red or blue. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.
+
+                **Question of the Day:** How can I use functions to organize and simplify my code?
             Circuits and Physical Prototypes:
               name: Physical Outputs and LEDs
               description_student: 'In this lesson, you will learn to use wires to create devices with external LEDs and add code to control these lights.
 
 '
-              description_teacher: 
+              description_teacher: |-
+                In this lesson, students learn how to attach external LEDs to their circuit playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.
+
+                **Question of the Day:** How can I use external LEDs to create physical prototypes?
             Project - Make a Game:
               name: Project - Make a Game
               description_student: In this lesson, you will take what you have learned through chapter one, and develop an app of your own design that uses the board to output information.
@@ -28406,8 +28514,11 @@ en:
 
             Physical Outputs:
               name: Physical Inputs and Buttons
-              description_student: 
-              description_teacher: 
+              description_student: Learn how to connect external wires to create input events when the wires touch, simulating a button press
+              description_teacher: |-
+                In this lesson, students learn how to connect external wires to create input events when the wires touch, simulating a button press. Students learn to use code to recognize these external button events to make changes to their app. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.
+
+                **Question of the Day:** How can I use external buttons to create physical prototypes?
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1
@@ -28881,13 +28992,77 @@ en:
           description_audience: ''
           name: csa8-pilot-facilitator
         csa9-pilot-facilitator:
-          title: ''
-          description: ''
-          student_description: ''
+          title: AP Exam Review and Practice
+          description: This unit prepares students for the AP CSA Exam by reviewing concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
+          student_description: This unit prepares you for the AP CSA Exam by reviewing concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
           description_short: ''
           description_audience: ''
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            The AP CSA Exam:
+              name: The AP CSA Exam
+              description_student: You did it! You have completed the content for the course, and now it is time to prepare for the AP CSA Exam. In the process, you identify and answer questions you may have about the exam. You explore test-testing strategies and study resources that you can use to prepare for the exam.
+              description_teacher: Students learn about the structure and expectations of the AP CSA Exam. In the process, students identify and answer questions about the exam. Students explore test-taking strategies and study resources that they can use to prepare for the exam.
+            MCQ Pre-Assessment:
+              name: MCQ Pre-Assessment
+              description_student: To identify your current strengths and weaknesses on the multiple-choice portion of the AP CSA Exam, you take a Multiple-Choice Pre-Assessment on AP Classroom. Best of luck!
+              description_teacher: Students complete a Multiple-Choice Pre-Assessment on AP Classroom.
+            MCQ Study Plan:
+              name: MCQ Study Plan
+              description_student: You review your results from the multiple-choice pre-assessment to create a study plan.
+              description_teacher: Students review their results from the multiple-choice pre-assessment to create a study plan.
+            MCQ Practice – Day 1:
+              name: MCQ Practice – Day 1
+              description_student: Now it's time to practice! You identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
+              description_teacher: Students identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
+            MCQ Practice – Day 2:
+              name: MCQ Practice – Day 2
+              description_student: You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam.
+              description_teacher: Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.
+            FRQ Pre-Assessment:
+              name: FRQ Pre-Assessment
+              description_student: To identify your current strengths and weaknesses on the FRQ portion of the AP CSA Exam, you take an FRQ Pre-Assessment. Best of luck!
+              description_teacher: 'Students complete an FRQ Pre-Assessment. '
+            FRQ Study Plan:
+              name: FRQ Study Plan
+              description_student: You review your results from the FRQ pre-assessment to create a study plan.
+              description_teacher: Students review their results from the FRQ pre-assessment to create a study plan.
+            FRQ Practice – Day 1:
+              name: FRQ Practice – Day 1
+              description_student: You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam.
+              description_teacher: Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.
+            FRQ Practice – Day 2:
+              name: FRQ Practice – Day 2
+              description_student: You identify strategies for approaching FRQs on the AP CSA Exam.
+              description_teacher: Students identify strategies for approaching FRQs on the AP CSA Exam.
+            Mock MCQ Exam – Day 1:
+              name: Mock MCQ Exam – Day 1
+              description_student: You complete the first half of a mock AP CSA multiple-choice exam. Best of luck!
+              description_teacher: Students complete the first half of a mock AP CSA multiple-choice exam.
+            Mock MCQ Exam – Day 2:
+              name: Mock MCQ Exam – Day 2
+              description_student: You complete the second half of a mock AP CSA multiple-choice exam. Best of luck!
+              description_teacher: Students complete the second half of a mock AP CSA multiple-choice exam.
+            Mock MCQ Exam – Day 3:
+              name: Mock MCQ Exam – Day 3
+              description_student: You review your results on the MCQ Mock Exam and update your study plans.
+              description_teacher: Students review their results on the MCQ Mock Exam and update their study plans.
+            Mock FRQ Exam – Day 1:
+              name: Mock FRQ Exam – Day 1
+              description_student: You complete the first half of a mock AP CSA free response exam. Best of luck!
+              description_teacher: Students complete the first half of a mock AP CSA free response exam.
+            Mock FRQ Exam – Day 2:
+              name: Mock FRQ Exam – Day 2
+              description_student: You complete the second half of a mock AP CSA free response exam. Best of luck!
+              description_teacher: Students complete the second half of a mock AP CSA free response exam.
+            Mock FRQ Exam – Day 3:
+              name: Mock FRQ Exam – Day 3
+              description_student: You review your results on the FRQ Mock Exam and update your study plans.
+              description_teacher: Students review their results on the FRQ Mock Exam and update their study plans.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Review and Practice
+            lessonGroup-3:
+              display_name: Mock Exams
           name: csa9-pilot-facilitator
         coursea-2022:
           lessons:
@@ -29009,6 +29184,7 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
+          name: coursea-2022
         express-2022:
           lessons:
             Programming with Angry Birds:
@@ -30946,44 +31122,198 @@ en:
           lessons:
             lesson-1:
               name: Welcome to CSA
+              description_student: |-
+                **What does software engineering mean to me?**
+
+                Believing in one's own software engineering identity develops confidence and perseverance. In this lesson, you are introduced to key characteristics and skills of software engineers and explore common perceptions. You have many of the same characteristics and skills as software engineers, which you realize as you discover your software engineering identity.
+              description_teacher: |-
+                **What does software engineering mean to me?**
+
+                Believing in one's own software engineering identity develops confidence and perseverance. In this lesson, students are introduced to key characteristics and skills of software engineers and explore common perceptions. Students realize that they have many of the same characteristics and skills as software engineers and discover their software engineering identity.
             lesson-2:
-              name: Exploring The Neighborhood
+              name: Java Lab
+              description_student: |-
+                **What are some of the primary components of a Java program?**
+
+                In this lesson, you are introduced to the Java Lab programming environment to navigate Java source code files and identify correct Java syntax. You experiment with the structure of a Java program to identify syntax rules of the Java programming language. While experimenting with Java syntax, you explore The Neighborhood and how the `Painter` can perform a task when given a set of instructions.
+              description_teacher: |-
+                **What are some of the primary components of a Java program?**
+
+                Students are introduced to the Java Lab programming environment to navigate Java source code files and identify correct Java syntax. Students experiment with the structure of a Java program to identify syntax rules of the Java programming language. While experimenting with Java syntax, students explore The Neighborhood and how the `Painter` can perform a task when given a set of instructions.
             lesson-3:
-              name: Working with the Painter
+              name: The Neighborhood
+              description_student: |-
+                **What is object-oriented programming?**
+
+                In this lesson, you explore the structure of The Neighborhood to identify the structure of the grid and potential obstacles. You learn that classes are blueprints that define the attributes and behaviors that an object can have and analyze the `Painter` class to identify these components. You then practice creating `Painter` objects using the `new` keyword and determining the current state of the objects.
+              description_teacher: |-
+                **What is object-oriented programming?**
+
+                Students explore the structure of The Neighborhood to identify the organization of the grid and potential obstacles. Students learn that classes are blueprints that define the attributes and behaviors that an object can have and analyze the `Painter` class to identify these components. Students then practice creating `Painter` objects using the `new` keyword and determining the current state of the objects.
             lesson-4:
               name: Navigating and Painting
+              description_student: |-
+                **What is a method?**
+
+                The `Painter` class has behaviors, or methods, to navigate and paint The Neighborhood. In this lesson, you learn the syntax for calling methods in Java to call methods from the `Painter` class and practice debugging syntax errors.
+              description_teacher: |-
+                **What is a method?**
+
+                Students learn the syntax for calling methods in Java to practice navigating and painting The Neighborhood. Students call `void` methods from the `Painter` class and practice debugging syntax errors.
             lesson-5:
-              name: Making Decisions
+              name: One-Way Selection Statements
+              description_student: |-
+                **How can I specify alternate outcomes based on the current state of the `Painter`?**
+
+                So far, you have written statements that execute in the order written. In this lesson, you learn to use conditional statements, or `if` statements, in your programs to make decisions based on the current state of a `Painter` object. The `Painter` class has methods that tell you whether a `Painter` object is on paint, is on a paint bucket, or can move in a specific direction, which you can use with `if` statements to make decisions based on the results of these method calls. As the complexity of your programs increases, you identify debugging strategies to find and correct syntax and logic errors.
+              description_teacher: |-
+                **How can I specify alternate outcomes based on the current state of the `Painter`?**
+
+                Students incorporate `if` statements into their programs to make decisions based on the current state of a `Painter` object. Students learn about methods that return `boolean` values and how to execute a specific block of code based on the method call result. As the complexity of their programs increases, students identify debugging strategies to find and correct syntax and logic errors.
             lesson-6:
-              name: Creating Types of Painters
+              name: PainterPlus
+              description_student: |-
+                **Why would I use inheritance?**
+
+                The `Painter` class has several methods for navigating and painting The Neighborhood, but it also has limitations. In this lesson, you consider the need for designing specialized types of classes and learn about inheritance to create a new type of `Painter`. You learn how to create this new type of `Painter` with the same attributes and behaviors as the `Painter` class to add new behaviors to expand its capabilities.
+              description_teacher: |-
+                **Why would I use inheritance?**
+
+                Students consider designing specialized types of classes and use inheritance to create the `PainterPlus` class. Students learn to create a new class and write a constructor that calls the superclass constructor using the `super` keyword. Students realize that while the `PainterPlus` class can perform the same behaviors as the `Painter` class, they can add new behaviors to expand its capabilities.
             lesson-7:
-              name: Improving Programs with Code Reviews
+              name: Writing Methods
+              description_student: |-
+                **How do I write a new method in a subclass?**
+
+                A `PainterPlus` object can do everything a `Painter` object can. In this lesson, you write and use a new `void` method in the `PainterPlus` class to expand its capabilities. You first learn about the accessibility of new behaviors between superclasses and subclasses to identify situations when to write new methods in the superclass or the subclass. In the process, you discover that methods written in a subclass are not accessible in the superclass.
+              description_teacher: |-
+                **How do I write a new method in a subclass?**
+
+                Students learn to write and use a new `void` method in the `PainterPlus` class to expand its capabilities. Students first consider the accessibility of new behaviors between superclasses and subclasses to identify situations when to write new methods in the superclass or the subclass. In the process, students discover that methods written in a subclass are not accessible in the superclass.
             lesson-8:
-              name: Repeating Instructions
+              name: Code Reviews
+              description_student: |-
+                **How do software engineers obtain feedback from peers?**
+
+                Software engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you identify the importance of commenting and program structure to improve readability. You learn about code reviews and practice giving and receiving feedback.
+              description_teacher: |-
+                **How do software engineers obtain feedback from peers?**
+
+                Software engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. Students identify the importance of commenting and program structure to improve readability. Students learn about code reviews and practice giving and receiving feedback.
             lesson-9:
-              name: Expanding Decisions
+              name: Loops
+              description_student: |-
+                **How can I repeat a set of instructions based on the state of an object?**
+
+                You have used selection statements to execute a block of code if the condition is `true`. In this lesson, you are introduced to iteration using `while` loops to repeat a block of code as long as the condition is `true`. You combine `while` loops with methods that return information about the state of a `PainterPlus` object to implement a new method in the `PainterPlus` class. You practice developing algorithms using selection statements and iteration and implementing your algorithms in Java.
+              description_teacher: |-
+                **How can I repeat a set of instructions based on the state of an object?**
+
+                Students are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. Students combine `while` loops with methods that return information about the state of an object to implement a new method in an existing class. Students practice developing algorithms using selection statements and iteration and implementing them in Java.
             lesson-10:
-              name: Debugging with the Painter
+              name: Two-Way Selection Statements
+              description_student: |-
+                **How can two-way selection statements and the NOT ( `!` ) logical operator improve my algorithms?**
+
+                You have used `if` statements to execute specific instructions based on if the condition is `true`. In this lesson, you expand your knowledge of selection statements and `Boolean` expressions to use two-way selection statements and the NOT ( `!` ) logical operator. You practice using these to check the state of an object and executing a specific set of instructions based on the result.
+              description_teacher: |-
+                **How can two-way selection statements and the NOT ( `!` ) logical operator improve my algorithms?**
+
+                Students expand their knowledge of selection statements and `Boolean` expressions using two-way selection statements and the NOT ( `!` ) logical operator. Students practice using these to check the state of an object and executing a specific set of instructions based on the result.
             lesson-11:
-              name: Adding New Capabilities
+              name: Debugging Strategies
+              description_student: |-
+                **How can the console be used as a debugging tool?**
+
+                Software engineers use various tools and techniques to find and fix errors. In this lesson, you learn to print information to the console as a debugging tool to identify logic errors in your programs. You expand your `PainterPlus` class to implement a new method that displays information about the state of a `PainterPlus` object and use this method within other methods to troubleshoot errors.
+              description_teacher: |-
+                **How can the console be used as a debugging tool?**
+
+                Students learn to print information to the console as a debugging tool to identify logic errors in their programs. Students expand an existing subclass to implement a new method that displays information about the state of an object and use this method within other methods to troubleshoot errors.
             lesson-12:
-              name: Creating a StampPainter
+              name: Decomposition and Design
+              description_student: |-
+                **How do I decide what new methods to write in a program?**
+
+                You have learned how to write pseudocode to plan algorithms. In this lesson, you are introduced to decomposition and top-down design to deconstruct problems into smaller tasks and develop algorithms for these tasks. You analyze decomposition examples and identify the importance of writing clear and specific pseudocode. You write and translate algorithms into methods and consider potential edge cases to improve your programs.
+              description_teacher: |-
+                **How do I decide what new methods to write in a program?**
+
+                Students are introduced to decomposition and top-down design to deconstruct problems into smaller tasks and develop algorithms for these tasks. Students analyze decomposition examples and identify the importance of writing clear and specific pseudocode. Students write and translate algorithms into methods and consider potential edge cases to improve their programs.
             lesson-13:
-              name: Expanding the StampPainter
+              name: PatternPainter
+              description_student: |-
+                **What other subclasses could I create?**
+
+                Now that you know how to create new types of `Painter`s, plan algorithms, and write good code, you can create additional types of `Painter`s with special behaviors. In this lesson, you write a new subclass that extends `PainterPlus` and practice decomposition to develop algorithms. You translate algorithms to write methods in your new subclass.
+              description_teacher: |-
+                **What other subclasses could I create?**
+
+                Students write a new subclass and practice decomposition to develop algorithms. Students translate algorithms to write methods in their new subclass.
             lesson-14:
-              name: Creating a BackgroundPainter
+              name: BackgroundPainter
+              description_student: |-
+                **How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**
+
+                In Java, a superclass can have multiple subclasses. In this lesson, you write an additional new subclass that extends `PainterPlus` and practice using decomposition to develop algorithms. You translate algorithms to write methods in your new subclass and create multiple objects in your program.
+              description_teacher: |-
+                **How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**
+
+                Students write an additional new subclass and practice using decomposition o develop algorithms. Students translate algorithms to write methods in their new subclass and create multiple objects in their program.
             lesson-15:
-              name: Becoming Software Engineers
+              name: Open Source Code
+              description_student: |-
+                **How have I grown as a software engineer?**
+
+                You have made a lot of progress in becoming a software engineer! In this lesson, you examine open source code and connect real-world applications and the concepts you have learned in this unit. You review the characteristics of software engineers and reflect on how you demonstrate these characteristics while planning and implementing solutions.
+              description_teacher: |-
+                **How have I grown as a software engineer?**
+
+                Students examine open source code and connect real-world applications and the concepts they have learned in this unit. Students review the characteristics of software engineers and reflect on how they demonstrate these characteristics while planning and implementing solutions.
             lesson-16:
               name: Asphalt Art Project – Day 1
+              description_student: |-
+                **What do I want to represent using programming and art?**
+
+                For this project, you use the skills you have developed to create asphalt art in The Neighborhood. You choose a theme or concept for your asphalt art that represents something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your design.
+              description_teacher: |-
+                ​​**What do I want to represent using programming and art?**
+
+                For this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.
             lesson-17:
               name: Asphalt Art Project – Day 2
+              description_student: |-
+                **How will I implement my plans to create my program?**
+
+                You have now designed a new class to create your asphalt art. In this lesson, you decide which classes and methods you have developed throughout the unit and your new class to create your design. You also reinforce your software development skills and processes by participating in a code review to give and use feedback.
+              description_teacher: |-
+                **How will I implement my plans to create my program?**
+
+                Students have designed a new class to create their asphalt art. In this lesson, students decide which classes and methods they have developed  throughout the unit to use and their new class to create their design. Students reinforce software development skills and processes by participating in a code review to give and use feedback.
             lesson-18:
               name: Asphalt Art Project – Day 3
+              description_student: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                You participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success.
+              description_teacher: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                Students participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback at this as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
             lesson-19:
               name: FRQ Practice
+              description_student: |-
+                **How will I use what I know about classes and objects to answer a Free Response Question?**
+
+                You are asked to develop solutions to Free Response Questions (FRQs) on the AP CSA Exam. You learn about the structure of an FRQ and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. You use annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines.
+              description_teacher: |-
+                **How will I use what I know about classes and objects to answer a Free Response Question?**
+
+                Students are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.
             lesson-20:
               name: Unit 1 Assessment
+              description_student: Congratulations, you completed your first unit! Assess your progress through the Unit 1 Assessment.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -30992,9 +31322,9 @@ en:
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students learn fundamental Java concepts, discover their identity as software engineers, and use debugging strategies and code reviews to improve their programming skills.
+          description: This unit exposes students to object-oriented programming principles as they explore The Neighborhood. Students learn fundamental Java concepts as they navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of their programs. Students practice predicting the outcome of program code and use their `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While students work with the `Painter`, they practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, students learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, students discover their identity as software engineers and use debugging strategies and code reviews to improve their programming skills.
+          student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -31264,8 +31594,12 @@ en:
           lessons:
             lesson-1:
               name: Welcome to CSA
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: The Neighborhood
             lesson-4:
@@ -31343,8 +31677,20 @@ en:
         self-paced-pl-csa2-2022:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-csa2-2022
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-csa3-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to JavaLab
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Using variables in Java
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
           title: Support for text-based programming
@@ -31527,11 +31873,12 @@ en:
               display_name: Pilot Survey
             lessonGroup-5:
               display_name: Sandbox
-          title: Expanding Software Design
+          title: 'Expanding Software Design '
           description: In this unit, students practice software design and development using the skills and programming constructs they have learned to develop a title sequence for their favorite content creator. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. Students explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.
           student_description: In this unit, you practice software design and development using the skills and programming constructs you have learned to develop a title sequence for your favorite content creator. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your projects meet specified requirements. You explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
           description_short: ''
           description_audience: ''
+          name: csa7-pilot-extra
         csa8-pilot-extra:
           lessons:
             Planning a Project:
@@ -31712,3 +32059,167 @@ en:
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
+          name: csa8-pilot-extra
+        csa-backpack-2022:
+          lessons:
+            lesson-1:
+              name: PainterPlus
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-backpack-2022
+          title: CSA Backpack Versions ['22-'23]
+          description_audience: ''
+          description_short: ''
+          description: Versions of classes students have in their **Backpack** throughout the course.
+          student_description: ''
+        csd6-projects:
+          lessons:
+            'Mini-Project: On-The-Go App':
+              name: 'Mini-Project: On-The-Go App'
+              description_student: Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected
+              description_teacher: |-
+                In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.
+
+                **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?
+            'Project: Human Device Interaction':
+              name: 'Project: Human Device Interaction'
+              description_student: 
+              description_teacher: 
+            'Mini-Project: Interactive Art':
+              name: 'Mini-Project: Interactive Art'
+              description_student: Create a piece of interactive artwork using a Circuit Playground and physical materials
+              description_teacher: In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.
+            lesson-4:
+              name: Independent Practice Levels
+              description_student: 
+              description_teacher: |-
+                This lesson contains a collection of levels that appear in our curriculum. You can use these levels to experiment with how the MicroBit works in the context of our level progression in the curriculum, or to test out individual components of the MicroBit in a smaller setting.
+
+                All levels are designed with the Circuit Playground in mind, so there may not be an exact match between the level instructions and the MicroBit.
+          lesson_groups: {}
+          name: csd6-projects
+          title: CSD Unit 6 Projects
+          description_audience: ''
+          description_short: ''
+          description: These are the new projects for the CS Discoveries Physical Computing unit. This unit exists to help playtesting the new MicroBit features in the Code.org platform
+          student_description: ''
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: The Power of Words
+              description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
+              key: The Power of Words
+            Introducing Sprite Lab:
+              name: Introducing Sprite Lab
+              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
+              description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
+
+'
+              key: Introducing Sprite Lab
+            Making Sprites:
+              name: Making Sprites
+              description_student: |2-
+
+                In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
+              key: Making Sprites
+            Sprites in Action:
+              name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
+              key: Sprites in Action
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Virtual Pet'
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
+              description_teacher: Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.
+              key: 'Mini-Project: Virtual Pet'
+            Blank Space Stories:
+              name: Blank Space Stories
+              description_student: 'In this activity, you will use fill-in-the-blank stories (similar to Mad Libs®) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. '
+              description_teacher: 'In this **context-setting** lesson, students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
+              key: Blank Space Stories
+            Text and Prompts:
+              name: Text and Prompts
+              description_student: In this lesson you will practice with variables in Sprite Lab.
+              description_teacher: 'In this **skill-building** lesson, students will get practice with variables in Sprite Lab. '
+              key: Text and Prompts
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: User Input Programs'
+              description_student: Apply your new skills with variables to one of three open-ended projects.
+              description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
+              key: 'Mini-Project: User Input Programs'
+            "[New] Lots of Sprites":
+              name: "[New] Lots of Sprites"
+              description_student: You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**
+              key: "[New] Lots of Sprites"
+            "[New] Counting with Variables":
+              name: "[New] Counting with Variables"
+              description_student: You will learn to use variables to make a counter or keep track of a score in a game.
+              description_teacher: In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**
+              key: "[New] Counting with Variables"
+            "[New] Mini-Project: Collector Game":
+              name: "[New] Mini-Project: Collector Game"
+              description_student: Collect all the sprites! In this project, you will create a game that others can play.
+              description_teacher: In this **mini-project** lesson, students will create a customized "collector game", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**
+              key: "[New] Mini-Project: Collector Game"
+            Simulating Experiments:
+              name: Simulating Experiments
+              description_student: Run simulations on the computer and experiment by changing variables.
+              description_teacher: In this **context-setting** lesson, students will run and collect data from a simple simulation in Sprite Lab. After running the simulation multiple times, students will have an opportunity to predict how changing a variable in the simulation might impact the outcome and test that hypothesis.
+              key: Simulating Experiments
+            Outbreak:
+              name: Outbreak
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
+              key: Outbreak
+            AI For Oceans:
+              name: AI For Oceans
+              description_student: Classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: In this **exploratory** lesson, students will train a machine learning model by classifying fish and other objects.
+              key: AI For Oceans
+            The Internet:
+              name: The Internet
+              description_student: Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.
+              description_teacher: Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.
+              key: The Internet
+            End of Course Project:
+              name: End of Course Project
+              description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
+              description_teacher: This **project** lesson takes students through the process of designing, developing, and showcasing new projects!
+              key: End of Course Project
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            ramp_up:
+              display_name: Sprites
+            lessonGroup-8:
+              display_name: Variables
+            csf_data:
+              display_name: Data and Simulations
+            end_of_course_project:
+              display_name: End of Course Project
+          name: coursef-2022-pilot
+          title: Course F (2022)
+          description_audience: 'Ages: 9-13'
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description: |
+            We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+
+            ## Spring 2022 Open Preview
+            This new version of Course F includes three new lessons, and we need your feedback! The new lessons are:
+            * Lesson 9 - Lots of Sprites - [give feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform)
+            * Lesson 10 - Counting with Variables - [give feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform)
+            * Lesson 11 - Mini-Project: Collector Game - [give feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform)
+
+            Please note that these new lessons may change between now and July 2022. We appreciate any feedback. Courses A-E of CS Fundamentals (2022) will launch in July 2022.
+
+            We have also added a full slide deck covering all lessons in Course F. We welcome your [feedback](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) on the lesson slides as well!
+          student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
