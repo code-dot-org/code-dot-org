@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Change the color of a sprite repeatedly when it is clicked.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/ubMFIKCmhuczdRR8hpO2yVwAoIvOQf_DqN8p_6d9Fu8",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Change the background color randomly when the sprite is clicked.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/4tcRFopUTN9SHeXD6oWaiy9BoKaZS4nQbzkTAzmyI8g",
       "image": null,
       "app_display_type": "embedAppWithCode",
