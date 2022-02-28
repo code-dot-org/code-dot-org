@@ -132,8 +132,6 @@ $dark_blue_background_colour: #0d4172;
 
     .text-wrapper {
       right: 24px;
-      width: 50%;
-      float: right;
 
       .header {
         color: black;
@@ -168,23 +166,26 @@ $dark_blue_background_colour: #0d4172;
     }
 
     .text-wrapper {
-      width: 100%;
+      right: 12px;
+      width: 50%;
+      float: right;
 
       .header {
         color: white;
-        padding: 15px 10px 5px 30px;
+        padding: 15px 0px 5px 0px;
         text-align: center;
         top: 0px;
+        font-size: 16px;
       }
 
       .text {
         color: white;
         line-height: 1.2;
         text-align: center;
+        font-size: 13px;
       }
 
       button {
-        margin-top: 15px;
         font-size: 14px;
         margin-bottom: 15px;
       }
