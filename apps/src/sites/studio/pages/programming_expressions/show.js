@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import PageContainer from '@cdo/apps/templates/codeDocs/PageContainer';
 import ProgrammingExpressionOverview from '@cdo/apps/templates/codeDocs/ProgrammingExpressionOverview';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
@@ -19,12 +20,23 @@ $(document).ready(() => {
 
   const store = getStore();
   const programmingExpression = getScriptData('programmingExpression');
+  const programmingEnvironmentTitle = getScriptData(
+    'programmingEnvironmentTitle'
+  );
+  const categoriesForNavigation = getScriptData('categoriesForNavigation');
+  const currentCategoryKey = getScriptData('currentCategoryKey');
   ReactDOM.render(
     <Provider store={store}>
       <>
-        <ProgrammingExpressionOverview
-          programmingExpression={programmingExpression}
-        />
+        <PageContainer
+          programmingEnvironmentTitle={programmingEnvironmentTitle}
+          categoriesForNavigation={categoriesForNavigation}
+          currentCategoryKey={currentCategoryKey}
+        >
+          <ProgrammingExpressionOverview
+            programmingExpression={programmingExpression}
+          />
+        </PageContainer>
         <ExpandableImageDialog />
       </>
     </Provider>,
