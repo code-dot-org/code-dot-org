@@ -14,14 +14,14 @@
       domain_name: "staging.codeprojects.org",
       alternative_names: []
     },
-    # test: {
-    #   domain_name: "test.codeprojects.org",
-    #   alternative_names: []
-    # },
-    # production: {
-    #   domain_name: "codeprojects.org",
-    #   alternative_names: ["www.codeprojects.org"]
-    # },
+    test: {
+      domain_name: "test.codeprojects.org",
+      alternative_names: []
+    },
+    production: {
+      domain_name: "codeprojects.org",
+      alternative_names: ["www.codeprojects.org"]
+    },
   }
 -%>
 
@@ -61,6 +61,18 @@
           HostedZoneId: <%= hosted_zone_id %>
         <%- end -%>
 <%- end -%>
+<%- end -%>
+
+<%- if rack_env?(:production) -%>
+  # One-off resources (Deployed with production)
+  CodeprojectsStaticCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: static.codeprojects.org
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: static.codeprojects.org
+          HostedZoneId: <%= hosted_zone_id %>
 <%- end -%>
 
   # -----------------------------------------------
