@@ -17,8 +17,6 @@ Given(/^I am a workshop administrator$/) do
 end
 
 Given(/^I am a CSD facilitator named "([^"]*)"$/) do |facilitator_name|
-  require_rails_env
-
   steps %Q{
     And there is a facilitator named "#{facilitator_name}" for course "#{Pd::Workshop::COURSE_CSD}"
     And I sign in as "#{facilitator_name}"
@@ -50,12 +48,10 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
 end
 
 Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
-  require_rails_env
-
-  email, password = generate_user(name)
-
-  FactoryGirl.create(:pd_course_facilitator, course: course, facilitator:
-    FactoryGirl.create(:facilitator, name: name, email: email, password: password)
+  browser_request(
+    url: '/api/test/create_facilitator',
+    method: 'POST',
+    body: {name: name, course: course}
   )
 end
 
