@@ -9,6 +9,7 @@
 #  color                      :string(255)
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
+#  position                   :integer
 #
 # Indexes
 #
@@ -42,6 +43,15 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
       name: name,
       color: color,
       deletable: programming_expressions.count == 0
+    }
+  end
+
+  def summarize_for_environment_show
+    {
+      key: key,
+      name: name,
+      color: color,
+      programmingExpressions: programming_expressions.map(&:serialize_for_environment_show)
     }
   end
 

@@ -7,8 +7,9 @@ export function getPoem(key) {
   }
   return {
     key: key,
+    locale: POEMS[key].locale,
     author: POEMS[key].author,
-    title: msg[`${key}Title`](),
-    lines: msg[`${key}Lines`]().split('\n')
+    title: POEMS[key].title || msg[`${key}Title`](),
+    lines: POEMS[key].linesSplit || msg[`${key}Lines`]().split('\n')
   };
 }

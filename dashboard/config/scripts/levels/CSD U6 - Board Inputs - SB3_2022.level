@@ -58,7 +58,7 @@
     "makerlab_enabled": "true",
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
-    "start_blocks": "// When the switch is flipped to open, the LED will turn on.\r\nonBoardEvent(toggleSwitch, \"open\", function() {\r\n\tled.on();\r\n});\r\n//When the switch is flipped to \"close\", the LED will turn off.",
+    "start_blocks": "// When the switch is flipped to open, the LED will turn on.\nonBoardEvent(toggleSwitch, \"open\", function() {\n\tled.on();\n});\n\n//Add an onBoardEvent for atoggle switch when the switch is flipped to close\n//When the switch is flipped to \"close\", the LED will turn off.\n\n//Add code so that when the toggle switch is flipped to close the light turns off\n",
     "top_level_procedure_autopopulate": "false",
     "encrypted_examples": "/mMsviXdj3VcfYv+hH8CH0c3EsHV9mlzwrdQrWjXHdaubcdgacl3Qo3qmtDZ\nlHrwzGcUvP1gpJX1lnIReN5fow==\n",
     "parent_level_id": 20418,
@@ -73,15 +73,16 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "preload_asset_list": null
   },
   "game_id": 41,
-  "published": true,
   "created_at": "2021-08-31T16:17:49.000Z",
   "level_num": "custom",
   "user_id": 1,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T16:17:49.477+00:00\",\"changed\":[\"cloned from \\\"CSDU6 - lightswitch toggleswitch_2021\\\"\"],\"cloned_from\":\"CSDU6 - lightswitch toggleswitch_2021\"},{\"changed_at\":\"2021-08-31 16:18:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 22:52:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:12:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 19:33:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T16:17:49.477+00:00\",\"changed\":[\"cloned from \\\"CSDU6 - lightswitch toggleswitch_2021\\\"\"],\"cloned_from\":\"CSDU6 - lightswitch toggleswitch_2021\"},{\"changed_at\":\"2021-08-31 16:18:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 22:52:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-18 23:12:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 19:33:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-21 07:19:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
   <blocks/>
 </Applab>

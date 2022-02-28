@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-14 15:32:27 UTC",
+    "serialized_at": "2022-02-24 14:47:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4387,6 +4387,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 8 Pilot Assessment 2021"
+        ],
         "progression": "Unit 8 Assessment"
       },
       "bonus": false,
@@ -5061,6 +5064,18 @@
       }
     },
     {
+      "name": "[KEY] U8L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1F4RRZvER4A_dNiTCoS0wxPXimDBx7bah2f63EYqjnb4/edit?usp=sharing",
+      "key": "_key_u8l3_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u8l3_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U8L4 Extra Practice",
       "url": "https://docs.google.com/document/d/1vgXJM0WFjBSFereFgnFBCbH0sJBtpgBt8LS5bCYi25Y/edit?usp=sharing",
       "key": "_key_u8l4_extra_practice",
@@ -5106,6 +5121,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u8l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U8L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ARgZ4ltm1rws0nMf6gWCejInovDUtq2ovGBAyArvCC4/edit?usp=sharing",
+      "key": "_key_u8l8_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u8l8_extra_practice"
       }
     },
     {
@@ -5406,6 +5433,18 @@
       }
     },
     {
+      "name": "U8L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1tYXxG787WVT1absx77VnlnBTVYKE3HCZCJt6G1BpAyM/edit?usp=sharing",
+      "key": "u8l3_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u8l3_extra_practice"
+      }
+    },
+    {
       "name": "U8L4 Extra Practice",
       "url": "https://docs.google.com/document/d/1y8JwPQDLHFZCs4Hp7auzdQtW4U1k771MH7JqWud_isI/edit?usp=sharing",
       "key": "u8l4_extra_practice",
@@ -5451,6 +5490,18 @@
       },
       "seeding_key": {
         "resource.key": "u8l7_extra_practice"
+      }
+    },
+    {
+      "name": "U8L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/11iPXyqk5Zh9UFhVbDQYj3_L9MhcvYzU85sV_ElYacjg/edit?usp=sharing",
+      "key": "u8l8_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u8l8_extra_practice"
       }
     },
     {
@@ -5536,6 +5587,18 @@
     {
       "seeding_key": {
         "lesson.key": "Expanding Standard Algorithms",
+        "resource.key": "_key_u8l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Expanding Standard Algorithms",
+        "resource.key": "u8l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Expanding Standard Algorithms",
         "resource.key": "unit_8_presentation_slides"
       }
     },
@@ -5596,7 +5659,19 @@
     {
       "seeding_key": {
         "lesson.key": "Implementing the Binary Search",
+        "resource.key": "_key_u8l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Implementing the Binary Search",
         "resource.key": "binary_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Implementing the Binary Search",
+        "resource.key": "u8l3_extra_practice"
       }
     },
     {

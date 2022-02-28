@@ -43,21 +43,21 @@ social:
 <a id="upcoming"></a>
 
 <div class="col-100" style="padding:25px; background-color: #7665a0; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Day in the Life of a Woman College Student in CS</h2>
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Overcoming Imposter Syndrome: Building Confidence & Belonging</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #7665a0; border-radius:0 0 15px 15px; border-top:none">
-  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, February 23rd at 8 pm EDT / 5 pm PDT</strong></h3>
-  <p>Join us as Rewriting the Code (RTC) college women attending Columbia, Dartmouth, Michigan, Stanford and UCLA share their experiences as computer science majors. We will discuss classes to take in HS to be prepared for college courses, what classes are like, navigating impostor syndrome, ways to get involved in CS outside of class and anything you would like to discuss! Register today and note your questions.</p>
-  <a href="https://us02web.zoom.us/webinar/register/WN_SE6ejdSoR8miT7feTATvDg" target="_blank"><button>Register</button></a> 
+  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, March 23rd at 8 pm EDT / 5 pm PDT</strong></h3>
+  <p>Join us as Rewriting the Code (RTC) college women attending Maryland, Stanford, University of British Columbia, Washington University in St. Louis, and Yale share personal experiences with imposter syndrome and strategies for overcoming it.</p>
+  <a href="https://us02web.zoom.us/webinar/register/WN_-UQ7tAdgQDikP9I8U4wUKw" target="_blank"><button>Register</button></a> 
   <br>
   <br>
   <p>Featuring:</p>
   <ul>
-    <li>Catherine Hu, Sophomore at <a href="https://www.ucla.edu/" target="_blank">UCLA</a></li>
-    <li>Indigo Parlin, Sophomore at <a href="https://www.columbia.edu/" target="_blank">Columbia University</a></li>
-    <li>Pranavi Pratapa, Sophomore at <a href="https://umich.edu/" target="_blank">University of Michigan</a></li>
-    <li>Anna Quinlan, Junior at <a href="https://www.stanford.edu/" target="_blank">Stanford University</a></li>
-    <li>Cindy Wang, Sophomore at <a href="https://home.dartmouth.edu/" target="_blank">Dartmouth College</a></li>
+    <li>Shelly Goel, Sophomore at <a href="https://www.stanford.edu/" target="_blank">Stanford University</a></li>
+    <li>Amanda Liu, Sophomore at <a href="https://umd.edu/" target="_blank">University of Maryland</a></li>
+    <li>Folakemi Shofu, Sophomore at <a href="https://wustl.edu/" target="_blank">Washington University in St. Louis</a></li>
+    <li>Tabreek Somani, Sophomore at <a href="https://www.ubc.ca/" target="_blank">University of British Columbia</a></li>
+    <li>Anna Zhang, Junior at <a href="https://www.yale.edu/" target="_blank">Yale University</a></li>
   </ul>
   <br>
   <a href="#top">Back to top</a>
@@ -75,6 +75,16 @@ social:
 <div class="col-60" style="padding:-top:15px; padding-left: 10px">
   <h3><strong>The Transition from High School to College</strong></h3>
   <p>This first discussion is all about transitions! Learn how Computer Science 101 is different than taking CS in high school. Get the inside scoop on what lectures and projects are like, who to seek help from and when (TAs and office hours), and the importance of finding/building community.</p>
+</div>
+
+<div style="clear: both"></div>
+
+<div class="col-40" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ rtc_panel2 }}
+</div>
+<div class="col-60" style="padding:-top:15px; padding-left: 10px">
+  <h3><strong>Day in the Life of a Woman College Student in CS</strong></h3>
+  <p>Rewriting the Code (RTC) college women attending Columbia, Dartmouth, Michigan, Stanford and UCLA share their experiences as computer science majors. The discussion includes classes to take in HS to be prepared for college courses, what classes are like, navigating impostor syndrome, and ways to get involved in CS outside of class.</p>
 </div>
 
 <div style="clear: both"></div>

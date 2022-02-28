@@ -68,7 +68,7 @@ To run a test file in either directory, `cd` into it before running the tests.
 
 ```bash
 cd shared
-ruby -Itest ./test/path/to/your/test.rb
+bundle exec ruby -Itest ./test/path/to/your/test.rb
 ``` 
 
 ### Apps Tests
