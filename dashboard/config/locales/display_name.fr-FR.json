@@ -594,8 +594,8 @@
         "CSD: Drawing in Game Lab 2_2019": "Vidéo : Dessiner dans le labo des jeux - Partie 2",
         "CSD: For Loop_2018": "Les Boucles « Pour »",
         "CSD: Introduction to the Draw Loop": "Vidéo : Introduction à la boucle draw",
-        "CSD: Introduction to the Draw Loop_2018": "Vidéo : Introduction à la boucle draw",
-        "CSD: Introduction to the Draw Loop_2019": "Vidéo : Introduction à la boucle draw",
+        "CSD: Introduction to the Draw Loop_2018": "Vidéo : Introduction à la boucle dessine",
+        "CSD: Introduction to the Draw Loop_2019": "Vidéo : Introduction à la boucle dessine",
         "CSD: Sprite Velocity": "Vidéo : la vitesse",
         "CSD: Sprite Velocity_2018": "Vidéo : la vitesse",
         "CSD: Sprite Velocity_2019": "Vidéo : la vitesse",
@@ -981,7 +981,7 @@
         "CSD: Drawing in Game Lab 1_2021": "Vidéo : Dessiner dans le labo des jeux - Partie 1",
         "CSD: Drawing in Game Lab 2_2021": "Vidéo : Dessiner dans le labo des jeux - Partie 2",
         "CSD: For Loop_2021": "Video: Les Boucles « Pour »",
-        "CSD: Introduction to the Draw Loop_2021": "Vidéo : Introduction à la boucle draw",
+        "CSD: Introduction to the Draw Loop_2021": "Vidéo : Introduction à la boucle dessine",
         "CSD: Sprite Velocity_2021": "Vidéo : la vitesse",
         "CSD: Sprites in Game Lab_2021": "Vidéo : Introduction aux sprites",
         "CSDU4 Design Mode Video_2021": "Introduction au mode création",
@@ -992,7 +992,9 @@
         "Oceans_Video_Machine_Learning_2021": "Vidéo : Apprentissage automatique",
         "Oceans_Video_Training_Data_2021": "Vidéo : Données de formation",
         "csd U3 conditional statements video_2021": "Vidéo : Instructions conditionnelles",
-        "csd u5 recommender sample_2021": "Appli d’exemple"
+        "csd u5 recommender sample_2021": "Appli d’exemple",
+        "CSD U3 function video": "Vidéo: Les Fonctions",
+        "CSD U3 function video_2021": "Vidéo: Les Fonctions"
       }
     }
   }

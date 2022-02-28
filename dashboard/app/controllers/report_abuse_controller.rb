@@ -25,7 +25,7 @@ class ReportAbuseController < ApplicationController
   def protected_project?
     return false if params[:channel_id].blank?
     owner_storage_id, _ = storage_decrypt_channel_id(params[:channel_id])
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
     return false unless owner_user_id
     project_owner = User.find(owner_user_id)
     project_owner.permission?(UserPermission::PROJECT_VALIDATOR)

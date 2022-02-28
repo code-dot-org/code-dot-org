@@ -550,7 +550,6 @@ es:
             '"fireworks"': Fuegos artificiales
             '"flowers"': Flores
             '"growing_stars"': Estrellas crecientes
-            '"higher_power"': Poder Superior
             '"swirl"': Hipnótico
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile láser
@@ -1037,7 +1036,6 @@ es:
             new Behavior(fluttering, []): revoloteando
             new Behavior(jittering, []): nerviosismo
             new Behavior(wobbling, []): tambaleándose
-            new Behavior(wandering, []): vagando
             new Behavior(patrolling, []): patrullando
             new Behavior(moving_west_and_looping, []): moviéndose hacia el oeste y
               haciendo un bucle
@@ -2128,11 +2126,9 @@ es:
             '"moving_south_and_looping"': bucle al sur
             '"moving_east_and_looping"': bucle al este
             '"moving_west_and_looping"': bucle al oeste
-            '"shrinking"': reducción
             '"spinning_left"': girando a la izquierda
             '"spinning_right"': girando a la derecha
             '"swimming_left_and_right"': natación
-            '"wandering"': vagando
             '"wobbling"': tambaleándose
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} para de {BEHAVIOR}
@@ -2145,11 +2141,9 @@ es:
             '"moving_south_and_looping"': bucle al sur
             '"moving_east_and_looping"': bucle al este
             '"moving_west_and_looping"': bucle al oeste
-            '"shrinking"': reducción
             '"spinning_left"': girando a la izquierda
             '"spinning_right"': girando a la derecha
             '"swimming_left_and_right"': natación
-            '"wandering"': vagando
             '"wobbling"': tambaleándose
             '"all"': "--cada comportamiento--"
       Poetry_stringValue:

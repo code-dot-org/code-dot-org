@@ -656,7 +656,7 @@ class User < ApplicationRecord
 
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    user_id = user_id_for_storage_id(owner_storage_id)
     User.find(user_id)
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
     nil
@@ -1085,6 +1085,25 @@ class User < ApplicationRecord
     user_levels.
       where(script_id: script.id).
       index_by(&:level_id)
+  end
+
+  # Retrieves all user_level objects for the given users, script, and levels.
+  # The return value is a hash from user_id to an array of UserLevel objects
+  # sorted in descending order by updated_at:
+  # {
+  #   1: [<UserLevel>, <UserLevel>, ...],
+  #   2: [<UserLevel>, <UserLevel>, ...]
+  # }
+  #
+  # A given user with no UserLevel matching the given criteria is omitted from
+  # the returned hash. The associated LevelSource data for each UserLevel is also
+  # prefetched to prevent n+1 query issues.
+  def self.user_levels_by_user(user_ids, script_id, level_ids)
+    UserLevel.
+      includes(:level_source).
+      where({user_id: user_ids, script_id: script_id, level_id: level_ids}).
+      order('updated_at DESC').
+      group_by(&:user_id)
   end
 
   # Retrieve all user levels for the designated set of users in the given
@@ -2343,11 +2362,8 @@ class User < ApplicationRecord
       update(state: 'active', updated_at: Time.now)
   end
 
-  # Gets the user's user_storage_id from the pegasus database, if it's available.
-  # Note: Known that this duplicates some logic in storage_id_for_user_id, but
-  # that method is globally stubbed in tests :cry: and therefore not very helpful.
   def user_storage_id
-    @user_storage_id ||= PEGASUS_DB[:user_storage_ids].where(user_id: id).first&.[](:id)
+    @user_storage_id ||= storage_id_for_user_id(id)
   end
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)

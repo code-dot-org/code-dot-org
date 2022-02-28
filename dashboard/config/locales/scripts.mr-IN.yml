@@ -17,6 +17,8 @@ mr:
               name: 'आर्टीस्ट:नेस्टेड लूप्स '
             Conditionals:
               name: कंडीशनल्स
+            Flappy:
+              name: फ्लॅपी
         course3:
           description_audience: वय वर्षे 8-18
           lessons:
@@ -148,6 +150,11 @@ mr:
           title: ईव्हेंट्स
           description: ईव्हेंट्स
           description_short: ईव्हेंट्स
+          lessons:
+            Calc:
+              name: कॅल्क
+            Eval:
+              name: इव्हॅल
           student_description: ईव्हेंट्स
         flappy:
           title: फ्लॅपी कोड
@@ -202,10 +209,14 @@ mr:
           lessons:
             Artist:
               name: आर्टीस्ट
+            Flappy:
+              name: फ्लॅपी
             Text Compression:
               name: टेक्स्ट कॉम्प्रेशन
             Web Lab:
               name: वेब लॅब
+            Java Lab:
+              name: जावा लॅब
         cspfacilitator:
           lessons:
             Text Compression Lesson:
@@ -412,6 +423,9 @@ mr:
               name: कंडीशनल्स
         grade2:
           description_audience: वय वर्षे 5-18
+          lessons:
+            Flappy:
+              name: फ्लॅपी
         k5concepts:
           lessons:
             Conditionals:
@@ -4139,6 +4153,9 @@ mr:
           student_description: विषाणूच्या उद्रेकाच्या सिम्युलेशनचा प्रोग्रॅम करण्यासाठी
             स्प्राईट लॅब वापरा.
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
@@ -4146,6 +4163,8 @@ mr:
           lessons:
             lesson-1:
               name: युनिट 2 पायलट सर्वेक्षण
+            lesson-16:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
@@ -4153,6 +4172,8 @@ mr:
           lessons:
             lesson-16:
               name: युनिट 3 पायलट सर्वेक्षण
+            lesson-17:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
@@ -4207,22 +4228,36 @@ mr:
                 लिहितात आणि निकालावर लॉजीकल ऑपरेटरचा प्रभाव ओळखतात. गेमप्ले आणि एकूण
                 कार्यक्षमता सुधारण्यासाठी पॉप द बलून गेममध्ये नेस्टेड `if` विधाने
                 आणि लॉजिकल ऑपरेटर लागू केले आहेत.
+            lesson-16:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
         csa8-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
@@ -4286,6 +4321,10 @@ mr:
             Computer Science Fundamentals:
               key: संगणक शास्त्राची मूलतत्त्वे
               name: संगणक शास्त्राची मूलतत्त्वे
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: शिक्षक समुदाय
         self-paced-pl-csd5-2021:
           lessons:
             lesson-4:
@@ -4293,6 +4332,10 @@ mr:
         outbreak-module:
           name: आऊटब्रेक-मोड्यूल
           title: उद्रेक
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: संसाधने
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -4384,6 +4427,7 @@ mr:
           lessons:
             lesson-1:
               key: धडा -1
+              name: जावा लॅब
             lesson-2:
               key: धडा -2
             lesson-3:
@@ -4462,6 +4506,7 @@ mr:
               key: धडा -15
             lesson-1:
               key: धडा -1
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
@@ -4472,6 +4517,7 @@ mr:
               name: युनिट 3 पायलट सर्वेक्षण
             lesson-1:
               key: धडा -1
+              name: जावा लॅब
             lesson-2:
               key: धडा -2
             lesson-3:
@@ -4581,6 +4627,7 @@ mr:
                 आणि लॉजिकल ऑपरेटर लागू केले आहेत.
             lesson-1:
               key: धडा -1
+              name: जावा लॅब
             lesson-3:
               key: धडा-3
             lesson-4:
@@ -4645,6 +4692,8 @@ mr:
               key: धडा -14
             lesson-15:
               key: धडा -15
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
@@ -4911,6 +4960,9 @@ mr:
           title: युनिट 5 - गिव्हिंग ऑब्जेक्टस ऑर्गनायझेशन [उदाहरणार्थ]
         csa6-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
             lesson-1:
               key: धडा -1
             lesson-2:
@@ -5165,6 +5217,9 @@ mr:
               display_name: प्रकरण 2
         csa7-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
             lesson-10:
               key: धडा -10
             lesson-6:
@@ -5202,6 +5257,9 @@ mr:
               display_name: सँडबॉक्स
         csa8-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
             lesson-1:
               key: धडा -1
             lesson-2:
@@ -5803,6 +5861,8 @@ mr:
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
         csa1-2022:
           lessons:
+            lesson-2:
+              name: जावा लॅब
             lesson-9:
               name: लूप्स
         pre-express-2022:
@@ -5856,10 +5916,15 @@ mr:
               name: डीबगिंग
         csa1-2022-exemplars:
           lessons:
+            lesson-2:
+              name: जावा लॅब
             lesson-9:
               name: लूप्स
         csa7-pilot-extra:
           lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
             lesson-10:
               key: धडा -10
             lesson-6:
@@ -5897,6 +5962,9 @@ mr:
               display_name: सँडबॉक्स
         csa8-pilot-extra:
           lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
             lesson-1:
               key: धडा -1
             lesson-2:
