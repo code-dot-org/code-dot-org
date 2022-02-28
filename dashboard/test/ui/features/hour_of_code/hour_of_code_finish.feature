@@ -18,7 +18,7 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   And I wait to see element with ID "uitest-thanks"
 
 Scenario: Flappy customized dashboard certificate pages
-  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
+  Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
 
   When I am on "http://code.org/api/hour/finish/flappy"
@@ -41,7 +41,7 @@ Scenario: Flappy customized dashboard certificate pages
   Then I wait to see an image "/certificate_images/"
 
 Scenario: Oceans uncustomized dashboard certificate pages
-  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
+  Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
 
   When I am on "http://code.org/api/hour/finish/oceans"
@@ -60,7 +60,7 @@ Scenario: Oceans uncustomized dashboard certificate pages
 
 @eyes
 Scenario: congrats certificate pages
-  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
+  Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
   And I open my eyes to test "congrats certificate pages"
 

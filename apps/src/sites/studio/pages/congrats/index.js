@@ -6,7 +6,6 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import queryString from 'query-string';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
-import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(function() {
   const store = getStore();
@@ -32,9 +31,7 @@ $(document).ready(function() {
   } catch (e) {}
 
   const mcShareLink = tryGetLocalStorage('craftHeroShareLink', '');
-  const showStudioCertificate = experiments.isEnabled(
-    experiments.STUDIO_CERTIFICATE
-  );
+  const showStudioCertificate = true;
   ReactDOM.render(
     <Provider store={store}>
       <Congrats
