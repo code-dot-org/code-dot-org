@@ -70,7 +70,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Random Lights\r\n\r\nCreate an app that toggles a random light on the circuit playground when you move your mouse on the screen. This can create a flashing light effect, like stars sparkling in a night sky.\r\n\r\nThe app has already been started for you with an [`onEvent()`(#fff176)](/docs/applab/onEvent/) block that detects when the mouse moves on the screen. Your task is to add code inside this block to make a random LED toggle on the circuit playground. This requires using variables with LEDs - click below to learn more about this.\r\n\r\n<!--\r\n::: details [**Using Variables with LEDs**]\r\n## TODO: ADD SCREENSHOTS AND INSTRUCTIONS HERE!\r\nOr maybe this is a lesson resource?\r\n:::\r\n-->\r\n## Do This\r\n\r\n- Add code inside the [`onEvent()`(#fff176)](/docs/applab/onEvent/) to make a random LED toggle on the circuit playground\r\n\t- Hint: You will need a line of code that uses [`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/) and [`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/) to generate a random number between 0 and 9 and then store the result as a variable.",
+    "long_instructions": "# Random Lights\r\n\r\nCreate an app that toggles a random light on the circuit playground when you move your mouse on the screen. This can create a flashing light effect, like stars sparkling in a night sky.\r\n\r\nThe app has already been started for you with an [`onEvent()`(#fff176)](/docs/applab/onEvent/) block that detects when the mouse moves on the screen. Your task is to add code inside this block to make a random LED toggle on the circuit playground. This requires using variables with LEDs - click below to learn more about this.\r\n\r\n<!--\r\n::: details [**Using Variables with LEDs**]\r\n## TODO: ADD SCREENSHOTS AND INSTRUCTIONS HERE!\r\nOr maybe this is a lesson resource?\r\n:::\r\n-->\r\n## Do This\r\n\r\n- Add code inside the [`onEvent()`(#fff176)](/docs/applab/onEvent/) to make a random LED toggle on the circuit playground\r\n\t- Use [`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/) and [`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/) blocks to generate a random number between 0 and 9 and then store the result as a variable.\r\n    - Use the [`toggle`(#f78183)](/docs/applab/toggle/) block, but instead of typing a number as the LED, use your variable instead.\r\n\r\nRun your code! As you move your mouse on the screen, you should see different LEDs light up!\r\n\r\n::: details [**Using Variables with LEDs**]\r\n![](https://images.code.org/8a296d5c848b17940d695ad95e8e69eb-image-1646089003459.png)\r\n:::\r\n\r\n",
     "parent_level_id": 20595,
     "name_suffix": "_2021",
     "mini_rubric": "false",
@@ -91,13 +91,13 @@
     "callout_json": "[]",
     "start_blocks": "onEvent(\"screen1\", \"mousemove\", function() {\r\n  \r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "display_name": "Random Lights",
+    "bubble_choice_description": "Light up a random LED light whenever the mouse moves",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L7/challenge/A.png",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "display_name": "Random Lights",
-    "bubble_choice_description": "Light up a random LED light whenever the mouse moves",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L7/challenge/A.png"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -105,7 +105,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-28T16:56:44.898+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracF_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracF_2022\"},{\"changed_at\":\"2021-12-28 16:56:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:00:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:45:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:47:04 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:10:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-28T16:56:44.898+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracF_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracF_2022\"},{\"changed_at\":\"2021-12-28 16:56:51 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:00:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:45:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:47:04 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:10:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-28 22:57:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

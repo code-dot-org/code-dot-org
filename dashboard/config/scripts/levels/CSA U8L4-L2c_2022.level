@@ -1,0 +1,33 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-26T00:33:55.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHY3jPzh5K4ZAIFMmCxg\nkN42Df0kZRTy8B4z8ysHLWQwodvvYxFUrZjUjGfddSGCjAN1zIKeqj2ynrvt\nfvnk0Zrq\n",
+    "long_instructions": "The food truck has new item  in stock that need to be labeled with a barcode. A random barcode number is generated and checked to confirm that the number does not already exist.\r\n\r\nIn `InventoryManager.java`, use the recursive binary search to implement `checkBarcode()`. This method takes parameters `low`, `high`, and `target` to check if the `target` exists in `barcodeList`. It returns `true` if the `target` is found in `barcodeList`, otherwise it returns `false`.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    int[] barcodes = {3, 4, 8, 9};\n    int newBarcode = (int)(Math.random() * 10) + 1;\n\n    InventoryManager myInventory = new InventoryManager(barcodes);\n    boolean result = myInventory.checkBarcode(newBarcode);\n    System.out.println(\"Barcode \" + newBarcode + \" exists: \" + result);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "InventoryManager.java": {
+        "text": "public class InventoryManager {\n\n  /**\n   * the list of barcode numbers\n   */\n  private int[] barcodeList;\n\n  /**\n   * Creates an InventoryManager with a specified barcodeList\n   * @param barcodeList the list of barcode numbers\n   */\n  public InventoryManager(int[] barcodeList) {\n    this.barcodeList = barcodeList;\n  }\n\n  /**\n   * Checks if the target barcode number exists in barcodeList\n   * @param target the barcode number to search for\n   * @return true if the barcode number is in barcodeList, otherwise\n   *         false if not found in the list\n   */\n  public boolean checkBarcode(int target) {\n    return checkBarcode(0, barcodeList.length - 1, target);\n  }\n\n  /**\n   * Uses a recursive binary search to find a target barcode number\n   * in the barcodeList and return whether or not it is found\n   * @param low the smallest index in the range to search\n   * @param high the largest index in the range to search\n   * @param target the barcode number to locate\n   * @return true if the barcode number is in barcodeList, otherwise\n   *         false if not found in the list\n   */\n  public boolean checkBarcode(int low, int high, int target) {\n    if (high < low) {\n      return false;\n    }\n\n    int middle = (low + high) / 2;\n\n    if (barcodeList[middle] > target) {\n      return checkBarcode(low, middle - 1, target);\n    }\n    else if (barcodeList[middle] < target) {\n      return checkBarcode(middle + 1, high, target);\n    }\n    else {\n      return true;\n    }\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "display_name": "Inventory Manager",
+    "bubble_choice_description": "Use a recursive binary search to check whether a new barcode number already exists in a list of barcode numbers.",
+    "thumbnail_url": "https://images.code.org/24b7dbe777b901347cd9835d331a44f2-image-1641402978782.png",
+    "name_suffix": "_2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:33:55.502+00:00\",\"changed\":[\"cloned from \\\"CSA U8L4-L2c\\\"\"],\"cloned_from\":\"CSA U8L4-L2c\"}]"
+}]]></config>
+</Javalab>

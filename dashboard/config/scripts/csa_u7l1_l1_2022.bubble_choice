@@ -1,0 +1,8 @@
+name 'CSA U7L1-L1_2022'
+display_name 'Title Sequence Project Examples'
+description 'Examples of the Title Sequence Project'
+
+sublevels
+level 'CSA U7L1-L1a_2022'
+level 'CSA U7L1-L1b_2022'
+level 'CSA U7L1-L1c_2022'

@@ -1,0 +1,38 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-26T00:28:06.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "In `DataReader.java`, write the methods `convertIntList()` and `convertDoubleList()` by:\r\n\r\n1. Using the `parseInt()` method from the `Integer` class to convert the values in the `String` array.\r\n\r\n2. Using the `parseDouble()` method from the `Double` class to convert the values in the `String` array.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "import java.io.FileNotFoundException;\n\npublic class MyConsole {\n  public static void main(String[] args) throws FileNotFoundException {\n    \n    // Creates DataReader objects to read the text files into String arrays\n    DataReader intData = new DataReader(\"integerData.txt\");\n    DataReader dblData = new DataReader(\"doubleData.txt\");\n    String[] intList = intData.readFile();\n    String[] dblList = dblData.readFile();\n\n    // Print the String array containing the integers\n    System.out.println(\"----- Integer List -----\");\n    for (int i = 0; i < intList.length; i++) {\n      System.out.print(intList[i] + \" \");\n    }\n\n    // Print the String array containing the doubles\n    System.out.println(\"\\n\\n----- Double List -----\");\n    for (int i = 0; i < dblList.length; i++) {\n      System.out.print(dblList[i] + \" \");\n    }\n\n    // Create int and double arrays by converting the String arrays\n    int[] newIntList = intData.convertIntList(intList);\n    double[] newDoubleList = dblData.convertDoubleList(dblList);\n\n    // Print the new int array\n    System.out.println(\"\\n\\n----- New Integer List -----\");\n    for (int i = 0; i < newIntList.length; i++) {\n      System.out.print(newIntList[i] + \" \");\n    }\n\n    // Print the new double array\n    System.out.println(\"\\n\\n----- New Double List -----\");\n    for (int i = 0; i < newDoubleList.length; i++) {\n      System.out.print(newDoubleList[i] + \" \");\n    }\n  }\n}",
+        "isVisible": true
+      },
+      "DataReader.java": {
+        "text": "import java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class DataReader {\n\n  private File dataFile;\n  private Scanner input;\n\n  public DataReader(String filename) throws FileNotFoundException {\n    dataFile = new File(filename);\n    input = new Scanner(dataFile);\n  }\n\n  public String[] readFile() {\n    String[] dataList = new String[20];\n\n    int index = 0;\n    while (input.hasNext()) {\n      dataList[index] = input.next();\n      index++;\n    }\n\n    input.close();\n\n    return dataList;\n  }\n\n  // TO DO: Use parseInt() to convert the values in list\n  // to ints instead of Strings. Return the int array.\n  public int[] convertIntList(String[] list) {\n    int intList[] = new int[0];\n\n    \n    \n    return intList;\n  }\n\n  // TO DO: Use parseDouble() to convert the values in list\n  // to doubles instead of Strings. Return the double array.\n  public double[] convertDoubleList(String[] list) {\n    double doubleList[] = new double[0];\n\n    \n\n    return doubleList;\n  }\n}",
+        "isVisible": true
+      },
+      "integerData.txt": {
+        "text": "380\n413\n114\n278\n411\n159\n151\n403\n350\n153\n184\n212\n236\n194\n500\n171\n143\n362\n117\n289",
+        "isVisible": true
+      },
+      "doubleData.txt": {
+        "text": "12.72\n46.37\n44.30\n49.72\n15.78\n14.33\n28.82\n43.68\n17.77\n47.64\n37.78\n21.19\n17.70\n31.40\n23.80\n45.61\n36.09\n40.18\n28.06\n18.01",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tM9E9IspvpSby6P4e/Z\n1tOr33lELtLUJP9C/HL4+AYuUVtb1nqtn+7Fm24r1I8rRSs=\n",
+    "name_suffix": "_2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:06.371+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L3\\\"\"],\"cloned_from\":\"CSA U6L2-L3\"}]"
+}]]></config>
+</Javalab>

@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:33.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -62,11 +58,16 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need an event block. Wait for your sprites to touch after pressing \\\"Run!\\\"\\n\\n<xml><block type=\\\"gamelab_checkTouching\\\" miniflyout=\\\"open\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE1\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_salad_1\\\"</title>\\n      </block>\\n    </value>\\n    <value name=\\\"SPRITE2\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_ramen_1\\\"</title>\\n      </block>\\n    </value>\\n  </block></xml>\",\"hint_id\":\"groups_touch_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f208c351cf78f32ce9d59cdda2196859/courseF_groups_touch.mp3\"}]",
     "hint_prompt_attempts_threshold": "1",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function(){\r\n    return minimumSprites(2);\r\n  }, 'spritelabFeedbackTwoSpritesWithCostumesAndBehaviors');\r\n  addCriteria(function(){\r\n    return anySpritesTouched();\r\n  }, 'spritesNotTouch');\r\n  addCriteria(function(){\r\n    return touchEventFound();\r\n  }, 'addWhenTouchesEvent');\r\n  addCriteria(function(){\r\n    return onlyEventSpritesBehaviorChanged()&&touchEventFound();\r\n  }, 'changeSpriteBehaviorsWhenTouch');\r\n  setDelayTime(20);\r\n}\r\n\r\ncheck();",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "qZKbCMwQfVBOv1OaJOxaaaK5YOcPdT8Hj4ahS8UQzixEd9RaHnyZrlLLncBU\n8rof9i2PxK/4tGPA1iHKKvQHwT7YLRP9MCTljaOKzRhici7fVMJu//J+ReSG\nOf9HGeheyTdKt2bG79nUVyIM9bfqew==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:33.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:33.074+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_touch\\\"\"],\"cloned_from\":\"courseF_groups_touch\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:33.074+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_touch\\\"\"],\"cloned_from\":\"courseF_groups_touch\"},{\"changed_at\":\"2022-02-28 20:39:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-02-28 20:41:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

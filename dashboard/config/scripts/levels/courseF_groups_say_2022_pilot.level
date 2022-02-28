@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:32.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -62,11 +58,16 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need an event block. Make sure to click your sprites after pressing \\\"Run!\\\"\\n\\n<xml>\\n  <block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_avocado_1\\\"</title>\\n      </block>\\n    </value>\\n  </block>\\n</xml>\",\"hint_id\":\"groups_click_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e527ec972e43c3c80ee7449ffacd02cf/courseF_groups_say.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Add a `clicked` block to a `say` block. You can find it inside the event block!\\n\\n<xml>\\n  <block type=\\\"gamelab_spriteSay\\\">\\n    <title name=\\\"SPEECH\\\">Wow!</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_clickedSpritePointer\\\"></block>\\n    </value>\\n  </block>\\n</xml>\",\"hint_id\":\"groups_say_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0b9322f5c505447a3c79dbf71fb85a84/courseF_groups_say.mp3\"}]",
     "hint_prompt_attempts_threshold": "1",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function() {\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function() {\r\n    return anySpriteClicked();\r\n  }, 'spritelabFeedbackClickSprites');\r\n  addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'eventNotDetected');\r\n  addCriteria(function() {\r\n    return anySpriteSpeaks() && clickEventFound();\r\n  }, 'clickButNoSpeech');\r\n  addCriteria(function() {\r\n    return singleSpriteSpeaks() && clickEventFound();\r\n  }, 'sayUseClicked');\r\n}\r\n\r\ncheck();",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "3Z7Y45XgNYI/JMszRp194GoJ+QAUKCo5McFTyVe8jQi3vF2skLEToAdk33Cq\nVyO+TNtd5fkWZhPaTNt2JjsOSg==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:32.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:32.278+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_say\\\"\"],\"cloned_from\":\"courseF_groups_say\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:32.278+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_say\\\"\"],\"cloned_from\":\"courseF_groups_say\"},{\"changed_at\":\"2022-02-28 20:24:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

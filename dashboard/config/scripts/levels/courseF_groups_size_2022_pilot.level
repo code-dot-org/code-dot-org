@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:32.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -63,11 +59,16 @@
     "hint_prompt_attempts_threshold": "1",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"mini-toolbox-blue-button\",\r\n  \"callout_text\": \"Click the blue button to open or close.\",\r\n  \"element_id\": \"#whenclicked\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 12,\r\n     \"y\": 24\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function() {\r\n    return spritesDefaultSize();\r\n  }, 'spritesNotDefaultSize');\r\n  addCriteria(function(){\r\n    return anySpriteClicked();\r\n  }, 'spritelabFeedbackClickSprites');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'eventNotDetected');\r\n  addCriteria(function(){\r\n    return onlyClickedPropChanged('scale')&&clickEventFound();\r\n  }, 'changeOrSetSize');\r\n}\r\n\r\ncheck();",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "f3WJ3Ls8kx7g0iVPhYANqu/aEWrLQTLozldF7vh3mN6a1xUGXjB8fH2QuHYk\n8el1vAhsNhnVvss6KjJ+GDYlcA==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:32.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:32.062+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_size\\\"\"],\"cloned_from\":\"courseF_groups_size\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:32.062+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_size\\\"\"],\"cloned_from\":\"courseF_groups_size\"},{\"changed_at\":\"2022-02-28 20:20:23 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

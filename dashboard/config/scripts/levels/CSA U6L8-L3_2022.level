@@ -1,0 +1,30 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-26T00:28:39.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `UserSorter` class obtains user input to create an `ArrayList` of items entered. The `readInput()` method obtains input until the user enters `\"q\"` to stop. Each item is added to the correct location in the `ArrayList` to maintain alphabetical order (A to Z) using the `findPosition()` method.\r\n\r\nIn `UserSorter.java`, write the `findPosition()` to find and return the index location to insert the parameter `word` entered by the user.\r\n\r\n1. Declare and initialize a variable to store the location, starting at the end of `wordList`.\r\n\r\n2. Traverse the `wordList` from the end to the beginning:\r\n\r\n   a. Check if the parameter `word` comes before the current word in the list. If so, update the location variable to the current index location.\r\n\r\n3. Return the location.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    UserSorter newList = new UserSorter(\"List of Things\");\n    System.out.println(newList);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "UserSorter.java": {
+        "text": "import java.util.ArrayList;\nimport java.util.Scanner;\n\npublic class UserSorter {\n\n  private String userList;\n  private ArrayList<String> wordList;\n\n  public UserSorter(String listName) {\n    userList = listName;\n    wordList = readInput();\n  }\n\n  public void readInput() {\n    Scanner input = new Scanner(System.in);\n\n    System.out.print(\"Add an item to your list or q to quit: \");\n    String inputText = input.next();\n    \n    while (!inputText.equals(\"q\")) {\n      if (wordList.size() == 0) {\n        wordList.add(inputText);\n      }\n      else {\n        wordList.add(findPosition(inputText), inputText);\n      }\n      \n      System.out.println(wordList);\n      System.out.print(\"Add an item to your list or q to quit: \");\n      inputText = input.next();\n    }\n\n    input.close();\n  }\n\n  // TO DO: Write the method to find the correct position\n  // to insert the new word into the list.\n  public int findPosition(String word) {\n\n    return 0;\n  }\n\n  public String toString() {\n    String text = \"\\nYour List Items\\n--------------------\\n\";\n\n    for (int index = 0; index < wordList.size(); index++) {\n      text = text + wordList.get(index) + \"\\n\";\n    }\n\n    return text;\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tM9E9IspvpSby6P4e/Z\n1tOrBe31dfD9siWxoQHTrsr4TQDaZ+5l3dKmZGEYhJQwry8=\n",
+    "name_suffix": "_2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:39.249+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L3\\\"\"],\"cloned_from\":\"CSA U6L8-L3\"}]"
+}]]></config>
+</Javalab>

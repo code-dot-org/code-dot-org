@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:34.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -65,11 +61,16 @@
     "bubble_choice_description": "Make the sprites move when they are clicked.",
     "thumbnail_url": "https://images.code.org/371f4ba22b3a2b81d63da7059d84590a-image-1641824534552.2022-01-10 09_21_44.gif",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function(){\r\n    return anySpriteClicked();\r\n  }, 'spritelabFeedbackClickSprites');\r\n  addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'clickButNoEvent');\r\n  addCriteria(function(){\r\n    return anyPropChanged('x')||anyPropChanged('y');\r\n  }, 'debugMovement');\r\n  addCriteria(function(){\r\n    return anyBehaviorChanged()&&clickEventFound();\r\n  }, 'changeSpriteBehaviorsWhenClicked');\r\n  addCriteria(function(){\r\n    return onlyEventSpritesBehaviorChanged();\r\n  }, 'moveOnlyClickedSpriteWithBehavior');\r\n}\r\n\r\ncheck();\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "zJz4gOt2XsKEyRFayjT0+1eIA5olLEedHR0c71FSVjwIDNep9HfUUMnTrzsa\nRIhuixz6PgTNdrcoDq8r6vRuAA==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:34.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:33.981+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_practice_behavior\\\"\"],\"cloned_from\":\"courseF_groups_practice_behavior\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:33.981+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_practice_behavior\\\"\"],\"cloned_from\":\"courseF_groups_practice_behavior\"},{\"changed_at\":\"2022-02-28 21:26:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-02-28 21:26:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-02-28 21:27:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
