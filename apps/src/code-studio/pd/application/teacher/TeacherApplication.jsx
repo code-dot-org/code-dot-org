@@ -18,6 +18,12 @@ const pageComponents = [
   ProfessionalLearningProgramRequirements,
   AdditionalDemographicInformation
 ];
+const autoComputedFields = [
+  'cs_total_course_hours',
+  'regionalPartnerGroup',
+  'regionalPartnerId',
+  'regionalPartnerWorkshopIds'
+];
 
 const sendFirehoseEvent = (userId, event) => {
   firehoseClient.putRecord(
@@ -103,6 +109,7 @@ const TeacherApplication = props => {
     <FormController
       {...props}
       pageComponents={pageComponents}
+      autoComputedFields={autoComputedFields}
       getPageProps={getPageProps}
       getInitialData={getInitialData}
       onSetPage={onSetPage}
