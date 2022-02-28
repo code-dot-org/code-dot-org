@@ -147,6 +147,11 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: nil, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :student, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :teacher, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :levelbuilder, response: :success
+
     test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: nil, response: :success
     test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: :student, response: :success
     test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: :teacher, response: :success
