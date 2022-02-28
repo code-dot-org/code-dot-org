@@ -44,7 +44,6 @@ export default function Congrats(props) {
         randomDonorTwitter={randomDonorTwitter}
         randomDonorName={randomDonorName}
         under13={under13}
-        showStudioCertificate={true}
       />
       {userType === 'teacher' && isEnglish && <TeachersBeyondHoc />}
       <StudentsBeyondHoc

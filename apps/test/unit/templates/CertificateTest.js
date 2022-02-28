@@ -139,8 +139,7 @@ describe('Certificate', () => {
 
       const wrapper = wrapperWithParams({
         tutorial: 'dance',
-        certificateId: 'sessionId',
-        showStudioCertificate: true
+        certificateId: 'sessionId'
       });
       let image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.match(

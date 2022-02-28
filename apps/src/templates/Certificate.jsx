@@ -1,4 +1,3 @@
-/* global dashboard */
 import React, {useState, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
@@ -28,12 +27,6 @@ function Certificate(props) {
   const [studentName, setStudentName] = useState();
   const nameInputRef = useRef(null);
 
-  const isMinecraft = () =>
-    /mc|minecraft|hero|aquatic|mee|mee_empathy|mee_timecraft/.test(
-      props.tutorial
-    );
-  const isAIOceans = () => /oceans/.test(props.tutorial);
-
   const personalizeCertificate = session => {
     $.ajax({
       url: '/v2/certificate',
@@ -62,43 +55,16 @@ function Certificate(props) {
   };
 
   const getCertificateImagePath = certificate => {
-    if (!props.showStudioCertificate) {
-      return `${
-        dashboard.CODE_ORG_URL
-      }/api/hour/certificate/${certificate}.jpg`;
-    }
-
     const filename = getEncodedParams();
     return `/certificate_images/${filename}.jpg`;
   };
 
   const getPrintPath = certificate => {
-    if (!props.showStudioCertificate) {
-      let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
-      if (isMinecraft() && !personalized) {
-        // Correct the minecraft print url for non-personalized certificates.
-        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
-          props.tutorial
-        }`;
-      }
-      if (isAIOceans() && !personalized) {
-        // Correct the minecraft print url for non-personalized certificates.
-        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
-          props.tutorial
-        }`;
-      }
-      return print;
-    }
-
     const encoded = getEncodedParams();
     return `/print_certificates/${encoded}`;
   };
 
   const getCertificateSharePath = certificate => {
-    if (!props.showStudioCertificate) {
-      return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
-    }
-
     const encoded = getEncodedParams();
     return `/certificates/${encoded}`;
   };
@@ -199,8 +165,7 @@ Certificate.propTypes = {
   randomDonorName: PropTypes.string,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
-  children: PropTypes.node,
-  showStudioCertificate: PropTypes.bool
+  children: PropTypes.node
 };
 
 const styles = {
