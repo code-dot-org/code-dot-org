@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-02-24 18:16:39 UTC",
+    "serialized_at": "2022-02-28 16:44:22 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5423,6 +5423,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict2"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9627,6 +9630,34 @@
     {
       "seeding_key": {
         "lesson.key": "[New] Lots of Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Mini-Project: Collector Game",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
       }

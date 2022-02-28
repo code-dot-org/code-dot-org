@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:35.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -65,11 +61,16 @@
     "bubble_choice_description": "Remove the sprites when they are clicked.",
     "thumbnail_url": "https://images.code.org/137b0a8b6261d07e40cbacbc75c28335-image-1641587649737.2022-01-07 15_33_36.gif",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'spriteNotClicked');\r\n  addCriteria(function(){\r\n    return spriteRemoved()&&clickEventFound();\r\n  }, 'removeSpriteWhenClicked');\r\n  addCriteria(function() {\r\n    return onlyEventSpriteRemoved();\r\n  }, 'removeOnlyClickedSprite');\r\n}\r\n\r\ncheck();\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "LghShy1cYCo7R/IBg1+sG99Bt77C9vdIKn7hbLYkMMWePvei3R184hQBrYZ4\ncoen2XuJXep0vAWMM6cgIn9oZw==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:35.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:35.629+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_remove\\\"\"],\"cloned_from\":\"courseF_groups_remove\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:35.629+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_remove\\\"\"],\"cloned_from\":\"courseF_groups_remove\"},{\"changed_at\":\"2022-02-28 21:37:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,0 +1,32 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-26T00:32:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "The Theater",
+    "long_instructions": "The `FractalConcert` class creates a concert of images about fractal landscapes. **Fractal landscapes** are computer-generated landscapes, which are often used in movies and TV shows.\r\n\r\nThe `drawImage()` method in the `FractalConcert` class draws a specified image as the background image by placing the image at `(0, 0)`, setting the width and height to `myStage.getWidth()` and `myStage.getHeight()`  and setting the rotation to `0`.\r\n\r\n1. In `FractalConcert.java`, write an overloaded `drawImage()` method with a `String` array for `filenames` and an `int` for the number of seconds the image should display as its parameters.\r\n\r\n   a. For each image in the `String` array, draw the image using the one-parameter version of the `drawImage()` method and use `myStage.pause()` to pause for the specified number of seconds.\r\n\r\n2. In `FractalConcert.java`, complete the `playConcert()` method to:\r\n\r\n   a. Call the `drawImage()` method with the `String` array and `timePerImage` as the arguments.\r\n   \r\n   b. Call the `drawImage()` method with the `\"landscape5.jpeg\"` file as the argument.",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Write an overloaded drawImage() method in The Theater to place background images on the stage.",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class MyTheater {\n  public static void main(String[] args) throws FileNotFoundException {\n\n    String[] landscapes = {\"landscape1.jpeg\", \"landscape2.jpeg\", \"landscape3.jpeg\", \"landscape4.jpeg\"};    \n    Concert fractalLandscapes = new Concert(\"Loren Carpenter\");\n    fractalLandscapes.playConcert(landscapes, 10);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "TheaterStage.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Concert {\n\n  private Stage myStage;\n  private String director;\n\n  public Concert(String director) {\n    myStage = Theater.stage;\n    this.director = director;\n  }\n\n  public void drawImage(String filename) throws FileNotFoundException {\n    myStage.drawImage(filename, 0, 0, myStage.getWidth(), myStage.getHeight(), 0);\n  }\n\n  // TO DO: Write an overloaded drawImage() method with an array\n  // of Strings for filenames and an int for number of seconds.\n  public void drawImage() throws FileNotFoundException {\n\n    \n  }\n\n  public void playConcert(String[] filenames, int length) throws FileNotFoundException {\n    int timePerImage = length / filenames.length;\n    \n    // TO DO: Call the drawImage() method and pass the\n    // filenames array and timesPerImage as arguments.\n\n\n    // TO DO: Call the drawImage() method and pass\n    // the landscape5.jpeg file as the argument.\n    \n\n    myStage.drawText(\"Fractal landscapes are\",\n        50, 30, Color.WHITE, Font.SANS, 20, 0);\n    myStage.drawText(\"computer-generated landscapes.\",\n        50, 60, Color.WHITE, Font.SANS, 20, 0);\n    \n    myStage.play();\n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "thumbnail_url": "https://images.code.org/37de5795485532786e2e30bc0fbbddec-image-1639150856820.gif",
+    "name_suffix": "_2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:09.994+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2c\\\"\"],\"cloned_from\":\"CSA U7L4-L2c\"}]"
+}]]></config>
+</Javalab>
