@@ -75,6 +75,7 @@ class XhrProxyController < ApplicationController
     distanza.org
     dweet.io
     enclout.com
+    freecurrencyapi.net
     googleapis.com
     grobchess.com
     herokuapp.com
@@ -93,6 +94,7 @@ class XhrProxyController < ApplicationController
     pastebin.com
     pixabay.com
     pokeapi.co
+    pro-api.coinmarketcap.com
     qrng.anu.edu.au
     quandl.com
     random.org

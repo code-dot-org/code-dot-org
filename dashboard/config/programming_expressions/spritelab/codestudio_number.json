@@ -1,8 +1,20 @@
 {
   "key": "codestudio_number",
-  "name": "math_number",
+  "name": "number",
   "category": "Math",
   "category_key": "math",
   "block_name": "math_number",
-  "syntax": "math_number"
+  "content": "Holds a number value.\r\n\r\nThis block cannot be used by itself and can be placed in any block that expects a number. Click inside the block to type a number.",
+  "image_url": "https://curriculum.code.org/media/blocks/number.PNG",
+  "palette_params": [
+    {
+      "name": "number",
+      "type": "",
+      "required": true,
+      "description": "Click inside the block to type any number"
+    }
+  ],
+  "short_description": "Holds a number value.",
+  "syntax": "math_number",
+  "tips": "- Only positive numbers, negative numbers, and decimals are accepted."
 }
