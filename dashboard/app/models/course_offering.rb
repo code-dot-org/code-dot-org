@@ -72,6 +72,69 @@ class CourseOffering < ApplicationRecord
     end
   end
 
+  def can_be_instructor?(user)
+    course_versions.any? {|cv| cv.can_be_instructor?(user)}
+  end
+
+  def pl_course?
+    course_versions.any?(&:pl_course?)
+  end
+
+  def any_versions_launched?
+    course_versions.any?(&:launched?)
+  end
+
+  def any_versions_in_development?
+    course_versions.any?(&:in_development?)
+  end
+
+  def any_version_has_pilot_access?(user)
+    course_versions.any? {|cv| cv.has_pilot_access?(user)}
+  end
+
+  def self.assignable_course_offerings(user)
+    CourseOffering.all.select {|co| co.assignable?(user)}
+  end
+
+  def self.assignable_course_offerings_info(user, locale_code = 'en-us')
+    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
+  end
+
+  def self.assignable_student_course_offerings(user)
+    assignable_course_offerings(user).select {|aco| !aco.pl_course?}
+  end
+
+  def self.assignable_student_course_offerings_info(user, locale_code = 'en-us')
+    assignable_student_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
+  end
+
+  def self.assignable_pl_course_offerings(user)
+    assignable_course_offerings(user).select(&:pl_course?)
+  end
+
+  def self.assignable_pl_course_offerings_info(user, locale_code = 'en-us')
+    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
+  end
+
+  def assignable?(user)
+    return false unless can_be_instructor?(user)
+    return true if any_versions_launched?
+    return true if Script.has_any_pilot_access?(user) && any_version_has_pilot_access?(user)
+    return true if user.permission?(UserPermission::LEVELBUILDER) && any_versions_in_development?
+
+    false
+  end
+
+  def summarize_for_assignment_dropdown(user, locale_code)
+    {
+      id: id,
+      display_name: localized_display_name,
+      category: category,
+      is_featured: is_featured?,
+      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
+    }
+  end
+
   def localized_display_name
     localized_name = I18n.t(
       key,

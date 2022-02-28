@@ -42,6 +42,7 @@ class Script < ApplicationRecord
   include SharedCourseConstants
   include SharedConstants
   include Curriculum::CourseTypes
+  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
 
   include Seeded
@@ -1869,6 +1870,15 @@ class Script < ApplicationRecord
       return alternate_ugu.script if ugu != alternate_ugu
     end
     nil
+  end
+
+  def summarize_for_assignment_dropdown
+    info = ScriptConstants.assignable_info(self)
+
+    {
+      id: id,
+      name: I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
+    }
   end
 
   # @return {AssignableInfo} with strings translated

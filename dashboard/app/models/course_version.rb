@@ -59,6 +59,13 @@ class CourseVersion < ApplicationRecord
   # into the course version itself.
 
   delegate :name, to: :content_root
+  delegate :pl_course?, to: :content_root
+  delegate :stable?, to: :content_root
+  delegate :launched?, to: :content_root
+  delegate :in_development?, to: :content_root
+  delegate :has_pilot_access?, to: :content_root
+  delegate :can_be_instructor?, to: :content_root
+  delegate :course_assignable?, to: :content_root
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -129,5 +136,32 @@ class CourseVersion < ApplicationRecord
     Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
       CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
     end
+  end
+
+  def recommended?(locale_code = 'en-us')
+    return false unless stable?
+    return true if course_offering.course_versions.length == 1
+
+    family_name = course_offering.key
+    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale_code)
+
+    puts family_name
+    puts locale_code
+    puts latest_stable_version.inspect
+    puts content_root.inspect
+
+    latest_stable_version == content_root
+  end
+
+  def summarize_for_assignment_dropdown(user, locale_code)
+    {
+      id: id,
+      version_year: key,
+      display_name: display_name,
+      is_stable: stable?,
+      is_recommended: recommended?(locale_code),
+      locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
+      units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown)
+    }
   end
 end
