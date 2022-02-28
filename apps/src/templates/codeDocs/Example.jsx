@@ -13,7 +13,7 @@ export default function Example({example, programmingEnvironmentName}) {
     </>
   );
   if (example.app) {
-    if (example.appDisplayType === 'displayApp') {
+    if (example.app_display_type === 'codeFromCodeField') {
       const embedUrl = example.app.endsWith('embed')
         ? example.app
         : example.app + '/embed';
@@ -42,7 +42,7 @@ export default function Example({example, programmingEnvironmentName}) {
               src={embedUrl}
               style={{
                 width: '100%',
-                height: Number(example.appEmbedHeight) || 310
+                height: Number(example.embed_app_with_code_height) || 310
               }}
             />
           </div>

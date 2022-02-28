@@ -10,7 +10,7 @@ describe('Example', () => {
       description: 'An example',
       code: '```This is the code that the embedded app uses```',
       app: '/p/applab/abcde',
-      appDisplayType: 'displayApp'
+      app_display_type: 'codeFromCodeField'
     };
     const wrapper = shallow(
       <Example example={example} programmingEnvironmentName="applab" />
@@ -29,7 +29,7 @@ describe('Example', () => {
       name: 'Example 1',
       description: 'An example',
       app: '/p/spritelab/abcde',
-      appDisplayType: 'directly'
+      app_display_type: 'embedAppWithCode'
     };
     const wrapper = shallow(
       <Example example={example} programmingEnvironmentName="spritelab" />
@@ -48,7 +48,7 @@ describe('Example', () => {
       name: 'Example 1',
       description: 'An example',
       code: '```This is some example code```',
-      appDisplayType: 'displayApp'
+      app_display_type: 'codeFromCodeField'
     };
 
     const wrapper = shallow(
@@ -64,7 +64,7 @@ describe('Example', () => {
       name: 'Example 1',
       description: 'An example',
       code: '```This is some example code```',
-      appDisplayType: 'displayApp',
+      app_display_type: 'codeFromCodeField',
       imageUrl: '/image.png'
     };
 
