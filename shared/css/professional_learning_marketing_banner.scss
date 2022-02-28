@@ -104,7 +104,7 @@ $dark_blue_background_colour: #0d4172;
       .header {
         color: black;
         position: relative;
-        font-size: 16px;
+        font-size: 18px;
       }
 
       .text {
@@ -196,6 +196,14 @@ $dark_blue_background_colour: #0d4172;
 
     .text-wrapper {
       color: black;
+
+      .header {
+        font-size: 18px;
+      }
+
+      .text {
+        font-size: 14px;
+      }
     }
   }
 
@@ -203,7 +211,7 @@ $dark_blue_background_colour: #0d4172;
     text-align: center;
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 180px;
     background-color: $dark_blue_background_colour;
 
     .text-wrapper {
@@ -216,12 +224,14 @@ $dark_blue_background_colour: #0d4172;
         padding: 15px 30px 5px 30px;
         text-align: center;
         top: 0px;
+        font-size: 16px;
       }
 
       .text {
         text-align: center;
         margin-left: 5px;
         margin-right: 5px;
+        font-size: 13px;
       }
 
       button {
