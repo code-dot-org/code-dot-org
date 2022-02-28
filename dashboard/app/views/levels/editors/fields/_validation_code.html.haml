@@ -19,9 +19,6 @@
   - if @level.is_a?(Gamelab)
     %p
       This is a snippet of javascript that is run after every draw loop. Call levelSuccess() in here to stop the level as a success. You can also pass a number into levelSuccess() to give the student a non-perfect test result (see <a href="https://github.com/code-dot-org/code-dot-org/blob/101fbfd2dcdd635d7359e991559ba782f9fd00be/apps/src/constants.js#L33-L106">TestResults</a> for the list of valid test results). There is also a `validationProps` object that you can stick arbitrary properties on to track state across draw loops.
-  - if @level.is_a?(GamelabJr) && !(@level.is_a?(Dancelab) || @level.is_a?(Poetry))
-    %p
-      Sprite Lab validation can utilize a number of <a href="https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js">criterion commands</a>. Available feedback strings are located in <a href="https://github.com/code-dot-org/code-dot-org/blob/staging/apps/i18n/spritelab/en_us.json">spritelab/en_us.json</a>. Additional criterion functions and feedback strings need to be added by an engineer.
     = f.text_area :validation_code
 
   = render partial: 'levels/editors/fields/applab_validations', locals: {f: f} if @level.is_a?(Applab)
