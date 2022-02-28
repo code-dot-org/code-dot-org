@@ -1087,6 +1087,25 @@ class User < ApplicationRecord
       index_by(&:level_id)
   end
 
+  # Retrieves all user_level objects for the given users, script, and levels.
+  # The return value is a hash from user_id to an array of UserLevel objects
+  # sorted in descending order by updated_at:
+  # {
+  #   1: [<UserLevel>, <UserLevel>, ...],
+  #   2: [<UserLevel>, <UserLevel>, ...]
+  # }
+  #
+  # A given user with no UserLevel matching the given criteria is omitted from
+  # the returned hash. The associated LevelSource data for each UserLevel is also
+  # prefetched to prevent n+1 query issues.
+  def self.user_levels_by_user(user_ids, script_id, level_ids)
+    UserLevel.
+      includes(:level_source).
+      where({user_id: user_ids, script_id: script_id, level_id: level_ids}).
+      order('updated_at DESC').
+      group_by(&:user_id)
+  end
+
   # Retrieve all user levels for the designated set of users in the given
   # script, with a single query.
   # @param [Enumerable<User>] users

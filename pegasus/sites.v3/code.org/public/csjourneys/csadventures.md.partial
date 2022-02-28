@@ -81,32 +81,34 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="tanium-chat" href="https://www.eventbrite.com/e/247529004917" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/tanium-chat2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Chris Lopez of Tanium">
+      <a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/myjourney-greenwayhealth.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Kevin Schriver of Greenway Health">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Fri, February 25 at 10 am EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>How to outsmart a malicious hacker with Tanium</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn how Christopher Lopez, a security analyst with Tanium, helps organizations protect their networks from cybersecurity threats. <i>For grades K-5</i>.</div>
-		<a class="linktag" id="tanium-chat" href="https://www.eventbrite.com/e/247529004917" target="_blank"><button>View details</button></a>
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Tuesday, March 8 at 4 pm EDT</strong></div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Improving user experiences in healthcare</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from a self-taught web developer about how his contributions at Greenway Health make access to healthcare information more user-friendly. <i>For grades K-5</i>.</div>
+		<a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank"><button>View details</button></a>
   </div>
 </div>
 </div>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="sasha-chat" href="https://www.eventbrite.com/e/247545785107" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/sasha-chat.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Sasha Samochina, creative technologist">
+      <a class="linktag" id="motorola-chat" href="https://www.eventbrite.com/e/my-journey-using-computer-science-to-keep-people-safe-registration-251607343337" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/motorola-classchat.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Richard Nelson, V of Motorola">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Fri, March 2 at 1 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Visual storytelling with data</strong></h3>
-       	<br>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 20px">Learn how creative technologist Sasha Samochina uses art and technology to create software that helps scientists and inspires people of all ages. <i>For grades 6-12</i>.</div>
-        <p><i>Postponed.  More info coming soon.</i></p>
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wed, March 16 at 9 am EDT</strong></div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Using computer science to keep people safe</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from Richard Nelson, V, a mechanical engineer at Motorola who plays a crucial role in ensuring public safety. <i>For grades 6-12</i>.</div>
+        <br>
+        <br>
+        <a class="linktag" id="motorola-chat" href="https://www.eventbrite.com/e/my-journey-using-computer-science-to-keep-people-safe-registration-251607343337" target="_blank"><button>View details</button></a>
   </div>
 </div>
 </div>
+
 
 <div class="col-33" style="padding-bottom:15px; padding-right:20px; text-align:center">
   <div class="col-100" style="padding:25px; border: 1px solid #0094ca; border-bottom: none; border-radius:15px 15px 0 0; text-align: center">
@@ -133,22 +135,6 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="motorola-chat" href="https://www.eventbrite.com/e/my-journey-using-computer-science-to-keep-people-safe-registration-251607343337" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/motorola-classchat.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Richard Nelson, V of Motorola">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wed, March 16 at 9 am EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Using computer science to keep people safe</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from Richard Nelson, V, a mechanical engineer at Motorola who plays a crucial role in ensuring public safety. <i>For grades 6-12</i>.</div>
-        <br>
-        <br>
-        <a class="linktag" id="motorola-chat" href="https://www.eventbrite.com/e/my-journey-using-computer-science-to-keep-people-safe-registration-251607343337" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="lucasfilm-chat" href="https://www.eventbrite.com/e/my-journey-creating-visual-effects-for-star-wars-registration-261427184747" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/lucasfilm-myjourney.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Allison Moon of Lucasfilm">
       </a>
@@ -156,6 +142,7 @@ social:
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wed, March 23 at 1 pm EDT</strong></div>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Creating visual effects for Star Wars</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from Allison Moon, a pipeline technical director with Lucasfilm who helps create visual effects for movies such as Star Wars: The Last Jedi. <i>For grades K-5</i>.</div>
+        <br>
         <br>
         <a class="linktag" id="motorola-chat" href="https://www.eventbrite.com/e/my-journey-creating-visual-effects-for-star-wars-registration-261427184747" target="_blank"><button>View details</button></a>
   </div>
@@ -170,8 +157,22 @@ social:
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Fri, April 1 at 1 pm EDT</strong></div>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Making interactive art with technology</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn how a creative engineer at Meow Wolf helps to build interactive art installations that immerse visitors in mind-blowing new worlds with the intersection of art and engineering <i>For grades 6-12</i>.</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn how a creative engineer at Meow Wolf helps to build interactive art installations that immerse visitors in mind-blowing new worlds with the intersection of art and engineering. <i>For grades 6-12</i>.</div>
         <a class="linktag" id="meowwolf-chat" href="https://www.eventbrite.com/e/my-journey-making-interactive-art-with-technology-registration-261398238167" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="snapchat-chat" href="https://www.eventbrite.com/e/252182493627" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/myjourney-snapchat.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat Bertrand Saint-Preux of Snapchat">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Fri, April 8 at 1 pm EDT</strong></div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Creating an inclusive camera at Snapchat</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear about a Snapchat Product Lead’s journey from building a jukebox app to creating an inclusive camera that works well for everyone, regardless of their skin tone, culture, beauty standards, or ability. <i>For grades 6-12</i>.</div>
+        <a class="linktag" id="snapchat-chat" href="https://www.eventbrite.com/e/252182493627" target="_blank"><button>View details</button></a>
   </div>
 </div>
 </div>

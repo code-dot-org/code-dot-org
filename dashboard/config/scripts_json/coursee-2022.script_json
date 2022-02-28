@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-02-22 19:49:16 UTC",
+    "serialized_at": "2022-02-25 20:07:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -640,6 +640,7 @@
       "key": "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847",
       "position": 2,
       "properties": {
+        "duration": 10,
         "name": "Bridging Activity"
       },
       "seeding_key": {
@@ -681,6 +682,7 @@
       "key": "a18d4bd3-bd12-49fd-9ce0-be5a87553023",
       "position": 1,
       "properties": {
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -694,6 +696,7 @@
       "key": "1835051a-c185-43c8-bc70-00418b23a879",
       "position": 2,
       "properties": {
+        "duration": 25,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -707,6 +710,7 @@
       "key": "2ae44a38-4141-461c-a9d1-291a952c3bec",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1610,7 +1614,7 @@
       "key": "7af8b468-66ad-4d3b-a9c3-2ff50362f027",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to reflect on previous two lessons. Students should know the difference between personal and private information. Students should also understand how to be an upstander.\n* _How can we safely present ourselves online?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: _How can we safely present ourselves online?_\n\n**Do this**: Ask students to reflect on previous two lessons. Students should know the difference between personal and private information. Students should also understand how to be an upstander.\n\n",
         "name": "Introduction\r",
         "tips": [
           {
@@ -1768,7 +1772,7 @@
       "key": "66c1f19a-bfc9-4569-8b6c-c0eb3b6336ae",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do we use sprites in our programs?_\n\n",
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How do we use sprites in our programs?_\n\n",
         "name": "Setting the Stage"
       },
       "seeding_key": {
@@ -1935,7 +1939,7 @@
       "key": "8489f43d-dff8-41c9-aeca-e699cb7e8adc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What information is safe to share online and what information is strictly private?_\n\nToday students will apply what they've learned about personal and private information to design an interactive poster about themselves with Sprite Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What information is safe to share online and what information is strictly private?_\n\nToday students will apply what they've learned about personal and private information to design an interactive poster about themselves with Sprite Lab.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2044,7 +2048,7 @@
       "key": "d058a787-37d6-4c25-b5c0-c427b5bc9373",
       "position": 1,
       "properties": {
-        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How does this puzzle work?_",
+        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How does this puzzle work?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2172,7 +2176,7 @@
       "key": "83e6c37d-1cc1-49b9-b208-79567063fb20",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect**: Ask the students how they felt about nested loops. \n\n* _What did they like and dislike about them?_ \n* _What are some advantages of using nested loops?_\n\nTell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect**: Ask the students how they felt about nested loops. \n\n* _What did they like and dislike about them?_ \n* _What are some advantages of using nested loops?_\n\n**Do this**: Tell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2226,7 +2230,7 @@
       "key": "7571aba3-7786-43cb-91e3-4d1a3218c6cc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Level 4-13 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4-13 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2293,7 +2297,7 @@
       "key": "0b5c0d6e-7e98-4c6e-afe5-0ef4e99677b0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Share Out” slide.\n\n*What did you make today?*\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide.\n\n**Discuss**: *What did you make today?*\n\n**Do This**: Get the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2305,7 +2309,7 @@
       "key": "2e538697-0729-4210-9cba-268ca191581e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Reflect” slide.\n\n**Reflect**:\nDraw something you used nested loops to make.\nHow do nested loops help you code complex images?\n\n**Reflect:**\n\n* _Draw something you used nested loops to make._\n* _How do nested loops help you code complex images?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect:**\n\n* _Draw something you used nested loops to make._\n* _How do nested loops help you code complex images?_"
       },
       "seeding_key": {
         "activity_section.key": "2e538697-0729-4210-9cba-268ca191581e",
@@ -2327,7 +2331,7 @@
       "key": "0242f01c-8a92-4d38-9d15-93132d346a76",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: Think back to the previous lesson: \nFancy Shapes Using Nested Loops\n\n* _If you were to teach nested loops to a friend, what would you say to help them understand?_\n\n\nIf there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' backstory if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the previous lesson: \nFancy Shapes Using Nested Loops_\n* _If you were to teach nested loops to a friend, what would you say to help them understand?_\n\n**Do This**: If there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' backstory if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2387,7 +2391,7 @@
       "key": "b6db9c2f-2e77-42e0-bc68-93d8f8e9b4b4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What is the chorus to your favorite song?_\n\n####Vocabulary\n\nThis lesson has one new and important word:\n\n - **Function** - Say it with me: Func-shun \n\nA piece of code that you can call over and over again.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is the chorus to your favorite song?_\n\n####Vocabulary\n\nThis lesson has one new and important word:\n\n - **Function** - Say it with me: Func-shun \n\nA piece of code that you can call over and over again.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2522,7 +2526,7 @@
       "key": "da43be51-eec4-49cb-8d03-ad637da32aff",
       "position": 2,
       "properties": {
-        "description": "\n####Flash Chat: What did we learn?\n\n- Would you rather write lyrics over and over again or define a chorus?\n- Do you think it's possible to make multiple choruses for the same song?\n- Does it make sense to make a new chorus for every time it's needed in a song?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n"
+        "description": "\n####Flash Chat: What did we learn?\n\n- Would you rather write lyrics over and over again or define a chorus?\n- Do you think it's possible to make multiple choruses for the same song?\n- Does it make sense to make a new chorus for every time it's needed in a song?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide"
       },
       "seeding_key": {
         "activity_section.key": "da43be51-eec4-49cb-8d03-ad637da32aff",
@@ -2533,7 +2537,7 @@
       "key": "89d28fac-a752-47ee-9ede-2c0bd67b4626",
       "position": 3,
       "properties": {
-        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Reflect:**\n* _Can you think of another activity (besides songwriting) where you might want to call a special group of instructions several times?_"
+        "description": "**Reflect:** _Can you think of another activity (besides songwriting) where you might want to call a special group of instructions several times?_"
       },
       "seeding_key": {
         "activity_section.key": "89d28fac-a752-47ee-9ede-2c0bd67b4626",
@@ -2577,7 +2581,7 @@
       "key": "e46c5e2b-810a-412d-b3c8-4866111b0589",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What is a function and how do you use it?_\n\nHelp the class understand that functions are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is a function and how do you use it?_\n\n**Discussion Goal**: Make sure students understand that functions are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2660,7 +2664,7 @@
       "key": "db999346-e73e-4580-8c5f-d76e30ab2b7d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3-Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2756,7 +2760,7 @@
       "key": "81a714a2-bfdb-4e01-a393-3b887eb5b555",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _Think back to the Songwriting lesson: When writing a song, when should you use a function?_\n\nAsk the class to think back to \"Functions Unplugged: Songwriting\" and recall what a function is. Open a discussion about when to use a function when writing a song.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Using Functions” slide\n\nTell the class that there are two main components to using functions.\n\n1. **The Declaration**: Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\n\n2. **The Call**:\n\tFunction calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\n    \nThe class can use songwriting as an example to understand these two components. In the unplugged activity, the function containing the lyrics to the chorus was named \"chorus\". When we first made this function, we circled the lyrics that would go in the function. Once we named the function, we could read through the lyrics and replace the repeated chorus lyrics with a function call to \"chorus\".\n\nContinue the conversation until students have a basic understanding of functions being declared and called. If students don't get to this point, make sure to do one of the bridging activities before moving into the Code.org puzzles.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the Songwriting lesson: When writing a song, when should you use a function?_\n\nAsk the class to think back to \"Functions Unplugged: Songwriting\" and recall what a function is. Open a discussion about when to use a function when writing a song.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Using Functions” slide\n\nTell the class that there are two main components to using functions.\n\n1. **The Declaration**: Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\n\n2. **The Call**:\n\tFunction calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\n    \nThe class can use songwriting as an example to understand these two components. In the unplugged activity, the function containing the lyrics to the chorus was named \"chorus\". When we first made this function, we circled the lyrics that would go in the function. Once we named the function, we could read through the lyrics and replace the repeated chorus lyrics with a function call to \"chorus\".\n\nContinue the conversation until students have a basic understanding of functions being declared and called. If students don't get to this point, make sure to do one of the bridging activities before moving into the Code.org puzzles.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2958,7 +2962,7 @@
       "key": "a8369823-7441-45a9-993c-3546a2f85efe",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Reflect\" slide\n\n**Reflect:**\n\n* _Can you draw a scene where someone is using a conditional?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Reflect\" slide\n\n**Reflect:** _Can you draw a scene where someone is using a conditional?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2981,7 +2985,7 @@
       "key": "7538f281-8565-4235-a3f1-a40a2679d73d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _When might you use a conditional in your code?_ \n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\nTell students they will be using conditionals to solve this problem on Code.org. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a conditional in your code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When might you use a conditional in your code?_ \n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Do This**: Tell students they will be using conditionals to solve this problem on Code.org. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a conditional in your code.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3107,7 +3111,7 @@
       "key": "4bfcc176-30cf-46d2-b6a1-7878cd32087f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* Give an example of a conditional in your daily life.\n* _For example: If I am hungry, I eat some food.  While I am walking across the street, I keep an eye out for cars._",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _Give an example of a conditional in your daily life._\n* _For example: If I am hungry, I eat some food.  While I am walking across the street, I keep an eye out for cars._",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3201,7 +3205,7 @@
       "key": "be75c786-414d-4ba7-a1cf-bd5b444be3b2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**\n* _How does a function help to simplify your program?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect** _How does a function help to simplify your program?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3213,7 +3217,7 @@
       "key": "5939ecdc-3ed6-484a-9053-c6fe4307b694",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_\n * _What kinds of apps exist?_ \n * _When do we use apps?_\n\n**Discussion**: Students should understand that apps can address a variety of needs. For example, apps can be used to request rides, recommend movies, or communicate with friends and family. Many people have access to a mobile device (e.g., smartphone) which makes it possible to use apps just about anywhere.\n\nWhile discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\nEnsure that all students are on the same page regarding this topic by introducing key terms and concepts with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What are apps?\" slide \n\n**Say**: \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\nIntroduce accessibility with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What is accessibility?\" slide\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: _Ask students to define the term \"app\" in their own words._\n\n * _What is an app?_\n * _What kinds of apps exist?_ \n * _When do we use apps?_\n\n**Discussion**: Students should understand that apps can address a variety of needs. For example, apps can be used to request rides, recommend movies, or communicate with friends and family. Many people have access to a mobile device (e.g., smartphone) which makes it possible to use apps just about anywhere.\n\nWhile discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\nEnsure that all students are on the same page regarding this topic by introducing key terms and concepts with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What are apps?\" slide \n\n**Say**: \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\nIntroduce accessibility with the remarks below.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"What is accessibility?\" slide\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities.",
         "name": "Context-Setting"
       },
       "seeding_key": {
@@ -3237,7 +3241,7 @@
       "key": "35fc9b88-53fd-44aa-9f29-faf30034de5e",
       "position": 2,
       "properties": {
-        "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the ***Designing for Accessibility Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n#### Designing for Accessibility Scenarios\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 1: Meet Wei*\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 2: Introducing Grammaphone!*\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n\n**Discuss**: What do you think about this app? How do you think this app works?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 3: Wei and Grammaphone*\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music-sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 4: Meet Roger*\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. A few years ago, Roger’s hand had to be “amputated” (surgically removed) due to an accident. \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand,” which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 5: Introducing Football Frenzy!*\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n\n**Discuss**: What do you think about this app? How do you think this game is played?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Slide 6: Roger and Football Frenzy*\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so that you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n*<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Slide 7: Designing for Accessibility* \n\n* Neither of these apps was designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s redesign these apps! \n\n####App Redesign Activity (25 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Your turn!” slide\n\nThe final scenario allows students to sketch a redesign of one app from the scenarios (\"Grammaphone\" for Wei or \"Football Frenzy\" for Roger). \n\nStudents should primarily focus their efforts on making their redesigned app more accessible for either of them, along with any other accessibility features they can think of. Students can design as many screens for the app as they wish, and they do not need to make their app look anything like the original examples.\n\nIf there is time, students may redesign apps for both characters.\n\n**Distribute**: Pass out crayons/pencils/etc. to each student as they open their reflection journals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Share Out” slide\n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design addresses the need of the user in question."
+        "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the Designing for Accessibility scenarios. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n#### Designing for Accessibility Scenarios\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Meet Wei\" slide\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Introducing Grammaphone!\" slide\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n\n**Discuss**: What do you think about this app? How do you think this app works?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Wei and Grammaphone\" slide\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music-sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Meet Roger\" slide\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. A few years ago, Roger’s hand had to be “amputated” (surgically removed) due to an accident. \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand,” which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Introducing Football Frenzy!\" slide\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n\n**Discuss**: What do you think about this app? How do you think this game is played?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Roger and Football Frenzy\" slide\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so that you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Designing for Accessibility\" slide\n\n* Neither of these apps was designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s redesign these apps! \n\n####App Redesign Activity (25 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Your turn!” slide\n\nThe final scenario allows students to sketch a redesign of one app from the scenarios (\"Grammaphone\" for Wei or \"Football Frenzy\" for Roger). \n\nStudents should primarily focus their efforts on making their redesigned app more accessible for either of them, along with any other accessibility features they can think of. Students can design as many screens for the app as they wish, and they do not need to make their app look anything like the original examples.\n\nIf there is time, students may redesign apps for both characters.\n\n**Distribute**: Pass out crayons/pencils/etc. to each student as they open their reflection journals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Share Out” slide\n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design addresses the need of the user in question."
       },
       "seeding_key": {
         "activity_section.key": "35fc9b88-53fd-44aa-9f29-faf30034de5e",
@@ -3260,7 +3264,7 @@
       "key": "6a862d4d-8036-499b-bdd6-a5d75dc0099e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What are examples of projects or artwork that people share online?_\n\nThe following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Digital Sharing” video slide\n\nHave students watch the one-minute ***Digital Sharing video**.\nYou may need to play it two or three times."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What are examples of projects or artwork that people share online?_\n\nThe following writing exercises are designed to create context, help students engage with the topic, and prepare them for the lesson discussion. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Digital Sharing” video slide\n\nHave students watch the one-minute ***Digital Sharing video**.\nYou may need to play it two or three times."
       },
       "seeding_key": {
         "activity_section.key": "6a862d4d-8036-499b-bdd6-a5d75dc0099e",
