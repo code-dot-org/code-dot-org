@@ -599,8 +599,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    // Nobody is able to set an application status to incomplete from detail view,
-    // so remove it unless the current status is incomplete
+    // Only show incomplete in the dropdown if the application is incomplete
     const statuses = _.omit(
       getApplicationStatuses(
         this.props.viewType,
