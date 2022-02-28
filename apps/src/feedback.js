@@ -970,6 +970,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
+
+  // maureen what is this
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
