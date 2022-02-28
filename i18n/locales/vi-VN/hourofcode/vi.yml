@@ -617,7 +617,7 @@ vi:
     Tất cả các sự kiện đã đăng ký với địa chỉ hợp lệ có thể được xem trên <a href='%{events_url}'>
     trang sự kiện.</a>
   map_warning_markdown: Bạn có thể xem danh sách đầy đủ các sự kiện trên [trang sự
-    kiện](%{Events_url}).
+    kiện](%{events_url}).
   meta_tag_og_title: Sự kiện Giờ Mã đang đến gần
   meta_tag_og_description: Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu
     học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi

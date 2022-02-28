@@ -3,6 +3,7 @@
   "name": "buzzer.playSong",
   "category": "Circuit",
   "category_key": "circuit",
+  "content": "Plays an array of notes one after the other at specified durations for each one.\r\n\r\n`buzzer.playSong()` works just like `buzzer.playNotes`, except now you can determine the duration for each note, which allows you to create music like what you would normally hear. ",
   "palette_params": [
     {
       "name": "notes"
@@ -11,5 +12,6 @@
       "name": "tempo"
     }
   ],
+  "short_description": "Plays an array of notes one after the other at specified durations for each one.",
   "syntax": "buzzer.playSong(notes, tempo)"
 }

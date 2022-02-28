@@ -3,15 +3,23 @@
     "data": {
       "activity_sections": {
         "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "#### Mise en scène\n\nAccueillez les élèves en cours en leur présentant rapidement l’activité de la journée. Veillez à leur dire de prendre leur temps et d'essayer différentes choses. "
         },
         "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
-            null
+            "Si vous avez le temps et que vous souhaitez préparer vos élèves à une activité hors-ligne, pensez à organiser [\"Soirée Dansante : hors-ligne\"](https://studio.code.org/s/dance-unplugged/lessons/1) avant votre Heure de Code. Ce cours succinct explique aux élèves l'idée que divers événements déclenchent de différents mouvements de danse."
           ]
         },
+        "73775ce2-2f05-4848-9b8c-9be7b6818903": {
+          "description": "Expliquez qu'aujourd'hui, vous allez être créatifs avec votre « code », chose qui signifie tout simplement : une série de consigne que peut comprendre un ordinateur. Tout comme choisir une couleur de peinture à utiliser ou les types de mots avec lesquels vous écrivez peut montrer comment vous vous exprimez, choisir le code que vous écrivez et comment les gens peuvent intéragir avec, cela peut aussi être l'occasion d'exprimer sa créativité !\n\n**Levez-vous et dansez :** Annoncez à la classe qu'aujourd'hui, vous allez voir comment danse et codage peuvent être conjugués de manière créative. Demandez à vos élèves de flosser, de dabber, ou de faire d'autres mouvements qu'ils ont inventés d'eux-mêmes pendant 10 secondes pour mettre l'ambiance. Vous pouvez mettre une chanson de cette Playlist Spotify (pour tous les âges) pour vous aider à commencer. \n\nN'oubliez pas de filmer vos élèves en train de bouger leurs codes ! \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
         "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
-          "name": "Dance Party - Va Plus Loin"
+          "name": "Dance Party - Va Plus Loin",
+          "description": "#### Ce tutoriel comprend des chansons d'artistes pop. Pour avoir un avant-goût de la liste des chansons dans ce tutoriel, consultez cette [Playlist Spotify (pour tous les âges)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Nous utilisons des versions sans paroles vulgaires pour les élèves d'en dessous de 13 ans."
+        },
+        "69481dbf-6e15-4769-8840-992f641a75b1": {
+          "description": "**Soutien générale :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien compléter le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau :\n\n-   Incitez les élèves à naviguer les différentes sections « en plus » dans l'ordre qu'ils souhaitent. Ils peuvent toujours retourner au Niveau 1 pour revisiter le menu. \n\n-   **Collaborer avec ses voisins :** Incitez vos élèves à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n\n-   **Lire les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Chercher des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les énigmes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour être encore plus créatif en prolongeant la tâche. \n\n-   **Avancer et revenir :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts introduits lors des niveaux antérieurs. \n\n-   **Prendre son temps et essayer différentes choses.** Même si les deux premiers niveaux indiquent aux élèves précisément ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées.\n\n-   Lire le code attentivement."
         },
         "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
           "progression_name": "Entrons en formation"
@@ -32,16 +40,26 @@
           "progression_name": "Accélére la, ralenti la"
         },
         "42ec95b6-80f4-4012-8869-6850c7497008": {
-          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
+          "name": "Compte rendu",
+          "description": "-   Posez une question avec diverses réponses possible, comme « Qu'est-ce que vous avez le plus aimé dans l'activité d'aujourd'hui ? » ou « Quel est le lien entre la créativité et l'informatique ? »."
+        },
+        "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
         },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
-          "name": "Prochaines étapes"
+          "name": "Prochaines étapes",
+          "description": "Indiquez aux élèves que s’ils ont apprécié l’activité d’aujourd’hui, ils ont de nombreuses pistes à leur dispositions s'ils veulent continuer à coder. Incitez-les à visiter [code.org/learn](<>) pour consulter une liste d’options ou, si vous envisagez l’une des activités supplémentaires qui découlent de l'Heure de Code, dites-leur ce que vous allez faire en classe."
+        },
+        "499c1123-e663-43e7-b573-a59ffd946fc4": {
+          "description": "L'Heure de Code est axée sur la créativité, et nous avons hâte de voir ce que vous créez ! Merci de partager les créations, photos et vidéos sur les réseaux sociaux ! Enseignants : filmez vos élèves en cours pendant qu’ils codent une danse, ou dansent cette danse. Personnalisez votre vidéo en ajoutant un [clip de fin](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nN’oubliez pas les tags #HourOfCode #HeuredeCode et taggez-nous sur Facebook, Twitter et Instagram. Et si vous identifiez l'artiste dont vos élèves utilisent la musique, c'est encore mieux ! Code.org repartagera les meilleures publications avec nos millions d'abonnés. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Bien sûr, veillez à bien respecter la politique de votre école concernant les réseaux sociaux._"
         },
         "2c451b2f-6820-47bb-94e0-966633757f93": {
-          "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
+          "description": "Demandez aux élèves d’ajouter leurs fiches ou post-its « Whip Around » à votre carte heuristique « Informatique » en partant. Essayez de remplir le tableau avec pleins d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
         },
         "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
-          "name": "Au-delà d’une Heure de Code"
+          "name": "Au-delà d’une Heure de Code",
+          "description": "Une fois votre Heure de Code terminée, il existe de nombreuses façons de continuer à enseigner l'informatique dans votre classe d'école primaire. Voici quelques idées :\n\n-   Enseigner les cours [Studio Code : les Bases de l'Informatique](http://code.org/educate/k5). Ces quatre cours sont destinés aux jeunes élèves. Ils se frayent un chemin à travers une série d'énigmes leur apprenant à coder. Les enseignants ont accès à des plans de cours intéressants qui aident à animer l'apprentissage. Code.org propose un suivi professionnel gratuit pour ces cours, en ligne ou en personne.\n-   Visiter [Vous Pouvez Enseigner l'Informatique](https://studio.code.org/courses?view=teacher) pour plus de propositions de cours. \n-   Inviter un expert en informatique à parler à votre salle de classe de son travail. Vous ne connaissez pas d'informaticiens dans la région ? Contactez un volontaire sur notre [carte des volontaires](https://code.org/volunteer/local)."
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Introduction"
@@ -64,8 +82,16 @@
             null
           ]
         },
+        "70935a98-82e9-4553-94f7-90a4e615dd34": {
+          "name": "Compte rendu"
+        },
+        "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](https://code.org/certificates?script=mc) à son nom."
+        },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
-          "name": "Prochaines étapes"
+          "name": "Prochaines étapes",
+          "description": "Indiquez aux élèves que s’ils ont apprécié l’activité d’aujourd’hui, ils ont de nombreuses pistes à leur dispositions s'ils veulent continuer à coder. Incitez-les à visiter [code.org/learn](<>) pour consulter une liste d’options ou, si vous envisagez l’une des activités supplémentaires qui découlent de l'Heure de Code, dites-leur ce que vous allez faire en classe."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Au-delà d’une Heure de Code"
@@ -91,8 +117,16 @@
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Le voyage du héros"
         },
+        "ae17edd9-ad82-47dc-95f5-368b58084998": {
+          "name": "Compte rendu"
+        },
+        "145782a9-a436-4615-9827-0f75d7e4b3a0": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](https://code.org/certificates?script=mc) à son nom."
+        },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
-          "name": "Prochaines étapes"
+          "name": "Prochaines étapes",
+          "description": "Indiquez aux élèves que s’ils ont apprécié l’activité d’aujourd’hui, ils ont de nombreuses pistes à leur dispositions s'ils veulent continuer à coder. Incitez-les à visiter [code.org/learn](<>) pour consulter une liste d’options ou, si vous envisagez l’une des activités supplémentaires qui découlent de l'Heure de Code, dites-leur ce que vous allez faire en classe."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Au-delà d’une Heure de Code"
@@ -162,6 +196,12 @@
             null
           ]
         },
+        "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
+          "name": "Compte rendu"
+        },
+        "ca7d5e61-0396-4885-934c-0d70ab63b072": {
+          "name": "Fêtez ça"
+        },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Prochaines étapes"
         },
@@ -185,6 +225,13 @@
           "tips": [
             null
           ]
+        },
+        "50db3674-3387-4932-ba7e-c9f176ebd976": {
+          "name": "Compte rendu"
+        },
+        "46f387e2-c275-4c57-acec-c9709e7f44fc": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Prochaines étapes"
@@ -214,11 +261,17 @@
             null
           ]
         },
+        "38799019-2b81-4c28-a239-762b90e0f5e3": {
+          "name": "Compte rendu"
+        },
+        "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
+          "name": "Fêtez ça"
+        },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Prochaines étapes"
         },
         "144b447f-1c5d-413b-a08c-65dda905a706": {
-          "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
+          "description": "Demandez aux élèves d’ajouter leurs fiches ou post-its « Whip Around » à votre carte heuristique « Informatique » en partant. Essayez de remplir le tableau avec pleins d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Au-delà d’une Heure de Code"
@@ -238,6 +291,12 @@
           "tips": [
             null
           ]
+        },
+        "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
+          "name": "Compte rendu"
+        },
+        "3d63393a-9146-4027-8783-247e19637d25": {
+          "name": "Fêtez ça"
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Prochaines étapes"
@@ -302,6 +361,12 @@
             null
           ]
         },
+        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
+          "name": "Compte rendu"
+        },
+        "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
+          "name": "Fêtez ça"
+        },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Prochaines étapes"
         },
@@ -314,7 +379,7 @@
         },
         "acc2ced5-83ed-4926-9830-f5bd846136a1": {
           "tips": [
-            null
+            "Si vous avez le temps et que vous souhaitez préparer vos élèves à une activité hors-ligne, pensez à organiser [\"Soirée Dansante : hors-ligne\"](https://studio.code.org/s/dance-unplugged/lessons/1) avant votre Heure de Code. Ce cours succinct explique aux élèves l'idée que divers événements déclenchent de différents mouvements de danse."
           ]
         },
         "e180cd18-ae1a-4a5f-b893-22359586ffe8": {
@@ -337,7 +402,7 @@
         },
         "ddf59331-16dc-488f-8170-6d12869fbb9f": {
           "name": "Assistance générale",
-          "description": "**Assistance générale :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien suivre le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau \n\n-   **Collaborez avec vos voisins:** Incitez-les à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n-   **Lisez les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Cherchez des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les énigmes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour devenir encore plus créatif en rallongeant la tâche. \n-   **Avancez et revenez :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts présentés avant. \n-   **Prenez votre temps et essayez des choses.** Même si les deux premiers niveaux indiquent exactement aux élèves ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées."
+          "description": "**Soutien générale :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien compléter le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau :\n\n-   **Collaborer avec ses voisins :** Incitez vos élèves à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n-   **Lire les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Chercher des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les énigmes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour devenir encore plus créatif en rallongeant la tâche. \n-   **Avancer et revenir :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts présentés avant. \n-   **Prendre son temps et essayer différentes choses.** Même si les deux premiers niveaux indiquent exactement aux élèves ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées."
         },
         "4dee8e28-b791-4791-ae95-8276c0da6331": {
           "description": "##### Niveau 1\n\n-   Faites glisser le bloc « créer un nouveau » rouge de la boîte à outils à gauche vers l'espace de travail à droite. Connectez-le à l'intérieur du bloc « installation ».\n-   Vous venez d'écrire votre premier programme. Assurez-vous d'appuyer sur Exécuter pour voir ce qui se passe. Vous devriez entendre de la musique et voir un personnage commencer à se déplacer dans la zone d'affichage. "
@@ -379,13 +444,22 @@
           "description": "#### Niveau 13\n\n-   Ce dernier niveau est très libre. Le tutoriel lui-même est conçu pour donner aux élèves suffisamment de temps pour continuer à travailler sur leur propre danse. \n-   **Incitez le partage :** Si les élèves ont un mobile avec du forfait, ils peuvent rapidement envoyer un lien vers leurs projets à leur propre téléphone ou à un ami. Si la charte de votre école le permet, incitez-les à le faire sur place. \n-   **Incitez la créativité :** La créativité est importante tout au long de ce cours, mais d'autant plus ici qu'autre part !"
         },
         "f78380b1-0666-40a6-ac50-7adf09cda880": {
-          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
+          "name": "Compte rendu",
+          "description": "-   Posez une question avec diverses réponses possible, comme « Qu'est-ce que vous avez le plus aimé dans l'activité d'aujourd'hui ? » ou « Quel est le lien entre la créativité et l'informatique ? »."
+        },
+        "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
-          "name": "Prochaines étapes"
+          "name": "Prochaines étapes",
+          "description": "Indiquez aux élèves que s’ils ont apprécié l’activité d’aujourd’hui, ils ont de nombreuses pistes à leur dispositions s'ils veulent continuer à coder. Incitez-les à visiter [code.org/learn](<>) pour consulter une liste d’options ou, si vous envisagez l’une des activités supplémentaires qui découlent de l'Heure de Code, dites-leur ce que vous allez faire en classe."
         },
         "0600e9df-03bd-4d61-9876-7516a87c2d30": {
-          "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
+          "description": "Demandez aux élèves d’ajouter leurs fiches ou post-its « Whip Around » à votre carte heuristique « Informatique » en partant. Essayez de remplir le tableau avec pleins d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
+        },
+        "ddc23577-3255-4a14-a11e-77259abc2810": {
+          "description": "L'Heure de Code est axée sur la créativité, et nous avons hâte de voir ce que vous créez ! Merci de partager les créations, photos et vidéos sur les réseaux sociaux ! Enseignants : filmez vos élèves en cours pendant qu’ils codent une danse, ou dansent cette danse. Personnalisez votre vidéo en ajoutant un [clip de fin](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nN’oubliez pas les tags #HourOfCode #HeuredeCode et taggez-nous sur Facebook, Twitter et Instagram. Et si vous identifiez l'artiste dont vos élèves utilisent la musique, c'est encore mieux ! Code.org repartagera les meilleures publications avec nos millions d'abonnés. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Bien sûr, veillez à bien respecter la politique de votre école concernant les réseaux sociaux._"
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "Installer la scène",
@@ -433,8 +507,16 @@
             null
           ]
         },
+        "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
+          "name": "Compte rendu"
+        },
+        "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](https://code.org/certificates?script=mc) à son nom."
+        },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
-          "name": "Prochaines étapes"
+          "name": "Prochaines étapes",
+          "description": "Indiquez aux élèves que s’ils ont apprécié l’activité d’aujourd’hui, ils ont de nombreuses pistes à leur dispositions s'ils veulent continuer à coder. Incitez-les à visiter [code.org/learn](<>) pour consulter une liste d’options ou, si vous envisagez l’une des activités supplémentaires qui découlent de l'Heure de Code, dites-leur ce que vous allez faire en classe."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Au-delà d’une Heure de Code"
@@ -524,6 +606,12 @@
             null
           ]
         },
+        "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
+          "name": "Compte rendu"
+        },
+        "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
+          "name": "Fêtez ça"
+        },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Prochaines étapes"
         },
@@ -531,7 +619,7 @@
           "name": "Au-delà d’une Heure de Code"
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
-          "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
+          "description": "Demandez aux élèves d’ajouter leurs fiches ou post-its « Whip Around » à votre carte heuristique « Informatique » en partant. Essayez de remplir le tableau avec pleins d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Introduction"
@@ -551,6 +639,13 @@
           "tips": [
             null
           ]
+        },
+        "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
+          "name": "Compte rendu"
+        },
+        "6b574c8b-2319-4244-acc8-fb8405fa5737": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](https://code.org/certificates?script=mc) à son nom."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Prochaines étapes"
@@ -573,6 +668,13 @@
           "tips": [
             null
           ]
+        },
+        "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
+          "name": "Compte rendu"
+        },
+        "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
         },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
           "name": "Prochaines étapes"
@@ -633,6 +735,12 @@
             null
           ]
         },
+        "afb5ecc7-af66-492d-96bb-2412754005e0": {
+          "name": "Compte rendu"
+        },
+        "16a6a4db-d853-478e-9945-3f0d17865e80": {
+          "name": "Fêtez ça"
+        },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Prochaines étapes"
         },
@@ -640,7 +748,7 @@
           "name": "Au-delà d’une Heure de Code"
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
-          "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
+          "description": "Demandez aux élèves d’ajouter leurs fiches ou post-its « Whip Around » à votre carte heuristique « Informatique » en partant. Essayez de remplir le tableau avec pleins d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
         },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
@@ -736,6 +844,13 @@
             null
           ]
         },
+        "a0530acf-3bce-4de9-b392-fe8725044086": {
+          "name": "Compte rendu"
+        },
+        "ceaf9d96-e806-48e1-9a95-30566999264e": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
+        },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Prochaines étapes"
         },
@@ -806,13 +921,18 @@
           "progression_name": "Accélére la, ralenti la"
         },
         "820a64ef-d544-460f-ab3f-0f19442b9129": {
-          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
+          "name": "Compte rendu",
+          "description": "-   Posez une question avec diverses réponses possible, comme « Qu'est-ce que vous avez le plus aimé dans l'activité d'aujourd'hui ? » ou « Quel est le lien entre la créativité et l'informatique ? »."
+        },
+        "2458fd7f-011d-4251-8877-2e90d5d55684": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Prochaines étapes"
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
-          "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
+          "description": "Demandez aux élèves d’ajouter leurs fiches ou post-its « Whip Around » à votre carte heuristique « Informatique » en partant. Essayez de remplir le tableau avec pleins d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
         },
         "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
           "name": "Installer la scène",
@@ -820,7 +940,7 @@
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
-            null
+            "Si vous avez le temps et que vous souhaitez préparer vos élèves à une activité hors-ligne, pensez à organiser [\"Soirée Dansante : hors-ligne\"](https://curriculum.code.org/hoc/unplugged/4/) avant votre Heure de Code. Ce cours succinct explique aux élèves l'idée que divers événements déclenchent de différents mouvements de danse."
           ]
         },
         "54fd242d-dc0f-4a52-b6d6-bfd8f396bc85": {
@@ -839,7 +959,7 @@
         },
         "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
           "name": "Assistance générale",
-          "description": "**Assistance générale :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien suivre le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau \n\n-   **Collaborez avec vos voisins:** Incitez-les à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n-   **Lisez les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Cherchez des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les énigmes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour devenir encore plus créatif en rallongeant la tâche. \n-   **Avancez et revenez :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts présentés avant. \n-   **Prenez votre temps et essayez des choses.** Même si les deux premiers niveaux indiquent exactement aux élèves ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées."
+          "description": "**Soutien générale :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien compléter le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau :\n\n-   **Collaborer avec ses voisins :** Incitez vos élèves à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n-   **Lire les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Chercher des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les énigmes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour devenir encore plus créatif en rallongeant la tâche. \n-   **Avancer et revenir :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts présentés avant. \n-   **Prendre son temps et essayer différentes choses.** Même si les deux premiers niveaux indiquent exactement aux élèves ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées."
         },
         "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
           "description": "##### Niveau 1\n\n-   Faites glisser le bloc « créer un nouveau » rouge de la boîte à outils à gauche vers l'espace de travail à droite. Connectez-le à l'intérieur du bloc « installation ».\n-   Vous venez d'écrire votre premier programme. Assurez-vous d'appuyer sur Exécuter pour voir ce qui se passe. Vous devriez entendre de la musique et voir un personnage commencer à se déplacer dans la zone d'affichage. "
@@ -850,13 +970,21 @@
           ]
         },
         "8653a0a0-b67c-4237-b8c1-111e0d11b4fe": {
-          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
+          "name": "Compte rendu",
+          "description": "-   Posez une question avec diverses réponses possible, comme « Qu'est-ce que vous avez le plus aimé dans l'activité d'aujourd'hui ? » ou « Quel est le lien entre la créativité et l'informatique ? »."
+        },
+        "f6bcac9d-cd44-435f-8565-57a5926542f8": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Prochaines étapes"
         },
+        "5a2bbf38-69c3-49c0-88ff-4f220565fb53": {
+          "description": "L'Heure de Code est axée sur la créativité, et nous avons hâte de voir ce que vous créez ! Merci de partager les créations, photos et vidéos sur les réseaux sociaux ! Enseignants : filmez vos élèves en cours pendant qu’ils codent une danse, ou dansent cette danse. Personnalisez votre vidéo en ajoutant un [clip de fin](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nN’oubliez pas les tags #HourOfCode #HeuredeCode et taggez-nous sur Facebook, Twitter et Instagram. Et si vous identifiez l'artiste dont vos élèves utilisent la musique, c'est encore mieux ! Code.org repartagera les meilleures publications avec nos millions d'abonnés. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif) \n\n_Bien sûr, veillez à bien respecter la politique de votre école concernant les réseaux sociaux._"
+        },
         "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
-          "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
+          "description": "Demandez aux élèves d’ajouter leurs fiches ou post-its « Whip Around » à votre carte heuristique « Informatique » en partant. Essayez de remplir le tableau avec pleins d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Rendez les choses intéressantes !",
@@ -2894,7 +3022,7 @@
           "progression_name": "Aperçu de la leçon"
         },
         "832dbd27-6b24-4512-9ab3-2e932bb1c988": {
-          "progression_name": "Vidéo : Introduction à la boucle draw"
+          "progression_name": "Vidéo : Introduction à la boucle dessine"
         },
         "4088b01c-c76d-4836-bfc1-7b0d3ce2fe68": {
           "progression_name": "La Boucle Dessiner"
@@ -3045,6 +3173,9 @@
         },
         "36340995-7f3c-4c0c-8cc9-25a4e255eff8": {
           "progression_name": "Aperçu de la leçon"
+        },
+        "aa9bbdfe-d05e-444f-bffc-dc450fee84cb": {
+          "progression_name": "Vidéo: Les Fonctions"
         },
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
           "progression_name": "fonctions"
@@ -5353,7 +5484,8 @@
           "description": "**Soutien général :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves tout au long du didacticiel. Voici quelques conseils qui devraient les aider, quel que soit le niveau sur lequel ils travaillent.\n\n-   **Collaborer avec les voisins :** Encouragez les élèves à se renseigner auprès d'un voisin pour discuter de ce qu'ils vivent. Étant donné que ce didacticiel comprend des vidéos et que les étudiants peuvent mettre des écouteurs, il risquent de « se mettre dans une bulle ». Aidez à briser ces barrières en les faisant travailler deux par deux.\n-   **Lire les instructions :** les instructions fournissent généralement des informations utiles sur ce qu'il se passe dans les coulisses.\n-   **Revenez en arrière et essayez différentes choses :** S'ils finissent vite, encouragez-les à revenir à « Plus d'entraînement ». Dans la dernière partie de l'activité, ils pourront également revenir en arrière et choisir un \"Nouveau mot\". Plus il y a de données d'entraînement, plus le modèle d'apprentissage automatique sera précis et cohérent. Ils peuvent également apprendre en entraînant délibérément leur modèle de manière incorrecte ou en ne l'entraînant pas du tout. ",
           "tips": [
             "Cette leçon ne dira pas aux étudiants s'ils ont terminé le niveau correctement. Il est possible de sauter rapidement les différentes parties de l'activité. Encouragez les élèves à regarder les vidéos, à lire les instructions et à essayer différentes choses en cours de route. À tout moment, ils pourront partager leurs découvertes avec vous ou un camarade de classe. "
-          ]
+          ],
+          "progression_name": "Vidéo : IA : Qu'est-ce que l'apprentissage automatique ? "
         },
         "fa4c81ae-8830-49d8-9de9-e5f80a38dac8": {
           "description": "### Entraînement de l'IA\n\nLes élèves peuvent parcourir les trois premiers niveaux seuls ou avec un camarade. Pour programmer l'IA, utilisez les boutons pour étiqueter une image comme « poisson » ou « pas de poisson ». Chaque image et étiquette fait partie des données utilisées pour entraîner l'IA. toute seule. Une fois formée, l'A.I. tentera d'étiqueter 100 nouvelles images toute seule, puis présentera une sélection qui, selon elle, a la plus grande probabilité d'être un \"poisson\" en fonction de sa formation. Les élèves qui étiquettent systématiquement les choses correctement devraient voir un océan plein de différents types de créatures marines, sans beaucoup (ou aucun) autre objet. ",
@@ -8418,7 +8550,8 @@
           "name": "Les Fonctions dans Minecraft",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vidéo : Minecraft - L'agent"
         },
         "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
           "progression_name": "Renforcement Des Compétences"
@@ -8512,7 +8645,8 @@
           "description": "#### Vidéo (5 minutes)\n\nMettez la vidéo en classe. ",
           "tips": [
             "Tout comme lorsque les élèves écrivent ou communiquent verbalement, il est important de définir des attentes sur l'utilisation appropriée des mots dans cette activité. Les élèves doivent comprendre qu'ils sont responsables du code qu'ils écrivent, y compris de tout texte qui s'affiche à l'écran. Le texte doit être respectueux et sûr. Ils peuvent s'entraîner à ne pas partager d'informations personnelles dans leurs programmes, surtout s'ils souhaitent les partager avec d'autres.\nNotez que les informations saisies dans une invite Sprite Lab ne sont pas enregistrées à long terme. Les mots et messages tapés par les utilisateurs de ces applications disparaissent une fois l'application réinitialisée. "
-          ]
+          ],
+          "progression_name": "Vidéo : Texte et invites "
         },
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
@@ -11146,7 +11280,8 @@
         "7d58d643-efce-44e7-a3e4-7b3492c72250": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vidéo : Qu'est-ce que l'apprentissage automatique ?"
         },
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
           "tips": [
@@ -11526,7 +11661,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vidéo : Introduction à la boucle draw"
+          "progression_name": "Vidéo : Introduction à la boucle dessine"
         },
         "09ba5105-6934-4a31-9684-3e62192e7542": {
           "progression_name": "Exploration"
@@ -11925,7 +12060,8 @@
         "52d53651-705c-47ec-a68f-d014f3499a99": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vidéo: Les Fonctions"
         },
         "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
           "tips": [
