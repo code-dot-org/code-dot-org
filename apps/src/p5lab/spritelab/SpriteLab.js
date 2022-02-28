@@ -91,20 +91,25 @@ export default class SpriteLab extends P5Lab {
     }
   }
 
-  alertStudent(msg) {
-    if (msg) {
-      studioApp().displayWorkspaceAlert(
-        'error',
-        React.createElement(
-          'div',
-          {},
-          this.getMsg().workspaceAlertError({
-            error: msg || ''
-          })
-        ),
-        true /* bottom */
-      );
+  /**
+   * If there is an executionError, create a WorkspaceAlert.
+   * We do this because Sprite Lab has no user-facing console.
+   */
+  reactToExecutionError(msg) {
+    if (!msg) {
+      return;
     }
+    studioApp().displayWorkspaceAlert(
+      'error',
+      React.createElement(
+        'div',
+        {},
+        this.getMsg().workspaceAlertError({
+          error: msg || ''
+        })
+      ),
+      true /* bottom */
+    );
   }
 
   onPromptAnswer(variableName, value) {
