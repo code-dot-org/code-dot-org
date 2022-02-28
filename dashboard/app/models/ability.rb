@@ -74,6 +74,10 @@ class Ability
       can? :update, level
     end
 
+    can [:show_by_keys], ProgrammingExpression do |expression|
+      can? :read, expression
+    end
+
     if user.persisted?
       can :manage, user
 
