@@ -78,54 +78,6 @@ describe('Certificate', () => {
       server.restore();
     });
 
-    it('renders using pegasus without experiment', () => {
-      const data = {
-        certificate_sent: true,
-        name: 'Student'
-      };
-      server.respondWith('POST', `/v2/certificate`, [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify(data)
-      ]);
-
-      const wrapper = wrapperWithParams({
-        tutorial: 'dance',
-        certificateId: 'sessionId'
-      });
-      let image = wrapper.find('#uitest-certificate img');
-      expect(image.prop('src')).to.match(
-        /^\/_karma_webpack_\/hour_of_code_certificate/
-      );
-
-      const printLink = wrapper.find('.social-print-link');
-      expect(printLink.prop('href')).to.equal(
-        '//code.org/printcertificate/sessionId'
-      );
-
-      // the share link is used in the image thumbnail as well as the facebook
-      // and twitter links. just test its value in the thumbnail, because it is
-      // harder to extract from the facebook and twitter links.
-      const thumbnailLink = wrapper.find('#uitest-certificate a');
-      expect(thumbnailLink.prop('href')).to.equal(
-        'https://code.org/certificates/sessionId'
-      );
-
-      const input = wrapper.find('input#name');
-      input.simulate('change', {target: {value: 'Student'}});
-      const submitButton = wrapper
-        .find('button')
-        .filterWhere(button => button.text() === 'Submit');
-      submitButton.simulate('click');
-      server.respond();
-
-      wrapper.update();
-      image = wrapper.find('#uitest-certificate img');
-      expect(image.prop('src')).to.equal(
-        '//code.org/api/hour/certificate/sessionId.jpg'
-      );
-    });
-
     it('renders using code studio with experiment', () => {
       const data = {
         certificate_sent: true,
