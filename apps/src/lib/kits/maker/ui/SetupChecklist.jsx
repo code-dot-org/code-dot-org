@@ -299,6 +299,7 @@ export default class SetupChecklist extends Component {
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_PLUG]}
             stepName={i18n.validationStepBoardPluggedIn()}
+            hideWaitingSteps={true}
           >
             {this.state.caughtError && this.state.caughtError.reason && (
               <pre>{this.state.caughtError.reason}</pre>
@@ -318,6 +319,7 @@ export default class SetupChecklist extends Component {
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
+            hideWaitingSteps={true}
           >
             {applabI18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
@@ -337,6 +339,7 @@ export default class SetupChecklist extends Component {
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
               stepName={i18n.validationStepBoardComponentsUsable()}
+              hideWaitingSteps={true}
             >
               {applabI18n.makerSetupVerifyComponents()}
               <br />
