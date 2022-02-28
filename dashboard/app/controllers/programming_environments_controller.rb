@@ -1,7 +1,7 @@
 class ProgrammingEnvironmentsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show]
 
   def index
     @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
@@ -57,6 +57,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   def show
     @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
     return render :not_found unless @programming_environment
+    @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
   end
 
   private

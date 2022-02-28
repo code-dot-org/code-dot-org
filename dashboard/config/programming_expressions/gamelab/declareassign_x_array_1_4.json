@@ -1,0 +1,8 @@
+{
+  "key": "declareAssign_x_array_1_4",
+  "name": "Declare and assign an array to a variable",
+  "category": "Variables",
+  "category_key": "variables",
+  "short_description": "Game Lab - Declare and assign an array to a variable",
+  "syntax": "var x = [1, 2, 3, 4];"
+}
