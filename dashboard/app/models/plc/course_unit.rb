@@ -38,7 +38,7 @@ class Plc::CourseUnit < ApplicationRecord
   end
 
   def deprecated?
-    !!script&.deprecated
+    script&.deprecated?
   end
 
   def determine_preferred_learning_modules(user)
