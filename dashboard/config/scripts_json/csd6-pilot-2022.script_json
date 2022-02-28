@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-02-18 19:23:35 UTC",
+    "serialized_at": "2022-02-25 16:06:23 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -63,7 +63,7 @@
       "properties": {
         "assessment_opportunities": "1. **Identify computing innovations within a given field**\r\n\r\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\r\n\r\n2. **For a given device, articulate the likely inputs and outputs**\r\n\r\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\r\n\r\n3. **Suggest improvements to help a device better solve a specific problem**\r\n\r\n\tActivity Guide, page 2: The suggested improvements should relate to the purpose of the device and how it is used.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
+        "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
         "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
         "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
         "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
@@ -1474,7 +1474,7 @@
       "key": "75b71dff-12ec-4b40-b895-a54dccf5a325",
       "position": 2,
       "properties": {
-        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be) as a class.",
+        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.",
         "name": "Get Inspired\r"
       },
       "seeding_key": {
@@ -1515,7 +1515,7 @@
       "key": "bf3677c4-60d0-44ee-afb4-80e0d85a9c66",
       "position": 3,
       "properties": {
-        "description": "#### Computing Innovations\r\n\r\nDuring this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depths and report back to the class about.\r\n\r\n#### Innovation Research\r\n\r\n* **Introduce the topics**: Make sure that students understand the scope of each of the potential topics.\r\n\t* Wearable Technology (eg. clothing, jewelry, or accessories with built-in computers)\r\n\t* Health and Safety (eg. devices that treat disease, track your health, or protect users from danger)\r\n\t* Agriculture (eg. technology to improve the effectiveness, sustainability, or efficiency of farming)\r\n\t* Manufacturing (eg. advancements in rapid prototyping, industrial robotics, and the production of goods)\r\n\t* Art and Design (eg. interactive art or public installations)\r\n\t* Smart Home (eg. devices that allow you to interact with your thermostat, locks, or lights using computers)\r\n* **Explain the research task**: The goal of this research is twofold:\r\n\t* First, develop a deeper understanding of your chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\r\n    * Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that demonstrate unique or novel _form factors_. That is to say, computers that don't _look_ like computers.\r\n* **Send to Code Studio for resource links**: On Code Studio we have compiled more detailed descriptions of the topics as well as couple of recommended sites to learn more about each topic. Use this as a jumping off point for student research."
+        "description": "#### Computing Innovations\n\nDuring this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depth and report back to the class about.\n\n#### Innovation Research\n\n* **Introduce the topics**: Make sure that students understand the scope of each of the potential topics.\n\t* Wearable Technology (eg. clothing, jewelry, or accessories with built-in computers)\n\t* Health and Safety (eg. devices that treat disease, track your health, or protect users from danger)\n\t* Agriculture (eg. technology to improve the effectiveness, sustainability, or efficiency of farming)\n\t* Manufacturing (eg. advancements in rapid prototyping, industrial robotics, and the production of goods)\n\t* Art and Design (eg. interactive art or public installations)\n\t* Smart Home (eg. devices that allow you to interact with your thermostat, locks, or lights using computers)\n* **Explain the research task**: The goal of this research is twofold:\n\t* First, develop a deeper understanding of your chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\n    * Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that demonstrate unique or novel _form factors_. That is to say, computers that don't _look_ like computers.\n* **Send to Code Studio**: On Code Studio we have compiled more detailed descriptions of the topics. Students can use this as a jumping off point for keywords to search for with student research. You can also use the teaching tip below as a guide for how to provide your own starting point for student research."
       },
       "seeding_key": {
         "activity_section.key": "bf3677c4-60d0-44ee-afb4-80e0d85a9c66",
@@ -1530,7 +1530,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Here are some recommended sites for students to start their research.  Although these sites are generally appropriate for school, the content within them changes frequently, so **we strongly suggest you check each site for inappropriate content before sharing it with students**.\n\n### Wearable Technology\n\n* [Warable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](https://www.industryweek.com/technology-and-iiot)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n"
+            "markdown": "Below are several websites that students can use to start their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy innovation may not be middle-school appropriate. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students**.\n\nUsing the list below as a starting point, we recommend providing a digital list of research websites to students. It can include the websites below, and any additional resources you may find in your own research.\n\n### Wearable Technology\n\n* [Wareable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](https://www.industryweek.com/technology-and-iiot)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n"
           }
         ]
       },
@@ -1566,7 +1566,7 @@
       "key": "8e72be07-16bc-463b-a4c2-b9dab170f0f0",
       "position": 1,
       "properties": {
-        "description": "Ask groups to create a poster that shares the innovate device that they researched. Posters should include:\r\n\r\n* Who invented the device\r\n* What problem they were trying to solve\r\n* Why it is unique or innovative\r\n* How users interact with it (specifically, what Inputs does it take and how does it provide Output)\r\n\r\nKeep these posters up throughout the unit for students to refer back to as they start to develop physical computing devices of their own.",
+        "description": "Ask groups to create a poster that shares the innovation device that they researched. Posters should include:\n\n* Who invented the device\n* What problem they were trying to solve\n* Why it is unique or innovative\n* How users interact with it (specifically, what Inputs does it take and how does it provide Output)\n\nKeep these posters up throughout the unit for students to refer back to as they start to develop physical computing devices of their own.",
         "name": "Innovation Posters\r"
       },
       "seeding_key": {
@@ -1578,7 +1578,7 @@
       "key": "22ad3178-538f-43eb-b458-0114f3fcbdc0",
       "position": 2,
       "properties": {
-        "description": "Instead of (or in addition to) you posters, have students develop websites in Web Lab that include the same required content. Make sure that students include links to their source websites.",
+        "description": "Instead of (or in addition to) your posters, have students develop websites in Web Lab that include the same required content. Make sure that students include links to their source websites.",
         "name": "Innovation Websites\r"
       },
       "seeding_key": {
@@ -7718,6 +7718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB1_2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -9834,11 +9837,10 @@
     },
     {
       "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
+      "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
       "key": "computer_science_is_changing_everything",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -10950,7 +10952,7 @@
     {
       "key": "innovation",
       "word": "Innovation",
-      "definition": "A new or improved idea, device, product, etc, or the development thereof",
+      "definition": "A new or improved idea, device, product, etc. or the development thereof",
       "properties": {
       },
       "seeding_key": {

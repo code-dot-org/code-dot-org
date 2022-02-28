@@ -1,7 +1,0 @@
-{
-  "key": "orOperator",
-  "name": "orOperator",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "__ || __"
-}

@@ -22,6 +22,7 @@
 class ProgrammingExpression < ApplicationRecord
   include CurriculumHelper
   include SerializedProperties
+  include Rails.application.routes.url_helpers
 
   belongs_to :programming_environment
   belongs_to :programming_environment_category
@@ -59,7 +60,7 @@ class ProgrammingExpression < ApplicationRecord
       else
         environment_name == 'spritelab' ? expression_config['color'] : ProgrammingExpression.get_category_color(expression_config['category'])
       end
-    expression_config.symbolize_keys.except(:category_key).merge(
+    expression_config.symbolize_keys.except(:category_key, :parameters).merge(
       {
         programming_environment_id: programming_environment.id,
         programming_environment_category_id: env_category&.id,
@@ -144,6 +145,10 @@ class ProgrammingExpression < ApplicationRecord
     "/docs/#{programming_environment.name}/#{key}/"
   end
 
+  def studio_documentation_path
+    programming_environment_programming_expression_path(programming_environment.name, key)
+  end
+
   def summarize_for_lesson_edit
     {
       id: id,
@@ -216,7 +221,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       color: get_color,
       syntax: syntax,
-      link: documentation_path
+      link: studio_documentation_path
     }
   end
 
@@ -247,7 +252,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    file_path = Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: true)}.json")
+    file_path = Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
     object_to_serialize = serialize
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end

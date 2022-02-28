@@ -659,7 +659,7 @@ class UnitEditor extends React.Component {
           {this.props.isLevelbuilder && (
             <div>
               <label>
-                Core Course
+                Code.org Initiative
                 <select
                   style={styles.dropdown}
                   value={this.state.curriculumUmbrella}
@@ -676,16 +676,18 @@ class UnitEditor extends React.Component {
                 </select>
                 <HelpTip>
                   <p>
-                    By selecting, this unit will have a property,
-                    curriculum_umbrella, specific to that course regardless of
-                    version.
+                    Our RED(research, evaluation, and data) team uses the
+                    setting of this field to determine which initiative to
+                    connect this unit to in order to track progress of students
+                    in our various work streams.
                   </p>
                   <p>
-                    If you select CSF, CSF-specific elements will show in the
-                    progress tab of the teacher dashboard. For example, the
-                    progress legend will include a separate column for levels
-                    completed with too many blocks and there will be information
-                    about CSTA Standards.
+                    Until we finalizing moving onto using Course Type for
+                    determining UI features of a course, if you select CSF,
+                    CSF-specific elements will show in the progress tab of the
+                    teacher dashboard. For example, the progress legend will
+                    include a separate column for levels completed with too many
+                    blocks and there will be information about CSTA Standards.
                   </p>
                 </HelpTip>
               </label>

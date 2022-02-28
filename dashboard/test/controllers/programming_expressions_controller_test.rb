@@ -86,19 +86,24 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'data is passed down to show page when using id path' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: category
 
     get :show, params: {id: programming_expression.id}
     assert_response :ok
 
     show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
     assert_equal programming_expression.summarize_for_show.to_json, show_data
+
+    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
+    assert_equal 1, JSON.parse(nav_data).length
   end
 
   test 'data is passed down to show page when using environment and expression path' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: category
 
     get :show_by_keys, params: {
       programming_environment_name: @programming_environment.name,
@@ -108,6 +113,9 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
     assert_equal programming_expression.summarize_for_show.to_json, show_data
+
+    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
+    assert_equal 1, JSON.parse(nav_data).length
   end
 
   class AccessTests < ActionController::TestCase
@@ -138,6 +146,11 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: nil, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :student, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :teacher, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: nil, response: :success
     test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: :student, response: :success
