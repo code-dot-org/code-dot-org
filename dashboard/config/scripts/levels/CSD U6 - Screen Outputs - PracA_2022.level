@@ -39,7 +39,7 @@
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
+    "hide_design_mode": "true",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
     "show_debug_watch": "false",
@@ -67,8 +67,8 @@
     "thumbnail_url": "https://images.code.org/e1bb8491b71a2226044c7114c897cc82-image-1644451262168.gif",
     "display_name": "Change the Background",
     "bubble_choice_description": "Change the background of your app with a button",
-    "preload_asset_list": null,
-    "encrypted_examples": "UWsOOt4CE38e2N3go4q3M44ZLH5HsWz3V0b7S7geR6RC+pXTbmwHm1CnHQ46\nyZ3ZED1z/90MAoaSUvSZRU36zw==\n"
+    "encrypted_examples": "UWsOOt4CE38e2N3go4q3M44ZLH5HsWz3V0b7S7geR6RC+pXTbmwHm1CnHQ46\nyZ3ZED1z/90MAoaSUvSZRU36zw==\n",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:00:15.697+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB4_2022\"},{\"changed_at\":\"2021-12-16 03:02:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"hide_design_mode\",\"show_debug_watch\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-16 03:02:57 +0000\",\"changed\":[\"code_functions\",\"palette_category_at_start\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:43:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-21 04:46:52 +0000\",\"changed\":[],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-10 00:01:18 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:51:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 07:43:45 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-22 04:39:48 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:00:15.697+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - SB4_2022\"},{\"changed_at\":\"2021-12-16 03:02:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"hide_design_mode\",\"show_debug_watch\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-16 03:02:57 +0000\",\"changed\":[\"code_functions\",\"palette_category_at_start\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:43:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-21 04:46:52 +0000\",\"changed\":[],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-10 00:01:18 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:51:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 07:43:45 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-22 04:39:48 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-25 15:34:11 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
