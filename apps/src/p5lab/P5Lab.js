@@ -673,7 +673,7 @@ export default class P5Lab {
    */
   onPause() {}
 
-  alertStudent(msg) {}
+  reactToExecutionError(msg) {}
 
   onIsRunningChange() {
     this.setCrosshairCursorForPlaySpace();
@@ -1470,11 +1470,7 @@ export default class P5Lab {
       }
     }
 
-    /**
-     * If there is an executionError, alert the user. In Sprite Lab there is
-     * no user-facing console, so we instead create a WorkspaceAlert.
-     */
-    this.alertStudent(this.JSInterpreter.executionError?.message);
+    this.reactToExecutionError(this.JSInterpreter.executionError?.message);
     this.completeRedrawIfDrawComplete();
   }
 
