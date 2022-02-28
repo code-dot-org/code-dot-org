@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
+import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -60,23 +61,24 @@ InvalidPagesSummary.propTypes = {
 const FormController = props => {
   const {
     pageComponents,
-    requiredFields = [],
+    requiredFields,
     apiEndpoint,
-    applicationId = undefined,
-    allowPartialSaving = false,
+    applicationId,
+    allowPartialSaving,
+    autoComputedFields,
     options,
-    getInitialData = () => ({}),
-    onInitialize = () => {},
-    onSetPage = () => {},
-    onSuccessfulSubmit = () => {},
-    onSuccessfulSave = () => {},
-    savedStatus = undefined,
-    serializeAdditionalData = () => ({}),
-    sessionStorageKey = null,
-    submitButtonText = defaultSubmitButtonText,
+    getInitialData,
+    onInitialize,
+    onSetPage,
+    onSuccessfulSubmit,
+    onSuccessfulSave,
+    savedStatus,
+    serializeAdditionalData,
+    sessionStorageKey,
+    submitButtonText,
     getPageProps: getAdditionalPageProps = () => ({}),
-    validateOnSubmitOnly = false,
-    warnOnExit = false
+    validateOnSubmitOnly,
+    warnOnExit
   } = props;
 
   // We use functions here as the initial value so that these values are only calculated once
@@ -89,9 +91,16 @@ const FormController = props => {
   }));
   const [submitting, setSubmitting] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [savedData, setSavedData] = useState(getInitialData());
   const [showSavedMessage, setShowSavedMessage] = useState(false);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
+  const [hasUserChangedData, setHasUserChangedData] = useState(
+    !isEqual(
+      omit(data, autoComputedFields),
+      omit(savedData, autoComputedFields)
+    )
+  );
   const [errorMessages, setErrorMessages] = useState({});
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
@@ -112,20 +121,33 @@ const FormController = props => {
   }, []);
 
   useEffect(() => {
-    // this function needs to be recreated because it holds 'submitting' in its closure
+    if (
+      !isEqual(
+        omit(data, autoComputedFields),
+        omit(savedData, autoComputedFields)
+      )
+    ) {
+      setHasUserChangedData(true);
+    } else {
+      setHasUserChangedData(false);
+    }
+  }, [autoComputedFields, data, savedData]);
+
+  useEffect(() => {
+    const showWarningOnExit =
+      warnOnExit && !submitting && !saving && hasUserChangedData;
     const exitHandler = event => {
-      if (!submitting) {
+      if (showWarningOnExit) {
         event.preventDefault();
         event.returnValue = 'Are you sure? Your application may not be saved.';
       }
     };
-    if (warnOnExit) {
-      window.addEventListener('beforeunload', exitHandler);
-    }
+
+    window.addEventListener('beforeunload', exitHandler);
     return () => {
       window.removeEventListener('beforeunload', exitHandler);
     };
-  }, [warnOnExit, submitting]);
+  }, [hasUserChangedData, submitting, saving, warnOnExit]);
 
   // on errors changed
   useEffect(() => {
@@ -344,13 +366,15 @@ const FormController = props => {
     setGlobalError(false);
     setSaving(true);
 
-    const handleSuccessfulSave = data => {
+    const handleSuccessfulSave = response => {
+      console.log('on successful save, data is', data, response);
       scrollToTop();
       setShowSavedMessage(true);
       setShowDataWasLoadedMessage(false);
-      setUpdatedApplicationId(data.id);
+      setUpdatedApplicationId(response.id);
+      setSavedData(data);
       setSaving(false);
-      onSuccessfulSave(data);
+      onSuccessfulSave(response);
     };
 
     makeRequest(applicationStatusOnSave)
@@ -631,6 +655,7 @@ const styles = {
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
   applicationId: PropTypes.number,
+  autoComputedFields: PropTypes.arrayOf(PropTypes.string),
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageComponents: PropTypes.arrayOf(PropTypes.func),
@@ -647,6 +672,23 @@ FormController.propTypes = {
   submitButtonText: PropTypes.string,
   validateOnSubmitOnly: PropTypes.bool,
   warnOnExit: PropTypes.bool
+};
+
+FormController.defaultProps = {
+  requiredFields: [],
+  applicationId: undefined,
+  allowPartialSaving: false,
+  autoComputedFields: [],
+  getInitialData: () => {},
+  onInitialize: () => {},
+  onSetPage: () => {},
+  onSuccessfulSubmit: () => {},
+  onSuccessfulSave: () => {},
+  serializeAdditionalData: () => {},
+  sessionStorageKey: null,
+  submitButtonText: defaultSubmitButtonText,
+  validateOnSubmitOnly: false,
+  warnOnExit: false
 };
 
 export default FormController;

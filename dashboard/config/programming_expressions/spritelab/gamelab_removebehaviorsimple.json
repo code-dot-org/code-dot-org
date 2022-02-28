@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "The phone will “ring” until the person touches and answers it.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/muxpC-K0WlAWaajtIcc22-1A5JruJ0hAJ3aaCNrZKcQ",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "If a sprite is doing multiple behaviors, individual behaviors can still be controlled and stopped. Click on the star to make it stop growing.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/nv7KLeJMzs-LvN3BOhNSZayUTB7Kgdo2FTR0reczY_E",
       "image": null,
       "app_display_type": "embedAppWithCode",
