@@ -145,6 +145,28 @@ describe('SpriteLab', () => {
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
       });
 
+      describe('react to executionError', () => {
+        beforeEach(() => {
+          console.log('start test');
+          sinon.stub(studioApp(), 'displayWorkspaceAlert');
+        });
+        afterEach(() => {
+          studioApp().displayWorkspaceAlert.restore();
+        });
+        it('displays a workspace alert if there is an executionError message'),
+          () => {
+            const msg = 'test string';
+            instance.reactToExecutionError(msg);
+            expect(studioApp().displayWorkspaceAlert).to.have.been.calledOnce;
+          };
+        it('does nothing if there is no executionError message'),
+          () => {
+            const msg = undefined;
+            instance.reactToExecutionError(msg);
+            expect(studioApp().displayWorkspaceAlert).to.not.have.been.called;
+          };
+      });
+
       describe('dispatching Blockly events', () => {
         let store, eventSpy, originalMainBlockSpace;
         beforeEach(() => {
