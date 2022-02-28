@@ -197,15 +197,12 @@ module Api::V1::Pd
       user = User.find_by_email email
 
       # only workshop admins can see incomplete applications
-      filtered_applications = current_user.workshop_admin? ? @applications.where(
-        application_year: APPLICATION_CURRENT_YEAR,
-        application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
-        user: user
-      ) : @applications.where.not(status: 'incomplete').where(
+      filtered_applications = @applications.where(
         application_year: APPLICATION_CURRENT_YEAR,
         application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
         user: user
       )
+      filtered_applications = filtered_applications.where.not(status: 'incomplete') unless current_user.workshop_admin?
 
       render json: filtered_applications, each_serializer: ApplicationSearchSerializer
     end
@@ -217,6 +214,7 @@ module Api::V1::Pd
       applications_of_type = current_user.workshop_admin? ?
         @applications.where(type: TYPES_BY_ROLE[role].try(&:name)) :
         @applications.where.not(status: 'incomplete').where(type: TYPES_BY_ROLE[role].try(&:name))
+      applications_of_type = applications_of_type.where.not(status: 'incomplete') unless current_user.workshop_admin?
       applications_of_type = applications_of_type.includes(:user, :regional_partner) if include_associations
 
       case role
