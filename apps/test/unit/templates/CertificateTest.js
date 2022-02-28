@@ -78,7 +78,7 @@ describe('Certificate', () => {
       server.restore();
     });
 
-    it('renders using code studio with experiment', () => {
+    it('renders certificate pages using code studio urls', () => {
       const data = {
         certificate_sent: true,
         name: 'Student'
