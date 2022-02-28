@@ -8,7 +8,11 @@
   # -----------------------------------------------
 
 <%-
-  hosted_zone_id = "Z2E5MLW9OSPK9O"
+  domain = "codeprojects.org"
+  hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
+  raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
+  hosted_zone_id = hosted_zone.id.delete_prefix("/hostedzone/")
+
   envs = {
     staging: {
       domain_name: "staging.codeprojects.org",
