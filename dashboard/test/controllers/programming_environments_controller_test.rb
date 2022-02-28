@@ -76,12 +76,13 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     category_to_keep = create :programming_environment_category, programming_environment: programming_environment, position: 0
     category_to_destroy = create :programming_environment_category, programming_environment: programming_environment, position: 1
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_environment.name}.json"}.once
-    post :update, params: {
-      name: programming_environment.name,
-      title: 'title',
-      editorType: 'blockly',
-      categories: [{name: 'brand new category', color: '#00FFFF'}, {id: category_to_keep.id, name: category_to_keep.name, color: category_to_keep.color}]
-    }
+    post :update, params:
+      {
+        name: programming_environment.name,
+        title: 'title',
+        editorType: 'blockly',
+        categories: [{id: nil, name: 'brand new category', color: '#00FFFF'}, {id: category_to_keep.id, name: category_to_keep.name, color: category_to_keep.color}]
+      }
     assert_response :ok
 
     programming_environment.reload
