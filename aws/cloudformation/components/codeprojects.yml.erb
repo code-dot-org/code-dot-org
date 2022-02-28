@@ -9,22 +9,23 @@
 
 <%-
   domain = "codeprojects.org"
+
   hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
   raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
   hosted_zone_id = hosted_zone.id.delete_prefix("/hostedzone/")
 
   envs = {
     staging: {
-      domain_name: "staging.codeprojects.org",
+      domain_name: "staging.#{domain}",
       alternative_names: []
     },
     # test: {
-    #   domain_name: "test.codeprojects.org",
+    #   domain_name: "test.#{domain}",
     #   alternative_names: []
     # },
     # production: {
-    #   domain_name: "codeprojects.org",
-    #   alternative_names: ["www.codeprojects.org"]
+    #   domain_name: domain,
+    #   alternative_names: ["www.#{domain}"]
     # },
   }
 -%>
@@ -34,8 +35,8 @@
   LocalhostCodeprojectsRecord:
     Type: AWS::Route53::RecordSet
     Properties:
-      HostedZoneId: codeprojects.org
-      Name: localhost.codeprojects.org
+      HostedZoneId: <%=domain%>
+      Name: <%="localhost.#{domain}"%>
       Type: A
       TTL: 3600
       ResourceRecords:
