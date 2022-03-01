@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:54.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -71,11 +67,16 @@
     ],
     "callout_json": "[]",
     "validation_code": "if (World.frameCount == 1) {\r\n  setFailTime(450);\r\n  validationProps.timeEventCount = 0;\r\n  addCriteria(function(){\r\n    return minimumCostumeCount(2);\r\n  }, 'noSecondCostumeForCollector');\r\n  addCriteria(function() {\r\n    return interactiveBehaviorFound();\r\n  }, 'playerBehavior');\r\n  addCriteria(function(){\r\n    return atTimeEventFound();\r\n  }, 'addAtTimeEvent');\r\n  addCriteria(function() {\r\n    return validationProps.timeEventCount >=2;\r\n  }, 'useTwoAtTimeBlocks');\r\n  addCriteria(function(){\r\n    return !interactiveBehaviorFound() && atTimeEventFound();\r\n  }, 'behaviorsIncreased');\r\n  addCriteria(function(){\r\n    return (printedText() || anySpriteSpeaks()) && atTimeEventFound();\r\n  }, 'printWithEvent');\r\n}\r\n\r\nif(atTimeEventFound()) {\r\n  validationProps.timeEventCount++;\r\n}\r\ndelayEndInActiveApp();\r\ncheck();",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "7ARATIoVrYybi5u971bfijWHJWA4QFg+T/dAU+ESSl9KMHOHmKGiUDbLiJiw\n0yL5ePpG3WVZLskIUtLMxmGZtw==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:54.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:54.625+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_score\\\"\"],\"cloned_from\":\"courseF_collector_score\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:54.625+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_score\\\"\"],\"cloned_from\":\"courseF_collector_score\"},{\"changed_at\":\"2022-03-01 21:00:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
