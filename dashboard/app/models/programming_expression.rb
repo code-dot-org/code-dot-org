@@ -181,7 +181,8 @@ class ProgrammingExpression < ApplicationRecord
       returnValue: return_value || '',
       tips: tips || '',
       parameters: palette_params || [],
-      examples: examples || []
+      examples: examples || [],
+      showPath: studio_documentation_path
     }
   end
 

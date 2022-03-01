@@ -74,7 +74,14 @@ describe('ProgrammingEnvironmentEditor', () => {
       </Provider>
     );
 
-    fetchSpy.returns(Promise.resolve({ok: true}));
+    fetchSpy.returns(
+      Promise.resolve({
+        ok: true,
+        json: () => {
+          return {};
+        }
+      })
+    );
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(2);

@@ -19,6 +19,10 @@ export const StatusColors = {
     backgroundColor: color.charcoal,
     color: color.white
   },
+  reopened: {
+    backgroundColor: color.lighter_orange,
+    color: color.black
+  },
   incomplete: {
     backgroundColor: color.lightest_cyan,
     color: color.black
