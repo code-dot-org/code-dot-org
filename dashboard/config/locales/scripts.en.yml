@@ -29179,7 +29179,7 @@ en:
               display_name: Events
             lessonGroup-5:
               display_name: End of Course Project
-          title: Course A (2021)
+          title: Course A (2022)
           description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
@@ -30017,11 +30017,12 @@ en:
               display_name: Events
             lessonGroup-6:
               display_name: End of Course Project
-          title: Course B (2021)
+          title: Course B (2022)
           description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
+          name: courseb-2022
         coursec-2022:
           lessons:
             Putting a STOP to Online Meanness:
@@ -30166,7 +30167,7 @@ en:
               display_name: Data
             end_of_course_project:
               display_name: End of Course Project
-          title: Course C (2021)
+          title: Course C (2022)
           description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
@@ -30684,11 +30685,12 @@ en:
               display_name: Conditionals
             end_of_course_project:
               display_name: End of Course Project
-          title: Course D (2021)
+          title: Course D (2022)
           description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
           student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
+          name: coursed-2022
         coursee-2022:
           lessons:
             Follow the Algorithm:
