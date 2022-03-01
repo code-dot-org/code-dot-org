@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-25 14:11:44 UTC",
+    "serialized_at": "2022-02-26 14:09:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -289,7 +289,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "**How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**\n\nStudents write an additional new subclass and practice using decomposition o develop algorithms. Students translate algorithms to write methods in their new subclass and create multiple objects in their program.",
+        "overview": "**How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**\n\nStudents write an additional new subclass and practice using decomposition to develop algorithms. Students translate algorithms to write methods in their new subclass and create multiple objects in their program.",
         "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the BackgroundPainter handout (one for each student)\n* Gather several sticky notes for each student",
         "student_overview": "**How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**\n\nIn Java, a superclass can have multiple subclasses. In this lesson, you write an additional new subclass that extends `PainterPlus` and practice using decomposition to develop algorithms. You translate algorithms to write methods in your new subclass and create multiple objects in your program."
       },
@@ -362,7 +362,7 @@
       "relative_position": 18,
       "properties": {
         "assessment": true,
-        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback at this as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
         "preparation": "* Gather several sticky notes for each student",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },

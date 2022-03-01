@@ -38,7 +38,7 @@ social:
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney12 }}
-  <h3><strong>Exploring the World of Virtual Reality</strong></h3>
+  <h3><strong>Exploring the world of virtual reality</strong></h3>
   <p>How can virtual reality experiences reinvent how people work, play, and communicate?  Find out as we talk to a technical program manager at Meta Quest.</p>
 </div>
 
