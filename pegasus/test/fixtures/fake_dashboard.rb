@@ -300,7 +300,7 @@ module FakeDashboard
   def self.create_fake_dashboard_db
     database = YAML.load(ERB.new(File.new(dashboard_dir('config/database.yml')).read).result) || {}
     # Temporary tables aren't shared across multiple database connections.
-    database['test']['pool'] = 1
+    database['test']['primary']['pool'] = 1
 
     ActiveRecord::Base.configurations = database
     ActiveRecord::Base.establish_connection
