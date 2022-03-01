@@ -738,10 +738,28 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student_1).can? :view_as_user_for_code_review, @login_required_script_level, student_2
   end
 
-  test 'workshop admin can update scholarship info' do
+  test 'workshop admins can update scholarship info' do
     workshop_admin = create :workshop_admin
     pd_enrollment = create :pd_enrollment
 
     assert Ability.new(workshop_admin).can? :update_scholarship_info, pd_enrollment
+  end
+
+  test 'workshop admins can see, update, and delete incomplete applications' do
+    workshop_admin = create :workshop_admin
+    incomplete_application = create :pd_teacher_application, status: 'incomplete'
+
+    assert Ability.new(workshop_admin).can? :show, incomplete_application
+    assert Ability.new(workshop_admin).can? :update, incomplete_application
+    assert Ability.new(workshop_admin).can? :destroy, incomplete_application
+  end
+
+  test 'regional partners cannot see, update, or delete incomplete applications' do
+    program_manager = create :program_manager
+    incomplete_application = create :pd_teacher_application, status: 'incomplete'
+
+    refute Ability.new(program_manager).can? :show, incomplete_application
+    refute Ability.new(program_manager).can? :update, incomplete_application
+    refute Ability.new(program_manager).can? :destroy, incomplete_application
   end
 end
