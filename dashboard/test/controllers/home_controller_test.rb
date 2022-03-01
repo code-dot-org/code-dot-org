@@ -416,7 +416,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 18
+    query_count = 17
     assert_queries query_count do
       get :home
     end
@@ -464,7 +464,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    query_count = 18
+    query_count = 17
     assert_queries query_count do
       get :home
     end
@@ -474,7 +474,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see application dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 18
+    query_count = 17
     assert_queries query_count do
       get :home
     end
