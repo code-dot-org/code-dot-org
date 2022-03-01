@@ -14,6 +14,7 @@
 #
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
+  include Rails.application.routes.url_helpers
 
   NAME_CHAR_RE = /[a-z0-9\-]/
   NAME_RE = /\A#{NAME_CHAR_RE}+\Z/
@@ -84,7 +85,8 @@ class ProgrammingEnvironment < ApplicationRecord
       projectUrl: project_url,
       description: description,
       editorType: editor_type,
-      categories: categories.map(&:serialize_for_edit)
+      categories: categories.map(&:serialize_for_edit),
+      showPath: programming_environment_path(name)
     }
   end
 
