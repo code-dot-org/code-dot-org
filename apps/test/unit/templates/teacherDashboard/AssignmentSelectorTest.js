@@ -4,8 +4,74 @@ import sinon from 'sinon';
 import {assert, expect} from '../../../util/deprecatedChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
+const courseOfferings = {
+  1: {
+    id: 1,
+    display_name: 'Course A',
+    category: 'csf',
+    is_featured: false,
+    course_versions: {
+      1: {
+        id: 1,
+        version_year: '2017',
+        display_name: '2017',
+        is_stable: true,
+        is_recommended: false,
+        locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
+        units: {1: {id: 1, name: 'Course A'}}
+      },
+      2: {
+        id: 2,
+        version_year: '2018',
+        display_name: '2018',
+        is_stable: true,
+        is_recommended: true,
+        locales: ['English', 'Italiano', 'Slovenčina'],
+        units: {
+          2: {
+            id: 2,
+            name: 'Course A (2018)'
+          }
+        }
+      }
+    }
+  },
+  2: {
+    id: 2,
+    display_name: 'Computer Science Discoveries',
+    category: 'full_course',
+    is_featured: false,
+    course_versions: {
+      84: {
+        id: 84,
+        version_year: '2017',
+        display_name: '2017',
+        is_stable: true,
+        is_recommended: false,
+        locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
+        units: {1: {id: 94, name: 'Unit 1'}}
+      },
+      85: {
+        id: 85,
+        version_year: '2018',
+        display_name: '2018',
+        is_stable: true,
+        is_recommended: true,
+        locales: ['English', 'Italiano', 'Slovenčina'],
+        units: {
+          95: {
+            id: 95,
+            name: 'Course A (2018)'
+          }
+        }
+      }
+    }
+  }
+};
+
 const defaultProps = {
   localeCode: 'en-US',
+  courseOfferings: courseOfferings,
   section: {
     id: 11,
     name: 'foo',
@@ -16,12 +82,16 @@ const defaultProps = {
     pairingAllowed: false,
     studentCount: 0,
     code: 'asdf',
+    courseOfferingId: null,
+    courseVersionId: null,
+    unitId: null,
     courseId: null,
     scriptId: null
   }
 };
 
 const hiddenSectionProps = {
+  courseOfferings: courseOfferings,
   section: {
     id: 11,
     name: 'foo',
@@ -32,6 +102,9 @@ const hiddenSectionProps = {
     pairingAllowed: false,
     studentCount: 0,
     code: 'asdf',
+    courseOfferingId: null,
+    courseVersionId: null,
+    unitId: 36,
     courseId: null,
     scriptId: 36
   }
@@ -45,8 +118,9 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 1);
     assert.equal(wrapper.find('select').value, undefined);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: null,
-      scriptId: null
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
     });
   });
 
@@ -60,8 +134,9 @@ describe('AssignmentSelector', () => {
       .simulate('change', {target: {value: 'csd'}});
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: 29,
-      scriptId: null
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
     });
   });
 
@@ -71,15 +146,17 @@ describe('AssignmentSelector', () => {
         {...defaultProps}
         section={{
           ...defaultProps.section,
-          courseId: 29, // CS Discoveries
-          scriptId: 168 // Unit 1: Problem Solving
+          courseOfferingId: 1, // CS Discoveries
+          courseVersionId: 10,
+          unitId: 168 // Unit 1: Problem Solving
         }}
       />
     );
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: 29,
-      scriptId: 168
+      courseOfferingId: 1,
+      courseVersionId: 10,
+      unitId: 168
     });
   });
 
@@ -109,8 +186,9 @@ describe('AssignmentSelector', () => {
       'Make a Flappy game'
     );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: null,
-      scriptId: null
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
     });
   });
 
@@ -138,8 +216,9 @@ describe('AssignmentSelector', () => {
       ''
     );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: 29,
-      scriptId: null
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
     });
   });
 
@@ -154,8 +233,9 @@ describe('AssignmentSelector', () => {
       .at(1)
       .simulate('change', {target: {value: 'null_168'}});
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: 29,
-      scriptId: 168
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
     });
   });
 
@@ -167,8 +247,9 @@ describe('AssignmentSelector', () => {
       .simulate('change', {target: {value: 'csd'}});
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: 29,
-      scriptId: null
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
     });
 
     wrapper
@@ -177,8 +258,9 @@ describe('AssignmentSelector', () => {
       .simulate('change', {target: {value: ''}});
     assert.equal(wrapper.find('select').length, 1);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: null,
-      scriptId: null
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
     });
   });
 
@@ -192,8 +274,9 @@ describe('AssignmentSelector', () => {
         {...defaultProps}
         section={{
           ...defaultProps.section,
-          courseId: null,
-          scriptId: 168
+          courseOfferingId: null,
+          courseVersionId: null,
+          unitId: 168
         }}
       />
     );
@@ -227,8 +310,9 @@ describe('AssignmentSelector', () => {
           localeCode="es-MX"
           section={{
             ...defaultProps.section,
-            courseId: null,
-            scriptId: 7
+            courseOfferingId: null,
+            courseVersionId: null,
+            unitId: null
           }}
         />
       );
@@ -253,8 +337,9 @@ describe('AssignmentSelector', () => {
           localeCode="sk-SK"
           section={{
             ...defaultProps.section,
-            courseId: null,
-            scriptId: 6
+            courseOfferingId: null,
+            courseVersionId: null,
+            unitId: 6
           }}
         />
       );
@@ -277,7 +362,9 @@ describe('AssignmentSelector', () => {
         {...defaultProps}
         section={{
           ...defaultProps.section,
-          courseId: 29
+          courseOfferingId: null,
+          courseVersionId: null,
+          unitId: null
         }}
       />
     );
@@ -290,8 +377,9 @@ describe('AssignmentSelector', () => {
         {...defaultProps}
         section={{
           ...defaultProps.section,
-          courseId: 29,
-          scriptId: 168
+          courseOfferingId: null,
+          courseVersionId: null,
+          unitId: null
         }}
       />
     );
@@ -304,7 +392,9 @@ describe('AssignmentSelector', () => {
         {...hiddenSectionProps}
         section={{
           ...hiddenSectionProps.section,
-          scriptId: 36
+          courseOfferingId: null,
+          courseVersionId: null,
+          unitId: null
         }}
       />
     );
@@ -360,8 +450,9 @@ describe('AssignmentSelector', () => {
         .at(0)
         .simulate('change', {target: {value: '__decideLater__'}});
       assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-        courseId: null,
-        scriptId: null
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null
       });
     });
   });
@@ -386,8 +477,9 @@ describe('AssignmentSelector', () => {
         .at(0)
         .simulate('change', {target: {value: 'csd'}});
       expect(spy).to.have.been.calledOnce.and.to.have.been.calledWith({
-        courseId: 29,
-        scriptId: null
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null
       });
     });
 
@@ -402,8 +494,9 @@ describe('AssignmentSelector', () => {
         .at(1)
         .simulate('change', {target: {value: 'null_168'}});
       expect(spy).to.have.been.calledOnce.and.to.have.been.calledWith({
-        courseId: 29,
-        scriptId: 168
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null
       });
     });
   });
