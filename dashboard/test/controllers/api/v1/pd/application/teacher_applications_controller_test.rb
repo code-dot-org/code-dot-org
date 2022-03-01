@@ -33,10 +33,20 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
-    # [MEG] TODO: Add different kinds of users, teachers can't access an application they don't own
     test_redirect_to_sign_in_for :update, params: -> {{id: @application.id}}
     test_user_gets_response_for :update, user: :student, params: -> {{id: @application.id}}, response: :forbidden
-    test_user_gets_response_for :update, user: :teacher, params: -> {{id: @application.id}}, response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a teacher cannot update an application they do not own',
+      user: :teacher,
+      params: -> {{id: @application.id}},
+      response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a teacher can update an application they own',
+      user:  -> {User.find_by(id: @application.user_id)},
+      params: -> {{id: @application.id}},
+      response: :success
 
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
