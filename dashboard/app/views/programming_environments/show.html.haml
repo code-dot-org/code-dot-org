@@ -2,3 +2,12 @@
 %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 %script{src: webpack_asset_path('js/programming_environments/show.js'), data: {programmingEnvironment: @programming_environment.summarize_for_show.to_json, customBlocksConfig: Block.for(@programming_environment.block_pool_name).to_json, categoriesForNavigation: @programming_environment_categories.to_json}}
 #container
+
+- if can? :edit, @programming_environment
+  = render layout: 'shared/extra_links' do
+    %strong= @programming_environment.title
+    %ul
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to 'Edit', edit_programming_environment_path(@programming_environment.name)
+      - else
+        %li= link_to 'Edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", edit_programming_environment_path(@programming_environment.name)).to_s

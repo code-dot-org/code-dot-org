@@ -368,6 +368,23 @@ describe('DetailViewContents', () => {
             .find('[value="incomplete"]')
         ).to.have.lengthOf(0);
       });
+
+      it(`incomplete status is in dropdown if ${applicationType} application is incomplete`, () => {
+        const detailView = mountDetailView('Teacher', {
+          applicationData: {
+            ...DEFAULT_APPLICATION_DATA,
+            status: 'incomplete',
+            scholarship_status: null,
+            update_emails_sent_by_system: false
+          }
+        });
+        expect(
+          detailView
+            .find('#DetailViewHeader select')
+            .find('option')
+            .find('[value="incomplete"]')
+        ).to.have.lengthOf(1);
+      });
     });
   }
 
