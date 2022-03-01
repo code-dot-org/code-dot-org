@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:53.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -70,11 +66,16 @@
     ],
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"costumes_tab_callout\",\r\n  \"callout_text\": \"Costumes tab\",\r\n  \"element_id\": \"[id=\\\"animationMode\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumSprites(1);\r\n  }, 'createSprite');\r\n  addCriteria(function() {\r\n    return interactiveBehaviorFound();\r\n  }, 'playerBehavior');\r\n  addCriteria(function(){\r\n    return anyPropChanged('x')||anyPropChanged('y');\r\n  }, 'debugMovement');\r\n  setDelayTime(90);\r\n}\r\n\r\ndelayEndInActiveApp();\r\ncheck();",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "nre/bli9GYb82C1p2/5Mwr+/8ppFd97jah+fr+bjHR9gRxGq6JWE0wDq0L6K\nPDPpLiAD/G+2LwrTXFjafns5cw==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:53.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:53.310+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_player_move\\\"\"],\"cloned_from\":\"courseF_collector_player_move\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:53.310+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_player_move\\\"\"],\"cloned_from\":\"courseF_collector_player_move\"},{\"changed_at\":\"2022-03-01 20:41:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
