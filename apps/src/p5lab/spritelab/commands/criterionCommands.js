@@ -27,13 +27,11 @@ export const commands = {
   // Return true if any sprite began speaking.
   anySpriteSpeaks() {
     const spriteIds = this.getSpriteIdsInUse();
-    let result = false;
-    for (let i = 0; i < spriteIds.length; i++) {
-      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
-        result = true;
-      }
-    }
-    return result;
+    return (
+      spriteIds.filter(_spriteId =>
+        commands.spriteSpeechRenderedThisFrame.call(this, _spriteId)
+      ).length > 0
+    );
   },
 
   // Return true if the specified sprite began speaking
@@ -50,38 +48,32 @@ export const commands = {
   // and the text is not an empty string.
   strictAnySpriteSpeaks() {
     const spriteIds = this.getSpriteIdsInUse();
-    let result = false;
-    for (let i = 0; i < spriteIds.length; i++) {
-      if (commands.strictSpriteSpeechRenderedThisFrame.call(this, i)) {
-        result = true;
-      }
-    }
-    return result;
+    return (
+      spriteIds.filter(_spriteId =>
+        commands.strictSpriteSpeechRenderedThisFrame.call(this, _spriteId)
+      ).length > 0
+    );
   },
 
   // Return true if any sprite was speaking.
   anySpriteSpeaking() {
     const spriteIds = this.getSpriteIdsInUse();
-    let result = false;
-    for (let i = 0; i < spriteIds.length; i++) {
-      if (this.getLastSpeechBubbleForSpriteId(spriteIds[i])) {
-        result = true;
-      }
-    }
-    return result;
+    return (
+      spriteIds.filter(_spriteId =>
+        this.getLastSpeechBubbleForSpriteId(_spriteId)
+      ).length > 0
+    );
   },
 
   // Return true if any sprite was speaking
   // and the text is not an empty string.
   strictAnySpriteSpeaking() {
     const spriteIds = this.getSpriteIdsInUse();
-    let result = false;
-    for (let i = 0; i < spriteIds.length; i++) {
-      if (this.getLastSpeechBubbleForSpriteId(spriteIds[i])?.text) {
-        result = true;
-      }
-    }
-    return result;
+    return (
+      spriteIds.filter(
+        _spriteId => this.getLastSpeechBubbleForSpriteId(_spriteId)?.text
+      ).length > 0
+    );
   },
 
   // Return true if any sprite's speech include values from the given object(s).
@@ -120,7 +112,7 @@ export const commands = {
     let result = false;
     let count = 0;
     for (let i = 0; i < spriteIds.length; i++) {
-      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, spriteIds[i])) {
         count++;
       }
     }
