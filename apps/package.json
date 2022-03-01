@@ -136,7 +136,7 @@
     "js-yaml": "^3.6.0",
     "json-parse-better-errors": "^1.0.1",
     "jsonic": "^0.3.0",
-    "karma": "^1.7.0",
+    "karma": "^6.3.17",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage-istanbul-reporter": "^2.1.0",
     "karma-junit-reporter": "^1.2.0",
