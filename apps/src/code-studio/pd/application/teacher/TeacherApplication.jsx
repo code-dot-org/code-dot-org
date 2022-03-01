@@ -44,16 +44,16 @@ const TeacherApplication = props => {
     accountEmail,
     userId,
     savedStatus,
-    schoolId
+    schoolId,
+    storage
   } = props;
 
   const getInitialData = () => {
     const dataOnPageLoad = savedFormData && JSON.parse(savedFormData);
 
     // Extract school info saved in sessionStorage, if any
-    const reloadedSchoolId = JSON.parse(
-      sessionStorage.getItem(sessionStorageKey)
-    )?.data?.school;
+    const reloadedSchoolId = JSON.parse(storage.getItem(sessionStorageKey))
+      ?.data?.school;
 
     // Populate additional data from server only if it doesn't override data in sessionStorage
     // (even if value in sessionStorage is null)
@@ -123,11 +123,16 @@ const TeacherApplication = props => {
     />
   );
 };
+
 TeacherApplication.propTypes = {
   ...FormController.propTypes,
   accountEmail: PropTypes.string.isRequired,
   userId: PropTypes.number.isRequired,
   schoolId: PropTypes.string
+};
+
+TeacherApplication.defaultProps = {
+  storage: sessionStorage
 };
 
 export default TeacherApplication;

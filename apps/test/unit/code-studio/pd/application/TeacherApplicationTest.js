@@ -6,6 +6,7 @@ import {isolateComponent} from 'isolate-react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
+import FakeStorage from '../../../../util/FakeStorage';
 
 describe('TeacherApplication', () => {
   const fakeOptionKeys = Object.values(PageLabels).reduce(
@@ -83,6 +84,7 @@ describe('TeacherApplication', () => {
     const teacherApplication = isolateComponent(
       <TeacherApplication {...defaultProps} allowPartialSaving />
     );
+    const storage = new FakeStorage();
 
     it('has no initial data if there is nothing in session storage, no school id, and no form data', () => {
       expect(
@@ -114,24 +116,28 @@ describe('TeacherApplication', () => {
       ).to.deep.equal({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
-      // [MEG] TODO: Use FakeStorage instead
-      window.sessionStorage.setItem(
-        'TeacherApplication',
-        JSON.stringify({data: {school: '25'}})
-      );
-      teacherApplication.mergeProps({savedFormData, schoolId});
+      let getItem = sinon.stub(storage, 'getItem');
+      getItem
+        .withArgs('TeacherApplication')
+        .returns(JSON.stringify({data: {school: '25'}}));
+      teacherApplication.mergeProps({savedFormData, schoolId, storage});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
+      getItem.restore();
     });
     it('includes saved form data even if partial saving is not allowed', () => {
-      teacherApplication.mergeProps({
-        savedFormData,
-        schoolId,
-        allowPartialSaving: false
-      });
+      const teacherApplicationWithoutSave = isolateComponent(
+        <TeacherApplication
+          {...defaultProps}
+          savedFormData={savedFormData}
+          schoolId={schoolId}
+        />
+      );
       expect(
-        teacherApplication.findOne('FormController').props.getInitialData()
+        teacherApplicationWithoutSave
+          .findOne('FormController')
+          .props.getInitialData()
       ).to.deep.equal({
         ...parsedData,
         school: schoolId

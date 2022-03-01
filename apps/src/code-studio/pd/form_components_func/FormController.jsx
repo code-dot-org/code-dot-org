@@ -76,6 +76,7 @@ const FormController = props => {
     serializeAdditionalData,
     sessionStorageKey,
     submitButtonText,
+    storage,
     getPageProps: getAdditionalPageProps = () => ({}),
     validateOnSubmitOnly,
     warnOnExit
@@ -288,7 +289,7 @@ const FormController = props => {
         },
         ...newState
       };
-      sessionStorage.setItem(sessionStorageKey, JSON.stringify(mergedData));
+      storage.setItem(sessionStorageKey, JSON.stringify(mergedData));
     }
   };
 
@@ -367,7 +368,6 @@ const FormController = props => {
     setSaving(true);
 
     const handleSuccessfulSave = response => {
-      console.log('on successful save, data is', data, response);
       scrollToTop();
       setShowSavedMessage(true);
       setShowDataWasLoadedMessage(false);
@@ -411,7 +411,7 @@ const FormController = props => {
     setSubmitting(true);
 
     const handleSuccessfulSubmit = data => {
-      sessionStorage.removeItem(sessionStorageKey);
+      storage.removeItem(sessionStorageKey);
       onSuccessfulSubmit(data);
     };
 
@@ -670,6 +670,7 @@ FormController.propTypes = {
   serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
+  storage: PropTypes.object,
   validateOnSubmitOnly: PropTypes.bool,
   warnOnExit: PropTypes.bool
 };
@@ -686,6 +687,7 @@ FormController.defaultProps = {
   onSuccessfulSave: () => {},
   serializeAdditionalData: () => {},
   sessionStorageKey: null,
+  storage: sessionStorage,
   submitButtonText: defaultSubmitButtonText,
   validateOnSubmitOnly: false,
   warnOnExit: false
