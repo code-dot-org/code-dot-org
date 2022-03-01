@@ -107,7 +107,7 @@ export const sortRows = (data, columnIndexList, orderList) => {
   }
   addRows = orderBy(addRows, columnIndexList, orderList);
   newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
-  studentRows = orderBy(studentRows, columnIndexList, orderList);
+  studentRows = studentRows.reverse();
   return addRows.concat(newStudentRows).concat(studentRows);
 };
 
