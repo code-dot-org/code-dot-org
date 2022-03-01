@@ -28,8 +28,8 @@ export const commands = {
   anySpriteSpeaks() {
     const spriteIds = this.getSpriteIdsInUse();
     return (
-      spriteIds.filter(_spriteId =>
-        commands.spriteSpeechRenderedThisFrame.call(this, _spriteId)
+      spriteIds.filter(id =>
+        commands.spriteSpeechRenderedThisFrame.call(this, id)
       ).length > 0
     );
   },
@@ -49,8 +49,8 @@ export const commands = {
   strictAnySpriteSpeaks() {
     const spriteIds = this.getSpriteIdsInUse();
     return (
-      spriteIds.filter(_spriteId =>
-        commands.strictSpriteSpeechRenderedThisFrame.call(this, _spriteId)
+      spriteIds.filter(id =>
+        commands.strictSpriteSpeechRenderedThisFrame.call(this, id)
       ).length > 0
     );
   },
@@ -59,9 +59,7 @@ export const commands = {
   anySpriteSpeaking() {
     const spriteIds = this.getSpriteIdsInUse();
     return (
-      spriteIds.filter(_spriteId =>
-        this.getLastSpeechBubbleForSpriteId(_spriteId)
-      ).length > 0
+      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length > 0
     );
   },
 
@@ -70,9 +68,8 @@ export const commands = {
   strictAnySpriteSpeaking() {
     const spriteIds = this.getSpriteIdsInUse();
     return (
-      spriteIds.filter(
-        _spriteId => this.getLastSpeechBubbleForSpriteId(_spriteId)?.text
-      ).length > 0
+      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)?.text)
+        .length > 0
     );
   },
 
