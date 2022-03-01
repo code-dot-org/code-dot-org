@@ -9,7 +9,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.0.4.1'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '5.2.4.4'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -27,6 +28,8 @@ gem 'responders', '~> 3.0'
 gem 'sinatra', '2.0.2', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
+
+gem 'seamless_database_pool', '>= 1.0.20'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
@@ -291,7 +294,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 12.0'
+gem 'composite_primary_keys', '~> 11.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy

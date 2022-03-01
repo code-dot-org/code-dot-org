@@ -2,11 +2,11 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
-# be faster and is potentially less error prone than running all of your
-# migrations from scratch. Old migrations may fail to apply correctly if those
-# migrations use external dependencies or application code.
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
 
@@ -281,7 +281,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
     t.integer "script_id"
     t.integer "level_id"
     t.integer "commenter_id", null: false
-    t.text "comment", size: :medium
+    t.text "comment", limit: 16777215
     t.integer "project_owner_id"
     t.integer "section_id"
     t.boolean "is_from_teacher"
@@ -558,7 +558,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
   create_table "foorm_submissions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "form_name", null: false
     t.integer "form_version", null: false
-    t.text "answers", size: :medium, null: false
+    t.text "answers", limit: 16777215, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -680,7 +680,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
 
   create_table "level_source_images", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.bigint "level_source_id", unsigned: true
-    t.binary "image", size: :medium
+    t.binary "image", limit: 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["level_source_id"], name: "index_level_source_images_on_level_source_id"
@@ -714,7 +714,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
     t.string "level_num"
     t.bigint "ideal_level_source_id", unsigned: true
     t.integer "user_id"
-    t.text "properties", size: :long, collation: "utf8mb4_unicode_520_ci"
+    t.text "properties", limit: 4294967295, collation: "utf8mb4_unicode_520_ci"
     t.string "type"
     t.string "md5"
     t.boolean "published", default: false, null: false
@@ -1382,7 +1382,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
   create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
     t.string "object_version_id", null: false
-    t.text "comment"
+    t.text "comment", limit: 16777215
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
