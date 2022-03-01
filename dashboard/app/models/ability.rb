@@ -74,6 +74,10 @@ class Ability
       can? :update, level
     end
 
+    can [:show_by_keys], ProgrammingExpression do |expression|
+      can? :read, expression
+    end
+
     if user.persisted?
       can :manage, user
 
@@ -208,9 +212,11 @@ class Ability
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
         if user.regional_partners.any?
-          # regional partners by default have read, quick_view, and update
-          # permissions
+          # regional partners by default have read, quick_view, and update permissions
           can [:read, :quick_view, :cohort_view, :update, :search, :destroy], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+
+          # regional partners cannot see or update incomplete teacher applications
+          cannot [:show, :update, :destroy], Pd::Application::TeacherApplication, &:incomplete?
 
           # G3 regional partners should have full management permission
           group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
