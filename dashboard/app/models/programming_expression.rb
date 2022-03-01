@@ -256,4 +256,32 @@ class ProgrammingExpression < ApplicationRecord
     object_to_serialize = serialize
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
+
+  def clone_to_programming_environment(environment_name, new_category_key = nil)
+    new_env = ProgrammingEnvironment.find_by_name(environment_name)
+    raise "Cannot find programming environment with name #{environment_name}" unless new_env
+
+    # Find the category for the new expressions:
+    # - if new_category_key is provided, use that
+    # - if not, try to find a category with the same key as the original expression's category
+    # - if that doesn't exist, search for a category with the same name as the original expression's category
+    # As there's no (current) problem with an expression not having a category,
+    # stop there. It won't appear in navigation but will still be valid
+    new_category = nil
+    if new_category_key
+      new_category = new_env.categories.find_by_key(new_category_key)
+    else
+      new_category ||= new_env.categories.find_by_key(programming_environment_category.key)
+      new_category ||= new_env.categories.find_by_name(programming_environment_category.name)
+    end
+
+    new_exp = dup
+    new_exp.programming_environment_id = new_env.id
+    new_exp.programming_environment_category_id = new_category&.id
+
+    new_exp.save!
+    new_exp.write_serialization
+
+    new_exp
+  end
 end
