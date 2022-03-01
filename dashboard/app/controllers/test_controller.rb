@@ -16,13 +16,12 @@ class TestController < ApplicationController
     head :ok
   end
 
-  def create_facilitator
+  def create_csd_facilitator
     name = params.require(:name)
-    course = params.require(:course)
 
     email, password = generate_user(name)
 
-    FactoryGirl.create(:pd_course_facilitator, course: course, facilitator:
+    FactoryGirl.create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD, facilitator:
       FactoryGirl.create(:facilitator, name: name, email: email, password: password)
     )
   end
