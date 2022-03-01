@@ -17,6 +17,12 @@ module MultipleDatabasesTransitionHelper
           use_database_pool route => :persistent
         end
       end
+
+      def connect_to_writer
+        ActiveRecord::Base.connected_to(role: :writing) do
+          yield
+        end
+      end
     end
 
     def connect_to_reader
