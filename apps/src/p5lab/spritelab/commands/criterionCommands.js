@@ -36,12 +36,48 @@ export const commands = {
     return result;
   },
 
+  // Return true if the specified sprite began speaking
+  // and the text is not an empty string.
+  strictSpriteSpeechRenderedThisFrame(spriteId) {
+    return (
+      this.getLastSpeechBubbleForSpriteId(spriteId)?.renderFrame ===
+        this.currentFrame() &&
+      this.getLastSpeechBubbleForSpriteId(spriteId)?.text
+    );
+  },
+
+  // Return true if any sprite began speaking
+  // and the text is not an empty string.
+  strictAnySpriteSpeaks() {
+    const spriteIds = this.getSpriteIdsInUse();
+    let result = false;
+    for (let i = 0; i < spriteIds.length; i++) {
+      if (commands.strictSpriteSpeechRenderedThisFrame.call(this, i)) {
+        result = true;
+      }
+    }
+    return result;
+  },
+
   // Return true if any sprite was speaking.
   anySpriteSpeaking() {
     const spriteIds = this.getSpriteIdsInUse();
     let result = false;
     for (let i = 0; i < spriteIds.length; i++) {
       if (this.getLastSpeechBubbleForSpriteId(spriteIds[i])) {
+        result = true;
+      }
+    }
+    return result;
+  },
+
+  // Return true if any sprite was speaking
+  // and the text is not an empty string.
+  strictAnySpriteSpeaking() {
+    const spriteIds = this.getSpriteIdsInUse();
+    let result = false;
+    for (let i = 0; i < spriteIds.length; i++) {
+      if (this.getLastSpeechBubbleForSpriteId(spriteIds[i])?.text) {
         result = true;
       }
     }
