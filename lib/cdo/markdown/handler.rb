@@ -10,8 +10,8 @@ module Cdo
         @parser = Redcarpet::Markdown.new(renderer, options)
       end
 
-      def call(template, source)
-        "#{@parser.render(source).inspect}.html_safe"
+      def call(template)
+        "#{@parser.render(template.source).inspect}.html_safe"
       end
 
       def self.register(*args)
