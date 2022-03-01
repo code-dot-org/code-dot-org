@@ -41,6 +41,7 @@ class XhrProxyController < ApplicationController
     api.github.com
     api.mathjs.org
     api.mojang.com
+    api.nal.usda.gov
     api.nasa.gov
     api.nookipedia.com
     api.opencagedata.com
