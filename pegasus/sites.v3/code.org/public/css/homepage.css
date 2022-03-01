@@ -300,7 +300,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage .action_buttons {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 #homepage #actions a {
@@ -347,7 +347,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions .herohocbutton {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 18px;
   min-width: 230px;
   height: 40px;
