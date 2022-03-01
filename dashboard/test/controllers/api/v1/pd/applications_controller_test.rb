@@ -1239,17 +1239,5 @@ module Api::V1::Pd
         delete :destroy, params: {id: application.id}
       end
     end
-
-    test 'group 3 partner cannot call delete api' do
-      application = create TEACHER_APPLICATION_FACTORY
-      group_3_partner = create :regional_partner, group: 3
-      group_3_program_manager = create :teacher
-      create :regional_partner_program_manager, regional_partner: group_3_partner, program_manager: group_3_program_manager
-
-      sign_in group_3_program_manager
-      assert_does_not_destroy(TEACHER_APPLICATION_CLASS) do
-        delete :destroy, params: {id: application.id}
-      end
-    end
   end
 end
