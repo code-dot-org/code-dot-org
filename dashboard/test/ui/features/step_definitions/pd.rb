@@ -18,12 +18,12 @@ end
 
 Given(/^I am a CSD facilitator named "([^"]*)"$/) do |facilitator_name|
   steps %Q{
-    And there is a facilitator named "#{facilitator_name}" for course "#{Pd::Workshop::COURSE_CSD}"
+    And there is a facilitator named "#{facilitator_name}" for CSD
     And I sign in as "#{facilitator_name}"
   }
 end
 
-Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ do |facilitator_name, partner_name|
+Given(/^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/) do |facilitator_name, partner_name|
   require_rails_env
 
   RegionalPartner.find_or_create_by(name: partner_name, group: 1)
@@ -34,7 +34,7 @@ Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ 
   }
 end
 
-Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ do |pm_name, partner_name|
+Given(/^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/) do |pm_name, partner_name|
   require_rails_env
 
   regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1)
@@ -47,11 +47,21 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   }
 end
 
-Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
+Given(/^there is a facilitator named "([^"]+)" for CSD"$/) do |name|
   browser_request(
-    url: '/api/test/create_facilitator',
+    url: '/api/test/create_csd_facilitator',
     method: 'POST',
-    body: {name: name, course: course}
+    body: {name: name}
+  )
+end
+
+Given(/^there is a facilitator named "([^"]+)" for course "([^"]+)"$/) do |name, course|
+  require_rails_env
+
+  email, password = generate_user(name)
+
+  FactoryGirl.create(:pd_course_facilitator, course: course, facilitator:
+    FactoryGirl.create(:facilitator, name: name, email: email, password: password)
   )
 end
 
