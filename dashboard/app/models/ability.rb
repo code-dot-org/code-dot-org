@@ -19,6 +19,7 @@ class Ability
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
+      ReferenceGuide, # see override below
       :reports,
       User,
       UserPermission,
@@ -305,6 +306,11 @@ class Ability
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
       can?(:read, script)
+    end
+
+    can :read, ReferenceGuide do |guide|
+      course_or_unit = guide.course_version.content_root
+      can?(:read, course_or_unit)
     end
 
     # Handle standalone projects as a special case.
