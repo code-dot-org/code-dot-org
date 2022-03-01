@@ -52,6 +52,7 @@ export default function ProgrammingExpressionEditor({
   const {
     id,
     key,
+    showPath,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
   remainingProgrammingExpression.parameters.forEach(
@@ -67,7 +68,7 @@ export default function ProgrammingExpressionEditor({
   const [error, setError] = useState(null);
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
-  const save = () => {
+  const save = (e, shouldCloseAfterSave) => {
     if (isSaving) {
       return;
     }
@@ -83,7 +84,12 @@ export default function ProgrammingExpressionEditor({
       .then(response => {
         setIsSaving(false);
         if (response.ok) {
-          setLastUpdated(Date.now());
+          if (shouldCloseAfterSave) {
+            navigateToHref(showPath);
+          } else {
+            setLastUpdated(Date.now());
+            setError(null);
+          }
         } else {
           setError(response.statusText);
         }
@@ -269,7 +275,7 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref(`/programming_expressions/${id}`)}
+        handleView={() => navigateToHref(showPath)}
       />
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}
