@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-26 14:09:13 UTC",
+    "serialized_at": "2022-03-02 14:29:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4672,13 +4672,7 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
         "duration": "15",
         "name": "Development",
-        "progression_name": "Asphalt Art Project",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize to students that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new class."
-          }
-        ]
+        "progression_name": "Asphalt Art Project"
       },
       "seeding_key": {
         "activity_section.key": "d9fefed9-efeb-4ddd-8a88-f717b3c55fd9",
@@ -4911,7 +4905,7 @@
       "key": "8f56723f-a67f-4747-9f0d-44aeaecff2ec",
       "position": 4,
       "properties": {
-        "description": "**Asphalt Art Project:** You can use the Day 2 Reflection as an optional completion assessment.",
+        "description": "**Asphalt Art Project Planning Guide:** You can use the Day 2 Reflection as an optional completion assessment.",
         "name": "Assessment (Optional)"
       },
       "seeding_key": {
@@ -5050,7 +5044,7 @@
       "key": "9087616e-70a5-407d-adb7-2fff64717d79",
       "position": 3,
       "properties": {
-        "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
+        "description": "**Asphalt Art Project Planning Guide:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -5158,7 +5152,7 @@
       "key": "0bed0534-8403-4547-b912-b6688c3b08b5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -5181,7 +5175,7 @@
       "key": "a0d6b210-10db-42f4-bade-74ea16ed26f7",
       "position": 3,
       "properties": {
-        "description": "**SpiralPainter FRQ:** The SpiralPainter FRQ handout can be used as a formative assessment to check that students can identify characteristics of a software engineer and relate them to their own personal skills and identity.",
+        "description": "**SpiralPainter FRQ:** The SpiralPainter FRQ handout can be used as an optional formative assessment.",
         "name": "Assessment (Optional)"
       },
       "seeding_key": {
