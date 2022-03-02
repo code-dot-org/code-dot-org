@@ -190,6 +190,7 @@ class HomeController < ApplicationController
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
       @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
+      @homepage_data[:marketingSegmentData] = current_user.marketing_segment_data
 
       if show_census_banner
         teachers_school = current_user.school_info.school

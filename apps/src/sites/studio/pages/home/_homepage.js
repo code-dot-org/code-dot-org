@@ -106,6 +106,7 @@ function showHomepage() {
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
             specialAnnouncement={specialAnnouncement}
+            marketingSegmentData={homepageData.marketingSegmentData}
           />
         )}
         {!isTeacher && (
