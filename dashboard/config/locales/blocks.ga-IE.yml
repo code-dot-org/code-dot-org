@@ -436,6 +436,26 @@ ga:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': eachtrán
             '"BEAR"': béar
@@ -979,6 +999,13 @@ ga:
         text: nuair a chliceáiltear {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): casadh ar deiseal
+            new Behavior(jittering, []): crith
+            new Behavior(wandering, []): fánaíocht
+            new Behavior(patrolling, []): patrólú
       gamelab_comment:
         text: 'nóta trachta: {COMMENT}'
       gamelab_costumeImage:
@@ -1010,6 +1037,19 @@ ga:
             '"seconds"': soicind
       gamelab_hideTitleScreen:
         text: cuir an scáileán teidil i bhfolach
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1211,6 +1251,14 @@ ga:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': mall
+            '5': gnáthmhód
+            '7': sciobtha
+            '9': extra fast
       gamelab_setTint:
         text: athraigh dath {THIS} go {COLOR}
       gamelab_showTitleScreen:
@@ -1540,64 +1588,69 @@ ga:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Bláthanna
-            '"hearts"': Croíthe
+            '"hearts"': croíthe
             '"iceCream"': Uachtair Reoite
-            '"rainbow"': Tuar ceatha
-            '"stars"': Réaltaí
-            '"waves"': Tonnta
+            '"rainbow"': tuar ceatha
+            '"stars"': réaltaí
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': báisteach
       Poetry_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': oíche
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': mall
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Sorcha
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': léim
       Poetry_setBackground:
         text: 'socraigh dath an chúlra: {COLOR}'
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Dathanna
-            '"squiggles"': Caisirníní
-            '"space"': An Spás
-            '"stars"': Réaltaí
-            '"ripples"': Tonnáin
-            '"rain"': Báisteach
             '"bubbles"': Boilgeoga
+            '"clouds"': scamallach
             '"confetti"': Coinfití
-            '"hearts"': Croíthe Daite
+            '"hearts"': croíthe
+            '"space"': An Spás
+            '"rain"': báisteach
+            '"ripples"': Tonnáin
+            '"colors"': Dathanna
+            '"stars"': Réaltaí
+            '"squiggles"': Caisirníní
           PALETTE:
-            '"rainbow"': Tuar ceatha
+            '"rainbow"': tuar ceatha
+            '"winter"': geimhreadh
       Poetry_setBackgroundImageAs:
         text: 'socraigh an cúlra: {IMG}'
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Báisteach
             '"bubbles"': Boilgeoga
-            '"hearts"': Croíthe Daite
             '"confetti"': Coinfití
+            '"hearts"': croíthe
+            '"rain"': báisteach
             '"starburst"': Pléascadh Réaltaí
       Poetry_startBehavior:
         options:
           BEHAVIOR:
-            growing: fás
-            jittering: crith
-            shrinking: crapadh
-            spinning_right: casadh ar deiseal
-            wandering: fánaíocht
+            '"growing"': fás
+            '"jittering"': crith
+            '"shrinking"': crapadh
+            '"spinning_right"': casadh ar deiseal
+            '"wandering"': fánaíocht
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            growing: fás
-            jittering: crith
-            shrinking: crapadh
-            spinning_right: casadh ar deiseal
-            wandering: fánaíocht
+            '"growing"': fás
+            '"jittering"': crith
+            '"shrinking"': crapadh
+            '"spinning_right"': casadh ar deiseal
+            '"wandering"': fánaíocht
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:

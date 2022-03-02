@@ -70,7 +70,11 @@
             "name": "dessiner la jambe droite"
           },
           "draw body and arms": {
-            "name": "dessiner le corps et les bras"
+            "name": "dessiner le corps et les bras",
+            "parameters": {
+              "armlength": "armlength",
+              "bodylength": "longueurcorps"
+            }
           },
           "draw a head": {
             "name": "dessiner une tête"
@@ -432,34 +436,52 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "obtenir 3 nectars"
+            "name": "obtenir 3 nectars",
+            "parameters": {
+              "direction": "direction"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "obtenir 3 nectars"
+            "name": "obtenir 3 nectars",
+            "parameters": {
+              "direction": "direction"
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "obtenir 5 nectars"
+            "name": "obtenir 5 nectars",
+            "parameters": {
+              "direction": "direction"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "obtenir 5 nectars"
+            "name": "obtenir 5 nectars",
+            "parameters": {
+              "direction": "direction"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "obtenir beaucoup de nectars"
+            "name": "obtenir beaucoup de nectars",
+            "parameters": {
+              "direction": "direction",
+              "nectars": "nectars"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "recueillir du nectar fabriquer du miel",
             "parameters": {
-              "honey": "miel"
+              "honey": "miel",
+              "direction": "direction",
+              "nectars": "nectars"
             }
           }
         },
@@ -1150,7 +1172,8 @@
             "parameters": {
               "height": "hauteur",
               "actor": "acteur"
-            }
+            },
+            "description": "bloc fonction de saut avec hauteur et paramètre d'acteur"
           },
           "patrol": {
             "name": "patrouiller",
@@ -1224,14 +1247,16 @@
             "parameters": {
               "height": "hauteur",
               "actor": "acteur"
-            }
+            },
+            "description": "bloc fonction de saut avec hauteur et paramètre d'acteur"
           },
           "patrol": {
             "name": "patrouiller",
             "parameters": {
               "actor": "acteur",
               "speed": "vitesse"
-            }
+            },
+            "description": "une fonction de patrouille ayant un acteur et un paramètre de vitesse"
           }
         },
         "Robot Doodle": {

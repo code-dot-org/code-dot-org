@@ -342,6 +342,32 @@ bn:
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': হরতন
+            '"rainbow"': রামধনু
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': রাত্রি
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': ঘণ্টা
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': লাফান
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': মেঘাচ্ছন্ন
+            '"hearts"': হরতন
+          PALETTE:
+            '"rainbow"': রামধনু
+            '"winter"': শীতকাল
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': হরতন
       RyanLab_moveForward:
         text: সামনে এগিয়ে যান
       RyanLab_turnLeft:

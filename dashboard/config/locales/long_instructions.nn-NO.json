@@ -138,7 +138,7 @@
         "Dance_2019_09": "Denne **nye blokka** er ein spesiell type hending som blir trigga igjen og igjen. \n\n<xml><block type=\"Dancelab_everySeconds\"><title name=\"N\">2</title><title name=\"UNIT\">\"measures\"</title></block></xml>\n\nVed å plassere andre nye blokker frå verktøykassa di innanfor ei gjenta-blokk gjer at du kan gjenta å endre eigenskapane til dansarane over tid. Ver kreativ og ha det gøy!\n\n_Når du er ferdig trykker du på Ferdig-knappen._",
         "Dance_2019_10": "Groove i veg! Lag ein dans du kan dele med venene dine.",
         "Dance_Party_01": "_La oss ha ein dansefest!_\n\nDra ‘lag en ny’-blokka inn i arbeidsområdet, og koble den til inni ‘oppsett’-blokka for å lage den første dansaren.\n\n-   _Du kan også klikke på lyspæra til venstre, om du vil ha meir informasjon eller fleire utfordringar._",
-        "Dance_Party_02": "No må vi få elgen til å danse!\n\nTrekk <xml><block type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new\\_dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.\n\n**Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.",
+        "Dance_Party_02": "No må vi få elgen til å danse!\n\nTrekk <xml><block type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new&#95;dancer</title><title name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.\n\n**Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.",
         "Dance_Party_03": "_Groovy greier!_\n\nLegg til ei <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>-blokk i arbeidsområdet. Få dansaren til å begynne på ein ny dans etter 6 taktar.",
         "Dance_Party_04": "_Denne dansen treng litt hjelp!_\n\nUnder finn du ei ny blokk som legg til en bakgrunnseffekt bak dansaren din. Sjå endringane som skjer i takt med musikken!",
         "Dance_Party_05": "Bruk nok ei ny blokk for å få danseren til å skifte rørsler **kvar andre takt**!\n\n-   Om du vel ‘(Neste)’, ‘(Førre)’ eller ‘(Tilfeldig)’, byttar dansaren til ein annan dans kvar gong du køyrer koden.",
@@ -490,7 +490,8 @@
         "courseB_maze_seq7_2021": "Finn ut hva som mangler og legg så til de manglende brikkene for å få Scrat til eikenøtten!",
         "courseB_maze_seq8_2021": "Din tur! Hva trenger du for å få Scrat til eikenøtten?",
         "courseB_maze_seq9_2021": "**Utfordring:** Flytt deg rundt den sprekte isen for å få Scrat til eikenøtten.",
-        "courseB_maze_seq_challenge1_2021": "Du har bare 4 av hver bevegelsesblokk. Kan du finne en rute før du går tom for blokker?"
+        "courseB_maze_seq_challenge1_2021": "Du har bare 4 av hver bevegelsesblokk. Kan du finne en rute før du går tom for blokker?",
+        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       }
     }
   }

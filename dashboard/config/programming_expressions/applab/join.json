@@ -1,11 +1,9 @@
 {
   "key": "join",
-  "name": "join",
+  "name": "list.join",
   "category": "Variables",
-  "palette_params": [
-    {
-      "name": "separator"
-    }
-  ],
+  "category_key": "variables",
+  "content": "[name]\n\n## [list].join\n\n[/name]\n\n[category]\n\nCategory: Variables\n\n[/category]\n\n[description]\n\n[short_description]\n\nReturns the array as a string with elements joined by an optional separator\n\n[/short_description]\n\nSometimes we want to put all of the items in our lists together. *join* allows us to do this and to choose what we want in between each of the items. The separator we choose will be placed between every single item in the resulting string.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n**Example: Simple Join** Join a list of strings with the word \"and\"\n\n```\nvar colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\"];\nconsole.log(\"My favorite colors are \" + colors.join(\" and \"));\n```\n\n[/example]\n____________________________________________________\n\n[example]\n\n**Example: Multiline-String** Join a string so that each element prints on another line.\n\n```\nvar colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\"];\nconsole.log(\"My favorite colors are:\\n\" + colors.join(\" \\n \"));\n```\n\n[/example]\n\n____________________________________________________\n\n[syntax]\n\n### Syntax\n\n```\n[list].join(separator)\n```\n\n[/syntax]\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| list | variable name | Yes | The variable name of the list (array) you want to join |\n| separator | string | No | The string to use to join the list (array). If none is given a comma will be used |\n\n[/parameters]\n\n[returns]\n\n### Returns\nThe list (array) as a single string, connected by the given separator.\n\n[/returns]\n\n[tips]\n\n### Tips\n- If you use the newline character `\"\\n\"` as your separator you can create a list in which each element prints on a different line.\n\n[/tips]\n\n[bug]\n\nFound a bug in the documentation? Let us know at documentation@code.org\n\n[/bug]",
+  "short_description": "\n[list].join\nCategory: Variables",
   "syntax": "join(separator)"
 }

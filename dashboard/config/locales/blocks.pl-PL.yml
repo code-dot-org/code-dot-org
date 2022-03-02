@@ -377,6 +377,8 @@ pl:
             '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
+            '"spiral"': spirala
+            '"infinity"': nieskończona linia
             '"random"': losowy
       Dancelab_makeAnonymousDanceSprite:
         text: utwórz nowy {COSTUME} w {LOCATION}
@@ -459,6 +461,26 @@ pl:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
@@ -486,6 +508,8 @@ pl:
             '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
+            '"spiral"': spirala
+            '"infinity"': nieskończona linia
             '"random"': losowy
       Dancelab_mixColors:
         text: zmieszaj {COLOR1} z {COLOR2}
@@ -547,6 +571,7 @@ pl:
             '"fireworks"': Fajerwerki
             '"flowers"': Kwiaty
             '"growing_stars"': Powiększające się gwiazdy
+            '"higher_power"': Higher Power
             '"swirl"': Hypno
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
@@ -1013,6 +1038,8 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunek ruchu
             '"speed"': prędkość
+      gamelab_changeVarBy:
+        text: zastąp {VARIABLE} przez {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
         options:
@@ -1023,6 +1050,25 @@ pl:
         text: kiedy {SPRITE} kliknął
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(fluttering, []): trzepotanie
+            new Behavior(jittering, []): trzęsienie się
+            new Behavior(wobbling, []): chybotanie
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(patrolling, []): patrolowanie
+            new Behavior(moving_west_and_looping, []): przechodząc na zachód i powtarzając
+              w pętli
+            new Behavior(moving_east_and_looping, []): przechodząc na wschód i powtarzając
+              w pętli
+            new Behavior(moving_north_and_looping, []): poruszanie się na północ i
+              w pętli
+            new Behavior(moving_south_and_looping, []): poruszanie się na południe
+              i w pętli
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
       gamelab_costumeImage:
@@ -1075,6 +1121,20 @@ pl:
         text: |-
           jeśli {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: kostium {SPRITE} jest {COSTUME}
       gamelab_isKeyPressed:
@@ -1270,6 +1330,15 @@ pl:
             "'sound://category_digital/jump_7.mp3'": skocz
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): poruszanie się za pomocą klawiszy
+              strzałek
+            new Behavior(driving_with_arrow_keys, []): poruszanie się za pomocą klawiszy
+              strzałek
+            draggable(): będąc przeciągalnym
       gamelab_pointInDirection:
         text: punkt {SPRITE} {DIRECTION}
         options:
@@ -1294,6 +1363,8 @@ pl:
         text: usuń kolor z {THIS}
       gamelab_repeatForever:
         text: powtarzaj w nieskończoność
+      gamelab_resetTimer:
+        text: zresetuj czasomierz
       gamelab_setAnimation:
         text: zmień {THIS} kostium na {ANIMATION}
       gamelab_setBackground:
@@ -1382,6 +1453,15 @@ pl:
             '"scale"': rozmiar
             '"width"': szerokość
             '"height"': wysokość
+      gamelab_setSpeed_dropdown:
+        text: ustaw prędkość {SPRITE} na {SIZE}
+        options:
+          SIZE:
+            '1': bardzo powoli
+            '3': powoli
+            '5': normalny
+            '7': szybko
+            '9': bardzo szybko
       gamelab_setTint:
         text: zmień kolor {THIS} na {COLOR}
       gamelab_setupScoreboard:
@@ -1389,7 +1469,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
@@ -1774,7 +1854,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
@@ -1880,17 +1960,17 @@ pl:
             '"decorative"': Dekoracyjny
             '"donuts"': Pączki
             '"fire"': Ogień
-            '"flowers"': Kwiaty
+            '"flowers"': kwiaty
             '"gilded"': Pozłacany
-            '"hearts"': Serca
+            '"hearts"': serca
             '"iceCream"': Lody
             '"leaves"': Liście
             '"metal"': Metalowa ramka
             '"pawPrints"': Odciski łap
-            '"rainbow"': Tęcza
-            '"stars"': Gwiazdy
+            '"rainbow"': tęcza
+            '"stars"': gwiazdy
             '"swirls"': Wiry
-            '"waves"': Fale
+            '"waves"': fale
             '"wood"': Drewniana ramka
             '"zigzag"': Zig-Zag
       Poetry_addLine:
@@ -1932,7 +2012,7 @@ pl:
             '"sound://category_background/inside_plane.mp3"': Szum
             '"sound://category_loops/red_flag_loop1.mp3"': Misja
             '"sound://category_nature/summer_night_loop.mp3"': Noc
-            '"sound://category_background/ocean_waves.mp3"': Ocean
+            '"sound://category_background/ocean_waves.mp3"': ocean
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Deszczowy
             '"sound://category_background/rainforest_ambient_sound.mp3"': Deszczowy
               las
@@ -1945,18 +2025,20 @@ pl:
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': Dzwon
-            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_digital/boing_2.mp3"': Dźwięk odbicia
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bąbelki
             '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Gadać
-            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Siadać
-            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Nieudane
-            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Trzepotanie
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Spuszczenie
+              powietrza
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Porażka
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Trzepot
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Skok
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Jasne
-            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puszysty
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': światło
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Dźwięk niewielkiego
+              wybuchu
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Skan
             '"sound://category_background/typewriter.mp3"': Maszyna do pisania
-            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Wibrujący
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Drgania
             '"sound://category_achievements/peaceful_win_1.mp3"': Zwycięstwo
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wir
             '"sound://category_achievements/peaceful_win_6.mp3"': Dzwonki wietrzne
@@ -1968,31 +2050,31 @@ pl:
         text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Kolory
-            '"squiggles"': Pokręcone linie
-            '"space"': Przestrzeń
-            '"stars"': Gwiazdy
+            '"blooming"': Rozkwiecony
+            '"bubbles"': Bąbelki
+            '"clouds"': Pochmurno
+            '"confetti"': Konfetti
             '"darkCircles"': Zblakły
             '"fadeColors"': Oszroniony
-            '"blooming"': Rozkwiecony
+            '"hearts"': serca
+            '"space"': Przestrzeń
+            '"rain"': deszcz
             '"ripples"': Fale
-            '"clouds"': Pochmurno
-            '"rain"': Deszcz
-            '"bubbles"': Bąbelki
-            '"confetti"': Konfetti
-            '"hearts"': Kolorowe Serca
+            '"colors"': Kolory
+            '"stars"': Gwiazdy
+            '"squiggles"': Pokręcone linie
           PALETTE:
-            '"rainbow"': Tęcza
-            '"grayscale"': Szarości
-            '"sky"': Niebo
-            '"ocean"': Ocean
+            '"autumn"': Jesień
             '"sunrise"': Świt
             '"sunset"': Zmierzch
+            '"grayscale"': Szarości
+            '"ocean"': Ocean
+            '"rainbow"': tęcza
+            '"roses"': Róże
+            '"sky"': Niebo
             '"spring"': Wiosna
             '"summer"': Lato
-            '"autumn"': Jesień
             '"winter"': Zima
-            '"roses"': Róże
       Poetry_setBackgroundImageAs:
         text: ustaw tło na {IMG}
       Poetry_setFont:
@@ -2000,23 +2082,23 @@ pl:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Pismo odręczne
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Pismo odręczne
       Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
       Poetry_setForegroundEffect:
         text: wykonaj efekt {EFFECT}
         options:
           EFFECT:
-            '"rain"': Deszcz
             '"bubbles"': Bąbelki
-            '"hearts"': Kolorowe Serca
-            '"emojis"': Szczęśliwe emotikony
             '"confetti"': Konfetti
+            '"hearts"': serca
+            '"emojis"': Szczęśliwe emotikony
+            '"rain"': deszcz
             '"starburst"': Rozprysk
             '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
@@ -2033,11 +2115,11 @@ pl:
         options:
           EFFECT:
             '"fade"': znikać
-            '"typewriter"': maszyna do pisania
             '"flyLeft"': lecieć z lewa
             '"flyRight"': lecieć z prawa
             '"flyTop"': lecieć z góry
             '"flyBottom"': lecieć z dołu
+            '"typewriter"': maszyna do pisania
       Poetry_setTitle:
         text: ustaw tytuł {TITLE}
       Poetry_showText:
@@ -2046,36 +2128,36 @@ pl:
         text: 'duszek {ANIMATION_NAME} rozpoczyna {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: trzepotanie
-            growing: rośnięcie
-            jittering: trzęsienie się
-            moving_north_and_looping: pętla na północ
-            moving_south_and_looping: pętla na południe
-            moving_east_and_looping: pętla na wschód
-            moving_west_and_looping: pętla na zachód
-            shrinking: zwężenie
-            spinning_left: obracanie się w lewo
-            spinning_right: obracanie się w prawo
-            swimming_left_and_right: pływanie
-            wandering: wędrowanie
-            wobbling: chybotanie
+            '"fluttering"': trzepotanie
+            '"growing"': rośnięcie
+            '"jittering"': trzęsienie się
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_west_and_looping"': pętla na zachód
+            '"shrinking"': zwężenie
+            '"spinning_left"': obracanie się w lewo
+            '"spinning_right"': obracanie się w prawo
+            '"swimming_left_and_right"': pływanie
+            '"wandering"': wędrowanie
+            '"wobbling"': chybotanie
       Poetry_stopBehavior:
         text: 'duszek {ANIMATION_NAME} zatrzymuje {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: trzepotanie
-            growing: rośnięcie
-            jittering: trzęsienie się
-            moving_north_and_looping: pętla na północ
-            moving_south_and_looping: pętla na południe
-            moving_east_and_looping: pętla na wschód
-            moving_west_and_looping: pętla na zachód
-            shrinking: zwężenie
-            spinning_left: obracanie się w lewo
-            spinning_right: obracanie się w prawo
-            swimming_left_and_right: pływanie
-            wandering: wędrowanie
-            wobbling: chybotanie
+            '"fluttering"': trzepotanie
+            '"growing"': rośnięcie
+            '"jittering"': trzęsienie się
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_west_and_looping"': pętla na zachód
+            '"shrinking"': zwężenie
+            '"spinning_left"': obracanie się w lewo
+            '"spinning_right"': obracanie się w prawo
+            '"swimming_left_and_right"': pływanie
+            '"wandering"': wędrowanie
+            '"wobbling"': chybotanie
             '"all"': "--wszystkie zachowania--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

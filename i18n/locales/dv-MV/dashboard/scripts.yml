@@ -136,3 +136,31 @@ dv:
             Events:
               key: އިވެންޓުތައް
               name: އިވެންޓުތައް
+        coursea-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: އިވެންޓުތައް
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursec-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursed-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursef-2022:
+          lessons:
+            AI for Oceans:
+              key: އޭއައި ފޯރ އޯޝަންސް
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް

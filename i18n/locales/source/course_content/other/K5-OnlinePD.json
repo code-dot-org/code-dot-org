@@ -564,7 +564,7 @@
   },
   "https://studio.code.org/s/K5-OnlinePD/lessons/11/levels/2": {
     "dsls": {
-      "markdown": "# Getting started - Take the post-survey\n\nThanks for using the Teaching Computer Science Fundamentals online professional development course! \n\nWhether or not you finished the whole course, we want to hear your feedback. Please submit this short survey to help us improve the course going forward!\n\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://form.jotform.com/90557778075168?user_id=<user_id/>\"> Take the post-survey</a>\n\n"
+      "markdown": "# Getting started - Take the post-survey\n\nThanks for using the Teaching Computer Science Fundamentals online professional development course! \n\n**This course is no longer accepting feedback.**\n\n<a href=\"https://studio.code.org/s/k5-onlinepd-2021\" target=\"blank\" rel=\"noopener noreferrer\"> Click here to access the latest CS Fundamentals self-paced online course</a>.\n\n"
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/lessons/11/levels/3": {
@@ -577,7 +577,7 @@
   },
   "https://studio.code.org/s/K5-OnlinePD/lessons/11/levels/5": {
     "dsls": {
-      "markdown": "# Next Steps > Celebrate!\n\nCongratulations on completing this professional development online course. Provided you have completed all levels in this training, you can download and print a certificate of accomplishment now by completing the following steps:\n\n1. Visit [this link](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).\n2. Enter your name into the input field/box.\n3. Click Print Certificates.\n4. Right click on the image of the certificate and choose \"Save Image As...\" so you can download to your computer.\n\nAnd don't forget... you can return to this online course anytime to review your learning, access links or resources, or just refresh your memory!\n\nThank you for your participation! We can't wait to hear how you implement computer science and Code Studio in your classroom!\n"
+      "markdown": "# Next Steps > Celebrate!\n\nCongratulations on completing this professional development online course. \n\n<a href=\"https://studio.code.org/s/k5-onlinepd-2021\" target=\"blank\" rel=\"noopener noreferrer\"> Click here to access the latest CS Fundamentals self-paced online course</a>.\n"
     }
   }
 }

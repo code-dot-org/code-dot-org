@@ -4,12 +4,19 @@ pt:
       actor: ator
       color: cor
       counter: contador
+      dir: dir
+      direction: direção
       height: altura
       honey: mel
       left: para a esquerda
       length: comprimento
       min: mín
+      nectar units: unidades de néctar
+      numOctagons: numOctogonos
       points: pontos
+      radius: raio
+      sides: lados
       size: tamanho
       speed: velocidade
+      theGuess: palpite
       width: largura

@@ -1,6 +1,0 @@
-{
-  "key": "mathMin",
-  "name": "mathMin",
-  "category": "Math",
-  "syntax": "Math.min(__)"
-}

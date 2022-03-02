@@ -881,6 +881,36 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.code_review_comments
+  #
+
+  test "soft deletes and clears comments written by purged user" do
+    student = create :student
+
+    comment = create :code_review_comment, commenter: student
+    refute comment.deleted?
+    refute_nil comment.comment
+
+    # Confirm that the contents of soft deleted comments
+    # are fully deleted.
+    deleted_comment = create :code_review_comment, commenter: student, deleted_at: Time.now
+    assert deleted_comment.deleted?
+    refute_nil deleted_comment.comment
+
+    purge_user student
+
+    comment.reload
+    assert comment.deleted?
+    assert_nil comment.comment
+
+    deleted_comment.reload
+    assert deleted_comment.deleted?
+    assert_nil deleted_comment.comment
+
+    assert_logged 'Cleared 2 CodeReviewComment'
+  end
+
+  #
   # Table: dashboard.pd_applications
   #
 
@@ -1718,6 +1748,62 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.project_versions
+  #
+
+  test "clears 'comment' on any version of all of a purged user's projects" do
+    student = create :student
+    with_channel_for student do |storage_app_id|
+      comment_text = 'a comment'
+      ProjectVersion.create(
+        storage_app_id: storage_app_id,
+        object_version_id: 'xyz',
+        comment: comment_text
+      )
+      assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id).count
+      assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id).first.comment
+
+      purge_user student
+
+      assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id).count
+      assert_nil ProjectVersion.where(storage_app_id: storage_app_id).first.comment
+      assert_logged "Cleared 1 ProjectVersion comments"
+    end
+  end
+
+  test "does not clear 'comment' on any version of anyone else's projects" do
+    student_to_purge = create :student
+    other_student = create :student
+    with_channel_for student_to_purge do |storage_app_id_to_purge|
+      with_channel_for other_student do |storage_app_id_other|
+        comment_text = 'a comment'
+        ProjectVersion.create(
+          storage_app_id: storage_app_id_to_purge,
+          object_version_id: 'xyz',
+          comment: comment_text
+        )
+        ProjectVersion.create(
+          storage_app_id: storage_app_id_other,
+          object_version_id: 'xyz',
+          comment: comment_text
+        )
+
+        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).count
+        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).first.comment
+        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_other).count
+        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_other).first.comment
+
+        purge_user student_to_purge
+
+        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).count
+        assert_nil ProjectVersion.where(storage_app_id: storage_app_id_to_purge).first.comment
+        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_other).count
+        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_other).first.comment
+      end
+    end
+  end
+
+  #
   # Table: dashboard.featured_projects
   #
 
@@ -1887,31 +1973,31 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'with_storage_id_for owns id if it does not exist' do
     student = create :student
 
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
 
     with_storage_id_for student do |storage_id|
-      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
+      assert_equal storage_id, storage_id_for_user_id(student.id)
     end
 
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
   end
 
   test 'with_storage_id_for does not own id if it does exist' do
     student = create :student
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
 
-    user_storage_ids.insert(user_id: student.id)
+    create_storage_id_for_user(student.id)
 
-    refute_empty user_storage_ids.where(user_id: student.id)
+    refute_nil storage_id_for_user_id(student.id)
 
     with_storage_id_for student do |storage_id|
-      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
+      assert_equal storage_id, storage_id_for_user_id(student.id)
     end
 
-    refute_empty user_storage_ids.where(user_id: student.id)
+    refute_nil storage_id_for_user_id(student.id)
 
-    user_storage_ids.where(user_id: student.id).delete
-    assert_empty user_storage_ids.where(user_id: student.id)
+    delete_storage_id_for_user(student.id)
+    assert_nil storage_id_for_user_id(student.id)
   end
 
   #

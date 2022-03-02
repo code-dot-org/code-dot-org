@@ -1,0 +1,18 @@
+name 'CSA Unit 4 Project Examples'
+title 'CSA Unit 3 Project Examples'
+
+markdown <<MARKDOWN
+#CSA Unit 4 Project Examples
+
+###[Student Example 1](https://studio.code.org/projects/javalab/uJUp98uy2yQlJ8zOD-GZMxmHlzCi-M3nH9CiegTGPOA)
+
+This is a simple rock-paper-scissors game by a student who has been struggling
+
+###[Student Example 2](https://studio.code.org/projects/javalab/JJuvjn8Ia6kubT-ezbl3nVxwPGUCA2abS9hMw-Nnc8M)
+
+This is a working UNO game (wild/draw/reverse cards work, and he implemented stacking draw cards so a player can add a draw card to the pile and the next person draws both) by one of my top students
+
+###[Student Example 3](https://studio.code.org/projects/javalab/rsZlh3oKVgTHXMxzEoAmpjiy2oH7fuSVcko7Y6PzVyY)
+
+Memory match game by a student who tries hard and is doing well
+MARKDOWN

@@ -1,0 +1,8 @@
+{
+  "key": "listLength",
+  "name": "list.length",
+  "category": "Variables",
+  "category_key": "variables",
+  "short_description": "Game Lab - list.length",
+  "syntax": "list.length"
+}

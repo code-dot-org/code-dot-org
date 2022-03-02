@@ -7,15 +7,6 @@ def hoc_load_countries
 end
 HOC_COUNTRIES = hoc_load_countries
 
-def hoc_load_i18n
-  i18n = {}
-  Dir.glob(hoc_dir('i18n/*.yml')).each do |string_file|
-    i18n.merge!(YAML.load_file(string_file))
-  end
-  i18n
-end
-HOC_I18N = hoc_load_i18n
-
 # Can be called by pages on hourofcode.com, code.org, or csedweek.org to retrieve
 # a string from the hourofcode.com translations.
 # When called on hourofcode.com, it uses @language.
@@ -25,17 +16,10 @@ HOC_I18N = hoc_load_i18n
 #
 # Can be called with markdown: true to render the string as (HTML-safe)
 # markdown, or with markdown: :inline to render as inline markdown.
-def hoc_s(id, markdown: false, locals: nil)
+def hoc_s(id, markdown: false, locals: {})
   id = id.to_s
   language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
-  string = HOC_I18N[language][id] || HOC_I18N['en'][id]
-
-  # manually implement a very simple version of string interpolation
-  if locals.present?
-    locals.each do |key, value|
-      string.gsub!(/%{#{key}}/, value)
-    end
-  end
+  string = I18n.t(id, locals.merge({locale: language}))
 
   if markdown
     type = markdown == :inline ? :inline_md : :safe_md
@@ -56,8 +40,13 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   end
 
   if @country || @company
-    if HOC_I18N[possible_language]
-      @user_language = possible_language
+    # Checking entire possible_language string first. We do not want to
+    # unintentionally interpret a path as a language.
+    if possible_language && I18n.backend.translations.key?(possible_language.to_sym)
+      # HOC uses two-letter language code. The full list of language codes is
+      # in the unique_language_s column in Pegasus.cdo_languages table.
+      short_language = possible_language[0..1]
+      @user_language = short_language if I18n.backend.translations.key?(short_language.to_sym)
     else
       path = File.join([possible_language, path].reject(&:nil_or_empty?))
     end
@@ -79,6 +68,7 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   browser_non_english = !hoc_detect_language.nil? && hoc_detect_language != 'en'
   default_language = browser_non_english ? hoc_detect_language : country_language
 
+  # Expected to be in short string format (ex. 'en')
   @language = @user_language || default_language
 
   canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].reject(&:nil_or_empty?))]
@@ -105,12 +95,12 @@ def hoc_detect_country
   country_code
 end
 
+# Get browser language from HTTP_ACCEPT_LANGUAGE header, then return a two-letter
+# language code or nil if we don't have translation for that language.
 def hoc_detect_language
-  language = request.env['rack.locale']
-  return language if HOC_I18N.keys.include?(language)
-  language = language[0..1]
-  return language if HOC_I18N.keys.include?(language)
-  nil
+  language = request.env['rack.locale'] || ''
+  language_short = language[0..1]
+  return I18n.backend.translations.key?(language_short.to_sym) ? language_short : nil
 end
 
 # Called by pages on hourofcode.com to convert the current two-letter language (stored
@@ -184,7 +174,7 @@ def campaign_date(format)
     id = "#{type}_#{id}"
   end
 
-  return HOC_I18N[language][id] || HOC_I18N['en'][id]
+  return I18n.t(id, locale: language)
 end
 
 def company_count

@@ -169,7 +169,7 @@ sr:
             '"SHARK"': ајкуле
           FORMAT:
             '"diamond"': дијамант
-            '"row"': разред
+            '"row"': ред
             '"random"': насумичан
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -204,7 +204,7 @@ sr:
             '"SHARK"': ајкуле
           LAYOUT:
             '"diamond"': дијамант
-            '"row"': разред
+            '"row"': ред
             '"random"': насумичан
       Dancelab_randomColor:
         text: насумична боја
@@ -531,6 +531,14 @@ sr:
             '"scale"': величина
             '"width"': Širina
             '"height"': висина
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': нормално
+            '7': fast
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -679,9 +687,36 @@ sr:
             '"down"': стрелица доле
             '"left"': стрелица лево
             '"right"': стрелица десно
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': срца
+            '"rainbow"': Дуга
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"rain"': киша
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': Ноћ
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': скок
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': Облачно
+            '"hearts"': срца
+            '"rain"': киша
+          PALETTE:
+            '"rainbow"': Дуга
+            '"winter"': Зима
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': срца
             '"rain"': киша
       RyanLab_moveForward:
         text: помери се напред
@@ -696,7 +731,7 @@ sr:
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"row"': разред
+            '"row"': ред
             '"random"': насумичан
       aalab_someGraduallyStartIntervention:
         options:

@@ -52,7 +52,7 @@ Följ med när vi utforskar AI i en helt ny videoserie, prova på spelet AI för
 <p>Modulen för AI och maskininlärning har en läroplan som sträcker sig över ungefär fem veckor. Modulen kan läras ut som en <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >enskild modul</a> eller som en valfri <a href="https://studio.code.org/s/csd7-2021">enhet inom kursplanen CS Discoveries</a>. Den fokuserar på AI och etik, tar upp problem med bias och utforskar och förklarar grundläggande koncept</p><p>Eftersom maskininlärning använder stora datamängder så innehåller den nya enheten datauppgifter om sjukvård, demografi med mera som elever kan kan arbeta med och ställa frågor som ”Vilka problem kan maskininlärning hjälpa oss att lösa?” ”Hur kan AI hjälpa vårt samhälle?” ”Vem är AI bra för?” ”Vem kan skadas?” ”Vem är inblandad?” ”Vem saknas?”  </p>
 <p>Etiska frågor är centrala i dessa diskussioner där ämnen och lektioner fokuserar på hur dessa tekniker påverkar vårt samhälle. Målet är att hjälpa eleverna få en helhetsbild och förståelse för teknikerna samtidigt som de lär sig grunderna för hur de fungerar.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Utforska modulen</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 

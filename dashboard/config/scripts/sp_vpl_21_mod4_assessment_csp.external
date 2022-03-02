@@ -19,6 +19,18 @@ markdown <<MARKDOWN
 
 ## Assessment in the curriculum
 
+### **Projects**
+
+##### Each unit, with the exception of Units 6 and 8, contains one project that takes more than one class period. These projects may be used as summative assessments in tandem with the multiple-choice assessment for the unit. Each project takes a different approach to assessing students’ ability to apply what they have learned from the unit. 
+
+<img src="https://images.code.org/3840c8eeef977c23f72db3ea4b8b310e-image-1641273495142.11.29 PM.png" alt="Screenshot of a submit button in AppLab" width="300px" style="float:right; margin: 0 0 0px 40px;">
+
+### **Submittable programming projects**
+
+##### When the curriculum calls for a programming project for assessment, the App Lab environment will show a “Submit” button below the typical “Run” button. When a student submits a project it is submitted with a timestamp and locked for teacher review. It also shows up in a special area of the teacher dashboard. The teacher can release the project back to the student as well.
+
+___
+
 ### **Fixed-response assessments**
 
 <img src="https://images.code.org/d69bec58966adfc52378ed598d016cf5-image-1641273220382.13.32 PM.png" alt="Screenshot of two 'check your understanding' levels." width="300px" style="float:right; margin: 0 0 40px 40px;">
@@ -35,15 +47,9 @@ markdown <<MARKDOWN
 
 ##### Lock settings enable or disable students from modifying their answers. For example, you may want to hide an assessment before students get to it, but after students take it, you might want it to remain visible but locked, while you review the answers.
 
-### **Projects**
+##### Read <a href="https://support.code.org/hc/en-us/articles/115001331951-How-do-I-unlock-assessments-tests-and-surveys-for-my-students-" target="blank" rel="noopener noreferrer"> this support article </a> for more information about unlocking assessments for students.
 
-##### Each unit, with the exception of Units 6 and 8, contains one project that takes more than one class period. These projects may be used as summative assessments in tandem with the multiple-choice assessment for the unit. Each project takes a different approach to assessing students’ ability to apply what they have learned from the unit. 
-
-### **Submittable programming projects**
-
-<img src="https://images.code.org/3840c8eeef977c23f72db3ea4b8b310e-image-1641273495142.11.29 PM.png" alt="Screenshot of a submit button in AppLab" width="300px" style="float:right; margin: 0 0 0px 40px;">
-
-##### When the curriculum calls for a programming project for assessment, the App Lab environment will show a “Submit” button below the typical “Run” button. When a student submits a project it is submitted with a timestamp and locked for teacher review. It also shows up in a special area of the teacher dashboard. The teacher can release the project back to the student as well.
+___
 
 ### **Worksheets and activity guides**
 

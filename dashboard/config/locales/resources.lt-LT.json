@@ -184,6 +184,39 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Diegimo vadovas"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizaino režimas"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizaino režimas"
+        },
+        "functions_2/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Kartojimas"
+        },
+        "for_loops/csd/2021": {
+          "name": "Kartojimas"
+        },
+        "variables_1/csd/2021": {
+          "name": "Kintamieji"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Greitis"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Greitis"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "functions_1/csd/2021": {
+          "name": "Komandų kūrimas"
+        },
+        "lists/csd/2021": {
+          "name": "Sąrašai"
         }
       }
     }

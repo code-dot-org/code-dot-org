@@ -25,7 +25,10 @@ export const MB_COMPONENTS = [
   'Accelerometer',
   'MicroBitThermometer',
   'Compass',
-  'LightSensor'
+  'LightSensor',
+  'ExternalButton',
+  'ExternalLed',
+  'CapacitiveTouchSensor'
 ];
 
 export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];

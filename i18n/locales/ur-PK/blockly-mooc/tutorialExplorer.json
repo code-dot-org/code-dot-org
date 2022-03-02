@@ -20,6 +20,7 @@
   "filterPlatformIos": "آئی پیڈ / آئی فون",
   "filterPlatformNoInternet": "کمزور یا بند انٹرنیٹ",
   "filterPlatformNoComputers": "کوئی کمپیوٹر یا آلات",
+  "filterPlatformScreenReader": "سکرین ریڈر",
   "filterTopics": "موضوعات",
   "filterTopicsScience": "سائنس",
   "filterTopicsMath": "ریاضی",
@@ -55,5 +56,7 @@
   "headingTutorialsYourLanguage": "آپ کی زبان میں کام",
   "showAllTutorialsButton": "بہت سی زبانوں کے لئے کام دکھائیں",
   "hideAllTutorialsButton": "بہت سی زبانوں کے کاموں کو چھپائیں",
-  "noTutorialsYourLanguage": "آپ کی زبان میں کوئی کام نہیں ہیں۔ نیچے دیے گئے بٹن پر کلک کر کے دوسری زبانوں میں کاموں کو کرنے کی کوشش کریں."
+  "noTutorialsYourLanguage": "آپ کی زبان میں کوئی کام نہیں ہیں۔ نیچے دیے گئے بٹن پر کلک کر کے دوسری زبانوں میں کاموں کو کرنے کی کوشش کریں.",
+  "bottomGuidelinesLink": "Hour of Code کے اسباق کے لیے ہمارے معیارات اور جمع کرانے کے رہنما خطوط دیکھنے کے لیے یہاں کلک کریں۔",
+  "bottomSpecialNeedsLink": "معذور طلباء کی مدد کے بارے میں مزید معلومات کے لیے یہاں کلک کریں۔"
 }

@@ -11,8 +11,7 @@ Data informs district and school recruitment by supporting your case and alignin
 ## Quick Links
 - [Access Your Data Dashboard](#tableau)
 - [Data Dashboard How-To Guide](#guide)
-- [Access Report](#access)
-- [2020 Data Clean-up](#cleanup)
+- [2021 Data Clean-up](#cleanup)
 
 <a name="tableau"></a>
 
@@ -42,43 +41,6 @@ Visit <a href="http://online.tableau.com/" target=_blank>http://online.tableau.c
 - [In Depth Guide](https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTpW4qZ-Wnt0U-v1xpNHjss/edit?ts=5a737737) - Dive more into Tableau, including Tableau navigation and available data
 - [Overview of Tableau Webinar](https://drive.google.com/file/d/1y5uJc0peiLUjGT6eqjmrMnUqsofRVyHR/view) including the [recording](https://code.zoom.us/recording/play/dllXoAASg7qgR_c2QMXC9dgou-2cjYawiWpJ2lixfkGzRlAHj1jhxUDqa0ERSrKK?continueMode=true) of useful views in Tableau
 
-
-
-<a name="access"></a>
-## K-12 Computer Science Access Report
-
-This is a report of which schools offer any computer science course in the US (including DOE data and survey data). See the Access Report section of the [2019 State of Computer Science Report](https://advocacy.code.org/2019_state_of_cs.pdf). All the data is made public on our site at <http://code.org/yourschool> and as regional partners, you have access to even [more data via Tableau](https://us-east-1.online.tableau.com/#/site/codeorg/workbooks/124362/views)!
-
-<details>
-  <summary>What schools teach a CS course in my state?</summary>
-  <p>
-
-Look in the [School-level filter](https://us-east-1.online.tableau.com/#/site/codeorg/views/Regionalpartnerdatasharing/School-levelFilter?:iid=3) view under “Computer Science Activities”. This includes all DOE data and survey data collected in your state and will show you which schools teacher computer science.
-</p>
-</details>
-
-<details>
-	<summary>What course counts as CS?</summary>
-See the [Access Report Section](https://advocacy.code.org/2019_state_of_cs.pdf) for the definition of what counts as a Computer Science course. Email <accessreport@code.org> to find out what courses were counted in your state.
-</p>
-</details>
-
-<details>
-	<summary>What courses count in my state?</summary>
-Refer to the [Access Report Section](https://advocacy.code.org/2019_state_of_cs.pdf) for which of the 39 states we have the full data set for public schools with any 9-12 grade bands. Email <accessreport@code.org> with any other information on what exactly your data set contains.
-</p>
-</details>
-
-<details>
-	<summary>How can you help?</summary>
-The data we gather can be an incredible resource to you, but only if it is robust. We need your help gathering data about every school in the country!
-
-- Include a call in your newsletter for students, teachers, parents, and districts to fill out the survery at <http://code.org/yourschool>. You can find sample language to use in your newsletter [here](https://docs.google.com/document/d/1O9julhujYWIkg-JAm92B-6havhPLSTI0avnXFXlthsk/edit?usp=sharing)
-- Connect to local organizations in your region who can spread the word on your behalf.
-- Connect us to organizations that may already have this information in your region (<accessreport@code.org>).
-- Share the [page](http://code.org/yourschool) on [Twitter](https://twitter.com/intent/tweet?related=codeorg&text=Does+your+school+teach+computer+science%3F+Expand+computer+science+at+your+school+or+district.+%40codeorg&url=https%3A%2F%2Fcode.org%2Fyourschool) or [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcode.org%2Fyourschool).
-</p>
-</details>
 
 <a name="cleanup"></a>
 

@@ -1936,6 +1936,21 @@
           "poetry_background": "Trouvez les blocs de code ici. ",
           "pause_button": "Testez l'animation que vous avez créée avec ce bouton.",
           "run_button": "Testez l'animation que vous avez créée avec ce bouton."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Ajoute tes blocs ici"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Que fait cette ligne?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Définie startGame ici"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Définie movePlayer() ici"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Vérifie si un joueur a gagné"
         }
       }
     }

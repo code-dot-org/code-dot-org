@@ -139,7 +139,12 @@ export function convertXmlToBlockly(xmlContainer) {
       // so if our container is a span it should be inline-block
       blockSpaceContainer.style.display = 'inline-block';
     }
-    xml.appendChild(blockSpaceContainer);
+
+    xml.parentNode.insertBefore(blockSpaceContainer, xml);
+
+    // Don't render the raw XML
+    xml.style.display = 'none';
+
     const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockSpaceContainer,
       xml,

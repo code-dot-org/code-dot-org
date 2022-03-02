@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:55:45 UTC",
+    "serialized_at": "2022-01-07 17:33:35 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -315,6 +315,21 @@
         "lesson_group.key": "",
         "script.name": "allthesurveys"
       }
+    },
+    {
+      "key": "lesson-20",
+      "name": "CSP post-survey 2021",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
     }
   ],
   "lesson_activities": [
@@ -564,6 +579,18 @@
         "lesson_group.key": "",
         "script.name": "allthesurveys"
       }
+    },
+    {
+      "key": "0c9e972e-acc8-4dd5-b4b4-ffc2b6a47a75",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0c9e972e-acc8-4dd5-b4b4-ffc2b6a47a75",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
     }
   ],
   "activity_sections": [
@@ -757,6 +784,17 @@
       "seeding_key": {
         "activity_section.key": "e3e3e99f-0068-4a38-a02f-cbf3a6a305d2",
         "lesson_activity.key": "9db1901e-3277-404b-9cd7-1f2d0dfa8e14"
+      }
+    },
+    {
+      "key": "d5440f6f-7446-4740-ad23-bc567a5b02a1",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSP Post-Survey 21-22"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5440f6f-7446-4740-ad23-bc567a5b02a1",
+        "lesson_activity.key": "0c9e972e-acc8-4dd5-b4b4-ffc2b6a47a75"
       }
     }
   ],
@@ -1265,6 +1303,28 @@
       "level_keys": [
         "csd-pre-survey-levelgroup_21_22"
       ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "CSP Post-Survey 21-22"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-levelgroup_2021"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys",
+        "activity_section.key": "d5440f6f-7446-4740-ad23-bc567a5b02a1"
+      },
+      "level_keys": [
+        "csp-post-survey-levelgroup_2021"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1518,6 +1578,18 @@
         "lesson_group.key": "",
         "script.name": "allthesurveys",
         "activity_section.key": "e3e3e99f-0068-4a38-a02f-cbf3a6a305d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-levelgroup_2021",
+        "script_level.level_keys": [
+          "csp-post-survey-levelgroup_2021"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys",
+        "activity_section.key": "d5440f6f-7446-4740-ad23-bc567a5b02a1"
       }
     }
   ],

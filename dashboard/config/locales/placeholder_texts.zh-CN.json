@@ -544,19 +544,23 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "你生日想要些什么？"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题",
+          "46463b2e9f71f2f15b7238f56f09ba30": "结束",
+          "c757766b0a7e2017c79e1c94f60e44f7": "谢谢你聊天！"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题",
+          "50d489a15105b987ec6d4410900c95dd": "输入一个动作词："
         },
         "courseE_aboutme_1": {
           "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "冰淇淋是我的最爱！但是也许我不应该在沙发上吃它。。。"
@@ -585,6 +589,10 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "选择2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "选择3",
           "6cd3556deb0da54bca060b4c39479839": "你好，世界！"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "点击精灵图给他们口罩。",
+          "968c8b54671ab303d48320f86937c40b": "口罩有助于减缓病毒的传播！"
         }
       }
     }

@@ -84,7 +84,7 @@ Ett nytt affischset är tillgängligt med Malala, Stephen Curry, Shakira med fle
 
 **Ämnesrad:** Följ med mig och över 100 miljoner studenter för en timme med Hour of Code <br />
 
-Datorer finns överallt, och förändrar varje industri på jorden. Men bara 51 % av alla gymnasieskolor lär ut datavetenskap. Goda nyheter är, vi är på väg att ändra detta! Om du hört talas om Hour of Code förra året, kanske du vet att projektet skapade historia. Över 100 miljoner studenter har provat på Hour of Code.
+Datorer finns överallt, och förändrar varje industri på jorden. But only 51% of all high schools offer computer science. Goda nyheter är, vi är på väg att ändra detta! Om du hört talas om Hour of Code förra året, kanske du vet att projektet skapade historia. Över 100 miljoner studenter har provat på Hour of Code.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Varje Apple Store i världen har varit värd för en Hour of Code, och ledare som president Obama och kanadensiska premiärministern Justin Trudeau skrev sina första rader kod som en del av kampanjen.
 
@@ -110,7 +110,7 @@ Mellan {{ campaign_date/short }} kommer tio procent av studenterna runt om i vä
 
 Eleverna kommer att skapa sina egna appar eller spel som de kan visa sina föräldrar, och vi kommer också att skriva ut Hour of Code-certifikat som de kan ta med sig hem. Och, det är roligt! Med interaktiva, praktiska aktiviteter kommer studenter att lära sig beräkningstänkande på ett lättillgängligt sätt.
 
-Datorer finns överallt, och förändrar varje industri på jorden. Men bara 51 % av alla gymnasieskolor lär ut datavetenskap. Goda nyheter är, vi är på väg att ändra detta! Om du har hört talas om Hour of Code tidigare, kanske du vet att det blev historia - mer än 100 miljoner studenter runt om i världen har provat en Hour of Code. Till och med ledare som president Obama och kanadensiska premiärministern Justin Trudeau skrev sina första rader av kodning som en del av kampanjen.
+Datorer finns överallt, och förändrar varje industri på jorden. But only 51% of all high schools offer computer science. Goda nyheter är, vi är på väg att ändra detta! Om du har hört talas om Hour of Code tidigare, kanske du vet att det blev historia - mer än 100 miljoner studenter runt om i världen har provat en Hour of Code. Till och med ledare som president Obama och kanadensiska premiärministern Justin Trudeau skrev sina första rader av kodning som en del av kampanjen.
 
 Du kan läsa mer om evenemanget på http://hourofcode.com. Eller låt oss veta om du vill boka tid för att prata om hur [school name] kan delta.<br />
 
@@ -126,7 +126,7 @@ Kära Föräldrar,
 
 Vi lever i en värld omgiven av teknologi. Och vi vet att vilket område våra elever än väljer att gå in på som vuxna, kommer deras förmåga att lyckas i allt högre grad att bero på att förstå hur tekniken fungerar.
 
-Men bara en bråkdel av oss lär sig **hur** teknologi fungerar. Endast 51 % av alla gymnasieskolor undervisar i datavetenskap.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 Det är därför hela vår skola deltar i historiens största läroevenemang: The Hour of Code, under Computer Science Education Week ({{ campaign_date/full }}). "Över 100 miljoner elever över hela världen har provat på "Hour of Code". Vår Hour of Code gör ett uttalande om att [SCHOOL NAME] är redo att lära ut dessa grundläggande 2000-talsfärdigheter. För att fortsätta erbjuda programmeringsaktiviteter till dina studenter vill vi göra vårt Hour of Code-evenemang enormt. Jag uppmuntrar dig att vara volontär, nå ut till lokala medier, dela nyheterna på sociala mediekanaler och överväga att vara värd för ytterligare Hour of Code-evenemang i gruppen/kommunen.
 
@@ -144,7 +144,7 @@ Se http://hourofcode.com/{{ country_language }} för mer information och hjälp 
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Datorer finns överallt, och förändrar varje industri på jorden, men i exempelvis USA är det bara 51 % av gymnasieskolorna som undervisar i datavetenskap. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Goda nyheter är, vi är på väg att ändra detta.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Goda nyheter är, vi är på väg att ändra detta.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -172,7 +172,7 @@ Kära [Mayor/Governor/Representative/Senator LAST NAME]:
 
 Visste du att datorer är den främsta lönekällan i USA? Det finns mer än 500 000 datorjobb öppna i hela landet, men förra året utexaminerades bara 42 969 datavetenskapsstudenter till arbetskraften.
 
-Datavetenskap är grundläggande för varje bransch idag, men de flesta skolor lär inte ut det. På [SKOLENS NAMN] försöker vi ändra på det.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 Det är därför hela vår skola deltar i historiens största läroevenemang: The Hour of Code, under Computer Science Education Week ({{ campaign_date/full }}). "Över 100 miljoner elever över hela världen har provat på "Hour of Code".
 

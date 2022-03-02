@@ -9,6 +9,7 @@ import color from '../../../util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class LessonLockDialog extends React.Component {
   static propTypes = {
@@ -20,7 +21,7 @@ class LessonLockDialog extends React.Component {
         lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ),
-    selectedSectionId: PropTypes.string.isRequired,
+    selectedSectionId: PropTypes.number,
     saving: PropTypes.bool.isRequired,
     saveDialog: PropTypes.func.isRequired
   };
@@ -94,7 +95,7 @@ class LessonLockDialog extends React.Component {
     const responsiveHeight = {
       maxHeight: window.innerHeight * 0.8 - 100
     };
-    const hasSelectedSection = this.props.selectedSectionId !== '';
+    const hasSelectedSection = this.props.selectedSectionId !== NO_SECTION;
     const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
     return (
       <BaseDialog
@@ -331,7 +332,7 @@ export default connect(
     initialLockStatus: state.lessonLock.lockStatus,
     isOpen: !!state.lessonLock.lockDialogLessonId,
     saving: state.lessonLock.saving,
-    selectedSectionId: state.teacherSections.selectedSectionId.toString()
+    selectedSectionId: state.teacherSections.selectedSectionId
   }),
   dispatch => ({
     saveDialog(sectionId, lockStatus) {

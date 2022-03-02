@@ -74,7 +74,6 @@ const sections = [
     studentCount: 10,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true,
     post_milestone_disabled: false
   },
   {
@@ -97,7 +96,6 @@ const sections = [
     studentCount: 1,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true,
     post_milestone_disabled: false
   },
   {
@@ -120,7 +118,6 @@ const sections = [
     studentCount: 0,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true,
     post_milestone_disabled: false
   }
 ];
@@ -512,10 +509,7 @@ describe('teacherSectionsRedux', () => {
     it('does set selectedSectionId if passed a single section', () => {
       const action = setSections(sections.slice(0, 1));
       const nextState = reducer(startState, action);
-      assert.strictEqual(
-        nextState.selectedSectionId,
-        sections[0].id.toString()
-      );
+      assert.strictEqual(nextState.selectedSectionId, sections[0].id);
     });
 
     it('throws rather than let us destroy data', () => {
@@ -617,8 +611,7 @@ describe('teacherSectionsRedux', () => {
         scriptId: null,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false,
-        codeReviewEnabled: true
+        restrictSection: false
       });
     });
   });
@@ -646,8 +639,9 @@ describe('teacherSectionsRedux', () => {
         hidden: false,
         isAssigned: undefined,
         restrictSection: false,
-        codeReviewEnabled: true,
-        postMilestoneDisabled: false
+        postMilestoneDisabled: false,
+        codeReviewExpiresAt: null,
+        isAssignedCSA: undefined
       });
     });
   });
@@ -769,7 +763,6 @@ describe('teacherSectionsRedux', () => {
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true,
       post_milestone_disabled: false
     };
 
@@ -922,8 +915,9 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           isAssigned: undefined,
           restrictSection: false,
-          codeReviewEnabled: true,
-          postMilestoneDisabled: false
+          postMilestoneDisabled: false,
+          codeReviewExpiresAt: null,
+          isAssignedCSA: undefined
         }
       });
     });
@@ -979,7 +973,6 @@ describe('teacherSectionsRedux', () => {
       script_id: null,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true,
       post_milestone_disabled: false
     };
 
@@ -1213,7 +1206,6 @@ describe('teacherSectionsRedux', () => {
       studentCount: 10,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true,
       post_milestone_disabled: false
     };
 
@@ -1239,10 +1231,6 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(
         section.restrict_section,
         serverSection.restrictSection
-      );
-      assert.strictEqual(
-        section.code_review_enabled,
-        serverSection.codeReviewEnabled
       );
       assert.strictEqual(
         section.post_milestone_disabled,

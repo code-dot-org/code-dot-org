@@ -7,6 +7,7 @@ import {
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
+import {onTestResult} from './testResultHandler';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -58,6 +59,7 @@ export default class JavabuilderConnection {
         levelId: this.levelId,
         options: this.options,
         executionType: this.executionType,
+        useDashboardSources: true,
         miniAppType: this.miniAppType
       }
     })
@@ -105,11 +107,6 @@ export default class JavabuilderConnection {
         message = javalabMsg.running();
         lineBreakCount = 2;
         break;
-      // TODO: Remove this case once Javabuilder stops sending these messages
-      case StatusMessageType.GENERATING_RESULTS:
-        message = javalabMsg.generatingResults();
-        lineBreakCount = 1;
-        break;
       case StatusMessageType.GENERATING_PROGRESS:
         message = javalabMsg.generatingProgress({
           progressTime: detail.progressTime
@@ -136,6 +133,14 @@ export default class JavabuilderConnection {
         this.onNewlineMessage();
         this.onExit();
         break;
+      case StatusMessageType.RUNNING_PROJECT_TESTS:
+        message = javalabMsg.runningProjectTests();
+        lineBreakCount = 2;
+        break;
+      case StatusMessageType.RUNNING_VALIDATION:
+        message = javalabMsg.runningValidation();
+        lineBreakCount = 2;
+        break;
       default:
         break;
     }
@@ -155,6 +160,10 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.SYSTEM_OUT:
         this.onOutputMessage(data.value);
+        break;
+      case WebSocketMessageType.TEST_RESULT:
+        onTestResult(data, this.onOutputMessage);
+        this.onNewlineMessage();
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
       case WebSocketMessageType.THEATER:

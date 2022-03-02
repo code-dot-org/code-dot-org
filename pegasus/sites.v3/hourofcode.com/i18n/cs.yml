@@ -141,6 +141,9 @@ cs:
     jak lze UI použít k řešení světových problémů. Počítačové vědy jsou o mnohem více
     věcech než jen o programování. Využijte první krok Code.org na nové cestě za naučením
     více o UI přes naše osnovy.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -238,8 +241,8 @@ cs:
   codeorg_homepage_csc_title: Napojení na počítačovou vědu
   hoc2018_tutorial_mchoc_description: Použij bloky kódu, abys vzal(a) Alexe nebo Steva
     na dobrodružství ve světě Minecraftu.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Podpora pro rodiče a učitele potýkající se se
     zavíráním škol.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -972,6 +975,7 @@ cs:
   footer_menu_support: Podpora
   footer_menu_terms: Podmínky
   footer_menu_privacy: Zásady ochrany osobních údajů
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Aktivity projektu Hodiny kódu
   learn_banner_blurb: Vyzkoušej si jednohodinový tutoriál navržený pro všechny věkové
     kategorie ve více než 45 jazycích.   Připoj se k milionům studentů a učitelů z

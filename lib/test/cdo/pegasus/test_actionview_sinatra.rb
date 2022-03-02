@@ -3,7 +3,7 @@ require 'cdo/pegasus/actionview_sinatra'
 
 class ActionViewSinatraTest < Minitest::Test
   def setup
-    @actionview = ActionViewSinatra::Base.new(self)
+    @actionview = ActionViewSinatra.create_view(self)
     @locals = {variable: 'headline'}
   end
 

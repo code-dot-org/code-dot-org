@@ -23,6 +23,7 @@ hr:
       user:
         name: 'Ime za prikaz'
         email: 'E-mail'
+        parent_email: 'E-mail roditelja/skrbnika'
         username: 'Korisničko ime'
         password: 'Lozinka'
         password_confirmation: 'Potvrda lozinke'
@@ -115,6 +116,7 @@ hr:
     email_preference_no: "Ne"
     share_teacher_email_reg_partner_preference_yes: "Da"
     share_teacher_email_reg_partner_preference_no: "Ne"
+    parent_account_email_label: "E-mail roditelja/skrbnika"
   school_info:
     public: 'Javni'
     other: 'Ostalo'
@@ -158,6 +160,7 @@ hr:
       Tutorijali su zabavni, vizualno privlačni, poučavaju osnovnim informatičkim pojmovima koristeći jednostavno iskustvo poput igre, s puno uputstava. Nauči kodirati dok ti pomažu Bill Gates, Mark Zuckerberg Angry Birds i Plants vs. Zombies! :-) 
       %{name}
   parent_mailer:
+    student_associated_subject: 'Podaci za prijavu na Code.org'
     parent_email_added_subject: 'Dobrodošao na Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Dobrodošao na Code.org!'
@@ -201,6 +204,7 @@ hr:
     header:
       finished_hoc: "Završio sam!"
       sign_in_to_save: 'Prijavite se da bi spremili napredak'
+      my_dashboard: "Moja nadzorna ploča"
       course_catalog: "Katalog tečajeva"
       project_gallery: "Projekti"
       help_support: "Pomoć i podrška"
@@ -297,7 +301,11 @@ hr:
     delete_text: "Klikom na donji gumb izbrisati ćete svoj račun."
     delete_text_teacher_note: "Napomena: brisanjem računa neće se izbrisati i račune vaših učenika."
     delete_confirm: 'Jeste li sigurni da želite izbrisati svoj račun?'
+    create_personal_login_under_13_parent_email: 'E-mail roditelja/skrbnika'
+    parent_email_label: "E-mail roditelja/skrbnika (neobavezno)"
     update_email: "Osvježi"
+    for_parents_and_guardians: "Za roditelje i skrbnike"
+    parent_guardian_email_label: "E-mail roditelja/skrbnika"
     remove_parent_email_label: "Obriši"
   user_level:
     completed: 'Završen'
@@ -599,15 +607,35 @@ hr:
   peer_review:
     accepted:
       name: 'Prihvaćeno'
+  external_links:
+    disclaimer: Odricanje od odgovornosti
   hoc_download:
+    capsule_title: 'Imaš li internet?'
     minecraft_name: 'Minecraft Sat Kodiranja'
+    download_in_Albanian: 'Preuzmi na albanskom:'
+    download_in_Arabic: 'Preuzmi na arapskom:'
+    download_in_Azerbaijani: 'Preuzmi na azerbejđanskom:'
+    download_in_Basque: 'Preuzmi na baskijskom:'
+    download_in_Bosnian: 'Preuzmi na bosanskom:'
+    download_in_Bulgarian: 'Preuzmi na bugarskom:'
+    download_in_Catalan: 'Preuzmi na katalonskom:'
+    download_in_Chinese-Taiwan: 'Preuzmi na kineskom-tajvanskom:'
+    download_in_Chinese: 'Preuzmi na kineskom:'
+    download_in_Croatian: 'Preuzmi na hrvatskom:'
+    download_in_Czech: 'Preuzmi na češkom:'
+    download_in_Danish: 'Preuzmi na danskom:'
+    download_in_Dutch: 'Preuzmi na nizozemskom'
+    windows: 'Windows (64-bit)'
+    mac: 'Mac OS X'
   pd:
     form_labels:
       first_name: 'Ime'
       last_name: 'Prezime'
       email: 'E-mail'
+      email_alternate: 'Dodatna adresa e-pošte'
       school_name: 'Naziv škole'
       colombian_chilean_school_name: 'Naziv škole'
+      chilean_school_id: 'ID škole'
     form_entries:
       gender:
         male: 'Muško'
@@ -621,6 +649,15 @@ hr:
         malaysia: 'Malezija'
         mexico: 'Meksiko'
         thailand: 'Tajland'
+      ages:
+        ages_under_6: '< 6 godina'
+        ages_7_8: '7-8 godina'
+        ages_9_10: '9-10 godina'
+        ages_11_12: '11-12 godina'
+        ages_13_14: '13-14 godina'
+        ages_15_16: '15-16 godina'
+        ages_17_18: '17-18 godina'
+        ages_19_over: '19+ godina'
       subjects:
         cs: 'Računalna znanost'
         ict: 'IKT'
@@ -668,3 +705,14 @@ hr:
     accept: 'Slažem se'
   copy: 'Kopiraj'
   confirm: 'Potvrdi'
+  maker:
+    google_oauth:
+      error_wrong_provider: 'Pogrešan dobavljač. Provjeri jesi li prijavljeni s Google-om.'
+      error_invalid_user: 'Nevažeći korisnički ID. Molimo pokušaj se ponovno prijaviti.'
+      error_no_code: 'Unesi svoj kod za prijavu.'
+      confirm_login: 'Odaberi "Potvrdi" za prijavu sa svojim Google računom.'
+  parent_email_banner:
+    text: "**Jeste li roditelj ili skrbnik?** Povežite svoju e-poštu s ovim računom kako biste bili u tijeku s napretkom i projektima svog djeteta!"
+    link_your_email: "Povežite svoj e-mail"
+    not_now: "Ne sada"
+  code_org_logo_alt: "Početna stranica Code.org"

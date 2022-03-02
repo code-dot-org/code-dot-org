@@ -244,6 +244,7 @@ lv:
       prizes_link: Vairāk informācijas
   teacher:
     answer: Atbilde
+    dashboard: Skolotāju darba galds
     for_teachers_only: Tikai skolotājiem
     title:
       one: 'Tavs skolotājs:'

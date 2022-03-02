@@ -1,0 +1,29 @@
+{
+  "pages": {
+    "homepage": "higherPower"
+  },
+
+  "banners": {
+    "higherPower": {
+      "dcdo": "higher-power-promotion",
+      "desktopImage": "/images/marketing/homepage-higher-power-background.jpg",
+      "items": [
+        {
+          "type": "image",
+          "url": "/images/marketing/homepage-higher-power-logo.png"
+        },
+        {
+          "type": "text",
+          "text": "homepage_higher_power_body"
+        }
+      ],
+      "actions": [
+        {
+          "text": "homepage_action_text_try_it",
+          "url": "/coldplay",
+          "type": "cta_button_solid_yellow"
+        }
+      ]
+    }
+  }
+}

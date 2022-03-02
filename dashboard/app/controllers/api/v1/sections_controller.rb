@@ -53,8 +53,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
-        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
-        code_review_enabled: params[:code_review_enabled].nil? ? true : params[:code_review_enabled]
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
       }
     )
     render head :bad_request unless section
@@ -102,7 +101,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
-    fields[:code_review_enabled] = params[:code_review_enabled].nil? ? true : params[:code_review_enabled]
 
     section.update!(fields)
     if script_id

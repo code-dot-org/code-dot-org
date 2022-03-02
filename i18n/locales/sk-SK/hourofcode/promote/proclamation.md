@@ -1,58 +1,58 @@
 ---
-title: Ukážka podporujúca Týždeň vyučovania informatiky a Hodiny kódu
+title: Vzorové uznesenie napísané na podporu Týždňa informatiky a Hodiny kódu
 ---
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Vzorové uznesenie na podporu Týždňa informatiky
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Na tejto stránke nájdete vzorové uznesenie pre zákonodarcov na štátnej aj lokálnej úrovni, ktoré podporuje Týždeň informatiky a jeho ciele.
 
 * * *
 
-#### **RESOLUTION**  
+#### **UZNESENIE**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Podporujeme ciele a ideály Týždňa informatiky
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Týždeň informatiky poukazuje na to, že informatika hrá kľúčovú úlohu v transformácii našej spoločnosti, umožňuje inovácie a vytvára ekonomické príležitosti.
 
-Nakoľko počítačové technológie predstavujú integrálnu súčasť modernej kultúry a menia spôsob, ako ľudia interagujú s ostatnými a svetom okolo seba;
+Počítačové technológie sú neoddeliteľnou súčasťou modernej kultúry a menia spôsob, ako ľudia interagujú s ostatnými a okolitým svetom.
 
-Nakoľko informatika mení odvetvia, vytvára nové podnikateľské možnosti, poháňa inovácie vo všetkých vedách a zvyšuje produktivitu v už zavedených ekonomických odvetviach;
+Informatika transformuje celé odvetvia, vytvára nové podnikateľské možnosti, poháňa inovácie vo všetkých vedných oblastiach a zvyšuje produktivitu v už zavedených sektoroch ekonomiky.
 
-Nakoľko je informatika základom technologického odvetvia v našej ekonomike a výrazne prispieva do vývoja ekonomiky na Slovensku;
+Informatika je základom nášho technologického sektora a výrazne prispieva do slovenskej ekonomiky.
 
-Nakoľko je informatika základnou vedou pre digitálny vek;
+Informatika je pre dnešný digitálny vek nevyhnutným odborom.
 
-Nakoľko je sektor informačných technológií v jedinečnej pozícií pomôcť s obnovou ekonomiky pomocou vývoja a rozvoja nových inovácií;
+Sektor informačných technológií má jedinečnú možnosť prispieť k obnove ekonomiky výskumom a vývojom nových inovácií.
 
-Nakoľko su výhľadovo otvorené tisícky pozícií v IT sektore v celej krajine;
+Po celej krajine budú v blízkej budúcnosti tisícky voľných pozícií v sektore informačných technológií.
 
-Nakoľko poskytnutie možnosti študentom zúčastniť sa kvalitných aktivít na hodine informatiky im otvára bohaté možnosti uplatnenia sa v odvetví a poskytuje im kritické zručnosti, ktoré budú môcť využívať počas celého ich života;
+Ak žiakom poskytneme možnosť zúčastniť sa kvalitných aktivít zameraných na informatiku, otvoríme im bohaté možnosti uplatnenia sa v danom odvetví a poskytneme im dôležité zručnosti, ktoré budú môcť využívať počas celého života.
 
-Nakoľko si každý študent zaslúži dôkladnú prípravu a IT vzdelanie vrátane prístupu ku kvalifikovaným učiteľom, technológiam a osnovám pre príslušný vek, aby sa mohol naučiť IT schopnosti na základnej i strednej škole;
+Všetci žiaci základných a stredných škôl si zaslúžia kvalitné informatické vzdelanie, čo si, okrem iného, vyžaduje aj kvalifikovaných učiteľov, prístup k technológiam a vhodné osnovy prispôsobené veku žiakov.
 
-Nakoľko má informatika pred sebou viaceré výzvy vrátane požiadavky na absolvovanie informatiky pre úspešné ukončenie štúdia a poskytnutie profesionálneho rozvoja pre učiteľov informatiky;
+Informatika má pred sebou viaceré výzvy vrátane nízkej hodinovej dotácie na školách či nedostatočného profesijného rozvoja pre učiteľov informatiky.
 
-Nakoľko účasť na Hodine Kódu počas Týždňa výuky informatiky môže pomôcť demystifikovať IT a motivovať študentov k ďaľšiemu vzdelávaniu v informatike;
+Učasť na Hodine kódu počas Týždňa informatiky môže pomôcť demystifikovať informačné technológie a motivovať žiakov k tomu, aby sa v informatike vzdelávali aj ďalej.
 
-Nakoľko je v informatike veľa bariér vrátane nedostatočného zastúpenia žien a minorít na všetkých leveloch;
+Vo svete informačných technológií existuje množstvo bariér, ktoré majú za následok nedostatočného zastúpenie žien a predstaviteľov menšín na všetkých úrovniach a vo všetkých oblastiach.
 
-Nakoľko Grace Murray Hopper, jedna z prvých žien v IT vyvinula nové programovacie jazyky a vytvorila štandardy pre počítačové systémy, ktoré položili základy pre veľa pokrokov v IT; a
+Grace Murray Hopper, jedna z prvých informatičiek, vyvinula nové programovacie jazyky a vytvorila štandardy pre počítačové systémy, ktoré položili základy pre mnohé pokroky v oblasti informačných technológií.
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Týždeň {{ campaign_date/start_long }} je na počesť narodenín Grace Hopper vyhlásený za Týždeň informatiky.<br />
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Preto sa uznášame, že (PARLAMENT, VLÁDA, KRAJSKÉ/MESTSKÉ/OBECNÉ ZASTUPITEĽSTVO, RADA ŠKOLY):
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+(1) podporuje zavedenie Týždňa informatiky ({{ campaign_date/full }});
 
-(2) podporujeme školy, učiteľov, rodičov a zákonodarcov v účasti na Týždni výučby informatiky umožnením študentom zúčastniť sa Hodiny Kódu;
+(2) podporuje školy, pedagógov, rodičov a zákonodarcov v tom, aby sa zapojili do Týždňa informatiky tým, že žiakom umožnia zúčastniť sa Hodiny kódu;
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) podporuje školy, učiteľov, výskumníkov, vysoké školy, podnikateľov a zákonodarcov v hľadaní mechanizmov, ktoré by učiteľom zabezpečili špičkový profesijný rozvoj, aby dokázali poskytovať udržateľné informatické vzdelanie na všetkých stupňoch vzdelávania a motivovali žiakov k spoznávaniu informatiky a jej konceptov;
 
-(4) podporujeme zákonodarcov pri odstraňovaní bariér, ktoré znemožňujú započítanie hodín informatiky do rámca výuky matematiky alebo vedných disciplín;
+(4) podporuje zákonodarcov pri odstraňovaní bariér zvýhodňujúcich iné predmety na úkor informatiky, ktorá v dôsledku toho nebýva ťažiskovým predmetom;
 
-(5) podporuje zlepšenie uplatnenia žien a minorít v informatike vrátane zlepšenia už existujúcich programov.
+(5) podporuje všetky (aj už existujúce) programy, ktoré pomáhajú ženám a predstaviteľom menšín nájsť si uplatnenie v oblasti informatiky.
 
 {{ signup_button }}

@@ -548,6 +548,7 @@
   user_header_signin: "سائن ان کریں"
   user_header_create: 'تخلیق کریں '
   user_header_dance: "ڈانس پارٹی"
+  user_header_flappy: "فلاپی"
   user_header_view_project_gallery: "تمام منصوبوں کو دیکھیں"
   user_header_view_my_projects: "تمام منصوبوں کو دیکھیں"
   view_all_sections: "تمام سیکشن دیکھیں"
@@ -586,6 +587,7 @@
   hoc2021_mc_mee_villages_description: 'کوڈنگ کی بنیادی باتیں سیکھیں اور Minecraft میں اپنے طلباء کے ساتھ تنوع اور شمولیت دریافت کریں: تعلیمی ایڈیشن۔'
   hoc2021_mc_mee_ai_title: "AI ہمیشہ کے لیے"
   hoc2021_mc_mee_ai_description: 'اپنے طلباء کے ساتھ AI کو دریافت کریں اور Minecraft میں کوڈ سیکھیں: تعلیمی ایڈیشن۔'
+  codebytes_skinny_banner_english_only: "صرف انگریزی"
   footer_privacy_policy: "رازداری کی پالیسی"
   footer_about: "متعلق"
   footer_donate: "عطیہ کریں"

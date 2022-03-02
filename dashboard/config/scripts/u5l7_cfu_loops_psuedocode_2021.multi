@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 The AP Reference Sheet shows how loops questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below.
 
-**Note:** The `REPEAT UNITL()` block is similar to a `while()` loop, but there are a few differences. In a `while()` loop, the loop continues as long as the condition is `true`. `REPEAT UNTIL()` continues  as long as the condition is `false`. It ends when the condition is `true`. The condition check comes first - this means for `REPEAT UNTIL()` if the condition is `true`, the loop will never run. 
+**Note:** The `REPEAT UNTIL()` block is similar to a `while()` loop, but there are a few differences. In a `while()` loop, the loop continues as long as the condition is `true`. `REPEAT UNTIL()` continues  as long as the condition is `false`. It ends when the condition is `true`. The condition check comes first - this means for `REPEAT UNTIL()` if the condition is `true`, the loop will never run. 
 
 ![](https://images.code.org/546dcc1f00d148623c4d83970db8ea28-image-1571438398722.34.10 PM.png)
 

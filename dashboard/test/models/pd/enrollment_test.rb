@@ -591,6 +591,16 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute teacher.permission? UserPermission::AUTHORIZED_TEACHER
   end
 
+  test 'Enrolling student user in CSD course does not make them authorized teacher' do
+    student = create :student
+    assert_empty student.permissions
+
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    create :pd_enrollment, workshop: workshop, user: student
+
+    refute student.permission? UserPermission::AUTHORIZED_TEACHER
+  end
+
   test 'Updating existing enrollment sets permission' do
     workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
     enrollment = create :pd_enrollment, workshop: workshop, user: nil
@@ -648,21 +658,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'the application id exists when the course from their application matches the workshop course' do
     teacher = create :teacher
-    application = create :pd_teacher_application, course: 'csp', user: teacher
-    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    application = create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: teacher
     enrollment = create :pd_enrollment, user: teacher, workshop: workshop
-
-    # [MEG] TODO: Delete after migration is complete––want to check only if a course matches
-    application.update(pd_workshop_id: workshop.id) unless
-      ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
 
     assert_equal application.id, enrollment.application_id
   end
 
   test 'the application id exists when their application has a matching workshop id' do
     teacher = create :teacher
-    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP
-    application = create :pd_teacher_application, course: 'csd', pd_workshop_id: workshop.id, user: teacher
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    application = create :pd_teacher_application, course: 'csp', pd_workshop_id: workshop.id,
+                         application_year: workshop.school_year, user: teacher
     enrollment = create :pd_enrollment, user: teacher, workshop: workshop
 
     assert_equal application.id, enrollment.application_id

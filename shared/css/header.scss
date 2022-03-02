@@ -64,8 +64,6 @@
     #headerlinks {
       float: left;
       position: relative;
-      padding-left: 6px;
-      position: relative;
 
       .rtl & {
         float: right;
@@ -74,7 +72,7 @@
       .headerlink {
         display: inline-block;
         font-size: 14px;
-        margin: 14px 0 0 30px;
+        margin: 12px 0 0 30px;
         font-family: 'Gotham 4r', sans-serif;
         color: $white;
         text-decoration: none;

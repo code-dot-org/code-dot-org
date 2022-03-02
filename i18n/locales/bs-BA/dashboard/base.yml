@@ -265,6 +265,7 @@ bs:
       prizes_link: 'više informacija'
   teacher:
     answer: Odgovor
+    dashboard: 'Nadzorna Ploča za Nastavnike'
     for_teachers_only: Samo za učitelje
     title:
       one: 'Tvoj učitelj:'

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # AI and Ethics
 
-#### As students are building their foundational knowledge around how to train machine learning models and use those models to create apps, they are also considering the ethical implications of artificial intelligence and machine learning. 
+##### As students are building their foundational knowledge around how to train machine learning models and use those models to create apps, they are also considering the ethical implications of artificial intelligence and machine learning. 
 
 <img src="https://images.code.org/d132848d9d9ea7e5c921e2cd58e6d3f9-image-1636738587825.36.06 AM.png" alt="Image of AI bot standing next to a crossroads sign" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 

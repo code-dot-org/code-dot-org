@@ -882,6 +882,9 @@ ru:
         PL_CSD_TeacherTips_PairProgramming: Подсказки Учителя - Парное Программирование
         PL_CSD_TeacherTips_Debugging: Подсказки учителя - Дебаггинг
         PL_CSD_TeacherTips_LeadLearner: Подсказки учителя - Ведущий Ученик
+        poembot-playtest-intro: Игровой тест PoemBot - введение
+        poembot-playtest-sprites: Игровой тест PoemBot - спрайты
+        poembot-playtest-events: Игровой тест PoemBot - события
         hello_world_intro: Привет, мир - Добро пожаловать в Sprite Lab
         hello_world_events: Привет, мир - Программирование с событиями
         hello_world_congrats: Привет, мир - Делайте, что вам хочется

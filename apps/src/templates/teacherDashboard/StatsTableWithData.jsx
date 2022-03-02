@@ -10,21 +10,23 @@ import {
 class StatsTableWithData extends Component {
   static propTypes = {
     // Props provided by redux.
-    section: PropTypes.object,
+    sectionId: PropTypes.number,
+    students: PropTypes.array,
     studentsCompletedLevelCount: PropTypes.object,
     asyncSetCompletedLevelCount: PropTypes.func.isRequired
   };
 
   componentDidMount() {
-    this.props.asyncSetCompletedLevelCount(this.props.section.id);
+    this.props.asyncSetCompletedLevelCount(this.props.sectionId);
   }
 
   render() {
-    const {section, studentsCompletedLevelCount} = this.props;
+    const {sectionId, students, studentsCompletedLevelCount} = this.props;
 
     return (
       <StatsTable
-        section={section}
+        sectionId={sectionId}
+        students={students}
         studentsCompletedLevelCount={studentsCompletedLevelCount}
       />
     );
@@ -35,10 +37,11 @@ export const UnconnectedStatsTableWithData = StatsTableWithData;
 
 export default connect(
   state => ({
-    section: state.sectionData.section,
+    sectionId: state.teacherSections.selectedSectionId,
+    students: state.teacherSections.selectedStudents,
     studentsCompletedLevelCount: getStudentsCompletedLevelCount(
       state,
-      state.sectionData.section.id
+      state.teacherSections.selectedSectionId
     )
   }),
   dispatch => ({

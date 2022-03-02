@@ -493,6 +493,7 @@ ro:
       prizes_link: Mai multe informaţii
   teacher:
     answer: Răspuns
+    dashboard: Tabloul de bord al profesorilor
     for_teachers_only: Doar pentru profesori
     title:
       one: 'Profesorul tău:'
@@ -1427,3 +1428,4 @@ ro:
   behaviors:
     this_sprite: acest spirit
   unit_prefix: Unitate %{n}
+  teacher_feedback: Punctele de vedere ale profesorului

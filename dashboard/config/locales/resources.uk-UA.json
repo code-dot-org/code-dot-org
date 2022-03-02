@@ -98,6 +98,22 @@
         "implementation_guide/courseb/2021": {
           "name": "Практика впровадження"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Слайди до уроку",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Моє Інтернет-сусідство",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Безпека рулить!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Хвилинка на зупинку",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Парне програмування"
         },
@@ -232,6 +248,147 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Практика впровадження"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Паперові прототипи"
+        },
+        "design_mode/csd/2021": {
+          "name": "Режим проектування"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "name": "Введення в Режим дизайну"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Режим проектування"
+        },
+        "changing_screens/csd/2021": {
+          "name": "Зміна екранів"
+        },
+        "importing_screens/csd/2021": {
+          "name": "Імпортування екранів"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Як працюють комп'ютери: Апаратне та програмне забезпечення"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "Аналогові датчики"
+        },
+        "booleans_and_comparison_operators_1/csd/2021": {
+          "name": "Булеві та оператори порівняння"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функції"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Вступ до масивів"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Цикли For"
+        },
+        "for_loops/csd/2021": {
+          "name": "Цикли For"
+        },
+        "modifying_arrays/csd/2021": {
+          "name": "Змінення та створення масивів"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Події акселерометра"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Як працюють комп'ютери: Схеми та логіка"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Відео: Машинне навчання"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "Малювання фігур"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "Малювання фігур"
+        },
+        "variables_1/csd/2021": {
+          "name": "Змінні"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Анімація"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Спрайти"
+        },
+        "the_counter_pattern/csd/2021": {
+          "name": "Лічильник шаблону"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Булеві вирази"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Умовні твердження"
+        },
+        "booleans_and_comparison_operators/csd/2021": {
+          "name": "Булеві та оператори порівняння"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Якщо/Інші Твердження"
+        },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "name": "Інтерактивна картка"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "name": "Інтерактивна картка"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "name": "Інтерактивна картка"
+        },
+        "interactive_card/csd/2021": {
+          "name": "Інтерактивна картка"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Швидкість"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Швидкість"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Прокрутка збоку"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Прокрутка збоку"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функції"
+        },
+        "functions_1/csd/2021": {
+          "name": "Функції"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Що таке комп’ютер?"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML Теги"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Заголовки та абзаци"
+        },
+        "formatting_html/csd/2021": {
+          "name": "Форматування HTML"
+        },
+        "lists/csd/2021": {
+          "name": "Списки"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Основи CSS - частина 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Основи CSS - частина 2"
+        },
+        "layout-properties/csd/2021": {
+          "name": "Властивості макета"
+        },
+        "classes/csd/2021": {
+          "name": "Класи"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Гіперпосилання"
         }
       }
     }

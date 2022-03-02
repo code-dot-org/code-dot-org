@@ -386,6 +386,7 @@ cs:
         csd_concept_hardware_software: 'Jak fungují počítače: Hardware a software'
         csd_concept_search: Jak funguje vyhledávání
         csd_external_waze_data: Proč je tolik uživatelů posedlých bludištěm?
+        csd_gamelab_velocity: Rychlost
         csd_weblab_css_1: Úvod do CSS - část 1
         csd_weblab_css_2: Úvod do CSS - část 2
         csp_applab_functions: Úvod do funkcí
@@ -463,15 +464,27 @@ cs:
         csf_lots_of_sprites: 'Laboratoř sprajtů: spousta sprajtů'
         playlab_2021: Úvod do Play Labu
         playlab_2021_reader: Úvod do Play Labu
-        rough_poemart_intro: v1 Básnické umění – Úvod
-        rough_poemart_events: v1 Básnické umění – Události
-        rough_poemart_imagery: v1 Básnické umění – Obrazotvornost
-        rough_poemart_congrats: v1 Básnické umění – Gratulace
-        poetry_module_variables: Proměnné – Kódování s poezií
-        poetry_module_textandvariables: Text a proměnné – Kódování s poezií
-        poetry_module_planningapp: Plánování aplikace na generování básní – Kódování s poezií
-        poetry_module_multichoiceprompts: Výzvy s volbami – Kódování s poezií
-        poetry_module_conditionals: Podmíněné výrazy – Kódování s poezií
+        PL_CSD_TeacherTips_Advise: Tipy pro učitele - Rady pro nové učitele
+        PL_CSD_TeacherTips_IntroToCSD: Tipy pro učitele - Úvod ke kurzu Objevujeme informatiku
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Tipy pro učitele - Proces řešení problémů
+        PL_CSD_TeacherTips_PairProgramming: Tipy pro učitele - Programování ve dvojici
+        PL_CSD_TeacherTips_Debugging: Tipy pro učitele - Ladění
+        PL_CSD_TeacherTips_LeadLearner: Tipy pro učitele - Nejlepší žák
+        poembot-playtest-intro: Testování poetického bota - Úvod
+        poembot-playtest-sprites: Testování poetického bota - Sprajti
+        poembot-playtest-events: Testování poetického bota - Události
+        hello_world_intro: Hello World - Vítej v Laboratoři sprajtů
+        hello_world_events: Hello World - Programování pomocí událostí
+        hello_world_congrats: Hello World - Dělej, co chceš
+        rough_poemart_intro: v1 Básnické umění - Úvod
+        rough_poemart_events: v1 Básnické umění - Události
+        rough_poemart_imagery: v1 Básnické umění - Obrazotvornost
+        rough_poemart_congrats: v1 Básnické umění - Gratulace
+        poetry_module_variables: Proměnné - Kódování s poezií
+        poetry_module_textandvariables: Text a proměnné - Kódování s poezií
+        poetry_module_planningapp: Plánování aplikace na generování básní - Kódování s poezií
+        poetry_module_multichoiceprompts: Výzvy s volbami - Kódování s poezií
+        poetry_module_conditionals: Podmíněné výrazy - Kódování s poezií
         poemart_intro: Básnické umění Úvod
         poemart_events: Básnické umění Události
         poemart_imagery: Básnické umění Obrazotvornost

@@ -1377,6 +1377,1834 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "crwdns2693217:0crwdne2693217:0",
           "url": "crwdns2693219:0crwdne2693219:0"
+        },
+        "classifying_fish/csd/2021": {
+          "name": "crwdns2875118:0crwdne2875118:0",
+          "url": "crwdns2875120:0crwdne2875120:0"
+        },
+        "introduction_to_machine_learning/csd/2021": {
+          "name": "crwdns2875122:0crwdne2875122:0",
+          "url": "crwdns2875124:0crwdne2875124:0"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "name": "crwdns2875126:0crwdne2875126:0",
+          "url": "crwdns2875128:0crwdne2875128:0"
+        },
+        "types_of_machine_learning/csd/2021": {
+          "name": "crwdns2875232:0crwdne2875232:0",
+          "url": "crwdns2875234:0crwdne2875234:0"
+        },
+        "types_of_machine_learning_1/csd/2021": {
+          "name": "crwdns2875236:0crwdne2875236:0",
+          "url": "crwdns2875238:0crwdne2875238:0"
+        },
+        "types_of_machine_learning_2/csd/2021": {
+          "name": "crwdns2875240:0crwdne2875240:0",
+          "url": "crwdns2875242:0crwdne2875242:0"
+        },
+        "innovations_in_ai/csd/2021": {
+          "name": "crwdns2875336:0crwdne2875336:0",
+          "url": "crwdns2875338:0crwdne2875338:0"
+        },
+        "innovations_in_ai_-_activity_guide/csd/2021": {
+          "name": "crwdns2875340:0crwdne2875340:0",
+          "url": "crwdns2875342:0crwdne2875342:0"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2021": {
+          "name": "crwdns2875344:0crwdne2875344:0",
+          "url": "crwdns2875346:0crwdne2875346:0"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "crwdns2875348:0crwdne2875348:0",
+          "url": "crwdns2875350:0crwdne2875350:0"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "name": "crwdns2875446:0crwdne2875446:0",
+          "url": "crwdns2875448:0crwdne2875448:0"
+        },
+        "patterns_in_data/csd/2021": {
+          "name": "crwdns2875450:0crwdne2875450:0",
+          "url": "crwdns2875452:0crwdne2875452:0"
+        },
+        "patterns_in_data_1/csd/2021": {
+          "name": "crwdns2875454:0crwdne2875454:0",
+          "url": "crwdns2875456:0crwdne2875456:0"
+        },
+        "shoe_survey/csd/2021": {
+          "name": "crwdns2875458:0crwdne2875458:0",
+          "url": "crwdns2875460:0crwdne2875460:0"
+        },
+        "patterns_in_data_3/csd/2021": {
+          "name": "crwdns2875462:0[KEY]crwdne2875462:0",
+          "url": "crwdns2875464:0crwdne2875464:0"
+        },
+        "_key_classification_models/csd/2021": {
+          "name": "crwdns2875550:0[KEY]crwdne2875550:0",
+          "url": "crwdns2875552:0crwdne2875552:0"
+        },
+        "classification_models/csd/2021": {
+          "name": "crwdns2875554:0crwdne2875554:0",
+          "url": "crwdns2875556:0crwdne2875556:0"
+        },
+        "classification_models_1/csd/2021": {
+          "name": "crwdns2875558:0crwdne2875558:0",
+          "url": "crwdns2875560:0crwdne2875560:0"
+        },
+        "fruit_veggie_cards/csd/2021": {
+          "name": "crwdns2875562:0crwdne2875562:0",
+          "url": "crwdns2875564:0crwdne2875564:0"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "crwdns2875678:0crwdne2875678:0",
+          "url": "crwdns2875680:0crwdne2875680:0"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "crwdns2875682:0crwdne2875682:0",
+          "url": "crwdns2875684:0crwdne2875684:0"
+        },
+        "training_a_model_in_ai_lab/csd/2021": {
+          "name": "crwdns2875686:0crwdne2875686:0",
+          "url": "crwdns2875688:0crwdne2875688:0"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "crwdns2875690:0crwdne2875690:0",
+          "url": "crwdns2875692:0crwdne2875692:0"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2021": {
+          "name": "crwdns2875694:0[KEY]crwdne2875694:0",
+          "url": "crwdns2875696:0crwdne2875696:0"
+        },
+        "accuracy_in_ai_lab/csd/2021": {
+          "name": "crwdns2875698:0crwdne2875698:0",
+          "url": "crwdns2875700:0crwdne2875700:0"
+        },
+        "selecting_features/csd/2021": {
+          "name": "crwdns2875702:0crwdne2875702:0",
+          "url": "crwdns2875704:0crwdne2875704:0"
+        },
+        "using_data_with_categorical_features/csd/2021": {
+          "name": "crwdns2875706:0crwdne2875706:0",
+          "url": "crwdns2875708:0crwdne2875708:0"
+        },
+        "importing_models_in_app_lab/csd/2021": {
+          "name": "crwdns2875804:0crwdne2875804:0",
+          "url": "crwdns2875806:0crwdne2875806:0"
+        },
+        "importing_a_model_in_app_lab/csd/2021": {
+          "name": "crwdns2875808:0crwdne2875808:0",
+          "url": "crwdns2875810:0crwdne2875810:0"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "crwdns2875908:0crwdne2875908:0",
+          "url": "crwdns2875910:0crwdne2875910:0"
+        },
+        "model_cards/csd/2021": {
+          "name": "crwdns2875912:0crwdne2875912:0",
+          "url": "crwdns2875914:0crwdne2875914:0"
+        },
+        "model_cards_1/csd/2021": {
+          "name": "crwdns2875916:0crwdne2875916:0",
+          "url": "crwdns2875918:0crwdne2875918:0"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "crwdns2875990:0crwdne2875990:0",
+          "url": "crwdns2875992:0crwdne2875992:0"
+        },
+        "saving_models_in_ai_lab/csd/2021": {
+          "name": "crwdns2875994:0crwdne2875994:0",
+          "url": "crwdns2875996:0crwdne2875996:0"
+        },
+        "zoo_models/csd/2021": {
+          "name": "crwdns2875998:0crwdne2875998:0",
+          "url": "crwdns2876000:0crwdne2876000:0"
+        },
+        "_key_zoo_models/csd/2021": {
+          "name": "crwdns2876002:0[KEY]crwdne2876002:0",
+          "url": "crwdns2876004:0crwdne2876004:0"
+        },
+        "selecting_a_label/csd/2021": {
+          "name": "crwdns2876006:0crwdne2876006:0",
+          "url": "crwdns2876008:0crwdne2876008:0"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "name": "crwdns2876118:0crwdne2876118:0",
+          "url": "crwdns2876120:0crwdne2876120:0"
+        },
+        "model_cards_in_app_lab/csd/2021": {
+          "name": "crwdns2876122:0crwdne2876122:0",
+          "url": "crwdns2876124:0crwdne2876124:0"
+        },
+        "numerical_accuracy_-_activity_guide/csd/2021": {
+          "name": "crwdns2876220:0crwdne2876220:0",
+          "url": "crwdns2876222:0crwdne2876222:0"
+        },
+        "numerical_models/csd/2021": {
+          "name": "crwdns2876224:0crwdne2876224:0",
+          "url": "crwdns2876226:0crwdne2876226:0"
+        },
+        "zombie_prediction_-_activity_guide/csd/2021": {
+          "name": "crwdns2876228:0crwdne2876228:0",
+          "url": "crwdns2876230:0crwdne2876230:0"
+        },
+        "zombie_prediction_-_answer_key/csd/2021": {
+          "name": "crwdns2876232:0[KEY]crwdne2876232:0",
+          "url": "crwdns2876234:0crwdne2876234:0"
+        },
+        "_key_numerical_accuracy/csd/2021": {
+          "name": "crwdns2876236:0[KEY]crwdne2876236:0",
+          "url": "crwdns2876238:0crwdne2876238:0"
+        },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "crwdns2876336:0crwdne2876336:0",
+          "url": "crwdns2876338:0crwdne2876338:0"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "crwdns2876340:0crwdne2876340:0",
+          "url": "crwdns2876342:0crwdne2876342:0"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "crwdns2876344:0crwdne2876344:0",
+          "url": "crwdns2876346:0crwdne2876346:0"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2021": {
+          "name": "crwdns2876348:0[KEY]crwdne2876348:0",
+          "url": "crwdns2876350:0crwdne2876350:0"
+        },
+        "using_data_with_numerical_features/csd/2021": {
+          "name": "crwdns2876352:0crwdne2876352:0",
+          "url": "crwdns2876354:0crwdne2876354:0"
+        },
+        "customizing_apps/csd/2021": {
+          "name": "crwdns2876426:0crwdne2876426:0",
+          "url": "crwdns2876428:0crwdne2876428:0"
+        },
+        "ai_code_of_ethics/csd/2021": {
+          "name": "crwdns2876486:0crwdne2876486:0",
+          "url": "crwdns2876488:0crwdne2876488:0"
+        },
+        "ai_ethics_research_areas/csd/2021": {
+          "name": "crwdns2876490:0crwdne2876490:0",
+          "url": "crwdns2876492:0crwdne2876492:0"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "name": "crwdns2876494:0crwdne2876494:0",
+          "url": "crwdns2876496:0crwdne2876496:0"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "name": "crwdns2876498:0crwdne2876498:0",
+          "url": "crwdns2876500:0crwdne2876500:0"
+        },
+        "our_ai_code_of_ethics_template_/csd/2021": {
+          "name": "crwdns2876502:0[Template]crwdne2876502:0",
+          "url": "crwdns2876504:0crwdne2876504:0"
+        },
+        "create_an_ml_app_-_project_guide/csd/2021": {
+          "name": "crwdns2876566:0crwdne2876566:0",
+          "url": "crwdns2876568:0crwdne2876568:0"
+        },
+        "make_a_machine_learning_app/csd/2021": {
+          "name": "crwdns2876570:0crwdne2876570:0",
+          "url": "crwdns2876572:0crwdne2876572:0"
+        },
+        "create_an_ml_app/csd/2021": {
+          "name": "crwdns2876574:0crwdne2876574:0",
+          "url": "crwdns2876576:0crwdne2876576:0"
+        },
+        "5_why_s_-_activity_guide/csd/2021": {
+          "name": "crwdns2876668:0crwdne2876668:0",
+          "url": "crwdns2876670:0crwdne2876670:0"
+        },
+        "app_brainstorm_-_activity_guide/csd/2021": {
+          "name": "crwdns2876672:0crwdne2876672:0",
+          "url": "crwdns2876674:0crwdne2876674:0"
+        },
+        "issue_statements/csd/2021": {
+          "name": "crwdns2876676:0crwdne2876676:0",
+          "url": "crwdns2876678:0crwdne2876678:0"
+        },
+        "survey_planning/csd/2021": {
+          "name": "crwdns2876768:0crwdne2876768:0",
+          "url": "crwdns2876770:0crwdne2876770:0"
+        },
+        "survey_planning_-_activity_guide/csd/2021": {
+          "name": "crwdns2876772:0crwdne2876772:0",
+          "url": "crwdns2876774:0crwdne2876774:0"
+        },
+        "survey_template_google_form_/csd/2021": {
+          "name": "crwdns2877196:0crwdne2877196:0",
+          "url": "crwdns2877198:0crwdne2877198:0"
+        },
+        "creating_a_survey/csd/2021": {
+          "name": "crwdns2876780:0crwdne2876780:0",
+          "url": "crwdns2876782:0crwdne2876782:0"
+        },
+        "isaac_s_survey_data_-_student_resource/csd/2021": {
+          "name": "crwdns2876882:0crwdne2876882:0",
+          "url": "crwdns2876884:0crwdne2876884:0"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2021": {
+          "name": "crwdns2876886:0crwdne2876886:0",
+          "url": "crwdns2876888:0crwdne2876888:0"
+        },
+        "survey_data_in_ai_lab/csd/2021": {
+          "name": "crwdns2876890:0crwdne2876890:0",
+          "url": "crwdns2876892:0crwdne2876892:0"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "name": "crwdns2876894:0crwdne2876894:0",
+          "url": "crwdns2876896:0crwdne2876896:0"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "name": "crwdns2876898:0crwdne2876898:0",
+          "url": "crwdns2876900:0crwdne2876900:0"
+        },
+        "troubleshooting_models/csd/2021": {
+          "name": "crwdns2876980:0crwdne2876980:0",
+          "url": "crwdns2876982:0crwdne2876982:0"
+        },
+        "troubleshooting_models_-_activity_guide/csd/2021": {
+          "name": "crwdns2876984:0crwdne2876984:0",
+          "url": "crwdns2876986:0crwdne2876986:0"
+        },
+        "creating_an_app/csd/2021": {
+          "name": "crwdns2877028:0crwdne2877028:0",
+          "url": "crwdns2877030:0crwdne2877030:0"
+        },
+        "_template_5_why_s/csd/2021": {
+          "name": "crwdns2877164:0[Template]crwdne2877164:0",
+          "url": "crwdns2877166:0crwdne2877166:0"
+        },
+        "design_an_ai_app/csd/2021": {
+          "name": "crwdns2877168:0crwdne2877168:0",
+          "url": "crwdns2877170:0crwdne2877170:0"
+        },
+        "design_an_ai_app_-_project_guide/csd/2021": {
+          "name": "crwdns2877172:0crwdne2877172:0",
+          "url": "crwdns2877174:0crwdne2877174:0"
+        },
+        "exemplar_-_design_an_ai_app/csd/2021": {
+          "name": "crwdns2877176:0crwdne2877176:0",
+          "url": "crwdns2877178:0crwdne2877178:0"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2021": {
+          "name": "crwdns2877180:0crwdne2877180:0",
+          "url": "crwdns2877182:0crwdne2877182:0"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2021": {
+          "name": "crwdns2877184:0crwdne2877184:0",
+          "url": "crwdns2877186:0crwdne2877186:0"
+        },
+        "model_card_-_digital_template/csd/2021": {
+          "name": "crwdns2877188:0crwdne2877188:0",
+          "url": "crwdns2877190:0crwdne2877190:0"
+        },
+        "model_card_-_printable_template/csd/2021": {
+          "name": "crwdns2877192:0crwdne2877192:0",
+          "url": "crwdns2877194:0crwdne2877194:0"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "name": "crwdns2877200:0crwdne2877200:0",
+          "url": "crwdns2877202:0crwdne2877202:0"
+        },
+        "csd_curriculum_guide/csd/2021": {
+          "name": "crwdns2881188:0crwdne2881188:0",
+          "url": "crwdns2881190:0crwdne2881190:0"
+        },
+        "csd_implementation_guide/csd/2021": {
+          "name": "crwdns2881192:0crwdne2881192:0",
+          "url": "crwdns2881194:0crwdne2881194:0"
+        },
+        "csd_guide_to_debugging/csd/2021": {
+          "name": "crwdns2881212:0crwdne2881212:0",
+          "url": "crwdns2881214:0crwdne2881214:0"
+        },
+        "csd_guide_to_differentiation/csd/2021": {
+          "name": "crwdns2881216:0crwdne2881216:0",
+          "url": "crwdns2881218:0crwdne2881218:0"
+        },
+        "all_code_5/csd/2021": {
+          "name": "crwdns2877224:0crwdne2877224:0",
+          "url": "crwdns2877226:0crwdne2877226:0"
+        },
+        "all_resources_7/csd/2021": {
+          "name": "crwdns2877228:0crwdne2877228:0",
+          "url": "crwdns2877230:0crwdne2877230:0"
+        },
+        "all_standards_7/csd/2021": {
+          "name": "crwdns2877232:0crwdne2877232:0",
+          "url": "crwdns2877234:0crwdne2877234:0"
+        },
+        "all_vocabulary_7/csd/2021": {
+          "name": "crwdns2877236:0crwdne2877236:0",
+          "url": "crwdns2877238:0crwdne2877238:0"
+        },
+        "unit-4-the-design-process/csd/2021": {
+          "name": "crwdns2872010:0crwdne2872010:0",
+          "url": "crwdns2872012:0crwdne2872012:0"
+        },
+        "reacting-as-your-user-exemplar-19/csd/2021": {
+          "name": "crwdns2870350:0crwdne2870350:0",
+          "url": "crwdns2870352:0crwdne2870352:0"
+        },
+        "reacting-as-your-user/csd/2021": {
+          "name": "crwdns2870354:0crwdne2870354:0",
+          "url": "crwdns2870356:0crwdne2870356:0"
+        },
+        "profile-1/csd/2021": {
+          "name": "crwdns2870358:0crwdne2870358:0",
+          "url": "crwdns2870360:0crwdne2870360:0"
+        },
+        "profile-2/csd/2021": {
+          "name": "crwdns2870362:0crwdne2870362:0",
+          "url": "crwdns2870364:0crwdne2870364:0"
+        },
+        "profile-3/csd/2021": {
+          "name": "crwdns2870366:0crwdne2870366:0",
+          "url": "crwdns2870368:0crwdne2870368:0"
+        },
+        "profile-4/csd/2021": {
+          "name": "crwdns2870370:0crwdne2870370:0",
+          "url": "crwdns2870372:0crwdne2870372:0"
+        },
+        "reacting_as_your_user_profile_2/csd/2021": {
+          "name": "crwdns2870374:0crwdne2870374:0",
+          "url": "crwdns2870376:0crwdne2870376:0"
+        },
+        "reacting_as_your_user_profile_3/csd/2021": {
+          "name": "crwdns2870378:0crwdne2870378:0",
+          "url": "crwdns2870380:0crwdne2870380:0"
+        },
+        "reacting_as_your_user_profile_4/csd/2021": {
+          "name": "crwdns2870382:0crwdne2870382:0",
+          "url": "crwdns2870384:0crwdne2870384:0"
+        },
+        "user-centered-design-2021/csd/2021": {
+          "name": "crwdns2870488:0crwdne2870488:0",
+          "url": "crwdns2870490:0crwdne2870490:0"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "name": "crwdns2870492:0crwdne2870492:0",
+          "url": "crwdns2870494:0crwdne2870494:0"
+        },
+        "user_centered_design_define_prepare_/csd/2021": {
+          "name": "crwdns2870496:0crwdne2870496:0",
+          "url": "crwdns2870498:0crwdne2870498:0"
+        },
+        "user-centered-design-reflect-2021/csd/2021": {
+          "name": "crwdns2870554:0crwdne2870554:0",
+          "url": "crwdns2870556:0crwdne2870556:0"
+        },
+        "user_centered_design_try_reflect_/csd/2021": {
+          "name": "crwdns2870558:0crwdne2870558:0",
+          "url": "crwdns2870560:0crwdne2870560:0"
+        },
+        "user-interface-screens/csd/2021": {
+          "name": "crwdns2870730:0crwdne2870730:0",
+          "url": "crwdns2870732:0crwdne2870732:0"
+        },
+        "user-experience-computer/csd/2021": {
+          "name": "crwdns2870648:0crwdne2870648:0",
+          "url": "crwdns2870650:0crwdne2870650:0"
+        },
+        "user-experience-user/csd/2021": {
+          "name": "crwdns2870652:0crwdne2870652:0",
+          "url": "crwdns2870654:0crwdne2870654:0"
+        },
+        "improve-a-screen-exemplar-19/csd/2021": {
+          "name": "crwdns2870734:0crwdne2870734:0",
+          "url": "crwdns2870736:0crwdne2870736:0"
+        },
+        "paper-prototype-sample-feedback/csd/2021": {
+          "name": "crwdns2870738:0crwdne2870738:0",
+          "url": "crwdns2870740:0crwdne2870740:0"
+        },
+        "improve-a-screen/csd/2021": {
+          "name": "crwdns2870742:0crwdne2870742:0",
+          "url": "crwdns2870744:0crwdne2870744:0"
+        },
+        "user-interviews-1/csd/2021": {
+          "name": "crwdns2870812:0crwdne2870812:0",
+          "url": "crwdns2870814:0crwdne2870814:0"
+        },
+        "user-interviews/csd/2021": {
+          "name": "crwdns2870816:0crwdne2870816:0",
+          "url": "crwdns2870818:0crwdne2870818:0"
+        },
+        "computer-science-practices/csd/2021": {
+          "name": "crwdns2881144:0crwdne2881144:0",
+          "url": "crwdns2881146:0crwdne2881146:0"
+        },
+        "paper-prototype-2021/csd/2021": {
+          "name": "crwdns2870930:0crwdne2870930:0",
+          "url": "crwdns2870932:0crwdne2870932:0"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "crwdns2870934:0crwdne2870934:0",
+          "url": "crwdns2870936:0crwdne2870936:0"
+        },
+        "paper_prototype_-_student_checklist/csd/2021": {
+          "name": "crwdns2870938:0crwdne2870938:0",
+          "url": "crwdns2870940:0crwdne2870940:0"
+        },
+        "sample_marked_rubrics/csd/2021": {
+          "name": "crwdns2870942:0crwdne2870942:0",
+          "url": "crwdns2870944:0crwdne2870944:0"
+        },
+        "app-design-kickoff-2019/csd/2021": {
+          "name": "crwdns2871040:0crwdne2871040:0",
+          "url": "crwdns2871042:0crwdne2871042:0"
+        },
+        "example-apps-for-good/csd/2021": {
+          "name": "crwdns2871044:0crwdne2871044:0",
+          "url": "crwdns2871046:0crwdne2871046:0"
+        },
+        "app_design_kickoff/csd/2021": {
+          "name": "crwdns2871048:0crwdne2871048:0",
+          "url": "crwdns2871050:0crwdne2871050:0"
+        },
+        "market-research/csd/2021": {
+          "name": "crwdns2871122:0crwdne2871122:0",
+          "url": "crwdns2871124:0crwdne2871124:0"
+        },
+        "market_research/csd/2021": {
+          "name": "crwdns2871126:0crwdne2871126:0",
+          "url": "crwdns2871128:0crwdne2871128:0"
+        },
+        "explore-ui-elements/csd/2021": {
+          "name": "crwdns2871198:0crwdne2871198:0",
+          "url": "crwdns2871200:0crwdne2871200:0"
+        },
+        "explore_ui_elements/csd/2021": {
+          "name": "crwdns2871202:0crwdne2871202:0",
+          "url": "crwdns2871204:0crwdne2871204:0"
+        },
+        "paper-prototype-planning/csd/2021": {
+          "name": "crwdns2871272:0crwdne2871272:0",
+          "url": "crwdns2871274:0crwdne2871274:0"
+        },
+        "phone-paper-prototype/csd/2021": {
+          "name": "crwdns2871276:0crwdne2871276:0",
+          "url": "crwdns2871278:0crwdne2871278:0"
+        },
+        "design_mode/csd/2021": {
+          "name": "crwdns2871280:0crwdne2871280:0",
+          "url": "crwdns2871282:0crwdne2871282:0"
+        },
+        "design_mode_elements/csd/2021": {
+          "name": "crwdns2871284:0crwdne2871284:0",
+          "url": "crwdns2871286:0crwdne2871286:0"
+        },
+        "paper_prototype_planning/csd/2021": {
+          "name": "crwdns2871288:0crwdne2871288:0",
+          "url": "crwdns2871290:0crwdne2871290:0"
+        },
+        "user-test-cases/csd/2021": {
+          "name": "crwdns2871748:0crwdne2871748:0",
+          "url": "crwdns2871750:0crwdne2871750:0"
+        },
+        "paper-prototype-user-testing-1-2/csd/2021": {
+          "name": "crwdns2871362:0crwdne2871362:0",
+          "url": "crwdns2871364:0crwdne2871364:0"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "name": "crwdns2871366:0crwdne2871366:0",
+          "url": "crwdns2871368:0crwdne2871368:0"
+        },
+        "paper_prototype_user_testing/csd/2021": {
+          "name": "crwdns2871370:0crwdne2871370:0",
+          "url": "crwdns2871372:0crwdne2871372:0"
+        },
+        "user_test_cases/csd/2021": {
+          "name": "crwdns2871374:0crwdne2871374:0",
+          "url": "crwdns2871376:0crwdne2871376:0"
+        },
+        "screen-ownership-2021/csd/2021": {
+          "name": "crwdns2871454:0crwdne2871454:0",
+          "url": "crwdns2871456:0crwdne2871456:0"
+        },
+        "screen-design-1/csd/2021": {
+          "name": "crwdns2871544:0crwdne2871544:0",
+          "url": "crwdns2871546:0crwdne2871546:0"
+        },
+        "model-screen-design/csd/2021": {
+          "name": "crwdns2871462:0crwdne2871462:0",
+          "url": "crwdns2871464:0crwdne2871464:0"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "name": "crwdns2871466:0crwdne2871466:0",
+          "url": "crwdns2871468:0crwdne2871468:0"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "crwdns2871470:0crwdne2871470:0",
+          "url": "crwdns2871472:0crwdne2871472:0"
+        },
+        "design_mode_elements_1/csd/2021": {
+          "name": "crwdns2871474:0crwdne2871474:0",
+          "url": "crwdns2871476:0crwdne2871476:0"
+        },
+        "changing_screens/csd/2021": {
+          "name": "crwdns2871668:0crwdne2871668:0",
+          "url": "crwdns2871670:0crwdne2871670:0"
+        },
+        "importing_screens/csd/2021": {
+          "name": "crwdns2871672:0crwdne2871672:0",
+          "url": "crwdns2871674:0crwdne2871674:0"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "crwdns2871676:0crwdne2871676:0",
+          "url": "crwdns2871678:0crwdne2871678:0"
+        },
+        "responding_to_user_input/csd/2021": {
+          "name": "crwdns2871680:0crwdne2871680:0",
+          "url": "crwdns2871682:0crwdne2871682:0"
+        },
+        "digital-prototype-user-testing/csd/2021": {
+          "name": "crwdns2871752:0crwdne2871752:0",
+          "url": "crwdns2871754:0crwdne2871754:0"
+        },
+        "bugs-and-features-planning/csd/2021": {
+          "name": "crwdns2871838:0crwdne2871838:0",
+          "url": "crwdns2871840:0crwdne2871840:0"
+        },
+        "bugs_and_features/csd/2021": {
+          "name": "crwdns2871842:0crwdne2871842:0",
+          "url": "crwdns2871844:0crwdne2871844:0"
+        },
+        "updating-your-prototype/csd/2021": {
+          "name": "crwdns2871908:0crwdne2871908:0",
+          "url": "crwdns2871910:0crwdne2871910:0"
+        },
+        "app-presentation/csd/2021": {
+          "name": "crwdns2872014:0crwdne2872014:0",
+          "url": "crwdns2872016:0crwdne2872016:0"
+        },
+        "app-presentation-template/csd/2021": {
+          "name": "crwdns2872018:0crwdne2872018:0",
+          "url": "crwdns2872020:0crwdne2872020:0"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "crwdns2872022:0crwdne2872022:0",
+          "url": "crwdns2872024:0crwdne2872024:0"
+        },
+        "sample_marked_rubrics_1_1/csd/2021": {
+          "name": "crwdns2872026:0crwdne2872026:0",
+          "url": "crwdns2872028:0crwdne2872028:0"
+        },
+        "peer_review_1/csd/2021": {
+          "name": "crwdns2872030:0crwdne2872030:0",
+          "url": "crwdns2872032:0crwdne2872032:0"
+        },
+        "peer_review_2/csd/2021": {
+          "name": "crwdns2872034:0crwdne2872034:0",
+          "url": "crwdns2872036:0crwdne2872036:0"
+        },
+        "app_presentation_-_student_checklist/csd/2021": {
+          "name": "crwdns2872038:0crwdne2872038:0",
+          "url": "crwdns2872040:0crwdne2872040:0"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "crwdns2881184:0crwdne2881184:0",
+          "url": "crwdns2881186:0crwdne2881186:0"
+        },
+        "all_code_3/csd/2021": {
+          "name": "crwdns2872062:0crwdne2872062:0",
+          "url": "crwdns2872064:0crwdne2872064:0"
+        },
+        "all_resources_4/csd/2021": {
+          "name": "crwdns2872066:0crwdne2872066:0",
+          "url": "crwdns2872068:0crwdne2872068:0"
+        },
+        "all_standards_4/csd/2021": {
+          "name": "crwdns2872070:0crwdne2872070:0",
+          "url": "crwdns2872072:0crwdne2872072:0"
+        },
+        "all_vocabulary_4/csd/2021": {
+          "name": "crwdns2872074:0crwdne2872074:0",
+          "url": "crwdns2872076:0crwdne2872076:0"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "crwdns2872240:0crwdne2872240:0",
+          "url": "crwdns2872242:0crwdne2872242:0"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "crwdns2872244:0crwdne2872244:0",
+          "url": "crwdns2872246:0crwdne2872246:0"
+        },
+        "responding_to_user_input_1/csd/2021": {
+          "name": "crwdns2872248:0crwdne2872248:0",
+          "url": "crwdns2872250:0crwdne2872250:0"
+        },
+        "csd_unit_6_-_physical_computing/csd/2021": {
+          "name": "crwdns2873816:0crwdne2873816:0",
+          "url": "crwdns2873820:0crwdne2873820:0"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "crwdns2872308:0crwdne2872308:0",
+          "url": "crwdns2872310:0crwdne2872310:0"
+        },
+        "circuit_playground/csd/2021": {
+          "name": "crwdns2872312:0crwdne2872312:0",
+          "url": "crwdns2872314:0crwdne2872314:0"
+        },
+        "input-and-events/csd/2021": {
+          "name": "crwdns2872372:0crwdne2872372:0",
+          "url": "crwdns2872374:0crwdne2872374:0"
+        },
+        "board_events/csd/2021": {
+          "name": "crwdns2872416:0crwdne2872416:0",
+          "url": "crwdns2872418:0crwdne2872418:0"
+        },
+        "physical_input/csd/2021": {
+          "name": "crwdns2872420:0crwdne2872420:0",
+          "url": "crwdns2872422:0crwdne2872422:0"
+        },
+        "physical_output/csd/2021": {
+          "name": "crwdns2872424:0crwdne2872424:0",
+          "url": "crwdns2872426:0crwdne2872426:0"
+        },
+        "taking_input_with_getproperty/csd/2021": {
+          "name": "crwdns2872470:0crwdne2872470:0",
+          "url": "crwdns2872472:0crwdne2872472:0"
+        },
+        "analog-digital-video/csd/2021": {
+          "name": "crwdns2872526:0crwdne2872526:0",
+          "url": "crwdns2872528:0crwdne2872528:0"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "crwdns2872530:0crwdne2872530:0",
+          "url": "crwdns2872532:0crwdne2872532:0"
+        },
+        "changing_sensor_scale/csd/2021": {
+          "name": "crwdns2872534:0crwdne2872534:0",
+          "url": "crwdns2872536:0crwdne2872536:0"
+        },
+        "date_and_change_events/csd/2021": {
+          "name": "crwdns2872538:0crwdne2872538:0",
+          "url": "crwdns2872540:0crwdne2872540:0"
+        },
+        "emoji-race-guide/csd/2021": {
+          "name": "crwdns2872616:0crwdne2872616:0",
+          "url": "crwdns2872618:0crwdne2872618:0"
+        },
+        "booleans_and_comparison_operators_1/csd/2021": {
+          "name": "crwdns2872620:0crwdne2872620:0",
+          "url": "crwdns2872622:0crwdne2872622:0"
+        },
+        "functions_2/csd/2021": {
+          "name": "crwdns2872624:0crwdne2872624:0",
+          "url": "crwdns2872626:0crwdne2872626:0"
+        },
+        "if_statements_1/csd/2021": {
+          "name": "crwdns2872628:0crwdne2872628:0",
+          "url": "crwdns2872630:0crwdne2872630:0"
+        },
+        "make-game-guide/csd/2021": {
+          "name": "crwdns2872700:0crwdne2872700:0",
+          "url": "crwdns2872702:0crwdne2872702:0"
+        },
+        "make_a_game_-_student_checklist/csd/2021": {
+          "name": "crwdns2872708:0crwdne2872708:0",
+          "url": "crwdns2872710:0crwdne2872710:0"
+        },
+        "make_a_game_1/csd/2021": {
+          "name": "crwdns2872712:0crwdne2872712:0",
+          "url": "crwdns2872714:0crwdne2872714:0"
+        },
+        "make_a_game_sample_marked_rubrics/csd/2021": {
+          "name": "crwdns2872716:0crwdne2872716:0",
+          "url": "crwdns2872718:0crwdne2872718:0"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "crwdns2872780:0crwdne2872780:0",
+          "url": "crwdns2872782:0crwdne2872782:0"
+        },
+        "arrays/csd/2021": {
+          "name": "crwdns2872784:0crwdne2872784:0",
+          "url": "crwdns2872786:0crwdne2872786:0"
+        },
+        "circuits_and_leds/csd/2021": {
+          "name": "crwdns2872788:0crwdne2872788:0",
+          "url": "crwdns2872790:0crwdne2872790:0"
+        },
+        "color_lights/csd/2021": {
+          "name": "crwdns2872792:0crwdne2872792:0",
+          "url": "crwdns2872794:0crwdne2872794:0"
+        },
+        "playing_notes/csd/2021": {
+          "name": "crwdns2872890:0crwdne2872890:0",
+          "url": "crwdns2872896:0crwdne2872896:0"
+        },
+        "producing_output/csd/2021": {
+          "name": "crwdns2872900:0crwdne2872900:0",
+          "url": "crwdns2872904:0crwdne2872904:0"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "crwdns2873028:0crwdne2873028:0",
+          "url": "crwdns2873034:0crwdne2873034:0"
+        },
+        "for_loops/csd/2021": {
+          "name": "crwdns2873040:0crwdne2873040:0",
+          "url": "crwdns2873044:0crwdne2873044:0"
+        },
+        "modifying_arrays/csd/2021": {
+          "name": "crwdns2873048:0crwdne2873048:0",
+          "url": "crwdns2873054:0crwdne2873054:0"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "crwdns2873176:0crwdne2873176:0",
+          "url": "crwdns2873182:0crwdne2873182:0"
+        },
+        "the_accelerometer/csd/2021": {
+          "name": "crwdns2873186:0crwdne2873186:0",
+          "url": "crwdns2873190:0crwdne2873190:0"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "crwdns2873492:0crwdne2873492:0",
+          "url": "crwdns2873498:0crwdne2873498:0"
+        },
+        "physical-prototyping-project/csd/2021": {
+          "name": "crwdns2873502:0crwdne2873502:0",
+          "url": "crwdns2873506:0crwdne2873506:0"
+        },
+        "circuits_and_buttons/csd/2021": {
+          "name": "crwdns2873510:0crwdne2873510:0",
+          "url": "crwdns2873516:0crwdne2873516:0"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "name": "crwdns2873762:0crwdne2873762:0",
+          "url": "crwdns2873766:0crwdne2873766:0"
+        },
+        "planning-your-innovation/csd/2021": {
+          "name": "crwdns2873772:0crwdne2873772:0",
+          "url": "crwdns2873776:0crwdne2873776:0"
+        },
+        "peer_review_1_1/csd/2021": {
+          "name": "crwdns2873782:0crwdne2873782:0",
+          "url": "crwdns2873786:0crwdne2873786:0"
+        },
+        "peer_review_2_1/csd/2021": {
+          "name": "crwdns2873792:0crwdne2873792:0",
+          "url": "crwdns2873796:0crwdne2873796:0"
+        },
+        "prototype_an_innovation_-_student_checklist/csd/2021": {
+          "name": "crwdns2873800:0crwdne2873800:0",
+          "url": "crwdns2873804:0crwdne2873804:0"
+        },
+        "sample_marked_rubrics_4/csd/2021": {
+          "name": "crwdns2873808:0crwdne2873808:0",
+          "url": "crwdns2873812:0crwdne2873812:0"
+        },
+        "csd_guide_to_using_resources/csd/2021": {
+          "name": "crwdns2879340:0crwdne2879340:0",
+          "url": "crwdns2879342:0crwdne2879342:0"
+        },
+        "all_code_4/csd/2021": {
+          "name": "crwdns2873880:0crwdne2873880:0",
+          "url": "crwdns2873884:0crwdne2873884:0"
+        },
+        "all_resources_6/csd/2021": {
+          "name": "crwdns2873888:0crwdne2873888:0",
+          "url": "crwdns2873892:0crwdne2873892:0"
+        },
+        "all_standards_6/csd/2021": {
+          "name": "crwdns2873896:0crwdne2873896:0",
+          "url": "crwdns2873900:0crwdne2873900:0"
+        },
+        "all_vocabulary_6/csd/2021": {
+          "name": "crwdns2873904:0crwdne2873904:0",
+          "url": "crwdns2873908:0crwdne2873908:0"
+        },
+        "circuit_playground_1/csd/2021": {
+          "name": "crwdns2873912:0crwdne2873912:0",
+          "url": "crwdns2873916:0crwdne2873916:0"
+        },
+        "unit-5-data-society/csd/2021": {
+          "name": "crwdns2879166:0crwdne2879166:0",
+          "url": "crwdns2879168:0crwdne2879168:0"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "crwdns2878044:0crwdne2878044:0",
+          "url": "crwdns2878046:0crwdne2878046:0"
+        },
+        "representing-information-exemplar-2019/csd/2021": {
+          "name": "crwdns2878048:0crwdne2878048:0",
+          "url": "crwdns2878050:0crwdne2878050:0"
+        },
+        "animal-shapes/csd/2021": {
+          "name": "crwdns2878052:0crwdne2878052:0",
+          "url": "crwdns2878054:0crwdne2878054:0"
+        },
+        "representing_information_2/csd/2021": {
+          "name": "crwdns2878056:0crwdne2878056:0",
+          "url": "crwdns2878058:0crwdne2878058:0"
+        },
+        "ascii-exemplar-2019/csd/2021": {
+          "name": "crwdns2878122:0crwdne2878122:0",
+          "url": "crwdns2878124:0crwdne2878124:0"
+        },
+        "ascii-text/csd/2021": {
+          "name": "crwdns2878126:0crwdne2878126:0",
+          "url": "crwdns2878128:0crwdne2878128:0"
+        },
+        "ascii-challenges/csd/2021": {
+          "name": "crwdns2878130:0crwdne2878130:0",
+          "url": "crwdns2878132:0crwdne2878132:0"
+        },
+        "ascii_challenges/csd/2021": {
+          "name": "crwdns2878134:0crwdne2878134:0",
+          "url": "crwdns2878136:0crwdne2878136:0"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "name": "crwdns2878302:0crwdne2878302:0",
+          "url": "crwdns2878304:0crwdne2878304:0"
+        },
+        "representing-numbers-2021/csd/2021": {
+          "name": "crwdns2878306:0crwdne2878306:0",
+          "url": "crwdns2878308:0crwdne2878308:0"
+        },
+        "number-cards-1/csd/2021": {
+          "name": "crwdns2878310:0crwdne2878310:0",
+          "url": "crwdns2878312:0crwdne2878312:0"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "crwdns2878314:0crwdne2878314:0",
+          "url": "crwdns2878316:0crwdne2878316:0"
+        },
+        "number-cards/csd/2021": {
+          "name": "crwdns2878318:0crwdne2878318:0",
+          "url": "crwdns2878320:0crwdne2878320:0"
+        },
+        "pet-records-exemplar-2019/csd/2021": {
+          "name": "crwdns2878396:0crwdne2878396:0",
+          "url": "crwdns2878398:0crwdne2878398:0"
+        },
+        "activity-guide-pet-records/csd/2021": {
+          "name": "crwdns2878400:0crwdne2878400:0",
+          "url": "crwdns2878402:0crwdne2878402:0"
+        },
+        "ascii-to-binary-table/csd/2021": {
+          "name": "crwdns2878404:0crwdne2878404:0",
+          "url": "crwdns2878406:0crwdne2878406:0"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "crwdns2878466:0crwdne2878466:0",
+          "url": "crwdns2878468:0crwdne2878468:0"
+        },
+        "keeping-data-secret/csd/2021": {
+          "name": "crwdns2878470:0crwdne2878470:0",
+          "url": "crwdns2878472:0crwdne2878472:0"
+        },
+        "unit_5_data_society/csd/2021": {
+          "name": "crwdns2878474:0crwdne2878474:0",
+          "url": "crwdns2878476:0crwdne2878476:0"
+        },
+        "secret_messages_2021/csd/2021": {
+          "name": "crwdns2878478:0crwdne2878478:0",
+          "url": "crwdns2878480:0crwdne2878480:0"
+        },
+        "medical_records/csd/2021": {
+          "name": "crwdns2878482:0crwdne2878482:0",
+          "url": "crwdns2878484:0crwdne2878484:0"
+        },
+        "create-a-representation-exemplar-2019/csd/2021": {
+          "name": "crwdns2878552:0crwdne2878552:0",
+          "url": "crwdns2878554:0crwdne2878554:0"
+        },
+        "encode-a-thing/csd/2021": {
+          "name": "crwdns2878556:0crwdne2878556:0",
+          "url": "crwdns2878558:0crwdne2878558:0"
+        },
+        "unit_5_data_society_1/csd/2021": {
+          "name": "crwdns2878560:0crwdne2878560:0",
+          "url": "crwdns2878562:0crwdne2878562:0"
+        },
+        "create_a_representation/csd/2021": {
+          "name": "crwdns2878564:0crwdne2878564:0",
+          "url": "crwdns2878566:0crwdne2878566:0"
+        },
+        "create_a_representation_-_student_checklist/csd/2021": {
+          "name": "crwdns2878568:0crwdne2878568:0",
+          "url": "crwdns2878570:0crwdne2878570:0"
+        },
+        "create_a_representation_marked_rubrics/csd/2021": {
+          "name": "crwdns2878572:0crwdne2878572:0",
+          "url": "crwdns2878574:0crwdne2878574:0"
+        },
+        "problem-solving-with-data-exemplar-2019/csd/2021": {
+          "name": "crwdns2878652:0crwdne2878652:0",
+          "url": "crwdns2878654:0crwdne2878654:0"
+        },
+        "problem-solving-with-data/csd/2021": {
+          "name": "crwdns2878656:0crwdne2878656:0",
+          "url": "crwdns2878658:0crwdne2878658:0"
+        },
+        "structuring-data-2021/csd/2021": {
+          "name": "crwdns2878734:0crwdne2878734:0",
+          "url": "crwdns2878736:0crwdne2878736:0"
+        },
+        "structuring_data/csd/2021": {
+          "name": "crwdns2878738:0crwdne2878738:0",
+          "url": "crwdns2878740:0crwdne2878740:0"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "crwdns2878812:0crwdne2878812:0",
+          "url": "crwdns2878814:0crwdne2878814:0"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "crwdns2878816:0crwdne2878816:0",
+          "url": "crwdns2878818:0crwdne2878818:0"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "crwdns2878820:0crwdne2878820:0",
+          "url": "crwdns2878822:0crwdne2878822:0"
+        },
+        "making-decisions-with-data-exemplar-2019/csd/2021": {
+          "name": "crwdns2878894:0crwdne2878894:0",
+          "url": "crwdns2878896:0crwdne2878896:0"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "crwdns2878898:0crwdne2878898:0",
+          "url": "crwdns2878900:0crwdne2878900:0"
+        },
+        "problem-solving-process-with-data/csd/2021": {
+          "name": "crwdns2878902:0crwdne2878902:0",
+          "url": "crwdns2878904:0crwdne2878904:0"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "crwdns2878964:0crwdne2878964:0",
+          "url": "crwdns2878966:0crwdne2878966:0"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "crwdns2878968:0crwdne2878968:0",
+          "url": "crwdns2878970:0crwdne2878970:0"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "crwdns2878972:0crwdne2878972:0",
+          "url": "crwdns2878974:0crwdne2878974:0"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "name": "crwdns2879066:0crwdne2879066:0",
+          "url": "crwdns2879068:0crwdne2879068:0"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "name": "crwdns2879070:0crwdne2879070:0",
+          "url": "crwdns2879072:0crwdne2879072:0"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "name": "crwdns2879074:0crwdne2879074:0",
+          "url": "crwdns2879076:0crwdne2879076:0"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "crwdns2879078:0crwdne2879078:0",
+          "url": "crwdns2879080:0crwdne2879080:0"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "crwdns2879082:0crwdne2879082:0",
+          "url": "crwdns2879084:0crwdne2879084:0"
+        },
+        "video_impact_on_society/csd/2021": {
+          "name": "crwdns2879170:0crwdne2879170:0",
+          "url": "crwdns2879172:0crwdne2879172:0"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "crwdns2879174:0crwdne2879174:0",
+          "url": "crwdns2879176:0crwdne2879176:0"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "name": "crwdns2879178:0crwdne2879178:0",
+          "url": "crwdns2879180:0crwdne2879180:0"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "name": "crwdns2879276:0crwdne2879276:0",
+          "url": "crwdns2879278:0crwdne2879278:0"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "name": "crwdns2879280:0crwdne2879280:0",
+          "url": "crwdns2879282:0crwdne2879282:0"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "name": "crwdns2879284:0crwdne2879284:0",
+          "url": "crwdns2879286:0crwdne2879286:0"
+        },
+        "project_guide_exemplar/csd/2021": {
+          "name": "crwdns2879288:0crwdne2879288:0",
+          "url": "crwdns2879290:0crwdne2879290:0"
+        },
+        "peer_review_exemplar_1/csd/2021": {
+          "name": "crwdns2879292:0crwdne2879292:0",
+          "url": "crwdns2879294:0crwdne2879294:0"
+        },
+        "peer_review_exemplar_2/csd/2021": {
+          "name": "crwdns2879296:0crwdne2879296:0",
+          "url": "crwdns2879298:0crwdne2879298:0"
+        },
+        "unit_5_data_society_2/csd/2021": {
+          "name": "crwdns2879300:0crwdne2879300:0",
+          "url": "crwdns2879302:0crwdne2879302:0"
+        },
+        "make_a_recommendation_-_student_checklist/csd/2021": {
+          "name": "crwdns2879304:0crwdne2879304:0",
+          "url": "crwdns2879306:0crwdne2879306:0"
+        },
+        "sample_marked_rubrics_3/csd/2021": {
+          "name": "crwdns2879308:0crwdne2879308:0",
+          "url": "crwdns2879310:0crwdne2879310:0"
+        },
+        "all_resources_5/csd/2021": {
+          "name": "crwdns2879328:0crwdne2879328:0",
+          "url": "crwdns2879330:0crwdne2879330:0"
+        },
+        "all_standards_5/csd/2021": {
+          "name": "crwdns2879332:0crwdne2879332:0",
+          "url": "crwdns2879334:0crwdne2879334:0"
+        },
+        "all_vocabulary_5/csd/2021": {
+          "name": "crwdns2879336:0crwdne2879336:0",
+          "url": "crwdns2879338:0crwdne2879338:0"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "crwdns2868192:0crwdne2868192:0",
+          "url": "crwdns2868194:0crwdne2868194:0"
+        },
+        "colored-shape-drawing/csd/2021": {
+          "name": "crwdns2868196:0crwdne2868196:0",
+          "url": "crwdns2868198:0crwdne2868198:0"
+        },
+        "drawing_shapes_version_b_/csd/2021": {
+          "name": "crwdns2868200:0crwdne2868200:0",
+          "url": "crwdns2868202:0crwdne2868202:0"
+        },
+        "drawing_shapes_version_a_/csd/2021": {
+          "name": "crwdns2868204:0crwdne2868204:0",
+          "url": "crwdns2868206:0crwdne2868206:0"
+        },
+        "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
+          "name": "crwdns2870226:0crwdne2870226:0",
+          "url": "crwdns2870228:0crwdne2870228:0"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "name": "crwdns2868300:0crwdne2868300:0",
+          "url": "crwdns2868302:0crwdne2868302:0"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "name": "crwdns2868304:0crwdne2868304:0",
+          "url": "crwdns2868306:0crwdne2868306:0"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "crwdns2868308:0crwdne2868308:0",
+          "url": "crwdns2868310:0crwdne2868310:0"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "crwdns2868382:0crwdne2868382:0",
+          "url": "crwdns2868384:0crwdne2868384:0"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "name": "crwdns2868390:0crwdne2868390:0",
+          "url": "crwdns2868392:0crwdne2868392:0"
+        },
+        "introduction-to-variables/csd/2021": {
+          "name": "crwdns2868466:0crwdne2868466:0",
+          "url": "crwdns2868468:0crwdne2868468:0"
+        },
+        "naming_variables/csd/2021": {
+          "name": "crwdns2868474:0crwdne2868474:0",
+          "url": "crwdns2868476:0crwdne2868476:0"
+        },
+        "variables_1/csd/2021": {
+          "name": "crwdns2868478:0crwdne2868478:0",
+          "url": "crwdns2868480:0crwdne2868480:0"
+        },
+        "random_numbers/csd/2021": {
+          "name": "crwdns2868548:0crwdne2868548:0",
+          "url": "crwdns2868550:0crwdne2868550:0"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "name": "crwdns2868638:0crwdne2868638:0",
+          "url": "crwdns2868640:0crwdne2868640:0"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "crwdns2868642:0crwdne2868642:0",
+          "url": "crwdns2868644:0crwdne2868644:0"
+        },
+        "animation_tab/csd/2021": {
+          "name": "crwdns2868646:0crwdne2868646:0",
+          "url": "crwdns2868648:0crwdne2868648:0"
+        },
+        "sprites_1/csd/2021": {
+          "name": "crwdns2868650:0crwdne2868650:0",
+          "url": "crwdns2868652:0crwdne2868652:0"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "crwdns2868714:0crwdne2868714:0",
+          "url": "crwdns2868716:0crwdne2868716:0"
+        },
+        "mini-project-captioned-scenes-2020/csd/2021": {
+          "name": "crwdns2868832:0crwdne2868832:0",
+          "url": "crwdns2868834:0crwdne2868834:0"
+        },
+        "captioned-scenes/csd/2021": {
+          "name": "crwdns2868836:0crwdne2868836:0",
+          "url": "crwdns2868838:0crwdne2868838:0"
+        },
+        "sprite-scene-planning/csd/2021": {
+          "name": "crwdns2868840:0crwdne2868840:0",
+          "url": "crwdns2868842:0crwdne2868842:0"
+        },
+        "random-dot-flipbook/csd/2021": {
+          "name": "crwdns2868920:0crwdne2868920:0",
+          "url": "crwdns2868922:0crwdne2868922:0"
+        },
+        "random-sprite-flipbook/csd/2021": {
+          "name": "crwdns2868924:0crwdne2868924:0",
+          "url": "crwdns2868926:0crwdne2868926:0"
+        },
+        "youtube-flipbook/csd/2021": {
+          "name": "crwdns2868928:0crwdne2868928:0",
+          "url": "crwdns2868930:0crwdne2868930:0"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "name": "crwdns2868936:0crwdne2868936:0",
+          "url": "crwdns2868938:0crwdne2868938:0"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "crwdns2868940:0crwdne2868940:0",
+          "url": "crwdns2868942:0crwdne2868942:0"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "crwdns2869002:0crwdne2869002:0",
+          "url": "crwdns2869004:0crwdne2869004:0"
+        },
+        "the_counter_pattern/csd/2021": {
+          "name": "crwdns2869010:0crwdne2869010:0",
+          "url": "crwdns2869012:0crwdne2869012:0"
+        },
+        "animated-scene-planning-exemplar-2020/csd/2021": {
+          "name": "crwdns2869072:0crwdne2869072:0",
+          "url": "crwdns2869074:0crwdne2869074:0"
+        },
+        "animated-scene-1/csd/2021": {
+          "name": "crwdns2869076:0crwdne2869076:0",
+          "url": "crwdns2869078:0crwdne2869078:0"
+        },
+        "animated-scene/csd/2021": {
+          "name": "crwdns2869080:0crwdne2869080:0",
+          "url": "crwdns2869082:0crwdne2869082:0"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "crwdns2869170:0crwdne2869170:0",
+          "url": "crwdns2869172:0crwdne2869172:0"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "crwdns2869174:0crwdne2869174:0",
+          "url": "crwdns2869176:0crwdne2869176:0"
+        },
+        "booleans_and_comparison_operators/csd/2021": {
+          "name": "crwdns2869178:0crwdne2869178:0",
+          "url": "crwdns2869180:0crwdne2869180:0"
+        },
+        "if_statements/csd/2021": {
+          "name": "crwdns2869182:0crwdne2869182:0",
+          "url": "crwdns2869184:0crwdne2869184:0"
+        },
+        "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "name": "crwdns2869314:0crwdne2869314:0",
+          "url": "crwdns2869316:0crwdne2869316:0"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "crwdns2869322:0crwdne2869322:0",
+          "url": "crwdns2869324:0crwdne2869324:0"
+        },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "name": "crwdns2869412:0crwdne2869412:0",
+          "url": "crwdns2869414:0crwdne2869414:0"
+        },
+        "interactive-card-marked-rubrics/csd/2021": {
+          "name": "crwdns2869416:0crwdne2869416:0",
+          "url": "crwdns2869418:0crwdne2869418:0"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "name": "crwdns2869420:0crwdne2869420:0",
+          "url": "crwdns2869422:0crwdne2869422:0"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "name": "crwdns2869424:0crwdne2869424:0",
+          "url": "crwdns2869426:0crwdne2869426:0"
+        },
+        "interactive_card/csd/2021": {
+          "name": "crwdns2869432:0crwdne2869432:0",
+          "url": "crwdns2869434:0crwdne2869434:0"
+        },
+        "interactive_card_-_student_checklist/csd/2021": {
+          "name": "crwdns2869436:0crwdne2869436:0",
+          "url": "crwdns2869438:0crwdne2869438:0"
+        },
+        "extra_code_in_challenge_levels_1/csd/2021": {
+          "name": "crwdns2870238:0crwdne2870238:0",
+          "url": "crwdns2870240:0crwdne2870240:0"
+        },
+        "velocity_1/csd/2021": {
+          "name": "crwdns2869512:0crwdne2869512:0",
+          "url": "crwdns2869514:0crwdne2869514:0"
+        },
+        "velocity_2/csd/2021": {
+          "name": "crwdns2869516:0crwdne2869516:0",
+          "url": "crwdns2869518:0crwdne2869518:0"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "crwdns2869596:0crwdne2869596:0",
+          "url": "crwdns2869598:0crwdne2869598:0"
+        },
+        "collision_detection_version_b_/csd/2021": {
+          "name": "crwdns2869600:0crwdne2869600:0",
+          "url": "crwdns2869602:0crwdne2869602:0"
+        },
+        "collision_detection_version_a_/csd/2021": {
+          "name": "crwdns2869604:0crwdne2869604:0",
+          "url": "crwdns2869606:0crwdne2869606:0"
+        },
+        "collision_detection/csd/2021": {
+          "name": "crwdns2869612:0crwdne2869612:0",
+          "url": "crwdns2869614:0crwdne2869614:0"
+        },
+        "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "name": "crwdns2869662:0crwdne2869662:0",
+          "url": "crwdns2869664:0crwdne2869664:0"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "crwdns2869666:0crwdne2869666:0",
+          "url": "crwdns2869668:0crwdne2869668:0"
+        },
+        "side-scroller/csd/2021": {
+          "name": "crwdns2869670:0crwdne2869670:0",
+          "url": "crwdns2869672:0crwdne2869672:0"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "crwdns2869742:0crwdne2869742:0",
+          "url": "crwdns2869744:0crwdne2869744:0"
+        },
+        "flyer-game-project-guide-exemplar/csd/2021": {
+          "name": "crwdns2869854:0crwdne2869854:0",
+          "url": "crwdns2869856:0crwdne2869856:0"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "crwdns2869858:0crwdne2869858:0",
+          "url": "crwdns2869860:0crwdne2869860:0"
+        },
+        "flyer-game/csd/2021": {
+          "name": "crwdns2869862:0crwdne2869862:0",
+          "url": "crwdns2869864:0crwdne2869864:0"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "crwdns2869944:0crwdne2869944:0",
+          "url": "crwdns2869946:0crwdne2869946:0"
+        },
+        "functions_1/csd/2021": {
+          "name": "crwdns2869948:0crwdne2869948:0",
+          "url": "crwdns2869950:0crwdne2869950:0"
+        },
+        "project-guide-defender-game/csd/2021": {
+          "name": "crwdns2870022:0crwdne2870022:0",
+          "url": "crwdns2870024:0crwdne2870024:0"
+        },
+        "planning-your-platform-game-exemplar-2020/csd/2021": {
+          "name": "crwdns2870102:0crwdne2870102:0",
+          "url": "crwdns2870104:0crwdne2870104:0"
+        },
+        "platform-game-project-guide/csd/2021": {
+          "name": "crwdns2870106:0crwdne2870106:0",
+          "url": "crwdns2870108:0crwdne2870108:0"
+        },
+        "make-your-own-game-exemplar-2020/csd/2021": {
+          "name": "crwdns2870210:0crwdne2870210:0",
+          "url": "crwdns2870212:0crwdne2870212:0"
+        },
+        "make-your-own-game-sample-marked-rubrics/csd/2021": {
+          "name": "crwdns2870214:0crwdne2870214:0",
+          "url": "crwdns2870216:0crwdne2870216:0"
+        },
+        "make-your-own-game/csd/2021": {
+          "name": "crwdns2870218:0crwdne2870218:0",
+          "url": "crwdns2870220:0crwdne2870220:0"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "name": "crwdns2870222:0crwdne2870222:0",
+          "url": "crwdns2870224:0crwdne2870224:0"
+        },
+        "make_your_own_game/csd/2021": {
+          "name": "crwdns2870230:0crwdne2870230:0",
+          "url": "crwdns2870232:0crwdne2870232:0"
+        },
+        "make_your_own_game_-_student_checklist/csd/2021": {
+          "name": "crwdns2870234:0crwdne2870234:0",
+          "url": "crwdns2870236:0crwdne2870236:0"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "crwdns2870246:0crwdne2870246:0",
+          "url": "crwdns2870248:0crwdne2870248:0"
+        },
+        "all_code_1/csd/2021": {
+          "name": "crwdns2870266:0crwdne2870266:0",
+          "url": "crwdns2870268:0crwdne2870268:0"
+        },
+        "all_resources_2/csd/2021": {
+          "name": "crwdns2870270:0crwdne2870270:0",
+          "url": "crwdns2870272:0crwdne2870272:0"
+        },
+        "all_standards_2/csd/2021": {
+          "name": "crwdns2870274:0crwdne2870274:0",
+          "url": "crwdns2870276:0crwdne2870276:0"
+        },
+        "all_vocabulary_2/csd/2021": {
+          "name": "crwdns2870278:0crwdne2870278:0",
+          "url": "crwdns2870280:0crwdne2870280:0"
+        },
+        "aluminum-boats-exemplar-2020/csd/2021": {
+          "name": "crwdns2881418:0crwdne2881418:0",
+          "url": "crwdns2881420:0crwdne2881420:0"
+        },
+        "aluminum-boats-activity-guide-2020/csd/2021": {
+          "name": "crwdns2881422:0crwdne2881422:0",
+          "url": "crwdns2881424:0crwdne2881424:0"
+        },
+        "how-to-videos/csd/2021": {
+          "name": "crwdns2882322:0crwdne2882322:0",
+          "url": "crwdns2882324:0crwdne2882324:0"
+        },
+        "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
+          "name": "crwdns2882618:0crwdne2882618:0",
+          "url": "crwdns2882620:0crwdne2882620:0"
+        },
+        "solving-problems-exemplar-2020/csd/2021": {
+          "name": "crwdns2881504:0crwdne2881504:0",
+          "url": "crwdns2881506:0crwdne2881506:0"
+        },
+        "solving-problems-activity-guide-2020/csd/2021": {
+          "name": "crwdns2881508:0crwdne2881508:0",
+          "url": "crwdns2881510:0crwdne2881510:0"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "crwdns2881602:0crwdne2881602:0",
+          "url": "crwdns2881604:0crwdne2881604:0"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "name": "crwdns2881606:0crwdne2881606:0",
+          "url": "crwdns2881608:0crwdne2881608:0"
+        },
+        "what-is-a-computer-version-b/csd/2021": {
+          "name": "crwdns2881610:0crwdne2881610:0",
+          "url": "crwdns2881612:0crwdne2881612:0"
+        },
+        "what-is-a-computer-version-a/csd/2021": {
+          "name": "crwdns2881614:0crwdne2881614:0",
+          "url": "crwdns2881616:0crwdne2881616:0"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "crwdns2881710:0crwdne2881710:0",
+          "url": "crwdns2881712:0crwdne2881712:0"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "crwdns2881714:0crwdne2881714:0",
+          "url": "crwdns2881716:0crwdne2881716:0"
+        },
+        "processing-2020/csd/2021": {
+          "name": "crwdns2881834:0crwdne2881834:0",
+          "url": "crwdns2881836:0crwdne2881836:0"
+        },
+        "apps-with-processing/csd/2021": {
+          "name": "crwdns2881838:0crwdne2881838:0",
+          "url": "crwdns2881840:0crwdne2881840:0"
+        },
+        "what-do-computers-do/csd/2021": {
+          "name": "crwdns2881950:0crwdne2881950:0",
+          "url": "crwdns2881952:0crwdne2881952:0"
+        },
+        "storage-1/csd/2021": {
+          "name": "crwdns2881954:0crwdne2881954:0",
+          "url": "crwdns2881956:0crwdne2881956:0"
+        },
+        "storage/csd/2021": {
+          "name": "crwdns2881958:0crwdne2881958:0",
+          "url": "crwdns2881960:0crwdne2881960:0"
+        },
+        "project-propose-an-app-2020/csd/2021": {
+          "name": "crwdns2882050:0crwdne2882050:0",
+          "url": "crwdns2882052:0crwdne2882052:0"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "crwdns2882054:0crwdne2882054:0",
+          "url": "crwdns2882056:0crwdne2882056:0"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "crwdns2882058:0crwdne2882058:0",
+          "url": "crwdns2882060:0crwdne2882060:0"
+        },
+        "apps-and-problem-solving-marked-rubrics/csd/2021": {
+          "name": "crwdns2882066:0crwdne2882066:0",
+          "url": "crwdns2882068:0crwdne2882068:0"
+        },
+        "peer_review_exemplar/csd/2021": {
+          "name": "crwdns2882070:0crwdne2882070:0",
+          "url": "crwdns2882072:0crwdne2882072:0"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "crwdns2882078:0crwdne2882078:0",
+          "url": "crwdns2882080:0crwdne2882080:0"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2021": {
+          "name": "crwdns2882082:0crwdne2882082:0",
+          "url": "crwdns2882084:0crwdne2882084:0"
+        },
+        "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
+          "name": "crwdns2882198:0crwdne2882198:0",
+          "url": "crwdns2882200:0crwdne2882200:0"
+        },
+        "build-a-newspaper-table/csd/2021": {
+          "name": "crwdns2882202:0crwdne2882202:0",
+          "url": "crwdns2882204:0crwdne2882204:0"
+        },
+        "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
+          "name": "crwdns2882326:0crwdne2882326:0",
+          "url": "crwdns2882328:0crwdne2882328:0"
+        },
+        "spaghetti-bridge-activity-guide/csd/2021": {
+          "name": "crwdns2882330:0crwdne2882330:0",
+          "url": "crwdns2882332:0crwdne2882332:0"
+        },
+        "intro-to-problem-solving-paper-tower-2020/csd/2021": {
+          "name": "crwdns2882446:0crwdne2882446:0",
+          "url": "crwdns2882448:0crwdne2882448:0"
+        },
+        "paper-planes/csd/2021": {
+          "name": "crwdns2882450:0crwdne2882450:0",
+          "url": "crwdns2882452:0crwdne2882452:0"
+        },
+        "plane-how-to-videos/csd/2021": {
+          "name": "crwdns2882454:0crwdne2882454:0",
+          "url": "crwdns2882456:0crwdne2882456:0"
+        },
+        "exploring-problem-solving-animal-theme-2020/csd/2021": {
+          "name": "crwdns2882528:0crwdne2882528:0",
+          "url": "crwdns2882530:0crwdne2882530:0"
+        },
+        "solving-problems-tangrams-2020/csd/2021": {
+          "name": "crwdns2882532:0crwdne2882532:0",
+          "url": "crwdns2882534:0crwdne2882534:0"
+        },
+        "solving-problems-activity-guide-animal-2020/csd/2021": {
+          "name": "crwdns2882536:0crwdne2882536:0",
+          "url": "crwdns2882538:0crwdne2882538:0"
+        },
+        "exploring-problem-solving-games-theme-2020/csd/2021": {
+          "name": "crwdns2882610:0crwdne2882610:0",
+          "url": "crwdns2882612:0crwdne2882612:0"
+        },
+        "solving-problems-activity-guide-game-2020/csd/2021": {
+          "name": "crwdns2882614:0crwdne2882614:0",
+          "url": "crwdns2882616:0crwdne2882616:0"
+        },
+        "all_resources/csd/2021": {
+          "name": "crwdns2882626:0crwdne2882626:0",
+          "url": "crwdns2882628:0crwdne2882628:0"
+        },
+        "all_standards/csd/2021": {
+          "name": "crwdns2882630:0crwdne2882630:0",
+          "url": "crwdns2882632:0crwdne2882632:0"
+        },
+        "all_vocabulary/csd/2021": {
+          "name": "crwdns2882634:0crwdne2882634:0",
+          "url": "crwdns2882636:0crwdne2882636:0"
+        },
+        "exemplar-text-website/csd/2021": {
+          "name": "crwdns2879442:0crwdne2879442:0",
+          "url": "crwdns2879444:0crwdne2879444:0"
+        },
+        "csd_unit_2_-_web_development/csd/2021": {
+          "name": "crwdns2881172:0crwdne2881172:0",
+          "url": "crwdns2881174:0crwdne2881174:0"
+        },
+        "html_tags/csd/2021": {
+          "name": "crwdns2879450:0crwdne2879450:0",
+          "url": "crwdns2879452:0crwdne2879452:0"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "name": "crwdns2879454:0crwdne2879454:0",
+          "url": "crwdns2879456:0crwdne2879456:0"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "name": "crwdns2879458:0crwdne2879458:0",
+          "url": "crwdns2879460:0crwdne2879460:0"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "crwdns2879582:0crwdne2879582:0",
+          "url": "crwdns2879584:0crwdne2879584:0"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "crwdns2879586:0crwdne2879586:0",
+          "url": "crwdns2879588:0crwdne2879588:0"
+        },
+        "video_debugging/csd/2021": {
+          "name": "crwdns2879590:0crwdne2879590:0",
+          "url": "crwdns2879592:0crwdne2879592:0"
+        },
+        "project-guide-html-project-2020/csd/2021": {
+          "name": "crwdns2879670:0crwdne2879670:0",
+          "url": "crwdns2879672:0crwdne2879672:0"
+        },
+        "peer-review-html-web-page-exemplar-2020/csd/2021": {
+          "name": "crwdns2879674:0crwdne2879674:0",
+          "url": "crwdns2879676:0crwdne2879676:0"
+        },
+        "html-web-page-1/csd/2021": {
+          "name": "crwdns2879678:0crwdne2879678:0",
+          "url": "crwdns2879680:0crwdne2879680:0"
+        },
+        "mini-project-html-page/csd/2021": {
+          "name": "crwdns2879682:0crwdne2879682:0",
+          "url": "crwdns2879684:0crwdne2879684:0"
+        },
+        "html-web-page/csd/2021": {
+          "name": "crwdns2879686:0crwdne2879686:0",
+          "url": "crwdns2879688:0crwdne2879688:0"
+        },
+        "html-page/csd/2021": {
+          "name": "crwdns2879690:0crwdne2879690:0",
+          "url": "crwdns2879692:0crwdne2879692:0"
+        },
+        "formatting_html/csd/2021": {
+          "name": "crwdns2879694:0crwdne2879694:0",
+          "url": "crwdns2879696:0crwdne2879696:0"
+        },
+        "lists/csd/2021": {
+          "name": "crwdns2879698:0crwdne2879698:0",
+          "url": "crwdns2879700:0crwdne2879700:0"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "crwdns2879764:0crwdne2879764:0",
+          "url": "crwdns2879766:0crwdne2879766:0"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "crwdns2879768:0crwdne2879768:0",
+          "url": "crwdns2879770:0crwdne2879770:0"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "crwdns2879772:0crwdne2879772:0",
+          "url": "crwdns2879774:0crwdne2879774:0"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "crwdns2879878:0crwdne2879878:0",
+          "url": "crwdns2879880:0crwdne2879880:0"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "crwdns2879882:0crwdne2879882:0",
+          "url": "crwdns2879884:0crwdne2879884:0"
+        },
+        "style_sheets/csd/2021": {
+          "name": "crwdns2879886:0crwdne2879886:0",
+          "url": "crwdns2879888:0crwdne2879888:0"
+        },
+        "text_properties/csd/2021": {
+          "name": "crwdns2879890:0crwdne2879890:0",
+          "url": "crwdns2879892:0crwdne2879892:0"
+        },
+        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
+          "name": "crwdns2879974:0crwdne2879974:0",
+          "url": "crwdns2879976:0crwdne2879976:0"
+        },
+        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
+          "name": "crwdns2879978:0crwdne2879978:0",
+          "url": "crwdns2879980:0crwdne2879980:0"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "name": "crwdns2879982:0crwdne2879982:0",
+          "url": "crwdns2879984:0crwdne2879984:0"
+        },
+        "your-personal-style-1/csd/2021": {
+          "name": "crwdns2879986:0crwdne2879986:0",
+          "url": "crwdns2879988:0crwdne2879988:0"
+        },
+        "your-personal-style/csd/2021": {
+          "name": "crwdns2879990:0crwdne2879990:0",
+          "url": "crwdns2879992:0crwdne2879992:0"
+        },
+        "licensing-your-work-exemplar-2020/csd/2021": {
+          "name": "crwdns2880074:0crwdne2880074:0",
+          "url": "crwdns2880076:0crwdne2880076:0"
+        },
+        "licensing-your-work-2020/csd/2021": {
+          "name": "crwdns2880078:0crwdne2880078:0",
+          "url": "crwdns2880080:0crwdne2880080:0"
+        },
+        "creative-commons-video/csd/2021": {
+          "name": "crwdns2880082:0crwdne2880082:0",
+          "url": "crwdns2880084:0crwdne2880084:0"
+        },
+        "creative_commons_search/csd/2021": {
+          "name": "crwdns2880152:0crwdne2880152:0",
+          "url": "crwdns2880154:0crwdne2880154:0"
+        },
+        "images_in_html/csd/2021": {
+          "name": "crwdns2880156:0crwdne2880156:0",
+          "url": "crwdns2880158:0crwdne2880158:0"
+        },
+        "define-your-webpage-2020/csd/2021": {
+          "name": "crwdns2880232:0crwdne2880232:0",
+          "url": "crwdns2880234:0crwdne2880234:0"
+        },
+        "define-your-web-page/csd/2021": {
+          "name": "crwdns2880236:0crwdne2880236:0",
+          "url": "crwdns2880238:0crwdne2880238:0"
+        },
+        "body-styling/csd/2021": {
+          "name": "crwdns2880298:0crwdne2880298:0",
+          "url": "crwdns2880300:0crwdne2880300:0"
+        },
+        "layout-properties/csd/2021": {
+          "name": "crwdns2880302:0crwdne2880302:0",
+          "url": "crwdns2880304:0crwdne2880304:0"
+        },
+        "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
+          "name": "crwdns2880366:0crwdne2880366:0",
+          "url": "crwdns2880368:0crwdne2880368:0"
+        },
+        "person-web-page-prepare/csd/2021": {
+          "name": "crwdns2880370:0crwdne2880370:0",
+          "url": "crwdns2880372:0crwdne2880372:0"
+        },
+        "practices-reflection-exemplar-2020/csd/2021": {
+          "name": "crwdns2880466:0crwdne2880466:0",
+          "url": "crwdns2880468:0crwdne2880468:0"
+        },
+        "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
+          "name": "crwdns2880470:0crwdne2880470:0",
+          "url": "crwdns2880472:0crwdne2880472:0"
+        },
+        "peer-review-personal-website-exemplar-2020/csd/2021": {
+          "name": "crwdns2880474:0crwdne2880474:0",
+          "url": "crwdns2880476:0crwdne2880476:0"
+        },
+        "personal-web-page-1/csd/2021": {
+          "name": "crwdns2880478:0crwdne2880478:0",
+          "url": "crwdns2880480:0crwdne2880480:0"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "name": "crwdns2880482:0crwdne2880482:0",
+          "url": "crwdns2880484:0crwdne2880484:0"
+        },
+        "personal-web-page/csd/2021": {
+          "name": "crwdns2880486:0crwdne2880486:0",
+          "url": "crwdns2880488:0crwdne2880488:0"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "crwdns2880494:0crwdne2880494:0",
+          "url": "crwdns2880496:0crwdne2880496:0"
+        },
+        "personal_web_page_-_student_checklist/csd/2021": {
+          "name": "crwdns2880498:0crwdne2880498:0",
+          "url": "crwdns2880500:0crwdne2880500:0"
+        },
+        "extra_code_in_challenge_levels/csd/2021": {
+          "name": "crwdns2881072:0crwdne2881072:0",
+          "url": "crwdns2881074:0crwdne2881074:0"
+        },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "crwdns2880574:0crwdne2880574:0",
+          "url": "crwdns2880576:0crwdne2880576:0"
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "name": "crwdns2880578:0crwdne2880578:0",
+          "url": "crwdns2880580:0crwdne2880580:0"
+        },
+        "website-team-plan-2020/csd/2021": {
+          "name": "crwdns2880666:0crwdne2880666:0",
+          "url": "crwdns2880668:0crwdne2880668:0"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "crwdns2880670:0crwdne2880670:0",
+          "url": "crwdns2880672:0crwdne2880672:0"
+        },
+        "how-teamwork-works/csd/2021": {
+          "name": "crwdns2880674:0crwdne2880674:0",
+          "url": "crwdns2880676:0crwdne2880676:0"
+        },
+        "website-team-plan/csd/2021": {
+          "name": "crwdns2880678:0crwdne2880678:0",
+          "url": "crwdns2880680:0crwdne2880680:0"
+        },
+        "links-and-research-1/csd/2021": {
+          "name": "crwdns2880756:0crwdne2880756:0",
+          "url": "crwdns2880758:0crwdne2880758:0"
+        },
+        "links-and-research/csd/2021": {
+          "name": "crwdns2880760:0crwdne2880760:0",
+          "url": "crwdns2880762:0crwdne2880762:0"
+        },
+        "how-search-works-video/csd/2021": {
+          "name": "crwdns2880764:0crwdne2880764:0",
+          "url": "crwdns2880766:0crwdne2880766:0"
+        },
+        "internet-scavenger-hunt/csd/2021": {
+          "name": "crwdns2880768:0crwdne2880768:0",
+          "url": "crwdns2880770:0crwdne2880770:0"
+        },
+        "classes/csd/2021": {
+          "name": "crwdns2880844:0crwdne2880844:0",
+          "url": "crwdns2880846:0crwdne2880846:0"
+        },
+        "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
+          "name": "crwdns2880922:0crwdne2880922:0",
+          "url": "crwdns2880924:0crwdne2880924:0"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "name": "crwdns2881148:0crwdne2881148:0",
+          "url": "crwdns2881150:0crwdne2881150:0"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "name": "crwdns2880930:0crwdne2880930:0",
+          "url": "crwdns2880932:0crwdne2880932:0"
+        },
+        "website_for_a_purpose_-_student_checklist/csd/2021": {
+          "name": "crwdns2881176:0crwdne2881176:0",
+          "url": "crwdns2881178:0crwdne2881178:0"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "crwdns2881004:0crwdne2881004:0",
+          "url": "crwdns2881006:0crwdne2881006:0"
+        },
+        "practices-reflection-l21-exemplar-2020/csd/2021": {
+          "name": "crwdns2881152:0crwdne2881152:0",
+          "url": "crwdns2881154:0crwdne2881154:0"
+        },
+        "project-guide-website-for-a-purpose-reflect-exemplar-2020/csd/2021": {
+          "name": "crwdns2881156:0crwdne2881156:0",
+          "url": "crwdns2881158:0crwdne2881158:0"
+        },
+        "peer-review-final-personal-website-exemplar-2020/csd/2021": {
+          "name": "crwdns2881160:0crwdne2881160:0",
+          "url": "crwdns2881162:0crwdne2881162:0"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "name": "crwdns2881164:0crwdne2881164:0",
+          "url": "crwdns2881166:0crwdne2881166:0"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "name": "crwdns2881168:0crwdne2881168:0",
+          "url": "crwdns2881170:0crwdne2881170:0"
+        },
+        "all_code_2/csd/2021": {
+          "name": "crwdns2881196:0crwdne2881196:0",
+          "url": "crwdns2881198:0crwdne2881198:0"
+        },
+        "all_resources_3/csd/2021": {
+          "name": "crwdns2881200:0crwdne2881200:0",
+          "url": "crwdns2881202:0crwdne2881202:0"
+        },
+        "all_standards_3/csd/2021": {
+          "name": "crwdns2881204:0crwdne2881204:0",
+          "url": "crwdns2881206:0crwdne2881206:0"
+        },
+        "all_vocabulary_3/csd/2021": {
+          "name": "crwdns2881208:0crwdne2881208:0",
+          "url": "crwdns2881210:0crwdne2881210:0"
         }
       }
     }

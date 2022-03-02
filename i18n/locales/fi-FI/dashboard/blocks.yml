@@ -3,7 +3,7 @@ fi:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} vaihtele jokaisen {N} mittayksikön \nvälillä {MOVE1} ja {MOVE2}"
+        text: "{GROUP} vaihtele jokaisen {N} tahdin \nvälillä {MOVE1} ja {MOVE2}"
         options:
           GROUP:
             sprites: kaikki
@@ -211,7 +211,7 @@ fi:
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
       Dancelab_everyMeasuresRange:
-        text: 'toista joka {N} mittayksikköä jälkeen {START} '
+        text: 'toista joka {N} tahdin jälkeen {START} '
       Dancelab_everySeconds:
         text: 'joka {N} {UNIT} '
         options:
@@ -249,7 +249,7 @@ fi:
             '"y"': pystyasento
             '"tint"': sävy
       Dancelab_getTime:
-        text: "[UNIT] [0] kulunut"
+        text: "{UNIT} kulunut"
         options:
           UNIT:
             '"measures"': tahdit
@@ -432,6 +432,26 @@ fi:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': kaikki alienit
             '"BEAR"': karhut
@@ -976,7 +996,7 @@ fi:
       gamelab_clickedOn:
         text: kun {SPRITE} klikataan
       gamelab_clickedSpritePointer:
-        text: napsautti {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'kommentti: {COMMENT}'
       gamelab_createNewSprite:
@@ -1006,6 +1026,19 @@ fi:
             '"seconds"': sekuntia
       gamelab_hideTitleScreen:
         text: piilota otsikkonäyttö
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1131,9 +1164,9 @@ fi:
       gamelab_moveToward:
         text: siirry {SPRITE} kuvapistettä {DISTANCE} kohti {TARGET}
       gamelab_newSpritePointer:
-        text: napsautti {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: napsautti {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_playSoundOptions:
@@ -1141,6 +1174,7 @@ fi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": murskaa
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": kupla
             "'sound://category_animals/bear.mp3'": karhu
             "'sound://category_animals/cat.mp3'": kissa
             "'sound://category_animals/cow.mp3'": lehmä
@@ -1149,6 +1183,10 @@ fi:
             "'sound://category_animals/dolphin.mp3'": delfiini
             "'sound://category_animals/dog.mp3'": koira
             "'sound://category_digital/jump_7.mp3'": hyppää
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): on vedettävä
       gamelab_pointInDirection:
         text: suuntaa {SPRITE} {DIRECTION}
         options:
@@ -1228,6 +1266,14 @@ fi:
             '"scale"': koko
             '"width"': leveys
             '"height"': korkeus
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': hidas
+            '5': normaali
+            '7': nopea
+            '9': extra fast
       gamelab_setTint:
         text: vaihtaa väriä {THIS} {COLOR}
       gamelab_setupSim:
@@ -1246,7 +1292,7 @@ fi:
             '"when"': kun
             '"while"': niin kauan kuin
       gamelab_subjectSpritePointer:
-        text: napsautti {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: käännä {SPRITE} {DIRECTION} {N} astetta
         options:
@@ -1589,47 +1635,54 @@ fi:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Kukat
-            '"hearts"': Sydämet
+            '"brick"': tiili
+            '"hearts"': sydämet
             '"iceCream"': Jäätelö
-            '"rainbow"': Sateenkaari
-            '"stars"': Äänet
-            '"waves"': Aallot
+            '"rainbow"': sateenkaari
+            '"stars"': Tähdet
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': sade
       Poetry_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': yö
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': hidas
       Poetry_playSound:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Vaalea
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': kupla
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hyppää
       Poetry_setBackground:
         text: aseta taustaväri {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': Värit
-            '"space"': Avaruus
-            '"stars"': Äänet
-            '"ripples"': Aaltoilu
-            '"rain"': Sade
             '"bubbles"': Kuplat
+            '"clouds"': pilvinen
             '"confetti"': Konfetti
-            '"hearts"': Värikkäät sydämet
+            '"hearts"': sydämet
+            '"space"': Avaruus
+            '"rain"': sade
+            '"ripples"': Aaltoilu
+            '"colors"': Värit
+            '"stars"': Äänet
           PALETTE:
-            '"rainbow"': Sateenkaari
+            '"rainbow"': sateenkaari
+            '"winter"': talvi
       Poetry_setBackgroundImageAs:
         text: aseta tausta {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Sade
             '"bubbles"': Kuplat
-            '"hearts"': Värikkäät sydämet
             '"confetti"': Konfetti
+            '"hearts"': sydämet
+            '"rain"': sade
             '"starburst"': Tähtisäteet
       Poetry_whenLineShows:
         options:

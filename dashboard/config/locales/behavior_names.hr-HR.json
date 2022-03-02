@@ -2515,7 +2515,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_animals_behaviors": {
           "wandering": "lutanje",
@@ -2534,7 +2536,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_animals_costumes": {
           "moving east": "krećući se prema istoku",
@@ -2584,7 +2588,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_emoji_backgrounds": {
           "shrinking": "skupljanje",
@@ -2603,7 +2609,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "lutanje",
@@ -2622,7 +2630,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_emoji_costumes": {
           "moving east": "krećući se prema istoku",
@@ -2672,7 +2682,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_food_backgrounds": {
           "shrinking": "skupljanje",
@@ -2691,7 +2703,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_food_costumes": {
           "moving east": "krećući se prema istoku",
@@ -2741,7 +2755,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_retro_backgrounds": {
           "shrinking": "skupljanje",
@@ -2760,7 +2776,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_retro_behaviors": {
           "wandering": "lutanje",
@@ -2779,7 +2797,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_retro_costumes": {
           "moving east": "krećući se prema istoku",
@@ -2829,7 +2849,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "helloworld_food_behaviors": {
           "wandering": "lutanje",
@@ -2848,7 +2870,9 @@
           "fluttering": "lepršanje",
           "wobbling": "njihanje",
           "moving west and looping": "krećući se prema zapadu i petljajući",
-          "moving east and looping": "krećući se prema istoku i petljajući"
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south and looping": "krećući se prema jugu i petljajući"
         },
         "poetry_hoc_spriteSizes": {
           "wandering": "lutanje",

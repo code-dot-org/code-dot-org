@@ -199,6 +199,33 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Ievietošanas pamācība"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkcijas"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "\"par\" cikli"
+        },
+        "for_loops/csd/2021": {
+          "name": "\"par\" cikli"
+        },
+        "variables_1/csd/2021": {
+          "name": "Mainīgie"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Ātrums"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Ātrums"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcijas"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkcijas"
+        },
+        "lists/csd/2021": {
+          "name": "Saraksti"
         }
       }
     }

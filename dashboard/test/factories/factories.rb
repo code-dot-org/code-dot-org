@@ -489,6 +489,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
     login_type 'email'
+    participant_type 'student'
 
     initialize_with {Section.new(attributes)}
   end
@@ -753,6 +754,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
+    instruction_type "teacher_led"
     participant_audience "student"
     instructor_audience "teacher"
 
@@ -764,7 +766,7 @@ FactoryGirl.define do
       after(:create) do |script, evaluator|
         lesson_group = create :lesson_group, script: script
         evaluator.lessons_count.times do
-          create :lesson, :with_activity_section, lesson_group: lesson_group
+          create :lesson, :with_activity_section, lesson_group: lesson_group, script: script, has_lesson_plan: true
         end
       end
     end
@@ -790,42 +792,49 @@ FactoryGirl.define do
     factory :csf_script do
       after(:create) do |csf_script|
         csf_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSF
-        csf_script.save
+        csf_script.save!
       end
     end
 
     factory :csd_script do
       after(:create) do |csd_script|
         csd_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
-        csd_script.save
+        csd_script.save!
       end
     end
 
     factory :csp_script do
       after(:create) do |csp_script|
         csp_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
-        csp_script.save
+        csp_script.save!
       end
     end
 
     factory :csa_script do
       after(:create) do |csa_script|
         csa_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
-        csa_script.save
+        csa_script.save!
       end
     end
 
     factory :csc_script do
       after(:create) do |csc_script|
         csc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
-        csc_script.save
+        csc_script.save!
       end
     end
 
     factory :hoc_script do
       after(:create) do |hoc_script|
         hoc_script.curriculum_umbrella = SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
-        hoc_script.save
+        hoc_script.save!
+      end
+    end
+
+    factory :standalone_unit do
+      after(:create) do |standalone_unit|
+        standalone_unit.is_course = true
+        standalone_unit.save!
       end
     end
   end
@@ -962,6 +971,12 @@ FactoryGirl.define do
 
   factory :programming_environment do
     sequence(:name) {|n| "programming-environment-#{n}"}
+  end
+
+  factory :programming_environment_category do
+    sequence(:key, 'a') {|n| "programming_environment_category_#{n}"}
+    sequence(:name, 'b') {|n| "programming-environment-category-#{n}"}
+    color '#000000'
   end
 
   factory :programming_expression do

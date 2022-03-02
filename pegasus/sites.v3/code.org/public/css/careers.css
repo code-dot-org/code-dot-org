@@ -200,11 +200,6 @@ ul li:before {
   content: "";
 }
 
-.careers__future {
-  margin: 10px 0;
-  margin-bottom: 0;
-}
-
 .careers__team-photos {
   display: flex;
   flex-wrap: wrap;

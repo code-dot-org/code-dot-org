@@ -1,6 +1,6 @@
 {
   "addAdditionalPrompts": "Proqramınız kifayət qədər cəld yaratmadı.",
-  "addAtTimeEvent": "Bu bloku öz kodunuza əlavə edin:\n<XML><block type=\"gamelab_atTime\"><title name=\"UNIT\">\"seconds\"</title><value name=\"N\"><block type=\"math_number\"><title name=\"NUM\">5</title></block></value></block></XML>",
+  "addAtTimeEvent": "\nBu bloku iş yerinizə əlavə edin:\n<XML><block type=\"gamelab_atTime\"><title name=\"UNIT\">\"seconds\"</title><value name=\"N\"><block type=\"math_number\"><title name=\"NUM\">5</title></block></value></block></XML>\n",
   "addJoinBlocks": "Daxil etdiyiniz dəqiq mətni çap edirsiniz. Qoşulma bloklarından istifadə edərək başqa mətn əlavə etməyə çalışın. ",
   "addPrintBlock": "Kodunuza bir çap bloku əlavə etməlisiniz:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"></title></block></value></block></xml> ",
   "addPrompt": "Kodunuza təklif blokunu əlavə etməlisiniz:\n <xml><block type=\"gamelab_setPrompt\"><value name=\"QUESTION\"><block type=\"text\" can_disconnect_from_parent=\"false\"><title name=\"TEXT\">...</title></block></value><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">???</title></block></value></block></xml>",
@@ -52,6 +52,7 @@
   "clickAllSprites": "\"İşlət\" düyməsini basdıqdan sonra qrafik obyektə vurduğunuzdan əmin olun.",
   "clickAnySprite": "* \"Çalış\" * düyməsini basdıqdan sonra hər hansı bir sprite vurduğunuzdan əmin olun.",
   "clickButNoPrint": "Bir sprite vurdunuz, ancaq mətn çap edilmədi. Tıklandığınızda 'print` blokunu' hadisənizə əlavə edin.",
+  "clickButNoSay": "Sprite kliklədiniz, lakin sprayt heç nə demədi. \"Kliklənəndə\" tədbirinizə \"say\" bloku əlavə edin.\n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "clickButNoSpeech": "Qrafik tıkladınız, amma heç nə dəyişiklik olmadı. “when clicked” tədbirinizə “say” blokunu əlavə edin.",
   "clicked": "klikləndi ",
   "clickedSprite": "Ruh klikləndi\n\n",
@@ -62,6 +63,8 @@
   "createAtLeastThreeSprites": "Üç sprite malik olmalısınız. 'Çalışanda' blokunun altında üç sprite düzəldin.",
   "createAtLeastTwoSprites": "İki sprite malik olmalısınız. \"Çalışanda\" blokunun altına iki sprite düzəldin.",
   "createDraggableSprite": "Ev heyvanınızın qida spriti \"sürüklənə bilən\" davranışa başlamalıdır.\n <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_carrot_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
+  "createNotDraggableSPrite": "Yalnız yemək spriti sürüklənməlidir. Ev heyvanınızdan davranışı çıxarın.",
+  "createTwoDraggableSprites": "Ev heyvanınızın yeməyi və dost sprite \"çəkilə bilən olmaq\" davranışına başlamalıdır.\n",
   "debugBehaviors": "Hadisələrlə əlaqəli bir səhviniz var.",
   "debugEvents": "Hadisələrlə əlaqəli bir səhviniz var.",
   "debugGroups": "Qrafik obyekt qrupları ilə əlaqəli bir səhviniz var",
@@ -86,6 +89,7 @@
   "haikuBlock": "Haiku görünmədi. Bloku artıq əlavə etmisinizsə, kodunuzdakı dəyişən etiketlərini diqqətlə yoxlayın və bütün istəklərin cavablandırıldığından əmin olun.",
   "hideTitleScreen": "Bir başlıq ekranı əlavə etdiniz, amma yoxa çıxmadı. \"3 saniyədə\" və ya \"basıldıqda\" kimi bir hadisə blokunun altındakı \"başlıq ekranını gizlət\" blokunu istifadə edin. ",
   "keyPressButNoEvent": "Bu blokun iş yerinizdə olduğuna əmin olun:",
+  "madlibAddPrompt": "Növbəti addım bir sorğu əlavə etməkdir. Məsələn, \"obyekt\" və ya \"sifət\" tələb edə bilərsiniz. Dəyişənin adını hansı məlumatın saxlandığını xatırlamağınıza kömək edəcək bir şeylə dəyişdirin.\n  <xml><block type=\"gamelab_setPrompt\"><value name=\"QUESTION\"><block type=\"text\" can_disconnect_from_parent=\"false\"><title name=\"TEXT\">Yemək daxil edin:</title></ blok></value><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">qida</title></block></value></ blok></xml>",
   "madlibAddtext": "İndi sorğu quraşdırıldıqdan sonra chatbot istifadəçiyə cavab vermək üçün çap bloklarından istifadə edə bilərsiniz:\n  <xml> <blok növü = \"gamelab_printText\"> <dəyər adı = \"TEXT\"> <blok növü = \"mətn\"> <titul adı = \"TEXT\"> </block> </value> </block> </xml> ",
   "madlibAnswerPrompt": "Qeyd dəftərinə nə isə yazmağı unutma. ",
   "madlibExplore": "Layihə üçün tələbləri yerinə yetirdiniz, amma bacarsanız davam edin. İstifadəçiyə əlavə suallar verin və ya davranışları, mənşəyi və səsləri ilə yaradıcı olun. Kodunuzda dəyişiklik etmək və yenidən işə salmaq üçün \"Oynamağa davam et\" düyməsini basın. Layihənizi bitirmək üçün \"Davam et\" düyməsini basın. ",
@@ -173,5 +177,7 @@
   "thirdClickButNoPrint": "Siz 2 və daha çox qrafiki kliklədiniz, ancaq heç bir mətn çap olunmadı. 'Print' blokunu hər bir  'klik olunduğu zaman' hadisəsinin altına əlavə edin. ",
   "titleVariable": "Başlıq ekranınızda ismarıcdan mətn daxil deyildi.",
   "tooManySprites": "Çox qrafik obyektiniz var. Yalnız yuxarıdakı təlimatlara uyğun olaraq sizə lazım olan qrafik obyekti yaradın.",
+  "useColorVariable": "Sorğuya cavab verilən zaman fon rəngini təyin etmək üçün dəyişəndən istifadə edin.\n",
+  "useSetpropBlock": "Sprite ölçüsünü dəyişmək üçün “təyin edilmiş ölçü” blokundan istifadə edin.\n <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_strawberry_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>",
   "whenToWhile": "Sizin spritiniz bütün istiqamətlərdə hərəkət edir, lakin axıcı deyil. Hər bir hadisə blokunda \"nə vaxt\"ı \"nə qədər ki\" olaraq dəyişin.\n<xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">while</title><title name=\"KEY\">???</title></block></xml>"
 }

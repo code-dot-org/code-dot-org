@@ -849,65 +849,72 @@ hr-HR:
         content1: opis ovdje
       K-1 Artist 1 Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
         questions:
         - text: Koji blokovi rješavaju ovu zagonetku?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
       K-1 Artist 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         questions:
         - text: Koji blokovi crtaju kvadrat?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
       K-1 Artist 2 Match 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: Spojite oblike na temelju sličnosti.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Spoji parove
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
         - text: Koliko je to nektara?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
         questions:
         - text: Koliko je to nektara?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
       K-1 Bee Loops Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Spoji parove blokova
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: Spoji parove
       K-1 Big Event Match 1:
         answers:
@@ -930,109 +937,125 @@ hr-HR:
         title: Višestruki izbor
       K-1 Getting Loopy Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
         questions:
         - text: Kako ovaj slijed naredbi možeš pojednostaviti pomoću petlji?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
         questions:
         - text: Koja strelica vodi Flurba do blaga?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
       K-1 Keep it Private Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         questions:
         - text: Koju informaciju <strong>ne smiješ</strong> dijeliti na internetu?
         title: Višestruki izbor
       K-1 Maze Debugging Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
         questions:
         - text: Koji blok bi trebao biti na kraju?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
       K-1 Maze Loops Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         questions:
         - text: Koji je blok ponavljanja isti?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
       K-1 Maze Loops Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
         questions:
         - text: Izaberite ispravan blok ponavljanja.
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
       K-1 Maze Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         content2: Spoji zadatke i blokove
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: Spoji parove
       K-1 Maze Multiple Choice 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
         questions:
         - text: Koji odgovor rješava ovaj zadatak?
         title: Labirint
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
         questions:
         - text: Koji algoritam vodi Flurba do cvijeća?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
       K-1 Plant a Seed Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
         questions:
         - text: Koji korak bi trebao biti na početku programa?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
       K-1 Plant a Seed Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         questions:
         - text: Koji korak treba staviti na mjesto upitnika u ovom algoritmu?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
       K-1 Word Search Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
         questions:
         - text: Koji blokovi slovkaju riječ "MOVE"?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
       K-1 Word Search Multi 3:
         answers:
         - text: SET
@@ -1041,6 +1064,7 @@ hr-HR:
         questions:
         - text: Koja riječ je slovkana?
         title: Višestruki izbor
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
       Multi-Screen Apps:
         content1: opis ovdje
       New Challenge Introduction:
@@ -2569,3 +2593,106 @@ hr-HR:
       express_EOC_2021:
         description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
           koji želiš izraditi.
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: opis ovdje
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: naslov
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: opis ovdje
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: opis ovdje
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: opis ovdje
+      CSD U6 LED create intro_2021:
+        content1: opis ovdje
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: opis ovdje
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}

@@ -25,7 +25,7 @@ class LessonGroup extends React.Component {
 
     // redux provided
     scriptId: PropTypes.number,
-    lessonIsVisible: PropTypes.func.isRequired,
+    hasVisibleLesson: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool
   };
@@ -68,8 +68,13 @@ class LessonGroup extends React.Component {
   };
 
   render() {
-    const {isSummaryView, isPlc, lessonIsVisible, viewAs, isRtl} = this.props;
-    const {lessonGroup, lessons} = this.props.groupedLesson;
+    const {isSummaryView, isPlc, viewAs, isRtl, hasVisibleLesson} = this.props;
+
+    const {
+      description,
+      bigQuestions,
+      displayName
+    } = this.props.groupedLesson.lessonGroup;
 
     // Adjust styles if locale is RTL
     const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
@@ -78,11 +83,11 @@ class LessonGroup extends React.Component {
       ? SummaryProgressTable
       : DetailProgressTable;
 
-    const hasVisibleLesson = lessons.some(lesson => lessonIsVisible(lesson));
-
     if (!hasVisibleLesson && viewAs === ViewType.Participant) {
       return null;
     }
+
+    const hasLessonGroupInfo = description || bigQuestions;
 
     return (
       <div style={styles.main} className="lesson-group">
@@ -97,27 +102,29 @@ class LessonGroup extends React.Component {
           <FontAwesome
             icon={this.state.collapsed ? 'caret-right' : 'caret-down'}
           />
-          <span style={headingTextStyle}>{lessonGroup.displayName}</span>
-          {(lessonGroup.description || lessonGroup.bigQuestions) && (
-            <FontAwesome
-              icon="info-circle"
-              style={styles.lessonGroupInfo}
-              onClick={this.openLessonGroupInfoDialog}
-            />
+          <span style={headingTextStyle}>{displayName}</span>
+          {hasLessonGroupInfo && (
+            <div>
+              <FontAwesome
+                icon="info-circle"
+                style={styles.lessonGroupInfo}
+                onClick={this.openLessonGroupInfoDialog}
+              />
+              <div className="print-only">
+                <LessonGroupInfo
+                  description={description}
+                  bigQuestions={bigQuestions}
+                />
+              </div>
+              <LessonGroupInfoDialog
+                isOpen={this.state.lessonGroupInfoDialogOpen}
+                displayName={displayName}
+                bigQuestions={bigQuestions}
+                description={description}
+                closeDialog={this.closeLessonGroupInfoDialog}
+              />
+            </div>
           )}
-          <div className="print-only">
-            <LessonGroupInfo
-              description={lessonGroup.description}
-              bigQuestions={lessonGroup.bigQuestions}
-            />
-          </div>
-          <LessonGroupInfoDialog
-            isOpen={this.state.lessonGroupInfoDialogOpen}
-            displayName={lessonGroup.displayName}
-            bigQuestions={lessonGroup.bigQuestions}
-            description={lessonGroup.description}
-            closeDialog={this.closeLessonGroupInfoDialog}
-          />
         </div>
         {!this.state.collapsed && (
           <div
@@ -176,9 +183,11 @@ const styles = {
 
 export const UnconnectedLessonGroup = LessonGroup;
 
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   scriptId: state.progress.scriptId,
-  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs),
   viewAs: state.viewAs,
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
+  hasVisibleLesson: ownProps.groupedLesson.lessons.some(lesson =>
+    lessonIsVisible(lesson, state, state.viewAs)
+  )
 }))(Radium(LessonGroup));

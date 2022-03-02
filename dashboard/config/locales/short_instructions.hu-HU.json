@@ -117,8 +117,8 @@
         "4-5 Bee Nested Loops 5": "Gyűjtasd össze az összes nektárt beágyazott ciklus készítésével.",
         "4-5 Maze 1": "Kedves személy. Én zombi. Kell... eljut... napraforgó.",
         "4-5 Maze 10": "El tudunk jutni a napraforgóig csak négy blokk felhasználásával?",
-        "4-5 Maze 11": "El tudsz juttatni a napraforgóhoz csak hat blokk használatával?",
-        "4-5 Maze 12": "Rendben, ez egy kicsit más. Meg tudod csinálni csak hat blokkal?",
+        "4-5 Maze 11": "El tudsz juttatni a napraforgóhoz mindössze hat blokk használatával?",
+        "4-5 Maze 12": "Rendben, ez egy kicsit más. Meg tudod csinálni mindössze hat blokkal?",
         "4-5 Maze 2": "Juttass el a napraforgóhoz, de kerüljük el a húsevő virágot!",
         "4-5 Maze 3": "Kell... eljut... napraforgó.",
         "4-5 Maze 4": "Használd az \"ismételd\" blokkot, hogy gyorsan megoldd a feladványt...",
@@ -1570,7 +1570,15 @@
         "poetry_hoc_exemplar2": "Milyen képek jutnak az eszedbe?",
         "poetry_hoc_sounds": "Adj hozzá hangokat a programodhoz, így meg tudod változttni a vers hangulatát olvasás közben. ",
         "poetry_hoc_spriteBehaviors": "A manók bizonyos műveleteket elvégezhetnek, viselkedéseket felvehetnek újra és újra, amíg a program fut.",
-        "poetry_hoc_spriteSizes": "A már elkészített manó méretét meg tudod változtatni. "
+        "poetry_hoc_spriteSizes": "A már elkészített manó méretét meg tudod változtatni. ",
+        "CSD U3 Sprites intro sprites_2021": "Csináld ezt",
+        "CSD U5 black white images pixelation 2_2021": "Rajzolj egy mosolygós arcot (kattints ide a kép megtekintéséhez)",
+        "CSD U5 black white images pixelation 3_2021": "Módosítsd a szélesség és magasság csúszkákat a kép megtalálásához (kattints ide, és tudj meg többet)",
+        "CSD U5 black white images pixelation 4_2021": "Adj szemöldököt a mosolygós archoz (kattints ide a kép megtekintéséhez)",
+        "CSD U5 black white images pixelation 5_2021": "Rajzold bármit, amit szeretnél",
+        "CSD U5 black white images pixelation_2021": "Egészítsd ki az X alakot nullák és egyesek begépelésével",
+        "CSDU6 arrays select rainbow_2021": "Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)",
+        "course3_maze_debugging_challenge1": "–\"Csak körbe-körbe járkálok?\""
       }
     }
   }

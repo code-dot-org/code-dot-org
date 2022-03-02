@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-import color from '@cdo/apps/util/color';
+import JavalabDropdown from './components/JavalabDropdown';
+import javalabMsg from '@cdo/javalab/locale';
 
 /**
  * A menu with a set of clickable links that calls the cancel handler if you
  * click outside the menu or the cancel button.
  */
-class JavalabTabMenuComponent extends Component {
+export default class JavalabEditorTabMenu extends Component {
   static propTypes = {
     cancelTabMenu: PropTypes.func.isRequired,
     renameFromTabMenu: PropTypes.func.isRequired,
@@ -22,7 +22,7 @@ class JavalabTabMenuComponent extends Component {
     dropdownOpen: false
   };
 
-  render() {
+  dropdownElements = () => {
     const {
       renameFromTabMenu,
       deleteFromTabMenu,
@@ -32,27 +32,20 @@ class JavalabTabMenuComponent extends Component {
       fileIsVisible,
       fileIsValidation
     } = this.props;
-    return (
-      <div>
-        <button
-          type="button"
-          key="rename"
-          onClick={renameFromTabMenu}
-          style={styles.anchor}
-        >
-          Rename
-        </button>
-        <button
-          type="button"
-          key="delete"
-          onClick={deleteFromTabMenu}
-          style={styles.anchor}
-        >
-          Delete
-        </button>
-        {showVisibilityOption && !fileIsVisible && (
-          <button
-            type="button"
+    let elements = [
+      <a onClick={renameFromTabMenu} key="rename">
+        {javalabMsg.rename()}
+      </a>,
+      <a onClick={deleteFromTabMenu} key="delete">
+        {javalabMsg.delete()}
+      </a>
+    ];
+    // options for start sources mode
+    if (showVisibilityOption) {
+      // file is not visible, add option to make it a starter file
+      if (!fileIsVisible) {
+        elements.push(
+          <a
             key="starter"
             onClick={() => {
               changeFileTypeFromTabMenu(
@@ -60,29 +53,15 @@ class JavalabTabMenuComponent extends Component {
                 false /*isValidation*/
               );
             }}
-            style={styles.anchor}
           >
-            Make starter file
-          </button>
-        )}
-        {showVisibilityOption && (fileIsVisible || fileIsValidation) && (
-          <button
-            type="button"
-            key="support"
-            onClick={() => {
-              changeFileTypeFromTabMenu(
-                false /*isVisible*/,
-                false /*isValidation*/
-              );
-            }}
-            style={styles.anchor}
-          >
-            Make support file
-          </button>
-        )}
-        {showVisibilityOption && !fileIsValidation && (
-          <button
-            type="button"
+            {javalabMsg.makeStarter()}
+          </a>
+        );
+      }
+      // file is not a validation file, add option to make it a validation file
+      if (!fileIsValidation) {
+        elements.push(
+          <a
             key="validation"
             onClick={() => {
               changeFileTypeFromTabMenu(
@@ -90,44 +69,37 @@ class JavalabTabMenuComponent extends Component {
                 true /*isValidation*/
               );
             }}
-            style={styles.anchor}
           >
-            Make validation file
-          </button>
-        )}
-        <button
-          type="button"
-          key="cancel"
-          onClick={cancelTabMenu}
-          style={styles.anchor}
-        >
-          Cancel
-        </button>
-      </div>
+            {javalabMsg.makeValidation()}
+          </a>
+        );
+      }
+      // if file is a starter file or a validation file, add the option to make it a support file.
+      if (fileIsVisible || fileIsValidation) {
+        elements.push(
+          <a
+            key="support"
+            onClick={() => {
+              changeFileTypeFromTabMenu(
+                false /*isVisible*/,
+                false /*isValidation*/
+              );
+            }}
+          >
+            {javalabMsg.makeSupport()}
+          </a>
+        );
+      }
+    }
+    elements.push(
+      <a key="cancel" onClick={cancelTabMenu}>
+        {javalabMsg.cancel()}
+      </a>
     );
+    return elements;
+  };
+
+  render() {
+    return <JavalabDropdown>{this.dropdownElements()}</JavalabDropdown>;
   }
 }
-
-const styles = {
-  anchor: {
-    padding: 5,
-    color: color.charcoal,
-    backgroundColor: color.white,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
-    display: 'block',
-    textDecoration: 'none',
-    lineHeight: '20px',
-    transition: 'background-color .2s ease-out',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-      cursor: 'pointer'
-    },
-    border: `1px solid ${color.charcoal}`,
-    width: '100%',
-    borderRadius: 0,
-    margin: 0
-  }
-};
-
-export default Radium(JavalabTabMenuComponent);

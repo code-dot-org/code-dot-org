@@ -7,7 +7,8 @@ import CodeReviewGroup from './CodeReviewGroup';
 import {
   HEADER_STYLE,
   BUTTON_STYLE,
-  GROUPS_CONTAINER_STYLE
+  GROUPS_CONTAINER_STYLE,
+  HEADER_TITLE_STYLE
 } from './UnassignedStudentsPanel';
 
 export default function AssignedStudentsPanel({
@@ -21,7 +22,7 @@ export default function AssignedStudentsPanel({
   return (
     <div style={styles.groupsPanel}>
       <div style={styles.header}>
-        <span>{i18n.groups()}</span>
+        <span style={styles.headerTitle}>{i18n.groups()}</span>
         <JavalabButton
           onClick={onCreateGroupClick}
           icon={<FontAwesome icon="plus" className="fa" />}
@@ -60,6 +61,7 @@ const styles = {
     width: 500
   },
   header: HEADER_STYLE,
+  headerTitle: HEADER_TITLE_STYLE,
   button: BUTTON_STYLE,
   groupsContainer: GROUPS_CONTAINER_STYLE
 };

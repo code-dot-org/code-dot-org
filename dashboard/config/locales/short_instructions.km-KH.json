@@ -375,7 +375,7 @@
         "courseD_scrat_ramp5": "ជៀសវាងទឹកកកដែលប្រេះ។",
         "courseD_scrat_ramp6": "ជួយសត្វកំប្រុកឱ្យដល់ផ្លែសែន ដោយប្រើរង្វិលជុំដដែលៗ!",
         "courseD_scrat_ramp8": "ប្រើអ្វីដែលអ្នកបានរៀនដើម្បីឱ្យ សត្វកំប្រុកទទួលផ្លែacorn!",
-        "courseD_video_nestedLoopsArtist": "ប្រើប្រាស់អ្វីដែលអ្នកបានរៀន គូរជារាងត្រីកោណនេះ។",
+        "courseD_video_nestedLoopsArtist": "ឥឡូវបង្កើតរាងការ៉េដោយប្រើ Artist!",
         "courseE_artist_functions3": "អ្នកអាចបង្កើតគំនូរនេះដោយបន្ថែមប្លុកម្តងទៀត។",
         "courseE_artist_functions3_copy": "អ្នកអាចបង្កើតគំនូរនេះដោយបន្ថែមប្លុកម្តងទៀត។",
         "courseE_artist_functions4": "ឥឡូវអ្នកអាចគូរផ្កាយបានមួយ, ព្យាយាមគូរផ្កាយបួន!",
@@ -1336,7 +1336,13 @@
         "New Gumball Project": "ឥឡូវនេះបង្កើតអ្វីមួយដែលអ្នកចូលចិត្តរួចចែករំលែកវាទៅ!",
         "New Ice Age Project": "ឥឡូវនេះបង្កើតអ្វីមួយដែលអ្នកចូលចិត្តរួចចែករំលែកវាទៅ!",
         "New Infinity Project": "ឥឡូវនេះបង្កើតអ្វីមួយដែលអ្នកចូលចិត្តរួចចែករំលែកវាទៅ!",
-        "New Sports Project": "អ្នកអាចបង្កើតហ្គេមខ្លួនឯងបានហើយ! អ្នកមានសិទ្ធិសម្រេចហើយនៅទីនេះ៖ អ្នកអាចប្ដូរលក្ខខណ្ឌនៃហ្គេម លាយឡំប្រភេទកីឡា និងប្រើប្រាសភាពឆ្នៃប្រឌិតរបស់អ្នកបាន! នៅពេលដែលអ្នករួចរាល់ ចុចលើប៊ូតុងបញ្ចប់ដើម្បីអោយមិត្តអ្នកអាចសាកល្បងលេងហ្គេមរបស់អ្នកនៅលើទូរស័ព្ទដែរបស់គេបាន។"
+        "New Sports Project": "អ្នកអាចបង្កើតហ្គេមខ្លួនឯងបានហើយ! អ្នកមានសិទ្ធិសម្រេចហើយនៅទីនេះ៖ អ្នកអាចប្ដូរលក្ខខណ្ឌនៃហ្គេម លាយឡំប្រភេទកីឡា និងប្រើប្រាសភាពឆ្នៃប្រឌិតរបស់អ្នកបាន! នៅពេលដែលអ្នករួចរាល់ ចុចលើប៊ូតុងបញ្ចប់ដើម្បីអោយមិត្តអ្នកអាចសាកល្បងលេងហ្គេមរបស់អ្នកនៅលើទូរស័ព្ទដែរបស់គេបាន។",
+        "CSD U3 L5 Freeplay_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
+        "CSD U3 Sprites intro sprites_2021": "ធ្វើបែបនេះ",
+        "CSD U3 Variables change circle size_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
+        "CSD U3 Variables naming rules v2_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
+        "CSD U3 Variables random with assignment_2021": "កែប្រែតម្លៃនៃ petalSize ឲ្យបានច្រើនដង។ តើវាធ្វើអោយការគូររបស់អ្នកប្រែប្រួលយ៉ាងដូចម្ដេច?",
+        "CSD U6 params modify planes_2021": "# Multi-plane Controller\\\r\n\n\\\r\nThis\nprogram moves the three planes using the board accelerometer and the on-screen\ncheck boxes.  Right now, only the red plane works.\\\r\n\\\r\n\n# Do This\\\r\n\n-   Create\n    a new `movePlane(name)` function that can move any plane.\\\r\n-   Call the `movePlane(name)`\n    function inside the event block, such that it only moves when its checkbox\n    is checked.\\\r\n    \\\r\n    _Challenge: Right now the planes move way too fast.  Can\n    you figure out how to change the code so they move more slowly?_"
       }
     }
   }

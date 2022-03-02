@@ -21,10 +21,10 @@ Consider the following code segment:
 ```
 double a = Math.pow(-2.0, 3.0);
 if(a > 0.0){
-   System.out.println(“The output is positive!);
+   System.out.println("The output is positive!");
    }
 else{
-   System.out.println(“The output is negative!);
+   System.out.println("The output is negative!");
    }
 ```
 

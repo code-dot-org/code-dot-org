@@ -768,9 +768,7 @@ input[type="radio"] {
   color: #7E5BA0;
   font-family: $gotham-extra-bold;
   font-weight: normal;
-
 }
-
 #show-code {
   margin-bottom: 5px;
 }
@@ -1131,7 +1129,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   td {
     vertical-align: middle;
   }
-  tr:nth-child(even){
+  tr.highlight{
     background-color: $lightest_purple;
   }
 
@@ -1425,11 +1423,25 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-family: "Gotham 4i";
   }
 
+  #sharing-input-container {
+    overflow: hidden;
+  }
+
   #sharing-input {
     margin: 0;
-    width: 100%;
+    width: calc(100% - 70px);
     padding: 10px;
     cursor: text;
+  }
+
+  #sharing-input-copy-button {
+    margin-top: 1px;
+    width: 40px;
+    box-sizing: border-box;
+  }
+
+  .sharing-input-copy-button-shared {
+    background-color: $light_purple;
   }
 
   #copy-button {

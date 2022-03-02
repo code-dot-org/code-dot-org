@@ -4883,31 +4883,6 @@ hi-IN:
           का उत्साह देखें, को अपने छात्रों का मार्गदर्शन करने के लिए रोज़ाना की पाठ
           योजनाओं, अनप्लग्ड गतिविधियों, जिन्हें आप बिना कंप्यूटर के कर सकते हैं और
           दूसरे अध्यापकों से जुड़ने के लिए फोरमों पर जाएं।"
-      OPD-K5 CS Courses_dani:
-        markdown: "# योजना बनाना > Code.org पर शुरूआत करना\n\n\n## चरण 1: कोर्स चुनें\nहमारे
-          सभी कोर्स -- आरंभिक पाठकों से लेकर हाई स्कूल के छात्रों तक -- हमारे **[कोर्स
-          कैटलॉग](https://studio.code.org/courses)** में सूचीबद्ध हैं। CS के मूल सिद्धांत
-          पाठ ढूंढ़ने के लिए, जिसका आप अभ्यास कर रहे हैं, हमारे **[एलिमेंटरी पृष्ठ](https://code.org/educate/curriculum/elementary-school)**
-          पर जाएं और \"कोर्स\" सेक्शन को स्क्रॉल डाउन करें। हमारे सभी कोर्स निशुल्क
-          उपलब्ध हैं। यह निर्धारित करने के लिए अपने स्कूल के सहपाठियों से बात करें
-          कि कोर्स पाठ्यक्रम को भिन्न प्रकार के विषयों के साथ एकीकृत कैसे किया जा
-          सकता है।\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          चरण 2: अपना कक्षा सेक्शन सेट अप करें\nअपने छात्र की प्रगति देखने, अपने छात्रों
-          के लिए लॉगिन कार्ड प्रिंट करने, उनके खाते व्यवस्थित करने और सर्टिफिकेट,
-          जिन्हें वे कोर्स समाप्त होने पर घर ले जा सकते हैं, प्रिंट करने के लिए कक्षा
-          सेक्शन सेट अप करें। लिंक **[संक्षिप्त वीडियो देखें](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          पर क्लिक करें, जो दर्शाता है कि Code.org पर अपनी पहली कंप्यूटर साइंस कक्षा
-          कैसे सेट अप करें। आप **[यह सहायता लेख](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**
-          में भी चरण देख सकते हैं।\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          चरण 3: अपने सेक्शन को कोर्स असाइन करें\nउस कोर्स पर क्लिक करें, जो आप पढ़ा
-          रहे हैं -- आप एक स्क्रीन देखेंगे, जो नीचे दी गई स्क्रीन की तरह दिखती है।
-          फिर आप \"कोर्स असाइन करें\" पर क्लिक करके, उस कोर्स को अपने एक सेक्शन को
-          असाइन कर सकते हैं। \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          चरण 4: पढ़ाना शुरू करें! \nकंप्यूटर साइंस अवधारणाओं को आपकी कक्षा में लाने
-          के लिए यही सब करना होता है। जब आप CS के लिए अपने छात्रों का उत्साह देखें,
-          को अपने छात्रों का मार्गदर्शन करने के लिए रोज़ाना की पाठ योजनाओं, अनप्लग्ड
-          गतिविधियों, जिन्हें आप बिना कंप्यूटर के कर सकते हैं और दूसरे अध्यापकों से
-          जुड़ने के लिए फोरमों पर जाएं।\n\n"
       OPD-K5 CS Tips:
         markdown: "# शुरूआत करना > इस ऑनलाइन कोर्स का संचालन करना\n\nयदि आप यहां तक
           पहुंच चुके हैं, तो बधाई हो! जब आप यह कोर्स पूरा करते हैं, तो आप CS के मूल
@@ -6016,27 +5991,6 @@ hi-IN:
           href=\"https://curriculum.code.org/csf-19/coursed/10/\" target=\"blank\"
           rel=\"noopener noreferrer\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14
           PM.png)</a>\n"
-      OPD-K5 Stage5Go_dani:
-        markdown: "# सापेक्ष > अनप्लग्ड पाठ\n\n\n**1. समीक्षा \"[कार्डों के साथ सापेक्ष](https://curriculum.code.org/csf-18/coursed/13/)
-          कोर्स D से पाठ योजना\":** \n<br/>\nकोर्स D ग्रेड 3 के छात्रों के लिए तैयार
-          किया गया है। यही पाठ कोर्स E और कोर्स F में भी दिखाई देता है। कोर्स A, B
-          या C में सापेक्ष शामिल नहीं किए गए हैं।\n<br/><br/>\n\n**2. छात्र वीडियो:
-          कार्डों के साथ सापेक्ष देखें **\n<br/>\nयह एक वीडियो है, जिसे आप सापेक्षों
-          की अवधारणा का परिचय देने और अनप्लग्ड पाठ को शुरू करने में मदद के लिए अपने
-          छात्रों को दिखाएंगे।\n[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41
-          PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)\n<br/>\n[क्या वीडियो
-          नहीं देख पा रहे हैं? यहां क्लिक करें](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)\n\n<br/><br/>\n**3.
-          इस पाठ: \"कार्डों के साथ सापेक्ष\" का अध्यापक नमूना वीडियो देखें**\n<br/>\nयह
-          वीडियो अध्यापक के तौर पर आपके सहयोग के लिए है, यदि आप इस बारे में सुझाव
-          ढूंढ़ रहे हैं कि इस पाठ को कैसे चलाना है। \n\n\n[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37
-          PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)\n\n[क्या वीडियो नहीं देख
-          पा रहे हैं? यहां क्लिक करें](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)\n\n<br/><br/>\n\n---\n\n>
-          ## विचार करें\n> आप अपने छात्रों को सापेक्षों की अवधारणा कैसे समझाएंगे?<br><br>
-          [हमारी फोरम] पर अपने विचार साझा करें (http://forum.code.org/t/teaching-conditionals/406/1)।\n\n>
-          <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\" target=\"blank\"
-          rel=\"noopener noreferrer\"><button class=\"plc\">फोरमों में चर्चा करें
-          >></button></a>\n\nफोरम में टिप्पणी करने के बाद, यहां वापस आएं और अगले चरण
-          पर जाने के लिए नीचे क्लिक करें। "
       OPD-K5 Stage5Review:
         markdown: "# सापेक्ष > विचार करें\n\nइस चरण में, हमने पड़ताल की कि सापेक्ष,
           प्रोग्रामर्स के कोड में तर्क शामिल करने में उनकी मदद कैसे करते हैं। अगले
@@ -6456,47 +6410,7 @@ hi-IN:
           अध्यापक डैशबोर्ड का स्क्रीनशॉट नीचे दिया गया है। इसे देखने के लिए आपको अपने Code.org अध्यापक खाते पर लॉग इन करने की जरूरत है। जब आप लॉग इन कर लें, तो यह डिफॉल्ट स्क्रीन होगी, जिसे आप Code.org की वेबसाइट पर देखेंगे। यदि आपका अध्यापक खाता नहीं है, तो आप **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">यहां खाते के लिए साइन अप कर सकते हैं/a>**।
 
           <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
-      OPD-K5 Stage9Start_dani:
-        markdown: "# योजना बनाना > अध्यापक संसाधनों की पड़ताल करना\n\nचरणों 4-8 में,
-          आपने CS के मूल सिद्धांत के लिए उपलब्ध कुछेक \"अनप्लग्ड\" और ऑनलाइन प्रशिक्षण
-          संसाधनों पर नजर डाली, क्योंकि वे उन कंप्यूटर साइंस अवधारणों के मुताबिक हैं,
-          जो आप सीख रहे थे। \n\nअब जबकि आप थोड़ा-बहुत समझ चुके हैं कि कूटलेखन कैसे
-          करना है और कंप्यूटर साइंस कैसे पढ़ानी है, अब आपकी इंस्ट्रक्शन की योजना शुरू
-          करने का समय है। अगले चरण में, हम Code.org प्लेटफॉर्म और **[अध्यापक डैशबोर्ड](http://studio.code.org/)**
-          के अन्य क्षेत्रों पर जाएंगे।\n\nचरण 10 को पूरा करके, आप यह करेंगे:\n\n-
-          अध्यापकों के लिए उपलब्ध संसाधनों की पड़ताल \n- Code.org **[अध्यापक डैशबोर्ड](http://studio.code.org/)**
-          की पड़ताल\n- इसके लिए योजना कि आप अपने अभ्यास में कंप्यूटर साइंस को एकीकृत
-          कैसे कर सकते हैं\n\n***\n\nअध्यापक डैशबोर्ड का स्क्रीनशॉट नीचे दिया गया
-          है। इसे देखने के लिए आपको अपने Code.org अध्यापक खाते पर लॉग इन करने की जरूरत
-          है -- जब आप लॉग इन कर लें, तो यह डिफॉल्ट स्क्रीन होगी, जिसे आप Code.org
-          की वेबसाइट पर देखेंगे। यदि आपका अध्यापक खाता नहीं है, तो आप **[यहां खाते
-          के लिए साइन अप करें](https://studio.code.org/users/sign_up)**।\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
       OPD-K5 Using CS:
-        markdown: "# योजना बनाना > Code Studio पाठ के लिए तैयारी करना\n\nआइए इस पर
-          एक नजर डालें कि कक्षा परिवेश में आपके लिए और आपके छात्रों के लिए Code Studio
-          कैसे काम करता है।\n\n## चरण 1: कोर्स चुनें\nहमारा [एलिमेंटरी स्कूल पृष्ठ](https://code.org/educate/curriculum/elementary-school)
-          चुनें और हमारे CS के मूल सिद्धांत A-F के लिए पाठ योजनाएं और पूरे कोर्स पाएं।
-          अथवा, यदि आप हमारे मिडल स्कूल या हाई स्कूल कोर्सों में रुचि रखते हैं, तो
-          आपको, आरंभिक पाठकों से लेकर हाई स्कूल तक,  बीच में हर कोई, सभी ग्रेड स्तरों
-          के लिए कोर्स मिलेंगे। हमारे सभी कोर्स निशुल्क उपलब्ध हैं। यह निर्धारित करने
-          के लिए अपने स्कूल के सहपाठियों से बात करें कि कोर्स पाठ्यक्रम को भिन्न प्रकार
-          के विषयों के साथ एकीकृत कैसे किया जा सकता है। \n \n## चरण 2: अपना कक्षा
-          सेक्शन सेट अप करें\nअपने छात्र की प्रगति देखने, अपने छात्रों के लिए लॉगिन
-          कार्ड प्रिंट करने, उनके खाते व्यवस्थित करने और सर्टिफिकेट, जिन्हें वे कोर्स
-          समाप्त होने पर घर ले जा सकते हैं, प्रिंट करने के लिए कक्षा सेक्शन सेट अप
-          करें। लिंक **[संक्षिप्त वीडियो देखें]\n(https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
-          पर क्लिक करें, जो दर्शाता है कि Code.org पर अपनी पहली कंप्यूटर साइंस कक्षा
-          कैसे सेट अप करें। आप **[इस सहायता लेख] (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
-          में भी चरण देख सकते हैं।\n\n## चरण 3: अपने सेक्शन को कोर्स असाइन करें\nउस
-          कोर्स पर क्लिक करें, जो आप पढ़ा रहे हैं -- आप एक स्क्रीन देखेंगे, जो नीचे
-          दी गई स्क्रीन की तरह दिखती है। फिर आप \"कोर्स असाइन करें\" पर क्लिक करके,
-          उस कोर्स को अपने एक सेक्शन को असाइन कर सकते हैं।\n\n## चरण 4: पढ़ाना शुरू
-          करें! \nकंप्यूटर साइंस अवधारणाओं को आपकी कक्षा में लाने के लिए यही सब करना
-          होता है। जब आप CS के लिए अपने छात्रों का उत्साह देखें, को अपने छात्रों का
-          मार्गदर्शन करने के लिए रोज़ाना की पाठ योजनाओं, अनप्लग्ड गतिविधियों, जिन्हें
-          आप बिना कंप्यूटर के कर सकते हैं और दूसरे अध्यापकों से जुड़ने के लिए फोरमों
-          पर जाएं।\n\n"
-      OPD-K5 Using CS_dani:
         markdown: "# योजना बनाना > Code Studio पाठ के लिए तैयारी करना\n\nआइए इस पर
           एक नजर डालें कि कक्षा परिवेश में आपके लिए और आपके छात्रों के लिए Code Studio
           कैसे काम करता है।\n\n## चरण 1: कोर्स चुनें\nहमारा [एलिमेंटरी स्कूल पृष्ठ](https://code.org/educate/curriculum/elementary-school)
@@ -6946,3 +6860,149 @@ hi-IN:
           बहुत ही बुनियादी विवरण के साथ पाठ शुरू करती है। बाद में, कक्षा एक रैंडम  संख्या
           को सहेजने  के लिए वेरिएबल का उपयोग करती है, जिससे प्रोग्राम एक ही रैंडम
           संख्या को कई बार उपयोग कर सकते हैं।
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games variables practice_2021:
+        display_name: वेरिएबल्स का अभ्यास
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 CSS practice_pilot_2021:
+        display_name: CSS के साथ स्टाइलिंग टेक्सट
+      CSD U2 Image challenge_pilot_2021:
+        display_name: चित्र शामिल करना
+      CSD U2 Image practice_pilot_2021:
+        display_name: चित्र शामिल करना
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: "https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
+            -> answers -> 1 -> text"
+        - text: "https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
+            -> उत्तर -> 2 -> टेक्स्ट"
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: |-
+          अपने बग के विवरण के साथ HTML के त्रुटियुक्त कोड का मिलान करें।
+
+          https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> content1
+        questions:
+        - text: |-
+            `src` विशेषता (एट्रिब्युट) को गलत तरीके से लिखा गया है।
+
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 0 -> text
+        - text: |-
+            `src` और` alt` विशेषताएँ (एट्रिब्युटस) स्विच की गयी हैं
+
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 1 -> text
+        - text: "फ़ाइल एक्सटेंशन (.jpg) छवि पते (इमेज एड्रेस) से गायब है\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4
+            -> dsls -> questions -> 2 -> text"
+        - text: छवि पता (इमेज एड्रेस) एक `src` विशेषता (एट्रिब्युट) के रूप में नहीं
+            दिया गया है
+        - text: फ़ाइल के नाम में एक रिक्त स्थान (स्पेस ) है
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: यहां वर्णन करें
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: शीर्षक
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: यहां वर्णन करें
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: अभ्यास
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: यहां वर्णन करें
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: यहां वर्णन करें
+      CSD U6 LED create intro_2021:
+        content1: यहां वर्णन करें
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: यहां वर्णन करें
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: अनुमान लगाएं
+      CSD games cake challenge choice_2021:
+        display_name: चुनौतियां
+      CSD games functions practice choice_2021:
+        display_name: फंक्शन्स का अभ्यास
+      CSD games platform challenge choice_2021:
+        display_name: चुनौतियां
+      CSD web conditionals practice choice_2021:
+        display_name: सापेक्षों का अभ्यास
+      CSD web draw loop practice choice_2021:
+        display_name: अभ्यास
+      CSD web movement practice choice_2021:
+        display_name: अभ्यास
+      CSD web text practice choice_2021:
+        display_name: अभ्यास

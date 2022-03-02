@@ -61,6 +61,21 @@
         },
         "define/coursee/2021": {
           "word": "Definir"
+        },
+        "variable/csd/2021": {
+          "word": "Variábel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstracción"
+        },
+        "function/csd/2021": {
+          "word": "Función"
+        },
+        "copyright/csd/2021": {
+          "word": "Dereitos de Autor"
         }
       }
     }

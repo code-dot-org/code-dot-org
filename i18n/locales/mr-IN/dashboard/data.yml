@@ -68,6 +68,7 @@ mr:
         C3_artist_nested_loops: नेस्टेड लूप्स
         C3_bee_nested_loops: नेस्टेड लूप्स
         C3_computational_thinking: कॉम्प्युटेशनल विचार  
+        C4_loops_zombie: लूप्स
         C4_variables_artist: व्हेरीएबल्स - आर्टीस्ट
         C4_math_artist: गणित वापरून आर्टीस्टचे प्रोग्रॅमिंग करणे
         C4_conditionals: कंडीशनल्स 
@@ -82,6 +83,7 @@ mr:
         infinity_playlab_events: प्ले लॅब - इव्हेंट्स
         infinity_playlab_repeat_forever: प्ले लॅब - रिपीट फॉरेव्हर
         csp_applab_functions: फंक्शन्सची ओळख
+        csp_applab_loops: लूप्स
         csp_cs_is_changing_everything: संगणक शास्त्रामुळे सगळे काही बदलत आहे
         starwars_intro: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे - प्रस्तावना '
         starwars_typing: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे - जावास्क्रिप्ट'
@@ -103,6 +105,7 @@ mr:
         mc_2017_puzzle_3: माईनक्राफ्ट अवर ऑफ कोड - रिपीट लूप्स
         mc_2017_puzzle_8: माईनक्राफ्ट अवर ऑफ कोड - फंक्शन्स 
         mc_2017_puzzle_12: माईनक्राफ्ट अवर ऑफ कोड - फ्रीप्ले 
+        CSF_loops_AB: लूप्स
         CSF_SpriteLabIntro_CDEF: ही स्प्राईट लॅब आहे
         CSF_StarWars_ProjectIntro: स्टार वॉर्स प्रोजेक्टची ओळख
         hoc_dance_warmup: डांस पार्टी - वार्म अप

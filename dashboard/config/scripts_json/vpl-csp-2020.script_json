@@ -5,12 +5,14 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
+      "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "20-21-virtual-AYW-CSP",
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "version_year": "2020"
     },
     "new_name": null,
-    "family_name": null,
+    "family_name": "vpl-csp",
     "serialized_at": "2021-11-22 19:57:19 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",

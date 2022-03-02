@@ -12,12 +12,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   end
 
   def alternate_email
-    # [MEG] TODO: Eliminate column_exists after migration
-    application_id = if ActiveRecord::Base.connection.column_exists?(:pd_enrollments, :application_id)
-                       object.try(:application_id)
-                     else
-                       object.application_id
-                     end
+    application_id = object.try(:application_id)
     return unless application_id
 
     # Note: Use dig instead of [] because RuboCop doesn't like chaining ordinary method call after safe navigation operator.

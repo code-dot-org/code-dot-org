@@ -4,12 +4,19 @@ mr:
       Blue: निळा
       Green: हिरवा
       Red: लाल
+      birds: पक्षी
       cats: मांजरी
       dogs: कुत्री
       height: उंची
       i: i
       left: डावा
+      planet: ग्रह
+      random: कोणताही
       repeat: पुन्हा करा
       right: उजवा
+      score: गुण
+      shout: ओरडणे
       size: आकार
+      variable: व्हेरीएबल
       width: रुंदी
+      x: x

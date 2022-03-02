@@ -37,7 +37,7 @@ th:
         finish_sign_up_header: เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ
         error:
           future: ไม่สามารถทำได้ในอนาคต
-  beta: Beta
+  beta: เบต้า
   hello: สวัสดีชาวโลก
   welcome_back: ยินดีต้อนรับอีกครั้ง, % {name}
   your_professional_learning_plan: แผนการเรียนของคุณ
@@ -53,7 +53,7 @@ th:
   heading_x_of_y: "%{heading} (หน้า %{x} จาก %{y})"
   join_section:
     code:
-      placeholder: ส่วนรหัส (ABCDEF)
+      placeholder: โค้ดหมวด (ABCDEF)
       submit: เข้าร่วม
   add_hint_form:
     placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
@@ -90,6 +90,7 @@ th:
     facebook: เฟซบุค
     windowslive: บัญชี Microsoft
     microsoft_v2_auth: บัญชี Microsoft
+    clever: เคลฟเวอร์
     powerschool: Powerschool
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
@@ -135,6 +136,7 @@ th:
     user_type_teacher: ครู
     field_is_required: จำเป็น
     accept_terms: คุณต้อง ยอมรับ เพื่อสร้างบัญชี
+    email_preference_privacy: "(ดูนโยบายความเป็นส่วนตัวของเรา)"
     email_preference_yes: ใช่
     email_preference_no: ไม่ใช่
     share_teacher_email_reg_partner_question: คุณต้องการให้เราแชร์ข้อมูลการติดต่อของคุณกับ
@@ -206,6 +208,8 @@ th:
       picture: รหัสผ่านภาพ
       word: ข้อความล๊อกอิน
       email: อีเมล
+      google_classroom: Google Classroom
+      clever: เคลฟเวอร์
   follower:
     invite_sent: ส่งคำเชิญ
     added_teacher: "%{name} เพิ่มเป็นครูของคุณ"
@@ -222,6 +226,7 @@ th:
       cant_join_own_section: ขออภัย คุณไม่สามารถร่วมเซคชั่นของคุณเอง
       restricted_section: เราไม่สามารถเพิ่มคุณไปที่ส่วน %{section_code} เพราะส่วนนี้ถูกล็อคไว้
         โปรดติดต่อขอความช่วยเหลือจากผู้สอน
+      not_participant_type: เราไม่สามารถเพิ่มคุณไปยังหมวด %{section_code} ได้ เนื่องจากคุณมีคุณสมบัติไม่ตรงตามประเภทของผู้เข้าร่วมหมวดนั้น
     mail:
       student_disassociated:
         subject: 'การแจ้งเตือนของ Code.org: ขณะนี้ %{student_name} ไม่เเป็นนักเรียนของคุณ'
@@ -278,19 +283,28 @@ th:
       team: ทีม
       navigator: คู่หู
       create: สร้าง
+      algebra_game: พีชคณิต
       applab: แอ๊ปแล็บ
       artist: ศิลปิน
       artist_k1: ศิลปิน (เด็กวัยเรียนรู้)
+      basketball: บาสเก็ตบอล
       bounce: กระเด้ง
+      calc: แคล
       dance: Dance Party
+      eval: อีวาล
+      flappy: แฟล๊ปปี้
       frozen: โฟรเซ่น
       gamelab: เกมแล๊บ (Game Lab)
+      gamelab_jr: เกมแล็บ (เบต้า)
       gumball: โลกมหัศจรรย์ของ Gumball
       iceage: ยุคน้ำแข็ง (Ice Age)
       infinity: ไม่จำกัด
       minecraft_adventurer: การผจญภัยในไมน์คราฟท์
+      minecraft_aquatic: โลกใต้ทะเลของ Minecraft
       minecraft_designer: ไมน์คราฟท์
+      minecraft_hero: มายคราฟฮีโร่
       playlab: เรื่องราวและเกม
+      playlab_k1: เพลย์แลป (เด็กวัยเรียนรู้)
       poetry: บทกวี
       poetry_hoc: ภาพปกบทกวี
       sports: กีฬา
@@ -298,6 +312,7 @@ th:
       starwarsblocks: สตาร์วอร์ส (บล็อก)
       starwarsblocks_hour: สตาร์วอร์ส (บล็อก)
       loading: กำลังโหลด...
+      weblab: เว็บแลป
     popup:
       progress_for_user: ความคืบหน้าของ %{name}
       progress: ความคืบหน้าของคุณ
@@ -349,6 +364,7 @@ th:
     remove_parent_email_label: ลบ
     none: ไม่มี
     only_one_parent_email_supported_warning: 'หมายเหตุ: ในขณะนี้ เราสามารถรองรับที่อยู่อีเมลของผู้ปกครอง/ผู้พิทักษ์ได้เพียงหนึ่งอีเมลต่อหนึ่งบัญชีนักเรียนเท่านั้น'
+    encrypted: เข้ารหัส
   user_level:
     completed: เสร็จแล้ว
   home:
@@ -390,6 +406,8 @@ th:
     no_primary_course: ทดลองคอร์ส Code Studio
     choose_next_course: ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้
     print_certificate: พิมพ์ใบรับรอง
+  move_students:
+    not_correct_participant_type: คุณไม่สามารถย้ายผู้ใช้งานได้ เนื่องจากผู้ใช้งานเหล่านั้นยังไม่มีสิทธิ์เข้าร่วมในหมวดใหม่
   share:
     title: เรียนกับ Code Studio
   gender:
@@ -416,6 +434,7 @@ th:
     built_on_code_studio: สร้างด้วย Code Studio
     make_my_own_app: สร้าง app ของฉันเอง
     how_it_works: มันทำงานได้อย่างไร
+    cookie_notice: ประกาศเกี่ยวกับคุกกี้
   reference_area:
     title: ต้องการความช่วยเหลือ?
     subtitle: ดูวิดีโอและคำบอกใบ้พวกนี้
@@ -430,6 +449,7 @@ th:
     download: ดาวน์โหลดวิดีโอ
     show_notes: แสดงข้อความ
     show_video: แสดงวิดีโอ
+    label: วิดีโอ
   compatibility:
     upgrade:
       unsupported_message: เบราเซอร์ของคุณไม่ได้รับการสนับสนุนให้ใช้งาน กรุณาอัพเกรดเบราเซอร์เป็น
@@ -570,8 +590,8 @@ th:
     correct_body: เป็นคำตอบที่ถูกต้อง
   dialog:
     ok: ตกลง
-    startover_title: คุณจะเริ่มต้นใหม่จริงๆหรือ ?
-    startover_ok: เริ่มเล่นใหม่
+    startover_title: คุณจะเริ่มต้นใหม่ใช่หรือไม่?
+    startover_ok: เริ่มใหม่
     startover_cancel: ยกเลิก
   terms_interstitial:
     tos: เงื่อนไขการให้บริการ
@@ -605,7 +625,7 @@ th:
     unpublish: ไม่เผยแพร่
     name: ชื่อ
     project_type: ประเภทโปรเจกต์
-    saved: จัดเก็บสู่ที่แสดงรูปภาพเรียบร้อยแล้ว!
+    saved: บันทึกแล้ว
     view_all: ดูโปรเจคของฉัน
     abuse:
       report_abuse_form:
@@ -623,8 +643,10 @@ th:
       email: อีเมล
       school: โรงเรียน
       school_name: ชื่อโรงเรียน
+      school_city: เมืองของโรงเรียน
       school_city_district: อำเภอ/เมืองของโรงเรียน
       school_country: ประเทศของโรงเรียน
+      colombian_school_city: เมืองของโรงเรียน
       colombian_chilean_school_name: ชื่อโรงเรียน
     form_entries:
       gender:
@@ -644,7 +666,7 @@ th:
         ages_19_over: 19 ขึ้นไป
       subjects:
         cs: วิทยาการคอมพิวเตอร์
-        math: คำนวณ
+        math: คณิตศาสตร์
         science: วิทยาศาสตร์
         la: ศิลปะการใช้ภาษา
       resources:
@@ -667,3 +689,4 @@ th:
     text: "**คุณเป็นผู้ปกครองหรือผู้พิทักษ์หรือไม่ ** เชื่อมต่ออีเมลของคุณเข้ากับบัญชีนี้เพื่อรับข้อมูลความคืบหน้าและโครงการของบุตรหลานของคุณ!"
     link_your_email: เชื่อมต่ออีเมลของคุณ
     not_now: ไม่ใช่ตอนนี้
+  teacher_feedback: ข้อเสนอแนะของผู้สอน

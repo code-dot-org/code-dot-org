@@ -172,6 +172,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Verlustlose Kompression"
         },
+        "event/outbreak/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
         "event/sports/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
@@ -245,10 +249,6 @@
         "line/poem-art/unversioned": {
           "word": "Zeile",
           "definition": "(Poesie) - ein Teil eines Gedichtes, das in einer Reihe angeordnet ist und am rechten Rand endet."
-        },
-        "event/outbreak/unversioned": {
-          "word": "Ereignis",
-          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "sprite/coursef/2021": {
           "word": "Sprite"
@@ -723,6 +723,59 @@
         "try/coursee/2021": {
           "word": "Versuche",
           "definition": "Versuche etwas zu tun"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Maschinelles Lernen"
+        },
+        "user_interface/csd/2021": {
+          "word": "Benutzeroberfläche"
+        },
+        "bug/csd/2021": {
+          "word": "Bug/Fehler",
+          "definition": "Teil eines Programms, der nicht korrekt funktioniert."
+        },
+        "for_loop/csd/2021": {
+          "word": "\"for“-Schleife",
+          "definition": "Schleifen mit einem voreingestellter Anfang, Ende und einem vorher eingestelltem Zuwachs (Schrittweite)."
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/csd/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "variable/csd/2021": {
+          "word": "Variable",
+          "definition": "Ein Platzhalter für Information die sich noch ändern kann."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "condition/csd/2021": {
+          "word": "Bedingung"
+        },
+        "conditionals/csd/2021": {
+          "word": "Bedingungen"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2021": {
+          "word": "Funktion"
+        },
+        "input/csd/2021": {
+          "word": "Eingabe"
+        },
+        "processing/csd/2021": {
+          "word": "Verarbeitung"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digitaler Fußabdruck"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

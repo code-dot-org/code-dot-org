@@ -239,13 +239,16 @@
           "craft_callout_preplaced_house": "Tento kód zahájí budování tvého domu. Umíš to dokončit?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program",
+          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program",
+          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program",
+          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Opakuj akce umístěním bloků zde"
@@ -1086,6 +1089,9 @@
         },
         "courseF_events_predict": {
           "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "K zobrazení mřížky klikněte zde."
         }
       }
     }

@@ -84,7 +84,7 @@ Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malal
 
 **Temat:** Dołącz do nas i do ponad 100 milionów uczniów na Godzinę Kodowania <br />
 
-Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. But only 51% of all high schools teach computer science. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszeliście o Godzinie Kodowania wcześniej, to zapewne wiecie, że zapisała się już w historii. Ponad 100 milionów uczniów wzięło już udział w Godzinie Kodowania.
+Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. But only 51% of all high schools offer computer science. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszeliście o Godzinie Kodowania wcześniej, to zapewne wiecie, że zapisała się już w historii. Ponad 100 milionów uczniów wzięło już udział w Godzinie Kodowania.
 
 Dzięki Godzinie Kodowania, zajęcia z informatyki pojawiły się na stronach Google, MSN, Yahoo! i Disney. Ponad 100 partnerów wspólnie wsparło tę inicjatywę. Każdy sklep Apple na świecie gościł już Godzinę Kodowania i przywódcy, jak Obama i kanadyjski premier Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
 
@@ -110,7 +110,7 @@ Pomiędzy {{ campaign_date/short }}, dziesięć procent uczniów z całego świa
 
 Uczniowie utworzą swoje własne aplikacje lub gry, które mogą zaprezentować swoim rodzicom. Wydrukujemy także certyfikaty Godziny Kodowania, które będą mogli zabrać do domu. I to jest fajne! Wraz z interaktywnymi i praktycznymi zajęciami, uczniowie w przystępny sposób nabędą umiejętności komputacyjnego myślenia.
 
-Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. But only 51% of all high schools teach computer science. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszałaś/eś wcześniej o Godzinie Kodowania, wiesz zapewne, że stała się już historią - ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nawet przywódcy, tacy jak prezydent Obama i premier Kanady Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
+Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. But only 51% of all high schools offer computer science. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszałaś/eś wcześniej o Godzinie Kodowania, wiesz zapewne, że stała się już historią - ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nawet przywódcy, tacy jak prezydent Obama i premier Kanady Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
 
 Możesz przeczytać więcej o tej inicjatywie na http://hourofcode.com. Lub daj nam znać, jeśli chcesz zarezerwować czas na rozmowę o tym, w jaki sposób [nazwa szkoły] może wziąć udział. <br />
 
@@ -126,7 +126,7 @@ Drodzy Rodzice,
 
 Żyjemy w świecie pełnym technologii. I wiemy, że niezależnie od tego, który zawód wybiorą nasi uczniowie, ich szansa na sukces będzie coraz bardziej zależeć od rozumienia, jak działają technologie.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 Dlatego cała nasza szkoła dołącza do największego wydarzenia edukacyjnego w historii: Godziny Kodowania, w czasie Tygodnia Edukacji Informatycznej ({{ campaign_date/full }}). Ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nasza Godzina Kodowania potwierdza, że [NAZWA SZKOŁY] jest gotowa, by uczyć fundamentalnych umiejętności XXI-wieku. Aby móc kontynuować zajęcia z programowania dla waszych uczniów chcemy, aby wydarzenie naszej Godziny Kodowania było jeszcze większe. Zachęcam was do wolontariatu, kontaktu z lokalnymi mediami, dzielenia się nowinkami w mediach społecznościowych oraz do rozważenia organizacji dodatkowych Godzin Kodowania w waszej społeczności.
 
@@ -144,7 +144,7 @@ Odwiedź http://hourofcode.com/{{ country_language }}po szczegółowe informacje
 
 **Temat:** Lokalna szkoła włącza się w misję wprowadzania uczniów do informatyki
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Młode kobiety i uczniowie wywodzący się z grup marginalizowanych ze względów rasowych i etnicznych są zdecydowanie niedostatecznie reprezentowani na zajęciach z informatyki oraz w branży zaawansowanych technologii. Dobrą wiadomością jest, że zamierzamy to zmienić.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Młode kobiety i uczniowie wywodzący się z grup marginalizowanych ze względów rasowych i etnicznych są zdecydowanie niedostatecznie reprezentowani na zajęciach z informatyki oraz w branży zaawansowanych technologii. Dobrą wiadomością jest, że zamierzamy to zmienić.
 
 Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
 
@@ -172,7 +172,7 @@ Szanowny Panie / Szanowna Pani [Burmistrz/Wójt/Radny/Poseł/Senator IMIĘ i NAZ
 
 Czy Pan/i wie, że informatyka jest największym źródłem dochodów w Stanach Zjednoczonych? Jest ponad 500.000 miejsc pracy dla informatyków, ale w zeszłym roku tylko 42.969 nowych absolwentów informatyki wkroczyło na rynek pracy.
 
-Informatyka jest dzisiaj podstawą w każdej branży, a mimo to, szkoły jej nie uczą. W [NAZWA SZKOŁY] próbujemy to zmienić.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 Dlatego cała nasza szkoła dołącza do największego wydarzenia edukacyjnego w historii: Godziny Kodowania, w czasie Tygodnia Edukacji Informatycznej ({{ campaign_date/full }}). Ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania.
 

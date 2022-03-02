@@ -136,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Defineix"
+        },
+        "debugging/csd/2021": {
+          "word": "Depuració"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condicionals"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstracció"
+        },
+        "function/csd/2021": {
+          "word": "Funció"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

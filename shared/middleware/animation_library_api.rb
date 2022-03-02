@@ -3,6 +3,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/aws/s3'
+require_relative '../../lib/cdo/png_utils'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
@@ -130,19 +131,32 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/animation-library/level-animations-filenames/
+  # GET /api/v1/animation-library/level-animations-files/
   #
-  # Retrieve filenames from the level-animations bucket
-  get %r{/api/v1/animation-library/level-animations-filenames} do
-    animations_by_name = []
+  # Retrieve file objects from the level-animations bucket
+  # File objects contains: key, last_modified, version_id, and source_size and
+  # are accessed with animation_name and extension
+  get %r{/api/v1/animation-library/level-animations-files} do
+    animations_by_name = {}
     prefix = 'level_animations'
     bucket = Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET)
     bucket.objects({prefix: prefix}).each do |object_summary|
       animation_name = object_summary.key[/level_animations[^.]+/]
+      extension = object_summary.key[/(?<=\.)\w+$/]
+      next if extension.nil? # Skip 'directory' objects
+
       # Push into animations collection if unique
-      animations_by_name.push(animation_name)
+      animations_by_name[animation_name] ||= {}
+      next unless animations_by_name[animation_name][extension].nil?
+      # Populate sourceSize if not already present
+      calculated_source_size = {}
+      if extension === 'png'
+        png_body = object_summary.object.get.body.read
+        calculated_source_size = PngUtils.dimensions_from_png(png_body)
+      end
+      animations_by_name[animation_name][extension] = {key: object_summary.key, last_modified: object_summary.last_modified, version_id: object_summary.object.version_id, source_size: calculated_source_size}
     end
-    {filenames: animations_by_name}.to_json
+    animations_by_name.to_json
   end
 
   #

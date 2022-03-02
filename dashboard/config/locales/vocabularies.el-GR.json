@@ -163,6 +163,30 @@
         },
         "define/coursee/2021": {
           "word": "Όρισε"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "debugging/csd/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "variable/csd/2021": {
+          "word": "Μεταβλητή"
+        },
+        "conditionals/csd/2021": {
+          "word": "Συνθήκες"
+        },
+        "abstraction/csd/2021": {
+          "word": "Αφαίρεση"
+        },
+        "function/csd/2021": {
+          "word": "Συνάρτηση"
+        },
+        "input/csd/2021": {
+          "word": "Είσοδος"
+        },
+        "copyright/csd/2021": {
+          "word": "Πνευματικά δικαιώματα"
         }
       }
     }

@@ -1608,7 +1608,20 @@
         "courseB_maze_seq6_2021": "Flytt først en vei, så en annen for å få Scrat til eikenøtten!",
         "courseB_maze_seq7_2021": "Finn ut hva som mangler og legg så til de manglende blokkene for å få Scrat til eikenøtten!",
         "courseB_maze_seq8_2021": "Din tur! Hva trenger du for å få Scrat til eikenøtten?",
-        "courseB_maze_seq9_2021": "Utfordring: Flytt deg rundt den sprekte isen for å få Scrat til eikenøtten."
+        "courseB_maze_seq9_2021": "Utfordring: Flytt deg rundt den sprekte isen for å få Scrat til eikenøtten.",
+        "CSD U3 L5 Freeplay_2021": "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?",
+        "CSD U3 Variables change circle size_2021": "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?",
+        "CSD U3 Variables naming rules v2_2021": "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?",
+        "CSD U3 Variables random with assignment_2021": "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?",
+        "CSD U5 black white images pixelation 2_2021": "Teikn eit smilefjes (Klikk her for å sjå bilete)",
+        "CSD U5 black white images pixelation 3_2021": "Endre bredde- og høgde-sliderane for å finne bildet (klikk her for å sjå meir)",
+        "CSD U5 black white images pixelation 4_2021": "Legg augebryn til smilefjeset (klikk her for å sjå biletet)",
+        "CSD U5 black white images pixelation 5_2021": "Teikn det du vil",
+        "CSD U5 black white images pixelation_2021": "Gjer ferdig X-forma ved å skrive nullar og eittal",
+        "CSDU6 arrays select rainbow_2021": "Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)",
+        "CSDU6 arrays select random_2021": "Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)",
+        "CSDU6 arrays select variable_2021": "Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)",
+        "U4 Model Design 1_2021": "Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)"
       }
     }
   }

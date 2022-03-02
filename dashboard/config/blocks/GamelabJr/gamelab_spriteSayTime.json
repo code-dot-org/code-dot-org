@@ -1,5 +1,5 @@
 {
-  "category": "Experimental",
+  "category": "Sprites",
   "config": {
     "func": "spriteSayTime",
     "blockText": "{SPRITE}say{TEXT1}for{NUM}seconds",

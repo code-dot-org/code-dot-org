@@ -3196,3 +3196,111 @@ km-KH:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: លក្ខណៈសម្បត្តិនៃ sprite
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: ការបង្វិល.សត្វឆ្កែ &lt; ការបង្វិល.សត្វឆ្មា
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: ចំ​ណង​ជើង
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U6 LED create intro_2021:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: ការណែនាំ​ នៅទីនេះ
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: អាន​កូដ​ហើយ​ប៉ាន់ស្មាន​ថា​តើ​កម្មវិធី​នេះ​នឹង​មានរូបរាង​ដូច​ម្តេច​នៅ​ពេល​ដំណើរការ​។
+        title: សូម​ធ្វើការ​ប៉ាន់ស្មាន
+      csd-pre-survey-levelgroup_21_22:
+        title: CS ស្វែងយល់ពីការស្ទង់មតិមុនវគ្គសិក្សារបស់និស្សិត

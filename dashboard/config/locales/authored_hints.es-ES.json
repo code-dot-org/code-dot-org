@@ -300,7 +300,7 @@
         "Course 4 Artist 12": {
           "Course_4_Artist_12_a": "Cada forma repetida es la combinación de \\*\\* la mitad de un hexágono \\*\\*, seguida de \\*\\* 2/3 de un triángulo \\*\\*. ",
           "Course_4_Artist_12_b": "La forma de la unidad es casi la misma que en el último acertijo, excepto que el medio hexágono es un poco más grande. ",
-          "Course_4_Artist_12_c": "1.  Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados ",
+          "Course_4_Artist_12_c": "1.  Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados ",
           "Course_4_Artist_12_d": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">60</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant\">\n                        <title name=\"DIR\">turnRight</title>\n                        <title name=\"VALUE\">60</title>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveForward</title>\n                        <title name=\"VALUE\">80</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">120</title>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "Course 4 Artist 6": {
@@ -1337,10 +1337,10 @@
           "courseF_bee_functions_challenge2_b": "**Solución:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "A continuación, recoge las gemas restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "A continuación, recoge las gemas restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Finalmente, recoge el tesoro restante. Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Esta es la solución completa para el desafío.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "courseD_collector_debugging_challenge2_a": "Empieza por concentrarte en recoger DOS piedras preciosas, de cada uno de los dos primeros montones.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUtiliza estos bloques.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          "courseD_collector_debugging_challenge2_a": "Empieza por concentrarte en recoger DOS piedras preciosas, de cada uno de los dos primeros montones.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUtiliza estos bloques.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         },
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "El botón de 'PASO' puede ser muy útil en este desafío.",
@@ -3024,25 +3024,25 @@
           "courseB_maze_seq5_c": "¿No estás seguro de cómo llegar a la bellota? Prueba este camino."
         },
         "courseB_maze_seq6": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro/a de cómo llegar al cerdo? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2018": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2019": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2020": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
@@ -3053,17 +3053,17 @@
           "courseB_maze_seq7_c": "¿No puedes llegar al cerdo? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2018": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2019": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2020": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
@@ -5777,16 +5777,16 @@
           "courseD_bee_conditionals_challenge1_b": "En este rompecabezas, cada espacio podría tener una flor, un panal de miel o nada. Eso significa que puedes repetir tu condicional `si/si no` en cada cuadrado."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "¿Por qué funciona la primera mitad de este programa? Piensa por qué la abeja necesita moverse hacia atrás. ¿Cuánto néctar recoge la abeja cada vez que se mueve sobre una flor?",
@@ -6067,8 +6067,8 @@
           "courseD_collector_debugging9_b": "Averigua cómo resolverías el acertijo, luego muévete paso a paso para intentar que el código coincida con lo que tienes en la cabeza."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Para comenzar, recoge solo **dos** gemas de cada una de las primeras **dos** pilas.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUsa estos bloques.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "A continuación, recoge las gemas restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Para comenzar, recoge solo **dos** gemas de cada una de las primeras **dos** pilas.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUsa estos bloques.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "A continuación, recoge las gemas restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Finalmente, recoge el tesoro restante. Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Esta es la solución completa para el desafío.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -8753,7 +8753,7 @@
           "courseC_PlayLab_eventsA_a": "Utiliza las teclas de flecha para mover el pingüino. No necesitas escribir ningún código para terminar este nivel."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras polen > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede polen. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras polen > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede polen. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "outbreak1": {
           "step1": "Utiliza estos bloques para crear tus sprites:\n\n[blockly block][0]\n\n[blockly block][1]\n\nEste bloque se encuentra en la categoría **Sprites** de la caja de herramientas.",
@@ -9133,24 +9133,24 @@
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
-          "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
+          "courseA_maze_seq10_a": "Si tienes problemas, intenta escribir primero los pasos en un papel.",
+          "courseA_maze_seq10_b": "Tendrás que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq13_2021": {
-          "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
-          "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> te acercarán al cerdo."
+          "courseA_maze_seq13_a": "Si el camino que necesitas no está claro, utiliza tu dedo para trazar el camino desde el pájaro hasta el cerdo.",
+          "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta añadiendo bloques y ejecutando el código para ver qué ocurre.",
+          "courseA_maze_seq13_c": "Estos <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n bloques te ayudarán para acercarte al cerdo."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto en <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "El ave tendrá que moverse hacia el oeste 3 veces para llegar al cerdo. Utilice este bloque:\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Si tienes problemas para conseguir que el pájaro se mueva, asegúrate de que los bloques están encajados en su sitio bajo <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "El pájaro tendrá que moverse hacia el Oeste 3 veces para llegar al cerdo. Usa este bloque:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
           "1": "¡Intenta escribir los pasos en papel para encontrar una solución!",
-          "2": "Necesitarás usar este bloque:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "Necesitarás utilizar este bloque:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5a_2021": {
-          "1": "Diga los pasos en voz alta y vea si le ayudan a encontrar la respuesta."
+          "1": "Repite los pasos en voz alta y comprueba si te ayuda a averiguar la respuesta."
         },
         "courseA_maze_seq6_2021": {
           "courseA_maze_seq6_a": "Tu código final debe tener 3 bloques de movimiento.",
@@ -9202,23 +9202,23 @@
           "courseA_playlab_events_challenge2_c": "Puedes hacer gruñir a un monstruo enojado.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic en ambos bloques al mismo tiempo, luego haz clic en \"ejecutar\" otra vez.",
-          "2": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "1": "Si Scrat no hace lo que quieres, asegúrate de que los dos bloques se han unido completamente y vuelve a hacer clic en \"Ejecutar\".",
+          "2": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "courseB_Scrat_ramp2_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2021": {
-          "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Tu código debería ser así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_artist_loops2_2021": {
           "courseB_artist_loops2_a": "Si deseas que el loop se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
@@ -9356,39 +9356,39 @@
           "courseB_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> Scrat hará movimiento!",
-          "courseB_maze_seq1_b": "Arrastre tres de estas <xml><block type=\"maze_moveSouth\"/></xml> flechas y conectalas al bloque <xml><block type=\"when_run\"/></xml> para que Scrat llegue a la bellota."
+          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> ¡para hacer que Scrat se mueva!",
+          "courseB_maze_seq1_b": "Arrastra tres flechas como esta <xml><block type=\"maze_moveSouth\"/></xml> hacia fuera y conéctalas al bloque <xml><block type=\"when_run\"/></xml> para llevar a Scrat hasta la bellota."
         },
         "courseB_maze_seq4_2021": {
-          "courseB_maze_seq4_a": "Intente agregar una instrucción a la vez hasta que llegue a la bellota.",
-          "courseB_maze_seq4_b": "Necesitas usar el bloque <xml><block type=\"maze_moveEast\"/></xml> para solucionar este puzzle."
+          "courseB_maze_seq4_a": "Intenta añadir una instrucción cada vez hasta llegar a la bellota.",
+          "courseB_maze_seq4_b": "Deberás utilizar el bloque <xml><block type=\"maze_moveEast\"/></xml> para resolver este rompecabezas."
         },
         "courseB_maze_seq5_2021": {
-          "courseB_maze_seq5_a": "Si te quedas atascado/a, intenta dibujar la ruta en papel.",
-          "courseB_maze_seq5_b": "¡Hay 2 formas de resolver este desafío!",
-          "courseB_maze_seq5_c": "¿No estás seguro de cómo llegar a la bellota? Prueba este camino."
+          "courseB_maze_seq5_a": "Si te bloqueas, intenta dibujar el recorrido en un papel.",
+          "courseB_maze_seq5_b": "¡Hay 2 formas de resolver este rompecabezas!",
+          "courseB_maze_seq5_c": "¿No sabes cómo llegar hasta la bellota?  Prueba este recorrido."
         },
         "courseB_maze_seq6_2021": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
-          "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
-          "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
-          "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
+          "courseB_maze_seq6_b": "Si te bloqueas, intenta resolver el rompecabezas en dos partes, una de lado y otra de arriba a abajo.",
+          "courseB_maze_seq5_c": "Hay dos formas de resolver este rompecabezas.",
+          "courseB_maze_seq5_d": "¿No sabes cómo llegar a la bellota? ¡Prueba este recorrido!"
         },
         "courseB_maze_seq7_2021": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
-          "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
-          "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
+          "courseB_maze_seq7_b": "Prueba a ejecutar el código que se te ha facilitado y mira a ver dónde acabas.",
+          "courseB_maze_seq7_c": "¿No puedes llegar hasta la bellota?  ¡Prueba este camino!"
         },
         "courseB_maze_seq8_2021": {
-          "courseB_maze_seq8_a": "Intenta agregar un bloque a la vez hasta que resuelvas el desafío.",
-          "courseB_maze_seq8_b": "¡Hay más de una manera para resolver este puzzle!",
-          "courseB_maze_seq8_c": "¿No sabes qué camino tomar? ¡Prueba este camino!"
+          "courseB_maze_seq8_a": "Intenta añadir un bloque cada vez hasta que resuelvas el rompecabezas.",
+          "courseB_maze_seq8_b": "¡Hay más de una manera de resolver este rompecabezas!",
+          "courseB_maze_seq8_c": "¿No sabes qué dirección tomar? ¡Prueba este camino!"
         },
         "courseB_maze_seq9_2021": {
           "courseB_maze_seq9_a": "Primero intenta escribir todos los pasos en un papel.",
-          "courseB_maze_seq9_b": "Construye tu programa de un bloque a la vez y prueba a medida que lo construyes.",
-          "courseB_maze_seq9_c": "Hay dos formas de resolver este desafío.",
-          "courseB_maze_seq9_d": "¿Atascado/a? ¡Prueba este camino!"
+          "courseB_maze_seq9_b": "Construye tu programa bloque a bloque y prueba mientras lo haces.",
+          "courseB_maze_seq9_c": "Hay dos formas de resolver este rompecabezas.",
+          "courseB_maze_seq9_d": "¿Tienes problemas?  ¡Prueba este camino!"
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "El camino más corto podría no funcionar esta vez.",
@@ -9435,32 +9435,32 @@
           "courseB_playlab_events_challenge2_d": "¡A mezclarlo!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
         },
         "courseB_starWars_prog1_2021": {
-          "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
-          "courseB_starWars_prog1_b": "Querrás moverte hacia el este para resolver este desafío. ¿Qué tan lejos necesitas moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_a": "Prueba añadiendo los bloques de uno en uno, y luego haz clic en \"Ejecutar\" para ver qué sucede.",
+          "courseB_starWars_prog1_b": "Querrás moverte hacia el Este para resolver este rompecabezas. ¿A qué distancia tienes que moverte?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
-          "courseB_starWars_prog2_a": "Divide este problema en dos partes. Consigue una sola pila de chatarra y luego descubre cómo llegar a la otra."
+          "courseB_starWars_prog2_a": "Divide este problema en dos partes. Recoge un montón de chatarra y luego averigua cómo llegar al otro."
         },
         "courseB_starWars_prog3_2021": {
-          "courseB_starWars_prog3_a": "Necesitarás moverte de 3 maneras para resolver este desafío.",
-          "courseB_starWars_prog3_b": "Construye una pieza de código a la vez. Ejecútalo para descubrir a dónde ir desde allí."
+          "courseB_starWars_prog3_a": "Tendrás que moverte de 3 formas distintas para resolver este rompecabezas.",
+          "courseB_starWars_prog3_b": "Construye una parte del código cada vez. Ejecútalo para descubrir a dónde ir desde allí."
         },
         "courseB_starWars_prog4_2021": {
-          "courseB_starWars_prog4_a": "Construye una pieza de código a la vez. Ejecútalo para descubrir a dónde ir desde allí.",
+          "courseB_starWars_prog4_a": "Construye una parte del código cada vez. Ejecútalo para descubrir a dónde ir desde allí.",
           "courseB_starWars_prog4_b": "Intenta usar el bloque `repetir` para que el código sea más corto.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
-          "courseB_starWars_prog5_a": "¿Este patrón no se parece un poco al último desafío?",
-          "courseB_starWars_prog5_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
-          "courseB_starWars_prog5_c": "Traza este patrón con tu dedo. Cuenta las piezas de metal mientras te mueves.",
-          "courseB_starWars_prog5_da": "Mira lo que sucede si usas la misma solución del desafío de la escalera:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_a": "¿No se parece este patrón al último rompecabezas?",
+          "courseB_starWars_prog5_b": "BB-8 recogerá la chatarra al pasar por encima de ella.",
+          "courseB_starWars_prog5_c": "Traza este patrón con el dedo. Cuenta los trozos de metal mientras te mueves.",
+          "courseB_starWars_prog5_da": "Mira lo que ocurre si utilizas la misma solución que el rompecabezas de la escalera:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6_2021": {
-          "courseB_starWars_prog6_a": "¡Este patrón es solo un paso escalón con dos movimientos por dirección!",
+          "courseB_starWars_prog6_a": "¡Este patrón es sólo un paso de escalera con dos movimientos por dirección!",
           "courseB_starWars_prog6_b": "Intenta usar el bloque `repetir` para que el código sea más corto.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
-          "courseB_starWars_prog7_a": "¿Este patrón no se parece un poco al último desafío?",
+          "courseB_starWars_prog7_a": "¿No se parece un poco este patrón al último rompecabezas?",
           "courseB_starWars_prog7_b": "BB-8 agarrará la chatarra mientras rueda sobre ella.",
           "courseB_starWars_prog7_c": "Intenta dibujar el patrón de escalón grande sobre este rompecabezas. ¿Cubre todo el metal de desecho?"
         },
@@ -9650,11 +9650,11 @@
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog_challenge1_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque `collect` muchas veces para recoger el tesoro extra."
+          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque \"obtener\" muchas veces para conseguir el tesoro extra."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar más de un bloque `recolectar` en cada espacio.",
-          "courseC_collector_prog_challenge1_b": "¿Perdiste tu camino? ¡Prueba este camino para resolver el desafío!"
+          "courseC_collector_prog_challenge1_a": "Puedes utilizar más de un bloque `obtener` en cada espacio.",
+          "courseC_collector_prog_challenge1_b": "¿Te has perdido?  ¡Prueba este camino para resolver el rompecabezas!"
         },
         "courseC_flappy_events1_2021": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -9737,11 +9737,11 @@
         "courseC_maze_debugging2_2021": {
           "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
+          "courseC_maze_debugging2_c": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
         },
         "courseC_maze_debugging3_2021": {
           "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
+          "courseC_maze_debugging3_b": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
         },
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
@@ -9749,7 +9749,7 @@
         },
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
-          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
+          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de giro haciendo clic en el desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging6_2021": {
@@ -9795,7 +9795,7 @@
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
+          "courseC_maze_programming6_a": "¡Hay dos maneras de resolver este rompecabezas!",
           "courseC_maze_programming6_b": "Sigue con el dedo el camino del pájaro al cerdo, ¿qué pasos has dado?",
           "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
           "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
@@ -9809,11 +9809,11 @@
           "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_maze_programming_challenge1_2021": {
-          "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego programarlo!"
+          "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego prográmalo!"
         },
         "courseC_maze_programming_challenge2_2021": {
           "courseC_maze_programming_challenge2_a": "_\"Si me envías hacia atrás, ¡ten mucho cuidado de que gire en la dirección correcta!\"_",
-          "courseC_maze_programming_challenge2_b": "La solución más corta usa solo 5 bloques, pero usa este bloque:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "La solución más corta utiliza sólo 5 bloques, pero utiliza este bloque:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "¿Este patrón no te parece una escalera gigante? Intenta usar lo que aprendiste de los puzles anteriores para lograr todos los giros.",
@@ -9995,7 +9995,7 @@
           "courseD_bee_conditionals_challenge1_b": "En este rompecabezas, cada espacio podría tener una flor, un panal de miel o nada. Eso significa que puedes repetir tu condicional `si/si no` en cada cuadrado."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Al igual que los bloques `si en una flor`, el código dentro de `mientras néctar > 0` solo se ejecuta si la abeja está en una flor. La diferencia es que este código se ejecutará una y otra vez hasta que no quede néctar. Prueba este patrón:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "¿No funciona? Intenta usar el botón \"Paso\" para ver lo que sucede línea por línea.",
@@ -10509,18 +10509,18 @@
           "hint1": "Haz clic en el botón `+` del bloque de sucesos. Rellena el espacio vacío del bloque de `cambio de vestuario` con el bloque de `sujeto` que se encuentra en su interior.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Para dar a los monstruos mascarillas, utiliza el bloque `cambio de traje` con un suceso `cuando se hace clic`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\n¡Asegúrate de arrastrar también el pequeño bloque rojo `clic`!.",
-          "hint2": "El nuevo código para este nivel debería ser así:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Para dar a los monstruos mascarillas, utiliza el bloque `cambio de traje` con un suceso `cuando se hace clic`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n¡Asegúrate de arrastrar también el pequeño bloque rojo `clic`!.",
+          "hint2": "El nuevo código para este nivel debería ser así:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## ¿Buscas un reto extra?\n\nTambién puedes hacer que los monstruos se muevan más rápido o más lento.\n\n1.  Haga clic en `Editar` en este bloque: <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Aumenta o disminuye el número en este bloque: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPara que los monstruos se muevan más lentamente, elige un número decimal como \"0,5\" o \"0,25\". Para que se muevan más rápido, elige cualquier número mayor que 1."
         },
         "CourseF_outbreak6": {
           "hint2": "Asegúrate de mover los otros bloques de \"acción\" hacia el interior del bloque \"si es posible\":\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Tendrás que añadir 3 sucesos más de `cuando se toca` para comprobar todas las posibles combinaciones de `toques` entre los sprites sanos e infectados.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Tendrás que añadir 3 sucesos más de `cuando se toca` para comprobar todas las posibles combinaciones de `toques` entre los sprites sanos e infectados.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Vacunas\n\nPuedes simular que das a los monstruos una vacuna cuando haces clic sobre ellos. Para ello, utiliza el bloque `cambio de traje` con este suceso:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Vacunas\n\nPuedes simular que das a los monstruos una vacuna cuando haces clic sobre ellos. Para ello, utiliza el bloque `cambio de traje` con este suceso:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "¿Te sientes atascado? Siempre puedes restablecer tu código haciendo clic en \"Historial de versiones\" y eligiendo \"Volver a empezar\"."
         },
         "courseA_maze_seq10_dani": {
@@ -10675,7 +10675,7 @@
           "iceage_warn_ice_age_b": "Añade los dos nuevos bloques debajo del evento 'al ejecutar' para que ocurran inmediatamente después de que se inicie el programa."
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "Puedes cambiar el fondo conectando un bloque `configurar fondo` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Puedes cambiar el fondo conectando un bloque `configurar fondo` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "_Nota:_ Para dotar a un sprite de un comportamiento, es necesario utilizar un bloque \"empieza sprite\" con uno de los bloques de comportamiento verdes, como por ejemplo \"girar a la derecha\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10685,10 +10685,10 @@
           "hw_no_changes": "No es necesario cambiar nada del código en este nivel."
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "Intenta conectar un bloque de `cambiar disfraz` bajo un bloque de evento `al pulsar`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "Intenta conectar un bloque de `cambiar disfraz` bajo un bloque de evento `al pulsar`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "Conecta un bloque `decir` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "Conecta un bloque `decir` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "Para cambiar la ubicación de un sprite, haz clic en la marca del bloque de ubicación y, a continuación, haz clic en el lugar donde quieres que vaya.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -10700,7 +10700,7 @@
           "hello-world-first-solution-bear": "Para que el oso diga algo, conecta los bloques de código así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "Para configurar el tamaño de un sprite una sola vez, puedes utilizar este bloque:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "Para configurar el tamaño de un sprite una sola vez, puedes utilizar este bloque:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_changePropBy": "Si quieres cambiar el tamaño de un sprite una y otra vez (con eventos), utiliza este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
@@ -10762,7 +10762,7 @@
           "storyboard_changePropBy": "Si quieres cambiar el tamaño de un sprite una y otra vez (con eventos), utiliza este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "Puedes cambiar el fondo conectando un bloque `configurar fondo` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Puedes cambiar el fondo conectando un bloque `configurar fondo` bajo un bloque de evento `al pulsar`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "_Nota:_ Para dotar a un sprite de un comportamiento, es necesario utilizar un bloque \"empieza sprite\" con uno de los bloques de comportamiento verdes, como por ejemplo \"girar a la derecha\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10781,7 +10781,7 @@
           "location_pin_hint": "Para cambiar la ubicación de un sprite, haz clic en la marca del bloque de ubicación y, a continuación, haz clic en el lugar donde quieres que vaya.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "Asegúrate de que los disfraces coinciden con cada sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature\\_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Asegúrate de que los disfraces coinciden con cada sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "Para que la criatura diga algo, conecta los bloques de código así:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -10791,8 +10791,8 @@
           "hw_retro_changePropBy": "Si quieres cambiar el tamaño de un sprite una y otra vez (con eventos), utiliza este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Cada sprite tiene una **ubicación**. Puedes establecer la ubicación haciendo clic en el pin de este bloque: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Haz clic en el pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) en el bloque de ubicación y luego elige una nueva posición para tu sprite en la pantalla.\n-   Pulsa el botón \"Ejecutar\" cuando el código esté terminado.",
-          "remove_hint": "Puedes eliminar un sprite en un determinado número de línea. Puedes añadir un nuevo sprite para ocupar su lugar: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Cada sprite tiene una **ubicación**. Puedes establecer la ubicación haciendo clic en el pin de este bloque: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Haz clic en el pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) en el bloque de ubicación y luego elige una nueva posición para tu sprite en la pantalla.\n-   Pulsa el botón \"Ejecutar\" cuando el código esté terminado.",
+          "remove_hint": "Puedes eliminar un sprite en un determinado número de línea. Puedes añadir un nuevo sprite para ocupar su lugar: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Encuentra un bloque de fondo como este:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\ny encuentra un bloque de efecto de texto como éste: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nConecta estos bloques en `cuando se ejecuta` en tu Espacio de Trabajo.",
@@ -10804,14 +10804,14 @@
           "more_events_hint": "Puedes utilizar más de un evento en tu programa. Prueba a utilizar dos eventos con efectos diferentes para que coincidan con las nuevas líneas del poema. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Encuentra este bloque:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\no este bloque: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConéctalo en \"cuando se ejecute\" en tu espacio de trabajo.",
-          "more_code": "Añade más efectos y colores para acompañar el sonido que has elegido. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Encuentra este bloque:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\no este bloque: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConéctalo en \"cuando se ejecute\" en tu espacio de trabajo.",
+          "more_code": "Añade más efectos y colores para acompañar el sonido que has elegido. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Añade un bloque `empieza sprite` a tu código. Asegúrate de que ya has creado el sprite al que vas a dar un comportamiento. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Añade un bloque `empieza sprite` a tu código. Asegúrate de que ya has creado el sprite al que vas a dar un comportamiento. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Encuentra este bloque y haz clic en el `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n¿Qué ocurre cuando el número es `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Encuentra este bloque y haz clic en el `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n¿Qué ocurre cuando el número es `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         }
       }
     }

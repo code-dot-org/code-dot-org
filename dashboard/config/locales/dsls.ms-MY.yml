@@ -1158,7 +1158,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Saya tidak tahu
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1166,7 +1166,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Saya tidak tahu
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1174,7 +1174,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Saya tidak tahu
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1182,7 +1182,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Saya tidak tahu
         questions:
         - {}
       courseC_multi_starWars_predict2:
@@ -1219,65 +1219,73 @@ ms-MY:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2056,6 +2064,7 @@ ms-MY:
           Setelah berlatih beberapa kali,  berapa lama kah anda perlu untuk meneka
           kata laluan dengan betul dengan mengantikan huruf dengan rawak?\n* Is this
           good or not  Adakah teknik ini sesuai digunakan?"
+        content1: penerangan di sini
       OPD-K5 CS Courses:
         markdown: "# Merancang > Langkah permulaan di Code.org\n\n\n## Langkah 1:
           Pilih kursus\nSemua kursus kami -- daripada prapembaca sehingga peringkat
@@ -2223,32 +2232,7 @@ ms-MY:
           dengan orang lain, atau berkongsi mesej tentang apa yang anda rasa dapat
           kami lakukan untuk membantu menjaga kesihatan orang lain ketika virus merebak
           ke bandar. "
-      OPD-K5 CS Courses_dani:
-        markdown: "# Merancang > Langkah permulaan di Code.org\n\n\n## Langkah 1:
-          Pilih kursus\nSemua kursus kami -- daripada prapembaca sehingga peringkat
-          sekolah menengah -- disenaraikan dalam **[katalog kursus](https://studio.code.org/courses)**.
-          Untuk mencari pelajaran Asas CS yang anda telah amalkan, sila pergi ke **[halaman
-          sekolah rendah] kami (https://code.org/educate/curriculum/elementary-school)**
-          dan tatal ke bawah sehingga sampai ke bahagian \"Kursus\". Semua kursus
-          kami tersedia tanpa sebarang kos. Sila bersembang dengan dengan rakan anda
-          di sekolah untuk menentukan sejauh mana kurikulum kursus boleh diintegrasikan
-          dengan pelbagai mata pelajaran.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Langkah 2: Sediakan bahagian kelas anda\nSediakan bahagian kelas untuk melihat
-          kemajuan pelajar anda, cetak kad log masuk untuk pelajar anda, uruskan akaun
-          mereka dan cetak sijil yang boleh mereka bawa pulang apabila mereka menyelesaikan
-          kursus itu. Klik pautan ini untuk **[menonton video pendek](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          yang menunjukkan cara menyediakan kelas sains komputer pertama anda di Code.org.
-          Anda juga boleh mengikuti langkah dalam **[artikel sokongan ini](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Langkah 3: Tetapkan kursus kepada bahagian anda\nKlik pada kursus yang anda
-          sedang mengajar -- anda sepatutnya melihat skrin yang kelihatan seperti
-          di bawah. Kemudian, anda boleh mengklik pada \"Tetapkan Kursus\" dan tetapkan
-          kursus itu kepada satu daripada bahagian anda. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Langkah 4: Mula mengajar! \nSemua yang diperlukan ialah hanya satu pelajaran
-          untuk membawa konsep sains komputer ke dalam kelas anda. Sebaik sahaja anda
-          dapat lihat minat pelajar terhadap CS, lakukan lebih lanjut dengan rancangan
-          pelajaran harian bertujuan membimbing pelajar anda, aktiviti nirplag yang
-          boleh anda lakukan tanpa menggunakan komputer dan forum untuk menyambung
-          kepada guru lain.\n\n\n\n"
+        content1: penerangan di sini
       courseAB_EOC_2021:
         display_name: Akhir Projek Kursus
       courseB_EOC_2021:
@@ -2306,9 +2290,10 @@ ms-MY:
         display_name: Akhir Projek Kursus
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2400,7 +2385,7 @@ ms-MY:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
-        - {}
+        - text: Makhluk asing akan mula meronda dari kanan ke kiri.
         - correct: true
         - {}
         questions:
@@ -2585,6 +2570,7 @@ ms-MY:
           selesai, kongsi simulasi anda dengan orang lain. Kongsi mesej anda mengenai
           apa yang boleh kami lakukan untuk membantu menjaga kesihatan orang lain
           ketika virus merebak ke bandar."
+        content1: penerangan di sini
       CSD U3 Collisions SFLP:
         markdown: |-
           # Gambaran keseluruhan
@@ -2647,3 +2633,426 @@ ms-MY:
           ## Sumber
 
           * [Pengenalan kepada Pembolehubah](https://youtu.be/G41G_PEWFjE) - Video ([muat turun](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      Internet Simulator Setup:
+        markdown: "# Simulator Internet Code.org\n\n_Nota: Arahan yang disenaraikan
+          dalam tutorial ini adalah untuk guru yang ingin menggunakan Simulator Internet
+          sebagai alat kendiri, berasingan daripada kurikulum Prinsip Sains Komputer
+          Code.org. Jika anda merancang untuk menggunakan aktiviti yang direka sebagai
+          sebahagian daripada kurikulum CSP Code.org, sila pergi ke [halaman kurikulum
+          CSP.] (Https://code.org/educate/csp) _\n\n### Kandungan\nTerdapat 3 halaman
+          latar belakang dan maklumat yang terkandung di sini:\n\n* Apakah Simulator
+          Internet? Gambaran keseluruhan (lihat di bawah)\n* [arahan persediaan] (/s/netsim/lesons/1/levels/2)\n*
+          [Soalan Lazim] (/s/netsim/pelajaran/1/peringkat/3)\n \n### Apakah itu Simulator
+          Internet? Gambaran keseluruhan:\n\nSimulator Internet ialah alat yang dibangunkan
+          oleh Code.org untuk kelas [Prinsip Sains Komputer] (https://code.org/educate/csp)
+          sekolah menengah baharu kami. Alat ini direka bentuk untuk membolehkan pelajar
+          mendapatkan pengalaman bereksperimen dengan (dan menyelesaikan) pelbagai
+          jenis masalah yang berkaitan dengan komputer rangkaian. Simulator Internet
+          digunakan dalam berbilang pelajaran di seluruh Unit 1 dan 2 dalam kurikulum
+          kami untuk membina lapisan Internet yang berbeza secara berturut-turut.\n\nJika
+          anda sedang mempertimbangkan untuk menggunakan alat dalam bilik darjah anda
+          dengan aktiviti yang anda reka, kami akan mengesyorkan anda membiasakan
+          diri dengan alat tersebut melalui [rancangan pelajaran] kami (https://curriculum.code.org/csp/unit1).
+          ** Arahan persediaan ** pada halaman seterusnya adalah untuk guru yang ingin
+          menggunakan Simulator Internet yang berasingan daripada kurikulum CSP Code.org.\n\nAlat
+          itu sendiri tidak _mengajar_ konsep ini, sebaliknya menyediakan persekitaran
+          untuk berbilang pelajar untuk berkumpul dan menghantar mesej berasaskan
+          perduaan, perpuluhan atau ascii kepada satu sama lain atau rakan sekelas
+          yang lain. ** Persekitaran boleh dikonfigurasikan ** dalam pelbagai cara
+          untuk mendedahkan pelbagai jenis masalah, menggambarkan data dan sambungan
+          antara hos, dan menyokong pembelajaran pelbagai konsep yang berkaitan dengan
+          Internet.\n\nSimulator Internet telah direka bentuk untuk digunakan dalam
+          * bilik darjah * dengan pelajar bekerja secara kolaboratif secara bersemuka
+          untuk menyelesaikan masalah. Selalunya masalah ini melibatkan mencipta protokol
+          komunikasi, atau mencipta cara untuk mengekod maklumat dengan cara berstruktur
+          yang menjadikan pengangkutannya melalui Internet boleh dilaksanakan.\n\n**
+          Dalam kurikulum Prinsip Sains Komputer Code.org ** kami biasanya menstruktur
+          pelajaran dan aktiviti dengan cara berikut:\n\n*** Mula-mula berikan pelajar
+          cabaran **\n * cth. Internet fizikal sememangnya tidak boleh dipercayai
+          dan boleh menggugurkan mesej\n*** Beri peluang untuk bereksperimen dengan
+          simulator untuk memahami isu **\n * cth. lihat log penghala untuk mengetahui
+          bahawa 10-20% daripada semua mesej digugurkan dan paket boleh dialihkan
+          ke luar susunan\n*** Beri peluang untuk mencipta penyelesaian mereka sendiri
+          untuk cabaran **\n  * cth. mencipta protokol mereka sendiri untuk cara menghantar
+          mesej dengan pasti pada rangkaian yang tidak boleh dipercayai ini\n*** Akhir
+          sekali, pelajar menyelidik bagaimana protokol atau ciptaan itu berfungsi
+          \"di dunia nyata\" **\n * cth. Selidik cara TCP benar-benar berfungsi dan
+          tonton video\n\n### Apakah Simulator Internet Boleh Dikonfigurasikan Untuk
+          Dilakukan?\n\nPada asasnya, Simulator Internet boleh menyampaikan sedikit
+          maklumat melalui wayar kongsi tunggal tanpa penyelarasan atau penyegerakan.
+          Pada tahap yang paling maju, ia boleh mensimulasikan sambungan yang tidak
+          boleh dipercayai melalui berbilang penghala, menggunakan alamat IP, DNS,
+          dan paket bersaiz tetap yang memerlukan penciptaan protokol yang serupa
+          dengan TCP/IP atau HTTP.\n\nKami telah menyediakan Simulator Internet dalam
+          pelbagai konfigurasi yang sesuai untuk mengajar topik tertentu. Tetapi jika
+          menggunakan Simulator Internet untuk kelas, anda harus mengetahui beberapa
+          tetapan antara muka pengguna yang anda mungkin ingin mengawal atau memberitahu
+          pelajar anda untuk menyediakan dengan cara tertentu.\n\nContohnya: salah
+          satu ciri Simulator Internet ialah anda boleh menunjukkan perwakilan perduaan,
+          perpuluhan, heks dan ASCII bagi sebarang data yang anda hantar ke sekeliling.
+          Dalam sesetengah konfigurasi, pengguna juga boleh menetapkan \"saiz ketulan\"
+          untuk menentukan cara bit ditafsirkan. Untuk pelajaran reka bentuk anda
+          sendiri, anda mungkin memilih salah satu konfigurasi yang telah kami sediakan,
+          tetapi mungkin perlu memberi mandat bahawa pelajar hanya menunjukkan perwakilan
+          tertentu bit, atau mungkin anda mahu saiz ketulan ditetapkan kepada nilai
+          tertentu.\n\nPerkara yang lebih besar ialah konfigurasi yang disediakan
+          di sini bertujuan untuk menjadi titik permulaan untuk mengajar topik tertentu.
+          Anda mungkin perlu menggunakan beberapa kepintaran dan strategi pengajaran
+          untuk memperhalusi lagi penggunaan Simulator agar sesuai dengan keperluan
+          anda.\n\n\n <br> <br>\n<img src = \"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width = \"600px\" style = \"margin: 0 100px\"/\n<br> <br>\n\n\n\n    \n\n\n_Seterusnya:
+          Arahan persediaan_"
+        content1: penerangan di sini
+      Internet Simulator Setup 2:
+        markdown: |-
+          # Simulator Internet: Arahan Persediaan
+
+          1. **Buat bahagian dalam Code Studio.** Untuk pelajar dalam kelas anda dapat berkomunikasi antara satu sama lain, mereka semua perlu dikaitkan dengan bahagian yang sama dalam Code Studio. Dilog masuk sebagai akaun guru, anda perlu membuat bahagian yang disertai oleh semua pelajar anda. Untuk membuat bahagian:
+           * Navigasi ke kawasan [sections](https://code.org/teacher-dashboard#/sections) pada papan pemuka guru
+           * Klik butang 'Bahagian Baharu'. Kami mengesyorkan memilih Log Masuk Jenis 'E-mel' dan 'cspunit1' untuk kursus.
+           <br>
+          <img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png" width="600px" />
+          <br><br>
+          2. **Suruh pelajar menyertai bahagian anda.** Setelah bahagian itu dibuat, klik pautan 'Urus Pelajar' untuk bahagian tersebut. Anda akan melihat kod bahagian yang anda boleh minta pelajar sertai setelah mereka membuat akaun Code Studio mereka sendiri.
+          <br>
+          <img src="https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png" width="400px" />
+          <br><br>
+          3. **Berikan kepada pelajar URL kepada versi Simulator Internet yang anda mahu gunakan.** Kami telah mencipta beberapa konfigurasi berbeza bagi Simulator Internet tersedia di [code.org/internetsimulator](http://code.org/internetsimulator ). Apabila anda menemui konfigurasi yang sesuai untuk aktiviti anda, kongsi URL dengan pelajar. Jika mereka semua berada dalam bahagian yang sama, maka mereka secara automatik akan dapat berhubung antara satu sama lain apabila mereka tiba di URL yang sama.
+
+          _Seterusnya: Soalan Lazim_
+        content1: penerangan di sini
+      Internet Simulator Setup 3:
+        markdown: |-
+          # Simulator Internet: Soalan Lazim
+
+          #### Di manakah saya boleh mencari aktiviti yang anda reka bentuk untuk digunakan dengan Simulator Internet?
+          Aktiviti yang telah kami reka bentuk untuk kurikulum Prinsip Sains Komputer kami, termasuk konfigurasi Simulator Internet khusus boleh didapati dalam rancangan pelajaran Unit [di sini](https://code.org/educate/csp). Kebanyakan rancangan pengajaran mempunyai video sokongan "Petua & Trik Guru" yang menunjukkan demonstrasi Simulator Internet yang digunakan sebagai sebahagian daripada aktiviti bilik darjah. Anda boleh menggunakan aktiviti ini sebagaimana adanya, atau berasa bebas untuk mengubah suai agar sesuai dengan kelas anda!
+
+          #### Bolehkah saya menyesuaikan Simulator Internet untuk kelas saya?
+          Pada masa ini, malangnya kami tidak mempunyai cara untuk orang di luar Code.org membuat konfigurasi dan arahan khusus untuk Simulator Internet. Kami telah cuba mendedahkan pelbagai konfigurasi berbeza yang diharapkan dapat berfungsi untuk bilik darjah dan aktiviti anda. Jangka panjang, kami ingin mempunyai cara untuk membenarkan orang lain mengkonfigurasi alat tersebut.
+
+          #### Pelajar saya tidak dapat melihat satu sama lain apabila mereka pergi ke URL yang saya berikan kepada mereka untuk Simulator Internet. Apa yang boleh saya buat?
+          Untuk pelajar melihat satu sama lain di lobi Simulator Internet, mereka perlu berada di bahagian yang sama. Semak semula sama ada anda telah melengkapkan arahan persediaan bahagian dari halaman sebelumnya dan bahawa pelajar yang berkenaan telah menyertai kod bahagian tertentu itu. Selain itu, sesetengah pelajar mungkin berada dalam berbilang bahagian jika mereka pernah membuat kerja kursus dengan Code.org sebelum ini, jadi pastikan mereka mengetahui nama bahagian anda dan telah memilihnya dalam menu lungsur sebelum memasuki lobi.
+        content1: penerangan di sini
+      Begin planning your project:
+        content1: penerangan di sini
+      Begin planning your project_2018:
+        content1: penerangan di sini
+      Begin planning your project_2018_2019:
+        content1: penerangan di sini
+      Begin planning your project_2018_2019_2020:
+        content1: penerangan di sini
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 Design Project:
+        content1: penerangan di sini
+      CSD U2 Design Project_2018:
+        content1: penerangan di sini
+      CSD U2 Design Project_2018_2019:
+        content1: penerangan di sini
+      CSD U2 L1 Overview:
+        content1: penerangan di sini
+      CSD U2 L2 Overview:
+        content1: penerangan di sini
+      CSD U2 L3 Overview:
+        content1: penerangan di sini
+      CSD U2 L4 Overview:
+        content1: penerangan di sini
+      CSD U2 L5 Overview:
+        content1: penerangan di sini
+      CSD U2 L6 Overview:
+        content1: penerangan di sini
+      CSD U2 Lesson 6 Overview:
+        content1: penerangan di sini
+      CSD U2 expand project:
+        content1: penerangan di sini
+      CSD U2 expand project_2018:
+        content1: penerangan di sini
+      CSD U2 expand project_2018_2019:
+        content1: penerangan di sini
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide:
+        content1: penerangan di sini
+      CSD U2 project guide_2018:
+        content1: penerangan di sini
+      CSD U2 project guide_2018_2019:
+        content1: penerangan di sini
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: penerangan di sini
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tajuk
+      CSD U3 Card Examples_2018:
+        content1: penerangan di sini
+      CSD U3 Card Examples_2018_2019:
+        content1: penerangan di sini
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: penerangan di sini
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 combining rep:
+        content1: penerangan di sini
+      CSD U3 combining rep_2018:
+        content1: penerangan di sini
+      CSD U3 combining rep_2018_2019:
+        content1: penerangan di sini
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro:
+        content1: penerangan di sini
+      CSD U3 game intro_2018:
+        content1: penerangan di sini
+      CSD U3 game intro_2018_2019:
+        content1: penerangan di sini
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: penerangan di sini
+      CSD U3 platform intro:
+        content1: penerangan di sini
+      CSD U3 platform intro_2018:
+        content1: penerangan di sini
+      CSD U3 platform intro_2018_2019:
+        content1: penerangan di sini
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: penerangan di sini
+      CSD U5 Encryption 1:
+        content1: penerangan di sini
+      CSD U5 Encryption 1_2018:
+        content1: penerangan di sini
+      CSD U5 Encryption 1_2018_2019:
+        content1: penerangan di sini
+      CSD U5 Encryption 2:
+        content1: penerangan di sini
+      CSD U5 Encryption 2_2018:
+        content1: penerangan di sini
+      CSD U5 Encryption 2_2018_2019:
+        content1: penerangan di sini
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: penerangan di sini
+      CSD U5 crosstab warmup:
+        content1: penerangan di sini
+      CSD U5 crosstab warmup_2018:
+        content1: penerangan di sini
+      CSD U5 crosstab warmup_2018_2019:
+        content1: penerangan di sini
+      CSD U5 data visualization:
+        content1: penerangan di sini
+      CSD U5 data visualization_2018:
+        content1: penerangan di sini
+      CSD U5 data visualization_2018_2019:
+        content1: penerangan di sini
+      CSD U5 student record:
+        content1: penerangan di sini
+      CSD U5 student record_2018:
+        content1: penerangan di sini
+      CSD U5 student record_2018_2019:
+        content1: penerangan di sini
+      CSD U6 LED create intro:
+        content1: penerangan di sini
+      CSD U6 LED create intro_2018:
+        content1: penerangan di sini
+      CSD U6 LED create intro_2018_2019:
+        content1: penerangan di sini
+      CSD U6 LED create intro_2021:
+        content1: penerangan di sini
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro:
+        content1: penerangan di sini
+      CSD U6 final intro_2018:
+        content1: penerangan di sini
+      CSD U6 final intro_2018_2019:
+        content1: penerangan di sini
+      CSD U6 final intro_2021:
+        content1: penerangan di sini
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Multi-Screen Apps:
+        content1: penerangan di sini
+      New Challenge Introduction:
+        content1: penerangan di sini
+        markdown: "### Cabaran Baharu: Pecah Sifir Penggantian Rawak...dengan widget
+          baharu \n\nBagaimana jika daripada mengalihkan keseluruhan abjad, kami memetakan
+          setiap huruf abjad kepada huruf rawak abjad yang berbeza? Ini dipanggil
+          **sifir penggantian rawak.** \n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)
+          \n\nKini, bukannya mesej rahsia dikodkan dengan anjakan abjad yang mudah,
+          anda akan menghadapi mesej yang dikodkan dengan **penggantian rawak**. \n\n\nIni
+          lebih sukar untuk dipecahkan dan memerlukan alat yang lebih canggih, jadi...\n\nApabila
+          anda mengklik teruskan, anda akan melihat **versi alat penyulitan yang baharu
+          dan lebih canggih** yang menunjukkan kepada anda banyak perkara yang berbeza.
+          \n\nTetapi apa yang dilakukannya adalah sedikit misteri!"
+      OPD-K5 Reviewing Reflections:
+        content1: penerangan di sini
+      OPD-K5 Stage3aGo:
+        content1: penerangan di sini
+      OPD-K5 Stage3aGo_copy:
+        content1: penerangan di sini
+      OPD-K5 Stage3aGo_dani:
+        content1: penerangan di sini
+      OPD-K5 conditionals introduced:
+        content1: penerangan di sini
+      OPD-K5 debugging:
+        content1: penerangan di sini
+      OPD-K5 diving deeper intro:
+        content1: penerangan di sini
+      OPD-K5 events introduced:
+        content1: penerangan di sini
+      OPD-K5 for loops:
+        content1: penerangan di sini
+      OPD-K5 for loops intro:
+        content1: penerangan di sini
+      OPD-K5 for loops introduction:
+        content1: penerangan di sini
+      OPD-K5 functions introduced:
+        content1: penerangan di sini
+      OPD-K5 journaling:
+        content1: penerangan di sini
+      OPD-K5 lesson implementation planning:
+        content1: penerangan di sini
+      OPD-K5 lesson plans:
+        content1: penerangan di sini
+      OPD-K5 loops introduced:
+        content1: penerangan di sini
+      OPD-K5 project:
+        content1: penerangan di sini
+      OPD-K5 projects introduction:
+        content1: penerangan di sini
+      OPD-K5 role_of_teacher:
+        content1: penerangan di sini
+      OPD-K5 sequencing introduced:
+        content1: penerangan di sini
+      OPD-K5 sprite lab:
+        content1: penerangan di sini
+      OPD-K5 sprite lab introduction:
+        content1: penerangan di sini
+      OPD-K5 sprite lab unplugged:
+        content1: penerangan di sini
+      OPD-K5 sprite lab video:
+        content1: penerangan di sini
+      OPD-K5 types of lessons:
+        content1: penerangan di sini
+      OPD-K5 using lesson plans:
+        content1: penerangan di sini
+      OPD-K5 variables:
+        content1: penerangan di sini
+      OPD-K5 variables introduction:
+        content1: penerangan di sini
+      OPD-K5 variables unplugged:
+        content1: penerangan di sini
+      OPD-K5 where to next:
+        content1: penerangan di sini
+      OPD-K5-projects-1:
+        content1: penerangan di sini
+      Prepare for your presentation:
+        content1: penerangan di sini
+      Terminology Recap:
+        content1: penerangan di sini
+        markdown: '# Jeda dan Rekap Mesej yang disulitkan dengan **Sifir Caesar**
+          sangat mudah untuk dipecahkan, terutamanya dengan alat pengiraan. Sekarang
+          setelah anda mempunyai sedikit latihan memecahkan sifir anjakan abjad (agak
+          mudah, ya?) mari cuba sesuatu yang lebih sukar. **Istilah ikhtisar:** *
+          **Penyulitan** - satu proses pengekodan mesej untuk merahsiakannya, jadi
+          hanya pihak "yang diberi kuasa" boleh membacanya. * **Penyahsulitan** -
+          proses yang membalikkan penyulitan, mengambil mesej rahsia dan menghasilkan
+          semula teks biasa asal * **Sifir** - istilah generik untuk teknik (atau
+          algoritma) yang melakukan penyulitan * **Caesar''s Cipher** - teknik untuk
+          penyulitan yang mengalihkan abjad dengan beberapa bilangan aksara. * **Penyulitan
+          retak** - Apabila anda cuba menyahkod mesej rahsia *tanpa* mengetahui semua
+          butiran sifir, anda cuba **memecahkan** penyulitan itu. Klik Teruskan untuk
+          melihat **Cabaran Seterusnya**...'
+      courseF_variables_stop:
+        content1: penerangan di sini
+      csf_be_a_super_digital_citizen:
+        content1: penerangan di sini
+      csf_be_a_super_digital_citizen_2021:
+        content1: penerangan di sini
+      csf_password_power-up:
+        content1: penerangan di sini
+      csf_password_power-up_2021:
+        content1: penerangan di sini
+      csf_putting_a_stop_to_online_meanness:
+        content1: penerangan di sini
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: penerangan di sini
+      courseF_intro_apps:
+        description: Selamat datang ke Asas CS! Semua projek ini telah dicipta dengan
+          Makmal Peperi. Cuba projek ini sekarang untuk melihat perkara yang boleh
+          dilakukan. Pada akhir kursus ini, anda akan dapat membuat projek anda sendiri
+          seperti ini...dan banyak lagi!
+        display_name: Aplikasi Makmal Peperi

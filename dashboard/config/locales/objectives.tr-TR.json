@@ -8,6 +8,9 @@
         "6da037be-d0be-4f41-a1e5-10b24a247190": {
           "description": "Bir metinde mecazi ve gerçek dili temsil eder."
         },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Zamanlanmış olaylara yanıt veren programlar geliştirin."
+        },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
           "description": "Hareketli nesneleri ve olayları kullanarak etkileşimli bir animasyon yapın."
         },
@@ -38,20 +41,71 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Hareketli nesneleri ve olayları kullanarak etkileşimli bir animasyon yapın."
         },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Zamanlanmış olaylara yanıt veren programlar geliştirin."
+        },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
           "description": "Bir şiirin ruh halindeki değişimleri gösterin."
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": "Bir metinde mecazi ve gerçek dili temsil eder."
         },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Tasarım sürecinde kullanıcının önemini tanımlayabilecektir."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Çalışan bir bilgisayar programında sprites tanımlayın."
+        },
+        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
+          "description": "Yeni sprites oluşturun ve onlara kostüm ve davranışlar atayın."
+        },
+        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
+          "description": "Sprites ve davranışları kullanarak bir animasyon oluşturun."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Zamanlanmış olaylara yanıt veren programlar geliştirin."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Kullanıcı girişine yanıt veren programlar geliştirin."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Olayları kullanarak etkileşimli bir animasyon oluşturun."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Etkinlikleri, davranışları ve özel resimleri kullanarak etkileşimli bir sanal evcil hayvan oluşturun."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Sanal bir evcil hayvan tasarlarken ortaya çıkan sorunlara çözüm önerileri, beslemek gibi."
+        },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Hangi tür ifadelerin çevrimiçi olarak söylenemeyeceğine ve hangisinin olmadığına karar verin."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Bir değişken tanımlayın"
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Bir değişken bir değer atama"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Bir programda bir değişkeni birden çok kez çağırın."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Bir programda “Çalıştır” tuşuna bastığımızda bir değişkenin nasıl tanımlandığı, depolandığı ve alındığı arasındaki ilişkiyi belirleyin."
         },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "Kelimeleri ve sözdizimlerini tutacak değişkenleri kullanma."
         },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Değişkenleri istemlerle birlikte kullanın."
+        },
         "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
           "description": "Kelimeleri ve sözdizimlerini tutacak değişkenleri kullanma."
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Değişkenleri istemlerle birlikte kullanın."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Kullanıcı girişine yanıt veren etkileşimli bir bilgisayar programı oluşturun."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Manüel tekrar yerine bir döngü yapısı kullanmanın faydalarını tanımlama."
@@ -83,6 +137,33 @@
         "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
           "description": "Değişkenlerin spesifik değerler için ikame edilebileceği yerleri bulmak için kodu inceleme."
         },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "“for loop” için başlangıç değerini, durdurma değerini ve adım değerini belirleyin."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Çalışma zamanı sırasında “for döngüsü” üzerinden her seferinde vurulan sayaç değerlerini gösterin."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Bir for döngüsünün başlangıç değerini, durdurma değerini ve adım değerini belirleyin."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "for döngüsünün ne zaman kullanılacağını ve repeat ve while döngüleri gibi diğer döngülerin ne zaman kullanılacağını tanır."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Döngüyü farklı değerlerle birkaç kez değiştirmek için döngüler için kullanın."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "for döngüsünün ne zaman kullanılacağını ve repeat ve while döngüleri gibi diğer döngülerin ne zaman kullanılacağını tanır."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Bir model hakkında veri toplamak için bilgisayar simülasyonunu kullanma"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "İki farklı kaynakla ilgili verileri karşılaştırmak için çift satırlı grafik oluşturma"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Simülasyon değişkenlerini değiştirerek tahmin yapın ve test edin"
+        },
         "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
           "description": "İnternet üzerinden mesaj göndermenin karmaşıklığını öğrenme."
         },
@@ -104,6 +185,12 @@
         "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
           "description": "Tasarım sürecini ve bitmiş nihai projenin şekillenmesine nasıl yardımcı olduğunu açıklama."
         },
+        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
+          "description": "Çevrimiçi olarak paylaştıkları bilgilerin dijital ayak izi veya “iz” bıraktığını öğrenin."
+        },
+        "5efa6c72-000c-40a0-ace0-55f47117305b": {
+          "description": "Hangi bilgilerin çevrimiçi paylaşılmak için sorun olduğunu keşfedin."
+        },
         "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
           "description": "Bir arkadaşı başlangıç konumundan hedefine ulaştırmak için bir adım listesi (algoritma) tanımlama"
         },
@@ -121,6 +208,12 @@
         },
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
           "description": "Hareketleri bir dizi komuta çevirme."
+        },
+        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
+          "description": "Sıralı hareketleri yeniden düzenleyerek bir program oluşturabilir."
+        },
+        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
+          "description": "Bir dizi yazılı talimattan bir bilgisayar programı oluşturun."
         },
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
           "description": "Hareketleri bir dizi komuta çevirme."
@@ -164,6 +257,15 @@
         "61329a99-1c0a-414f-9694-78f7f9c81372": {
           "description": "Basit sıraları kullanarak karmaşık şekilleri çizen bir program oluşturma."
         },
+        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
+          "description": "Akıllı telefon uygulamalarının birkaç farklı örneğini listeleyin."
+        },
+        "595564b5-94b4-4104-9613-05eadc30663e": {
+          "description": "Benzersiz ihtiyaçlarına göre başkalarına teknoloji önerin. "
+        },
+        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
+          "description": "Diğerleri için teknoloji tasarlamak için empati ve yaratıcılık uygular. "
+        },
         "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
           "description": "Bir eğitmen tarafından verilen komutları tekrarlama."
         },
@@ -176,8 +278,20 @@
         "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
           "description": "Sıraları ve olay-işleyicileri kullanarak hareketli, interaktif bir hikaye oluşturma."
         },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Bilgisayar bilimi kavramlarını açık uçlu bir projede uygular."
+        },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelme."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "İnternetin uzak yerleri ziyaret etmek ve yeni şeyler öğrenmek için kullanılabileceğini keşfedin."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Çevrimiçi olarak güvende kalmanın gerçek dünyada güvende kalmaya nasıl benzer olduğunu karşılaştırın."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "İnternette güvenli bir şekilde seyahat etme kurallarını açıklayın."
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Bir algoritmayı bir programa çevirme"
@@ -248,8 +362,17 @@
         "b366b41e-9396-4c1b-9d35-164052448c1c": {
           "description": "Sıra ve olay-işleyicileri kullanarak hareketli, interaktif bir hikaye oluşturma."
         },
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Bilgisayar bilimi kavramlarını açık uçlu bir projede uygular."
+        },
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelme."
+        },
+        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
+          "description": "Çevrimiçi alçaklığın neye benzediğini ve insanların nasıl hissettiğini anlayın."
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "S-T-O-P kullanarak, ortalama kelimelere çevrimiçi yanıt vermenin yollarını belirleyin."
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
           "description": "Talimatları oluştururken doğruluğa dikkat etme"
@@ -329,6 +452,15 @@
         "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
           "description": "Sıra ve olay-işleyicileri kullanarak hareketli, interaktif bir oyun oluşturma."
         },
+        "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
+          "description": "Ekrandaki gerçek nesnelerin veya karakterlerin miktarları hakkında veri toplayın ve kaydedin"
+        },
+        "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
+          "description": "Basit verileri temsil etmek için çubuk grafik ve pasta grafiği oluşturun."
+        },
+        "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
+          "description": "Başkaları tarafından yapılan veri görselleştirmeleri arasında karşılaştırmalar yapın ve bunları tahmin yapmak için kullanın."
+        },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "Harfleri ikili kodlama."
         },
@@ -338,8 +470,17 @@
         "ce1f4117-76f3-4359-a554-683a878f82cb": {
           "description": "Bir kağıt üzerine harflerin saklanması fikrini, bilgisayara bilgi depolamak fikriyle ilişkilendirme."
         },
+        "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
+          "description": "Planlı bir tasarımı oluşturma için bir plan olarak kullanın."
+        },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelme."
+        },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "“Şifre” terimini tanımlayın ve bir şifrenin amacını tanımlayın."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "Unutulmaz ve güçlü bir şifre oluşturarak pratik yapın."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "Bir adım dizisini kodlanmış bir program olarak yeniden çerçeveleme"
@@ -461,6 +602,24 @@
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
           "description": "Ekranda hareket ettirilebilen ve değiştirilebilen bir karakter veya nesne olarak \"hareketli nesneyi\" tanımlama."
         },
+        "09281dd0-4b33-4537-9543-a2377bc2f923": {
+          "description": "Yeni sprites oluşturun ve onlara kostüm ve davranışlar atayın."
+        },
+        "30a80046-d715-46b1-8b89-65c410d04690": {
+          "description": "Yeni sprites oluşturun ve onlara kostüm ve davranışlar atayın."
+        },
+        "e0d4a883-51dc-4647-8c9f-59652f699aec": {
+          "description": "Sprites ve davranışları kullanarak bir animasyon oluşturun."
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Olayları kullanarak etkileşimli bir animasyon oluşturun."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Zamanlanmış olaylara yanıt veren programlar geliştirin."
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Kullanıcı girişine yanıt veren programlar geliştirin."
+        },
         "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
           "description": "Olayları, davranışları, değişkenleri ve özel sanatı kullanarak etkileşimli bir sanal evcil hayvan oluşturma."
         },
@@ -554,6 +713,12 @@
         "5bbd5970-dd02-4100-b9c4-6d051ec9bba2": {
           "description": "Ortak olarak tekrarlanan görevleri tamamlamak için önceden belirlenmiş fonksiyonları kullanma."
         },
+        "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
+          "description": "Eylemler Kelimeleri ve ifadeleri tutmak için değişkenleri kullanın."
+        },
+        "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
+          "description": "Değişkenleri istemlerle birlikte kullanın."
+        },
         "16854174-125c-4c79-9a42-064ef84535e3": {
           "description": "Değerleri mevcut değişkenlere atama."
         },
@@ -568,6 +733,18 @@
         },
         "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
           "description": "Değişkenlerin spesifik değerler için ikame edilebileceği yerleri bulmak için kodu inceleme."
+        },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Bir for döngüsünün başlangıç değerini, durdurma değerini ve adım değerini belirleyin."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "for döngüsünün ne zaman kullanılacağını ve repeat ve while döngüleri gibi diğer döngülerin ne zaman kullanılacağını tanır."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Döngüyü farklı değerlerle birkaç kez değiştirmek için döngüler için kullanın."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "for döngüsünün ne zaman kullanılacağını ve repeat ve while döngüleri gibi diğer döngülerin ne zaman kullanılacağını tanır."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Zaman kısıtlamaları veya hatalar gibi engellerin üstesinden gelme."
@@ -637,6 +814,9 @@
         },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "Ekranda hareket ettirilebilen ve değiştirilebilen bir karakter veya nesne olarak \"hareketli nesneyi\" tanımlama."
+        },
+        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
+          "description": "Yeni sprites oluşturun ve onlara kostüm ve davranışlar atayın."
         },
         "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
           "description": "Telifli malzemenin etik bir şekilde paylaşıma karşı etik olmayan bir şekilde paylaşımı yorumlama."

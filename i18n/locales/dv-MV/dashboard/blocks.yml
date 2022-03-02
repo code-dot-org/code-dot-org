@@ -342,6 +342,26 @@ dv:
             '18': 18 (އަށާރަ)
             '19': 19 (ނަވާރަ)
             '20': 20 (ވިހި)
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
             '"DUCK"': ޑަކްސް (އަސްދޫނި)
@@ -777,6 +797,19 @@ dv:
             '"rotation"': އެނބުރޭ މިންވަރު
             '"direction"': މޫވް ކުރަންވީ ދިމާ
             '"tint"': ކުލަ
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': 2 (ދޭއް)
+            '3': 3 (ތިނެއް)
+            '4': 4 (ހަތަރެއް)
+            '5': 5 (ފަހެއް)
+            '6': 6 (ހައެއް)
+            '7': 7 (ހަތެއް)
+            '8': 8 (އަށެއް)
+            '9': 9 (ނުވައެއް)
+            '10': 10 (ދިހައެއް)
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -838,6 +871,14 @@ dv:
           PROPERTY:
             '"rotation"': އެނބުރޭ މިންވަރު
             '"direction"': މޫވް ކުރަންވީ ދިމާ
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': ލަސް
+            '5': normal
+            '7': އަވަސް
+            '9': extra fast
       gamelab_whenKey:
         text: "{KEY} އަށް ފިތުމުން"
         options:
@@ -931,38 +972,27 @@ dv:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': ފްލާވަރ - މައު
-            '"hearts"': ހާރޓްސް
             '"iceCream"': އައިސްކްރީމް
-            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
-            '"stars"': ސްޓަރ - ތަރި
-            '"waves"': ވޭވްސް
-      Poetry_playSound:
+      Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ލައިޓް - އަލި
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': ލަސް
       Poetry_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': ކުލަ
-            '"squiggles"': ސްކުއިގްލްސް
-            '"space"': ސްޕޭސް
-            '"stars"': ސްޓަރ - ތަރި
-            '"ripples"': ރިޕްލްސް
-            '"rain"': ރެއިން - ވިއްސާރަ
             '"bubbles"': ބަބްލްސް
             '"confetti"': ކޮންފެޓީ
-            '"hearts"': ކުލަކުލައިގެ ހިތް
-          PALETTE:
-            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"space"': ސްޕޭސް
+            '"ripples"': ރިޕްލްސް
+            '"colors"': ކުލަ
+            '"stars"': ސްޓަރ - ތަރި
+            '"squiggles"': ސްކުއިގްލްސް
       Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': ރެއިން - ވިއްސާރަ
             '"bubbles"': ބަބްލްސް
-            '"hearts"': ކުލަކުލައިގެ ހިތް
             '"confetti"': ކޮންފެޓީ
             '"starburst"': ސްޓަރ ބަރސްޓް
       Poetry_whenLineShows:

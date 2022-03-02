@@ -351,6 +351,33 @@ hy:
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': hearts
+            '"rainbow"': ծիածան
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': գիշեր
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': զանգ
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': պղպջակ
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ցատկել
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': ամպամած
+            '"hearts"': hearts
+          PALETTE:
+            '"rainbow"': ծիածան
+            '"winter"': Ձմեռ
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': hearts
       RyanLab_moveForward:
         text: առաջ ընթանալ
       RyanLab_turnLeft:

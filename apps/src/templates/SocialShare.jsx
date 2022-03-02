@@ -70,7 +70,7 @@ export default class SocialShare extends Component {
             </button>
           </a>
         )}
-        <a href={this.props.print}>
+        <a href={this.props.print} className="social-print-link">
           <button
             type="button"
             style={{background: color.charcoal, ...styles.shareButton}}

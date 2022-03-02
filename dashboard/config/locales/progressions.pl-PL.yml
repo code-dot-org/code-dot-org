@@ -4,10 +4,19 @@ pl:
     progressions:
       '"If/Else" with the Bee': '"jeśli/w przeciwnym razie" z Pszczółką'
       AI Machine Learning - Video: AI Uczenie maszynowe — Film
+      'AI for Oceans: Fish vs Not Fish': 'AI dla oceanów: ryby kontra nie ryby'
+      'AI for Oceans: Types of Fish': 'AI dla oceanów: rodzaje ryb'
       'AI: Impact on Society - Video': 'AI: wpływ na społeczeństwo — Film'
       'AI: Training Data & Bias - Video': 'AI: dane treningowe i stronniczość — Film'
       Accelerometer Events: Akcelerometr Zdarzeń
+      Add Sprites: Dodaj duszki
+      Add Style: Dodaj Styl
+      Add Style to Your Page: Dodaj styl do swojej strony
+      Add Text: Dodaj tekst
+      Add a Welcome Screen: Dodaj powitalny ekran
       Adding Images: Dodawanie obrazów
+      Adding New Screens: Dodawanie nowych ekranów
+      Adding Pages: Dodawanie stron
       Adding Screens: Dodawanie Ekranów
       Alien Defender: Obrońca ufoludków
       Animate Your Scene: Animuj swoją scenę
@@ -18,6 +27,7 @@ pl:
       Artist Intro with JR Hildebrande: Wprowadzenie artysty z JR Hildebrandem
       Artist Project: Projekt Artysty
       'Artist: Variables': 'Artysta: Zmienne'
+      Assessment: Ocena
       Attribution: Atrybucja
       Back and Forth: Tam i z powrotem
       Basic Conditionals: Podstawowe Wyrażenia warunkowe
@@ -91,6 +101,8 @@ pl:
       Design Your Prototype: Zaprojektuj swój prototyp
       Design a Screen for your App: Zaprojektuj ekran dla swojej aplikacji
       Designing for Accessibility: Projektowanie pod kątem dostępności
+      Digital Sharing - Unplugged Activity: Udostępnianie cyfrowe — Aktywność bez
+        komputera
       Dogger Example: Przykład łodzi rybackiej
       Drawing: Rysowanie
       End of Course Projects: Koniec projektów w ramach kursu
@@ -108,9 +120,14 @@ pl:
       Expanding Your Website: Rozszerzanie Twojej Witryny Internetowej
       Experiment with Web Lab: Eksperymentuj z Web Lab
       Exploration: Eksploracja
+      'Exploration: For Loops': 'Eksploracja: Pętle "dla"'
+      'Exploration: Sample Apps': 'Eksploracja: Przykładowe aplikacje'
+      'Exploration: Sample Programs': 'Eksploracja: Przykładowe programy'
+      'Exploration: Sample Project': 'Eksploracja: Przykładowe projekty'
       Explore HTML: Poznaj HTML
       Exploring CS in Entertainment: Odkrywanie informatyki w rozrywce
       Exploring more CSS: Odkrywanie CSS
+      Extra: Dodatkowe
       Final Room Escape App: Finalna aplikacja Room Escape
       Find the Wizard: Znajdź czarodzieja
       Finish a Screen: Ukończ Ekran
@@ -118,14 +135,20 @@ pl:
       Finishing Functions: Kończąc funkcje
       Finishing Touches: Końcowe poprawki
       Flyer Game: Gra Flyer
+      Follow the Algorithm - Unplugged Activity: Postępuj zgodnie z algorytmem — Aktywność
+        bez komputera
       Follow the Mouse: Podążaj za Myszą
       Fonts and Style: Fonty i Styl
       FoodFight: FoodFight
+      For Loop Fun - Unplugged Activity: Zabawa z pętlą — Aktywność bez komputera
       For Loops: Pętle dla (for)
       For Loops and Color LEDs: Pętle 'dla' i kolorowe LEDy
       For Loops and Repeat Blocks: Bloki pętli 'dla' i 'powtórz'
       Formatting HTML: Formatowanie HTML
       Free Play: Czas na zabawę
+      'Free Play: Make a Scene': 'Czas na zabawę: Utwórz scenę'
+      'Free Play: Make an Interactive Scene': 'Czas na zabawę: Utwórz interaktywną
+        scenę'
       Functions: Funkcje
       Functions with Parameters: Funkcje z parametrami
       Geometric Sun: Geometryczne słońce
@@ -200,6 +223,7 @@ pl:
       'Mini-project: Flappy Game': 'Mini-projekt: Gra z Flappym'
       'Mini-project: Interactive Poster': 'Mini-projekt: Interaktywny plakat'
       'Mini-project: Jorge the Dog': 'Mini-projekt: Pies Jorge'
+      'Mini-project: Sticker Art': 'Mini-projekt: Sztuka naklejek'
       'Mini-project: Sticker Design': 'Mini-projekt: Projekt naklejki'
       Modify simulation variables: Zmień zmienne symulacji
       More Buttons: Więcej przycisków
@@ -257,6 +281,8 @@ pl:
       Random Numbers: Losowe liczby
       Reading Sensors: Czytanie Czujników
       Reflection: Refleksja
+      Relay Programming - Unplugged Activity: Programowanie przekaźników — Aktywność
+        bez komputera
       Repeat Blocks: Bloki Powtarzania
       Repeat Blocks with BB-8: Bloki Powtarzania z BB-8
       Repeat Blocks with the Artist: Bloki Powtarzania z Artystą
@@ -282,9 +308,12 @@ pl:
       Sliders: Suwaki
       Smart Bike - Blinkers: Mądry rower - migacze
       Social Sleuth: Społeczny detektyw
+      Songwriting - Functions Unplugged Activity: Pisanie piosenek — Funkcje, aktywność
+        bez komputera
       Speed it Up, Slow it Down: Przyspiesz, spowolnij
       Sprite Lab Example Project: Przykład projektu "Sprite Lab"
       Sprite Lab Project: Projekt Sprite Lab
+      Sprite Movement: Ruch duszka
       Sprite Properties: Właściwości duszka
       Sprites and the Draw Loop: Duszki i pętla rysowania
       Star Chaser: Łowca Gwiazd
@@ -309,6 +338,7 @@ pl:
       Train AI to Clean the Ocean: Trenuj AI, by czyścił ocean
       UI Element Properties: Właściwości elementów interfejsu graficznego
       Unit 5 Lesson 1 Overview: Jednostka 5 Lekcja 1 Omówienie
+      Updating Your Prototype: Aktualizacja Twojego prototypu
       User Interface: Interfejs użytkownika
       Using Getters and Setters: Używanie pobieraczy i ustawiaczy
       Using HTML Tags: Stosując Tagi HTML
@@ -349,8 +379,15 @@ pl:
       'Video: Debugging with the Step Button': 'Film: Debugowanie za pomocą przycisku
         Krok '
       'Video: Events': 'Film: Zdarzenia'
+      'Video: Follow The Digital Trail': 'Film: Śledź cyfrowy szlak'
       'Video: Functions': 'Film: Funkcje'
+      'Video: Getting Loopy': 'Film: Zapętlanie'
+      'Video: Happy Maps - Unplugged Activity': 'Film: Wesołe Mapy — Aktywność bez
+        komputera'
+      'Video: Harvesting with Conditionals': 'Film: Żniwa z warunkami'
+      'Video: How to Create a Simple Function': 'Film: Jak utworzyć prost funkcję'
       'Video: How to Make a Sprite': 'Film: jak utworzyć duszka'
+      'Video: Ice Age Loops': 'Film: Pętle epoki lodowcowej'
       'Video: Impacts on Society': 'Film: Wpływy na społeczeństwo'
       'Video: Intro to CSS': 'Wideo: Wstęp do CSS'
       'Video: Intro to Web Lab - Part 1': 'Wideo: Wprowadzenie do Web Lab - Część
@@ -372,6 +409,14 @@ pl:
       'Video: Minecraft - Functions': 'Film: Minecraft - Funkcja'
       'Video: Minecraft - Repeat Loops': 'Film: Minecraft - Pętle powtarzania'
       'Video: Minecraft - The Agent': 'Film: Minecraft - Agent'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Film: Minecraft - Wodna Podróż
+        - Warunki'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Film: Minecraft: Wodna
+        Podróż - Gratulacje'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Film: Minecraft - Wodna Podróż
+        - Wprowadzenie'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Film: Minecraft - Wodna Podróż
+        - Powtarzaj aż'
       'Video: Nested Loops': 'Film: zagnieżdżone pętle'
       'Video: Nested Loops with the Bee': 'Film: zagnieżdżone pętle z pszczółką '
       'Video: Outbreak Simulator: Introduction': 'Film: Wiele Duszków'
@@ -379,8 +424,24 @@ pl:
       'Video: Pair Programming ': 'Film: Programowanie parami '
       'Video: Problem Solving Process': 'Nagranie: Proces Rozwiązywania Problemów'
       'Video: Programming with Blocks': 'Film: Programowanie z użyciem bloków'
+      'Video: Programming with Rey and BB-8': 'Film: Programowanie z Rey i BB-8'
       'Video: Properties': 'Film: Wściwości'
+      'Video: Repeat Blocks': 'Film: Bloki powtarzania'
+      'Video: Repeat Blocks with BB-8': 'Film: Bloki powtarzania z BB-8'
+      'Video: Repeat Blocks with the Artist': 'Film: Bloki powtarzania z Artystą '
+      'Video: Repeat Until Blocks': 'Film: Bloki powtarzaj aż'
+      'Video: Repeat Until Statements': 'Film: Instrukcje powtarzaj aż'
       'Video: Sprites in Action': 'Film: Duszki w akcji'
+      'Video: Star Wars Project': 'Film: Projekt Gwiezdne Wojny'
+      'Video: Text and Prompts': 'Film:  Tekst i monity'
+      'Video: The Artist in Code Studio': 'Film: Artysta w Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Film: Wielkie wydarzenie - Aktywność
+        bez komputera'
+      'Video: The Collector': 'Film: Kolekcjoner'
+      'Video: The Harvester': 'Film: Kombajn'
+      'Video: Training Data & Bias': 'Film: Dane treningowe i stronniczość'
+      'Video: Unplugged Variables in Envelopes': 'Film: Zmienne w kopertach bez komputera'
+      'Video: Using the Repeat Block': 'Film: Stosowanie bloku powtórzeń'
       'Video: Variables in Artist': 'Film: Zmienne z Artystą'
       'Video: Warm Up': 'Film:: Rozgrzewka '
       'Video: What Makes a Computer, a Computer?': 'Wideo: Co czyni komputer komputerem?'

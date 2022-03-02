@@ -358,6 +358,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"infinity"': infinite line
             '"random"': acak
       Dancelab_makeAnonymousDanceSprite:
         text: buat baru {COSTUME} di {LOCATION}
@@ -440,6 +441,26 @@ id:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': semua aliens
             '"BEAR"': semua beruang
@@ -467,6 +488,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"infinity"': infinite line
             '"random"': acak
       Dancelab_mixColors:
         text: campur {COLOR1} dan {COLOR2}
@@ -532,6 +554,7 @@ id:
             '"fireworks"': Kembang Api
             '"flowers"': Bunga
             '"growing_stars"': Bintang Tumbuh
+            '"higher_power"': Higher Power
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Lantai Dansa Laser
@@ -1001,6 +1024,17 @@ id:
         text: ketika {SPRITE} diklik
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): berputar ke kanan
+            new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(jittering, []): gugup
+            new Behavior(wandering, []): pengembaraan
+            new Behavior(patrolling, []): perondaan
+            new Behavior(moving_north_and_looping, []): bergerak ke utara dan berulang
+            new Behavior(moving_south_and_looping, []): bergerak ke selatan dan berulang
       gamelab_comment:
         text: 'komentar: {COMMENT}'
       gamelab_costumeImage:
@@ -1053,6 +1087,20 @@ id:
         text: |-
           jika {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: kostum {SPRITE} adalah {COSTUME}
       gamelab_isKeyPressed:
@@ -1247,6 +1295,12 @@ id:
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_playSpeech:
         text: putar ucapan {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): bergerak dengan tanda panah
+            draggable(): yang diseret
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
         options:
@@ -1271,6 +1325,8 @@ id:
         text: hapus warna dari {THIS}
       gamelab_repeatForever:
         text: Ulangi selamanya
+      gamelab_resetTimer:
+        text: reset timer
       gamelab_setAnimation:
         text: perubahan {THIS} kostum untuk {ANIMATION}
       gamelab_setBackground:
@@ -1369,6 +1425,14 @@ id:
             '"scale"': ukuran
             '"width"': lebar
             '"height"': tinggi
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lambat
+            '5': normal
+            '7': cepat
+            '9': extra fast
       gamelab_setTint:
         text: ubah warna {THIS} menjadi {COLOR}
       gamelab_setupScoreboard:
@@ -1831,12 +1895,15 @@ id:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Bunga
-            '"hearts"': Hati
+            '"brick"': Batu bata
+            '"fire"': api
+            '"flowers"': bunga
+            '"hearts"': hati
             '"iceCream"': Es Krim
-            '"rainbow"': Pelangi
-            '"stars"': Bintang
-            '"waves"': Gelombang
+            '"leaves"': daun
+            '"rainbow"': pelangi
+            '"stars"': bintang
+            '"waves"': gelombang
       Poetry_addLine:
         text: tambah baris {LINE}
       Poetry_animateText:
@@ -1864,10 +1931,15 @@ id:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Tenang
             '"sound://category_nature/steady_campfire_loop.mp3"': Api Unggun
             '"sound://category_nature/rain_loop.mp3"': Gerimis
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': hutan
             '"sound://category_loops/faultering_desicion_loop1.mp3"': Angker
             '"sound://category_background/inside_plane.mp3"': Ngung
             '"sound://category_loops/red_flag_loop1.mp3"': Misi
+            '"sound://category_nature/summer_night_loop.mp3"': malam
+            '"sound://category_background/ocean_waves.mp3"': lautan
+            '"sound://category_background/rainforest_ambient_sound.mp3"': hutan hujan
             '"sound://category_background/repitition.mp3"': Berkendara
+            '"sound://category_background/wavering_wind.mp3"': mengantuk
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Lambat
       Poetry_playSound:
         text: Playsound {SOUND}
@@ -1881,7 +1953,7 @@ id:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Gagal
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Gelepar
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Lompat
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lampu
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': lampu
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Wuss
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Pindai
             '"sound://category_background/typewriter.mp3"': Mesin ketik
@@ -1897,30 +1969,31 @@ id:
         text: tetapkan latar belakang menjadi {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Warna
-            '"squiggles"': Garis berlekuk
-            '"space"': Spasi
-            '"stars"': Bintang
+            '"blooming"': Berbunga
+            '"bubbles"': Gelembung
+            '"clouds"': Berawan
+            '"confetti"': Konfeti
             '"darkCircles"': Memudar
             '"fadeColors"': Buram
-            '"blooming"': Berbunga
+            '"hearts"': hati
+            '"space"': Spasi
+            '"rain"': hujan
             '"ripples"': Riak
-            '"clouds"': Berawan
-            '"rain"': Hujan
-            '"bubbles"': Gelembung
-            '"confetti"': Konfeti
-            '"hearts"': Hati Penuh Warna
+            '"colors"': Warna
+            '"stars"': Bintang
+            '"squiggles"': Garis berlekuk
           PALETTE:
-            '"rainbow"': Pelangi
-            '"grayscale"': Kelabu
-            '"sky"': Langit
+            '"autumn"': Musim gugur
             '"sunrise"': Fajar
             '"sunset"': Senja
+            '"grayscale"': Kelabu
+            '"ocean"': lautan
+            '"rainbow"': pelangi
+            '"roses"': Mawar
+            '"sky"': Langit
             '"spring"': Musim semi
             '"summer"': Musim panas
-            '"autumn"': Musim gugur
             '"winter"': Musim dingin
-            '"roses"': Mawar
       Poetry_setBackgroundImageAs:
         text: atur latar belakang ke {IMG}
       Poetry_setFont:
@@ -1928,23 +2001,23 @@ id:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: tetapkan warna teks {FILL}
       Poetry_setForegroundEffect:
         text: lakukan efek {EFFECT}
         options:
           EFFECT:
-            '"rain"': Hujan
             '"bubbles"': Gelembung
-            '"hearts"': Hati Penuh Warna
-            '"emojis"': Emoji Bahagia
             '"confetti"': Konfeti
+            '"hearts"': hati
+            '"emojis"': Emoji Bahagia
+            '"rain"': hujan
             '"starburst"': Semburan bintang
             '"glass"': Kaca Pecah
             '"twinkling"': Berkelip
@@ -1962,11 +2035,11 @@ id:
         options:
           EFFECT:
             '"fade"': memudar
-            '"typewriter"': mesin ketik
             '"flyLeft"': terbang dari kiri
             '"flyRight"': terbang dari kanan
             '"flyTop"': terbang dari atas
             '"flyBottom"': terbang dari bawah
+            '"typewriter"': mesin ketik
       Poetry_setTitle:
         text: tetapkan judul {TITLE}
       Poetry_showText:
@@ -1975,32 +2048,24 @@ id:
         text: 'sprite {ANIMATION_NAME} mulai {BEHAVIOR} '
         options:
           BEHAVIOR:
-            growing: pertumbuhan
-            jittering: gugup
-            moving_north_and_looping: berputar ke utara
-            moving_south_and_looping: berputar ke selatan
-            moving_east_and_looping: berputar ke timur
-            moving_west_and_looping: berputar ke barat
-            shrinking: penyusutan
-            spinning_left: berputar ke kiri
-            spinning_right: berputar ke kanan
-            swimming_left_and_right: berenang
-            wandering: pengembaraan
+            '"growing"': pertumbuhan
+            '"jittering"': gugup
+            '"shrinking"': penyusutan
+            '"spinning_left"': berputar ke kiri
+            '"spinning_right"': berputar ke kanan
+            '"swimming_left_and_right"': berenang
+            '"wandering"': pengembaraan
       Poetry_stopBehavior:
         text: 'sprite {ANIMATION_NAME} berhenti {BEHAVIOR} '
         options:
           BEHAVIOR:
-            growing: pertumbuhan
-            jittering: gugup
-            moving_north_and_looping: berputar ke utara
-            moving_south_and_looping: berputar ke selatan
-            moving_east_and_looping: berputar ke timur
-            moving_west_and_looping: berputar ke barat
-            shrinking: penyusutan
-            spinning_left: berputar ke kiri
-            spinning_right: berputar ke kanan
-            swimming_left_and_right: berenang
-            wandering: pengembaraan
+            '"growing"': pertumbuhan
+            '"jittering"': gugup
+            '"shrinking"': penyusutan
+            '"spinning_left"': berputar ke kiri
+            '"spinning_right"': berputar ke kanan
+            '"swimming_left_and_right"': berenang
+            '"wandering"': pengembaraan
             '"all"': "--semua perilaku--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

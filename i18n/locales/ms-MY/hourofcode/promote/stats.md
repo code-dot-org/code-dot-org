@@ -16,7 +16,7 @@ title: Ringkasan penerbit dan statistik yang berguna
 
 #### Bawa sains komputer ke sekolah anda. Mulakan dengan Jam Kod!
 
-Dengan teknologi mengubah setiap industri di planet ini, pengetahuan pengkomputeran telah menjadi sebahagian daripada set kemahiran yang sempurna. Tetapi kurang daripada separuh bilangan semua sekolah yang mengajar sains komputer! Berita baiknya ialah, kami sedang dalam proses mengubahnya. Jika anda dengar tentang Jam Kod pada tahun lepas, anda mungkin tahu bahawa acara tersebut telah mencipta sejarah. Kini, 100 juta pelajar telah mengetahui sejauh mana sains komputer boleh diakses dan menyeronokkan dengan hanya melakukan satu Jam Kod.
+Dengan teknologi mengubah setiap industri di planet ini, pengetahuan pengkomputeran telah menjadi sebahagian daripada set kemahiran yang sempurna. But just half of all schools offer computer science! Berita baiknya ialah, kami sedang dalam proses mengubahnya. Jika anda dengar tentang Jam Kod pada tahun lepas, anda mungkin tahu bahawa acara tersebut telah mencipta sejarah. Kini, 100 juta pelajar telah mengetahui sejauh mana sains komputer boleh diakses dan menyeronokkan dengan hanya melakukan satu Jam Kod.
 
 Jam Kod ialah pengenalan kepada sains komputer selama sejam, direka bentuk untuk menjadikan kod lebih mudah difahami dan menunjukkan bahawa sesiapa sahaja boleh mempelajari asasnya. Ketahui lebih lanjut di <http://HourofCode.com>, anda sendiri boleh mencuba selama sejam, atau menganjurkan acara Jam Kod bertujuan memperkenalkan individu lain kepada dunia pengkomputeran!
 
@@ -30,7 +30,7 @@ Kami berharap ia akan mencetuskan minat dalam pelajar untuk terus belajar. Penye
 
 #### Mengapakah perkara ini penting?
 
-Teknologi sedang mengubah setiap industri di planet ini. Pada tahun 2015, sebanyak 7 juta peluang pekerjaan di Amerika Syarikat ialah dalam kerjaya—termasuklah kesenian dan seni reka—yang menilai kemahiran pengekodan. Tetapi 53 peratus sekolah di Amerika Syarikat tidak mengajar sains komputer. Kini, sudah tiba masanya untuk kita mengejar abad ke-21. Kami tahu bahawa tanpa mengambil kira perkara yang dilakukan oleh pelajar kita apabila mereka membesar, sama ada mereka memasuki jurusan perubatan, perniagaan, politik, atau kesenian, mengetahui cara membina teknologi akan memberikan keyakinan dan kelebihan daya saing kepada mereka. <br /> <br />
+Teknologi sedang mengubah setiap industri di planet ini. Pada tahun 2015, sebanyak 7 juta peluang pekerjaan di Amerika Syarikat ialah dalam kerjaya—termasuklah kesenian dan seni reka—yang menilai kemahiran pengekodan. But 49 percent of schools in the U.S. don't offer computer science. Kini, sudah tiba masanya untuk kita mengejar abad ke-21. Kami tahu bahawa tanpa mengambil kira perkara yang dilakukan oleh pelajar kita apabila mereka membesar, sama ada mereka memasuki jurusan perubatan, perniagaan, politik, atau kesenian, mengetahui cara membina teknologi akan memberikan keyakinan dan kelebihan daya saing kepada mereka. <br /> <br />
 
 #### Petikan yang boleh digunakan sebagai bahan
 

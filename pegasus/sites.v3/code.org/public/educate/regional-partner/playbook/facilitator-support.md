@@ -12,41 +12,22 @@ noindex: true
 #### Facilitators are key to building a sustainable computer science community in your region. They are the bridge between your organization and the teachers you serve and impact the quality of the professional learning programs. The following resources will help you sustain and grow a strong corps of local facilitators.
 
 ## Table of Contents
-- [Announcements](#announce)
-- [Example Facilitator One-Pager](#page)
+- [Securing Substitute Facilitators](#subfac)
 - [Example Contract](#contract)
-- [Facilitator Recruitment Resources](#recruitment)
-- [CS Fundamentals Facilitator Support Documents](#k-5docs)
-- [CS Discoveries and CS Principles Facilitator Support Documents](#6-12docs)
-- [Facilitator Payments](#pay)
-
-________________
-<a id="announce"></a>
-## Announcements
-- [New Process to secure substitute CS Discoveries and CS Principles Facilitators](#subfac)
-- [Updated CS Discoveries/Principles Facilitator Travel Policy](#6-12docs)
-
-
+- [Facilitator Landing Pages](#landing)
 
 ________________
 
 <a id="subfac"></a>
-### Securing Substitute 6-12 Facilitators
-A new, streamlined process for securing a substitute CS Discoveries/CS Principles facilitators, outlined in the **Academic Year Workshop Process Document** <a href="https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit#heading=h.bjz40tsn2qt" target=_blank>**here**</a>.
+## Securing Substitute Facilitators
+Facilitators who are interested in traveling to support workshops in other regions can add their names and contact information to the [Code.org Facilitator Contact and Availability](https://docs.google.com/spreadsheets/d/1ccefl3MO-Z0ETyq9MmpvqiK9KTPOXoubVVckp28VXrU/edit#gid=0) (currently being updated by facilitators for summer 2022). Regional Partners should reach out to available facilitators directly when in need of a substitute.
 
-[**Back to the top**](#top)
-________________
-<a id="page"></a>
-### Example Facilitator One-Pager for 6-12 Programs
-The facilitator one-pager should be sent to facilitators at least 10 days prior to the academic year workshops. It provides facilitators with the logistical information needed to run their workshop.
-
-Use <a href="https://docs.google.com/document/d/1FobsNOHi91ioe5ZoCeiWNgDslQkTPF4w31j2ii8q4Bk/edit" target=_blank>this one-pager</a> as an example of how to format the information that facilitators will need to run a successful workshop.
 
 
 [**Back to the top**](#top)
 ________________
 <a id="contract"></a>
-### Example contract
+## Example Contract
 [This is an example](https://docs.google.com/document/d/12xtLUisQB0VJHQAxtNBVUcFYJzT9uXXuMKPrJ5ChLsw/view) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
 
 We have created these example Scope of Work documents that you can use as a planning resource when establishing a relationship with a K-5 or 6-12 facilitators. These document lives in our shared Google Drive folder.
@@ -57,44 +38,18 @@ We have created these example Scope of Work documents that you can use as a plan
 
 *DISCLAIMER: By providing these resources and example documents, Code.org is not offering you legal advice. You should consult a lawyer if you need advice about contracts, the language therein, or any other legal matter. These resources are meant to serve as general guides for you to customize and make adjustments that are right for your organization, while still staying within the bounds of the program guidelines Code.org has outlined.*
 
-[**Back to the top**](#top)
-________________
-<a id="recruitment"></a>
-## Facilitator Recruitment Resources
-
-- [Facilitator Program Landing Page](https://code.org/facilitator) on the Code.org website
 
 [**Back to the top**](#top)
 ________________
-<a id="k-5docs"></a>
-## CS Fundamentals Facilitator Support Documents
+<a id="landing"></a>
+## Facilitator Landing Pages
 
-<ul>
- <li><a href="https://docs.google.com/document/d/15OeABLkGfF4tOutKA4NydDuoigAhVwN0RAXm9x_DIRE/preview", target=_"blank">CS Fundamentals Facilitator Handbook</a> - The handbook contains an overview of CS Fundamentals facilitator program and facilitation principles.</li>
- <li><a href="https://docs.google.com/document/d/1hmaqhTvLjl7b_TKjaGF8O3RgirGYMJLA-AZ9yDGBLEw/preview", target=_"blank">CS Fundamentals Workshop Organizer Guide</a> - This document outlines the process for managing CS Fundamentals workshops.</li>
- <li><a href="https://curriculum.code.org/plcsf/", target=_"blank">CS Fundamentals Facilitator Landing Page</a> - See full list of resources and agendas for CS Fundamentals Facilitators</li>
- <li><a href="/educate/regional-partner/playbook/payments#csftravel", target=_"blank">CS Fundamentals Facilitator Travel Policy</a></li> 
-</ul>
+- <a href="https://curriculum.code.org/plcsf-21/", target=_"blank">CS Fundamentals Facilitator Landing Page</a> 
+- <a href="https://curriculum.code.org/plcsd-21/w", target=_"blank">CS Discoveries Facilitator Landing Page</a> 
+- <a href="https://curriculum.code.org/plcsp-21/", target=_"blank">CS Principles Facilitator Landing Page</a> 
 
 
-<a id="6-12docs"></a>
-
-## CS Discoveries and CS Principles Facilitator Support Documents
-
-<ul>
- <li><a href="https://docs.google.com/document/d/1_pIaekAxOXnVUO4KYnnlmgH-Bna3f046MidrD9gYnZI/preview", target=_"blank">6-12 Facilitator Handbook</a> - The handbook contains an overview of CS Discoveries and CS Principles facilitator programs and facilitation principles.</li>
- <li><a href="https://curriculum.code.org/plcsd/", target=_"blank">CS Discoveries Facilitator Landing Page</a> - See full list of important resources and agendas for CS Discoveries Facilitators</li>
- <li><a href="https://curriculum.code.org/plcsp/", target=_"blank">CS Principles Facilitator Landing Page</a> See full list of important resources and agendas for CS Principles Facilitators</li>
- <li><a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit", target=_"blank">6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated September 2019]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.</li>
-</ul>
 
 [**Back to the top**](#top)
 
-________________
-<a id="pay"></a>
-## Facilitator Payments
 
-See information about facilitator payments in the payments tile <a href="https://code.org/educate/regional-partner/playbook/payments#facilitators" target=_blank>**here**</a>.
-
-
-[**Back to the top**](#top)

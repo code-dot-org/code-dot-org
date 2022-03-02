@@ -16,7 +16,8 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "taipkan tajuk di sini"
         },
         "courseF_project_1": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Terima kasih!"
+          "498cd895eb5a102c5aeb977e2b928dee": "Terima kasih!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Anda menang!"
         },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "taipkan perkataan di sini",
@@ -36,7 +37,8 @@
         },
         "Find the Wizard": {
           "0ab65920c84bec05a22e09feea7fe4ea": "taipkan perkataan di sini",
-          "30fcc1693fa8402931d13ac3a5f396fd": "taipkan tajuk di sini"
+          "30fcc1693fa8402931d13ac3a5f396fd": "taipkan tajuk di sini",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Awak jumpa saya!"
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "taipkan perkataan di sini",
@@ -199,11 +201,49 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "taipkan tajuk di sini"
         },
         "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "ikan"
+          "83e4a96aed96436c621b9809e258b309": "ikan",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "makhluk"
         },
         "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "taipkan perkataan di sini",
           "30fcc1693fa8402931d13ac3a5f396fd": "taipkan tajuk di sini"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Klik sprite untuk memberikan mereka topeng.",
+          "968c8b54671ab303d48320f86937c40b": "Topeng membantu melambatkan penyebaran virus!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Anda menang!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Helo Dunia!"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Anda menang!"
         }
       }
     }

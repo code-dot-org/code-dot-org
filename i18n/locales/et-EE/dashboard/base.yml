@@ -290,6 +290,7 @@ et:
       prizes_link: 'rohkem infot'
   teacher:
     answer: Vastus
+    dashboard: 'Õpetaja töölaud'
     for_teachers_only: Ainult õpetajatele
     title:
       one: 'Sinu õpetaja:'

@@ -847,6 +847,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Loyihalash jarayonini aniqlang va u yakunlangan loyihani shakllantirishda qanday yordam berdi."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Mashinani o‘rganish modelini o‘rgating va sinovdan o‘tkazing."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Mashinani o‘rganishda inson tarafkashligi qanday rol o‘ynashi haqida sabab."
         }
       }
     }

@@ -2513,31 +2513,6 @@ vi-VN:
           # Câu chuyện khoảng trống
 
           Trong bài học này, bạn sẽ học cách sử dụng và viết câu chuyện khoảng trống. Hãy xem video này để tìm hiểu mối liên hệ với khoa học máy tính.
-      OPD-K5 CS Courses_dani:
-        markdown: "# Lập kế hoạch > Bắt đầu trên Code.org\n\n\n## Bước 1: Chọn khóa
-          học\nTất cả các khóa học của chúng tôi – từ khóa dành cho trẻ chưa biết
-          đọc tới khóa dành cho học sinh trung học – đều có trên **[danh mục khóa
-          học](https://studio.code.org/courses)**. Để tìm các bài học Nguyên tắc cơ
-          bản của KHMT mà bạn đã luyện tập, hãy truy cập **[trang tiểu học](https://code.org/educate/curriculum/elementary-school)**
-          và cuộn xuống phần “Khóa học”. Tất cả khóa học của chúng tôi đều miễn phí.
-          Hãy trò chuyện với đồng nghiệp ở trường bạn để quyết định xem chương trình
-          đào tạo nào có thể tích hợp với nhiều môn học khác nhau.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Bước 2: Thiết lập nhóm đào tạo của bạn\nThiết lập nhóm đào tạo để xem tiến
-          trình của học sinh, in thẻ điểm danh cho học sinh của bạn, quản lý tài khoản
-          của các em và in chứng chỉ để các em có thể mang về nhà khi kết thúc khóa
-          học. Hãy nhấp chuột vào liên kết này để **[xem một đoạn video ngắn](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          minh họa cách thiết lập lớp khoa học máy tính đầu tiên của bạn trên Code.org.
-          Bạn cũng có thể tìm thấy các bước trong **[bài viết hỗ trợ sau](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Bước 3: Chỉ định khóa học cho nhóm của bạn\nNhấp chuột vào khóa học mà bạn
-          đang dạy – bạn sẽ thấy màn hình như dưới đây. Sau đó, bạn có thể nhấp chuột
-          vào “Chỉ định khóa học” và chỉ định khóa học đó cho một trong các nhóm của
-          bạn. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Bước 4: Bắt đầu dạy thôi!\nChỉ cần một bài học duy nhất để mang các khái
-          niệm khoa học máy tính vào lớp học của bạn. Sau khi thấy học sinh của mình
-          nhiệt tình với KHMT, hãy tiếp tục với giáo án hàng ngày để hướng dẫn học
-          sinh của mình, các hoạt động không sử dụng thiết bị điện tử để bạn có thể
-          thực hiện mà không cần máy tính và các diễn đàn để kết nối với các thầy
-          cô giáo khác.\n\n\n"
       OPD-K5 Stage3aGo_dani:
         content1: mô tả ở đây
       SimonSays-Unplugged_2021:
@@ -3414,3 +3389,108 @@ vi-VN:
           ## Tài liệu tham khảo
 
           * [Giới thiệu về biến](https://youtu.be/G41G_PEWFjE) - Video ([tải về](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Tạo phong cách cho văn bản với CSS
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tiêu đề
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U6 LED create intro_2021:
+        content1: mô tả ở đây
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: mô tả ở đây
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

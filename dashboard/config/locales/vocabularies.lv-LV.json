@@ -124,6 +124,21 @@
         },
         "define/coursee/2021": {
           "word": "Definēt"
+        },
+        "debugging/csd/2021": {
+          "word": "Atkļūdošana"
+        },
+        "variable/csd/2021": {
+          "word": "Mainīgais"
+        },
+        "conditionals/csd/2021": {
+          "word": "Sazarojumi"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
         }
       }
     }

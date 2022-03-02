@@ -151,6 +151,9 @@ el:
     πολλά περισσότερα από τον προγραμματισμό! Απολαύστε το πρώτο βήμα του Code.org
     σε ένα νέο ταξίδι για να διδάξετε περισσότερα για την ΤΝ σε όλο το πρόγραμμα σπουδών
     μας.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -250,7 +253,7 @@ el:
   hoc2018_tutorial_mchoc_description: Χρησιμοποιήστε μπλοκ κώδικα για να οδηγήσετε
     την Alex ή τον Steve σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
   codeorg_homepage_hoc2019_dance_heading: Δοκιμάστε το νέο <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Υποστήριξη για γονείς και δασκάλους που αντιμετωπίζουν
     το κλείσιμο των σχολείων.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1067,6 +1070,7 @@ el:
   footer_menu_support: Υποστήριξη
   footer_menu_terms: Όροι
   footer_menu_privacy: Πολιτική Απορρήτου
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Δραστηριότητες ώρας κώδικα
   learn_banner_blurb: Δοκιμάστε έναν οδηγό εκμάθησης διάρκειας μιας ώρας σχεδιασμένο
     για όλες τις ηλικίες σε περισσότερες από 45 γλώσσες. Γίνετε μέλος ενός δικτύου
