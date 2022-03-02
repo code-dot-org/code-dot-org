@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const courseOfferings = {
@@ -42,28 +42,108 @@ const courseOfferings = {
     category: 'full_course',
     is_featured: false,
     course_versions: {
-      84: {
-        id: 84,
+      3: {
+        id: 3,
         version_year: '2017',
         display_name: '2017',
         is_stable: true,
         is_recommended: false,
-        locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
-        units: {1: {id: 94, name: 'Unit 1'}}
+        locales: [],
+        units: {3: {id: 3, name: 'Unit 1'}, 4: {id: 4, name: 'Unit 2'}}
       },
-      85: {
-        id: 85,
+      4: {
+        id: 3,
         version_year: '2018',
         display_name: '2018',
         is_stable: true,
         is_recommended: true,
-        locales: ['English', 'Italiano', 'Slovenčina'],
-        units: {
-          95: {
-            id: 95,
-            name: 'Course A (2018)'
-          }
-        }
+        locales: [],
+        units: {5: {id: 5, name: 'Unit 1'}, 6: {id: 6, name: 'Unit 2'}}
+      }
+    }
+  },
+  3: {
+    id: 3,
+    display_name: 'Computer Science A',
+    category: 'full_course',
+    is_featured: false,
+    course_versions: {
+      5: {
+        id: 5,
+        version_year: '2022',
+        display_name: '2022',
+        is_stable: true,
+        is_recommended: false,
+        locales: [],
+        units: {7: {id: 7, name: 'Unit 1'}, 8: {id: 8, name: 'Unit 2'}}
+      }
+    }
+  },
+  4: {
+    id: 4,
+    display_name: 'Flappy',
+    category: 'hoc',
+    is_featured: false,
+    course_versions: {
+      6: {
+        id: 6,
+        version_year: 'unversioned',
+        display_name: 'unversioned',
+        is_stable: true,
+        is_recommended: false,
+        locales: [],
+        units: {9: {id: 9, name: 'Flappy'}}
+      }
+    }
+  },
+  5: {
+    id: 5,
+    display_name: 'Hello World',
+    category: 'hoc',
+    is_featured: true,
+    course_versions: {
+      7: {
+        id: 7,
+        version_year: 'unversioned',
+        display_name: 'unversioned',
+        is_stable: true,
+        is_recommended: true,
+        locales: [],
+        units: {10: {id: 10, name: 'Hello World'}}
+      }
+    }
+  },
+  6: {
+    id: 6,
+    display_name: 'Poem Art',
+    category: 'hoc',
+    is_featured: true,
+    course_versions: {
+      8: {
+        id: 8,
+        version_year: 'unversioned',
+        display_name: 'unversioned',
+        is_stable: true,
+        is_recommended: true,
+        locales: [],
+        units: {11: {id: 11, name: 'Poem Art'}}
+      }
+    }
+  },
+  7: {
+    id: 7,
+    display_name: 'Artist',
+    category: 'hoc',
+    is_featured: false,
+    course_versions: {
+      9: {
+        id: 9,
+        version_year: 'unversioned',
+        display_name: 'unversioned',
+        is_stable: true,
+        is_recommended: true,
+        locales: [],
+        units: {12: {id: 12, name: 'Artist'}}
       }
     }
   }
@@ -84,9 +164,7 @@ const defaultProps = {
     code: 'asdf',
     courseOfferingId: null,
     courseVersionId: null,
-    unitId: null,
-    courseId: null,
-    scriptId: null
+    unitId: null
   }
 };
 
@@ -102,11 +180,9 @@ const hiddenSectionProps = {
     pairingAllowed: false,
     studentCount: 0,
     code: 'asdf',
-    courseOfferingId: null,
-    courseVersionId: null,
-    unitId: 36,
-    courseId: null,
-    scriptId: 36
+    courseOfferingId: 2,
+    courseVersionId: 4,
+    unitId: 6
   }
 };
 
@@ -131,12 +207,12 @@ describe('AssignmentSelector', () => {
     wrapper
       .find('select')
       .at(0)
-      .simulate('change', {target: {value: 'csd'}});
+      .simulate('change', {target: {value: 2}});
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseOfferingId: null,
-      courseVersionId: null,
-      unitId: null
+      courseOfferingId: 2,
+      courseVersionId: 3,
+      unitId: 5
     });
   });
 
@@ -146,50 +222,35 @@ describe('AssignmentSelector', () => {
         {...defaultProps}
         section={{
           ...defaultProps.section,
-          courseOfferingId: 1, // CS Discoveries
-          courseVersionId: 10,
-          unitId: 168 // Unit 1: Problem Solving
+          courseOfferingId: 2,
+          courseVersionId: 4,
+          unitId: 6
         }}
       />
     );
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseOfferingId: 1,
-      courseVersionId: 10,
-      unitId: 168
+      courseOfferingId: 2,
+      courseVersionId: 4,
+      unitId: 6
     });
   });
 
-  it('does not show script that is in course in primary dropdown', () => {
+  it('shows all course offerings in first dropdown with blank option', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps} />);
     assert.equal(wrapper.find('select').length, 1);
-    assert.equal(wrapper.find('option').length, 3);
-    assert.equal(
-      wrapper
-        .find('option')
-        .at(0)
-        .text(),
-      ''
-    );
-    assert.equal(
-      wrapper
-        .find('option')
-        .at(1)
-        .text(),
-      'CS Discoveries'
-    );
-    assert.equal(
-      wrapper
-        .find('option')
-        .at(2)
-        .text(),
-      'Make a Flappy game'
-    );
-    assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseOfferingId: null,
-      courseVersionId: null,
-      unitId: null
-    });
+    assert.equal(wrapper.find('option').length, 8);
+
+    assert.equal(wrapper.find('option').map(option => option.text()), [
+      '',
+      'Computer Science A',
+      'Computer Science Discoveries',
+      'Course A',
+      'Hello World',
+      'Poem Art',
+      'Artist',
+      'Flappy'
+    ]);
   });
 
   it('shows second dropdown after selecting primary', () => {
@@ -197,24 +258,15 @@ describe('AssignmentSelector', () => {
     wrapper
       .find('select')
       .at(0)
-      .simulate('change', {target: {value: 'csd'}});
+      .simulate('change', {target: {value: 2}});
     assert.equal(wrapper.find('select').length, 2);
     const secondary = wrapper.find('select').at(1);
-    assert.equal(secondary.find('option').length, 2);
-    assert.equal(
-      secondary
-        .find('option')
-        .at(0)
-        .text(),
-      'Unit 1: Problem Solving'
-    );
-    assert.equal(
-      secondary
-        .find('option')
-        .at(1)
-        .text(),
+    assert.equal(secondary.find('option').length, 3);
+    assert.equal(secondary.find('option').map(option => option.text()), [
+      'Unit 1',
+      'Unit 2',
       ''
-    );
+    ]);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: null,
       courseVersionId: null,
@@ -227,15 +279,15 @@ describe('AssignmentSelector', () => {
     wrapper
       .find('select')
       .at(0)
-      .simulate('change', {target: {value: 'csd'}});
+      .simulate('change', {target: {value: 2}});
     wrapper
       .find('select')
       .at(1)
-      .simulate('change', {target: {value: 'null_168'}});
+      .simulate('change', {target: {value: 3}});
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseOfferingId: null,
-      courseVersionId: null,
-      unitId: null
+      courseOfferingId: 2,
+      courseVersionId: 3,
+      unitId: 3
     });
   });
 
@@ -264,122 +316,15 @@ describe('AssignmentSelector', () => {
     });
   });
 
-  it('includes uncoursed script if section is assigned that script currently', () => {
-    // Eventually we don't expect this to be a plausible case, but until we do
-    // our migration, it's possible for a section to be assigned to a script that
-    // is in a course, and we want to make sure this still shows up in our
-    // dropdown.
+  it('shows two dropdowns if section has course offering, course version and unit', () => {
     const wrapper = shallow(
       <AssignmentSelector
         {...defaultProps}
         section={{
           ...defaultProps.section,
-          courseOfferingId: null,
-          courseVersionId: null,
-          unitId: 168
-        }}
-      />
-    );
-    assert.equal(wrapper.find('select').length, 1);
-    assert.equal(wrapper.find('option').length, 4);
-    // ends up after flappy, because it's in a later category
-    assert.equal(
-      wrapper
-        .find('option')
-        .at(2)
-        .text(),
-      'Make a Flappy game'
-    );
-    assert.equal(
-      wrapper
-        .find('option')
-        .at(3)
-        .text(),
-      'Unit 1: Problem Solving'
-    );
-  });
-
-  // Make sure we are passing the proper recommended version to our child component, <AssignmentVersionSelector/>
-  describe('version recommendation', () => {
-    it('recommends the latest stable version supported in user locale', () => {
-      // Choose the 'Make a flappy game' script, which has both 2017 and 2018 versions.
-      // Make sure we are recommended 2017 version, which supports Spanish.
-      const wrapper = shallow(
-        <AssignmentSelector
-          {...defaultProps}
-          localeCode="es-MX"
-          section={{
-            ...defaultProps.section,
-            courseOfferingId: null,
-            courseVersionId: null,
-            unitId: null
-          }}
-        />
-      );
-
-      const versionSelectorProps = wrapper
-        .find('AssignmentVersionSelector')
-        .props();
-
-      assert.equal(versionSelectorProps.versions.length, 2);
-      const recommendedVersion = versionSelectorProps.versions.find(
-        v => v.isRecommended
-      );
-      assert.equal(recommendedVersion.title, '2017');
-    });
-
-    it('recommends the latest stable version if no versions are supported in user locale', () => {
-      // Choose the 'Make a flappy game' script, which has both 2017 and 2018 versions.
-      // Make sure we are recommended 2018 version, since no versions support Slovak.
-      const wrapper = shallow(
-        <AssignmentSelector
-          {...defaultProps}
-          localeCode="sk-SK"
-          section={{
-            ...defaultProps.section,
-            courseOfferingId: null,
-            courseVersionId: null,
-            unitId: 6
-          }}
-        />
-      );
-
-      const versionSelectorProps = wrapper
-        .find('AssignmentVersionSelector')
-        .props();
-
-      assert.equal(versionSelectorProps.versions.length, 2);
-      const recommendedVersion = versionSelectorProps.versions.find(
-        v => v.isRecommended
-      );
-      assert.equal(recommendedVersion.title, '2018');
-    });
-  });
-
-  it('shows two dropdowns if section has a course selected', () => {
-    const wrapper = shallow(
-      <AssignmentSelector
-        {...defaultProps}
-        section={{
-          ...defaultProps.section,
-          courseOfferingId: null,
-          courseVersionId: null,
-          unitId: null
-        }}
-      />
-    );
-    assert.equal(wrapper.find('select').length, 2);
-  });
-
-  it('shows two dropdowns if section has course and current unit selected', () => {
-    const wrapper = shallow(
-      <AssignmentSelector
-        {...defaultProps}
-        section={{
-          ...defaultProps.section,
-          courseOfferingId: null,
-          courseVersionId: null,
-          unitId: null
+          courseOfferingId: 2,
+          courseVersionId: 3,
+          unitId: 3
         }}
       />
     );
@@ -413,35 +358,17 @@ describe('AssignmentSelector', () => {
 
     it('shows up after the blank option and before the others', () => {
       assert.equal(wrapper.find('select').length, 1);
-      assert.equal(wrapper.find('option').length, 4);
-      assert.equal(
-        wrapper
-          .find('option')
-          .at(0)
-          .text(),
-        ''
-      );
-      assert.equal(
-        wrapper
-          .find('option')
-          .at(1)
-          .text(),
-        'Decide later'
-      );
-      assert.equal(
-        wrapper
-          .find('option')
-          .at(2)
-          .text(),
-        'CS Discoveries'
-      );
-      assert.equal(
-        wrapper
-          .find('option')
-          .at(3)
-          .text(),
-        'Make a Flappy game'
-      );
+      assert.equal(wrapper.find('option').length, 9);
+      assert.equal(wrapper.find('option').map(option => option.text()), [
+        '',
+        'Decide later',
+        'Computer Science Discoveries',
+        'Course A',
+        'Hello World',
+        'Poem Art',
+        'Artist',
+        'Flappy'
+      ]);
     });
 
     it('means selecting nothing', () => {
@@ -475,7 +402,7 @@ describe('AssignmentSelector', () => {
       wrapper
         .find('select')
         .at(0)
-        .simulate('change', {target: {value: 'csd'}});
+        .simulate('change', {target: {value: 2}});
       expect(spy).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: null,
         courseVersionId: null,
@@ -487,16 +414,16 @@ describe('AssignmentSelector', () => {
       wrapper
         .find('select')
         .at(0)
-        .simulate('change', {target: {value: 'csd'}});
+        .simulate('change', {target: {value: 2}});
       spy.resetHistory();
       wrapper
         .find('select')
         .at(1)
-        .simulate('change', {target: {value: 'null_168'}});
+        .simulate('change', {target: {value: 3}});
       expect(spy).to.have.been.calledOnce.and.to.have.been.calledWith({
-        courseOfferingId: null,
-        courseVersionId: null,
-        unitId: null
+        courseOfferingId: 2,
+        courseVersionId: 3,
+        unitId: 3
       });
     });
   });
@@ -510,16 +437,16 @@ describe('AssignmentSelector', () => {
 
     it('disables the primary dropdown', () => {
       const firstDropdown = wrapper.find('select').at(0);
-      expect(firstDropdown).to.have.prop('disabled', true);
+      expect(firstDropdown.props().disabled).to.equal(true);
     });
 
     it('disables the secondary dropdown', () => {
       wrapper
         .find('select')
         .at(0)
-        .simulate('change', {target: {value: 'csd'}});
+        .simulate('change', {target: {value: 2}});
       const secondDropdown = wrapper.find('select').at(1);
-      expect(secondDropdown).to.have.prop('disabled', true);
+      expect(secondDropdown.props().disabled).to.equal(true);
     });
   });
 });
