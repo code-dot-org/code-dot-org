@@ -104,7 +104,7 @@ module.exports = function(grunt) {
    */
   function checkForFormatIssues(locale, namespace, json, src) {
     const errors = [];
-    // Process each individual key so we can quickly identify why string is having an issue.
+    // Process each individual key so we can quickly identify which string is having an issue.
     Object.keys(json).forEach(function(key) {
       try {
         process(locale, namespace, json[key]);
