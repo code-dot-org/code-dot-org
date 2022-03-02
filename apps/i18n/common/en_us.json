@@ -1898,6 +1898,8 @@
   "studentAnnouncementSpecial2020Heading": "Learn computer science at home",
   "studentAnnouncementSpecial2020Body": "Tune in to a CodeBytes mini-lesson, or see resources for students, parents, and teachers - including videos, fun tutorials, and projects!",
   "studentAnnouncementSpecial2020Button": "Get started",
+  "studentAsVerifiedTeacherWarning": "Your account is currently a student account - you will need to update this account to a teacher account to keep verified teacher access.",
+  "studentAsVerifiedTeacherDetails": "Click on the link and follow the instructions to upgrade your account. If you do not see the option to upgrade your account, you will need to be removed from all teacher sections.",
   "students": "Students",
   "studentFreeResponseAnswers": "Student free response answers",
   "studentsInSection": "Students in section: ",

@@ -117,6 +117,9 @@ function showHomepage() {
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
             isEnglish={isEnglish}
+            showVerifiedTeacherWarning={
+              homepageData.showStudentAsVerifiedTeacherWarning
+            }
           />
         )}
       </div>
