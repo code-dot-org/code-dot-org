@@ -15,6 +15,9 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
       .then(() => this.setSerialPort(port))
       .then(() => {
         return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
+      })
+      .catch(() => {
+        return Promise.reject("Couldn't connect to board");
       });
   }
 
