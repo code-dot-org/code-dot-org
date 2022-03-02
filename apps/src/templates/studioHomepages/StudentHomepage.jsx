@@ -22,7 +22,7 @@ export default class StudentHomepage extends Component {
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
     isEnglish: PropTypes.bool.isRequired,
-    showVerifiedTeacherWarning: PropTypes.bool.isRequired
+    showVerifiedTeacherWarning: PropTypes.bool
   };
 
   componentDidMount() {
