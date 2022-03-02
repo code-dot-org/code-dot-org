@@ -125,9 +125,10 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
-      @programming_environment = create :programming_environment
+      @published_programming_environment = create :programming_environment, published: true
+      @unpublished_programming_environment = create :programming_environment, published: false
 
-      @update_params = {name: @programming_environment.name, title: 'new title'}
+      @update_params = {name: @published_programming_environment.name, title: 'new title'}
     end
 
     test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
@@ -135,20 +136,25 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     test_user_gets_response_for :new, user: :teacher, response: :forbidden
     test_user_gets_response_for :new, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :student, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :edit, params: -> {{name: @published_programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :edit, params: -> {{name: @published_programming_environment.name}}, user: :student, response: :forbidden
+    test_user_gets_response_for :edit, params: -> {{name: @published_programming_environment.name}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :edit, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {{name: @programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: -> {{name: @published_programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: nil, response: :success
-    test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: :student, response: :success
-    test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: :teacher, response: :success
-    test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: nil, response: :success, name: 'signed out user can view published programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :student, response: :success, name: 'student can view published programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :teacher, response: :success, name: 'teacher can view published programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view published programming environment'
+
+    test_user_gets_response_for :show, params: -> {{name: @unpublished_programming_environment.name}}, user: nil, response: :forbidden, name: 'signed out user cannot view unpublished programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @unpublished_programming_environment.name}}, user: :student, response: :forbidden, name: 'student cannot view unpublished programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @unpublished_programming_environment.name}}, user: :teacher, response: :forbidden, name: 'teacher cannot view unpublished programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view unpublished programming environment'
 
     test_user_gets_response_for :index, user: nil, response: :success
     test_user_gets_response_for :index, user: :student, response: :success
