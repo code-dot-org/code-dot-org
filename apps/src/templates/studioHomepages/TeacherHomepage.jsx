@@ -42,7 +42,8 @@ export const UnconnectedTeacherHomepage = ({
   teacherName,
   topCourse,
   topPlCourse,
-  beginGoogleImportRosterFlow
+  beginGoogleImportRosterFlow,
+  marketingSegmentData
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
@@ -159,6 +160,7 @@ export const UnconnectedTeacherHomepage = ({
         {isEnglish && specialAnnouncement && (
           <MarketingAnnouncementBanner
             announcement={specialAnnouncement}
+            marketingSegmentData={marketingSegmentData}
             marginBottom="30px"
           />
         )}
@@ -283,7 +285,8 @@ UnconnectedTeacherHomepage.propTypes = {
   teacherName: PropTypes.string,
   topCourse: shapes.topCourse,
   topPlCourse: shapes.topCourse,
-  beginGoogleImportRosterFlow: PropTypes.func
+  beginGoogleImportRosterFlow: PropTypes.func,
+  marketingSegmentData: PropTypes.object
 };
 
 const styles = {

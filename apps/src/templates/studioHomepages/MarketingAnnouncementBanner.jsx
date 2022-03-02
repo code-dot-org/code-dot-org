@@ -11,9 +11,16 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 // MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock which adds
 // a button to dismiss the banner. It also listens for modifications to the banner through
 // optimizely and checks if the new version of the banner has been dismissed.
-const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
+const MarketingAnnouncementBanner = ({
+  announcement,
+  marginBottom,
+  marketingSegmentData
+}) => {
   const [displayBanner, setDisplayBanner] = useState(true);
   const bannerRef = useRef(null);
+
+  const overrideAnnouncement = getTargetedBanner(marketingSegmentData);
+  let displayedBanner = overrideAnnouncement || announcement;
 
   useEffect(() => {
     if (window['optimizely']) {
@@ -37,7 +44,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   };
 
   const getLocalStorageBannerKey = () => {
-    let bannerId = announcement.id;
+    let bannerId = displayedBanner.id;
 
     const optimizelyId = getOptimizelyModifiedElementId();
     if (optimizelyId) {
@@ -96,11 +103,11 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   const bannerDisplayStyle = displayBanner ? 'block' : 'none';
 
   const button = {
-    id: announcement.buttonId
-      ? announcement.buttonId
+    id: displayedBanner.buttonId
+      ? displayedBanner.buttonId
       : 'marketing-announcement-banner-btn',
-    url: announcement.buttonUrl,
-    text: announcement.buttonText,
+    url: displayedBanner.buttonUrl,
+    text: displayedBanner.buttonText,
     onClick: () => logEvent('cta_button_clicked')
   };
 
@@ -115,11 +122,11 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       {/* ID is used for easier targeting in Optimizely */}
       <div id="special-announcement-action-block" ref={bannerRef}>
         <TwoColumnActionBlock
-          imageUrl={pegasus(announcement.image)}
-          subHeading={announcement.title}
-          description={announcement.body}
+          imageUrl={pegasus(displayedBanner.image)}
+          subHeading={displayedBanner.title}
+          description={displayedBanner.body}
           buttons={[button]}
-          backgroundColor={announcement.backgroundColor}
+          backgroundColor={displayedBanner.backgroundColor}
           marginBottom={marginBottom}
         />
       </div>
@@ -132,6 +139,25 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       />
     </div>
   );
+};
+
+const getTargetedBanner = marketingSegmentData => {
+  // target California and Washington teachers who have not attended PD
+  if (
+    marketingSegmentData['has_attended_pd'] === false &&
+    (marketingSegmentData['school_state'] === 'CA' ||
+      marketingSegmentData['school_state'] === 'WA')
+  ) {
+    return {
+      id: 'ca-wa-superhero-custom',
+      image: '/images/marketing/superhero_teacherdash.png',
+      title: 'CA & WA teachers - Help your students become superheroes!',
+      body: 'Something custom for these states!!',
+      buttonText: 'Learn More',
+      buttonUrl: 'https://code.org/educate/professional-learning/',
+      buttonId: 'superhero-pl-details'
+    };
+  }
 };
 
 const styles = {
@@ -150,7 +176,8 @@ const styles = {
 
 MarketingAnnouncementBanner.propTypes = {
   announcement: shapes.specialAnnouncement,
-  marginBottom: PropTypes.string
+  marginBottom: PropTypes.string,
+  marketingSegmentData: PropTypes.object
 };
 
 export default MarketingAnnouncementBanner;
