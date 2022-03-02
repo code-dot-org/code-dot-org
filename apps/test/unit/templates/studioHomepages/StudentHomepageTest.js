@@ -5,6 +5,8 @@ import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
 import {courses, topCourse, joinedSections} from './homepagesTestData';
+import Notification from '@cdo/apps/templates/Notification';
+import i18n from '@cdo/locale';
 
 describe('StudentHomepage', () => {
   const TEST_PROPS = {
@@ -13,7 +15,8 @@ describe('StudentHomepage', () => {
     sections: joinedSections,
     codeOrgUrlPrefix: 'http://localhost:3000',
     studentId: 123,
-    isEnglish: true
+    isEnglish: true,
+    showVerifiedTeacherWarning: false
   };
 
   it('shows a non-extended Header Banner that says My Dashboard', () => {
@@ -67,5 +70,17 @@ describe('StudentHomepage', () => {
       <StudentHomepage {...TEST_PROPS} isEnglish={false} />
     );
     assert.isFalse(wrapper.find('SpecialAnnouncement').exists());
+  });
+
+  it('displays a notification for verified teacher permissions if showVerifiedTeacherWarning is true', () => {
+    const wrapper = shallow(
+      <StudentHomepage {...TEST_PROPS} showVerifiedTeacherWarning={true} />
+    );
+    const notification = wrapper.find(Notification);
+    assert(notification.exists());
+    assert.equal(
+      notification.props().notice,
+      i18n.studentAsVerifiedTeacherWarning()
+    );
   });
 });
