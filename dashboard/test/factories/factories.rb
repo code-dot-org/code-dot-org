@@ -971,6 +971,7 @@ FactoryGirl.define do
 
   factory :programming_environment do
     sequence(:name) {|n| "programming-environment-#{n}"}
+    published true
   end
 
   factory :programming_environment_category do

@@ -63,7 +63,7 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def serialize
-    env_hash = {name: name}.merge(properties.sort.to_h)
+    env_hash = {name: name, published: published}.merge(properties.sort.to_h)
     env_hash.merge(categories: programming_environment_categories.map(&:serialize))
   end
 
@@ -82,6 +82,7 @@ class ProgrammingEnvironment < ApplicationRecord
     {
       name: name,
       title: title,
+      published: published,
       imageUrl: image_url,
       projectUrl: project_url,
       description: description,
