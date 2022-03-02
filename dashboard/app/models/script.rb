@@ -333,8 +333,10 @@ class Script < ApplicationRecord
     @@lesson_extras_script_ids ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
   end
 
-  def self.maker_units
-    @@maker_units ||= visible_units.select(&:is_maker_unit?)
+  def self.maker_units(user)
+    total_units = visible_units
+    total_units += all_scripts.select {|s| s.has_pilot_access?(user)}
+    @@maker_units ||= total_units.select(&:is_maker_unit?)
   end
 
   def self.text_to_speech_unit_ids
