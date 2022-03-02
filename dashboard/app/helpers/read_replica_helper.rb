@@ -1,26 +1,20 @@
 require 'dynamic_config/gatekeeper'
 
 module ReadReplicaHelper
-  def self.included(base)
-    ActiveRecord::Base.include GatekeeperReadReplica
-  end
+  # The Resolver class is used by the DatabaseSelector middleware to determine
+  # which database the request should use.
+  #
+  # As recommended by Rails documentation, we change the behavior of the
+  # Resolver class in our application by creating a custom resolver class that
+  # inherits from DatabaseSelector::Resolver. In this case, we add the option
+  # to dynamically disable redirecting traffic to the read replica with a
+  # Gatekeeper flag.
+  class GatekeeperReadReplicaResolver < ActiveRecord::Middleware::DatabaseSelector::Resolver
+    private
 
-  # Wrap ActiveRecord::ConnectionHandling methods in Gatekeeper flag to allow
-  # dynamic control over offloading queries to the read pool.
-  module GatekeeperReadReplica
-    extend ActiveSupport::Concern
-    module ClassMethods
-      def read_replica?
-        Gatekeeper.allows('dashboard_read_replica')
+      def read_from_primary?
+        return true unless Gatekeeper.allows('dashboard_read_replica')
+        super
       end
-
-      def lookup_connection_handler(handler_key)
-        if read_replica?
-          super(handler_key)
-        else
-          super(ActiveRecord::Base.writing_role)
-        end
-      end
-    end
   end
 end
