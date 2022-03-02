@@ -41,11 +41,11 @@ describe('SpriteLab', () => {
     });
     afterEach(() => document.body.removeChild(container));
 
-    let testStudioApp;
+    let mockStudioApp;
     beforeEach(() => {
       registerReducers({...commonReducers, ...reducers});
       instance = new SpriteLab();
-      testStudioApp = {
+      mockStudioApp = {
         setCheckForEmptyBlocks: sinon.spy(),
         showRateLimitAlert: sinon.spy(),
         setPageConstants: sinon.spy(),
@@ -62,7 +62,7 @@ describe('SpriteLab', () => {
     describe('After being injected with a studioApp instance', () => {
       let muteSpy;
       beforeEach(() => {
-        instance.injectStudioApp(testStudioApp);
+        instance.injectStudioApp(mockStudioApp);
         registerReducers({...commonReducers, ...reducers});
         instance.areAnimationsReady_ = sinon.stub().returns(true);
         instance.p5Wrapper = sinon.spy();
@@ -146,28 +146,27 @@ describe('SpriteLab', () => {
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
       });
 
-      describe('react to executionError', () => {
+      describe('reactToExecutionError', () => {
         let alertSpy;
         beforeEach(() => {
           alertSpy = sinon.stub(studioApp(), 'displayWorkspaceAlert');
           sinon.stub(instance, 'getMsg').returns({
-            workspaceAlertError: () => {
-              return 'translated string';
-            }
+            workspaceAlertError: () => 'translated string'
           });
         });
+
         afterEach(() => {
           alertSpy.restore();
           instance.getMsg.restore();
         });
+
         it('displays a workspace alert if there is an executionError message', () => {
-          const msg = 'test string';
-          instance.reactToExecutionError(msg);
+          instance.reactToExecutionError('test string');
           expect(alertSpy).to.have.been.calledOnce;
         });
+
         it('does nothing if there is no executionError message', () => {
-          const msg = undefined;
-          instance.reactToExecutionError(msg);
+          instance.reactToExecutionError(undefined);
           expect(alertSpy).to.not.have.been.called;
         });
       });
