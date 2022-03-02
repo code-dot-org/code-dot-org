@@ -490,6 +490,7 @@ module HttpCacheTest
       end
 
       it 'Strips cookies from the penultimate dance level' do
+        assert strips_session_specific_cookies_from_request? '/s/dance/lessons/1/levels/12'
         assert strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/9'
       end
 
