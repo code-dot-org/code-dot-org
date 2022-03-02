@@ -67,8 +67,8 @@
     ],
     "callout_json": "[]",
     "validation_code": "// This level requires the variableLog Helper Library\r\nif (World.frameCount == 1) {\r\n  varLog = buildVariableLog();\r\n  addCriteria(function(){\r\n    return minimumCostumeCount(2);\r\n  }, 'noSecondCostumeForCollector');\r\n  addCriteria(function(){\r\n    return Object.keys(varLog).length >0;\r\n  }, 'createVariable');\r\n  addCriteria(function(){\r\n    return !varLabelStartsWithUnderscore();\r\n  }, 'renameVariable');\r\n  addCriteria(function(){\r\n    return touchEventFound();\r\n  }, 'addWhenTouchesEvent');\r\n  addCriteria(function(){\r\n    return spriteRemoved()&&touchEventFound();\r\n  }, 'removeSpriteWhenTouch');\r\n  addCriteria(function() {\r\n    return onlyEventSpriteRemoved();\r\n  }, 'removeOnlyTouchedSprite');\r\n  addCriteria(function(){\r\n    return detectVariableLogChange();\r\n  }, 'changeVariableBlock');\r\n}\r\n\r\ndelayEndInActiveApp();\r\ncheck();",
-    "preload_asset_list": null,
-    "encrypted_examples": "QNrGfaRS7J0ipPQ7qhvAe0/pUnZJTCw6YLBvmfLl1T8fSBc4IYgOFp6XG3hu\n0V3KiC8Z5EWY2xQpV9eOsi2rnw==\n"
+    "encrypted_examples": "oinfLsrl6xoGzaGnTcpxqIQNdYdux8hzAlj2OoFnUgejE2UkQWdfs0bwVG2B\nnZCwQ2ajYfbP+2vOnGpgXtZ/J+pbVKMsIZKhhSp8CfY3X6/02Hx77+a6iGs5\nWkTMIPg+HDCgkakqXXfKbzjjKdievQ==\n",
+    "preload_asset_list": null
   },
   "game_id": 64,
   "published": true,
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:54.157+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_remove\\\"\"],\"cloned_from\":\"courseF_collector_remove\"},{\"changed_at\":\"2022-03-01 20:50:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:54.157+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_remove\\\"\"],\"cloned_from\":\"courseF_collector_remove\"},{\"changed_at\":\"2022-03-01 20:50:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-02 17:09:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
