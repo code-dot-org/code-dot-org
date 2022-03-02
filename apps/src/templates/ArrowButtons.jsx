@@ -14,7 +14,7 @@ class ArrowButtons extends React.Component {
 
   render() {
     const {visible, disabled} = this.props;
-    const className = !visible && 'hidden';
+    const className = visible ? undefined : 'hidden';
     return (
       <div className={className} id="soft-buttons">
         <button
