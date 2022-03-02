@@ -5,7 +5,10 @@
     "csa2-2022",
     "csa3-2022",
     "csa4-2022",
-    "csa5-2022"
+    "csa5-2022",
+    "csa6-2022",
+    "csa7-2022",
+    "csa8-2022"
   ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
