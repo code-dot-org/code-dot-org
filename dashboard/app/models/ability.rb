@@ -218,11 +218,6 @@ class Ability
           # regional partners cannot see or update incomplete teacher applications
           cannot [:show, :update, :destroy], Pd::Application::TeacherApplication, &:incomplete?
 
-          # G3 regional partners should have full management permission
-          group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
-          unless group_3_partner_ids.empty?
-            can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
-          end
           can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
