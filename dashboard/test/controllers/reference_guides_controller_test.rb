@@ -42,6 +42,8 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     assert_equal reference_guide.summarize_for_show.to_json, show_data
   end
 
+  test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
+
   # everyone can see basic reference guides
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: nil, response: :success
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :student, response: :success
@@ -50,11 +52,11 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
   # pilot reference guides are restricted
   test_user_gets_response_for :show, name: 'not signed-in cannot view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: nil, response: :not_found
+    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: nil, response: :redirect
   test_user_gets_response_for :show, name: 'regular student cannot view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :student, response: :not_found
+    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, name: 'regular teacher cannot view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :teacher, response: :not_found
+    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, name: 'pilot student can view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: -> {@pilot_student}, response: :success
   test_user_gets_response_for :show, name: 'pilot teacher can view pilot ref guide',
@@ -64,11 +66,11 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
   # reference guides in development are restricted
   test_user_gets_response_for :show, name: 'not signed-in cannot view indev ref guide',
-    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: nil, response: :not_found
+    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: nil, response: :redirect
   test_user_gets_response_for :show, name: 'student cannot view indev ref guide',
-    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :student, response: :not_found
+    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, name: 'teacher cannot view indev ref guide',
-    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :teacher, response: :not_found
+    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, name: 'levelbuilder can view indev ref guide',
     params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :levelbuilder, response: :success
 end
