@@ -2,23 +2,29 @@
 :ruby
   require 'cdo/create_header'
   require 'cdo/language_dir'
-  limit_project_types = request.cookies["_limit_project_types_#{rack_env}"]
 
-  level = defined?(local_assigns) ?
-    local_assigns[:level] :
-    false
+  # Determine if we want to show the create menu
+  if local_assigns[:show_create_menu]
+    show_create_menu = local_assigns[:show_create_menu] == "true"
+  elsif local_assigns[:level]
+    # Only show the create menu on project levels (and not on levels in units)
+    show_create_menu = local_assigns[:level].try(:is_project_level)
+  else
+    # Show the create menu on non-level pages
+    show_create_menu = true
+  end
 
-  options = {
-    limit_project_types: limit_project_types,
-    project_type: params && params[:key]
-  }
-  create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
+  if show_create_menu
+    limit_project_types = request.cookies["_limit_project_types_#{rack_env}"]
 
-  # We want to show the Create button for all pages except when working on a
-  # course level. Specifically, for any page except non-project levels.
-  should_show_create_menu = !level || level.try(:is_project_level)
+    options = {
+      limit_project_types: limit_project_types,
+      project_type: params && params[:key]
+    }
+    create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
+  end
 
-- if should_show_create_menu
+- if show_create_menu
   .header_button.create_menu{tabindex: 0, role: "button"}
     %span.create_button
       = I18n.t("#{loc_prefix}create")
@@ -34,44 +40,41 @@
       %a.project_link_box{href: CDO.studio_url('projects')}
         .project_link#view_all_projects
           = I18n.t("#{loc_prefix}view_all")
--# The user menu button is hidden using css so that we can verify the login state of the user on the client
--# and adjust as needed for cached pages (see header.js in apps)
-- user_dropdown_display = current_user.present? ? "block" : "none"
-.header_button.header_user.user_menu{id: "header_user_menu", tabindex: 0, role: "button", style: "display: #{user_dropdown_display}"}
-  - if current_user&.can_pair? && session_pairings.present?
-    %i.fa.fa-users.pairing_icon
-    %span.pairing_name= I18n.t("#{loc_prefix}team")
-  - else
-    - short_name = ERB::Util.h(current_user&.short_name)
-    %span.display_name{id: 'header_display_name', 'data-id': current_user&.id, 'data-shortname': short_name}= short_name
-  &nbsp;
-  %i.user_menu_arrow_down{class: "fa fa-caret-down"}
-  %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
-  .user_options{style: 'display: none', dir: language_dir_class}
-    %a.linktag#my-projects{href: CDO.studio_url('projects')}= I18n.t("#{loc_prefix}my_projects")
-    - if current_user&.can_pair?
-      - if session_pairings.present?
-        = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-          = I18n.t("#{loc_prefix}pair_programming")
-          .pairing_summary
-            #{I18n.t("#{loc_prefix}driver")}:
-            = h(current_user&.short_name)
-            - session_pairings.map do |id|
-              %br
-              #{I18n.t("#{loc_prefix}navigator")}:
-              = h(User.find(id).short_name)
-      - else
-        = link_to '#', {id: 'pairing_link', style: 'display: none'} do
-          = I18n.t("#{loc_prefix}pair_programming")
-    %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
-    %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
--# The sign-in button is hidden using css so that we can verify the login state of the user on the client
--# and adjust as needed for cached pages (see header.js in apps)
-- signin_display = current_user.present? ? "none" : "inline"
-%a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button', style: "display: #{signin_display}"}
-  .header_button.header_user#header_user_signin
-    %span= I18n.t("#{loc_prefix}signin")
-    .signin_callout_wrapper
+
+- if current_user
+  .header_button.header_user.user_menu{id: "header_user_menu", tabindex: 0, role: "button"}
+    - if current_user.can_pair? && session_pairings.present?
+      %i.fa.fa-users.pairing_icon
+      %span.pairing_name= I18n.t("#{loc_prefix}team")
+    - else
+      - short_name = ERB::Util.h(current_user.short_name)
+      %span.display_name{id: 'header_display_name', 'data-id': current_user.id, 'data-shortname': short_name}= short_name
+    &nbsp;
+    %i.user_menu_arrow_down{class: "fa fa-caret-down"}
+    %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+    .user_options{style: 'display: none', dir: language_dir_class}
+      %a.linktag#my-projects{href: CDO.studio_url('projects')}= I18n.t("#{loc_prefix}my_projects")
+      - if current_user.can_pair?
+        - if session_pairings.present?
+          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+            = I18n.t("#{loc_prefix}pair_programming")
+            .pairing_summary
+              #{I18n.t("#{loc_prefix}driver")}:
+              = h(current_user.short_name)
+              - session_pairings.map do |id|
+                %br
+                #{I18n.t("#{loc_prefix}navigator")}:
+                = h(User.find(id).short_name)
+        - else
+          = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+            = I18n.t("#{loc_prefix}pair_programming")
+      %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
+      %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
+- else
+  %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
+    .header_button.header_user#header_user_signin
+      %span= I18n.t("#{loc_prefix}signin")
+      .signin_callout_wrapper
 
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';

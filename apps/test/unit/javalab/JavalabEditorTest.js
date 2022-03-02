@@ -2,7 +2,10 @@ import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {mount} from 'enzyme';
-import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
+import JavalabEditor, {
+  editorDarkModeThemeOverride,
+  editorLightModeThemeOverride
+} from '@cdo/apps/javalab/JavalabEditor';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -15,11 +18,12 @@ import {EditorState} from '@codemirror/state';
 import {oneDark} from '@codemirror/theme-one-dark';
 import {lightMode} from '@cdo/apps/javalab/editorSetup';
 import javalab, {
-  setIsDarkMode,
+  setDisplayTheme,
   sourceVisibilityUpdated,
   sourceValidationUpdated,
   setBackpackApi
 } from '@cdo/apps/javalab/javalabRedux';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {setAllSources} from '../../../src/javalab/javalabRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -324,17 +328,23 @@ describe('Java Lab Editor Test', () => {
         const firstEditor = Object.values(javalabCodeMirrors)[0];
 
         const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
-        store.dispatch(setIsDarkMode(true));
+        store.dispatch(setDisplayTheme(DisplayTheme.DARK));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            oneDark
-          )
+          effects: [
+            javalabEditor.editorThemeOverrideCompartment.reconfigure(
+              editorDarkModeThemeOverride
+            ),
+            javalabEditor.editorModeConfigCompartment.reconfigure(oneDark)
+          ]
         });
-        store.dispatch(setIsDarkMode(false));
+        store.dispatch(setDisplayTheme(DisplayTheme.LIGHT));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            lightMode
-          )
+          effects: [
+            javalabEditor.editorThemeOverrideCompartment.reconfigure(
+              editorLightModeThemeOverride
+            ),
+            javalabEditor.editorModeConfigCompartment.reconfigure(lightMode)
+          ]
         });
       });
     });

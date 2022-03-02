@@ -41,6 +41,7 @@ class XhrProxyController < ApplicationController
     api.github.com
     api.mathjs.org
     api.mojang.com
+    api.nal.usda.gov
     api.nasa.gov
     api.nookipedia.com
     api.opencagedata.com
@@ -75,6 +76,7 @@ class XhrProxyController < ApplicationController
     distanza.org
     dweet.io
     enclout.com
+    freecurrencyapi.net
     googleapis.com
     grobchess.com
     herokuapp.com
@@ -86,12 +88,14 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maker.ifttt.com
     myschoolapp.com
+    newsapi.org
     noaa.gov
     numbersapi.com
     opentdb.com
     pastebin.com
     pixabay.com
     pokeapi.co
+    pro-api.coinmarketcap.com
     qrng.anu.edu.au
     quandl.com
     random.org
@@ -99,7 +103,6 @@ class XhrProxyController < ApplicationController
     restcountries.eu
     roblox.com
     runescape.com
-    script.google.com
     sessionserver.mojang.com
     spreadsheets.google.com
     stats.minecraftservers.org
@@ -113,6 +116,7 @@ class XhrProxyController < ApplicationController
     wikipedia.org
     worldclockapi.com
     worldtimeapi.org
+    xeno-canto.org
   ).freeze
 
   # How long the content is allowed to be cached

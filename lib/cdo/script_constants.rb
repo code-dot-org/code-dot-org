@@ -94,6 +94,7 @@ module ScriptConstants
       DANCE_PARTY_2019_NAME = 'dance-2019'.freeze, # 2019 hour of code
       DANCE_PARTY_EXTRAS_2019_NAME = 'dance-extras-2019'.freeze, # 2019 hour of code
       OCEANS_NAME = 'oceans'.freeze,
+      OUTBREAK_NAME = 'outbreak'.freeze,
       MINECRAFT_AQUATIC_NAME = 'aquatic'.freeze,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
@@ -454,6 +455,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd, script) ||
       ScriptConstants.unit_in_category?(:csd_2018, script) ||
       ScriptConstants.unit_in_category?(:csd_2019, script) ||
+      ScriptConstants.unit_in_category?(:csd_2021, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2016-07-25T18:35:33.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -31,17 +27,32 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
-    "start_animations": "{\n    \"orderedKeys\": [\n        \"red_car\"\n    ],\n    \"propsByKey\": {\n        \"red_car\": {\n            \"name\": \"red_car\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_car.png\",\n            \"frameSize\": {\n                \"x\": 170,\n                \"y\": 76\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
+    "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"red_car\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"red_car\": {\r\n            \"name\": \"red_car\",\r\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_car.png\",\r\n            \"frameSize\": {\r\n                \"x\": 170,\r\n                \"y\": 76\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "start_blocks": "var car = createSprite(70,300);\r\ncar.setAnimation(\"red_car\");\r\n\r\nfunction draw() {\r\n  background(\"green\");\r\n  stroke(\"gray\");\r\n  strokeWeight(70);\r\n  line(0, 335, 400, 185);\r\n  stroke(\"black\");\r\n  strokeWeight(5);\r\n  line(0, 370, 400, 220);\r\n  line(0, 300, 400, 150);\r\n  line(0, 335, 80, 305);\r\n  line(160, 275, 240, 245);\r\n  line(320, 215, 400, 185);\r\n  drawSprites();\r\n}\r\n",
-    "project_template_level_name": "car velocity",
     "long_instructions": "# Moving at an Angle\r\n\r\nIf you use `velocityX` and `velocityY` at the same time, you can move your sprite at an angle.  See if you can keep the car on the road by using these two properties.\r\n\r\n# Do This\r\n\r\nUse `velocityX` and `velocityY` to make the car move along the road.",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "expand_debugger": "false",
+    "libraries_enabled": "false",
+    "validation_enabled": "false"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2016-07-25T18:35:33.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-01-12 17:50:46 +0000\",\"changed\":[\"start_animations\",\"project_template_level_name\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -6,11 +6,17 @@ import Example from './Example';
 import ParametersTable from './ParametersTable';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import i18n from '@cdo/locale';
+import {
+  convertXmlToBlockly,
+  shrinkBlockSpaceContainer
+} from '@cdo/apps/templates/instructions/utils';
+import {parseElement} from '@cdo/apps/xml';
 
 const VIDEO_WIDTH = 560;
 const VIDEO_HEIGHT = 315;
 
 export default function ProgrammingExpressionOverview({programmingExpression}) {
+  const titleRef = React.createRef();
   const videoRef = createRef();
 
   useEffect(() => {
@@ -22,26 +28,61 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
         VIDEO_HEIGHT
       );
     }
-  });
-  // Spritelab passes down its color in HSL format, whereas other labs use hex color
-  const color =
-    programmingExpression.color &&
-    (typeof programmingExpression.color === 'string'
-      ? programmingExpression.color
-      : `hsl(${programmingExpression.color[0]},${programmingExpression
-          .color[1] * 100}%, ${programmingExpression.color[2] * 100}%)`);
+    if (titleRef.current && programmingExpression.blockName) {
+      convertXmlToBlockly(titleRef.current);
+      const blocksDom = parseElement(
+        `<block type='${programmingExpression.blockName}' />`
+      );
+      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+        titleRef.current,
+        blocksDom,
+        {
+          noScrolling: true,
+          inline: false
+        }
+      );
+      shrinkBlockSpaceContainer(blockSpace, true);
+    }
+  }, [programmingExpression]);
+
+  const getColor = () => {
+    const color = programmingExpression.color;
+    if (!color) {
+      return null;
+    }
+    // Spritelab passes down its color in HSL format, whereas other labs use hex color
+    if (typeof color === 'string') {
+      return color;
+    } else {
+      return `hsl(${color[0]},${color[1] * 100}%, ${color[2] * 100}%)`;
+    }
+  };
+
+  const getTitle = () => {
+    if (programmingExpression.blockName) {
+      return (
+        <div
+          ref={titleRef}
+          title={programmingExpression.blockName}
+          role="heading"
+          aria-level="1"
+        />
+      );
+    }
+    if (programmingExpression.imageUrl) {
+      return <img src={programmingExpression.imageUrl} style={styles.image} />;
+    }
+    return <h1>{programmingExpression.name}</h1>;
+  };
+
   return (
     <div>
-      {programmingExpression.imageUrl ? (
-        <img src={programmingExpression.imageUrl} style={styles.image} />
-      ) : (
-        <h1>{programmingExpression.name}</h1>
-      )}
+      <div>{getTitle()}</div>
       <div>
         <strong>{`${i18n.category()}:`}</strong>
         <span
           style={{
-            backgroundColor: color,
+            backgroundColor: getColor(),
             marginLeft: 10,
             padding: '5px 10px'
           }}

@@ -45,6 +45,7 @@ MONITORING_GROUPS = {
   'marketing' => ['Media'],
   'pdot' => ['PDOT Amy', 'PDOT Desiree', 'PDOT Jess', 'PDOT Rosie', 'PDOT Tawny'],
   'product' => ['Product'],
+  'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
   'star-labs-cabal' => ['*Labs']
 }

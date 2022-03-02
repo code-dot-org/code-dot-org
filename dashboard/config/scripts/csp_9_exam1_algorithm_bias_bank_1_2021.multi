@@ -1,7 +1,7 @@
 name 'csp-9-exam1-algorithm-bias-bank-1_2021'
 editor_experiment ''
 wrong 'The algorithm will not be biased because using machine learning eliminates human biases'
-wrong 'While the algorithm may be biased, the eventual decision made the algorithm will not be'
+wrong 'While the algorithm may be biased, the eventual decision made by the algorithm will not be'
 right 'The algorithm will likely reflect the human biases in the data used to train it'
 wrong 'Machine learning algorithms cannot be developed using biased data so if there is bias in the data it will be impossible to develop the algorithm'
 

@@ -136,6 +136,14 @@ class TransfersController < ApplicationController
       return
     end
 
+    # Verify user can be participant in destination section.
+    if students.any? {|student| !new_section.can_join_section_as_participant?(student)}
+      render json: {
+        error: I18n.t('move_students.not_correct_participant_type')
+      }, status: :forbidden
+      return
+    end
+
     stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
       params[:stay_enrolled_in_current_section] != 'false'
     students.each do |student|

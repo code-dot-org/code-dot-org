@@ -9,7 +9,7 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyFoodTruck.java": {
-        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n\n    Cake cakeA = new Cake(\"pineapple\", 12, 2.99, 1, \"cherries\");\n    Cake cakeB = new Cake(\"pineapple\", 12, 2.99, 1, \"cherries\");\n    Cake cakeC = cakeA;\n\n    System.out.print(\"Is Cake A equal to Cake B? \");\n    System.out.println(cakeA == cakeB);\n\n    System.out.print(\"Is Cake A equal to Cake C? \");\n    System.out.println(cakeA == cakeC);\n\n    System.out.print(\"Is Cake B equal to Cake C? \");\n    System.out.println(cakeB == cakeC);\n    \n  }\n}",
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n\n    Cake cakeA = new Cake(\"pineapple\", 12, 2.99, 1, \"cherries\");\n    Cake cakeB = new Cake(\"pineapple\", 12, 2.99, 1, \"cherries\");\n    Cake cakeC = cakeA;\n    Cake cakeD = null;\n\n    System.out.print(\"Is Cake A equal to Cake B? \");\n    System.out.println(cakeA == cakeB);\n\n    System.out.print(\"Is Cake A equal to Cake C? \");\n    System.out.println(cakeA == cakeC);\n\n    System.out.print(\"Is Cake B equal to Cake C? \");\n    System.out.println(cakeB == cakeC);\n\n    System.out.print(\"Does Cake C exist? \");\n    System.out.println(cakeC != null);\n    \n  }\n}",
         "isVisible": true
       },
       "Dessert.java": {
@@ -27,6 +27,6 @@
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-09-07 16:02:40 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:22:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:27:26 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:29:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-07 16:02:40 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:22:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:27:26 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:29:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2022-01-26 21:35:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-26 21:35:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

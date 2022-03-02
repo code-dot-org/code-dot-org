@@ -18,12 +18,14 @@ import {
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {getStore} from '@cdo/apps/redux';
 import _ from 'lodash';
+import logToCloud from '@cdo/apps/logToCloud';
 
 const NUM_STUDENTS_PER_PAGE = 50;
 
 export function loadScriptProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
-  const sectionData = getStore().getState().sectionData.section;
+  const sectionData = getStore().getState().teacherSections.sections[sectionId];
+  const students = getStore().getState().teacherSections.selectedStudents;
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
@@ -39,6 +41,7 @@ export function loadScriptProgress(scriptId, sectionId) {
     getStore().dispatch(startRefreshingProgress());
   } else {
     getStore().dispatch(startLoadingProgress());
+    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted);
   }
 
   let sectionProgress = {
@@ -69,9 +72,7 @@ export function loadScriptProgress(scriptId, sectionId) {
       }
     });
 
-  // get the student data
-  const numStudents = sectionData.students.length;
-  const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
+  const numPages = Math.ceil(students.length / NUM_STUDENTS_PER_PAGE);
 
   const requests = _.range(1, numPages + 1).map(currentPage => {
     const url = `/dashboardapi/section_level_progress/${
@@ -98,6 +99,8 @@ export function loadScriptProgress(scriptId, sectionId) {
   // Combine and transform the data
   requests.push(scriptRequest);
   Promise.all(requests).then(() => {
+    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished);
+
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
       [scriptId]: lessonProgressForSection(

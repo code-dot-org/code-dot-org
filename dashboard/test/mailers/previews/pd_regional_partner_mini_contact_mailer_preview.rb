@@ -1,4 +1,4 @@
-# This can be viewed on non-production environments at /rails/mailers/pd/regional_partner_contact_mailer
+# This can be viewed on non-production environments at /rails/mailers/pd/regional_partner_mini_contact_mailer
 class Pd::RegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 

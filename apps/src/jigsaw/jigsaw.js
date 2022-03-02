@@ -29,7 +29,7 @@ studioApp().setCheckForEmptyBlocks(true);
 // Never bump neighbors for Jigsaw
 Blockly.BUMP_UNCONNECTED = false;
 
-function useLargeNotches() {
+function configureLargeNotches() {
   var notchHeight = 8;
   var notchWidthA = 6;
   var notchWidthB = 10;
@@ -142,7 +142,7 @@ Jigsaw.init = function(config) {
   loadLevel();
 
   if (level.largeNotches) {
-    useLargeNotches();
+    configureLargeNotches();
   }
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 

@@ -26,6 +26,13 @@ const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 
+const MICROBIT_FIRMATA_URL =
+  'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
+const EXPRESS_FIRMATA_URL =
+  'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
+const CLASSIC_FIRMATA_URL =
+  'https://learn.adafruit.com/circuit-playground-firmata/overview';
+
 const initialState = {
   isDetecting: false,
   caughtError: null,
@@ -225,27 +232,37 @@ export default class SetupChecklist extends Component {
   }
 
   installFirmwareSketch() {
-    let firmataFromBoardType;
-    switch (this.state.boardTypeDetected) {
-      case BOARD_TYPE.EXPRESS:
-        firmataFromBoardType =
-          'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
-        break;
-      case BOARD_TYPE.MICROBIT:
-        firmataFromBoardType =
-          'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
-        break;
-      default:
-        firmataFromBoardType =
-          'https://learn.adafruit.com/circuit-playground-firmata/overview';
+    let firmataMarkdown;
+    if (this.state.boardTypeDetected === BOARD_TYPE.MICROBIT) {
+      firmataMarkdown = applabI18n.makerSetupInstallFirmataMB({
+        firmataURL: MICROBIT_FIRMATA_URL
+      });
+    } else if (
+      this.state.boardTypeDetected === BOARD_TYPE.EXPRESS ||
+      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+    ) {
+      firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
+        firmataURLExpress: EXPRESS_FIRMATA_URL,
+        firmataURLClassic: CLASSIC_FIRMATA_URL
+      });
+    } else {
+      // Board Type is Other/Unknown
+      if (experiments.isEnabled('microbit')) {
+        firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
+          firmataURLExpress: EXPRESS_FIRMATA_URL,
+          firmataURLClassic: CLASSIC_FIRMATA_URL,
+          firmataURLMB: MICROBIT_FIRMATA_URL
+        });
+      } else {
+        firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
+          firmataURLExpress: EXPRESS_FIRMATA_URL,
+          firmataURLClassic: CLASSIC_FIRMATA_URL
+        });
+      }
     }
     return (
-      <div>
-        <SafeMarkdown
-          markdown={applabI18n.makerSetupInstallFirmata({
-            firmataURL: firmataFromBoardType
-          })}
-        />
+      <div style={styles.suggestionHeader}>
+        <SafeMarkdown markdown={firmataMarkdown} />
       </div>
     );
   }
@@ -333,3 +350,9 @@ function promiseWaitFor(ms) {
     setTimeout(resolve, ms);
   });
 }
+
+const styles = {
+  suggestionHeader: {
+    marginTop: 15
+  }
+};

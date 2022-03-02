@@ -1,6 +1,0 @@
-{
-  "key": "functionParams_none",
-  "name": "functionParams_none",
-  "category": "Functions",
-  "syntax": "function myFunction() {\n  __;\n}"
-}

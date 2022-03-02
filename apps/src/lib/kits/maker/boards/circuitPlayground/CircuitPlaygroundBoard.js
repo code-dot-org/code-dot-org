@@ -32,7 +32,16 @@ process.hrtime = require('browser-process-hrtime');
 const SERIAL_BAUD = 57600;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
-const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
+const pinMapping = {
+  A0: 12,
+  A1: 6,
+  A2: 9,
+  A3: 10,
+  A4: 3,
+  A5: 2,
+  A6: 0,
+  A7: 1
+};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using

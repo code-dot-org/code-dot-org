@@ -13,6 +13,8 @@ class HttpCache
   DEFAULT_COOKIES = [
     # Language drop-down selection.
     'language_',
+    # Offline experiment flag, to allow users into the pilot
+    'offline_pilot',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze

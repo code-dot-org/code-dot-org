@@ -13,7 +13,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
-import CdoPathObject from './addons/cdoPathObject';
+import CdoRenderer from './addons/cdoRenderer';
 import CdoTheme from './addons/cdoTheme';
 import CdoToolbox from './addons/cdoToolbox';
 import initializeTouch from './addons/cdoTouch';
@@ -165,7 +165,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldVariable = CdoFieldVariable;
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Input = CdoInput;
-  blocklyWrapper.geras.PathObject = CdoPathObject;
   blocklyWrapper.blockly_.Toolbox = CdoToolbox;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
@@ -182,6 +181,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
     blocklyWrapper.blockly_.registry.DEFAULT,
     CdoVerticalFlyout,
+    true /* opt_allowOverrides */
+  );
+
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.RENDERER,
+    'cdo_renderer',
+    CdoRenderer,
     true /* opt_allowOverrides */
   );
 
@@ -317,7 +323,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
       plugins: {
         blockDragger: CdoBlockDragger,
         metricsManager: CdoMetricsManager
-      }
+      },
+      renderer: 'cdo_renderer'
     };
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout

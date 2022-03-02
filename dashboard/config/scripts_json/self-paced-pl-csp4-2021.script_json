@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-04 18:24:04 UTC",
+    "serialized_at": "2022-01-04 22:39:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -313,15 +313,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod4-LeadLearner-vid-CSP"
-        ],
         "progression": "Lead learner"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod4-LeadLearner-vid-CSP"
+          "SP-VPL-21-CSP-mod3-LeadLearner"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -329,7 +326,7 @@
         "activity_section.key": "4848748e-62fb-4a57-a84d-b913e91b0b95"
       },
       "level_keys": [
-        "SP-VPL-21-mod4-LeadLearner-vid-CSP"
+        "SP-VPL-21-CSP-mod3-LeadLearner"
       ]
     },
     {
@@ -438,15 +435,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod4-PairProgramming-TipVid-CSP"
-        ],
         "progression": "Pair programming"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod4-PairProgramming-TipVid-CSP"
+          "SP-VPL-21-CSP-mod3-PairProgramming"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -454,7 +448,7 @@
         "activity_section.key": "2cc15a68-7d26-4082-ba01-c22915f5e8f4"
       },
       "level_keys": [
-        "SP-VPL-21-mod4-PairProgramming-TipVid-CSP"
+        "SP-VPL-21-CSP-mod3-PairProgramming"
       ]
     },
     {
@@ -588,15 +582,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod4-Debugging-TipVid-CSP"
-        ],
         "progression": "Debugging"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod4-Debugging-TipVid-CSP"
+          "SP-VPL-21-CSP-mod4-DebuggingAdvice"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -604,7 +595,7 @@
         "activity_section.key": "37cf16f1-5876-4625-aeba-125e900fa1d7"
       },
       "level_keys": [
-        "SP-VPL-21-mod4-Debugging-TipVid-CSP"
+        "SP-VPL-21-CSP-mod4-DebuggingAdvice"
       ]
     },
     {
@@ -960,9 +951,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod4-LeadLearner-vid-CSP",
+        "level.key": "SP-VPL-21-CSP-mod3-LeadLearner",
         "script_level.level_keys": [
-          "SP-VPL-21-mod4-LeadLearner-vid-CSP"
+          "SP-VPL-21-CSP-mod3-LeadLearner"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1020,9 +1011,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod4-PairProgramming-TipVid-CSP",
+        "level.key": "SP-VPL-21-CSP-mod3-PairProgramming",
         "script_level.level_keys": [
-          "SP-VPL-21-mod4-PairProgramming-TipVid-CSP"
+          "SP-VPL-21-CSP-mod3-PairProgramming"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1092,9 +1083,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod4-Debugging-TipVid-CSP",
+        "level.key": "SP-VPL-21-CSP-mod4-DebuggingAdvice",
         "script_level.level_keys": [
-          "SP-VPL-21-mod4-Debugging-TipVid-CSP"
+          "SP-VPL-21-CSP-mod4-DebuggingAdvice"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

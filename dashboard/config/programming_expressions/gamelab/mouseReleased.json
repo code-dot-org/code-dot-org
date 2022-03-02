@@ -1,6 +1,0 @@
-{
-  "key": "mouseReleased",
-  "name": "mouseReleased",
-  "category": "World",
-  "syntax": "function mouseReleased() {}"
-}

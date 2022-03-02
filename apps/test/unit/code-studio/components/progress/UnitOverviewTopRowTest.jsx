@@ -3,12 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {
-  UnconnectedUnitOverviewTopRow as UnitOverviewTopRow,
-  NOT_STARTED,
-  IN_PROGRESS,
-  COMPLETED
-} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
+import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
@@ -20,7 +15,6 @@ import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {
   sectionsForDropdown: [],
-  unitProgress: NOT_STARTED,
   scriptId: 42,
   scriptName: 'test-script',
   unitTitle: 'Unit test script title',
@@ -29,16 +23,19 @@ const defaultProps = {
   teacherResources: [],
   studentResources: [],
   showAssignButton: true,
-  isMigrated: false
+  isMigrated: false,
+  unitCompleted: false,
+  hasPerLevelResults: false
 };
 
 describe('UnitOverviewTopRow', () => {
-  it('renders "Try Now" for participant', () => {
+  it('renders "Try Now" for participant if not unitCompleted and not hasPerLevelResults', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Participant}
-        unitProgress={NOT_STARTED}
+        unitCompleted={false}
+        hasPerLevelResults={false}
       />
     );
 
@@ -71,12 +68,13 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Continue" for participant', () => {
+  it('renders "Continue" for participant if has level results and not unitCompleted', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Participant}
-        unitProgress={IN_PROGRESS}
+        unitCompleted={false}
+        hasPerLevelResults={true}
       />
     );
 
@@ -97,7 +95,7 @@ describe('UnitOverviewTopRow', () => {
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Participant}
-        unitProgress={COMPLETED}
+        unitCompleted={true}
       />
     );
 

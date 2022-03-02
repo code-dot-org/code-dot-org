@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "",
+        "isVisible": true
+      }
+    },
+    "teacher_markdown": "Have students refer to their notes from the Java Lab Scavenger Hunt and the code segment on the Unit 1 Guide to help write their code.",
+    "long_instructions": "You have learned that Java programs contain a file with two core components: a class header and a `main`(#e7e8ea) method.\r\n\r\n##In MyConsole.java:\r\n\r\n1. Write the class header and `main`(#e7e8ea) method.\r\n\r\n::: details [**Show Me How**]\r\nA class header and the `main`(#e7e8ea) method are structured as:\r\n\r\n  ```\r\n  public class ClassName {\r\n     public static void main(String[] args) {\r\n     \r\n     }\r\n  }\r\n  ```\r\n\r\nBe sure to replace `ClassName`(#e7e8ea) with the name of the Java file.\r\n:::",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-02-14T17:06:12.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-02-14T17:06:12.192+00:00\",\"changed\":[\"cloned from \\\"CSA U1L2-L3_2022\\\"\"],\"cloned_from\":\"CSA U1L2-L3_2022\"},{\"changed_at\":\"2022-02-14 17:11:15 +0000\",\"changed\":[\"hide_share_and_remix\",\"csa_view_mode\",\"teacher_markdown\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-14 17:12:34 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-14 17:14:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-14 17:15:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-14 17:16:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

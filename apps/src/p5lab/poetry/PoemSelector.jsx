@@ -142,11 +142,11 @@ PoemEditor.defaultProps = {
 };
 
 function PoemSelector(props) {
+  const [isOpen, setIsOpen] = useState(false);
+
   if (appOptions.level.standaloneAppName !== PoetryStandaloneApp.PoetryHoc) {
     return null;
   }
-
-  const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = poem => {
     // If the dialog is dismissed, poem will be falsy. Don't update selected poem.
@@ -185,6 +185,7 @@ function PoemSelector(props) {
   const getPoemOptions = () => {
     const options = Object.keys(POEMS)
       .map(poemKey => getPoem(poemKey))
+      .filter(poem => !poem.locale || poem.locale === appOptions.locale)
       .sort((a, b) => (a.title > b.title ? 1 : -1))
       .map(poem => ({value: poem.key, label: poem.title}));
     // Add option to create your own poem to the top of the dropdown.

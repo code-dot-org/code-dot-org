@@ -14,7 +14,7 @@ social:
 ---
 <link href="/css/tools.css" rel="stylesheet">
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 24px"/><br/>Careers with Computer Science</h1>
+<h1><a href="/csjourneys" target="_blank"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 24px"/></a><br/>Careers with Computer Science</h1>
 <div class="col-60" style="margin-bottom: 20px">
   <p>Careers in computer science and technology can be fun and rewarding. But what does a person working in these fields really do? With a vast variety of jobs and companies, there's not just one answer to this question. Watch the videos below to meet some of the people who are tackling big problems in creative ways, then use one of the interactive tools below to learn more about fields and careers that interest you. View opportunities to apply your new CS knowledge outside the classroom, and connect directly with college students and CS professionals at College Confidential or Career Village.</p>
 </div>
@@ -119,18 +119,6 @@ social:
 </div>
 
 <div style="clear: both; margin-bottom:10px"></div>
-
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
-  <div style="width: 87%; float: left">
-    <a class="linktag" id="fb-techprep" href="https://techprep.org/why/" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>TechPrep by Facebook</strong></h3></a>
-    <p style="color:#ffffff">Profiles of Facebook employees in different careers, featuring job descriptions and visual timelines of career paths.</p>
-    <br>
-    <br>
-    <br>
-    <a class="linktag" id="fb-techprep" href="https://techprep.org/why/" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">View resource</button></a>
-  </div>
-  <div style="clear: both"></div>
-</div>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">

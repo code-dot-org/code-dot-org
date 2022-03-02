@@ -1,0 +1,8 @@
+{
+  "key": "randomNumber",
+  "name": "randomNumber()",
+  "category": "Math",
+  "category_key": "math",
+  "short_description": "Game Lab - randomNumber()",
+  "syntax": "randomNumber"
+}

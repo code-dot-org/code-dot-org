@@ -70,7 +70,10 @@ class TeacherPanel extends React.Component {
 
   componentDidMount() {
     const initialViewAs = queryParams('viewAs') || ViewType.Instructor;
-    this.props.setViewType(initialViewAs);
+
+    if (this.props.viewAs !== initialViewAs) {
+      this.props.setViewType(initialViewAs);
+    }
 
     this.loadInitialData();
   }
@@ -346,6 +349,7 @@ export default connect(
     loadLevelsWithProgress: () => dispatch(loadLevelsWithProgress()),
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
+      updateQueryParam('version');
       isAsync ? dispatch(queryUserProgress(userId)) : reload();
     },
     setStudentsForCurrentSection: (sectionId, students) => {

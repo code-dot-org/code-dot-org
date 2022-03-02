@@ -1,0 +1,8 @@
+{
+  "key": "setInterval",
+  "name": "setInterval()",
+  "category": "Control",
+  "category_key": "control",
+  "short_description": "Game Lab - setInterval()",
+  "syntax": "setInterval(callback, ms)"
+}

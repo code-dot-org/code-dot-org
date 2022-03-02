@@ -10,7 +10,6 @@ wrong 'All students can participate, but the course was designed for students wi
 
 markdown <<MARKDOWN
 
-![](https://images.code.org/c6a02a8487c97a7c91abb0268c52fa94-image-1625772235783.png)
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

@@ -377,6 +377,8 @@ en:
             '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
+            '"spiral"': spiral
+            '"infinity"': infinite line
             '"random"': random
       Dancelab_makeAnonymousDanceSprite:
         text: make a new {COSTUME} at {LOCATION}
@@ -459,6 +461,26 @@ en:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': aliens
             '"BEAR"': bears
@@ -486,6 +508,8 @@ en:
             '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
+            '"spiral"': spiral
+            '"infinity"': infinite line
             '"random"': random
       Dancelab_mixColors:
         text: mix {COLOR1} and {COLOR2}
@@ -553,6 +577,7 @@ en:
             '"fireworks"': Fireworks
             '"flowers"': Flowers
             '"growing_stars"': Growing Stars
+            '"higher_power"': Higher Power
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoscope
             '"lasers"': Laser Dance Floor
@@ -1021,6 +1046,8 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"speed"': speed
+      gamelab_changeVarBy:
+        text: change {VARIABLE} by {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} touches {SPRITE2}"
         options:
@@ -1031,6 +1058,21 @@ en:
         text: when {SPRITE} clicked
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning right
+            new Behavior(spinning_left, []): spinning left
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): wobbling
+            new Behavior(wandering, []): wandering
+            new Behavior(patrolling, []): patrolling
+            new Behavior(moving_west_and_looping, []): moving west and looping
+            new Behavior(moving_east_and_looping, []): moving east and looping
+            new Behavior(moving_north_and_looping, []): moving north and looping
+            new Behavior(moving_south_and_looping, []): moving south and looping
       gamelab_comment:
         text: 'comment: {COMMENT}'
       gamelab_costumeImage:
@@ -1082,6 +1124,20 @@ en:
         text: |-
           if {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} costume is {COSTUME}"
       gamelab_isKeyPressed:
@@ -1271,6 +1327,13 @@ en:
             "'sound://category_digital/jump_7.mp3'": jump
       gamelab_playSpeech:
         text: play speech {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moving with arrow keys
+            new Behavior(driving_with_arrow_keys, []): driving with arrow keys
+            draggable(): being draggable
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1295,6 +1358,8 @@ en:
         text: remove color from {THIS}
       gamelab_repeatForever:
         text: repeat forever
+      gamelab_resetTimer:
+        text: reset timer
       gamelab_setAnimation:
         text: change {THIS} costume to {ANIMATION}
       gamelab_setBackground:
@@ -1374,6 +1439,15 @@ en:
             '"scale"': size
             '"width"': width
             '"height"': height
+      gamelab_setSpeed_dropdown:
+        text: set {SPRITE} speed to {SIZE}
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': normal
+            '7': fast
+            '9': extra fast
       gamelab_setTint:
         text: change color of {THIS} to {COLOR}
       gamelab_setupScoreboard:
@@ -1918,25 +1992,25 @@ en:
         text: set frame to {BRUSH}
         options:
           BRUSH:
-            '"bamboo"': Bamboo
-            '"beaded"': Beaded
-            '"brick"': Brick
-            '"decorative"': Decorative
-            '"donuts"': Donuts
-            '"fire"': Fire
-            '"flowers"': Flowers
-            '"gilded"': Gilded
-            '"hearts"': Hearts
-            '"iceCream"': Ice Cream
-            '"leaves"': Leaves
-            '"metal"': Metal Frame
-            '"pawPrints"': Paw Prints
-            '"rainbow"': Rainbow
-            '"stars"': Stars
-            '"swirls"': Swirls
-            '"waves"': Waves
-            '"wood"': Wood Frame
-            '"zigzag"': Zig-Zag
+            '"bamboo"': bamboo
+            '"beaded"': beaded
+            '"brick"': brick
+            '"decorative"': decorative
+            '"donuts"': donuts
+            '"fire"': fire
+            '"flowers"': flowers
+            '"gilded"': gilded
+            '"hearts"': hearts
+            '"iceCream"': ice cream
+            '"leaves"': leaves
+            '"metal"': metal frame
+            '"pawPrints"': paw prints
+            '"rainbow"': rainbow
+            '"stars"': stars
+            '"swirls"': swirls
+            '"waves"': waves
+            '"wood"': wood frame
+            '"zigzag"': zig-zag
       Poetry_addLine:
         text: add line {LINE}
       Poetry_addTextHighlight:
@@ -1965,45 +2039,45 @@ en:
         text: play music {SOUND}
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Bright
-            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calm
-            '"sound://category_nature/steady_campfire_loop.mp3"': Campfire
-            '"sound://category_nature/rain_loop.mp3"': Drizzle
-            '"sound://category_background/fire_burning.mp3"': Fireside
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Forest
-            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harps
-            '"sound://category_loops/faultering_desicion_loop1.mp3"': Haunted
-            '"sound://category_background/inside_plane.mp3"': Hum
-            '"sound://category_loops/red_flag_loop1.mp3"': Mission
-            '"sound://category_nature/summer_night_loop.mp3"': Night
-            '"sound://category_background/ocean_waves.mp3"': Ocean
-            '"sound://category_background/rain_thunderstorm_calm.mp3"': Rainy
-            '"sound://category_background/rainforest_ambient_sound.mp3"': Rainforest
-            '"sound://category_background/repitition.mp3"': Riding
-            '"sound://category_background/wavering_wind.mp3"': Sleepy
-            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Slow
-            '"sound://category_background/waterfall.mp3"': Waterfall
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': bright
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': calm
+            '"sound://category_nature/steady_campfire_loop.mp3"': campfire
+            '"sound://category_nature/rain_loop.mp3"': drizzle
+            '"sound://category_background/fire_burning.mp3"': fireside
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': forest
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': harps
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': haunted
+            '"sound://category_background/inside_plane.mp3"': hum
+            '"sound://category_loops/red_flag_loop1.mp3"': mission
+            '"sound://category_nature/summer_night_loop.mp3"': night
+            '"sound://category_background/ocean_waves.mp3"': ocean
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': rainy
+            '"sound://category_background/rainforest_ambient_sound.mp3"': rainforest
+            '"sound://category_background/repitition.mp3"': riding
+            '"sound://category_background/wavering_wind.mp3"': sleepy
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': slow
+            '"sound://category_background/waterfall.mp3"': waterfall
       Poetry_playSound:
         text: play sound {SOUND}
         options:
           SOUND:
-            '"sound://category_bell/long_bell_notification.mp3"': Bell
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Break
-            '"sound://category_digital/boing_2.mp3"': Boing
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubble
-            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Chatter
-            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Deflate
-            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Fail
-            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Flutter
-            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Jump
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Light
-            '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
-            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
-            '"sound://category_background/typewriter.mp3"': Typewriter
-            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrant
-            '"sound://category_achievements/peaceful_win_1.mp3"': Win
-            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Whirl
-            '"sound://category_achievements/peaceful_win_6.mp3"': Wind Chimes
+            '"sound://category_bell/long_bell_notification.mp3"': bell
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': break
+            '"sound://category_digital/boing_2.mp3"': boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': bubble
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': chatter
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': deflate
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': fail
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': flutter
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': jump
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': light
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': poof
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': scan
+            '"sound://category_background/typewriter.mp3"': typewriter
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': vibrant
+            '"sound://category_achievements/peaceful_win_1.mp3"': win
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': whirl
+            '"sound://category_achievements/peaceful_win_6.mp3"': wind chimes
       Poetry_setAuthor:
         text: set author {AUTHOR}
       Poetry_setBackground:
@@ -2012,31 +2086,31 @@ en:
         text: set background to {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Shifting
-            '"squiggles"': Wavy
-            '"space"': Hyper Speed
-            '"stars"': Starry
-            '"darkCircles"': Fading
-            '"fadeColors"': Frosted
-            '"blooming"': Blooming
-            '"ripples"': Rippling
-            '"clouds"': Cloudy
-            '"rain"': Rain
-            '"bubbles"': Bubbles
-            '"confetti"': Confetti
-            '"hearts"': Colorful Hearts
+            '"blooming"': blooming
+            '"bubbles"': bubbles
+            '"clouds"': cloudy
+            '"confetti"': confetti
+            '"darkCircles"': fading
+            '"fadeColors"': frosted
+            '"hearts"': hearts
+            '"space"': hyper speed
+            '"rain"': rain
+            '"ripples"': rippling
+            '"colors"': shifting
+            '"stars"': starry
+            '"squiggles"': wavy
           PALETTE:
-            '"rainbow"': Rainbow
-            '"grayscale"': Grays
-            '"sky"': Sky
-            '"ocean"': Ocean
-            '"sunrise"': Dawn
-            '"sunset"': Dusk
-            '"spring"': Spring
-            '"summer"': Summer
-            '"autumn"': Autumn
-            '"winter"': Winter
-            '"roses"': Roses
+            '"autumn"': autumn
+            '"sunrise"': dawn
+            '"sunset"': dusk
+            '"grayscale"': grays
+            '"ocean"': ocean
+            '"rainbow"': rainbow
+            '"roses"': roses
+            '"sky"': sky
+            '"spring"': spring
+            '"summer"': summer
+            '"winter"': winter
       Poetry_setBackgroundImageAs:
         text: set background to {IMG}
       Poetry_setFont:
@@ -2044,26 +2118,26 @@ en:
         options:
           FONT:
             '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
             '"Georgia"': Georgia
             '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: set text color {FILL}
       Poetry_setForegroundEffect:
         text: do {EFFECT} effect
         options:
           EFFECT:
-            '"rain"': Rain
-            '"bubbles"': Bubbles
-            '"hearts"': Colorful Hearts
-            '"emojis"': Happy Emojis
-            '"confetti"': Confetti
-            '"starburst"': Starburst
-            '"glass"': Shattering Glass
-            '"twinkling"': Twinkling
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"emojis"': happy emojis
+            '"rain"': rain
+            '"starburst"': starburst
+            '"glass"': shattering glass
+            '"twinkling"': twinkling
       Poetry_setPrompt:
         text: prompt user {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} for variable {VAR}
       Poetry_setPromptWithChoices:
@@ -2075,11 +2149,11 @@ en:
         options:
           EFFECT:
             '"fade"': fade
-            '"typewriter"': typewriter
             '"flyLeft"': fly from left
             '"flyRight"': fly from right
             '"flyTop"': fly from top
             '"flyBottom"': fly from bottom
+            '"typewriter"': typewriter
       Poetry_setTitle:
         text: set title {TITLE}
       Poetry_showText:
@@ -2088,36 +2162,36 @@ en:
         text: 'sprite {ANIMATION_NAME} begins {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: fluttering
-            growing: growing
-            jittering: jittering
-            moving_north_and_looping: looping north
-            moving_south_and_looping: looping south
-            moving_east_and_looping: looping east
-            moving_west_and_looping: looping west
-            shrinking: shrinking
-            spinning_left: spinning left
-            spinning_right: spinning right
-            swimming_left_and_right: swimming
-            wandering: wandering
-            wobbling: wobbling
+            '"fluttering"': fluttering
+            '"growing"': growing
+            '"jittering"': jittering
+            '"moving_north_and_looping"': looping north
+            '"moving_south_and_looping"': looping south
+            '"moving_east_and_looping"': looping east
+            '"moving_west_and_looping"': looping west
+            '"shrinking"': shrinking
+            '"spinning_left"': spinning left
+            '"spinning_right"': spinning right
+            '"swimming_left_and_right"': swimming
+            '"wandering"': wandering
+            '"wobbling"': wobbling
       Poetry_stopBehavior:
         text: 'sprite {ANIMATION_NAME} stops {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: fluttering
-            growing: growing
-            jittering: jittering
-            moving_north_and_looping: looping north
-            moving_south_and_looping: looping south
-            moving_east_and_looping: looping east
-            moving_west_and_looping: looping west
-            shrinking: shrinking
-            spinning_left: spinning left
-            spinning_right: spinning right
-            swimming_left_and_right: swimming
-            wandering: wandering
-            wobbling: wobbling
+            '"fluttering"': fluttering
+            '"growing"': growing
+            '"jittering"': jittering
+            '"moving_north_and_looping"': looping north
+            '"moving_south_and_looping"': looping south
+            '"moving_east_and_looping"': looping east
+            '"moving_west_and_looping"': looping west
+            '"shrinking"': shrinking
+            '"spinning_left"': spinning left
+            '"spinning_right"': spinning right
+            '"swimming_left_and_right"': swimming
+            '"wandering"': wandering
+            '"wobbling"': wobbling
             '"all"': "--all behaviors--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

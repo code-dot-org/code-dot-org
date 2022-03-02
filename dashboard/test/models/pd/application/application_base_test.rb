@@ -18,22 +18,31 @@ module Pd::Application
           'Application type is not included in the list',
           'Application year is not included in the list',
           'Type is required'
-        ],
-        application.errors.full_messages
+        ].sort,
+        application.errors.full_messages.sort
       )
     end
 
     test 'derived classes override type and year' do
-      application = TEACHER_APPLICATION_CLASS.new
+      application = create TEACHER_APPLICATION_FACTORY
       assert_equal TEACHER_APPLICATION, application.application_type
       assert_equal APPLICATION_CURRENT_YEAR, application.application_year
     end
 
     test 'default status is unreviewed' do
-      application = ApplicationBase.new
+      application = create TEACHER_APPLICATION_FACTORY
 
       assert_equal 'unreviewed', application.status
       assert application.unreviewed?
+    end
+
+    test 'can set a different status from the default' do
+      application = create TEACHER_APPLICATION_FACTORY, status: 'incomplete'
+      application.update_status_timestamp_change_log(nil)
+
+      assert application.incomplete?
+      assert_equal application.sanitize_status_timestamp_change_log.length, 1
+      assert application.sanitize_status_timestamp_change_log[0].value?('incomplete')
     end
 
     test 'can update status' do

@@ -1,6 +1,8 @@
 {
   "key": "assign_x",
-  "name": "assign_x",
+  "name": "Assign x",
   "category": "Variables",
+  "category_key": "variables",
+  "short_description": "Game Lab - Assign x",
   "syntax": "x = __;"
 }
