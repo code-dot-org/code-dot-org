@@ -27,25 +27,50 @@ export const commands = {
   // Return true if any sprite began speaking.
   anySpriteSpeaks() {
     const spriteIds = this.getSpriteIdsInUse();
-    let result = false;
-    for (let i = 0; i < spriteIds.length; i++) {
-      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
-        result = true;
-      }
-    }
-    return result;
+    return (
+      spriteIds.filter(id =>
+        commands.spriteSpeechRenderedThisFrame.call(this, id)
+      ).length > 0
+    );
+  },
+
+  // Return true if the specified sprite began speaking
+  // and the text is not an empty string.
+  strictSpriteSpeechRenderedThisFrame(spriteId) {
+    return (
+      this.getLastSpeechBubbleForSpriteId(spriteId)?.renderFrame ===
+        this.currentFrame() &&
+      this.getLastSpeechBubbleForSpriteId(spriteId)?.text
+    );
+  },
+
+  // Return true if any sprite began speaking
+  // and the text is not an empty string.
+  strictAnySpriteSpeaks() {
+    const spriteIds = this.getSpriteIdsInUse();
+    return (
+      spriteIds.filter(id =>
+        commands.strictSpriteSpeechRenderedThisFrame.call(this, id)
+      ).length > 0
+    );
   },
 
   // Return true if any sprite was speaking.
   anySpriteSpeaking() {
     const spriteIds = this.getSpriteIdsInUse();
-    let result = false;
-    for (let i = 0; i < spriteIds.length; i++) {
-      if (this.getLastSpeechBubbleForSpriteId(spriteIds[i])) {
-        result = true;
-      }
-    }
-    return result;
+    return (
+      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length > 0
+    );
+  },
+
+  // Return true if any sprite was speaking
+  // and the text is not an empty string.
+  strictAnySpriteSpeaking() {
+    const spriteIds = this.getSpriteIdsInUse();
+    return (
+      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)?.text)
+        .length > 0
+    );
   },
 
   // Return true if any sprite's speech include values from the given object(s).
@@ -84,7 +109,7 @@ export const commands = {
     let result = false;
     let count = 0;
     for (let i = 0; i < spriteIds.length; i++) {
-      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, spriteIds[i])) {
         count++;
       }
     }
