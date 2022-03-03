@@ -88,6 +88,7 @@ class XhrProxyController < ApplicationController
     newsapi.org
     noaa.gov
     numbersapi.com
+    open.mapquestapi.com
     opentdb.com
     pixabay.com
     pokeapi.co
