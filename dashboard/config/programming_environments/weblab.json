@@ -9,12 +9,14 @@
     {
       "key": "html_tags",
       "name": "HTML Tags",
-      "color": "#fff176"
+      "color": "#fff176",
+      "position": 0
     },
     {
       "key": "css_properties",
       "name": "CSS Properties",
-      "color": "#d3e965"
+      "color": "#d3e965",
+      "position": 1
     }
   ]
 }
