@@ -15,8 +15,8 @@ describe('ExampleEditor', () => {
         description: 'this is the first example',
         code: 'return foo;',
         app: 'studio.code.org/p/spritelab',
-        appDisplayType: 'withCode',
-        appEmbedHeight: '100'
+        app_display_type: 'withCode',
+        embed_app_with_code_height: '100'
       },
       updateExample: updateSpy
     };
@@ -85,7 +85,7 @@ describe('ExampleEditor', () => {
     const displayTypeSelect = wrapper.find('select').at(0);
     displayTypeSelect.simulate('change', {target: {value: 'directly'}});
     expect(updateSpy).to.be.calledOnce.and.calledWith(
-      'appDisplayType',
+      'app_display_type',
       'directly'
     );
   });
@@ -100,6 +100,9 @@ describe('ExampleEditor', () => {
     const wrapper = shallow(<ExampleEditor {...defaultProps} />);
     const appEmbedHeightField = wrapper.find('input').at(2);
     appEmbedHeightField.simulate('change', {target: {value: '250'}});
-    expect(updateSpy).to.be.calledOnce.and.calledWith('appEmbedHeight', '250');
+    expect(updateSpy).to.be.calledOnce.and.calledWith(
+      'embed_app_with_code_height',
+      '250'
+    );
   });
 });
