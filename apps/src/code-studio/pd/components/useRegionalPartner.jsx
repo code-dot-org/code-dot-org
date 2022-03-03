@@ -68,7 +68,7 @@ export const useRegionalPartner = data => {
       schoolState,
       school
     });
-  }, [program, schoolZipCode, schoolState, school]);
+  }, [program, schoolZipCode, schoolState, school, debouncedSetSearchTerm]);
 
   // load regional partner whenever parameters change
   useEffect(() => {
