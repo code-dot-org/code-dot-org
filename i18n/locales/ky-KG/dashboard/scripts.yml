@@ -2022,6 +2022,10 @@ ky:
               display_name: Циклдер
             csf_events:
               display_name: Окуялар
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Өзгөрмөлөр
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2030,3 +2034,11 @@ ky:
           lessons:
             lesson-9:
               name: Циклдер
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Интернет
+              key: Интернет
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Өзгөрмөлөр

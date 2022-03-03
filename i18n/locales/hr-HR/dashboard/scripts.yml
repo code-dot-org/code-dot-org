@@ -2729,6 +2729,10 @@ hr:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Varijable
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2741,3 +2745,15 @@ hr:
           lessons:
             lesson-9:
               name: Petlje
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internet
+              key: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno građanstvo
+            ramp_up:
+              display_name: Likovi
+            lessonGroup-8:
+              display_name: Varijable

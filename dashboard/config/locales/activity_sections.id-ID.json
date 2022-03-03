@@ -9014,6 +9014,7 @@
           ]
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "name": "Model kartu di Lab AI",
           "tips": [
             null
           ]
@@ -9197,6 +9198,9 @@
           "tips": [
             null
           ]
+        },
+        "920cf048-b5d3-4033-8705-25e47ba99238": {
+          "progression_name": "Dataset Alternatif"
         },
         "8da670fc-d91b-438b-af07-2227156fdbcd": {
           "tips": [
@@ -10901,6 +10905,9 @@
             null
           ]
         },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "Tambah Teks"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -10998,6 +11005,12 @@
           "tips": [
             null
           ]
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "Tambah Teks"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "Tambah Gerakan"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -12394,7 +12407,8 @@
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Menambahkan Halaman"
         },
         "76186510-9804-44d1-8371-4aa2895fc16d": {
           "progression_name": "Tantangan"
@@ -12416,6 +12430,12 @@
           "tips": [
             null
           ]
+        },
+        "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
+          "progression_name": "Tambah Konten dan HTML"
+        },
+        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
+          "progression_name": "Tambah Gaya"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [

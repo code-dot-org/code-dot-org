@@ -12941,6 +12941,9 @@ cs:
             csf_events:
               display_name: Události
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Proměnné
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -13056,6 +13059,282 @@ cs:
               key: lekce-15
             lesson-16:
               key: lekce-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Moc slova
+              description_student: Šikana není nikdy v pořádku. Tato lekce Vás poučí
+                o tom, co je a co není správné říkat online.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Tuto lekci původně vytvořila společnost Common Sense Education. [Zjistěte si více.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Jak děti rostou, přirozeně začínají více komunikovat online. Ale něco z toho, s čím se setkají, by je mohlo přimět cítit se uraženy, rozezleny nebo dokonce i zastrašeny. Pomozte svým studentům budovat empatii k ostatním a učit se strat, které mají používat, když se setkají se šikanou na internetu.
+              key: Moc slova
+            Making Sprites:
+              name: Dělání sprajtů
+              key: Dělání sprajtů
+            Blank Space Stories:
+              name: Příběhy prázdného prostoru
+              key: Příběhy prázdného prostoru
+            Text and Prompts:
+              name: Text a výzvy
+              key: Text a výzvy
+            Simulating Experiments:
+              name: Simulační experimenty
+              description_student: Spouštějte simulace na počítači a experimentujte
+                měněním hodnot.
+              key: Simulační experimenty
+            Outbreak:
+              name: Epidemie
+              key: Epidemie
+            AI For Oceans:
+              name: AI pomáhá oceánům
+              key: AI pomáhá oceánům
+            The Internet:
+              name: Internet
+              key: Internet
+            End of Course Project:
+              name: Projekt na zakončení kurzu
+              description_student: Takto velké projekty potřebují čas a spoustu plánování.
+                Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!
+              key: Projekt na zakončení kurzu
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitální občanství
+            ramp_up:
+              display_name: Postavy
+            lessonGroup-8:
+              display_name: Proměnné
+            end_of_course_project:
+              display_name: Projekt na zakončení kurzu
+          description_audience: 'Věk: 9-13 let'
+          description_short: Naučte se všechny koncepce v základech počítačových věd
+            a vytvořte si vlastní umělecké dílo, příběh nebo hru.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: Projekty, které jste během kurzu vyvinuli, inspirovaly
+                ve vaší komunitě spoustu kreativity! K předvedení všech kreativních
+                příběhů, scénářů, textů písní, dopisů a básní bude proto uspořádán
+                Sousedský literární festival. Projekt Sousedský literární festival
+                je velký projekt, na kterém budete v průběhu jednotky pracovat, a
+                strategie řízení projektu vám pomohou organizovat a strukturovat vaši
+                práci. Budete zkoumat strategie psaní a strukturování kódu, aby ho
+                jiní softwaroví odborníci dokázali snadno pochopit, a používat javový
+                nástroj k vytváření dokumentace k programu.
+              description_teacher: Studentům je představen projekt Sousedský literární
+                festival. Budou vyhodnocovat požadavky a příklady, aby dokázali identifikovat
+                důležité otázky a klíčové vlastnosti. Před započetím práce na projektu
+                si studenti rozšíří své znalosti o struktuře programu a komentování
+                určením doporučených postupů a prozkoumáním využití nástroje Javadocs
+                ke generování dokumentace k programu.
+            Exploring Integer and Double Objects:
+              description_student: Navrhnete objekty „Integer“ a „Double“, které budou
+                představovat primitivní hodnoty „int“ a „double“ jako referenční hodnoty.
+                Pomocí metod ve třídách „Integer“ a „Double“ budete vracet hodnoty
+                uložené v těchto objektech jako primitivní hodnoty. Před naplánováním
+                úkolů, které musíte dokončit pro svůj projekt Sousedský literární
+                festival, také prozkoumáte minimální a maximální hodnoty pro celá
+                čísla, abyste se vyhnuli chybám přetečení.
+              description_teacher: Studenti navrhnou objekty „Integer“ a „Double“,
+                které budou představovat primitivní hodnoty „int“ a „double“ jako
+                referenční hodnoty. Pomocí metod ve třídách „Integer“ a „Double“ budou
+                studenti vracet hodnoty uložené v těchto objektech jako primitivní
+                hodnoty. Před naplánováním úkolů, které musejí studenti dokončit pro
+                jejich projekt Sousedský literární festival, také prozkoumají minimální
+                a maximální hodnoty pro celá čísla, aby se vyhnuli chybám přetečení.
+            Using ArrayLists to Store Data:
+              description_student: Při práci s poli a seznamy někdy narazíme na problém,
+                že je počet prvků neznámý nebo se délka seznamu neustále mění. V této
+                lekci se seznámíte s datovou strukturou „ArrayList“ a identifikujete
+                situace, ve kterých je použití této datové struktury vhodnější.
+              description_teacher: Studenti vytvoří „ArrayList“ pro ukládání hodnot
+                „int“ a „double“. Studenti se naučí rozlišovat mezi strukturou „ArrayList“
+                a jednorozměrnými poli, aby dokázali určit, která datová struktura
+                je pro danou situaci nejlepší. Studenti budou do struktury „ArrayList“
+                přidávat prvky a poznávat, jak autoboxing převádí mezi primitivními
+                hodnotami a obalovými třídami při práci s uloženými daty.
+            Working with ArrayList Data:
+              description_student: Budete používat metody „get()“ a „set()“ třídy
+                „ArrayList“ k získávání a úpravám prvků a naučíte se používat metodu
+                „length()“ třídy „String“ k určení počtu znaků v objektu „String“.
+                Využijete standardní algoritmy, které jste vyvinuli u jednorozměrných
+                a dvourozměrných polí, k úpravě prvků v objektu „ArrayList“. Zjistíte,
+                jak unboxing provádí konverze mezi primitivními hodnotami a obalovými
+                třídami při práci s uloženými daty v objektu „ArrayList“.
+              description_teacher: 'Studenti budou pracovat s metodami „get()“ a „set()“
+                k získávání a úpravám prvků objektu „ArrayList“ a naučí se používat
+                metodu „length()“ třídy „String“ k vrácení počtu znaků v objektu „String“.
+                Využijí standardní algoritmy, které vyvinuli u jednorozměrných a dvourozměrných
+                polí, k úpravě prvků v objektu „ArrayList“. Studenti zjistí, jak unboxing
+                provádí konverze mezi primitivními hodnotami a obalovými třídami při
+                práci s uloženými daty v objektu „ArrayList“. '
+            Storing Objects in an ArrayList:
+              description_student: Zatím jste vytvořili objekt „ArrayList“ k ukládání
+                prvků „Integer“, „Double“ a „String“. Podobně jako u jednorozměrných
+                a dvourozměrných polí můžete ovšem ve struktuře „ArrayList“ ukládat
+                také objekty, které vytvoříte. V této lekci vytvoříte „ArrayList“
+                objektů a použijete na ně standardní algoritmy, které jste používali
+                během roku a pomocí kterých budete pracovat s daty uloženými v tomto
+                seznamu.
+              description_teacher: Studenti vytvoří „ArrayList“ k ukládání objektů,
+                aby se seznámili s obecnými typy v Javě. Studenti použijí na „ArrayList“
+                algoritmy, které se naučili u jednorozměrných polí, aby nalezli minimální
+                a maximální hodnotu, vypočítali součet a průměr nebo vyhledali prvky
+                odpovídající konkrétním kritériím.
+            Removing Data from an ArrayList:
+              description_student: Prozkoumáte funkčnost metody „remove()“ třídy „ArrayList“
+                a identifikujete potenciální chyby při pokusech o odstranění položek
+                při procházení seznamu. Přitom si uvědomíte, kdy je „ArrayList“ pro
+                danou situaci nebo problém nejlepší.
+              description_teacher: Studenti prozkoumají funkčnost metody „remove()“
+                třídy „ArrayList“ a identifikují potenciální chyby při pokusech o
+                odstranění položek při procházení seznamu. Pak si studenti uvědomí,
+                kdy je „ArrayList“ pro danou situaci nebo problém nejlepší.
+            Using String Methods:
+              description_student: Prozkoumáte strukturu „String“ a uvědomíte si,
+                že struktury „String“ jsou objekty. Použijete metody „indexOf()“ a
+                „substring()“ k vyhledávání podřetězců ve struktuře „String“ a budete
+                vytvářet nové objekty „String“ z existujících objektů „String“.
+              description_teacher: Studenti prozkoumají strukturu „String“ a uvědomí
+                si, že struktury „String“ jsou objekty. Studenti použijí metody „indexOf()“
+                a „substring()“ k vyhledávání podřetězců ve struktuře „String“ a budou
+                vytvářet nové objekty „String“ z existujících objektů „String“.
+            Comparing Strings:
+              description_student: Prozkoumáte využití metody „compareTo()“ ke kontrole,
+                zda jsou objekty „String“ seřazené podle abecedy. Poté budete pracovat
+                na projektu Sousedský literární festival a zaměříte se konkrétně na
+                úkoly, které máte na svém plánovacím panelu projektu.
+              description_teacher: Studenti prozkoumají využití metody „compareTo()“
+                ke kontrole, zda jsou objekty „String“ seřazené podle abecedy. Poté
+                budou studenti pracovat na projektu Sousedský literární festival a
+                zaměří se konkrétně na úkoly, které mají na svém plánovacím panelu
+                projektu.
+            Solving Problems with Strings:
+              description_student: 'Zkombinujete svou znalost standardních algoritmů
+                a objektů „String“, abyste zjistili, zda je daný „String“ palindromem.
+                Pak se zúčastníte porady se zpětnou vazbou od svých spolužáků a budete
+                hodnotit pokrok v projektu Sousedský literární festival. '
+              description_teacher: Studenti zkombinují znalost standardních algoritmů
+                a objektů „String“, aby zjistili, zda je daný „String“ palindromem.
+                Pak se studenti zúčastní porady se zpětnou vazbou od svých spolužáků
+                a budou hodnotit pokrok v projektu Sousedský literární festival.
+            Solving Problems with ArrayLists:
+              description_student: Použijete na „ArrayList“ standardní algoritmy,
+                které jste napsali pro jednorozměrná a dvourozměrná pole. Budete implementovat
+                nový standardní algoritmus, abyste získali jednotlivé číslice z celého
+                čísla, a pak budete upravovat a používat předchozí algoritmy pro záměnu
+                prvků, odstraňování duplicit nebo hledání prvků splňujících určitá
+                kritéria ve vašem projektu Sousedský literární festival.
+              description_teacher: Studenti použijí na „ArrayList“ standardní algoritmy,
+                které napsali pro jednorozměrná a dvourozměrná pole. Budou implementovat
+                nový standardní algoritmus, aby získali jednotlivé číslice z celého
+                čísla, a pak budou upravovat a používat předchozí algoritmy pro záměnu
+                prvků, odstraňování duplicit nebo hledání prvků splňujících určitá
+                kritéria v jejich projektu Sousedský literární festival.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Projekt Sousedský literární festival – 1. den
+              description_student: Budete pokračovat ve vývoji projektu Sousedský
+                literární festival a vytvářet příběh, poezii, píseň nebo jiný literární
+                útvar na základě analýzy díla vašeho oblíbeného autora či umělce.
+                Nejprve budete sami posuzovat svou práci, abyste zhodnotili svůj pokrok
+                v plnění požadavků projektu, a pak sepíšete kritéria přijetí pro funkci
+                ve vašem projektu, kterou bude váš spolužák testovat. Na základě svého
+                sebehodnocení a zpětné vazby od spolužáků si určíte priority pro zbývající
+                úkoly a budete pokračovat ve vývoji projektu.
+              description_teacher: Studenti budou pokračovat ve vývoji projektu Sousedský
+                literární festival a vytvářet příběh, poezii, píseň nebo jiný literární
+                útvar na základě analýzy díla jejich oblíbeného autora či umělce.
+                Nejprve budou studenti sami posuzovat svou práci, aby zhodnotili svůj
+                pokrok v plnění požadavků projektu, a pak sepíšou kritéria přijetí
+                pro funkci v projektu, kterou bude jejich spolužák testovat. Na základě
+                svého sebehodnocení a zpětné vazby od spolužáků si studenti určí priority
+                pro zbývající úkoly a budou pokračovat ve vývoji projektů.
+              key: Projekt Sousedský literární festival – 1. den
+            Neighborhood Lit Fest Project - Day 2:
+              name: Projekt Sousedský literární festival – 2. den
+              description_student: V předchozí lekci jste prováděli sebehodnocení
+                a sepisovali kritéria přijetí pro svůj projekt. V této lekci dostanete
+                zpětnou vazbu od spolužáků, abyste mohli identifikovat, které úkoly
+                ještě musíte dokončit, a budete dál pokračovat ve vývoji projektu
+                Sousedský literární festival.
+              description_teacher: V předchozí lekci studenti prováděli sebehodnocení
+                a sepisovali kritéria přijetí pro svůj projekt. V této lekci dostanou
+                studenti zpětnou vazbu od spolužáků, aby mohli identifikovat, které
+                úkoly ještě musí dokončit, a budou dál pokračovat ve vývoji projektu
+                Sousedský literární festival.
+              key: Projekt Sousedský literární festival – 2. den
+            Neighborhood Lit Fest Project - Day 3:
+              name: Projekt Sousedský literární festival – 3. den
+              description_student: Provedete závěrečné revize a aktualizace na základě
+                zhodnocení kódu a plánovacího panelu projektu. Poté se podělíte o
+                výsledky svého projektu Sousedský literární festival se spolužáky.
+                Pak oslavíte svůj úspěch a provedete závěrečné zhodnocení procesu
+                vývoje.
+              description_teacher: Studenti provedou závěrečné revize a aktualizace
+                na základě zhodnocení kódu a plánovacího panelu projektu. Poté se
+                podělí o výsledky svého projektu Sousedský literární festival se spolužáky.
+                Pak oslaví svůj úspěch a provedou závěrečné zhodnocení procesu vývoje.
+              key: Projekt Sousedský literární festival – 3. den
+            Assessment Day:
+              description_student: V této jednotce jste používali objekt „ArrayList“
+                k ukládání programových dat a naučili jste se rozlišovat, kdy používat
+                jednorozměrná a dvourozměrná pole a kdy objekty typu „ArrayList“.
+                Prozkoumali jste výhody a funkčnost třídy „ArrayList“ a využili je
+                k řešení problémů s číselnými a objektovými údaji. Použili jste metody
+                třídy „String“ k analýze a zpracování textu získaného od uživatele
+                a ze souboru. V průběhu jednotky jste pořizovali dokumentaci k programu
+                pomocí jednořádkových komentářů, víceřádkových komentářů a komentářů
+                Javadoc k vytvoření dokumentace API. Během postupu jste identifikovali
+                a zdokumentovali výchozí a následné podmínky objektů a metod. Nyní
+                budete hodnotit úspěšnost splnění výukových cílů jednotky a získané
+                dovednosti prostřednictvím hodnocení s možností výběru z několika
+                voleb.
+              description_teacher: V této jednotce studenti používali objekt „ArrayList“
+                k ukládání programových dat a naučili se rozlišovat, kdy používat
+                jednorozměrná a dvourozměrná pole a kdy objekty typu „ArrayList“.
+                Studenti prozkoumali výhody a funkčnost třídy „ArrayList“ a využili
+                je k řešení problémů s číselnými a objektovými údaji. Studenti použili
+                metody třídy „String“ k analýze a zpracování textu získaného od uživatele
+                a ze souboru. V průběhu jednotky studenti pořizovali dokumentaci k
+                programu pomocí jednořádkových komentářů, víceřádkových komentářů
+                a komentářů Javadoc k vytvoření dokumentace API. Během postupu studenti
+                identifikovali a zdokumentovali výchozí a následné podmínky objektů
+                a metod. Nyní budou studenti hodnotit úspěšnost splnění výukových
+                cílů jednotky a získané dovednosti prostřednictvím hodnocení s možností
+                výběru z několika voleb.
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: lekce-1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa7-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah

@@ -5384,7 +5384,7 @@
         },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
-            null
+            "Bu kursdakı bir çox dərslərə həm “Bacarıqların İnkişaf etdirilməsi”, həm də “Təcrübə” səviyyələri daxildir. Qiymətləndirmə baxımından bütün tələbələr bacarıqların formalaşdırılması bölməsini tamamlamalıdırlar. Təcrübə səviyyələri fərqləndirmək və ya tələbələr üçün daha çox seçim təmin etmək üçün istifadə edilə bilər."
           ],
           "progression_name": "Bacarıqların qurulması"
         },
@@ -5423,7 +5423,8 @@
           "progression_name": "Pulsuz Oyun: İnteraktiv bir səhnə yaradın"
         },
         "47bca048-39fb-4014-a480-e21d163469db": {
-          "name": "Əksetmə"
+          "name": "Əksetmə",
+          "description": "Bu gün siz hadisələrdən istifadə edərək zamanla dəyişən proqramlar yaratmağı öyrəndiniz.\n**Hadisə** - Nəyinsə baş verməsinə səbəb olan hərəkət."
         },
         "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
           "name": "Giriş"
@@ -6948,6 +6949,7 @@
           "name": "Giriş"
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
+          "name": "ikili bilərziklər",
           "progression_name": "İkili bilərziklər - Unplugged Fəaliyyət"
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
@@ -7234,7 +7236,7 @@
         },
         "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
           "description": "##### Səviyyə 11\n\n-   11-13 səviyyələri rəqqasların xüsusiyyətlərini (məsələn, ölçüsü, rəngi) tənzimləməklə bağlıdır.\n-   Rəqqaslar yaradıldıqdan \\_sonra çay rəngli `dəst` blokunun proqramda haradasa yerləşdirildiyinə əmin olmaq vacibdir. Bu tapmacanı həll etmək üçün proqramınızın istənilən yerinə “dəstləşdirilən ölçü” blokunu yerləşdirin və ondan bəzi rəqqaslarınızın ölçüsünü dəyişmək üçün istifadə edin.\n-   Qrup şəklində yaradılan rəqqasların standart ölçüsü 30-dur. Digər rəqqasların standart ölçüsü 100-dür.\n\n##### Səviyyə 12\n\n-   Əvvəlki səviyyədə olduğu kimi, proqramınızda rəqqasları yaratdıqdan sonra `rəngi təyin et` blokundan istifadə etməyinizə əmin olun. Məsələn, onu proqramınızın “quraşdırma” sahəsinə ilk addım kimi yerləşdirməyin heç bir təsiri olmayacaq.\n\n##### Səviyyə 13\n\n-   Düzgün kodla siz müxtəlif rənglər, ölçülər və ya rəqs hərəkətləri vasitəsilə rəqqas dövrü görməlisiniz.\n-   “Hər 2 ölçü” blokunun içərisində çay rəngli “dəyişiklik”, mavi “təsadüfiləşdirmə” bloku və ya bənövşəyi “doforever” blokunun qoşulduğundan əmin olun.\n-   `Do forever` bloklarının ya (Növbəti), (Əvvəlki) və ya (Təsadüfi) olaraq təyin olunduğundan əmin olun. Əks halda, rəqqasə sadəcə set hərəkətini təkrar-təkrar yerinə yetirəcək.\n-   Qeyd edək ki, tələbələrin bu səviyyədə yazdıqları **kodun düzgünlüyü yoxlanılmır**. Bu o deməkdir ki, onlar proqramı dəyişməsələr də həmişə səviyyəni keçəcəklər. Tələbələr öz kodları ilə onlar üçün maraqlı olan üsullarla sınaqdan keçirməlidirlər. Davam etmək üçün \"Bitir\" düyməsini basın.\n-   “Hər 2 ölçü” blokunda yeni rəqqasların yaradılması proqramınızın eyni məkan(larda) çoxlu eyni rəqqas yaratmasına səbəb olacaq və gözlənilməz nəticələrə səbəb ola bilər!",
-          "progression_name": "Xüsusiyyətlər"
+          "progression_name": "Xassələri"
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
@@ -7721,7 +7723,8 @@
           "progression_name": "Pulsuz Oyun: İnteraktiv bir səhnə yaradın"
         },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
-          "name": "Əksetmə"
+          "name": "Əksetmə",
+          "description": "Bu gün siz hadisələrdən istifadə edərək zamanla dəyişən proqramlar yaratmağı öyrəndiniz.\n**Hadisə** - Nəyinsə baş verməsinə səbəb olan hərəkət."
         },
         "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
           "name": "Giriş",
@@ -7791,7 +7794,7 @@
           "tips": [
             "Dərsin bu nöqtəsində siz təlimatların daha az göstərişli olduğunu görə bilərsiniz. Tələbələri yaradıcı olmağa və təqdim olunan yeni blokları araşdırmağa həvəsləndirin. Bu andan etibarən tələbə kodu xüsusi tapşırığı həll etmək əvəzinə eksperimentləri təşviq etmək üçün **düzgünlük yoxlanılmır**."
           ],
-          "progression_name": "Xüsusiyyətlər"
+          "progression_name": "Xassələri"
         },
         "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
           "description": "#### Əylən! Səviyyə 15\n\n-   Bu son səviyyə çox açıqdır. Dərslik özü tələbələrə öz rəqsləri üzərində işləmək üçün kifayət qədər vaxt vermək üçün nəzərdə tutulub.\n-   **Paylaşımı Təşviq Edin:** Əgər tələbələrin məlumat planı olan mobil telefonları varsa, onlar öz layihələrinin linkini öz telefonlarına və ya dostlarına tez mətnlə göndərə bilərlər. Məktəb siyasətiniz buna icazə verirsə, onları burada bunu etməyə təşviq edin.\n-   **Yaradıcılığı təşviq edin:** Bu dərs boyu yaradıcılıq vacibdir, lakin bu, hər yerdə olduğundan daha çox burada doğrudur!",
@@ -8980,7 +8983,8 @@
           ]
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
-          "name": "Əksetmə"
+          "name": "Əksetmə",
+          "progression_name": "giriş sorğusu"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -8991,6 +8995,9 @@
           "tips": [
             null
           ]
+        },
+        "3b73e965-37ee-48c9-b346-0b2f05e5664d": {
+          "progression_name": "Yaşıl Şüşə Qapı"
         },
         "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
           "tips": [
@@ -9117,6 +9124,9 @@
             null
           ]
         },
+        "24852ddc-3470-46ba-b727-e205b2a6da3c": {
+          "progression_name": "Tətbiqinizi özəlləşdirin"
+        },
         "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
           "tips": [
             null
@@ -9202,6 +9212,9 @@
           "tips": [
             null
           ]
+        },
+        "5c385108-484c-44cb-b688-858fc00e41df": {
+          "progression_name": "Yeni ekranların əlavə edilməsi"
         },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
           "tips": [
@@ -9315,7 +9328,8 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "Sorğu"
+          "name": "Sorğu",
+          "progression_name": "Kimin sorğusu"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
           "tips": [
@@ -9352,6 +9366,12 @@
           "tips": [
             null
           ]
+        },
+        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
+          "progression_name": "qarşılanma ekranı əlavə edin"
+        },
+        "dfa4b1ec-4f9f-4ec1-9c42-613c82405096": {
+          "progression_name": "Tətbiqinizi özəlləşdirin"
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
@@ -10038,6 +10058,9 @@
         "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
           "progression_name": "Motosiklet"
         },
+        "c7ee1edc-3c31-4a6a-a814-1bc69360e6fe": {
+          "progression_name": "əlavə problem"
+        },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [
             null
@@ -10059,6 +10082,9 @@
             null
           ],
           "progression_name": "Rənglərə Sensorlar"
+        },
+        "1a668f58-e58e-4624-a911-fcfc3188df23": {
+          "progression_name": "əlavə problem"
         },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
           "tips": [
@@ -11011,6 +11037,15 @@
         "d4865d33-6382-4b57-b532-6949d5621973": {
           "progression_name": "Sprite səhnələri"
         },
+        "9a593b91-9cd2-48ff-a733-2943aa535ceb": {
+          "progression_name": "arxa fon yarat"
+        },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "qrafik obyekt əlavə et"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "mətn əlavə edin"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -11109,6 +11144,18 @@
           "tips": [
             null
           ]
+        },
+        "2e883502-c179-45a9-a313-6ec995831ed2": {
+          "progression_name": "arxa fon çək"
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "qrafik obyekt əlavə et"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "mətn əlavə edin"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "hərəkət əlavə edin"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -11340,6 +11387,9 @@
             null
           ]
         },
+        "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
+          "progression_name": "arxa fonunuzu çəkin"
+        },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
             null
@@ -11375,6 +11425,9 @@
           "tips": [
             null
           ]
+        },
+        "da390762-bcc9-47c8-ab06-9bac895ebd00": {
+          "progression_name": "kod təxmini"
         },
         "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
           "tips": [
@@ -11461,6 +11514,9 @@
         "f2e6c88e-bc52-4073-b67d-69a0dda590a7": {
           "progression_name": "Layihənizi Plaşdırın"
         },
+        "f860c052-f4a5-4925-bed9-78bf6c24605b": {
+          "progression_name": "oyunçunu idarə et"
+        },
         "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
           "tips": [
             null
@@ -11536,6 +11592,7 @@
           ]
         },
         "1c951438-4727-4ea5-84d9-560f7dac9204": {
+          "name": "Mərhələ təyin et",
           "tips": [
             null
           ]
@@ -11551,11 +11608,13 @@
           ]
         },
         "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
+          "name": "Hədəf və qaydalar",
           "tips": [
             null
           ]
         },
         "6470c3f3-0547-4d23-bede-dbac0704a029": {
+          "name": "Plan inkişaf etdir",
           "tips": [
             null
           ]
@@ -11648,12 +11707,14 @@
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Tətbiq: Ev Heyvanı seçən"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "hekayə yaradıcısı"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
           "tips": [
@@ -11665,6 +11726,9 @@
             null
           ]
         },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "progression_name": "sizin ad gününüzdür ?"
+        },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
           "tips": [
             null
@@ -11675,10 +11739,16 @@
             null
           ]
         },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "progression_name": "milli parklar"
+        },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
           "tips": [
             null
           ]
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "progression_name": "Neçə ölkə"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
           "tips": [
@@ -11689,6 +11759,18 @@
           "tips": [
             null
           ]
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "progression_name": "Mənim məşhur ad günüm"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "ən sürətli barmaq"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "Tətbiq: rəqəmi təxmin et "
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "mən harda yaşamalıyam"
         },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
           "tips": [
@@ -11709,6 +11791,15 @@
           "tips": [
             null
           ]
+        },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "progression_name": "Tətbiq: paltar seçən"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "progression_name": "Tətbiq: Dost tapan"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "Tətbiq:Uşağın kinosunu seçin"
         },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
           "tips": [
@@ -11763,6 +11854,7 @@
           ]
         },
         "68d48a87-2999-499a-962e-a0a177e1c4e6": {
+          "name": "Mərhələ təyin et",
           "tips": [
             null
           ]
@@ -11778,11 +11870,13 @@
           ]
         },
         "f3726d11-0690-46a9-b742-f48b4a80ab33": {
+          "name": "Hədəf və qaydalar",
           "tips": [
             null
           ]
         },
         "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
+          "name": "Plan inkişaf etdir",
           "tips": [
             null
           ]
@@ -11803,6 +11897,7 @@
           ]
         },
         "418d731c-d516-4e49-8547-9313763526ca": {
+          "name": "Mərhələ təyin et",
           "tips": [
             null
           ]
@@ -11818,11 +11913,13 @@
           ]
         },
         "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
+          "name": "Hədəf və qaydalar",
           "tips": [
             null
           ]
         },
         "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
+          "name": "Plan inkişaf etdir",
           "tips": [
             null
           ]
@@ -11843,6 +11940,7 @@
           ]
         },
         "9823b27f-66ca-4ea1-860d-3472e5317340": {
+          "name": "Mərhələ təyin et",
           "tips": [
             null
           ]
@@ -11858,11 +11956,13 @@
           ]
         },
         "f5570fab-fdee-464e-b569-ec19142fc35d": {
+          "name": "Hədəf və qaydalar",
           "tips": [
             null
           ]
         },
         "661c94ca-9d68-45ee-afca-2ff357684bf3": {
+          "name": "Plan inkişaf etdir",
           "tips": [
             null
           ]
@@ -12063,6 +12163,9 @@
             null
           ]
         },
+        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
+          "progression_name": "siyahılar"
+        },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
             null
@@ -12148,6 +12251,9 @@
           "tips": [
             null
           ]
+        },
+        "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
+          "progression_name": "səhifənizə üslub əlavə edin"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "Həmyaşıd rəyi"
@@ -12461,7 +12567,8 @@
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "səhifələri əlavə etmək"
         },
         "76186510-9804-44d1-8371-4aa2895fc16d": {
           "progression_name": "Əngəllər"
@@ -12483,6 +12590,12 @@
           "tips": [
             null
           ]
+        },
+        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
+          "progression_name": "üslub əlavə edin"
+        },
+        "f6c5624d-14b2-4344-86e9-2a2da40edf31": {
+          "progression_name": "İşinizi Yoxlayın"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [

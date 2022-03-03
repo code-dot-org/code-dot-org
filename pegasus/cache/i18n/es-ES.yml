@@ -2604,6 +2604,10 @@ es-ES:
   hoc2018_dance_video2: Fiesta de baile - Eventos
   hoc2018_dance_video3: Fiesta de Baile - Propiedades
   hoc2018_dance_video4: Fiesta de Baile - Felicidades
+  dance_box_higher_power_line_1: Programa un baile al ritmo de "Higher Power" de Coldplay
+    y podrías tener la oportunidad de ver al grupo en directo.
+  dance_box_higher_power_line_2: Comprueba <a href="%{path}">code.org/coldplay</a>
+    para más información.
   page_not_found_title: Página no encontrada
   page_not_found_header: '404: Página no encontrada'
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba

@@ -2752,6 +2752,10 @@ eu:
               display_name: Itzuliak
             csf_events:
               display_name: Gertaerak
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Aldagaiak
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2764,3 +2768,13 @@ eu:
           lessons:
             lesson-9:
               name: Itzuliak
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internet
+              key: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hiritartasun digitala
+            lessonGroup-8:
+              display_name: Aldagaiak
