@@ -1,10 +1,28 @@
 class ProgrammingEnvironmentsController < ApplicationController
+  include ProxyHelper
+  EXPIRY_TIME = 30.minutes
+
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show]
-  before_action :set_programming_environment, except: [:index, :new, :create]
+  before_action :set_programming_environment, except: [:index, :docs_index, :new, :create]
   authorize_resource
 
   def index
     @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
+  end
+
+  def docs_index
+    if DCDO.get('use-studio-code-docs', false)
+      @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
+      render :index
+    else
+      render_proxied_url(
+        'https://curriculum.code.org/docs/',
+        allowed_content_types: nil,
+        allowed_hostname_suffixes: %w(curriculum.code.org),
+        expiry_time: EXPIRY_TIME,
+        infer_content_type: true
+      )
+    end
   end
 
   def new
@@ -21,25 +39,20 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def edit
-    @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
     return render :not_found unless @programming_environment
   end
 
   def update
-    programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
-    unless programming_environment
-      render :not_found
-      return
-    end
-    programming_environment.assign_attributes(programming_environment_params.except(:categories))
+    return render :not_found unless @programming_environment
+    @programming_environment.assign_attributes(programming_environment_params.except(:categories))
     begin
       if programming_environment_params[:categories]
-        programming_environment.categories =
+        @programming_environment.categories =
           programming_environment_params[:categories].each_with_index.map do |category, i|
             if category['id'].blank?
-              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id, position: i))
+              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: @programming_environment.id, position: i))
             else
-              existing_category = programming_environment.categories.find(category['id'])
+              existing_category = @programming_environment.categories.find(category['id'])
               existing_category.assign_attributes(category.except('id'))
               existing_category.position = i
               existing_category.save! if existing_category.changed?
@@ -47,9 +60,9 @@ class ProgrammingEnvironmentsController < ApplicationController
             end
           end
       end
-      programming_environment.save! if programming_environment.changed?
-      programming_environment.write_serialization
-      render json: programming_environment.summarize_for_edit.to_json
+      @programming_environment.save! if @programming_environment.changed?
+      @programming_environment.write_serialization
+      render json: @programming_environment.summarize_for_edit.to_json
     rescue ActiveRecord::RecordInvalid => e
       render(status: :not_acceptable, plain: e.message)
     end
@@ -57,8 +70,24 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def show
     return render :not_found unless @programming_environment
-    return head :forbidden unless can?(:read, @programming_environment)
     @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+    return head :forbidden unless can?(:read, @programming_environment)
+  end
+
+  def docs_show
+    if DCDO.get('use-studio-code-docs', false)
+      return render :not_found unless @programming_environment
+      @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      render :show
+    else
+      render_proxied_url(
+        "https://curriculum.code.org/docs/#{params[:name]}/",
+        allowed_content_types: nil,
+        allowed_hostname_suffixes: %w(curriculum.code.org),
+        expiry_time: EXPIRY_TIME,
+        infer_content_type: true
+      )
+    end
   end
 
   def destroy

@@ -148,7 +148,11 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def studio_documentation_path
-    programming_environment_programming_expression_path(programming_environment.name, key)
+    if DCDO.get('use-studio-code-docs', false)
+      documentation_path
+    else
+      programming_environment_programming_expression_path(programming_environment.name, key)
+    end
   end
 
   def summarize_for_lesson_edit
