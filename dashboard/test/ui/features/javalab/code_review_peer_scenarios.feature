@@ -6,12 +6,12 @@
 @no_ie
 Feature: Code review (peer scenarios)
 
-# At the end of the setup, we will have created
-# a CSA section with an associated code review group.
-# That code review group should have two students in it.
-# The section itself will also have code review enabled.
+  # At the end of the setup, we will have created
+  # a CSA section with an associated code review group.
+  # That code review group should have two students in it.
+  # The section itself will also have code review enabled.
   Background:
-  # Create a section
+    # Create a section
     Given I create a levelbuilder named "Dumbledore"
     And I create a new section assigned to "ui-test-csa-family-script"
     And I sign in as "Dumbledore" and go home
@@ -21,15 +21,15 @@ Feature: Code review (peer scenarios)
     And I join the section
     Given I create a student named "Harry"
     And I join the section
-  # Create a code review group with students in it.
-  # Save the group, and enable code review for the section.
+    # Create a code review group with students in it.
+    # Save the group, and enable code review for the section.
     Given I sign in as "Dumbledore" and go home
     And I create a new code review group for the section I saved
     And I add the first student to the first code review group
     And I add the first student to the first code review group
     And I click selector ".uitest-base-dialog-confirm"
     And I click selector ".toggle-input"
-  # Visit Javalab level as student, and enable code review on the level
+    # Visit Javalab level as student, and enable code review on the level
     Given I sign in as "Hermione"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
