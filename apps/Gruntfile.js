@@ -581,6 +581,8 @@ describe('entry tests', () => {
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'report_abuse/report_abuse_form':
       './src/sites/studio/pages/report_abuse/report_abuse_form.js',
+    'reference_guides/show':
+      './src/sites/studio/pages/reference_guides/show.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
     'scripts/resources': './src/sites/studio/pages/scripts/resources.js',

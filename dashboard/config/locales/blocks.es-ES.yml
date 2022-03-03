@@ -1036,6 +1036,7 @@ es:
             new Behavior(fluttering, []): revoloteando
             new Behavior(jittering, []): nerviosismo
             new Behavior(wobbling, []): tambaleándose
+            new Behavior(wandering, []): deambulando
             new Behavior(patrolling, []): patrullando
             new Behavior(moving_west_and_looping, []): moviéndose hacia el oeste y
               haciendo un bucle
@@ -2126,9 +2127,11 @@ es:
             '"moving_south_and_looping"': bucle al sur
             '"moving_east_and_looping"': bucle al este
             '"moving_west_and_looping"': bucle al oeste
+            '"shrinking"': reduciendo
             '"spinning_left"': girando a la izquierda
             '"spinning_right"': girando a la derecha
             '"swimming_left_and_right"': natación
+            '"wandering"': deambulando
             '"wobbling"': tambaleándose
       Poetry_stopBehavior:
         text: sprite {ANIMATION_NAME} para de {BEHAVIOR}
@@ -2141,9 +2144,11 @@ es:
             '"moving_south_and_looping"': bucle al sur
             '"moving_east_and_looping"': bucle al este
             '"moving_west_and_looping"': bucle al oeste
+            '"shrinking"': reduciendo
             '"spinning_left"': girando a la izquierda
             '"spinning_right"': girando a la derecha
             '"swimming_left_and_right"': natación
+            '"wandering"': deambulando
             '"wobbling"': tambaleándose
             '"all"': "--cada comportamiento--"
       Poetry_stringValue:

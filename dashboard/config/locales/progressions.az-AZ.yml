@@ -9,7 +9,17 @@ az:
       'AI: Impact on Society - Video': 'AI: Cəmiyyətə Təsir - Video'
       'AI: Training Data & Bias - Video': 'AI: Təlim məlumatları və qərəzlilik - Video'
       Accelerometer Events: Akselerometr hadisələri
+      Add Movement: hərəkət əlavə edin
+      Add Sprites: qrafik obyekt əlavə et
+      Add Style: üslub əlavə edin
+      Add Style to Your Page: səhifənizə üslub əlavə edin
+      Add Text: mətn əlavə edin
+      Add a Welcome Screen: qarşılanma ekranı əlavə edin
       Adding Images: Şəkillər əlavə etmək
+      Adding New Screens: Yeni ekranların əlavə edilməsi
+      Adding Pages: 'səhifələri əlavə etmək
+
+'
       Adding Screens: ekranlar əlavə etmək
       Alien Defender: Yadplanteli mudafiyesi
       Analog Sensors: Analoq sensorlar
@@ -21,6 +31,24 @@ az:
 '
       'App Project: Linking Screens': 'Tətbiq Layihəsi: Ekranları Bağlamaq'
       'App Project: Screen Design': 'Proqram Layihəsi: Ekran Dizaynı'
+      'App: Choose a Kid''s Movie': Tətbiq:Uşağın kinosunu seçin
+      'App: Friend Finder': 'Tətbiq: Dost tapan'
+      'App: Guess the Number': 'Tətbiq: rəqəmi təxmin et '
+      'App: How Many Countries': Neçə ölkə
+      'App: Is It Your Birthday?': sizin ad gününüzdür ?
+      'App: My Famous Birthday': Mənim məşhur ad günüm
+      'App: National Parks': 'milli parklar
+
+'
+      'App: Outfit Picker': 'Tətbiq: paltar seçən'
+      'App: Pet Chooser': 'Tətbiq: Ev Heyvanı seçən'
+      'App: Story Creator': hekayə yaradıcısı
+      'App: The Fastest Finger': 'ən sürətli barmaq
+
+'
+      'App: Where Should I Live?': 'mən harda yaşamalıyam
+
+'
       Arrays: Massivlər
       Artist Intro with JR Hildebrand: JR Hildebrand ilə Rəssam Girişi
       Artist Intro with JR Hildebrande: JR Hildebrand ilə Rəssam Girişi
@@ -61,14 +89,20 @@ az:
       Challenge Levels: Çağırış Səviyyələri
       'Challenge: Draw an Image': 'Çağırış: Bir şəkil çəkin'
       'Challenge: Extend Your Scene': 'Çağırış: Səhnənizi genişləndirin'
+      'Challenge: Lists': siyahılar
       'Challenge: Updating Variables': 'Çağırış: Dəyişənləri Yeniləmə'
       Challenges: Əngəllər
       Change: Dəyişmək
       Changing Screens: Ekranların dəyişdirilməsi
+      Check Your Work: İşinizi Yoxlayın
+      Check-In Survey: 'giriş sorğusu
+
+'
       Checking for a Winner: Qazananı yoxlamaq
       Choose Your Own Adventure: Öz macəranızı seçin
       Choosing Good IDs: Yaxşı şəxsiyyət vəsiqələrinin seçilməsi
       'Circuit Playground: Introduction': 'Circuit Playground: Giriş'
+      Code Prediction: kod təxmini
       Code Your Own Flappy Game: Öz Flappy Oyununuzu Kodlayın
       Collector Game: Kolleksiyaçı oyunu
       Collisions: Toqquşmalar
@@ -79,6 +113,7 @@ az:
       Conditionals with Cards - Unplugged Activity: Kartlı Şərtlər - Unplugged Fəaliyyət
       'Conditionals: If Statements': 'Şərtlər: İf Operatorları'
       'Conditionals: If and If/Else Statements': 'Şərtlər: If və If/Else ifadələri'
+      Control Your Player: oyunçunu idarə et
       'Course E: Play Lab Project': 'Kurs E: Play Lab Layihəsi'
       'Course F: Artist Project': 'Kurs F: Rəssam Layihəsi'
       'Course F: Artist Project - Revise': 'Kurs F: Rəssam Layihəsi - Yenidən nəzərdən
@@ -89,11 +124,13 @@ az:
       Crack Random Substitution: Crack Təsadüfi Əvəzetmə
       Crack a Caesar Cipher: Sezar şifrəsini sındırın
       Create Your Own Animation: öz animasiyanızı yaradın
+      Create a Background: arxa fon yarat
       Create a Story: Hekayə yarat
       Create your project: Layihə yarat
       Creating Sprites: Spraytlar yaratmaq
       Creative Commons Search: Yaradıcı ümumi araşdırma
       Customize: Özəlləşdir
+      Customize Your App: Tətbiqinizi özəlləşdirin
       Dance Crews: Rəqs komandası
       Data Visualization: Məlumatların vizuallaşdırılması
       De-bugging with the Step Button: Addım Düyməsi ilə Debugging
@@ -110,6 +147,12 @@ az:
       Designing Screens with Code: Kod ilə ekran dizaynı
       Designing for Accessibility: Əlçatanlıq üçün dizayn
       Digital Sharing - Unplugged Activity: Rəqəmsal Paylaşım - Çıxarılan Fəaliyyət
+      Draw Your Background: 'arxa fonunuzu çəkin
+
+'
+      Draw a Background: 'arxa fon çək
+
+'
       Drawing: Şəkil
       Drawing Shapes: Rəsm Şekilləri
       Editing Images: Şəkilləri redaktə etmək
@@ -143,6 +186,7 @@ az:
       Exploring CS in Entertainment: Əyləncədə CS-ni araşdırın
       Exploring more CSS: Daha çox CSS-i araşdırın
       Extra: Əlavə
+      Extra Challenge: əlavə problem
       Final Personal Website: Son şəxsi sayt
       Final Room Escape App: Son otaqdan qaçış proqramı
       Find the Wizard: Sehrbazı tapın
@@ -169,6 +213,7 @@ az:
       Getting Properties: Xüsusiyyətləri əldə etmək
       Graph Paper Programming - Unplugged Activity: Qrafik Kağız Proqramlaşdırma -
         Unplugged Fəaliyyət
+      Green Glass Door: Yaşıl Şüşə Qapı
       Guess The Number: Rəqəmi təxmin et
       HTML Tags: HTML teqlər
       Hardware and Software: Kompüter Təchizatı və Proqram Təminatı
@@ -199,6 +244,7 @@ az:
       Keep On Dancing!: Rəqs etməyə davam edin!
       Keeping Data Secret: Məlumatlar Gizli Saxlanır
       Keyboard Input: Klaviatura Girişi
+      Kim's Survey: Kimin sorğusu
       LED Apps: LED Proqramları
       Layout Properties: Düzən Xüsusiyyətləri
       Layout with CSS: CSS ilə tərtibat
@@ -243,7 +289,7 @@ az:
       Project - Sprites and Interactions: Layihə - Sprite və Qarşılıqlı Əlaqələr
       Project Guide: Layihə Bələdçisi
       Project Work: layihə işi
-      Properties: Xüsusiyyətlər
+      Properties: Xassələri
       Publishing Your Website: Veb saytınızın nəşri
       Quarter Notes: Dörddəbir Qeydlər
       RGB Exploration: RGB kəşfiyyatı

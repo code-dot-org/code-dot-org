@@ -11085,41 +11085,6 @@ pt-PT:
         display_name: Praticar
       CSD web text practice choice_2021:
         display_name: Praticar
-      CSDU6 Innovation_2021:
-        markdown: |+
-          # Pesquisa em Inovação
-
-          Escolha um dos tópicos a seguir para investigar. Você terá que encontrar informações sobre alguns dos mais recentes dispositivos de computação inovadores relacionados à sua categoria.
-
-          ## Tecnologia utilizável
-          A tecnologia utilizável inclui qualquer forma de computação projetada para ser usada pelo usuário, seja ela incorporada na roupa ou usada como acessório. Muitos utilizáveis, como pedômetros inteligentes, se sobrepõem um pouco com a saúde e a segurança, pois o dispositivo é tanto usável como destinado a ajudar a melhorar sua saúde pessoal.
-
-          ## Saúde e segurança
-          O amplo tópico inclui tanto a tecnologia do consumidor (coisas que você pode usar para melhorar sua saúde ou segurança) quanto a tecnologia profissional (equipamento que um médico ou outro profissional pode usar).
-
-          ## Agricultura
-          A agricultura pode não ser um assunto óbvio, mas as inovações tecnológicas tiveram um impacto enorme na maneira como abordamos a agricultura. Isso inclui incorporar computadores aos equipamentos agrícolas existentes, usar sensores e robótica para monitorar culturas e analisar dados para melhorar a eficiência e a sustentabilidade.
-
-          ## Manufacturing
-          Avanços em prototipagem rápida, robótica industrial e automação tiveram um grande impacto sobre como as mercadorias são produzidas. Quer seja a tecnologia para permitir a produção em pequena escala acessível (como impressoras 3D e cortadores a laser) ou a integração de computadores no trabalho de fábrica, há muitas áreas interessantes para pesquisar aqui.
-
-          ## Arte e Design
-          A interseção entre expressão artística e computação pode produzir resultados impressionantes e inesperados. Embora seja menos provável que você encontre produtos disponíveis comercialmente relacionados à arte e ao design, você encontrará uma grande variedade de criações caseiras que usam todas as maneiras de dispositivos de computação de maneiras criativas e expressivas.
-
-          ## Lar inteligente
-          O sonho de uma casa que compreende e até antecipa as suas necessidades está mais perto do que nunca. Se controlado explicitamente através de comandos de voz, ou usando sensores para monitorar e responder às condições de mudança, os dispositivos domésticos inteligentes cuidam de qualquer número de tarefas mundanas ou repetitivas em casa.
-
-
-          # Considerações sobre pesquisa
-
-          Ao pesquisar dispositivos no seu tópico, tenha as seguintes considerações em mente:
-
-          * Foque em soluções baseadas em hardware sobre programas de software
-          * Concentre-se em inovações recentes sobre notícias antigas
-          * Siga o que te interessa
-
-          Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
-
       Design a Screen for your App_2021:
         markdown: |
           # Simulando seu App

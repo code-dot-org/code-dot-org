@@ -3549,6 +3549,10 @@ el:
               display_name: Βρόχοι
             csf_events:
               display_name: Συμβάντα
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Μεταβλητές
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -3561,3 +3565,21 @@ el:
           lessons:
             lesson-9:
               name: Βρόχοι
+        coursef-2022-pilot:
+          lessons:
+            Sprites in Action:
+              name: Χαρακτήρες σε Δράση
+              key: Χαρακτήρες σε Δράση
+            Outbreak:
+              name: Έξαρση
+              key: Έξαρση
+            The Internet:
+              name: Το Διαδίκτυο
+              key: Το Διαδίκτυο
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Ψηφιακή υπηκοότητα
+            ramp_up:
+              display_name: Χαρακτήρας
+            lessonGroup-8:
+              display_name: Μεταβλητές

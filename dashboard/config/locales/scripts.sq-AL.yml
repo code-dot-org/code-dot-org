@@ -3265,6 +3265,9 @@ sq:
             csf_events:
               display_name: Ngjarje
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: variabla
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -3300,6 +3303,28 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Interneti
+              key: Interneti
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-8:
+              display_name: variabla
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja

@@ -31630,40 +31630,76 @@ en:
               description_teacher: 
             lesson-3:
               name: The Neighborhood
+              description_student: 
+              description_teacher: 
             lesson-4:
               name: Navigating and Painting
+              description_student: 
+              description_teacher: 
             lesson-5:
               name: One-Way Selection Statements
+              description_student: 
+              description_teacher: 
             lesson-6:
               name: PainterPlus
+              description_student: 
+              description_teacher: 
             lesson-7:
               name: Writing Methods
+              description_student: 
+              description_teacher: 
             lesson-8:
               name: Code Reviews
+              description_student: 
+              description_teacher: 
             lesson-9:
               name: Loops
+              description_student: 
+              description_teacher: 
             lesson-10:
               name: Two-Way Selection Statements
+              description_student: 
+              description_teacher: 
             lesson-11:
               name: Debugging Strategies
+              description_student: 
+              description_teacher: 
             lesson-12:
               name: Decomposition and Design
+              description_student: 
+              description_teacher: 
             lesson-13:
               name: PatternPainter
+              description_student: 
+              description_teacher: 
             lesson-14:
               name: BackgroundPainter
+              description_student: 
+              description_teacher: 
             lesson-15:
               name: Open Source Code
+              description_student: 
+              description_teacher: 
             lesson-16:
               name: Asphalt Art Project — Day 1
+              description_student: 
+              description_teacher: 
             lesson-17:
               name: Asphalt Art Project — Day 2
+              description_student: 
+              description_teacher: 
             lesson-18:
               name: Asphalt Art Project — Day 3
+              description_student: 
+              description_teacher: 
             lesson-19:
               name: FRQ Practice
+              description_student: 
+              description_teacher: 
             lesson-20:
               name: Unit 1 Assessment
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -32629,6 +32665,27 @@ en:
           lesson_groups: {}
           name: ui-test-csa-family-script
           title: UI Test CSA Family Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-preview:
+          lessons:
+            lesson-1:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: The Playground
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-preview
+          title: CSA Curriculum and Tools Preview
           description_audience: ''
           description_short: ''
           description: ''
