@@ -507,77 +507,77 @@
           "Course_4_SCV_6_f": "**Solution :**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" inline=\"false\">\n            <title name=\"VAR\">red1</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">0</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">green1</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">175</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"variables_set\" inline=\"false\">\n                    <title name=\"VAR\">blue1</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">200</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">red2</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">100</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">green2</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">50</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"variables_set\" inline=\"false\">\n                                <title name=\"VAR\">blue2</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">150</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"variables_set\" inline=\"false\">\n                                    <title name=\"VAR\">length</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">70</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"variables_set\" inline=\"false\">\n                                        <title name=\"VAR\">sides</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">5</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"controls_repeat_ext\" inline=\"true\">\n                                            <value name=\"TIMES\">\n                                              <block type=\"math_arithmetic\" inline=\"true\">\n                                                <title name=\"OP\">MULTIPLY</title>\n                                                <value name=\"A\">\n                                                  <block type=\"math_number\">\n                                                    <title name=\"NUM\">2</title>\n                                                  </block>\n                                                </value>\n                                                <value name=\"B\">\n                                                  <block type=\"variables_get\">\n                                                    <title name=\"VAR\">sides</title>\n                                                  </block>\n                                                </value>\n                                              </block>\n                                            </value>\n                                            <statement name=\"DO\">\n                                              <block type=\"controls_repeat_ext\" inline=\"true\">\n                                                <value name=\"TIMES\">\n                                                  <block type=\"variables_get\">\n                                                    <title name=\"VAR\">sides</title>\n                                                  </block>\n                                                </value>\n                                                <statement name=\"DO\">\n                                                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                                                    <value name=\"TIMES\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">sides</title>\n                                                      </block>\n                                                    </value>\n                                                    <statement name=\"DO\">\n                                                      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                                                        <value name=\"COLOUR\">\n                                                          <block type=\"colour_rgb\" inline=\"false\">\n                                                            <value name=\"RED\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">red1</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"GREEN\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">green1</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"BLUE\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">blue1</title>\n                                                            </block>\n                                                            </value>\n                                                          </block>\n                                                        </value>\n                                                        <next>\n                                                          <block type=\"draw_move\" inline=\"true\">\n                                                            <title name=\"DIR\">moveForward</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">length</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_turn\" inline=\"true\">\n                                                            <title name=\"DIR\">turnLeft</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                                                            <value name=\"COLOUR\">\n                                                            <block type=\"colour_rgb\" inline=\"false\">\n                                                            <value name=\"RED\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">red2</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"GREEN\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">green2</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"BLUE\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">blue2</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_move\" inline=\"true\">\n                                                            <title name=\"DIR\">moveForward</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">length</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_turn\" inline=\"true\">\n                                                            <title name=\"DIR\">turnRight</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                          </block>\n                                                        </next>\n                                                      </block>\n                                                    </statement>\n                                                    <next>\n                                                      <block type=\"draw_turn\" inline=\"true\">\n                                                        <title name=\"DIR\">turnRight</title>\n                                                        <value name=\"VALUE\">\n                                                          <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                          </block>\n                                                        </value>\n                                                      </block>\n                                                    </next>\n                                                  </block>\n                                                </statement>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_arithmetic\" inline=\"true\">\n                                                        <title name=\"OP\">DIVIDE</title>\n                                                        <value name=\"A\">\n                                                          <block type=\"math_number\">\n                                                            <title name=\"NUM\">180</title>\n                                                          </block>\n                                                        </value>\n                                                        <value name=\"B\">\n                                                          <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                          </block>\n                                                        </value>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </statement>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseD_Dance_2020_01": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\\*Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
-          "challenges": "**Défis optionnels**\n\n-   Choisis une chanson différente à jouer.\n-   Déplace ton danseur vers un nouvel emplacement.\n-   Crée plus d'un danseur."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
+          "challenges": "**Défis optionnels**\n\n-   Choisis une chanson différente à mettre. \n-   Déplace ton danseur vers un nouvel emplacement.\n-   Crée plus d'un danseur."
         },
         "CourseD_Dance_2020_02": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Le danseur doit effectuer un mouvement.\n-   Tu dois appuyer sur une touche fléchée.\n\n_Ce niveau se termine après 4 mesures._",
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Le danseur doit effectuer un mouvement.\n-   Tu dois appuyer sur une touche fléchée.\n\n_Ce niveau se termine après 4 mesures._",
           "challenges": "**Défi facultatif**\n\n-   Utilise plusieurs blocs <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "CourseD_Dance_2020_03": {
-          "validation": "**Comment puis-je réussir à passer ce niveau ?**\n\n-   Les deux danseurs doivent faire un mouvement.\n-   Il faut appuyer sur les touches fléchées.\n\n_Ce niveau se termine après 6 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Un danseur doit répondre aux touches fléchées gauche et droite."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Les deux danseurs doivent faire un mouvement.\n-   Il faut appuyer sur les touches fléchées.\n\n_Ce niveau se termine après 6 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Un danseur doit réagir aux touches fléchées gauche et droite."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Le danseur doit passer à un nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Le danseur doit se mettre à faire nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
         },
         "CourseD_Dance_2020_05": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Change l’arrière-plan à chaque changement de danseur."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Change l’arrière-plan à chaque fois que les danseurs changent de mouvement."
         },
         "CourseD_Dance_2020_06": {
-          "validation": "**Comment puis-je réussir à passer ce niveau ?**\n\n-   Crée un danseur principal et un groupe de danseurs en renfort.\n\n_Ce niveau se termine après 7 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Crée plusieurs groupes de danseurs de secours."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Crée un danseur principal et un groupe de danseurs de fond au cours des 4 premières mesures de la chanson.\n\n_Ce niveau se termine après 7 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Crée plusieurs groupes de danseurs de fond. "
         },
         "CourseD_Dance_2020_07": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Modifie la taille d'au moins un danseur après le début de la musique.\n\n_Ce niveau se termine après 6 mesures._",
-          "challenges": "**Défi optionnel**\n\n-   Expérimente en changeant d'autres propriétés (largeur, hauteur, angle, etc.)."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Modifie la taille d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
+          "challenges": "**Défi optionnel**\n\n-   Amuse-toi à changer d'autres propriétés telles que la largeur ou l'angle."
         },
         "CourseD_Dance_2020_08": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
           "tint_hint": "As-tu remarqué que tes danseurs n'ont pas la couleur exacte que tu choisis ? En effet, **les teintes** mélangent la couleur que tu choisis avec les couleurs du danseur."
         },
         "CourseD_Dance_2020_09": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Appuie simplement sur le bouton \"Terminer\" !",
-          "repeat_every_ideas": "**Besoin d'idées ?**\n\n-   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.\n-   Modifie à plusieurs reprises l'angle d'un danseur pour le faire tourner.\n-   Modifie à plusieurs reprises la position horizontale ou verticale d'un danseur pour le déplacer sur l'écran.\n\n_Tu peux également utiliser des nombres négatifs pour créer un effet opposé !_",
-          "next_previous": "**Défi facultatif**\n\n-   Tu peux également utiliser ce nouveau bloc d'événements pour parcourir une liste de mouvements de danse en définissant le déplacement sur `(Aléatoire)`, `(Suivant)` ou `(Précédent)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Appuie simplement sur le bouton \"Terminer\" !",
+          "repeat_every_ideas": "**Besoin d'idées ?**\n\n-   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.\n-   Change à plusieurs reprises l'angle d'un danseur pour le faire tourner.\n\n_Tu peux aussi utiliser des nombres négatifs pour créer un effet opposé !_",
+          "next_previous": "**Défi facultatif**\n\n-   Tu peux également utiliser ce nouveau bloc événement pour passer en boucle une série de mouvements de danse en définissant le mouvement sur « (Aléatoire) », « (Suivant)» ou « (Précédent) ».\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
-          "alternate": "Le bloc alternatif est dans la catégorie « Danseurs »."
+          "alternate": "Le bloc « alterner » est dans la catégorie « Danseurs »."
         },
         "CourseD_Dance_Party_01": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\\*Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
-          "challenges": "**Défis optionnels**\n\n-   Choisis une autre chanson à jouer.\n-   Renomme ton danseur."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
+          "challenges": "**Défis optionnels**\n\n-   Choisis une autre chanson à mettre.\n-   Renomme ton danseur."
         },
         "CourseD_Dance_Party_02": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Le danseur doit passer à un nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Le danseur doit se mettre à faire nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
         },
         "CourseD_Dance_Party_03": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Tu dois faire en sorte que l’effet de fond change à un moment avant la septième mesure de la chanson.\n\n_Ce niveau se termine après 9 mesures._",
-          "challenges": "**Défis optionnels**\n\nChange l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"mesures\"</title></block></xml>."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Tu dois faire en sorte que l’effet de fond change à un moment avant la septième mesure de la chanson.\n\n_Ce niveau se termine après 9 mesures._",
+          "challenges": "**Défi optionnel**\n\nChange l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>. "
         },
         "CourseD_Dance_Party_06": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Tu dois avoir au moins deux danseurs.\n\n_Ce niveau se termine après 5 mesures._",
-          "challenges": "**Défis optionnels**\n\n-   Ajoute un troisième danseur (ou autant que tu veux !)\n-   Fait en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Il te faut au moins deux danseurs.\n\n_Ce niveau se termine après 5 mesures._",
+          "challenges": "**Défi optionnel**\n\n-   Ajoute un troisième danseur (ou autant que tu veux !)\n-   Fais en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson."
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Deux danseurs doivent avoir une taille autre que 100.\n\n_Ce niveau se termine après 5 mesures._",
-          "challenges": "**Défi optionnel**\n\n\\*Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Il faut que deux danseurs aient une taille autre que 100.\n\n_Ce niveau se termine après 5 mesures._",
+          "challenges": "**Défi optionnel**\n\n-   Essaie différentes choses en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)"
         },
         "CourseD_Dance_Party_09": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 7 mesures._"
         },
         "CourseD_Dance_Party_10": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Les propriétés de deux ou plusieurs danseurs doivent changer.\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Les propriétés d'aux moins deux danseurs doivent changer.\n\n_Ce niveau se termine après 7 mesures._"
         },
         "CourseD_Dance_Party_11": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Sois créatif !\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Sois juste original !\n\n_Ce niveau se termine après 7 mesures._"
         },
         "CourseD_Dance_Party_11_5": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Sois créatif !\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Sois juste original !\n\n_Ce niveau se termine après 7 mesures._"
         },
         "CourseD_Dance_Party_11b": {
           "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Utilise le bloc ˋen appuyant sur vers la gaucheˋ pour que le robot fasse un mouvement de danse.\n\n_Ce niveau se termine après 7 mesures._"
@@ -601,83 +601,83 @@
           "voyage_aquatic_9a": "Quel manifique récif de corail ! Si le corail bleu est dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !"
         },
         "Dance_2019_01": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\\*Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
-          "challenges": "**Défis optionnels**\n\n-   Choisis une chanson différente à jouer.\n-   Déplace ton danseur vers un nouvel emplacement.\n-   Crée plus d'un danseur."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
+          "challenges": "**Défis optionnels**\n\n-   Choisis une chanson différente à mettre. \n-   Déplace ton danseur vers un nouvel emplacement.\n-   Crée plus d'un danseur."
         },
         "Dance_2019_02": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Le danseur doit effectuer un mouvement.\n-   Tu dois appuyer sur une touche fléchée.\n\n_Ce niveau se termine après 4 mesures._",
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Le danseur doit effectuer un mouvement.\n-   Tu dois appuyer sur une touche fléchée.\n\n_Ce niveau se termine après 4 mesures._",
           "challenges": "**Défi facultatif**\n\n-   Utilise plusieurs blocs <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "Dance_2019_03": {
-          "validation": "**Comment puis-je réussir à passer ce niveau ?**\n\n-   Les deux danseurs doivent faire un mouvement.\n-   Il faut appuyer sur les touches fléchées.\n\n_Ce niveau se termine après 6 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Un danseur doit répondre aux touches fléchées gauche et droite."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Les deux danseurs doivent faire un mouvement.\n-   Il faut appuyer sur les touches fléchées.\n\n_Ce niveau se termine après 6 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Un danseur doit réagir aux touches fléchées gauche et droite."
         },
         "Dance_2019_04": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Le danseur doit passer à un nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Le danseur doit se mettre à faire nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
         },
         "Dance_2019_05": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Change l’arrière-plan à chaque changement de danseur."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Change l’arrière-plan à chaque fois que les danseurs changent de mouvement."
         },
         "Dance_2019_06": {
-          "validation": "**Comment puis-je réussir à passer ce niveau ?**\n\n-   Crée un danseur principal et un groupe de danseurs en renfort.\n\n_Ce niveau se termine après 7 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Crée plusieurs groupes de danseurs de secours."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Crée un danseur principal et un groupe de danseurs de fond au cours des 4 premières mesures de la chanson.\n\n_Ce niveau se termine après 7 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Crée plusieurs groupes de danseurs de fond. "
         },
         "Dance_2019_07": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Modifie la taille d'au moins un danseur après le début de la musique.\n\n_Ce niveau se termine après 6 mesures._",
-          "challenges": "**Défi optionnel**\n\n-   Expérimente en changeant d'autres propriétés (largeur, hauteur, angle, etc.)."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Modifie la taille d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
+          "challenges": "**Défi optionnel**\n\n-   Amuse-toi à changer d'autres propriétés telles que la largeur ou l'angle."
         },
         "Dance_2019_08": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
           "tint_hint": "As-tu remarqué que tes danseurs n'ont pas la couleur exacte que tu choisis ? En effet, **les teintes** mélangent la couleur que tu choisis avec les couleurs du danseur."
         },
         "Dance_2019_09": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Appuie simplement sur le bouton \"Terminer\" !",
-          "repeat_every_ideas": "**Besoin d'idées ?**\n\n-   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.\n-   Modifie à plusieurs reprises l'angle d'un danseur pour le faire tourner.\n-   Modifie à plusieurs reprises la position horizontale ou verticale d'un danseur pour le déplacer sur l'écran.\n\n_Tu peux également utiliser des nombres négatifs pour créer un effet opposé !_",
-          "next_previous": "**Défi facultatif**\n\n-   Tu peux également utiliser ce nouveau bloc d'événements pour parcourir une liste de mouvements de danse en définissant le déplacement sur `(Aléatoire)`, `(Suivant)` ou `(Précédent)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Appuie simplement sur le bouton \"Terminer\" !",
+          "repeat_every_ideas": "**Besoin d'idées ?**\n\n-   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.\n-   Change à plusieurs reprises l'angle d'un danseur pour le faire tourner.\n\n_Tu peux aussi utiliser des nombres négatifs pour créer un effet opposé !_",
+          "next_previous": "**Défi facultatif**\n\n-   Tu peux également utiliser ce nouveau bloc événement pour passer en boucle une série de mouvements de danse en définissant le mouvement sur « (Aléatoire) », « (Suivant)» ou « (Précédent) ».\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\\*Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
-          "challenges": "**Défis optionnels**\n\n-   Choisis une autre chanson à jouer.\n-   Renomme ton danseur."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
+          "challenges": "**Défis optionnels**\n\n-   Choisis une autre chanson à mettre.\n-   Renomme ton danseur."
         },
         "Dance_Party_02": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Le danseur doit passer à un nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Le danseur doit se mettre à faire nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
         },
         "Dance_Party_03": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._"
         },
         "Dance_Party_04": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Tu dois faire en sorte que l’effet de fond change à un moment avant la septième mesure de la chanson.\n\n_Ce niveau se termine après 9 mesures._",
-          "challenges": "**Défis optionnels**\n\nChange l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"mesures\"</title></block></xml>."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Tu dois faire en sorte que l’effet de fond change à un moment avant la septième mesure de la chanson.\n\n_Ce niveau se termine après 9 mesures._",
+          "challenges": "**Défi optionnel**\n\nChange l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>. "
         },
         "Dance_Party_05": {
-          "validation": "**Comment réussir ce niveau ?** \n\n-   Votre danseur doit effectuer au moins 4 mouvements de danse différents avant la fin du niveau. \n\n_Ce niveau se termine après 12 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Ton danseur doit effectuer au moins 4 mouvements de danse différents avant la fin du niveau. \n\n_Ce niveau se termine après 12 mesures._"
         },
         "Dance_Party_06": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Tu dois avoir au moins deux danseurs.\n\n_Ce niveau se termine après 5 mesures._",
-          "challenges": "**Défis optionnels**\n\n-   Ajoute un troisième danseur (ou autant que tu veux !)\n-   Fait en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Il te faut au moins deux danseurs.\n\n_Ce niveau se termine après 5 mesures._",
+          "challenges": "**Défi optionnel**\n\n-   Ajoute un troisième danseur (ou autant que tu veux !)\n-   Fais en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson."
         },
         "Dance_Party_08": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Deux danseurs doivent avoir une taille autre que 100.\n\n_Ce niveau se termine après 5 mesures._",
-          "challenges": "**Défi optionnel**\n\n\\*Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Il faut que deux danseurs aient une taille autre que 100.\n\n_Ce niveau se termine après 5 mesures._",
+          "challenges": "**Défi optionnel**\n\n-   Essaie différentes choses en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)"
         },
         "Dance_Party_09": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 7 mesures._"
         },
         "Dance_Party_10": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Les propriétés de deux ou plusieurs danseurs doivent changer.\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Les propriétés d'aux moins deux danseurs doivent changer.\n\n_Ce niveau se termine après 7 mesures._"
         },
         "Dance_Party_11": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Sois créatif !\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Sois juste original !\n\n_Ce niveau se termine après 7 mesures._"
         },
         "Dance_Party_11_5": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Sois créatif !\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Sois juste original !\n\n_Ce niveau se termine après 7 mesures._"
         },
         "Dance_Party_11b": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Utilise le bloc ˋen appuyant sur vers la gaucheˋ pour que le robot fasse un mouvement de danse.\n\n_Ce niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Utilise le bloc « en appuyant sur la flèche vers la gauche » pour que le robot fasse un mouvement de danse.\n\n_Ce niveau se termine après 7 mesures._"
         },
         "Dance_Party_extras_alternate_2019": {
-          "alternate": "Le bloc alternatif est dans la catégorie « Danseurs »."
+          "alternate": "Le bloc « alterner » est dans la catégorie « Danseurs »."
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_b": "Si tu appelles les fonctions correctement, voici le chemin que tu feras...",
@@ -8746,43 +8746,43 @@
           "hint1": "Vous devrez ajouter 3 autres événements \"si touche\" pour vérifier toutes les combinaisons de \"contacts\" possibles entre les sprites en bonne santé et les sprites infectés.\n\n[blockly block][0]"
         },
         "CourseD_Dance_2020_01_2021": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\\*Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
-          "challenges": "**Défis optionnels**\n\n-   Choisis une chanson différente à jouer.\n-   Déplace ton danseur vers un nouvel emplacement.\n-   Crée plus d'un danseur."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
+          "challenges": "**Défis optionnels**\n\n-   Choisis une chanson différente à mettre. \n-   Déplace ton danseur vers un nouvel emplacement.\n-   Crée plus d'un danseur."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Le danseur doit effectuer un mouvement.\n-   Tu dois appuyer sur une touche fléchée.\n\n_Ce niveau se termine après 4 mesures._",
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Le danseur doit effectuer un mouvement.\n-   Tu dois appuyer sur une touche fléchée.\n\n_Ce niveau se termine après 4 mesures._",
           "challenges": "**Défi facultatif**\n\n-   Utilise plusieurs blocs <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "CourseD_Dance_2020_03_2021": {
-          "validation": "**Comment puis-je réussir à passer ce niveau ?**\n\n-   Les deux danseurs doivent faire un mouvement.\n-   Il faut appuyer sur les touches fléchées.\n\n_Ce niveau se termine après 6 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Un danseur doit répondre aux touches fléchées gauche et droite."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Les deux danseurs doivent faire un mouvement.\n-   Il faut appuyer sur les touches fléchées.\n\n_Ce niveau se termine après 6 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Un danseur doit réagir aux touches fléchées gauche et droite."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Le danseur doit passer à un nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Le danseur doit se mettre à faire nouveau mouvement après 4 mesures.\n\n_Le niveau se termine après 7 mesures._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Change l’arrière-plan à chaque changement de danseur."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Après 6 mesures, ton danseur doit faire une danse différente de ce qu'il faisait après 4 mesures.\n\n_Le niveau se termine après 11 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Change l’arrière-plan à chaque fois que les danseurs changent de mouvement."
         },
         "CourseD_Dance_2020_06_2021": {
-          "validation": "**Comment puis-je réussir à passer ce niveau ?**\n\n-   Crée un danseur principal et un groupe de danseurs en renfort.\n\n_Ce niveau se termine après 7 mesures._",
-          "challenges": "**Défi facultatif**\n\n-   Crée plusieurs groupes de danseurs de secours."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Crée un danseur principal et un groupe de danseurs de fond au cours des 4 premières mesures de la chanson.\n\n_Ce niveau se termine après 7 mesures._",
+          "challenges": "**Défi facultatif**\n\n-   Crée plusieurs groupes de danseurs de fond. "
         },
         "CourseD_Dance_2020_07_2021": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Modifie la taille d'au moins un danseur après le début de la musique.\n\n_Ce niveau se termine après 6 mesures._",
-          "challenges": "**Défi optionnel**\n\n-   Expérimente en changeant d'autres propriétés (largeur, hauteur, angle, etc.)."
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Modifie la taille d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
+          "challenges": "**Défi optionnel**\n\n-   Amuse-toi à changer d'autres propriétés telles que la largeur ou l'angle."
         },
         "CourseD_Dance_2020_08_2021": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Change la teinte d'au moins un danseur.\n\n_Ce niveau se termine après 6 mesures._",
           "tint_hint": "As-tu remarqué que tes danseurs n'ont pas la couleur exacte que tu choisis ? En effet, **les teintes** mélangent la couleur que tu choisis avec les couleurs du danseur."
         },
         "CourseD_Dance_2020_09_2021": {
-          "validation": "**Comment puis-je passer ce niveau ?**\n\n-   Appuie simplement sur le bouton \"Terminer\" !",
-          "repeat_every_ideas": "**Besoin d'idées ?**\n\n-   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.\n-   Modifie à plusieurs reprises l'angle d'un danseur pour le faire tourner.\n-   Modifie à plusieurs reprises la position horizontale ou verticale d'un danseur pour le déplacer sur l'écran.\n\n_Tu peux également utiliser des nombres négatifs pour créer un effet opposé !_",
-          "next_previous": "**Défi facultatif**\n\n-   Tu peux également utiliser ce nouveau bloc d'événements pour parcourir une liste de mouvements de danse en définissant le déplacement sur `(Aléatoire)`, `(Suivant)` ou `(Précédent)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Appuie simplement sur le bouton \"Terminer\" !",
+          "repeat_every_ideas": "**Besoin d'idées ?**\n\n-   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.\n-   Change à plusieurs reprises l'angle d'un danseur pour le faire tourner.\n\n_Tu peux aussi utiliser des nombres négatifs pour créer un effet opposé !_",
+          "next_previous": "**Défi facultatif**\n\n-   Tu peux également utiliser ce nouveau bloc événement pour passer en boucle une série de mouvements de danse en définissant le mouvement sur « (Aléatoire) », « (Suivant)» ou « (Précédent) ».\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
-          "alternate": "Le bloc alternatif est dans la catégorie « Danseurs »."
+          "alternate": "Le bloc « alterner » est dans la catégorie « Danseurs »."
         },
         "CourseE_HOC 2018 Level_10_2021": {
           "voyage_aquatic_10a": "Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?"
@@ -8930,7 +8930,7 @@
           "mc_9_c": "Utilise ˋplacer la torche\\` pour placer une torche là où tu es."
         },
         "courseA_artist_loops2_2021": {
-          "courseA_artist_loops2_a": "Tu n’arrives pas à dessiner une ligne ? Commence par attacher des blocs au bloc <xml><block type=\"when_run\"/></xml> pour voir ce qui se passe.",
+          "courseA_artist_loops2_a": "Tu n’arrives pas à dessiner une ligne ? Commence par attacher des blocs au bloc <xml><block type=\"when_run\"/></xml> pour voir ce qu'il se passe.",
           "courseA_artist_loops2_b": "Utilise ce bloc <xml><block type=\"simple_move_right\"/></xml> pour résoudre ce puzzle."
         },
         "courseA_artist_loops3_2021": {
@@ -8947,11 +8947,11 @@
           "courseA_artist_loops5_c": "Comme tu ne peux utiliser qu’un bloc <xml><block type=\"simple_move_right\"/></xml>, essaie de le mettre à l’intérieur de la boucle \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseA_artist_loops6_2021": {
-          "courseA_artist_loops6_a": "Tu ne trouves pas comment dessiner la colline ? Essaie de jouer un peu avec les blocs pour voir ce qu’ils dessinent.",
+          "courseA_artist_loops6_a": "Tu ne sais pas comment dessiner la colline ? Essaie de jouer un peu avec les blocs pour voir ce qu’ils dessinent.",
           "courseA_artist_loops6_b": "Tu auras besoin de 2 blocs dans 2 directions pour résoudre ce puzzle."
         },
         "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_a": "Tu ne sais pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un motif.",
+          "courseA_artist_loops7_a": "Tu ne sais pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un modèle.",
           "courseA_artist_loops7_b": "Écris d’abord le code pour une vague, puis répète-le pour dessiner les deux autres.",
           "courseA_artist_loops7_c": "N’oublie pas que tu peux mettre plus d’un bloc dans une boucle <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>"
         },
@@ -8963,7 +8963,7 @@
         "courseA_artist_loops9_2021": {
           "courseA_artist_loops9_a": "Ajoute un autre bloc au code qui t’a été donné pour dessiner le reste des escaliers.",
           "courseA_artist_loops9_b": "Le bloc que tu ajoutes devrait être dans la boucle \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>",
-          "courseA_artist_loops9_c": "Si tu n’arrives pas à trouver où mettre la boucle, essaie d’écrire ton code étape par étape puis de chercher des motifs."
+          "courseA_artist_loops9_c": "Si tu n’arrives pas à trouver où mettre la boucle, essaie d’écrire ton code étape par étape puis de chercher des modèles."
         },
         "courseA_artist_loops_challenge2a_2021": {
           "courseA_artist_loops_challenge2_a": "Les blocs comme ceux-ci <xml>  <block type=\"simple_move_up_left\"/></xml>feront bouger ton artiste en oblique !",
@@ -9066,23 +9066,23 @@
           "courseA_harvester_seq10_c": "Essaie de suivre ce chemin pour récolter tout le maïs."
         },
         "courseA_harvester_seq13_2021": {
-          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand la moissonneusse l’atteint.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+          "courseA_bee_seq1_a": "Utilise ce bloc pour récolter le maïs quand la moissonneuse l’atteint.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2021": {
-          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand la moissonneuse le trouve !\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "La moissonneuse devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur le trouve !\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "Le moissonneur devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_a": "N’oublie pas d’utiliser <xml><block type=\"harvester_corn\"/></xml> pour ramasser le maïs !",
-          "courseA_harvester_seq2_b": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution!"
+          "courseA_harvester_seq2_a": "N'oubliez pas d'utiliser <xml><block type=\"harvester_corn\"/></xml> pour ramasser le maïs !",
+          "courseA_harvester_seq2_b": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution !"
         },
         "courseA_harvester_seq3_2021": {
-          "courseA_harvester_seq3_a": "As-tu pensé à utiliser ce bloc ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "Avez-vous pensé à utiliser ce bloc ?\n\n<xml><block type=\"harvester_corn\"/></xml>",
           "courseA_harvester_seq3_b": "Dis les étapes à voix haute et vois si cela t’aide à trouver la réponse."
         },
         "courseA_harvester_seq4_2021": {
           "courseA_harvester_seq4_a": "Combien de cases y a-t-il entre le moissonneur et le maïs ? Combien de blocs sont déjà dans l’espace de travail ?",
-          "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs `Déplacer vers l’Est` et un bloc `Récolter maïs` :\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_b": "Il faudra cinq blocs \"Aller vers l'Est\" et un \"Ramasser le maïs\" :\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5_2021": {
           "courseA_harvester_seq5_a": "Quel bloc déplace la moissonneuse dans le mauvais sens ?",
@@ -9129,8 +9129,8 @@
         },
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "Si le chemin ne te semble pas clair, trace du doigt un chemin de l’oiseau jusqu'au cochon.",
-          "courseA_maze_seq13_b": "N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.",
-          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n t’aideront à te rapprocher du cochon."
+          "courseA_maze_seq13_b": "N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qu'il se passe.",
+          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n t'aideront à te rapprocher du cochon."
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_a": "Si tu as du mal à faire bouger l’oiseau, assure-toi que les blocs sont connectés sous <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -9138,7 +9138,7 @@
         },
         "courseA_maze_seq5_2021": {
           "1": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution!",
-          "2": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "Il va falloir que tu utilises ce bloc :\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5_dani": {
           "courseA_maze_seq5_a": "Essaie d’écrire les étapes sur une feuille de papier pour trouver une solution!",
@@ -9193,7 +9193,7 @@
           "courseA_playLab_events6_c": "Voici le bloc que tu devras utiliser pour jouer un son aléatoire :\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events7_2021": {
-          "courseA_playLab_events7_a": "Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs entrent en collision.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+          "courseA_playLab_events7_a": "Utilise ce bloc pour contrôler ce qu'il se passe lorsque les acteurs entrent en collision.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2021": {
           "courseA_playlab_events_challenge1_a": "Fais apparaître Waddles le pingouin quand tu cliques sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
@@ -9209,7 +9209,7 @@
         },
         "courseB_Scrat_ramp1_2021": {
           "1": "Si Scrat ne fait pas ce que tu veux, assure-toi que les deux blocs sont connectés, puis appuie de nouveau sur « Exécuter ».",
-          "2": "N'aie pas peur de faire une erreurs ! Essaie quelque chose et, si cela ne fonctionne pas, essaie autre chose !"
+          "2": "N'aie pas peur de faire une erreur ! Essaie quelque chose et, si cela ne fonctionne pas, essaie autre chose !"
         },
         "courseB_Scrat_ramp2_2021": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -9231,7 +9231,7 @@
           "courseB_artist_loops2_b": "Essaie d’abord d’exécuter le code pour voir où l’artiste finit."
         },
         "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_a": "N’oublie pas d’utiliser une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> pour un meilleur code !",
+          "courseB_artist_loops3_a": "N'oubliez pas d'utiliser une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> pour un meilleur code ! ",
           "courseB_artist_loops3_b": "L’artiste devra se déplacer vers le Sud pour dessiner cette ligne."
         },
         "courseB_artist_loops4_2021": {
@@ -9240,7 +9240,7 @@
           "courseB_artist_loops4_c": "N’oublie pas de modifier le nombre de fois que la boucle se répète."
         },
         "courseB_artist_loops5_2021": {
-          "courseB_artist_loops5_a": "Fais glisser une boucle \"repeat\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, puis mets les autres blocs à l’intérieur. Combien de fois dois-tu répéter cette action ?"
+          "courseB_artist_loops5_a": "Fais glisser une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, puis mets les autres blocs à l’intérieur. Combien de fois dois-tu répéter ?"
         },
         "courseB_artist_loops6_2021": {
           "courseB_artist_loops6_b": "Essaie d’écrire les déplacements sur du papier et regarde ce qui se répète."
@@ -9248,7 +9248,7 @@
         "courseB_artist_loops7_2021": {
           "courseB_artist_loops7_a": "Ce défi utilise **4** boucles, l’une après l’autre !",
           "courseB_artist_loops7_b": "Remarque que chaque boucle crée un motif en escalier qui va dans une direction différente.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "Les boucles devraient faire ceci :\n\n-   Boucle 1\n    -   Droite\n    -   Bas\n-   Boucle 2\n    -   Droite\n    -   Haut\n-   Boucle 3\n    -   Gauche\n    -   Haut\n-   Boucle 4\n    -   Gauche\n    -   Bas"
+          "courseB_artist_loops7_c": "Les boucles devraient faire ceci :\n\n-   Boucle 1\n    -   Droite\n    -   Bas\n-   Boucle 2\n    -   Droite\n    -   Haut\n-   Boucle \n    -   Gauche\n    -   Haut\n-   Boucle 4\n    -   Gauch\n    -   Bas"
         },
         "courseB_artist_loops8_2021": {
           "courseB_artist_loops8_a": "Combien de fois dois-tu répéter le modèle pour créer l’échelle ?",
@@ -9260,7 +9260,7 @@
           "courseB_artist_loops9_c": "Tu ne sais pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un motif."
         },
         "courseB_artist_loops_challenge1_2021": {
-          "courseB_artist_loops_challenge1_a": "Les blocs comme ceux-ci :<xml>  <block type=\"simple_move_up_right\"/></xml> déplaceront ton artiste en diagonale !",
+          "courseB_artist_loops_challenge1_a": "Les blocs comme ceux-ci : <xml>  <block type=\"simple_move_up_right\"/></xml> déplaceront ton artiste en diagonale !",
           "courseB_artist_loops_challenge1_b": "Quand tu finis un des dés, `saute` vers le suivant !",
           "courseB_artist_loops_challenge1_c": "Tu devras te ˋdéplacer`ou ˋsauter` au-dessus de certaines des mêmes lignes deux fois. "
         },
@@ -9269,41 +9269,41 @@
           "courseB_artist_loops_challenge2_b": "Tu peux utiliser les blocs ˋsauter\\` pour te déplacer vers d’autres cases sans dessiner."
         },
         "courseB_collector_loops10_2021": {
-          "courseB_collector_loops10_a": "Si tu n’arrives pas à trouver où mettre les boucles ˋrépéter\\`, écris le code étape par étape puis regarde ce qui se répète.",
+          "courseB_collector_loops10_a": "Si tu n’arrives pas à trouver où mettre les boucles ˋrepeat\\`, écrit le code étape par étape puis regarde ce qui se répète.",
           "courseB_collector_loops10_b": "Essaie d’écrire les déplacements sur un papier et de voir ce qui se répète."
         },
         "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_a": "Le bloc <xml><block type=\"collector_collect_simplified\"/></xml> permet de ramasser le trésor quand tu te tiens dessus."
+          "courseB_collector_loops1_a": "Le bloc <xml><block type=\"collector_collect_simplified\"/></xml>  permet de ramasser le trésor quand tu es dessus."
         },
         "courseB_collector_loops2_2021": {
-          "courseB_collector_loops2_a": "Tu devras te déplacer avant de pouvoir récupérer un diamant.",
+          "courseB_collector_loops2_a": "Tu devras te déplacer avant de pouvoir récupérer un trésor.",
           "courseB_collector_loops2_b": "Lorsque tu arrives sur une case avec un trésor, utilise le bloc <xml><block type=\"collector_collect\"/></xml> pour le ramasser."
         },
         "courseB_collector_loops3_2021": {
-          "courseB_collector_prog3_a": "Essaie d’utiliser un bloc <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>pour ramasser ton trésor.",
-          "courseB_collector_prog3_b": "N’oublie pas que tu peux mettre plus d’un bloc à l’intérieur d’une boucle `répéter`."
+          "courseB_collector_prog3_a": "Essaie d'utiliser un bloc <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> pour ramasser ton trésor.",
+          "courseB_collector_prog3_b": "N’oublie pas que tu peux mettre plus d’un bloc à l’intérieur d’une boucle repeat."
         },
         "courseB_collector_loops4_2021": {
           "courseB_collector_loops4_a": "Essaie d’utiliser le bouton étape pour voir où les choses tournent mal.",
           "courseB_collector_loops4_b": "Pour modifier la distance que Laurel parcourt, modifie le nombre de fois que la boucle s’exécute.",
-          "courseB_collector_loops4_c": "Laurel doit descendre et ramasser le trésor après la fin de la boucle ˋrepeat\\` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> !"
+          "courseB_collector_loops4_c": "Laurel doit descendre et ramasser le trésor après la fin de la boucle repeat <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> !"
         },
         "courseB_collector_loops5_2021": {
           "courseB_collector_loops5_a": "Utilise plus d’une boucle pour accomplir la tâche.",
-          "courseB_collector_loops5_b": "Essaie d’exécuter le code plusieurs fois pour voir ce qu'il se passe."
+          "courseB_collector_loops5_b": "Essaie d’exécuter le code une ou deux fois pour voir ce qu'il se passe."
         },
         "courseB_collector_loops6_2021": {
-          "courseB_collector_loops6_a": "Tu ne vois pas où les choses commencent à bloquer ? Utilise le bouton «Step » pour parcourir ton programme bloc par bloc.",
+          "courseB_collector_loops6_a": "Tu ne vois pas où les choses commencent à mal tourner ? Utilise le bouton « Étape » pour parcourir ton programme bloc par bloc.",
           "courseB_collector_loops6_b": "Tu peux changer le nombre de fois que la boucle répéter s’exécute en cliquant sur « 3 » et en choisissant un autre nombre.",
-          "courseB_collector_loops6_c": "Tu auras besoin d’utiliser 3 boucles `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> pour résoudre ce casse-tête.",
-          "courseB_collector_loops6_d": "Si tu es confus, essaie de diviser cette énigme en 3 parties."
+          "courseB_collector_loops6_c": "Tu auras besoin d’utiliser 3 boucles `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> pour résoudre cette énigme.",
+          "courseB_collector_loops6_d": "Si tu es perdu, essaie de diviser cette énigme en 3 parties."
         },
         "courseB_collector_loops7_2021": {
           "courseB_collector_loops7_a": "Si tu as du mal avec cette énigme, essaie de la dessiner sur du papier pour t’aider à trouver.",
           "courseB_collector_loops7_b": "Tu auras besoin de 3 boucles répéter pour résoudre cette énigme, et n’oublie pas le trésor supplémentaire à la fin !"
         },
         "courseB_collector_loops8_2021": {
-          "courseB_collector_loops8_challenge_a": "Si tu ne comprends pas où mettre les boucles répéter, écris le code étape par étape et regarde ce qui se répète."
+          "courseB_collector_loops8_challenge_a": "Si tu ne comprends pas où mettre les boucles repeat, écris le code étape par étape et regarde ce qui se répète."
         },
         "courseB_collector_loops9_2021": {
           "courseB_collector_loops9_a": "Ça a l’air trop difficile ? Divise-le en 3 petits problèmes pour te faciliter la tâche.  ",
@@ -9311,16 +9311,16 @@
         },
         "courseB_collector_loops_challenge1_2021": {
           "courseB_collector_loops_challenge1_b": "Commence par faire des boucles avec les commandes suivantes :\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Déplace-toi à l’Est deux fois entre chaque chemin.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nTu peux résoudre ce problème en seulement 14 blocs. Clique de nouveau pour voir une solution.",
+          "courseB_collector_loops_challenge1_c": "Déplace-toi à l’Est deux fois entre chaque chemin.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nVous pouvez le faire avec seulement 14 blocs. Cliquez pour un autre indice pour voir une solution.",
           "courseB_collector_loops_challenge1_d": "Essaie ça !\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge2a_2021": {
           "courseB_collector_loops_challenge2a_a": "Si un problème survient, essaie de débuguer. N’abandonne pas !",
-          "courseB_collector_loops_challenge2a_b": "Jette un œil à cette solution pour traverser le labyrinthe. Vois-tu un motif qui se répète ?",
-          "courseB_collector_loops_challenge2a_c": "Pour ramasser tout les diamants, tu auras soit besoin d’ajouter deux blocs  <xml> <block type=\"collector_collect\"/></xml> à l’intérieur de ta boucle, soit de mettre le bloc à l’intérieur de sa propre boucle ˋrépéter\\`."
+          "courseB_collector_loops_challenge2a_b": "Jette un œil à cette solution pour traverser le labyrinthe. Vois-tu un modèle qui se répète ?",
+          "courseB_collector_loops_challenge2a_c": "Pour ramasser tout les diamants, tu auras soit besoin d’ajouter deux blocs  <xml> <block type=\"collector_collect\"/></xml> à l’intérieur de ta boucle, soit de mettre le bloc à l’intérieur de sa propre boucle ˋrepeat\\`."
         },
         "courseB_iceage_loops10_2021": {
-          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat va tomber dans l’eau !",
+          "courseB_iceage_loops10_a": "Attention à la glace brisée ! Scrat tombera dans l’eau !",
           "courseB_iceage_loops10_b": "Essaie de dire les étapes à voix haute ou de les écrire sur du papier. Vois-tu des choses qui se répètent ?",
           "courseB_iceage_loops10_c": "Ce casse-tête est long ! Suis ce chemin."
         },
@@ -9338,17 +9338,17 @@
           "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, puis mets le bloc que tu veux dedans."
         },
         "courseB_iceage_loops4_2021": {
-          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un modèle ?",
+          "courseB_iceage_loops4_a": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
           "courseB_iceage_loops4_b": "N’aie pas peur d’exécuter ton code pour voir ce qu'il se passe !",
           "courseB_iceage_loops4_c": "Voici le chemin que Scrat devrait emprunter."
         },
         "courseB_iceage_loops6_2021": {
           "courseB_iceage_loops6_a": "Ton code final devra avoir **trois** blocs de mouvement.",
-          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** boucle !",
+          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** seule boucle de plus !",
           "courseB_iceage_loops6_c": "Ton chemin final devrait ressembler à ceci."
         },
         "courseB_iceage_loops7_2021": {
-          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un modèle ?",
+          "courseB_iceage_loops7_a": "Si tu es bloqué, essaie d’écrire les étapes sur du papier. Vois-tu un motif ?",
           "courseB_iceage_loops7_b": "Voici le chemin que Scrat devrait suivre pour arriver jusqu’au gland."
         },
         "courseB_iceage_loops8_2021": {
@@ -9357,7 +9357,7 @@
           "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à suivre ce chemin."
         },
         "courseB_iceage_loops9_2021": {
-          "courseB_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseB_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme tout au long du processus !",
           "courseB_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
           "courseB_iceage_loops9_c": "Scrat devrait suivre ce chemin pour obtenir le gland."
         },
@@ -9408,7 +9408,7 @@
           "courseB_playlab_events2_a": "Voici le bloc qui fait dire quelque chose à Daisy :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events3_2021": {
-          "courseB_playlab_events3_a": "Voici le bloc que tu devrais utiliser pour ajouter l’événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_a": "This is the block you should use to add the event :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
           "courseB_playlab_events3_b": "Voici le bloc dont tu as besoin pour changer l’humeur de Daisy :\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events4_2021": {
@@ -9417,16 +9417,16 @@
         },
         "courseB_playlab_events5_2021": {
           "courseB_playlab_events5_a": "Voici l’événement qui contrôle la flèche droite :\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events5_b": "Voici le bloc qui fait fuir le chevalier. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+          "courseB_playlab_events5_b": "Voici le bloc qui fait fuir le chevalier. \n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Tu auras besoin de ces blocs d’événement :\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "Utilise les flèches déroulantes sur les blocs événements verts `quand on appuie sur___ la flèche` pour choisir des directions différentes.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_b": "Utilise les flèches déroulantes sur les blocs événements verts `quand la flèche ___ est appuyée` pour choisir des directions différentes.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Récupère tous les drapeaux pour réussir !"
         },
         "courseB_playlab_events7_2021": {
           "courseB_playlab_events7_a": "Voici le bloc événement dont tu auras besoin :\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "Voici le bloc dont tu as besoin pour faire un son.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "Voici le bloc dont tu as besoin pour jouer un son.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
           "courseB_playlab_events7_c": "Voici le bloc dont tu as besoin pour faire disparaître le chevalier :\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2021": {
@@ -9435,14 +9435,14 @@
           "courseB_playlab_events_challenge1_c": "Que dira tout le monde quand la course se terminera ? Fais-les parler avec cet événement :\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_playlab_events_challenge2_2021": {
-          "courseB_playlab_events_challenge2_a": "Chaque animal dans le jeu doit disparaître quand on lui clique dessus. Il doit aussi réapparaître après une ou deux secondes !",
+          "courseB_playlab_events_challenge2_a": "Chaque animal dans le jeu doit disparaître quand on clique dessus. Il doit aussi réapparaître après une ou deux secondes !",
           "courseB_playlab_events_challenge2_b": "Utilise d’autres blocs événement pour faire disparaître les autres animaux !\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "Utilise des commandes pour jouer des sons ou gagner des points quand on clique sur les animaux !\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "Mélange tout ça ! \n\nFais en sorte que certains animaux donnent plus de points que d’autres.\nUtilise différents sons. \nModifie les humeurs des animaux !"
         },
         "courseB_starWars_prog1_2021": {
           "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qu'il se passe.",
-          "courseB_starWars_prog1_b": "Tu devras te déplacer à l’Est pour résoudre ce casse-tête.\nÀ quelle distance dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Tu devras aller vers l’Est pour résoudre ce casse-tête.\nEst-ce que tu dois aller loin ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
           "courseB_starWars_prog2_a": "Sépare ce problème en deux parties. Ramasse une pile de ferraille, puis trouve comment atteindre la suivante."
@@ -9477,7 +9477,7 @@
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qu'il se passe, même si tu n’as pas encore résolu l'énigme.",
           "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre cette énigme.",
-          "courseB_starWars_prog9_c": "Est-ce qu'une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> pourrait t'aider ici ?"
+          "courseB_starWars_prog9_c": "Est-ce qu'une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> t'aiderait là ?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
