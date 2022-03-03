@@ -85,19 +85,18 @@ class JavabuilderSessionsController < ApplicationController
   private
 
   def get_teacher_list
-    teachers = []
     if current_user.permission?(UserPermission::LEVELBUILDER) ||
         current_user.verified_teacher? ||
         current_user.has_pilot_experiment?(CSA_PILOT) ||
         current_user.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
-      teachers << current_user.id
-    else
-      current_user.teachers.each do |teacher|
-        next unless teacher.verified_teacher? ||
-            teacher.has_pilot_experiment?(CSA_PILOT) ||
-            teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
-        teachers << teacher.id
-      end
+      return [current_user.id]
+    end
+    teachers = []
+    current_user.teachers.each do |teacher|
+      next unless teacher.verified_teacher? ||
+          teacher.has_pilot_experiment?(CSA_PILOT) ||
+          teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
+      teachers << teacher.id
     end
     teachers
   end
