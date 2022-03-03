@@ -361,6 +361,7 @@ ja:
             '"x"': 十字
             '"plus"': プラス
             '"spiral"': スパイラル
+            '"infinity"': 無限ライン
             '"random"': ランダム に
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} で新しい{COSTUME} を作成します"
@@ -443,6 +444,26 @@ ja:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': すべてのエイリアン
             '"BEAR"': クマ
@@ -471,6 +492,7 @@ ja:
             '"x"': 十字
             '"plus"': プラス
             '"spiral"': スパイラル
+            '"infinity"': 無限ライン
             '"random"': ランダム に
       Dancelab_mixColors:
         text: "{COLOR1} と {COLOR2} をまぜる"
@@ -534,6 +556,7 @@ ja:
             '"fireworks"': 花火
             '"flowers"': フラワー
             '"growing_stars"': 成長する星
+            '"higher_power"': より高いパワー
             '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
             '"lasers"': レーザーのダンスフロア
@@ -1010,6 +1033,7 @@ ja:
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
       gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(spinning_right, []): 右に回す
@@ -1075,6 +1099,7 @@ ja:
           if {NUM} ={VAL}
           {STATEMENT}
       gamelab_int10:
+        text: "{VALUE}"
         options:
           VALUE:
             '1': '1'
@@ -1278,6 +1303,7 @@ ja:
       gamelab_playSpeech:
         text: ピーチを再生する {SOUND}
       gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): 矢印キーで動かす
@@ -1307,6 +1333,8 @@ ja:
         text: 色の削除元 {THIS}
       gamelab_repeatForever:
         text: ずっと
+      gamelab_resetTimer:
+        text: タイマーリセット
       gamelab_setAnimation:
         text: 変更 {THIS} 衣装に {ANIMATION}
       gamelab_setBackground:

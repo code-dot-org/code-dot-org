@@ -1165,6 +1165,24 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "ವರ್ಚುವಲ್ ಪಾಠ ಮಾರ್ಪಾಡುಗಳು",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "ಎಐ ನೋಡುವುದು"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "ವೀಡಿಯೋ: ಮಶಿನ್ ಲರ್ನಿಂಗ್"
+        },
+        "variables_1/csd/2021": {
+          "name": "ವೇರಿಯಬಲ್‌ಗಳು"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
+        },
+        "lists/csd/2021": {
+          "name": "ಪಟ್ಟಿಗಳು"
         }
       }
     }

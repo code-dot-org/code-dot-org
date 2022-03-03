@@ -3,7 +3,9 @@ mr:
   data:
     script:
       category:
+        csf_category_name: संगणक शास्त्राची मूलतत्त्वे
         hoc_category_name: अवर ऑफ कोड
+        math_category_name: गणित
       name:
         course1:
           description_audience: वय वर्षे 4-6
@@ -15,6 +17,8 @@ mr:
               name: 'आर्टीस्ट:नेस्टेड लूप्स '
             Conditionals:
               name: कंडीशनल्स
+            Flappy:
+              name: फ्लॅपी
         course3:
           description_audience: वय वर्षे 8-18
           lessons:
@@ -84,6 +88,10 @@ mr:
               name: 'आर्टीस्ट: फंक्शन्स'
             'Artist: Nested Loops':
               name: 'आर्टीस्ट:नेस्टेड लूप्स '
+        usability:
+          lessons:
+            Variables:
+              name: व्हेरीएबल्स
         algebra:
           lessons:
             'Eval: Conditionals':
@@ -107,6 +115,11 @@ mr:
           title: ईव्हेंट्स
           description: ईव्हेंट्स
           description_short: ईव्हेंट्स
+          lessons:
+            Calc:
+              name: कॅल्क
+            Eval:
+              name: इव्हॅल
           student_description: ईव्हेंट्स
         flappy:
           title: फ्लॅपी कोड
@@ -143,18 +156,30 @@ mr:
           lessons:
             Artist:
               name: आर्टीस्ट
+            Flappy:
+              name: फ्लॅपी
             Text Compression:
               name: टेक्स्ट कॉम्प्रेशन
+            Web Lab:
+              name: वेब लॅब
+            Java Lab:
+              name: जावा लॅब
         cspfacilitator:
           lessons:
             Text Compression Lesson:
               name: टेक्स्ट कॉम्प्रेशनचा धडा
             Text Compression Widget:
               name: टेक्स्ट कॉम्प्रेशन विजेट
+        K5-OnlinePD:
+          lessons:
+            Computer Science Fundamentals:
+              name: संगणक शास्त्राची मूलतत्त्वे
         asUnplugged:
           description_audience: वय वर्षे 6-13
         afterschool1:
           description_audience: वय वर्षे 7-13
+        cspunit4draft:
+          description_short: डेटा
         Special Fun:
           description_audience: वय वर्षे 10-18
         SpecialSeries:
@@ -232,6 +257,8 @@ mr:
           lessons:
             Exploring Apps:
               name: एक्सप्लोरींग ॲप्स
+        CSDU5-Draft:
+          description_short: डेटा
         CSF_Secret_Sample_Story:
           description_audience: वय वर्षे 8-18+
         MikeTest:
@@ -255,6 +282,8 @@ mr:
               name: डीबगिंग
             Events:
               name: ईव्हेंट्स
+            Loops:
+              name: लूप्स
             Programming:
               name: प्रोग्रामिंग
         grade4:
@@ -271,6 +300,8 @@ mr:
               name: डीबगिंग
             Events:
               name: ईव्हेंट्स
+            Loops:
+              name: लूप्स
             Programming:
               name: प्रोग्रामिंग
             'Debugging: Unspotted Bugs':
@@ -295,18 +326,27 @@ mr:
               display_name: आढावा
         csd3-2017:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
         grade2:
           description_audience: वय वर्षे 5-18
+          lessons:
+            Flappy:
+              name: फ्लॅपी
         k5concepts:
           lessons:
             Conditionals:
               name: कंडीशनल्स
             Events:
               name: ईव्हेंट्स
+            Loops:
+              name: लूप्स
             Nested Loops:
               name: नेस्टेड लूप्स
+            Variables:
+              name: व्हेरीएबल्स
         csp-online-test:
           lesson_groups:
             required:
@@ -328,6 +368,10 @@ mr:
               name: सुलभ एनक्रीप्शन
               description_student: या धड्यात, विद्यार्थ्यांना गुप्त संदेश तोडण्यासाठी (किंवा क्रॅक करण्यासाठी) एन्क्रिप्शनची आवश्यकता आणि सोप्या तंत्रांचा परिचय करून दिला जातो. विद्यार्थी क्लासिक सीझर सायफर आणि यादृच्छिक प्रतिस्थापन सायफरसह एन्कोड केलेला संदेश क्रॅक करण्याचा प्रयत्न करतात. शक्तिशाली संगणकीय साधनांच्या युगात, एनक्रिप्शनच्या तंत्रांना अधिक परिष्कृत करणे आवश्यक आहे या कल्पनेशी विद्यार्थ्यांना चांगले परिचित असले पाहिजे. इंटरनेटवरील आपल्या दैनंदिन जीवनात एन्क्रिप्शन कशी आणि का भूमिका बजावते हे समजून घेणे हा या धड्याचा सर्वात महत्त्वाचा पैलू आहे आणि चांगले एन्क्रिप्शन तयार करणे ही काही क्षुल्लक बाब नाही. ते क्रॅक करण्यासाठी वापरल्या जाऊ शकणार्‍या शक्तिशाली संगणकीय साधनांसमोर मजबूत एनक्रिप्शन तयार करण्यासाठी आवश्यक असलेल्या कल्पना समजून घेतल्याने विद्यार्थी त्यांचे पाय ओले होतील. इंटरनेटवरून बिट पाठवताना गोपनीयतेची गरज इंटरनेट वापरणाऱ्या प्रत्येकासाठी महत्त्वाची आहे.
               description_teacher: या धड्यात, विद्यार्थ्यांना गुप्त संदेश तोडण्यासाठी (किंवा क्रॅक करण्यासाठी) एन्क्रिप्शनची आवश्यकता आणि सोप्या तंत्रांचा परिचय करून दिला जातो. विद्यार्थी क्लासिक सीझर सायफर आणि यादृच्छिक प्रतिस्थापन सायफरसह एन्कोड केलेला संदेश क्रॅक करण्याचा प्रयत्न करतात. शक्तिशाली संगणकीय साधनांच्या युगात, एनक्रिप्शनच्या तंत्रांना अधिक परिष्कृत करणे आवश्यक आहे या कल्पनेशी विद्यार्थ्यांना चांगले परिचित असले पाहिजे. इंटरनेटवरील आपल्या दैनंदिन जीवनात एन्क्रिप्शन कशी आणि का भूमिका बजावते हे समजून घेणे हा या धड्याचा सर्वात महत्त्वाचा पैलू आहे आणि चांगले एन्क्रिप्शन तयार करणे ही काही क्षुल्लक बाब नाही. ते क्रॅक करण्यासाठी वापरल्या जाऊ शकणार्‍या शक्तिशाली संगणकीय साधनांसमोर मजबूत एनक्रिप्शन तयार करण्यासाठी आवश्यक असलेल्या कल्पना समजून घेतल्याने विद्यार्थी त्यांचे पाय ओले होतील. इंटरनेटवरून बिट पाठवताना गोपनीयतेची गरज इंटरनेट वापरणाऱ्या प्रत्येकासाठी महत्त्वाची आहे.
+        csd2-2017:
+          lessons:
+            Lists:
+              name: याद्या
         csp2-support:
           lesson_groups:
             required:
@@ -561,16 +605,34 @@ mr:
           lesson_groups:
             required:
               display_name: आढावा
+        csd6-draft:
+          lessons:
+            Lists:
+              name: याद्या
+            Map:
+              name: नकाशा
         coursee-ramp:
           lessons:
             Conditionals:
               name: कंडीशनल्स
+        csd6-2017:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-draft:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
+        csd2-draft:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-chapters:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
             'null':
@@ -1333,14 +1395,26 @@ mr:
               name: तुमच्या प्रकल्पाचा आढावा घ्या
             Present Your Project:
               name: तुमचा प्रकल्प सादर करा
+        csd6-old:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-1819draft:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
         csd3-2018:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
+        csd2-2018:
+          lessons:
+            Lists:
+              name: याद्या
         coursea-2018:
           assignment_family_title: अभ्यासक्रम A
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
@@ -1769,6 +1843,8 @@ mr:
               name: डांस पार्टी
         cspplayground:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         dance-extras:
@@ -1782,6 +1858,11 @@ mr:
         coursef-2019:
           title: अभ्यासक्रम F (2019)
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+          lesson_groups:
+            csf_variables:
+              display_name: व्हेरीएबल्स
+            csf_data:
+              display_name: डेटा
           lessons:
             'Programming: My Robotic Friends':
               name: 'प्रोग्रॅमिंग: माझे रोबो मित्र'
@@ -1847,6 +1928,8 @@ mr:
               display_name: सिक्वेन्सिंग
             csf_events:
               display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
@@ -1951,8 +2034,12 @@ mr:
               display_name: वार्म अप
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            csf_variables:
+              display_name: व्हेरीएबल्स
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'अल्गोरिदम्स: आलेख कागद प्रोग्रॅमिंग '
@@ -2043,8 +2130,12 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            csf_data:
+              display_name: डेटा
           lessons:
             Programming in Maze:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
@@ -2082,6 +2173,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2128,6 +2221,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2168,6 +2263,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2205,12 +2302,20 @@ mr:
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'डीबगिंग: न सापडलेले बग्ज'
+        csd2-2019:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-2019:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
         csp4-pilot:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
             required:
@@ -2259,30 +2364,50 @@ mr:
               name: संकल्पना ठरवा
         csp1-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp2-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp4-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
         csp6-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp8-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp9-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         csp10-pilot-staging:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         express-2018-vn:
@@ -2293,6 +2418,10 @@ mr:
               name: रे आणि बीबी -8 सह लूप
         csp5-pilot:
           lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
             required:
               display_name: आढावा
         fit2019-novice:
@@ -2309,8 +2438,14 @@ mr:
           lessons:
             Wrap Up:
               name: समाप्ती
+        csd2-pilot:
+          lessons:
+            Lists:
+              name: याद्या
         csd3-pilot:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
         csp3-pilot:
@@ -2324,6 +2459,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2404,12 +2541,18 @@ mr:
           student_description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या डान्स पार्टीचा कोड लिहा!
         k5-onlinepd-2019:
           lessons:
+            Computer Science Fundamentals:
+              name: संगणक शास्त्राची मूलतत्त्वे
             Sequencing:
               name: सिक्वेन्सिंग
+            Loops:
+              name: लूप्स
             Conditionals:
               name: कंडीशनल्स
             Events:
               name: ईव्हेंट्स
+            Variables:
+              name: व्हेरीएबल्स
             End of Course projects:
               name: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
         dance-extras-2019:
@@ -2418,6 +2561,8 @@ mr:
           student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
         csp4-preview:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
         time4cs-original-unit-1:
@@ -2463,6 +2608,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
             csf_events:
@@ -2480,6 +2627,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
             csf_events:
@@ -2499,18 +2648,32 @@ mr:
               display_name: आढावा
         csp4-2020:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
         csd3-2020:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
+            Text:
+              name: टेक्स्ट
         coursea-2020:
           title: अभ्यासक्रम A (2020)
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2553,6 +2716,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2589,8 +2754,12 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            csf_data:
+              display_name: डेटा
           lessons:
             Screen Out the Mean:
               name: शेरेबाजी काढून टाका
@@ -2625,6 +2794,8 @@ mr:
               display_name: सिक्वेन्सिंग
             csf_events:
               display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
@@ -2695,6 +2866,11 @@ mr:
         coursef-2020:
           title: अभ्यासक्रम F (2020)
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+          lesson_groups:
+            csf_variables:
+              display_name: व्हेरीएबल्स
+            csf_data:
+              display_name: डेटा
           lessons:
             Functions in Minecraft:
               name: माईनक्राफ्ट मधील फंक्शन्स
@@ -2731,8 +2907,12 @@ mr:
               display_name: वार्म अप
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            csf_variables:
+              display_name: व्हेरीएबल्स
           lessons:
             Dance Party:
               name: डांस पार्टी
@@ -2806,6 +2986,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
@@ -2847,12 +3029,16 @@ mr:
               name: डीबगिंग
         jess-test-script:
           lessons:
+            Tools:
+              name: साधने
             Debugging:
               name: डीबगिंग
         csp5-virtual:
           lessons:
             Intro to App Lab:
               name: अॅप लॅबची ओळख
+            Variables:
+              name: व्हेरीएबल्स
         code-break:
           lessons:
             Events:
@@ -2861,16 +3047,40 @@ mr:
           lessons:
             Sequencing:
               name: सिक्वेन्सिंग
+            Loops:
+              name: लूप्स
             Events:
               name: ईव्हेंट्स
             Conditionals:
               name: कंडीशनल्स
             End of Course projects:
               name: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
+            Variables:
+              name: व्हेरीएबल्स
         csd3-virtual:
           lessons:
+            Variables:
+              name: व्हेरीएबल्स
+            Text:
+              name: टेक्स्ट
             Conditionals:
               name: कंडीशनल्स
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: धडा
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: धडा
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: धडा
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: धडा
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -2881,6 +3091,8 @@ mr:
               name: अभ्यासक्रम E
             Course F:
               name: अभ्यासक्रम F
+            csf:
+              name: संगणक शास्त्राची मूलतत्त्वे
         virustest:
           title: उद्रेकाचे सिम्युलेशन करणे
           description_short: विषाणूच्या उद्रेकाचे सिम्युलेशन करण्यासाठी स्प्राईट लॅब वापरा.
@@ -2917,12 +3129,20 @@ mr:
             Outbreaklab:
               name: आऊटब्रेक स्टँडअलोन लॅब
           lesson_groups:
+            lessonGroup-3:
+              display_name: व्हेरीएबल्स
             outbreak:
               display_name: आऊटब्रेक सिम्युलेटर
             debugging:
               display_name: डीबगिंग
         csd3-2021:
           lessons:
+            Variables:
+              key: व्हेरीएबल्स
+              name: व्हेरीएबल्स
+            Text:
+              key: टेक्स्ट
+              name: टेक्स्ट
             Conditionals:
               key: कंडीशनल्स
               name: कंडीशनल्स
@@ -2940,8 +3160,16 @@ mr:
               name: डीबगिंग
         csp4-2021:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -2990,6 +3218,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
         courseb-2021:
@@ -3030,6 +3260,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
         coursec-2021:
@@ -3075,8 +3307,12 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            csf_data:
+              display_name: डेटा
         coursed-2021:
           title: अभ्यासक्रम D (2021)
           lessons:
@@ -3128,6 +3364,8 @@ mr:
               display_name: सिक्वेन्सिंग
             csf_events:
               display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
         coursee-2021:
@@ -3222,6 +3460,9 @@ mr:
               name: उद्रेक
             lesson-2:
               name: शब्दांची ताकद
+          lesson_groups:
+            lessonGroup-8:
+              display_name: व्हेरीएबल्स
         express-2021:
           lessons:
             Dance Party:
@@ -3313,8 +3554,12 @@ mr:
               display_name: वार्म अप
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            csf_variables:
+              display_name: व्हेरीएबल्स
             lessonGroup-9:
               display_name: ईव्हेंट्स
         pre-express-2021:
@@ -3359,6 +3604,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
         csf-2021-pilot:
@@ -3378,11 +3625,18 @@ mr:
           lesson_groups:
             outbreak:
               display_name: आऊटब्रेक सिम्युलेशन
+            lessonGroup-3:
+              display_name: व्हेरीएबल्स
+            variables:
+              display_name: व्हेरीएबल्स
         contagion-pilot:
           description_short: विषाणूच्या उद्रेकाच्या सिम्युलेशनचा प्रोग्रॅम करण्यासाठी स्प्राईट लॅब वापरा.
           description: विषाणूच्या उद्रेकाच्या सिम्युलेशनचा प्रोग्रॅम करण्यासाठी स्प्राईट लॅब वापरा.
           student_description: विषाणूच्या उद्रेकाच्या सिम्युलेशनचा प्रोग्रॅम करण्यासाठी स्प्राईट लॅब वापरा.
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
@@ -3390,6 +3644,8 @@ mr:
           lessons:
             lesson-1:
               name: युनिट 2 पायलट सर्वेक्षण
+            lesson-16:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
@@ -3397,6 +3653,8 @@ mr:
           lessons:
             lesson-16:
               name: युनिट 3 पायलट सर्वेक्षण
+            lesson-17:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
@@ -3414,22 +3672,36 @@ mr:
             lesson-10:
               description_student: तुम्ही अनेक परिस्थितींचा समावेश असलेल्या समस्या एक्सप्लोर करता आणि तुमच्या सोल्यूशन्समध्ये नेस्टेड 'if' स्टेटमेंट वापरण्यास शिका. तुम्ही कंडिशनल स्टेटमेंटमध्ये नवीन लॉजिकल ऑपरेटर्स वापरून एक्स्प्रेशन्स लिहिता आणि या ऑपरेटर्सचा परिणामावर होणारा परिणाम ओळखता. त्यानंतर तुम्ही नेस्टेड `if` स्टेटमेंट आणि लॉजिकल ऑपरेटर वापरून तुमच्या पॉप द बलून गेमचा गेमप्ले आणि कार्यक्षमता सुधारता.
               description_teacher: विद्यार्थी एकाधिक परिस्थितींचा समावेश असलेल्या समस्या शोधतात आणि उपाय विकसित करण्यासाठी नेस्टेड 'if' स्टेटमेंट लिहितात. विद्यार्थी कंडीशनल स्टेटमेंट मध्ये लॉजीकल ऑपरेटर वापरून अभिव्यक्ती लिहितात आणि निकालावर लॉजीकल ऑपरेटरचा प्रभाव ओळखतात. गेमप्ले आणि एकूण कार्यक्षमता सुधारण्यासाठी पॉप द बलून गेममध्ये नेस्टेड `if` विधाने आणि लॉजिकल ऑपरेटर लागू केले आहेत.
+            lesson-16:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
         csa8-pilot:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
@@ -3438,6 +3710,9 @@ mr:
             Sequencing:
               key: सिक्वेन्सिंग
               name: सिक्वेन्सिंग
+            Loops:
+              key: लूप्स
+              name: लूप्स
             Events:
               key: ईव्हेंट्स
               name: ईव्हेंट्स
@@ -3447,6 +3722,9 @@ mr:
             End of Course projects:
               key: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
               name: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
+            Variables:
+              key: व्हेरीएबल्स
+              name: व्हेरीएबल्स
         outbreakmodule:
           lessons:
             intro monster town:
@@ -3464,6 +3742,15 @@ mr:
           lessons:
             Similarity Models:
               description_teacher: "या धड्यात, विद्यार्थी झोम्बीच्या उद्रेकाचे सिम्युलेशन करणाऱ्या एका अनप्लग्ड कृतीत सहभागी होतात. शेजारच्या शहराचा डेटा वापरून शहराच्या कोणत्या भागात सर्वांत कमी झोम्बीज असतील याचा अंदाज विद्यार्थ्यांनी वर्तवायचा आहे. एखाद्या विशिष्ट ठिकाणी असलेल्या झोम्बीजच्या संख्येबद्दल अंदाज वर्तवण्यासाठी विद्यार्थ्या साम्य आणि सरासरी यांचे प्रमाण वापरतील. मग, विद्यार्थ्यांची सुटका करण्यात येईल आणि त्यांच्या अंदाजाची त्यांना प्रत्यक्ष संख्येशी तुलना करता येईल. त्यावरून त्यांना श्रेणीबद्ध डेटाच्या तुलनेत सांख्यिक डेटासाठी अचूकता कशी वेगळी असते, हे समजेल.\n\n**आजचा प्रश्न:** सांख्यिक डेटा वापरून अंदाज वर्तवायला कॉम्प्युटर्स कसे शिकतात?    "
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: संगणक शास्त्राची मूलतत्त्वे
+              name: संगणक शास्त्राची मूलतत्त्वे
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: शिक्षक समुदाय
         self-paced-pl-csd5-2021:
           lessons:
             lesson-4:
@@ -3471,6 +3758,10 @@ mr:
         outbreak-module:
           name: आऊटब्रेक-मोड्यूल
           title: उद्रेक
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: संसाधने
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -3485,9 +3776,13 @@ mr:
               name: आढावा
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: साधने
             lesson-17:
               name: कन्सोल
           lesson_groups:
+            lessonGroup-2:
+              display_name: धडे
             lessonGroup-4:
               display_name: डेमो आणि संसाधने
         hello-world-draft:
@@ -3558,6 +3853,7 @@ mr:
           lessons:
             lesson-1:
               key: धडा -1
+              name: जावा लॅब
             lesson-2:
               key: धडा -2
             lesson-3:
@@ -3636,6 +3932,7 @@ mr:
               key: धडा -15
             lesson-1:
               key: धडा -1
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
@@ -3646,6 +3943,7 @@ mr:
               name: युनिट 3 पायलट सर्वेक्षण
             lesson-1:
               key: धडा -1
+              name: जावा लॅब
             lesson-2:
               key: धडा -2
             lesson-3:
@@ -3701,6 +3999,7 @@ mr:
               description_teacher: विद्यार्थी एकाधिक परिस्थितींचा समावेश असलेल्या समस्या शोधतात आणि उपाय विकसित करण्यासाठी नेस्टेड 'if' स्टेटमेंट लिहितात. विद्यार्थी कंडीशनल स्टेटमेंट मध्ये लॉजीकल ऑपरेटर वापरून अभिव्यक्ती लिहितात आणि निकालावर लॉजीकल ऑपरेटरचा प्रभाव ओळखतात. गेमप्ले आणि एकूण कार्यक्षमता सुधारण्यासाठी पॉप द बलून गेममध्ये नेस्टेड `if` विधाने आणि लॉजिकल ऑपरेटर लागू केले आहेत.
             lesson-1:
               key: धडा -1
+              name: जावा लॅब
             lesson-3:
               key: धडा-3
             lesson-4:
@@ -3765,6 +4064,8 @@ mr:
               key: धडा -14
             lesson-15:
               key: धडा -15
+            Java Lab:
+              name: जावा लॅब
           lesson_groups:
             lessonGroup-4:
               display_name: सँडबॉक्स
@@ -3870,7 +4171,12 @@ mr:
               name: हॅलो वर्ल्ड
           name: हॅलो -वर्ल्ड-फुड
         csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: साधने
           lesson_groups:
+            lessonGroup-2:
+              display_name: धडे
             lessonGroup-4:
               display_name: डेमो आणि संसाधने
         hello-world-animals:
@@ -3927,6 +4233,9 @@ mr:
           description_audience: स्प्राइट लॅबचे इंटरमीडिएट/प्रगत वापरकर्ते
           description_short: स्प्राइट लॅब वापरून तुमचा स्वतःचा स्प्राइट इफेक्ट तयार करण्याचे आव्हान स्वीकारा!
         csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: साधने
           lesson_groups:
             lessonGroup-2:
               display_name: डेमो आणि संसाधने
@@ -3991,6 +4300,9 @@ mr:
           title: युनिट 5 - गिव्हिंग ऑब्जेक्टस ऑर्गनायझेशन [उदाहरणार्थ]
         csa6-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
             lesson-1:
               key: धडा -1
             lesson-2:
@@ -4128,6 +4440,10 @@ mr:
               description_student: लॉरेल, द ट्रेजर हंटर ला  रत्ने गोळा करण्यासाठी टप्पे जोडा व ते मोजण्यासाठी मदत करा.
               description_teacher: "हा धडा मोजणी आणि जोडणीचा समावेश असलेल्या पूर्वीच्या क्रियाकलापांना तयार करतो. लॉरेल सोबत मोजणे बालवाडी आणि प्रथम श्रेणीतील विद्यार्थ्यांना सराव मोजणी आणि जोडण्यासह मदत करते कारण ते लॉरेल, द ट्रेजर हंटर, चक्रव्यूहाच्या ग्रीडमधून रत्ने गोळा करण्यात मदत करण्यासाठी लूप वापरतात. लॉरेलला रत्ने गोळा करण्यासाठी ग्रिडवर मार्गदर्शन करण्यासाठी ते कोडिंग कमांडच्या मालिकेचा वापर करतात, \"पुनरावृत्ती\" ब्लॉकचा वापर करतात ज्यासाठी त्यांना लॉरेलने किती पावले उचलावीत हे मोजणे आवश्यक आहे- नंतर कोडच्या ब्लॉकमध्ये योग्य अंक वापरून त्या संख्येचे प्रतिनिधित्व करा.\n\n#### पूर्वावश्यक कौशल्ये\n\nया धड्याचा उद्देश विद्यार्थ्यांना संख्या, मोजणी किंवा जोडण्याशी परिचय करून देण्याचा नाही. विद्यार्थ्यांनी या धड्यात काही पूर्व ज्ञान आणि कौशल्यांसह आले पाहिजे:\n\n-   इमेज, बोटे किंवा फेरफार वापरून 10 पर्यंत संख्या ओळखा आणि मोजा.\n-   10 च्या बेरीज पर्यंत वस्तू, इमेज, बोटे किंवा फेरफार जोडा."
           title: लॉरेलसह मोजणे (गणना करणे )
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: धडा
         2022drafting:
           lessons:
             lesson-4:
@@ -4160,8 +4476,23 @@ mr:
             Text and Prompts:
               name: टेक्स्ट आणि प्रॉम्प्ट्स
               description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: व्हेरीएबल्स
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: इनपुट एकत्रित करणे
+          lesson_groups:
+            lessonGroup-2:
+              display_name: प्रकरण 1
+            lessonGroup-3:
+              display_name: प्रकरण 2
         csa7-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
             lesson-10:
               key: धडा -10
             lesson-6:
@@ -4199,6 +4530,9 @@ mr:
               display_name: सँडबॉक्स
         csa8-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
             lesson-1:
               key: धडा -1
             lesson-2:
@@ -4294,6 +4628,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
@@ -4401,8 +4737,12 @@ mr:
               display_name: सिक्वेन्सिंग
             lessonGroup-9:
               display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            csf_variables:
+              display_name: व्हेरीएबल्स
         csp2-2022:
           lessons:
             Packets:
@@ -4415,8 +4755,16 @@ mr:
               key: डीबगिंग
         csp4-2022:
           lesson_groups:
+            csp_variables:
+              display_name: व्हेरीएबल्स
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: याद्या
+            csp_loops:
+              display_name: लूप्स
         courseb-2022:
           lessons:
             Move It, Move It:
@@ -4478,6 +4826,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
         coursec-2022:
@@ -4534,8 +4884,12 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            csf_data:
+              display_name: डेटा
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
         csp8-2022:
           lessons:
@@ -4605,6 +4959,8 @@ mr:
               display_name: सिक्वेन्सिंग
             csf_events:
               display_name: ईव्हेंट्स
+            csf_loops:
+              display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
           title: अभ्यासक्रम D (2021)
@@ -4734,7 +5090,16 @@ mr:
             AI for Oceans:
               key: महासागरांसाठी कृत्रिम बुद्धिमत्ता
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+          lesson_groups:
+            lessonGroup-8:
+              display_name: व्हेरीएबल्स
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: जावा लॅब
+            lesson-9:
+              name: लूप्स
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -4770,6 +5135,8 @@ mr:
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
+            csf_loops:
+              display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
         cs4all-invasive-species:
@@ -4778,5 +5145,93 @@ mr:
               name: कंडीशनल्स
             lesson-16:
               name: डीबगिंग
+            lesson-17:
+              name: प्रोजेक्टसाठी प्रेरणा
             lesson-19:
               name: डीबगिंग
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: जावा लॅब
+            lesson-9:
+              name: लूप्स
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+            lesson-10:
+              key: धडा -10
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-1:
+              key: धडा -1
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-16:
+              key: धडा -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+            lesson-1:
+              key: धडा -1
+            lesson-2:
+              key: धडा -2
+            lesson-3:
+              key: धडा-3
+            lesson-4:
+              key: धडा-4
+            lesson-5:
+              key: धडा -5
+            lesson-10:
+              key: धडा -10
+            lesson-6:
+              key: धडा -6
+            lesson-7:
+              key: धडा -7
+            lesson-8:
+              key: धडा -8
+            lesson-9:
+              key: धडा -9
+            lesson-11:
+              key: धडा -11
+            lesson-12:
+              key: धडा -12
+            lesson-13:
+              key: धडा -13
+            lesson-14:
+              key: धडा -14
+            lesson-15:
+              key: धडा -15
+            lesson-16:
+              key: धडा -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स

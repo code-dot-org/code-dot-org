@@ -1,8 +1,0 @@
-{
-  "key": "whenPromptAnswered",
-  "name": "whenPromptAnswered",
-  "category": "Events",
-  "category_key": "events",
-  "block_name": "gamelab_whenPromptAnswered",
-  "syntax": "whenPromptAnswered"
-}

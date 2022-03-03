@@ -1185,6 +1185,279 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Sanal Ders Değişiklikleri",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Veri toplama tasarımı"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Kağıt Prototipler"
+        },
+        "market-research/csd/2021": {
+          "name": "Pazar araştırması"
+        },
+        "market_research/csd/2021": {
+          "name": "Pazar araştırması"
+        },
+        "design_mode/csd/2021": {
+          "name": "Tasarım Modu"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Tasarım Modu"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "Çoklu ekranlı Uygulamalar"
+        },
+        "app-presentation/csd/2021": {
+          "name": "Uygulama Sunumu"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "Uygulama Sunumu"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Öğretmen forumu"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "Kod ile Ekranlar Tasarlama"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Rastgele Sayılar"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Bilgisayarlar Nasıl Çalışır: Donanım & Yazılım"
+        },
+        "board_events/csd/2021": {
+          "name": "Kurul Etkinlikleri"
+        },
+        "physical_input/csd/2021": {
+          "name": "Fiziksel Girdi"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "Analog Sensörler"
+        },
+        "booleans_and_comparison_operators_1/csd/2021": {
+          "name": "Boolean ve Karşılaştırma Operatörleri"
+        },
+        "functions_2/csd/2021": {
+          "name": "Fonksiyonlar"
+        },
+        "if_statements_1/csd/2021": {
+          "name": "Eğer (If) Durumları"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Dizilere Giriş"
+        },
+        "arrays/csd/2021": {
+          "name": "Diziler"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Notları çalma"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For Döngüleri"
+        },
+        "for_loops/csd/2021": {
+          "name": "For Döngüleri"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "İvmeölçer olayları"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Bilgisayarlar Nasıl Çalışır: Devreler & Mantık"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Sunulan Bilgi"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Numaraları temsil eden"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "Verileri Gizli Tutmak"
+        },
+        "structuring_data/csd/2021": {
+          "name": "Verilerin Yapılandırılması"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "Veri Yorumlama"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "Veri Yorumlama"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "Veri Yorumlama"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Veri ile karar verme"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Veri ile kararları otomatikleştirme"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "Veri ile kararları otomatikleştirme"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "Veri ile kararları otomatikleştirme"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Gerçek Dünyada Veriler"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Gerçek Dünyada Veriler"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Makine Öğrenimi"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "Şekil Çizmek"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "Şekil Çizmek"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "Şekiller ve Parametreler"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "name": "Şekiller ve Parametreler"
+        },
+        "naming_variables/csd/2021": {
+          "name": "Değişkenleri Adlandırma"
+        },
+        "variables_1/csd/2021": {
+          "name": "Değişkenler"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Rastgele Sayılar"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animasyon sekmesi"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Hareketli Nesneler"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Nesne özellikleri"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "Döngü çiz"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Hareketli Nesnelerin Hareketi"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Boolean İfadeleri"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Koşullu İfadeler"
+        },
+        "booleans_and_comparison_operators/csd/2021": {
+          "name": "Boolean ve Karşılaştırma Operatörleri"
+        },
+        "if_statements/csd/2021": {
+          "name": "Eğer (If) Durumları"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Eğer/Değilse İfadeleri"
+        },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "name": "İnteraktif Kart"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "name": "İnteraktif Kart"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "name": "İnteraktif Kart"
+        },
+        "interactive_card/csd/2021": {
+          "name": "İnteraktif Kart"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Hız"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Hız"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Çarpışmanın algılanması"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Çarpışmanın algılanması"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Yan Kaydırıcı"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Yan Kaydırıcı"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Flyer Oyunu"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Flyer Oyunu"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Fonksiyonlar"
+        },
+        "functions_1/csd/2021": {
+          "name": "Fonksiyonlar"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Öğretmen forumu"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Bilgisayar nedir?"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Girdiler ve çıktılar"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Girdiler ve çıktılar"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Uygulamalar ve Problem çözme"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Uygulamalar ve Problem çözme"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Uygulamalar ve Problem çözme"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML Etiketleri"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Başıklar ve Paragraflar"
+        },
+        "formatting_html/csd/2021": {
+          "name": "HTML'de Biçimlendirme"
+        },
+        "lists/csd/2021": {
+          "name": "Listeler"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Dijital Ayak İzi"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Bilgisayar Bilimi Tanıtım Bölüm 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Bilgisayar Bilimi Tanıtım Bölüm 2"
+        },
+        "creative_commons_search/csd/2021": {
+          "name": "Kamu Telif Hakkı Araması"
+        },
+        "images_in_html/csd/2021": {
+          "name": "HTML'de Görseller"
+        },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "Bir Amaca yönelik Web Siteleri"
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "name": "Bir Amaca yönelik Web Siteleri"
+        },
+        "classes/csd/2021": {
+          "name": "Sınıflar"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Köprü"
         }
       }
     }

@@ -1307,6 +1307,186 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Úpravy virtuálnych lekcií",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Úvod do UI Labu"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Úvod do UI Labu"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "Umelá inteligencia: Trénovacie dáta a skreslenie"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizajnový mód"
+        },
+        "design_mode_elements/csd/2021": {
+          "name": "Prvky dizajnového módu"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "name": "Úvod do dizajnového módu"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizajnový mód"
+        },
+        "design_mode_elements_1/csd/2021": {
+          "name": "Prvky dizajnového módu"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Ako pracujú počítače: Hardvér a softvér"
+        },
+        "booleans_and_comparison_operators_1/csd/2021": {
+          "name": "Logické výrazy a porovnávacie znamienka"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkcie"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Úvod do zoskupení"
+        },
+        "arrays/csd/2021": {
+          "name": "Rady"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Hranie nôt"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Cykly \"For\""
+        },
+        "for_loops/csd/2021": {
+          "name": "Cykly \"For\""
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Udalosti s akcelerometrom"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Ako pracujú počítače: Obvody a logika"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Strojové učenie"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "name": "Video: Kreslenie v Game Labe - 1. časť"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "name": "Video: Kreslenie v Game Labe - 2. časť"
+        },
+        "introduction-to-variables/csd/2021": {
+          "name": "Predstavenie premenných"
+        },
+        "variables_1/csd/2021": {
+          "name": "Premenné"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Záložka s animáciami"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Objekt \"sprite\""
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Vlastnosti postáv"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "Cyklus kreslenia"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Pohyb \"sprite\" objektu"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Logické výrazy"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Podmienkové výroky"
+        },
+        "booleans_and_comparison_operators/csd/2021": {
+          "name": "Logické výrazy a porovnávacie znamienka"
+        },
+        "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "name": "Výroky \"If-Else\""
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Podmienkové výroky (if/else)"
+        },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "name": "Interaktívna pohľadnica"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "name": "Interaktívna pohľadnica"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "name": "Interaktívna pohľadnica"
+        },
+        "interactive_card/csd/2021": {
+          "name": "Interaktívna pohľadnica"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Rýchlosť"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Rýchlosť"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Detekcia kolízie"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Detekcia kolízie"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Posúvačka (side-scroller)"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Posúvačka (side-scroller)"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Lietajúca hra"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Lietajúca hra"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcie"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkcie"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Fórum učiteľov"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Čo je počítač?"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Vstup a Výstup"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Vstup a Výstup"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML tag-y"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "Video: Párové programovanie"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Nadpisy a odseky "
+        },
+        "lists/csd/2021": {
+          "name": "Zoznamy"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Digitálna stopa"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Úvod do CSS - časť 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Úvod do CSS - časť 2"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Publikovanie tvojej webstránky"
         }
       }
     }

@@ -6042,7 +6042,7 @@ pl-PL:
           Na tej lekcji nauczysz się korzystać z historii pustej przestrzeni i pisać je. Obejrzyj ten film wideo i dowiedz się, jak łączy się to z informatyką.
       courseF_artist_practice:
         description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
-          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i artystą!
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i Artystą!
         display_name: " Ćwiczenie artysty"
       courseF_beeFor_practice:
         description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
@@ -6169,3 +6169,163 @@ pl-PL:
           ## Zasoby
 
           * [Wprowadzenie do zmienych](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Właściwości duszka
+      CSD Games variables practice_2021:
+        display_name: Zmienne - Praktyka
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
+        title: Szybkie sprawdzenie nagłówków
+      CSD Interactive Animations and Games Post-Project Test_pilot_2021:
+        title: 'Test po projekcie Interaktywnych animacji i gier '
+      CSD Physical Computing Post-Project Test_2021:
+        title: 'Test po projekcie: Obliczenia fizyczne'
+      CSD U1 Test_2021:
+        title: "\nTest po projekcie: Komputery i rozwiązywanie problemów "
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Ustalanie stylu tekstu przy użyciu CSS
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Dodawanie obrazów
+      CSD U2 Image practice_pilot_2021:
+        display_name: Dodawanie obrazów
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        teacher_markdown: Chociaż ten poziom można wykorzystać do oceny zrozumienia
+          przez uczniów składni znacznika `<img>`, jego głównym celem jest uświadomienie
+          uczniom najczęstszych rodzajów błędów, jakie mogą napotkać podczas dodawania
+          grafiki do stron internetowych.
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: opis tutaj
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tytuł
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Ćwiczenia
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U5 test_2021:
+        title: 'Test po projekcie: Dane i społeczeństwo'
+      CSD U6 LED create intro_2021:
+        content1: opis tutaj
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: opis tutaj
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Przewidzieć coś
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Test po projekcie: Projektowanie zorientowane na użytkownika'
+      CSD Web Development Post-Project Test_pilot_2021:
+        title: 'Test po projekcie: Tworzenie stron internetowych '
+      CSD games cake challenge choice_2021:
+        display_name: Wyzwania
+      CSD games functions practice choice_2021:
+        display_name: Funkcje - Ćwiczenia
+      CSD games platform challenge choice_2021:
+        display_name: Wyzwania
+      CSD web conditionals practice choice_2021:
+        display_name: Zmienne - Praktyka
+      CSD web draw loop practice choice_2021:
+        display_name: Ćwiczenia
+      CSD web movement practice choice_2021:
+        display_name: Ćwiczenia
+      CSD web text practice choice_2021:
+        display_name: Ćwiczenia
+      csd-pre-survey-levelgroup_21_22:
+        title: 'Ankieta uczniowska przed kursem CS Discoveries '

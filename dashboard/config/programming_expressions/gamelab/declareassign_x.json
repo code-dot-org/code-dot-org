@@ -1,0 +1,8 @@
+{
+  "key": "declareAssign_x",
+  "name": "Declare and assign a value to a variable",
+  "category": "Variables",
+  "category_key": "variables",
+  "short_description": "Game Lab - Declare and assign a value to a variable",
+  "syntax": "var x = __;"
+}

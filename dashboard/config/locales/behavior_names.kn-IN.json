@@ -333,7 +333,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "Virtual Pet 2_2021": {
           "wandering": "ಅಲೆದಾಡುವುದು",
@@ -664,7 +664,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -680,7 +680,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -698,7 +698,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -733,7 +733,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_events_freeplay_air": {
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
@@ -786,7 +786,7 @@
         "courseF_events_freeplay_blank": {
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
           "moving east": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ",
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ",
           "moving west": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ",
           "wandering": "ಅಲೆದಾಡುವುದು",
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
@@ -936,7 +936,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_events_time": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -1011,7 +1011,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_sprites_desert": {
           "moving east": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ",
@@ -1026,7 +1026,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_sprites_freeplay_air": {
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
@@ -1167,7 +1167,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_sprites_predict": {
           "moving east": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ",
@@ -1198,7 +1198,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ\n"
         },
         "courseF_sprites_ship": {
           "moving east": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುತ್ತಿದೆ",
@@ -1213,7 +1213,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_text_answer": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -1247,7 +1247,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
+          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
         },
         "courseF_text_choice_conversation": {
           "wandering": "ಅಲೆದಾಡುವುದು",
@@ -1307,7 +1307,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
+          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
         },
         "courseF_text_choice_interview": {
           "wandering": "ಅಲೆದಾಡುವುದು",
@@ -1327,7 +1327,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_text_choice_multiprompt": {
           "wandering": "ಅಲೆದಾಡುವುದು",
@@ -1347,7 +1347,7 @@
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "wobbling": "ಒದ್ದಾಡುವುದು",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_text_choice_title": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -1364,7 +1364,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_text_concat": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -1381,7 +1381,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_text_events": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -1398,7 +1398,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_text_print": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -1432,7 +1432,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_text_review": {
           "patrolling": "ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ",
@@ -1449,7 +1449,7 @@
           "spinning left": "ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ",
           "fluttering": "ಬೀಸುತ್ತಿದೆ",
           "moving west and looping": "ಪಶ್ಚಿಮಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು",
-          "moving east and looping": "ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವ ಮತ್ತು ಲೂಪ್ ಮಾಡುವ"
+          "moving east and looping": "ಪೂರ್ವ ಮತ್ತು ಲೂಪ್ ಚಲಿಸುವ"
         },
         "courseF_variables_card": {
           "wandering": "ಅಲೆದಾಡುವುದು",

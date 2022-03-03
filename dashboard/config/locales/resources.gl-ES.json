@@ -199,6 +199,33 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Guía de implementación"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funcións"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Bucles \"Para\" (For)"
+        },
+        "for_loops/csd/2021": {
+          "name": "Bucles \"Para\" (For)"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funcións"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funcións"
+        },
+        "html_tags/csd/2021": {
+          "name": "Etiquetas HTML"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Cabeceiras e parágrafos"
+        },
+        "lists/csd/2021": {
+          "name": "Listas"
         }
       }
     }

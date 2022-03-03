@@ -3839,7 +3839,7 @@ fr:
             Debugging in Maze:
               name: Déboguer dans le Labyrinthe
             Loops in Harvester:
-              name: Les Boucles dans la Moissonneuse
+              name: Les Boucles avec l'Agricultrice
         coursed-draft:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           lessons:
@@ -3864,7 +3864,7 @@ fr:
             Conditionals & Loops in Maze:
               name: Les Conditions et les Boucles dans le Labyrinthe
             Conditionals & Loops in Farmer:
-              name: Les Conditions et les Boucles dans la Moissonneuse
+              name: Les Conditions et les Boucles avec l'Agricultrice
             Impacts of Computing:
               name: Les Impacts de l'Informatique
             More Programming with CS4FN:
@@ -5216,7 +5216,7 @@ fr:
             Loops in Maze:
               name: Les Boucles dans le Labyrinthe
             Loops in Harvester:
-              name: Les Boucles dans la Moissonneuse
+              name: Les Boucles avec l'Agricultrice
             'Events: The Big Event':
               name: 'Événements : Le Grand Événement'
             Build a Flappy Game:
@@ -5242,7 +5242,7 @@ fr:
             Introduction:
               name: Introduction aux Énigmes en ligne
               description_student: Cette leçon sera un entraînement pour les compétences dont tu auras besoin pour ce cours.
-              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme le Collecteur, l''Artiste et la Moissonneuse, quand ils apprendront les bases de _boucles_.'
+              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme la Collectionneuse, l''Artiste et l''Agricultrice, quand ils apprendront les bases de _boucles_.'
             'Algorithms: Graph Paper Programming':
               name: 'Programmation: Programmation sur Papier Millimétré'
               description_student: Dans cette leçon, tu programmeras votre ami pour dessiner des images !
@@ -5282,7 +5282,7 @@ fr:
               description_student: Tu peux faire des choses étonnantes lorsque tu utilises des conditions et des boucles, ensemble !
               description_teacher: 'Dans cette leçon, les élèves associeront deux concepts clés : les boucles et les conditions. Cet ensemble d''énigmes comble les lacunes dans la compréhension qui se produisent lorsque vous travaillez sur des énigmes qui utilisent plusieurs types de blocs. En réunissant deux idées, les élèves créeront un code plus complexe qui montre à la fois une créativité impressionnante et une pensée critique !'
             Conditionals & Loops in Farmer:
-              name: Les Conditions et les Boucles dans la Moissonneuse
+              name: Les Conditions et les Boucles avec l'Agricultrice
               description_student: Il n'est pas toujours clair quand utiliser chaque conditionn. Cette leçon t'aidera à t'entraîner à décider quoi faire.
               description_teacher: Les étudiants pratiqueront les boucles `tant que`, les boucles `jusqu'à ce que` et les déclarations `si / sinon`. Tous ces blocs utilisent des conditions. En pratiquant les trois, les élèves apprendront à écrire du code complexe et flexible.
             Digital Citizenship:
@@ -5445,7 +5445,7 @@ fr:
             Nested Loops:
               name: Boucles Imbriquées
             Functions in Harvester:
-              name: Les Fonctions dans la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
           student_description: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
         coursef-2017:
           title: Cours F
@@ -5973,7 +5973,7 @@ fr:
             Nested Loops:
               name: Boucles Imbriquées
             Conditionals & Loops in Harvester:
-              name: Les Conditions et les Boucles dans la Moissonneuse
+              name: Les Conditions et les Boucles avec l'Agricultrice
             Until Loops in Maze:
               name: Les Boucles Jusqu'à ce que dans le Labyrinthe
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
@@ -6926,7 +6926,7 @@ fr:
             Build a Star Wars Game:
               name: Construis un Jeu Star Wars
             Functions in Harvester:
-              name: Les Fonctions dans la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
         course-f-2018:
           title: Cours F 2018 (Obsolète)
           lesson_groups:
@@ -7350,9 +7350,9 @@ fr:
             Programming in Bee:
               name: La Programmation dans l'Abeille
             Programming in Harvester:
-              name: La Programmation avec la Moissonneuse
+              name: La Programmation avec l'Agricultrice
             Loops in Harvester:
-              name: Les Boucles avec la Moissonneuse
+              name: Les Boucles avec l'Agricultrice
             Sequencing in Maze:
               name: Séquencer avec Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
@@ -7468,7 +7468,7 @@ fr:
             Functions in Minecraft:
               name: Les Fonctions avec Minecraft
             Functions in Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
             Functions in Artist:
               name: Les Fonctions dans Artist
             Screen Out the Mean:
@@ -7896,7 +7896,7 @@ fr:
               description_student: N'écris pas trop de code pour rassembler tout le nectar et le miel. Utilise plutôt des fonctions !
               description_teacher: Dans le deuxième cycle de pratique avec des fonctions en ligne, les étudiants parcourront des chemins complexes, recueilleront beaucoup de nectar et feront beaucoup de miel.
             Functions in Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
             Determine the Concept:
               name: Détermine le Concept
               description_student: Nous ne dévoilons aucun secret ! Cette leçon pourrait utiliser toute compétence, quelle qu'elle soit, apprise jusqu'à présent.
@@ -9448,7 +9448,7 @@ fr:
             Introduction to Online Puzzles:
               name: Introduction aux Énigmes en ligne
               description_student: Cette leçon sera un entraînement pour les compétences dont tu auras besoin pour ce cours.
-              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme le Collecteur, l''Artiste et la Moissonneuse, quand ils apprendront les bases de _boucles_.'
+              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme la Collectionneuse, l''Artiste et l''Agricultrice, quand ils apprendront les bases de _boucles_.'
             Relay Programming:
               name: Programmation de relais
               description_student: Te rappelles-tu, au début du cours, lorsque tu as fait des dessins avec du code ? Dans cette leçon, tu vas travailler avec une équipe pour faire quelque chose de très similaire !
@@ -9582,9 +9582,9 @@ fr:
               description_student: Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?
               description_teacher: Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !
             Functions in Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
               description_student: Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !
-              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
+              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
             Copyright and Creativity:
               name: Les Droits d'Auteur et la Créativité
             Functions in Artist:
@@ -9745,7 +9745,7 @@ fr:
             Functions in Minecraft:
               name: Les Fonctions dans Minecraft
             Functions in Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
             Functions in Artist:
               name: Les Fonctions avec L'Artiste
             Screen Out the Mean:
@@ -9961,8 +9961,8 @@ fr:
               name: Les Boucles dans Artiste
             Loops in Harvester:
               name: Récolter des Cultures avec des Boucles
-              description_student: Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !
-              description_teacher: À l'étape précédente, les élèves ont utilisé des boucles pour créer des dessins fantastiques. Maintenant, ils vont boucler de nouvelles actions afin d'aider la Moissonneuse à ramasser plusieurs légumes qui poussent en larges lots.\\ r
+              description_student: Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !
+              description_teacher: À l'étape précédente, les élèves ont utilisé des boucles pour créer des dessins fantastiques. Maintenant, ils vont boucler de nouvelles actions afin d'aider l'Agricultrice à ramasser plusieurs légumes qui poussent en larges lots.\\ r
             'Events: The Big Event':
               name: Le Grand Événement
               description_student: 'Jouer un jeu amusant pour découvrir les événements. '
@@ -10061,7 +10061,7 @@ fr:
               name: La Programmation dans le Labyrinthe
               description_teacher: Dans cette série d'énigmes en ligne, les élèves s'appuieront sur leur compréhension des algorithmes, du débogage et des connaissances informatiques générales. Mettant en avant des personnages du jeu Angry Birds, les élèves développeront des algorithmes séquentiels pour amener l'oiseau au cochon sans s'écraser sur les murs ou le TNT. Des énigmes de débogage ont également été mélangées à cette phase, pour une pratique supplémentaire avec la résolution de problèmes et la pensée critique.
             Programming in Harvester:
-              name: La Programmation dans la Moissonneuse
+              name: La Programmation avec l'Agricultrice
             Going Places Safely:
               name: Se Déplacer en Toute Sécurité
               description_student: Apprends les règles pour visiter, en toute sécurité, des lieux en ligne.
@@ -10173,16 +10173,16 @@ fr:
               description_student: Esquisse ta propre application smartphone.
               description_teacher: 'Cette leçon voit les élèves reconnaître que l''informatique peut aider les gens dans la vie réelle. Tout d''abord, les étudiants sympathisent avec plusieurs utilisateurs de smartphones fictifs afin de les aider à trouver la “bonne application”, qui répond à leurs besoins. Ensuite, les élèves font preuve d''empathie et de créativité pour dessiner leur propre application pour smartphone qui répond aux besoins d''un utilisateur supplémentaire. '
             Loops in Harvester:
-              name: Les Boucles avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser encore plus, en utilisant des boucles !
+              name: Les Boucles avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser encore plus, en utilisant des boucles !
               description_teacher: En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour ramasser le maïs plus efficacement sur Code.org.
             Programming in Maze:
               name: Programmation avec Angry Birds
               description_student: Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe.
             Programming in Harvester:
-              name: La Programmation avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser les légumes le long d'un chemin.
-              description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
+              name: La Programmation avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser les légumes le long d'un chemin.
+              description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de l''Agricultrice. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
             Sequencing in Maze:
               name: Séquencer avec Angry Birds
               description_student: Aide Rouge L'Angry Bird à suivre le chemin vers le cochon méchant.
@@ -10236,7 +10236,7 @@ fr:
             Programming in Maze:
               name: Programmation avec Angry Birds
             Programming in Harvester:
-              name: La Programmation avec la Moissonneuse
+              name: La Programmation avec l'Agricultrice
             Tell a Story in Play Lab:
               name: En Déplacement avec les Événements
             Make a Game in Play Lab:
@@ -11241,7 +11241,7 @@ fr:
             Functions in Minecraft:
               name: Les Fonctions dans Minecraft
             Functions in Harvester:
-              name: Les Fonctions dans la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
             Functions in Artist:
               name: Les Fonctions dans Artist
             Determine the Concept:
@@ -13038,7 +13038,7 @@ fr:
             Functions in Minecraft:
               name: Les Fonctions dans Minecraft
             Functions in Harvester:
-              name: Les Fonctions dans la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
             Functions in Artist:
               name: Les Fonctions dans Artist
             End of Course Project:
@@ -13098,7 +13098,7 @@ fr:
             Functions in Minecraft:
               name: Les Fonctions dans Minecraft
             Functions with Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
             Functions with Artist:
               name: Les Fonctions avec L'Artiste
             Pythons impacting native populations:
@@ -13898,16 +13898,16 @@ fr:
               name: Programmation avec Angry Birds
               description_student: Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe.
             Programming in Harvester:
-              name: La Programmation avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser les légumes le long d'un chemin.
-              description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
+              name: La Programmation avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser les légumes le long d'un chemin.
+              description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de l''Agricultrice. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
             'Loops: Getting Loopy':
               name: Tourner en Rond
               description_student: Dans cette leçon, nous aurons une soirée dansante en utilisant des boucles répéter !
               description_teacher: Du fait que nous commençons à écrire des programmes plus longs et plus intéressants, notre code contient souvent beaucoup de répétitions. Dans cette leçon, les élèves apprendront comment les boucles peuvent être utilisés pour communiquer plus facilement les instructions qui ont beaucoup de répétitions, en observant les motifs répétés de mouvement dans une danse.
             Loops in Harvester:
-              name: Les Boucles avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser encore plus, en utilisant des boucles !
+              name: Les Boucles avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser encore plus, en utilisant des boucles !
               description_teacher: En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour ramasser le maïs plus efficacement sur Code.org.
             Loops in Collector:
               name: Les Boucles avec Laurel
@@ -13993,8 +13993,8 @@ fr:
               description_teacher: En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour aider BB-8 à traverser un labyrinthe plus efficacement qu'auparavant.
             Loops in Harvester:
               name: Récolter des Cultures avec des Boucles
-              description_student: Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !
-              description_teacher: À l'étape précédente, les élèves ont utilisé des boucles pour créer des dessins fantastiques. Maintenant, ils vont boucler de nouvelles actions afin d'aider la Moissonneuse à ramasser plusieurs légumes qui poussent en larges lots.\\ r
+              description_student: Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !
+              description_teacher: À l'étape précédente, les élèves ont utilisé des boucles pour créer des dessins fantastiques. Maintenant, ils vont boucler de nouvelles actions afin d'aider l'Agricultrice à ramasser plusieurs légumes qui poussent en larges lots.\\ r
             Looking Ahead:
               name: Regarder vers l'Avenir avec Minecraft
               description_student: Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft.
@@ -14056,7 +14056,7 @@ fr:
             Introduction to Online Puzzles:
               name: Introduction aux Énigmes en ligne
               description_student: Cette leçon sera un entraînement pour les compétences dont tu auras besoin pour ce cours.
-              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme le Collecteur, l''Artiste et la Moissonneuse, quand ils apprendront les bases de _boucles_.'
+              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme la Collectionneuse, l''Artiste et l''Agricultrice, quand ils apprendront les bases de _boucles_.'
             Relay Programming:
               name: Programmation de relais
               description_student: Te rappelles-tu, au début du cours, lorsque tu as fait des dessins avec du code ? Dans cette leçon, tu vas travailler avec une équipe pour faire quelque chose de très similaire !
@@ -14206,9 +14206,9 @@ fr:
               description_student: Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?
               description_teacher: Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !
             Functions in Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
               description_student: Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !
-              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
+              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
             Functions in Artist:
               name: Les Fonctions avec L'Artiste
               description_student: Fais des dessins complexes plus facilement avec les fonctions !
@@ -14379,11 +14379,11 @@ fr:
             Until Loops in Maze:
               name: Les Boucles Jusqu'à ce que dans le Labyrinthe
             Conditionals & Loops in Harvester:
-              name: Les Conditions et les Boucles dans la Moissonneuse
+              name: Les Conditions et les Boucles avec l'Agricultrice
             Functions in Minecraft:
               name: Les Fonctions dans Minecraft
             Functions in Harvester:
-              name: Les Fonctions dans la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
             Functions in Artist:
               name: Les Fonctions dans Artist
             For Loops in Bee:
@@ -14421,7 +14421,7 @@ fr:
             Harvesting with Conditionals:
               name: Récolter avec les Conditions
             Functions with Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
             Functions with Artist:
               name: Les Fonctions avec L'Artiste
             Variables with Artist:
@@ -14462,8 +14462,8 @@ fr:
               name: Programmer avec Rey et BB-8
               description_teacher: Dans cette leçon, les élèves utiliseront leurs nouvelles compétences en programmation de manière plus compliquée pour naviguer dans un cours délicat avec BB-8.
             Programming in Harvester:
-              name: La Programmation dans la Moissonneuse
-              description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
+              name: La Programmation avec l'Agricultrice
+              description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de l''Agricultrice. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
             Spelling Bee:
               name: Concours d'orthographe
             Loops in Ice Age:
@@ -16046,19 +16046,19 @@ fr:
               description_student: Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe.
               description_teacher: En utilisant des personnages de L'Âge de Glace, les élèves développeront des algorithmes séquentiels pour déplacer Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.
             Programming in Harvester:
-              key: La Programmation dans la Moissonneuse
-              name: La Programmation avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser les légumes le long d'un chemin.
-              description_teacher: Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage.
+              key: La Programmation avec l'Agricultrice
+              name: La Programmation avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser les légumes le long d'un chemin.
+              description_teacher: Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de l'Agricultrice. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage.
             'Loops: Getting Loopy':
               key: 'Boucles : Tourner en Boucle'
               name: Tourner en Rond
               description_student: Dans cette leçon, nous aurons une soirée dansante en utilisant des boucles répéter !
               description_teacher: Du fait que nous commençons à écrire des programmes plus longs et plus intéressants, notre code contient souvent beaucoup de répétitions. Dans cette leçon, les élèves apprendront comment les boucles peuvent être utilisés pour communiquer plus facilement les instructions qui ont beaucoup de répétitions, en observant les motifs répétés de mouvement dans une danse.
             Loops in Harvester:
-              key: Les Boucles dans la Moissonneuse
-              name: Les Boucles avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser encore plus, en utilisant des boucles !
+              key: Les Boucles avec l'Agricultrice
+              name: Les Boucles avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser encore plus, en utilisant des boucles !
               description_teacher: En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour ramasser le maïs plus efficacement sur Code.org.
             Loops in Collector:
               key: Les Boucles dans Collecteur
@@ -16149,10 +16149,10 @@ fr:
               description_student: 'Aide BB-8 à travers des labyrinthes en utilisant des boucles ! '
               description_teacher: En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour aider BB-8 à traverser un labyrinthe plus efficacement qu'auparavant.
             Loops in Harvester:
-              key: Les Boucles dans la Moissonneuse
+              key: Les Boucles avec l'Agricultrice
               name: Récolter des Cultures avec des Boucles
-              description_student: Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !
-              description_teacher: Les élèves font de nouvelles boucles pour que la moissonneuse récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**.
+              description_student: Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !
+              description_teacher: Les élèves font de nouvelles boucles pour que l'agricultrice récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**.
             Looking Ahead:
               key: Regarder en avant
               name: Regarder vers l'Avenir avec Minecraft
@@ -16212,7 +16212,7 @@ fr:
               key: Introduction aux Énigmes en ligne
               name: Introduction aux Énigmes en ligne
               description_student: Cette leçon sera un entraînement pour les compétences dont tu auras besoin pour ce cours.
-              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme le Collecteur, l''Artiste et la Moissonneuse, quand ils apprendront les bases de _boucles_.'
+              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme le Collectionneuse, l''Artiste et l''Agricultrice, quand ils apprendront les bases de _boucles_.'
             Relay Programming:
               key: Programmation de relais
               name: Programmation de relais
@@ -16273,7 +16273,7 @@ fr:
               description_student: Tu peux faire des choses incroyables lorsque tu utilises des boucles `jusqu'à ce que` !
               description_teacher: Dans cette leçon, les élèves découvriront les boucles `jusqu'à ce que`. Les étudiants construiront des programmes qui feront répéter des actions au personnage principal `jusqu'à ce qu'`'il atteigne le point d'arrêt désiré.
             Conditionals & Loops in Harvester:
-              key: Les Conditions et les Boucles dans la Moissonneuse
+              key: Les Conditions et les Boucles avec l'Agricultrice
               description_student: Il n'est pas toujours clair quand utiliser chaque conditionn. Cette leçon t'aidera à t'entraîner à décider quoi faire.
               description_teacher: Les étudiants pratiqueront les boucles `tant que`, les boucles `jusqu'à ce que` et les déclarations `si / sinon`. Tous ces blocs utilisent des conditions. En pratiquant les trois, les élèves apprendront à écrire du code complexe et flexible.
             'Unplugged: Binary':
@@ -16390,10 +16390,10 @@ fr:
               description_student: Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?
               description_teacher: Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !
             Functions in Harvester:
-              key: Les Fonctions dans la Moissonneuse
-              name: Les Fonctions avec la Moissonneuse
+              key: Les Fonctions avec l'Agricultrice
+              name: Les Fonctions avec l'Agricultrice
               description_student: Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !
-              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
+              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
             Functions in Artist:
               key: Les Fonctions dans Artist
               name: Les Fonctions avec L'Artiste
@@ -16652,10 +16652,10 @@ fr:
               description_student: Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?
               description_teacher: Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !
             Functions with Harvester:
-              key: Les Fonctions avec la Moissonneuse
-              name: Les Fonctions avec la Moissonneuse
+              key: Les Fonctions avec l'Agricultrice
+              name: Les Fonctions avec l'Agricultrice
               description_student: Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !
-              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
+              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
             Functions with Artist:
               key: Les Fonctions avec L'Artiste
               name: Les Fonctions avec L'Artiste
@@ -16768,10 +16768,10 @@ fr:
               name: Programmer avec Rey et BB-8
               description_teacher: Dans cette leçon, les élèves utiliseront leurs nouvelles compétences en programmation de manière plus compliquée pour naviguer dans un cours délicat avec BB-8.
             Programming in Harvester:
-              key: La Programmation dans la Moissonneuse
-              name: La Programmation avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser les légumes le long d'un chemin.
-              description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
+              key: La Programmation avec l'Agricultrice
+              name: La Programmation avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser les légumes le long d'un chemin.
+              description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de l''Agricultrice. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
             Loops with Scrat:
               key: Les Boucles avec Scrat
               name: Les Boucles avec Scrat
@@ -17897,6 +17897,8 @@ fr:
               name: Création de prototypes
             lesson-19:
               name: Projet
+            Circuits and Physical Prototypes:
+              description_teacher: Pour préparer le projet final de ce chapitre, les élèves vont appendre à développer un prototype d'objet physique à base du Circuit Playground. En utilisant un guide de gestion de projet prêt à l'emploi, les élèves vont voir comment brancher quelques circuits simples et construire un prototype pour démontrer l'usage d'un objet, le tout réalisé avec des matériaux bon marché et facile à trouver comme du carton et du ruban adhésif.
           lesson_groups:
             lessonGroup-3:
               display_name: Modèles 
@@ -17926,6 +17928,11 @@ fr:
               display_name: Projet
             lessonGroup-4:
               display_name: Démos et ressources
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: Test du clone CSA
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -18357,6 +18364,12 @@ fr:
               description_student: Crée un projet interactif qui peut être partagé avec tes camarades de classe.
               description_teacher: Cette leçon présente le Labo des Sprites, une plate-forme où les élèves peuvent créer leurs propres animations et jeux interactifs. Aujourd'hui, en plus des comportements, les étudiants intégreront les entrées de l'utilisateur en tant qu'événements pour créer une « soirée dansante extraterrestre ».
           lesson_groups:
+            lessonGroup-5:
+              display_name: Cours F sur les variables (Obsolète )
+            lessonGroup-6:
+              display_name: Cours F Sur les boucles (Obsolète )
+            lessonGroup-7:
+              display_name: Cours E sur les Sprites (Obsolète)
             lessonGroup-8:
               display_name: Heure de Code
           description_short: Interne
@@ -18408,6 +18421,33 @@ fr:
               display_name: variables
             lessonGroup-4:
               display_name: Fin du projet.
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: 'Pour le projet final de ce cours, les élèves forment des groupes pour développer et tester un prototype innovant basé sur le Circuit Playground. En utilisant les entrées et les sorties disponibles sur le circuit, les groupes vont créer des programmes qui permettent des interactions intéressantes et uniques avec l''utilisateur. '
+            Innovations in Computing:
+              name: Innovations en informatique
+              description_teacher: Pour démarrer le dernière partie de ce module, les élèves vont rechercher quelques innovations intéressantes en informatique. Cette leçon montrera aux élèves une grande variété dans la forme des ordinateurs et les activités impactées par l'informatique. Plus tard dans le module, les étudiants pourront comparer le résultat de leur recherche avec leur propre expérimentation sur un microcontrôleur.
+            The Circuit Playground:
+              name: Le Circuit Playground
+            Board Events:
+              name: Évènements en provenance du circuit
+            Arrays and Color LEDs:
+              name: Couleurs des LED
+            lesson-10:
+              name: Combinaison des saisies
+            Accelerometer:
+              name: Accéléromètre
+              description_teacher: Dans cette leçon, vous allez découvrir l'accéléromètre et ses capacités. Vous apprendrez ses évènements et ses propriétés, et vous créerez plusieurs programmes utilisant l'accéléromètre identique à celle des applications réelles.
+            Making Music:
+              name: Créer de la Musique
+            Functions with Parameters:
+              name: fonctions
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Chapitre 2
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -18710,10 +18750,10 @@ fr:
               description_teacher: Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.
               key: Les Fonctions avec L'Artiste
             Functions with Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
               description_student: Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !
-              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
-              key: Les Fonctions avec la Moissonneuse
+              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
+              key: Les Fonctions avec l'Agricultrice
             Text and Prompts:
               name: Texte et invites
               description_student: Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab.
@@ -18808,6 +18848,7 @@ fr:
               display_name: Fin du projet.
           description_short: 'Une introduction à l''informatique : elle combine le meilleur de notre programme pour l''école primaire à destination des élèves plus âgés.'
           description_audience: 'Âges : de 9 à 18 ans'
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -19058,16 +19099,16 @@ fr:
               description_student: Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe.
               description_teacher: En utilisant des personnages de L'Âge de Glace, les élèves développeront des algorithmes séquentiels pour déplacer Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.
             Programming with Harvester:
-              name: La Programmation avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser les légumes le long d'un chemin.
-              description_teacher: Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage.
+              name: La Programmation avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser les légumes le long d'un chemin.
+              description_teacher: Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de l'Agricultrice. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage.
             Getting Loopy:
               name: Tourner en Rond
               description_student: Dans cette leçon, nous aurons une soirée dansante en utilisant des boucles répéter !
               description_teacher: Du fait que nous commençons à écrire des programmes plus longs et plus intéressants, notre code contient souvent beaucoup de répétitions. Dans cette leçon, les élèves apprendront comment les boucles peuvent être utilisés pour communiquer plus facilement les instructions qui ont beaucoup de répétitions, en observant les motifs répétés de mouvement dans une danse.
             Loops with Harvester:
-              name: Les Boucles avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser encore plus, en utilisant des boucles !
+              name: Les Boucles avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser encore plus, en utilisant des boucles !
               description_teacher: En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour ramasser le maïs plus efficacement sur Code.org.
             Loops with Laurel:
               name: Les Boucles avec Laurel
@@ -19104,19 +19145,19 @@ fr:
               description_student: Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe.
               description_teacher: En utilisant des personnages de L'Âge de Glace, les élèves développeront des algorithmes séquentiels pour déplacer Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.
             Programming in Harvester:
-              key: La Programmation dans la Moissonneuse
-              name: La Programmation avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser les légumes le long d'un chemin.
-              description_teacher: Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage.
+              key: La Programmation avec l'Agricultrice
+              name: La Programmation avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser les légumes le long d'un chemin.
+              description_teacher: Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de l'Agricultrice. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage.
             'Loops: Getting Loopy':
               key: 'Boucles : Tourner en Boucle'
               name: Tourner en Rond
               description_student: Dans cette leçon, nous aurons une soirée dansante en utilisant des boucles répéter !
               description_teacher: Du fait que nous commençons à écrire des programmes plus longs et plus intéressants, notre code contient souvent beaucoup de répétitions. Dans cette leçon, les élèves apprendront comment les boucles peuvent être utilisés pour communiquer plus facilement les instructions qui ont beaucoup de répétitions, en observant les motifs répétés de mouvement dans une danse.
             Loops in Harvester:
-              key: Les Boucles dans la Moissonneuse
-              name: Les Boucles avec la Moissonneuse
-              description_student: Aide la Moissonneuse à ramasser encore plus, en utilisant des boucles !
+              key: Les Boucles avec l'Agricultrice
+              name: Les Boucles avec l'Agricultrice
+              description_student: Aide l'Agricultrice à ramasser encore plus, en utilisant des boucles !
               description_teacher: En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour ramasser le maïs plus efficacement sur Code.org.
             Loops in Collector:
               key: Les Boucles dans Collecteur
@@ -19194,8 +19235,8 @@ fr:
               key: Les Boucles avec Rey et BB-8
             Harvesting Crops with Loops:
               name: Récolter des Cultures avec des Boucles
-              description_student: Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !
-              description_teacher: Les élèves font de nouvelles boucles pour que la moissonneuse récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**.
+              description_student: Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !
+              description_teacher: Les élèves font de nouvelles boucles pour que l'agricultrice récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**.
             'Mini-Project: Sticker Art':
               description_student: Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !
             The Big Event:
@@ -19250,10 +19291,10 @@ fr:
               description_student: Dans cette leçon, tu programmeras à nouveau tes camarades de classe mais, en utilisant des boucles, tu seras en mesure de résoudre des problèmes plus importants et plus compliqués.
               description_teacher: En s'appuyant sur l'activité initiale "Mes Amis Robotiques", les élèves abordent des conceptions plus grandes et plus compliquées. Afin de programmer leurs "robots" pour compléter ces conceptions plus grandes, les étudiants devront identifier des modèles répétés dans leurs instructions qui pourraient être remplacés par une boucle.
             Loops in Harvester:
-              key: Les Boucles dans la Moissonneuse
+              key: Les Boucles avec l'Agricultrice
               name: Récolter des Cultures avec des Boucles
-              description_student: Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !
-              description_teacher: Les élèves font de nouvelles boucles pour que la moissonneuse récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**.
+              description_student: Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !
+              description_teacher: Les élèves font de nouvelles boucles pour que l'agricultrice récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**.
             Sticker Art with Loops:
               key: L'Art de l'Autocollant avec les Boucles
               description_student: Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !
@@ -19433,7 +19474,7 @@ fr:
             Introduction to Online Puzzles:
               name: Introduction aux Énigmes en ligne
               description_student: Cette leçon sera un entraînement pour les compétences dont tu auras besoin pour ce cours.
-              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme le Collecteur, l''Artiste et la Moissonneuse, quand ils apprendront les bases de _boucles_.'
+              description_teacher: 'Dans cet ensemble d''énigmes, les élèves commenceront par une introduction à (ou une révision de, en fonction de l''expérience de votre classe) l''espace de travail en ligne de Code.org . Des vidéos souligneront les fonctionnalités de base de l''espace de travail, y compris les boutons `Exécuter`, `Réinitialiser` et `Étape`. Seront également discutés, dans ces vidéos : glisser des blocs Blockly, supprimer des blocs Blockly et connecter des blocs Blockly. Ensuite, les élèves pratiqueront leurs compétences en _séquençage_ et débogage, dans le labyrinthe. De là, les élèves découvriront de nouveaux types d''énigmes comme le Collectionneuse, l''Artiste et l''Agricultrice, quand ils apprendront les bases de _boucles_.'
               key: Introduction aux Énigmes en ligne
             Relay Programming:
               name: Programmation de relais
@@ -19606,9 +19647,9 @@ fr:
               description_student: Tu pourras dire à l'ordinateur ce qu'il faut faire dans certaines conditions, dans cette série amusante et stimulante.
               description_teacher: Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu'une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.
             Functions with Harvester:
-              name: Les Fonctions avec la Moissonneuse
+              name: Les Fonctions avec l'Agricultrice
               description_student: Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !
-              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
+              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
             Designing for Accessibility:
               name: Concevoir pour l'Accessibilité
               description_student: 'Découvre l’accessibilité et la valeur de l’empathie, grâce à une réflexion en groupes et à la conception de solutions accessibles pour les applications hypothétiques '
@@ -19662,10 +19703,10 @@ fr:
               description_student: Tu pourras dire à l'ordinateur ce qu'il faut faire dans certaines conditions, dans cette série amusante et stimulante.
               description_teacher: Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu'une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.
             Functions in Harvester:
-              key: Les Fonctions dans la Moissonneuse
-              name: Les Fonctions avec la Moissonneuse
+              key: Les Fonctions avec l'Agricultrice
+              name: Les Fonctions avec l'Agricultrice
               description_student: Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !
-              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
+              description_teacher: Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.
             lesson-1:
               key: leçon n° 1
               name: Concevoir pour l'Accessibilité
@@ -19673,6 +19714,8 @@ fr:
               description_teacher: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
             'Hello World: Food':
               name: Bonjour tout le monde !
+              description_student: Dans le présent cours, vous apprendrez à créer et à animer des sprites et à les rendre interactifs grâce aux événements.
+              description_teacher: 'Dans ce cours **de renforcement des compétences**, les participants apprendront à créer et à animer des sprites et à les rendre interactifs grâce aux événements. '
           lesson_groups:
             csf_sprites:
               display_name: Les Lutins
@@ -19855,6 +19898,11 @@ fr:
         csp-post-survey-2021:
           title: CS PrincipPrincipleses Enquête Post-Cours
         csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: boucles
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -19873,8 +19921,8 @@ fr:
               key: Programmer avec Rey et BB-8
               name: Programmer avec Rey et BB-8
             Programming with Harvester:
-              key: La Programmation avec la Moissonneuse
-              name: La Programmation avec la Moissonneuse
+              key: La Programmation avec l'Agricultrice
+              name: La Programmation avec l'Agricultrice
             Loops with Scrat:
               key: Les Boucles avec Scrat
               name: Les Boucles avec Scrat
@@ -19911,6 +19959,8 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -19937,3 +19987,102 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: boucles
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: leçon n°10
+            lesson-6:
+              key: leçon n°6
+            lesson-7:
+              key: leçon n°7
+            lesson-8:
+              key: leçon n° 8
+            lesson-9:
+              key: leçon n°9
+            lesson-11:
+              key: leçon n°11
+            lesson-12:
+              key: leçon n°12
+            lesson-13:
+              key: leçon n°13
+            lesson-14:
+              key: leçon n°14
+            lesson-15:
+              key: leçon n°15
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+            lesson-4:
+              key: leçon n°4
+            lesson-5:
+              key: leçon n°5
+              name: Journée d'Évaluation
+            lesson-16:
+              key: leçon n°16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+            lesson-4:
+              key: leçon n°4
+            lesson-5:
+              key: leçon n°5
+            lesson-10:
+              key: leçon n°10
+            lesson-6:
+              key: leçon n°6
+            lesson-7:
+              key: leçon n°7
+            lesson-8:
+              key: leçon n° 8
+            lesson-9:
+              key: leçon n°9
+            lesson-11:
+              key: leçon n°11
+            lesson-12:
+              key: leçon n°12
+            lesson-13:
+              key: leçon n°13
+            lesson-14:
+              key: leçon n°14
+            lesson-15:
+              key: leçon n°15
+              name: Journée d'Évaluation
+            lesson-16:
+              key: leçon n°16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox

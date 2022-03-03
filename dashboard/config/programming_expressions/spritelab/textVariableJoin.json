@@ -1,8 +1,0 @@
-{
-  "key": "textVariableJoin",
-  "name": "textVariableJoin",
-  "category": "World",
-  "category_key": "world",
-  "block_name": "gamelab_textVariableJoin",
-  "syntax": "textVariableJoin"
-}

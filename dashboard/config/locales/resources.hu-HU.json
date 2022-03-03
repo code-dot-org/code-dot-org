@@ -270,6 +270,108 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Sprite Lab dokumentációja"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Látva AI"
+        },
+        "design_mode/csd/2021": {
+          "name": "Tervező mód"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "name": "Bevezető a Tervező módhoz"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Tervező mód"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Tanári fórum"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Véletlen számok"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "Analóg szenzorok"
+        },
+        "functions_2/csd/2021": {
+          "name": "funkciók"
+        },
+        "if_statements_1/csd/2021": {
+          "name": "Ha nyilatkozatok"
+        },
+        "circuits_and_leds/csd/2021": {
+          "name": "Áramkörök és LED-ek"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Számláló ciklusok"
+        },
+        "for_loops/csd/2021": {
+          "name": "Számláló ciklusok"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Az információ ábrázolása"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Videó: Gépi tanulás"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "Síkidomok rajzolása"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "Síkidomok rajzolása"
+        },
+        "variables_1/csd/2021": {
+          "name": "változók"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Véletlen számok"
+        },
+        "sprites_1/csd/2021": {
+          "name": "manók"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Sprite tulajdonságok"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Logikai kifejezések"
+        },
+        "if_statements/csd/2021": {
+          "name": "Ha nyilatkozatok"
+        },
+        "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "name": "Ha-egyébként nyilatkozatok"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "funkciók"
+        },
+        "functions_1/csd/2021": {
+          "name": "funkciók"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Tanári fórum"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Mi az a számítógép?"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML-címkék"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Címsorok és bekezdések"
+        },
+        "formatting_html/csd/2021": {
+          "name": "HTML formázás"
+        },
+        "lists/csd/2021": {
+          "name": "Listák"
+        },
+        "creative_commons_search/csd/2021": {
+          "name": "Creative Commons keresés"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Webhelyének közzététele"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Hiperhivatkozások"
         }
       }
     }

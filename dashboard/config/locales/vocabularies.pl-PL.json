@@ -838,6 +838,77 @@
         "try/coursee/2021": {
           "word": "Spróbuj",
           "definition": "Próba zrobienia czegoś"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "ethics/csd/2021": {
+          "word": "Etyka"
+        },
+        "user_interface/csd/2021": {
+          "word": "Interfejs użytkownika"
+        },
+        "bug/csd/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "for_loop/csd/2021": {
+          "word": "Pętla \"dla\"",
+          "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
+        },
+        "parameter/csd/2021": {
+          "word": "Parametr",
+          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/csd/2021": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "variable/csd/2021": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
+        },
+        "property/csd/2021": {
+          "word": "Właściwość"
+        },
+        "sprite/csd/2021": {
+          "word": "Duszek"
+        },
+        "condition/csd/2021": {
+          "word": "Warunek"
+        },
+        "conditionals/csd/2021": {
+          "word": "Zdania z warunkami"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakcja"
+        },
+        "function/csd/2021": {
+          "word": "Funkcja"
+        },
+        "input/csd/2021": {
+          "word": "Wejście"
+        },
+        "processing/csd/2021": {
+          "word": "Przetwarzanie"
+        },
+        "html/csd/2021": {
+          "word": "HTML"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Cyfrowy ślad"
+        },
+        "css/csd/2021": {
+          "word": "CSS"
+        },
+        "copyright/csd/2021": {
+          "word": "Prawa autorskie",
+          "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
         }
       }
     }

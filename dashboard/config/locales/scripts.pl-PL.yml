@@ -33130,6 +33130,16 @@ pl:
                 -   Wymaga wprowadzenia funkcji, a następnie funkcji z parametrami.
                 -   Będzie musiał zobaczyć film o edycji oryginalnych funkcji
                 -   W obecnym programie nauczania, funkcje z poziomami parametrów są ściśle związane z muzyką i akcelerometrem, więc warto uwzględnić je tutaj w postępie jednostki
+            Circuits and Physical Prototypes:
+              name: Wyjścia fizyczne
+              description_teacher: W przygotowaniu do projektu końcowego w ramach
+                tego rozdziału uczniowie będą się uczyć, jak tworzyć prototyp fizycznego
+                przedmiotu, który uwzględnia Circuit Playground. Używając przewodnika
+                po planowaniu modelowanego projektu uczniowie uczą się instalowania
+                przewodów w kilku prostych obwodach i budowania prototypów, przy pomocy
+                którego można przekazać przewidywaną konstrukcję produktu, z wykorzystaniem
+                tanich i łatwych do znalezienia materiałów takich jak karton i taśma
+                klejąca.
           lesson_groups:
             lessonGroup-3:
               display_name: Szablony
@@ -34322,11 +34332,11 @@ pl:
             lessonGroup-4:
               display_name: Przyborniki, itp.
             lessonGroup-5:
-              display_name: Kursu F Zmienne (przestarzałe)
+              display_name: Zmienne kursu F (przestarzałe)
             lessonGroup-6:
-              display_name: Kursu F Pętla "dla" (przestarzałe)
+              display_name: Kurs F dla pętli (przestarzały)
             lessonGroup-7:
-              display_name: Kursu E Duszki (przestarzałe)
+              display_name: Duszki kursu E (przestarzałe)
             lessonGroup-8:
               display_name: Godzina Kodowania
           name: 2022drafting
@@ -34443,6 +34453,8 @@ pl:
               name: "[New] Wiele duszków"
             Counting with Variables:
               name: "[New] Liczenie ze zmiennymi"
+            'Mini-Project: Collector Game':
+              name: "[New] Mini-projekt: Gra kolekcjonera"
             Simulating Experiments:
               name: Symulowanie eksperymentów
               description_student: Uruchom symulacje na komputerze i eksperymentuj
@@ -34488,6 +34500,95 @@ pl:
 
             **Pilot 2022**: Dziękujemy za wypróbowanie tych nowych lekcji. Wdzięczni jesteśmy za wszelkie uwagi. Ten pilotażowy kurs będzie dostępny tylko do czerwca 2022 r.
         csd6-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 'Mini-projekt: Aplikacja On-The-Go'
+            lesson-2:
+              name: 'Projekt: Interakcja człowiek-urządzenie'
+            lesson-3:
+              name: 'Mini-projekt: Sztuka interaktywna'
+            Project - Prototype an Innovation:
+              description_teacher: W tym projekcie końcowym uczniowie dzielą się na
+                zespoły, aby opracować i przetestować prototyp innowacyjnego urządzenia
+                informatycznego w oparciu o Circuit Playground. Używając danych wejściowych
+                i wyników wyjściowych dostępnych na tablicy grupy będą tworzyć programy,
+                które umożliwią ciekawe i niepowtarzalne interakcje z użytkownikiem.
+            Innovations in Computing:
+              name: Innowacje w informatyce
+              description_teacher: Celem rozpoczęcia przerabiania ostatniego działu
+                tego kursu, uczniowie wykonają pewne badania w zakresie ciekawych
+                innowacji w informatyce. Na tej lekcji uczniowie skonfrontują się
+                z szerszym zakresem informatycznych czynników kształtujących (jak
+                wygląda komputer) oraz pól, na które oddziałuje informatyka. W dalszej
+                części tego działu, będą znów oglądać urządzenia, które poznali na
+                tej lekcji, w trakcie tworzenia swoich własnych urządzeń informatycznych.
+            Designing Screens with Code:
+              name: Aktualizacja elementów ekranu
+              description_student: Na tej lekcji zaczniesz budować aplikacje, które
+                pozwolą na wiele interakcji z użytkownikiem i funkcjonalności
+            The Circuit Playground:
+              name: Circuit Playground
+              description_teacher: Na tej lekcji uczniowie mają pierwszą okazję do
+                pisania programów wykorzystujących Circuit Playground. Po pierwszej
+                wizualnej inspekcji płytki i ustaleniu możliwych funkcji, poruszają
+                się w trybie online, by uczyć się pisać aplikacje, które sterują diodą
+                LED i używają brzęczyka do wydawania dźwięków. Łącząc ekrany App Lab
+                z Circuit Playgrounds, mogą stopniowo integrować elementy płytki jako
+                urządzenia wyjściowego, wykorzystując App Lab przy wprowadzaniu danych
+                przez użytkownika.
+            Board Events:
+              name: Zdarzenia na tablicy
+            Arrays and Color LEDs:
+              name: Kolorowe LED
+              description_student: Na tej lekcji dowiesz się, jak uzyskać dostęp i
+                sterować kolorowymi diodami LED na Circuit Playground.
+            Getting Properties:
+              name: Uzyskiwanie danych wejściowych na ekranie
+              description_student: Na tej lekcji dowiesz się, jak korzystać z elementów
+                projektu, takich jak pola tekstowe lub listy rozwijane, aby uzyskać
+                dane wejściowe użytkownika z ekranu
+            lesson-9:
+              name: Zmienne i instrukcje 'jeżeli'
+            lesson-10:
+              name: Łączenie wejść
+            Analog Input:
+              name: Czujniki na płytce
+              description_student: Na tej lekcji poznasz czujniki na Circuit Playground
+                i napiszesz programy, które reagują na otoczenie.
+            Accelerometer:
+              name: Akcelerometr
+              description_teacher: Na tej lekcji uczniowie będą badać przyspieszeniomierz
+                i jego możliwości. Zapoznają się z jego zdarzeniami i właściwościami,
+                jak również będą tworzyć liczne programy z użyciem przyspieszeniomierza
+                podobnie do tych, które najprawdopodobniej napotkają w aplikacjach
+                w prawdziwym świecie.
+            Making Music:
+              name: Tworzenie muzyki
+              description_teacher: Na tej lekcji uczniowie będą wykorzystywać brzęczyk
+                w pełnym zakresie do wydawania dźwiękiów nut i piosenek. Rozpoczynają
+                od krótkiego przeglądu parametrów częstotliwości i czasu trwania brzęczka,
+                a następnie przechodzą do nut. Nuty pozwalają im ograniczyć się do
+                częstotliwości używanych w muzyce zachodniej i zapewniają warstwę
+                abstrakcji, która pomaga im zrozumieć, które częstotliwości mogą razem
+                dobrze brzmieć. Gdy są w stanie grać nuty na brzęczku, uczą się grać
+                sekwencje nut, tworząc proste piosenki.
+            Functions with Parameters:
+              name: Funkcje
+              description_student: Na tej lekcji będziesz tworzyć i wywoływać funkcje,
+                a następnie nauczysz się używać parametrów, aby funkcje były przydatne
+                w wielu różnych sytuacjach
+            Circuits and Physical Prototypes:
+              name: Wyjścia fizyczne i diody LED
+              description_student: Na tej lekcji nauczysz się używać przewodów do
+                tworzenia urządzeń z zewnętrznymi diodami LED i dodawać kod do sterowania
+                tymi światłami.
+            Physical Outputs:
+              name: Wejścia fizyczne i przyciski
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Rozdział 2
           name: csd6-pilot-2022
         csa8-exemplars:
           lessons:
@@ -36420,6 +36521,7 @@ pl:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne
             dzieła, opowiadania i gry.
           description_audience: W wieku 6-10
+          name: coursec-2022
         csp6-2022:
           lessons:
             Algorithms Solve Problems:
@@ -37093,7 +37195,7 @@ pl:
             'Hello World: Food':
               name: Witaj świecie
               description_student: Na tej lekcji nauczysz się tworzyć i animować duszki
-                oraz uczynić je interaktywnymi za pomocą zdarzeń.
+                oraz czynić je interaktywnymi za pomocą zdarzeń.
               description_teacher: Podczas tej lekcji **budującej umiejętności** uczniowie
                 nauczą się tworzyć i animować duszki oraz czynić je interaktywnymi
                 za pomocą zdarzeń.
@@ -37492,6 +37594,12 @@ pl:
                 o połączeniach, URL, adresach sieciowych IP i DNS.
             lesson-4:
               name: Wiele duszków
+            "[New] Lots of Sprites":
+              name: "[New] Wiele duszków"
+            "[New] Counting with Variables":
+              name: "[New] Liczenie ze zmiennymi"
+            "[New] Mini-Project: Collector Game":
+              name: "[New] Mini-projekt: Gra kolekcjonera"
           lesson_groups:
             ramp_up:
               display_name: Duszki
@@ -37504,36 +37612,69 @@ pl:
             end_of_course_project:
               display_name: Koniec projektu kursu
           title: Kurs F (2022)
+          description: "Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna
+            się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach,
+            z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje
+            w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych
+            lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie
+            tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie
+            utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi
+            i rodziną.\n\n## Wiosna 2022 Otwarty przegląd\n\nTa nowa wersja Kursu
+            F zawiera trzy nowe lekcje i potrzebujemy Twojej opinii! Nowe lekcje to:\n\n-
+            \  Lekcja 9 - Dużo duszków - [przekaż opinię](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform)\n-
+            \  Lekcja 10 – Liczenie ze zmiennymi – [przekaż opinię](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform)\n-
+            \  Lekcja 11 - Mini-projekt: Gra kolekcjonera - [przekaż opinię](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform)\n\nZauważ,
+            że te nowe lekcje mogą ulec zmianie od teraz do lipca 2022. Dziękujemy
+            za wszelkie uwagi. Kursy A-E z Podstaw informatyki (2022) rozpoczną się
+            w lipcu 2022.\n\nDodaliśmy również pełny zestaw slajdów obejmujący wszystkie
+            lekcje w Kursie F. Czekamy również na Twoją [opinię](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform)
+            na temat tych slajdów! "
+          student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów
+            wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj
+            i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz
             własne dzieło sztuki, historyjkę lub grę.
           description_audience: W wieku 9-13
           name: coursef-2022
         csp-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Ankieta kursu
           name: csd-post-survey-2021
           title: Zasady informatyki Ankieta po kursie
           description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
+          student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady
+            Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
         csa1-2022:
           lessons:
+            lesson-2:
+              name: Java Lab
             lesson-3:
               name: Praca z malarzem
             lesson-4:
               name: Nawigacja i malowanie
             lesson-5:
-              name: Podejmowanie decyzji
+              name: Jednokierunkowe instrukcje wyboru
             lesson-6:
-              name: Tworzenie typów malarzy
+              name: Malarz Plus
             lesson-7:
               name: Ulepszanie programów z pomocą recenzji kodu
             lesson-8:
-              name: Powtarzanie instrukcji
+              name: Przegląd kodu
             lesson-9:
               name: Poszerzanie decyzji
             lesson-10:
-              name: Debugowanie z malarzem
+              name: Dwukierunkowe instrukcje wyboru
             lesson-11:
-              name: Dodawanie nowych możliwości
+              name: Strategie debugowania
+            lesson-12:
+              name: Dekompozycja i projektowanie
+            lesson-13:
+              name: Malarz wzorów
+            lesson-14:
+              name: Malarz tła
             lesson-15:
-              name: Stawanie się inżynierem oprogramowania
+              name: Otwarty kod źródłowy
             lesson-16:
               name: Asfaltowy projekt artystyczny – Dzień 1
             lesson-17:
@@ -37596,6 +37737,12 @@ pl:
           name: pre-express-2022
         csa2-2022:
           lessons:
+            lesson-1:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+            lesson-2:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+            lesson-3:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
             lesson-4:
               name: Praktyka FRQ
             lesson-5:
@@ -37606,6 +37753,7 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa2-2022
+          title: Struktura i projekt klas ('22-'23)
         csa3-2022:
           lessons:
             lesson-1:
@@ -37618,6 +37766,7 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa3-2022
+          title: Tabkice i algorytmy ('22-'23)
         tessplayground:
           lessons:
             Conditionals and Debugging:
@@ -37757,3 +37906,717 @@ pl:
               display_name: Pokaż Tydzień, co wiesz
           name: csa5-2022
           title: Tablice dwuwymiarowe ('22 -'23)
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-4:
+              name: Nawigacja i malowanie
+            lesson-5:
+              name: Jednokierunkowe instrukcje wyboru
+            lesson-6:
+              name: MalarzPlus
+            lesson-7:
+              name: Metody pisania
+            lesson-8:
+              name: Przegląd kodu
+            lesson-9:
+              name: Pętle
+            lesson-10:
+              name: Dwukierunkowe instrukcje wyboru
+            lesson-11:
+              name: Strategie debugowania
+            lesson-12:
+              name: Dekompozycja i projektowanie
+            lesson-13:
+              name: Malarz wzorów
+            lesson-14:
+              name: Malarz tła
+            lesson-15:
+              name: Otwarty kod źródłowy
+            lesson-16:
+              name: Asfaltowy projekt artystyczny – Dzień 1
+            lesson-17:
+              name: Asfaltowy projekt artystyczny – Dzień 2
+            lesson-18:
+              name: Asfaltowy projekt artystyczny – Dzień 3
+            lesson-19:
+              name: Praktyka FRQ
+            lesson-20:
+              name: Jednostka 1 - Sprawdzian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          name: csa1-2022-exemplars
+          title: Jednostka 1 - Programowanie obiektowe [Exemplars]
+        pltess:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: kurs
+        self-paced-pl-csa1-2022:
+          lessons:
+            lesson-1:
+              name: Witaj na Code.org
+          name: self-paced-pl-csa1-2022
+          title: 'Jednostka 1 - Moduł 1: Powitanie'
+        self-paced-pl-csa3-2022:
+          name: self-paced-pl-csa3-2022
+          title: Wsparcie przy programowaniu tekstowym
+        csa7-pilot-extra:
+          lessons:
+            Writing Methods to Satisfy Conditions:
+              name: Pisanie metod spełniających warunki
+              description_student: Twój ulubiony twórca treści zwerbował Cię do stworzenia
+                sekwencji tytułów do wykorzystania we wszystkich swoich treściach!
+                Projekt Sekwencji Tytułów to duży projekt, nad którym pracujesz w
+                całej jednostce, a strategie zarządzania projektami pomagają zorganizować
+                i ustrukturyzować Twoją pracę.
+              description_teacher: Uczniowie zapoznają się z metodami pisania pod
+                kątem spełnienia warunków i poznają abstrakcję proceduralną oraz dekompozycję
+                metod. Następnie są wprowadzani do Projektu Sekwencji Tytułów i oceniają
+                wymagania i przykłady w celu zidentyfikowania pytań i kluczowych własności.
+            Exploring Method Components and Functionality:
+              name: Odkrywanie składników metody i funkcjonalności
+              description_student: Ponownie odwiedzasz elementy sygnatury metody i
+                przeglądasz relacje między parametrami aktualnymi i formalnymi. Rozróżniasz
+                metody „void” i inne niż „void” oraz debugujesz kod z niepoprawnymi
+                nagłówkami metod i instrukcjami return. Następnie planujesz zadania,
+                które musisz wykonać w swoim Projekcie Sekwencji Tytułów,
+              description_teacher: Uczniowie ponownie przyglądają się elementom sygnatury
+                metody i dokonują przeglądu relacji między aktualnymi i formalnymi
+                parametrami. Rozróżniają metody „void” i inne niż „void” oraz debugują
+                kod z niepoprawnymi nagłówkami metod i instrukcjami return. Następnie
+                planują zadania, które muszą wykonać w ramach Projektu Sekwencji Tytułów.
+            Using Object References as Parameters:
+              name: Używanie odniesień do obiektów jako parametrów
+              description_student: Wracasz do przekazywania prymitywów i odwołań do
+                obiektów jako parametrów, aby zidentyfikować podobieństwa i różnice
+                między nimi. Określasz dane wyjściowe segmentów kodu i wpływ na obiekty,
+                używając odniesień do obiektów jako parametrów. Następnie poznasz
+                znaczenie najlepszych praktyk dotyczących używania odwołań do obiektów
+                jako parametrów, aby upewnić się, że obiekty są modyfikowane tylko
+                wtedy, gdy jest to wymagane.
+              description_teacher: Uczniowie wracają do przekazywania prymitywów i
+                odwołań do obiektów jako parametrów, aby zidentyfikować podobieństwa
+                i różnice między nimi. Określają  dane wyjściowe segmentów kodu i
+                wpływ na obiekty, używając odniesień do obiektów jako parametrów.
+                Następnie poznają znaczenie najlepszych praktyk dotyczących używania
+                odwołań do obiektów jako parametrów, aby upewnić się, że obiekty są
+                modyfikowane tylko wtedy, gdy jest to wymagane.
+            Overloading Methods:
+              name: Metody przeciążania
+              description_student: Ponownie powracasz do celu przeciążania i badasz
+                przeciążone metody, aby określić ich wpływ na funkcjonalność programu.
+                Następnie piszesz przeciążone metody rozwiązywania problemów w konsoli,
+                Sąsiedztwie lub Teatrze, zanim zaczniesz tworzyć początkowe plany
+                dotyczące Projektu Sekwencji Tytułów.
+              description_teacher: Uczniowie powracają  do celu przeciążania i badają
+                przeciążone metody, aby określić ich wpływ na funkcjonalność programu.
+                Następnie piszą przeciążone metody rozwiązywania problemów w konsoli,
+                Sąsiedztwie lub Teatrze, zanim zaczną tworzyć początkowe plany dotyczące
+                Projektu Sekwencji Tytułów.
+            Accessing Object Behavior:
+              name: Dostęp do zachowania obiektu
+              description_student: Ponownie odwiedzasz słowa kluczowe „public” i „private”,
+                aby określić zewnętrzną dostępność atrybutów i zachowań obiektu. Badasz
+                wpływ ustawiania metod na „private” na funkcjonalność programu i identyfikujesz
+                korzyści płynące z używania metod „private”.
+              description_teacher: Uczniowie ponownie odwiedzają  słowa kluczowe „public”
+                i „private”, aby określić zewnętrzną dostępność atrybutów i zachowań
+                obiektu. Badają wpływ ustawiania metod na „private” na funkcjonalność
+                programu i identyfikują korzyści płynące z używania metod „private”.
+            Overriding Methods:
+              name: Nadrzędne metody
+              description_student: Na poprzednich lekcjach miałeś nadpisane metody
+                w klasie `Object` i pracowałeś z hierarchiami klas, które implementowały
+                nadpisane metody. Eksplorujesz pisanie i wywoływanie nadpisanych metod
+                w klasach niestandardowych, a następnie uczysz się używać wartości
+                wartowniczych, aby poprawić swoją zdolność do pracy z danymi wejściowymi
+                użytkownika w swoich programach.
+              description_teacher: Uczniowie na poprzednich lekcjach mieli nadpisane
+                metody w klasie `Object` i pracowali z hierarchiami klas, które implementowały
+                nadpisane metody. Piszą i wywołują nadpisane metody w klasach niestandardowych,
+                a następnie uczą się używać wartości wartowniczych, aby poprawić swoją
+                zdolność do pracy z danymi wejściowymi użytkownika w swoich programach.
+            Exploring Recursive Methods:
+              name: Odkrywanie metod rekurencyjnych
+              description_student: Eksplorujesz metody rekurencyjne poprzez wybraną
+                przez siebie aktywność bez komputera i ćwiczysz śledzenie kodu za
+                pomocą metod rekurencyjnych. Następnie pracujesz nad zadaniami na
+                Tablicy Planowania Projektu, aby kontynuować opracowywanie Projektu
+                Sekwencji Tytułów.
+              description_teacher: Uczniowie eksplorują metody rekurencyjne poprzez
+                wybraną przez siebie aktywność bez komputera i ćwiczą śledzenie kodu
+                za pomocą metod rekurencyjnych. Następnie pracują nad zadaniami na
+                Tablicy Planowania Projektu, aby kontynuować opracowywanie Projektu
+                Sekwencji Tytułów.
+            Comparing Recursive and Iterative Solutions:
+              name: Porównanie rozwiązań rekurencyjnych i iteracyjnych
+              description_student: Czasami łatwiej jest napisać metodę iteracyjną,
+                a innym razem najlepsza jest metoda rekurencyjna! Badasz problemy
+                i algorytmy, aby zidentyfikować ich przypadki bazowe i przypadki rekurencyjne.
+                Rozróżniasz rozwiązania rekurencyjne i iteracyjne i ćwiczysz konwertowanie
+                rozwiązań iteracyjnych na metody rekurencyjne.
+              description_teacher: Uczniowie badają problemy i algorytmy, aby zidentyfikować
+                ich przypadki bazowe i przypadki rekurencyjne. Rozróżniają rozwiązania
+                rekurencyjne i iteracyjne i ćwiczą konwertowanie rozwiązań iteracyjnych
+                na metody rekurencyjne.
+            Writing Recursive Methods:
+              name: Pisanie metod rekurencyjnych
+              description_student: Porównujesz rozwiązania iteracyjne i rekurencyjne
+                w pracy ze "String" i ćwiczysz śledzenie rozwiązań rekurencyjnych
+                za pomocą "String",  tablic i "ArrayList". Następnie bierzesz udział
+                we wzajemnej recenzji, aby przekazywać i otrzymywać informacje zwrotne
+                na temat postępów w pracy nad Projektem Sekwencji Tytułów.
+              description_teacher: Uczniowie porównują rozwiązania iteracyjne i rekurencyjne
+                do pracy z "String" i ćwiczą śledzenie rozwiązań rekurencyjnych za
+                pomocą "String", tablic i "ArraList". Następnie biorą udział we wzajemnym
+                recenzowaniu, aby przekazać i otrzymać informację zwrotną na temat
+                postępów w swoich Projektach Sekwencji Tytułów.
+            Maximizing System Reliability:
+              name: Maksymalizacja niezawodności systemu
+              description_student: Eksplorujesz niezawodność systemu, biorąc pod uwagę
+                użytkowników końcowych programów i przeprowadzając testy, aby sprawdzić,
+                czy programy spełniają ich potrzeby i oczekiwania. Określasz strategie
+                testowania niezawodności systemu i poznajesz swoją rolę jako inżyniera
+                oprogramowania w tworzeniu i utrzymywaniu działającego oprogramowania.
+              description_teacher: Uczniowie badają niezawodność systemu, biorąc pod
+                uwagę użytkowników końcowych programów i przeprowadzając testy, aby
+                sprawdzić, czy programy spełniają ich potrzeby i oczekiwania. Identyfikują
+                strategie testowania niezawodności systemu i rozpoznają swoją rolę
+                jako inżynierów oprogramowania w opracowywaniu i utrzymywaniu działającego
+                oprogramowania.
+            Title Sequence Project - Day 1:
+              name: Projekt Sekwencji Tytułów - Dzień 1
+              description_student: Kontynuujesz rozwijanie Projektu Sekwencji Tytułów,
+                aby utworzyć sekwencję tytułów do programu promującego ulubionego
+                twórcę treści za pomocą obrazów i rysunków do tworzenia animacji i
+                efektów. Najpierw dokonujesz samooceny swojej pracy, aby ocenić postępy
+                w spełnianiu wymagań projektu, a następnie przeprowadzasz testy akceptacyjne,
+                aby określić, które historyjki użytkownika są kompletne. Korzystasz
+                z samooceny i informacji zwrotnej, aby ustalić priorytety pozostałych
+                zadań i kontynuować rozwój swojego projektu.
+              description_teacher: Uczniowie nadal rozwijają swoje Projekty Sekwencji
+                Tytułów, aby stworzyć sekwencję tytułów do programu promującego ich
+                ulubionego twórcę treści, używając obrazów i rysunków do tworzenia
+                animacji i efektów. Najpierw dokonują samooceny swojej pracy, aby
+                ocenić postępy w spełnianiu wymagań projektu, a następnie przeprowadzają
+                testy akceptacyjne, aby określić, które z ich historyjek użytkownika
+                są kompletne. Wykorzystują samoocenę i informacje zwrotne, aby ustalić
+                priorytety pozostałych zadań i kontynuować rozwój swoich projektów.
+            Title Sequence Project - Day 2:
+              name: Projekt Sekwencji Tytułów - Dzień 2
+              description_student: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji Twojego projektu. Podczas tej lekcji uzyskasz
+                opinie innych uczniów, aby ustalić pozostałe do wykonania zadania
+                i będziesz kontynuować prace nad swoim Projektem sekwencji tytułów.
+              description_teacher: Na poprzedniej lekcji, uczniowie wykonywali samoocenę
+                i spisywali kryteria akceptacji ich projektów. Podczas tej lekcji
+                otrzymują opinie innych uczniów, aby ustalić pozostałe do wykonania
+                zadania i kontynuować prace nad swoimi Projektami sekwencji tytułów.
+            Title Sequence Project - Day 3:
+              name: Projekt Sekwencji Tytułów - Dzień 3
+              description_student: Wprowadzasz ostateczne poprawki i aktualizacje
+                na podstawie przeglądów kodu i Tablicy Planowania Projektu. Dzielisz
+                się swoim Projektem Sekwencji Tytułów ze swoimi rówieśnikami. Następnie
+                świętujesz swój sukces i kończysz ostateczną refleksją nad procesem
+                rozwoju.
+              description_teacher: Uczniowie dokonują ostatecznych poprawek i aktualizacji
+                w oparciu o przeglądy kodu i Tablicę Planowania Projektu. Dzielą się
+                swoimi Projektami Sekwencji Tytułów ze swoimi rówieśnikami. Następnie
+                świętują swój sukces i dokonują ostatecznej refleksji nad procesem
+                rozwoju.
+            FRQ Day:
+              name: Dzień FRQ
+              description_student: 'Niezależnie wypełniasz pytanie Free Response Question
+                (FRQ) typu AP. Odpowiadasz za swoje tempo i zastosowanie trzy etapowego
+                procesu: dodawania adnotacji do pytań, pisania pseudokodu, a następnie
+                pisania swojego kodu w Java. Następnie wypełniasz post-FRQ, aby zidentyfikować
+                obszary, w których możesz wykorzystać więcej z praktyki.'
+              description_teacher: Uczniowie niezależnie wypełniają pytanie Free Response
+                Question (FRQ) typu AP. Następnie wypełniają ankietę post-FRQ, aby
+                podsumować swoje doświadczenie w testowaniu i zidentyfikować luki
+                w swojej wiedzy.
+            Assessment Day:
+              name: Dzień sprawdzianu
+              description_student: W tej jednostce ćwiczyłeś projektowanie i tworzenie
+                oprogramowania, wykorzystując umiejętności i konstrukcje programistyczne,
+                których nauczyłeś się podczas kursu, aby opracować sekwencję tytułów
+                dla swojego ulubionego twórcy treści. Użyłeś strategii dekompozycji
+                i zasad programowania obiektowego, aby zaplanować i wdrożyć swoje
+                pomysły, zapewniając jednocześnie, że Twój projekt spełnia określone
+                wymagania. Poznałeś metody rekurencyjne i porównałeś rozwiązania rekurencyjne
+                i iteracyjne pod kątem wydajności. Pod koniec tej jednostki rozważałeś
+                potrzebę maksymalizacji niezawodności systemu, analizując kod open
+                source. Teraz oceniasz osiągnięcie celów nauczania jednostki i umiejętności
+                na podstawie testu wielokrotnego wyboru.
+              description_teacher: W tej jednostce uczniowie ćwiczyli projektowanie
+                i tworzenie oprogramowania, wykorzystując umiejętności i konstrukcje
+                programistyczne, których nauczyli się podczas kursu, aby opracować
+                sekwencję tytułów dla swojego ulubionego twórcy treści. Wykorzystywali
+                strategie dekompozycji i zasady programowania obiektowego, aby planować
+                i wdrażać swoje pomysły, zapewniając jednocześnie, że ich projekty
+                spełniają określone wymagania. Badali metody rekurencyjne i porównywali
+                rozwiązania rekurencyjne i iteracyjne pod kątem wydajności. Pod koniec
+                jednostki rozważali potrzebę maksymalizacji niezawodności systemu,
+                analizując kod open source. Teraz oceniają osiągnięcie celów uczenia
+                się jednostki i umiejętności na podstawie testu wielokrotnego wyboru.
+            Unit 7 Pilot Survey:
+              name: Jednostka 7 Badanie pilotażowe
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
+              key: Korzystanie z poleceń
+            lesson-10:
+              key: lekcja 10
+              name: Pisanie metod spełniających warunki
+              description_student: Twój ulubiony twórca treści zwerbował Cię do stworzenia
+                sekwencji tytułów do wykorzystania we wszystkich swoich treściach!
+                Projekt Sekwencji Tytułów to duży projekt, nad którym pracujesz w
+                całej jednostce, a strategie zarządzania projektami pomagają zorganizować
+                i ustrukturyzować Twoją pracę.
+              description_teacher: Uczniowie zapoznają się z metodami pisania pod
+                kątem spełnienia warunków i poznają abstrakcję proceduralną oraz dekompozycję
+                metod. Następnie są wprowadzani do Projektu Sekwencji Tytułów i oceniają
+                wymagania i przykłady w celu zidentyfikowania pytań i kluczowych własności.
+            lesson-6:
+              key: lekcja 6
+              name: Odkrywanie składników metody i funkcjonalności
+              description_student: Ponownie odwiedzasz elementy sygnatury metody i
+                przeglądasz relacje między parametrami aktualnymi i formalnymi. Rozróżniasz
+                metody „void” i inne niż „void” oraz debugujesz kod z niepoprawnymi
+                nagłówkami metod i instrukcjami return. Następnie planujesz zadania,
+                które musisz wykonać w swoim Projekcie Sekwencji Tytułów,
+              description_teacher: Uczniowie ponownie przyglądają się elementom sygnatury
+                metody i dokonują przeglądu relacji między aktualnymi i formalnymi
+                parametrami. Rozróżniają metody „void” i inne niż „void” oraz debugują
+                kod z niepoprawnymi nagłówkami metod i instrukcjami return. Następnie
+                planują zadania, które muszą wykonać w ramach Projektu Sekwencji Tytułów.
+            lesson-7:
+              key: lekcja 7
+              name: Używanie odniesień do obiektów jako parametrów
+              description_student: Wracasz do przekazywania prymitywów i odwołań do
+                obiektów jako parametrów, aby zidentyfikować podobieństwa i różnice
+                między nimi. Określasz dane wyjściowe segmentów kodu i wpływ na obiekty,
+                używając odniesień do obiektów jako parametrów. Następnie poznasz
+                znaczenie najlepszych praktyk dotyczących używania odwołań do obiektów
+                jako parametrów, aby upewnić się, że obiekty są modyfikowane tylko
+                wtedy, gdy jest to wymagane.
+              description_teacher: Uczniowie wracają do przekazywania prymitywów i
+                odwołań do obiektów jako parametrów, aby zidentyfikować podobieństwa
+                i różnice między nimi. Określają  dane wyjściowe segmentów kodu i
+                wpływ na obiekty, używając odniesień do obiektów jako parametrów.
+                Następnie poznają znaczenie najlepszych praktyk dotyczących używania
+                odwołań do obiektów jako parametrów, aby upewnić się, że obiekty są
+                modyfikowane tylko wtedy, gdy jest to wymagane.
+            lesson-8:
+              key: lekcja 8
+              name: Metody przeciążania
+              description_student: Ponownie powracasz do celu przeciążania i badasz
+                przeciążone metody, aby określić ich wpływ na funkcjonalność programu.
+                Następnie piszesz przeciążone metody rozwiązywania problemów w konsoli,
+                Sąsiedztwie lub Teatrze, zanim zaczniesz tworzyć początkowe plany
+                dotyczące Projektu Sekwencji Tytułów.
+              description_teacher: Uczniowie powracają  do celu przeciążania i badają
+                przeciążone metody, aby określić ich wpływ na funkcjonalność programu.
+                Następnie piszą przeciążone metody rozwiązywania problemów w konsoli,
+                Sąsiedztwie lub Teatrze, zanim zaczną tworzyć początkowe plany dotyczące
+                Projektu Sekwencji Tytułów.
+            lesson-9:
+              key: lekcja 9
+              name: Dostęp do zachowania obiektu
+              description_student: Ponownie odwiedzasz słowa kluczowe „public” i „private”,
+                aby określić zewnętrzną dostępność atrybutów i zachowań obiektu. Badasz
+                wpływ ustawiania metod na „private” na funkcjonalność programu i identyfikujesz
+                korzyści płynące z używania metod „private”.
+              description_teacher: Uczniowie ponownie odwiedzają  słowa kluczowe „public”
+                i „private”, aby określić zewnętrzną dostępność atrybutów i zachowań
+                obiektu. Badają wpływ ustawiania metod na „private” na funkcjonalność
+                programu i identyfikują korzyści płynące z używania metod „private”.
+            lesson-11:
+              key: lekcja 11
+              name: Nadrzędne metody
+              description_student: Na poprzednich lekcjach miałeś nadpisane metody
+                w klasie `Object` i pracowałeś z hierarchiami klas, które implementowały
+                nadpisane metody. Eksplorujesz pisanie i wywoływanie nadpisanych metod
+                w klasach niestandardowych, a następnie uczysz się używać wartości
+                wartowniczych, aby poprawić swoją zdolność do pracy z danymi wejściowymi
+                użytkownika w swoich programach.
+              description_teacher: Uczniowie na poprzednich lekcjach mieli nadpisane
+                metody w klasie `Object` i pracowali z hierarchiami klas, które implementowały
+                nadpisane metody. Piszą i wywołują nadpisane metody w klasach niestandardowych,
+                a następnie uczą się używać wartości wartowniczych, aby poprawić swoją
+                zdolność do pracy z danymi wejściowymi użytkownika w swoich programach.
+            lesson-12:
+              key: lekcja 12
+              name: Odkrywanie metod rekurencyjnych
+              description_student: Eksplorujesz metody rekurencyjne poprzez wybraną
+                przez siebie aktywność bez komputera i ćwiczysz śledzenie kodu za
+                pomocą metod rekurencyjnych. Następnie pracujesz nad zadaniami na
+                Tablicy Planowania Projektu, aby kontynuować opracowywanie Projektu
+                Sekwencji Tytułów.
+              description_teacher: Uczniowie eksplorują metody rekurencyjne poprzez
+                wybraną przez siebie aktywność bez komputera i ćwiczą śledzenie kodu
+                za pomocą metod rekurencyjnych. Następnie pracują nad zadaniami na
+                Tablicy Planowania Projektu, aby kontynuować opracowywanie Projektu
+                Sekwencji Tytułów.
+            lesson-13:
+              key: lekcja 13
+              name: Porównanie rozwiązań rekurencyjnych i iteracyjnych
+              description_student: Czasami łatwiej jest napisać metodę iteracyjną,
+                a innym razem najlepsza jest metoda rekurencyjna! Badasz problemy
+                i algorytmy, aby zidentyfikować ich przypadki bazowe i przypadki rekurencyjne.
+                Rozróżniasz rozwiązania rekurencyjne i iteracyjne i ćwiczysz konwertowanie
+                rozwiązań iteracyjnych na metody rekurencyjne.
+              description_teacher: Uczniowie badają problemy i algorytmy, aby zidentyfikować
+                ich przypadki bazowe i przypadki rekurencyjne. Rozróżniają rozwiązania
+                rekurencyjne i iteracyjne i ćwiczą konwertowanie rozwiązań iteracyjnych
+                na metody rekurencyjne.
+            lesson-14:
+              key: lekcja 14
+              name: Pisanie metod rekurencyjnych
+              description_student: Porównujesz rozwiązania iteracyjne i rekurencyjne
+                w pracy ze "String" i ćwiczysz śledzenie rozwiązań rekurencyjnych
+                za pomocą "String",  tablic i "ArrayList". Następnie bierzesz udział
+                we wzajemnej recenzji, aby przekazywać i otrzymywać informacje zwrotne
+                na temat postępów w pracy nad Projektem Sekwencji Tytułów.
+              description_teacher: Uczniowie porównują rozwiązania iteracyjne i rekurencyjne
+                do pracy z "String" i ćwiczą śledzenie rozwiązań rekurencyjnych za
+                pomocą "String", tablic i "ArraList". Następnie biorą udział we wzajemnym
+                recenzowaniu, aby przekazać i otrzymać informację zwrotną na temat
+                postępów w swoich Projektach Sekwencji Tytułów.
+            lesson-15:
+              key: lekcja 15
+              name: Maksymalizacja niezawodności systemu
+              description_student: Eksplorujesz niezawodność systemu, biorąc pod uwagę
+                użytkowników końcowych programów i przeprowadzając testy, aby sprawdzić,
+                czy programy spełniają ich potrzeby i oczekiwania. Określasz strategie
+                testowania niezawodności systemu i poznajesz swoją rolę jako inżyniera
+                oprogramowania w tworzeniu i utrzymywaniu działającego oprogramowania.
+              description_teacher: Uczniowie badają niezawodność systemu, biorąc pod
+                uwagę użytkowników końcowych programów i przeprowadzając testy, aby
+                sprawdzić, czy programy spełniają ich potrzeby i oczekiwania. Identyfikują
+                strategie testowania niezawodności systemu i rozpoznają swoją rolę
+                jako inżynierów oprogramowania w opracowywaniu i utrzymywaniu działającego
+                oprogramowania.
+            lesson-1:
+              key: lekcja 1
+              name: Projekt Sekwencji Tytułów - Dzień 1
+              description_student: Kontynuujesz rozwijanie Projektu Sekwencji Tytułów,
+                aby utworzyć sekwencję tytułów do programu promującego ulubionego
+                twórcę treści za pomocą obrazów i rysunków do tworzenia animacji i
+                efektów. Najpierw dokonujesz samooceny swojej pracy, aby ocenić postępy
+                w spełnianiu wymagań projektu, a następnie przeprowadzasz testy akceptacyjne,
+                aby określić, które historyjki użytkownika są kompletne. Korzystasz
+                z samooceny i informacji zwrotnej, aby ustalić priorytety pozostałych
+                zadań i kontynuować rozwój swojego projektu.
+              description_teacher: Uczniowie nadal rozwijają swoje Projekty Sekwencji
+                Tytułów, aby stworzyć sekwencję tytułów do programu promującego ich
+                ulubionego twórcę treści, używając obrazów i rysunków do tworzenia
+                animacji i efektów. Najpierw dokonują samooceny swojej pracy, aby
+                ocenić postępy w spełnianiu wymagań projektu, a następnie przeprowadzają
+                testy akceptacyjne, aby określić, które z ich historyjek użytkownika
+                są kompletne. Wykorzystują samoocenę i informacje zwrotne, aby ustalić
+                priorytety pozostałych zadań i kontynuować rozwój swoich projektów.
+            lesson-2:
+              key: lekcja 2
+              name: Projekt Sekwencji Tytułów - Dzień 2
+              description_student: Poprzednia lekcja polegała na samoocenie i spisaniu
+                kryteriów akceptacji Twojego projektu. Podczas tej lekcji uzyskasz
+                opinie innych uczniów, aby ustalić pozostałe do wykonania zadania
+                i będziesz kontynuować prace nad swoim Projektem sekwencji tytułów.
+              description_teacher: Na poprzedniej lekcji, uczniowie wykonywali samoocenę
+                i spisywali kryteria akceptacji ich projektów. Podczas tej lekcji
+                otrzymują opinie innych uczniów, aby ustalić pozostałe do wykonania
+                zadania i kontynuować prace nad swoimi Projektami sekwencji tytułów.
+            lesson-3:
+              key: lekcja 3
+              name: Projekt Sekwencji Tytułów - Dzień 3
+              description_student: Wprowadzasz ostateczne poprawki i aktualizacje
+                na podstawie przeglądów kodu i Tablicy Planowania Projektu. Dzielisz
+                się swoim Projektem Sekwencji Tytułów ze swoimi rówieśnikami. Następnie
+                świętujesz swój sukces i kończysz ostateczną refleksją nad procesem
+                rozwoju.
+              description_teacher: Uczniowie dokonują ostatecznych poprawek i aktualizacji
+                w oparciu o przeglądy kodu i Tablicę Planowania Projektu. Dzielą się
+                swoimi Projektami Sekwencji Tytułów ze swoimi rówieśnikami. Następnie
+                świętują swój sukces i dokonują ostatecznej refleksji nad procesem
+                rozwoju.
+            lesson-4:
+              key: lekcja 4
+              name: Dzień FRQ
+              description_student: 'Niezależnie wypełniasz pytanie Free Response Question
+                (FRQ) typu AP. Odpowiadasz za swoje tempo i zastosowanie trzy etapowego
+                procesu: dodawania adnotacji do pytań, pisania pseudokodu, a następnie
+                pisania swojego kodu w Java. Następnie wypełniasz post-FRQ, aby zidentyfikować
+                obszary, w których możesz wykorzystać więcej z praktyki.'
+              description_teacher: Uczniowie niezależnie wypełniają pytanie Free Response
+                Question (FRQ) typu AP. Następnie wypełniają ankietę post-FRQ, aby
+                podsumować swoje doświadczenie w testowaniu i zidentyfikować luki
+                w swojej wiedzy.
+            lesson-5:
+              key: lekcja 5
+              name: Dzień sprawdzianu
+              description_student: W tej jednostce ćwiczyłeś projektowanie i tworzenie
+                oprogramowania, wykorzystując umiejętności i konstrukcje programistyczne,
+                których nauczyłeś się podczas kursu, aby opracować sekwencję tytułów
+                dla swojego ulubionego twórcy treści. Użyłeś strategii dekompozycji
+                i zasad programowania obiektowego, aby zaplanować i wdrożyć swoje
+                pomysły, zapewniając jednocześnie, że Twój projekt spełnia określone
+                wymagania. Poznałeś metody rekurencyjne i porównałeś rozwiązania rekurencyjne
+                i iteracyjne pod kątem wydajności. Pod koniec tej jednostki rozważałeś
+                potrzebę maksymalizacji niezawodności systemu, analizując kod open
+                source. Teraz oceniasz osiągnięcie celów nauczania jednostki i umiejętności
+                na podstawie testu wielokrotnego wyboru.
+              description_teacher: W tej jednostce uczniowie ćwiczyli projektowanie
+                i tworzenie oprogramowania, wykorzystując umiejętności i konstrukcje
+                programistyczne, których nauczyli się podczas kursu, aby opracować
+                sekwencję tytułów dla swojego ulubionego twórcy treści. Wykorzystywali
+                strategie dekompozycji i zasady programowania obiektowego, aby planować
+                i wdrażać swoje pomysły, zapewniając jednocześnie, że ich projekty
+                spełniają określone wymagania. Badali metody rekurencyjne i porównywali
+                rozwiązania rekurencyjne i iteracyjne pod kątem wydajności. Pod koniec
+                jednostki rozważali potrzebę maksymalizacji niezawodności systemu,
+                analizując kod open source. Teraz oceniają osiągnięcie celów uczenia
+                się jednostki i umiejętności na podstawie testu wielokrotnego wyboru.
+            lesson-16:
+              key: lekcja 16
+              name: Jednostka 7 Badanie pilotażowe
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
+          name: csa7-pilot-extra
+        csa8-pilot-extra:
+          lessons:
+            Planning a Project:
+              name: Planowanie projektu
+              description_student: Zostałeś poproszony o zaprojektowanie i stworzenie
+                gry, w którą mogą grać wszyscy w Twojej społeczności. Inkluzywny Projekt
+                Placu zabaw to duży projekt, nad którym pracujesz w całej jednostce,
+                a strategie zarządzania projektami pomagają organizować i uporządkować
+                Twoją pracę.
+              description_teacher: Uczniowie poznają projektowanie gier i zasady stosowane
+                przez projektantów gier do tworzenia gier inkluzywnych. Zapoznają
+                się z projektem Inkluzywny Projekt Placu zabaw i oceniają wymagania
+                oraz przykłady w celu zidentyfikowania pytań i kluczowych funkcji.
+            Searching for Data:
+              name: Wyszukiwanie danych
+              description_student: Użyłeś wyszukiwania standardowymi algorytmami,
+                aby znaleźć element docelowy na liście. Na tej lekcji zapoznasz się
+                z najlepszymi, średnimi i najgorszymi przypadkami liniowego algorytmu
+                wyszukiwania przy użyciu liczby wykonań.
+              description_teacher: Uczniowie korzystali z wyszukiwania standardowymi
+                algorytmami, aby znaleźć element docelowy na liście. W tej lekcji
+                uczniowie badają najlepsze, średnie i najgorsze przypadki liniowego
+                algorytmu wyszukiwania przy użyciu liczby wykonań.
+            Implementing the Binary Search:
+              name: Implementacja wyszukiwania binarnego
+              description_student: Odkrywasz lepszy algorytm wyszukiwania, który może
+                działać wydajniej, jeśli lista jest już posortowana. Śledzisz kod
+                wyszukiwania binarnego, aby ocenić jego efektywność i porównać go
+                z wyszukiwaniem liniowym. Algorytm wyszukiwania binarnego służy do
+                rozwiązywania problemów w różnych scenariuszach.
+              description_teacher: Uczniowie odkrywają lepszy algorytm wyszukiwania,
+                który może działać szybciej, jeśli lista jest już posortowana. Śledzą
+                kod wyszukiwania binarnego, aby ocenić jego efektywność i porównać
+                go z wyszukiwaniem liniowym. Następnie stosują algorytm wyszukiwania
+                binarnego do rozwiązywania problemów w różnych scenariuszach.
+            Implementing a Recursive Binary Search:
+              name: Implementacja rekurencyjnego wyszukiwania binarnego
+              description_student: Podobnie jak wiele algorytmów, które napisałeś,
+                wyszukiwanie binarne można zaimplementować rekurencyjnie. Na tej lekcji
+                zapoznasz się z rekurencyjną implementacją wyszukiwania binarnego
+                i zastosowaniem go do rozwiązywania różnych problemów.
+              description_teacher: Uczniowie zapoznają się z algorytmem wyszukiwania
+                binarnego i poznają jego implementację rekurencyjną. Następnie stosują
+                rekurencyjny algorytm wyszukiwania binarnego do rozwiązywania problemów,
+                które zawierają różne typy danych, struktury danych i ograniczenia
+                problemowe.
+            Implementing the Selection Sort:
+              name: Implementacja sortowania przez wybór
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań.
+            Implementing the Insertion Sort:
+              name: Implementacja sortowania przez wstawianie
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+                Rozróżniasz algorytmy sortowania przez wybór i sortowania przez wstawianie
+                porównując ich efektywność.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań. Uczniowie rozróżniają algorytmy sortowania przez wybór
+                i sortowania przez wstawianie porównując ich efektywność.
+            Implementing the Merge Sort:
+              name: Implementacja sortowania przez scalanie
+              description_student: Analizujesz algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikujesz składowe algorytmu i poznajesz funkcje pomocnicze.
+                Śledzisz algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikują składowe algorytmu i poznają funkcje pomocnicze. Uczniowie
+                śledzą algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+            Expanding Standard Algorithms:
+              name: Rozszerzanie standardowych algorytmów
+            Defending Privacy and Security:
+              name: Ochrona prywatności i bezpieczeństwa
+            Inclusive Playground Project - Day 1:
+              name: Włączający projekt Placu zabaw – Dzień 1
+            Inclusive Playground Project - Day 2:
+              name: Włączający projekt Placu zabaw – Dzień 2
+            Inclusive Playground Project - Day 3:
+              name: Włączający projekt Placu zabaw – Dzień 3
+            FRQ Day:
+              name: Dzień FRQ
+            Assessment Day:
+              name: Dzień sprawdzianu
+            Unit 8 Pilot Survey:
+              name: Jednostka 8 Badanie pilotażowe
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
+              key: Korzystanie z poleceń
+            lesson-1:
+              key: lekcja 1
+              name: Planowanie projektu
+              description_student: Zostałeś poproszony o zaprojektowanie i stworzenie
+                gry, w którą mogą grać wszyscy w Twojej społeczności. Inkluzywny Projekt
+                Placu zabaw to duży projekt, nad którym pracujesz w całej jednostce,
+                a strategie zarządzania projektami pomagają organizować i uporządkować
+                Twoją pracę.
+              description_teacher: Uczniowie poznają projektowanie gier i zasady stosowane
+                przez projektantów gier do tworzenia gier inkluzywnych. Zapoznają
+                się z projektem Inkluzywny Projekt Placu zabaw i oceniają wymagania
+                oraz przykłady w celu zidentyfikowania pytań i kluczowych funkcji.
+            lesson-2:
+              key: lekcja 2
+              name: Wyszukiwanie danych
+              description_student: Użyłeś wyszukiwania standardowymi algorytmami,
+                aby znaleźć element docelowy na liście. Na tej lekcji zapoznasz się
+                z najlepszymi, średnimi i najgorszymi przypadkami liniowego algorytmu
+                wyszukiwania przy użyciu liczby wykonań.
+              description_teacher: Uczniowie korzystali z wyszukiwania standardowymi
+                algorytmami, aby znaleźć element docelowy na liście. W tej lekcji
+                uczniowie badają najlepsze, średnie i najgorsze przypadki liniowego
+                algorytmu wyszukiwania przy użyciu liczby wykonań.
+            lesson-3:
+              key: lekcja 3
+              name: Implementacja wyszukiwania binarnego
+              description_student: Odkrywasz lepszy algorytm wyszukiwania, który może
+                działać wydajniej, jeśli lista jest już posortowana. Śledzisz kod
+                wyszukiwania binarnego, aby ocenić jego efektywność i porównać go
+                z wyszukiwaniem liniowym. Algorytm wyszukiwania binarnego służy do
+                rozwiązywania problemów w różnych scenariuszach.
+              description_teacher: Uczniowie odkrywają lepszy algorytm wyszukiwania,
+                który może działać szybciej, jeśli lista jest już posortowana. Śledzą
+                kod wyszukiwania binarnego, aby ocenić jego efektywność i porównać
+                go z wyszukiwaniem liniowym. Następnie stosują algorytm wyszukiwania
+                binarnego do rozwiązywania problemów w różnych scenariuszach.
+            lesson-4:
+              key: lekcja 4
+              name: Implementacja rekurencyjnego wyszukiwania binarnego
+              description_student: Podobnie jak wiele algorytmów, które napisałeś,
+                wyszukiwanie binarne można zaimplementować rekurencyjnie. Na tej lekcji
+                zapoznasz się z rekurencyjną implementacją wyszukiwania binarnego
+                i zastosowaniem go do rozwiązywania różnych problemów.
+              description_teacher: Uczniowie zapoznają się z algorytmem wyszukiwania
+                binarnego i poznają jego implementację rekurencyjną. Następnie stosują
+                rekurencyjny algorytm wyszukiwania binarnego do rozwiązywania problemów,
+                które zawierają różne typy danych, struktury danych i ograniczenia
+                problemowe.
+            lesson-5:
+              key: lekcja 5
+              name: Implementacja sortowania przez wybór
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań.
+            lesson-10:
+              key: lekcja 10
+              name: Implementacja sortowania przez wstawianie
+              description_student: Analizujesz algorytm sortowania przez wybór, aby
+                poprawnie organizować elementy na liście. Śledzisz algorytm, aby zrozumieć
+                jego działanie i określić jego efektywność za pomocą liczby wykonań.
+                Rozróżniasz algorytmy sortowania przez wybór i sortowania przez wstawianie
+                porównując ich efektywność.
+              description_teacher: Uczniowie analizują algorytm sortowania przez wybór,
+                aby poprawnie organizować elementy na liście. Następnie śledzą algorytm,
+                aby zrozumieć jego działanie i określić jego efektywność za pomocą
+                liczby wykonań. Uczniowie rozróżniają algorytmy sortowania przez wybór
+                i sortowania przez wstawianie porównując ich efektywność.
+            lesson-6:
+              key: lekcja 6
+              name: Implementacja sortowania przez scalanie
+              description_student: Analizujesz algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikujesz składowe algorytmu i poznajesz funkcje pomocnicze.
+                Śledzisz algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+              description_teacher: Uczniowie analizują algorytm sortowania przez scalanie,
+                aby organizować elementy na liście przy użyciu metody dziel i zwyciężaj.
+                Identyfikują składowe algorytmu i poznają funkcje pomocnicze. Uczniowie
+                śledzą algorytm, aby zrozumieć jego działanie i określić jego efektywność
+                za pomocą liczby wykonań.
+            lesson-7:
+              key: lekcja 7
+              name: Rozszerzanie standardowych algorytmów
+            lesson-8:
+              key: lekcja 8
+            lesson-9:
+              key: lekcja 9
+              name: Ochrona prywatności i bezpieczeństwa
+            lesson-11:
+              key: lekcja 11
+              name: Włączający projekt Placu zabaw – Dzień 1
+            lesson-12:
+              key: lekcja 12
+              name: Włączający projekt Placu zabaw – Dzień 2
+            lesson-13:
+              key: lekcja 13
+              name: Włączający projekt Placu zabaw – Dzień 3
+            lesson-14:
+              key: lekcja 14
+              name: Dzień FRQ
+            lesson-15:
+              key: lekcja 15
+              name: Dzień sprawdzianu
+            lesson-16:
+              key: lekcja 16
+              name: Jednostka 8 Badanie pilotażowe
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
+        csa-backpack-2022:
+          lessons:
+            lesson-1:
+              name: Malarz Plus
+          name: csa-backpack-2022
+          title: Wersje CSA w plecakach [22-23]
+          description: Wersje zajęć, które uczniowie mają w swoich **Plecakach** przez
+            cały kurs.

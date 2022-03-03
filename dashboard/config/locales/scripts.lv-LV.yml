@@ -2421,6 +2421,10 @@ lv:
           lesson_groups:
             lessonGroup-3:
               display_name: Mainīgie
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funkcijas
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2552,6 +2556,10 @@ lv:
               display_name: Digitālā pilsonība
             lessonGroup-8:
               display_name: Mainīgie
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Cikli
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -2566,3 +2574,7 @@ lv:
               name: Atkļūdošana
             lesson-19:
               name: Atkļūdošana
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Cikli

@@ -3,6 +3,7 @@ kn:
   data:
     script:
       category:
+        csf_category_name: CS ಫಂಡಮೆಂಟಲ್ಸ್
         hoc_category_name: ಅವರ್ ಆಫ್‌ ಕೋಡ್
         math_category_name: ಗಣಿತ
         other_category_name: ಇತರೆ
@@ -13,6 +14,8 @@ kn:
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Flappy:
+              name: ಫ್ಲಾಪಿ
         course3:
           description_audience: ವಯಸ್ಸು 8-18
         playlab:
@@ -76,6 +79,16 @@ kn:
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+        events:
+          title: ಈವೆಂಟ್‌ಗಳು
+          description: ಈವೆಂಟ್‌ಗಳು
+          description_short: ಈವೆಂಟ್‌ಗಳು
+          lessons:
+            Calc:
+              name: ಕ್ಯಾಲ್ಕ್
+            Eval:
+              name: ಈವಲ್
+          student_description: ಈವೆಂಟ್‌ಗಳು
         flappy:
           title: ಫ್ಲಾಪಿ ಕೋಡ್
           description: ಕೇವಲ 10 ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮದೇ ಗೇಮ್‌ ಬರೆಯಬೇಕೆ? ನಮ್ಮ ಫ್ಲಾಪ್ಪಿ ಕೋಡ್
@@ -93,6 +106,11 @@ kn:
                 ವರ್ತನೆಯನ್ನು ಪರಿಚಯಿಸುವ ಮೂಲಕ ಸಂಕ್ಷಿಪ್ತ ಚರ್ಚೆಯೊಂದಿಗೆ ಇದು ಆರಂಭವಾಗುತ್ತದೆ
                 ಮತ್ತು ನಂತರ, ಆನ್‌ಲೈನ್ ಪಝಲ್‌ಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಕಂಪ್ಯೂಟರ್ ಬಳಸುವುದಕ್ಕೆ
                 ಅವರು ಸಾಗುತ್ತಾರೆ.
+        step:
+          title: ಹಂತ
+          lessons:
+            Step:
+              name: ಹಂತ
         Hour of Code:
           title: ಅವರ್ ಆಫ್‌ ಕೋಡ್ 2013
           lessons:
@@ -112,10 +130,24 @@ kn:
                 **ಕಂಪ್ರೆಸ್** ಮಾಡಬೇಕು. ಈ ಪಾಠದಲ್ಲಿ, ವಿದ್ಯಾರ್ಥಿಗಳು ಮಾದರಿಗಳನ್ನು ಹುಡುಕುವ
                 ಮೂಲಕ ಮತ್ತು ಪಠ್ಯದ ದೊಡ್ಡ ಮಾದರಿಗಳಿಗೆ ಚಿಹ್ನೆಗಳನ್ನು ಬದಲಿಸುವ ಮೂಲಕ ಇಂಗ್ಲಿಷ್
                 ಪಠ್ಯದ ಭಾಗಗಳನ್ನು ಸಂಕುಚಿತಗೊಳಿಸಲು ಪಠ್ಯ ಸಂಕೋಚನ ವಿಜೆಟ್ ಅನ್ನು ಬಳಸುತ್ತಾರೆ.\\\r"
+        allthethings:
+          lessons:
+            Flappy:
+              name: ಫ್ಲಾಪಿ
+            Web Lab:
+              name: ವೆಬ್ ಲ್ಯಾಬ್
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+        K5-OnlinePD:
+          lessons:
+            Computer Science Fundamentals:
+              name: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್
         asUnplugged:
           description_audience: ವಯಸ್ಸು 6-13
         afterschool1:
           description_audience: ವಯಸ್ಸು 7-13
+        cspunit4draft:
+          description_short: ಡೇಟಾ
         Special Fun:
           description_audience: ವಯಸ್ಸು 10-18
         SpecialSeries:
@@ -205,6 +237,8 @@ kn:
           lesson_groups:
             required:
               display_name: ಮುನ್ನೋಟ
+        CSDU5-Draft:
+          description_short: ಡೇಟಾ
         CSF_Secret_Sample_Story:
           description_audience: ವಯಸ್ಸು 8-18+
         MikeTest:
@@ -223,6 +257,8 @@ kn:
           lessons:
             Debugging:
               name: ಡಿಬಗ್ ಮಾಡುವುದು
+            Events:
+              name: ಈವೆಂಟ್‌ಗಳು
             Loops:
               name: ಲೂಪ್‌ಗಳು
         grade4:
@@ -235,6 +271,8 @@ kn:
           lessons:
             Debugging:
               name: ಡಿಬಗ್ ಮಾಡುವುದು
+            Events:
+              name: ಈವೆಂಟ್‌ಗಳು
             Loops:
               name: ಲೂಪ್‌ಗಳು
             'Debugging: Unspotted Bugs':
@@ -255,10 +293,15 @@ kn:
               name: ಕಂಡೀಷನಲ್ಸ್‌
         grade2:
           description_audience: ವಯಸ್ಸು 5-18
+          lessons:
+            Flappy:
+              name: ಫ್ಲಾಪಿ
         k5concepts:
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Events:
+              name: ಈವೆಂಟ್‌ಗಳು
             Loops:
               name: ಲೂಪ್‌ಗಳು
             Nested Loops:
@@ -551,6 +594,8 @@ kn:
           lessons:
             Lists:
               name: ಪಟ್ಟಿಗಳು
+            Map:
+              name: ನಕ್ಷೆ
         coursee-ramp:
           lessons:
             Conditionals:
@@ -1667,6 +1712,8 @@ kn:
           lesson_groups:
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_data:
+              display_name: ಡೇಟಾ
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
@@ -1696,6 +1743,8 @@ kn:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
         coursed-2019:
           lesson_groups:
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
@@ -1819,6 +1868,10 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_data:
+              display_name: ಡೇಟಾ
           lessons:
             'Loops: Getting Loopy':
               name: 'ಲೂಪ್ಸ್: ಲೂಪಿ ಆಗುವುದು'
@@ -1831,6 +1884,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             Programming in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
@@ -1884,6 +1939,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
@@ -1904,6 +1961,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'ಡಿಬಗ್ ಮಾಡುವುದು: ಗುರುತಿಸಿಲ್ಲದ ಬಗ್‌ಗಳು'
@@ -2054,6 +2113,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             Programming in Maze:
               name: ಮೇಝ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
@@ -2131,10 +2192,14 @@ kn:
                 ಧ್ವನಿ ಅಗತ್ಯವಿದ್ದು, ಸಂಗೀತಕ್ಕೆ ಪ್ರತಿಕ್ರಿಯಿಸುವಂತೆ ನಿರ್ಮಿಸಲಾಗಿದೆ.
         k5-onlinepd-2019:
           lessons:
+            Computer Science Fundamentals:
+              name: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್
             Loops:
               name: ಲೂಪ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Events:
+              name: ಈವೆಂಟ್‌ಗಳು
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             End of Course projects:
@@ -2174,6 +2239,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
@@ -2185,6 +2252,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
@@ -2219,6 +2288,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             Going Places Safely:
               description_teacher: ಕಾಮನ್ ಸೆನ್ಸ್‌ ಮೀಡಿಯಾ ಸಹಭಾಗಿತ್ವದಲ್ಲಿ, ಖಾಸಗಿ ಮಾಹಿತಿಯನ್ನು
@@ -2255,6 +2326,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             'Events: The Big Event':
               description_teacher: ಮೊದಲೇ ಬರೆದ ಅಲ್ಗೊರಿಥಂ ಅನ್ನು ಸೇರಿಸಲು ಈವೆಂಟ್‌ಗಳು ಉತ್ತಮ
@@ -2271,11 +2344,17 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_data:
+              display_name: ಡೇಟಾ
           lessons:
             Screen Out the Mean:
               name: ಮೀನ್ ಸ್ಕ್ರೀನ್ ಔಟ್ ಮಾಡಿ
         coursed-2020:
           lesson_groups:
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
@@ -2326,6 +2405,8 @@ kn:
           lesson_groups:
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            csf_data:
+              display_name: ಡೇಟಾ
           lessons:
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
@@ -2366,6 +2447,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           lessons:
             Learn to Drag and Drop:
               description_teacher: ಕಂಪ್ಯೂಟರ್ ಲ್ಯಾಬ್‌ಗೆ ವಿದ್ಯಾರ್ಥಿಗಳು ಹೋದಾಗ ಏನನ್ನು
@@ -2414,10 +2497,16 @@ kn:
               name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
+        code-break:
+          lessons:
+            Events:
+              name: ಈವೆಂಟ್‌ಗಳು
         k5-onlinepd-2020:
           lessons:
             Loops:
               name: ಲೂಪ್‌ಗಳು
+            Events:
+              name: ಈವೆಂಟ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
             End of Course projects:
@@ -2432,6 +2521,22 @@ kn:
               name: ಪಠ್ಯ
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: ಅಧ್ಯಾಯ
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: ಅಧ್ಯಾಯ
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: ಅಧ್ಯಾಯ
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: ಅಧ್ಯಾಯ
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -2442,6 +2547,8 @@ kn:
               name: ಕೋರ್ಸ್‌ ಇ
             Course F:
               name: ಕೋರ್ಸ್‌ ಎಫ್‌
+            csf:
+              name: CS ಫಂಡಮೆಂಟಲ್ಸ್
         virustest:
           title: ಔಟ್‌ಬ್ರೇಕ್‌ ಅನ್ನು ಸಿಮ್ಯುಲೇಟ್ ಮಾಡುವುದು
           description_short: ವೈರಸ್ ಔಟ್‌ಬ್ರೇಕ್‌ನಿಂದ ಸಿಮ್ಯುಲೇಶನ್ ರಚಿಸಲು ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್
@@ -2541,6 +2648,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
         courseb-2021:
           lessons:
             Programming in Maze:
@@ -2558,6 +2667,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
         coursec-2021:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ
             ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
@@ -2579,6 +2690,10 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_data:
+              display_name: ಡೇಟಾ
         coursed-2021:
           title: ಕೋರ್ಸ್‌ ಡಿ (2021)
           lessons:
@@ -2599,6 +2714,8 @@ kn:
             lesson-1:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
           lesson_groups:
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
@@ -2677,6 +2794,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            lessonGroup-9:
+              display_name: ಈವೆಂಟ್‌ಗಳು
         pre-express-2021:
           lessons:
             Programming with Rey and BB-8:
@@ -2685,6 +2804,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
         csf-2021-pilot:
           lessons:
             Virus Simulation for Code Bytes:
@@ -2710,6 +2831,9 @@ kn:
           student_description: ವೈರಸ್ ಔಟ್‌ಬ್ರೇಕ್‌ನಿಂದ ಸಿಮ್ಯುಲೇಶನ್ ಪ್ರೋಗ್ರಾಮ್ ಮಾಡಲು
             ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್ ಬಳಸಿ.
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
@@ -2717,6 +2841,8 @@ kn:
           lessons:
             lesson-1:
               name: ಯುನಿಟ್ 2 ಪೈಲಟ್ ಸಮೀಕ್ಷೆ
+            lesson-16:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-4:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
@@ -2724,6 +2850,8 @@ kn:
           lessons:
             lesson-16:
               name: ಯುನಿಟ್ 3 ಪೈಲಟ್ ಸಮೀಕ್ಷೆ
+            lesson-17:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
@@ -2781,15 +2909,22 @@ kn:
                 ಮೇಲೆ ತಾರ್ಕಿಕ ಆಪರೇಟರ್‌ಗಳ ಪರಿಣಾಮವನ್ನು ಗುರುತಿಸುತ್ತಾರೆ. ನೆಸ್ಟೆಡ್ `ಇಫ್‌`
                 ಸ್ಟೇಟ್‌ಮೆಂಟ್‌ಗಳು ಮತ್ತು ಲಾಜಿಕಲ್ ಆಪರೇಟರ್‌ಗಳನ್ನು ನಂತರ ಗೇಮ್‌ಪ್ಲೇ ಮತ್ತು
                 ಒಟ್ಟಾರೆ ಕಾರ್ಯವನ್ನು ಸುಧಾರಿಸಲು ಪಾಪ್ ದಿ ಬಲೂನ್ಸ್ ಆಟದಲ್ಲಿ ಅಳವಡಿಸಲಾಗುತ್ತದೆ.
+            lesson-16:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-4:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-4:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
         csa6-pilot:
           lessons:
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-1:
               description_student: ಕೋರ್ಸ್‌ನುದ್ದಕ್ಕೂ ನೀವು ಅಭಿವೃದ್ಧಿಪಡಿಸಿದ ಯೋಜನೆಗಳು
                 ಸಮುದಾಯದಲ್ಲಿ ಸಾಕಷ್ಟು ಸೃಜನಶೀಲತೆಯನ್ನು ಉತ್ತೇಜಿಸಿವೆ! ಸೃಜನಾತ್ಮಕ ಕಥೆಗಳು,
@@ -2994,10 +3129,16 @@ kn:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
         csa8-pilot:
+          lessons:
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
@@ -3006,6 +3147,9 @@ kn:
             Loops:
               key: ಲೂಪ್‌ಗಳು
               name: ಲೂಪ್‌ಗಳು
+            Events:
+              key: ಈವೆಂಟ್‌ಗಳು
+              name: ಈವೆಂಟ್‌ಗಳು
             Conditionals:
               key: ಕಂಡೀಷನಲ್ಸ್‌
               name: ಕಂಡೀಷನಲ್ಸ್‌
@@ -3042,6 +3186,15 @@ kn:
                 ಈ ಅಧ್ಯಾಯದಲ್ಲಿ, ಝೊಂಬೀ ಹರಡುವಿಕೆಯನ್ನು ಸಿಮ್ಯುಲೇಟ್ ಮಾಡುವ ಅನ್‌ಪ್ಲಗ್ಡ್ ಚಟುವಟಿಕೆಯಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳು ಭಾಗವಹಿಸುತ್ತಾರೆ. ನೆರೆಯ ಪಟ್ಟಣದ ಡೇಟಾ ಬಳಸಿ ಪಟ್ಟಣದ ಯಾವ ಭಾಗದಲ್ಲಿ ಅತಿ ಕಡಿಮೆ ಝೊಂಬೀಗಳು ಇರುತ್ತಾರೆ ಎಂದು ವಿದ್ಯಾರ್ಥಿಗಳು ಊಹಿಸಬೇಕು. ನಿರ್ದಿಷ್ಟ ಸ್ಥಳದಲ್ಲಿ ಝೊಂಬೀಗಳ ಸಂಖ್ಯೆಯ ಬಗ್ಗೆ ನಿರೀಕ್ಷೆ ಮಾಡಲು ಸಮಾನತೆ ಮತ್ತು ಸರಾಸರಿಗಳ ಡಿಗ್ರಿಗಳನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳು ಬಳಸುತ್ತಾರೆ. ನಂತರ, ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ರಕ್ಷಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ವರ್ಗೀಯ ಡೇಟಾಗೆ ಹೋಲಿಸಿದರೆ ಸಂಖ್ಯೆಯ ಡೇಟಾಗಿಂತ ಹೇಗೆ ನಿಖರತೆ ವಿಭಿನ್ನವಾಗಿರುತ್ತದೆ ಎಂದು ಚರ್ಚೆ ಮಾಡುವ ವಿಧಾನವಾಗಿ ನೈಜ ಸಂಖ್ಯೆಗಳಿಗೆ ಊಹೆ ಮಾಡಲು ಹೋಲಿಕೆ ಮಾಡುತ್ತಾರೆ.
 
                 **ದಿನದ ಪ್ರಶ್ನೆ:** ಸಂಖ್ಯೆಯನನ್ನು ಬಳಸಿ ಊಹೆ ಮಾಡುವುದನ್ನು ಕಂಪ್ಯೂಟರ್‌ಗಳು ಹೇಗೆ ಕಲಿಯುತ್ತವೆ?
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್
+              name: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: ಶಿಕ್ಷಕ ಸಮುದಾಯ
         self-paced-pl-csd5-2021:
           lessons:
             lesson-4:
@@ -3049,6 +3202,10 @@ kn:
         outbreak-module:
           name: ಔಟ್‌ಬ್ರೇಕ್-ಮಾಡ್ಯೂಲ್
           title: ಹರಡುವಿಕೆ
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ಸಂಪನ್ಮೂಲಗಳು
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -3068,6 +3225,8 @@ kn:
             lesson-17:
               name: ಕನ್ಸೋಲ್
           lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯಗಳು
             lessonGroup-4:
               display_name: ಡೆಮೋ ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು
         csa-self-paced-pl:
@@ -3133,6 +3292,7 @@ kn:
           lessons:
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
+              name: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-2:
               key: ಅಧ್ಯಾಯ -2
             lesson-3:
@@ -3211,6 +3371,7 @@ kn:
               key: ಅಧ್ಯಾಯ -15
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-4:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
@@ -3221,6 +3382,7 @@ kn:
               name: ಯುನಿಟ್ 3 ಪೈಲಟ್ ಸಮೀಕ್ಷೆ
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
+              name: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-2:
               key: ಅಧ್ಯಾಯ -2
             lesson-3:
@@ -3335,6 +3497,7 @@ kn:
                 ಒಟ್ಟಾರೆ ಕಾರ್ಯವನ್ನು ಸುಧಾರಿಸಲು ಪಾಪ್ ದಿ ಬಲೂನ್ಸ್ ಆಟದಲ್ಲಿ ಅಳವಡಿಸಲಾಗುತ್ತದೆ.
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
+              name: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-3:
               key: ಅಧ್ಯಾಯ -3
             lesson-4:
@@ -3399,6 +3562,8 @@ kn:
               key: ಅಧ್ಯಾಯ -14
             lesson-15:
               key: ಅಧ್ಯಾಯ -15
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
           lesson_groups:
             lessonGroup-4:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
@@ -3511,6 +3676,8 @@ kn:
             lesson-3:
               name: ಸಲಕರಣೆಗಳು
           lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯಗಳು
             lessonGroup-4:
               display_name: ಡೆಮೋ ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು
         hello-world-animals:
@@ -3881,6 +4048,9 @@ kn:
                 ಮತ್ತು ಪೋಸ್ಟ್‌ ಕಂಡೀಷನ್ಸ್ ಅನ್ನು ಗುರುತಿಸುತ್ತಾರೆ ಮತ್ತು ದಾಖಲಿಸುತ್ತಾರೆ.
                 ಈಗ, ವಿದ್ಯಾರ್ಥಿಗಳು ಬಹು ಆಯ್ಕೆಯ ಮೌಲ್ಯಮಾಪನದಲ್ಲಿ ಯುನಿಟ್ ಕಲಿಕೆಯ ಉದ್ದೇಶಗಳು
                 ಮತ್ತು ಕೌಶಲ್ಯಗಳ ಸಾಧನೆಯನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡುತ್ತಾರೆ.
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+              key: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
             lesson-2:
@@ -4248,6 +4418,10 @@ kn:
                 -   ಚಿತ್ರಗಳು, ಬೆರಳುಗಳು ಅಥವಾ ಮ್ಯಾನಿಪ್ಯುಲೇಟಿವ್‌ಗಳನ್ನು ಬಳಸಿಕೊಂಡು 10 ರವರೆಗಿನ ಸಂಖ್ಯೆಗಳನ್ನು ಗುರುತಿಸಿ ಮತ್ತು ಎಣಿಸಿ.
                 -   10 ಮೊತ್ತದವರೆಗೆ ವಸ್ತುಗಳು, ಚಿತ್ರಗಳು, ಬೆರಳುಗಳು ಅಥವಾ ಮ್ಯಾನಿಪ್ಯುಲೇಟಿವ್‌ಗಳನ್ನು ಸೇರಿಸಿ.
           title: ಲಾರೆಲ್‌ನೊಂದಿಗೆ ಲೆಕ್ಕ ಮಾಡುವುದು
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: ಅಧ್ಯಾಯ
         csa6-exemplars:
           lessons:
             lesson-11:
@@ -4276,8 +4450,20 @@ kn:
           lesson_groups:
             lessonGroup-3:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: ಕಂಬೈನಿಂಗ್ ಇನ್‌ಪುಟ್‌ಗಳು
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2
         csa7-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+              key: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-10:
               key: ಅಧ್ಯಾಯ -10
             lesson-6:
@@ -4315,6 +4501,9 @@ kn:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
         csa8-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+              key: ಜಾವಾ ಲ್ಯಾಬ್
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
             lesson-2:
@@ -4370,6 +4559,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
         express-2022:
           lessons:
@@ -4391,6 +4582,8 @@ kn:
             lesson-4:
               key: ಅಧ್ಯಾಯ -4
           lesson_groups:
+            lessonGroup-9:
+              display_name: ಈವೆಂಟ್‌ಗಳು
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
@@ -4433,6 +4626,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
         coursec-2022:
           lessons:
             'Programming: My Robotic Friends':
@@ -4452,6 +4647,10 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
+            csf_data:
+              display_name: ಡೇಟಾ
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ
             ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
         csp8-2022:
@@ -4481,6 +4680,8 @@ kn:
             Conditionals in Bee:
               key: ಜೇನ್ನೊಣದಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು
           lesson_groups:
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
@@ -4551,6 +4752,12 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು
             ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+            lesson-9:
+              name: ಲೂಪ್‌ಗಳು
         pre-express-2022:
           lessons:
             Programming with Rey and BB-8:
@@ -4559,6 +4766,8 @@ kn:
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
+            csf_events:
+              display_name: ಈವೆಂಟ್‌ಗಳು
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -4569,3 +4778,89 @@ kn:
               name: ಪ್ರಾಜೆಕ್ಟ್ ಸ್ಫೂರ್ತಿ
             lesson-19:
               name: ಡಿಬಗ್ ಮಾಡುವುದು
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+            lesson-9:
+              name: ಲೂಪ್‌ಗಳು
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+              key: ಜಾವಾ ಲ್ಯಾಬ್
+            lesson-10:
+              key: ಅಧ್ಯಾಯ -10
+            lesson-6:
+              key: ಅಧ್ಯಾಯ -6
+            lesson-7:
+              key: ಅಧ್ಯಾಯ -7
+            lesson-8:
+              key: ಅಧ್ಯಾಯ -8
+            lesson-9:
+              key: ಅಧ್ಯಾಯ -9
+            lesson-11:
+              key: ಅಧ್ಯಾಯ -11
+            lesson-12:
+              key: ಅಧ್ಯಾಯ -12
+            lesson-13:
+              key: ಅಧ್ಯಾಯ -13
+            lesson-14:
+              key: ಅಧ್ಯಾಯ -14
+            lesson-15:
+              key: ಅಧ್ಯಾಯ -15
+            lesson-1:
+              key: ಅಧ್ಯಾಯ -1
+            lesson-2:
+              key: ಅಧ್ಯಾಯ -2
+            lesson-3:
+              key: ಅಧ್ಯಾಯ -3
+            lesson-4:
+              key: ಅಧ್ಯಾಯ -4
+            lesson-5:
+              key: ಅಧ್ಯಾಯ -5
+            lesson-16:
+              key: ಅಧ್ಯಾಯ -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+              key: ಜಾವಾ ಲ್ಯಾಬ್
+            lesson-1:
+              key: ಅಧ್ಯಾಯ -1
+            lesson-2:
+              key: ಅಧ್ಯಾಯ -2
+            lesson-3:
+              key: ಅಧ್ಯಾಯ -3
+            lesson-4:
+              key: ಅಧ್ಯಾಯ -4
+            lesson-5:
+              key: ಅಧ್ಯಾಯ -5
+            lesson-10:
+              key: ಅಧ್ಯಾಯ -10
+            lesson-6:
+              key: ಅಧ್ಯಾಯ -6
+            lesson-7:
+              key: ಅಧ್ಯಾಯ -7
+            lesson-8:
+              key: ಅಧ್ಯಾಯ -8
+            lesson-9:
+              key: ಅಧ್ಯಾಯ -9
+            lesson-11:
+              key: ಅಧ್ಯಾಯ -11
+            lesson-12:
+              key: ಅಧ್ಯಾಯ -12
+            lesson-13:
+              key: ಅಧ್ಯಾಯ -13
+            lesson-14:
+              key: ಅಧ್ಯಾಯ -14
+            lesson-15:
+              key: ಅಧ್ಯಾಯ -15
+            lesson-16:
+              key: ಅಧ್ಯಾಯ -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್

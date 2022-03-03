@@ -71,16 +71,35 @@ export default class CourseVersionPublishingEditor extends Component {
         PublishedState.pilot,
         PublishedState.beta,
         PublishedState.preview,
-        PublishedState.stable
+        PublishedState.stable,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
       ],
-      pilot: [PublishedState.pilot],
+      pilot: [
+        PublishedState.pilot,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
+      ],
       beta: [
         PublishedState.beta,
         PublishedState.preview,
-        PublishedState.stable
+        PublishedState.stable,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
       ],
-      preview: [PublishedState.preview, PublishedState.stable],
-      stable: [PublishedState.stable]
+      preview: [
+        PublishedState.preview,
+        PublishedState.stable,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
+      ],
+      stable: [
+        PublishedState.stable,
+        PublishedState.sunsetting,
+        PublishedState.deprecated
+      ],
+      sunsetting: [PublishedState.sunsetting, PublishedState.deprecated],
+      deprecated: [PublishedState.deprecated]
     };
 
     return availablePublishedStates[currentState];
@@ -240,6 +259,18 @@ export default class CourseVersionPublishingEditor extends Component {
                   <td style={styles.tableBorder}>
                     A course that is not changing. If it is the most recent
                     course in your language it will be the recommended course.
+                  </td>
+                </tr>
+                <tr>
+                  <td style={styles.tableBorder}>Sunsetting</td>
+                  <td style={styles.tableBorder}>
+                    A course that is in the process of being deprecated.
+                  </td>
+                </tr>
+                <tr>
+                  <td style={styles.tableBorder}>Deprecated</td>
+                  <td style={styles.tableBorder}>
+                    A course that has been deprecated.
                   </td>
                 </tr>
               </tbody>

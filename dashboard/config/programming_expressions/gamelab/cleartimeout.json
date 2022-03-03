@@ -1,0 +1,8 @@
+{
+  "key": "clearTimeout",
+  "name": "clearTimeout()",
+  "category": "Control",
+  "category_key": "control",
+  "short_description": "Game Lab - clearTimeout()",
+  "syntax": "clearTimeout(__)"
+}

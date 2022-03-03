@@ -113,6 +113,9 @@ class HomeController < ApplicationController
     @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
     @homepage_data[:currentUserId] = current_user.id
 
+    current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
+    @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
+
     # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
     @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
 
@@ -186,6 +189,7 @@ class HomeController < ApplicationController
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
+      @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
       @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids

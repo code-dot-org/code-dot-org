@@ -17,10 +17,7 @@ class ProgressBubbleSet extends React.Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    selectedSectionId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number

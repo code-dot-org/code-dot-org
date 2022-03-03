@@ -22543,6 +22543,10 @@ in:
             lesson-20:
               name: crwdns2693403:0crwdne2693403:0
               description_teacher: crwdns2693407:0crwdne2693407:0
+            Circuits and Physical Prototypes:
+              name: crwdns2866430:0crwdne2866430:0
+              description_student: crwdns2866432:0crwdne2866432:0
+              description_teacher: crwdns2866434:0crwdne2866434:0
           lesson_groups:
             lessonGroup-3:
               display_name: crwdns2692787:0crwdne2692787:0
@@ -23468,6 +23472,86 @@ in:
           description: crwdns2858297:0[New]crwdnd2858297:0[0]crwdne2858297:0
           student_description: crwdns2858299:0crwdne2858299:0
         csd6-pilot-2022:
+          lessons:
+            lesson-1:
+              name: crwdns2866436:0crwdne2866436:0
+              description_student: crwdns2866438:0crwdne2866438:0
+              description_teacher: crwdns2866440:0crwdne2866440:0
+            lesson-2:
+              name: crwdns2866442:0crwdne2866442:0
+            lesson-3:
+              name: crwdns2866448:0crwdne2866448:0
+              description_student: crwdns2866450:0crwdne2866450:0
+              description_teacher: crwdns2866452:0crwdne2866452:0
+            Project - Prototype an Innovation:
+              name: crwdns2866454:0crwdne2866454:0
+              description_student: crwdns2866456:0crwdne2866456:0
+              description_teacher: crwdns2866458:0crwdne2866458:0
+            Innovations in Computing:
+              name: crwdns2866460:0crwdne2866460:0
+              description_student: crwdns2866462:0crwdne2866462:0
+              description_teacher: crwdns2866464:0crwdne2866464:0
+            Designing Screens with Code:
+              name: crwdns2866466:0crwdne2866466:0
+              description_student: crwdns2866468:0crwdne2866468:0
+              description_teacher: crwdns2866470:0crwdne2866470:0
+            The Circuit Playground:
+              name: crwdns2866472:0crwdne2866472:0
+              description_student: crwdns2866474:0crwdne2866474:0
+              description_teacher: crwdns2866476:0crwdne2866476:0
+            Board Events:
+              name: crwdns2866478:0crwdne2866478:0
+              description_student: crwdns2866480:0crwdne2866480:0
+              description_teacher: crwdns2866482:0crwdne2866482:0
+            Arrays and Color LEDs:
+              name: crwdns2866484:0crwdne2866484:0
+              description_student: crwdns2866486:0crwdne2866486:0
+              description_teacher: crwdns2866488:0crwdne2866488:0
+            Getting Properties:
+              name: crwdns2866490:0crwdne2866490:0
+              description_student: crwdns2866492:0crwdne2866492:0
+              description_teacher: crwdns2866494:0crwdne2866494:0
+            lesson-9:
+              name: crwdns2866496:0crwdne2866496:0
+              description_student: crwdns2866498:0crwdne2866498:0
+              description_teacher: crwdns2866500:0crwdne2866500:0
+            lesson-10:
+              name: crwdns2866502:0crwdne2866502:0
+              description_student: crwdns2866504:0crwdne2866504:0
+              description_teacher: crwdns2866506:0crwdne2866506:0
+            Analog Input:
+              name: crwdns2866508:0crwdne2866508:0
+              description_student: crwdns2866510:0crwdne2866510:0
+              description_teacher: crwdns2866512:0crwdne2866512:0
+            Accelerometer:
+              name: crwdns2866514:0crwdne2866514:0
+              description_student: crwdns2866516:0crwdne2866516:0
+              description_teacher: crwdns2866518:0crwdne2866518:0
+            Making Music:
+              name: crwdns2866520:0crwdne2866520:0
+              description_student: crwdns2866522:0crwdne2866522:0
+              description_teacher: crwdns2866524:0crwdne2866524:0
+            Functions with Parameters:
+              name: crwdns2866526:0crwdne2866526:0
+              description_student: crwdns2866528:0crwdne2866528:0
+              description_teacher: crwdns2866530:0crwdne2866530:0
+            Circuits and Physical Prototypes:
+              name: crwdns2866532:0crwdne2866532:0
+              description_student: crwdns2866534:0crwdne2866534:0
+              description_teacher: crwdns2866536:0crwdne2866536:0
+            Project - Make a Game:
+              name: crwdns2866538:0crwdne2866538:0
+              description_student: crwdns2866540:0crwdne2866540:0
+              description_teacher: crwdns2866542:0crwdne2866542:0
+            Physical Outputs:
+              name: crwdns2866544:0crwdne2866544:0
+              description_student: crwdns2866546:0crwdne2866546:0
+              description_teacher: crwdns2866548:0crwdne2866548:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2866550:0crwdne2866550:0
+            lessonGroup-3:
+              display_name: crwdns2866552:0crwdne2866552:0
           name: crwdns2858301:0crwdne2858301:0
           title: crwdns2858303:0crwdne2858303:0
         csa8-exemplars:
@@ -24933,6 +25017,7 @@ in:
           student_description: crwdns2860851:0crwdne2860851:0
           description_short: crwdns2860853:0crwdne2860853:0
           description_audience: crwdns2860855:0crwdne2860855:0
+          name: crwdns2866554:0crwdne2866554:0
         csp6-2022:
           lessons:
             Algorithms Solve Problems:
@@ -25766,6 +25851,18 @@ in:
               description_teacher: crwdns2862125:0crwdne2862125:0
             lesson-4:
               name: crwdns2862127:0crwdne2862127:0
+            "[New] Lots of Sprites":
+              name: crwdns2866556:0[New]crwdne2866556:0
+              description_student: crwdns2866558:0crwdne2866558:0
+              description_teacher: crwdns2866560:0crwdne2866560:0
+            "[New] Counting with Variables":
+              name: crwdns2866562:0[New]crwdne2866562:0
+              description_student: crwdns2866564:0crwdne2866564:0
+              description_teacher: crwdns2866566:0crwdne2866566:0
+            "[New] Mini-Project: Collector Game":
+              name: crwdns2866568:0[New]crwdne2866568:0
+              description_student: crwdns2866570:0crwdne2866570:0
+              description_teacher: crwdns2866572:0crwdne2866572:0
           lesson_groups:
             ramp_up:
               display_name: crwdns2862129:0crwdne2862129:0
@@ -25780,7 +25877,7 @@ in:
             end_of_course_project:
               display_name: crwdns2862139:0crwdne2862139:0
           title: crwdns2862141:0crwdne2862141:0
-          description: crwdns2862143:0crwdne2862143:0
+          description: crwdns2862143:0[0]crwdnd2862143:0[1]crwdnd2862143:0[2]crwdnd2862143:0[feedback]crwdnd2862143:0[3]crwdne2862143:0
           student_description: crwdns2862145:0crwdne2862145:0
           description_short: crwdns2862147:0crwdne2862147:0
           description_audience: crwdns2862149:0crwdne2862149:0
@@ -25842,6 +25939,9 @@ in:
               display_name: crwdns2862213:0crwdne2862213:0
           name: crwdns2862215:0crwdne2862215:0
           title: crwdns2862217:0crwdne2862217:0
+          description_short: crwdns2862221:0crwdne2862221:0
+          description: crwdns2862223:0crwdne2862223:0
+          student_description: crwdns2862225:0crwdne2862225:0
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -26026,3 +26126,411 @@ in:
               display_name: crwdns2865984:0crwdne2865984:0
           name: crwdns2865986:0crwdne2865986:0
           title: crwdns2865988:0crwdne2865988:0
+        tess-test-csa:
+          name: crwdns2866574:0crwdne2866574:0
+        csa1-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: crwdns2866586:0crwdne2866586:0
+            lesson-2:
+              name: crwdns2866588:0crwdne2866588:0
+            lesson-3:
+              name: crwdns2866590:0crwdne2866590:0
+            lesson-4:
+              name: crwdns2866592:0crwdne2866592:0
+            lesson-5:
+              name: crwdns2866594:0crwdne2866594:0
+            lesson-6:
+              name: crwdns2866596:0crwdne2866596:0
+            lesson-7:
+              name: crwdns2866598:0crwdne2866598:0
+            lesson-8:
+              name: crwdns2866600:0crwdne2866600:0
+            lesson-9:
+              name: crwdns2866602:0crwdne2866602:0
+            lesson-10:
+              name: crwdns2866604:0crwdne2866604:0
+            lesson-11:
+              name: crwdns2866606:0crwdne2866606:0
+            lesson-12:
+              name: crwdns2866608:0crwdne2866608:0
+            lesson-13:
+              name: crwdns2866610:0crwdne2866610:0
+            lesson-14:
+              name: crwdns2866612:0crwdne2866612:0
+            lesson-15:
+              name: crwdns2866614:0crwdne2866614:0
+            lesson-16:
+              name: crwdns2866616:0crwdne2866616:0
+            lesson-17:
+              name: crwdns2866618:0crwdne2866618:0
+            lesson-18:
+              name: crwdns2866620:0crwdne2866620:0
+            lesson-19:
+              name: crwdns2866622:0crwdne2866622:0
+            lesson-20:
+              name: crwdns2866624:0crwdne2866624:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2866626:0crwdne2866626:0
+            lessonGroup-3:
+              display_name: crwdns2866628:0crwdne2866628:0
+          name: crwdns2866630:0crwdne2866630:0
+          title: crwdns2866632:0[Exemplars]crwdne2866632:0
+        pltess:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2867446:0crwdne2867446:0
+          name: crwdns2867448:0crwdne2867448:0
+        self-paced-pl-csa1-2022:
+          lessons:
+            lesson-1:
+              name: crwdns2867460:0crwdne2867460:0
+            lesson-2:
+              name: crwdns2867462:0crwdne2867462:0
+          name: crwdns2867464:0crwdne2867464:0
+          title: crwdns2867466:0crwdne2867466:0
+          description: crwdns2867472:0crwdne2867472:0
+        self-paced-pl-csa3-2022:
+          name: crwdns2867476:0crwdne2867476:0
+          title: crwdns2867478:0crwdne2867478:0
+        csa7-pilot-extra:
+          lessons:
+            Writing Methods to Satisfy Conditions:
+              name: crwdns2867488:0crwdne2867488:0
+              description_student: crwdns2867490:0crwdne2867490:0
+              description_teacher: crwdns2867492:0crwdne2867492:0
+            Exploring Method Components and Functionality:
+              name: crwdns2867494:0crwdne2867494:0
+              description_student: crwdns2867496:0crwdne2867496:0
+              description_teacher: crwdns2867498:0crwdne2867498:0
+            Using Object References as Parameters:
+              name: crwdns2867500:0crwdne2867500:0
+              description_student: crwdns2867502:0crwdne2867502:0
+              description_teacher: crwdns2867504:0crwdne2867504:0
+            Overloading Methods:
+              name: crwdns2867506:0crwdne2867506:0
+              description_student: crwdns2867508:0crwdne2867508:0
+              description_teacher: crwdns2867510:0crwdne2867510:0
+            Accessing Object Behavior:
+              name: crwdns2867512:0crwdne2867512:0
+              description_student: crwdns2867514:0crwdne2867514:0
+              description_teacher: crwdns2867516:0crwdne2867516:0
+            Overriding Methods:
+              name: crwdns2867518:0crwdne2867518:0
+              description_student: crwdns2867520:0crwdne2867520:0
+              description_teacher: crwdns2867522:0crwdne2867522:0
+            Exploring Recursive Methods:
+              name: crwdns2867524:0crwdne2867524:0
+              description_student: crwdns2867526:0crwdne2867526:0
+              description_teacher: crwdns2867528:0crwdne2867528:0
+            Comparing Recursive and Iterative Solutions:
+              name: crwdns2867530:0crwdne2867530:0
+              description_student: crwdns2867532:0crwdne2867532:0
+              description_teacher: crwdns2867534:0crwdne2867534:0
+            Writing Recursive Methods:
+              name: crwdns2867536:0crwdne2867536:0
+              description_student: crwdns2867538:0crwdne2867538:0
+              description_teacher: crwdns2867540:0crwdne2867540:0
+            Maximizing System Reliability:
+              name: crwdns2867542:0crwdne2867542:0
+              description_student: crwdns2867544:0crwdne2867544:0
+              description_teacher: crwdns2867546:0crwdne2867546:0
+            Title Sequence Project - Day 1:
+              name: crwdns2867548:0crwdne2867548:0
+              description_student: crwdns2867550:0crwdne2867550:0
+              description_teacher: crwdns2867552:0crwdne2867552:0
+            Title Sequence Project - Day 2:
+              name: crwdns2867554:0crwdne2867554:0
+              description_student: crwdns2867556:0crwdne2867556:0
+              description_teacher: crwdns2867558:0crwdne2867558:0
+            Title Sequence Project - Day 3:
+              name: crwdns2867560:0crwdne2867560:0
+              description_student: crwdns2867562:0crwdne2867562:0
+              description_teacher: crwdns2867564:0crwdne2867564:0
+            FRQ Day:
+              name: crwdns2867566:0crwdne2867566:0
+              description_student: crwdns2867568:0crwdne2867568:0
+              description_teacher: crwdns2867570:0crwdne2867570:0
+            Assessment Day:
+              name: crwdns2867572:0crwdne2867572:0
+              description_student: crwdns2867574:0crwdne2867574:0
+              description_teacher: crwdns2867576:0crwdne2867576:0
+            Unit 7 Pilot Survey:
+              name: crwdns2867578:0crwdne2867578:0
+            Java Lab:
+              name: crwdns2867584:0crwdne2867584:0
+              key: crwdns2867590:0crwdne2867590:0
+            The Neighborhood:
+              name: crwdns2867592:0crwdne2867592:0
+              key: crwdns2867598:0crwdne2867598:0
+            The Theater:
+              name: crwdns2867600:0crwdne2867600:0
+              key: crwdns2867606:0crwdne2867606:0
+            The Playground:
+              name: crwdns2867608:0crwdne2867608:0
+              key: crwdns2867614:0crwdne2867614:0
+            lesson-10:
+              key: crwdns2867616:0crwdne2867616:0
+              name: crwdns2867618:0crwdne2867618:0
+              description_student: crwdns2867620:0crwdne2867620:0
+              description_teacher: crwdns2867622:0crwdne2867622:0
+            lesson-6:
+              key: crwdns2867624:0crwdne2867624:0
+              name: crwdns2867626:0crwdne2867626:0
+              description_student: crwdns2867628:0crwdne2867628:0
+              description_teacher: crwdns2867630:0crwdne2867630:0
+            lesson-7:
+              key: crwdns2867632:0crwdne2867632:0
+              name: crwdns2867634:0crwdne2867634:0
+              description_student: crwdns2867636:0crwdne2867636:0
+              description_teacher: crwdns2867638:0crwdne2867638:0
+            lesson-8:
+              key: crwdns2867640:0crwdne2867640:0
+              name: crwdns2867642:0crwdne2867642:0
+              description_student: crwdns2867644:0crwdne2867644:0
+              description_teacher: crwdns2867646:0crwdne2867646:0
+            lesson-9:
+              key: crwdns2867648:0crwdne2867648:0
+              name: crwdns2867650:0crwdne2867650:0
+              description_student: crwdns2867652:0crwdne2867652:0
+              description_teacher: crwdns2867654:0crwdne2867654:0
+            lesson-11:
+              key: crwdns2867656:0crwdne2867656:0
+              name: crwdns2867658:0crwdne2867658:0
+              description_student: crwdns2867660:0crwdne2867660:0
+              description_teacher: crwdns2867662:0crwdne2867662:0
+            lesson-12:
+              key: crwdns2867664:0crwdne2867664:0
+              name: crwdns2867666:0crwdne2867666:0
+              description_student: crwdns2867668:0crwdne2867668:0
+              description_teacher: crwdns2867670:0crwdne2867670:0
+            lesson-13:
+              key: crwdns2867672:0crwdne2867672:0
+              name: crwdns2867674:0crwdne2867674:0
+              description_student: crwdns2867676:0crwdne2867676:0
+              description_teacher: crwdns2867678:0crwdne2867678:0
+            lesson-14:
+              key: crwdns2867680:0crwdne2867680:0
+              name: crwdns2867682:0crwdne2867682:0
+              description_student: crwdns2867684:0crwdne2867684:0
+              description_teacher: crwdns2867686:0crwdne2867686:0
+            lesson-15:
+              key: crwdns2867688:0crwdne2867688:0
+              name: crwdns2867690:0crwdne2867690:0
+              description_student: crwdns2867692:0crwdne2867692:0
+              description_teacher: crwdns2867694:0crwdne2867694:0
+            lesson-1:
+              key: crwdns2867696:0crwdne2867696:0
+              name: crwdns2867698:0crwdne2867698:0
+              description_student: crwdns2867700:0crwdne2867700:0
+              description_teacher: crwdns2867702:0crwdne2867702:0
+            lesson-2:
+              key: crwdns2867704:0crwdne2867704:0
+              name: crwdns2867706:0crwdne2867706:0
+              description_student: crwdns2867708:0crwdne2867708:0
+              description_teacher: crwdns2867710:0crwdne2867710:0
+            lesson-3:
+              key: crwdns2867712:0crwdne2867712:0
+              name: crwdns2867714:0crwdne2867714:0
+              description_student: crwdns2867716:0crwdne2867716:0
+              description_teacher: crwdns2867718:0crwdne2867718:0
+            lesson-4:
+              key: crwdns2867720:0crwdne2867720:0
+              name: crwdns2867722:0crwdne2867722:0
+              description_student: crwdns2867724:0crwdne2867724:0
+              description_teacher: crwdns2867726:0crwdne2867726:0
+            lesson-5:
+              key: crwdns2867728:0crwdne2867728:0
+              name: crwdns2867730:0crwdne2867730:0
+              description_student: crwdns2867732:0crwdne2867732:0
+              description_teacher: crwdns2867734:0crwdne2867734:0
+            lesson-16:
+              key: crwdns2867736:0crwdne2867736:0
+              name: crwdns2867738:0crwdne2867738:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2867744:0crwdne2867744:0
+            lessonGroup-3:
+              display_name: crwdns2867746:0crwdne2867746:0
+            lessonGroup-4:
+              display_name: crwdns2867748:0crwdne2867748:0
+            lessonGroup-5:
+              display_name: crwdns2867750:0crwdne2867750:0
+          title: crwdns2867752:0crwdne2867752:0
+          description: crwdns2867754:0crwdne2867754:0
+          student_description: crwdns2867756:0crwdne2867756:0
+          name: crwdns2883562:0crwdne2883562:0
+        csa8-pilot-extra:
+          lessons:
+            Planning a Project:
+              name: crwdns2867762:0crwdne2867762:0
+              description_student: crwdns2867764:0crwdne2867764:0
+              description_teacher: crwdns2867766:0crwdne2867766:0
+            Searching for Data:
+              name: crwdns2867768:0crwdne2867768:0
+              description_student: crwdns2867770:0crwdne2867770:0
+              description_teacher: crwdns2867772:0crwdne2867772:0
+            Implementing the Binary Search:
+              name: crwdns2867774:0crwdne2867774:0
+              description_student: crwdns2867776:0crwdne2867776:0
+              description_teacher: crwdns2867778:0crwdne2867778:0
+            Implementing a Recursive Binary Search:
+              name: crwdns2867780:0crwdne2867780:0
+              description_student: crwdns2867782:0crwdne2867782:0
+              description_teacher: crwdns2867784:0crwdne2867784:0
+            Implementing the Selection Sort:
+              name: crwdns2867786:0crwdne2867786:0
+              description_student: crwdns2867788:0crwdne2867788:0
+              description_teacher: crwdns2867790:0crwdne2867790:0
+            Implementing the Insertion Sort:
+              name: crwdns2867792:0crwdne2867792:0
+              description_student: crwdns2867794:0crwdne2867794:0
+              description_teacher: crwdns2867796:0crwdne2867796:0
+            Implementing the Merge Sort:
+              name: crwdns2867798:0crwdne2867798:0
+              description_student: crwdns2867800:0crwdne2867800:0
+              description_teacher: crwdns2867802:0crwdne2867802:0
+            Expanding Standard Algorithms:
+              name: crwdns2867804:0crwdne2867804:0
+              description_student: crwdns2867806:0crwdne2867806:0
+              description_teacher: crwdns2867808:0crwdne2867808:0
+            Traversing Multiple Lists:
+              name: crwdns2867810:0crwdne2867810:0
+              description_student: crwdns2867812:0crwdne2867812:0
+              description_teacher: crwdns2867814:0crwdne2867814:0
+            Defending Privacy and Security:
+              name: crwdns2867816:0crwdne2867816:0
+              description_student: crwdns2867818:0crwdne2867818:0
+              description_teacher: crwdns2867820:0crwdne2867820:0
+            Inclusive Playground Project - Day 1:
+              name: crwdns2867822:0crwdne2867822:0
+              description_student: crwdns2867824:0crwdne2867824:0
+              description_teacher: crwdns2867826:0crwdne2867826:0
+            Inclusive Playground Project - Day 2:
+              name: crwdns2867828:0crwdne2867828:0
+              description_student: crwdns2867830:0crwdne2867830:0
+              description_teacher: crwdns2867832:0crwdne2867832:0
+            Inclusive Playground Project - Day 3:
+              name: crwdns2867834:0crwdne2867834:0
+              description_student: crwdns2867836:0crwdne2867836:0
+              description_teacher: crwdns2867838:0crwdne2867838:0
+            FRQ Day:
+              name: crwdns2867840:0crwdne2867840:0
+              description_student: crwdns2867842:0crwdne2867842:0
+              description_teacher: crwdns2867844:0crwdne2867844:0
+            Assessment Day:
+              name: crwdns2867846:0crwdne2867846:0
+              description_student: crwdns2867848:0crwdne2867848:0
+              description_teacher: crwdns2867850:0crwdne2867850:0
+            Unit 8 Pilot Survey:
+              name: crwdns2867852:0crwdne2867852:0
+            Java Lab:
+              name: crwdns2867858:0crwdne2867858:0
+              key: crwdns2867864:0crwdne2867864:0
+            The Neighborhood:
+              name: crwdns2867866:0crwdne2867866:0
+              key: crwdns2867872:0crwdne2867872:0
+            The Theater:
+              name: crwdns2867874:0crwdne2867874:0
+              key: crwdns2867880:0crwdne2867880:0
+            The Playground:
+              name: crwdns2867882:0crwdne2867882:0
+              key: crwdns2867888:0crwdne2867888:0
+            lesson-1:
+              key: crwdns2867890:0crwdne2867890:0
+              name: crwdns2867892:0crwdne2867892:0
+              description_student: crwdns2867894:0crwdne2867894:0
+              description_teacher: crwdns2867896:0crwdne2867896:0
+            lesson-2:
+              key: crwdns2867898:0crwdne2867898:0
+              name: crwdns2867900:0crwdne2867900:0
+              description_student: crwdns2867902:0crwdne2867902:0
+              description_teacher: crwdns2867904:0crwdne2867904:0
+            lesson-3:
+              key: crwdns2867906:0crwdne2867906:0
+              name: crwdns2867908:0crwdne2867908:0
+              description_student: crwdns2867910:0crwdne2867910:0
+              description_teacher: crwdns2867912:0crwdne2867912:0
+            lesson-4:
+              key: crwdns2867914:0crwdne2867914:0
+              name: crwdns2867916:0crwdne2867916:0
+              description_student: crwdns2867918:0crwdne2867918:0
+              description_teacher: crwdns2867920:0crwdne2867920:0
+            lesson-5:
+              key: crwdns2867922:0crwdne2867922:0
+              name: crwdns2867924:0crwdne2867924:0
+              description_student: crwdns2867926:0crwdne2867926:0
+              description_teacher: crwdns2867928:0crwdne2867928:0
+            lesson-10:
+              key: crwdns2867930:0crwdne2867930:0
+              name: crwdns2867932:0crwdne2867932:0
+              description_student: crwdns2867934:0crwdne2867934:0
+              description_teacher: crwdns2867936:0crwdne2867936:0
+            lesson-6:
+              key: crwdns2867938:0crwdne2867938:0
+              name: crwdns2867940:0crwdne2867940:0
+              description_student: crwdns2867942:0crwdne2867942:0
+              description_teacher: crwdns2867944:0crwdne2867944:0
+            lesson-7:
+              key: crwdns2867946:0crwdne2867946:0
+              name: crwdns2867948:0crwdne2867948:0
+              description_student: crwdns2867950:0crwdne2867950:0
+              description_teacher: crwdns2867952:0crwdne2867952:0
+            lesson-8:
+              key: crwdns2867954:0crwdne2867954:0
+              name: crwdns2867956:0crwdne2867956:0
+              description_student: crwdns2867958:0crwdne2867958:0
+              description_teacher: crwdns2867960:0crwdne2867960:0
+            lesson-9:
+              key: crwdns2867962:0crwdne2867962:0
+              name: crwdns2867964:0crwdne2867964:0
+              description_student: crwdns2867966:0crwdne2867966:0
+              description_teacher: crwdns2867968:0crwdne2867968:0
+            lesson-11:
+              key: crwdns2867970:0crwdne2867970:0
+              name: crwdns2867972:0crwdne2867972:0
+              description_student: crwdns2867974:0crwdne2867974:0
+              description_teacher: crwdns2867976:0crwdne2867976:0
+            lesson-12:
+              key: crwdns2867978:0crwdne2867978:0
+              name: crwdns2867980:0crwdne2867980:0
+              description_student: crwdns2867982:0crwdne2867982:0
+              description_teacher: crwdns2867984:0crwdne2867984:0
+            lesson-13:
+              key: crwdns2867986:0crwdne2867986:0
+              name: crwdns2867988:0crwdne2867988:0
+              description_student: crwdns2867990:0crwdne2867990:0
+              description_teacher: crwdns2867992:0crwdne2867992:0
+            lesson-14:
+              key: crwdns2867994:0crwdne2867994:0
+              name: crwdns2867996:0crwdne2867996:0
+              description_student: crwdns2867998:0crwdne2867998:0
+              description_teacher: crwdns2868000:0crwdne2868000:0
+            lesson-15:
+              key: crwdns2868002:0crwdne2868002:0
+              name: crwdns2868004:0crwdne2868004:0
+              description_student: crwdns2868006:0crwdne2868006:0
+              description_teacher: crwdns2868008:0crwdne2868008:0
+            lesson-16:
+              key: crwdns2868010:0crwdne2868010:0
+              name: crwdns2868012:0crwdne2868012:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2868018:0crwdne2868018:0
+            lessonGroup-3:
+              display_name: crwdns2868020:0crwdne2868020:0
+            lessonGroup-4:
+              display_name: crwdns2868022:0crwdne2868022:0
+            lessonGroup-5:
+              display_name: crwdns2868024:0crwdne2868024:0
+          title: crwdns2868026:0crwdne2868026:0
+          description: crwdns2868028:0crwdne2868028:0
+          student_description: crwdns2868030:0crwdne2868030:0
+        csa-backpack-2022:
+          lessons:
+            lesson-1:
+              name: crwdns2883564:0crwdne2883564:0
+          name: crwdns2883570:0crwdne2883570:0
+          title: crwdns2883572:0crwdne2883572:0
+          description: crwdns2883578:0crwdne2883578:0

@@ -2141,7 +2141,13 @@
         "iceage_sound_and_points_dani": "Dokážeš program napsat tak, aby se při setkání Sida s Granny současně **přehrál zvuk** i **připsal bod**? ",
         "iceage_throw_hearts": "Použij příkaz „postava \\_\\_ pošle“, aby Sid (postava 1) poslal srdce Granny (postavě 2), a nastav, aby se nálada Granny změnila na šťastnou, když ji srdce zasáhnou.",
         "iceage_warn_ice_age": "Zvol ledové pozadí scény a nastav pro Sida (postavu 1) vysokou rychlost.",
-        "iceage_warn_ice_age_dani": "Zvol ledové pozadí scény a nastav pro Sida (postavu 1) vysokou rychlost."
+        "iceage_warn_ice_age_dani": "Zvol ledové pozadí scény a nastav pro Sida (postavu 1) vysokou rychlost.",
+        "CSD U5 black white images pixelation 2_2021": "Namaluj usměváka (klikni sem pro zobrazení obrázku)",
+        "CSD U5 black white images pixelation 3_2021": "Změň slidery pro šířku a výšku abys našel obrázek (klikni sem pro více informací)",
+        "CSD U5 black white images pixelation 4_2021": "Doplň usměvákovi obočí (klikni sem pro zobrazení obrázku)",
+        "CSD U5 black white images pixelation 5_2021": "Namaluj cokoliv budeš chtít",
+        "CSD U5 black white images pixelation_2021": "Dokonči tvar X vepsáním nul a jedniček",
+        "CSD U6 params modify planes_2021": "# Ovladání letadel\n\nTento program pohybuje třemi letadly pomocí kontrolky zrychlení a zaškrtávacích tlačítek na obrazovce. Zatím funguje pouze červené letadlo.\n\n# Udělejte následující:\n\n-   Vytvořte novou funkci \"movePlane(name)\", která bude pohybovat libovolným letadlem.\n-   Zavolejte funkci \"movePlane(name)\" zevnitř bloku události tak, aby se letadlo pohybovalo jen tehdy, když je zaškrtnuto zaškrtávací tlačítko.\n\n\\_Výzva: letadla se momentálně pohybují příliš rychle. Podaří se vám změnit kód tak, aby se pohybala pomaleji? \\_"
       }
     }
   }

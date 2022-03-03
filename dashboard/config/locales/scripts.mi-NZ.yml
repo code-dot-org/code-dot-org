@@ -2535,6 +2535,10 @@ mi:
           lesson_groups:
             lessonGroup-3:
               display_name: Ngā Taurangi
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Ngā Taumahi
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2679,6 +2683,9 @@ mi:
             lessonGroup-8:
               display_name: Ngā Taurangi
         csa1-2022:
+          lessons:
+            lesson-9:
+              name: Ngā Koromeke
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
@@ -2705,6 +2712,21 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Ngā Koromeke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi

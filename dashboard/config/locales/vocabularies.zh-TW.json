@@ -803,6 +803,57 @@
         "try/coursee/2021": {
           "word": "嘗試（Try）",
           "definition": "試著去做某件事"
+        },
+        "machine_learning/csd/2021": {
+          "word": "機器學習",
+          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
+        },
+        "user_interface/csd/2021": {
+          "word": "使用者介面"
+        },
+        "bug/csd/2021": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "for_loop/csd/2021": {
+          "word": "計數/計次迴圈（For Loop）",
+          "definition": "有預先確定的開始、結束與增加幅度（階值）的迴圈。"
+        },
+        "debugging/csd/2021": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/csd/2021": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "variable/csd/2021": {
+          "word": "變數",
+          "definition": "放置可變更資訊的佔位符。"
+        },
+        "condition/csd/2021": {
+          "word": "條件（Condition）"
+        },
+        "conditionals/csd/2021": {
+          "word": "條件判斷（Conditionals）"
+        },
+        "abstraction/csd/2021": {
+          "word": "抽象概念"
+        },
+        "function/csd/2021": {
+          "word": "函式"
+        },
+        "input/csd/2021": {
+          "word": "輸入"
+        },
+        "processing/csd/2021": {
+          "word": "處理"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "數位足跡"
+        },
+        "copyright/csd/2021": {
+          "word": "版權所有"
         }
       }
     }

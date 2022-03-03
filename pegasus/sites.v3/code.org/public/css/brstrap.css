@@ -39,6 +39,7 @@
 @media screen and (max-width: 600px)
 {
   .tablet-feature { display: none; }
+  .tablet-restrictive-feature { display: none; }
 }
 
 /* 971px and up: regular headers */
@@ -47,6 +48,7 @@
 {
   /* large screens */
   .mobile-feature { display: none }
+  .tablet-restrictive-feature { display: none; }
   .desktop-feature { }
 
   .col-10 { width: 10%; float:left; }

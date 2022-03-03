@@ -27497,6 +27497,14 @@ tr:
               name: Prototipleme
             lesson-19:
               name: Proje
+            Circuits and Physical Prototypes:
+              description_teacher: Bu bölümün final projesine hazırlık olarak öğrenciler,
+                bir Çember Oyun Alanını içeren fiziksel bir nesnenin bir prototipini
+                nasıl geliştireceğini öğrenecektir. Modelli bir proje planlama kılavuzu
+                kullanarak öğrenciler, karton ve izole bant gibi ucuz ve kolayca bulunan
+                malzemeleri kullanarak, bir çift basit devreyi nasıl bağlayacağını
+                ve bir ürünün hedeflenen tasarımını iletebilecek prototipleri nasıl
+                oluşturacağını öğrenecektir.
           lesson_groups:
             lessonGroup-3:
               display_name: Şablonlar
@@ -27526,6 +27534,11 @@ tr:
               display_name: Proje
             lessonGroup-4:
               display_name: Demolar ve Kaynaklar
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: BBA Klonunu Test Etme
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -28393,6 +28406,12 @@ tr:
                 partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil
                 edecektir.
           lesson_groups:
+            lessonGroup-5:
+              display_name: Kurs F Değişkenleri (Kaldırıldı)
+            lessonGroup-6:
+              display_name: Kurs F Döngüler Kursu (Kaldırıldı)
+            lessonGroup-7:
+              display_name: Kurs E Hareketli Nesneler (Kaldırıldı)
             lessonGroup-8:
               display_name: Saat Kodu
           description_short: Dahili
@@ -28448,6 +28467,46 @@ tr:
               display_name: Değişkenler
             lessonGroup-4:
               display_name: Ders Projesinin Sonu
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: 'Kursun bu son projesinde, öğrenci ekibi Devre
+                Oyun Alanına dayalı yenilikçi bilgisayar cihazı için bir prototip
+                geliştirir ve test eder. Panodaki mevcut giriş ve çıkışları kullanarak,
+                gruplar ilginç ve özgün kullanıcı etkileşimleri sağlayan programlar
+                oluşturacaklardır. '
+            Innovations in Computing:
+              name: Bilişimdeki Yenilikler
+              description_teacher: Bu dersin son bölümünü başlatmak için, öğrenciler
+                bilgisayarlarda ilginç yenilikler konusunda biraz araştırma yapacaklardır.
+                Bu ders öğrencileri bilgisayarlardan etkilenen alanlar ve bilgisayar
+                form faktörlerinden daha geniş bir kitleye (bir bilgisayarın nasıl
+                göründüğü) açıklayacak. Daha sonra bu birimde öğrenciler kendi fiziki
+                bilgi işlem cihazlarını geliştirdikçe bu derste karşılaştıkları cihazlara
+                bakacaklardır.
+            The Circuit Playground:
+              name: Çember Oyun Alanı
+            Board Events:
+              name: Kurul Etkinlikleri
+            Arrays and Color LEDs:
+              name: Renkli LED'ler
+            lesson-10:
+              name: Girdileri Birleştirme
+            Accelerometer:
+              name: İvme Ölçer
+              description_teacher: Bu derste öğrenciler, ivmeölçer ve kabiliyetlerini
+                keşfedecektir. Bunun olayları ve özelliklerini öğrenecekler ve ayrıca
+                gerçek dünya uygulamalarında muhtemel olarak karşılaştıklarına benzer
+                ivmeölçer kullanarak çoklu programlar oluşturacaklar.
+            Making Music:
+              name: Müzik yapma
+            Functions with Parameters:
+              name: Fonksiyonlar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bölüm 1
+            lessonGroup-3:
+              display_name: Bölüm 2
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -29025,6 +29084,7 @@ tr:
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın
             en iyilerini daha eski öğrenciler için birleştirir.'
           description_audience: 'Yaş: 9-18'
+          name: ekspres-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -30336,6 +30396,11 @@ tr:
                 tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.
             'Hello World: Food':
               name: Merhaba Dünya
+              description_student: Bu derste, hareketli grafikler oluşturmayı, canlandırmayı
+                ve olayları kullanarak onları etkileşimli hale getirmeyi öğreneceksiniz.
+              description_teacher: Bu **beceri geliştirme** dersinde öğrenciler, hareketli
+                grafikler oluşturmayı, canlandırmayı ve olayları kullanarak onları
+                etkileşimli hale getirmeyi öğrenecekler.
           lesson_groups:
             csf_sprites:
               display_name: Hareketli Nesneler
@@ -30643,6 +30708,9 @@ tr:
         csp-post-survey-2021:
           title: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
         csa1-2022:
+          lessons:
+            lesson-9:
+              name: Döngüler
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -30699,6 +30767,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
+        tessplayground:
+          name: tessoyunalanı
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -30725,3 +30795,94 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Döngüler
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-10:
+              key: ders-10
+            lesson-6:
+              key: ders-6
+            lesson-7:
+              key: ders-7
+            lesson-8:
+              key: ders-8
+            lesson-9:
+              key: ders-9
+            lesson-11:
+              key: ders-11
+            lesson-12:
+              key: ders-12
+            lesson-13:
+              key: ders-13
+            lesson-14:
+              key: ders-14
+            lesson-15:
+              key: ders-15
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
+            lesson-4:
+              key: ders-4
+            lesson-5:
+              key: ders-5
+              name: Değerlendirme Günü
+            lesson-16:
+              key: ders-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-1:
+              key: ders-1
+            lesson-2:
+              key: ders-2
+            lesson-3:
+              key: ders-3
+            lesson-4:
+              key: ders-4
+            lesson-5:
+              key: ders-5
+            lesson-10:
+              key: ders-10
+            lesson-6:
+              key: ders-6
+            lesson-7:
+              key: ders-7
+            lesson-8:
+              key: ders-8
+            lesson-9:
+              key: ders-9
+            lesson-11:
+              key: ders-11
+            lesson-12:
+              key: ders-12
+            lesson-13:
+              key: ders-13
+            lesson-14:
+              key: ders-14
+            lesson-15:
+              key: ders-15
+              name: Değerlendirme Günü
+            lesson-16:
+              key: ders-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-5:
+              display_name: Sandbox

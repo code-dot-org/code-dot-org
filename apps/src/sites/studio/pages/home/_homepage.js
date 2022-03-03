@@ -96,6 +96,10 @@ function showHomepage() {
               allowTeacherAppReopening &&
               homepageData.showFinishTeacherApplication
             }
+            showReturnToReopenedTeacherApplication={
+              allowTeacherAppReopening &&
+              homepageData.showReturnToReopenedTeacherApplication
+            }
             donorBannerName={homepageData.donorBannerName}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
@@ -113,6 +117,9 @@ function showHomepage() {
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
             isEnglish={isEnglish}
+            showVerifiedTeacherWarning={
+              homepageData.showStudentAsVerifiedTeacherWarning
+            }
           />
         )}
       </div>

@@ -2,9 +2,24 @@
 kn:
   data:
     variable_names:
+      actor: ನಟ
       birds: ಹಕ್ಕಿಗಳು
+      counter: ಕೌಂಟರ್
+      height: ಎತ್ತರ
+      honey: ಜೇನುತುಪ್ಪ
+      left: ಎಡಕ್ಕೆ
+      length: ಉದ್ದ
+      name: ಹೆಸರು
+      nectar: ಮಕರಂದ
       planet: ಗ್ರಹ
+      points: ಪಾಯಿಂಟ್‌ಗಳು
       random: ಯಾದೃಚ್ಛಿಕ
       repeat: ಪುನರಾವರ್ತನೆ
+      right: ಬಲಕ್ಕೆ
+      score: ಅಂಕ
       shout: ಶೌಟ್
+      size: ಗಾತ್ರ
+      speed: ವೇಗ
       variable: ವೇರಿಯಬಲ್
+      wizard: ವಿಝಾರ್ಡ್‌
+      x: x

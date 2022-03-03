@@ -562,7 +562,7 @@
         },
         "sequencing/coursec/2021": {
           "word": "Secuencias",
-          "definition": "poner los comandos en el orden correcto para que las computadoras puedan leerlos."
+          "definition": "Poner los comandos en el orden correcto para que los computadores puedan leerlos."
         },
         "programming/coursec/2021": {
           "word": "Programación",
@@ -582,7 +582,7 @@
         },
         "binary/coursec/2021": {
           "word": "Binario",
-          "definition": "una forma de representar la información con solo dos opciones."
+          "definition": "Una forma de representar información usando sólo dos opciones."
         },
         "algorithm/coursed/2021": {
           "word": "Algoritmo",
@@ -665,7 +665,7 @@
         },
         "sequencing/express/2021": {
           "word": "Secuencias",
-          "definition": "poner los comandos en el orden correcto para que las computadoras puedan leerlos."
+          "definition": "Poner los comandos en el orden correcto para que los computadores puedan leerlos."
         },
         "program/express/2021": {
           "word": "Programa",
@@ -861,6 +861,64 @@
         "try/coursee/2021": {
           "word": "Probar",
           "definition": "intentar hacer algo."
+        },
+        "machine_learning/csd/2021": {
+          "word": "Aprendizaje automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "ethics/csd/2021": {
+          "word": "Ética"
+        },
+        "user_interface/csd/2021": {
+          "word": "Pantalla de Usuario"
+        },
+        "bug/csd/2021": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "for_loop/csd/2021": {
+          "word": "Bucles desde",
+          "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
+        },
+        "debugging/csd/2021": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/csd/2021": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "variable/csd/2021": {
+          "word": "Variable",
+          "definition": "un marcador de posición para una información que puede cambiar."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "condition/csd/2021": {
+          "word": "Condición"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condicionales"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstracción"
+        },
+        "function/csd/2021": {
+          "word": "Función"
+        },
+        "input/csd/2021": {
+          "word": "Entrada"
+        },
+        "processing/csd/2021": {
+          "word": "Procesamiento"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Huella digital"
+        },
+        "copyright/csd/2021": {
+          "word": "Derechos de autor",
+          "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
         }
       }
     }

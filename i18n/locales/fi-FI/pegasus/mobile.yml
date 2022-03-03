@@ -1253,6 +1253,8 @@
   page_not_found_title: "Sivua ei löydy"
   hoc2018_mc_thank_microsoft: "Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa ja sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä ja taitoja menestyä 2000-luvulla."
   hoc2019_dance_previous_versions: "Etsitkö edellistä versiota Tanssibileistä?  \nKlikkaa täältä aloittaaksesi [Osan 1](%{dance_2018_link}) ja [Osan 2](%{dance_extras_2018_link}) vuodelta 2018."
+  homepage_slot_text_title_at_home: "Opi kotona"
+  homepage_slot_text_blurb_at_home: "Näillä materiaaleilla se käy helposti"
   hoc2020_mc_available_code_org: "Saatavilla Code.org -sivustolla"
   footer_powered_by_aws: "Toimii Amazon Web Services -palvelun päällä"
   footer_privacy_policy: "Tietosuojakäytäntö"

@@ -3356,6 +3356,10 @@ el:
               display_name: Χαρακτήρας
             lessonGroup-3:
               display_name: Μεταβλητές
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Συναρτήσεις
         coursea-2022:
           lessons:
             Happy Maps:
@@ -3535,6 +3539,10 @@ el:
               display_name: Ψηφιακή υπηκοότητα
             lessonGroup-8:
               display_name: Μεταβλητές
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Βρόχοι
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3549,3 +3557,7 @@ el:
               name: Εντοπισμός σφαλμάτων
             lesson-19:
               name: Εντοπισμός σφαλμάτων
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Βρόχοι

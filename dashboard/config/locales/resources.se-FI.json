@@ -88,6 +88,63 @@
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binára Giehtabáttit"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Designe Data Čoakkaldaga"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "BáberPrototyhpat"
+        },
+        "market-research/csd/2021": {
+          "name": "MárkanIskkadeapmi"
+        },
+        "market_research/csd/2021": {
+          "name": "MárkanIskkadeapmi"
+        },
+        "design_mode/csd/2021": {
+          "name": "Designa Modus"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Designa Modus"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Láidehus Matrisaide"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Dáta Duohta Máilmmis"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Dáta Duohta Máilmmis"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Oahpahit Mašiinna"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprite:at"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Sprite Lihkadeapmi"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Input ja Output"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Input ja Output"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "App:at ja ČuolbmaČoavdin"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "App:at ja ČuolbmaČoavdin"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "App:at ja ČuolbmaČoavdin"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Digitála Luodda"
+        },
+        "classes/csd/2021": {
+          "name": "Klássat"
         }
       }
     }

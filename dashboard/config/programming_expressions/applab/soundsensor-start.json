@@ -1,7 +1,0 @@
-{
-  "key": "soundSensor.start",
-  "name": "soundSensor.start",
-  "category": "Circuit",
-  "category_key": "circuit",
-  "syntax": "soundSensor.start"
-}

@@ -222,18 +222,25 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
-    # Student has completed an assessment.
-    level_source = create(
-      :level_source,
-      level: level1,
-      data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"},"#{sub_level5.id}":{"result":","},"#{sub_level6.id}":{"result":"0,1"},"#{sub_level7.id}":{"result":"1,0"}})
-    )
-    create :activity, user: @student_1, level: level1,
-      level_source: level_source
+    student_answers = [
+      [sub_level1, "This is a free response"],
+      [sub_level2, "0"],
+      [sub_level3, "1"],
+      [sub_level4, "-1"],
+      [sub_level5, ","],
+      [sub_level6, "0,1"],
+      [sub_level7, "1,0"]
+    ]
 
-    updated_at = Time.now
+    # create user_level for level_group
+    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
 
-    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
+    # create user_levels for sublevels
+    student_answers.each do |level_and_answer|
+      level, answer = level_and_answer
+      level_source = create :level_source, level: level, data: answer
+      user_level = create :user_level, user: @student_1, script: script, level: level, level_source: level_source
+    end
 
     # Call the controller method.
     get :section_responses, params: {
@@ -306,18 +313,20 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
-    # Student has completed an assessment.
-    level_source = create(
-      :level_source,
-      level: level1,
-      data: %Q({"#{sub_level1.id}":{"result":"2,3"},"#{sub_level2.id}":{"result":"3"}})
-    )
-    create :activity, user: @student_1, level: level1,
-           level_source: level_source
+    student_answers = [
+      [sub_level1, "2,3"],
+      [sub_level2, "3"]
+    ]
 
-    updated_at = Time.now
+    # create user_level for level_group
+    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
 
-    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
+    # create user_levels for sublevels
+    student_answers.each do |level_and_answer|
+      level, answer = level_and_answer
+      level_source = create :level_source, level: level, data: answer
+      user_level = create :user_level, user: @student_1, script: script, level: level, level_source: level_source
+    end
 
     # Call the controller method.
     get :section_responses, params: {

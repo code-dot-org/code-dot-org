@@ -2701,6 +2701,10 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: អ​ថេរ
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: អនុ​គមន៍
         coursea-2022:
           lessons:
             Learn to Drag and Drop:
@@ -2959,6 +2963,10 @@ km:
             lessonGroup-8:
               display_name: អ​ថេរ
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: រង្វិល​ជុំ
         pre-express-2022:
           lessons:
             Programming with Rey and BB-8:
@@ -2975,3 +2983,7 @@ km:
               name: លក្ខខណ្ឌ
             lesson-14:
               name: លក្ខខណ្ឌនៅក្នុង Minecraft
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: រង្វិល​ជុំ

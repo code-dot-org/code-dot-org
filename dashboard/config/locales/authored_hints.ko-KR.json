@@ -10354,11 +10354,11 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "밟아야 하는 단계 수와 모아야 하는 과즙 수 사이에서 패턴을 찾아낼 수 있어요?",
           "courseF_bee_for10_b": "첫 번째 꽃 세트에는 **14개 꽃**이 있어요. 이 첫 번째 세트를 얻기 위해, 벌은 **7개 사각형** (또는 2로 나눈 14개 사각형)을 내려가야 합니다. 다음 세트에는 몇 개의 꽃이 있고 벌은 그곳에 가기 위해 얼마 만큼을 이동해야 할까요?",
-          "courseF_bee_for10_c": "이 퍼즐에서, 첫 번째 꽃 세트에는 **14**개 꽃이 있고 두 번째 세트에는 **10**개 꽃, 세 번째 세트에는 **6**개 꽃이 있으며, 네 번째 세트에는 **2**개 꽃이 있어요.\n\n이 그림에서, **7**개의 빨간색 사각형과 **5**개의 주황색 사각형, **3**개의 녹색 사각형, **1**개의 파란색 블록이 있음을 인지하세요.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n숫자는 어떤 관련이 있습니까?",
+          "courseF_bee_for10_c": "이 퍼즐에서, 첫 번째 꽃 세트에는 **14**개 꽃이 있고 두 번째 세트에는 **10**개 꽃, 세 번째 세트에는 **6**개 꽃이 있으며, 네 번째 세트에는 **2**개 꽃이 있어요.\n\n이 그림에서, **7**개의 빨간색 사각형과 **5**개의 주황색 사각형, **3**개의 녹색 사각형, **1**개의 파란색 블록이 있음을 인지하세요.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\n숫자는 어떤 관련이 있습니까?",
           "courseF_bee_for10_d": "2개의 반복이 필요할 것이며 한 개는 수학 블록을 사용할 것입니다."
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "12가 15 보다 얼마나 더 적습니까?\\\n9가 12 보다 얼마나 더 적습니까?\n\n패턴이 보여요?"
+          "courseF_bee_for11_a": "12가 15 보다 얼마나 더 적습니까?\n9가 12 보다 얼마나 더 적습니까?\n\n패턴이 보여요?"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "과즙 모두 모으려면 ‘반복’ 루프 안에 두 개의 블록이 있어야 합니다."
@@ -10460,13 +10460,13 @@
           "courseF_bee_variables_4_2021_1": "변수에 1을 더하는 대신, 매번 2를 더합니다."
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "이 블록이 필요할 것입니다:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "또한 다음의 블록도 필요할 것입니다:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"스케일\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"생명체_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
           "changePropBlock": "이 블록이 필요할 것입니다:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "`응답했을 때` 블록에서 변수 라벨을 변경해 보세요. 복수의 문제가 있기 때문에 응답할 _마지막_ 프롬프트의 라벨을 사용하세요.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "`응답되었을 때` 블록에서 변수 라벨을 변경해 보세요. 복수의 프롬프트가 있기 때문에, 응답할 *최종* 프롬프트의 라벨을 사용합니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_variables_card_finish": {
           "card_idea1": "다른 변수를 가진 새 프롬프트 블록을 첫 번째 `응답되었을 때` 이벤트에 연결함으로써 두 번째 (또는 세 번째, 네 번째) 프롬프트를 추가할 수 있습니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">생일에 무엇을 하고 싶어요?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">선물</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

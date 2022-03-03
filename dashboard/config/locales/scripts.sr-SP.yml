@@ -2354,6 +2354,10 @@ sr:
           lesson_groups:
             lessonGroup-3:
               display_name: Променљиве
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функције
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2476,6 +2480,10 @@ sr:
               display_name: Дигитално држављанство
             lessonGroup-8:
               display_name: Променљиве
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Петље
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -2490,3 +2498,7 @@ sr:
               name: Отклањање грешака
             lesson-19:
               name: Отклањање грешака
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Петље

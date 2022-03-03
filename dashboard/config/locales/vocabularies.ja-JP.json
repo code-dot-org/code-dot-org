@@ -838,6 +838,61 @@
         "try/coursee/2021": {
           "word": "試してみる",
           "definition": "何かをしようとすること"
+        },
+        "machine_learning/csd/2021": {
+          "word": "機械学習",
+          "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
+        },
+        "user_interface/csd/2021": {
+          "word": "ユーザーインタフェース"
+        },
+        "bug/csd/2021": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "for_loop/csd/2021": {
+          "word": "Forループ",
+          "definition": "あらかじめ開始、終了、増分（増分間隔）のあるループ。"
+        },
+        "debugging/csd/2021": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/csd/2021": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "variable/csd/2021": {
+          "word": "変数",
+          "definition": "プログラムで使用される情報の一部のラベル。"
+        },
+        "sprite/csd/2021": {
+          "word": "スプライト"
+        },
+        "condition/csd/2021": {
+          "word": "条件"
+        },
+        "conditionals/csd/2021": {
+          "word": "条件"
+        },
+        "abstraction/csd/2021": {
+          "word": "抽象化"
+        },
+        "function/csd/2021": {
+          "word": "関数（かんすう）"
+        },
+        "input/csd/2021": {
+          "word": "入力"
+        },
+        "processing/csd/2021": {
+          "word": "処理"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "デジタルフットプリント"
+        },
+        "copyright/csd/2021": {
+          "word": "著作権",
+          "definition": "文学的、芸術的、または音楽的な素材を印刷、出版、上演、映画化、または録音する独占的な法的権利、および他の人に同じことをすることを許可する権利。"
         }
       }
     }

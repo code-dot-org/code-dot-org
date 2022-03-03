@@ -895,6 +895,266 @@
         },
         "virtual_lesson_modifications/coursee/2021": {
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "AI görmək"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Süni intellekt laboratoriyasına giriş"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Süni intellekt laboratoriyasına giriş"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Süni intellekt laboratoriyasında təlim və sınaq"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: Təlim məlumatları və qərəzlilik",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI Laboratoriyasında Model Kartlar"
+        },
+        "market-research/csd/2021": {
+          "name": "Bazar Araşdırması"
+        },
+        "market_research/csd/2021": {
+          "name": "Bazar Araşdırması"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizayn Rejimi"
+        },
+        "design_mode_elements/csd/2021": {
+          "name": "Dizayn rejimi elementləri"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "name": "Dizayn rejiminə giriş"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizayn Rejimi"
+        },
+        "design_mode_elements_1/csd/2021": {
+          "name": "Dizayn rejimi elementləri"
+        },
+        "changing_screens/csd/2021": {
+          "name": "Ekranların dəyişdirilməsi"
+        },
+        "importing_screens/csd/2021": {
+          "name": "Ekranlar idxal olunur"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "Çox-ekranlı Tətbiqlər"
+        },
+        "responding_to_user_input/csd/2021": {
+          "name": "İstifadəçi input-una cavab"
+        },
+        "app-presentation/csd/2021": {
+          "name": "Proqram təqdimatı"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "Proqram təqdimatı"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "Kod ilə ekran dizaynı "
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Təsadufi rəqəmlər"
+        },
+        "responding_to_user_input_1/csd/2021": {
+          "name": "İstifadəçi input-una cavab"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Kompüterlər necə işləyir: Aparat və proqram təminatı"
+        },
+        "board_events/csd/2021": {
+          "name": "İdarə Heyətinin Tədbirləri"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "Analoq sensorlar"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funksiyalar"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Massivlərə Giriş"
+        },
+        "arrays/csd/2021": {
+          "name": "Massivlər"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "\"For\" dövrü"
+        },
+        "for_loops/csd/2021": {
+          "name": "\"For\" dövrü"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Akselerometr hadisələri"
+        },
+        "the_accelerometer/csd/2021": {
+          "name": "Akselerometr"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Kompüterlər necə işləyir: Dövrlər və məntiq"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Məlumatı təmsil edən"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "name": "İkili və məlumat"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "Məlumatlar Gizli Saxlanır"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Data ilə bağlı qərar vermək"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Data əsl dünyada"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Data əsl dünyada"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Maşın öyrənməsi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "Rəsm Şekilləri"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "Rəsm Şekilləri"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "Forma və parametrlər"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "name": "Forma və parametrlər"
+        },
+        "introduction-to-variables/csd/2021": {
+          "name": "Dəyişənlərə giriş"
+        },
+        "naming_variables/csd/2021": {
+          "name": "Dəyişənlərin adlanması"
+        },
+        "variables_1/csd/2021": {
+          "name": "dəyişənlər"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Təsadufi rəqəmlər"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animasiya Nişanı"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Spraytlar"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Sprite Xüsusiyyətləri"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "Bərabərlik Döngüsü"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Məntiqi İfadələr"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Şərti Operatorlar"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "əgər/yoxsa ifadələri"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Sürət"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Sürət"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Yan Scroller"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Yan Scroller"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Flyer Oyunu"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Flyer Oyunu"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funksiyalar"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funksiyalar"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Kompüter nədir?"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Tətbiqlər və Problemlərin Həlli"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Tətbiqlər və Problemlərin Həlli"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Tətbiqlər və Problemlərin Həlli"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML teqlər"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Başlıqlar və Paraqraflar"
+        },
+        "formatting_html/csd/2021": {
+          "name": "HTML formatı"
+        },
+        "lists/csd/2021": {
+          "name": "Siyahılar"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Sosial Sleuth"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Sosial Sleuth"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "CSS-ə giriş-Hissə 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "CSS - yə giriş: 2 ci hissə"
+        },
+        "creative_commons_search/csd/2021": {
+          "name": "Yaradıcı ümumi araşdırma"
+        },
+        "images_in_html/csd/2021": {
+          "name": "HTML-dəki şəkillər"
+        },
+        "layout-properties/csd/2021": {
+          "name": "Düzən Xüsusiyyətləri"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Veb saytınızın nəşri"
+        },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "Məqsəd üçün veb saytlar"
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "name": "Məqsəd üçün veb saytlar"
+        },
+        "classes/csd/2021": {
+          "name": "Dərslər"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Köprülər"
         }
       }
     }

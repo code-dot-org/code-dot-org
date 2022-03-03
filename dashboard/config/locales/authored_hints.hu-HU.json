@@ -201,7 +201,7 @@
         },
         "4-5 Maze 5": {
           "4-5_Maze_5_a": "Próbáld az `ismételd` ciklust használni, amikor több mint kétszer kell alkalmaznod az `előrelépni` blokkot!",
-          "4-5_Maze_5_b": "Több `repeat` ciklust is használhatsz a feladványban."
+          "4-5_Maze_5_b": "Több `ismételd` ciklust is használhatsz a feladványban."
         },
         "4-5 Maze 6": {
           "4-5_Maze_6_a": "Próbáld követni az utat az ujjaddal!\nEz a legrövidebb út, amit találhatsz?"

@@ -349,15 +349,15 @@
           "courseF_artist_variables3_b": "50 के मूल्य वाला नंबर ब्लॉक केवल एक स्थान पर होगा: `लंबाई सेट करें` ब्लॉक।"
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_c": "यह वह पैटर्न है, जिसका अनुसरण आपका कलाकार करेगा:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)",
+          "courseF_artist_variables4_c": "यह वह पैटर्न है, जिसका अनुसरण आपका कलाकार करेगा:\n\n[][0]",
           "courseF_artist_variables4_a": "आपका कोड उससे ज्यादा अलग नहीं होगा, जैसे यह पिछली पहेली में था, सिवाय इसके कि आपको नीचे कूदने के लिए कलाकार को मोड़ने, फिर उसे अगला त्रिकोण चित्रित करने के लिए तैयार करने हेतु वापस मोड़ने की जरूरत होगी।",
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "OPD-K5-variables-7": {
           "courseF_artist_variables5_a": "आपके कोड का दूसरा आधा हिस्सा लगभग पहले आधे हिस्से की तरह दिखाई देगा, सिवाय इसके कि आप मुड़ना_बाएं_, कूदना, फिर मुड़ना _दाएं_ करेंगे।",
           "courseF_artist_variables5_b": "आपके कोड का पहला आधा हिस्सा तीन त्रिकोण खींचेगा, और दूसरा आधा हिस्सा अन्य तीन खींचेगा।",
           "courseF_artist_variables5_c": "अपने प्रोग्राम के पहले आधे हिस्से में कोड की प्रतिलिपि तैयार करके शुरुआत करें, फिर इसे दिखाया गया डिज़ाइन बनाने के लिए बदलें।",
-          "courseF_artist_variables5_d": "यह वह पैटर्न है, जिसका अनुसरण आपका कलाकार करेगा:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
+          "courseF_artist_variables5_d": "यह वह पैटर्न है, जिसका अनुसरण आपका कलाकार करेगा:\n\n[][0]"
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "कुछे रास्ते हैं, जिन्हें आप ले सकते हैं। कौन-सा सबसे छोटा है?",
@@ -3456,7 +3456,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "इससमस्याकेबारेमेंछोटेभागोंमेंसोचनेकीकोशिशकरें।पूरासमयलें।आपकेलिएइसेपहलीबारमेंहीहलजरूरीनहींहै!",
           "course_starWars_loops8_b": "आधासमयइससमस्याकोसीढीकेस्टेपकेतौरपरसोचें।आपनेपहलेउसेकैसेहलकियाथा?",
-          "course_starWars_loops8_c": "इसरास्तेपरएकनज़रडालें।\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "इसरास्तेपरएकनज़रडालें।\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "आप `दोहराएं` लूप के अंदर एक से अधिक ब्लॉक रख सकते हैं।",
@@ -4128,7 +4128,7 @@
           "courseD_bee_conditionals4_hintVid1": "क्याशुरुआतकरनेमेंमददकीजरूरतहै?वीडियोदेखें!",
           "courseD_bee_conditionals4_a": "आपतबभीप्रत्येकस्थानसेइसतरहव्यवहारकरसकतेहैंकिमानोइसपरबादलहो,चाहेआपपूरारास्तादेखसकतेहों।",
           "courseD_bee_conditionals4_b": "मधुरसकेप्रत्येकस्थानकोदेखनेकेलिएअपनीलूपकेअंदर`इफ`स्टेटमेंटकाउपयोगकरें।",
-          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml>blockब्लॉककाउपयोगकरतेहुए,आपकोआगेकीओरमूवकरकेफूलकोदेखें।यदिवहांफूलहै,तोमधुमक्खीकोक्याकरनाचाहिए?",
+          "courseD_bee_conditionals4_c": "[blocklyblock][0]blockब्लॉककाउपयोगकरतेहुए,आपकोआगेकीओरमूवकरकेफूलकोदेखें।यदिवहांफूलहै,तोमधुमक्खीकोक्याकरनाचाहिए?",
           "courseD_bee_conditionals4_hintVid2": "इसपहेलीकोहलकरनेमेंमददकेलिएयहवीडियोदेखें।"
         },
         "courseD_bee_conditionals5": {
@@ -5295,7 +5295,7 @@
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "जो फंक्शन आप लिखें, उसमें आपका पूरा प्रोग्राम शामिल नहीं होना चाहिए, केवल आंशिक होना चाहिए, जो 100 पिक्सल की भुजाओं वाला वर्ग खींचता हो",
-          "courseD_artist_functions2_c": "`जब चलाएं` ब्लॉक के अंतर्गत अपने फंक्शन को \"बोलने” के लिए हरा `वर्ग खींचें` ब्लॉक का उपयोग करें। अन्यथा, आपके फंक्शन में कोड नहीं चलेगा।\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "`जब चलाएं` ब्लॉक के अंतर्गत अपने फंक्शन को \"बोलने” के लिए हरा `वर्ग खींचें` ब्लॉक का उपयोग करें। अन्यथा, आपके फंक्शन में कोड नहीं चलेगा।\n\n[blockly block][0]",
           "courseD_artist_functions2_a": "आपके प्रोग्राम को यह करना चाहिए:\n\n-   फंक्शन का उपयोग\n-   100 + 75 पिक्सल आगे की ओर मूव करना\n-   फंक्शन का उपयोग"
         },
         "courseE_artist_functions3": {
@@ -8608,7 +8608,7 @@
           "4-5_Artist_1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",

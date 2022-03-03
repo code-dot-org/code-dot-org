@@ -1009,6 +1009,715 @@
           "preparation": "",
           "purpose": "",
           "student_overview": ""
+        },
+        "csd7-2021/Introduction to Machine Learning": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Types of Machine Learning": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Innovations in AI": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Patterns in Data": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Classification Models": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Importing Models in App Lab": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Model Cards": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Saving Models in AI Lab": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Model Cards in App Lab": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Similarity Models": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Customizing Apps": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/AI Code of Ethics": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Mini-Project: Make a Machine Learning App": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Issue Statements": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Survey Planning": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Survey Data in AI Lab": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Troubleshooting Models": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Creating an App": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Design an AI App": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Understanding Your User": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/User-Centered Design 1": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/User-Centered Design 2": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/User Interfaces": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Feedback and Testing": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Identifying User Needs": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Project - Paper Prototype": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Designing Apps for Good": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Market Research": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Exploring UI Elements": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Paper Prototypes": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Prototype Testing": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Digital Design": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Build a Digital Prototype": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Events In AppLab": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Linking Screens": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Testing the App": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Bugs and Features": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Updating Your Prototype": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd4-2021/Project - App Presentation": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Designing Screens with Code": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/The Circuit Playground": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Input Unplugged": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Board Events": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Getting Properties": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Analog Input": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/The Program Design Process": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Project: Make a Game": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Arrays and Color LEDs": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Making Music": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Arrays and For Loops": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Accelerometer": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Functions with Parameters": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Circuits and Physical Prototypes": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Project: Prototype an Innovation": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Patterns and Representation": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/ASCII and Binary Representation": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Representing Images": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Representing Numbers": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Combining Representations": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Keeping Data Secret": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Project - Create a Representation": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Problem Solving and Data": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Structuring Data": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Interpreting Data": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Making Decisions with Data": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Automating Data Decisions": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Problem Solving with Big Data": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Data and Machine Learning": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd5-2021/Project - Make a Recommendation": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Plotting Shapes": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Drawing in Game Lab": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Shapes and Parameters": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Variables": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Random Numbers": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Sprites": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Sprite Properties": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Text": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mini-Project: Captioned Scenes": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/The Draw Loop": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Sprite Movement": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mini-Project: Animation": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Conditionals": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Keyboard Input": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mouse Input": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Project - Interactive Card": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Velocity": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Collision Detection": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mini-Project: Side Scroller": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Complex Sprite Movement": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Collisions": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mini-Project: Flyer Game": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Functions": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/The Game Design Process": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Using the Game Design Process": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Project - Design a Game": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Intro to Problem Solving": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Exploring Problem Solving": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/What is a Computer?": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Input and Output": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Processing": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Storage": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Project - Propose an App": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Intro to HTML": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Headings": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Mini-Project: HTML Web Page": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Digital Footprint": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Styling Text with CSS": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Mini-Project: Your Personal Style": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Intellectual Property": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Using Images": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Websites for Expression ": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Styling Elements with CSS": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Your Web Page - Prepare": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Project - Personal Web Page": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Websites for a Purpose": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Team Problem Solving": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Sources and Research": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/CSS Classes": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Planning a Multi-page Website": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Linking Pages": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Project - Website for a Purpose": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd2-2021/Peer Review and Final Touches": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         }
       }
     }

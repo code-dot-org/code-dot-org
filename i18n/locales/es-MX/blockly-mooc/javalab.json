@@ -98,6 +98,8 @@
   "reviewClassmateProject": "Revisa el proyecto de un compañero...",
   "returnToMyProject": "Volver a mi proyecto",
   "running": "Ejecutando...",
+  "runningProjectTests": "Ejecutando las pruebas de tu proyecto...",
+  "runningValidation": "Ejecutando pruebas de nivel...",
   "runtimeError": "Tu código encontró una excepción mientras se ejecutaba.\n{cause}",
   "saveToBackpack": "Guardar en Mochila",
   "sendingVideo": "Enviando vídeo. Longitud total: {totalTime} segundos.",

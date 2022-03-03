@@ -369,7 +369,15 @@ mk:
           lesson_groups:
             lessonGroup-8:
               display_name: Променливи
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Лупови
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: Лупови
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Лупови

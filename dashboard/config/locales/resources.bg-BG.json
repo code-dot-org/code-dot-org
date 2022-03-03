@@ -259,6 +259,60 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Учителски форум"
+        },
+        "design_mode/csd/2021": {
+          "name": "Режим на проектиране"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Режим на проектиране"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Учителски форум"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функции"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "За циклите"
+        },
+        "for_loops/csd/2021": {
+          "name": "За циклите"
+        },
+        "variables_1/csd/2021": {
+          "name": "Променливи"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Раздел \"Анимация\""
+        },
+        "sprites_1/csd/2021": {
+          "name": "Спрайт"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Свойства на Спрайта"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Скорост"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Скорост"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функции"
+        },
+        "functions_1/csd/2021": {
+          "name": "Функции"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Учителски форум"
+        },
+        "lists/csd/2021": {
+          "name": "Списъци"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Въведение CSS - част 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Въведение CSS - част 2"
         }
       }
     }

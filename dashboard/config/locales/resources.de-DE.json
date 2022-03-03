@@ -1168,6 +1168,295 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Änderungen der virtuellen Lektion",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "KI sehen"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Entwurf einer Datenerhebung"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Papier-Prototypen"
+        },
+        "market-research/csd/2021": {
+          "name": "Marktforschung"
+        },
+        "market_research/csd/2021": {
+          "name": "Marktforschung"
+        },
+        "design_mode/csd/2021": {
+          "name": "Entwurfsmodus"
+        },
+        "design_mode_elements/csd/2021": {
+          "name": "Entwurfsmodus-Elemente"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "name": "Einführung in den Designmodus"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Entwurfsmodus"
+        },
+        "design_mode_elements_1/csd/2021": {
+          "name": "Entwurfsmodus-Elemente"
+        },
+        "importing_screens/csd/2021": {
+          "name": "Bildschirme Importieren"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "Mehrbildschirm-Apps"
+        },
+        "app-presentation/csd/2021": {
+          "name": "App-Präsentation"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "App-Präsentation"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Lehrer Forum"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "Bildschirme mit Code gestalten"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Zufällige Zahlen"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Wie Computer funktionieren: Hardware & Software"
+        },
+        "board_events/csd/2021": {
+          "name": "Platinen-Ereignisse"
+        },
+        "physical_input/csd/2021": {
+          "name": "Physischer Input"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "Analoge Sensoren"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funktionen"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Einführung in Arrays"
+        },
+        "arrays/csd/2021": {
+          "name": "Arrays"
+        },
+        "circuits_and_leds/csd/2021": {
+          "name": "Schaltungen und LEDs"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Noten abspielen"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "\"Zähle mit\"-Schleifen"
+        },
+        "for_loops/csd/2021": {
+          "name": "\"Zähle mit\"-Schleifen"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Ereignisse mit dem Beschleunigungsmesser"
+        },
+        "the_accelerometer/csd/2021": {
+          "name": "Der Beschleunigungssensor"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Wie Computer funktionieren: Schaltkreise und Logik"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Darstellung von Informationen"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "name": "Binär und Daten"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Zahlendarstellung"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "Daten geheim halten"
+        },
+        "structuring_data/csd/2021": {
+          "name": "Daten strukturieren"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "Daten interpretieren"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "Daten interpretieren"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "Daten interpretieren"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Entscheidungen mit Daten"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Automatisierung von Datenentscheidungen"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "Automatisierung von Datenentscheidungen"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "Automatisierung von Datenentscheidungen"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Daten in der Praxis"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Daten in der Praxis"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Maschinelles Lernen",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "introduction-to-variables/csd/2021": {
+          "name": "Einführung in Variablen"
+        },
+        "naming_variables/csd/2021": {
+          "name": "Benennung von Variablen"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variablen"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Zufällige Zahlen"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Der Animations Tab"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprites"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Sprite Eigenschaften"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "Die Zieh-Schleife"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Sprite-Bewegung"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Boolesche Ausdrücke"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Bedingte Anweisungen"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Wenn/Sonst Anweisungen"
+        },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "name": "Interaktive Karte"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "name": "Interaktive Karte"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "name": "Interaktive Karte"
+        },
+        "interactive_card/csd/2021": {
+          "name": "Interaktive Karte"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Geschwindigkeit"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Geschwindigkeit"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Kollisions-Entdeckung"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Kollisions-Entdeckung"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Side-Scroller"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Side-Scroller"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Geschwindigkeit und das Zählermuster"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Flieger-Spiel"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Flieger-Spiel"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funktionen"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funktionen"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Lehrer Forum"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Was ist ein Computer?"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Input und Output"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Input und Output"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Apps und Problemlösung"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Apps und Problemlösung"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Apps und Problemlösung"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML-Tags"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "Video: Paar-Programmierung"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Überschriften und Absätze"
+        },
+        "formatting_html/csd/2021": {
+          "name": "HTML-Formatierung"
+        },
+        "lists/csd/2021": {
+          "name": "Listen"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Digitaler Fußabdruck"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Einführung in CSS - Teil 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Einführung in CSS - Teil 2"
+        },
+        "creative_commons_search/csd/2021": {
+          "name": "Creative Commons Suche"
+        },
+        "images_in_html/csd/2021": {
+          "name": "Bilder in HTML"
+        },
+        "layout-properties/csd/2021": {
+          "name": "Layout-Eigenschaften"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Veröffentlichung Deiner Website"
+        },
+        "classes/csd/2021": {
+          "name": "Klassen"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Hyperlinks"
         }
       }
     }

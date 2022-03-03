@@ -241,6 +241,48 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "פורום מורים"
+        },
+        "design_mode/csd/2021": {
+          "name": "מצב עיצוב"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "מצב עיצוב"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "פורום מורים"
+        },
+        "functions_2/csd/2021": {
+          "name": "פונקציות"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "בשביל לולאות"
+        },
+        "for_loops/csd/2021": {
+          "name": "בשביל לולאות"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "וידאו: למידת מכונה"
+        },
+        "variables_1/csd/2021": {
+          "name": "משתנים"
+        },
+        "sprites_1/csd/2021": {
+          "name": "דמויות"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "מאפייני ספרייט"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "פונקציות"
+        },
+        "functions_1/csd/2021": {
+          "name": "פונקציות"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "פורום מורים"
+        },
+        "lists/csd/2021": {
+          "name": "רשימות"
         }
       }
     }

@@ -1,0 +1,8 @@
+{
+  "key": "declareAssign_str_hello_world",
+  "name": "Declare and assign a string to a variable",
+  "category": "Variables",
+  "category_key": "variables",
+  "short_description": "Game Lab - Declare and assign a string to a variable",
+  "syntax": "var str = \"Hello World\";"
+}

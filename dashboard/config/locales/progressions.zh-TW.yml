@@ -19,6 +19,7 @@ zh-TW:
       Artist Intro with JR Hildebrande: 由 JR 希爾布蘭來介紹畫家
       Artist Project: 藝術專案
       'Artist: Variables': 小藝術家 - 變數（Variables）
+      Assessment: 測驗
       Attribution: 根目錄 -> 資料 -> 進度 -> 屬性
       Back and Forth: 不斷重複
       Basic Conditionals: 基本條件判斷
@@ -101,6 +102,7 @@ zh-TW:
       'Exploration: Adding Style': '探索: 添加樣式'
       Explore HTML: 探索 HTML
       Exploring more CSS: 探索更多的CSS
+      Extra: 額外的
       Final Personal Website: 完成你的個人網站
       Finish a Screen: 完成一個畫面
       Finish the Prototype: 完成原型
@@ -267,6 +269,7 @@ zh-TW:
 
 '
       Sprite Lab Project: Sprite Lab 專案
+      Sprite Movement: 角色動作
       Sprite Velocity: 角色速度
       Sprites and the Draw Loop: 小怪跟畫迴圈
       Star Chaser: 星星追尋者

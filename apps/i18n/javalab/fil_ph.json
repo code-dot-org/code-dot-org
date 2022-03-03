@@ -98,6 +98,8 @@
   "reviewClassmateProject": "Rebyuhin ang proyekto ng kaklase...",
   "returnToMyProject": "Bumalik sa proyekto ko",
   "running": "Tumatakbo...",
+  "runningProjectTests": "Pinapatakbo ang mga test ng proyekto mo...",
+  "runningValidation": "Pinapatakbo ang mga antas ng test...",
   "runtimeError": "Nagkaroon ng exception ang code mo habang pinapatakbo ito.\n{cause}",
   "saveToBackpack": "I-save sa Backpack",
   "sendingVideo": "Ipinapadala ang video. Kabuuang haba: {totalTime} (na) segundo.",

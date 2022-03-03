@@ -852,6 +852,9 @@
           "preparation": "-   Venujte čas tomu, aby ste si vytvorili vlastný projekt v Umelcovi aj Sprite Labe. Oboznámte sa s možnosťami a obmedzeniami oboch nástrojov.\n-   Upravte **\\*hodnotiacu tabuľku** tak, aby bola v súlade s vašimi triednymi cieľmi a každému žiakovi vytlačte jeden exemplár.\n-   Upravte **\\*hárok návrhu projektu** tak, aby bol v súlade s vašimi triednymi cieľmi a každému žiakovi vytlačte jeden exemplár.",
           "purpose": "Hoci môžu byť žiaci pripravení vrhnúť sa do vytvárania vlastných projektov, táto lekcia im pomôže premeniť nápady na plány. Táto štruktúra pomôže uzemniť idealistov a zároveň ukáže cestu tým, ktorí ešte možno trocha blúdia. Dajte žiakom dosť času na to, aby si vytvorili a upravili svoje projekty. Nevyhnutnosť prístupu „pokus –omyl“ v tejto lekcii naučí žiakov riešiť problémy a vytrvať.",
           "student_overview": "Na takéto veľké projekty treba veľa času a plánovania. Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť naplno!"
+        },
+        "csd3-2021/Variables": {
+          "overview": "**Otázka dňa:  Ako vieme využiť premenné na skladovanie konkrétnej hodnoty a jej využitie v našom programe?**\n\nV tejto lekcii si predstavíme premenné ako spôsob na označenie čísla alebo uloženie náhodne vygenerovanej hodnoty. Začneme jednoduchým popisom premenných a ich využitia a vyskúšame ich použitie v praxi. "
         }
       }
     }

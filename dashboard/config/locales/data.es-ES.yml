@@ -39,7 +39,7 @@ es:
         Custom: Artista
         CustomStudio: Laboratorio de juegos
         Gamelab: Laboratorio de Juegos
-        Spritelab: Laboratorio de sprites
+        Spritelab: Laboratorio de Sprites
     trophy:
       name:
         Bronze: Bronce
@@ -798,7 +798,7 @@ es:
         mc_2018_closing: 'Minecraft: felicitaciones en viaje acuático'
         hoc_dance_warmup: Fiesta de baile - Calentamiento
         hoc_dance_events: Fiesta de baile - Eventos
-        hoc_dance_properties: Fiesta de baile - Propiedades
+        hoc_dance_properties: Fiesta de Baile - Propiedades
         hoc_dance_congrats: Fiesta de baile - ¡Que siga la fiesta!
         c_and_c_great_to_create: Crear y jugar limpio es lo mejor
         c_and_c_digital_sharing: Colaboración digital
@@ -853,7 +853,7 @@ es:
         hoc_dance_warmup_2019: Fiesta de baile - Calentamiento
         hoc_dance_events_2019: Fiesta de baile - Eventos
         hoc_dance_measures_2019: 'Fiesta de Baile: Compaces'
-        hoc_dance_properties_2019: Fiesta de baile - Propiedades
+        hoc_dance_properties_2019: Fiesta de Baile - Propiedades
         csd_what_computers_do: "¿Qué hacen los ordenadores?"
         csf_my_online_neighborhood_2020: Mi barrio en línea
         csf_follow_the_digital_trail: Sigue el rastro digital
@@ -950,6 +950,7 @@ es:
         outbreak_outro: 'Simulación de brote epidémico: Juego libre'
         PL_overview_CSP: "¿Qué son los Principios de la Informática?"
         PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
+        tesstest: Prueba Tess
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

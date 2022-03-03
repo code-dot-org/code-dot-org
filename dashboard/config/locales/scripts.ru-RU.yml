@@ -9364,6 +9364,11 @@ ru:
               display_name: Проект
             lessonGroup-4:
               display_name: Демонстрации и ресурсы
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: Тестирование клона CSA
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -10108,6 +10113,12 @@ ru:
             For Loops with Artist:
               name: Цикл for в Художнике
           lesson_groups:
+            lessonGroup-5:
+              display_name: Переменные курса F (устарело)
+            lessonGroup-6:
+              display_name: Курс F для циклов (устарело)
+            lessonGroup-7:
+              display_name: Спрайты курса E (устарело)
             lessonGroup-8:
               display_name: Час Кода
         csa7-exemplars:
@@ -10134,6 +10145,21 @@ ru:
               display_name: Спрайты
             lessonGroup-3:
               display_name: Переменные
+        csd6-pilot-2022:
+          lessons:
+            Board Events:
+              name: События на доске
+            Arrays and Color LEDs:
+              name: Цветные светодиоды
+            lesson-10:
+              name: Комбинирование введенных данных
+            Functions with Parameters:
+              name: функции
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Глава 1
+            lessonGroup-3:
+              display_name: Глава 2
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -10351,6 +10377,7 @@ ru:
             csf_for_loops:
               display_name: Циклы с параметром
           description_audience: 'Возраст: 9-18'
+          name: ускоренный курс-2022
         csp1-2022:
           lessons:
             Binary Numbers:
@@ -10623,6 +10650,11 @@ ru:
                 приложений. '
             'Hello World: Food':
               name: Привет, мир
+              description_student: В этом уроке вы научитесь создавать и анимировать
+                спрайты и делать их интерактивными, используя события.
+              description_teacher: 'В этом уроке, посвященном **получению навыков**,
+                ученики научатся создавать и анимировать спрайты, а также делать их
+                интерактивными, используя события. '
           lesson_groups:
             csf_sprites:
               display_name: Спрайты
@@ -10765,6 +10797,11 @@ ru:
             собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
         csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: Циклы
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -10806,6 +10843,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -10826,3 +10865,96 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: Циклы
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: урок-10
+            lesson-6:
+              key: урок-6
+            lesson-7:
+              key: урок-7
+            lesson-8:
+              key: урок-8
+            lesson-9:
+              key: урок-9
+            lesson-11:
+              key: урок-11
+            lesson-12:
+              key: урок-12
+            lesson-13:
+              key: урок-13
+            lesson-14:
+              key: урок-14
+            lesson-15:
+              key: урок-15
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+            lesson-4:
+              key: урок-4
+            lesson-5:
+              key: урок-5
+            lesson-16:
+              key: урок-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+            lessonGroup-5:
+              display_name: Песочница
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: урок-1
+            lesson-2:
+              key: урок-2
+            lesson-3:
+              key: урок-3
+            lesson-4:
+              key: урок-4
+            lesson-5:
+              key: урок-5
+            lesson-10:
+              key: урок-10
+            lesson-6:
+              key: урок-6
+            lesson-7:
+              key: урок-7
+            lesson-8:
+              key: урок-8
+            lesson-9:
+              key: урок-9
+            lesson-11:
+              key: урок-11
+            lesson-12:
+              key: урок-12
+            lesson-13:
+              key: урок-13
+            lesson-14:
+              key: урок-14
+            lesson-15:
+              key: урок-15
+            lesson-16:
+              key: урок-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+            lessonGroup-5:
+              display_name: Песочница

@@ -3373,6 +3373,10 @@ fi:
           lesson_groups:
             lessonGroup-3:
               display_name: Muuttujat
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funktiot
         coursea-2022:
           lessons:
             Happy Maps:
@@ -3522,6 +3526,10 @@ fi:
               display_name: Digitaalinen kansalaisuus
             lessonGroup-8:
               display_name: Muuttujat
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Silmukat
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3534,5 +3542,11 @@ fi:
               name: Ehtolausekkeet
             lesson-16:
               name: Virheen etsintä
+            lesson-17:
+              name: Innoitusta projekteihin
             lesson-19:
               name: Virheen etsintä
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Silmukat

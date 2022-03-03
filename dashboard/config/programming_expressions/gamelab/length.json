@@ -1,7 +1,8 @@
 {
   "key": "length",
-  "name": "length",
+  "name": "strlength",
   "category": "Variables",
   "category_key": "variables",
+  "short_description": "Game Lab - strlength",
   "syntax": "length"
 }

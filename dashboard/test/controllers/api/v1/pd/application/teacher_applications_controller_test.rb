@@ -33,10 +33,20 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
-    # [MEG] TODO: Add different kinds of users, teachers can't access an application they don't own
     test_redirect_to_sign_in_for :update, params: -> {{id: @application.id}}
     test_user_gets_response_for :update, user: :student, params: -> {{id: @application.id}}, response: :forbidden
-    test_user_gets_response_for :update, user: :teacher, params: -> {{id: @application.id}}, response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a teacher cannot update an application they do not own',
+      user: :teacher,
+      params: -> {{id: @application.id}},
+      response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a teacher can update an application they own',
+      user:  -> {User.find_by(id: @application.user_id)},
+      params: -> {{id: @application.id}},
+      response: :success
 
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
@@ -123,7 +133,7 @@ module Api::V1::Pd::Application
 
     test 'can submit an empty form if application is incomplete' do
       sign_in @applicant
-      put :create, params: {form_data: {status: 'incomplete'}}
+      put :create, params: {status: 'incomplete'}
 
       assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
       assert_response :created
@@ -134,7 +144,7 @@ module Api::V1::Pd::Application
       Pd::Application::TeacherApplication.expects(:queue_email).never
 
       sign_in @applicant
-      put :create, params: {form_data: {status: 'incomplete'}}
+      put :create, params: {status: 'incomplete'}
       assert_response :created
     end
 
@@ -144,7 +154,8 @@ module Api::V1::Pd::Application
       original_data = application.form_data_hash
       original_school_info = @applicant.school_info
 
-      put :update, params: {id: application.id, form_data: {status: 'incomplete'}}
+      # Keep cs_total_course_hours because it is calculated on create or update
+      put :update, params: {id: application.id, status: 'incomplete', form_data: {"cs_total_course_hours": 80}}
       application.reload
       refute_equal original_data, application.form_data_hash
       assert_nil application.course

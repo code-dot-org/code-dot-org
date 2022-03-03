@@ -1238,6 +1238,252 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Modifikasi Pelajaran Virtual",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Melihat AI"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Merancang Pengumpulan Data"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Prototipe Kertas"
+        },
+        "market-research/csd/2021": {
+          "name": "Meneliti pasar"
+        },
+        "market_research/csd/2021": {
+          "name": "Meneliti pasar"
+        },
+        "design_mode/csd/2021": {
+          "name": "Mode desain"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Mode desain"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "Aplikasi Multilayar"
+        },
+        "app-presentation/csd/2021": {
+          "name": "Penyajian aplikasi"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "Penyajian aplikasi"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Forum guru"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "Perancangan Layar dengan Kode"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Cara Kerja Komputer: Perangkat Keras & Perangkat Lunak"
+        },
+        "board_events/csd/2021": {
+          "name": "Event Papan"
+        },
+        "physical_input/csd/2021": {
+          "name": "Input Fisik"
+        },
+        "functions_2/csd/2021": {
+          "name": "fungsi"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Pengenalan Array"
+        },
+        "arrays/csd/2021": {
+          "name": "Array"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Catatan Permainan"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For Loop"
+        },
+        "for_loops/csd/2021": {
+          "name": "For Loop"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Accelerometer Event"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Cara Kerja Komputer: Sirkuit & Logika"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Menunjukkan informasi"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "name": "Binary dan Data"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Merepresentasikan Angka"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "Menjaga Kerahasiaan Data"
+        },
+        "structuring_data/csd/2021": {
+          "name": "Penataan Data"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "Menginterpretasikan Data"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "Menginterpretasikan Data"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "Menginterpretasikan Data"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Mengambil Keputusan dengan Data"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Mengotomatisasi Data Keputusan"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "Mengotomatisasi Data Keputusan"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "Mengotomatisasi Data Keputusan"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Data di Dunia Nyata"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Data di Dunia Nyata"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Pembelajaran Mesin"
+        },
+        "variables_1/csd/2021": {
+          "name": "variabel"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Tab Animasi"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprites"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "Draw Loop"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Gerakan Sprite"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Ekspresi Boolean"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Pernyataan Kondisional"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Pernyataan If/Else"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Percepatan"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Percepatan"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Deteksi tumbukan"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Deteksi tumbukan"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Side Scroller"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Side Scroller"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Percepatan dan Pola Tandingan"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Flyer Game"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Flyer Game"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "fungsi"
+        },
+        "functions_1/csd/2021": {
+          "name": "fungsi"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Forum guru"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Apa itu Komputer?"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Input dan Output"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Input dan Output"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Aplikasi dan Pemecahan Masalah"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Aplikasi dan Pemecahan Masalah"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Aplikasi dan Pemecahan Masalah"
+        },
+        "html_tags/csd/2021": {
+          "name": "Tag HTML"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "Video: Pair Programming"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Heading dan Paragrap"
+        },
+        "formatting_html/csd/2021": {
+          "name": "Format HTML"
+        },
+        "lists/csd/2021": {
+          "name": "List"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Jejak Digital"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Social Sleuth"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Social Sleuth"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Pengantar CSS - Bagian 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Pengantar CSS - Bagian 2"
+        },
+        "creative_commons_search/csd/2021": {
+          "name": "Karya kreatif"
+        },
+        "images_in_html/csd/2021": {
+          "name": "Gambar dalam HTML"
+        },
+        "layout-properties/csd/2021": {
+          "name": "Layout property"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Sedang diterbitkan situs web"
+        },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "Situs Web untuk suatu Tujuan"
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "name": "Situs Web untuk suatu Tujuan"
+        },
+        "classes/csd/2021": {
+          "name": "Kelas"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Tautan"
         }
       }
     }

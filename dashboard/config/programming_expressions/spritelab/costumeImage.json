@@ -1,8 +1,0 @@
-{
-  "key": "costumeImage",
-  "name": "costumeImage",
-  "category": "World",
-  "category_key": "world",
-  "block_name": "gamelab_costumeImage",
-  "syntax": "costumeImage"
-}

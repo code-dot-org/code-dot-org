@@ -89,7 +89,7 @@
     "makerlab_enabled": "true",
     "disable_procedure_autopopulate": "false",
     "long_instructions": "# Change Threshold\r\n\r\nBy default a sensor's \"change\" event fires every time the sensor value changes at all, even by one. The light and sound sensors are constantly fluctuating, so you probably want the \"change\" event to be a little less responsive. The `threshold` property allows you to set how much a sensor should change before considering it a \"change\" event - so setting `soundSensor.threshold = 100` would cause the sound sensor's \"change\" event only to trigger if its value increased or decreased by at least 100.\r\n\r\n# Do This\r\n\r\nThis app changes the background color of the screen whenever the sound sensor value changes, but we want to only respond to big changes in volume (like a loud noise). Use the `soundSensor.threshold` block to fix it.\r\n\r\n* Add a `soundSensor.threshold` block before the event handler\r\n* Test out how different threshold values impact the \"change\" event\r\n* Choose a threshold value that makes the screen background change only when a loud noise is sensed.\r\n\r\n_Tip: Your threshold depends on how much ambient noise there is in the room, and how much it changes. A threshold that works in a quiet room may not work in a louder classroom._",
-    "start_blocks": "// Change the threshold of the sound sensor\r\n// so the background color only changes\r\n// when you make a loud noise\r\n\r\nonBoardEvent(soundSensor, \"change\", function() {\r\n  setProperty(\"screen1\", \"background-color\", rgb(randomNumber(0, 255), randomNumber(0, 255), randomNumber(0, 255)));\r\n});",
+    "start_blocks": "//Add a soundSensor.threshold block before the event handler so the screen only changes \n//color when there is a big change in the volume\n\n//The sound sensor's \"change\" event fires when the sensor value changes,\n//so the background color changes when the sound volume changes or when you make a loud noise\nonBoardEvent(soundSensor, \"change\", function() {\n  setProperty(\"screen1\", \"background-color\", rgb(randomNumber(0, 255), randomNumber(0, 255), randomNumber(0, 255)));\n});\n",
     "top_level_procedure_autopopulate": "false",
     "encrypted_examples": "1dW++ApbrZhFoS/AiwbCbyFlruPRItpAUrD16tV92kHujHT2ZVWPwZsU26hg\nzHWEDDfd/6YtH51ActL0rrJjaw==\n",
     "parent_level_id": 20459,
@@ -104,18 +104,19 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
     "display_name": "Threshold",
     "bubble_choice_description": "Learn to use the threshold block with the sound sensor",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L11/challenge/A.png"
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L11/challenge/A.png",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "preload_asset_list": null
   },
   "game_id": 41,
-  "published": true,
   "created_at": "2021-09-01T22:28:04.000Z",
   "level_num": "custom",
   "user_id": 1,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:28:04.723+00:00\",\"changed\":[\"cloned from \\\"CSD U6 analog threshold_2021\\\"\"],\"cloned_from\":\"CSD U6 analog threshold_2021\"},{\"changed_at\":\"2021-09-01 22:28:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:41:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:44:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:28:04.723+00:00\",\"changed\":[\"cloned from \\\"CSD U6 analog threshold_2021\\\"\"],\"cloned_from\":\"CSD U6 analog threshold_2021\"},{\"changed_at\":\"2021-09-01 22:28:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:41:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:44:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 05:47:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-21 05:48:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
   <blocks/>
 </Applab>

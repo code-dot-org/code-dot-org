@@ -1,7 +1,0 @@
-{
-  "key": "mathDecrement",
-  "name": "mathDecrement",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "__--"
-}

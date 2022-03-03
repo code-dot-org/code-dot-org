@@ -2014,6 +2014,111 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Tu nájdeš bloky kódu.",
           "run_button": "Otestuj si animáciu pomocou tohto tlačidla."
+        },
+        "CSD U3 - conditionals - transition_2021": {
+          "CSD_U3_L8_S6_C1": "Sem pridaj console log prvok"
+        },
+        "CSD U3 Boolean Predict_2021": {
+          "": "Tento program vypíše výsledok sem"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Pre zobrazenie mriežky klikni sem."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Zmeňte číslo tu"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Tu je kód"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Pridajte váš kód sem"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Čo robí tento riadok?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Definujte začiatokHry tu"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Definujte movePlayer() tu"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Skontrolujte, či hráč vyhral"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Zmeňte číslo tu"
         }
       }
     }

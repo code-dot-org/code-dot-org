@@ -98,6 +98,8 @@
   "reviewClassmateProject": "Revizuiește un proiect al unui coleg de clasă...",
   "returnToMyProject": "Revino la proiectul meu",
   "running": "Se rulează...",
+  "runningProjectTests": "Se execută testele proiectului tău",
+  "runningValidation": "Se niveluri de teste...",
   "runtimeError": "Codul tău a întâlnit o excepție în timpul rulării. {cause}",
   "saveToBackpack": "Salvează în Ghiozdan",
   "sendingVideo": "Videoul se trimite. Durata totală: {totalTime} secunde.",

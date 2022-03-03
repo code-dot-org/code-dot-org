@@ -327,6 +327,8 @@ vi:
         bạn vào và tham gia mục này.
       restricted_section: Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code}
         vì nhóm này bị khóa. Vui lòng liên hệ với giáo viên của bạn để được giúp đỡ.
+      not_participant_type: Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code}
+        vì bạn không phù hợp với kiểu người tham gia nhóm đào tạo này.
     mail:
       student_disassociated:
         subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách
@@ -609,6 +611,8 @@ vi:
     student_not_found: Không thể tìm thấy một hoặc vài sinh viên.
     all_students_must_be_in_current_section: Tất cả các sinh viên hiện phải đăng ký
       trong phần của bạn.
+    not_correct_participant_type: Bạn không thể di chuyển những người dùng này vì
+      họ không có quyền trở thành người tham gia nhóm đào tạo mới.
   share:
     title: Học về Xưởng Code
     description: Bất kỳ ai cũng có thể học khoa học máy tính. Tạo trò chơi, ứng dụng
@@ -670,6 +674,7 @@ vi:
     make_my_own_app: Tạo ứng dụng của tôi
     how_it_works: Nó hoạt động như thế nào
     try_hour_of_code: Hãy thử Giờ lập trình!
+    cookie_notice: Thông báo về cookie
   reference_area:
     title: Cần trợ giúp?
     subtitle: Xem các video và gợi ý

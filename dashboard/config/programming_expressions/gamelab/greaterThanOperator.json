@@ -1,7 +1,0 @@
-{
-  "key": "greaterThanOperator",
-  "name": "greaterThanOperator",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "__ > __"
-}

@@ -2,7 +2,40 @@
   "key": "gamelab_turn",
   "name": "turn",
   "category": "Sprites",
-  "category_key": "sprites",
+  "category_key": "actions",
   "block_name": "gamelab_turn",
+  "content": "Rotates a sprite or group of sprites by the selected amount. When used in a behavior, the turn command will give sprite the appearance that it is spinning.\r\n\r\n## Examples\r\n\r\nDisplay Area | Code\r\n--- | ---\r\n![](https://curriculum.code.org/media/uploads/2.png) | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-08-07-at-11.23.37-AM.png)\r\n![](https://curriculum.code.org/media/uploads/ezgif-2-61b75f3cbcdb.gif) | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-08-07-at-11.24.16-AM.png)\r\n",
+  "examples": [
+    {
+      "name": "",
+      "description": "The toothbrush has been turned to make it look like it is in the sprite’s hand. \r\n",
+      "app": "https://studio.code.org/projects/spritelab/_-NSBYoKUgXUNjx-ZGvUGtODsq3nC3d7q4K-7JrQn-o",
+      "image": null,
+      "app_display_type": "embedAppWithCode",
+      "embed_app_with_code_height": 350
+    }
+  ],
+  "image_url": "https://curriculum.code.org/media/blocks/turn.PNG",
+  "palette_params": [
+    {
+      "name": "sprite",
+      "type": "",
+      "required": true,
+      "description": "A sprite or group of sprites. Examples of blocks to attach here are `sprite name`, `costume` and `this/other sprite`. `gamelab_allSpritesWithAnimation`"
+    },
+    {
+      "name": "direction",
+      "type": "",
+      "required": true,
+      "description": "The direction the sprite will rotate, either \"left\" or \"right\"."
+    },
+    {
+      "name": "degrees",
+      "type": "",
+      "required": true,
+      "description": "The amount of rotation in degrees. An `integer` block can be used here or any other combination of blocks that produces a numerical value. Negative values will reverse the direction of rotation."
+    }
+  ],
+  "short_description": "Rotates a sprite or group of sprites by the selected amount. When used in a behavior, the turn command will give sprite the appearance that it is spinning.",
   "syntax": "turn"
 }

@@ -1,8 +1,0 @@
-{
-  "key": "repeatForever",
-  "name": "repeatForever",
-  "category": "Control",
-  "category_key": "control",
-  "block_name": "gamelab_repeatForever",
-  "syntax": "repeatForever"
-}

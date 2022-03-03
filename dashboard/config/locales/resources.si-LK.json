@@ -199,6 +199,30 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "functions_2/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "ලූපයන් සඳහා"
+        },
+        "for_loops/csd/2021": {
+          "name": "ලූපයන් සඳහා"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
+        },
+        "variables_1/csd/2021": {
+          "name": "විචල්‍යන්"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_1/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "lists/csd/2021": {
+          "name": "ලැයිස්තු"
         }
       }
     }

@@ -432,6 +432,26 @@ fi:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': kaikki alienit
             '"BEAR"': karhut
@@ -1154,6 +1174,7 @@ fi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": murskaa
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": kupla
             "'sound://category_animals/bear.mp3'": karhu
             "'sound://category_animals/cat.mp3'": kissa
             "'sound://category_animals/cow.mp3'": lehmä
@@ -1614,6 +1635,7 @@ fi:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': tiili
             '"hearts"': sydämet
             '"iceCream"': Jäätelö
             '"rainbow"': sateenkaari
@@ -1633,6 +1655,7 @@ fi:
         text: PlaySound {SOUND}
         options:
           SOUND:
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': kupla
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hyppää
       Poetry_setBackground:
         text: aseta taustaväri {COLOR}

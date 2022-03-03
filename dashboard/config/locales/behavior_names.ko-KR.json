@@ -1435,8 +1435,8 @@
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
           "moving with arrow keys": "화살표 키로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
           "driving with arrow keys": "화살표 키로 운전"
@@ -1768,7 +1768,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -1784,7 +1784,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -1800,9 +1800,9 @@
           "wandering": "배회",
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
-          "wobbling": "워블링",
+          "wobbling": "흔들림",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -1818,9 +1818,9 @@
           "wandering": "배회",
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
-          "wobbling": "워블링",
+          "wobbling": "흔들림",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -1837,7 +1837,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -1902,8 +1902,8 @@
           "jittering": "지터링",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
-          "fluttering": "플루터링",
-          "wobbling": "워블링"
+          "fluttering": "너울거림",
+          "wobbling": "흔들림"
         },
         "courseF_events_freeplay_food": {
           "moving east": "동쪽으로 이동",
@@ -1949,9 +1949,9 @@
           "wandering": "배회",
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
-          "wobbling": "워블링",
+          "wobbling": "흔들림",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -1968,9 +1968,9 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving with arrow keys": "화살표 키로 이동",
-          "wobbling": "워블링",
+          "wobbling": "흔들림",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
           "driving with arrow keys": "화살표 키로 운전"
@@ -2003,9 +2003,9 @@
           "wandering": "배회",
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
-          "wobbling": "워블링",
+          "wobbling": "흔들림",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2021,9 +2021,9 @@
           "wandering": "배회",
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
-          "wobbling": "워블링",
+          "wobbling": "흔들림",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2040,7 +2040,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2056,9 +2056,9 @@
           "wandering": "배회",
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
-          "wobbling": "워블링",
+          "wobbling": "흔들림",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2088,8 +2088,8 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2114,8 +2114,8 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2129,8 +2129,8 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2195,8 +2195,8 @@
           "jittering": "지터링",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
-          "fluttering": "플루터링",
-          "wobbling": "워블링"
+          "fluttering": "너울거림",
+          "wobbling": "흔들림"
         },
         "courseF_sprites_freeplay_food": {
           "moving east": "동쪽으로 이동",
@@ -2240,8 +2240,8 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2255,8 +2255,8 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2270,8 +2270,8 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2301,8 +2301,8 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2316,8 +2316,8 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2334,7 +2334,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2351,7 +2351,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2369,8 +2369,8 @@
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰",
           "moving with arrow keys": "화살표 키로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
           "driving with arrow keys": "화살표 키로 운전"
@@ -2389,8 +2389,8 @@
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰",
           "moving with arrow keys": "화살표 키로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
           "driving with arrow keys": "화살표 키로 운전"
@@ -2409,8 +2409,8 @@
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰",
           "moving with arrow keys": "화살표 키로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
           "driving with arrow keys": "화살표 키로 운전"
@@ -2429,8 +2429,8 @@
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰",
           "moving with arrow keys": "화살표 키로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
           "driving with arrow keys": "화살표 키로 운전"
@@ -2449,8 +2449,8 @@
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰",
           "moving with arrow keys": "화살표 키로 이동",
-          "fluttering": "플루터링",
-          "wobbling": "워블링",
+          "fluttering": "너울거림",
+          "wobbling": "흔들림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복",
           "driving with arrow keys": "화살표 키로 운전"
@@ -2468,7 +2468,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2485,7 +2485,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2502,7 +2502,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2519,7 +2519,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2536,7 +2536,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },
@@ -2553,7 +2553,7 @@
           "shrinking": "축소",
           "spinning left": "왼쪽으로 회전",
           "moving forward": "앞으로 이동",
-          "fluttering": "플루터링",
+          "fluttering": "너울거림",
           "moving west and looping": "서쪽으로 이동 및  반복",
           "moving east and looping": "동쪽으로 이동 및  반복"
         },

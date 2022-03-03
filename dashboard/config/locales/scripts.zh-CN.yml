@@ -18969,6 +18969,8 @@ zh-CN:
               name: 原型设计
             lesson-19:
               name: 项目
+            Circuits and Physical Prototypes:
+              description_teacher: 在准备本章的最终项目时，学生们会学习到如何用电路游戏板开发一个物理对象的原型。用一个模型化的项目规划指南，学生们会使用便宜并容易找到的材料，如纸板、胶带，组合一些简单的电路来做出达到设计意图的产品。
           lesson_groups:
             lessonGroup-3:
               display_name: 模板
@@ -18998,6 +19000,11 @@ zh-CN:
               display_name: 项目
             lessonGroup-4:
               display_name: 演示和资源
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: 测试CSA克隆
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -19517,6 +19524,12 @@ zh-CN:
               description_student: 创建能分享给同学的互动项目。
               description_teacher: 这节课的特色：精灵图实验室，这是学生可以创建自己的交互动画和游戏的平台。除了行为，学生还会将用户输入作为事件来创建"外星人舞蹈派对"。
           lesson_groups:
+            lessonGroup-5:
+              display_name: 课程F-变量（已弃用）
+            lessonGroup-6:
+              display_name: 课程F-For循环（已弃用）
+            lessonGroup-7:
+              display_name: 课程E-精灵图（已弃用）
             lessonGroup-8:
               display_name: 编程一小时
           description_short: 内部
@@ -19551,6 +19564,33 @@ zh-CN:
               display_name: 变量
             lessonGroup-4:
               display_name: 课程结束项目
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: '在这个课程的最后一个项目中, 学生组队来开发并测试一个基于电路游戏板的创新计算设备的原型。通过使用主板上提供的输入和输出,
+                学生组将创建允许有趣和独特的用户交互的程序。 '
+            Innovations in Computing:
+              name: 计算中的创新
+              description_teacher: 为了开始这门课程的最后一个单元, 学生们将对计算中有趣的创新做一些研究。本课将向学生展示各种计算形式的因素
+                (计算机的外观是什么样的) 和受计算影响的领域。在本单元的后面课程中, 学生在开发自己的物理计算设备时, 他们会回顾在本课中学习到的设备。
+            The Circuit Playground:
+              name: 电路游乐场
+            Board Events:
+              name: 主板事件
+            lesson-10:
+              name: 组合输入
+            Accelerometer:
+              name: 加速传感器
+              description_teacher: 这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。
+            Making Music:
+              name: 制作音乐
+            Functions with Parameters:
+              name: 函数
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -19927,6 +19967,7 @@ zh-CN:
               display_name: 课程结束项目
           description_short: 计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。
           description_audience: 年龄：9-18
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -20802,6 +20843,8 @@ zh-CN:
               description_teacher: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
             'Hello World: Food':
               name: 你好世界
+              description_student: 在这个课程中，你将学习创建和动画化精灵图，并使用事件使它们互动。
+              description_teacher: 在这个**技能建设**课程中，你将学习创建和动画化精灵图，并使用事件使它们互动。
           lesson_groups:
             csf_sprites:
               display_name: 精灵图
@@ -20950,6 +20993,11 @@ zh-CN:
         csp-post-survey-2021:
           title: 计算机科学原理课后调查
         csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java实验室
+            lesson-9:
+              name: 循环
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -21006,6 +21054,8 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -21032,3 +21082,102 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java实验室
+            lesson-9:
+              name: 循环
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: 评估日
+            Java Lab:
+              name: Java实验室
+              key: Java实验室
+            lesson-10:
+              key: 第10课
+            lesson-6:
+              key: 第6课
+            lesson-7:
+              key: 第7课
+            lesson-8:
+              key: 第8课
+            lesson-9:
+              key: 第9课
+            lesson-11:
+              key: 第11课
+            lesson-12:
+              key: 第12课
+            lesson-13:
+              key: 第13课
+            lesson-14:
+              key: 第14课
+            lesson-15:
+              key: 第15课
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+            lesson-3:
+              key: 第3课
+            lesson-4:
+              key: 第4课
+            lesson-5:
+              key: 第5课
+              name: 评估日
+            lesson-16:
+              key: 第16课
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 沙盒
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: 评估日
+            Java Lab:
+              name: Java实验室
+              key: Java实验室
+            lesson-1:
+              key: 第1课
+            lesson-2:
+              key: 第2课
+            lesson-3:
+              key: 第3课
+            lesson-4:
+              key: 第4课
+            lesson-5:
+              key: 第5课
+            lesson-10:
+              key: 第10课
+            lesson-6:
+              key: 第6课
+            lesson-7:
+              key: 第7课
+            lesson-8:
+              key: 第8课
+            lesson-9:
+              key: 第9课
+            lesson-11:
+              key: 第11课
+            lesson-12:
+              key: 第12课
+            lesson-13:
+              key: 第13课
+            lesson-14:
+              key: 第14课
+            lesson-15:
+              key: 第15课
+              name: 评估日
+            lesson-16:
+              key: 第16课
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 沙盒

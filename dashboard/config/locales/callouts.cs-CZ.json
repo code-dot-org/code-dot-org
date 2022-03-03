@@ -1089,6 +1089,9 @@
         },
         "courseF_events_predict": {
           "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "K zobrazení mřížky klikněte zde."
         }
       }
     }

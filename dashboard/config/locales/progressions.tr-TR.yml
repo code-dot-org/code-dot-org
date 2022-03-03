@@ -18,6 +18,7 @@ tr:
       Artist Intro with JR Hildebrande: JR Hildebrand ile Sanatçı Tanıtımı
       Artist Project: Sanatçı Projesi
       'Artist: Variables': 'Sanatçı: Değişkenler'
+      Assessment: Değerlendirme
       Attribution: İlişkilendirme
       Back and Forth: Geri ve ileri
       Basic Conditionals: Temel Koşullar
@@ -94,6 +95,7 @@ tr:
       'Exploration: Adding Style': 'Keşfet: Biçem Eklemek'
       Explore HTML: HTML'i Keşfet
       Exploring more CSS: Daha fazla CSS keşfetmek
+      Extra: Ek özellikler
       Finish a Screen: Bir Ekranı Bitir
       Finish the Prototype: Prototipi Bitir
       Finishing Functions: Bitirme Fonksiyonları
@@ -242,6 +244,7 @@ tr:
       Speed it Up, Slow it Down: Hızlandır, Yavaşlat
       Sprite Lab Example Project: Hareketli Nesne Laboratuvarı Örnek Proje
       Sprite Lab Project: Grafik Lab Projesi
+      Sprite Movement: Hareketli Nesnelerin Hareketi
       Sprite Properties: Nesne özellikleri
       Sprite Scenes: Hareketli Sahneleri
       Sprites and the Draw Loop: Sprite ve Çizim Döngüsü

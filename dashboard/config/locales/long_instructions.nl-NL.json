@@ -1280,7 +1280,8 @@
         "poetry_hoc_freeplay": "De vrijheid van een lege bladzijde! Voor zie uw gedicht van illustratie die u leuk vindt en deel het met uw vrienden.",
         "poetry_hoc_sounds": "Het toevoegen van **geluiden** en **muziek** aan uw programma veranderen het gevoel dat u hebt tijdens het lezen van het gedicht. \n\n-   Voeg een nieuw geluids- of muziekblok toe aan uw code.\n-   Ontdek geluiden of muziek die passen bij de stemming van het gedicht. ",
         "poetry_hoc_spriteBehaviors": "Sprites kunnen bepaalde handelingen of **gedragingen** constant uitvoeren terwijl het programma wordt uitgevoerd.\n\n-   Voeg een 'sprite begint'-blok toe aan uw code.\n-   Verken de verschillende gedraginge voor sprites.\n-   Kies een gedraging uit die past bij uw gedicht.\n\n_Extra uitdaging:_ Voeg een 'sprite begint'-blok toe aan een **event**.",
-        "poetry_hoc_spriteSizes": "U kunt de **grootte** van een reeds gemaakte sprite veranderen.\n\n-   Wijzig de grootte van uw sprite door middel van het nieuwe 'grootte instellen'-blok. \n-   Kies een andere grootte dan 100."
+        "poetry_hoc_spriteSizes": "U kunt de **grootte** van een reeds gemaakte sprite veranderen.\n\n-   Wijzig de grootte van uw sprite door middel van het nieuwe 'grootte instellen'-blok. \n-   Kies een andere grootte dan 100.",
+        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       }
     }
   }

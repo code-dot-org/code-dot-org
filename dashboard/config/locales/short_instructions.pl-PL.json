@@ -3717,7 +3717,7 @@
         "Virtual Pet 6_2021": "Następnie dodajmy kolejnego \"możliwego do przeciągnięcia\" duszka, aby zwierzątko mogło się z nim pobawić. To może być zabawka lub nawet przyjaciel.",
         "Virtual Pet 7_2021": "Nadaj swojemu zwierzątku zachowanie, gdy dotyka je nowy duszek.",
         "Virtual Pet 8_2021": "Wspaniale! Co jeszcze możesz dodać do swojego programu? Wypróbuj dowolną rzecz, która ci odpowiada!",
-        "courseC_artist_prog7_2021": "**Wyzwanie:** Ten tag z imieniem zwierzątka domowego ma szczególny kształt! Ten tag z imieniem zwierzątka domowego ma szczególny kształt!",
+        "courseC_artist_prog7_2021": "**Wyzwanie:** Ten tag z imieniem zwierzątka domowego ma szczególny kształt! ",
         "courseF_artist_for5a_2021": "Dodaj dwa bloki, aby utworzyć spiralę.",
         "courseF_bee_variables_0a_2021": "Zbierz cały miód i zrób cały nektar!",
         "courseF_bee_variables_2a_2021": "Zmień wartość początkową zmiennej tak, aby pszczółka mogła zebrać cały miód i nektar.",
@@ -3767,7 +3767,19 @@
         "poetry_hoc_exemplar2": "Jakie obrazy przychodzą na myśl?",
         "New Artist Project": "Narysuj coś niesamowitego! Twój kod zostaje zapisany jako projekt, do którego możesz wrócić w dowolnym momencie.",
         "New Basketball Project": "Stwórz własną wersję koszykówki. Możesz zmienić wszystkie zasady. Kiedy skończysz, użyj przycisku Udostępnij, aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach.",
-        "New Bounce Project": "Stwórz własną grę w zbijaka. Możesz zmienić grafiki i zasady. Kiedy skończysz, użyj przycisku \"Udostępnij\", aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach."
+        "New Bounce Project": "Stwórz własną grę w zbijaka. Możesz zmienić grafiki i zasady. Kiedy skończysz, użyj przycisku \"Udostępnij\", aby Twoi znajomi mogli zagrać w Twoją grę na swoich telefonach.",
+        "CSD U3 L5 Freeplay_2021": "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?",
+        "CSD U3 Variables change circle size_2021": "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?",
+        "CSD U3 Variables naming rules v2_2021": "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?",
+        "CSD U3 Variables random with assignment_2021": "Zmień wartość petalSize kilka razy.\nJak jej wielkość wpływa na Twój rysunek?",
+        "CSD U5 black white images pixelation 2_2021": "Narysuj uśmiechniętą buźkę (kliknij tutaj aby zobaczyć obrazek)",
+        "CSD U5 black white images pixelation 3_2021": "Zmień szerokość i wysokość suwaka aby znaleźć obraz (kliknij tutaj aby dowiedzieć się więcej)",
+        "CSD U5 black white images pixelation 4_2021": "Dodaj brwi do uśmiechniętej\nbuźki (kliknij tutaj, aby zobaczyć obraz)",
+        "CSD U5 black white images pixelation 5_2021": "Teraz narysuj coś, co Ci się spodoba!",
+        "CSD U5 black white images pixelation_2021": "Uzupełnij kształt X poprzez\ndopisywanie zer i jedynek",
+        "CSDU6 arrays select rainbow_2021": "Przepisz zawartość\ntablicy na ekran w kolejności numerycznej. (Kliknij, aby zobaczyć pełne instrukcje)",
+        "CSDU6 arrays select random_2021": "Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)",
+        "CSDU6 arrays select variable_2021": "Napisz program, który wyświetli losowo wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)"
       }
     }
   }

@@ -1260,6 +1260,48 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "การปรับเปลี่ยนบทเรียนเสมือนจริง",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "แอป Seeing AI"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: ข้อมูลการฝึกฝนและอคติ"
+        },
+        "design_mode/csd/2021": {
+          "name": "สถานะการออกแบบ"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "สถานะการออกแบบ"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "ฟอรัมผู้สอน"
+        },
+        "functions_2/csd/2021": {
+          "name": "ฟังก์ชัน"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "การวนรอบ"
+        },
+        "for_loops/csd/2021": {
+          "name": "การวนรอบ"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "วิดีโอ: การเรียนรู้ของระบบ"
+        },
+        "variables_1/csd/2021": {
+          "name": "ตัวแปร"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "ฟังก์ชัน"
+        },
+        "functions_1/csd/2021": {
+          "name": "ฟังก์ชัน"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "ฟอรัมผู้สอน"
+        },
+        "lists/csd/2021": {
+          "name": "รายการ"
         }
       }
     }

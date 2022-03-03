@@ -18,6 +18,7 @@ sk:
       Artist Intro with JR Hildebrande: Úvod k Umelcovi s JR Hildebrandom
       Artist Project: Umelec - Projekt
       'Artist: Variables': 'Umelec: Premenné'
+      Assessment: Hodnotenie
       Attribution: Uvedenie zdroja
       Back and Forth: Dozadu a dopredu
       Basic Conditionals: Základné podmienky
@@ -257,6 +258,7 @@ sk:
       Speed it Up, Slow it Down: Zrýchli, spomaľ
       Sprite Lab Example Project: Sprite Lab ukážkový projekt
       Sprite Lab Project: Lab postáv projekt
+      Sprite Movement: Pohyb "sprite" objektu
       Sprite Properties: Vlastnosti postáv
       Sprite Velocity: Rýchlosť "sprite" objektu
       Sprites and the Draw Loop: '"Sprite" objekty a vykresľovací cyklus'

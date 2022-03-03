@@ -2895,32 +2895,6 @@ ro-RO:
           și multe altele!\n\nDe asemenea, poți să partajezi modelul tău de simulare
           cu alții, sau să partajezi un mesaj despre ce crezi că putem să facem ca
           să îi menținem pe ceilalți sănătoși atunci când un virus intră în oraș. "
-      OPD-K5 CS Courses_dani:
-        markdown: "# Planificare > Cum să începeți pe Code.org## Pasul 1: Alegeți
-          un cursToate cursurile noastre – de la preșcolari la elevi de liceu – sunt
-          incluse în **[catalogul cursurilor](https://studio.code.org/courses)**.
-          Pentru a identifica lecțiile pentru Noțiuni de bază de știința calculatoarelor
-          cu care ați exersat, accesați **[pagina pentru școala elementară](https://code.org/educate/curriculum/elementary-school)**
-          și derulați până la secțiunea „Cursuri”. Toate cursurile noastre sunt puse
-          la dispoziție cu titlu gratuit. Discutați cu colegii din școala dvs. pentru
-          a stabili modul în care programa de curs poate fi integrată în diverse discipline.![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)***##
-          Pasul 2: Configurați secțiunea atribuită clasei dvs.Configurați secțiunea
-          atribuită clasei dvs. în așa fel încât să puteți vizualiza progresele elevilor
-          dvs., să imprimați carduri de autentificare pentru elevi, să le gestionați
-          conturile și să imprimați certificate pe care le pot lua acasă când termină
-          cursul. Faceți clic pe acest link pentru a **[vizualiza un scurt clip video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          în care se demonstrează cum puteți să configurați prima oră de știința calculatoarelor
-          pe Code.org. De asemenea, puteți găsi pașii în **[acest articol de asistență](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)***##
-          Pasul 3: Alocați cursul secțiunii dvs.Faceți clic pe cursul pe care îl predați
-          – ar trebui să vedeți un ecran care seamănă cu cel de mai jos. Puteți face
-          clic apoi pe „Alocare curs” și să alocați cursul respectiv uneia dintre
-          secțiunile dvs. ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)***##
-          Pasul 4: Începeți să predați! Aveți nevoie de o singură lecție pentru a
-          prezenta concepte de știința calculatoarelor în sala de clasă. După ce veți
-          vedea cât de entuziasmați sunt elevii dvs. cu privire la știința calculatoarelor,
-          continuați cu planurile de lecție zilnice pentru a vă ghida elevii, cu activitățile
-          offline pe care le puteți desfășura fără să aveți nevoie de un computer
-          și cu forumurile pentru a lua legătura cu alți profesori."
       OPD-K5 Stage3aGo_dani:
         content1: descrierea aici
       courseAB_EOC_2021:
@@ -3264,3 +3238,108 @@ ro-RO:
           ## Resurse
 
           * [Introducere în Variabile](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Proprietăți spiriduș
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: descrierea aici
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+        title: titlu
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: descrierea aici
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: descrierea aici
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: descrierea aici
+      CSD U6 LED create intro_2021:
+        content1: descrierea aici
+      CSD U6 array multi_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: descrierea aici
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}

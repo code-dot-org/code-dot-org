@@ -392,6 +392,604 @@
         },
         "iceage_move_to_flag": {
           "iceage_hello3_a": "Gunakan blok `move actor 1 right by 200 pixels` untuk menyelesaikan teka-teki ini."
+        },
+        "CourseE_HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
+        },
+        "CourseE_HOC 2018 Level_10_2020": {
+          "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
+        },
+        "CourseE_HOC 2018 Level_7a": {
+          "aquatic7": "Anda boleh menggunakan blok laluan jika untuk membantu anda membuat selekoh yang betul."
+        },
+        "CourseE_HOC 2018 Level_7a_2020": {
+          "aquatic7": "Anda boleh menggunakan blok laluan jika untuk membantu anda membuat selekoh yang betul."
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "Anda boleh menggunakan blok laluan jika untuk membantu anda membuat selekoh yang betul."
+        },
+        "CourseE_HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Nampak bongkah karang merah dan biru? Gunakannya sebagai tiang panduan untuk membelok ke kanan dan kiri melalui terumbu."
+        },
+        "CourseE_HOC 2018 Level_9b_2020": {
+          "voyage_aquatic_9a": "Nampak bongkah karang merah dan biru? Gunakannya sebagai tiang panduan untuk membelok ke kanan dan kiri melalui terumbu."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Nampak bongkah karang merah dan biru? Gunakannya sebagai tiang panduan untuk membelok ke kanan dan kiri melalui terumbu."
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali di dalam program anda! Cuba panggil dua kali untuk menyelesaikan teka-teki ini."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali di dalam program anda! Cuba panggil dua kali untuk menyelesaikan teka-teki ini."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali di dalam program anda! Cuba panggil dua kali untuk menyelesaikan teka-teki ini."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali di dalam program anda! Cuba panggil dua kali untuk menyelesaikan teka-teki ini."
+        },
+        "HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
+        },
+        "HOC 2018 Level_7a": {
+          "aquatic7": "Anda boleh menggunakan blok laluan jika untuk membantu anda membuat selekoh yang betul."
+        },
+        "HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Nampak bongkah karang merah dan biru? Gunakannya sebagai tiang panduan untuk membelok ke kanan dan kiri melalui terumbu."
+        },
+        "MC_HOC_2017_01_RETRY": {
+          "MC_HOC_2017_01_RETRY_a": "Seret satu blok `bergerak ke hadapan` dari kotak alat ke ruang kerja, dan pasangkannya ke tempatnya di bawah blok `apabila dijalankan`.",
+          "MC_HOC_2017_01_RETRY_b": "Jangan lupa klik \"Run\" untuk menjalankan kod untuk Ejen.",
+          "MC_HOC_2017_01_RETRY_c": "Setelah Ejen menjalankan semua kodnya, anda boleh menggerakkan pemain dengan kekunci anak panah!"
+        },
+        "MC_HOC_2017_01_RETRY_2019": {
+          "MC_HOC_2017_01_RETRY_a": "Seret satu blok `bergerak ke hadapan` dari kotak alat ke ruang kerja, dan pasangkannya ke tempatnya di bawah blok `apabila dijalankan`.",
+          "MC_HOC_2017_01_RETRY_b": "Jangan lupa klik \"Run\" untuk menjalankan kod untuk Ejen.",
+          "MC_HOC_2017_01_RETRY_c": "Setelah Ejen menjalankan semua kodnya, anda boleh menggerakkan pemain dengan kekunci anak panah!"
+        },
+        "MC_HOC_2017_01_RETRY_2020": {
+          "MC_HOC_2017_01_RETRY_a": "Seret satu blok `bergerak ke hadapan` dari kotak alat ke ruang kerja, dan pasangkannya ke tempatnya di bawah blok `apabila dijalankan`.",
+          "MC_HOC_2017_01_RETRY_b": "Jangan lupa klik \"Run\" untuk menjalankan kod untuk Ejen.",
+          "MC_HOC_2017_01_RETRY_c": "Setelah Ejen menjalankan semua kodnya, anda boleh menggerakkan pemain dengan kekunci anak panah!"
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Seret satu blok `bergerak ke hadapan` dari kotak alat ke ruang kerja, dan pasangkannya ke tempatnya di bawah blok `apabila dijalankan`.",
+          "MC_HOC_2017_01_RETRY_b": "Jangan lupa klik \"Run\" untuk menjalankan kod untuk Ejen.",
+          "MC_HOC_2017_01_RETRY_c": "Setelah Ejen menjalankan semua kodnya, anda boleh menggerakkan pemain dengan kekunci anak panah!"
+        },
+        "MC_HOC_2017_02_Cole": {
+          "MC_HOC_2017_02_Cole_a": "Gerakkan Ejen ke hadapan dua ruang untuk berdiri di atas plat tekanan. Itu akan membuka pintu untuk pemain anda.",
+          "MC_HOC_2017_02_Cole_b": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_02_Cole_c": "Sebaik sahaja Ejen telah membuka pintu, gunakan kekunci anak panah untuk mengalihkan pemain ke peta!",
+          "MC_HOC_2017_02_Cole_d": "Pastikan Ejen mengikuti laluan yang digariskan pada peta!"
+        },
+        "MC_HOC_2017_02_Cole_2019": {
+          "MC_HOC_2017_02_Cole_a": "Gerakkan Ejen ke hadapan dua ruang untuk berdiri di atas plat tekanan. Itu akan membuka pintu untuk pemain anda.",
+          "MC_HOC_2017_02_Cole_b": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_02_Cole_c": "Sebaik sahaja Ejen telah membuka pintu, gunakan kekunci anak panah untuk mengalihkan pemain ke peta!",
+          "MC_HOC_2017_02_Cole_d": "Pastikan Ejen mengikuti laluan yang digariskan pada peta!"
+        },
+        "MC_HOC_2017_02_Cole_2020": {
+          "MC_HOC_2017_02_Cole_a": "Gerakkan Ejen ke hadapan dua ruang untuk berdiri di atas plat tekanan. Itu akan membuka pintu untuk pemain anda.",
+          "MC_HOC_2017_02_Cole_b": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_02_Cole_c": "Sebaik sahaja Ejen telah membuka pintu, gunakan kekunci anak panah untuk mengalihkan pemain ke peta!",
+          "MC_HOC_2017_02_Cole_d": "Pastikan Ejen mengikuti laluan yang digariskan pada peta!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Gerakkan Ejen ke hadapan dua ruang untuk berdiri di atas plat tekanan. Itu akan membuka pintu untuk pemain anda.",
+          "MC_HOC_2017_02_Cole_b": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_02_Cole_c": "Sebaik sahaja Ejen telah membuka pintu, gunakan kekunci anak panah untuk mengalihkan pemain ke peta!",
+          "MC_HOC_2017_02_Cole_d": "Pastikan Ejen mengikuti laluan yang digariskan pada peta!"
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_a": "Sebaik sahaja anda mendapatkan Ejen ke plat tekanan, anda boleh menggunakan kekunci anak panah anda untuk membawa pemain ke kompas!",
+          "MC_HOC_2017_03_Cole_b": "Adakah kod itu terasa agak panjang? Cuba gunakan gelung `ulang` dan lihat jika anda boleh memikirkan cara untuk menjadikannya lebih pendek!"
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_a": "Sebaik sahaja anda mendapatkan Ejen ke plat tekanan, anda boleh menggunakan kekunci anak panah anda untuk membawa pemain ke kompas!",
+          "MC_HOC_2017_03_Cole_b": "Adakah kod itu terasa agak panjang? Cuba gunakan gelung `ulang` dan lihat jika anda boleh memikirkan cara untuk menjadikannya lebih pendek!"
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_a": "Sebaik sahaja anda mendapatkan Ejen ke plat tekanan, anda boleh menggunakan kekunci anak panah anda untuk membawa pemain ke kompas!",
+          "MC_HOC_2017_03_Cole_b": "Adakah kod itu terasa agak panjang? Cuba gunakan gelung `ulang` dan lihat jika anda boleh memikirkan cara untuk menjadikannya lebih pendek!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Sebaik sahaja anda mendapatkan Ejen ke plat tekanan, anda boleh menggunakan kekunci anak panah anda untuk membawa pemain ke kompas!",
+          "MC_HOC_2017_03_Cole_b": "Adakah kod itu terasa agak panjang? Cuba gunakan gelung `ulang` dan lihat jika anda boleh memikirkan cara untuk menjadikannya lebih pendek!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gunakan blok `belok kanan` untuk menukar arah ejen",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ejen hanya perlu pergi ke plat tekanan pertama untuk membiarkan Alex atau Steve melalui kapak."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2019": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gunakan blok `belok kanan` untuk menukar arah ejen",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ejen hanya perlu pergi ke plat tekanan pertama untuk membiarkan Alex atau Steve melalui kapak."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2020": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gunakan blok `belok kanan` untuk menukar arah ejen",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ejen hanya perlu pergi ke plat tekanan pertama untuk membiarkan Alex atau Steve melalui kapak."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gunakan blok `belok kanan` untuk menukar arah ejen",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ejen hanya perlu pergi ke plat tekanan pertama untuk membiarkan Alex atau Steve melalui kapak."
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Ejen perlu `move forward` sebanyak 7 kali. Bagaimanakah anda boleh menggunakan gelung `ulang` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_c": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_04_Cole_b": "Sebaik sahaja Ejen sampai ke plat tekanan, Ejen akan membuka pintu untuk pemain."
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Ejen perlu `move forward` sebanyak 7 kali. Bagaimanakah anda boleh menggunakan gelung `ulang` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_c": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_04_Cole_b": "Sebaik sahaja Ejen sampai ke plat tekanan, Ejen akan membuka pintu untuk pemain."
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Ejen perlu `move forward` sebanyak 7 kali. Bagaimanakah anda boleh menggunakan gelung `ulang` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_c": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_04_Cole_b": "Sebaik sahaja Ejen sampai ke plat tekanan, Ejen akan membuka pintu untuk pemain."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Ejen perlu `move forward` sebanyak 7 kali. Bagaimanakah anda boleh menggunakan gelung `ulang` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_c": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_04_Cole_b": "Sebaik sahaja Ejen sampai ke plat tekanan, Ejen akan membuka pintu untuk pemain."
+        },
+        "MC_HOC_2017_05_Cole": {
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu keping kod di dalam gelung? Cuba bergerak ke hadapan **dan** letakkan papan di dalam `ulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
+        },
+        "MC_HOC_2017_05_Cole_2019": {
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu keping kod di dalam gelung? Cuba bergerak ke hadapan **dan** letakkan papan di dalam `ulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
+        },
+        "MC_HOC_2017_05_Cole_2020": {
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu keping kod di dalam gelung? Cuba bergerak ke hadapan **dan** letakkan papan di dalam `ulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu keping kod di dalam gelung? Cuba bergerak ke hadapan **dan** letakkan papan di dalam `ulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_a": "Berapa kali gelung ini dijalankan? Berapa kali _harus_ ia dijalankan?",
+          "MC_HOC_2017_06_Cole_b": "Bantu Ejen membina jambatan sepanjang jalan merentasi air!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_a": "Berapa kali gelung ini dijalankan? Berapa kali _harus_ ia dijalankan?",
+          "MC_HOC_2017_06_Cole_b": "Bantu Ejen membina jambatan sepanjang jalan merentasi air!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_a": "Berapa kali gelung ini dijalankan? Berapa kali _harus_ ia dijalankan?",
+          "MC_HOC_2017_06_Cole_b": "Bantu Ejen membina jambatan sepanjang jalan merentasi air!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Berapa kali gelung ini dijalankan? Berapa kali _harus_ ia dijalankan?",
+          "MC_HOC_2017_06_Cole_b": "Bantu Ejen membina jambatan sepanjang jalan merentasi air!"
+        },
+        "MC_HOC_2017_07_Cole": {
+          "MC_HOC_2017_07_Cole_c": "Apa yang anda perlu lakukan oleh Ejen ialah mengosongkan laluan ke Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Untuk menyelesaikan teka-teki ini, ketahui fungsi `clear path` dan panggilnya seberapa banyak yang anda perlukan menggunakan blok `clear path` hijau kecil dari kotak alat.",
+          "MC_HOC_2017_07_Cole_b": "Cuba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu anda menyelesaikan teka-teki ini."
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "MC_HOC_2017_07_Cole_c": "Apa yang anda perlu lakukan oleh Ejen ialah mengosongkan laluan ke Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Untuk menyelesaikan teka-teki ini, ketahui fungsi `clear path` dan panggilnya seberapa banyak yang anda perlukan menggunakan blok `clear path` hijau kecil dari kotak alat.",
+          "MC_HOC_2017_07_Cole_b": "Cuba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu anda menyelesaikan teka-teki ini."
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "MC_HOC_2017_07_Cole_c": "Apa yang anda perlu lakukan oleh Ejen ialah mengosongkan laluan ke Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Untuk menyelesaikan teka-teki ini, ketahui fungsi `clear path` dan panggilnya seberapa banyak yang anda perlukan menggunakan blok `clear path` hijau kecil dari kotak alat.",
+          "MC_HOC_2017_07_Cole_b": "Cuba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu anda menyelesaikan teka-teki ini."
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "Apa yang anda perlu lakukan oleh Ejen ialah mengosongkan laluan ke Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Untuk menyelesaikan teka-teki ini, ketahui fungsi `clear path` dan panggilnya seberapa banyak yang anda perlukan menggunakan blok `clear path` hijau kecil dari kotak alat.",
+          "MC_HOC_2017_07_Cole_b": "Cuba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu anda menyelesaikan teka-teki ini."
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "MC_HOC_2017_10_Cole_b": "Tidak tahu hendak ke mana? Lihat jika anda boleh mencari garis putus-putus!",
+          "MC_HOC_2017_10_Cole_a": "Gunakan fungsi untuk memudahkan penyelesaian teka-teki ini!"
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "MC_HOC_2017_10_Cole_b": "Tidak tahu hendak ke mana? Lihat jika anda boleh mencari garis putus-putus!",
+          "MC_HOC_2017_10_Cole_a": "Gunakan fungsi untuk memudahkan penyelesaian teka-teki ini!"
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "MC_HOC_2017_10_Cole_b": "Tidak tahu hendak ke mana? Lihat jika anda boleh mencari garis putus-putus!",
+          "MC_HOC_2017_10_Cole_a": "Gunakan fungsi untuk memudahkan penyelesaian teka-teki ini!"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "Tidak tahu hendak ke mana? Lihat jika anda boleh mencari garis putus-putus!",
+          "MC_HOC_2017_10_Cole_a": "Gunakan fungsi untuk memudahkan penyelesaian teka-teki ini!"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_a": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_08_RY_b": "Terdapat BANYAK cara untuk menyelesaikan teka-teki ini. Cuba beberapa di antaranya!",
+          "MC_HOC_2017_08_RY_c": "Cuba ikuti garis putus-putus untuk laluan mudah melalui lava."
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_a": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_08_RY_b": "Terdapat BANYAK cara untuk menyelesaikan teka-teki ini. Cuba beberapa di antaranya!",
+          "MC_HOC_2017_08_RY_c": "Cuba ikuti garis putus-putus untuk laluan mudah melalui lava."
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_a": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_08_RY_b": "Terdapat BANYAK cara untuk menyelesaikan teka-teki ini. Cuba beberapa di antaranya!",
+          "MC_HOC_2017_08_RY_c": "Cuba ikuti garis putus-putus untuk laluan mudah melalui lava."
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_08_RY_b": "Terdapat BANYAK cara untuk menyelesaikan teka-teki ini. Cuba beberapa di antaranya!",
+          "MC_HOC_2017_08_RY_c": "Cuba ikuti garis putus-putus untuk laluan mudah melalui lava."
+        },
+        "MC_HOC_2017_FP20x20": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa trek kereta api supaya anda boleh meneroka dunia!"
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa trek kereta api supaya anda boleh meneroka dunia!"
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa trek kereta api supaya anda boleh meneroka dunia!"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa trek kereta api supaya anda boleh meneroka dunia!"
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa jambatan supaya Alex atau Steve boleh berjalan-jalan di luar tepi peta."
+        },
+        "Overworld Avoid Monsters": {
+          "mc_8_a": "Terdapat beberapa laluan yang anda boleh ambil. Yang manakah paling pendek?",
+          "mc_8_b": "Gunakan gelung `repeat` untuk memudahkan kod anda.",
+          "mc_8_c": "Matlamat anda adalah untuk masuk ke ambang pintu rumah di bahagian atas skrin."
+        },
+        "Overworld Avoid Monsters_2019": {
+          "mc_8_a": "Terdapat beberapa laluan yang anda boleh ambil. Yang manakah paling pendek?",
+          "mc_8_b": "Gunakan gelung `repeat` untuk memudahkan kod anda.",
+          "mc_8_c": "Matlamat anda adalah untuk masuk ke ambang pintu rumah di bahagian atas skrin."
+        },
+        "Overworld Avoid Monsters_2020": {
+          "mc_8_a": "Terdapat beberapa laluan yang anda boleh ambil. Yang manakah paling pendek?",
+          "mc_8_b": "Gunakan gelung `repeat` untuk memudahkan kod anda.",
+          "mc_8_c": "Matlamat anda adalah untuk masuk ke ambang pintu rumah di bahagian atas skrin."
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "Terdapat beberapa laluan yang anda boleh ambil. Yang manakah paling pendek?",
+          "mc_8_b": "Gunakan gelung `repeat` untuk memudahkan kod anda.",
+          "mc_8_c": "Matlamat anda adalah untuk masuk ke ambang pintu rumah di bahagian atas skrin."
+        },
+        "Overworld Chop Tree": {
+          "mc_2_a": "Anda perlu `bergerak ke hadapan` dua kali untuk berdiri di hadapan pokok.",
+          "mc_2_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Tree_2019": {
+          "mc_2_a": "Anda perlu `bergerak ke hadapan` dua kali untuk berdiri di hadapan pokok.",
+          "mc_2_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Tree_2020": {
+          "mc_2_a": "Anda perlu `bergerak ke hadapan` dua kali untuk berdiri di hadapan pokok.",
+          "mc_2_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Anda perlu `bergerak ke hadapan` dua kali untuk berdiri di hadapan pokok.",
+          "mc_2_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Trees": {
+          "mc_4_a": "Anda boleh menebang pokok dalam sebarang susunan. Laluan apakah yang mengambil bilangan blok terkecil?",
+          "mc_4_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Trees_2019": {
+          "mc_4_a": "Anda boleh menebang pokok dalam sebarang susunan. Laluan apakah yang mengambil bilangan blok terkecil?",
+          "mc_4_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Trees_2020": {
+          "mc_4_a": "Anda boleh menebang pokok dalam sebarang susunan. Laluan apakah yang mengambil bilangan blok terkecil?",
+          "mc_4_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "Anda boleh menebang pokok dalam sebarang susunan. Laluan apakah yang mengambil bilangan blok terkecil?",
+          "mc_4_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld House Frame Chosen": {
+          "mc_6_a": "Klik anak panah pada blok `tempat` untuk memilih perkara yang anda mahu letak.",
+          "mc_6_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "mc_6_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld House Frame Chosen_2019": {
+          "mc_6_a": "Klik anak panah pada blok `tempat` untuk memilih perkara yang anda mahu letak.",
+          "mc_6_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "mc_6_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld House Frame Chosen_2020": {
+          "mc_6_a": "Klik anak panah pada blok `tempat` untuk memilih perkara yang anda mahu letak.",
+          "mc_6_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "mc_6_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "Klik anak panah pada blok `tempat` untuk memilih perkara yang anda mahu letak.",
+          "mc_6_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "mc_6_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Move to Sheep": {
+          "mc_1_a": "Blok `maju ke hadapan` berada di bahagian atas kotak alat.",
+          "mc_1_b": "Pastikan kedua-dua blok `maju ke hadapan` disentap ke blok `apabila dijalankan`."
+        },
+        "Overworld Move to Sheep_2019": {
+          "mc_1_a": "Blok `maju ke hadapan` berada di bahagian atas kotak alat.",
+          "mc_1_b": "Pastikan kedua-dua blok `maju ke hadapan` disentap ke blok `apabila dijalankan`."
+        },
+        "Overworld Move to Sheep_2020": {
+          "mc_1_a": "Blok `maju ke hadapan` berada di bahagian atas kotak alat.",
+          "mc_1_b": "Pastikan kedua-dua blok `maju ke hadapan` disentap ke blok `apabila dijalankan`."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "Blok `maju ke hadapan` berada di bahagian atas kotak alat.",
+          "mc_1_b": "Pastikan kedua-dua blok `maju ke hadapan` disentap ke blok `apabila dijalankan`."
+        },
+        "Overworld Place Wall": {
+          "mc_5_a": "Gunakan blok `letakkan` dahulu, dan kemudian blok `gerakkan`.",
+          "mc_5_b": "Pastikan kedua-dua blok berada di dalam gelung `ulang` untuk menjalankan kod lebih daripada sekali.",
+          "mc_5_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Place Wall_2019": {
+          "mc_5_a": "Gunakan blok `letakkan` dahulu, dan kemudian blok `gerakkan`.",
+          "mc_5_b": "Pastikan kedua-dua blok berada di dalam gelung `ulang` untuk menjalankan kod lebih daripada sekali.",
+          "mc_5_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Place Wall_2020": {
+          "mc_5_a": "Gunakan blok `letakkan` dahulu, dan kemudian blok `gerakkan`.",
+          "mc_5_b": "Pastikan kedua-dua blok berada di dalam gelung `ulang` untuk menjalankan kod lebih daripada sekali.",
+          "mc_5_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "Gunakan blok `letakkan` dahulu, dan kemudian blok `gerakkan`.",
+          "mc_5_b": "Pastikan kedua-dua blok berada di dalam gelung `ulang` untuk menjalankan kod lebih daripada sekali.",
+          "mc_5_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Plant Crops": {
+          "mc_7_a": "Gunakan blok `tanam tanaman` untuk menanam tanaman di ruang tempat anda berdiri.",
+          "mc_7_b": "Kedua-dua jalur tanah coklat gelap di tepi air perlu diisi dengan tanaman.",
+          "mc_7_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Plant Crops_2019": {
+          "mc_7_a": "Gunakan blok `tanam tanaman` untuk menanam tanaman di ruang tempat anda berdiri.",
+          "mc_7_b": "Kedua-dua jalur tanah coklat gelap di tepi air perlu diisi dengan tanaman.",
+          "mc_7_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Plant Crops_2020": {
+          "mc_7_a": "Gunakan blok `tanam tanaman` untuk menanam tanaman di ruang tempat anda berdiri.",
+          "mc_7_b": "Kedua-dua jalur tanah coklat gelap di tepi air perlu diisi dengan tanaman.",
+          "mc_7_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "Gunakan blok `tanam tanaman` untuk menanam tanaman di ruang tempat anda berdiri.",
+          "mc_7_b": "Kedua-dua jalur tanah coklat gelap di tepi air perlu diisi dengan tanaman.",
+          "mc_7_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Powered Minecart": {
+          "mc_13_a": "Gunakan `letak rel` untuk meletakkan rel di dataran tempat anda berdiri.",
+          "mc_13_b": "Gunakan gelung `ulang` untuk menjadikan kod anda lebih pendek."
+        },
+        "Overworld Powered Minecart_2019": {
+          "mc_13_a": "Gunakan `letak rel` untuk meletakkan rel di dataran tempat anda berdiri.",
+          "mc_13_b": "Gunakan gelung `ulang` untuk menjadikan kod anda lebih pendek."
+        },
+        "Overworld Powered Minecart_2020": {
+          "mc_13_a": "Gunakan `letak rel` untuk meletakkan rel di dataran tempat anda berdiri.",
+          "mc_13_b": "Gunakan gelung `ulang` untuk menjadikan kod anda lebih pendek."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Gunakan `letak rel` untuk meletakkan rel di dataran tempat anda berdiri.",
+          "mc_13_b": "Gunakan gelung `ulang` untuk menjadikan kod anda lebih pendek."
+        },
+        "Overworld Shear Sheep": {
+          "mc_3_a": "Blok `ricih` membawa biri-biri di hadapan anda. Adakah anda menghadap kambing biri-biri?",
+          "mc_3_b": "Jika anda perlu menukar cara anda menghadapi, gunakan blok `pusing`.",
+          "mc_3_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Shear Sheep_2019": {
+          "mc_3_a": "Blok `ricih` membawa biri-biri di hadapan anda. Adakah anda menghadap kambing biri-biri?",
+          "mc_3_b": "Jika anda perlu menukar cara anda menghadapi, gunakan blok `pusing`.",
+          "mc_3_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Shear Sheep_2020": {
+          "mc_3_a": "Blok `ricih` membawa biri-biri di hadapan anda. Adakah anda menghadap kambing biri-biri?",
+          "mc_3_b": "Jika anda perlu menukar cara anda menghadapi, gunakan blok `pusing`.",
+          "mc_3_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "Blok `ricih` membawa biri-biri di hadapan anda. Adakah anda menghadap kambing biri-biri?",
+          "mc_3_b": "Jika anda perlu menukar cara anda menghadapi, gunakan blok `pusing`.",
+          "mc_3_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Avoiding Lava": {
+          "mc_11_a": "Semua kod disediakan untuk memeriksa lava dan menanganinya. Anda perlu menambah blok untuk bergerak.",
+          "mc_11_b": "Patutkah perintah `bergerak ke hadapan` anda masuk ke dalam pernyataan `if` atau selepas?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "mc_11_a": "Semua kod disediakan untuk memeriksa lava dan menanganinya. Anda perlu menambah blok untuk bergerak.",
+          "mc_11_b": "Patutkah perintah `bergerak ke hadapan` anda masuk ke dalam pernyataan `if` atau selepas?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "mc_11_a": "Semua kod disediakan untuk memeriksa lava dan menanganinya. Anda perlu menambah blok untuk bergerak.",
+          "mc_11_b": "Patutkah perintah `bergerak ke hadapan` anda masuk ke dalam pernyataan `if` atau selepas?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Semua kod disediakan untuk memeriksa lava dan menanganinya. Anda perlu menambah blok untuk bergerak.",
+          "mc_11_b": "Patutkah perintah `bergerak ke hadapan` anda masuk ke dalam pernyataan `if` atau selepas?"
+        },
+        "Underground If Statements": {
+          "mc_12_a": "Ruang dengan bintik merah adalah tempat anda akan menemui Redstone.",
+          "mc_12_b": "Bolehkah anda menggunakan gelung `repeat` untuk menjadikan kod anda lebih pendek?",
+          "mc_12_c": "Gunakan pernyataan `jika` untuk memeriksa ruang untuk lava, kemudian letakkan batu buntar."
+        },
+        "Underground If Statements_2019": {
+          "mc_12_a": "Ruang dengan bintik merah adalah tempat anda akan menemui Redstone.",
+          "mc_12_b": "Bolehkah anda menggunakan gelung `repeat` untuk menjadikan kod anda lebih pendek?",
+          "mc_12_c": "Gunakan pernyataan `jika` untuk memeriksa ruang untuk lava, kemudian letakkan batu buntar."
+        },
+        "Underground If Statements_2020": {
+          "mc_12_a": "Ruang dengan bintik merah adalah tempat anda akan menemui Redstone.",
+          "mc_12_b": "Bolehkah anda menggunakan gelung `repeat` untuk menjadikan kod anda lebih pendek?",
+          "mc_12_c": "Gunakan pernyataan `jika` untuk memeriksa ruang untuk lava, kemudian letakkan batu buntar."
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Ruang dengan bintik merah adalah tempat anda akan menemui Redstone.",
+          "mc_12_b": "Bolehkah anda menggunakan gelung `repeat` untuk menjadikan kod anda lebih pendek?",
+          "mc_12_c": "Gunakan pernyataan `jika` untuk memeriksa ruang untuk lava, kemudian letakkan batu buntar."
+        },
+        "Underground Iron": {
+          "mc_10_a": "Blok besi adalah ruang berbintik-bintik di belakang obor! Bagaimana anda akan pergi ke sana?",
+          "mc_10_b": "Apabila anda berdiri di tepi lava, gunakan `place cobblestone ahead` untuk membuat laluan selamat. Kemudian, anda boleh berjalan di atasnya!",
+          "mc_10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Iron_2019": {
+          "mc_10_a": "Blok besi adalah ruang berbintik-bintik di belakang obor! Bagaimana anda akan pergi ke sana?",
+          "mc_10_b": "Apabila anda berdiri di tepi lava, gunakan `place cobblestone ahead` untuk membuat laluan selamat. Kemudian, anda boleh berjalan di atasnya!",
+          "mc_10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Iron_2020": {
+          "mc_10_a": "Blok besi adalah ruang berbintik-bintik di belakang obor! Bagaimana anda akan pergi ke sana?",
+          "mc_10_b": "Apabila anda berdiri di tepi lava, gunakan `place cobblestone ahead` untuk membuat laluan selamat. Kemudian, anda boleh berjalan di atasnya!",
+          "mc_10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "Blok besi adalah ruang berbintik-bintik di belakang obor! Bagaimana anda akan pergi ke sana?",
+          "mc_10_b": "Apabila anda berdiri di tepi lava, gunakan `place cobblestone ahead` untuk membuat laluan selamat. Kemudian, anda boleh berjalan di atasnya!",
+          "mc_10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Mining Coal": {
+          "mc_9_a": "Adakah anda menghadapi jalan yang betul? `destroy block` melombong blok di hadapan anda.",
+          "mc_9_b": "Bintik hitam di dinding adalah arang batu! Gunakan `destroy block` padanya untuk melombong arang batu.",
+          "mc_9_c": "Gunakan `tempat obor` untuk meletakkan obor di ruang tempat anda berdiri."
+        },
+        "Underground Mining Coal_2019": {
+          "mc_9_a": "Adakah anda menghadapi jalan yang betul? `destroy block` melombong blok di hadapan anda.",
+          "mc_9_b": "Bintik hitam di dinding adalah arang batu! Gunakan `destroy block` padanya untuk melombong arang batu.",
+          "mc_9_c": "Gunakan `tempat obor` untuk meletakkan obor di ruang tempat anda berdiri."
+        },
+        "Underground Mining Coal_2020": {
+          "mc_9_a": "Adakah anda menghadapi jalan yang betul? `destroy block` melombong blok di hadapan anda.",
+          "mc_9_b": "Bintik hitam di dinding adalah arang batu! Gunakan `destroy block` padanya untuk melombong arang batu.",
+          "mc_9_c": "Gunakan `tempat obor` untuk meletakkan obor di ruang tempat anda berdiri."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Adakah anda menghadapi jalan yang betul? `destroy block` melombong blok di hadapan anda.",
+          "mc_9_b": "Bintik hitam di dinding adalah arang batu! Gunakan `destroy block` padanya untuk melombong arang batu.",
+          "mc_9_c": "Gunakan `tempat obor` untuk meletakkan obor di ruang tempat anda berdiri."
+        },
+        "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseB_starWars_prog9_2018": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseB_starWars_prog9_2019": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseB_starWars_prog9_2020": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1_2018": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1_2019": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1_2020": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "Tambahkan satu atau lebih blok `pelakon 1 berkata` pada acara `apabila diklik` untuk melengkapkan teka-teki ini."
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "Bolehkah anda membuat Sid dan Manny pergaduhan Ais Kristal?",
+          "iceage_free_play_b": "Buat Nenek mengejar Diego. Tamatkan permainan sebagai kemenangan jika dia menangkapnya.",
+          "iceage_free_play_c": "Bolehkah anda meminta Sid membaling kepingan salji ke Diego dan meminta Diego menjadi lebih besar setiap kali terkena? Tamatkan permainan sebagai kemenangan jika Diego terkena 5 kali."
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": " Setiap peristiwa `apabila ___ anak panah` perlu mempunyai perintah `gerakkan pelakon 1` berbeza yang disambungkan kepadanya untuk menyelesaikan teka-teki ini."
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": " Setiap peristiwa `apabila ___ anak panah` perlu mempunyai perintah `gerakkan pelakon 1` berbeza yang disambungkan kepadanya untuk menyelesaikan teka-teki ini."
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "Untuk teka-teki ini, anda boleh sama ada memindahkan Diego ke bawah sebanyak 200 piksel, atau menaikkan Manny sebanyak 200 piksel.",
+          "iceage_move_to_actor_b": "Sambungkan blok `mainkan ___ bunyi` ke acara `apabila pelakon 1 menyentuh pelakon 2` untuk menyelesaikan cabaran ini"
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "Gunakan kedua-dua blok `gerakkan pelakon 1 ke kiri` dan `gerakkan pelakon 1 ke kanan` untuk menyelesaikan teka-teki ini."
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "Anda perlu menambah dua blok di bawah acara `apabila pelakon 1 menyentuh pelakon 2`.",
+          "iceage_sound_and_points_b": "Anda memerlukan kedua-dua blok `menjaringkan mata` dan blok 'mainkan \\_\\_\\_\\_ sound\\` untuk melepasi tahap ini."
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "Anda perlu menambah dua blok di bawah acara `apabila pelakon 1 menyentuh pelakon 2`.",
+          "iceage_sound_and_points_b": "Anda memerlukan kedua-dua blok `menjaringkan mata` dan blok 'mainkan \\_\\_\\_\\_ sound\\` untuk melepasi tahap ini."
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "Bila nak lemparkan hati pada nenek? Apabila anak panah ditekan? Apabila anda mengklik pada Sid? Apabila anda mengklik pada Nenek? Pilihan adalah milik anda!",
+          "iceage_throw_hearts_b": "Untuk membuat nenek gembira apabila dia menerima hati, anda perlu menyambungkan blok `menetapkan mood pelakon 2 kepada gembira` di bawah acara `apabila pelakon 2 menyentuh peluru`."
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "Anda hanya perlu menambah dua blok untuk mendapatkan teka-teki ini di tempat yang sepatutnya.",
+          "iceage_warn_ice_age_b": "Tambahkan kedua-dua blok baharu di bawah acara `apabila dijalankan` agar ia berlaku serta-merta selepas program bermula."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "Anda hanya perlu menambah dua blok untuk mendapatkan teka-teki ini di tempat yang sepatutnya.",
+          "iceage_warn_ice_age_b": "Tambahkan kedua-dua blok baharu di bawah acara `apabila dijalankan` agar ia berlaku serta-merta selepas program bermula."
         }
       }
     }

@@ -2764,6 +2764,67 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Dapat ka lang magdagdag ng dalawang bloke upang makuha ang puzzle na ito kung saan ito dapat.",
           "iceage_warn_ice_age_b": "Idagdag ang parehong mga bagong bloke sa ilalim ng kaganapang `kapag tumakbo` upang mangyari ang mga ito kaagad pagkatapos magsimula ang programa."
+        },
+        "CourseE_HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Tingnan ang **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Paano mo magagamit ang isang kondisyon sa kanila upang makadaan sa Ocean Monument?"
+        },
+        "CourseE_HOC 2018 Level_10_2020": {
+          "voyage_aquatic_10a": "Tingnan ang **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Paano mo magagamit ang isang kondisyon sa kanila upang makadaan sa Ocean Monument?"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Tingnan ang **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Paano mo magagamit ang isang kondisyon sa kanila upang makadaan sa Ocean Monument?"
+        },
+        "CourseE_HOC 2018 Level_7a": {
+          "aquatic7": "Maaari mong gamitin ang if path block upang matulungan kang gumawa ng mga tamang pagliko."
+        },
+        "CourseE_HOC 2018 Level_7a_2020": {
+          "aquatic7": "Maaari mong gamitin ang if path block upang matulungan kang gumawa ng mga tamang pagliko."
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "Maaari mong gamitin ang if path block upang matulungan kang gumawa ng mga tamang pagliko."
+        },
+        "CourseE_HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Tingnan ang pula at asul na mga bloke ng korales? Gamitin ang mga ito bilang mga poste ng gabay upang lumiko sa kanan at kaliwa sa pamamagitan ng bahura."
+        },
+        "CourseE_HOC 2018 Level_9b_2020": {
+          "voyage_aquatic_9a": "Tingnan ang pula at asul na mga bloke ng korales? Gamitin ang mga ito bilang mga poste ng gabay upang lumiko sa kanan at kaliwa sa pamamagitan ng bahura."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Tingnan ang pula at asul na mga bloke ng korales? Gamitin ang mga ito bilang mga poste ng gabay upang lumiko sa kanan at kaliwa sa pamamagitan ng bahura."
+        },
+        "HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Tingnan ang **Sea Lanterns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Paano mo magagamit ang isang kondisyon sa kanila upang makadaan sa Ocean Monument?"
+        },
+        "HOC 2018 Level_7a": {
+          "aquatic7": "Maaari mong gamitin ang if path block upang matulungan kang gumawa ng mga tamang pagliko."
+        },
+        "HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Tingnan ang pula at asul na mga bloke ng korales? Gamitin ang mga ito bilang mga poste ng gabay upang lumiko sa kanan at kaliwa sa pamamagitan ng bahura."
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "Magdagdag ng isa o higit pang `actor 1 say` block sa event na `kapag na-click` upang makumpleto ang puzzle na ito."
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "Kailangan mo lamang magdagdag ng isang block upang malutas ang puzzle na ito. I-drag ang `say` na block palabas mula sa toolbar at ikonekta ito sa `kapag tumakbo` na event block na nasa workspace na. Susunod, i-type sa loob ang \"Hello!\""
+        },
+        "iceage_hello2": {
+          "iceage_hello2_a": "Upang malutas ang puzzle na ito, kakailanganin mong sabihin kay Sid ang isang bagay gamit ang block na `actor 1 say`. Kakailanganin mo ring sabihin kay Manny ang isang bagay na may block na `actor 2 say`."
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": "Kailangang magkaroon Ang bawat isa sa mga kaganapang `kapag ___ arrow` ng ibang command na `move actor 1` na konektado dito upang malutas ang puzzle na ito."
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "Kailangang magkaroon Ang bawat isa sa mga kaganapang `kapag ___ arrow` ng ibang command na `move actor 1` na konektado dito upang malutas ang puzzle na ito."
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "Sa puzzle na ito, maaari mong ilipat si Diego pababa ng 200 pixels, o itaas si Manny ng 200 pixels.",
+          "iceage_move_to_actor_b": "Ikonekta ang block na `play ___ sound` sa event na `kapag hinawakan ng aktor 1 ang aktor 2` upang tapusin ang hamon na ito."
+        },
+        "iceage_move_to_flag": {
+          "iceage_hello3_a": "Gamitin ang block na `move actor 1 right by 200 pixels` upang lutasin ang puzzle na ito."
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "Gamitin ang parehong mga block na `move actor 1 left` at `move actor 1 right` upang lutasin ang puzzle na ito."
         }
       }
     }

@@ -4223,21 +4223,22 @@ ja-JP:
         - text: プログラムを実行（じっこう）したら、いくつ カボチャを あつめることが できますか？
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - text: スクラットはどんぐりにとうちゃくする。コードにバグはない。
-          feedback: ふせいかい。 まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
+        - text: スクラットはどんぐりのところに着く。コードにバグはない。
+          feedback: ふせいかい。 まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリのところへ行けません。
         - text: スクラットはまちがった方に曲がるため、ドングリにとうちゃくしない。
           correct: true
-          feedback: せいかい！まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
-        - text: "「まえにすすむ」ブロックが十分でないため、スクラットはドングリにとうちゃくしません。"
+          feedback: 'せいかい！ '
+        - text: "「まえにすすむ」ブロックがじゅうぶんでないため、スクラットはドングリにとうちゃくしません。"
           correct: true
-          feedback: せいかい！まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
+          feedback: せいかい！まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリのところへ行けません。
         - text: スクラットはさいしょのブロックから動かない。
-          feedback: このコードには2つのバグがあります。まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリにとうちゃくしません。
+          feedback: このコードには2つのバグがあります。まず、スクラットはまちがった方に曲がるので、じゅうぶんな回数、前に進めないため、ドングリのところへ行けません。
         questions:
-        - text: このコードにあるバグを見つけましょう。スクラットはドングリにとうちゃくしますか、それとも、まだ問題がありますか？
+        - text: このコードにあるバグを見つけましょう。スクラットはドングリのところへ行けますか、それとも、まだもんだいがありますか？
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: トリさんは ブタの一歩手前まで行くことができる。
+          correct: true
           feedback: ふせいかい。このプログラムで トリさんは ブタのところまで 行くことができます。
         - text: トリさんは ブタのところへ 行くことができる。
           correct: true
@@ -4522,7 +4523,7 @@ ja-JP:
           feedback: ふせいかい。スプライトは回転をとめないので、どちらもどうじにおこなわれます。
         - text: スプライトは回りながら進む。
           correct: true
-          feedback: 'せいかい！ '
+          feedback: せいかい！りょうほうの動きはどうじにはっせいします。
         - text: スプライトはまず回って、そのあと、進む。
           feedback: ふせいかい。スプライトロボでは、つなげられたブロックは、そのまえのブロックのすぐあとに起きるので、両方の動きはどうじにはっせいします。
         questions:
@@ -6197,13 +6198,6 @@ ja-JP:
           教師が利用できるリソースを探す\n- Code.org ** [教師用ダッシュボード]（http://studio.code.org/）を探索する**\n-
           コンピュータサイエンスを実践に組み込む方法を計画する\n\n***\n\n教師ダッシュボードのスクリーンショットは以下の通りです。これを表示するには、Code.orgの教師用アカウントにログインする必要があります。ログインすると、Code.orgのウェブサイトのデフォルト画面になります。教師用アカウントをお持ちでない場合は、**
           [ここからサインアップ]（https://studio.code.org/users/sign_up）**できます。\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
-      OPD-K5 Stage9Start_dani:
-        markdown: "＃計画 > 教師向けリソースを探究する\n\nステージ4〜8では、学習中のコンピュータサイエンスの概念に対応する「コンピュータサイエンス（CS）入門」で利用可能な「アンプラグド」オンライン学習リソースのいくつかを見てきました。
-          \n\nコーディングの方法とコンピュータサイエンスの指導方法についてある程度、理解できたところで、次は指導計画を立てましょう。このステージでは、Code.orgプラットフォームの他の領域と**
-          [教師用ダッシュボード]（http://studio.code.org/）**を見てまわります。\n\nステージ10では、以下のことを行います。\n\n-
-          教師が利用できるリソースを探す\n- Code.org ** [教師用ダッシュボード]（http://studio.code.org/）を探索する**\n-
-          コンピュータサイエンスを実践に組み込む方法を計画する\n\n***\n\n教師ダッシュボードのスクリーンショットは以下の通りです。これを表示するには、Code.orgの教師用アカウントにログインする必要があります。ログインすると、Code.orgのウェブサイトのデフォルト画面になります。教師用アカウントをお持ちでない場合は、**
-          [ここからサインアップ]（https://studio.code.org/users/sign_up）**できます。\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
       OPD-K5 Vocabulary:
         markdown: |-
           # コンピュータサイエンス（CS）入門 > 主要なボキャブラリー
@@ -6227,14 +6221,6 @@ ja-JP:
 
           > **指導のヒント：**理解しやすい言葉で用語を紹介し、用語をこれまでの経験に関連付け、必要に応じてコース全体を通して（および他の状況で）レッスン以外の場でも用語を繰り返し使用し、口頭および書面のコミュニケーションで生徒がこれらを使えるよう強化することが、ベストプラクティスになります
       OPD-K5 CS Courses:
-        markdown: "＃計画 > Code.org入門\n\n## ステップ1：コースの選択\n就学前の児童から高校生までのための全コースが **
-          [コースカタログ] (https://studio.code.org/courses)** に挙げられています。実践中の「コンピュータサイエンス（CS）入門」のレッスンを見つけるには、*
-          [小学校ページ]（https://code.org/educate/curriculum/elementary-school）**にアクセスし、[コース]セクションまでスクロールしてください。すべてのコースは無料でご利用いただけます。学内の同僚と話し合って、さまざまな科目にコースのカリキュラムを統合する方法を決定しましょう。\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##ステップ2：クラスルームセクションを設定する
-          \nクラスルームセクションを設定して、生徒の進捗状況を確認したり、生徒のログインカードを印刷したり、アカウントを管理したり、コース終了時に持ち帰ることができる証明書を印刷したりします。
-          **このリンクをクリックして **[短いビデオを見る]（https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b）**Code.orgの初めてのコンピュータサイエンスクラスを設定する方法をご覧ください。また、このステップについて、**[このサポート記事]（https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section）**にも手順が記載されています。\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##ステップ3：コースをセクションに割り当てる
-          \n教えるコースをクリックしてください。 次に、「コースの割り当て」をクリックして、そのコースをセクションの1つに割り当てます。\n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          ステップ4：教え始めましょう！ 必要となるのは、コンピュータサイエンスの概念を教室に取り入れるための1つのレッスンです。生徒がコンピュータサイエンスに熱心に取り組むのを確認したら、毎日のレッスンプランで生徒を導き、コンピュータなしで行えるアンプラグドアクティビティに進み、フォーラムで他の先生たちとつながりましょう。\n"
-      OPD-K5 CS Courses_dani:
         markdown: "＃計画 > Code.org入門\n\n## ステップ1：コースの選択\n就学前の児童から高校生までのための全コースが **
           [コースカタログ] (https://studio.code.org/courses)** に挙げられています。実践中の「コンピュータサイエンス（CS）入門」のレッスンを見つけるには、*
           [小学校ページ]（https://code.org/educate/curriculum/elementary-school）**にアクセスし、[コース]セクションまでスクロールしてください。すべてのコースは無料でご利用いただけます。学内の同僚と話し合って、さまざまな科目にコースのカリキュラムを統合する方法を決定しましょう。\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##ステップ2：クラスルームセクションを設定する
@@ -6397,12 +6383,6 @@ ja-JP:
 
           準備はできましたか？ さあ、始めましょう！
       OPD-K5 Using CS:
-        markdown: "# 計画 > CodeStudioレッスンの準備\n\nCode Studioが教室であなたと生徒にどのような役目を果たすか見てみましょう。\n\n##ステップ1：コースの選択
-          \n「コンピュータサイエンス（CS）入門」のレッスン計画および全コースを見つけるには、* [小学校ページ]（https://code.org/educate/curriculum/elementary-school）**にアクセスしましょう。中学校または高校のコースに興味がある場合は、すべての学年レベルのコースも用意しています。就学前の生徒から高校3年生まで、その間の全学年の生徒のものがあります。すべてのコースは無料でご利用いただけます。学内の同僚と話し合って、さまざまな科目にコースのカリキュラムを統合する方法を決定しましょう。\n
-          \n##ステップ2：クラスルームセクションを設定する\n教室のセクションを設定して、生徒の進捗状況を確認したり、生徒のログインカードを印刷したり、アカウントを管理したり、コース終了時に持ち帰ることができる証明書を印刷したりします。
-          [簡単なビデオを見る]（https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b）のリンクをクリックして、Code.orgの初めてのコンピュータサイエンスクラスの設定方法をご覧ください。このステップについて、[このサポート記事]（(https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section）にも手順があります。\n\n##ステップ3：コースをセクションに割り当てる\n教えるコースをクリックしてください。
-          次に、「コースの割り当て」をクリックして、そのコースをセクションの1つに割り当てます。\n\n##ステップ4：教え始めましょう！\n必要となるのは、コンピュータサイエンスの概念を教室に取り入れるための1つのレッスンです。生徒がコンピュータサイエンスに熱心に取り組むのを確認したら、毎日のレッスンプランで生徒を導き、コンピュータなしで行えるアンプラグドアクティビティに進み、フォーラムで他の先生たちとつながりましょう。"
-      OPD-K5 Using CS_dani:
         markdown: "# 計画 > CodeStudioレッスンの準備\n\nCode Studioが教室であなたと生徒にどのような役目を果たすか見てみましょう。\n\n##ステップ1：コースの選択
           \n「コンピュータサイエンス（CS）入門」のレッスン計画および全コースを見つけるには、* [小学校ページ]（https://code.org/educate/curriculum/elementary-school）**にアクセスしましょう。中学校または高校のコースに興味がある場合は、すべての学年レベルのコースも用意しています。就学前の生徒から高校3年生まで、その間の全学年の生徒のものがあります。すべてのコースは無料でご利用いただけます。学内の同僚と話し合って、さまざまな科目にコースのカリキュラムを統合する方法を決定しましょう。\n
           \n##ステップ2：クラスルームセクションを設定する\n教室のセクションを設定して、生徒の進捗状況を確認したり、生徒のログインカードを印刷したり、アカウントを管理したり、コース終了時に持ち帰ることができる証明書を印刷したりします。
@@ -6889,43 +6869,6 @@ ja-JP:
           > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank" rel="noopener noreferrer"><button class="plc">>フォーラムでディスカッションする >></button></a>
 
           フォーラムにコメントを残したら、ここに戻ってきて、以下をクリックして次のステージに進んでください。
-      OPD-K5 Stage5Go_dani:
-        markdown: |-
-          # 条件文 > アンプラグドレッスン
-
-
-          ** 1. コースD の「[トランプで学ぶ条件文](https://curriculum.code.org/csf-18/coursed/13/)」レッスンプランを確認します**
-          <br/>
-          コースDは3年生を対象としています。この同じレッスンは、コースEとコースFにもあります。条件文はコースA、B、またはCではカバーされていません。
-          <br/><br/>
-
-          ** 2. 生徒用ビデオ「トランプで学ぶ条件文」を視聴します**
-          <br/>
-          これは、条件文の概念を紹介し、アンプラグドレッスンを開始するのに役立つように生徒に見せるためのビデオです。
-          [![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41 PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)
-          <br/>
-          [ビデオが見れませんか？ここをクリックしてください](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
-
-          <br/><br/>
-          ** 3. 教師がこのレッスン「トランプで学ぶ条件文」をモデル化する様子を視聴します**
-          <br/>
-          このビデオは、このレッスンの実践方法に関するヒントを探している教師をサポートするためのものです。
-
-
-          [![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37 PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)
-
-          [ビデオが見れませんか？ここをクリックしてください](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
-
-          <br/><br/>
-
-          ---
-
-          > ## リフレクト
-          >条件文の概念を生徒にどのように説明しますか？ [フォーラム](http://forum.code.org/t/teaching-conditionals/406/1)であなたの考えを共有しましょう。
-
-          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank" rel="noopener noreferrer"><button class="plc">>フォーラムでディスカッションする >></button></a>
-
-          フォーラムにコメントを残したら、ここに戻ってきて、以下をクリックして次のステージに進んでください。
       OPD-K5 Stage6Go:
         markdown: |-
           # 関数 > アンプラグドレッスン
@@ -7344,3 +7287,131 @@ ja-JP:
           ## リソース
 
           * [変数入門](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games variables practice_2021:
+        display_name: 変数 練習
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 CSS practice_pilot_2021:
+        display_name: CSSを使用したテキストのスタイル設定
+      CSD U2 Image challenge_pilot_2021:
+        display_name: 画像の追加
+      CSD U2 Image practice_pilot_2021:
+        display_name: 画像の追加
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: 説明
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: タイトル
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: 説明
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: 練習
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: 説明
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: 説明
+      CSD U6 LED create intro_2021:
+        content1: 説明
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: 説明
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: 予測する
+      CSD games cake challenge choice_2021:
+        display_name: チャレンジ
+      CSD games functions practice choice_2021:
+        display_name: 関数 練習
+      CSD games platform challenge choice_2021:
+        display_name: チャレンジ
+      CSD web conditionals practice choice_2021:
+        display_name: 条件文 練習
+      CSD web draw loop practice choice_2021:
+        display_name: 練習
+      CSD web movement practice choice_2021:
+        display_name: 練習
+      CSD web text practice choice_2021:
+        display_name: 練習

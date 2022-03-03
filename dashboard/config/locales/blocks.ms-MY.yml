@@ -355,6 +355,8 @@ ms:
             '"right"': lajur Kanan
             '"x"': bersilang-silang
             '"plus"': tambah
+            '"spiral"': lingkaran
+            '"infinity"': garis tak terhingga
             '"random"': rawak
       Dancelab_makeAnonymousDanceSprite:
         text: buatkan {COSTUME} baharu di {LOCATION}
@@ -433,6 +435,26 @@ ms:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
@@ -460,6 +482,8 @@ ms:
             '"right"': lajur Kanan
             '"x"': bersilang-silang
             '"plus"': tambah
+            '"spiral"': lingkaran
+            '"infinity"': garis tak terhingga
             '"random"': rawak
       Dancelab_mixColors:
         text: campurkan {COLOR1} dan {COLOR2}
@@ -525,6 +549,7 @@ ms:
             '"fireworks"': Bunga Api
             '"flowers"': Bunga
             '"growing_stars"': Bintang yang Semakin Meningkat
+            '"higher_power"': Kuasa yang lebih tinggi
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Lantai Menari Laser
@@ -995,6 +1020,7 @@ ms:
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
       gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(moving_north_and_looping, []): bergerak ke utara dan gelung
@@ -1051,6 +1077,7 @@ ms:
           jika {NUM} ={VAL}
           {STATEMENT}
       gamelab_int10:
+        text: "{VALUE}"
         options:
           VALUE:
             '1': '1'
@@ -1167,6 +1194,7 @@ ms:
             '"burst"': pecah
             '"pop"': pop
             '"rain"': hujan
+            '"spiral"': lingkaran
       gamelab_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       gamelab_makeNumSprites:
@@ -1258,6 +1286,7 @@ ms:
       gamelab_playSpeech:
         text: bermain ucapan {SOUND}
       gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): bergerak dengan kunci arah
@@ -1286,6 +1315,8 @@ ms:
         text: keluarkan warna dari {THIS}
       gamelab_repeatForever:
         text: ulang selamanya
+      gamelab_resetTimer:
+        text: set semula pemasa
       gamelab_setAnimation:
         text: menukar {THIS} pakaian untuk {ANIMATION}
       gamelab_setBackground:
@@ -1325,7 +1356,10 @@ ms:
               fiksyen
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': padang
               bola
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': peringkat
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': bintang
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': kereta
+              api bawah tanah
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': matahari
               dan pelangi
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': dihujani
@@ -1751,6 +1785,9 @@ ms:
               pine
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': padang
               bola
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': peringkat
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': kereta
+              api bawah tanah
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': matahari
               dan pelangi
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': dihujani
@@ -1879,6 +1916,7 @@ ms:
             '"burst"': pecah
             '"pop"': pop
             '"rain"': hujan
+            '"spiral"': lingkaran
       Poetry_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       Poetry_makeNumSprites:
