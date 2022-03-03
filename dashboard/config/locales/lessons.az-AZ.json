@@ -62,6 +62,7 @@
           "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər."
         },
         "dance/Dance Party": {
+          "overview": "Bu dərsdə, bütün yaşlardan öyrənənlər kodlaşdırmaya və komputer elminə təhlükəsiz və dəstəkləyici bir mühitdə başlanğıc təcrübələr qazanacaqlar. Bu dərs bütün yaşlardan öyrənənlər üçün dizayn edilmişdir lakin oxumaq tələb etmir. Alət musiqiyə cavab vermək üçün qurulduğundan bu fəaliyyət səs tələb edir.",
           "preparation": "### Kod saatınızdan bir həftə əvvəl\n\n-   Kod Saatı tədbirinizi planlaşdırmağa başlamaq üçün [Kod Saatı Tərbiyəçisi Bələdçisi](http://hourofcode.com/resources/how-to/) və [Müvəffəqiyyətli Tərbiyəçilərin Ən Yaxşı Təcrübələri](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ilə tanış olun.\n-   Sinif dəstəyi, endirimli posterlər əldə etmək və ya robototexnika hədiyyəsində iştirak etmək istəyirsinizsə, [Hour of Code tədbirinizi qeydiyyatdan keçirin](http://hourofcode.com) (yalnız ABŞ).\n-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Dance Party](https://studio.code.org/s/dance/lessons/1/levels/1)\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun. Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl hər hansı problemi həll etməyiniz lazım olub-olmadığına qərar verin.\n-   Kod Saatı başlamazdan əvvəl bu dərsə rəhbərlik etmək istəyib-istəmədiyinizi müəyyən etmək üçün əlavə dərs planını, [\"The Big Dance Party\"] [4] nəzərdən keçirin.\n\n### Kod saatınızdan bir gün əvvəl\n\n-   Fəaliyyəti tamamlayan hər bir tələbə [certificate](http://code.org/certificates) almalıdır. Kod Saatınızın sonunda bunu asanlaşdırmaq üçün əvvəlcədən hər bir tələbə üçün bir çap edin.\n-   (istəyə görə) Tələbələri fəaliyyət zamanı istifadə etmək üçün qulaqlıq gətirməyə həvəsləndirin.",
           "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
         },
@@ -142,6 +143,7 @@
           "purpose": "Bu dərs kodlaşdırma və proqramlaşdırmanın (bloklardan istifadə etməklə) əsas CS anlayışlarını, eləcə də sadə sazlama üsullarını təqdim edir. Onlar öyrənəcəklər ki, hadisələr kompüter proqramlarında, xüsusən də video oyunlarında çox yaygındır.\n\nŞagirdlər basketbol oyunu quraraq hadisələr haqqında anlayışlarını inkişaf etdirəcəklər. Şagirdlər ox düymələrinə uyğun olaraq əllə hərəkət etməyi və obyektlər toqquşduqda səs çıxarmağı öyrənəcəklər. Ən sonunda onlar oyunlarını daha unikal etmək üçün fərdiləşdirəcəklər!"
         },
         "dance-extras-2019/Dance Party - Go Further": {
+          "overview": "Bu dərsdə, bütün yaşlardan öyrənənlər kodlaşdırmaya və komputer elminə təhlükəsiz və dəstəkləyici bir mühitdə başlanğıc təcrübələr qazanacaqlar. Bu dərs bütün yaşlardan öyrənənlər üçün dizayn edilmişdir lakin oxumaq tələb etmir. Alət musiqiyə cavab vermək üçün qurulduğundan bu fəaliyyət səs tələb edir.",
           "preparation": "-   Onlayn dərsliyi özünüz nəzərdən keçirin və tamamlayın: [Dancy Party](https://studio.code.org/s/dance-2019)\n\n-   Tələbələrinizdən onu tamamlamağı xahiş etməzdən əvvəl onu sınadığınızdan əmin olun.\n\n-   Texnologiyanızı yoxlayın və Kod Saatı başlamazdan əvvəl nəyisə həll etməyiniz lazım olub-olmadığına qərar verin.",
           "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
         },
@@ -533,6 +535,9 @@
         },
         "coursee-2021/Functions in Harvester": {
           "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun."
+        },
+        "csd1-2021/Intro to Problem Solving": {
+          "overview": "**Günün Sualı: Bizə birlikdə işləmək və komanda şəklində problemləri həll etmək üçün nə kömək edə bilər?**\n\nBu dərsdə tələbələr mümkün qədər çox qəpikləri dəstəkləyəcək alüminium folqa qayıqları dizayn etmək üçün qruplar şəklində işləyirlər. Qrupların qayıqlarında işləmək üçün iki dövrə var, məqsədi 1-ci dövrədə olduğundan daha çox qəpik tutmağa çalışmaqdır. Fəaliyyətin strukturu tələbələrin növbəti dərsdə daha ətraflı tanış olacaqları problemin həlli prosesinin müxtəlif mərhələlərindən xəbər verir. Dərsin sonunda tələbələr fəaliyyətlə bağlı təcrübələrini əks etdirir və kursun qalan hissəsində görəcəkləri problemin həlli növləri ilə əlaqələndirirlər.\n**Bu dərsin alternativ versiyaları da mövcuddur.**\n\n-   [Qəzet Cədvəli](/s/csd1-2021/lessons/9/)\n-   [Spagetti Körpüsü](/s/csd1-2021/lessons/10/)\n-   [Kağız Qüllə](/s/csd1-2021/lessons/11/)"
         }
       }
     }
