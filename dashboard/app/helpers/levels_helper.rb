@@ -358,7 +358,13 @@ module LevelsHelper
         end
       if section && section.first_activity_at.nil?
         section.first_activity_at = DateTime.now
-        section.save(validate: false)
+        # this helper method is sometimes called from contexts that expect to
+        # be read-only, such as during template rendering. Explicitly specify
+        # the writing role here so we don't accidentally attempt to execute a
+        # write operation on the reader.
+        ActiveRecord::Base.connected_to(role: :writing) do
+          section.save(validate: false)
+        end
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)

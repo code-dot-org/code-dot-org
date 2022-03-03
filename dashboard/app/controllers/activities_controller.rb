@@ -62,10 +62,14 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        @level_source = LevelSource.find_identical_or_create(
-          @level,
-          params[:program].strip_utf8mb4
-        )
+        # This route is configured to use the reader connection by default, so
+        # we manually specify the writer connection for this write operation.
+        ActiveRecord::Base.connected_to(role: :writing) do
+          @level_source = LevelSource.find_identical_or_create(
+            @level,
+            params[:program].strip_utf8mb4
+          )
+        end
         if share_filtering_error
           FirehoseClient.instance.put_record(
             :analysis,
@@ -109,7 +113,11 @@ class ActivitiesController < ApplicationController
 
     @new_level_completed = false
     if current_user
-      track_progress_for_user if @script_level
+      # This route is configured to use the reader connection by default, so we
+      # manually specify the writer connection for this write operation.
+      ActiveRecord::Base.connected_to(role: :writing) do
+        track_progress_for_user if @script_level
+      end
     else
       track_progress_in_session
     end
