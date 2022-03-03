@@ -19,4 +19,13 @@ module CurriculumHelper
     end
     return true
   end
+
+  # retrieves the matching UnitGroup or Script associated with a course version and offering
+  def find_matching_course_version(course_name)
+    matching_unit_group = UnitGroup.find_by_name(course_name)
+    return matching_unit_group.course_version if matching_unit_group
+    matching_standalone_course = Script.find_by_name(course_name)
+    return matching_standalone_course.course_version if matching_standalone_course&.is_course
+    return nil
+  end
 end
