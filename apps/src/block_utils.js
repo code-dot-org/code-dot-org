@@ -463,7 +463,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/title[@id="${name}"]`,
+        `//block[@type="${type}"]/field[@id="${name}"]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
