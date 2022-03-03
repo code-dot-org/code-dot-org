@@ -367,7 +367,6 @@ const FormController = props => {
     setSaving(true);
 
     const handleSuccessfulSave = response => {
-      console.log('on successful save, data is', data, response);
       scrollToTop();
       setShowSavedMessage(true);
       setShowDataWasLoadedMessage(false);
