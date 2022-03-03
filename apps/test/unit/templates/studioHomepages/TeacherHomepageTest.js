@@ -70,6 +70,14 @@ describe('TeacherHomepage', () => {
     );
   });
 
+  it('renders a Return to Application call to action if showReturnToReopenedTeacherApplication is true', () => {
+    const wrapper = setUp({showReturnToReopenedTeacherApplication: true});
+    assert.equal(
+      wrapper.find('BorderedCallToAction').props().buttonText,
+      'Return to Application'
+    );
+  });
+
   it('renders a MarketingAnnouncementBanner if isEnglish and specialAnnouncement exists', () => {
     const specialAnnouncement = {
       title: 'An announcement',

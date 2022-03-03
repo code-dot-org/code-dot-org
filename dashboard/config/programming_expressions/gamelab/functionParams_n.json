@@ -1,7 +1,0 @@
-{
-  "key": "functionParams_n",
-  "name": "functionParams_n",
-  "category": "Functions",
-  "category_key": "functions",
-  "syntax": "function myFunction(n) {\n  __;\n}"
-}

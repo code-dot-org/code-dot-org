@@ -56,6 +56,7 @@ export default function ProgrammingEnvironmentEditor({
 }) {
   const {
     name,
+    showPath,
     ...remainingProgrammingEnvironment
   } = initialProgrammingEnvironment;
   const [
@@ -68,7 +69,7 @@ export default function ProgrammingEnvironmentEditor({
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
 
-  const save = () => {
+  const save = (e, shouldCloseAfterSave) => {
     if (isSaving) {
       return;
     }
@@ -84,16 +85,20 @@ export default function ProgrammingEnvironmentEditor({
       .then(response => {
         setIsSaving(false);
         if (response.ok) {
-          setLastUpdated(Date.now());
-          setError(null);
           return response.json();
         } else {
-          throw new Error(error.statusText);
+          throw new Error(response.statusText);
         }
       })
       .then(json => {
-        delete json.name;
-        setProgrammingEnvironment(json);
+        if (shouldCloseAfterSave) {
+          navigateToHref(showPath);
+        } else {
+          setLastUpdated(Date.now());
+          setError(null);
+          delete json.name;
+          setProgrammingEnvironment(json);
+        }
       })
       .catch(error => {
         setIsSaving(false);
@@ -136,7 +141,16 @@ export default function ProgrammingEnvironmentEditor({
           ))}
         </select>
       </label>
-
+      <label>
+        Project URL
+        <input
+          value={programmingEnvironment.projectUrl || ''}
+          onChange={e =>
+            updateProgrammingEnvironment('projectUrl', e.target.value)
+          }
+          style={styles.textInput}
+        />
+      </label>
       <label>
         Image
         <Button
@@ -172,7 +186,7 @@ export default function ProgrammingEnvironmentEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref('/')}
+        handleView={() => navigateToHref(showPath)}
       />
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}

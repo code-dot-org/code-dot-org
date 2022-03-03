@@ -52,7 +52,7 @@ AI और मशीन लर्निंग हमारी पूरी दु
 <p>AI और मशीन लर्निंग मॉड्यूल मोटे तौर पर पांच सप्ताह का पाठ्यक्रम मॉड्यूल है जो एक <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >स्टैंडअलोन मॉड्यूल</a> के रूप में या वैकल्पिक <a href="https://studio.code.org/s/csd7-2021">यूनिट CS डिस्कवरी में </a>। यह AI नैतिकता पर केंद्रित है, पूर्वाग्रह के मुद्दों की जांच करता है, और मौलिक अवधारणाओं की खोज और व्याख्या करता है</p><p>क्योंकि मशीन लर्निंग डेटा के बड़े सेट पर निर्भर करता है, नई यूनिट में स्वास्थ्य देखभाल, जनसांख्यिकी और छात्रों को शामिल करने के लिए वास्तविक जीवन डेटासेट शामिल हैं, जैसे प्रश्नों की खोज करते हुए, "एक समस्या क्या है जिसे मशीन लर्निंग हल करने में मदद कर सकता है?" “AI समाज की सहायता कैसे कर सकता है?” “AI से किसे लाभ हो रहा है?” "किसको नुकसान पहुंचाया जा रहा है?" "कौन शामिल है?" "कौन गायब है?"  </p>
 <p>नैतिक विचार इन चर्चाओं में सबसे प्रधान होगा, इन तकनीकों के प्रभाव को लेकर नित्य चर्चा और पाठ।  यह छात्रों को इन तकनीकों के बारे में एक समग्र, विचारशील समझ विकसित करने में मदद करेगा, जबकि वे इन तकनीकों के पीछे की कारीगरी को सीखते हैं। </p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>मॉड्यूल को एक्सप्लोर करें</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 

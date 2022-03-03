@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -18,63 +17,66 @@ export const NotificationType = {
   feedback: 'feedback'
 };
 
-class Notification extends Component {
-  static propTypes = {
-    type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
-    notice: PropTypes.string.isRequired,
-    details: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
-      .isRequired,
-    detailsLinkText: PropTypes.string,
-    detailsLink: PropTypes.string,
-    detailsLinkNewWindow: PropTypes.bool,
-    buttonText: PropTypes.string,
-    buttonLink: PropTypes.string,
-    dismissible: PropTypes.bool.isRequired,
-    onDismiss: PropTypes.func,
-    newWindow: PropTypes.bool,
-    // googleAnalyticsId and firehoseAnalyticsData are only used when a primary button is provided.
-    // It's not used by the array of buttons.
-    googleAnalyticsId: PropTypes.string,
-    firehoseAnalyticsData: PropTypes.object,
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
-    isRtl: PropTypes.bool.isRequired,
-    onButtonClick: PropTypes.func,
-    buttonClassName: PropTypes.string,
+const Notification = ({
+  buttonClassName,
+  buttonLink,
+  buttons,
+  buttonText,
+  children,
+  details,
+  detailsLink,
+  detailsLinkNewWindow,
+  detailsLinkText,
+  dismissible,
+  firehoseAnalyticsData,
+  googleAnalyticsId,
+  isRtl,
+  newWindow,
+  notice,
+  onDismiss,
+  onButtonClick,
+  responsiveSize,
+  type,
+  width
+}) => {
+  const [open, setOpen] = useState(true);
 
-    // Optionally can provide an array of buttons.
-    buttons: PropTypes.arrayOf(
-      PropTypes.shape({
-        text: PropTypes.string,
-        link: PropTypes.string,
-        newWindow: PropTypes.bool,
-        onClick: PropTypes.func,
-        className: PropTypes.string
-      })
-    ),
-
-    // Optionally can provide children, such as one or more buttons.
-    children: PropTypes.node,
-
-    // Can be specified to override default width
-    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-  };
-
-  state = {open: true};
-
-  toggleContent() {
-    this.setState({open: !this.state.open});
-  }
-
-  onDismiss = () => {
-    this.toggleContent();
-    if (this.props.onDismiss) {
-      this.props.onDismiss();
+  const handleDismiss = () => {
+    setOpen(false);
+    if (onDismiss) {
+      onDismiss();
     }
   };
 
-  onAnnouncementClick() {
-    const {firehoseAnalyticsData, googleAnalyticsId} = this.props;
+  const logAnnouncementClickToFirehose = () => {
+    let record = {};
 
+    // Our firehose logging system has standalone fields for commonly used metadata (eg, user_id).
+    // Here, we separate out those fields from any other analytics data provided in the firehoseAnalyticsData prop.
+    // We include these properties in the data_json object as well, in case that is easier for our product team to use.
+    ['user_id', 'script_id', 'lesson_id'].forEach(firehoseMetadataKey => {
+      if (firehoseMetadataKey in firehoseAnalyticsData) {
+        record[firehoseMetadataKey] =
+          firehoseAnalyticsData[firehoseMetadataKey];
+      }
+    });
+
+    record = {
+      ...record,
+      study: 'notification_engagement',
+      event: 'notification_click',
+      data_json: JSON.stringify({
+        ...firehoseAnalyticsData,
+        notice: notice,
+        details: details,
+        buttonLink: buttonLink
+      })
+    };
+
+    firehoseClient.putRecord(record, {includeUserId: true});
+  };
+
+  const onAnnouncementClick = () => {
     // Log to Google Analytics
     if (googleAnalyticsId) {
       trackEvent('teacher_announcement', 'click', googleAnalyticsId);
@@ -82,150 +84,143 @@ class Notification extends Component {
 
     // Log to Firehose
     if (firehoseAnalyticsData) {
-      let record = {};
-
-      // Our firehose logging system has standalone fields for commonly used metadata (eg, user_id).
-      // Here, we separate out those fields from any other analytics data provided in the firehoseAnalyticsData prop.
-      // We include these properties in the data_json object as well, in case that is easier for our product team to use.
-      ['user_id', 'script_id', 'lesson_id'].forEach(firehoseMetadataKey => {
-        if (firehoseMetadataKey in firehoseAnalyticsData) {
-          record[firehoseMetadataKey] =
-            firehoseAnalyticsData[firehoseMetadataKey];
-        }
-      });
-
-      record = {
-        ...record,
-        study: 'notification_engagement',
-        event: 'notification_click',
-        data_json: JSON.stringify({
-          ...firehoseAnalyticsData,
-          notice: this.props.notice,
-          details: this.props.details,
-          buttonLink: this.props.buttonLink
-        })
-      };
-
-      firehoseClient.putRecord(record, {includeUserId: true});
+      logAnnouncementClickToFirehose();
     }
-    if (this.props.onButtonClick) {
-      this.props.onButtonClick();
+
+    if (onButtonClick) {
+      onButtonClick();
     }
+  };
+
+  const desktop = responsiveSize === undefined || responsiveSize === 'lg';
+
+  const icons = {
+    information: 'info-circle',
+    success: 'check-circle',
+    failure: 'exclamation-triangle',
+    warning: 'exclamation-triangle',
+    bullhorn: 'bullhorn',
+    feedback: 'envelope'
+  };
+
+  const mainStyle = {
+    ...styles.main,
+    direction: isRtl ? 'rtl' : 'ltr',
+    width: width || styles.main.width
+  };
+
+  if (!open) {
+    return null;
   }
 
-  onButtonClick() {
-    if (this.onClick) {
-      this.onClick();
-    }
-  }
+  const colorStyles = styles.colors[type];
 
-  render() {
-    const {
-      notice,
-      details,
-      detailsLinkText,
-      detailsLink,
-      detailsLinkNewWindow,
-      type,
-      buttonText,
-      buttonLink,
-      dismissible,
-      newWindow,
-      isRtl,
-      width,
-      buttonClassName,
-      buttons,
-      responsiveSize
-    } = this.props;
-
-    const desktop = responsiveSize === undefined || responsiveSize === 'lg';
-
-    const icons = {
-      information: 'info-circle',
-      success: 'check-circle',
-      failure: 'exclamation-triangle',
-      warning: 'exclamation-triangle',
-      bullhorn: 'bullhorn',
-      feedback: 'envelope'
-    };
-
-    const mainStyle = {
-      ...styles.main,
-      direction: isRtl ? 'rtl' : 'ltr',
-      width: width || styles.main.width
-    };
-
-    if (!this.state.open) {
-      return null;
-    }
-    return (
-      <div className="announcement-notification">
-        <div style={[styles.colors[type], mainStyle]}>
-          {type !== NotificationType.course && (
-            <div style={[styles.iconBox, styles.colors[type]]}>
-              <FontAwesome icon={icons[type]} style={styles.icon} />
-            </div>
-          )}
-          <div style={styles.contentBox}>
-            <div style={styles.wordBox}>
-              <div style={[styles.colors[type], styles.notice]}>{notice}</div>
-              <div style={styles.details}>
-                {details}
-                {detailsLinkText && detailsLink && (
-                  <span>
-                    &nbsp;
-                    <a
-                      href={detailsLink}
-                      style={styles.detailsLink}
-                      target={detailsLinkNewWindow ? '_blank' : null}
-                    >
-                      {detailsLinkText}
-                    </a>
-                  </span>
-                )}
-              </div>
-            </div>
-            <div style={desktop ? null : styles.buttonsMobile}>
-              {buttonText && buttonLink && (
-                <Button
-                  __useDeprecatedTag
-                  href={buttonLink}
-                  color={Button.ButtonColor.gray}
-                  text={buttonText}
-                  style={styles.button}
-                  target={newWindow ? '_blank' : null}
-                  onClick={this.onAnnouncementClick.bind(this)}
-                  className={buttonClassName}
-                />
+  return (
+    <div className="announcement-notification">
+      <div style={{...colorStyles, ...mainStyle}}>
+        {type !== NotificationType.course && (
+          <div style={{...styles.iconBox, ...colorStyles}}>
+            <FontAwesome icon={icons[type]} style={styles.icon} />
+          </div>
+        )}
+        <div style={styles.contentBox}>
+          <div style={styles.wordBox}>
+            <div style={{...colorStyles, ...styles.notice}}>{notice}</div>
+            <div style={styles.details}>
+              {details}
+              {detailsLinkText && detailsLink && (
+                <span>
+                  &nbsp;
+                  <a
+                    href={detailsLink}
+                    style={styles.detailsLink}
+                    target={detailsLinkNewWindow ? '_blank' : null}
+                  >
+                    {detailsLinkText}
+                  </a>
+                </span>
               )}
-              {buttons &&
-                buttons.map((button, index) => (
-                  <Button
-                    __useDeprecatedTag
-                    key={index}
-                    href={button.link}
-                    color={Button.ButtonColor.gray}
-                    text={button.text}
-                    style={styles.button}
-                    target={button.newWindow ? '_blank' : null}
-                    onClick={this.onButtonClick.bind(button)}
-                    className={button.className}
-                  />
-                ))}
-              {this.props.children}
             </div>
           </div>
-          {dismissible && (
-            <div style={styles.dismiss}>
-              <FontAwesome icon="times" onClick={this.onDismiss} />
-            </div>
-          )}
+          <div style={desktop ? null : styles.buttonsMobile}>
+            {buttonText && buttonLink && (
+              <Button
+                __useDeprecatedTag
+                href={buttonLink}
+                color={Button.ButtonColor.gray}
+                text={buttonText}
+                style={styles.button}
+                target={newWindow ? '_blank' : null}
+                onClick={onAnnouncementClick}
+                className={buttonClassName}
+              />
+            )}
+            {buttons &&
+              buttons.map((button, index) => (
+                <Button
+                  __useDeprecatedTag
+                  key={index}
+                  href={button.link}
+                  color={Button.ButtonColor.gray}
+                  text={button.text}
+                  style={styles.button}
+                  target={button.newWindow ? '_blank' : null}
+                  onClick={button.onClick}
+                  className={button.className}
+                />
+              ))}
+            {children}
+          </div>
         </div>
-        <div style={styles.clear} />
+        {dismissible && (
+          <div style={styles.dismiss}>
+            <FontAwesome icon="times" onClick={handleDismiss} />
+          </div>
+        )}
       </div>
-    );
-  }
-}
+      <div style={styles.clear} />
+    </div>
+  );
+};
+
+Notification.propTypes = {
+  type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
+  notice: PropTypes.string.isRequired,
+  details: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  detailsLinkText: PropTypes.string,
+  detailsLink: PropTypes.string,
+  detailsLinkNewWindow: PropTypes.bool,
+  buttonText: PropTypes.string,
+  buttonLink: PropTypes.string,
+  dismissible: PropTypes.bool.isRequired,
+  onDismiss: PropTypes.func,
+  newWindow: PropTypes.bool,
+  // googleAnalyticsId and firehoseAnalyticsData are only used when a primary button is provided.
+  // It's not used by the array of buttons.
+  googleAnalyticsId: PropTypes.string,
+  firehoseAnalyticsData: PropTypes.object,
+  responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
+  isRtl: PropTypes.bool.isRequired,
+  onButtonClick: PropTypes.func,
+  buttonClassName: PropTypes.string,
+
+  // Optionally can provide an array of buttons.
+  buttons: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+      link: PropTypes.string,
+      newWindow: PropTypes.bool,
+      onClick: PropTypes.func,
+      className: PropTypes.string
+    })
+  ),
+
+  // Optionally can provide children, such as one or more buttons.
+  children: PropTypes.node,
+
+  // Can be specified to override default width
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+};
 
 const styles = {
   main: {
@@ -344,9 +339,9 @@ const styles = {
 
 export default connect(state => ({
   isRtl: state.isRtl
-}))(Radium(Notification));
+}))(Notification);
 
 export const NotificationResponsive = connect(state => ({
   isRtl: state.isRtl,
   responsiveSize: state.responsive.responsiveSize
-}))(Radium(Notification));
+}))(Notification);

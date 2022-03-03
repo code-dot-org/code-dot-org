@@ -130,4 +130,12 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN'}
     assert_response :bad_request
   end
+
+  test 'returns error if upload fails when not using dashboard sources' do
+    JavalabFilesHelper.stubs(:upload_project_files).returns(false)
+    levelbuilder = create :levelbuilder
+    sign_in(levelbuilder)
+    get :get_access_token, params: {useDashboardSources: "false", channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+    assert_response :internal_server_error
+  end
 end

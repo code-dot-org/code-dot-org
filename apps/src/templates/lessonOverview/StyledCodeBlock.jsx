@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import React, {createRef, useEffect} from 'react';
+import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {parseElement} from '@cdo/apps/xml';
-import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
+import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
 
 export const buildProgrammingExpressionMarkdown = function(
   programmingExpression
@@ -15,35 +14,13 @@ export const buildProgrammingExpressionMarkdown = function(
 };
 
 export default function StyledCodeBlock({programmingExpression}) {
-  const blockRef = createRef();
-
-  useEffect(() => {
-    if (programmingExpression.blockName && blockRef.current) {
-      const blocksDom = parseElement(
-        `<block type='${programmingExpression.blockName}' />`
-      );
-      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
-        blockRef.current,
-        blocksDom,
-        {
-          noScrolling: true,
-          inline: true
-        }
-      );
-      shrinkBlockSpaceContainer(blockSpace, true);
-    }
-  }, [programmingExpression, blockRef.current]);
-
   if (programmingExpression.blockName) {
     return (
-      <div>
-        <a href={programmingExpression.link}>
-          <div
-            id={`embedded-block-${programmingExpression.blockName}`}
-            ref={blockRef}
-          />
-        </a>
-      </div>
+      <EmbeddedBlock
+        blockName={programmingExpression.blockName}
+        link={programmingExpression.link}
+        ariaLabel={programmingExpression.name}
+      />
     );
   } else {
     return (

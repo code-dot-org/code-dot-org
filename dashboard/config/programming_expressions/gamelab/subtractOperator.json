@@ -1,7 +1,0 @@
-{
-  "key": "subtractOperator",
-  "name": "subtractOperator",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "__ - __"
-}

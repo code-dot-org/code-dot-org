@@ -91,14 +91,6 @@ class Pd::FormTest < ActiveSupport::TestCase
     refute form.valid?
   end
 
-  test 'pd form does not check required fields if status is incomplete' do
-    expects(:dynamic_required_fields).never
-    form = DummyFormWithRequiredFields.new
-    form.form_data = {status: "incomplete"}.to_json
-
-    assert form.valid?
-  end
-
   test 'pd form enforces required fields' do
     form = DummyFormWithRequiredFields.new
 

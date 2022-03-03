@@ -1,2 +1,2 @@
-Name	script_id	level_num	localization_key	element_id
-Run Button	12345	invalid_level	Click here to run your program.	#runButton
+Name	script_name	level_num	localization_key	element_id
+Run Button	run-button-invalid-callout-script	invalid_level	Click here to run your program.	#runButton

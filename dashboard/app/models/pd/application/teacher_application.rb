@@ -368,6 +368,7 @@ module Pd::Application
       %w(
         unreviewed
         incomplete
+        reopened
         pending
         waitlisted
         declined

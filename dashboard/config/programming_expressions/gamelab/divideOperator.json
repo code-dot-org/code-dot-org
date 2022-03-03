@@ -1,7 +1,0 @@
-{
-  "key": "divideOperator",
-  "name": "divideOperator",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "__ / __"
-}

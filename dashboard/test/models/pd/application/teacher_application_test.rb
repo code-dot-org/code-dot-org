@@ -55,8 +55,8 @@ module Pd::Application
       }
 
       application = create :pd_teacher_application, form_data_hash: (
-        build :pd_teacher_application_hash, :incomplete, custom_minutes_hours_weeks
-      )
+        build :pd_teacher_application_hash, custom_minutes_hours_weeks
+      ), status: 'incomplete'
 
       assert_equal 112, application.sanitize_form_data_hash[:cs_total_course_hours]
     end
@@ -70,8 +70,8 @@ module Pd::Application
 
       %i(cs_how_many_minutes cs_how_many_days_per_week cs_how_many_weeks_per_year).each do |attribute|
         application = create :pd_teacher_application, form_data_hash: (
-          build :pd_teacher_application_hash, :incomplete, empty_minutes_hours_weeks.slice(attribute)
-        )
+          build :pd_teacher_application_hash, empty_minutes_hours_weeks.slice(attribute)
+        ), status: 'incomplete'
 
         assert_nil application.sanitize_form_data_hash[:cs_total_course_hours]
       end

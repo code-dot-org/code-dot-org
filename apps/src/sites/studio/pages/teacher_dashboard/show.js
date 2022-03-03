@@ -19,7 +19,6 @@ import teacherSections, {
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -29,7 +28,10 @@ import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashbo
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
-import {setValidScripts} from '../../../../redux/unitSelectionRedux';
+import {
+  setValidScripts,
+  setScriptId
+} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -51,7 +53,6 @@ const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 $(document).ready(function() {
   registerReducers({
     teacherSections,
-    sectionData,
     manageStudents,
     sectionProgress,
     unitSelection,
@@ -62,11 +63,9 @@ $(document).ready(function() {
     locales
   });
   const store = getStore();
-  // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));
   store.dispatch(setStudentsForCurrentSection(section.id, section.students));
@@ -83,6 +82,12 @@ $(document).ready(function() {
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));
+  }
+
+  // Default the scriptId to the script assigned to the section
+  const defaultScriptId = section.script ? section.script.id : null;
+  if (defaultScriptId) {
+    store.dispatch(setScriptId(defaultScriptId));
   }
 
   store.dispatch(

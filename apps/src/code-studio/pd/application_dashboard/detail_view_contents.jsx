@@ -599,9 +599,13 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    const statuses = getApplicationStatuses(
-      this.props.viewType,
-      this.props.applicationData.update_emails_sent_by_system
+    // Only show incomplete in the dropdown if the application is incomplete
+    const statuses = _.omit(
+      getApplicationStatuses(
+        this.props.viewType,
+        this.props.applicationData.update_emails_sent_by_system
+      ),
+      this.state.status === 'incomplete' ? [] : ['incomplete']
     );
     const selectControl = (
       <div>

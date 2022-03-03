@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-14 14:13:45 UTC",
+    "serialized_at": "2022-02-25 15:54:33 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -49,7 +49,7 @@
       "name": "Welcome to CSA",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -64,7 +64,7 @@
       "name": "Java Lab",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -346,10 +346,52 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f0ce2906-cbbe-4e9e-80bd-2a49d4cbc16e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0ce2906-cbbe-4e9e-80bd-2a49d4cbc16e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022-exemplars"
+      }
+    },
+    {
+      "key": "eabe94b9-5d0e-4666-a8f1-ee57526941cc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eabe94b9-5d0e-4666-a8f1-ee57526941cc",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022-exemplars"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f0e35319-107b-43ce-a368-61561d8e09e9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f0e35319-107b-43ce-a368-61561d8e09e9",
+        "lesson_activity.key": "f0ce2906-cbbe-4e9e-80bd-2a49d4cbc16e"
+      }
+    },
+    {
+      "key": "cbb67438-4746-44f9-8162-449c51177369",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cbb67438-4746-44f9-8162-449c51177369",
+        "lesson_activity.key": "eabe94b9-5d0e-4666-a8f1-ee57526941cc"
+      }
+    }
   ],
   "script_levels": [
 
