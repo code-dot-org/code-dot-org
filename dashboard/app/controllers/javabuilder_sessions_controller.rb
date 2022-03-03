@@ -8,9 +8,12 @@ class JavabuilderSessionsController < ApplicationController
 
   PRIVATE_KEY = CDO.javabuilder_private_key
   PASSWORD = CDO.javabuilder_key_password
+  CSA_PILOT = 'csa-pilot'
+  CSA_PILOT_FACILITATORS = 'csa-pilot-facilitators'
 
   # GET /javabuilder/access_token
   def get_access_token
+    teacher_list = get_teacher_list
     channel_id = params[:channelId]
     project_version = params[:projectVersion]
     # TODO: remove project_url after javabuilder is deployed with update to no longer need it
@@ -50,7 +53,8 @@ class JavabuilderSessionsController < ApplicationController
       execution_type: execution_type,
       mini_app_type: mini_app_type,
       use_dashboard_sources: use_dashboard_sources,
-      options: options
+      options: options,
+      verified_teachers: teacher_list
     }
 
     # log payload to firehose
@@ -76,5 +80,25 @@ class JavabuilderSessionsController < ApplicationController
     end
 
     render json: {token: encoded_payload, session_id: session_id}
+  end
+
+  private
+
+  def get_teacher_list
+    teachers = []
+    if current_user.permission?(UserPermission::LEVELBUILDER) ||
+        current_user.verified_teacher? ||
+        current_user.has_pilot_experiment?(CSA_PILOT) ||
+        current_user.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
+      teachers << current_user.id
+    else
+      current_user.teachers.each do |teacher|
+        next unless teacher.verified_teacher? ||
+            teacher.has_pilot_experiment?(CSA_PILOT) ||
+            teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
+        teachers << teacher.id
+      end
+    end
+    teachers
   end
 end
