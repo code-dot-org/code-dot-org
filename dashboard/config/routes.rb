@@ -62,8 +62,11 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/', to: 'curriculum_proxy#get_doc_landing'
-  get 'docs/*path', to: 'curriculum_proxy#get_doc'
+  get 'docs/concepts', to: 'curriculum_proxy#get_doc'
+  get 'docs/concepts/*path', to: 'curriculum_proxy#get_doc'
+  get 'docs/', to: 'programming_environments#docs_index'
+  get 'docs/:name', to: 'programming_environments#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key', to: 'programming_expressions#docs_show'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
   # User-facing section routes
