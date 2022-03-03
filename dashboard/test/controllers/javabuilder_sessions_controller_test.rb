@@ -96,30 +96,6 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     section.destroy
   end
 
-  test 'student of csa-pilot and verified teacher has correct verified_teachers parameter' do
-    teacher = create(:teacher)
-    create(:single_user_experiment, min_user_id: teacher.id, name: CSA_PILOT_FACILITATORS)
-    section_1 = create(:section, user: teacher, login_type: 'word')
-    verified_teacher = create(:teacher)
-    verified_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    section_2 = create(:section, user: verified_teacher, login_type: 'word')
-    student_1 = create(:follower, section: section_1).student_user
-    create(:follower, section: section_2, student_user: student_1)
-    sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-    token = response['token']
-    decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
-
-    # decoded_token[0] is the JWT payload. Spot check some params
-    teachers = decoded_token[0]['verified_teachers']
-    assert_equal [teacher.id, verified_teacher.id], teachers
-    section_1.destroy
-    section_2.destroy
-  end
-
   test 'param for channel id is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
@@ -161,5 +137,42 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     sign_in(levelbuilder)
     get :get_access_token, params: {useDashboardSources: "false", channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
     assert_response :internal_server_error
+  end
+
+  test 'student of csa-pilot and verified teacher has correct verified_teachers parameter' do
+    teacher = create(:teacher)
+    create(:single_user_experiment, min_user_id: teacher.id, name: CSA_PILOT_FACILITATORS)
+    section_1 = create(:section, user: teacher, login_type: 'word')
+    verified_teacher = create(:teacher)
+    verified_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+    section_2 = create(:section, user: verified_teacher, login_type: 'word')
+    student_1 = create(:follower, section: section_1).student_user
+    create(:follower, section: section_2, student_user: student_1)
+    sign_in(student_1)
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+    token = response['token']
+    decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
+
+    teachers = decoded_token[0]['verified_teachers']
+    assert_equal 2, teachers.length
+    assert teachers.include?(teacher.id)
+    assert teachers.include?(verified_teacher.id)
+    section_1.destroy
+    section_2.destroy
+  end
+
+  test 'levelbuilder has correct verified_teachers parameter' do
+    levelbuilder = create :levelbuilder
+    sign_in(levelbuilder)
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+
+    response = JSON.parse(@response.body)
+    token = response['token']
+    decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
+    teachers = decoded_token[0]['verified_teachers']
+    assert_equal [levelbuilder.id], teachers
   end
 end
