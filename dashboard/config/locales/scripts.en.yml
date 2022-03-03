@@ -32679,3 +32679,80 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        vpl-csd1-summer-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd1-summer-pilot-2022
+          title: 'Module 1: Introduction to CS Discoveries '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd2-summer-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd2-summer-pilot-2022
+          title: 'Module 2: Tools and Instructional Strategies'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd3-summer-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd3-summer-pilot-2022
+          title: 'Module 3: Classroom Context and Culture'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd4-summer-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd4-summer-pilot-2022
+          title: 'Module 4: Addressing Student Needs'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd5-summer-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd5-summer-pilot-2022
+          title: 'Module 5: Preparing to Teach CS Discoveries'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
