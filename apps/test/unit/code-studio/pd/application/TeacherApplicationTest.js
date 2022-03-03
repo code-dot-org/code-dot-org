@@ -1,6 +1,5 @@
 import React from 'react';
 import {expect} from 'chai';
-import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -25,7 +24,9 @@ describe('TeacherApplication', () => {
   });
 
   it('Logs user id on initialization', () => {
-    shallow(<TeacherApplication {...defaultProps} />);
+    isolateComponent(
+      <TeacherApplication {...defaultProps} allowPartialSaving />
+    );
     expect(fc.calledWith(sinon.match({userId: 1})));
   });
 
