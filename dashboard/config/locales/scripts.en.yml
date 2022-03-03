@@ -32623,7 +32623,13 @@ en:
           description_short: ''
           description_audience: ''
         ui-test-csa-family-script:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: UI Test CSA Family Lesson
           lesson_groups: {}
           name: ui-test-csa-family-script
           title: UI Test CSA Family Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
