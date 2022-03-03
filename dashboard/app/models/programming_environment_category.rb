@@ -32,7 +32,8 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     {
       key: key,
       name: name,
-      color: color
+      color: color,
+      position: position
     }
   end
 

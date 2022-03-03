@@ -1,9 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-02-24T20:57:29.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Our program should create two `Painter` objects, but currently the `Painter` variable called `cezzane` is initialized to `null`. What do you think will happen when we click **Run**? Run the code to see what happens.\r\n\r\n1. Create a second `Painter` object that has an initial location of `(4, 5)`, facing `East`, and has `100` units of paint. Assign this `Painter` object to the existing variable `cezzane`.\r\n\r\n2. Use the variables `initialX`, `initialY`, `direction`, and `paintLevel` as arguments to the constructor.\r\n\r\nRemember that you can reassign the value stored in a variable if needed.",
@@ -360,7 +356,11 @@
     ],
     "submittable": "false"
   },
+  "game_id": 68,
+  "created_at": "2022-02-24T20:57:29.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-24T20:57:29.466+00:00\",\"changed\":[\"cloned from \\\"testingforselfpacedCSA\\\"\"],\"cloned_from\":\"testingforselfpacedCSA\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-24T20:57:29.466+00:00\",\"changed\":[\"cloned from \\\"testingforselfpacedCSA\\\"\"],\"cloned_from\":\"testingforselfpacedCSA\"},{\"changed_at\":\"2022-03-02 14:57:19 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-02 14:58:32 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-02 14:59:02 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>
