@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "ui-test-csa-family-script",
-    "serialized_at": "2022-02-18 18:17:37 UTC",
+    "serialized_at": "2022-03-03 21:15:28 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -34,7 +34,21 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "UI Test CSA Family Lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csa-family-script"
+      }
+    }
   ],
   "lesson_activities": [
 
