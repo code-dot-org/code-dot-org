@@ -212,8 +212,14 @@
         "video_machine_learning/csd/2021": {
           "name": "भिडियोः Machine Learning"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Peer Review"
+        },
         "variables_1/csd/2021": {
           "name": "Variables"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Peer Review"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Functions"
@@ -221,8 +227,26 @@
         "functions_1/csd/2021": {
           "name": "Functions"
         },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Peer Review"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Peer Review"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Peer Review"
+        },
         "lists/csd/2021": {
           "name": "Lists"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Peer Review"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Peer Review"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Peer Review"
         }
       }
     }
