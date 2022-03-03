@@ -148,6 +148,10 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     section_2 = create(:section, user: verified_teacher, login_type: 'word')
     student_1 = create(:follower, section: section_1).student_user
     create(:follower, section: section_2, student_user: student_1)
+    regular_teacher = create(:teacher)
+    section_3 = create(:section, user: regular_teacher, login_type: 'word')
+    create(:follower, section: section_3, student_user: student_1)
+
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
@@ -160,6 +164,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_equal 2, teachers.length
     assert teachers.include?(teacher.id)
     assert teachers.include?(verified_teacher.id)
+    refute teachers.include?(regular_teacher.id)
     section_1.destroy
     section_2.destroy
   end
