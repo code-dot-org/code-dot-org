@@ -10,67 +10,80 @@
     {
       "key": "sprites",
       "name": "Sprites",
-      "color": "#df9399"
+      "color": "#df9399",
+      "position": 0
     },
     {
       "key": "world",
       "name": "World",
-      "color": "#acacd2"
+      "color": "#acacd2",
+      "position": 1
     },
     {
       "key": "location",
       "name": "Locations",
-      "color": "#f5ebaa"
+      "color": "#f5ebaa",
+      "position": 2
     },
     {
       "key": "actions",
       "name": "Actions",
-      "color": "#5ef3ff"
+      "color": "#5ef3ff",
+      "position": 3
     },
     {
       "key": "events",
       "name": "Events",
-      "color": "#62fc94"
+      "color": "#62fc94",
+      "position": 4
     },
     {
       "key": "behaviors",
       "name": "Behaviors",
-      "color": "#89eba4"
+      "color": "#89eba4",
+      "position": 5
     },
     {
       "key": "loops",
       "name": "Loops",
-      "color": "#f98bd0"
+      "color": "#f98bd0",
+      "position": 6
     },
     {
       "key": "variables",
       "name": "Variables",
-      "color": "#0cfb4c"
+      "color": "#cfc4b9",
+      "position": 7
     },
     {
       "key": "math",
       "name": "Math",
-      "color": "#bbb3ce"
+      "color": "#bbb3ce",
+      "position": 8
     },
     {
       "key": "logic",
       "name": "Logic",
-      "color": "#64d5ff"
+      "color": "#64d5ff",
+      "position": 9
     },
     {
       "key": "functions",
       "name": "Functions",
-      "color": "#a3e770"
+      "color": "#a3e770",
+      "position": 10
     },
     {
       "key": "text",
       "name": "Text",
-      "color": "#acd2c6"
+      "color": "#acd2c6",
+      "position": 11
     },
     {
       "key": "comments",
       "name": "Comments",
-      "color": "#d9d9d9"
+      "color": "#d9d9d9",
+      "position": 12
     }
   ]
 }

@@ -55,7 +55,9 @@ export default class SetupChecker {
   detectCorrectFirmware(boardType) {
     if (boardType === BOARD_TYPE.MICROBIT) {
       this.boardController = new MicroBitBoard(this.port);
-      return this.boardController.checkExpectedFirmware();
+      return this.boardController.checkExpectedFirmware().catch(err => {
+        return Promise.reject(err);
+      });
     } else {
       this.boardController = new CircuitPlaygroundBoard(this.port);
       return this.boardController.connectToFirmware();

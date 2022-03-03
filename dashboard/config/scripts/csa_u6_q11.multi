@@ -16,7 +16,7 @@ Covered in Unit 6 Lesson 10.
 MARKDOWN
 
 markdown <<MARKDOWN
-Assume that `nums` has been initialized with the following `Integer` objects: `[0, 5, 1, 3, 7]`. What is the value of `nums` after `mystery(5)` executes? 
+Assume that `numList` has been initialized with the following `Integer` objects: `[0, 5, 1, 3, 7]`. What is the value of `numList` after `mystery(5)` executes? 
 
 ![](https://images.code.org/643cea182cb5f30a1ce5e10ccedf5e66-image-1634924365431.png)
 MARKDOWN
