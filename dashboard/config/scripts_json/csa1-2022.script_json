@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-26 14:09:13 UTC",
+    "serialized_at": "2022-03-03 13:48:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1569,7 +1569,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The unit guide provides students with lesson objectives, guided notes, and vocabulary for new concepts introduced in each lesson. You can choose to have students complete the guided notes during the lesson, or you can choose to incorporate the unit guide differently according to the needs of your classroom and students."
+            "markdown": "The unit guide provides students with guided notes, syntax, and vocabulary for new concepts introduced in each lesson. You provide the entire unit guide, or you can distribute each section at the start of each lesson. You can choose to have students complete the guided notes during the lesson, or you can choose to incorporate the unit guide differently according to the needs of your classroom and students."
           }
         ]
       },
@@ -2109,8 +2109,31 @@
       }
     },
     {
-      "key": "32de7f8f-5764-488e-888d-908b6f7f4abb",
+      "key": "9c165695-9043-48de-ba53-2126681b666a",
       "position": 7,
+      "properties": {
+        "description": "These void methods can modify the state of a `Painter` object. Let's take a look at the code for the `takePaint()` method. A lot of this code may look unfamiliar to you right now, and that's ok! We will be learning more about these statements throughout this course.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c165695-9043-48de-ba53-2126681b666a",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "335702e6-967f-424c-9668-b4e8372b4992",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the code for the `takePaint()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "335702e6-967f-424c-9668-b4e8372b4992",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "32de7f8f-5764-488e-888d-908b6f7f4abb",
+      "position": 9,
       "properties": {
         "description": "Let's practice calling these methods to move around and paint The Neighborhood! As you work, use the guiding questions and debugging checklist on your Unit 1 Guide to help you write and debug code.",
         "duration": "15",
@@ -2124,7 +2147,7 @@
     },
     {
       "key": "f453b0d5-c881-42b3-a6f4-f18f212ed238",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5 using the Unit 1 Guide. Students debug the program on Level 2, then continue to complete Level 3. Students complete a choice level on Level 4. Students debug the program on Level 5.",
         "progression_name": "Moving and Painting"
@@ -4672,13 +4695,7 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
         "duration": "15",
         "name": "Development",
-        "progression_name": "Asphalt Art Project",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize to students that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new class."
-          }
-        ]
+        "progression_name": "Asphalt Art Project"
       },
       "seeding_key": {
         "activity_section.key": "d9fefed9-efeb-4ddd-8a88-f717b3c55fd9",
@@ -4911,7 +4928,7 @@
       "key": "8f56723f-a67f-4747-9f0d-44aeaecff2ec",
       "position": 4,
       "properties": {
-        "description": "**Asphalt Art Project:** You can use the Day 2 Reflection as an optional completion assessment.",
+        "description": "**Asphalt Art Project Planning Guide:** You can use the Day 2 Reflection as an optional completion assessment.",
         "name": "Assessment (Optional)"
       },
       "seeding_key": {
@@ -5050,7 +5067,7 @@
       "key": "9087616e-70a5-407d-adb7-2fff64717d79",
       "position": 3,
       "properties": {
-        "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
+        "description": "**Asphalt Art Project Planning Guide:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -5158,7 +5175,7 @@
       "key": "0bed0534-8403-4547-b912-b6688c3b08b5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -5181,7 +5198,7 @@
       "key": "a0d6b210-10db-42f4-bade-74ea16ed26f7",
       "position": 3,
       "properties": {
-        "description": "**SpiralPainter FRQ:** The SpiralPainter FRQ handout can be used as a formative assessment to check that students can identify characteristics of a software engineer and relate them to their own personal skills and identity.",
+        "description": "**SpiralPainter FRQ:** The SpiralPainter FRQ handout can be used as an optional formative assessment.",
         "name": "Assessment (Optional)"
       },
       "seeding_key": {

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-24 20:57:37 UTC",
+    "serialized_at": "2022-03-02 20:08:54 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -95,11 +95,20 @@
       "key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a",
       "position": 2,
       "properties": {
-        "name": "another small header",
-        "progression_name": "another progression"
+        "progression_name": "Printing to the console"
       },
       "seeding_key": {
         "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a",
+        "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163"
+      }
+    },
+    {
+      "key": "ee698b7b-813d-4c68-a616-24af954e7bb7",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7",
         "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163"
       }
     }
@@ -111,6 +120,75 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Test levels in a progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Introduction to Module 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      },
+      "level_keys": [
+        "Introduction to Module 3"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Test levels in a progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Java Lab Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      },
+      "level_keys": [
+        "Java Lab Video"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Test levels in a progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Java Lab - debugging 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      },
+      "level_keys": [
+        "Intro to Java Lab - debugging 1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Example Markdown (External Level) with Video"
+        ],
         "progression": "Test levels in a progression"
       },
       "bonus": false,
@@ -128,11 +206,14 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Javalab Example - Using Instructor in Training"
+        ],
         "progression": "Test levels in a progression"
       },
       "bonus": false,
@@ -150,17 +231,17 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "another progression"
+        "progression": "Printing to the console"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test3"
+          "Intro to Java Lab - System"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -168,11 +249,110 @@
         "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       },
       "level_keys": [
-        "test3"
+        "Intro to Java Lab - System"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSAPL3-1-SyntaxDebugging1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
+      },
+      "level_keys": [
+        "CSAPL3-1-SyntaxDebugging1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSAPL3-1-SyntaxDebugging2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
+      },
+      "level_keys": [
+        "CSAPL3-1-SyntaxDebugging2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSAPL3-1-SyntaxDebugging3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
+      },
+      "level_keys": [
+        "CSAPL3-1-SyntaxDebugging3"
       ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Introduction to Module 3",
+        "script_level.level_keys": [
+          "Introduction to Module 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Java Lab Video",
+        "script_level.level_keys": [
+          "Java Lab Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Java Lab - debugging 1",
+        "script_level.level_keys": [
+          "Intro to Java Lab - debugging 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "Example Markdown (External Level) with Video",
@@ -199,14 +379,50 @@
     },
     {
       "seeding_key": {
-        "level.key": "test3",
+        "level.key": "Intro to Java Lab - System",
         "script_level.level_keys": [
-          "test3"
+          "Intro to Java Lab - System"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
         "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSAPL3-1-SyntaxDebugging1",
+        "script_level.level_keys": [
+          "CSAPL3-1-SyntaxDebugging1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSAPL3-1-SyntaxDebugging2",
+        "script_level.level_keys": [
+          "CSAPL3-1-SyntaxDebugging2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSAPL3-1-SyntaxDebugging3",
+        "script_level.level_keys": [
+          "CSAPL3-1-SyntaxDebugging3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
       }
     }
   ],

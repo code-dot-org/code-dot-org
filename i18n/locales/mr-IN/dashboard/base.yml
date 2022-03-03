@@ -17,6 +17,7 @@ mr:
         locale: 'भाषा'
   beta: "बीटा"
   cancel: "रद्द करा"
+  okay: "ठीक आहे"
   or: "किंवा"
   join_section:
     code:
@@ -186,6 +187,15 @@ mr:
       audience: "वय वर्षे 14+"
   landing:
     help_support: "सहाय्य आणि मदत"
+  multi-submittable:
+    wrong_title: "धन्यवाद"
+    correct_title: "धन्यवाद"
+  level_group:
+    wrong_title: "धन्यवाद"
+    correct_title: "धन्यवाद"
+  level_group-submittable:
+    wrong_title: "धन्यवाद"
+    correct_title: "धन्यवाद"
   dialog:
     ok: "ठीक आहे"
     startover_title: "तुम्हाला नक्की पहिल्यापासून सुरुवात करायची आहे का?"

@@ -1282,6 +1282,94 @@ az:
         text: O zaman biz şeylər arasında oxşarlıq axtarırıq. Eyni şeyləri tapdıqdan
           sonra nəyin fərqli olduğunu anlaya bilərəm. Mən bu fərqləri aradan qaldıranda
           buna abstraksiya deyilir.
+      5:
+        text: 'Mən problemin həlli üçün mərhələləri tapdıqdan sonra, mən onları alqoritm
+          adlanan xüsusi sırada qoydum belə ki, hər kəs mənim göstərişlərimlə problemi
+          həll edə bilsin.Heç bir qayda olmadan oyunu necə oynayacağımızı anlamaq
+          üçün bu dörd addımdan istifadə edəcəyik. Oyunun sonunda siz buna bənzər
+          bir şey oynaya biləcəksiniz! '
+    C3_crowdsourcing:
+      2:
+        text: 'Kompüter elmində biz hər zaman kraudsorsingdən istifadə edirik. Minlərlə
+          həvəskar və peşəkar, milyardlarla məlumatı axtarmaq üçün kompüterlərini
+          birləşdirir. Növbəti Marsenne əsas rəqəmi və ya hətta mümkün yadplanetli
+          rabitələri kimi şeyləri axtarırıq. '
+      3:
+        text: 'Sən kinoya baxanda, filmin hər saniyəsi 24 ayrı şəkildən ibarət olur,
+          biz onları çərçivələr adlandırırıq.Odur ki, o şəkillərin hər biri yaradılmalı,
+          göstərilməli və hamısı bir yerə qoyulmalıdır. Komandam və mən, hamımız proqram
+          tərtibatçılarıyıq. Biz hamımız birlikdə işləyərək  proqram təminatı parçası
+          yaradırıq ki , əslində görüntünü və ekranda gördüyünüz son görüntünü yaradan
+          odur. Bu, rəssamların və digər tərtibatçıların ekranda istədikləri şəkilləri
+          yarada bilmək üçün komanda işlərinin və proseslərinin bir hissəsi kimi istifadə
+          edə biləcəkləri alətdir. '
+      4:
+        text: 'Məsələn, Finding Nemo filmində, Crush, Squirt və bütün dostları Şərqi
+          Avstraliya cərəyanından keçərkən. Yanından axan su şəkillərini , tısbağanın
+          arxasındakı rəngləri , balığın yanlarını görürsən. Bütün yazdığımız, sonra
+          rəssama verdiyimiz və onların bu son görüntüyü yaratmaq, onu cızmaq və onu
+          gözəl və əyləncəli göstərmək üçün götürdüyü şeylər riyaziyyat və kompüter
+          proqramları vasitəsilə yaradılır. '
+    C3_dice_race:
+      1:
+        text: 'Bu dərs nərd yarışı adlanır. Demək olar ki, hər kəs kompüter oyunları
+          oynamağı xoşlayır. Kompüter proqramçılarının oyunun addımlarını proqrama
+          necə çevirdiyini heç düşünmüsünüzmü? Kompüter oyunlarının yaradılmasında
+          və istənilən problemin həllində ilk addım düşünmək və planlaşdırmaq tələb
+          edir. '
+      2:
+        text: 'Problemin həllinin düşünmə mərhələsi problemin həlli və ya tapşırığı
+          tamamlamaq üçün addım-addım plan olan bir alqoritm yaradır. Bu dərsdə siz
+          nərd oyunu üçün alqoritm yaradacaqsınız. Sonra dostlarınızdan oyunu oynamaq
+          üçün addımları izləyə biləcəklərini görmək üçün planınızı sınamalarını xahiş
+          edəcəksiniz. Proqramçı addımların düzgün olduğuna əmin olduqdan sonra, alqoritmi
+          kompüterin başa düşəcəyi dildə proqrama çevirməyin vaxtıdır. '
+      3:
+        text: 'Hər gün etdiyimiz demək olar ki, hər şey bir alqoritm, tapşırığı başa
+          çatdırmaq üçün izləyə biləcəyiniz addımların siyahısını tələb edir. Məktəbə
+          hazırlaşmağı və ya dostlarınızla əyləncəli bir gün planlaşdırmağı və ya
+          qəlyanaltı hazırlamağı düşünün. Bu tapşırıqlardan hər hansı birini yerinə
+          yetirmək üçün onu daha kiçik addımlara bölməlisiniz və bəzən addımlar müəyyən
+          bir ardıcıllıqla olmalıdır. '
+      4:
+        text: Bir sendviç hazırlamağı düşünün. Şkafdan ilk olaraq hansı inqrediyentdən
+          çıxmağınızın əhəmiyyəti yoxdur. Amma bankanı açana qədər fıstıq yağını yaymaq
+          olmaz. Kompüterlərin ən sadə şeylər üçün də alqoritmlərə və proqramlara
+          ehtiyacı var hansı ki biz onlara düşünmədən edə bilirik.
+      5:
+        text: " Bir alqoritm, baş verməsi üçün proqram kompüterə verilən faktiki göstərişlər
+          olduğu halda, nəyin baş verməsinin arxasında duran düşüncədir. Kompüter
+          onu işə salmazdan əvvəl alqoritmi proqrama çevirmək lazımdır. Tapşırığı
+          alqoritm adlanan addımlara bölmək bəzən çətin olur. Ancaq hər hansı bir
+          yeni bacarıq kimi, təcrübə ilə daha asan və asan olur. "
+    C3_functional_suncatchers:
+      2:
+        text: Günəş tutucu hazırlamaq prosesini sadələşdirmək üçün ilk addım dəfələrlə
+          təkrarlamalı olduğumuzu anlamaqdır. Bu addımları funksiya dediyimiz şeyə
+          qruplaşdıra bilərik.
+    C3_internet:
+      1:
+        text: Bu dərs internetə aiddir. İnternet çox məşğul yerdir və bu sıx yola
+          bənzəyir. Avtomobillər kimi mesajlar təyinat yerlərinə çatmaq üçün yaxınlaşır.
+          Mesajlar internetdə çox sürətlə hərəkət edir.
+      3:
+        text: 'İnternetdə mesaj göndərmək bir az poçtla mesaj göndərməyə bənzəyir,
+          lakin bir neçə fərqlə. Mən burada, Google.com-dayam. Bu vebsayt üçün IP
+          ünvanı bu nömrədir. Bir IP ünvanını poçtdakı qayıdış ünvanınız kimi düşünə
+          bilərsiniz. Təsəvvür edək ki, mən oradakı ofisdəki kiməsə poçtla mesaj göndərmək
+          istəyirəm. Həmin qapıda URL və IP ünvanını görürsünüzmü? Mən bu mesajı yazdım
+          və göndər düyməsini basdım. '
+      5:
+        text: Mənim adım Amanda Campdır və mən Google-da proqram təminatı mühəndisiyəm.
+          Mən profilləri və kontaktları saxlayan arxa serverində işləyən komandada
+          işləyirəm. İşimdə kontaktların telefonunuz kimi digər cihazlara necə göndərilə
+          biləcəyi barədə çox düşünürük. Əksər insanların çoxlu kontaktları var, siz
+          deyə bilərsiniz ki, 1000 kontakt var və biz bu kontaktların hamısını bir
+          anda telefonunuza göndərmək istəmirik, çünki mesaj çox böyükdür. İnternetin
+          böyük mesajları paketlərə ayırma üsuluna bənzər şəkildə, biz bir anda telefonunuza
+          yalnız 100 kontakt göndərə biləcəyimiz və telefonunuzun bizə cavab verməsi
+          və növbəti 100-ü istəməsinə icazə verə biləcəyimiz səhifələmə adlanan konsepsiyadan
+          istifadə edirik.
     C3_maze_level_4:
       1:
         text: Bu nümunədə sənin hədəfin zombini günəbaxana çatdırmaqdı.Biz 5 irəli

@@ -563,8 +563,14 @@ id:
         codebreak_e04: Code Breal 4.0 Informasi Digital bersama Mike Krieger dan Alice Keeler
         csd_how_teamwork_works: Bagaimana timkerja bekerja
         csd_teamwork_and_disagreement: Timkerja- Menghadapi perbedaan pendapat
+        csd_ml_intro_to_ai_lab: Pengantar Lab AI
+        csd_ml_import_model: Mengimpor model AI
         playlab_2021: Pengantar Play Lab
         playlab_2021_reader: Pengantar Play Lab
+        csp_tutorial_libraries: Perpustakaan di Lab App
+        csd_ml_intro_ai_lab_july2021: Pengantar Lab AI
+        csd_ml_model_cards_july2021: Model kartu di Lab AI
+        Gettting_Started_StudentExperience: Pengalaman siswa
         PL_CSD_TeacherTips_Advise: Kiat untuk Guru - Saran bagi Guru Baru
         PL_CSD_TeacherTips_IntroToCSD: Kiat untuk Guru - Pengantar CS Discoveries
         PL_CSD_TeacherTips_ProblemSolvingProcess: Kiat untuk Guru - Proses Pemecahan Masalah
@@ -587,6 +593,10 @@ id:
         poetry_module_multichoiceprompts: Beberapa Prompt Pilihan - Coding dengan Puisi
         poetry_module_conditionals: Conditional - Coding dengan Puisi
         poemart_intro: Pengantar Seni Puisi
+        csd_u6_variables_part2: Variable - Part 2
+        csd_ml_ethics_ai: 'Etika dan AI'
+        PL_overview_CSP: Apa prinsip-prinsip Ilmu Komputer?
+        PL_CSP_EIPMOverview: Panduan Belajar EIPM
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

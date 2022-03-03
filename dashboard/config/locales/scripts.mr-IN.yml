@@ -5904,6 +5904,10 @@ mr:
               display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: व्हेरीएबल्स
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -5997,6 +6001,59 @@ mr:
               key: धडा -15
             lesson-16:
               key: धडा -16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: शब्दांची ताकद
+              key: शब्दांची ताकद
+            Making Sprites:
+              name: स्प्राईट्स तयार करणे
+              key: स्प्राईट्स तयार करणे
+            Blank Space Stories:
+              name: ब्लॅंक स्पेस स्टोरीज
+              key: ब्लॅंक स्पेस स्टोरीज
+            Text and Prompts:
+              name: टेक्स्ट आणि प्रॉम्प्ट्स
+              description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह
+                सराव कराल.
+              key: टेक्स्ट आणि प्रॉम्प्ट्स
+            Outbreak:
+              name: उद्रेक
+              key: उद्रेक
+            AI For Oceans:
+              name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+              key: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+          lesson_groups:
+            lessonGroup-8:
+              display_name: व्हेरीएबल्स
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
+            आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+        csa6-2022:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+            lesson-1:
+              key: धडा -1
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa7-2022:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सँडबॉक्स
+        csa8-2022:
+          lessons:
+            Java Lab:
+              name: जावा लॅब
+              key: जावा लॅब
           lesson_groups:
             lessonGroup-5:
               display_name: सँडबॉक्स
