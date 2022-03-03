@@ -13,8 +13,8 @@ Feature: Code review (peer scenarios)
   Background:
   # Create a section
     Given I create a levelbuilder named "Dumbledore"
+    And I create a new section assigned to "ui-test-csa-family-script"
     And I sign in as "Dumbledore" and go home
-    And I create a new section named "CSA Section" assigned to "UI Test CSA Family Script"
     And I save the section url
     And I save the section id from row 0 of the section table
     Given I create a student named "Hermione"
