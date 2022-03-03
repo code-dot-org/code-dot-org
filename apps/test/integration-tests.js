@@ -1,5 +1,8 @@
 import '@babel/polyfill';
 import 'whatwg-fetch';
+import Adapter from 'enzyme-adapter-react-16';
+import enzyme from 'enzyme';
+enzyme.configure({adapter: new Adapter()});
 import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import stubFirehose from './util/stubFirehose';
