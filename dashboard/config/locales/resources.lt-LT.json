@@ -200,8 +200,14 @@
         "for_loops/csd/2021": {
           "name": "Kartojimas"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
         "variables_1/csd/2021": {
           "name": "Kintamieji"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Tarpusavio peržiūra"
         },
         "velocity_1/csd/2021": {
           "name": "Greitis"
@@ -215,8 +221,26 @@
         "functions_1/csd/2021": {
           "name": "Komandų kūrimas"
         },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
         "lists/csd/2021": {
           "name": "Sąrašai"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Tarpusavio peržiūra"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Tarpusavio peržiūra"
         }
       }
     }

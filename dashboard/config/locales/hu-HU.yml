@@ -837,7 +837,7 @@ hu:
     unplugged_conditionals:
       title: Feltételek
     widgets:
-      audience: 'Korosztály: 14 +'
+      audience: 14 éves kortól
       cta: Ismerd meg, hogyan
   landing:
     report_bug: Hiba bejelentése

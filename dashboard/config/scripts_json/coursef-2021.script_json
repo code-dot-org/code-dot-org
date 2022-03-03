@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Open Preview of New Course F Lessons!",
+          "details": "Our team has been hard at work on updates to the 2022-23 CS Fundamentals curriculum. We’ve been preparing new lessons and resources, some of which are available to preview now! Check out our forum post to learn more.",
+          "link": "https://forum.code.org/t/announcing-updates-to-course-f-in-cs-fundamentals/35898",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -30,7 +39,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-01-20 17:45:38 UTC",
+    "serialized_at": "2022-02-28 17:23:03 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

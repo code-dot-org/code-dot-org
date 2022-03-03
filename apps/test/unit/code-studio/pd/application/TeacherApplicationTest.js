@@ -51,14 +51,15 @@ describe('TeacherApplication', () => {
     );
   });
   it('Sets the school dropdown value from storage', () => {
-    window.sessionStorage.setItem(
-      'TeacherApplication',
-      JSON.stringify({data: {school: '25'}})
-    );
+    sinon
+      .stub(window.sessionStorage, 'getItem')
+      .withArgs('TeacherApplication')
+      .returns(JSON.stringify({data: {school: '25'}}));
     const page = mount(<TeacherApplication {...defaultProps} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '25'
     );
+    window.sessionStorage.getItem.restore();
   });
   it('Logs user id on initialization', () => {
     const fc = sinon.stub(firehoseClient, 'putRecord');
@@ -114,15 +115,15 @@ describe('TeacherApplication', () => {
       ).to.deep.equal({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
-      // [MEG] TODO: Use FakeStorage instead
-      window.sessionStorage.setItem(
-        'TeacherApplication',
-        JSON.stringify({data: {school: '25'}})
-      );
+      sinon
+        .stub(window.sessionStorage, 'getItem')
+        .withArgs('TeacherApplication')
+        .returns(JSON.stringify({data: {school: '25'}}));
       teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
+      window.sessionStorage.getItem.restore();
     });
     it('includes saved form data even if partial saving is not allowed', () => {
       teacherApplication.mergeProps({

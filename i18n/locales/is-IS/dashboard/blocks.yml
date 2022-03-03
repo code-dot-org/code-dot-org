@@ -1738,6 +1738,7 @@ is:
             '"leaves"': laufblöð
             '"rainbow"': regnbogi
             '"stars"': stjörnur
+            '"waves"': öldur
       Poetry_makeBurst:
         options:
           EFFECT:

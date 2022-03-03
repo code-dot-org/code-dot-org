@@ -1006,6 +1006,8 @@ in:
   no_course_access_teacher: "crwdns2356842:0crwdne2356842:0"
   no_script_access_student: "crwdns401134:0crwdne401134:0"
   no_script_access_teacher: "crwdns401136:0crwdne401136:0"
+  no_level_access_student: "crwdns2883586:0crwdne2883586:0"
+  no_level_access_teacher: "crwdns2883588:0crwdne2883588:0"
   return_unit_overview: 'crwdns91105:0crwdne91105:0'
   return_course_overview: 'crwdns60153:0crwdne60153:0'
   view_all_units: 'crwdns84693:0crwdne84693:0'

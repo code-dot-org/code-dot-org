@@ -22,6 +22,7 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
+import logToCloud from '@cdo/apps/logToCloud';
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -45,8 +46,25 @@ class SectionProgress extends Component {
     showStandardsIntroDialog: PropTypes.bool
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      reportedInitialRender: false
+    };
+  }
+
   componentDidMount() {
     loadScriptProgress(this.props.scriptId, this.props.sectionId);
+  }
+
+  componentDidUpdate() {
+    if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
+      logToCloud.addPageAction(
+        logToCloud.PageAction.LoadScriptProgressFinished
+      );
+      this.setState({reportedInitialRender: true});
+    }
   }
 
   onChangeScript = scriptId => {
@@ -87,18 +105,20 @@ class SectionProgress extends Component {
     );
   };
 
+  levelDataInitialized = () => {
+    const {scriptData, isLoadingProgress, isRefreshingProgress} = this.props;
+    return scriptData && !isLoadingProgress && !isRefreshingProgress;
+  };
+
   render() {
     const {
       validScripts,
       currentView,
       scriptId,
       scriptData,
-      isLoadingProgress,
-      isRefreshingProgress,
       showStandardsIntroDialog
     } = this.props;
-    const levelDataInitialized =
-      scriptData && !isLoadingProgress && !isRefreshingProgress;
+    const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;

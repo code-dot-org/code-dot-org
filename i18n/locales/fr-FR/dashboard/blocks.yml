@@ -3,45 +3,47 @@ fr:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} change toutes les {N} mesures \nentre {MOVE1} et {MOVE2}"
+        text: "{GROUP} alterne toutes les {N} mesures entre {MOVE1} et {MOVE2}"
         options:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           MOVE1:
-            MOVES.Roll: Roulements de hanches
+            MOVES.Roll: Bodyroll (vague)
             MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double la mise
-            MOVES.Drop: Grand écart
-            MOVES.Floss: Floss dance
-            MOVES.Fresh: Fresh dance
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
           MOVE2:
-            MOVES.Roll: Roulements de hanches
+            MOVES.Roll: Bodyroll (vague)
             MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double la mise
-            MOVES.Drop: Grand écart
-            MOVES.Floss: Floss dance
-            MOVES.Fresh: Fresh dance
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
       Dancelab_atTimestamp:
         text: après {TIMESTAMP} {UNIT}
@@ -57,51 +59,52 @@ fr:
             '"saturation"': saturation
             '"brightness"': luminosité
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} faire {MOVE} {DIR} pour toujours"
+        text: "{GROUP} faire {MOVE} {DIR} indéfiniment"
         options:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           MOVE:
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
-            MOVES.Roll: Roulements de hanches
+            MOVES.Roll: Bodyroll (vague)
             MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double la mise
-            MOVES.Drop: Grand écart
-            MOVES.Floss: Floss dance
-            MOVES.Fresh: Fresh dance
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
       Dancelab_changeMoveLR:
-        text: "{SPRITE} faire {MOVE} {DIR} pour toujours"
+        text: "{SPRITE} faire {MOVE} {DIR} indéfiniment"
         options:
           MOVE:
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
-            MOVES.Roll: Roulements de hanches
+            MOVES.Roll: Bodyroll (vague)
             MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double la mise
-            MOVES.Drop: Grand écart
-            MOVES.Floss: Floss dance
-            MOVES.Fresh: Fresh dance
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
@@ -123,17 +126,17 @@ fr:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -147,37 +150,37 @@ fr:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           MOVE:
             '"rand"': "(Aléatoire)"
             MOVES.XBend: Fente
-            MOVES.Roll: Roulements de hanches
-            MOVES.XClapSide: Tape des mains
+            MOVES.Roll: Bodyroll (vague)
+            MOVES.XClapSide: Frapper des mains
             MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
             MOVES.XFever: Disco
             MOVES.DoubleJam: Double la mise
-            MOVES.Drop: Grand écart
-            MOVES.Floss: Floss dance
-            MOVES.Fresh: Fresh dance
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Tête + hanches
             MOVES.XHop: Saut
             MOVES.XHighKick: Coup de pied
-            MOVES.XKnee: Genoux
+            MOVES.XKnee: Genou
             MOVES.XKneel: S'agenouiller
             MOVES.XOle: Olé
-            MOVES.XArmsSide: Atteindre
+            MOVES.XArmsSide: Tendre le bras
             MOVES.XSlide: Glisser
             MOVES.Kick: Étoile
             MOVES.XArmsUp: Étirer
@@ -190,23 +193,23 @@ fr:
           MOVE:
             '"rand"': "(Aléatoire)"
             MOVES.XBend: Fente
-            MOVES.Roll: Roulements de hanches
-            MOVES.XClapSide: Tape des mains
+            MOVES.Roll: Bodyroll (vague)
+            MOVES.XClapSide: Frapper des mains
             MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
             MOVES.XFever: Disco
             MOVES.DoubleJam: Double la mise
-            MOVES.Drop: Grand écart
-            MOVES.Floss: Floss dance
-            MOVES.Fresh: Fresh dance
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Tête + hanches
             MOVES.XHop: Saut
             MOVES.XHighKick: Coup de pied
-            MOVES.XKnee: Genoux
+            MOVES.XKnee: Genou
             MOVES.XKneel: S'agenouiller
             MOVES.XOle: Olé
-            MOVES.XArmsSide: Atteindre
+            MOVES.XArmsSide: Tendre le bras
             MOVES.XSlide: Glisser
             MOVES.Kick: Étoile
             MOVES.XArmsUp: Étirer
@@ -233,7 +236,7 @@ fr:
         text: 'chaque {UNIT} '
         options:
           UNIT:
-            '"verse"': verset
+            '"verse"': couplet
             '"chorus"': chœur
       Dancelab_getEnergy:
         text: obtenir {RANGE}
@@ -252,7 +255,7 @@ fr:
             '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
-            '"tint"': nuance
+            '"tint"': teinte
       Dancelab_getTime:
         text: heure actuelle en {UNIT}
         options:
@@ -267,10 +270,10 @@ fr:
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double la mise
-            MOVES.Drop: Grand écart
-            MOVES.Floss: Floss dance
-            MOVES.Fresh: Fresh dance
-            MOVES.Roll: Roulements de hanches
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Bodyroll (vague)
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
@@ -305,17 +308,17 @@ fr:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           LOCATION:
             "{x: 200, y: 100}": vers le haut
             "{x: 200, y: 300}": vers le bas
@@ -333,17 +336,17 @@ fr:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           FORMAT:
             '"border"': frontière
             '"inner"': carré intérieur
@@ -351,7 +354,7 @@ fr:
             '"circle"': cercle
             '"grid"': grille
             '"top"': rangée du haut
-            '"row"': ligne
+            '"row"': rangée
             '"bottom"': rangée du bas
             '"left"': colonne de gauche
             '"column"': colonne
@@ -359,7 +362,7 @@ fr:
             '"x"': entrecroisement
             '"plus"': plus
             '"spiral"': spirale
-            '"infinity"': Ligne infinie
+            '"infinity"': ligne infinie
             '"random"': aléatoire
       Dancelab_makeAnonymousDanceSprite:
         text: faire un nouveau {COSTUME} à {LOCATION}
@@ -460,17 +463,17 @@ fr:
             '40': '40'
           COSTUME:
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           LAYOUT:
             '"border"': frontière
             '"inner"': carré intérieur
@@ -478,7 +481,7 @@ fr:
             '"circle"': cercle
             '"grid"': grille
             '"top"': rangée du haut
-            '"row"': ligne
+            '"row"': rangée
             '"bottom"': rangée du bas
             '"left"': colonne de gauche
             '"column"': colonne
@@ -486,7 +489,7 @@ fr:
             '"x"': entrecroisement
             '"plus"': plus
             '"spiral"': spirale
-            '"infinity"': Ligne infinie
+            '"infinity"': ligne infinie
             '"random"': aléatoire
       Dancelab_mixColors:
         text: mélanger {COLOR1} et {COLOR2}
@@ -518,7 +521,7 @@ fr:
             '"splatter"': Éclaboussures de peinture
             '"rainbow"': Arc-en-ciel
             '"snowflakes"': Neige
-            '"text"': Titre de la chanson
+            '"text"': Titres de chanson
             '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
@@ -526,16 +529,16 @@ fr:
             '"stars"': Étoiles
           PALETTE:
             '"rave"': Noir et blanc
-            '"cool"': Blues
+            '"cool"': Cool
             '"electronic"': Électronique
-            '"iceCream"': Crème glacée
+            '"iceCream"': Glace
             '"default"': Lumière
             '"neon"': Néon
             '"tropical"': Tropical
-            '"vintage"': Ancien
+            '"vintage"': Vintage
             '"warm"': Rouges
       Dancelab_setBackgroundEffectWithPalette:
-        text: définir l'effet d'arrière-plan{PALETTE} {EFFECT}
+        text: définir l'effet d'arrière-plan {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Aucun
@@ -548,7 +551,6 @@ fr:
             '"fireworks"': Feux d'artifice
             '"flowers"': Fleurs
             '"growing_stars"': Étoiles montantes
-            '"higher_power"': Plus grande puissance
             '"swirl"': Hypno
             '"kaleidoscope"': Kaléidoscope
             '"lasers"': Piste de danse laser
@@ -557,7 +559,7 @@ fr:
             '"ripples_random"': Ondulations aléatoires
             '"ripples"': Ondulations
             '"snowflakes"': Neige
-            '"text"': Titre de la chanson
+            '"text"': Titres de chanson
             '"squiggles"': Gribouillis
             '"galaxy"': Espace
             '"sparkles"': Éclats
@@ -567,13 +569,13 @@ fr:
             '"music_wave"': Vagues
           PALETTE:
             '"rave"': Noir et blanc
-            '"cool"': Blues
+            '"cool"': Cool
             '"electronic"': Électronique
-            '"iceCream"': Crème glacée
+            '"iceCream"': Glace
             '"default"': Lumière
             '"neon"': Néon
             '"tropical"': Tropical
-            '"vintage"': Ancien
+            '"vintage"': Vintage
             '"warm"': Rouges
       Dancelab_setDanceSpeed:
         text: changer la vitesse de la danse à {SPEED} pour {SPRITE}
@@ -590,17 +592,17 @@ fr:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           SPEED:
             '1': normal
             '2': rapide
@@ -616,11 +618,11 @@ fr:
             '"confetti"': Confettis
             '"hearts_red"': Cœurs
             '"music_notes"': Notes de musique
-            '"pineapples"': Ananas
+            '"pineapples"': Les ananas
             '"pizzas"': Pizzas
             '"smiling_poop"': Crotte
             '"rain"': Pluie
-            '"floating_rainbows"': Arc-en-ciel
+            '"floating_rainbows"': Arc-en-ciels
             '"smile_face"': Sourires
             '"spotlight"': Projecteur
             '"color_lights"': Éclairage de scène
@@ -638,11 +640,11 @@ fr:
             '"hearts_red"': Cœurs
             '"music_notes"': Notes de musique
             '"paint_drip"': Gouttes de peinture
-            '"pineapples"': Ananas
+            '"pineapples"': Les ananas
             '"pizzas"': Pizzas
             '"smiling_poop"': Crotte
             '"rain"': Pluie
-            '"floating_rainbows"': Arc-en-ciel
+            '"floating_rainbows"': Arc-en-ciels
             '"smile_face"': Sourires
             '"spotlight"': Projecteur
             '"color_lights"': Éclairage de scène
@@ -664,17 +666,17 @@ fr:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -682,7 +684,7 @@ fr:
             '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
-            '"tint"': nuance
+            '"tint"': teinte
       Dancelab_setPropRandom:
         text: randomiser {SPRITE} {PROPERTY}
         options:
@@ -693,24 +695,24 @@ fr:
             '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
-            '"tint"': nuance
+            '"tint"': teinte
       Dancelab_setPropRandomEach:
         text: randomiser {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -718,7 +720,7 @@ fr:
             '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
-            '"tint"': nuance
+            '"tint"': teinte
       Dancelab_setTint:
         text: définir la teinte de {SPRITE} à {VAL}
       Dancelab_setTintEach:
@@ -727,38 +729,38 @@ fr:
           THIS:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
       Dancelab_setTintEachInline:
         text: définir la teinte de {THIS} à {VAL}
         options:
           THIS:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
       Dancelab_setTintInline:
         text: définir la teinte de {SPRITE} à {VAL}
       Dancelab_setVisible:
-        text: régler {SPRITE} visible à {VISIBILITY}
+        text: définir {SPRITE} comme visible à {VISIBILITY}
         options:
           VISIBILITY:
             'true': visible
@@ -769,17 +771,17 @@ fr:
           THIS:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -793,7 +795,7 @@ fr:
             '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
-            '"tint"': nuance
+            '"tint"': teinte
           RANGE:
             '"bass"': grave
             '"mid"': médium
@@ -804,17 +806,17 @@ fr:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -822,7 +824,7 @@ fr:
             '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
-            '"tint"': nuance
+            '"tint"': teinte
           RANGE:
             '"bass"': grave
             '"mid"': médium
@@ -838,7 +840,7 @@ fr:
             '"x"': position horizontale
             '"y"': position verticale
             '"direction"': direction du mouvement
-            '"tint"': nuance
+            '"tint"': teinte
           RANGE:
             '"bass"': grave
             '"mid"': médium
@@ -849,17 +851,17 @@ fr:
           GROUP:
             sprites: tout
             '"ALIEN"': tous les extraterrestres
-            '"BEAR"': tous les ours
+            '"BEAR"': les ours
             '"CAT"': tous les chats
             '"DOG"': tous les chiens
-            '"DUCK"': tous les canards
-            '"FROG"': toutes les grenouilles
+            '"DUCK"': les canards
+            '"FROG"': les grenouilles
             '"MOOSE"': tous les élans
-            '"PINEAPPLE"': tous les ananas
+            '"PINEAPPLE"': les ananas
             '"ROBOT"': tous les robots
-            '"SHARK"': tous les requins
-            '"SLOTH"': paresseux
-            '"UNICORN"': Toutes les licornes
+            '"SHARK"': les requins
+            '"SLOTH"': les paresseux
+            '"UNICORN"': les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -868,7 +870,7 @@ fr:
             '"x"': position horizontale
             '"y"': position verticale
             '"direction"': direction du mouvement
-            '"tint"': nuance
+            '"tint"': teinte
           RANGE:
             '"bass"': grave
             '"mid"': médium
@@ -882,7 +884,7 @@ fr:
             '"ripples_random"': Ondulations aléatoires
             '"quads"': Angles
             '"flowers"': Fleurs
-            '"popsicles"': Glaces à l’eau
+            '"popsicles"': Bâtonnet de glace
             '"squiggles"': Gribouillis
             '"growing_stars"': Étoiles montantes
             '"emojis"': Emojis
@@ -894,11 +896,11 @@ fr:
             '"column_left"': colonne de gauche
             '"column_right"': colonne de droite
             '"diamond"': diamant
-            '"mural"': Mural
+            '"mural"': Murale
             '"safari"': Safari
             '"network"': Réseau
             '"highway"': Autoroute
-            '"stream"': Courant
+            '"stream"': Ruisseau
             '"tile"': Tuile
             '"shadow"': Ombre
             '"s"': s
@@ -909,7 +911,7 @@ fr:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-            '"0"': '1'
+            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -920,7 +922,7 @@ fr:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: En appuyant sur {KEY}
+        text: en appuyant sur {KEY}
         options:
           KEY:
             '"up"': vers le haut
@@ -928,14 +930,14 @@ fr:
             '"down"': vers le bas
             '"right"': vers la droite
             '"space"': espace
-            '"enter"': entrée
+            '"enter"': entrer
             '"a"': a
             '"b"': b
             '"c"': c
             '"d"': d
             '"e"': e
             '"f"': f
-            '"g"': q
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -945,6 +947,7 @@ fr:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -954,7 +957,7 @@ fr:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-            '"0"': '1'
+            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -1068,7 +1071,7 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
-            '"tint"': nuance
+            '"tint"': teinte
             '"speed"': vitesse
       gamelab_getThisSprite:
         text: "{CHOICE} lutin"
@@ -1121,7 +1124,7 @@ fr:
             '"d"': d
             '"e"': e
             '"f"': f
-            '"g"': q
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -1131,6 +1134,7 @@ fr:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -1164,7 +1168,7 @@ fr:
             '"d"': d
             '"e"': e
             '"f"': f
-            '"g"': q
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -1174,6 +1178,7 @@ fr:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -1464,7 +1469,7 @@ fr:
       gamelab_whenDownArrow:
         text: quand flèche du bas appuyée
       gamelab_whenKey:
-        text: En appuyant sur {KEY}
+        text: en appuyant sur {KEY}
         options:
           KEY:
             '"up"': vers le haut
@@ -1694,10 +1699,10 @@ fr:
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double la mise
-            MOVES.Drop: Grand écart
-            MOVES.Floss: Floss dance
-            MOVES.Fresh: Fresh dance
-            MOVES.Roll: Roulements de hanches
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Roll: Bodyroll (vague)
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
@@ -1818,7 +1823,7 @@ fr:
       Mikelab_whenClickedOn:
         text: quand on clique sur {SPRITE}
       Mikelab_whenKeyPressed:
-        text: En appuyant sur {KEY}
+        text: en appuyant sur {KEY}
         options:
           KEY:
             '"up"': flèche « vers le haut »
@@ -2123,7 +2128,7 @@ fr:
           FORMAT:
             '"grid"': grille
             '"border"': frontière
-            '"row"': ligne
+            '"row"': rangée
             '"random"': aléatoire
       aalab_levelFailure:
         text: élève {STATE} avec {KEY}
@@ -2229,7 +2234,7 @@ fr:
             '"left"': vers la gauche
             '"right"': vers la droite
       binary_whenKey:
-        text: En appuyant sur {KEY}
+        text: en appuyant sur {KEY}
         options:
           KEY:
             '"up"': vers le haut
