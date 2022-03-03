@@ -5,14 +5,20 @@ class AbilityTest < ActiveSupport::TestCase
   setup_all do
     @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
       CourseOffering.add_course_offering(unit_group)
-      @reference_guide = create(:reference_guide, course_version: unit_group.course_version)
+      @reference_guide_student_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
+
     @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @public_teacher_to_student_script_level = create(:script_level, script: script)
     end
 
     @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
       @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
+    end
+
+    @public_facilitator_to_teacher_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher) do |unit_group|
+      CourseOffering.add_course_offering(unit_group)
+      @reference_guide_teacher_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
     @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
@@ -73,7 +79,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -109,7 +116,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -145,7 +153,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -183,7 +192,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    refute ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     refute ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -224,7 +234,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    refute ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     refute ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -260,7 +271,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -301,7 +313,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -343,7 +356,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -385,7 +399,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -431,7 +446,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, @login_required_migrated_lesson)
     assert ability.cannot?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.cannot?(:read, @reference_guide_student_unit_group)
+    assert ability.cannot?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.cannot?(:read, @public_teacher_to_student_script_level)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_script_level)
@@ -477,7 +493,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @reference_guide)
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)

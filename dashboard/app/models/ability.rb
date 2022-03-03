@@ -423,6 +423,7 @@ class Ability
         CourseOffering,
         Script,
         Lesson,
+        ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,
