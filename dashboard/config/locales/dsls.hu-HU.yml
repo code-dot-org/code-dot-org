@@ -2790,10 +2790,12 @@ hu-HU:
         - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
           feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
             miközben hármat kellene előre haladnia.
-        - feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+        - text: BB-8 rossz irányba fordul az első ciklus után.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
             miközben hármat kellene előre haladnia.
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Mi történik, amikor megnyomod
+            a "Futtatás" gombot?
       courseD_EOC_2021:
         description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
@@ -2810,13 +2812,24 @@ hu-HU:
         - {}
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: A méh elmegy a felhőig, és megpróbál nektárt gyűjteni.
+          feedback: 'Rossz megoldás. A `ha virágnál` blokk hatására a méh csak akkor
+            fog nektárt gyűjteni, ha a felhő alatt virág van. '
+        - text: A méh elmegy a felhőig, és csak akkor fog ott nektárt gyűjteni, ha
+            virág van a felhő alatt.
+          correct: true
           feedback: Helyes!
-        - {}
-        - {}
+        - text: A méh elmegy a felhőig, és ott semmit sem fog csinálni.
+          feedback: 'Rossz megoldás. A `ha virágnál` blokk hatására a méh nektárt
+            fog gyűjteni, ha a felhő alatt virág van. '
+        - text: A méh nem ér el a felhőig.
+          feedback: 'Rossz megoldás. A `ha virágnál` blokk hatására a méh csak akkor
+            fog nektárt gyűjteni, ha a felhő alatt virág van. '
         questions:
-        - {}
+        - text: A felhőtől nem látni semmit! Akár virág is lehet alatta. Ha így van,
+            akkor onnan a méhnek nektárt kell gyűjtenie. Ha nincs virág a felhő alatt,
+            akkor nem kell csinálnia semmit. Nézz rá a kódra! Mit gondolsz, mi történik,
+            miután a "Futtatás" gombra kattintasz?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
@@ -2849,13 +2862,23 @@ hu-HU:
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          feedback: Hibás válasz. A méh minden lépés után két mézet készít az első
+            blokkban, aztán elfordulás után ismét kettőt. Mindezt kétszer hajtja végre.
+            (2+2)*2=8
         - text: '8'
           correct: true
           feedback: Helyes!
         - text: '10'
+          feedback: Hibás válasz. A méh minden lépés után két mézet készít az első
+            blokkban, aztán elfordulás után ismét kettőt. Mindezt kétszer hajtja végre.
+            (2+2)*2=8
         - text: '12'
+          feedback: Hibás válasz. A méh minden lépés után két mézet készít az első
+            blokkban, aztán elfordulás után ismét kettőt. Mindezt kétszer hajtja végre.
+            (2+2)*2=8
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Hány mézet készít a méh, miután
+            megnyomod a "Futtatás" gombot?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
         - {}
@@ -3101,7 +3124,7 @@ hu-HU:
         markdown: |-
           # Áttekintés
 
-          Az osztály úgy programozza a manókat, hogy azok új módon lépjenek kapcsolatba egymással.  Az isTouching blokk használatának rövid áttekintése után az osztály ötletbörzét tart arról, hogy két manó miképp léphetne kapcsolatba egymással.  Ezután az isTouching segítségével az egyik manó egy másikat áttol a képernyőn, majd a négy ütközésblokk (ütközés, elmozdítás, ugrálás és leugrás) használatát gyakorolják.
+          Az osztály úgy programozza a sprite-okat, hogy azok új módon lépjenek kapcsolatba egymással.  Az isTouching blokk használatának rövid áttekintése után az osztály ötletbörzét tart arról, hogy két sprite miképp léphetne kapcsolatba egymással.  Ezután az isTouching segítségével az egyik sprite egy másikat áttol a képernyőn, majd a négy ütközésblokk (ütközés, elmozdítás, ugrálás és leugrás) használatát gyakorolják.
           ## Fogalomtár
 
           * **Absztrakció** - Konkrét különbségek kiemelése, hogy egy megoldás több problémára is alkalmazható legyen.

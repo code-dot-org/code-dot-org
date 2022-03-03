@@ -92,6 +92,9 @@
         "survey_planning/csd/2021": {
           "name": "Designe Data Čoakkaldaga"
         },
+        "computer-science-practices/csd/2021": {
+          "type": "Reflekšuvdna"
+        },
         "paper-prototypes/csd/2021": {
           "name": "BáberPrototyhpat"
         },
@@ -119,11 +122,20 @@
         "video_machine_learning/csd/2021": {
           "name": "Video: Oahpahit Mašiinna"
         },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
         "sprites_1/csd/2021": {
           "name": "Sprite:at"
         },
         "animating-sprites/csd/2021": {
           "name": "Sprite Lihkadeapmi"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
         },
         "input-and-output-2020/csd/2021": {
           "name": "Input ja Output"
@@ -135,16 +147,29 @@
           "name": "App:at ja ČuolbmaČoavdin"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "App:at ja ČuolbmaČoavdin"
+          "name": "App:at ja ČuolbmaČoavdin",
+          "type": "Eará Oahppi Árvvoštallan"
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "App:at ja ČuolbmaČoavdin"
         },
+        "html-web-page/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
         "digital-footprint/csd/2021": {
           "name": "Digitála Luodda"
         },
+        "your-personal-style-1/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
+        },
         "classes/csd/2021": {
           "name": "Klássat"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Eará Oahppi Árvvoštallan"
         }
       }
     }
