@@ -79,6 +79,16 @@ class ProgrammingExpressionsController < ApplicationController
     render :not_found
   end
 
+  def destroy
+    return render :not_found unless @programming_expression
+    if @programming_expression.destroy
+      File.delete(@programming_expression.file_path) if File.exist?(@programming_expression.file_path)
+      render(status: 200, plain: "Destroyed #{@programming_expression.name}")
+    else
+      render(status: :not_acceptable, plain: @programming_expression.errors.full_messages.join('. '))
+    end
+  end
+
   private
 
   def programming_expression_params
