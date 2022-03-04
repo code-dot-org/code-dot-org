@@ -2,7 +2,8 @@ import {
   WebSocketMessageType,
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
-  ExecutionType
+  ExecutionType,
+  AuthorizerSignalType
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -48,6 +49,8 @@ export default class JavabuilderConnection {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }
+
+    this.onOutputMessage(javalabMsg.connecting());
 
     $.ajax({
       url: '/javabuilder/access_token',
@@ -182,6 +185,9 @@ export default class JavabuilderConnection {
           this.onNewlineMessage();
         }
         break;
+      case WebSocketMessageType.AUTHORIZER:
+        this.onAuthorizerMessage(data.value, data.detail);
+        break;
       default:
         break;
     }
@@ -248,6 +254,25 @@ export default class JavabuilderConnection {
         break;
       case ExecutionType.TEST:
         this.setIsTesting(false);
+        break;
+    }
+  }
+
+  onAuthorizerMessage(value, detail) {
+    switch (value) {
+      case AuthorizerSignalType.TOKEN_USED:
+        this.onOutputMessage(javalabMsg.authorizerTokenUsed());
+        break;
+      case AuthorizerSignalType.NEAR_LIMIT:
+        this.onOutputMessage(
+          javalabMsg.authorizerNearLimit({attemptsLeft: detail.remaining})
+        );
+        break;
+      case AuthorizerSignalType.USER_BLOCKED:
+        this.onOutputMessage(javalabMsg.userBlocked());
+        break;
+      case AuthorizerSignalType.CLASSROOM_BLOCKED:
+        this.onOutputMessage(javalabMsg.classroomBlocked());
         break;
     }
   }
