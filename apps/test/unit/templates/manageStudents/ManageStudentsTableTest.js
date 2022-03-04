@@ -56,8 +56,8 @@ describe('ManageStudentsTable', () => {
     const sortedList = sortRows(rowData, columnIndexList, orderList);
     expect(sortedList[0].id).to.equal(0);
     expect(sortedList[1].id).to.equal(2);
-    expect(sortedList[2].id).to.equal(1);
-    expect(sortedList[3].id).to.equal(3);
+    expect(sortedList[2].id).to.equal(3);
+    expect(sortedList[3].id).to.equal(1);
   });
 
   describe('appropriate buttons render', () => {
