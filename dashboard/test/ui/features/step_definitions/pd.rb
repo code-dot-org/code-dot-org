@@ -20,7 +20,7 @@ And(/^I get facilitator access$/) do
   browser_request(url: '/api/test/facilitator_access', method: 'POST')
 end
 
-Given(/^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/) do |facilitator_name, partner_name|
+Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ do |facilitator_name, partner_name|
   require_rails_env
 
   RegionalPartner.find_or_create_by(name: partner_name, group: 1)
@@ -31,7 +31,7 @@ Given(/^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/)
   }
 end
 
-Given(/^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/) do |pm_name, partner_name|
+Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ do |pm_name, partner_name|
   require_rails_env
 
   regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1)
@@ -44,15 +44,7 @@ Given(/^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/)
   }
 end
 
-Given(/^there is a CSD facilitator named "([^"]+)"$/) do |name|
-  browser_request(
-    url: '/api/test/create_csd_facilitator',
-    method: 'POST',
-    body: {name: name}
-  )
-end
-
-Given(/^there is a facilitator named "([^"]+)" for course "([^"]+)"$/) do |name, course|
+Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
   require_rails_env
 
   email, password = generate_user(name)
