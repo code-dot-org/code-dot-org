@@ -1,10 +1,10 @@
 name 'CSA Playground Overview'
 title 'The Playground'
-description 'The Playground is a simple interface for creating interactive games in Java like Tic-Tac-Toe, Checkers, or Connect Four. The Playground  presents images & text on a board and can play sound effects.'
+description 'The Playground is a simple interface for creating interactive games in Java, such as Tic-Tac-Toe, Checkers, or Connect Four. The Playground presents images and text on a board and can play sound effects.'
 
 markdown <<MARKDOWN
 #The Playground
-The Playground is a simple interface for creating interactive games in Java like Tic-Tac-Toe, Checkers, or Connect Four. The Playground  presents images & text on a board and can play sound effects.
+The Playground is a simple interface for creating interactive games in Java, such as Tic-Tac-Toe, Checkers, or Connect Four. The Playground presents images and text on a board and can play sound effects.
 
 ##Board Class
 The following are the constructors and methods in the `Board` class.
