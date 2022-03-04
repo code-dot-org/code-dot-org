@@ -8539,7 +8539,8 @@
         },
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "Agar sizga kerak bo'lgan yo'l noaniq bo'lsa, barmog'ingiz bilan qushdan cho'chqaga boradigan yo'lni izlang.",
-          "courseA_maze_seq13_b": "Xato qilishdan qo'rqmang! Bloklarni qo'shib, nima bo'lishini ko'rish uchun kodni ishlatib ko'ring."
+          "courseA_maze_seq13_b": "Xato qilishdan qo'rqmang! Bloklarni qo'shib, nima bo'lishini ko'rish uchun kodni ishlatib ko'ring.",
+          "courseA_maze_seq13_c": "Ushbu <xml><block type=\"maze_moveNorth\"/></xml> \n<xml><block type=\"maze_moveEast\"/></xml> \nbloklari sizga cho'chqaga yaqinlashishga yordam beradi."
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_a": "Agar siz qushni harakatga keltirishda muammolarga duch kelgan bo'lsangiz, <xml>\n  <block type=\"when_run\"/>\n</xml> ostiga bloklar qo'yilganligiga ishonch hosil qiling.",
@@ -9992,6 +9993,10 @@
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Agent yordamida Aleks yoki Stiv xaritaning chetidan o'tib ketishi uchun bir nechta ko'priklarni qurishga harakat qiling."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Bu yangi blokdan foydalaning!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Kodni takrorlash uchun `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> siklini olib keling, so‘ngra kerakli blokni ichiga qo‘ying."
         }
       }
     }

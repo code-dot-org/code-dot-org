@@ -577,7 +577,6 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/coursed/2021": {
-          "word": "",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "repeat/coursed/2021": {
@@ -589,12 +588,7 @@
           "definition": "تعليمات للكمبيوتر. توضع العديد من الأوامر معًا لتشكيل خوارزميات وبرامج كمبيوتر."
         },
         "conditionals/coursed/2021": {
-          "word": "الجمل الشرطية",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الجمل الشرطية"
         },
         "condition/coursed/2021": {
           "word": "الشرط",
@@ -605,8 +599,7 @@
           "definition": "حلقة تستمر في التكرار طالما كان الشرط صحيحًا."
         },
         "until/coursed/2021": {
-          "word": "حتى",
-          "definition": ""
+          "word": "حتى"
         },
         "algorithm/express/2021": {
           "word": "الخوارزمية",
@@ -633,20 +626,14 @@
           "definition": "فن تصميم برنامج."
         },
         "behavior/express/2021": {
-          "word": "السلوك",
-          "definition": ""
+          "word": "السلوك"
         },
         "sprite/express/2021": {
-          "word": "شبح",
-          "definition": ""
+          "word": "شبح"
         },
         "event/express/2021": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
         },
         "loop/express/2021": {
           "word": "الحلقة",
@@ -665,16 +652,14 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/express/2021": {
-          "word": "الجمل الشرطية",
-          "definition": ""
+          "word": "الجمل الشرطية"
         },
         "while_loop/express/2021": {
           "word": "حلقة \"While\"",
           "definition": "حلقة تستمر في التكرار طالما كان الشرط صحيحًا."
         },
         "until/express/2021": {
-          "word": "حتى",
-          "definition": ""
+          "word": "حتى"
         },
         "function/express/2021": {
           "word": "وظيفة ",
@@ -683,10 +668,6 @@
         "variable/express/2021": {
           "word": "متغير",
           "definition": "عنصر نائب عن قطعة من المعلومات التي يمكن أن تتغير."
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "حلقة \"For\"",
@@ -761,24 +742,21 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "behavior/coursee/2021": {
-          "word": "السلوك",
-          "definition": ""
+          "word": "السلوك"
         },
         "algorithm/coursee/2021": {
           "word": "الخوارزمية",
           "definition": "قائمة الخطوات اللازمة لإنجاز مهمة."
         },
         "sprite/coursee/2021": {
-          "word": "شبح",
-          "definition": ""
+          "word": "شبح"
         },
         "event/coursee/2021": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "copyright/coursee/2021": {
-          "word": "حقوق النسخ",
-          "definition": ""
+          "word": "حقوق النسخ"
         },
         "loop/coursee/2021": {
           "word": "الحلقة",
@@ -797,8 +775,7 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/coursee/2021": {
-          "word": "الجمل الشرطية",
-          "definition": ""
+          "word": "الجمل الشرطية"
         },
         "while_loop/coursee/2021": {
           "word": "حلقة \"While\"",

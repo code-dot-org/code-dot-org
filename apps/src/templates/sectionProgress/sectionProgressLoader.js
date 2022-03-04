@@ -41,7 +41,10 @@ export function loadScriptProgress(scriptId, sectionId) {
     getStore().dispatch(startRefreshingProgress());
   } else {
     getStore().dispatch(startLoadingProgress());
-    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted);
+    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
+      sectionId,
+      scriptId
+    });
   }
 
   let sectionProgress = {
@@ -99,7 +102,10 @@ export function loadScriptProgress(scriptId, sectionId) {
   // Combine and transform the data
   requests.push(scriptRequest);
   Promise.all(requests).then(() => {
-    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished);
+    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
+      sectionId,
+      scriptId
+    });
 
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,

@@ -7,6 +7,7 @@
 #  properties :text(65535)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  published  :boolean          default(FALSE), not null
 #
 # Indexes
 #

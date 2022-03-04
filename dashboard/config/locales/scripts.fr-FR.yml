@@ -13935,7 +13935,7 @@ fr:
             étendues.
           lessons:
             Dance Party - Go Further:
-              name: Dance Party - Va Plus Loin
+              name: Continuer de Danser (2018)
               description_student: Ce cours permettra aux apprenants de tous âges
                 de s'initier au codage et à l'informatique tout en travaillant dans
                 un environnement sûr et favorable à l'apprentissage. Il a été conçu
@@ -15264,7 +15264,7 @@ fr:
             étendues.
           lessons:
             Dance Party - Go Further:
-              name: Dance Party - Va Plus Loin
+              name: Soirée Dansante - Va Plus Loin
           student_description: Vas au-delà de la première heure avec des idées de
             projets étendues.
         coursec-2019:
@@ -20250,7 +20250,7 @@ fr:
             de Code.org, le Didacticiel Soirèe Dansante
           lessons:
             Dance Party - Go Further:
-              name: Dance Party - Va Plus Loin
+              name: Continuer de Danser
           student_description: Vas au-delà de la première heure avec des idées de
             projets étendues.
         csp10-pilot:
@@ -26373,6 +26373,7 @@ fr:
             lessonGroup-9:
               display_name: Événements
         pre-express-2021:
+          title: Cours rapide pour les primo-lecteurs (2021)
           description_short: 'Une introduction à l''informatique pour les pré-lecteurs:
             conjugue le meilleur de nos cours de maternelle et d''année préparatoire.'
           description_audience: 'Âges : 4 à 8 ans'
@@ -31978,6 +31979,8 @@ fr:
           lessons:
             lesson-5:
               name: Unité 2 Évaluation
+            lesson-6:
+              name: variables
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -32107,6 +32110,403 @@ fr:
               name: Journée d'Évaluation
             lesson-16:
               key: leçon n°16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Le Pouvoir des Mots
+              description_student: Le harcèlement n'est jamais acceptable. Cette leçon
+                vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
+              key: Le Pouvoir des Mots
+            Introducing Sprite Lab:
+              name: Introduction au Labo des Sprites
+              description_student: Vous aborderez lerôle des ordinateurs et de la
+                technologie dans votre vie, en mettant l'accent sur la façon dont
+                les applications et les outils donnent aux utilisateurs des choix
+                sur la façon de les utiliser.
+              key: Introduction au Labo des Sprites
+            Making Sprites:
+              name: Faire des sprites
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**,
+                les élèves passeront par une série de niveaux de programmation sur
+                ordinateur, en terminant par une tâche de « jeu libre » ouverte où
+                ils pourront construire ce qu''ils veulent. Les étudiants écriront
+                des programmes et découvriront les deux concepts au cœur de Sprite
+                Lab : les sprites et les comportements. '
+              key: Faire des sprites
+            Sprites in Action:
+              name: Les Sprites en Action
+              description_student: Vous travaillerez à travers les niveaux de programmation
+                et terminerez avec une tâche de « jeu libre » ouverte où vous pourrez
+                créer ce que vous voulez.
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**,
+                les élèves passeront par une série de niveaux de programmation sur
+                ordinateur, en terminant par une tâche de « jeu libre » ouverte où
+                ils pourront construire ce qu''ils veulent. Les étudiants écriront
+                des programmes qui répondent à des événements chronométrés et à des
+                entrées utilisateur. '
+              key: Les Sprites en Action
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-projet : animal de compagnie virtuel '
+              description_student: Dans cette leçon, les élèves créeront un Animal
+                de Compagnie Virtuel interactif dont l'apparence et le comportements
+                correspondront à leurs souhaits. Les élèves utiliseront l'outil «
+                Costumes » du Labo des Lutins pour personnaliser l'apparence de leur
+                animal de compagnie. Ils utiliseront ensuite des événements, des comportements
+                et d'autres concepts qu'ils ont appris afin de donner vie à leur animal
+                !
+              description_teacher: Dans cette leçon, les élèves créeront un Animal
+                de Compagnie Virtuel interactif dont l'apparence et le comportements
+                correspondront à leurs souhaits. Les élèves utiliseront l'outil «
+                Costumes » du Labo des Sprites pour personnaliser l'apparence de leur
+                animal de compagnie. Ils utiliseront ensuite des événements, des comportements
+                et d'autres concepts qu'ils ont appris afin de donner vie à leur animal
+                !
+              key: 'Mini-projet : animal de compagnie virtuel '
+            Blank Space Stories:
+              name: Histoires d'espace vide
+              description_student: 'Dans cette activité, vous utiliserez des histoires
+                à compléter (similaires à Mad Libs®) pour vous préparer à comprendre
+                comment les ordinateurs prennent et stockent les entrées d''un utilisateur,
+                puis les utiliserez plus tard lors de l''exécution d''un programme. '
+              description_teacher: 'Dans cette leçon de **mise en contexte**, les
+                élèves utiliseront des histoires à compléter (similaires à Mad Libs®)
+                comme contexte pour comprendre comment les ordinateurs prennent et
+                stockent les entrées d''un utilisateur, puis les utiliseront plus
+                tard quand le programme s''exécute. '
+              key: Histoires d'espace vide
+            Text and Prompts:
+              name: Texte et invites
+              description_student: Dans ce cours, vous vous entraînerez avec des variables
+                dans Sprite Lab.
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**,
+                les étudiants s''entraîneront avec les variables dans Sprite Lab. '
+              key: Texte et invites
+            'Mini-Project: User Input Programs':
+              description_student: Appliquez vos nouvelles compétences avec des variables
+                à l'un des trois projets ouverts.
+              description_teacher: Les étudiants appliqueront leurs nouvelles compétences
+                avec des variables à l'un des trois **mini-projets** ouverts. Ils
+                exploreront des exemples de programmes, créeront un plan pour leur
+                propre projet et le programmeront entièrement depuis le début.
+            Simulating Experiments:
+              name: Simuler des Expérimentations
+              description_student: Exécute des simulations sur l'ordinateur et expérimente
+                en changeant les variables.
+              description_teacher: En exécutant une simulation simple dans le Labo
+                des Sprites, les étudiants découvriront comment l'informatique peut
+                être utilisée pour collecter des données qui identifient des tendances
+                ou des modèles. Après avoir exécuté la simulation de nombreuses fois,
+                les élèves auront l'occasion de faire une prédiction sur la façon
+                dont la modification d'une variable dans la simulation peut avoir
+                un impact sur le résultat, puis de tester cette hypothèse.
+              key: Simuler des Expérimentations
+            Outbreak:
+              name: Épidémie
+              description_student: Un virus est arrivé à Monster Town ! Apprenez à
+                créer un simulateur de virus et aidez les monstres à guérir.
+              description_teacher: 'Cette leçon combine le **renforcement des compétences**
+                autour d''événements avec un **mini-projet** où les élèves peuvent
+                créer leur propre simulation informatique dans Sprite Lab. Ils étudieront
+                la simulation pour comprendre à quelle vitesse un virus peut se propager
+                et ce qui peut être fait pour le ralentir. '
+              key: Épidémie
+            AI For Oceans:
+              name: IA pour les Océans
+              description_student: Classez les objets en « poisson » ou « pas de poisson
+                » pour tenter de retirer les déchets de l'océan. Ensuite, développez
+                votre ensemble de données d'entraînement pour inclure d'autres créatures
+                marines qui appartiennent à l'eau. Dans la deuxième partie de l'activité,
+                choisissez vos propres étiquettes à appliquer aux images de poissons
+                générés aléatoirement. Ces données d'entraînement sont utilisées pour
+                un modèle d'apprentissage automatique qui devrait ensuite être capable
+                d'étiqueter de nouvelles images par lui-même.
+              description_teacher: Dans cette leçon **exploratoire**, les élèves formeront
+                un modèle d'apprentissage automatique en classant des poissons et
+                d'autres objets.
+              key: IA pour les Océans
+            The Internet:
+              name: Internet et les réseaux connectés
+              description_student: T'es-tu déjà demandé comment l'information circule
+                sur Internet ? C'est pas de la magie ! Cette leçon t'apprendra les
+                bases du fonctionnement d'Internet.
+              description_teacher: Même si beaucoup de gens utilisent internet quotidiennement,
+                peu savent comment cela fonctionne. Dans cette leçon, les élèves feront
+                semblant de circuler sur internet, tout en apprenant sur les connexions,
+                les URL, les adresses IP et le DNS.
+              key: Internet et les réseaux connectés
+            End of Course Project:
+              name: Fin du projet.
+              description_student: Des projets aussi importants prennent du temps
+                et beaucoup de planification. Trouve ton inspiration, développe un
+                plan et libère ta créativité !
+              description_teacher: Cette leçon **projet** guide les élèves dans le
+                processus de conception, de développement et de présentation de nouveaux
+                projets !
+              key: Fin du projet.
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Citoyenneté Numérique
+            ramp_up:
+              display_name: Les Lutins
+            lessonGroup-8:
+              display_name: variables
+            end_of_course_project:
+              display_name: Fin du projet.
+          description_audience: 'Àges : 9 à 13 ans'
+          description_short: Apprends toutes les notions dans les Concepts Fondamentaux
+            de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: Les projets que vous avez développés tout au long
+                du cours ont inspiré beaucoup de créativité à la communauté ! Un festival
+                d'éclairage de quartier sera organisé pour présenter des histoires
+                créatives, des scripts, des paroles de chansons, des lettres et des
+                poèmes. Le projet Neighbourhood Lit Fest est un grand projet sur lequel
+                vous travaillez tout au long de l'unité, et les stratégies de gestion
+                de projet aident à organiser et structurer votre travail. Vous explorez
+                des stratégies d'écriture et de structuration du code pour que d'autres
+                ingénieurs logiciels puissent facilement comprendre et utiliser un
+                outil Java pour créer la documentation du programme.
+              description_teacher: Les étudiants sont initiés au projet Neighbourhood
+                Lit Fest et évaluent les exigences et les exemples pour identifier
+                les questions et les caractéristiques clés. Avant de commencer à travailler
+                sur le projet, les étudiants approfondissent leur compréhension de
+                la structure du programme et des commentaires, en identifiant les
+                meilleures pratiques et en explorant l'utilisation de Javadocs pour
+                générer la documentation du programme.
+            Exploring Integer and Double Objects:
+              description_student: Vous construisez des objets « Integer » et « Double
+                » pour représenter les valeurs primitives « int » et « double » comme
+                valeurs de référence. En utilisant les méthodes des classes `Integer`
+                et `Double`, vous renvoyez les valeurs que ces objets stockent en
+                tant que valeurs primitives. Vous explorez également les valeurs minimales
+                et maximales des nombres entiers pour éviter les erreurs de débordement
+                avant de planifier les tâches que vous devez effectuer pour votre
+                projet Neighborhood Lit Fest.
+              description_teacher: Les élèves construisent des objets « Integer »
+                et « Double » pour représenter les valeurs primitives « int » et «
+                double » comme valeurs de référence. À l'aide des méthodes des classes
+                « Integer » et « Double », les étudiants renvoient les valeurs que
+                ces objets stockent en tant que valeurs primitives. Les élèves explorent
+                également les valeurs minimales et maximales des nombres entiers pour
+                éviter les erreurs de débordement avant de planifier les tâches qu'ils
+                doivent accomplir pour leur projet Neighbourhood Lit Fest.
+            Using ArrayLists to Store Data:
+              description_student: Lorsque nous travaillons avec des tableaux et des
+                listes, nous rencontrons parfois des problèmes où le nombre d'éléments
+                est inconnu ou la taille de la liste change constamment. Dans cette
+                leçon, vous découvrirez les « ArrayList » et identifierez les scénarios
+                où cette structure de données est plus appropriée.
+              description_teacher: Les étudiants créent des « ArrayList » pour stocker
+                les valeurs « int » et « double ». Les étudiants font la distinction
+                entre « ArrayList » et les tableaux à une dimension pour déterminer
+                quelle structure de données est la mieux adaptée à un scénario. Les
+                étudiants ajoutent des éléments à une « ArrayList » et apprennent
+                comment l'autoboxing convertit les valeurs primitives et les classes
+                wrapper lorsqu'ils travaillent avec les données stockées.
+            Working with ArrayList Data:
+              description_student: Vous utilisez les méthodes `ArrayList` `get()`
+                et `set()` pour récupérer et modifier des éléments et découvrez la
+                méthode `String` `length()` pour compter le nombre de caractères dans
+                un objet `String`. Vous appliquez les algorithmes standard que vous
+                avez développés avec des tableaux 1D et 2D pour modifier des éléments
+                dans un `ArrayList`.
+              description_teacher: Les élèves travaillent avec les méthodes `get()`
+                et `set()` pour récupérer et modifier des éléments dans un `ArrayList`
+                et apprennent la méthode `String` `length()` pour renvoyer le nombre
+                de caractères dans une `String` objet. Ils appliquent les algorithmes
+                standard qu'ils ont développés avec des tableaux 1D et 2D pour modifier
+                les éléments d'une « ArrayList ». Ils apprennent comment le déballage
+                effectue les conversions entre les valeurs primitives et les classes
+                wrapper lorsqu'ils travaillent avec des données stockées dans une
+                « ArrayList ».
+            Storing Objects in an ArrayList:
+              description_student: Pour l’instant, vous avez juste créé des `ArrayList`s
+                pour stocker des `Integer`s, `Double`s et `String`s. Comme avec les
+                tableaux 1D et 2D, vous pouvez également stocker les objets que vous
+                créez dans un `ArrayList`. Dans cette leçon, vous allez créer une
+                « ArrayList » d'objets pour appliquer les algorithmes standard que
+                vous avez utilisés tout au long de l'année pour travailler avec les
+                données stockées dans cette liste.
+              description_teacher: Les élèves créent des « ArrayList » pour stocker
+                des objets et se familiariser avec les types génériques en Java. Ils
+                appliquent les algorithmes qu'ils ont appris avec des tableaux à une
+                dimension à des « ArrayList » pour trouver les valeurs minimales et
+                maximales, calculer des sommes et des moyennes ou trouver des éléments
+                qui répondent à des critères précis.
+            Removing Data from an ArrayList:
+              description_student: Vous explorez les fonctionnalités de la méthode
+                `remove()` dans la classe `ArrayList` et identifiez les erreurs potentielles
+                lors de la tentative de suppression d'éléments tout en parcourant
+                la liste. Ce faisant, vous réalisez quand une « ArrayList » est la
+                meilleure pour un scénario ou un problème.
+              description_teacher: Les élèves explorent les fonctionnalités de la
+                méthode `remove()` dans la classe `ArrayList` et identifient les erreurs
+                potentielles lors de la tentative de suppression d'éléments tout en
+                parcourant la liste. Ils réalisent alors quand une « ArrayList » est
+                la meilleure pour un scénario ou un problème.
+            Using String Methods:
+              description_student: Vous explorez la structure d'une « chaîne » et
+                vous vous rappelez que les « chaînes sont des objets. Vous utilisez
+                les méthodes `indexOf()` et `substring()` pour rechercher des sous-chaînes
+                dans une `String` et pour créer de nouveaux objets `String` à partir
+                d'une `String` existante.
+              description_teacher: Les élèves explorent la structure d'une String`(chaîne)
+                et se rappellent que ce sont des objets. Ils utilisent les méthodes`indexOf()`et`substring()`pour
+                rechercher des sous-chaînes dans une`String`et pour créer de nouveaux
+                objets`String`à partir d'une`String\` existante.
+            Comparing Strings:
+              description_student: Vous explorez en utilisant `compareTo()` pour vérifier
+                si les `String`s sont dans l'ordre alphabétique. Vous travaillez ensuite
+                sur votre projet de fête d'éclairage de quartier, en vous concentrant
+                surtout sur les tâches que vous avez au sein de votre conseil de planification
+                de projet.
+              description_teacher: Les élèves explorent l'utilisation de « compareTo()
+                » pour vérifier si les « chaînes » sont dans l'ordre alphabétique.
+                Ils travaillent ensuite sur leur projet de fête d'éclairage de quartier,
+                en se concentrant surtout sur les tâches qu'ils ont sur leur tableau
+                de planification de projet.
+            Solving Problems with Strings:
+              description_student: Vous combinez votre connaissance des algorithmes
+                standards et des `String`s pour vérifier si une `String` est un palindrome.
+                Vous participez ensuite à une séance de rétroaction par les pairs
+                et réfléchissez à vos progrès dans votre projet de festival d'éclairage
+                de quartier.
+              description_teacher: Ils combinent leurs connaissances des algorithmes
+                standard et des « chaînes » pour vérifier si une « chaîne » est un
+                palindrome, puis ils participent ensuite à une séance de rétroaction
+                par les pairs et réfléchissent à leurs progrès dans le cadre de leur
+                projet de festival d'éclairage de quartier.
+            Solving Problems with ArrayLists:
+              description_student: Vous appliquez les algorithmes standard que vous
+                avez écrits pour les tableaux 1D et 2D aux « ArrayList ». Vous implémentez
+                un nouvel algorithme standard pour obtenir des chiffres individuels
+                à partir d'un nombre entier avant de modifier et d'appliquer les algorithmes
+                précédents pour échanger des éléments, supprimer les doublons ou rechercher
+                des éléments répondant à des critères spécifiques dans votre projet
+                de festival d'éclairage de quartier.
+              description_teacher: Les élèves appliquent les algorithmes standard
+                qu'ils ont écrits pour les tableaux 1D et 2D aux « ArrayList », puis
+                mettent en œuvre un nouvel algorithme standard pour obtenir des chiffres
+                individuels à partir d'un nombre entier avant de modifier et d'appliquer
+                les algorithmes précédents pour échanger des éléments, supprimer les
+                doublons ou rechercher des éléments répondant à des critères précis
+                dans leur projet de festival d'éclairage de quartier.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Projet de fête d'éclairage de quartier - Jour 1
+              description_student: Vous continuez à développer votre projet Neighbourhood
+                Lit Fest pour créer une histoire, une poésie, une chanson ou une autre
+                forme de littérature basée sur l'analyse du travail de votre auteur
+                ou artiste préféré. Vous auto-évaluez d'abord votre travail pour évaluer
+                vos progrès dans la réalisation des exigences du projet, puis écrivez
+                des critères d'acceptation pour une fonctionnalité de votre projet
+                qu'un camarade testera. Vous utilisez l'auto-évaluation et les commentaires
+                de vos camarades pour hiérarchiser les tâches restantes et continuer
+                à développer votre projet.
+              description_teacher: Les élèves continuent à développer leur projet
+                Neighbourhood Lit Fest pour créer une histoire, une poésie, une chanson
+                ou une autre forme de littérature basée sur l'analyse du travail de
+                leur auteur ou artiste préféré. Ils évaluent d'abord leur travail
+                pour voir leurs progrès quant aux exigences du projet, puis écrivent
+                des critères d'acceptation pour une fonctionnalité de leur projet
+                qu'un camarade testera. Ils utilisent l'auto-évaluation et les commentaires
+                de leurs camarades pour hiérarchiser les tâches qu’il leur reste et
+                continuer à développer leurs projets.
+              key: Projet de fête d'éclairage de quartier - Jour 1
+            Neighborhood Lit Fest Project - Day 2:
+              name: Projet de fête d'éclairage de quartier - Jour 2
+              description_student: Dans la leçon précédente, vous avez effectué une
+                auto-évaluation et rédigé des critères d'acceptation pour votre projet.
+                Dans cette leçon, vous obtenez les commentaires des pairs pour identifier
+                les tâches restantes à accomplir et continuer à développer votre projet
+                Neighbourhood Lit Fest.
+              description_teacher: Dans la leçon précédente, les élèves ont effectué
+                des auto-évaluations et écrit des critères d'acceptation pour leurs
+                projets. Ils obtiennent les commentaires de leurs camarades dans cette
+                leçon pour identifier les tâches restantes à accomplir et continuer
+                à développer leurs projets de fête d'éclairage de quartier.
+              key: Projet de fête d'éclairage de quartier - Jour 2
+            Neighborhood Lit Fest Project - Day 3:
+              name: Projet de fête d'éclairage de quartier - Jour 3
+              description_student: Vous faites les révisions et les mises à jour finales,
+                en fonction de vos révisions de code et de votre comité de planification
+                de projet. Vous partagez votre projet Neighbourhood Lit Fest avec
+                vos pairs. Vous célébrez ensuite votre succès et terminez une réflexion
+                finale sur le processus de développement.
+              description_teacher: Les élèves font les révisions et les mises à jour
+                finales, en fonction de leurs révisions de code et du Conseil de planification
+                de projet, puis ils partagent leurs projets de festival d'éclairage
+                de quartier avec leurs camarades, pour ensuite le fêter et résumer
+                le processus de développement final.
+              key: Projet de fête d'éclairage de quartier - Jour 3
+            Assessment Day:
+              name: Journée d'Évaluation
+              description_student: Dans cette unité, vous avez utilisé `ArrayList`
+                pour stocker les données du programme et savoir quand utiliser des
+                tableaux 1D et 2D et `ArrayList`. Vous avez exploré les avantages
+                et les fonctionnalités d'une « ArrayList », en les utilisant pour
+                résoudre des problèmes impliquant des données numériques et des objets.
+                Vous avez utilisé des méthodes de la classe `String` pour analyser
+                et traiter le texte obtenu, à partir de l'entrée utilisateur et fichier.
+                Tout au long de l'unité, vous avez écrit la documentation du programme
+                en utilisant des commentaires sur une seule ligne, des commentaires
+                sur plusieurs lignes et des commentaires Javadoc pour créer la documentation
+                de l'API. Au cours du processus, vous avez identifié et documenté
+                les préconditions et postconditions des objets et des méthodes. Vous
+                pouvez maintenant évaluer la réalisation des objectifs d'apprentissage
+                et des compétences de l'unité sur une évaluation à choix multiples.
+              description_teacher: Dans cette unité, les élèves ont utilisé `ArrayList`
+                pour stocker les données du programme et savoir quand utiliser des
+                tableaux 1D et 2D et `ArrayList`. Ils ont exploré les avantages et
+                les fonctionnalités d'une « ArrayList », en les utilisant pour résoudre
+                des problèmes impliquant des données numériques et des objets. Ils
+                ont aussi utilisé des méthodes de la classe `String` pour analyser
+                et traiter le texte obtenu, à partir de l'entrée utilisateur et fichier.
+                Tout au long de l'unité, ils ont écrit la documentation du programme
+                en utilisant des commentaires sur une seule ligne, des commentaires
+                sur plusieurs lignes et des commentaires Javadoc pour créer la documentation
+                de l'API. Au cours du processus, ils ont identifié et documenté les
+                préconditions et postconditions des objets et des méthodes. Ils peuvent
+                maintenant évaluer la réalisation des objectifs d'apprentissage et
+                des compétences de l'unité sur une évaluation à choix multiples.
+              key: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: leçon n° 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox
+        csa7-2022:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+              key: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox
+        csa8-2022:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+              key: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu

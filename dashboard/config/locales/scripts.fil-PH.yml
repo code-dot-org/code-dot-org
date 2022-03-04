@@ -22820,6 +22820,10 @@ fil:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Mga variable
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -22919,6 +22923,65 @@ fil:
               key: aralin-15
             lesson-16:
               key: aralin-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kahon ng buhangin
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Ang Kapangyarihan ng mga Salita
+              description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling
+                ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng
+                sabihin online.
+              key: Ang Kapangyarihan ng mga Salita
+            Outbreak:
+              name: Pagsiklab
+              key: Pagsiklab
+            The Internet:
+              name: The Internet
+              description_student: Nagtataka ka na ba kung paano ang mga impormasyon
+                naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling
+                ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang
+                Internet gumagana.
+              description_teacher: Kahit na maraming mga tao ang gumamit ng Internet
+                araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana.
+                Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet,
+                habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address,
+                at ang DNS.
+              key: The Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital na Pagkamamamayan
+            ramp_up:
+              display_name: Mga Sprites
+            lessonGroup-8:
+              display_name: Mga variable
+          description_audience: 'Mga Edad: 9-13'
+          description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman
+            sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+        csa6-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: aralin-1
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kahon ng buhangin
+        csa7-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kahon ng buhangin
+        csa8-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
