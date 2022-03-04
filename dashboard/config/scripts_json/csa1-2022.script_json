@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-03 13:48:39 UTC",
+    "serialized_at": "2022-03-03 20:03:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -485,6 +485,7 @@
       "key": "d11f3015-34bb-4b5f-934a-c9685d13c2c4",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
