@@ -3,6 +3,31 @@ class ProgrammingExpressionsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
 
+  def index
+    @programming_environments = ProgrammingEnvironment.all.map(&:summarize_for_edit)
+    @environments_for_select = ProgrammingEnvironment.all.map do |env|
+      {id: env.id, name: env.name, title: env.title}
+    end
+    @categories_for_select = ProgrammingEnvironmentCategory.all.map do |cat|
+      {id: cat.id, envId: cat.programming_environment.id, name: cat.name, formattedName: "#{cat.programming_environment.title}:#{cat.name}"}
+    end
+  end
+
+  # GET /programming_expressions/get_filtered_expressions
+  def get_filtered_expressions
+    @programming_expressions = ProgrammingExpression.all
+    @programming_expressions = @programming_expressions.where(programming_environment_id: params[:programmingEnvironmentId]) if params[:programmingEnvironmentId]
+    @programming_expressions = @programming_expressions.where(programming_environment_category_id: params[:categoryId]) if params[:categoryId]
+
+    results_per_page = 20
+    total_expressions = @programming_expressions.length
+    num_pages = (total_expressions / results_per_page).ceil
+
+    @programming_expressions.page(params[:page]).per(results_per_page)
+    @programming_expressions = @programming_expressions.map(&:summarize_for_edit)
+    render json: {numPages: num_pages, expressions: @programming_expressions}
+  end
+
   # GET /programming_expressions/search
   def search
     programming_environment =
