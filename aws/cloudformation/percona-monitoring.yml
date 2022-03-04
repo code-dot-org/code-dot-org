@@ -157,8 +157,7 @@ Resources:
         - FARGATE
       NetworkMode: awsvpc
       ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/ecsTaskExecutionRole"
-      # TODO: Export this Resource from the IAM template and import it here instead of hard coding the ARN.
-      TaskRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/IAM-PMMRole-1RTCAQVDSSSOR"
+      TaskRoleArn: !ImportValue IAM-PerconaMonitoringRoleARN
       Cpu: 2048
       Memory: 8192
       ContainerDefinitions:
