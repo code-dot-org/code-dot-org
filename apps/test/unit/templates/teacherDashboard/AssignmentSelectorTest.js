@@ -43,7 +43,7 @@ const hiddenSectionProps = {
 };
 
 describe('AssignmentSelector', () => {
-  it('defaults to one dropdown, no selection when no section is provided', () => {
+  it('defaults to just course offering dropdown with no selection when no section is provided', () => {
     const wrapper = shallow(
       <AssignmentSelector {...defaultProps} section={null} />
     );
@@ -56,7 +56,7 @@ describe('AssignmentSelector', () => {
     });
   });
 
-  it('second dropdown defaults to no selection when no section is provided', () => {
+  it('unit dropdown defaults to no selection when no section is provided', () => {
     const wrapper = shallow(
       <AssignmentSelector {...defaultProps} section={null} />
     );
@@ -68,11 +68,11 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 3,
-      unitId: 5
+      unitId: null
     });
   });
 
-  it('second dropdown defaults to current value when section is provided', () => {
+  it('unit dropdown defaults to current unit assignment when section is provided', () => {
     const wrapper = shallow(
       <AssignmentSelector
         {...defaultProps}
@@ -109,7 +109,7 @@ describe('AssignmentSelector', () => {
     ]);
   });
 
-  it('shows second dropdown after selecting primary', () => {
+  it('shows unit dropdown after selecting course offering', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps} />);
     wrapper
       .find('select')
@@ -130,7 +130,7 @@ describe('AssignmentSelector', () => {
     });
   });
 
-  it('can select script in second dropdown after selecting primary', () => {
+  it('can select unit in unit dropdown after selecting course offering', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps} />);
     wrapper
       .find('select')
@@ -147,23 +147,23 @@ describe('AssignmentSelector', () => {
     });
   });
 
-  it('hides second dropdown after selecting "" primary', () => {
+  it('hides unit dropdown after selecting blank course offering', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps} />);
     wrapper
       .find('select')
       .at(0)
-      .simulate('change', {target: {value: 'csd'}});
+      .simulate('change', {target: {value: 2}});
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseOfferingId: null,
-      courseVersionId: null,
+      courseOfferingId: 2,
+      courseVersionId: 3,
       unitId: null
     });
 
     wrapper
       .find('select')
       .at(0)
-      .simulate('change', {target: {value: ''}});
+      .simulate('change', {target: {value: 0}});
     assert.equal(wrapper.find('select').length, 1);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: null,
