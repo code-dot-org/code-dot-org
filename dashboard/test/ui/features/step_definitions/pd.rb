@@ -16,11 +16,8 @@ Given(/^I am a workshop administrator$/) do
   }
 end
 
-Given(/^I am a CSD facilitator named "([^"]*)"$/) do |facilitator_name|
-  steps %Q{
-    And there is a facilitator named "#{facilitator_name}" for CSD
-    And I sign in as "#{facilitator_name}"
-  }
+And(/^I get facilitator access$/) do
+  browser_request(url: '/api/test/facilitator_access', method: 'POST')
 end
 
 Given(/^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/) do |facilitator_name, partner_name|
@@ -47,7 +44,7 @@ Given(/^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/)
   }
 end
 
-Given(/^there is a facilitator named "([^"]+)" for CSD"$/) do |name|
+Given(/^there is a CSD facilitator named "([^"]+)"$/) do |name|
   browser_request(
     url: '/api/test/create_csd_facilitator',
     method: 'POST',
