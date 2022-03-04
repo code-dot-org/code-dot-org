@@ -118,6 +118,20 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal 1, JSON.parse(nav_data).length
   end
 
+  test 'can destroy programming expression' do
+    sign_in @levelbuilder
+    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+
+    File.expects(:exist?).returns(true).once
+    File.expects(:delete).once
+
+    delete :destroy, params: {
+      id: programming_expression.id
+    }
+
+    assert_nil ProgrammingExpression.find_by_key('test-expression')
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
@@ -146,6 +160,11 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :student, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: nil, response: :success
     test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :student, response: :success

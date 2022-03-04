@@ -122,6 +122,19 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_response :not_acceptable
   end
 
+  test 'can destroy a programming environment' do
+    sign_in @levelbuilder
+
+    programming_environment = create :programming_environment, name: 'test-environment'
+
+    File.expects(:exist?).returns(true).once
+    File.expects(:delete).once
+    delete :destroy, params: {
+      name: programming_environment.name
+    }
+    assert_nil ProgrammingEnvironment.find_by_name('test-environment')
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
@@ -140,10 +153,15 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :teacher, response: :forbidden
     test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {{name: @programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :destroy, params: -> {{name: @programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :destroy, params: -> {{name: @programming_environment.name}}, user: :student, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{name: @programming_environment.name}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{name: @programming_environment.name}}, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: nil, response: :success
     test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: :student, response: :success
