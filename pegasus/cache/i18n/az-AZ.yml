@@ -492,6 +492,8 @@ az-AZ:
   homepage_below_hero_announcement_text: Məxfiliyinizə əhəmiyyət veririk və 25 may
     tarixindən etibarən gizlilik siyasətimizdə bəzi yeniləmələr edirik.
   homepage_below_hero_announcement_link_text: Daha ətraflı
+  homepage_higher_power_body: '"Dance Party" ilə yarat, qrupu canlı görmə şansı əldə
+    et.'
   contact_form_topic_student: Mən şagirdəm
   contact_form_topic_parent: Mən valideynəm
   contact_form_topic_teacher: Mən müəllim/təlimçiyəm
@@ -571,8 +573,8 @@ az-AZ:
   minecraft_agent_description: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü!
     Kod ilə Minecraft-a səyahət.
   minecraft_agent_button: Başlayın
-  minecraft_designer_description: Öz Minecraft versiyanızda heyvanları və başqa Minecraft
-    varlıqlarını proqramlaşdırın.
+  minecraft_designer_description: Minecraft-ın öz versiyanızda heyvanları və digər
+    Minecraft canlılarını proqramlaşdırın.
   minecraft_designer_button: Başlayın
   minecraft_adventurer_description: 'Aleks və Stivə macəraya getmələrinə dəstək olmaq
     üçün kod istifadə et '
@@ -835,11 +837,11 @@ az-AZ:
 '
   dashboard_landing_office_hours: Şəxsən sual verin! Aylıq video ofis saatlarımızı
     ziyarət edin.
-  dashboard_landing_print_certificates: Bu kursu bitirən tələbələr üçün sertifikatları
-    çap edin
+  dashboard_landing_print_certificates: Kursu bitirən tələbələrin sertifikatları çap
+    edin
   dashboard_landing_educator_blog: Xəbərləri və materiallarımızdakı yeniləmələri Pedaqoq
     Bloqumuzda oxuyun
-  dashboard_landing_video_player: Yeni video pleyerinizi məktəbinizdə sınayın
+  dashboard_landing_video_player: Yeni video pleyerinizi məktəbinizdə test edin
   dashboard_landing_progress_title: Əsas sinif irəliləyişi
   dashboard_landing_progress_biggest: Bu, ən böyük bölməniz üçün irəliləyişdir.
   dashboard_landing_view_progress: "%{biggest_section} üzrə irəliləyişə baxın"
@@ -943,9 +945,10 @@ az-AZ:
   dashboard_navigation_section: 'Bölmə: %{section_name}'
   dashboard_navigation_student: 'Şagird: %{student_name}'
   dashboard_progress_not_started: başlanmayıb
-  dashboard_progress_in_progress: tamamlanmayıb
+  dashboard_progress_in_progress: davam edir
   dashboard_progress_not_completed: tamamlanmayıb
-  dashboard_progress_completed_too_many_blocks: tamamlanıb, artıq bloklar var
+  dashboard_progress_completed_too_many_blocks: tamamlandı, həddən artıq çox blok
+    var
   dashboard_progress_completed_perfect: tamamlanıb, əladır
   dashboard_progress_furthest_level_attempted: sonuncu cəhd istifadə edildi.
   dashboard_progress_submitted: təqdim edilmişdir
@@ -1114,7 +1117,7 @@ az-AZ:
   dashboard_correctness: Düzgünlük
   dashboard_correctness_free_response: Azad cavab
   dashboard_correctness_unsubmitted: Göndərilməyib
-  dashboard_correctness_correct: Düzgün
+  dashboard_correctness_correct: Doğru
   dashboard_correctness_incorrect: Yalnış
   dashboard_submission_submitted: Göndərilib
   dashboard_submission_in_progress: Tamamlanmayıb
@@ -1179,8 +1182,8 @@ az-AZ:
   learn_inspirational_videos: <a href="https://code.org/educate/inspire">bu videoları</a>
     göstərməklə tələbələrə ilham verin
   hoc2014_try_new_tutorials: Yeni Kod Saatı dərslərimizi sınayın
-  hoc2014_try_new_tutorial: 'Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə
-    edin. '
+  hoc2014_try_new_tutorial: Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə
+    edin.
   hoc2014_try_scrat: Angry Birds, PvZ və Scrat
   hoc2014_try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
   carousel_heading_codeorg: Code.org tərəfindən dərslər
@@ -1545,8 +1548,8 @@ az-AZ:
   starwars_shortdescription: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
     Ulduz Müharibələri oyunu düzəldin.
   playlab_shortdescription: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
-  infinity_shortdescription: Disney Infinity personajlarının oynadığı bir hekayə və
-    ya oyun yaratmaq üçün Play Labdan istifadə edin.
+  infinity_shortdescription: Disney Infinity personajlarının oynadığı hekayə və ya
+    oyun yaratmaq üçün Play Lab-dan istifadə edin.
   artist_shortdescription: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
   monsterocding_shortdescription: Uşaqlar üçün rəngli özünü idarə edən proqramlaşdırma
     macərası.
@@ -2211,8 +2214,8 @@ az-AZ:
   user_header_label: Salam %{username}
   user_header_team: Komanda
   user_header_my_projects: Mənim layihələrim
-  user_header_settings: Mənim hesabım
-  user_header_logout: Çıxın
+  user_header_settings: Hesab parametrləri
+  user_header_logout: Çıxış
   user_header_signin: Daxil olun
   user_header_create: 'Yarat '
   user_header_applab: 'Proqram Labı '
@@ -2286,7 +2289,7 @@ az-AZ:
   applab_tile_teacher_guide: Müəllim bələdçisinə bax
   aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: Kurslarımızdakı yeniliklər, yerli imkanlar və ya digər
-    kompüter elmləri xəbərləri barədə sizə e-poçt göndərə bilərikmi? (təxminən ayda
+    kompüter elmləri xəbərləri barədə sizə e-poçt göndərə bilərik? (təxminən ayda
     bir dəfə)
   account_sign_up_child_accept_terms: Code.org xidmətlərindən istifadə etmək üçün
     valideynimdən və ya qanuni qəyyumdan icazə aldığımı təsdiqləyirəm.
@@ -2349,8 +2352,8 @@ az-AZ:
   hoc2018_mc_hero_description: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü!
     Kod ilə Minecraft-a səyahət.
   hoc2018_mc_designer_title: Minecraft Dizayner
-  hoc2018_mc_designer_description: Öz Minecraft versiyanızda heyvanları və başqa Minecraft
-    varlıqlarını proqramlaşdırın.
+  hoc2018_mc_designer_description: Minecraft-ın öz versiyanızda heyvanları və digər
+    Minecraft canlılarını proqramlaşdırın.
   hoc2018_mc_adventurer_title: Minecraft Macəraçısı
   hoc2018_mc_adventurer_description: 'Aleks və Stivə macəraya getmələrinə dəstək olmaq
     üçün kod istifadə et '
@@ -2501,6 +2504,9 @@ az-AZ:
   hoc2018_dance_video2: Rəqs Şənliyi - Hadisələr
   hoc2018_dance_video3: Rəqs Şənliyi - Xüsusiyyətlər
   hoc2018_dance_video4: Rəqs Şənliyi - Təbriklər
+  dance_box_higher_power_line_1: Coldplay'in "Higher Power" mahnısına rəqs kodlaşdır
+    və qrupu canlı görmə şansı əldə et.
+  dance_box_higher_power_line_2: Əlavə məlumat üçün  <a href="%{path}">code.org/coldplay</a>  yoxla.
   page_not_found_title: Səhifə tapılmadı
   page_not_found_header: '404: Səhifə tapılmadı'
   page_not_found_description: Sizin müraciət etdiyiniz səhifə bu ünvanda mövcud deyil.
@@ -2533,9 +2539,21 @@ az-AZ:
   hoc2020_mc_available_code_org: code.org-da mövcuddur
   hoc2020_mc_available_mee: 'Minecraft-da Mpvcuddur: Təhsil Nəşri'
   hoc2020_mc_mee_title: Minecraft iki kəndin nağılı
-  footer_powered_by_aws: Amazon Web Services və "Powered by AWS" loqotipi Amazon.com,
-    Inc. və ya onun Amerika Birləşmiş Ştatları və/və ya digər ölkələrdəki ticarət
-    nişanlarıdır.
+  hoc2020_mc_mee_description: 'Yeni Minecraft Hour of Code məşğələsi artıq mövcuddur:
+    Windows, Mac, Chromebook və Ipad üçün Education Eddition. Tələbələrinlə kodlaşdırmanın
+    əsaslarını öyrən və müxtəlifliyi kəşf et. Ödənişsiz mənbələrə- dərs planı, videolar,
+    kompüter elmləri programı, ədalətlilik dərsləri, və müəllim təlimlərinə giriş
+    et'
+  hoc2021_mc_mee_description: 'Keçmişə səyahət et və kodlaşdırmanı öyrən! Yeni Minecraft
+    Hour of Code məşğələsi artıq mövcuddur: Windows, Mac, Chromebook və Ipad üçün
+    Education Eddition. Ödənişsiz tədris mənbələri, təlimlərlə və videolarla başla.'
+  hoc2021_mc_mee_villages_title: 2 kəndin hekayəsi
+  hoc2021_mc_mee_villages_description: 'Tələbələrinlə Minecraft''da kodlaşdırmanın
+    əsaslarını öyrən: Təhsil Buraxılışı'
+  hoc2021_mc_mee_ai_description: 'Tələbələrinlə Al''ı kəşf et və kodlaşdırmanən əsaslarını
+    öyrən: Education Eddition.'
+  footer_powered_by_aws: Amazon Veb Xidmətləri və “Powered by AWS” loqosu Amazon.com,
+    Inc. və ya onun ABŞ və/və ya digər ölkələrdəki filiallarının ticarət nişanlarıdır.
   footer_built_on_github: Microsoft tərəfindən GitHub-da qurulub
   codebytes_skinny_banner_english_only: Yalnız ingilis dili
   footer_privacy_policy: Məxfilik siyasəti
