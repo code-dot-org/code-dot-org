@@ -97,7 +97,7 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 1);
     assert.equal(wrapper.find('option').length, 8);
 
-    assert.equal(wrapper.find('option').map(option => option.text()), [
+    assert.deepEqual(wrapper.find('option').map(option => option.text()), [
       '',
       'Computer Science A',
       'Computer Science Discoveries',
@@ -118,14 +118,14 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 2);
     const secondary = wrapper.find('select').at(1);
     assert.equal(secondary.find('option').length, 3);
-    assert.equal(secondary.find('option').map(option => option.text()), [
+    assert.deepEqual(secondary.find('option').map(option => option.text()), [
       'Unit 1',
       'Unit 2',
       ''
     ]);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseOfferingId: null,
-      courseVersionId: null,
+      courseOfferingId: 2,
+      courseVersionId: 3,
       unitId: null
     });
   });
@@ -215,9 +215,10 @@ describe('AssignmentSelector', () => {
     it('shows up after the blank option and before the others', () => {
       assert.equal(wrapper.find('select').length, 1);
       assert.equal(wrapper.find('option').length, 9);
-      assert.equal(wrapper.find('option').map(option => option.text()), [
+      assert.deepEqual(wrapper.find('option').map(option => option.text()), [
         '',
         'Decide later',
+        'Computer Science A',
         'Computer Science Discoveries',
         'Course A',
         'Hello World',
@@ -241,42 +242,42 @@ describe('AssignmentSelector', () => {
   });
 
   describe('the onChange prop', () => {
-    let wrapper, spy;
+    let wrapper, onChange;
 
     beforeEach(() => {
-      spy = sinon.spy();
+      onChange = sinon.spy();
       wrapper = shallow(
-        <AssignmentSelector {...defaultProps} onChange={spy} />
+        <AssignmentSelector {...defaultProps} onChange={onChange} />
       );
     });
 
     it(`doesn't get called during construction`, () => {
-      expect(spy).not.to.have.been.called;
+      expect(onChange).not.to.have.been.called;
     });
 
-    it('gets called when primary dropdown changes', () => {
+    it('gets called when course offering dropdown changes', () => {
       wrapper
         .find('select')
         .at(0)
         .simulate('change', {target: {value: 2}});
-      expect(spy).to.have.been.calledOnce.and.to.have.been.calledWith({
-        courseOfferingId: null,
-        courseVersionId: null,
+      expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
+        courseOfferingId: 2,
+        courseVersionId: 3,
         unitId: null
       });
     });
 
-    it('gets called when secondary dropdown changes', () => {
+    it('gets called when unit dropdown changes', () => {
       wrapper
         .find('select')
         .at(0)
         .simulate('change', {target: {value: 2}});
-      spy.resetHistory();
+      onChange.resetHistory();
       wrapper
         .find('select')
         .at(1)
         .simulate('change', {target: {value: 3}});
-      expect(spy).to.have.been.calledOnce.and.to.have.been.calledWith({
+      expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: 2,
         courseVersionId: 3,
         unitId: 3
@@ -291,12 +292,12 @@ describe('AssignmentSelector', () => {
       wrapper = shallow(<AssignmentSelector {...defaultProps} disabled />);
     });
 
-    it('disables the primary dropdown', () => {
+    it('disables the course offering dropdown', () => {
       const firstDropdown = wrapper.find('select').at(0);
       expect(firstDropdown.props().disabled).to.equal(true);
     });
 
-    it('disables the secondary dropdown', () => {
+    it('disables the unit dropdown', () => {
       wrapper
         .find('select')
         .at(0)

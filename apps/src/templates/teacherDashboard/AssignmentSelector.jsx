@@ -77,36 +77,48 @@ export default class AssignmentSelector extends Component {
     }
 
     if (courseOfferingId === noAssignment || courseOfferingId === decideLater) {
-      this.setState({
-        selectedCourseOfferingId: noAssignment,
-        selectedCourseVersionId: noAssignment,
-        selectedUnitId: noAssignment
-      });
+      this.setState(
+        {
+          selectedCourseOfferingId: noAssignment,
+          selectedCourseVersionId: noAssignment,
+          selectedUnitId: noAssignment
+        },
+        this.reportChange
+      );
     } else if (this.state.selectedCourseOfferingId !== courseOfferingId) {
       const recommendedCourseVersionId = Object.values(
         this.props.courseOfferings[courseOfferingId].course_versions
       ).find(versions => versions.is_recommended).id;
 
-      this.setState({
-        selectedCourseOfferingId: courseOfferingId,
-        selectedCourseVersionId: recommendedCourseVersionId,
-        selectedUnitId: noAssignment
-      });
+      this.setState(
+        {
+          selectedCourseOfferingId: courseOfferingId,
+          selectedCourseVersionId: recommendedCourseVersionId,
+          selectedUnitId: noAssignment
+        },
+        this.reportChange
+      );
     } else if (Object.values(courseVersions).length === 1) {
       let courseVersionId = Object.keys(courseVersions)[0];
 
       if (Object.values(courseVersions.units).length === 1) {
-        this.setState({
-          selectedUnitId: Object.keys(courseVersions.units)[0],
-          selectedCourseVersionId: courseVersionId,
-          selectedCourseOfferingId: courseOfferingId
-        });
+        this.setState(
+          {
+            selectedUnitId: Object.keys(courseVersions.units)[0],
+            selectedCourseVersionId: courseVersionId,
+            selectedCourseOfferingId: courseOfferingId
+          },
+          this.reportChange
+        );
       } else {
-        this.setState({
-          selectedUnitId: noAssignment,
-          selectedCourseVersionId: courseVersionId,
-          selectedCourseOfferingId: courseOfferingId
-        });
+        this.setState(
+          {
+            selectedUnitId: noAssignment,
+            selectedCourseVersionId: courseVersionId,
+            selectedCourseOfferingId: courseOfferingId
+          },
+          this.reportChange
+        );
       }
     }
   };
@@ -121,16 +133,22 @@ export default class AssignmentSelector extends Component {
       courseVersionId === noAssignment ||
       this.state.selectedCourseVersionId !== courseVersionId
     ) {
-      this.setState({
-        selectedUnitId: noAssignment,
-        selectedCourseVersionId: courseVersionId
-      });
+      this.setState(
+        {
+          selectedUnitId: noAssignment,
+          selectedCourseVersionId: courseVersionId
+        },
+        this.reportChange
+      );
     } else if (Object.values(units).length === 1) {
       let unitId = Object.keys(units)[0];
-      this.setState({
-        selectedUnitId: unitId,
-        selectedCourseVersionId: courseVersionId
-      });
+      this.setState(
+        {
+          selectedUnitId: unitId,
+          selectedCourseVersionId: courseVersionId
+        },
+        this.reportChange
+      );
     }
   };
 
