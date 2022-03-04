@@ -350,18 +350,16 @@
         }
       ]
     ],
-    "long_instructions": "##In MyNeighborhood.java:\r\n\r\n1. Use the `turnRight()`(#e7e8ea) method to navigate the `myPainterPlus`(#e7e8ea) object to the traffic cone.\r\n\r\n::: details [**Show Me How**]\r\nA method is called using the following syntax:\r\n\r\n  ```\r\n  variableName.methodName();\r\n  \r\n  OR\r\n  \r\n  variableName.methodName(argument);\r\n  ```\r\n\r\nBe sure to replace `variableName`(#e7e8ea) with the name of the reference variable and `methodName`(#e7e8ea) with the name of the method you want to use.\r\n\r\nIf the method you want to use requires an argument, include the value you want to use inside the parentheses.\r\n:::",
+    "long_instructions": "##In MyNeighborhood.java:\r\n\r\n1. Use the `turnRight()`(#e7e8ea) method to navigate the `myPainterPlus`(#e7e8ea) object to the traffic cone.\r\n\r\n![](https://images.code.org/fe0636136988ed9a70ad7d05ade2d8c7-image-1646321533285.gif)\r\n\r\n::: details [**Show Me How**]\r\nA method is called using the following syntax:\r\n\r\n  ```\r\n  variableName.methodName();\r\n  \r\n  OR\r\n  \r\n  variableName.methodName(argument);\r\n  ```\r\n\r\nBe sure to replace `variableName`(#e7e8ea) with the name of the reference variable and `methodName`(#e7e8ea) with the name of the method you want to use.\r\n\r\nIf the method you want to use requires an argument, include the value you want to use inside the parentheses.\r\n:::",
     "project_template_level_name": "CSA U1L6 PBT_2022",
     "teacher_markdown": "Refer students to their notes on the Unit 1 Guide to help them write their code.",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "mZB7BNRoUfVP+xe/M7KOnuvdOgK/ZEEXUmzYMFb5QmYHI6sX2RM4mPoHWEs6\nenQyohKOi2hBKBz+sYvpm5coNLbBz6DOkMVCgEte627HXls=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-02-15T15:32:43.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-02-15T15:32:43.684+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-L1_2022\\\"\"],\"cloned_from\":\"CSA U1L7-L1_2022\"},{\"changed_at\":\"2022-02-15 15:35:13 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-15T15:32:43.684+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-L1_2022\\\"\"],\"cloned_from\":\"CSA U1L7-L1_2022\"},{\"changed_at\":\"2022-02-15 15:35:13 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 13:43:51 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:32:29 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

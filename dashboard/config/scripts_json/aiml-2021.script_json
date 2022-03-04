@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2022-01-13 15:42:37 UTC",
+    "serialized_at": "2022-02-28 18:35:23 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5888,7 +5888,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Repeated Levels:** The choices in this level are identical to the choices in the last lesson. This is intentional, so students have multiple opportunities to learn the new design tricks or code blocks, or continue to practice the new blcoks they learned last lesson. Encourage students to choose a new challenge for today’s app that’s different from the ones they chose yesterday.\r\n"
+            "markdown": "**Repeated Levels:** The choices in this level are identical to the choices in the last lesson. This is intentional, so students have multiple opportunities to learn the new design tricks or code blocks, or continue to practice the new blocks they learned last lesson. Encourage students to choose a new challenge for today’s app that’s different from the ones they chose yesterday.\n"
           }
         ]
       },

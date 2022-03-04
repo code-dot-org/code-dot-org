@@ -7,6 +7,7 @@
 #  properties :text(65535)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  published  :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -14,6 +15,7 @@
 #
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
+  include Rails.application.routes.url_helpers
 
   NAME_CHAR_RE = /[a-z0-9\-]/
   NAME_RE = /\A#{NAME_CHAR_RE}+\Z/
@@ -22,7 +24,7 @@ class ProgrammingEnvironment < ApplicationRecord
   validates_uniqueness_of :name, case_sensitive: false
 
   alias_attribute :categories, :programming_environment_categories
-  has_many :programming_environment_categories, dependent: :destroy
+  has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
@@ -84,7 +86,8 @@ class ProgrammingEnvironment < ApplicationRecord
       projectUrl: project_url,
       description: description,
       editorType: editor_type,
-      categories: categories.map(&:serialize_for_edit)
+      categories: categories.map(&:serialize_for_edit),
+      showPath: programming_environment_path(name)
     }
   end
 
