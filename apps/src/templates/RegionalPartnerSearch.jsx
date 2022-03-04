@@ -304,51 +304,55 @@ class RegionalPartnerSearch extends Component {
                   collection => collection.workshops.length === 0
                 ) && <div>Workshop details coming soon!</div>}
 
-                {workshopCollections.map((collection, collectionIndex) => {
-                  // If the partner is not offering CSA workshops, we display a different message
-                  if (
-                    collection.workshops.length === 0 &&
-                    collection.heading ===
-                      `${ActiveCourseWorkshops.CSA} Workshops`
-                  ) {
-                    return (
-                      <div
-                        key={collectionIndex}
-                        style={{
-                          ...styles.workshopCollection,
-                          ...workshopCollectionStyle
-                        }}
-                      >
-                        <h4>{collection.heading}</h4>
-                        <div>
-                          This Regional Partner is not offering CSA workshops at
-                          this time, but Code.org has a solution for you! Please
-                          complete the professional learning application, and a
-                          Code.org staff member will be in touch.
-                        </div>
-                      </div>
-                    );
-                  } else if (collection.workshops.length > 0) {
-                    return (
-                      <div
-                        key={collectionIndex}
-                        style={{
-                          ...styles.workshopCollection,
-                          ...workshopCollectionStyle
-                        }}
-                      >
-                        <h4>{collection.heading}</h4>
-                        {collection.workshops.map((workshop, index) => (
-                          <div key={index} style={styles.workshop}>
-                            <div>{workshop.workshop_date_range_string}</div>
-                            <div>{workshop.location_name}</div>
-                            <div>{workshop.location_address}</div>
+                {!workshopCollections.every(
+                  collection => collection.workshops.length === 0
+                ) &&
+                  workshopCollections.map((collection, collectionIndex) => {
+                    // If the partner is not offering CSA workshops, we display a different message
+                    if (
+                      collection.workshops.length === 0 &&
+                      collection.heading ===
+                        `${ActiveCourseWorkshops.CSA} Workshops`
+                    ) {
+                      return (
+                        <div
+                          key={collectionIndex}
+                          style={{
+                            ...styles.workshopCollection,
+                            ...workshopCollectionStyle
+                          }}
+                        >
+                          <h4>{collection.heading}</h4>
+                          <div>
+                            This Regional Partner is not offering CSA workshops
+                            at this time, but Code.org has a solution for you!
+                            Please complete the professional learning
+                            application, and a Code.org staff member will be in
+                            touch.
                           </div>
-                        ))}
-                      </div>
-                    );
-                  }
-                })}
+                        </div>
+                      );
+                    } else if (collection.workshops.length > 0) {
+                      return (
+                        <div
+                          key={collectionIndex}
+                          style={{
+                            ...styles.workshopCollection,
+                            ...workshopCollectionStyle
+                          }}
+                        >
+                          <h4>{collection.heading}</h4>
+                          {collection.workshops.map((workshop, index) => (
+                            <div key={index} style={styles.workshop}>
+                              <div>{workshop.workshop_date_range_string}</div>
+                              <div>{workshop.location_name}</div>
+                              <div>{workshop.location_address}</div>
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    }
+                  })}
               </div>
             )}
 
