@@ -141,7 +141,7 @@ class RegionalPartnerSearch extends Component {
         workshops:
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === `${ActiveCourseWorkshops.CSD}`
+            workshop => workshop.course === ActiveCourseWorkshops.CSD
           )
       },
       {
@@ -149,7 +149,7 @@ class RegionalPartnerSearch extends Component {
         workshops:
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === `${ActiveCourseWorkshops.CSP}`
+            workshop => workshop.course === ActiveCourseWorkshops.CSP
           )
       },
       {
@@ -157,7 +157,7 @@ class RegionalPartnerSearch extends Component {
         workshops:
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === `${ActiveCourseWorkshops.CSA}`
+            workshop => workshop.course === ActiveCourseWorkshops.CSA
           )
       }
     ];
