@@ -70,21 +70,27 @@ export default class AssignmentSelector extends Component {
   }
   onChangeCourseOffering = event => {
     const courseOfferingId = event.target.value;
-    const courseVersions = this.props.courseOfferings[courseOfferingId]
-      .course_versions;
-    const recommendedCourseVersion = Object.values(
-      this.props.courseOfferings[courseOfferingId].course_versions
-    ).find(versions => versions.is_recommended);
-    const recommendedCourseVersionId = recommendedCourseVersion.id;
+    let courseVersions = [];
+    if (courseOfferingId !== noAssignment && courseOfferingId !== decideLater) {
+      courseVersions = this.props.courseOfferings[courseOfferingId]
+        .course_versions;
+    }
 
-    if (
-      courseOfferingId === noAssignment ||
-      this.state.selectedCourseOfferingId !== courseOfferingId
-    ) {
+    if (courseOfferingId === noAssignment || courseOfferingId === decideLater) {
+      this.setState({
+        selectedCourseOfferingId: noAssignment,
+        selectedCourseVersionId: noAssignment,
+        selectedUnitId: noAssignment
+      });
+    } else if (this.state.selectedCourseOfferingId !== courseOfferingId) {
+      const recommendedCourseVersionId = Object.values(
+        this.props.courseOfferings[courseOfferingId].course_versions
+      ).find(versions => versions.is_recommended).id;
+
       this.setState({
         selectedCourseOfferingId: courseOfferingId,
         selectedCourseVersionId: recommendedCourseVersionId,
-        selectedUnitId: Object.keys(recommendedCourseVersion.units)[0]
+        selectedUnitId: noAssignment
       });
     } else if (Object.values(courseVersions).length === 1) {
       let courseVersionId = Object.keys(courseVersions)[0];
@@ -97,7 +103,7 @@ export default class AssignmentSelector extends Component {
         });
       } else {
         this.setState({
-          selectedUnitId: Object.keys(courseVersions.units)[0],
+          selectedUnitId: noAssignment,
           selectedCourseVersionId: courseVersionId,
           selectedCourseOfferingId: courseOfferingId
         });
@@ -116,7 +122,7 @@ export default class AssignmentSelector extends Component {
       this.state.selectedCourseVersionId !== courseVersionId
     ) {
       this.setState({
-        selectedUnitId: Object.keys(units[0]),
+        selectedUnitId: noAssignment,
         selectedCourseVersionId: courseVersionId
       });
     } else if (Object.values(units).length === 1) {
