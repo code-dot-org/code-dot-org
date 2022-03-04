@@ -327,9 +327,10 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
+  resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
+      get :get_filtered_expressions
     end
     member do
       post :clone
