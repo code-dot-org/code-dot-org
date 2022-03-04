@@ -16,7 +16,7 @@ Covered in Unit 8 Lesson 8.
 MARKDOWN
 
 markdown <<MARKDOWN
-Consider the following instance variable and method.
+Consider the following instance variable and method. Assume the array `numbers` has been initialized with integers.
 
 ```
 private int[] numbers;

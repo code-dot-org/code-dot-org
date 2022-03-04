@@ -16,13 +16,8 @@ Given(/^I am a workshop administrator$/) do
   }
 end
 
-Given(/^I am a CSD facilitator named "([^"]*)"$/) do |facilitator_name|
-  require_rails_env
-
-  steps %Q{
-    And there is a facilitator named "#{facilitator_name}" for course "#{Pd::Workshop::COURSE_CSD}"
-    And I sign in as "#{facilitator_name}"
-  }
+And(/^I get facilitator access$/) do
+  browser_request(url: '/api/test/facilitator_access', method: 'POST')
 end
 
 Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ do |facilitator_name, partner_name|
