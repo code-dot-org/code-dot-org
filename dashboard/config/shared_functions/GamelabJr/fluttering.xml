@@ -4,7 +4,7 @@
     <arg name="this sprite" type="Sprite"/>
     <description>randomly change the vertical position of a sprite</description>
   </mutation>
-  <field name="NAME" id="fluttering">fluttering<field>
+  <field name="NAME" id="fluttering">fluttering</field>
   <statement name="STACK">
     <block type="gamelab_changePropBy">
       <field name="PROPERTY">"y"</field>

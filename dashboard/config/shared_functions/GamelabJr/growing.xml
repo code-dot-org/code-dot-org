@@ -4,18 +4,18 @@
     <arg name="this sprite" type="Sprite"/>
     <description>change the size of a sprite</description>
   </mutation>
-  <field name="NAME" id="growing">growing<field>
+  <title name="NAME" id="growing">growing</title>
   <statement name="STACK">
     <block type="gamelab_changePropBy">
-      <field name="PROPERTY">"scale"<field>
+      <field name="PROPERTY">"scale"</field>
       <value name="SPRITE">
         <block type="sprite_parameter_get">
-          <field name="VAR">this sprite<field>
+          <field name="VAR">this sprite</field>
         </block>
       </value>
       <value name="VAL">
         <block type="math_number">
-          <field name="NUM">1<field>
+          <field name="NUM">1</field>
         </block>
       </value>
     </block>

@@ -4,18 +4,18 @@
     <arg name="this sprite" type="Sprite"/>
     <description>rotate a sprite to its right</description>
   </mutation>
-  <field name="NAME" id="spinning right">spinning right<field>
+  <field name="NAME" id="spinning right">spinning right</field>
   <statement name="STACK">
     <block type="gamelab_turn">
-      <field name="DIRECTION">"right"<field>
+      <field name="DIRECTION">"right"</field>
       <value name="SPRITE">
         <block type="sprite_parameter_get">
-          <field name="VAR">this sprite<field>
+          <field name="VAR">this sprite</field>
         </block>
       </value>
       <value name="N">
         <block type="math_number">
-          <field name="NUM">6<field>
+          <field name="NUM">6</field>
         </block>
       </value>
     </block>
