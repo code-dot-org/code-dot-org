@@ -21,7 +21,8 @@
         "Course 4 Play Lab Params 3": {
           "jump": {
             "parameters": {
-              "height": "उंची"
+              "height": "उंची",
+              "actor": "पात्र"
             },
             "name": "जंप"
           }
@@ -75,6 +76,11 @@
             "parameters": {
               "repeat": "पुन्हा करा"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "गुण"
+            }
           }
         },
         "NEW Course 4 Artist Params 2": {
@@ -90,9 +96,16 @@
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
             "parameters": {
-              "height": "उंची"
+              "height": "उंची",
+              "actor": "पात्र"
             },
             "name": "जंप"
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "पात्र",
+              "speed": "वेग "
+            }
           }
         },
         "New Artist Project": {
@@ -100,14 +113,26 @@
             "parameters": {
               "repeat": "पुन्हा करा"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "गुण"
+            }
           }
         },
         "New Play Lab Project": {
           "jump": {
             "parameters": {
-              "height": "उंची"
+              "height": "उंची",
+              "actor": "पात्र"
             },
             "name": "जंप"
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "पात्र",
+              "speed": "वेग "
+            }
           }
         },
         "course3_artist_functions_challenge1": {
@@ -432,6 +457,11 @@
             "parameters": {
               "min": "किमान"
             }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "गुण"
+            }
           }
         },
         "courseF_artist_fwp_challenge1": {
@@ -488,6 +518,11 @@
           "draw a pinwheel": {
             "parameters": {
               "repeat": "पुन्हा करा"
+            }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "गुण"
             }
           }
         },
@@ -1179,6 +1214,104 @@
             "parameters": {
               "min": "किमान"
             }
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "parameters": {
+              "honey": "मध"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "गुण"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "parameters": {
+              "actor": "पात्र"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "parameters": {
+              "actor": "पात्र"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "parameters": {
+              "actor": "पात्र",
+              "speed": "वेग "
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "parameters": {
+              "actor": "पात्र",
+              "speed": "वेग "
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "गुण"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "गुण सेट करा "
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "गुण सेट करा "
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "गुण"
+            }
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "गोळा करा"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "गोळा करा"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "गोळा करा"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "गोळा करा"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "गोळा करा"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "गोळा करा"
           }
         }
       }

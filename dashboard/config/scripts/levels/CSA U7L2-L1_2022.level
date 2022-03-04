@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-26T00:32:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n    \n    TicketManager myShow = new TicketManager(\"Theater Manager\");\n    \n    myShow.displayTickets(5, 7);\n    myShow.displayTax(5.00);\n    myShow.displayMessage();\n    \n  }\n}",
+        "isVisible": true
+      },
+      "TicketManager.java": {
+        "text": "public class TicketManager {\n\n  private String theaterManager;\n\n  public TicketManager(String theaterManager) {\n    this.theaterManager = theaterManager;\n  }\n    \n  public void displayTickets(int numofPeople, int numofTickets){\n    System.out.println(numofPeople + \" people purchased \" + numofTickets + \" tickets for the show.\");\n  }\n  \n  public void displayTax(double price){\n    double tax = price * 0.07;\n    double total = price + tax;\n    \n    System.out.println(\"Your total price is \" + total);\n  }\n  \n  public void displayMessage(){\n    System.out.println(\"Goodbye \" + theaterManager + \"!\");\n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "contained_level_names": [
+      "CSA U7L2-L1 Predict_2022"
+    ],
+    "name_suffix": "_2022"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:03.327+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L1\\\"\"],\"cloned_from\":\"CSA U7L2-L1\"}]"
+}]]></config>
+</Javalab>

@@ -328,7 +328,7 @@ Dashboard::Application.routes.draw do
   end
 
   resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show], param: 'name' do
-    resources :programming_expressions, param: 'programming_expression_key' do
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'
       end

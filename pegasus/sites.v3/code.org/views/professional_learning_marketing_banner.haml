@@ -2,29 +2,35 @@
   = inline_css 'professional_learning_marketing_banner.css'
   - header_text = 'Help students become superheroes!'
   - text = "Our Professional Learning program helps #{audience_text} teach computer science!"
-  - should_animate ||= false
+  - homepage ||= false
+  - if homepage
+    - large_image = "/images/homepage/superhero-banner-gold.png"
+    - half_image = "/images/homepage/superhero-banner-half-gold.png"
+  - else
+    - large_image = "/images/homepage/superhero-banner.png"
+    - half_image = "/images/homepage/superhero-banner-half-blue.png"
 
-  .homepage-professional-learning-banner{class: should_animate ? 'animate-text' : ''}
+  .homepage-professional-learning-banner{class: homepage ? 'animate-text' : ''}
     %a.linktag#pl-2019{href: link_address}
-      .professional-learning-banner-desktop.col-80.desktop-feature
+      .professional-learning-banner-desktop.desktop-feature{class: homepage ? 'homepage' : ''}
         .banner
-          %img{src: "/images/homepage/superhero-banner.png"}
-        .left
+          %img{src: large_image}
+        .text-wrapper
           .header= header_text
           .text= text
         .right-button
           %button
             #{button_label}
-      .professional-learning-banner-tablet.col-80.tablet-restrictive-feature
+      .professional-learning-banner-tablet.tablet-restrictive-feature{class: homepage ? 'homepage' : ''}
         .banner
-          %img{src: "/images/homepage/superhero-banner-half.png"}
-          .text-button-wrapper
+          %img{src: half_image}
+          .text-wrapper
             .header= header_text
             .text= text
             %button
               #{button_label}
-      .professional-learning-banner-phone.phone-feature
-        .text-button-wrapper
+      .professional-learning-banner-phone.phone-feature{class: homepage ? 'homepage' : ''}
+        .text-wrapper
           .header= header_text
           .text= text
           %button

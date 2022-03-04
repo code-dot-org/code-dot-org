@@ -1,7 +1,7 @@
 class ProgrammingExpressionsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:search]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
 
   # GET /programming_expressions/search
   def search
@@ -96,7 +96,7 @@ class ProgrammingExpressionsController < ApplicationController
       :return_value,
       :tips,
       parameters: [:name, :type, :required, :description],
-      examples: [:name, :description, :code, :app, :imageUrl, :appDisplayType, :appEmbedHeight]
+      examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height]
     )
     transformed_params
   end
