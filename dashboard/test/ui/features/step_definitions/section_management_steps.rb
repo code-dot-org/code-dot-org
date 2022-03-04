@@ -37,8 +37,6 @@ And /^I create a new section named "([^"]*)" assigned to "([^"]*)" version "([^"
 end
 
 Given (/^I create a new section assigned to "([^"]*)"$/) do |script_name|
-  puts "hello"
-  puts script_name
   browser_request(
     url: '/api/test/create_section_assigned_to_script',
     method: 'POST',
