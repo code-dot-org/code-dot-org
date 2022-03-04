@@ -18,3 +18,8 @@
   display: flex;
   align-items: center;
 }
+
+.ot-cat-item:before,
+.ot-abt-tab:before {
+  content: none;
+}
