@@ -34,10 +34,12 @@ Scenario: Flappy customized dashboard certificate pages
 
   When I press the first "#uitest-certificate img" element to load a new page
   And I wait until current URL contains "/certificates/"
+  And I wait for jquery to load
   Then I wait to see an image "/certificate_images/"
 
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
+  And I wait for jquery to load
   Then I wait to see an image "/certificate_images/"
 
 Scenario: Oceans uncustomized dashboard certificate pages
