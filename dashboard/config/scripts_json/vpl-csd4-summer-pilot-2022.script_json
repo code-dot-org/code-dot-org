@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-03 22:37:02 UTC",
+    "serialized_at": "2022-03-04 19:42:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -59,7 +59,7 @@
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "Asynchronous Part 2"
+        "display_name": "Curriculum Investigation"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -68,19 +68,86 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "[TEMPLATE] Introduction to...",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e1d8ae05-67dd-4d45-bf0a-68aa8d752e7a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1d8ae05-67dd-4d45-bf0a-68aa8d752e7a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b5270ec6-e436-42c8-9f4f-084e01023ac0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0",
+        "lesson_activity.key": "e1d8ae05-67dd-4d45-bf0a-68aa8d752e7a"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0"
+      }
+    }
   ],
   "resources": [
 
