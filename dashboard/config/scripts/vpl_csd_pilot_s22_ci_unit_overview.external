@@ -1,0 +1,37 @@
+name 'VPL-CSD-pilot-S22-CI-Unit_Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<a href="https://levelbuilder-studio.code.org/s/self-paced-pl-csd5-2021/lessons/1/levels/4" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
+
+# Unit Overview
+
+##### Insert unit overview from the <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer">Curriculum Guide</a>.
+
+
+## Students will:
+
+* ##### Replace with unit specific objectives
+
+## 
+
+## Update with a unit specific image then remove this text
+
+<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+
+### **Implementation guidance** 
+
+* ##### Add information from the <a href="https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview" target="blank" rel="noopener noreferrer">Implementation Guide</a> 
+* ##### You can view the full <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer">Curriculum Guide</a> for more information about this unit. 
+
+
+### **Suggested time to complete the unit:** (update for each unit) weeks 
+##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2021" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+
+<div style="clear:both"/>
+
+
+
+
+MARKDOWN
