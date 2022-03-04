@@ -29,6 +29,8 @@ module UsersHelper
       return false
     end
 
+    log_self_takeover_investigation_to_firehose(firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
+
     ActiveRecord::Base.transaction do
       # Move over sections that source_user follows
       Follower.where(student_user_id: source_user.id).each do |followed|
@@ -47,7 +49,16 @@ module UsersHelper
 
     log_account_takeover_to_firehose(firehose_params)
     true
-  rescue
+  rescue => e
+    if source_user && destination_user
+      log_self_takeover_investigation_to_firehose({
+        source_user: source_user,
+        destination_user: destination_user,
+        type: takeover_type,
+        provider: provider,
+        error: "Type: #{e.class} Message: #{e.message}"
+      })
+    end
     false
   end
 
@@ -63,6 +74,30 @@ module UsersHelper
         data_json: {
           user_type: destination_user.user_type,
           error: error,
+        }.to_json
+      }
+    )
+  end
+
+  def log_self_takeover_investigation_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'self-takeover-investigation',
+        event: "#{type}-account-takeover", # Silent or OAuth takeover
+        user_id: source_user.id, # User account being "taken over" (deleted)
+        data_int: destination_user.id, # User account after takeover
+        data_string: provider,
+        error: error,   # Move error outside of data_json to query easier
+        data_json: {
+          session_sign_up_type: session[:sign_up_type],
+          destination_user_email: destination_user.email,
+          destination_user_hashed_email: destination_user.hashed_email,
+          source_user_email: source_user.email,
+          source_user_hashed_email: source_user.hashed_email,
+          # Including the auth_option_ids for reference, but not confident they will reveal much
+          destination_user_auth_option_ids: destination_user.authentication_options.map(&:id).join(', '),
+          source_user_auth_option_ids: source_user.authentication_options.map(&:id).join(', ')
         }.to_json
       }
     )
