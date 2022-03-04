@@ -1006,7 +1006,7 @@
           "progression_name": "Sleduj myš"
         },
         "8ca97900-8855-4bb6-9717-d9e403b12fb0": {
-          "progression_name": "Video: Podmienky"
+          "progression_name": "Video: Blok Ak/Inak"
         },
         "5598ea09-433e-405f-81b7-4ea132b43c9d": {
           "progression_name": "Výroky \"If-Else\""
@@ -1264,7 +1264,7 @@
           "progression_name": "Opakujúce sa programy"
         },
         "bca84870-d563-4903-b1d9-51253cbbfc90": {
-          "progression_name": "Cykly \"For\""
+          "progression_name": "Cykly \"Pre\""
         },
         "18ead11c-bea7-41a3-84ac-be932e91d480": {
           "progression_name": "Cykly \"for\" a farebné LEDky"
@@ -3065,7 +3065,7 @@
           "progression_name": "Video: Cykly „for“"
         },
         "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
-          "progression_name": "Cykly \"For\""
+          "progression_name": "Cykly \"Pre\""
         },
         "e6e515ed-5cc0-4db3-8b4e-4f416a208e55": {
           "name": "Cykly \"for\" a farebné LEDky",
@@ -3683,7 +3683,7 @@
           "progression_name": "Sleduj myš"
         },
         "7b10d24c-5e4b-49cb-a89c-e659288c3731": {
-          "progression_name": "Video: Podmienky"
+          "progression_name": "Video: Blok Ak/Inak"
         },
         "ecb006e6-b739-4392-8d5d-2278b7ada266": {
           "progression_name": "Výroky \"If-Else\""
@@ -3952,10 +3952,10 @@
           "progression_name": "Opakujúce sa programy"
         },
         "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
-          "progression_name": "Cykly \"For\""
+          "progression_name": "Cykly \"Pre\""
         },
         "2b5209d7-f495-4e26-b2af-8b639c085bca": {
-          "progression_name": "Cykly \"For\""
+          "progression_name": "Cykly \"Pre\""
         },
         "09d72bde-4b77-4508-ab36-596d06ec9d72": {
           "name": "Cykly \"for\" a farebné LEDky",
@@ -10660,7 +10660,7 @@
           "progression_name": "Video: Cykly „for“"
         },
         "2aed74d8-d9e0-4c5d-b0bc-7bc5e90ce0df": {
-          "progression_name": "Cykly \"For\""
+          "progression_name": "Cykly \"Pre\""
         },
         "4eae7990-8111-4f59-a7ef-212acf9f054f": {
           "tips": [

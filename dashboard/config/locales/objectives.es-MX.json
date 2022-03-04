@@ -1292,11 +1292,170 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
         },
+        "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
+          "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
+        },
+        "04724c46-add4-4ec1-af15-4c44eed0a91b": {
+          "description": "Responder a la entrada del usuario mediante un manejador de eventos"
+        },
+        "8902d86e-40fd-47c8-92d0-c4a9b766f913": {
+          "description": "Escribir programas que cambien varios elementos en una sola pantalla en lugar de cambiar de pantalla"
+        },
+        "61fb8052-ffea-4adf-a134-8d730ad54e8b": {
+          "description": "Conectar y solucionar problemas de dispositivos externos"
+        },
+        "d69128fd-98d6-4897-966d-76362dbaf0ac": {
+          "description": "Encender y apagar un LED con un código"
+        },
+        "617e327c-d4cc-4b6e-b456-7233bb9c845b": {
+          "description": "Utilizar el código para controlar un dispositivo físico"
+        },
+        "2b306542-728e-4848-a27f-c0521831a6f4": {
+          "description": "Comparar y contrastar múltiples formas de obtener entradas"
+        },
+        "c10da89e-729b-4d0f-b376-3e14e931b870": {
+          "description": "Representar diferentes métodos de obtención de datos del usuario"
+        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Entrena y prueba un modelo de aprendizaje automático."
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
+        },
+        "5fc17aef-b130-416f-8746-54fe3f0ed390": {
+          "description": "Identificar a una variable como una forma de etiquetar y referenciar un valor en un programa."
+        },
+        "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca": {
+          "description": "Usar variables en un programa para almacenar información que pueda utilizarse varias veces."
+        },
+        "557e9ade-ee71-4196-9dce-44f742180fa8": {
+          "description": "Generar y utilizar números aleatorios en un programa"
+        },
+        "71209fa9-4d56-4ced-bb42-b3cf73f523f1": {
+          "description": "Actualizar un valor almacenado en una variable"
+        },
+        "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
+          "description": " Comunicarse y colaborar con sus compañeros de clase con el fin de buscar soluciones a distintos problemas "
+        },
+        "8bc02767-3a96-4d13-a946-1e5a0dbcb037": {
+          "description": "Mejorar sistemáticamente en la resolución de problemas"
+        },
+        "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
+          "description": "Identificar las distintas estrategias utilizadas para la resolución de problemas"
+        },
+        "e8cad68d-4922-47bd-9b73-c22e8af10879": {
+          "description": "Aplicar el proceso de resolución de problemas en distintas situaciones"
+        },
+        "34e775e2-0c00-4052-9987-1ea46e705fa0": {
+          "description": "Evalúe que tan bien definido está un problema y utilice estrategias para definirlo con más precisión"
+        },
+        "ccfcb058-12bd-488b-8356-b22d10c4ea6f": {
+          "description": "Identificar a una computadora como una máquina que trabaja con información"
+        },
+        "bac6e9a1-3d3a-4632-951a-18176be462c8": {
+          "description": "Razonar si determinados objetos son o no son computadoras."
+        },
+        "10f87a6a-1dee-44d3-b8d9-1a8d79891db9": {
+          "description": "Elegir problemas que pueden ser resueltos con la computación y justificar sus elecciones."
+        },
+        "b77ee6ff-2558-4b8a-b835-6cc16409602f": {
+          "description": "Seleccionar las entradas y salidas utilizadas para realizar tareas informáticas cotidianas"
+        },
+        "372ca368-9509-4398-b84c-21ac4c890a1d": {
+          "description": "Explique el papel que desempeñan la entrada y la salida cuando se utilizan computadoras para resolver problemas de información"
+        },
+        "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
+          "description": "Definir procesamiento como el trabajo realizado (posiblemente por una computadora) para convertir una entrada en una salida"
+        },
+        "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
+          "description": "Identificar varios tipos comunes de procesamiento utilizados en la informática"
+        },
+        "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
+          "description": "Determinar qué tipos de procesamiento son adecuados para un problema informático específico"
+        },
+        "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
+          "description": "Determinar qué información de un problema computacional debe ser almacenada para su uso posterior"
+        },
+        "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
+          "description": "Identificar las directrices respecto a la información que debe y no debe almacenarse como parte del proceso computacional"
+        },
+        "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
+          "description": "Utilizar el modelo de entrada-salida-almacenamiento-procesamiento para describir un proceso computacional"
+        },
+        "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
+          "description": "Identificar y definir un problema que pueda ser resuelto con la computación"
+        },
+        "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
+          "description": "Diseñar una aplicación que incluya la entrada, salida, almacenamiento, y procesamiento de información para resolver el problema"
+        },
+        "5caf913a-779e-4174-9e9f-b6a87756263e": {
+          "description": "Dar e incorporar opiniones de sus pares para mejorar un artefacto computacional"
+        },
+        "07998a0e-1ef2-4bc0-af59-5278007a0058": {
+          "description": " Comunicarse y colaborar con sus compañeros de clase con el fin de buscar soluciones a distintos problemas "
+        },
+        "74336c50-eaa5-4dce-a478-27925ce67729": {
+          "description": "Mejorar sistemáticamente en la resolución de problemas"
+        },
+        "30d66e3d-96aa-4b8e-adb5-6f112d41f16d": {
+          "description": "Identificar las distintas estrategias utilizadas para la resolución de problemas"
+        },
+        "71eb384e-9034-406d-a8fc-3e410e869985": {
+          "description": " Comunicarse y colaborar con sus compañeros de clase con el fin de buscar soluciones a distintos problemas "
+        },
+        "eb402ed0-5510-4b3a-bc73-694ddde8bf0f": {
+          "description": "Mejorar sistemáticamente en la resolución de problemas"
+        },
+        "9f5e8294-cf6c-4f28-9f8f-1c0c869a69be": {
+          "description": "Identificar las distintas estrategias utilizadas para la resolución de problemas"
+        },
+        "dd44e0a2-e2a0-46aa-bc51-e0d67dc95491": {
+          "description": "Comunicarse y colaborar con sus compañeros de clase con el fin de buscar soluciones a distintos problemas "
+        },
+        "2c2dc6c4-9a9f-4186-85ba-44882179e48b": {
+          "description": "Mejorar sistemáticamente en la resolución de problemas"
+        },
+        "1829ce9e-4e7e-451f-898e-692c3abb5ad6": {
+          "description": "Identificar las distintas estrategias utilizadas para la resolución de problemas"
+        },
+        "a98e9a65-fe9a-421b-854f-ee5c090c9503": {
+          "description": "Aplicar el proceso de resolución de problemas en distintas situaciones"
+        },
+        "4616a321-c362-4a0e-928a-b1bc642d4010": {
+          "description": "Evalúe que tan bien definido está un problema y utilice estrategias para definirlo con más precisión"
+        },
+        "69a7b9a8-b9be-4d2e-aacc-43805fc5f186": {
+          "description": "Aplicar el proceso de resolución de problemas en distintas situaciones"
+        },
+        "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
+          "description": "Evalúe que tan bien definido está un problema y utilice estrategias para definirlo con más precisión"
+        },
+        "a3d13dc7-ae60-458e-aefc-0e6399f6b074": {
+          "description": "Explicar que el HMTL es una herramienta que permite a un programador comunicar la forma en la que el contenido de una página debe estructurarse"
+        },
+        "0227f8e9-e8ad-40b5-bc8f-ea0fae00241a": {
+          "description": "Escribir un documento HTLM simple, utilizando etiquetas de apertura y cierre para estructurar el contenido"
+        },
+        "c783566f-9577-4876-96f7-594f4dccd8aa": {
+          "description": "Entender cómo usar los recursos en el Laboratorio Web"
+        },
+        "7298cc4c-c0b2-40d2-b508-5e460f8d7653": {
+          "description": "Usar las etiquetas de encabezado para cambiar la apariencia de un texto en una página web."
+        },
+        "8301013f-1346-4f62-a416-ed9371bf3588": {
+          "description": "Estructurar el contenido en encabezados, sub encabezados y párrafos."
+        },
+        "6b4d8978-99c8-4541-9213-fa14c4132c62": {
+          "description": "Usar una práctica estructurada y colaborativa para crear un artefacto digital."
+        },
+        "05f3226e-a69a-45ca-8264-e6cacdfb11ee": {
+          "description": "Crear una página web con HTML"
+        },
+        "cec2c627-e5a4-418b-bbd9-2f2811e12060": {
+          "description": "Comprender y explicar las razones por las que es difícil controlar quién ve la información publicada en línea."
+        },
+        "efb37b92-5146-4ab0-803f-3e5af49fdb2b": {
+          "description": "Comprender y justificar las pautas para publicar información en línea de forma segura. "
         }
       }
     }
