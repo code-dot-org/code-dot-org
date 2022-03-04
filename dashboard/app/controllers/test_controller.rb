@@ -16,6 +16,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def facilitator_access
+    return unless (user = current_user)
+    user.permission = UserPermission::FACILITATOR
+    user.save!
+    head :ok
+  end
+
   def enroll_in_plc_course
     return unless (user = current_user)
     unit_group = UnitGroup.find_by(name: 'All The PLC Things')
