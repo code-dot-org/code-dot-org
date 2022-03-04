@@ -4,21 +4,21 @@
     <arg name="this sprite" type="Sprite"/>
     <description>move a sprite to the left across the screen</description>
   </mutation>
-  <field name="NAME" id="moving west">moving west<field>
+  <field name="NAME" id="moving west">moving west</field>
   <statement name="STACK">
     <block type="gamelab_moveInDirection">
-      <field name="DIRECTION">"West"<field>
+      <field name="DIRECTION">"West"</field>
       <value name="SPRITE">
         <block type="sprite_parameter_get">
-          <field name="VAR">this sprite<field>
+          <field name="VAR">this sprite</field>
         </block>
       </value>
       <value name="DISTANCE">
         <block type="gamelab_getProp">
-          <field name="PROPERTY">"speed"<field>
+          <field name="PROPERTY">"speed"</field>
           <value name="SPRITE">
             <block type="sprite_parameter_get">
-              <field name="VAR">this sprite<field>
+              <field name="VAR">this sprite</field>
             </block>
           </value>
         </block>

@@ -4,28 +4,28 @@
     <arg name="this sprite" type="Sprite"/>
     <description>move a sprite if the user is pressing the arrow keys</description>
   </mutation>
-  <field name="NAME" id="moving with arrow keys">moving with arrow keys<field>
+  <field name="NAME" id="moving with arrow keys">moving with arrow keys</field>
   <statement name="STACK">
     <block type="controls_if">
       <value name="IF0">
         <block type="gamelab_isKeyPressed">
-          <field name="KEY">"up"<field>
+          <field name="KEY">"up"</field>
         </block>
       </value>
       <statement name="DO0">
         <block type="gamelab_moveInDirection">
-          <field name="DIRECTION">"North"<field>
+          <field name="DIRECTION">"North"</field>
           <value name="SPRITE">
             <block type="sprite_parameter_get">
-              <field name="VAR">this sprite<field>
+              <field name="VAR">this sprite</field>
             </block>
           </value>
           <value name="DISTANCE">
             <block type="gamelab_getProp">
-              <field name="PROPERTY">"speed"<field>
+              <field name="PROPERTY">"speed"</field>
               <value name="SPRITE">
                 <block type="sprite_parameter_get">
-                  <field name="VAR">this sprite<field>
+                  <field name="VAR">this sprite</field>
                 </block>
               </value>
             </block>
@@ -36,23 +36,23 @@
         <block type="controls_if">
           <value name="IF0">
             <block type="gamelab_isKeyPressed">
-              <field name="KEY">"down"<field>
+              <field name="KEY">"down"</field>
             </block>
           </value>
           <statement name="DO0">
             <block type="gamelab_moveInDirection">
-              <field name="DIRECTION">"South"<field>
+              <field name="DIRECTION">"South"</field>
               <value name="SPRITE">
                 <block type="sprite_parameter_get">
-                  <field name="VAR">this sprite<field>
+                  <field name="VAR">this sprite</field>
                 </block>
               </value>
               <value name="DISTANCE">
                 <block type="gamelab_getProp">
-                  <field name="PROPERTY">"speed"<field>
+                  <field name="PROPERTY">"speed"</field>
                   <value name="SPRITE">
                     <block type="sprite_parameter_get">
-                      <field name="VAR">this sprite<field>
+                      <field name="VAR">this sprite</field>
                     </block>
                   </value>
                 </block>
@@ -63,23 +63,23 @@
             <block type="controls_if">
               <value name="IF0">
                 <block type="gamelab_isKeyPressed">
-                  <field name="KEY">"left"<field>
+                  <field name="KEY">"left"</field>
                 </block>
               </value>
               <statement name="DO0">
                 <block type="gamelab_moveInDirection">
-                  <field name="DIRECTION">"West"<field>
+                  <field name="DIRECTION">"West"</field>
                   <value name="SPRITE">
                     <block type="sprite_parameter_get">
-                      <field name="VAR">this sprite<field>
+                      <field name="VAR">this sprite</field>
                     </block>
                   </value>
                   <value name="DISTANCE">
                     <block type="gamelab_getProp">
-                      <field name="PROPERTY">"speed"<field>
+                      <field name="PROPERTY">"speed"</field>
                       <value name="SPRITE">
                         <block type="sprite_parameter_get">
-                          <field name="VAR">this sprite<field>
+                          <field name="VAR">this sprite</field>
                         </block>
                       </value>
                     </block>
@@ -90,23 +90,23 @@
                 <block type="controls_if">
                   <value name="IF0">
                     <block type="gamelab_isKeyPressed">
-                      <field name="KEY">"right"<field>
+                      <field name="KEY">"right"</field>
                     </block>
                   </value>
                   <statement name="DO0">
                     <block type="gamelab_moveInDirection">
-                      <field name="DIRECTION">"East"<field>
+                      <field name="DIRECTION">"East"</field>
                       <value name="SPRITE">
                         <block type="sprite_parameter_get">
-                          <field name="VAR">this sprite<field>
+                          <field name="VAR">this sprite</field>
                         </block>
                       </value>
                       <value name="DISTANCE">
                         <block type="gamelab_getProp">
-                          <field name="PROPERTY">"speed"<field>
+                          <field name="PROPERTY">"speed"</field>
                           <value name="SPRITE">
                             <block type="sprite_parameter_get">
-                              <field name="VAR">this sprite<field>
+                              <field name="VAR">this sprite</field>
                             </block>
                           </value>
                         </block>
