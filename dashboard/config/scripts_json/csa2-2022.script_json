@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-18 20:32:59 UTC",
+    "serialized_at": "2022-02-26 14:13:27 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -52,12 +52,162 @@
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Neighborhood Store Management Project – Day 1",
+      "key": "lesson-6",
+      "name": "Variables",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Operators and Expressions",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Attributes",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Constructors",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "User Input",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Class Hierarchies",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Accessor Methods",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Mutator Methods",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Printing Objects",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Scope",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Store Management Project – Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -68,11 +218,11 @@
     },
     {
       "key": "lesson-2",
-      "name": "Neighborhood Store Management Project – Day 2",
-      "absolute_position": 2,
+      "name": "Store Management Project – Day 2",
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -83,11 +233,11 @@
     },
     {
       "key": "lesson-3",
-      "name": "Neighborhood Store Management Project – Day 3",
-      "absolute_position": 3,
+      "name": "Store Management Project – Day 3",
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -99,10 +249,10 @@
     {
       "key": "lesson-4",
       "name": "FRQ Practice",
-      "absolute_position": 4,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -114,10 +264,10 @@
     {
       "key": "lesson-5",
       "name": "Unit 2 Assessment",
-      "absolute_position": 5,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -128,10 +278,74 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "9cc8bca4-4b03-4625-8327-1d3d22d62a71",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9cc8bca4-4b03-4625-8327-1d3d22d62a71",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "5163f5e7-7da5-4b0e-a9d5-49eb5bcb861d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5163f5e7-7da5-4b0e-a9d5-49eb5bcb861d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "c7f1b214-5d60-410d-8023-73c32d3eebf1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7f1b214-5d60-410d-8023-73c32d3eebf1",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "6055aa1a-d31b-434e-adb9-6c9f428e454c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6055aa1a-d31b-434e-adb9-6c9f428e454c",
+        "lesson_activity.key": "9cc8bca4-4b03-4625-8327-1d3d22d62a71"
+      }
+    },
+    {
+      "key": "091f2ae7-7aa7-441b-a1f8-433cec42a688",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "091f2ae7-7aa7-441b-a1f8-433cec42a688",
+        "lesson_activity.key": "5163f5e7-7da5-4b0e-a9d5-49eb5bcb861d"
+      }
+    },
+    {
+      "key": "b73751fc-2ee2-4955-bf15-a1f7b977f481",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b73751fc-2ee2-4955-bf15-a1f7b977f481",
+        "lesson_activity.key": "c7f1b214-5d60-410d-8023-73c32d3eebf1"
+      }
+    }
   ],
   "script_levels": [
 

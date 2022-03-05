@@ -354,16 +354,14 @@
         }
       ]
     ],
-    "long_instructions": "##Debug the Program\r\n\r\nThis program is supposed to navigate the `myPainter`(#e7e8ea) object to the food truck, but it has an error!\r\n\r\nFind and fix the error in this program.\r\n\r\n::: details [**Show Me How**]\r\nWhat type of object is trying to use the `turnRight()`(#e7e8ea) method? Does this object have access to the `turnRight()`(#e7e8ea) method?\r\n:::",
-    "encrypted_examples": [
-
-    ]
+    "long_instructions": "##Debug the Program\r\n\r\nThis program is supposed to navigate the `myPainter`(#e7e8ea) object to the food truck, but it has an error!\r\n\r\nFind and fix the error in this program.\r\n\r\n![](https://images.code.org/2c1cfcdf216b0cfba820a9415eaec277-image-1646321649834.gif)\r\n\r\n::: details [**Show Me How**]\r\nWhat type of object is trying to use the `turnRight()`(#e7e8ea) method? Does this object have access to the `turnRight()`(#e7e8ea) method?\r\n:::",
+    "encrypted_examples": "mZB7BNRoUfVP+xe/M7KOnuvdOgK/ZEEXUmzYMFb5QmYHI6sX2RM4mPoHWEs6\nenQyohKOi2hBKBz+sYvpm5coNHNUGeEwt7EzMlZfZf4B5Tk=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-02-15T16:15:20.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-02-15T16:15:20.105+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L7-L2_2022\"},{\"changed_at\":\"2022-02-15 16:20:30 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"project_template_level_name\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 16:24:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 16:24:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 16:25:41 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-15T16:15:20.105+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L7-L2_2022\"},{\"changed_at\":\"2022-02-15 16:20:30 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"project_template_level_name\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 16:24:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 16:24:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 16:25:41 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 13:43:40 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:34:24 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
