@@ -865,7 +865,7 @@ export default function teacherSections(state = initialState, action) {
 
     const lessonExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
-    if (action.props.scriptId) {
+    if (action.props.unitId) {
       const unit =
         state.courseOfferings[action.props.courseOfferingId].course_versions[
           action.props.courseVersionId
