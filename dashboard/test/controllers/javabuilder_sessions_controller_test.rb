@@ -160,11 +160,13 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     token = response['token']
     decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
 
-    teachers = decoded_token[0]['verified_teachers']
+    teachers_string = decoded_token[0]['verified_teachers']
+    teachers = teachers_string.split(',')
     assert_equal 2, teachers.length
-    assert teachers.include?(teacher.id)
-    assert teachers.include?(verified_teacher.id)
-    refute teachers.include?(regular_teacher.id)
+    assert teachers.include?((teacher.id).to_s)
+    assert teachers.include?((verified_teacher.id).to_s)
+    refute teachers.include?((regular_teacher.id).to_s)
+
     section_1.destroy
     section_2.destroy
   end
@@ -177,7 +179,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     token = response['token']
     decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
-    teachers = decoded_token[0]['verified_teachers']
-    assert_equal [levelbuilder.id], teachers
+    teachers_string = decoded_token[0]['verified_teachers']
+    assert_equal (levelbuilder.id).to_s, teachers_string
   end
 end
