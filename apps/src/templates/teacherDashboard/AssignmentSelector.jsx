@@ -99,12 +99,12 @@ export default class AssignmentSelector extends Component {
         this.reportChange
       );
     } else if (Object.values(courseVersions).length === 1) {
-      let courseVersionId = Object.keys(courseVersions)[0];
+      let courseVersionId = Object.values(courseVersions)[0].id;
 
       if (Object.values(courseVersions.units).length === 1) {
         this.setState(
           {
-            selectedUnitId: Object.keys(courseVersions.units)[0],
+            selectedUnitId: Object.values(courseVersions.units)[0].id,
             selectedCourseVersionId: courseVersionId,
             selectedCourseOfferingId: courseOfferingId
           },
@@ -141,7 +141,7 @@ export default class AssignmentSelector extends Component {
         this.reportChange
       );
     } else if (Object.values(units).length === 1) {
-      let unitId = Object.keys(units)[0];
+      let unitId = Object.values(units)[0].id;
       this.setState(
         {
           selectedUnitId: unitId,
