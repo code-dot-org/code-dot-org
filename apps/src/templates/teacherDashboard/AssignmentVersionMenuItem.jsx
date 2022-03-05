@@ -8,56 +8,6 @@ import color from '../../util/color';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 
-export const columnWidths = {
-  selected: 25,
-  title: 70,
-  status: 160,
-  language: 140
-};
-
-export const rowHeight = 35;
-
-export const cellStyle = {
-  display: 'inline-block',
-  marginTop: 9
-};
-
-const style = {
-  wrapper: {
-    fontSize: 16,
-    height: rowHeight
-  },
-  selectedColumn: {
-    ...cellStyle,
-    width: columnWidths.selected,
-    marginLeft: -10
-  },
-  titleColumn: {
-    ...cellStyle,
-    width: columnWidths.title,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
-  },
-  statusColumn: {
-    ...cellStyle,
-    width: columnWidths.status
-  },
-  recommended: {
-    borderRadius: 5,
-    padding: 8,
-    backgroundColor: color.cyan,
-    color: 'white'
-  },
-  languageColumn: {
-    ...cellStyle,
-    width: columnWidths.language,
-    marginRight: -10
-  },
-  infoCircle: {
-    fontSize: 18
-  }
-};
-
 export default function AssignmentVersionMenuItem(props) {
   // Returns whether we should display this version as english-only.
   const englishOnly = () => {
@@ -125,4 +75,54 @@ AssignmentVersionMenuItem.propTypes = {
   selectedCourseVersionId: PropTypes.number,
   courseVersion: assignmentCourseVersionShape,
   onClick: PropTypes.func.isRequired
+};
+
+export const columnWidths = {
+  selected: 25,
+  title: 70,
+  status: 160,
+  language: 140
+};
+
+export const rowHeight = 35;
+
+export const cellStyle = {
+  display: 'inline-block',
+  marginTop: 9
+};
+
+const style = {
+  wrapper: {
+    fontSize: 16,
+    height: rowHeight
+  },
+  selectedColumn: {
+    ...cellStyle,
+    width: columnWidths.selected,
+    marginLeft: -10
+  },
+  titleColumn: {
+    ...cellStyle,
+    width: columnWidths.title,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold'
+  },
+  statusColumn: {
+    ...cellStyle,
+    width: columnWidths.status
+  },
+  recommended: {
+    borderRadius: 5,
+    padding: 8,
+    backgroundColor: color.cyan,
+    color: 'white'
+  },
+  languageColumn: {
+    ...cellStyle,
+    width: columnWidths.language,
+    marginRight: -10
+  },
+  infoCircle: {
+    fontSize: 18
+  }
 };
