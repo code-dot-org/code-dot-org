@@ -71,6 +71,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.find(params[:id])
     authorize! :manage, section
 
+    puts params
+    # TODO: use courseOfferingId, courseVersionId, and unitId to set things correctly here
+
     course_id = params[:course_id]
 
     # This endpoint needs to satisfy two endpoint formats for getting script_id
