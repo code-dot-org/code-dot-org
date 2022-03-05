@@ -206,7 +206,7 @@ export const PaneButton = Radium(function(props) {
   return (
     <div
       role="button"
-      tabIndex={0}
+      tabIndex="0"
       id={props.id}
       style={divStyle}
       onKeyDown={props.isDisabled ? () => {} : onKeyDownWrapper}
