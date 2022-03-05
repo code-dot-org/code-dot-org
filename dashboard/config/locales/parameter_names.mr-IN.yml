@@ -2,8 +2,12 @@
 mr:
   data:
     parameter_names:
+      actor: पात्र
       height: उंची
+      honey: मध
       left: डावा
       min: किमान
+      points: गुण
       size: आकार
+      speed: वेग
       width: रुंदी

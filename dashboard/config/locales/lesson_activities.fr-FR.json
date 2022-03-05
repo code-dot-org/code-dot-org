@@ -138,7 +138,7 @@
           "name": "Conclusion"
         },
         "777be184-c917-4732-ad47-bb1fad0a30e4": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
           "name": "La Mise en Route"
@@ -204,7 +204,7 @@
           "name": "Résumé et ouverture"
         },
         "10b66543-86a4-459e-bc67-a31d688547ce": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -297,7 +297,7 @@
           "name": "Résumé et ouverture"
         },
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
           "name": "Séance d'échauffement"
@@ -344,6 +344,9 @@
         "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
           "name": "Aller plus loin"
         },
+        "ad2299c9-28bf-4e9f-b320-cb44ff94bdba": {
+          "name": "Pour commencer"
+        },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
           "name": "Activité (30-45 minutes)"
         },
@@ -358,6 +361,9 @@
         },
         "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
           "name": "Niveaux"
+        },
+        "0f7585ce-d117-4b61-aee9-d54444cd83b0": {
+          "name": "Pour commencer"
         },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
           "name": "Activité (30-45 minutes)"
@@ -381,7 +387,7 @@
           "name": "Activité"
         },
         "04400eef-5989-4325-a801-ab4ad451f130": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "899fd6a9-1214-43ec-a159-77c421de2c8a": {
           "name": "Niveaux"
@@ -3183,7 +3189,7 @@
           "name": "Évaluation"
         },
         "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
           "name": "Niveaux"
@@ -3423,7 +3429,7 @@
           "name": "Conclusion : Moment de pause et de réflexion "
         },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3435,7 +3441,7 @@
           "name": "Résumé et ouverture"
         },
         "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3450,7 +3456,7 @@
           "name": "Conclusion"
         },
         "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "e030be21-480d-40a2-8f97-574492b54aa2": {
           "name": "Opportunité interdisciplinaire "
@@ -3471,7 +3477,7 @@
           "name": "Conclusion"
         },
         "25e921a3-616c-4b8d-accb-c360ef37c266": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3495,7 +3501,7 @@
           "name": "Conclusion"
         },
         "4a617b6e-9d56-472c-8a50-31052d127232": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "10140329-cade-4307-8132-d9ac56d8182c": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3510,7 +3516,7 @@
           "name": "Conclusion"
         },
         "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "3ffb2700-4b4c-4deb-a009-856be4b850da": {
           "name": "Opportunité interdisciplinaire "
@@ -3561,7 +3567,7 @@
           "name": "Évaluation"
         },
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "e524c263-6ebc-47c9-9d43-3b738a99574b": {
           "name": "Opportunité interdisciplinaire "
@@ -3579,7 +3585,7 @@
           "name": "Conclusion"
         },
         "2672684d-adc1-4050-9d44-d42d9e1a2e0c": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3603,7 +3609,7 @@
           "name": "Faire une pause et réfléchir"
         },
         "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "07c33815-2515-4a63-91f1-51db34b0a00e": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3615,7 +3621,7 @@
           "name": "Conclusion"
         },
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "620c06c7-711d-459f-9f67-af3d142eb29c": {
           "name": "Opportunité interdisciplinaire "
@@ -3630,7 +3636,7 @@
           "name": "Conclusion"
         },
         "0915a618-f1c1-47be-b8fb-80664fa62e50": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3645,7 +3651,7 @@
           "name": "Conclusion"
         },
         "519099ff-6a78-427c-91d6-4ef9a2cba286": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3657,7 +3663,7 @@
           "name": "Conclusion"
         },
         "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
           "name": "Opportunité interdisciplinaire "
@@ -3681,7 +3687,7 @@
           "name": "Conclusion"
         },
         "924d773a-f021-4b86-bde2-95ddf2dc12ae": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3696,7 +3702,7 @@
           "name": " Conclusion"
         },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "92c5197c-d135-4891-9504-ba1393dd8ca6": {
           "name": "Opportunité interdisciplinaire "
@@ -3732,7 +3738,7 @@
           "name": "Conclusion"
         },
         "32810ead-80cc-47b1-863f-ea8d023aaa94": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3747,7 +3753,7 @@
           "name": "Conclusion"
         },
         "98f951f7-63b2-4d62-82c9-d472b3505b68": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3771,7 +3777,7 @@
           "name": "Conclusion : Moment de pause et de réflexion "
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "9d9055c3-143a-452e-9703-ef90cd9a9469": {
           "name": "Niveaux"
@@ -3801,7 +3807,7 @@
           "name": "Conclusion"
         },
         "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
           "name": "Opportunité interdisciplinaire "
@@ -3816,7 +3822,7 @@
           "name": "Conclusion"
         },
         "756542f6-213e-4c07-9442-d1cf97e1ff26": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3840,7 +3846,7 @@
           "name": "Conclusion"
         },
         "27034f13-f0bf-41c0-a198-385c740be6ab": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
           "name": "Opportunité interdisciplinaire "
@@ -3855,7 +3861,7 @@
           "name": "Conclusion"
         },
         "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3870,7 +3876,7 @@
           "name": "Conclusion"
         },
         "d905457a-3a72-4927-a3a6-910b2fba3a53": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3882,7 +3888,7 @@
           "name": "Conclusion"
         },
         "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
           "name": "Opportunité interdisciplinaire "
@@ -3909,7 +3915,7 @@
           "name": "Conclusion"
         },
         "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "38b78816-4a04-4c9b-b112-3704e9511c42": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3924,7 +3930,7 @@
           "name": "Conclusion"
         },
         "7c0129f4-ba20-475d-b304-a85ddd87507e": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
           "name": "Opportunité interdisciplinaire "
@@ -3939,7 +3945,7 @@
           "name": "Conclusion"
         },
         "cf4ad357-07b4-48e1-bd8f-108301e7aa0a": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3963,7 +3969,7 @@
           "name": "Évaluation"
         },
         "af629d31-87ab-476d-a2d3-6da008802f3c": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -3987,7 +3993,7 @@
           "name": "Conclusion : Conseils, notes, mot de passe"
         },
         "e735098e-abab-465e-949c-a7e92e771b84": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "f5985094-20d7-4316-a052-e7b18a78572e": {
           "name": "Niveaux"
@@ -4002,7 +4008,7 @@
           "name": "Conclusion"
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4026,7 +4032,7 @@
           "name": "Conclusion"
         },
         "da433c13-5e0a-48fe-a697-d2288e831912": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4050,7 +4056,7 @@
           "name": "Conclusion"
         },
         "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
           "name": "Opportunité interdisciplinaire "
@@ -4083,7 +4089,7 @@
           "name": " Conclusion"
         },
         "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "46464e07-b5ac-4ca4-84b2-3b43873360da": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4113,7 +4119,7 @@
           "name": "Évaluation"
         },
         "22ad368d-3a00-4720-a21a-72985c642b8d": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
           "name": "Opportunité interdisciplinaire "
@@ -4128,7 +4134,7 @@
           "name": "Conclusion"
         },
         "f72b0518-8373-4e23-9798-b4973072e86e": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4140,7 +4146,7 @@
           "name": "Conclusion"
         },
         "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4470,7 +4476,7 @@
           "name": "Conclusion"
         },
         "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4485,7 +4491,7 @@
           "name": "Conclusion"
         },
         "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Activité principale"
@@ -4494,7 +4500,7 @@
           "name": "Conclusion"
         },
         "3aaee60c-904c-4592-8092-b7abf66d9fac": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4524,7 +4530,7 @@
           "name": " Conclusion"
         },
         "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4566,7 +4572,7 @@
           "name": "Conclusion"
         },
         "9209915b-655f-4e9e-b106-3843617f4034": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4578,7 +4584,7 @@
           "name": "Conclusion"
         },
         "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4611,10 +4617,10 @@
           "name": "Conclusion"
         },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Niveaux"
@@ -4638,7 +4644,7 @@
           "name": "Conclusion"
         },
         "27b493bd-61be-4305-b021-8b40d59ee55a": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "1014e6a8-473d-46e2-a448-ca92a6697405": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4662,7 +4668,7 @@
           "name": "Conclusion"
         },
         "6354e763-cca6-4b98-b56e-16609de67f85": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4689,7 +4695,7 @@
           "name": "Évaluation"
         },
         "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "6c35971f-0c71-44c4-b6d7-9380216625a5": {
           "name": "Opportunité interdisciplinaire "
@@ -4716,7 +4722,7 @@
           "name": "Conclusion"
         },
         "1a3eff43-27c8-476a-9d18-2e277fa416b9": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "da87c8ba-9486-43e4-9dde-e6eac223396e": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4728,7 +4734,7 @@
           "name": "Conclusion"
         },
         "3f414667-5259-49ac-a7a3-af4a9ef62fdf": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "82c8173b-040e-41ec-b6ca-f1369b308268": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4740,7 +4746,7 @@
           "name": "Conclusion"
         },
         "8026f93e-6bc5-4824-9f7a-d21fa69476ed": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4773,7 +4779,7 @@
           "name": "Jour 4 et 5 - Présentez votre projet"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "c7c9975a-6ebc-42fb-8d9a-fbc7b99af9ee": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -5703,7 +5709,7 @@
           "name": "Conclusion"
         },
         "73080877-a97f-4bdc-a8b7-4210cf0f40c7": {
-          "name": "Apprentissage accru"
+          "name": "Aller plus loin"
         },
         "cd19519f-0869-4d79-a3ee-639ee1ed92c1": {
           "name": "Test Post-Projet"

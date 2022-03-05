@@ -27,7 +27,10 @@
       "led.off": null,
       "led.pulse": null,
       "led.blink": null,
-      "led.toggle": null
+      "led.toggle": null,
+      "setScreen": null,
+      "playSound": null,
+      "playSpeech": null
     },
     "edit_code": true,
     "embed": "false",
@@ -68,7 +71,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# If Variables Practice",
+    "long_instructions": "# Age Recommender\r\n\r\nCreate an app that recommends something based on somebody's age. For example, you could recommend a PG or PG-13 or R rated movie based on how old someone is. Or, you could recommend baby food vs soft food vs spicy food based on someone's age.\r\n\r\nThe home screen has already been started for you, but the app still needs 4 recommendations and the code needs to be added.\r\n\r\n## Do This\r\n**Planning**\r\n- Decide what 4 things you would like to recommend based on someone's age. It can be music or movies or books or foods or places to visit - whatever you decide.\r\n\r\n**In Design Mode:**\r\n- Use labels or images to add your 4 items to each of the other screens\r\n\r\n**In Code Mode:**\r\n- When the + button is pressed: have it increase the age on the screen by 1\r\n- When the - button is pressed: have it decrease the age on the screen by 1\r\n- When the \"Recommend\" button is pressed: have it go to a certain screen based on what the user pressed\r\n\r\nMore detailed instructions are available in the starter code of the app",
     "parent_level_id": 20595,
     "name_suffix": "_2021",
     "mini_rubric": "false",
@@ -86,12 +89,15 @@
       "/docs/concepts/maker-toolkit/board-events/"
     ],
     "callout_json": "[]",
+    "display_name": "Age Recommender",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L5/challenge/D.png",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"homeScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 17px; padding: 2px 15px; width: 320px; height: 90px; position: absolute; left: 0px; top: 5px; text-align: center;\" id=\"directionsLabel\">Use the buttons on the screen to enter your age. Then press the \"Recommend\" button to view a recommendation!</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; padding: 2px 15px; width: 105px; height: 105px; position: absolute; left: 105px; top: 165px; font-size: 50px; text-align: center;\" id=\"ageLabel\">0</label><button id=\"plusButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 55px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; position: absolute; left: 165px; top: 305px; font-size: 30px;\">+</button><button id=\"minusButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 55px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; position: absolute; left: 90px; top: 305px; font-size: 30px;\">-</button><button id=\"recommendButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 45px; width: 130px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 365px;\">Recommend</button></div><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"choice1Screen\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"choice2Screen\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"choice3Screen\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"choice4Screen\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "start_blocks": "var age = 0;\r\nonEvent(\"plusButton\", \"click\", function() {\r\n  // Use the counter pattern to add 1 to the age variable\r\n  \r\n  // Use setText to update the ageLabel\r\n  \r\n});\r\nonEvent(\"minusButton\", \"click\", function() {\r\n  // Use the counter pattern to subtract 1 to the age variable\r\n  \r\n  // Use setText to update the ageLabel\r\n  \r\n});\r\nonEvent(\"submitButto\", \"click\", function() {\r\n  // Use an if-statement to check the value of the age variable\r\n  // Use the setScreen block to change to a specific screen based on their age\r\n  \r\n  //Repeat this 4 times for each screen\r\n  \r\n});\r\n",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "display_name": "Challenge D",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L5/challenge/D.png"
+    "bubble_choice_description": "Create an app that recommends something based on the users age. For example: recommend a movie or book or place to visit based on a person's age."
   },
   "game_id": 41,
   "published": true,
@@ -99,7 +105,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-18T23:52:37.418+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalC_2022\"},{\"changed_at\":\"2021-12-18 23:52:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:05:02 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-18T23:52:37.418+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalC_2022\"},{\"changed_at\":\"2021-12-18 23:52:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:05:02 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-28 22:24:20 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-28 22:25:31 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-28 22:27:17 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-28 22:28:22 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-28 22:34:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

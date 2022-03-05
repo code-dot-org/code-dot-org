@@ -8399,6 +8399,9 @@ nl:
             csf_events:
               display_name: Gebeurtenissen
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variabelen
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -8504,6 +8507,242 @@ nl:
               key: Les 15
             lesson-16:
               key: Les 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-5:
+              display_name: Sandbox
+        coursef-2022-pilot:
+          lessons:
+            Outbreak:
+              name: Uitbraak
+              key: Uitbraak
+            The Internet:
+              name: Het Internet
+              key: Het Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitaal Burgerschap
+            ramp_up:
+              display_name: Sprites
+            lessonGroup-8:
+              display_name: Variabelen
+          description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer
+            je eigen kunst, verhaal of spel.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: De projecten die jullie tijdens de cursus hebben
+                ontwikkeld, hebben veel creativiteit in de community geïnspireerd!
+                Er wordt een literair buurtfeest gehouden worden om creatieve verhalen,
+                scripts, liedteksten, brieven en gedichten te laten zien. Het Literair
+                buurtfeest-project is een groot project waar je gedurende de hele
+                unit aan werkt, en projectmanagementstrategieën helpen om je werk
+                te organiseren en te structureren. Je verkent strategieën voor het
+                schrijven en structureren van code zodat andere software-ingenieurs
+                het gemakkelijk kunnen begrijpen, en je gebruikt een Java-tool om
+                programmadocumentatie te maken.
+              description_teacher: Leerlingen maken kennis met het Literair buurtfeest-project
+                en evalueren de vereisten en voorbeelden om vragen en hoofdkenmerken
+                te identificeren. Alvorens aan het project te beginnen, breiden leerlingen
+                hun begrip van programmastructuur en commentaar uit door best practices
+                te identificeren en het gebruik van Javadocs te onderzoeken om programmadocumentatie
+                te genereren.
+            Exploring Integer and Double Objects:
+              description_student: Je construeert `Integer` en `Dubbel` objecten om
+                `int` en `double` primitieve waarden als referentiewaarden weer te
+                geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen,
+                retourneer je de waarden die deze objecten opslaan als primitieve
+                waarden. Je onderzoekt ook de minimum en maximum waarden voor gehele
+                getallen om overloopfouten te voorkomen, voordat je de taken plant
+                die je moet voltooien voor je Literair buurtfeest-project.
+              description_teacher: Leerlingen construeren `Integer` en `Dubbel` objecten
+                om `int` en `double` primitieve waarden als referentiewaarden weer
+                te geven. Met behulp van de methoden in de `Integer` en `Dubbel` klassen,
+                retourneren de leerlingen de waarden die deze objecten opslaan als
+                primitieve waarden. Leerlingen onderzoeken ook de minimum- en maximumwaarden
+                voor gehele getallen om overloopfouten te voorkomen voordat ze de
+                taken plannen die ze moeten voltooien voor hun Literair buurtfeest-project.
+            Using ArrayLists to Store Data:
+              description_student: Bij het werken met arrays en lijsten komen we soms
+                problemen tegen waarbij het aantal elementen onbekend is of de grootte
+                van de lijst voortdurend verandert. In deze les leer je over `ArrayList`s
+                en leer je scenario\`s kennen waar deze data structuur meer geschikt
+                is.
+              description_teacher: De leerlingen maken `ArrayList`s om `int` en `dubbel`
+                waarden op te slaan. De leerlingen maken onderscheid tussen `ArrayList`
+                en één-dimensionale arrays om te bepalen welke datastructuur het meest
+                geschikt is voor een scenario. Leerlingen voegen elementen toe aan
+                een `ArrayList` en leren hoe autoboxing converteert tussen primitieve
+                waarden en “wrapper classes” terwijl ze werken met de opgeslagen data.
+            Working with ArrayList Data:
+              description_student: Je gebruikt de `ArrayList` methoden `get()` en
+                `set()` om elementen op te halen en te wijzigen en je leert over de
+                `String` methode `length()` om het aantal karakters in een `String`
+                object te tellen. Je past de standaard algoritmes die je hebt ontwikkeld
+                met 1D en 2D arrays toe om elementen in een `ArrayList` te wijzigen.
+                Je leert hoe unboxing conversies uitvoert tussen primitieve waarden
+                en wrapper classes als ze werken met data opgeslagen in een `ArrayList`.
+              description_teacher: Leerlingen werken met de `get()` en `set()` methoden
+                om elementen in een `ArrayList` op te halen en te wijzigen en leren
+                over de `String` methode `length()` om het aantal karakters in een
+                `String` object te retourneren. Ze passen de standaard algoritmes
+                toe die ze hebben ontwikkeld met 1D en 2D arrays om elementen in een
+                `ArrayList` te wijzigen. Leerlingen leren hoe unboxing conversies
+                uitvoert tussen primitieve waarden en wrapper classes terwijl ze werken
+                met data opgeslagen in een `ArrayList`.
+            Storing Objects in an ArrayList:
+              description_student: Tot nu toe heb je `ArrayList`s gemaakt om `Integer`s,
+                `Dubbels en`String`s op te slaan. Net als met 1D en 2D arrays, kun
+                je ook objecten die je maakt opslaan in een`ArrayList`. In deze les
+                maak je een`ArrayList\` van objecten om de standaard algoritmes die
+                je het hele jaar hebt gebruikt toe te passen om te werken met de gegevens
+                die in deze lijst zijn opgeslagen.
+              description_teacher: Leerlingen maken `ArrayList`s om objecten op te
+                slaan en leren over generieke types in Java. Leerlingen passen de
+                algoritmes die ze geleerd hebben met een-dimensionale arrays toe op
+                `ArrayList`s om de minimum en maximum waarden te vinden, sommen en
+                gemiddelden te berekenen of elementen te vinden die aan specifieke
+                criteria voldoen.
+            Removing Data from an ArrayList:
+              description_student: Je onderzoekt de functionaliteit van de `remove()`
+                methode in de `ArrayList` klasse en identificeert mogelijke fouten
+                wanneer je items probeert te verwijderen terwijl je door de lijst
+                gaat. In het proces, realiseer je je wanneer een `ArrayList` het beste
+                is voor een scenario of probleem.
+              description_teacher: Leerlingen verkennen de functionaliteit van de
+                `remove()` methode in de `ArrayList` klasse en identificeren mogelijke
+                fouten bij het verwijderen van items tijdens het doorlopen van de
+                lijst. De leerlingen realiseren zich dan wanneer een `ArrayList` het
+                beste is voor een scenario of probleem.
+            Using String Methods:
+              description_student: Je verkent de structuur van een `String` en herinnert
+                je dat `String`s objecten zijn. Je gebruikt de `indexOf()` en `substring()`
+                methoden om te zoeken naar substrings binnen een `String` en om nieuwe
+                `String` objecten te maken van een bestaande `String`.
+              description_teacher: Leerlingen onderzoeken de structuur van een `String`
+                en herinneren zich dat `String`s objecten zijn. De leerlingen gebruiken
+                de `indexOf()` en `substring()` methoden om te zoeken naar substrings
+                binnen een `String` en om nieuwe `String` objecten te maken van een
+                bestaande `String`.
+            Comparing Strings:
+              description_student: Je onderzoekt het gebruik van `compareTo()` om
+                te controleren of `String`s in alfabetische volgorde staan. Daarna
+                werk je aan je literaire buurtfeest project, waarbij je je specifiek
+                richt op de taken die je op je projectplanbord hebt staan.
+              description_teacher: Leerlingen onderzoeken het gebruik van `compareTo()`
+                om te controleren of `String`s in alfabetische volgorde staan. Daarna
+                werken de leerlingen aan hun Literair buurtfeest-project, waarbij
+                ze zich specifiek richten op de taken die ze op hun projectplanbord
+                hebben staan.
+            Solving Problems with Strings:
+              description_student: Je combineert je kennis van standaard algoritmen
+                en `String`s om te controleren of een `String` een palindroom is.
+                Daarna neem je deel aan een peer-feedback sessie en reflecteer je
+                op je voortgang van je Literair buurtfeest-project.
+              description_teacher: Leerlingen combineren hun kennis van standaard
+                algoritmen en `String`s om te controleren of een `String` een palindroom
+                is. Leerlingen nemen vervolgens deel aan een peer-feedback sessie
+                en reflecteren op hun voortgang van hun Literair buurtfeest-project.
+            Solving Problems with ArrayLists:
+              description_student: Je past standaard algoritmes die je schreef voor
+                1D en 2D arrays toe op `ArrayList`s. Je implementeert een nieuw standaard
+                algoritme om individuele cijfers uit een geheel getal te halen voordat
+                je eerdere algoritmes aanpast en toepast om elementen te verwisselen,
+                duplicaten te verwijderen, of elementen te vinden die aan specifieke
+                criteria voldoen in je Literair buurtfeest-project.
+              description_teacher: Leerlingen passen standaard algoritmes die ze schreven
+                voor 1D en 2D arrays toe op `ArrayList`s. Leerlingen implementeren
+                een nieuw standaard algoritme om individuele cijfers uit een geheel
+                getal te halen voordat ze eerdere algoritmes aanpassen en toepassen
+                om elementen te verwisselen, dubbels te verwijderen, of elementen
+                te vinden die aan specifieke criteria voldoen in hun Literair buurtfeest-project.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Literair buurtfeest-project - Dag 1
+              description_student: Je gaat verder met het ontwikkelen van je Literair
+                buurtfeest-project om een verhaal, poëzie, lied, of een andere vorm
+                van literatuur te creëren gebaseerd op de analyse van het werk van
+                je favoriete auteur of artiest. Je beoordeelt eerst zelf je werk om
+                je vooruitgang te evalueren bij het voltooien van de projectvereisten,
+                dan schrijf je acceptatiecriteria voor een functie in je project die
+                een medeleerling zal testen. Je gebruikt de zelfevaluatie en de peer
+                feedback om prioriteiten te stellen in resterende taken en je project
+                verder te ontwikkelen.
+              description_teacher: Leerlingen gaan verder met het ontwikkelen van
+                hun Literair buurtfeest-project om een verhaal, poëzie, lied, of een
+                andere vorm van literatuur te creëren, gebaseerd op de analyse van
+                het werk van hun favoriete auteur of artiest. Leerlingen beoordelen
+                eerst zelf hun werk om hun vooruitgang te evalueren bij het voltooien
+                van de projectvereisten, schrijven dan acceptatiecriteria voor een
+                onderdeel van hun project dat een medeleerling zal testen. Leerlingen
+                gebruiken de zelfevaluatie en de feedback van hun medeleerlingen om
+                prioriteiten te stellen in hun resterende en hun projecten verder
+                te ontwikkelen.
+              key: Literair buurtfeest-project - Dag 1
+            Neighborhood Lit Fest Project - Day 2:
+              name: Literair buurtfeest-project - Dag 2
+              description_student: In de vorige les heb je een zelfevaluatie uitgevoerd
+                en acceptatiecriteria voor je project geschreven. In deze les krijg
+                je feedback van medeleerlingen om de resterende taken te identificeren
+                en je literaire buurtfeestproject verder te ontwikkelen.
+              description_teacher: In de vorige les voerden de leerlingen zelfbeoordelingen
+                uit en schreven ze acceptatiecriteria voor hun projecten. In deze
+                les krijgen de leerlingen feedback van medeleerlingen om te bepalen
+                welke taken nog moeten worden uitgevoerd en om hun Literair buurtfeest-projecten
+                verder te ontwikkelen.
+              key: Literair buurtfeest-project - Dag 2
+            Neighborhood Lit Fest Project - Day 3:
+              name: Literair buurtfeest-project - Dag 3
+              description_student: Je maakt de laatste revisies en updates op basis
+                van je codebeoordelingen en Projectplanbord. Je deelt je Literair
+                buurtfeest-project met je medeleerlingen. Vervolgens vier je je succes
+                en voltooi je een laatste reflectie van het ontwikkelingsproces.
+              description_teacher: Leerlingen maken de laatste revisies en updates
+                gebaseerd op hun codebeoordelingen en het Projectplanbord. Leerlingen
+                delen hun Literair buurtfeest-projecten met hun medeleerlingen. Leerlingen
+                vieren dan hun succes en voltooien een laatste reflectie van het ontwikkelingsproces.
+              key: Literair buurtfeest-project - Dag 3
+            Assessment Day:
+              description_student: In deze unit heb je `ArrayList`s gebruikt om programmagegevens
+                op te slaan en onderscheid gemaakt tussen wanneer je 1D en 2D arrays
+                en `ArrayList`s moet gebruiken. Je hebt de voordelen en functionaliteit
+                van een `ArrayList` verkend, en deze gebruikt om problemen op te lossen
+                met numerieke en object data. Je hebt methoden in de `String` klasse
+                gebruikt om tekst, verkregen uit gebruikers- en bestandsinvoer, te
+                analyseren en te verwerken. Gedurende de gehele unit heb je programmadocumentatie
+                geschreven met behulp van eenregelig commentaar, meerregelig commentaar
+                en Javadoc commentaar om API documentatie te maken. In het proces
+                identificeerde en documenteerde je precondities en postcondities van
+                objecten en methodes. Nu evalueer je het bereiken van de leerdoelen
+                en vaardigheden van de unit op een meerkeuzebeoordeling.
+              description_teacher: In deze unit gebruikten de leerlingen `ArrayList`s
+                om programmagegevens op te slaan en maakten ze onderscheid tussen
+                het gebruik van 1D en 2D arrays en `ArrayList`s. Leerlingen onderzochten
+                de voordelen en functionaliteit van een `ArrayList`, en gebruikten
+                deze om problemen op te lossen met numerieke en objectgegevens. Leerlingen
+                gebruikten methoden in de `String` klasse om tekst, verkregen uit
+                gebruikers- en bestandsinvoer, te analyseren en te verwerken. Gedurende
+                de hele unit schreven de leerlingen programmadocumentatie met behulp
+                van eenregelig commentaar, meerregelig commentaar en Javadoc commentaar
+                om API documentatie te maken. In het proces, identificeerden en documenteerden
+                de leerlingen precondities en postcondities van objecten en methodes.
+                Nu evalueren de leerlingen het bereiken van de leerdoelen en vaardigheden
+                van de unit op een meerkeuzebeoordeling.
+            lesson-1:
+              key: Les 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-5:
+              display_name: Sandbox
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Content

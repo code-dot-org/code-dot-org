@@ -279,6 +279,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/dance-2019/unversioned": {
+          "word": "coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "event/dance-2019/unversioned": {
@@ -442,7 +443,7 @@
           "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
         },
         "drop/courseb/2021": {
-          "word": "Grand écart",
+          "word": "Drop",
           "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
         },
         "double_click/courseb/2021": {
@@ -494,7 +495,7 @@
           "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
         },
         "drop/coursea/2021": {
-          "word": "Grand écart",
+          "word": "Drop",
           "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
         },
         "double_click/coursea/2021": {
@@ -727,7 +728,7 @@
           "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
         },
         "drop/pre-express/2021": {
-          "word": "Grand écart",
+          "word": "Drop",
           "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
         },
         "double_click/pre-express/2021": {
