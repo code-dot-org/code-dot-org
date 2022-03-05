@@ -12,7 +12,6 @@ import teacherSections, {
   setSections,
   selectSection,
   setRosterProvider,
-  setValidAssignments,
   setCourseOfferings,
   setValidGrades,
   setTextToSpeechUnitIds,
@@ -74,7 +73,6 @@ $(document).ready(function() {
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setCourseOfferings(validCourseOfferings));
-  store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setLessonExtrasUnitIds(lessonExtrasUnitIds));

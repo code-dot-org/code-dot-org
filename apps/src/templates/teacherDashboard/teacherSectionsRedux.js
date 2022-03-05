@@ -48,7 +48,6 @@ const importUrlByProvider = {
 // Action keys
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
-const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
 const SET_LESSON_EXTRAS_UNIT_IDS =
   'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
@@ -136,11 +135,6 @@ export const setRosterProvider = rosterProvider => ({
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
   courseOfferings
-});
-export const setValidAssignments = (validCourses, validScripts) => ({
-  type: SET_VALID_ASSIGNMENTS,
-  validCourses,
-  validScripts
 });
 export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
@@ -426,31 +420,20 @@ export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-    '/dashboardapi/sections/valid_course_offerings',
-    `/dashboardapi/courses`,
-    '/dashboardapi/sections/valid_scripts'
+    '/dashboardapi/sections/valid_course_offerings'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
 
   return Promise.all(apis.map(fetchJSON))
-    .then(
-      ([
-        sections,
-        validCourseOfferings,
-        validCourses,
-        validScripts,
-        students
-      ]) => {
-        dispatch(setCourseOfferings(validCourseOfferings));
-        dispatch(setValidAssignments(validCourses, validScripts));
-        dispatch(setSections(sections));
-        if (id) {
-          dispatch(setStudentsForCurrentSection(id, students));
-        }
+    .then(([sections, validCourseOfferings, students]) => {
+      dispatch(setCourseOfferings(validCourseOfferings));
+      dispatch(setSections(sections));
+      if (id) {
+        dispatch(setStudentsForCurrentSection(id, students));
       }
-    )
+    })
     .catch(err => {
       console.error(err.message);
     })
@@ -573,8 +556,6 @@ const initialState = {
   validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
-  // A map from assignmentId to assignment (see assignmentShape PropType).
-  validAssignments: {},
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -713,56 +694,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings
-    };
-  }
-
-  if (action.type === SET_VALID_ASSIGNMENTS) {
-    const validAssignments = {};
-
-    // Array of assignment ids of units which belong to any valid courses.
-    let secondaryAssignmentIds = [];
-
-    // NOTE: We depend elsewhere on the order of our keys in validAssignments
-    action.validCourses.forEach(course => {
-      const assignId = assignmentId(course.id, null);
-      const scriptAssignIds = (course.script_ids || []).map(scriptId =>
-        assignmentId(null, scriptId)
-      );
-      validAssignments[assignId] = {
-        ..._.omit(course, 'script_ids'),
-        courseId: course.id,
-        scriptId: null,
-        scriptAssignIds,
-        assignId,
-        path: `/courses/${course.script_name}`
-      };
-
-      secondaryAssignmentIds.push(...scriptAssignIds);
-    });
-    secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
-
-    action.validScripts.forEach(unit => {
-      const assignId = assignmentId(null, unit.id);
-
-      // Put each unit in its own assignment family with the default version
-      // year, unless those values were provided by the server.
-      const assignmentFamilyName =
-        unit.assignment_family_name || unit.script_name;
-      validAssignments[assignId] = {
-        ...unit,
-        courseId: null,
-        scriptId: unit.id,
-        assignId,
-        path: `/s/${unit.script_name}`,
-        assignment_family_name: assignmentFamilyName,
-        version_year: unit.version_year,
-        version_title: unit.version_title
-      };
-    });
-
-    return {
-      ...state,
-      validAssignments
     };
   }
 
