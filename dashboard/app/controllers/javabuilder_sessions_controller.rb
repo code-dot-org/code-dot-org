@@ -13,7 +13,7 @@ class JavabuilderSessionsController < ApplicationController
 
   # GET /javabuilder/access_token
   def get_access_token
-    teacher_list = get_teacher_list
+    teacher_list = get_teacher_list.join(',')
     channel_id = params[:channelId]
     project_version = params[:projectVersion]
     # TODO: remove project_url after javabuilder is deployed with update to no longer need it
