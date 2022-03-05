@@ -70,11 +70,6 @@ export default class AssignmentSelector extends Component {
   }
   onChangeCourseOffering = event => {
     const courseOfferingId = event.target.value;
-    let courseVersions = [];
-    if (courseOfferingId !== noAssignment && courseOfferingId !== decideLater) {
-      courseVersions = this.props.courseOfferings[courseOfferingId]
-        .course_versions;
-    }
 
     if (courseOfferingId === noAssignment || courseOfferingId === decideLater) {
       this.setState(
@@ -98,36 +93,11 @@ export default class AssignmentSelector extends Component {
         },
         this.reportChange
       );
-    } else if (Object.values(courseVersions).length === 1) {
-      let courseVersionId = Object.values(courseVersions)[0].id;
-
-      if (Object.values(courseVersions.units).length === 1) {
-        this.setState(
-          {
-            selectedUnitId: Object.values(courseVersions.units)[0].id,
-            selectedCourseVersionId: courseVersionId,
-            selectedCourseOfferingId: courseOfferingId
-          },
-          this.reportChange
-        );
-      } else {
-        this.setState(
-          {
-            selectedUnitId: noAssignment,
-            selectedCourseVersionId: courseVersionId,
-            selectedCourseOfferingId: courseOfferingId
-          },
-          this.reportChange
-        );
-      }
     }
   };
 
   onChangeCourseVersion = value => {
     const courseVersionId = value;
-    const units = this.props.courseOfferings[
-      this.state.selectedCourseOfferingId
-    ].course_versions[courseVersionId].units;
 
     if (
       courseVersionId === noAssignment ||
@@ -136,15 +106,6 @@ export default class AssignmentSelector extends Component {
       this.setState(
         {
           selectedUnitId: noAssignment,
-          selectedCourseVersionId: courseVersionId
-        },
-        this.reportChange
-      );
-    } else if (Object.values(units).length === 1) {
-      let unitId = Object.values(units)[0].id;
-      this.setState(
-        {
-          selectedUnitId: unitId,
           selectedCourseVersionId: courseVersionId
         },
         this.reportChange
