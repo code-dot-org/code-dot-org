@@ -66,7 +66,7 @@ export default class AssignmentSelector extends Component {
     };
   }
   onChangeCourseOffering = event => {
-    const courseOfferingId = event.target.value;
+    const courseOfferingId = Number(event.target.value);
 
     if (courseOfferingId === noAssignment || courseOfferingId === decideLater) {
       this.setState(
@@ -94,7 +94,7 @@ export default class AssignmentSelector extends Component {
   };
 
   onChangeCourseVersion = value => {
-    const courseVersionId = value;
+    const courseVersionId = Number(value);
 
     if (
       courseVersionId === noAssignment ||
@@ -113,7 +113,7 @@ export default class AssignmentSelector extends Component {
   onChangeUnit = event => {
     this.setState(
       {
-        selectedUnitId: event.target.value
+        selectedUnitId: Number(event.target.value)
       },
       this.reportChange
     );
