@@ -936,7 +936,9 @@ export default function teacherSections(state = initialState, action) {
     const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
       const unit =
-        state.validAssignments[assignmentId(null, action.props.scriptId)];
+        state.courseOfferings[action.props.courseOfferingId].course_versions[
+          action.props.courseVersionId
+        ].units[action.props.unitId];
       if (unit) {
         lessonExtraSettings.lessonExtras =
           unit.lesson_extras_available || defaultLessonExtras;
@@ -1206,12 +1208,14 @@ export function isSaveInProgress(state) {
 }
 
 export function assignedUnitName(state) {
-  const {sectionBeingEdited, validAssignments} = getRoot(state);
+  const {sectionBeingEdited, courseOfferings} = getRoot(state);
   if (!sectionBeingEdited) {
     return '';
   }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+  const assignment =
+    courseOfferings[sectionBeingEdited.courseOfferingId].course_versions[
+      sectionBeingEdited.courseVersionId
+    ].units[sectionBeingEdited.unitId];
   return assignment ? assignment.name : '';
 }
 
@@ -1226,7 +1230,7 @@ export function getVisibleSections(state) {
  * @param {number[]} sectionIds - List of section ids we want row data for
  */
 export function getSectionRows(state, sectionIds) {
-  const {sections, validAssignments} = getRoot(state);
+  const {sections, courseOfferings} = getRoot(state);
   return sectionIds.map(id => ({
     ..._.pick(sections[id], [
       'id',
@@ -1238,14 +1242,14 @@ export function getSectionRows(state, sectionIds) {
       'providerManaged',
       'hidden'
     ]),
-    assignmentNames: assignmentNames(validAssignments, sections[id]),
-    assignmentPaths: assignmentPaths(validAssignments, sections[id])
+    assignmentNames: assignmentNames(courseOfferings, sections[id]),
+    assignmentPaths: assignmentPaths(courseOfferings, sections[id])
   }));
 }
 
 export function getAssignmentName(state, sectionId) {
-  const {sections, validAssignments} = getRoot(state);
-  return assignmentNames(validAssignments, sections[sectionId])[0];
+  const {sections, courseOfferings} = getRoot(state);
+  return assignmentNames(courseOfferings, sections[sectionId])[0];
 }
 /**
  * Maps from the data we get back from the server for a section, to the format
@@ -1319,20 +1323,27 @@ export function serverSectionFromSection(section) {
   };
 }
 
-const assignmentsForSection = (validAssignments, section) => {
+const assignmentsForSection = (courseOfferings, section) => {
   const assignments = [];
-  if (section.courseId) {
-    const assignId = assignmentId(section.courseId, null);
-    if (validAssignments[assignId]) {
-      assignments.push(validAssignments[assignId]);
+  if (section.courseOfferingId && section.courseVersionId) {
+    const courseVersion =
+      courseOfferings[section.courseOfferingId]?.course_versions[
+        section.courseVersionId
+      ];
+    if (courseVersion) {
+      assignments.push({
+        name: courseVersion.content_root_name,
+        path: courseVersion.content_root_path
+      });
+    }
+
+    if (section.unitId) {
+      if (courseVersion.units[section.unitId]) {
+        assignments.push(courseVersion.units[section.unitId]);
+      }
     }
   }
-  if (section.scriptId) {
-    const assignId = assignmentId(null, section.scriptId);
-    if (validAssignments[assignId]) {
-      assignments.push(validAssignments[assignId]);
-    }
-  }
+
   return assignments;
 };
 
@@ -1340,8 +1351,8 @@ const assignmentsForSection = (validAssignments, section) => {
  * Get the name of the course/unit assigned to the given section
  * @returns {string[]}
  */
-export const assignmentNames = (validAssignments, section) => {
-  const assignments = assignmentsForSection(validAssignments, section);
+export const assignmentNames = (courseOfferings, section) => {
+  const assignments = assignmentsForSection(courseOfferings, section);
   // we might not have an assignment object if we have a section that was somehow
   // assigned to a hidden unit (and we dont have permissions to see hidden units)
   return assignments.map(assignment => (assignment ? assignment.name : ''));
@@ -1351,8 +1362,8 @@ export const assignmentNames = (validAssignments, section) => {
  * Get the path of the course/unit assigned to the given section
  * @returns {string[]}
  */
-export const assignmentPaths = (validAssignments, section) => {
-  const assignments = assignmentsForSection(validAssignments, section);
+export const assignmentPaths = (courseOfferings, section) => {
+  const assignments = assignmentsForSection(courseOfferings, section);
   return assignments.map(assignment => (assignment ? assignment.path : ''));
 };
 
