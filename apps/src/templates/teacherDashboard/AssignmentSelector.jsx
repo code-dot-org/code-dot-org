@@ -6,7 +6,7 @@ import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
-const noAssignment = 0;
+const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
@@ -33,16 +33,13 @@ export default class AssignmentSelector extends Component {
 
     const {section} = props;
 
-    let selectedCourseOfferingId, selectedCourseVersionId, selectedUnitId;
-    if (!section) {
-      selectedCourseOfferingId = noAssignment;
-      selectedCourseVersionId = noAssignment;
-      selectedUnitId = noAssignment;
-    } else {
-      selectedCourseOfferingId = section.courseOfferingId;
-      selectedCourseVersionId = section.courseVersionId;
-      selectedUnitId = section.unitId;
-    }
+    const selectedCourseOfferingId = section.courseOfferingId
+      ? section.courseOfferingId
+      : noAssignment;
+    const selectedCourseVersionId = section.courseVersionId
+      ? section.courseVersionId
+      : noAssignment;
+    const selectedUnitId = section.unitId ? section.unitId : noAssignment;
 
     this.state = {
       selectedCourseOfferingId,

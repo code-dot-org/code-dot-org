@@ -1144,9 +1144,9 @@ export function assignedUnitName(state) {
     return '';
   }
   const assignment =
-    courseOfferings[sectionBeingEdited.courseOfferingId].course_versions[
+    courseOfferings[sectionBeingEdited.courseOfferingId]?.course_versions[
       sectionBeingEdited.courseVersionId
-    ].units[sectionBeingEdited.unitId];
+    ]?.units[sectionBeingEdited.unitId];
   return assignment ? assignment.name : '';
 }
 
