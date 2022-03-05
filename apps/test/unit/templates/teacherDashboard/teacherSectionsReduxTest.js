@@ -68,11 +68,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
-    courseOfferingId: null,
-    courseVersionId: null,
+    courseOfferingId: 2,
+    courseVersionId: 3,
     unitId: null,
-    script: null,
-    course_id: 29,
     createdAt: createdAt,
     studentCount: 10,
     hidden: false,
@@ -90,14 +88,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
-    courseOfferingId: null,
-    courseVersionId: null,
-    unitId: null,
-    script: {
-      id: 36,
-      name: 'course3'
-    },
-    course_id: null,
+    courseOfferingId: 1,
+    courseVersionId: 1,
+    unitId: 1,
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
@@ -115,14 +108,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: false,
     sharing_disabled: false,
-    courseOfferingId: null,
-    courseVersionId: null,
-    unitId: null,
-    script: {
-      id: 112,
-      name: 'csp1-2017'
-    },
-    course_id: 29,
+    courseOfferingId: 3,
+    courseVersionId: 5,
+    unitId: 7,
     createdAt: createdAt,
     studentCount: 0,
     hidden: false,
@@ -818,7 +806,7 @@ describe('teacherSectionsRedux', () => {
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
       server.respondWith(
         'GET',
-        '/dashboardapi/sections/valid_scripts',
+        '/dashboardapi/sections/valid_course_offerings',
         successResponse()
       );
       server.respondWith(
@@ -860,10 +848,9 @@ describe('teacherSectionsRedux', () => {
         '/dashboardapi/sections',
         successResponse(sections)
       );
-      server.respondWith('GET', '/dashboardapi/courses', successResponse());
       server.respondWith(
         'GET',
-        '/dashboardapi/sections/valid_scripts',
+        '/dashboardapi/sections/valid__course_offerings',
         successResponse()
       );
       server.respond();
@@ -1320,10 +1307,9 @@ describe('teacherSectionsRedux', () => {
         successResponse({})
       );
       server.respondWith('GET', '/dashboardapi/sections', successResponse([]));
-      server.respondWith('GET', '/dashboardapi/courses', successResponse([]));
       server.respondWith(
         'GET',
-        '/dashboardapi/sections/valid_scripts',
+        '/dashboardapi/sections/valid_course_offerings',
         successResponse([])
       );
     });
@@ -1424,7 +1410,7 @@ describe('teacherSectionsRedux', () => {
         expect(server.requests[2].url).to.equal('/dashboardapi/courses');
         expect(server.requests[3].method).to.equal('GET');
         expect(server.requests[3].url).to.equal(
-          '/dashboardapi/sections/valid_scripts'
+          '/dashboardapi/sections/valid_course_offerings'
         );
         expect(Object.keys(getState().teacherSections.sections)).to.have.length(
           sections.length
