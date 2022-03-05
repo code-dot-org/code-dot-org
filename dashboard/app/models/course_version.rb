@@ -160,7 +160,7 @@ class CourseVersion < ApplicationRecord
         locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
         content_root: {
           id: content_root.id,
-          name: content_root.name,
+          name: content_root.localized_title,
           path: content_root.link,
           type: content_root_type
         },

@@ -1331,10 +1331,7 @@ const assignmentsForSection = (courseOfferings, section) => {
         section.courseVersionId
       ];
     if (courseVersion) {
-      assignments.push({
-        name: courseVersion.content_root_name,
-        path: courseVersion.content_root_path
-      });
+      assignments.push(courseVersion.content_root);
     }
 
     if (section.unitId) {

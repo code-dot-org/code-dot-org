@@ -74,13 +74,20 @@ export const assignmentShape = PropTypes.shape({
 
 export const assignmentUnitShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
+  lesson_extras_available: PropTypes.bool.isRequired
 });
 
 export const assignmentCourseVersionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   display_name: PropTypes.string.isRequired,
-  units: PropTypes.objectOf(assignmentUnitShape).isRequired
+  version_year: PropTypes.string.isRequired,
+  is_stable: PropTypes.bool.isRequired,
+  is_recommended: PropTypes.bool.isRequired,
+  locales: PropTypes.array,
+  content_root: PropTypes.object,
+  units: PropTypes.object.isRequired
 });
 
 export const assignmentCourseOfferingShape = PropTypes.shape({
@@ -88,7 +95,7 @@ export const assignmentCourseOfferingShape = PropTypes.shape({
   display_name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   is_featured: PropTypes.bool.isRequired,
-  course_versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired
+  course_versions: PropTypes.object.isRequired
 });
 
 // Represents a version of an assignment (script or course) as it
