@@ -335,7 +335,7 @@ class Script < ApplicationRecord
 
   def self.maker_units(user)
     return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?)
-    return_units + all_scripts.select {|s| s.has_pilot_access?(user) && s.is_maker_unit?}
+    return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
   end
 
   def self.text_to_speech_unit_ids
