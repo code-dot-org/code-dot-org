@@ -51,6 +51,7 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: true,
         locales: ['English', 'Italiano', 'Slovenčina'],
+        //TODO: Add content roots here in test data
         units: {
           2: {
             id: 2,
@@ -97,7 +98,7 @@ export const courseOfferings = {
         version_year: '2022',
         display_name: '2022',
         is_stable: true,
-        is_recommended: false,
+        is_recommended: true,
         locales: [],
         units: {7: {id: 7, name: 'Unit 1'}, 8: {id: 8, name: 'Unit 2'}}
       }
