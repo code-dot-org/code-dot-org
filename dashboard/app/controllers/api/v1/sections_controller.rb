@@ -71,18 +71,18 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.find(params[:id])
     authorize! :manage, section
 
-    puts params
-    # TODO: use courseOfferingId, courseVersionId, and unitId to set things correctly here
-
-    course_id = params[:course_id]
+    course_version_id = params[:course_version_id]
+    course_version = CourseVersion.find_by_id(course_version_id) if course_version_id
+    course_id = course_version.content_root_id if course_version&.content_root_type == 'UnitGroup'
+    unit_id = course_version.content_root_id if course_version&.content_root_type == 'Script'
 
     # This endpoint needs to satisfy two endpoint formats for getting script_id
     # This should be updated soon to always expect params[:script_id]
-    script_id = params[:script][:id] if params[:script]
-    script_id ||= params[:script_id]
+    unit_id = params[:script][:id] if params[:script]
+    unit_id ||= params[:unit_id]
 
-    if script_id
-      script = Script.get_from_cache(script_id)
+    if unit_id
+      script = Script.get_from_cache(unit_id)
       return head :bad_request if script.nil?
       # If given a course and script, make sure the script is in that course
       return head :bad_request if course_id && course_id != script.unit_group.try(:id)
@@ -95,7 +95,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
     fields[:course_id] = set_course_id(course_id)
-    fields[:script_id] = set_script_id(script_id)
+    fields[:script_id] = set_script_id(unit_id)
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
@@ -106,7 +106,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
 
     section.update!(fields)
-    if script_id
+    if unit_id
       section.students.each do |student|
         student.assign_script(script)
       end
