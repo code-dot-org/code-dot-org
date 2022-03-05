@@ -88,7 +88,7 @@ export default class AssignmentSelector extends Component {
     } else if (this.state.selectedCourseOfferingId !== courseOfferingId) {
       const recommendedCourseVersionId = Object.values(
         this.props.courseOfferings[courseOfferingId].course_versions
-      ).find(versions => versions.is_recommended).id;
+      ).find(versions => versions.is_recommended)?.id;
 
       this.setState(
         {
