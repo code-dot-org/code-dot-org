@@ -81,9 +81,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     unit_id = params[:unit_id] if course_version&.content_root_type == 'UnitGroup'
     unit_id = course_version.content_root_id if course_version&.content_root_type == 'Script'
 
-    puts unit_id
-    puts course_id
-
     if unit_id
       script = Script.get_from_cache(unit_id)
       return head :bad_request if script.nil?
