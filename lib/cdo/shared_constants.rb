@@ -52,7 +52,7 @@ module SharedConstants
 
   STUDENT_GRADE_LEVELS = OpenStruct.new(
     {
-      k: 'k',
+      k: 'K',
       '1': '1',
       '2': '2',
       '3': '3',
