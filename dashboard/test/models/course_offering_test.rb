@@ -329,11 +329,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
           @unit_group.course_version.id => {
             id: @unit_group.course_version.id,
             version_year: @unit_group.course_version.version_year,
-            display_name: @unit_group.course_version.display_name,
+            content_root_id: @unit_group.id,
+            name: @unit_group.localized_title,
+            path: @unit_group.link,
+            type: 'UnitGroup',
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: {@unit_in_course.id => {id: @unit_in_course.id, name: @unit_in_course.name}}
+            units: {@unit_in_course.id => {
+              id: @unit_in_course.id,
+              name: @unit_in_course.name,
+              path: @unit_in_course.link,
+              lesson_extras_available: false
+            }}
           }
         }
       },
@@ -346,20 +354,36 @@ class CourseOfferingTest < ActiveSupport::TestCase
           @unit_teacher_to_students.course_version.id => {
             id: @unit_teacher_to_students.course_version.id,
             version_year: @unit_teacher_to_students.course_version.version_year,
-            display_name: @unit_teacher_to_students.course_version.display_name,
+            content_root_id: @unit_teacher_to_students.id,
+            name: @unit_teacher_to_students.localized_title,
+            path: @unit_teacher_to_students.link,
+            type: 'Script',
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
-            units: {@unit_teacher_to_students.id => {id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}}
+            units: {@unit_teacher_to_students.id => {
+              id: @unit_teacher_to_students.id,
+              name: @unit_teacher_to_students.name,
+              path: @unit_teacher_to_students.link,
+              lesson_extras_available: false
+            }}
           },
           @unit_teacher_to_students2.course_version.id => {
             id: @unit_teacher_to_students2.course_version.id,
             version_year: @unit_teacher_to_students2.course_version.version_year,
-            display_name: @unit_teacher_to_students2.course_version.display_name,
+            content_root_id: @unit_teacher_to_students2.id,
+            name: @unit_teacher_to_students2.localized_title,
+            path: @unit_teacher_to_students2.link,
+            type: 'Script',
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: {@unit_teacher_to_students2.id => {id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}}
+            units: {@unit_teacher_to_students2.id => {
+              id: @unit_teacher_to_students2.id,
+              name: @unit_teacher_to_students2.name,
+              path: @unit_teacher_to_students2.link,
+              lesson_extras_available: false
+            }}
           }
         }
       }
@@ -379,11 +403,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
           @unit_facilitator_to_teacher.course_version.id => {
             id: @unit_facilitator_to_teacher.course_version.id,
             version_year: @unit_facilitator_to_teacher.course_version.version_year,
-            display_name: @unit_facilitator_to_teacher.course_version.display_name,
+            content_root_id: @unit_facilitator_to_teacher.id,
+            name: @unit_facilitator_to_teacher.localized_title,
+            path: @unit_facilitator_to_teacher.link,
+            type: 'Script',
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: {@unit_facilitator_to_teacher.id => {id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}}
+            units: {@unit_facilitator_to_teacher.id => {
+              id: @unit_facilitator_to_teacher.id,
+              name: @unit_facilitator_to_teacher.name,
+              path: @unit_facilitator_to_teacher.link,
+              lesson_extras_available: false
+            }}
           }
         }
       }
@@ -403,11 +435,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
           @unit_group.course_version.id => {
             id: @unit_group.course_version.id,
             version_year: @unit_group.course_version.version_year,
-            display_name: @unit_group.course_version.display_name,
+            content_root_id: @unit_group.id,
+            name: @unit_group.localized_title,
+            path: @unit_group.link,
+            type: 'UnitGroup',
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: {@unit_in_course.id => {id: @unit_in_course.id, name: @unit_in_course.name}}
+            units: {@unit_in_course.id => {
+              id: @unit_in_course.id,
+              name: @unit_in_course.name,
+              path: @unit_in_course.link,
+              lesson_extras_available: false
+            }}
           }
         }
       },
@@ -417,25 +457,39 @@ class CourseOfferingTest < ActiveSupport::TestCase
         category: @unit_teacher_to_students.course_version.course_offering.category,
         is_featured: @unit_teacher_to_students.course_version.course_offering.is_featured?,
         course_versions: {
-          @unit_teacher_to_students.course_version.id =>
-          {
+          @unit_teacher_to_students.course_version.id => {
             id: @unit_teacher_to_students.course_version.id,
             version_year: @unit_teacher_to_students.course_version.version_year,
-            display_name: @unit_teacher_to_students.course_version.display_name,
+            content_root_id: @unit_teacher_to_students.id,
+            name: @unit_teacher_to_students.localized_title,
+            path: @unit_teacher_to_students.link,
+            type: 'Script',
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
-            units: {@unit_teacher_to_students.id => {id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}}
+            units: {@unit_teacher_to_students.id => {
+              id: @unit_teacher_to_students.id,
+              name: @unit_teacher_to_students.name,
+              path: @unit_teacher_to_students.link,
+              lesson_extras_available: false
+            }}
           },
-          @unit_teacher_to_students2.course_version.id =>
-          {
+          @unit_teacher_to_students2.course_version.id => {
             id: @unit_teacher_to_students2.course_version.id,
             version_year: @unit_teacher_to_students2.course_version.version_year,
-            display_name: @unit_teacher_to_students2.course_version.display_name,
+            content_root_id: @unit_teacher_to_students2.id,
+            name: @unit_teacher_to_students2.localized_title,
+            path: @unit_teacher_to_students2.link,
+            type: 'Script',
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: {@unit_teacher_to_students2.id => {id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}}
+            units: {@unit_teacher_to_students2.id => {
+              id: @unit_teacher_to_students2.id,
+              name: @unit_teacher_to_students2.name,
+              path: @unit_teacher_to_students2.link,
+              lesson_extras_available: false
+            }}
           }
         }
       }
@@ -455,11 +509,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
           @unit_group.course_version.id => {
             id: @unit_group.course_version.id,
             version_year: @unit_group.course_version.version_year,
-            display_name: @unit_group.course_version.display_name,
+            content_root_id: @unit_group.id,
+            name: @unit_group.localized_title,
+            path: @unit_group.link,
+            type: 'UnitGroup',
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: {@unit_in_course.id => {id: @unit_in_course.id, name: @unit_in_course.name}}
+            units: {@unit_in_course.id => {
+              id: @unit_in_course.id,
+              name: @unit_in_course.name,
+              path: @unit_in_course.link,
+              lesson_extras_available: false
+            }}
           }
         }
       },
@@ -472,20 +534,36 @@ class CourseOfferingTest < ActiveSupport::TestCase
           @unit_teacher_to_students.course_version.id => {
             id: @unit_teacher_to_students.course_version.id,
             version_year: @unit_teacher_to_students.course_version.version_year,
-            display_name: @unit_teacher_to_students.course_version.display_name,
+            content_root_id: @unit_teacher_to_students.id,
+            name: @unit_teacher_to_students.localized_title,
+            path: @unit_teacher_to_students.link,
+            type: 'Script',
             is_stable: true,
             is_recommended: false,
             locales: ["English"],
-            units: {@unit_teacher_to_students.id => {id: @unit_teacher_to_students.id, name: @unit_teacher_to_students.name}}
+            units: {@unit_teacher_to_students.id => {
+              id: @unit_teacher_to_students.id,
+              name: @unit_teacher_to_students.name,
+              path: @unit_teacher_to_students.link,
+              lesson_extras_available: false
+            }}
           },
           @unit_teacher_to_students2.course_version.id => {
             id: @unit_teacher_to_students2.course_version.id,
             version_year: @unit_teacher_to_students2.course_version.version_year,
-            display_name: @unit_teacher_to_students2.course_version.display_name,
+            content_root_id: @unit_teacher_to_students2.id,
+            name: @unit_teacher_to_students2.localized_title,
+            path: @unit_teacher_to_students2.link,
+            type: 'Script',
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: {@unit_teacher_to_students2.id => {id: @unit_teacher_to_students2.id, name: @unit_teacher_to_students2.name}}
+            units: {@unit_teacher_to_students2.id => {
+              id: @unit_teacher_to_students2.id,
+              name: @unit_teacher_to_students2.name,
+              path: @unit_teacher_to_students2.link,
+              lesson_extras_available: false
+            }}
           }
         }
       },
@@ -498,11 +576,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
           @unit_facilitator_to_teacher.course_version.id => {
             id: @unit_facilitator_to_teacher.course_version.id,
             version_year: @unit_facilitator_to_teacher.course_version.version_year,
-            display_name: @unit_facilitator_to_teacher.course_version.display_name,
+            content_root_id: @unit_facilitator_to_teacher.id,
+            name: @unit_facilitator_to_teacher.localized_title,
+            path: @unit_facilitator_to_teacher.link,
+            type: 'Script',
             is_stable: true,
             is_recommended: true,
             locales: ["English"],
-            units: {@unit_facilitator_to_teacher.id => {id: @unit_facilitator_to_teacher.id, name: @unit_facilitator_to_teacher.name}}
+            units: {@unit_facilitator_to_teacher.id => {
+              id: @unit_facilitator_to_teacher.id,
+              name: @unit_facilitator_to_teacher.name,
+              path: @unit_facilitator_to_teacher.link,
+              lesson_extras_available: false
+            }}
           }
         }
       }
