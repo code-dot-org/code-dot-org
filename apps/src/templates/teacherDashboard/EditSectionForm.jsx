@@ -325,10 +325,7 @@ const GradeField = ({value, onChange, disabled}) => {
     </div>
   );
 };
-GradeField.propTypes = {
-  ...FieldProps,
-  StudentGradeLevels: PropTypes.arrayOf(PropTypes.string).isRequired
-};
+GradeField.propTypes = FieldProps;
 
 const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
   const friendlyNameByLoginType = {
