@@ -14,7 +14,6 @@ import teacherSections, {
   setRosterProvider,
   setValidAssignments,
   setValidGrades,
-  setTextToSpeechUnitIds,
   setLessonExtrasUnitIds,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection
@@ -45,7 +44,6 @@ const {
   validCourses,
   hasSeenStandardsReportInfo,
   localeCode,
-  textToSpeechUnitIds,
   lessonExtrasUnitIds
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
@@ -75,7 +73,6 @@ $(document).ready(function() {
   store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setLessonExtrasUnitIds(lessonExtrasUnitIds));
-  store.dispatch(setTextToSpeechUnitIds(textToSpeechUnitIds));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));

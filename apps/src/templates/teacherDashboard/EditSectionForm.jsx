@@ -44,7 +44,6 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     lessonExtrasAvailable: PropTypes.func.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
     assignedUnitName: PropTypes.string.isRequired,
@@ -138,7 +137,6 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       lessonExtrasAvailable,
-      textToSpeechUnitIds,
       assignedUnitName,
       localeCode,
       isNewSection,
@@ -226,7 +224,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
+          {section.script.textToSpeechEnabled && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
@@ -548,7 +546,6 @@ let defaultPropsFromState = state => ({
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
   lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
   hiddenLessonState: state.hiddenLesson,
   assignedUnitName: assignedUnitName(state),

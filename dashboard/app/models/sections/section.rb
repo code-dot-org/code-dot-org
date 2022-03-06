@@ -332,7 +332,8 @@ class Section < ApplicationRecord
       script: {
         id: script_id,
         name: script.try(:name),
-        project_sharing: script.try(:project_sharing)
+        project_sharing: script.try(:project_sharing),
+        text_to_speech_enabled: script.text_to_speech_enabled?
       },
       studentCount: num_students,
       grade: grade,
