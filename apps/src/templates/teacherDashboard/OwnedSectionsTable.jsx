@@ -15,6 +15,7 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '../../utils';
+import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -26,10 +27,6 @@ export const COLUMNS = {
   LOGIN_INFO: 5,
   EDIT_DELETE: 6
 };
-
-// K, 1, 2... 12, Other, null
-const numberedGrades = Array.from({length: 12}, (_, i) => (i + 1).toString());
-export const GRADES = ['K', ...numberedGrades, 'Other', null];
 
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function(name, {rowData}) {
@@ -162,7 +159,7 @@ class OwnedSectionsTable extends Component {
     if (this.state.sortingColumns[gradeCol]) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function(obj) {
-        return mult * GRADES.indexOf(obj.grade);
+        return mult * StudentGradeLevels.indexOf(obj.grade);
       });
     } else {
       return orderBy(data, activeColumn, directionArray);
