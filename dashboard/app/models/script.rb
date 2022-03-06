@@ -330,10 +330,6 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
-  def self.lesson_extras_script_ids
-    @@lesson_extras_script_ids ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
-  end
-
   def self.maker_units
     @@maker_units ||= visible_units.select(&:is_maker_unit?)
   end
