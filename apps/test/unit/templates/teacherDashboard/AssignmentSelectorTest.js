@@ -163,7 +163,7 @@ describe('AssignmentSelector', () => {
     wrapper
       .find('select')
       .at(0)
-      .simulate('change', {target: {value: 0}});
+      .simulate('change', {target: {value: '__noAssignment__'}});
     assert.equal(wrapper.find('select').length, 1);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: null,
