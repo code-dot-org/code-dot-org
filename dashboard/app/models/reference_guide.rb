@@ -24,6 +24,10 @@ class ReferenceGuide < ApplicationRecord
   validates_uniqueness_of :key, scope: :course_version_id
   validate :validate_key_format
 
+  def course_offering_version
+    "#{course_version.course_offering.key}-#{course_version.key}"
+  end
+
   def children
     ReferenceGuide.where(course_version_id: course_version_id, parent_reference_guide_key: key)
   end
@@ -43,8 +47,7 @@ class ReferenceGuide < ApplicationRecord
   # writes reference guide to a seed file in the config directory
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    offering_and_version = "#{course_version.course_offering.key}-#{course_version.key}"
-    file_path = Rails.root.join("config/reference_guides/#{offering_and_version}/#{key}.json")
+    file_path = Rails.root.join("config/reference_guides/#{course_offering_version}/#{key}.json")
     object_to_serialize = serialize
     dirname = File.dirname(file_path)
     unless File.directory?(dirname)
@@ -90,5 +93,12 @@ class ReferenceGuide < ApplicationRecord
     )
     reference_guide.update! properties
     reference_guide.id
+  end
+
+  def summarize_for_show
+    {
+      display_name: display_name,
+      content: content
+    }
   end
 end
