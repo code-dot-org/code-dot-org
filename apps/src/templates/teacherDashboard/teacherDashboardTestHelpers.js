@@ -47,14 +47,14 @@ export const courseOfferings = {
         content_root: {
           id: 10,
           name: 'Course A',
-          path: 's/coursea-2017',
+          path: '/s/coursea-2017',
           type: 'Script'
         },
         units: {
           1: {
             id: 1,
             name: 'Course A',
-            path: 's/coursea-2017',
+            path: '/s/coursea-2017',
             lesson_extras_available: true
           }
         }
@@ -69,14 +69,14 @@ export const courseOfferings = {
         content_root: {
           id: 11,
           name: 'Course A',
-          path: 's/coursea-2018',
+          path: '/s/coursea-2018',
           type: 'Script'
         },
         units: {
           2: {
             id: 2,
             name: 'Course A (2018)',
-            path: 's/coursea-2018',
+            path: '/s/coursea-2018',
             lesson_extras_available: true
           }
         }
@@ -98,21 +98,21 @@ export const courseOfferings = {
         locales: [],
         content_root: {
           id: 12,
-          name: 'CS Discoveries',
-          path: 'courses/csd-2017',
+          name: 'CS Discoveries 2017',
+          path: '/courses/csd-2017',
           type: 'UnitGroup'
         },
         units: {
           3: {
             id: 3,
             name: 'Unit 1',
-            path: 's/csd1-2017',
+            path: '/s/csd1-2017',
             lesson_extras_available: false
           },
           4: {
             id: 4,
             name: 'Unit 2',
-            path: 's/csd2-2017',
+            path: '/s/csd2-2017',
             lesson_extras_available: false
           }
         }
@@ -126,21 +126,21 @@ export const courseOfferings = {
         locales: [],
         content_root: {
           id: 13,
-          name: 'CS Discoveries',
-          path: 'courses/csd-2018',
+          name: 'CS Discoveries 2018',
+          path: '/courses/csd-2018',
           type: 'UnitGroup'
         },
         units: {
           5: {
             id: 5,
             name: 'Unit 1',
-            path: 's/csd1-2018',
+            path: '/s/csd1-2018',
             lesson_extras_available: false
           },
           6: {
             id: 6,
             name: 'Unit 2',
-            path: 's/csd2-2018',
+            path: '/s/csd2-2018',
             lesson_extras_available: false
           }
         }
@@ -163,20 +163,20 @@ export const courseOfferings = {
         content_root: {
           id: 14,
           name: 'CS A',
-          path: 'courses/csa-2022',
+          path: '/courses/csa-2022',
           type: 'UnitGroup'
         },
         units: {
           7: {
             id: 7,
             name: 'Unit 1',
-            path: 's/csa1-2022',
+            path: '/s/csa1-2022',
             lesson_extras_available: false
           },
           8: {
             id: 8,
             name: 'Unit 2',
-            path: 's/csa2-2022',
+            path: '/s/csa2-2022',
             lesson_extras_available: false
           }
         }
@@ -199,14 +199,14 @@ export const courseOfferings = {
         content_root: {
           id: 15,
           name: 'Flappy',
-          path: 's/flappy',
+          path: '/s/flappy',
           type: 'Script'
         },
         units: {
           9: {
             id: 9,
             name: 'Flappy',
-            path: 's/flappy',
+            path: '/s/flappy',
             lesson_extras_available: false
           }
         }
@@ -229,14 +229,14 @@ export const courseOfferings = {
         content_root: {
           id: 16,
           name: 'Hello World',
-          path: 's/hello-world',
+          path: '/s/hello-world',
           type: 'Script'
         },
         units: {
           10: {
             id: 10,
             name: 'Hello World',
-            path: 's/hello-world',
+            path: '/s/hello-world',
             lesson_extras_available: false
           }
         }
@@ -259,14 +259,14 @@ export const courseOfferings = {
         content_root: {
           id: 17,
           name: 'Poem Art',
-          path: 's/poem-art',
+          path: '/s/poem-art',
           type: 'Script'
         },
         units: {
           11: {
             id: 11,
             name: 'Poem Art',
-            path: 's/poem-art',
+            path: '/s/poem-art',
             lesson_extras_available: false
           }
         }
@@ -289,14 +289,14 @@ export const courseOfferings = {
         content_root: {
           id: 18,
           name: 'Artist',
-          path: 's/artist',
+          path: '/s/artist',
           type: 'Script'
         },
         units: {
           12: {
             id: 12,
             name: 'Artist',
-            path: 's/artist',
+            path: '/s/artist',
             lesson_extras_available: false
           }
         }

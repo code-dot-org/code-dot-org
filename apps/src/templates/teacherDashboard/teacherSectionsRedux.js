@@ -713,6 +713,8 @@ export default function teacherSections(state = initialState, action) {
       sectionFromServerSection(section)
     );
 
+    console.log(sections);
+
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
     if (Object.keys(action.sections).length === 1) {
@@ -1255,6 +1257,8 @@ export function serverSectionFromSection(section) {
 }
 
 const assignmentsForSection = (courseOfferings, section) => {
+  console.log(courseOfferings);
+  console.log(section);
   const assignments = [];
   if (section.courseOfferingId && section.courseVersionId) {
     const courseVersion =
