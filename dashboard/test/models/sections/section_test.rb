@@ -142,7 +142,7 @@ class SectionTest < ActiveSupport::TestCase
       section1.save!
     end
 
-    assert_includes error.message, 'Grade must be one of the valid student grades. Expected one of:s'
+    assert_includes error.message, 'Grade must be one of the valid student grades. Expected one of:'
   end
 
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
