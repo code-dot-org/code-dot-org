@@ -1,7 +1,8 @@
 export const testSection = {
   id: 11,
-  courseId: 29,
-  scriptId: null,
+  courseOfferingId: 2,
+  courseVersionId: 3,
+  unitId: null,
   name: 'my_section',
   loginType: 'word',
   grade: '3',
@@ -15,8 +16,9 @@ export const testSection = {
 
 export const noStudentsSection = {
   id: 11,
-  courseId: 29,
-  scriptId: null,
+  courseOfferingId: 2,
+  courseVersionId: 3,
+  unitId: null,
   name: 'my_section',
   loginType: 'word',
   grade: '3',
@@ -42,7 +44,20 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: false,
         locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
-        units: {1: {id: 1, name: 'Course A'}}
+        content_root: {
+          id: 10,
+          name: 'Course A',
+          path: 's/coursea-2017',
+          type: 'Script'
+        },
+        units: {
+          1: {
+            id: 1,
+            name: 'Course A',
+            path: 's/coursea-2017',
+            lesson_extras_available: true
+          }
+        }
       },
       2: {
         id: 2,
@@ -51,11 +66,18 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: true,
         locales: ['English', 'Italiano', 'Slovenčina'],
-        //TODO: Add content roots here in test data
+        content_root: {
+          id: 11,
+          name: 'Course A',
+          path: 's/coursea-2018',
+          type: 'Script'
+        },
         units: {
           2: {
             id: 2,
-            name: 'Course A (2018)'
+            name: 'Course A (2018)',
+            path: 's/coursea-2018',
+            lesson_extras_available: true
           }
         }
       }
@@ -74,7 +96,26 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: false,
         locales: [],
-        units: {3: {id: 3, name: 'Unit 1'}, 4: {id: 4, name: 'Unit 2'}}
+        content_root: {
+          id: 12,
+          name: 'CS Discoveries',
+          path: 'courses/csd-2017',
+          type: 'UnitGroup'
+        },
+        units: {
+          3: {
+            id: 3,
+            name: 'Unit 1',
+            path: 's/csd1-2017',
+            lesson_extras_available: false
+          },
+          4: {
+            id: 4,
+            name: 'Unit 2',
+            path: 's/csd2-2017',
+            lesson_extras_available: false
+          }
+        }
       },
       4: {
         id: 3,
@@ -83,7 +124,26 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: true,
         locales: [],
-        units: {5: {id: 5, name: 'Unit 1'}, 6: {id: 6, name: 'Unit 2'}}
+        content_root: {
+          id: 13,
+          name: 'CS Discoveries',
+          path: 'courses/csd-2018',
+          type: 'UnitGroup'
+        },
+        units: {
+          5: {
+            id: 5,
+            name: 'Unit 1',
+            path: 's/csd1-2018',
+            lesson_extras_available: false
+          },
+          6: {
+            id: 6,
+            name: 'Unit 2',
+            path: 's/csd2-2018',
+            lesson_extras_available: false
+          }
+        }
       }
     }
   },
@@ -100,7 +160,26 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: true,
         locales: [],
-        units: {7: {id: 7, name: 'Unit 1'}, 8: {id: 8, name: 'Unit 2'}}
+        content_root: {
+          id: 14,
+          name: 'CS A',
+          path: 'courses/csa-2022',
+          type: 'UnitGroup'
+        },
+        units: {
+          7: {
+            id: 7,
+            name: 'Unit 1',
+            path: 's/csa1-2022',
+            lesson_extras_available: false
+          },
+          8: {
+            id: 8,
+            name: 'Unit 2',
+            path: 's/csa2-2022',
+            lesson_extras_available: false
+          }
+        }
       }
     }
   },
@@ -117,7 +196,20 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: false,
         locales: [],
-        units: {9: {id: 9, name: 'Flappy'}}
+        content_root: {
+          id: 15,
+          name: 'Flappy',
+          path: 's/flappy',
+          type: 'Script'
+        },
+        units: {
+          9: {
+            id: 9,
+            name: 'Flappy',
+            path: 's/flappy',
+            lesson_extras_available: false
+          }
+        }
       }
     }
   },
@@ -134,7 +226,20 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: true,
         locales: [],
-        units: {10: {id: 10, name: 'Hello World'}}
+        content_root: {
+          id: 16,
+          name: 'Hello World',
+          path: 's/hello-world',
+          type: 'Script'
+        },
+        units: {
+          10: {
+            id: 10,
+            name: 'Hello World',
+            path: 's/hello-world',
+            lesson_extras_available: false
+          }
+        }
       }
     }
   },
@@ -151,7 +256,20 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: true,
         locales: [],
-        units: {11: {id: 11, name: 'Poem Art'}}
+        content_root: {
+          id: 17,
+          name: 'Poem Art',
+          path: 's/poem-art',
+          type: 'Script'
+        },
+        units: {
+          11: {
+            id: 11,
+            name: 'Poem Art',
+            path: 's/poem-art',
+            lesson_extras_available: false
+          }
+        }
       }
     }
   },
@@ -168,7 +286,20 @@ export const courseOfferings = {
         is_stable: true,
         is_recommended: true,
         locales: [],
-        units: {12: {id: 12, name: 'Artist'}}
+        content_root: {
+          id: 18,
+          name: 'Artist',
+          path: 's/artist',
+          type: 'Script'
+        },
+        units: {
+          12: {
+            id: 12,
+            name: 'Artist',
+            path: 's/artist',
+            lesson_extras_available: false
+          }
+        }
       }
     }
   }

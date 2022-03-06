@@ -327,8 +327,6 @@ describe('teacherSectionsRedux', () => {
         courseOfferingId: null,
         courseVersionId: null,
         unitId: null,
-        courseId: null,
-        scriptId: null,
         hidden: false,
         isAssigned: undefined,
         restrictSection: false
@@ -352,11 +350,9 @@ describe('teacherSectionsRedux', () => {
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
-        courseOfferingId: null,
-        courseVersionId: null,
-        unitId: null,
-        scriptId: 36,
-        courseId: null,
+        courseOfferingId: 1,
+        courseVersionId: 1,
+        unitId: 1,
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
@@ -437,14 +433,25 @@ describe('teacherSectionsRedux', () => {
         editingNewSectionState,
         setCourseOfferings(courseOfferings)
       );
-      state = reducer(state, editSectionProperties({scriptId: 1}));
+      state = reducer(
+        state,
+        editSectionProperties({
+          courseOfferingId: 1,
+          courseVersionId: 1,
+          unitId: 1
+        })
+      );
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
+
+      state = reducer(
+        state,
+        editSectionProperties({
+          courseOfferingId: 2,
+          courseVersionId: 3,
+          unitId: 3
+        })
+      );
       expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
-
-      state = reducer(state, editSectionProperties({scriptId: 36}));
-      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
-
-      state = reducer(state, editSectionProperties({scriptId: 37}));
-      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
@@ -481,8 +488,9 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
-      courseId: null,
-      scriptId: null,
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null,
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
@@ -632,8 +640,9 @@ describe('teacherSectionsRedux', () => {
           sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
-          courseId: undefined,
-          scriptId: null,
+          courseOfferingId: null,
+          courseVersionId: null,
+          unitId: null,
           createdAt: createdAt,
           hidden: false,
           isAssigned: undefined,
