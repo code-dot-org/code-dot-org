@@ -118,7 +118,7 @@ export const courseOfferings = {
         }
       },
       4: {
-        id: 3,
+        id: 4,
         version_year: '2018',
         display_name: '2018',
         is_stable: true,
