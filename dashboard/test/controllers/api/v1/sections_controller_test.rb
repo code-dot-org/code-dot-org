@@ -293,7 +293,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 'Untitled Section', returned_section.name
   end
 
-  SharedConstants::SECTION_LOGIN_TYPE.each do |desired_type|
+  Section::LOGIN_TYPES.each do |desired_type|
     test "can set login_type to #{desired_type} during creation" do
       sign_in @teacher
       post :create, params: {

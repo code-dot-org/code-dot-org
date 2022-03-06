@@ -105,9 +105,18 @@ class Section < ApplicationRecord
 
   serialized_attrs %w(code_review_expires_at)
 
+  # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
+  LOGIN_TYPES = [
+    LOGIN_TYPE_EMAIL = 'email'.freeze,
+    LOGIN_TYPE_PICTURE = 'picture'.freeze,
+    LOGIN_TYPE_WORD = 'word'.freeze,
+    LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
+    LOGIN_TYPE_CLEVER = 'clever'.freeze
+  ]
+
   LOGIN_TYPES_OAUTH = [
-    SharedConstants::SECTION_LOGIN_TYPE.google_classroom,
-    SharedConstants::SECTION_LOGIN_TYPE.clever
+    LOGIN_TYPE_GOOGLE_CLASSROOM,
+    LOGIN_TYPE_CLEVER
   ]
 
   TYPES = [
@@ -125,7 +134,7 @@ class Section < ApplicationRecord
   CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
   def self.valid_login_type?(type)
-    SharedConstants::SECTION_LOGIN_TYPE.include? type
+    LOGIN_TYPES.include? type
   end
 
   # Override default script accessor to use our cache
