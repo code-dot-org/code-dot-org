@@ -154,7 +154,10 @@ class CourseVersion < ApplicationRecord
       {
         id: id,
         version_year: key,
-        display_name: display_name,
+        content_root_id: content_root.id,
+        name: content_root.localized_title,
+        path: content_root.link,
+        type: content_root_type,
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
         locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
