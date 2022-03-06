@@ -81,12 +81,14 @@ export const assignmentUnitShape = PropTypes.shape({
 
 export const assignmentCourseVersionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  display_name: PropTypes.string.isRequired,
   version_year: PropTypes.string.isRequired,
+  content_root_id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   is_stable: PropTypes.bool.isRequired,
   is_recommended: PropTypes.bool.isRequired,
   locales: PropTypes.array,
-  content_root: PropTypes.object,
   units: PropTypes.object.isRequired
 });
 

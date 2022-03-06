@@ -1262,7 +1262,7 @@ const assignmentsForSection = (courseOfferings, section) => {
         section.courseVersionId
       ];
     if (courseVersion) {
-      assignments.push(courseVersion.content_root);
+      assignments.push(courseVersion);
       if (section.unitId) {
         if (courseVersion.units[section.unitId]) {
           assignments.push(courseVersion.units[section.unitId]);

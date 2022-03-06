@@ -32,7 +32,7 @@ export default function AssignmentVersionMenuItem(props) {
           style={style.titleColumn}
           className="assignment-courseVersion-title"
         >
-          {courseVersion.display_name}
+          {courseVersion.version_year}
         </span>
         <span style={style.statusColumn}>
           {courseVersion.is_recommended && (
