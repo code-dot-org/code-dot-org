@@ -1201,6 +1201,7 @@ export const sectionFromServerSection = serverSection => ({
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
+  script: serverSection.script ? serverSection.script : null,
   scriptId: serverSection.script
     ? serverSection.script.id
     : serverSection.script_id || null,
