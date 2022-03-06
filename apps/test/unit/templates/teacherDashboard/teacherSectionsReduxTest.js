@@ -324,6 +324,8 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         studentCount: 0,
         code: '',
+        courseId: null,
+        scriptId: null,
         courseOfferingId: null,
         courseVersionId: null,
         unitId: null,
@@ -352,7 +354,9 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         courseOfferingId: 1,
         courseVersionId: 1,
-        unitId: 1,
+        unitId: null,
+        courseId: undefined,
+        scriptId: null,
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
@@ -640,9 +644,11 @@ describe('teacherSectionsRedux', () => {
           sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
-          courseOfferingId: null,
-          courseVersionId: null,
-          unitId: null,
+          courseOfferingId: undefined,
+          courseVersionId: undefined,
+          unitId: undefined,
+          courseId: undefined,
+          scriptId: null,
           createdAt: createdAt,
           hidden: false,
           isAssigned: undefined,
@@ -810,9 +816,8 @@ describe('teacherSectionsRedux', () => {
     it('sets asyncLoadComplete to true after success responses', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
 
-      expect(server.requests).to.have.length(4);
+      expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
-      server.respondWith('GET', '/dashboardapi/courses', successResponse());
       server.respondWith(
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
@@ -851,7 +856,7 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData());
       expect(state().sections).to.deep.equal({});
 
-      expect(server.requests).to.have.length(3);
+      expect(server.requests).to.have.length(2);
       server.respondWith(
         'GET',
         '/dashboardapi/sections',
@@ -859,7 +864,7 @@ describe('teacherSectionsRedux', () => {
       );
       server.respondWith(
         'GET',
-        '/dashboardapi/sections/valid__course_offerings',
+        '/dashboardapi/sections/valid_course_offerings',
         successResponse()
       );
       server.respond();
@@ -873,7 +878,7 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData());
       expect(state().courseOfferings).to.deep.equal({});
 
-      expect(server.requests).to.have.length(3);
+      expect(server.requests).to.have.length(2);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith(
         'GET',
@@ -884,7 +889,7 @@ describe('teacherSectionsRedux', () => {
 
       return promise.then(() => {
         expect(Object.keys(state().courseOfferings)).to.have.length(
-          courseOfferings.length
+          Object.keys(courseOfferings).length
         );
       });
     });
@@ -893,7 +898,7 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
       expect(state().courseOfferings).to.deep.equal({});
 
-      expect(server.requests).to.have.length(4);
+      expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith(
         'GET',
@@ -994,36 +999,41 @@ describe('teacherSectionsRedux', () => {
       sectionId: '12',
       serverSection: {
         ...sections[1],
-        course_id: null,
-        script: null
+        course_offering_id: null,
+        course_version_id: null,
+        unit_id: null
       }
     });
-    const stateWithInvalidScriptAssignment = reducer(stateWithSections, {
+    const stateWithInvalidUnitAssignment = reducer(stateWithSections, {
       type: EDIT_SECTION_SUCCESS,
       sectionId: '12',
       serverSection: {
         ...sections[1],
-        course_id: null,
-        script: {id: 35, name: 'netsim'}
+        course_offering_id: 2,
+        course_version_id: 3,
+        unit_id: 9999
       }
     });
-    const stateWithInvalidCourseAssignment = reducer(stateWithSections, {
-      type: EDIT_SECTION_SUCCESS,
-      sectionId: '12',
-      serverSection: {
-        ...sections[1],
-        course_id: 9999,
-        script: null
+    const stateWithInvalidCourseOfferingAssignment = reducer(
+      stateWithSections,
+      {
+        type: EDIT_SECTION_SUCCESS,
+        sectionId: '12',
+        serverSection: {
+          ...sections[1],
+          course_offering_id: 9999,
+          course_version_id: 9999,
+          unit_id: null
+        }
       }
-    });
+    );
 
     const assignedSection = stateWithUnassignedSection.sections['11'];
     const unassignedSection = stateWithUnassignedSection.sections['12'];
     const assignedSectionWithUnit = stateWithUnassignedSection.sections['307'];
-    const invalidScriptSection =
-      stateWithInvalidScriptAssignment.sections['12'];
+    const invalidScriptSection = stateWithInvalidUnitAssignment.sections['12'];
     const invalidCourseSection =
-      stateWithInvalidCourseAssignment.sections['12'];
+      stateWithInvalidCourseOfferingAssignment.sections['12'];
 
     it('assignmentNames returns the name if the section is assigned a course/script', () => {
       const names = assignmentNames(
@@ -1049,17 +1059,17 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(names, []);
     });
 
-    it('assignmentName returns empty array if assigned script is not a valid assignment', () => {
+    it('assignmentName returns just the course if assigned unit is not a valid assignment', () => {
       const names = assignmentNames(
-        stateWithInvalidScriptAssignment.courseOfferings,
+        stateWithInvalidUnitAssignment.courseOfferings,
         invalidScriptSection
       );
-      assert.deepEqual(names, []);
+      assert.deepEqual(names, ['CS Discoveries 2017']);
     });
 
     it('assignmentName returns empty array if assigned course is not a valid assignment', () => {
       const names = assignmentNames(
-        stateWithInvalidCourseAssignment.courseOfferings,
+        stateWithInvalidCourseOfferingAssignment.courseOfferings,
         invalidCourseSection
       );
       assert.deepEqual(names, []);
@@ -1091,15 +1101,15 @@ describe('teacherSectionsRedux', () => {
 
     it('assignmentPaths returns empty array if assigned script is not a valid assignment', () => {
       const paths = assignmentPaths(
-        stateWithInvalidScriptAssignment,
+        stateWithInvalidUnitAssignment,
         invalidScriptSection
       );
       assert.deepEqual(paths, []);
     });
 
-    it('assignmentPaths returns empty array if assigned course is not a valid assignment', () => {
+    it('assignmentPaths returns empty array if assigned course offering and course version is not a valid assignment', () => {
       const paths = assignmentPaths(
-        stateWithInvalidCourseAssignment,
+        stateWithInvalidCourseOfferingAssignment,
         invalidCourseSection
       );
       assert.deepEqual(paths, []);
@@ -1412,13 +1422,11 @@ describe('teacherSectionsRedux', () => {
         importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
       );
       return expect(promise).to.be.fulfilled.then(() => {
-        expect(server.requests).to.have.length(4);
+        expect(server.requests).to.have.length(3);
         expect(server.requests[1].method).to.equal('GET');
         expect(server.requests[1].url).to.equal('/dashboardapi/sections');
         expect(server.requests[2].method).to.equal('GET');
-        expect(server.requests[2].url).to.equal('/dashboardapi/courses');
-        expect(server.requests[3].method).to.equal('GET');
-        expect(server.requests[3].url).to.equal(
+        expect(server.requests[2].url).to.equal(
           '/dashboardapi/sections/valid_course_offerings'
         );
         expect(Object.keys(getState().teacherSections.sections)).to.have.length(
