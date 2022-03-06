@@ -12,7 +12,6 @@ import {
   pageTypes,
   setAuthProviders,
   setPageType,
-  setLessonExtrasUnitIds,
   setTextToSpeechUnitIds,
   setValidGrades,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
@@ -37,7 +36,6 @@ function showHomepage() {
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setLessonExtrasUnitIds(homepageData.lessonExtrasUnitIds));
   store.dispatch(setTextToSpeechUnitIds(homepageData.textToSpeechUnitIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
