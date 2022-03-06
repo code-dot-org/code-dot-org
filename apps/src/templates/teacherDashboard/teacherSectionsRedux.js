@@ -46,8 +46,6 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_LESSON_EXTRAS_UNIT_IDS =
-  'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
 const SET_TEXT_TO_SPEECH_UNIT_IDS =
   'teacherDashboard/SET_TEXT_TO_SPEECH_UNIT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
@@ -113,10 +111,6 @@ export const __testInterface__ = {
 // Action Creators
 //
 export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
-export const setLessonExtrasUnitIds = ids => ({
-  type: SET_LESSON_EXTRAS_UNIT_IDS,
-  ids
-});
 export const setTextToSpeechUnitIds = ids => ({
   type: SET_TEXT_TO_SPEECH_UNIT_IDS,
   ids
@@ -547,7 +541,6 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
-  lessonExtrasUnitIds: [],
   textToSpeechUnitIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
@@ -624,13 +617,6 @@ export default function teacherSections(state = initialState, action) {
       providers: action.providers.map(provider =>
         mapProviderToSectionType(provider)
       )
-    };
-  }
-
-  if (action.type === SET_LESSON_EXTRAS_UNIT_IDS) {
-    return {
-      ...state,
-      lessonExtrasUnitIds: action.ids
     };
   }
 
@@ -1299,14 +1285,6 @@ export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   return assignments.map(assignment => (assignment ? assignment.path : ''));
 };
-
-/**
- * Is the given unit ID a CSF course? `script.rb` owns the list.
- * @param state
- * @param id
- */
-export const lessonExtrasAvailable = (state, id) =>
-  state.teacherSections.lessonExtrasUnitIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using
