@@ -95,4 +95,39 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
 
     assert_equal 1, ProgrammingExpression.where(programming_environment_id: programming_environment.id, key: 'to_create').count
   end
+
+  test 'can clone expression to another programming environment' do
+    original_env = create :programming_environment
+    original_cat = create :programming_environment_category, programming_environment: original_env, name: 'World'
+    original_exp = create :programming_expression, programming_environment: original_env, programming_environment_category: original_cat, content: 'some well written content', tips: 'a long list of tips'
+    new_env = create :programming_environment
+    new_cat = create :programming_environment_category, programming_environment: new_env, name: 'World'
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write).once
+    copied_exp = original_exp.clone_to_programming_environment(new_env.name)
+
+    assert_equal new_env.name, copied_exp.programming_environment.name
+    assert_equal new_cat.key, copied_exp.programming_environment_category.key
+    assert_equal original_exp.content, copied_exp.content
+    assert_equal original_exp.tips, copied_exp.tips
+  end
+
+  test 'can clone expression to another programming environment and specify category' do
+    original_env = create :programming_environment
+    original_cat = create :programming_environment_category, programming_environment: original_env, name: 'World'
+    original_exp = create :programming_expression, programming_environment: original_env, programming_environment_category: original_cat, content: 'some well written content', tips: 'a long list of tips'
+    new_env = create :programming_environment
+    create :programming_environment_category, programming_environment: new_env, name: 'World'
+    new_cat = create :programming_environment_category, programming_environment: new_env, name: 'Sprites'
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write).once
+    copied_exp = original_exp.clone_to_programming_environment(new_env.name, new_cat.key)
+
+    assert_equal new_env.name, copied_exp.programming_environment.name
+    assert_equal new_cat.key, copied_exp.programming_environment_category.key
+    assert_equal original_exp.content, copied_exp.content
+    assert_equal original_exp.tips, copied_exp.tips
+  end
 end
