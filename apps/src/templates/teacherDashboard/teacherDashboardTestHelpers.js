@@ -40,16 +40,13 @@ export const courseOfferings = {
       1: {
         id: 1,
         version_year: '2017',
-        display_name: '2017',
+        content_root_id: 10,
+        name: 'Course A',
+        path: '/s/coursea-2017',
+        type: 'Script',
         is_stable: true,
         is_recommended: false,
         locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
-        content_root: {
-          id: 10,
-          name: 'Course A',
-          path: '/s/coursea-2017',
-          type: 'Script'
-        },
         units: {
           1: {
             id: 1,
@@ -62,16 +59,13 @@ export const courseOfferings = {
       2: {
         id: 2,
         version_year: '2018',
-        display_name: '2018',
+        content_root_id: 11,
+        name: 'Course A',
+        path: '/s/coursea-2018',
+        type: 'Script',
         is_stable: true,
         is_recommended: true,
         locales: ['English', 'Italiano', 'Slovenčina'],
-        content_root: {
-          id: 11,
-          name: 'Course A',
-          path: '/s/coursea-2018',
-          type: 'Script'
-        },
         units: {
           2: {
             id: 2,
@@ -92,16 +86,13 @@ export const courseOfferings = {
       3: {
         id: 3,
         version_year: '2017',
-        display_name: '2017',
+        content_root_id: 12,
+        name: 'CS Discoveries 2017',
+        path: '/courses/csd-2017',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: false,
         locales: [],
-        content_root: {
-          id: 12,
-          name: 'CS Discoveries 2017',
-          path: '/courses/csd-2017',
-          type: 'UnitGroup'
-        },
         units: {
           3: {
             id: 3,
@@ -120,16 +111,13 @@ export const courseOfferings = {
       4: {
         id: 4,
         version_year: '2018',
-        display_name: '2018',
+        content_root_id: 13,
+        name: 'CS Discoveries 2018',
+        path: '/courses/csd-2018',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
         locales: [],
-        content_root: {
-          id: 13,
-          name: 'CS Discoveries 2018',
-          path: '/courses/csd-2018',
-          type: 'UnitGroup'
-        },
         units: {
           5: {
             id: 5,
@@ -156,16 +144,13 @@ export const courseOfferings = {
       5: {
         id: 5,
         version_year: '2022',
-        display_name: '2022',
+        content_root_id: 14,
+        name: 'CS A',
+        path: '/courses/csa-2022',
+        type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
         locales: [],
-        content_root: {
-          id: 14,
-          name: 'CS A',
-          path: '/courses/csa-2022',
-          type: 'UnitGroup'
-        },
         units: {
           7: {
             id: 7,
@@ -192,16 +177,13 @@ export const courseOfferings = {
       6: {
         id: 6,
         version_year: 'unversioned',
-        display_name: 'unversioned',
+        content_root_id: 15,
+        name: 'Flappy',
+        path: '/s/flappy',
+        type: 'Script',
         is_stable: true,
         is_recommended: false,
         locales: [],
-        content_root: {
-          id: 15,
-          name: 'Flappy',
-          path: '/s/flappy',
-          type: 'Script'
-        },
         units: {
           9: {
             id: 9,
@@ -222,16 +204,13 @@ export const courseOfferings = {
       7: {
         id: 7,
         version_year: 'unversioned',
-        display_name: 'unversioned',
+        content_root_id: 16,
+        name: 'Hello World',
+        path: '/s/hello-world',
+        type: 'Script',
         is_stable: true,
         is_recommended: true,
         locales: [],
-        content_root: {
-          id: 16,
-          name: 'Hello World',
-          path: '/s/hello-world',
-          type: 'Script'
-        },
         units: {
           10: {
             id: 10,
@@ -252,16 +231,13 @@ export const courseOfferings = {
       8: {
         id: 8,
         version_year: 'unversioned',
-        display_name: 'unversioned',
+        content_root_id: 17,
+        name: 'Poem Art',
+        path: '/s/poem-art',
+        type: 'Script',
         is_stable: true,
         is_recommended: true,
         locales: [],
-        content_root: {
-          id: 17,
-          name: 'Poem Art',
-          path: '/s/poem-art',
-          type: 'Script'
-        },
         units: {
           11: {
             id: 11,
@@ -282,16 +258,13 @@ export const courseOfferings = {
       9: {
         id: 9,
         version_year: 'unversioned',
-        display_name: 'unversioned',
+        content_root_id: 18,
+        name: 'Artist',
+        path: '/s/artist',
+        type: 'Script',
         is_stable: true,
         is_recommended: true,
         locales: [],
-        content_root: {
-          id: 18,
-          name: 'Artist',
-          path: '/s/artist',
-          type: 'Script'
-        },
         units: {
           12: {
             id: 12,
