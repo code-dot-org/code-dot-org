@@ -559,7 +559,7 @@ const initialState = {
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
-  courseOfferings: [],
+  courseOfferings: {},
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited (see studentShape PropType)
@@ -712,8 +712,6 @@ export default function teacherSections(state = initialState, action) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section)
     );
-
-    console.log(sections);
 
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
@@ -869,9 +867,9 @@ export default function teacherSections(state = initialState, action) {
     const ttsAutoplayEnabledSettings = {};
     if (action.props.unitId) {
       const unit =
-        state.courseOfferings[action.props.courseOfferingId].course_versions[
+        state.courseOfferings[action.props.courseOfferingId]?.course_versions[
           action.props.courseVersionId
-        ].units[action.props.unitId];
+        ]?.units[action.props.unitId];
       if (unit) {
         lessonExtraSettings.lessonExtras =
           unit.lesson_extras_available || defaultLessonExtras;
@@ -1257,8 +1255,6 @@ export function serverSectionFromSection(section) {
 }
 
 const assignmentsForSection = (courseOfferings, section) => {
-  console.log(courseOfferings);
-  console.log(section);
   const assignments = [];
   if (section.courseOfferingId && section.courseVersionId) {
     const courseVersion =
@@ -1267,11 +1263,10 @@ const assignmentsForSection = (courseOfferings, section) => {
       ];
     if (courseVersion) {
       assignments.push(courseVersion.content_root);
-    }
-
-    if (section.unitId) {
-      if (courseVersion.units[section.unitId]) {
-        assignments.push(courseVersion.units[section.unitId]);
+      if (section.unitId) {
+        if (courseVersion.units[section.unitId]) {
+          assignments.push(courseVersion.units[section.unitId]);
+        }
       }
     }
   }
