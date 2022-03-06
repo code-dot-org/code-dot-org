@@ -68,9 +68,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
-    courseOfferingId: 2,
-    courseVersionId: 3,
-    unitId: null,
+    course_offering_id: 2,
+    course_version_id: 3,
+    unit_id: null,
     createdAt: createdAt,
     studentCount: 10,
     hidden: false,
@@ -88,9 +88,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
-    courseOfferingId: 1,
-    courseVersionId: 1,
-    unitId: 1,
+    course_offering_id: 1,
+    course_version_id: 1,
+    unit_id: null,
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
@@ -108,9 +108,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: false,
     sharing_disabled: false,
-    courseOfferingId: 3,
-    courseVersionId: 5,
-    unitId: 7,
+    course_offering_id: 3,
+    course_version_id: 5,
+    unit_id: 7,
     createdAt: createdAt,
     studentCount: 0,
     hidden: false,
@@ -1038,7 +1038,7 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.courseOfferings,
         assignedSectionWithUnit
       );
-      assert.deepEqual(names, ['CS Discoveries 2017', 'Unit 1: The Internet']);
+      assert.deepEqual(names, ['CS A', 'Unit 1']);
     });
 
     it('assignmentName returns empty array if unassigned', () => {
@@ -1078,7 +1078,7 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.courseOfferings,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1-2017']);
+      assert.deepEqual(paths, ['/courses/csa-2022', '/s/csa1-2022']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1629,8 +1629,8 @@ describe('teacherSectionsRedux', () => {
           grade: '11',
           providerManaged: false,
           hidden: false,
-          assignmentNames: ['Course 3'],
-          assignmentPaths: ['/s/course3']
+          assignmentNames: ['Course A'],
+          assignmentPaths: ['/s/coursea-2017']
         }
       ];
       assert.deepEqual(data, expected);
