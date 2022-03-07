@@ -334,10 +334,6 @@ class Script < ApplicationRecord
     @@maker_units ||= visible_units.select(&:is_maker_unit?)
   end
 
-  def self.text_to_speech_unit_ids
-    @@text_to_speech_unit_ids ||= all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
-  end
-
   # Get the set of units that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
@@ -1912,6 +1908,7 @@ class Script < ApplicationRecord
     info[:supported_locales] = supported_locale_names
     info[:supported_locale_codes] = supported_locale_codes
     info[:lesson_extras_available] = lesson_extras_available
+    info[:text_to_speech_enabled] = text_to_speech_enabled?
     if has_standards_associations?
       info[:standards] = standards
     end
