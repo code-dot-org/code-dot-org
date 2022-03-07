@@ -394,12 +394,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # Transfer sections and destroy new user if takeover is possible
     if allows_section_takeover(oauth_user)
-      if (oauth_user.id == lookup_user.id) && (provider == AuthenticationOption::GOOGLE)
+      if (oauth_user.id == lookup_user.id)
         # Duplicate params only because this log is temporary and will be removed
         firehose_params = {
           source_user: oauth_user,
           destination_user: lookup_user,
-          type: 'silent',
+          type: 'silent-self',
           provider: provider,
         }
         log_self_takeover_investigation_to_firehose(firehose_params)
