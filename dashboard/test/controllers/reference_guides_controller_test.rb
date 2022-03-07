@@ -42,7 +42,21 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     assert_equal reference_guide.summarize_for_show.to_json, show_data
   end
 
+  test 'data is passed to index page' do
+    sign_in @levelbuilder
+
+    get :index, params: {
+      course_course_name: @reference_guide.course_offering_version
+    }
+    assert_response :ok
+
+    show_data = css_select('script[data-referenceguides]').first.attribute('data-referenceguides').to_s
+
+    assert_equal [@reference_guide.summarize_for_index].to_json, show_data
+  end
+
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
+  test_user_gets_response_for :index, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :success
 
   # everyone can see basic reference guides
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: nil, response: :success
@@ -57,6 +71,8 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, name: 'regular teacher cannot view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :index, name: 'regular teacher cannot view pilot ref guide index',
+    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version}}, user: :teacher, response: :not_found
   test_user_gets_response_for :show, name: 'pilot student can view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: -> {@pilot_student}, response: :success
   test_user_gets_response_for :show, name: 'pilot teacher can view pilot ref guide',
