@@ -22,19 +22,19 @@ describe('TeacherApplication', () => {
     userId: 1
   };
 
-  let ga;
-  let fc;
+  let googleAnalyticsStub;
+  let firehoseClientStub;
 
   beforeEach(() => {
-    ga = sinon.fake();
-    window.ga = ga;
-    fc = sinon.stub(firehoseClient, 'putRecord');
+    googleAnalyticsStub = sinon.fake();
+    window.ga = googleAnalyticsStub;
+    firehoseClientStub = sinon.stub(firehoseClient, 'putRecord');
     window.sessionStorage.removeItem('TeacherApplication');
   });
 
   afterEach(() => {
     window.ga = undefined;
-    fc.restore();
+    firehoseClientStub.restore();
     window.sessionStorage.removeItem('TeacherApplication');
   });
 
@@ -47,10 +47,10 @@ describe('TeacherApplication', () => {
       <TeacherApplication {...defaultProps} allowPartialSaving />
     );
     const formControllerProps = teacherApp.find('FormController').props();
-    sinon.assert.calledOnce(fc);
+    sinon.assert.calledOnce(firehoseClientStub);
 
     formControllerProps.onSuccessfulSave();
-    sinon.assert.calledTwice(fc);
+    sinon.assert.calledTwice(firehoseClientStub);
   });
   it('Does not set schoolId if not provided', () => {
     const page = mount(<TeacherApplication {...defaultProps} />);
@@ -79,6 +79,6 @@ describe('TeacherApplication', () => {
     const form = mount(<TeacherApplication {...defaultProps} />);
     const nextButton = form.find('#next').first();
     nextButton.simulate('click');
-    expect(ga.getCall(2).calledWith());
+    expect(googleAnalyticsStub.getCall(2).calledWith());
   });
 });
