@@ -228,7 +228,7 @@ describe('FormController', () => {
         expect(form.findAll('Spinner')).to.have.length(1);
       });
 
-      it('Re-enables the save button after successful save', () => {
+      it('Re-enables the save button after successful save and removes spinner', () => {
         form = isolateComponent(<FormController {...defaultProps} />);
 
         const server = sinon.fakeServer.create();
@@ -382,13 +382,14 @@ describe('FormController', () => {
           });
         });
 
-        it('Disables the submit button during submit', () => {
+        it('Disables the submit button during submit and renders spinner', () => {
           setupValid();
           triggerSubmit();
           expect(form.findOne('#submit').props.disabled).to.be.true;
+          expect(form.findAll('Spinner')).to.have.length(1);
         });
 
-        it('Re-enables the submit button on error', () => {
+        it('Re-enables the submit button on error and removes spinner', () => {
           setupValid();
           server.respondWith([
             400,
@@ -403,6 +404,7 @@ describe('FormController', () => {
 
           expect(getErrors(DummyPage3)).to.eql(['an error']);
           expect(form.findOne('#submit').props.disabled).to.be.false;
+          expect(form.findAll('Spinner')).to.have.length(0);
         });
 
         // [MEG] TODO: Refactor this to use savedStatus instead of form_data

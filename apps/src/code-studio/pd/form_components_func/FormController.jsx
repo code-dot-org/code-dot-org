@@ -626,7 +626,9 @@ const FormController = props => {
         {pageButtons}
         {shouldShowSubmit() ? submitButton : nextButton}
         {allowPartialSaving && savedStatus !== 'reopened' && saveButton}
-        {saving && <Spinner style={styles.spinner} size="medium" />}
+        {(saving || submitting) && (
+          <Spinner style={styles.spinner} size="medium" />
+        )}
       </FormGroup>
     );
   };
