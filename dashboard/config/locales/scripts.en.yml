@@ -31415,10 +31415,28 @@ en:
               name: FRQ Practice
             lesson-5:
               name: Unit 2 Assessment
+              description_student: Assess your progress through the Unit 2 Assessment.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-6:
               name: Variables
+              description_student: |-
+                **How can I store values so I can reuse them?**
+
+                You learned about the `boolean` data type to represent a `true` or `false` value in the previous unit. In this lesson, you expand your knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. You use manipulatives to explore how variables are declared, initialized, and used as you write and trace code segments and identify the current value stored in a variable.
+              description_teacher: |-
+                **How can I store values so I can reuse them?**
+
+                Students expand their knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. Students use manipulatives to explore how variables are declared, initialized, and used as they write and trace code segments and identify the current value stored in a variable.
             lesson-7:
               name: Operators and Expressions
+              description_student: |-
+                **How can I use variables to perform calculations?**
+
+                You learned about primitive and reference variables and how to store values and pointers to objects in these variables. In this lesson, you discover how arithmetic and compound assignment operators function in Java when used with different data types. You practice evaluating expressions and explore scenarios that result in errors or unexpected results.
+              description_teacher: |-
+                **How can I use variables to perform calculations?**
+
+                Students discover how arithmetic and compound assignment operators function in Java with different data types. Students practice evaluating expressions and explore scenarios that result in errors or unexpected results.
             lesson-8:
               name: Attributes
             lesson-9:
