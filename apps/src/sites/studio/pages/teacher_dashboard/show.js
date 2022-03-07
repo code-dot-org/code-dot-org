@@ -13,7 +13,6 @@ import teacherSections, {
   selectSection,
   setRosterProvider,
   setCourseOfferings,
-  setValidGrades,
   setTextToSpeechUnitIds,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection
@@ -38,7 +37,6 @@ const scriptData = JSON.parse(script.dataset.dashboard);
 const {
   section,
   sections,
-  validGrades,
   validScripts,
   studentScriptIds,
   validCourses,
@@ -71,7 +69,6 @@ $(document).ready(function() {
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setCourseOfferings(validCourseOfferings));
-  store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setTextToSpeechUnitIds(textToSpeechUnitIds));
 
