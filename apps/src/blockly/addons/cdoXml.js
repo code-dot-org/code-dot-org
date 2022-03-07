@@ -18,37 +18,38 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   blocklyWrapper.Xml.originalDomToBlockHeadless_ =
     blocklyWrapper.Xml.domToBlockHeadless_;
   // Override domToBlockHeadless_ so that we can gracefully handle unknown blocks.
-  blocklyWrapper.Xml.domToBlockHeadless_ = function(
-    xmlBlock,
-    workspace,
-    parentConnection,
-    connectedToParentNext
-  ) {
-    let block;
-    try {
-      block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
-        xmlBlock,
-        workspace,
-        parentConnection,
-        connectedToParentNext
-      );
-    } catch (e) {
-      block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
-        blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
-        workspace,
-        parentConnection,
-        connectedToParentNext
-      );
-      block
-        .getField('NAME')
-        .setValue(`unknown block: ${xmlBlock.getAttribute('type')}`);
-    }
-    return block;
-  };
+  // blocklyWrapper.Xml.domToBlockHeadless_ = function(
+  //   xmlBlock,
+  //   workspace,
+  //   parentConnection,
+  //   connectedToParentNext
+  // ) {
+  //   let block;
+  //   try {
+  //     block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
+  //       xmlBlock,
+  //       workspace,
+  //       parentConnection,
+  //       connectedToParentNext
+  //     );
+  //   } catch (e) {
+  //     block = blocklyWrapper.Xml.originalDomToBlockHeadless_(
+  //       blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
+  //       workspace,
+  //       parentConnection,
+  //       connectedToParentNext
+  //     );
+  //     block
+  //       .getField('NAME')
+  //       .setValue(`unknown block: ${xmlBlock.getAttribute('type')}`);
+  //   }
+  //   return block;
+  // };
 
   // Aliasing Google's domToBlock() so that we can override it, but still be able
   // to call Google's domToBlock() in the override function.
   blocklyWrapper.Xml.originalDomToBlock = blocklyWrapper.Xml.domToBlock;
+
   blocklyWrapper.Xml.domToBlock = function(xmlBlock, workspace) {
     const block = blocklyWrapper.Xml.originalDomToBlock(xmlBlock, workspace);
     const can_disconnect_from_parent = xmlBlock.getAttribute(
@@ -56,6 +57,26 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     );
     if (can_disconnect_from_parent) {
       block.canDisconnectFromParent_ = can_disconnect_from_parent === 'true';
+    }
+    return block;
+  };
+
+  blocklyWrapper.Xml.testDomToBlock = function(xmlBlock, workspace) {
+    let block;
+    try {
+      console.log('in try');
+      block = blocklyWrapper.Xml.domToBlock(xmlBlock, workspace);
+      console.log('block', block);
+    } catch (error) {
+      console.log('in catch', error);
+      block = blocklyWrapper.Xml.domToBlock(
+        blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
+        workspace
+      );
+      console.log('xmlBlock', xmlBlock);
+      block.getField('NAME');
+      // .setValue(`unknown block: ${xmlBlock.getAttribute('type')}`);
+      block.canDisconnectFromParent_ = 'true';
     }
     return block;
   };
