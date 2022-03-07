@@ -2637,6 +2637,10 @@ ca:
               display_name: Bucles
             csf_events:
               display_name: Esdeveniments
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variables
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2649,3 +2653,15 @@ ca:
           lessons:
             lesson-9:
               name: Bucles
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internet
+              key: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Ciutadania digital
+            lessonGroup-8:
+              display_name: Variables
+          description_audience: De 9 a 13 anys
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
