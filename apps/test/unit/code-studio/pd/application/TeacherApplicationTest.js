@@ -2,7 +2,6 @@ import React from 'react';
 import {expect} from 'chai';
 import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 
 describe('TeacherApplication', () => {
@@ -12,23 +11,6 @@ describe('TeacherApplication', () => {
     accountEmail: 'user@email.com',
     userId: 1
   };
-
-  let fc;
-
-  beforeEach(() => {
-    fc = sinon.stub(firehoseClient, 'putRecord');
-  });
-
-  afterEach(() => {
-    fc.restore();
-  });
-
-  it('Logs user id on initialization', () => {
-    isolateComponent(
-      <TeacherApplication {...defaultProps} allowPartialSaving />
-    );
-    expect(fc.calledWith(sinon.match({userId: 1})));
-  });
 
   describe('getInitialData', () => {
     const savedFormData =
