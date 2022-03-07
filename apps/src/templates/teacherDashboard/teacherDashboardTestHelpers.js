@@ -98,13 +98,15 @@ export const courseOfferings = {
             id: 3,
             name: 'Unit 1',
             path: '/s/csd1-2017',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           },
           4: {
             id: 4,
             name: 'Unit 2',
             path: '/s/csd2-2017',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           }
         }
       },
@@ -123,13 +125,15 @@ export const courseOfferings = {
             id: 5,
             name: 'Unit 1',
             path: '/s/csd1-2018',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           },
           6: {
             id: 6,
             name: 'Unit 2',
             path: '/s/csd2-2018',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           }
         }
       }
@@ -156,13 +160,15 @@ export const courseOfferings = {
             id: 7,
             name: 'Unit 1',
             path: '/s/csa1-2022',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           },
           8: {
             id: 8,
             name: 'Unit 2',
             path: '/s/csa2-2022',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           }
         }
       }
@@ -189,7 +195,8 @@ export const courseOfferings = {
             id: 9,
             name: 'Flappy',
             path: '/s/flappy',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           }
         }
       }
@@ -216,7 +223,8 @@ export const courseOfferings = {
             id: 10,
             name: 'Hello World',
             path: '/s/hello-world',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           }
         }
       }
@@ -243,7 +251,8 @@ export const courseOfferings = {
             id: 11,
             name: 'Poem Art',
             path: '/s/poem-art',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           }
         }
       }
@@ -270,7 +279,8 @@ export const courseOfferings = {
             id: 12,
             name: 'Artist',
             path: '/s/artist',
-            lesson_extras_available: false
+            lesson_extras_available: false,
+            text_to_speech_enabled: false
           }
         }
       }
