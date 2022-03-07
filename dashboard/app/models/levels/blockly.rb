@@ -790,6 +790,7 @@ class Blockly < Level
   end
 
   def shared_functions
+    puts "fetching from shared_functions/#{shared_function_type}"
     Rails.cache.fetch("shared_functions/#{shared_function_type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: shared_function_type).map(&:to_xml_fragment)
     end.join
@@ -810,6 +811,7 @@ class Blockly < Level
       end
     end
 
+    # Explicitly check for title tags even if they are not the desired type.
     block_xml.xpath(".//#{tag}|//title[@name=\"VAR\"]").each do |parameter|
       next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
       parameter.content = I18n.t('behaviors.this_sprite')
