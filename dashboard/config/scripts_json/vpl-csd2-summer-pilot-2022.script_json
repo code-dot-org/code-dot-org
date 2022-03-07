@@ -2,13 +2,17 @@
   "script": {
     "name": "vpl-csd2-summer-pilot-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-03 22:32:06 UTC",
+    "serialized_at": "2022-03-07 15:28:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -68,13 +72,47 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Welome",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-summer-pilot-2022"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "03647c13-9047-48b4-9e0a-7199b8fcb913",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03647c13-9047-48b4-9e0a-7199b8fcb913",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-summer-pilot-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "c78b844b-23fb-4868-a345-7b369ea3e7d0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c78b844b-23fb-4868-a345-7b369ea3e7d0",
+        "lesson_activity.key": "03647c13-9047-48b4-9e0a-7199b8fcb913"
+      }
+    }
   ],
   "script_levels": [
 
