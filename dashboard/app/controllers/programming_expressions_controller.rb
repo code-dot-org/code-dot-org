@@ -89,6 +89,18 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
+  # POST /programming_expressions/:id/clone
+  def clone
+    return render :not_found unless @programming_expression
+    return render :not_acceptable unless params[:destinationProgrammingEnvironmentName]
+    begin
+      new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
+      render(status: 200, json: {editUrl: edit_programming_expression_path(new_exp)})
+    rescue => err
+      render(json: {error: err.message}.to_json, status: :not_acceptable)
+    end
+  end
+
   private
 
   def programming_expression_params
