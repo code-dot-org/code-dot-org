@@ -290,7 +290,6 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
-    deprecated
     is_course
     show_calendar
     weekly_instructional_minutes
@@ -1438,6 +1437,10 @@ class Script < ApplicationRecord
     [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
+  def deprecated?
+    get_published_state == SharedCourseConstants::PUBLISHED_STATE.deprecated
+  end
+
   def stable?
     get_published_state == SharedCourseConstants::PUBLISHED_STATE.stable
   end
@@ -1778,7 +1781,6 @@ class Script < ApplicationRecord
       :has_verified_resources,
       :project_sharing,
       :tts,
-      :deprecated,
       :is_course,
       :show_calendar,
       :is_migrated,
