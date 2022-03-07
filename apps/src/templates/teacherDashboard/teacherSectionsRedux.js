@@ -1141,23 +1141,28 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedUnitName(state) {
+export function assignedUnit(state) {
   const {sectionBeingEdited, validAssignments} = getRoot(state);
+
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  return validAssignments[assignId];
+}
+
+export function assignedUnitName(state) {
+  const {sectionBeingEdited} = getRoot(state);
   if (!sectionBeingEdited) {
     return '';
   }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+  const assignment = assignedUnit(state);
   return assignment ? assignment.name : '';
 }
 
 export function assignedUnitTextToSpeechEnabled(state) {
-  const {sectionBeingEdited, validAssignments} = getRoot(state);
+  const {sectionBeingEdited} = getRoot(state);
   if (!sectionBeingEdited) {
     return false;
   }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+  const assignment = assignedUnit(state);
   return assignment ? assignment.text_to_speech_enabled : false;
 }
 
