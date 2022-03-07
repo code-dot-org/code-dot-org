@@ -11,6 +11,23 @@ class AssetBucket < BucketHelper
     %w(.jpg .jpeg .gif .png .mp3 .wav .pdf .doc .docx)
   end
 
+  def try_resize_file(body, extension)
+    require "mini_magick"
+    # Resizing takes a lot of compute power. If we're given an image higher than 20MB, don't attempt
+    # to resize. (The upper limit we want to use may actually be much higher, but I was unable to
+    # find an image larger than 20MB to test with). Here, we resize the height and width to 1/4 of
+    # their original value because it's very quick from a compute perspective (<1s versus ~6s for
+    # 1/2). And because the resolution is still pretty good on the small visualization area used
+    # in our web apps.
+    max_resize_size = 20_000_000
+    if ([".jpg", ".jpeg", ".png"].include? extension.downcase) && (body.length < max_resize_size)
+      image = MiniMagick::Image.read(body, extension)
+      image.resize (image.height / 4).floor.to_s + "x" + (image.width / 4).floor.to_s
+      return image.to_blob
+    end
+    return body
+  end
+
   def cache_duration_seconds
     3600
   end
