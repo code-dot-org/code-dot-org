@@ -346,6 +346,10 @@ describe('entry tests', () => {
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
+            'build/package/css/reference_guides.css',
+            'style/curriculum/reference_guides.scss'
+          ],
+          [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
           ],
@@ -581,6 +585,8 @@ describe('entry tests', () => {
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'report_abuse/report_abuse_form':
       './src/sites/studio/pages/report_abuse/report_abuse_form.js',
+    'reference_guides/index':
+      './src/sites/studio/pages/reference_guides/index.js',
     'reference_guides/show':
       './src/sites/studio/pages/reference_guides/show.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
