@@ -605,6 +605,19 @@ class SectionTest < ActiveSupport::TestCase
     assert summarized_section[:sharing_disabled]
   end
 
+  test 'valid_grade? accepts K-12 and Other' do
+    assert Section.valid_grade?("K")
+    assert Section.valid_grade?("1")
+    assert Section.valid_grade?("6")
+    assert Section.valid_grade?("12")
+    assert Section.valid_grade?("Other")
+  end
+
+  test 'valid_grade? does not accept invalid numbers and strings' do
+    refute Section.valid_grade?("Something else")
+    refute Section.valid_grade?("56")
+  end
+
   test 'code review disabled for sections with no code review expiration' do
     DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
     section = create :section
