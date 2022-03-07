@@ -26,21 +26,21 @@ describe('TeacherApplication', () => {
   let firehoseClientStub;
 
   beforeEach(() => {
-    googleAnalyticsStub = sinon.fake();
     sinon
       .stub(window.sessionStorage, 'getItem')
       .withArgs('TeacherApplication')
       .returns(JSON.stringify({}));
     sinon.stub(window.sessionStorage, 'setItem');
+    googleAnalyticsStub = sinon.fake();
     window.ga = googleAnalyticsStub;
     firehoseClientStub = sinon.stub(firehoseClient, 'putRecord');
   });
 
   afterEach(() => {
-    window.ga = undefined;
-    firehoseClientStub.restore();
     window.sessionStorage.getItem.restore();
     window.sessionStorage.setItem.restore();
+    window.ga = undefined;
+    firehoseClientStub.restore();
   });
 
   it('Sends firehose event on initialization and save', () => {
@@ -48,7 +48,7 @@ describe('TeacherApplication', () => {
     // The page reload can't be stubbed because `window.location.reload`
     // is not writable nor configurable: Object.getOwnPropertyDescriptor(window.location, 'toString')
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#modifying_a_property
-    let teacherApp = mount(
+    const teacherApp = mount(
       <TeacherApplication {...defaultProps} allowPartialSaving />
     );
     const formControllerProps = teacherApp.find('FormController').props();
@@ -81,9 +81,7 @@ describe('TeacherApplication', () => {
     );
   });
   it('Reports to google analytics', () => {
-    const form = mount(<TeacherApplication {...defaultProps} />);
-    const nextButton = form.find('#next').first();
-    nextButton.simulate('click');
-    expect(googleAnalyticsStub.getCall(2).calledWith());
+    mount(<TeacherApplication {...defaultProps} />);
+    sinon.assert.called(window.ga);
   });
 });
