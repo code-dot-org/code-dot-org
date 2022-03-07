@@ -10,7 +10,7 @@ import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
   assignedUnitName,
-  assignedTextToSpeech,
+  assignedUnitTextToSpeechEnabled,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
@@ -48,7 +48,7 @@ class EditSectionForm extends Component {
     lessonExtrasAvailable: PropTypes.func.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
     assignedUnitName: PropTypes.string.isRequired,
-    assignedTextToSpeech: PropTypes.bool.isRequired,
+    assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
@@ -139,7 +139,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       lessonExtrasAvailable,
-      assignedTextToSpeech,
+      assignedUnitTextToSpeechEnabled,
       assignedUnitName,
       localeCode,
       isNewSection,
@@ -227,7 +227,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {assignedTextToSpeech && (
+          {assignedUnitTextToSpeechEnabled && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
@@ -552,7 +552,7 @@ let defaultPropsFromState = state => ({
   lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
   hiddenLessonState: state.hiddenLesson,
   assignedUnitName: assignedUnitName(state),
-  assignedTextToSpeech: assignedTextToSpeech(state),
+  assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
 
   // DCDO Flag - show/hide Lock Section field

@@ -25,6 +25,7 @@ describe('EditSectionForm', () => {
         section={testSection}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -62,6 +63,7 @@ describe('EditSectionForm', () => {
         section={noStudentsSection}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -99,6 +101,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -136,6 +139,7 @@ describe('EditSectionForm', () => {
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -176,6 +180,7 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -201,6 +206,7 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -223,6 +229,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -248,6 +255,7 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -270,6 +278,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -292,6 +301,7 @@ describe('EditSectionForm', () => {
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -299,5 +309,53 @@ describe('EditSectionForm', () => {
     );
     const loginTypeField = wrapper.find('LoginTypeField');
     assert.equal(loginTypeField.length, 0);
+  });
+
+  it('does not render TtsAutoplayField when assignedUnitTextToSpeechEnabled is false', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+      />
+    );
+    const ttsAutoplayField = wrapper.find('TtsAutoplayField');
+    assert.equal(ttsAutoplayField.length, 0);
+  });
+
+  it('renders TtsAutoplayField when assignedUnitTextToSpeechEnabled is true', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => true}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+      />
+    );
+    const ttsAutoplayField = wrapper.find('TtsAutoplayField');
+    assert.equal(ttsAutoplayField.length, 1);
   });
 });
