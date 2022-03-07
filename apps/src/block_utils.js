@@ -447,7 +447,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       ? startBlocksDom.ownerDocument
       : document;
     const node = ownerDocument.evaluate(
-      'title[@name="NAME"]',
+      'field[@name="NAME"]',
       func,
       null,
       XPathResult.FIRST_ORDERED_NODE_TYPE,
