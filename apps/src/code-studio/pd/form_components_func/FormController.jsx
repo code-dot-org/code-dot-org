@@ -656,7 +656,7 @@ FormController.propTypes = {
   applicationId: PropTypes.number,
   autoComputedFields: PropTypes.arrayOf(PropTypes.string),
   options: PropTypes.object.isRequired,
-  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+  requiredFields: PropTypes.arrayOf(PropTypes.string),
   pageComponents: PropTypes.arrayOf(PropTypes.func),
   allowPartialSaving: PropTypes.bool,
   getPageProps: PropTypes.func,

@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `Pie`(#e7e8ea) class represents a pie that is available at the Project Mercury Pastries Food Truck.\r\n\r\n##Getting Started\r\n1. Import `Dessert.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://studio.code.org/s/csa-backpack-2022/lessons/2/levels/5).*\r\n\r\n##In Pie.java:\r\nComplete the no-argument constructor.\r\n\r\n2. Use the `this`(#e7e8ea) keyword to call the parameterized constructor for the `Pie`(#e7e8ea) class. Use the values `\"apple\"`(#e7e8ea) for the `newFlavor`(#e7e8ea), `6`(#e7e8ea) for the `newDiameter`(#e7e8ea), and `2.99`(#e7e8ea) for the `newPrice`(#e7e8ea).",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "The Pie Class",
+    "bubble_choice_description": "The Pie class represents a pie that is available at the Project Mercury Pastries Food Truck. Complete the no-argument constructor for the Pie class.",
+    "thumbnail_url": "https://images.code.org/61ca3c00a57923062101c94fc9730b12-image-1646614914894.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Pie myPie = new Pie();\n    System.out.println(myPie);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Pie.java": {
+        "text": "public class Pie extends Dessert {\n    \n  private int diameter;  // The diameter of the Pie\n  \n  /*\n   * Constructor to create a Pie that sets flavor to\n   * \"apple\", diameter to 6, and price to 2.99\n   */\n  public Pie() {\n    // TO DO: Use the this keyword to call the parameterized\n    // constructor with the specified values.\n\n\n    \n  }\n\n  /*\n   * Constructor to create a Pie\n   */\n  public Pie(String newFlavor, int newDiameter, double newPrice) {\n    super(newFlavor, newPrice);\n    diameter = newDiameter;\n  }\n\n  /*\n   * Returns the current value of diameter\n   */\n  public int getDiameter() {\n    return diameter;\n  }\n\n  /*\n   * Sets the diameter to the new value given\n   */\n  public void setDiameter(int newDiameter) {\n    diameter = newDiameter;\n  }\n\n  /*\n   * Returns a string containing the\n   * flavor, price, and diameter\n   */\n  public String toString() {\n    return super.toString() + \"\\nDiameter: \" + diameter;\n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-07T00:54:16.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-07 00:54:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 01:00:17 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 01:02:10 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 01:10:15 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 01:24:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 01:24:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
