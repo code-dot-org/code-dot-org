@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-07 18:03:00 UTC",
+    "serialized_at": "2022-03-07 22:53:22 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -59,6 +59,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**How can I store values so I can reuse them?**\n\nStudents expand their knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. Students use manipulatives to explore how variables are declared, initialized, and used as they write and trace code segments and identify the current value stored in a variable.",
+        "preparation": "* Print copies of the Unit 2 Guide (one for each student)\n* Print copies of the Data Types Manipulatives (one set for each group of 3-4 student)\n* (Optional) Gather sets of three different sizes of envelopes\n* Gather several sticky notes, tape, rubber bands cut in half (or pieces of yarn), and scrap pieces of paper",
+        "student_overview": "**How can I store values so I can reuse them?**\n\nYou learned about the `boolean` data type to represent a `true` or `false` value in the previous unit. In this lesson, you expand your knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. You use manipulatives to explore how variables are declared, initialized, and used as you write and trace code segments and identify the current value stored in a variable."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -74,6 +77,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "**How can I use variables to perform calculations?**\n\nStudents discover how arithmetic and compound assignment operators function in Java with different data types. Students practice evaluating expressions and explore scenarios that result in errors or unexpected results.",
+        "preparation": "* Print copies of the Evaluating Expressions Quiz-Quiz-Trade\n* Cut out the Evaluating Expressions Quiz-Quiz-Trade cards",
+        "student_overview": "**How can I use variables to perform calculations?**\n\nYou learned about primitive and reference variables and how to store values and pointers to objects in these variables. In this lesson, you discover how arithmetic and compound assignment operators function in Java when used with different data types. You practice evaluating expressions and explore scenarios that result in errors or unexpected results."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -269,6 +275,9 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "student_overview": "Assess your progress through the Unit 2 Assessment."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -278,6 +287,73 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "e511af76-bfc6-4aa9-a6ae-ada226ca485f",
+      "position": 1,
+      "properties": {
+        "name": "Manipulatives Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e511af76-bfc6-4aa9-a6ae-ada226ca485f",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "3a3d37b9-57ec-464b-b077-2057a53f62c4",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a3d37b9-57ec-464b-b077-2057a53f62c4",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "684fa4ea-d363-47d2-b73a-9242d07e95e4",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "c17d3324-01d0-417a-a988-780b75f3edba",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c17d3324-01d0-417a-a988-780b75f3edba",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "dd3f20d4-a95c-4553-909a-14cb5df7653f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd3f20d4-a95c-4553-909a-14cb5df7653f",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022"
+      }
+    },
     {
       "key": "9cc8bca4-4b03-4625-8327-1d3d22d62a71",
       "position": 1,
@@ -313,9 +389,303 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-2022"
       }
+    },
+    {
+      "key": "abf675ba-82f1-4845-8fbf-7fef08927c3a",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "abf675ba-82f1-4845-8fbf-7fef08927c3a",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "43ff342e-239f-4cbf-a7d8-176e6a0e791d",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "43ff342e-239f-4cbf-a7d8-176e6a0e791d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "b3411399-b531-4c0c-bd93-fe739b70d264",
+      "position": 1,
+      "properties": {
+        "description": "You can choose to print and cut out sets of the foldables or gather sets of different-sized envelopes for each data type.\n* For the int data type, use 2.25\" x 3.5\" envelopes such as [**these**](https://www.amazon.com/Envelopes-Gummed-assorted-colors-Office/dp/B087D964CN/ref=sr_1_2_sspa?crid=3LCABNRIDRL4X&keywords=small+envelopes&qid=1645400504&sprefix=small+envelopes%2Caps%2C108&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzVzRZVlZBWjUxWFVYJmVuY3J5cHRlZElkPUEwODQwMDMxMllVOFBNWFJHRlhCMyZlbmNyeXB0ZWRBZElkPUEwNTM3ODc4Ujg2SFhHNFlLT0hPJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==).\n* For the double data type, use 4\" x 2.7\" envelopes such as [**these**](https://www.amazon.com/Mini-Envelopes-Assorted-Colors-Business/dp/B07JPYBGQH/ref=sr_1_7?crid=3LCABNRIDRL4X&keywords=small+envelopes&qid=1645400504&sprefix=small+envelopes%2Caps%2C108&sr=8-7).\n* For objects, use 5\" x 7\" envelopes such as [**these**](https://www.amazon.com/Colorful-Envelopes-Assorted-Invitations-Graduation/dp/B08DV47RR4/ref=sr_1_14?crid=3LCABNRIDRL4X&keywords=small+envelopes&qid=1645400504&sprefix=small+envelopes%2Caps%2C108&sr=8-14)."
+      },
+      "seeding_key": {
+        "activity_section.key": "b3411399-b531-4c0c-bd93-fe739b70d264",
+        "lesson_activity.key": "e511af76-bfc6-4aa9-a6ae-ada226ca485f"
+      }
+    },
+    {
+      "key": "e3a182ba-9c64-4b8c-b74b-c095abcdb0d6",
+      "position": 1,
+      "properties": {
+        "description": "In the previous unit, you learned about the characteristics of software engineers and began to develop your software engineering skills. We will be learning more about the structure and design of classes in Java programs and continue to use software engineering characteristics and skills to make design decisions.",
+        "name": "Software Engineering Goals",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e3a182ba-9c64-4b8c-b74b-c095abcdb0d6",
+        "lesson_activity.key": "3a3d37b9-57ec-464b-b077-2057a53f62c4"
+      }
+    },
+    {
+      "key": "5b4f8cb5-610f-42d4-87a5-61aa1411ee43",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 2 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt, then have students note their goals on the Unit 2 Guide.\n* *What software engineering characteristics do you want to work on in this unit?*\n* *How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students can choose any characteristic or skill they want to improve regardless of whether or not it is an area for improvement. Students can choose a characteristic that is a strength that they want to further develop as an anchor for upcoming units, or they can choose a characteristic that is an area for improvement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5b4f8cb5-610f-42d4-87a5-61aa1411ee43",
+        "lesson_activity.key": "3a3d37b9-57ec-464b-b077-2057a53f62c4"
+      }
+    },
+    {
+      "key": "97674a65-81f6-4484-87b9-04d9f0915486",
+      "position": 1,
+      "properties": {
+        "description": "We used reference variables in the previous unit for our `Painter` objects. There are two types of variables in Java that store different types of information. Let's explore what these are and how they work.",
+        "duration": "15",
+        "name": "Introduction to Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "97674a65-81f6-4484-87b9-04d9f0915486",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "45bc4da2-611c-43e7-9081-0b3dfdd52096",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *Where have you seen or used variables before?*\n* *What might you store in a variable in a program?*\n\n**Discussion Goal:** Students share examples of using variables in math class. Students suggest ways a variable could be used in a program, such as keeping track of a score in a game.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students recall the attributes of the `Painter` class. Ask them whether these are variables and how a program in The Neighborhood used these variables to keep track of the location of a `Painter` object, how much paint it had, and the color of the paint."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "45bc4da2-611c-43e7-9081-0b3dfdd52096",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "ccda8471-1c49-42d7-b42d-7bfda0182129",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define data type and primitive type, review the `boolean` data type, and introduce the int and double data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating Variables*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *literal*, *assignment*, and *assignment operator* and demonstrate declaring and initializing a primitive variable.\n\n**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of Data Types Manipulatives, sticky notes, tape, rubber bands (or yarn), and scrap pieces of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Data Types Manipulatives to model the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate stack memory and heap memory."
+      },
+      "seeding_key": {
+        "activity_section.key": "ccda8471-1c49-42d7-b42d-7bfda0182129",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "10442509-5a15-4212-8c1b-73503df42dd8",
+      "position": 4,
+      "properties": {
+        "description": "Primitive variables are stored in stack memory. On the other hand, objects are stored in heap memory. We use reference variables to access an object from heap memory. Reference variables contain a pointer to where the object is located in memory.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "10442509-5a15-4212-8c1b-73503df42dd8",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "c243f909-b161-481b-af46-30335f2a069d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review `String`s and demonstrate declaring a variable for a `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Data Types Manipulatives to model declaring a variable for a `Painter` object."
+      },
+      "seeding_key": {
+        "activity_section.key": "c243f909-b161-481b-af46-30335f2a069d",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "92c92b05-d5fa-4d76-b104-304f506b3241",
+      "position": 6,
+      "properties": {
+        "description": "We can change the value stored in a variable after it has been initialized using the assignment operator.",
+        "duration": "10",
+        "name": "Tracing Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "92c92b05-d5fa-4d76-b104-304f506b3241",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "9ea72156-4710-49e3-b7d1-790ddf4e29d3",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate changing the value of a variable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use their Data Types Manipulatives to trace the code segment.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that a variable can only hold one value at a time. When a value is removed from a variable, it is gone from stack memory."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ea72156-4710-49e3-b7d1-790ddf4e29d3",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "18f4a9ef-a257-4edf-88e4-1399e26e2faa",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution to the code segment."
+      },
+      "seeding_key": {
+        "activity_section.key": "18f4a9ef-a257-4edf-88e4-1399e26e2faa",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "dcb1aca5-17f7-47b9-8e51-43ab706777d3",
+      "position": 9,
+      "properties": {
+        "description": "Let's practice creating and using variables in Java. You can print the values stored in a variable to check its value.",
+        "duration": "10",
+        "name": "Creating and Working with Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dcb1aca5-17f7-47b9-8e51-43ab706777d3",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "38337133-2f77-4705-8bf2-79423ee5a672",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate printing the value stored in a variable to the console.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students complete a Check for Understanding on Level 1, then continue to Level 2 to create and print `int`, `double`, and `String` variables. Students change and print the values stored in these variables on Level 3.",
+        "progression_name": "Creating and Printing Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "38337133-2f77-4705-8bf2-79423ee5a672",
+        "lesson_activity.key": "684fa4ea-d363-47d2-b73a-9242d07e95e4"
+      }
+    },
+    {
+      "key": "29787f22-318e-4caf-a8e1-505ce10f570d",
+      "position": 1,
+      "properties": {
+        "description": "We have learned a lot about working with variables in a program today! Let's help this programmer fix an error in their code.",
+        "name": "Swapping Values",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "29787f22-318e-4caf-a8e1-505ce10f570d",
+        "lesson_activity.key": "c17d3324-01d0-417a-a988-780b75f3edba"
+      }
+    },
+    {
+      "key": "6faff273-2c61-4049-aae1-e78a44c1aaba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This code segment is supposed to swap the values in variables `firstNumber` and `secondNumber`, but it has an error. What do we need to add, remove, or change to correct this code segment?*\n\n**Discussion Goal:** Students suggest adding a temporary variable to perform the swap. The value stored in `firstNumber` should be copied to the temporary variable. The value stored in `secondNumber` can then be copied to the `firstNumber` variable, and then the value stored in the temporary variable can be copied to the `secondNumber` variable.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to identify a solution, have them model the problem using their Data Types Manipulatives."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6faff273-2c61-4049-aae1-e78a44c1aaba",
+        "lesson_activity.key": "c17d3324-01d0-417a-a988-780b75f3edba"
+      }
+    },
+    {
+      "key": "8e956d78-6863-4bd9-b9a3-1d55aaa4fdff",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Gather the Data Types Manipulatives to reuse in upcoming lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8e956d78-6863-4bd9-b9a3-1d55aaa4fdff",
+        "lesson_activity.key": "c17d3324-01d0-417a-a988-780b75f3edba"
+      }
+    },
+    {
+      "key": "aececbbc-4078-46f2-9606-07a33a886c3c",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "aececbbc-4078-46f2-9606-07a33a886c3c",
+        "lesson_activity.key": "c17d3324-01d0-417a-a988-780b75f3edba"
+      }
+    },
+    {
+      "key": "db112086-b901-4817-8c65-896a2db18ecc",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "db112086-b901-4817-8c65-896a2db18ecc",
+        "lesson_activity.key": "c17d3324-01d0-417a-a988-780b75f3edba"
+      }
+    },
+    {
+      "key": "fe49be75-03e6-4187-b317-2fe820fb9a2d",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe49be75-03e6-4187-b317-2fe820fb9a2d",
+        "lesson_activity.key": "c17d3324-01d0-417a-a988-780b75f3edba"
+      }
+    },
+    {
+      "key": "2e1e7e7e-a622-44d4-9097-1e0657f364f4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e1e7e7e-a622-44d4-9097-1e0657f364f4",
+        "lesson_activity.key": "dd3f20d4-a95c-4553-909a-14cb5df7653f"
+      }
+    },
     {
       "key": "6055aa1a-d31b-434e-adb9-6c9f428e454c",
       "position": 1,
@@ -345,19 +715,295 @@
         "activity_section.key": "b73751fc-2ee2-4955-bf15-a1f7b977f481",
         "lesson_activity.key": "c7f1b214-5d60-410d-8023-73c32d3eebf1"
       }
+    },
+    {
+      "key": "f4a08cf4-2b15-4b18-a253-eed071b7dae2",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations! After designing classes and hierarchies, you have successfully made it to the end of Unit 2. Today, you will each complete a multiple-choice assessment to put your skills to the test.",
+        "name": "Unit 2 Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f4a08cf4-2b15-4b18-a253-eed071b7dae2",
+        "lesson_activity.key": "abf675ba-82f1-4845-8fbf-7fef08927c3a"
+      }
+    },
+    {
+      "key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3",
+        "lesson_activity.key": "abf675ba-82f1-4845-8fbf-7fef08927c3a"
+      }
+    },
+    {
+      "key": "81855817-2852-40dd-98ad-aee052c6b791",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class together.\n* Review answers asynchronously and allow students to do corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectation, follow up so they have the opportunity to learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81855817-2852-40dd-98ad-aee052c6b791",
+        "lesson_activity.key": "43ff342e-239f-4cbf-a7d8-176e6a0e791d"
+      }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Creating and Printing Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L1_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022",
+        "activity_section.key": "38337133-2f77-4705-8bf2-79423ee5a672"
+      },
+      "level_keys": [
+        "CSA U2L1-L1_2022"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and Printing Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L2_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022",
+        "activity_section.key": "38337133-2f77-4705-8bf2-79423ee5a672"
+      },
+      "level_keys": [
+        "CSA U2L1-L2_2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and Printing Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L3_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022",
+        "activity_section.key": "38337133-2f77-4705-8bf2-79423ee5a672"
+      },
+      "level_keys": [
+        "CSA U2L1-L3_2022"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L4_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022",
+        "activity_section.key": "db112086-b901-4817-8c65-896a2db18ecc"
+      },
+      "level_keys": [
+        "CSA U2L1-L4_2022"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L1_2022",
+        "script_level.level_keys": [
+          "CSA U2L1-L1_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022",
+        "activity_section.key": "38337133-2f77-4705-8bf2-79423ee5a672"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L2_2022",
+        "script_level.level_keys": [
+          "CSA U2L1-L2_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022",
+        "activity_section.key": "38337133-2f77-4705-8bf2-79423ee5a672"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L3_2022",
+        "script_level.level_keys": [
+          "CSA U2L1-L3_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022",
+        "activity_section.key": "38337133-2f77-4705-8bf2-79423ee5a672"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L4_2022",
+        "script_level.level_keys": [
+          "CSA U2L1-L4_2022"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2022",
+        "activity_section.key": "db112086-b901-4817-8c65-896a2db18ecc"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Data Type Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1JFNDhDfNXTzX4pYOlEx90S5TXAswW2RE7qo06jb7X9s/edit?usp=sharing",
+      "key": "data_type_manipulatives",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_type_manipulatives"
+      }
+    },
+    {
+      "name": "Evaluating Expressions Quiz-Quiz-Trade",
+      "url": "https://docs.google.com/document/d/1PvhyKQFF5P43D5xJfoEwrE8_VdqMeqTM7IW1vTyegUM/edit?usp=sharing",
+      "key": "evaluating_expressions_quiz-quiz-trade",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "evaluating_expressions_quiz-quiz-trade"
+      }
+    },
+    {
+      "name": "Unit 2 Guide",
+      "url": "https://docs.google.com/document/d/1FjdUqh94hmb2mAFRwLxYK-no8brQ3ze77y37hDJThTA/edit?usp=sharing",
+      "key": "unit_2_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "name": "Unit 2 Presentation",
+      "url": "https://docs.google.com/presentation/d/1fq1A8RfwFaBJvIiFFcuETFLw5ahY2FVcTSwcODUUncM/edit?usp=sharing",
+      "key": "unit_2_presentation",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "data_type_manipulatives"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "evaluating_expressions_quiz-quiz-trade"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_2_presentation"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -366,19 +1012,338 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "_double_",
+      "word": "`double`",
+      "definition": "a data type that stores a decimal number",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "_double_"
+      }
+    },
+    {
+      "key": "_int_",
+      "word": "`int`",
+      "definition": "a data type that stores integers, or whole numbers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "_int_"
+      }
+    },
+    {
+      "key": "_string_",
+      "word": "`String`",
+      "definition": "an object that represents a sequence of characters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "_string_"
+      }
+    },
+    {
+      "key": "assignment",
+      "word": "assignment",
+      "definition": "using the assignment operator ( `=` ) to initialize or change the value stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "assignment"
+      }
+    },
+    {
+      "key": "assignment_operator_",
+      "word": "assignment operator ( `=` )",
+      "definition": "an operator used to assign a value or object to a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "assignment_operator_"
+      }
+    },
+    {
+      "key": "data_type",
+      "word": "data type",
+      "definition": "the format of the data that can be stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "key": "declaration",
+      "word": "declaration",
+      "definition": "giving a name and data type to a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "declaration"
+      }
+    },
+    {
+      "key": "evaluate",
+      "word": "evaluate",
+      "definition": "determining the value of an expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "evaluate"
+      }
+    },
+    {
+      "key": "expression",
+      "word": "expression",
+      "definition": "a combination of data and operators that evaluates to a single value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "key": "initialization",
+      "word": "initialization",
+      "definition": "giving a starting value to a variable using the assignment operator ( `=` )",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initialization"
+      }
+    },
+    {
+      "key": "literal",
+      "word": "literal",
+      "definition": "a source code representation of a value, such as a number or text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "literal"
+      }
+    },
+    {
+      "key": "operand",
+      "word": "operand",
+      "definition": "the data that is operated on",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "operand"
+      }
+    },
+    {
+      "key": "primitive_type",
+      "word": "primitive type",
+      "definition": "a basic data type that Java predefines",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "primitive_type"
+      }
+    },
+    {
+      "key": "reference_type",
+      "word": "reference type",
+      "definition": "a data type that contains a pointer to the memory location of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "reference_type"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "variable",
+      "definition": "a container that stores a value in memory",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "_double_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "_int_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "_string_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "assignment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "assignment_operator_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "declaration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "initialization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "literal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "primitive_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "reference_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "evaluate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "operand"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "1c72c064-6872-4111-8ecf-d6c8178a1d5f",
+      "properties": {
+        "description": "Trace the changing values of variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "1c72c064-6872-4111-8ecf-d6c8178a1d5f"
+      }
+    },
+    {
+      "key": "af55c6a6-db89-431d-a8e4-61084b3b8e60",
+      "properties": {
+        "description": "Declare and assign a value of type `int`, `double`, `boolean`, or `String` to a variable"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "af55c6a6-db89-431d-a8e4-61084b3b8e60"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.1"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
