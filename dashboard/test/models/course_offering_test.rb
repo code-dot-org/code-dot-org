@@ -340,7 +340,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_in_course.id,
               name: @unit_in_course.name,
               path: @unit_in_course.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           }
         }
@@ -365,7 +366,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_teacher_to_students.id,
               name: @unit_teacher_to_students.name,
               path: @unit_teacher_to_students.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           },
           @unit_teacher_to_students2.course_version.id => {
@@ -382,7 +384,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_teacher_to_students2.id,
               name: @unit_teacher_to_students2.name,
               path: @unit_teacher_to_students2.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           }
         }
@@ -414,7 +417,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_facilitator_to_teacher.id,
               name: @unit_facilitator_to_teacher.name,
               path: @unit_facilitator_to_teacher.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           }
         }
@@ -446,7 +450,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_in_course.id,
               name: @unit_in_course.name,
               path: @unit_in_course.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           }
         }
@@ -471,7 +476,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_teacher_to_students.id,
               name: @unit_teacher_to_students.name,
               path: @unit_teacher_to_students.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           },
           @unit_teacher_to_students2.course_version.id => {
@@ -488,7 +494,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_teacher_to_students2.id,
               name: @unit_teacher_to_students2.name,
               path: @unit_teacher_to_students2.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           }
         }
@@ -520,7 +527,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_in_course.id,
               name: @unit_in_course.name,
               path: @unit_in_course.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           }
         }
@@ -545,7 +553,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_teacher_to_students.id,
               name: @unit_teacher_to_students.name,
               path: @unit_teacher_to_students.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           },
           @unit_teacher_to_students2.course_version.id => {
@@ -562,7 +571,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_teacher_to_students2.id,
               name: @unit_teacher_to_students2.name,
               path: @unit_teacher_to_students2.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           }
         }
@@ -587,7 +597,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
               id: @unit_facilitator_to_teacher.id,
               name: @unit_facilitator_to_teacher.name,
               path: @unit_facilitator_to_teacher.link,
-              lesson_extras_available: false
+              lesson_extras_available: false,
+              text_to_speech_enabled: false
             }}
           }
         }
