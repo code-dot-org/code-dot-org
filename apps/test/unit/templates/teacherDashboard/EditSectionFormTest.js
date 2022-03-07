@@ -17,7 +17,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={testSection}
@@ -54,7 +53,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={noStudentsSection}
@@ -91,7 +89,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.picture}}
@@ -128,7 +125,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
@@ -165,7 +161,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{
@@ -190,7 +185,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{
@@ -215,7 +209,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
@@ -237,7 +230,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{
@@ -262,7 +254,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.clever}}
@@ -284,7 +275,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         courseOfferings={courseOfferings}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}

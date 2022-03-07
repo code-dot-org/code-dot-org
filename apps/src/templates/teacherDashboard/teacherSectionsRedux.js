@@ -47,7 +47,6 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
 const SET_TEXT_TO_SPEECH_UNIT_IDS =
   'teacherDashboard/SET_TEXT_TO_SPEECH_UNIT_IDS';
@@ -113,7 +112,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
 export const setTextToSpeechUnitIds = ids => ({
   type: SET_TEXT_TO_SPEECH_UNIT_IDS,
   ids
@@ -547,7 +545,6 @@ const initialState = {
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
   // for consistency and ease of comparison).
   providers: [],
-  validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
   // Array of course offerings, to populate the assignment dropdown
@@ -659,13 +656,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       textToSpeechUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_VALID_GRADES) {
-    return {
-      ...state,
-      validGrades: action.grades
     };
   }
 

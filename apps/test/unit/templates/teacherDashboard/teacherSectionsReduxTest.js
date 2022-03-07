@@ -10,7 +10,6 @@ import reducer, {
   __testInterface__,
   setAuthProviders,
   setRosterProvider,
-  setValidGrades,
   setCourseOfferings,
   setSections,
   selectSection,
@@ -179,14 +178,6 @@ describe('teacherSectionsRedux', () => {
       const action = setRosterProvider('word');
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.rosterProvider, null);
-    });
-  });
-
-  describe('setValidGrades', () => {
-    it('sets a list of valid grades', () => {
-      const action = setValidGrades(['K', '1', '2']);
-      const nextState = reducer(initialState, action);
-      assert.deepEqual(nextState.validGrades, ['K', '1', '2']);
     });
   });
 

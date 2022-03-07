@@ -21,7 +21,10 @@ import {
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {
+  SectionLoginType,
+  StudentGradeLevels
+} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -36,7 +39,6 @@ class EditSectionForm extends Component {
     //Comes from redux
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
-    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
       .isRequired,
     section: sectionShape.isRequired,
@@ -131,7 +133,6 @@ class EditSectionForm extends Component {
     const {
       section,
       title,
-      validGrades,
       courseOfferings,
       isSaveInProgress,
       editSectionProperties,
@@ -193,7 +194,6 @@ class EditSectionForm extends Component {
           <GradeField
             value={section.grade || ''}
             onChange={grade => editSectionProperties({grade})}
-            validGrades={validGrades}
             disabled={isSaveInProgress}
           />
           {showLoginTypeField && (
@@ -301,11 +301,13 @@ const SectionNameField = ({value, onChange, disabled}) => (
 );
 SectionNameField.propTypes = FieldProps;
 
-const GradeField = ({value, onChange, validGrades, disabled}) => {
-  const gradeOptions = [''].concat(validGrades).map(grade => ({
-    value: grade,
-    text: grade === 'Other' ? 'Other/Mixed' : grade
-  }));
+const GradeField = ({value, onChange, disabled}) => {
+  const gradeOptions = ['']
+    .concat(Object.values(StudentGradeLevels))
+    .map(grade => ({
+      value: grade,
+      text: grade === 'Other' ? 'Other/Mixed' : grade
+    }));
   return (
     <div>
       <FieldName>{i18n.grade()}</FieldName>
@@ -323,10 +325,7 @@ const GradeField = ({value, onChange, validGrades, disabled}) => {
     </div>
   );
 };
-GradeField.propTypes = {
-  ...FieldProps,
-  validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
-};
+GradeField.propTypes = FieldProps;
 
 const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
   const friendlyNameByLoginType = {
@@ -538,7 +537,6 @@ YesNoDropdown.propTypes = FieldProps;
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialUnitId: state.teacherSections.initialUnitId,
-  validGrades: state.teacherSections.validGrades,
   courseOfferings: state.teacherSections.courseOfferings,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,

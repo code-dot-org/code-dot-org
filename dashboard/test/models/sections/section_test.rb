@@ -134,6 +134,17 @@ class SectionTest < ActiveSupport::TestCase
     assert student.sharing_disabled?
   end
 
+  test 'should raise error if grade is not valid' do
+    section1 = Section.create @default_attrs
+
+    error = assert_raises do
+      section1.grade = 'fake_grade'
+      section1.save!
+    end
+
+    assert_includes error.message, 'Grade must be one of the valid student grades. Expected one of:'
+  end
+
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
   # sections. As this situation cannot happen without manipulating the DB (dependent callbacks),
   # we do not worry about testing it.
@@ -592,19 +603,6 @@ class SectionTest < ActiveSupport::TestCase
 
     assert summarized_section[:script][:project_sharing]
     assert summarized_section[:sharing_disabled]
-  end
-
-  test 'valid_grade? accepts K-12 and Other' do
-    assert Section.valid_grade?("K")
-    assert Section.valid_grade?("1")
-    assert Section.valid_grade?("6")
-    assert Section.valid_grade?("12")
-    assert Section.valid_grade?("Other")
-  end
-
-  test 'valid_grade? does not accept invalid numbers and strings' do
-    refute Section.valid_grade?("Something else")
-    refute Section.valid_grade?("56")
   end
 
   test 'code review disabled for sections with no code review expiration' do
