@@ -6,6 +6,7 @@ import {Pagination} from '@react-bootstrap/pagination';
 import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const defaultSubmitButtonText = i18n.submit();
 
@@ -625,6 +626,7 @@ const FormController = props => {
         {pageButtons}
         {shouldShowSubmit() ? submitButton : nextButton}
         {allowPartialSaving && savedStatus !== 'reopened' && saveButton}
+        {saving && <Spinner style={styles.spinner} size="medium" />}
       </FormGroup>
     );
   };
@@ -647,7 +649,8 @@ const styles = {
     margin: '0 10px'
   },
   saveButton: {
-    marginLeft: '10px'
+    marginLeft: '10px',
+    marginRight: '10px'
   }
 };
 

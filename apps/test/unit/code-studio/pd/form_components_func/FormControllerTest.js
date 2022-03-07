@@ -221,10 +221,11 @@ describe('FormController', () => {
         expect(getData(DummyPage1)).to.eql({...testData});
       });
 
-      it('Disables the save button during save', () => {
+      it('Disables the save button during save and renders spinner', () => {
         form = isolateComponent(<FormController {...defaultProps} />);
         form.findAll('Button')[1].props.onClick();
         expect(form.findAll('Button')[1].props.disabled).to.be.true;
+        expect(form.findAll('Spinner')).to.have.length(1);
       });
 
       it('Re-enables the save button after successful save', () => {
@@ -241,6 +242,7 @@ describe('FormController', () => {
         server.respond();
 
         expect(form.findAll('Button')[1].props.disabled).to.be.false;
+        expect(form.findAll('Spinner')).to.have.length(0);
 
         server.restore();
       });
