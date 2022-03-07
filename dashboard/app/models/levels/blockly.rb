@@ -810,7 +810,7 @@ class Blockly < Level
       end
     end
 
-    block_xml.xpath(".//#{tag}[@name=\"VAR\"]").each do |parameter|
+    block_xml.xpath(".//#{tag}|//title[@name=\"VAR\"]").each do |parameter|
       next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
       parameter.content = I18n.t('behaviors.this_sprite')
     end
