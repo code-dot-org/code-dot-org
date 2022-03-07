@@ -104,6 +104,7 @@ class HomeController < ApplicationController
 
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
+    @homepage_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
