@@ -3536,6 +3536,10 @@ fi:
               display_name: Silmukat
             csf_events:
               display_name: Tapahtumat
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Muuttujat
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -3550,3 +3554,13 @@ fi:
           lessons:
             lesson-9:
               name: Silmukat
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internetti
+              key: Internetti
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-8:
+              display_name: Muuttujat

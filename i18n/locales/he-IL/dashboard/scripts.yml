@@ -5302,20 +5302,8 @@ he:
             lesson-1: {}
         csa1-2022:
           lessons:
-            lesson-2: {}
-            lesson-3: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
             lesson-9:
               name: חזרות
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
         pre-express-2022:
           lessons:
             Learn to Drag and Drop: {}
@@ -5338,7 +5326,13 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
-        csa2-2022: {}
+        csa2-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-6:
+              name: משתנים
         csa3-2022: {}
         tessplayground: {}
         cs4all-invasive-species:
@@ -5371,11 +5365,16 @@ he:
         tess-test-csa: {}
         csa1-2022-exemplars:
           lessons:
+            lesson-1: {}
+            lesson-2: {}
             lesson-9:
               name: חזרות
         pltess: {}
         self-paced-pl-csa1-2022: {}
-        self-paced-pl-csa3-2022: {}
+        self-paced-pl-csa2-2022: {}
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-1: {}
         csa7-pilot-extra:
           lessons:
             Unit 7 Pilot Survey: {}
@@ -5395,3 +5394,45 @@ he:
         csa-backpack-2022:
           lessons:
             lesson-1: {}
+        csd6-projects:
+          lessons:
+            'Project: Human Device Interaction': {}
+            lesson-4: {}
+        coursef-2022-pilot:
+          lessons:
+            Outbreak:
+              name: התפרצות
+              key: התפרצות
+            AI For Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
+              key: בינה מלאכותית למען האוקיינוסים
+            The Internet:
+              name: האינטרנט
+              key: האינטרנט
+          lesson_groups:
+            ramp_up:
+              display_name: דמויות
+            lessonGroup-8:
+              display_name: משתנים
+        csa6-2022:
+          lessons:
+            Unit 6 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1: {}
+        csa7-2022:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+        csa8-2022:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}

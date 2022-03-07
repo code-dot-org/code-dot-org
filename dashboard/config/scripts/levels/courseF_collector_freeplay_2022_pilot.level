@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:54.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -59,7 +55,7 @@
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "short_instructions": "After enough time has passed, end the game and show the final score.",
-    "long_instructions": "# Finish your Collector Game\r\n\r\nYou can now add whatever you like to your code. For example, you can change the background at the end of the game or add sounds.\r\n\r\nIf you would like a new idea, click the light bulb to the left.",
+    "long_instructions": "# Finish your Collector Game\r\n\r\nYou can now add whatever you like to your code. For example, you can change the background at the end of the game or add sounds.",
     "authored_hints": "[]",
     "hint_prompt_attempts_threshold": "1",
     "project_template_level_name": "courseF_collector_template_2022_pilot",
@@ -70,11 +66,16 @@
       "downButton"
     ],
     "callout_json": "[]",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "gWNcOFiKYN3xUCUhCYjwg0UvsqBlgFrnToaeIgBOYioUmBmC8h29oaTxKSHe\nqAUtBslmSsPmY7M1Kfs13oDhUXzgXXGQL78J4gOSEtguEzQrsp1f6sBTNaZL\nLcFBfeE0PvqNwTcOL5jWDwqH6N46pKuSj8HGpM65koXOk82uaLdXapdgv5xE\nTl4c9HdbP/d0N7oUbsTZAjoXBosfrp1msQ==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:54.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:54.858+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_freeplay\\\"\"],\"cloned_from\":\"courseF_collector_freeplay\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:54.858+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_freeplay\\\"\"],\"cloned_from\":\"courseF_collector_freeplay\"},{\"changed_at\":\"2022-03-01 21:09:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-01 21:16:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-03-01 21:26:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

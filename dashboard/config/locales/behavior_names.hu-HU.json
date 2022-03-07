@@ -233,19 +233,46 @@
           "fluttering": "csapkodva",
           "wobbling": "kalimpálva",
           "moving west and looping": "nyugat felé menni és ismételgetni",
-          "moving east and looping": "kelet felé menni és ismételgetni"
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "moving east": "keletre menni",
+          "spinning left": "balra forogni",
+          "spinning right": "jobbra forogni",
+          "shrinking": "zsugorodni",
+          "growing": "növekedni",
+          "moving south": "délre menni",
+          "moving north": "északra menni",
+          "jittering": "idegeskedni",
+          "moving west": "nyugatra menni"
         },
         "courseF_sprites_moreSprites": {
           "fluttering": "csapkodva",
           "wobbling": "kalimpálva",
           "moving west and looping": "nyugat felé menni és ismételgetni",
-          "moving east and looping": "kelet felé menni és ismételgetni"
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "moving east": "keletre menni",
+          "spinning left": "balra forogni",
+          "spinning right": "jobbra forogni",
+          "shrinking": "zsugorodni",
+          "growing": "növekedni",
+          "moving south": "délre menni",
+          "moving north": "északra menni",
+          "jittering": "idegeskedni",
+          "moving west": "nyugatra menni"
         },
         "courseF_sprites_positioning": {
           "fluttering": "csapkodva",
           "wobbling": "kalimpálva",
           "moving west and looping": "nyugat felé menni és ismételgetni",
-          "moving east and looping": "kelet felé menni és ismételgetni"
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "moving east": "keletre menni",
+          "spinning left": "balra forogni",
+          "spinning right": "jobbra forogni",
+          "shrinking": "zsugorodni",
+          "growing": "növekedni",
+          "moving south": "délre menni",
+          "moving north": "északra menni",
+          "jittering": "idegeskedni",
+          "moving west": "nyugatra menni"
         },
         "courseF_sprites_properties": {
           "fluttering": "csapkodva",
@@ -546,6 +573,20 @@
           "wobbling": "kalimpálva",
           "moving west and looping": "nyugat felé menni és ismételgetni",
           "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_sprites_predict": {
+          "moving east": "keletre menni",
+          "moving west": "nyugatra menni",
+          "wandering": "vándorolni",
+          "spinning left": "balra forogni",
+          "spinning right": "jobbra forogni",
+          "shrinking": "zsugorodni",
+          "growing": "növekedni",
+          "moving south": "délre menni",
+          "swimming left and right": "jobbra-balra úszás",
+          "moving north": "északra menni",
+          "jittering": "idegeskedni",
+          "patrolling": "járőrözni"
         }
       }
     }

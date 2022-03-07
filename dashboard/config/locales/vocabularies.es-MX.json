@@ -907,14 +907,53 @@
         "function/csd/2021": {
           "word": "Función"
         },
+        "computer/csd/2021": {
+          "word": "Computadora",
+          "definition": "Una máquina que trabaja con información."
+        },
         "input/csd/2021": {
-          "word": "Entrada"
+          "word": "Entrada",
+          "definition": "la información que las computadoras obtienen de los usuarios, dispositivos u otras computadoras"
+        },
+        "output/csd/2021": {
+          "word": "Salida",
+          "definition": "la información que las computadoras dan a los usuarios, a los dispositivos o a otras computadoras"
         },
         "processing/csd/2021": {
-          "word": "Procesamiento"
+          "word": "Procesamiento",
+          "definition": "El proceso que las computadoras hacen para convertir la entrada en salida"
+        },
+        "storage/csd/2021": {
+          "word": "almacenamiento",
+          "definition": "Guardar información para poder utilizarla en el futuro"
+        },
+        "html/csd/2021": {
+          "word": "HTML",
+          "definition": "Lenguaje de Marcas de Hipertexto, un lenguaje usado para crear páginas web."
+        },
+        "html_element/csd/2021": {
+          "word": "Elemento HTML",
+          "definition": "Un extracto de un sitio web, marcado por una etiqueta de inicio y por lo general cerrado con una etiqueta de fin."
+        },
+        "html_tag/csd/2021": {
+          "word": "Etiqueta HTML",
+          "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y que tipo de elemento es"
+        },
+        "website_content/csd/2021": {
+          "word": "Contenido de sitio web",
+          "definition": "El texto y las imágenes en un sitio web"
+        },
+        "website_structure/csd/2021": {
+          "word": "Estructura del sitio web",
+          "definition": "La forma en la que se organiza el contenido de un sitio web"
+        },
+        "heading/csd/2021": {
+          "word": "Encabezado",
+          "definition": "Un título o resumen de un documento o de una sección de un documento."
         },
         "digital_footprint/csd/2021": {
-          "word": "Huella digital"
+          "word": "Huella digital",
+          "definition": "La información recopilada sobre una persona en varios sitios web de Internet."
         },
         "copyright/csd/2021": {
           "word": "Derechos de autor",

@@ -900,13 +900,13 @@
         },
         "OPD-K5-events-3": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
-          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este desafío."
+          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este rompecabezas."
         },
         "OPD-K5-events-4": {
           "courseC_flappy_events3_a": "Si algo no está funcionando correctamente, asegúrate de que tus bloques estén conectados a los eventos correctos en el espacio de trabajo."
         },
         "OPD-K5-events-5": {
-          "courseC_flappy_events4_a": "Conecta el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este desafío."
+          "courseC_flappy_events4_a": "Conecte el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este rompecabezas."
         },
         "OPD-K5-events-6": {
           "courseC_flappy_events5_a": "Deberás usar el bloque `marcar un punto` para pasar este nivel."
@@ -936,8 +936,8 @@
         },
         "OPD-K5-projects-2": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
-          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' de 'debajo del' cuando 'para que su actor aparezca al principio del programa.",
-          "courseE_playLab_scaffold1_c": "Usa ¨set ??? Fondo¨para elegir un fondo para tu escena."
+          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' abajo del 'cuando se ejecute' para que su actor aparezca al principio del programa.",
+          "courseE_playLab_scaffold1_c": "Usa ¨set ??? fondo¨para elegir un fondo para tu escena."
         },
         "OPD-K5-projects-3": {
           "courseE_playLab_scaffold1_a": "Abre el menú desplegable del evento 'cuando \\_\\_\\_ flecha' para cambiar la dirección de los controles de bloqueo.",
@@ -2395,15 +2395,15 @@
         },
         "courseB_Scrat_ramp1_2018": {
           "1": "Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic en ambos bloques al mismo tiempo, luego haz clic en \"ejecutar\" otra vez.",
-          "2": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "2": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "courseB_Scrat_ramp1_2019": {
           "1": "Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic en ambos bloques al mismo tiempo, luego haz clic en \"ejecutar\" otra vez.",
-          "2": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "2": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "courseB_Scrat_ramp1_2020": {
           "1": "Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic en ambos bloques al mismo tiempo, luego haz clic en \"ejecutar\" otra vez.",
-          "2": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "2": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "courseB_Scrat_ramp2_2018": {
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -3445,13 +3445,13 @@
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
-          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' de 'debajo del' cuando 'para que su actor aparezca al principio del programa.",
-          "courseE_playLab_scaffold1_c": "Usa ¨set ??? Fondo¨para elegir un fondo para tu escena."
+          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' abajo del 'cuando se ejecute' para que su actor aparezca al principio del programa.",
+          "courseE_playLab_scaffold1_c": "Usa ¨set ??? fondo¨para elegir un fondo para tu escena."
         },
         "courseC19_playLab_EOC1_2020": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
-          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' de 'debajo del' cuando 'para que su actor aparezca al principio del programa.",
-          "courseE_playLab_scaffold1_c": "Usa ¨set ??? Fondo¨para elegir un fondo para tu escena."
+          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' abajo del 'cuando se ejecute' para que su actor aparezca al principio del programa.",
+          "courseE_playLab_scaffold1_c": "Usa ¨set ??? fondo¨para elegir un fondo para tu escena."
         },
         "courseC19_playLab_EOC2": {
           "courseE_playLab_scaffold1_a": "Abre el menú desplegable del evento 'cuando \\_\\_\\_ flecha' para cambiar la dirección de los controles de bloqueo.",
@@ -3519,19 +3519,19 @@
         },
         "courseC_PlayLab_events4": {
           "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberás adjuntar un bloque \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este desafío."
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2018": {
           "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberás adjuntar un bloque \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este desafío."
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2019": {
           "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberás adjuntar un bloque \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este desafío."
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
         },
         "courseC_PlayLab_events4_2020": {
           "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberás adjuntar un bloque \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este desafío."
+          "courseC_PlayLab_events4_a": "Deberá adjuntar un bloque de \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
         },
         "courseC_PlayLab_events5": {
           "courseC_PlayLab_events5_a": "Deberás hacer clic en el menú desplegable en el bloque `actor decir` para encontrar el texto\" ¿Qué hay de nuevo",
@@ -3570,20 +3570,20 @@
           "courseC_PlayLab_events6_c": "¡Cuando hayas terminado, deberías poder mover Waddles usando las teclas de flecha en tu computadora!"
         },
         "courseC_PlayLab_events7": {
-          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del loop `repite siempre` para resolver este desafío. ",
-          "courseC_PlayLab_events7_b": "El loop \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
+          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del bucle (loop)\n `repite siempre` para resolver este rompecabeza. ",
+          "courseC_PlayLab_events7_b": "El bucle (loop) \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
         },
         "courseC_PlayLab_events7_2018": {
-          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del loop `repite siempre` para resolver este desafío. ",
-          "courseC_PlayLab_events7_b": "El loop \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
+          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del bucle (loop)\n `repite siempre` para resolver este rompecabeza. ",
+          "courseC_PlayLab_events7_b": "El bucle (loop) \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
         },
         "courseC_PlayLab_events7_2019": {
-          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del loop `repite siempre` para resolver este desafío. ",
-          "courseC_PlayLab_events7_b": "El loop \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
+          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del bucle (loop)\n `repite siempre` para resolver este rompecabeza. ",
+          "courseC_PlayLab_events7_b": "El bucle (loop) \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
         },
         "courseC_PlayLab_events7_2020": {
-          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del loop `repite siempre` para resolver este desafío. ",
-          "courseC_PlayLab_events7_b": "El loop \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
+          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del bucle (loop)\n `repite siempre` para resolver este rompecabeza. ",
+          "courseC_PlayLab_events7_b": "El bucle (loop) \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
         },
         "courseC_PlayLab_events8": {
           "courseC_PlayLab_events8_a": "Necesitarás conectar bloques en el bloque 'cuando el actor toca' para que esto suceda correctamente.",
@@ -3602,39 +3602,39 @@
           "courseC_PlayLab_events8_b": "¡El bloque 'actor dice' y 'emitir sonido', en la caja de herramientas podrían ayudarte!"
         },
         "courseC_PlayLab_events9": {
-          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este desafío.",
+          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este rompecabezas.",
           "courseC_PlayLab_events9_b": "Asegúrate de que tu nuevo bloque `cuando actor toque` dice actor \\*\\* 1 \\*\\* y actor \\*\\* 3 \\*\\*.",
           "courseC_PlayLab_events9_c": "¡Puedes tener más de un evento \\`cuando actor toque ' en tu espacio de trabajo al mismo tiempo, por lo que no tienes que borrar el primero!"
         },
         "courseC_PlayLab_events9_2018": {
-          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este desafío.",
+          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este rompecabezas.",
           "courseC_PlayLab_events9_b": "Asegúrate de que tu nuevo bloque `cuando actor toque` dice actor \\*\\* 1 \\*\\* y actor \\*\\* 3 \\*\\*.",
           "courseC_PlayLab_events9_c": "¡Puedes tener más de un evento \\`cuando actor toque ' en tu espacio de trabajo al mismo tiempo, por lo que no tienes que borrar el primero!"
         },
         "courseC_PlayLab_events9_2019": {
-          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este desafío.",
+          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este rompecabezas.",
           "courseC_PlayLab_events9_b": "Asegúrate de que tu nuevo bloque `cuando actor toque` dice actor \\*\\* 1 \\*\\* y actor \\*\\* 3 \\*\\*.",
           "courseC_PlayLab_events9_c": "¡Puedes tener más de un evento \\`cuando actor toque ' en tu espacio de trabajo al mismo tiempo, por lo que no tienes que borrar el primero!"
         },
         "courseC_PlayLab_events9_2020": {
-          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este desafío.",
+          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este rompecabezas.",
           "courseC_PlayLab_events9_b": "Asegúrate de que tu nuevo bloque `cuando actor toque` dice actor \\*\\* 1 \\*\\* y actor \\*\\* 3 \\*\\*.",
           "courseC_PlayLab_events9_c": "¡Puedes tener más de un evento \\`cuando actor toque ' en tu espacio de trabajo al mismo tiempo, por lo que no tienes que borrar el primero!"
         },
         "courseC_PlayLab_eventsA": {
-          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este desafío.",
+          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este rompecabeza.",
           "courseC_PlayLab_eventsA_b": "Tendrás que arrastrar específicamente un bloque de eventos `cuando se ejecuta` al espacio de trabajo para resolver este rompecabezas."
         },
         "courseC_PlayLab_eventsA_2018": {
-          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este desafío.",
+          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este rompecabeza.",
           "courseC_PlayLab_eventsA_b": "Tendrás que arrastrar específicamente un bloque de eventos `cuando se ejecuta` al espacio de trabajo para resolver este rompecabezas."
         },
         "courseC_PlayLab_eventsA_2019": {
-          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este desafío.",
+          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este rompecabeza.",
           "courseC_PlayLab_eventsA_b": "Tendrás que arrastrar específicamente un bloque de eventos `cuando se ejecuta` al espacio de trabajo para resolver este rompecabezas."
         },
         "courseC_PlayLab_eventsA_2020": {
-          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este desafío.",
+          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este rompecabeza.",
           "courseC_PlayLab_eventsA_b": "Tendrás que arrastrar específicamente un bloque de eventos `cuando se ejecuta` al espacio de trabajo para resolver este rompecabezas."
         },
         "courseC_PlayLab_eventsFP": {
@@ -3659,22 +3659,22 @@
         },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge_a": "Puedes usar este bloque para mover a los actores a diferentes lugares en el mismo espacio de juego.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Intenta usar \\`establecer actor 1 al centro de la posición izquierda' cuando toque a cualquiera de los otros actores. ¡Esto reiniciará el juego para que el jugador pueda seguir intentándolo!",
+          "courseC_PlayLab_events_challenge_b": "Intenta usar `colocar actor 1 en la posición central izquierda` cuando toque a cualquiera de los otros actores. ¡Esto reiniciará el juego para que el jugador pueda seguir intentándolo!",
           "courseC_PlayLab_events_challenge_c": "¡También puedes intentar cambiar la velocidad de los diferentes actores para que el juego sea más fácil o más difícil!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2018": {
           "courseC_PlayLab_events_challenge_a": "Puedes usar este bloque para mover a los actores a diferentes lugares en el mismo espacio de juego.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Intenta usar \\`establecer actor 1 al centro de la posición izquierda' cuando toque a cualquiera de los otros actores. ¡Esto reiniciará el juego para que el jugador pueda seguir intentándolo!",
+          "courseC_PlayLab_events_challenge_b": "Intenta usar `colocar actor 1 en la posición central izquierda` cuando toque a cualquiera de los otros actores. ¡Esto reiniciará el juego para que el jugador pueda seguir intentándolo!",
           "courseC_PlayLab_events_challenge_c": "¡También puedes intentar cambiar la velocidad de los diferentes actores para que el juego sea más fácil o más difícil!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2019": {
           "courseC_PlayLab_events_challenge_a": "Puedes usar este bloque para mover a los actores a diferentes lugares en el mismo espacio de juego.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Intenta usar \\`establecer actor 1 al centro de la posición izquierda' cuando toque a cualquiera de los otros actores. ¡Esto reiniciará el juego para que el jugador pueda seguir intentándolo!",
+          "courseC_PlayLab_events_challenge_b": "Intenta usar `colocar actor 1 en la posición central izquierda` cuando toque a cualquiera de los otros actores. ¡Esto reiniciará el juego para que el jugador pueda seguir intentándolo!",
           "courseC_PlayLab_events_challenge_c": "¡También puedes intentar cambiar la velocidad de los diferentes actores para que el juego sea más fácil o más difícil!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2020": {
           "courseC_PlayLab_events_challenge_a": "Puedes usar este bloque para mover a los actores a diferentes lugares en el mismo espacio de juego.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Intenta usar \\`establecer actor 1 al centro de la posición izquierda' cuando toque a cualquiera de los otros actores. ¡Esto reiniciará el juego para que el jugador pueda seguir intentándolo!",
+          "courseC_PlayLab_events_challenge_b": "Intenta usar `colocar actor 1 en la posición central izquierda` cuando toque a cualquiera de los otros actores. ¡Esto reiniciará el juego para que el jugador pueda seguir intentándolo!",
           "courseC_PlayLab_events_challenge_c": "¡También puedes intentar cambiar la velocidad de los diferentes actores para que el juego sea más fácil o más difícil!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_artist_loop1": {
@@ -3804,16 +3804,16 @@
           "courseC_artist_loops6a_a": "Para hacer un diseño como el de la parte superior, salta hacia adelante menos de 75 pixeles entre cada pegatina (sticker)."
         },
         "courseC_artist_loops7a": {
-          "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplique los grados en su giro las veces que el numero se repita. ¿Equivale a 360?\nChequee las rotaciones sugeridas para ver si funciona!"
+          "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplica los grados de tu giro las veces que el numero se repita. ¿Equivale a 360?\nComprueba las rotaciones sugeridas para ver si funciona!"
         },
         "courseC_artist_loops7a_2018": {
-          "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplique los grados en su giro las veces que el numero se repita. ¿Equivale a 360?\nChequee las rotaciones sugeridas para ver si funciona!"
+          "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplica los grados de tu giro las veces que el numero se repita. ¿Equivale a 360?\nComprueba las rotaciones sugeridas para ver si funciona!"
         },
         "courseC_artist_loops7a_2019": {
-          "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplique los grados en su giro las veces que el numero se repita. ¿Equivale a 360?\nChequee las rotaciones sugeridas para ver si funciona!"
+          "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplica los grados de tu giro las veces que el numero se repita. ¿Equivale a 360?\nComprueba las rotaciones sugeridas para ver si funciona!"
         },
         "courseC_artist_loops7a_2020": {
-          "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplique los grados en su giro las veces que el numero se repita. ¿Equivale a 360?\nChequee las rotaciones sugeridas para ver si funciona!"
+          "courseC_artist_loops7a_a": "Un circulo tiene 360 grados. Multiplica los grados de tu giro las veces que el numero se repita. ¿Equivale a 360?\nComprueba las rotaciones sugeridas para ver si funciona!"
         },
         "courseC_artist_loopsPre1a": {
           "courseC_artist_loopsPre1a_a": "Recuerda poner el bloque \"girar\" dentro del loop.",
@@ -4185,19 +4185,19 @@
         },
         "courseC_flappy_events2": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
-          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este desafío."
+          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este rompecabezas."
         },
         "courseC_flappy_events2_2018": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
-          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este desafío."
+          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este rompecabezas."
         },
         "courseC_flappy_events2_2019": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
-          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este desafío."
+          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este rompecabezas."
         },
         "courseC_flappy_events2_2020": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
-          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este desafío."
+          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este rompecabezas."
         },
         "courseC_flappy_events3": {
           "courseC_flappy_events3_a": "Si algo no está funcionando correctamente, asegúrate de que tus bloques estén conectados a los eventos correctos en el espacio de trabajo."
@@ -4212,16 +4212,16 @@
           "courseC_flappy_events3_a": "Si algo no está funcionando correctamente, asegúrate de que tus bloques estén conectados a los eventos correctos en el espacio de trabajo."
         },
         "courseC_flappy_events4": {
-          "courseC_flappy_events4_a": "Conecta el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este desafío."
+          "courseC_flappy_events4_a": "Conecte el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este rompecabezas."
         },
         "courseC_flappy_events4_2018": {
-          "courseC_flappy_events4_a": "Conecta el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este desafío."
+          "courseC_flappy_events4_a": "Conecte el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este rompecabezas."
         },
         "courseC_flappy_events4_2019": {
-          "courseC_flappy_events4_a": "Conecta el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este desafío."
+          "courseC_flappy_events4_a": "Conecte el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este rompecabezas."
         },
         "courseC_flappy_events4_2020": {
-          "courseC_flappy_events4_a": "Conecta el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este desafío."
+          "courseC_flappy_events4_a": "Conecte el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este rompecabezas."
         },
         "courseC_flappy_events5": {
           "courseC_flappy_events5_a": "Deberás usar el bloque `marcar un punto` para pasar este nivel."
@@ -7708,8 +7708,8 @@
         },
         "courseE_playLab_scaffold1": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
-          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' de 'debajo del' cuando 'para que su actor aparezca al principio del programa.",
-          "courseE_playLab_scaffold1_c": "Usa ¨set ??? Fondo¨para elegir un fondo para tu escena."
+          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' abajo del 'cuando se ejecute' para que su actor aparezca al principio del programa.",
+          "courseE_playLab_scaffold1_c": "Usa ¨set ??? fondo¨para elegir un fondo para tu escena."
         },
         "courseE_playLab_scaffold2": {
           "courseE_playLab_scaffold1_a": "Abre el menú desplegable del evento 'cuando \\_\\_\\_ flecha' para cambiar la dirección de los controles de bloqueo.",
@@ -8641,15 +8641,15 @@
         },
         "coursea_maze_ramp1_2018": {
           "courseC_maze_programming1_a": "Si el pájaro no alcanza a llegar al cerdo, asegúrate que los bloques estén totalmente ensamblados y haz clic en \"Ejecutar\" de nuevo.",
-          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "courseC_maze_programming1_b": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "coursea_maze_ramp1_2019": {
           "courseC_maze_programming1_a": "Si el pájaro no alcanza a llegar al cerdo, asegúrate que los bloques estén totalmente ensamblados y haz clic en \"Ejecutar\" de nuevo.",
-          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "courseC_maze_programming1_b": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "coursea_maze_ramp1_2020": {
           "courseC_maze_programming1_a": "Si el pájaro no alcanza a llegar al cerdo, asegúrate que los bloques estén totalmente ensamblados y haz clic en \"Ejecutar\" de nuevo.",
-          "courseC_maze_programming1_b": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "courseC_maze_programming1_b": "¡No tengas miedo de equivocarte! Intenta algo, ¡y si no funciona, prueba otra cosa!"
         },
         "grade5_artist_variables_triangles1": {
           "grade5_artist_variables_triangles1_a": "Para hacer un ángulo interior de 60 grados en este triángulo, recuerda girar al artista en 120 grados.",
@@ -9101,46 +9101,46 @@
         },
         "courseA_harvester_seq10_2021": {
           "courseA_harvester_seq10_a": "¿Estás atascado/a? Trata de anotar primero los pasos en una hoja de papel.",
-          "courseA_harvester_seq10_b": "Necesitas `Mover al este`, luego`Mover al norte`. Haz esto dos veces. ¡No te olvides de obtener todo el maíz también!",
+          "courseA_harvester_seq10_b": "Necesitas `Mover al Este`, y después `Mover al Norte`. Haz esto dos veces. ¡No te olvides de recoger también todo el maíz!",
           "courseA_harvester_seq10_c": "¡Utiliza esta ruta para recoger todo el maíz."
         },
         "courseA_harvester_seq13_2021": {
           "courseA_bee_seq1_a": "Usa este bloque para recoger maíz una vez que el cosechador llegue a él.\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2021": {
-          "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz en cuanto el cosechador lo encuentre!\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "El cosechador necesita moverse tres veces hacia el Este para recoger el maíz. Usa este bloque:\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz en cuanto la cosechadora lo encuentre!\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "La cosechadora necesita moverse tres veces hacia el Este para recoger el maíz. Usa este bloque:\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2_2021": {
           "courseA_harvester_seq2_a": "¡No te olvides de usar <xml><block type=\"harvester_corn\"/></xml> para recoger el maíz!",
           "courseA_harvester_seq2_b": "¡Intenta escribir los pasos en papel para encontrar una solución!"
         },
         "courseA_harvester_seq3_2021": {
-          "courseA_harvester_seq3_a": "¿Te has acordado de usar este bloque?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "¿Recordaste usar este bloque?\n<xml><block type=\"harvester_corn\"/></xml>",
           "courseA_harvester_seq3_b": "Diga los pasos en voz alta y vea si le ayudan a encontrar la respuesta."
         },
         "courseA_harvester_seq4_2021": {
-          "courseA_harvester_seq4_a": "¿Cuántos espacios hay entre el Harvester y el maíz? ¿Cuántos bloques hay en tu espacio de trabajo?",
-          "courseA_harvester_seq4_b": "Necesitas cinco bloques de `Mover al Este` y un bloque de `Coger Maíz`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_seq4_a": "¿Cuántos espacios hay entre la cosechadora y el maíz? ¿Cuántos bloques hay en tu espacio de trabajo?",
+          "courseA_harvester_seq4_b": "Necesitas cinco bloques de `Mover al Este` y un bloque de `Recoger Maíz`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5_2021": {
           "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora de la manera incorrecta?",
-          "courseA_harvester_seq5_b": "Es necesario eliminar un bloque.",
-          "courseA_harvester_seq5_c": "¡Descarta este bloque!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+          "courseA_harvester_seq5_b": "Necesitas eliminar un bloque.",
+          "courseA_harvester_seq5_c": "¡Tira este bloque a la basura!\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq6_2021": {
           "courseA_harvester_seq6_a": "Si estás atascado, trata de decir los pasos en voz alta. Podría ayudarte a descubrir el camino correcto."
         },
         "courseA_harvester_seq7_2021": {
           "courseA_harvester_seq7_a": "Intenta resolver el rompecabezas en 2 partes, una parte antes de la esquina y una parte después de la esquina.",
-          "courseA_harvester_seq7_b": "¿Tienes problemas? Este es el camino que debe tomar la cosechadora."
+          "courseA_harvester_seq7_b": "¿Tienes problemas? Éste es el camino que debe seguir la cosechadora."
         },
         "courseA_harvester_seq8_2021": {
-          "courseA_harvester_seq8_a": "Tu código final debe tener \\*\\* 4 \\*\\* bloques de movimiento y \\*\\* 2 \\*\\* bloques de selección."
+          "courseA_harvester_seq8_a": "Tu código final debería tener **4** bloques de movimiento y **2** bloques de recogida."
         },
         "courseA_harvester_seq9_2021": {
           "courseA_harvester_seq9_a": "Ejecute el código varias veces para ver qué sucede. ¿Dónde se detiene la cosechadora?",
-          "courseA_harvester_seq9_b": "¡No te olvides de recoger todo el maíz! Necesitarás bloques de maíz \\*\\* \\*\\* \\*\\*.",
+          "courseA_harvester_seq9_b": "¡No te olvides de recoger todo el maíz! Necesitarás **_3_** bloques de maíz recogido.",
           "courseA_harvester_seq9_c": "Sigue esta ruta para recoger todo el maíz."
         },
         "courseA_maze_ramp2_2021": {
@@ -9159,7 +9159,7 @@
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "Si tienes problemas, primero intenta anotar los pasos en una hoja de papel.",
+          "courseA_maze_seq10_a": "Si tienes problemas, primero intenta escribir los pasos en un papel.",
           "courseA_maze_seq10_b": "Tendrá que ir en 3 direcciones diferentes para resolver este rompecabezas."
         },
         "courseA_maze_seq10_dani": {
@@ -9169,11 +9169,11 @@
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "Si el camino que necesita no está claro, use su dedo para seguir el camino del pájaro hasta el cerdo.",
           "courseA_maze_seq13_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá.",
-          "courseA_maze_seq13_c": "Estos bloques <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> te acercarán al cerdo."
+          "courseA_maze_seq13_c": "Estos bloques le ayudarán a moverse más cerca del cerdo <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml>."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto en <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "El ave tendrá que moverse hacia el oeste 3 veces para llegar al cerdo. Utilice este bloque:\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Si no puedes hacer que el pájaro se mueva, asegúrate de que los bloques estén en el lugar correcto debajo de <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "El pájaro tendrá que moverse hacia el Oeste 3 veces para llegar al cerdo. Usa este bloque:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
           "1": "¡Intenta escribir los pasos en papel para encontrar una solución!",
@@ -9266,37 +9266,37 @@
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_artist_loops2_2021": {
-          "courseB_artist_loops2_a": "Si deseas que el loop se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
+          "courseB_artist_loops2_a": "Si deseas que el bucle (loop) se repita más de 4 veces, puedes cambiar el número en la parte superior del bloque.",
           "courseB_artist_loops2_b": "Intenta ejecutar el código primero para ver dónde termina el artista."
         },
         "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_a": "¡Recuerda utilizar un loop \"repetir\" <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> para un mejor código!",
+          "courseB_artist_loops3_a": "¡Recuerda utilizar un bucle (loop) de \"repetir\" <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> para un mejor código!",
           "courseB_artist_loops3_b": "El artista querrá moverse hacia el sur para dibujar esta línea."
         },
         "courseB_artist_loops4_2021": {
           "courseB_artist_loops4_a": "El bloque saltar te permite avanzar sin dibujar una línea.",
-          "courseB_artist_loops4_b": "Deberás agregar un bloque dentro del loop repetir para resolver este desafío.",
-          "courseB_artist_loops4_c": "No olvides cambiar la cantidad de veces que el loop se repite."
+          "courseB_artist_loops4_b": "Deberás agregar un bloque dentro del bucle (loop) de 'repetir' para resolver este rompecabezas.",
+          "courseB_artist_loops4_c": "No olvides cambiar el número de veces que el bucle (loop) se repite."
         },
         "courseB_artist_loops5_2021": {
-          "courseB_artist_loops5_a": "Arrastre un loop de \"repetición\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesita repetir?"
+          "courseB_artist_loops5_a": "Arrastre un bucle (loop) de \"repetir\", luego coloque otros bloques dentro de él. ¿Cuántas veces necesita repetir?"
         },
         "courseB_artist_loops6_2021": {
           "courseB_artist_loops6_b": "Intenta escribir los movimientos en un papel y busca un patrón."
         },
         "courseB_artist_loops7_2021": {
-          "courseB_artist_loops7_a": "Este desafío usa **4** loops, ¡uno tras de otro!",
+          "courseB_artist_loops7_a": "Este desafío usa **4** bucles (loops), ¡uno tras de otro!",
           "courseB_artist_loops7_b": "Observa que cada bucle crea un patrón de escalera que va en una dirección diferente. \n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
-          "courseB_artist_loops7_c": "Los bucles deberían hacer esto:\n\n-   Bucle 1\n    -   Derecha\n    -   Abajo\n\n-   Bucle 2\n    -   Derecha\n    -   Arriba\n\n-   Bucle 3\n    -   Izquierda\n    -   Arriba\n\n-   Bucle 4\n    -   Izquierda\n    -   Abajo"
+          "courseB_artist_loops7_c": "Los bucles (loops) deberían hacer esto:\n\n-   Bucle 1\n    -   Derecha\n    -   Abajo\n\n-   Bucle 2\n    -   Derecha\n    -   Arriba\n\n-   Bucle 3\n    -   Izquierda\n    -   Arriba\n\n-   Bucle 4\n    -   Izquierda\n    -   Abajo"
         },
         "courseB_artist_loops8_2021": {
           "courseB_artist_loops8_a": "¿Cuántas veces debes repetir el patrón para hacer la escalera?",
           "courseB_artist_loops8_b": "Intenta ejecutar el código que se te ha dado para ver lo que hace."
         },
         "courseB_artist_loops9_2021": {
-          "courseB_artist_loops9_a": "Recuerda que los bloques saltar pueden usarse para moverse sin dibujar una línea.",
+          "courseB_artist_loops9_a": "Recuerde que los bloques de salto se pueden usar para moverse sin dibujar una línea.",
           "courseB_artist_loops9_b": "Querrás usar el bloque W para resolver este desafío.",
-          "courseB_artist_loops9_c": "¿No puedes descifrar donde colocar el loop? Intenta escribir el código paso a paso y busca un patrón."
+          "courseB_artist_loops9_c": "¿No puede averiguar dónde colocar el bucle (loop)? Trate de escribir el código paso a paso, y buscar para un patrón."
         },
         "courseB_artist_loops_challenge1_2021": {
           "courseB_artist_loops_challenge1_a": "¡Bloques como este: <xml>  <block type=\"simple_move_up_right\"/></xml> permitirán que tu artista se mueva de forma inclinada!",
@@ -9308,7 +9308,7 @@
           "courseB_artist_loops_challenge2_b": "Puede usar los bloques \"saltar\" para moverse a otros espacios sin dibujar."
         },
         "courseB_collector_loops10_2021": {
-          "courseB_collector_loops10_a": "Si no puedes descifrar dónde poner los loops \"repetir\", escribe paso a paso el código y busca un patrón.",
+          "courseB_collector_loops10_a": "Si no puedes descifrar dónde poner los bucles (loops) de \"repetir\", escribe paso a paso el código y busca un patrón.",
           "courseB_collector_loops10_b": "Intenta escribir los movimientos en un papel tratando de encontrar un patrón."
         },
         "courseB_collector_loops1_2021": {
@@ -9320,43 +9320,43 @@
         },
         "courseB_collector_loops3_2021": {
           "courseB_collector_prog3_a": "Intenta usar un bloque <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> para recoger tu tesoro.",
-          "courseB_collector_prog3_b": "Recuerda que puedes poner más de un bloque dentro de un loop repetir."
+          "courseB_collector_prog3_b": "Recuerde que puede poner más de un bloque dentro de un bucle (loop) de repetición."
         },
         "courseB_collector_loops4_2021": {
-          "courseB_collector_loops4_a": "Pruebe usar el botón paso para descubrir dónde van las cosas mal.",
-          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el loop.",
-          "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el loop 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
+          "courseB_collector_loops4_a": "Pruebe usar el botón de paso para descubrir dónde van las cosas mal.",
+          "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el bucle (loop).",
+          "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el bucle (loop) 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops5_2021": {
-          "courseB_collector_loops5_a": "Use más de un loop para finalizar el trabajo.",
+          "courseB_collector_loops5_a": "Use más de un bucle (loop) para finalizar el trabajo.",
           "courseB_collector_loops5_b": "Intenta ejecutar el código un par de veces para ver qué pasa."
         },
         "courseB_collector_loops6_2021": {
-          "courseB_collector_loops6_a": "¿No puedes descifrar dónde las cosas empiezan a fallar? Usa el botón \"Paso\" para ejecutar tu programa un bloque a la vez.",
-          "courseB_collector_loops6_b": "Puedes cambiar el número de veces que el loop se repite y ejecutar haciendo clic en el \"3\" y eligiendo un número distinto.",
-          "courseB_collector_loops6_c": "Querrás utilizar 3 loops de repetición para resolver este desafío <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>.",
+          "courseB_collector_loops6_a": "¿No puedes averiguar dónde las cosas empiezan a fallar? Usa el botón \"Paso\" para ejecutar tu programa un bloque a la vez.",
+          "courseB_collector_loops6_b": "Puedes cambiar el número de veces que el bucle (loop) se repite y ejecutar haciendo clic en el \"3\" y eligiendo un número distinto.",
+          "courseB_collector_loops6_c": "Querrá utilizar 3 bucles (loops) de 'repetir' para resolver este rompecabezas <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>.",
           "courseB_collector_loops6_d": "Si estás confundido/a, intenta dividir este desafío en 3 partes."
         },
         "courseB_collector_loops7_2021": {
-          "courseB_collector_loops7_a": "Si tienes dificultades con este desafío, intenta dibujarlo en un papel para ayudarte a resolverlo.",
-          "courseB_collector_loops7_b": "Necesitarás 3 loops 'repetir' para resolver este desafío, ¡y no olvides el tesoro extra al final!"
+          "courseB_collector_loops7_a": "Si tienes dificultades con este rompecabeza, intenta dibujarlo en un papel para ayudarte a resolverlo.",
+          "courseB_collector_loops7_b": "Necesitarás 3 loops de 'repetir' para resolver este rompecabezas, ¡y no olvides el tesoro extra al final!"
         },
         "courseB_collector_loops8_2021": {
-          "courseB_collector_loops8_challenge_a": "Si no puedes averiguar donde poner los loops 'repetir', escribe tu código paso a paso y busca un patrón."
+          "courseB_collector_loops8_challenge_a": "Si no puedes averiguar donde poner los bucles (loops) de 'repetir', escribe tu código paso a paso y busca un patrón."
         },
         "courseB_collector_loops9_2021": {
           "courseB_collector_loops9_a": "¿Parece muy difícil? Divídelo en 3 pequeños problemas para que sea más fácil.",
-          "courseB_collector_loops9_b": "Se necesitan 3 loops repetir, uno después de otro, para esta solución."
+          "courseB_collector_loops9_b": "Se necesitan 3 bucles (loops) de 'repetir', uno después de otro, para esta solución."
         },
         "courseB_collector_loops_challenge1_2021": {
-          "courseB_collector_loops_challenge1_b": "Empieza haciendo bucles con los siguientes comandos:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_b": "Para empezar, crea un bucle (loop) con los siguientes comandos:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
           "courseB_collector_loops_challenge1_c": "Muévete al Este dos veces entre cada camino.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nPuedes hacerlo con solamente 14 bloques. Haz click y pide una pista más para ver la solución.",
-          "courseB_collector_loops_challenge1_d": "¡Prueba con esto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_d": "¡Prueba esto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge2a_2021": {
           "courseB_collector_loops_challenge2a_a": "Si algo sale mal, intenta depurarlo. ¡No te rindas!",
           "courseB_collector_loops_challenge2a_b": "Mira esta opción para atravesar el laberinto. ¿Ves un patrón que puedas repetir?",
-          "courseB_collector_loops_challenge2a_c": "Para recoger todo el tesoro, tendrás que añadir dos bloques <xml> <block type=\"collector_collect\"/></xml> dentro de tu loop, o poner el bloque en el interior de su propio bloque de 'repetir'."
+          "courseB_collector_loops_challenge2a_c": "Para recoger todo el tesoro, tendrás que añadir dos bloques <xml> <block type=\"collector_collect\"/></xml> dentro de tu bucle (loop), o poner el bloque en el interior de su propio bloque de 'repetir'."
         },
         "courseB_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "Cuidado con de hielo roto! ¡Scrat caerá al agua!",
@@ -9459,14 +9459,14 @@
           "courseB_playlab_events5_b": "Éste es el bloque que hace que el caballero huya.\n\n<xml>\n<block type=\"studio_move\">\n  <title name=\"SPRITE\">1</title>\n  <title name=\"DIR\">2</title>\n </block>\n</xml>"
         },
         "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Necesitarás estos bloques de evento:\n\n<xml>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">arriba</title>\n</block>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">abajo</title>\n</block>\n</xml>",
-          "courseB_playlab_events6_b": "Usa las flechas desplegables de los bloques de eventos `cuando se presiona tecla ___` verdes para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_a": "Necesitarás estos bloques de eventos:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "Use las flechas desplegables en verde `cuando la flecha ___ presionó` bloques de eventos para elegir diferentes direcciones.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "¡Llega a todas las banderas para pasar!"
         },
         "courseB_playlab_events7_2021": {
           "courseB_playlab_events7_a": "Éste es el bloque de evento que necesitarás:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n</block>\n</xml>",
           "courseB_playlab_events7_b": "Éste es el bloque que necesitas para reproducir un sonido.\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">palmada</title>\n</block>\n</xml>",
-          "courseB_playlab_events7_c": "Éste es el bloque que necesitas para hacer que el caballero se desvanezca:\n\n<xml>\n<block type=\"studio_vanish\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
+          "courseB_playlab_events7_c": "Este es el bloque que necesitas para que el caballero desaparezca:\n<xml>\n<block type=\"studio_vanish\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2021": {
           "courseB_playlab_events_challenge1_a": "Haz que los otros animales se muevan hacia abajo all pulsar `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">abajo</title>\n  </block>\n</xml>",
@@ -9475,9 +9475,9 @@
         },
         "courseB_playlab_events_challenge2_2021": {
           "courseB_playlab_events_challenge2_a": "Cada animal en el juego debería desaparecer al hacer clic. ¡También debería volver después de uno o dos segundos!",
-          "courseB_playlab_events_challenge2_b": "¡Usa otros bloques de eventos para hacer desaparecer a los demás animales!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "¡Usa otros comandos para reproducir sonidos o anotar puntos si haces clic en los animales!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "¡A mezclarlo!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
+          "courseB_playlab_events_challenge2_b": "Usa otros bloques de eventos para hacer desaparecer a los otros animales.\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "¡Usa comandos adicionales para reproducir sonidos o ganar puntos cuando haces clic en los animales!\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "¡Mezclar!\n\nHaz que algunos animales den más puntos que otros. Usa diferentes sonidos.\n¡Cambia los estados de ánimo de los animales!"
         },
         "courseB_starWars_prog1_2021": {
           "courseB_starWars_prog1_a": "Intenta agregar bloques de uno en uno, luego haz clic en \"Ejecutar\" para ver qué sucede.",
@@ -9520,8 +9520,8 @@
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "El bloque 'establecer actor 1 ??? imagen' puede usarse para agregar un actor al escenario.",
-          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' de 'debajo del' cuando 'para que su actor aparezca al principio del programa.",
-          "courseE_playLab_scaffold1_c": "Usa ¨set ??? Fondo¨para elegir un fondo para tu escena."
+          "courseE_playLab_scaffold1_b": "Coloca el bloque de 'actor' abajo del 'cuando se ejecute' para que su actor aparezca al principio del programa.",
+          "courseE_playLab_scaffold1_c": "Usa ¨set ??? fondo¨para elegir un fondo para tu escena."
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "Debes tener cuatro 'cuando flecha' bloques de eventos, con una dirección para abrir debajo de cada uno.",
@@ -9548,7 +9548,7 @@
         },
         "courseC_PlayLab_events4_2021": {
           "courseC_PlayLab_events4_b": "Cuando se haga clic en el botón \"Ejecutar\", Jorge se moverá a la derecha \\*\\* 100 píxeles para llegar al gato.",
-          "courseC_PlayLab_events4_a": "Deberás adjuntar un bloque \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este desafío."
+          "courseC_PlayLab_events4_a": "Deberás adjuntar un bloque \"actor \\_\\_ decir \" al evento \"cuando el actor toque\" para resolver este rompecabezas."
         },
         "courseC_PlayLab_events5_2021": {
           "courseC_PlayLab_events5_a": "Deberás hacer clic en el menú desplegable en el bloque `actor decir` para encontrar el texto\" ¿Qué hay de nuevo",
@@ -9560,20 +9560,20 @@
           "courseC_PlayLab_events6_c": "¡Cuando hayas terminado, deberías poder mover Waddles usando las teclas de flecha en tu computadora!"
         },
         "courseC_PlayLab_events7_2021": {
-          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del loop `repite siempre` para resolver este desafío. ",
-          "courseC_PlayLab_events7_b": "El loop \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
+          "courseC_PlayLab_events7_a": "Utiliza tanto el bloque `mover actor de 2 hasta 400 píxeles` y el bloque `mover actor 2 por 400 píxeles` dentro del bucle (loop)\n `repite siempre` para resolver este rompecabeza. ",
+          "courseC_PlayLab_events7_b": "El bucle (loop) \"repetir siempre\" no necesita estar conectado a otro bloque de evento; se ejecutará por si mismo."
         },
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_a": "Necesitarás conectar bloques en el bloque 'cuando el actor toca' para que esto suceda correctamente.",
           "courseC_PlayLab_events8_b": "¡El bloque 'actor dice' y 'emitir sonido', en la caja de herramientas podrían ayudarte!"
         },
         "courseC_PlayLab_events9_2021": {
-          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este desafío.",
+          "courseC_PlayLab_events9_a": "El bloque `anotar punto` te ayudará a resolver este rompecabeza.",
           "courseC_PlayLab_events9_b": "Asegúrate de que tu nuevo bloque `cuando actor toque` dice actor \\*\\* 1 \\*\\* y actor \\*\\* 3 \\*\\*.",
           "courseC_PlayLab_events9_c": "¡Puedes tener más de un evento \\`cuando actor toque ' en tu espacio de trabajo al mismo tiempo, por lo que no tienes que borrar el primero!"
         },
         "courseC_PlayLab_eventsA_2021": {
-          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este desafío.",
+          "courseC_PlayLab_eventsA_a": "Usa el bloque \\` establecer fondo ' y el bloque ' establecer agente a una velocidad de**\\_** ' para resolver este rompecabeza.",
           "courseC_PlayLab_eventsA_b": "Tendrás que arrastrar específicamente un bloque de eventos `cuando se ejecuta` al espacio de trabajo para resolver este rompecabezas."
         },
         "courseC_PlayLab_eventsA_embed_2021": {
@@ -9705,13 +9705,13 @@
         },
         "courseC_flappy_events2_2021": {
           "courseC_flappy_events2_a": "El bloque que necesitas agregar se llama `` establecer velocidad ' '. ",
-          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este desafío."
+          "courseC_flappy_events2_b": "Conecta el bloque ´establecer velocidad´ al bloque ´cuando se ejecuta´ para resolver este rompecabezas"
         },
         "courseC_flappy_events3_2021": {
           "courseC_flappy_events3_a": "Si algo no está funcionando correctamente, asegúrate de que tus bloques estén conectados a los eventos correctos en el espacio de trabajo."
         },
         "courseC_flappy_events4_2021": {
-          "courseC_flappy_events4_a": "Conecta el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este desafío."
+          "courseC_flappy_events4_a": "Conecte el bloque `final del juego` a`cuando golpee un obstáculo` para resolver este rompecabezas."
         },
         "courseC_flappy_events5_2021": {
           "courseC_flappy_events5_a": "Deberás usar el bloque `marcar un punto` para pasar este nivel."

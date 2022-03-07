@@ -901,7 +901,7 @@
         },
         "courseB_starWars_prog8_2021": {
           "courseB_starWars_prog8_a": "நீங்கள் ஏற்கனவே பயணித்த இடங்களின் தொகுப்பிற்கு திரும்பிச் செல்வது சரி.",
-          "courseB_starWars_prog8_b": "நீங்கள் உள்ளே வைத்த குறியீட்டிற்கு என்ன நடக்கிறது என்பதைக் காண `மீண்டும்` தொகுதியைப் பயன்படுத்த முயற்சிக்கவும்."
+          "courseB_starWars_prog8_b": "நீங்கள் உள்ளே வைத்த குறியீட்டிற்கு என்ன நடக்கிறது என்பதைக் காண `மீண்டும்` தொகுதியைப் பயன்படுத்த முயற்சிக்கவும்.\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரை தீர்க்கவில்லை என்றாலும், என்ன நடக்கிறது என்பதைக் காண குறியீட்டை இயக்கவும்.",
@@ -926,7 +926,7 @@
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரை தீர்க்கவில்லை என்றாலும், என்ன நடக்கிறது என்பதைக் காண குறியீட்டை இயக்கவும்.",
           "courseB_starWars_prog9_b": "இந்த புதிரை தீர்க்க பல வழிகள் உள்ளன.",
-          "courseB_starWars_prog9_c": "ஒரு `மீண்டும்` [தடுக்கப்பட்ட தடுப்பு] [0] வளையத்தை இங்கு உதவ முடியுமா?"
+          "courseB_starWars_prog9_c": "ஒரு `மீண்டும்`  [blockly block] [0] வளையத்தை இங்கு உதவ முடியுமா?"
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "பிபி -8 ஸ்கிராப் மெட்டல் மீது உருளும் போது அவர் அதை தானாக எடுப்பார்.",
@@ -1253,11 +1253,11 @@
           "courseA_collector_loops8_c": "நீங்கள் ஒரு நேரத்தில் குறியீட்டின் ஒரு பகுதியை எழுதலாம் என்பதை நினைவில் கொள்ளுங்கள், பின்னர் நீங்கள் அங்கிருந்து எங்கு செல்ல வேண்டும் என்பதை அறிய \"Run\" என்பதை அழுத்தவும்."
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "நீங்கள் விரும்புவதை ஸ்க்ராட் செய்யவில்லை என்றால், இரண்டு தொகுதிகளும் முழுமையாக ஒன்றாக கிளிக் செய்யப்பட்டுள்ளதா என்பதை உறுதிசெய்து, மீண்டும் \"Run\" என்பதைக் கிளிக் செய்யவும்",
-          "2": "தவறு செய்ய பயப்பட வேண்டாம்! ஏதாவது முயற்சி செய்யுங்கள், அது வேலை செய்யவில்லை என்றால், வேறு ஏதாவது முயற்சி செய்யுங்கள்!"
+          "1": "ஸ்க்ராட் நீங்கள் விரும்பியதைச் செய்யவில்லை எனில், இரண்டு தொகுதிகளும் ஒன்றாகக் கிளிக் செய்யப்பட்டுள்ளன என்பதை உறுதிசெய்து, மீண்டும் \"Run\" என்பதைக் கிளிக் செய்க.",
+          "2": "தவறு செய்ய பயப்பட வேண்டாம்! ஏதாவது முயற்சி செய்யுங்கள், அது வேலை செய்யவில்லை என்றால், வேறு ஏதாவது முயற்சிக்கவும்!"
         },
         "courseB_Scrat_ramp2_2021": {
-          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2021": {
           "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1339,7 +1339,7 @@
           "courseA_harvester_loops9_c": "அனைத்து சோளங்களையும் எடுக்க இந்த வழியைப் பின்பற்றவும்."
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "உங்களுக்கு சிக்கல் இருந்தால், முதலில் ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்.",
+          "courseA_maze_seq10_a": "உங்களுக்கு சிக்கல் இருந்தால், முதலில் ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்",
           "courseA_maze_seq10_b": "இந்த புதிர் தீர்க்க நீங்கள் 3 வெவ்வேறு திசைகளில் செல்ல வேண்டும்."
         },
         "courseA_maze_seq13_2021": {
@@ -1348,19 +1348,19 @@
           "courseA_maze_seq13_c": "இவை <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n blocks கள் பன்றிக்கு அருகில் செல்ல உதவும்."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "பறவையை நகர்த்துவதில் சிக்கல் இருந்தால்,<xml>\n  <block type=\"when_run\"/>\n</xml>கள் பிடுங்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்.",
+          "courseA_maze_seq1_a": "பறவையை நகர்த்துவதில் சிக்கல் இருந்தால், <xml>\n  <block type=\"when_run\"/>\n</xml> கீழ் தொகுதிகள் பிடுங்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்.",
           "courseA_maze_seq1_b": "பறவை பன்றிக்குச் செல்ல 3 முறை மேற்கு நோக்கி நகர வேண்டும். இந்தத் தொகுதியைப் பயன்படுத்தவும்:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
           "1": "ஒரு தீர்வைக் கண்டுபிடிக்க காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்!",
-          "2": "இந்த தொகுதியை நீங்கள் பயன்படுத்த வேண்டும்:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "இந்த தொகுதியை நீங்கள் பயன்படுத்த வேண்டும்:"
         },
         "courseA_maze_seq5a_2021": {
           "1": "படிகளை உரக்கச் சொல்லுங்கள், பதிலைக் கண்டுபிடிக்க இது உங்களுக்கு உதவுமா என்று பாருங்கள்."
         },
         "courseA_maze_seq6_2021": {
           "courseA_maze_seq6_a": "உங்கள் இறுதி குறியீடு 3 இயக்கத் தொகுதிகளைக் கொண்டிருக்க வேண்டும்.",
-          "courseA_maze_seq6_b": "நீங்கள் சிக்கிக்கொண்டால், புதிரை 2 பகுதிகளாக தீர்க்க முயற்சி செய்யுங்கள், மூலையில் ஒரு பகுதி மற்றும் மூலையில் ஒரு பகுதி"
+          "courseA_maze_seq6_b": "நீங்கள் சிக்கிக்கொண்டால், புதிரை 2 பகுதிகளாக தீர்க்க முயற்சி செய்யுங்கள், மூலையில் ஒரு பகுதி மற்றும் மூலையில் ஒரு பகுதி."
         },
         "courseA_maze_seq8_2021": {
           "courseA_maze_seq8_a": "நீங்கள் சிக்கிக்கொண்டால், பறவை எப்படி நகர வேண்டும் என்பதை அறிய காகிதத்தில் படத்தை வரைய முயற்சிக்கவும்."
@@ -1378,7 +1378,7 @@
           "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2021": {
-          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:"
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "`நடிகர் 1 ஆக அமைக்கப்பட்டாரா ??? மேடையில் ஒரு நடிகரைச் சேர்க்க image` block ஐப் பயன்படுத்தலாம்.",
@@ -1746,7 +1746,7 @@
           "courseB_collector_loops1_a": "<xml><block type=\"collector_collect_simplified\"/></xml> நீங்கள் புதையலின் மேல் நிற்கும்போது அதை எடுக்கப் பயன்படுத்தலாம்."
         },
         "courseB_collector_loops2_2021": {
-          "courseB_collector_loops2_a": "எந்தவொரு புதையலையும் சேகரிப்பதற்கு முன்பு நீங்கள் செல்ல வேண்டும்.",
+          "courseB_collector_loops2_a": "நீங்கள் எந்த புதையலையும் சேகரிக்கும் முன் நீங்கள் நகர வேண்டும்.",
           "courseB_collector_loops2_b": "நீங்கள் புதையல் உள்ள இடத்தை அடைந்ததும், அதை எடுக்க <xml><block type=\"collector_collect\"/></xml> block ஐப் பயன்படுத்தவும்."
         },
         "courseB_collector_loops3_2021": {
@@ -2808,7 +2808,7 @@
           "hello-world-first-solution-retrocreature": "உயிரினம் ஏதாவது சொல்ல, இது போன்ற குறியீடு தொகுதிகளை இணைக்கவும்: \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml> "
         },
         "helloworld_retro_sizes": {
-          "hw_retro_setProp": "ஒரு ஸ்ப்ரைட்டின் அளவை ஒரு முறை அமைக்க, நீங்கள் இந்தத் தொகுதியைப் பயன்படுத்தலாம்:  <xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
+          "hw_retro_setProp": "ஒரு ஸ்ப்ரைட்டின் அளவை ஒரு முறை அமைக்க, நீங்கள் இந்தத் தொகுதியைப் பயன்படுத்தலாம்:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
           "hw_retro_changePropBy": "ஸ்பிரைட்டின் அளவை மீண்டும் மீண்டும் (நிகழ்வுகளுடன்) மாற்ற விரும்பினால், இந்தத் தடுப்பைப் பயன்படுத்தவும்:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {

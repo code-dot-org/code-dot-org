@@ -495,7 +495,6 @@ module HttpCacheTest
       end
 
       it 'Does not strip cookies from the last dance level' do
-        refute strips_session_specific_cookies_from_request? '/s/dance/lessons/1/levels/13'
         refute strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/10'
       end
 
