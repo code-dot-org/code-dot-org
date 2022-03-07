@@ -1151,7 +1151,7 @@ export function assignedUnitName(state) {
   return assignment ? assignment.name : '';
 }
 
-export function assignedTextToSpeech(state) {
+export function assignedUnitTextToSpeechEnabled(state) {
   const {sectionBeingEdited, validAssignments} = getRoot(state);
   if (!sectionBeingEdited) {
     return false;
