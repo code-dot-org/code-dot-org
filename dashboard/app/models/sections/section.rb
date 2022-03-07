@@ -81,7 +81,7 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
-  validates :grade, acceptance: {accept: SharedConstants::STUDENT_GRADE_LEVELS.to_h.values, message: "must be one of the valid student grades. Expected one of: #{SharedConstants::STUDENT_GRADE_LEVELS.to_h.values.map(&:to_s)}. Got: \"%{value}\"."}
+  validates :grade, acceptance: {accept: SharedConstants::STUDENT_GRADE_LEVELS, message: "must be one of the valid student grades. Expected one of: #{SharedConstants::STUDENT_GRADE_LEVELS}. Got: \"%{value}\"."}
 
   validate :pl_sections_must_use_email_logins
   validate :participant_type_not_changed
