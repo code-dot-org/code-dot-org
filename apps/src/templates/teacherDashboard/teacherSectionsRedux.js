@@ -1109,6 +1109,10 @@ function assignedUnit(state) {
 }
 
 export function assignedUnitName(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return '';
+  }
   const assignment = assignedUnit(state);
   return assignment ? assignment.name : '';
 }
@@ -1118,7 +1122,11 @@ export function assignedUnitLessonExtrasAvailable(state) {
   return assignment ? assignment.lesson_extras_available : false;
 }
 
-export function assignedUnitTextToSpeech(state) {
+export function assignedUnitTextToSpeechEnabled(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
   const assignment = assignedUnit(state);
   return assignment ? assignment.text_to_speech_enabled : false;
 }
