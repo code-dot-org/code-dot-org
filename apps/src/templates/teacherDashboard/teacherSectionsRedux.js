@@ -1151,6 +1151,16 @@ export function assignedUnitName(state) {
   return assignment ? assignment.name : '';
 }
 
+export function assignedLessonExtras(state) {
+  const {sectionBeingEdited, validAssignments} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  const assignment = validAssignments[assignId];
+  return assignment ? assignment.lesson_extras_available : false;
+}
+
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
   return sortSectionsList(allSections || []).filter(section => !section.hidden);
@@ -1201,7 +1211,6 @@ export const sectionFromServerSection = serverSection => ({
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  script: serverSection.script ? serverSection.script : null,
   scriptId: serverSection.script
     ? serverSection.script.id
     : serverSection.script_id || null,

@@ -13,7 +13,8 @@ import {
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
-  reloadAfterEditingSection
+  reloadAfterEditingSection,
+  assignedLessonExtras
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -44,6 +45,7 @@ class EditSectionForm extends Component {
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
     textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    assignedLessonExtras: PropTypes.bool.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
     assignedUnitName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
@@ -135,6 +137,7 @@ class EditSectionForm extends Component {
       isSaveInProgress,
       editSectionProperties,
       handleClose,
+      assignedLessonExtras,
       textToSpeechUnitIds,
       assignedUnitName,
       localeCode,
@@ -211,7 +214,7 @@ class EditSectionForm extends Component {
             localeCode={localeCode}
             isNewSection={isNewSection}
           />
-          {section.script.lesson_extras_available && (
+          {assignedLessonExtras && (
             <LessonExtrasField
               value={section.lessonExtras}
               onChange={lessonExtras => editSectionProperties({lessonExtras})}
@@ -545,6 +548,7 @@ let defaultPropsFromState = state => ({
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
+  assignedLessonExtras: assignedLessonExtras(state),
   textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
   hiddenLessonState: state.hiddenLesson,
   assignedUnitName: assignedUnitName(state),
