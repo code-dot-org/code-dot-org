@@ -360,4 +360,54 @@ describe('EditSectionForm', () => {
     const ttsAutoplayField = wrapper.find('TtsAutoplayField');
     assert.equal(ttsAutoplayField.length, 1);
   });
+
+  it('does not render LessonExtrasField when assignedUnitLessonExtrasAvailable is false', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
+      />
+    );
+    const lessonExtrasField = wrapper.find('LessonExtrasField');
+    assert.equal(lessonExtrasField.length, 0);
+  });
+
+  it('renders LessonExtrasField when assignedUnitLessonExtrasAvailable is true', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        lessonExtrasAvailable={() => false}
+        assignedUnitTextToSpeechEnabled={() => true}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => true}
+      />
+    );
+    const lessonExtrasField = wrapper.find('LessonExtrasField');
+    assert.equal(lessonExtrasField.length, 1);
+  });
 });
