@@ -38,9 +38,19 @@ describe('TeacherApplication', () => {
     window.sessionStorage.removeItem('TeacherApplication');
   });
 
-  it('Logs user id on initialization', () => {
-    mount(<TeacherApplication {...defaultProps} />);
+  it('Sends firehose event on initialization and save', () => {
+    // Also calls firehose event on submit, but we reload the page on submit
+    // The page reload can't be stubbed because `window.location.reload`
+    // is not writable nor configurable: Object.getOwnPropertyDescriptor(window.location, 'toString')
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#modifying_a_property
+    let teacherApp = mount(
+      <TeacherApplication {...defaultProps} allowPartialSaving />
+    );
+    const formControllerProps = teacherApp.find('FormController').props();
     sinon.assert.calledOnce(fc);
+
+    formControllerProps.onSuccessfulSave();
+    sinon.assert.calledTwice(fc);
   });
   it('Does not set schoolId if not provided', () => {
     const page = mount(<TeacherApplication {...defaultProps} />);
