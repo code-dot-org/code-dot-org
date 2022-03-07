@@ -2584,7 +2584,7 @@ az-AZ:
           feedback: Yanlış. Rəssam kvadrat çəkir.
         - text: Rəssam tək xətt çəkəcək.
           feedback: Yanlış. Rəssam kvadrat çəkir.
-        - text: Artist dördbucaqlı çəkəcək.
+        - text: Rəssam dördbucaqlı çəkəcək.
           correct: true
           feedback: Düzgün!
         - text: Rəssam beşbucaqlı cəkəcək
@@ -2770,7 +2770,8 @@ az-AZ:
         - text: Laurel bütün xəzinəni toplayacaq.
           feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
             və bu xətaya səbəb olur.
-        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+        - text: Bu koddan istifadə edərək Laurel 1 parça xəzinə toplayacaq
+          feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
             və bu xətaya səbəb olur.
         questions:
         - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
@@ -3856,7 +3857,7 @@ az-AZ:
         - feedback: Yanlış. Yadplanetli ekranda yuxarı-aşağı hərəkət etməyə başlayacaq.
         - correct: true
           feedback: Düzgün!
-        - {}
+        - text: Yadplanetli ekranın yuxarı hissəsində yox olacaq.
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqdan
             sonra nə olacaq? '
@@ -5697,39 +5698,9 @@ az-AZ:
         display_name: Praktika
       CSD web text practice choice_2021:
         display_name: Praktika
-      CSDU6 Innovation_2021:
-        markdown: |-
-          # İnnovasiya Araşdırması
-
-          Baxmaq üçün aşağıdakı mövzulardan birini seçin. Siz kateqoriyanızla əlaqəli ən son innovativ hesablama cihazları haqqında məlumat tapmaq istəyə bilərsiniz.
-
-          ## Geyinilə bilən texnologiya
-          Geyinilə bilən texnologiya istifadəçi tərəfindən geyinilmək üçün nəzərdə tutulmuş istənilən hesablama formasını əhatə edir, istər geyimə daxil edilmiş olsun, istərsə də aksessuar kimi. Ağıllı addımölçənlər kimi bir çox geyilə bilən qurğular sağlamlıq və təhlükəsizliklə bir qədər üst-üstə düşür, çünki cihaz həm taxıla bilər, həm də şəxsi sağlamlığınızı yaxşılaşdırmaq üçün nəzərdə tutulub.
-
-          ## Sağlamlıq və təhlükəsizlik
-          Geniş mövzuya həm istehlakçı texnologiyası (sağlamlığınızı və ya təhlükəsizliyinizi yaxşılaşdırmaq üçün istifadə edə biləcəyiniz şeylər), həm də peşəkar texnologiya (həkim və ya digər peşəkarın istifadə edə biləcəyi avadanlıq) daxildir.
-
-          ## Kənd təsərrüfatı
-          Kənd təsərrüfatı açıq mövzu olmaya bilər, lakin texnoloji yeniliklər bizim əkinçiliklə bağlı yanaşmamıza böyük təsir göstərib. Buraya kompüterlərin mövcud təsərrüfat avadanlığına daxil edilməsi, məhsulların monitorinqi üçün sensorlar və robotların istifadəsi, səmərəliliyi və davamlılığı artırmaq üçün məlumatların təhlili daxildir.
-
-          ## İstehsalat
-          Sürətli prototipləşdirmə, sənaye robotikası və avtomatlaşdırma sahəsindəki irəliləyişlər malların necə istehsal olunduğuna böyük təsir göstərmişdir. İstər münasib qiymətə kiçik miqyaslı istehsalı (3D printerlər və lazer kəsicilər kimi) təmin edən texnologiya, istərsə də kompüterlərin zavod işlərinə inteqrasiyası olsun, burada araşdırmaq üçün çoxlu maraqlı sahələr var.
-
-          ## İncəsənət və dizayn
-          Bədii ifadə ilə hesablamanın kəsişməsi təsirli və gözlənilməz nəticələr verə bilər. İncəsənət və dizaynla əlaqəli kommersiya məhsullarını tapma ehtimalınız az olsa da, hər cür hesablama cihazlarından yaradıcı və ifadəli şəkildə istifadə edən çoxlu sayda evdə hazırlanmış əsərlər tapacaqsınız.
-
-          ## Ağıllı Ev
-          Ehtiyaclarınızı anlayan və hətta gözləyən bir evin xəyalı hər zamankindən daha yaxındır. İstər açıq şəkildə səs əmrləri ilə idarə olunsun, istərsə də dəyişən şərtlərə nəzarət etmək və onlara cavab vermək üçün sensorlardan istifadə etməklə, ağıllı ev cihazları evin ətrafında istənilən sayda gündəlik və ya təkrarlanan tapşırıqların öhdəsindən gəlir.
-
-
-          # Araşdırma Mülahizələri
-
-          Mövzunuzla bağlı cihazları araşdırarkən aşağıdakı mülahizələri nəzərə alın:
-
-          * Proqram təminatında avadanlıq əsaslı həllər üzərində fokuslanmaq
-          * Köhnə xəbərlər üzərində son yeniliklərə diqqət yetirin
-          * Sizi maraqlandıran şeyləri izləyin
-
-          Hər bir mövzu üçün sadalanan tövsiyə olunan saytlara əlavə olaraq, hələ tam istifadə olunmamış məhsulları görmək üçün müxtəlif kraudfandinq veb saytlarına (məsələn, Kickstarter və Indiegogo) baxmağı düşünün.
       csd-pre-survey-levelgroup_21_22:
         title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+      ml-club app-choice parent:
+        display_name: Tətbiqinizi özəlləşdirin
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Tətbiqinizi özəlləşdirin
