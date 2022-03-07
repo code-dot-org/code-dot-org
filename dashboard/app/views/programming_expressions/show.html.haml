@@ -13,4 +13,4 @@
       - if Rails.application.config.levelbuilder_mode
         %li= link_to 'Edit', edit_programming_expression_path(@programming_expression)
       - else
-        %li= link_to 'Edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", edit_programming_expression_path(@programming_expression)).to_s
+        %li= link_to 'View on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", programming_environment_programming_expression_path(@programming_expression.programming_environment.name, @programming_expression.key)).to_s
