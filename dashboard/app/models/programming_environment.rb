@@ -105,7 +105,8 @@ class ProgrammingEnvironment < ApplicationRecord
       name: name,
       title: title,
       imageUrl: image_url,
-      description: description
+      description: description,
+      showPath: programming_environment_path(name)
     }
   end
 end
