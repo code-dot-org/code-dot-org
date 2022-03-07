@@ -22,25 +22,21 @@ describe('TeacherApplication', () => {
     userId: 1
   };
 
-  let googleAnalyticsStub;
-  let firehoseClientStub;
-
   beforeEach(() => {
+    sinon.stub(firehoseClient, 'putRecord');
     sinon
       .stub(window.sessionStorage, 'getItem')
       .withArgs('TeacherApplication')
       .returns(JSON.stringify({}));
     sinon.stub(window.sessionStorage, 'setItem');
-    googleAnalyticsStub = sinon.fake();
-    window.ga = googleAnalyticsStub;
-    firehoseClientStub = sinon.stub(firehoseClient, 'putRecord');
+    window.ga = sinon.fake();
   });
 
   afterEach(() => {
+    firehoseClient.putRecord.restore();
     window.sessionStorage.getItem.restore();
     window.sessionStorage.setItem.restore();
     window.ga = undefined;
-    firehoseClientStub.restore();
   });
 
   it('Sends firehose event on initialization and save', () => {
@@ -52,10 +48,10 @@ describe('TeacherApplication', () => {
       <TeacherApplication {...defaultProps} allowPartialSaving />
     );
     const formControllerProps = teacherApp.find('FormController').props();
-    sinon.assert.calledOnce(firehoseClientStub);
+    sinon.assert.calledOnce(firehoseClient.putRecord);
 
     formControllerProps.onSuccessfulSave();
-    sinon.assert.calledTwice(firehoseClientStub);
+    sinon.assert.calledTwice(firehoseClient.putRecord);
   });
   it('Does not set schoolId if not provided', () => {
     const page = mount(<TeacherApplication {...defaultProps} />);
