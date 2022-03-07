@@ -27,15 +27,20 @@ describe('TeacherApplication', () => {
 
   beforeEach(() => {
     googleAnalyticsStub = sinon.fake();
+    sinon
+      .stub(window.sessionStorage, 'getItem')
+      .withArgs('TeacherApplication')
+      .returns(JSON.stringify({}));
+    sinon.stub(window.sessionStorage, 'setItem');
     window.ga = googleAnalyticsStub;
     firehoseClientStub = sinon.stub(firehoseClient, 'putRecord');
-    window.sessionStorage.removeItem('TeacherApplication');
   });
 
   afterEach(() => {
     window.ga = undefined;
     firehoseClientStub.restore();
-    window.sessionStorage.removeItem('TeacherApplication');
+    window.sessionStorage.getItem.restore();
+    window.sessionStorage.setItem.restore();
   });
 
   it('Sends firehose event on initialization and save', () => {
@@ -65,6 +70,7 @@ describe('TeacherApplication', () => {
     );
   });
   it('Sets the school dropdown value from storage', () => {
+    window.sessionStorage.getItem.restore();
     sinon
       .stub(window.sessionStorage, 'getItem')
       .withArgs('TeacherApplication')
@@ -73,7 +79,6 @@ describe('TeacherApplication', () => {
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '25'
     );
-    window.sessionStorage.getItem.restore();
   });
   it('Reports to google analytics', () => {
     const form = mount(<TeacherApplication {...defaultProps} />);
