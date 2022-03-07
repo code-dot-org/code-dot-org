@@ -1873,7 +1873,8 @@ class Script < ApplicationRecord
         id: id,
         name: I18n.t("data.script.name.#{info[:name]}.title", default: info[:name]),
         path: link,
-        lesson_extras_available: lesson_extras_available?
+        lesson_extras_available: lesson_extras_available?,
+        text_to_speech_enabled: text_to_speech_enabled?
       }
     ]
   end
