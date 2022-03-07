@@ -378,9 +378,9 @@ exports.functionalDefinitionXml = function(
   return (
     '<block type="functional_definition" inline="false">' +
     mutation +
-    '<field name="NAME">' +
+    '<title name="NAME">' +
     name +
-    '</field>' +
+    '</title>' +
     '<functional_input name="STACK">' +
     blockXml +
     '</functional_input>' +
