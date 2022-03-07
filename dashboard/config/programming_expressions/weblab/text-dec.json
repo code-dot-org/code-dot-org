@@ -9,15 +9,15 @@
       "name": "Multiple Text Decorations",
       "description": "Setting different text decorations for a `<h1>` element. ",
       "code": "```\nh2 {\n  text-decoration: underline overline wavy blue;\n}\n```",
-      "appDisplayType": "displayApp",
-      "appEmbedHeight": "310"
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": "310"
     },
     {
       "name": "Overline text decoration",
       "description": "Setting an overline text decoration for a `<h1>` element. ",
       "code": "```\nh1 {\n  text-decoration: overline;\n}\n```",
-      "appDisplayType": "displayApp",
-      "appEmbedHeight": "310"
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": "310"
     }
   ],
   "external_documentation": "http://www.w3schools.com/cssref/pr_text_text-decoration.asp",

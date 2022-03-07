@@ -898,6 +898,10 @@ ku:
           lesson_groups:
             csf_loops:
               display_name: گرێکان
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: گۆڕاوەکان
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -906,3 +910,11 @@ ku:
           lessons:
             lesson-9:
               name: گرێکان
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: ئینتەرنێت
+              key: ئینتەرنێت
+          lesson_groups:
+            lessonGroup-8:
+              display_name: گۆڕاوەکان

@@ -1,4 +1,6 @@
 {
+  "backward": "मागे",
+  "blocksUsed": "वापरलेले ब्लॉक्स: %1 ",
   "catControl": "लूप्स",
   "catMath": "गणित",
   "catTurtle": "कृती",

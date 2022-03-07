@@ -1475,4 +1475,5 @@ fr:
   behaviors:
     this_sprite: ce sprite
   unit_prefix: Unité %{n}
+  code_org_logo_alt: Code.org Accueil
   teacher_feedback: FeedBack enseignants

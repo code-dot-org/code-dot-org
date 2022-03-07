@@ -2887,6 +2887,10 @@ da:
               display_name: Løkker
             csf_events:
               display_name: Hændelser
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variabler
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2899,3 +2903,18 @@ da:
           lessons:
             lesson-9:
               name: Løkker
+        coursef-2022-pilot:
+          lessons:
+            Outbreak:
+              name: Udbrud
+              key: Udbrud
+            The Internet:
+              name: Internettet
+              key: Internettet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital statsborgerskab
+            ramp_up:
+              display_name: figure
+            lessonGroup-8:
+              display_name: Variabler
