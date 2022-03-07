@@ -303,12 +303,10 @@ const SectionNameField = ({value, onChange, disabled}) => (
 SectionNameField.propTypes = FieldProps;
 
 const GradeField = ({value, onChange, disabled}) => {
-  const gradeOptions = ['']
-    .concat(Object.values(StudentGradeLevels))
-    .map(grade => ({
-      value: grade,
-      text: grade === 'Other' ? 'Other/Mixed' : grade
-    }));
+  const gradeOptions = [''].concat(StudentGradeLevels).map(grade => ({
+    value: grade,
+    text: grade === 'Other' ? 'Other/Mixed' : grade
+  }));
   return (
     <div>
       <FieldName>{i18n.grade()}</FieldName>

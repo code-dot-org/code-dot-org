@@ -159,7 +159,7 @@ class OwnedSectionsTable extends Component {
     if (this.state.sortingColumns[gradeCol]) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function(obj) {
-        return mult * Object.values(StudentGradeLevels).indexOf(obj.grade);
+        return mult * StudentGradeLevels.concat(null).indexOf(obj.grade);
       });
     } else {
       return orderBy(data, activeColumn, directionArray);
