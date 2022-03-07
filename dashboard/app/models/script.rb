@@ -1897,6 +1897,7 @@ class Script < ApplicationRecord
     info[:supported_locales] = supported_locale_names
     info[:supported_locale_codes] = supported_locale_codes
     info[:lesson_extras_available] = lesson_extras_available
+    info[:text_to_speech_enabled] = text_to_speech_enabled?
     if has_standards_associations?
       info[:standards] = standards
     end

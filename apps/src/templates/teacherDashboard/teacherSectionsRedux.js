@@ -1151,6 +1151,16 @@ export function assignedUnitName(state) {
   return assignment ? assignment.name : '';
 }
 
+export function assignedTextToSpeech(state) {
+  const {sectionBeingEdited, validAssignments} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  const assignment = validAssignments[assignId];
+  return assignment ? assignment.text_to_speech_enabled : false;
+}
+
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
   return sortSectionsList(allSections || []).filter(section => !section.hidden);
