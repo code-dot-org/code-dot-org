@@ -358,8 +358,6 @@ const FormController = props => {
   };
 
   const handleSave = () => {
-    // [MEG] TODO: Consider rendering spinner if saving
-
     // clear errors so we can more clearly detect "new" errors and toggle
     // submitting flag so we can prevent duplicate submission
     setErrors([]);
@@ -653,6 +651,10 @@ const styles = {
   saveButton: {
     marginLeft: '10px',
     marginRight: '10px'
+  },
+  spinner: {
+    verticalAlign: 'top',
+    marginTop: '5px'
   }
 };
 
