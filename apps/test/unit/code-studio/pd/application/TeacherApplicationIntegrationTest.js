@@ -4,6 +4,7 @@ import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 describe('TeacherApplication', () => {
   const fakeOptionKeys = Object.values(PageLabels).reduce(
@@ -22,18 +23,25 @@ describe('TeacherApplication', () => {
   };
 
   let ga;
+  let fc;
 
   beforeEach(() => {
     ga = sinon.fake();
     window.ga = ga;
+    fc = sinon.stub(firehoseClient, 'putRecord');
     window.sessionStorage.removeItem('TeacherApplication');
   });
 
   afterEach(() => {
     window.ga = undefined;
+    fc.restore();
     window.sessionStorage.removeItem('TeacherApplication');
   });
 
+  it('Logs user id on initialization', () => {
+    mount(<TeacherApplication {...defaultProps} />);
+    sinon.assert.calledOnce(fc);
+  });
   it('Does not set schoolId if not provided', () => {
     const page = mount(<TeacherApplication {...defaultProps} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
