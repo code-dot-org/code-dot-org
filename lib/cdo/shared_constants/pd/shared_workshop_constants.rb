@@ -207,6 +207,12 @@ module Pd
       unknown: "unknown"
     }.freeze
 
+    ACTIVE_COURSE_WORKSHOPS = {
+      CSD: 'CS Discoveries',
+      CSP: 'CS Principles',
+      CSA: 'Computer Science A'
+    }.freeze
+
     WORKSHOP_TYPES = {
       teachercon: SUBJECT_TEACHER_CON,
       local_summer: SUBJECT_SUMMER_WORKSHOP,
