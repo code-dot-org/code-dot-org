@@ -1100,35 +1100,26 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedUnitName(state) {
+function assignedUnit(state) {
   const {sectionBeingEdited, courseOfferings} = getRoot(state);
-  if (!sectionBeingEdited) {
-    return '';
-  }
-  const assignment =
-    courseOfferings[sectionBeingEdited.courseOfferingId]?.course_versions[
-      sectionBeingEdited.courseVersionId
-    ]?.units[sectionBeingEdited.unitId];
+
+  return courseOfferings[sectionBeingEdited.courseOfferingId]?.course_versions[
+    sectionBeingEdited.courseVersionId
+  ]?.units[sectionBeingEdited.unitId];
+}
+
+export function assignedUnitName(state) {
+  const assignment = assignedUnit(state);
   return assignment ? assignment.name : '';
 }
 
 export function assignedUnitLessonExtrasAvailable(state) {
-  const {sectionBeingEdited, validAssignments} = getRoot(state);
-  if (!sectionBeingEdited) {
-    return false;
-  }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+  const assignment = assignedUnit(state);
   return assignment ? assignment.lesson_extras_available : false;
 }
 
-export function assignedTextToSpeech(state) {
-  const {sectionBeingEdited, validAssignments} = getRoot(state);
-  if (!sectionBeingEdited) {
-    return false;
-  }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+export function assignedUnitTextToSpeech(state) {
+  const assignment = assignedUnit(state);
   return assignment ? assignment.text_to_speech_enabled : false;
 }
 
