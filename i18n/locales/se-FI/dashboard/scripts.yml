@@ -7298,3 +7298,25 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        coursef-2022-pilot:
+          lessons:
+            AI For Oceans:
+              name: AI Mearaide
+              key: AI Mearaide
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
+            ramp_up:
+              display_name: Sprite:at
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
