@@ -2242,6 +2242,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2250,6 +2251,7 @@ ms-MY:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Betul!
         - text: '15'
         - text: '20'
         questions:
@@ -2258,7 +2260,11 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul! Mula-mula, Scrat membelok ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
         - correct: true
+          feedback: Betul! Mula-mula, Scrat membelok ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
         - {}
         questions:
         - {}
@@ -2266,6 +2272,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -2275,6 +2282,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2282,6 +2290,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -2292,6 +2301,7 @@ ms-MY:
         answers:
         - text: A
           correct: true
+          feedback: Betul!
         - text: B
         - text: C
         - {}
@@ -2301,6 +2311,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -2316,6 +2327,7 @@ ms-MY:
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         - {}
@@ -2326,6 +2338,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2334,6 +2347,7 @@ ms-MY:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Betul!
         - text: '10'
         - text: '12'
         questions:
@@ -2343,6 +2357,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2350,6 +2365,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -2359,12 +2375,14 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         - {}
@@ -2374,19 +2392,25 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
         - {}
       courseE_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       courseE_EOC_examples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
         - text: Makhluk asing akan mula meronda dari kanan ke kiri.
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2395,6 +2419,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2404,6 +2429,8 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam program, bersama lompatan
+            di antaranya.
         questions:
         - {}
       courseE_prediction_artistFunction1_dani:
@@ -2419,60 +2446,98 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
       courseF_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus F! Pilih projek untuk
+          dicipta.
       courseF_EOC_examples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus F! Pilih projek untuk
+          dicipta.
       courseF_EOC_samples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
       courseF_events_predict_multi:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Betul! Kedua-dua tingkah laku akan berlaku secara serentak.
         - {}
         questions:
-        - {}
+        - text: Baca kod, kemudian buat ramalan.
       courseF_labels_predict_multi:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: Salah. Label pemboleh ubah tidak pernah dicetak.
         - correct: true
         - {}
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Artis akan melukis segi tiga dengan sisi yang terdiri daripada 50
+            piksel.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
+            3 piksel.
+          feedback: Salah. Pemboleh ubah `panjang` perlu berada dalam gelung `berulang`
+            untuk perkara tersebut berlaku.
+        - text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
+          feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
+            untuk perkara tersebut berlaku.
+        - feedback: Pemboleh ubah `panjang` ditetapkan kepada 50 dan sedang digunakan
+            dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
+            segi tiga dengan sisi yang terdiri daripada 50 piksel.
         questions:
-        - {}
+        - text: Kami telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+            akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+          correct: true
+          feedback: Betul!
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
         questions:
-        - {}
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
       courseF_sprites_predict_multi:
         answers:
         - {}
         - correct: true
+          feedback: Betul! Tingkah laku ini memberitahu kapal terbang supaya mula
+            bergerak dan teruskan.
         - {}
         - {}
         questions:
-        - {}
+        - text: Baca kod, kemudian buat ramalan.
       courseF_variables_predict_multi:
         answers:
         - {}
         - correct: true
+          feedback: Betul! Perkara yang anda taip digunakan di tempat blok nama.
         - {}
         - {}
         questions:
@@ -2481,16 +2546,20 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
         - {}
       express_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -3056,3 +3125,94 @@ ms-MY:
           dilakukan. Pada akhir kursus ini, anda akan dapat membuat projek anda sendiri
           seperti ini...dan banyak lagi!
         display_name: Aplikasi Makmal Peperi
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Pilihan di sini membawa pelajar kepada sampel aplikasi yang boleh mereka terokai. Aktiviti ini bertujuan menyelaras dengan lembaran kerja Meneroka Aplikasi, yang terdapat dalam [lesson plan](.././).
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # Gelung Untuk yang Menyeronokkan
+
+          Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan terbina di dalam.
+      Internet-Unplugged_2021:
+        markdown: |
+          # Internet
+
+          Bina Internet anda sendiri di dalam kelas hanya menggunakan helaian kertas.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Cepat, Cepat
+
+          Gunakan peta dan berikan perintah untuk mencapai matlamat.
+      PowerOfWords-Unplugged_2021:
+        markdown: |
+          # Kuasa Kata-kata
+
+          ## Apakah yang perlu anda lakukan apabila seseorang menggunakan bahasa kesat atau menyakitkan hati dalam internet?
+      courseD_EOC_examples_2021:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
+      courseF_beeFor_practice:
+        display_name: Latihan Lebah
+      courseF_beeVar_practice:
+        display_name: Latihan Lebah
+      courseF_events_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Dilancarkan!|Belajar menerbangkan kapal terbang|Lakukan gerakan aerobatik terbalik|Mengecil dan Membesar|Mengembungkan ikan!|Penguin sedang bergerak|
+          |-|-|-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Nyahpepijat**|**Nyahpepijat**|**Nyahpepijat**|**Kandungan Pilihan**|**Kandungan Pilihan**
+          | ***Konsep***|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*apabila/semasa peristiwa*|*apabila/semasa peristiwa*|
+
+
+      courseF_sprites_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Pemandangan Gurun|Mengubah saiz buah.|Menganimasikan Kapal Layar|Hari yang Berangin|
+          |-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Semak**|**Semak**|**Semak**|
+          | ***Konsep***|*peperi, lokasi*|*peperi, sifat*|*peperi, lokasi, tingkah laku*|*tingkah laku*|
+
+
+      courseF_text_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Menggunakan Pertuturan untuk Teks|Teks untuk Prom|Namakan robot!|Label Pemboleh Ubah|Teks Besar|Menggesa untuk warna|Memulakan tanpa apa-apa asas|
+          |-|-|-|-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Nyapepijat**|**Nyapepijat**|**Nyapepijat**|**Kandungan Pilihan**|**Kandungan Pilihan**|**Permainan Bebas**
+          | ***Konsep***|*blok cetak, peristiwa*|*prom, peristiwa*|*menambahkan ruangan*|*padanan label pemboleh ubah*|*tajuk blok skrin*|*menyimpan warna*|*tiada kandungan baharu*
+
+
+      courseF_variables_projects:
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi perlu digalakkan melengkapkan **dua** tahap untuk projek yang sama.
+
+          Pelajar mungkin memerlukan arahan yang amat jelas untuk memahami cara menavigasi pilihan di sini. Untuk setiap pilihan projek, terdapat dua subtahap di sini. Untuk mulakan, pelajar perlu memilih satu daripada tahap yang ditandakan sebagai "Bahagian 1". Sebaik sahaja mereka menamatkan tahap itu, mereka perlu kembali ke sini dan memilih "Bahagian 2" daripada projek yang *sama*. Tahap pertama untuk setiap pilihan akan memberikan maklum balas kepada pelajar semasa mereka menggabungkan komponen asas projek mereka. Tahap kedua ialah "permainan bebas" yang bertujuan membolehkan pelajar membuat apa-apa perubahan kepada kod mereka yang mereka suka.
+      courseF_variables_samples:
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+      csf_digital_trails_2021:
+        markdown: |
+          # Ikuti Jejak Digital
+
+          ## Apakah maklumat yang OK untuk ada dalam jejak digital anda?
+      express_EOC_examples_2021:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
