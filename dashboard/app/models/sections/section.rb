@@ -137,6 +137,10 @@ class Section < ApplicationRecord
     LOGIN_TYPES.include? type
   end
 
+  def self.valid_grade?(grade)
+    SharedConstants::STUDENT_GRADE_LEVELS.include? grade
+  end
+
   # Override default script accessor to use our cache
   def script
     Script.get_from_cache(script_id) if script_id
