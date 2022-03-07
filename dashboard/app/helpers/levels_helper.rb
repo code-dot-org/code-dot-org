@@ -46,7 +46,7 @@ module LevelsHelper
   end
 
   def url_from_path(path)
-    "#{root_url.chomp('/')}#{path}"
+    "#{root_url(protocol: '//').chomp('/')}#{path}"
   end
 
   def readonly_view_options

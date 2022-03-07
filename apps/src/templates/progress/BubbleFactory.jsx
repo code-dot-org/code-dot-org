@@ -212,11 +212,6 @@ export function getBubbleUrl(
   if (studentId) {
     params.user_id = studentId;
   }
-  if (location.protocol === 'https:') {
-    // The server has given us a http:// URL, but since we are on an https:// connection, we
-    // can avoid a redirect when the bubble is clicked by updating the protocol here.
-    levelUrl = levelUrl.replace('http:', 'https:');
-  }
   if (Object.keys(params).length) {
     return `${levelUrl}?${queryString.stringify(params)}`;
   }
