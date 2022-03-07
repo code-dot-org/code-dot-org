@@ -22,7 +22,6 @@ export default storybook => {
         }}
         isSaveInProgress={false}
         textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -42,7 +41,6 @@ export default storybook => {
         }}
         isSaveInProgress={false}
         textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -59,7 +57,6 @@ export default storybook => {
         section={testSection}
         isSaveInProgress={true}
         textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
