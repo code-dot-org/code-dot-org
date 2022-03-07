@@ -275,8 +275,8 @@ class ProgrammingExpression < ApplicationRecord
     if new_category_key
       new_category = new_env.categories.find_by_key(new_category_key)
     else
-      new_category ||= new_env.categories.find_by_key(programming_environment_category.key)
-      new_category ||= new_env.categories.find_by_name(programming_environment_category.name)
+      new_category ||= new_env.categories.find_by_key(programming_environment_category&.key)
+      new_category ||= new_env.categories.find_by_name(programming_environment_category&.name)
     end
 
     new_exp = dup

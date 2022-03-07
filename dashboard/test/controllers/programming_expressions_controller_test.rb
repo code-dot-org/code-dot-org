@@ -132,6 +132,43 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_nil ProgrammingExpression.find_by_key('test-expression')
   end
 
+  test 'can clone programming expression' do
+    sign_in @levelbuilder
+    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+    destination_programming_environment = create :programming_environment
+
+    assert_creates(ProgrammingExpression) do
+      post :clone, params: {
+        id: programming_expression.id,
+        destinationProgrammingEnvironmentName: destination_programming_environment.name
+      }
+    end
+    assert_response :ok
+
+    new_exp = destination_programming_environment.programming_expressions.find_by_key('test-expression')
+    refute_nil new_exp
+  end
+
+  test 'can clone programming expression into a category' do
+    sign_in @levelbuilder
+    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+    destination_programming_environment = create :programming_environment
+    destination_category = create :programming_environment_category, programming_environment: destination_programming_environment
+
+    assert_creates(ProgrammingExpression) do
+      post :clone, params: {
+        id: programming_expression.id,
+        destinationProgrammingEnvironmentName: destination_programming_environment.name,
+        destinationCategoryKey: destination_category.key
+      }
+    end
+    assert_response :ok
+
+    new_exp = destination_programming_environment.programming_expressions.find_by_key('test-expression')
+    refute_nil new_exp
+    assert_equal destination_category.id, new_exp.programming_environment_category_id
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
@@ -139,6 +176,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       @programming_expression = create :programming_expression, programming_environment: programming_environment
 
       @update_params = {id: @programming_expression.id, name: 'new name'}
+      destination_programming_environment = create :programming_environment
+      @clone_params = {id: @programming_expression.id, destinationProgrammingEnvironmentName: destination_programming_environment.name}
     end
 
     test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
@@ -156,10 +195,15 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     test_user_gets_response_for :edit, params: -> {{id: @programming_expression.id}}, user: :teacher, response: :forbidden
     test_user_gets_response_for :edit, params: -> {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :clone, params: -> {@clone_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :student, response: :forbidden
