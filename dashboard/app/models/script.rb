@@ -329,8 +329,9 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
-  def self.maker_units
-    @@maker_units ||= visible_units.select(&:is_maker_unit?)
+  def self.maker_units(user)
+    return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?)
+    return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
   end
 
   # Get the set of units that are valid for the current user, ignoring those
