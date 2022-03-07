@@ -28,6 +28,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -65,6 +66,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -102,6 +104,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -139,6 +142,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -179,6 +183,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -204,6 +209,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -226,6 +232,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -251,6 +258,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -273,6 +281,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -295,6 +304,7 @@ describe('EditSectionForm', () => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');

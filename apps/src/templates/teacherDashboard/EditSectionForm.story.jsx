@@ -31,6 +31,7 @@ export default storybook => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     ));
     storybook = storybook.add('no students yet', () => (
@@ -52,6 +53,7 @@ export default storybook => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     ));
     storybook = storybook.add('save in progress', () => (
@@ -70,6 +72,7 @@ export default storybook => {
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={() => false}
       />
     ));
   });
