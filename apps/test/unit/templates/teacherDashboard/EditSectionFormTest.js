@@ -315,6 +315,7 @@ describe('EditSectionForm', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
+        localeCode="en_us"
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
@@ -339,6 +340,7 @@ describe('EditSectionForm', () => {
     const wrapper = mount(
       <EditSectionForm
         title="Edit section details"
+        localeCode="en_us"
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
