@@ -91,9 +91,7 @@ module UsersHelper
         error: error,   # Move error outside of data_json to query easier
         data_json: {
           session_sign_up_type: session[:sign_up_type],
-          destination_user_email: destination_user.email,
           destination_user_hashed_email: destination_user.hashed_email,
-          source_user_email: source_user.email,
           source_user_hashed_email: source_user.hashed_email,
           # Including the auth_option_ids for reference, but not confident they will reveal much
           destination_user_auth_option_ids: destination_user.authentication_options.map(&:id).join(', '),
