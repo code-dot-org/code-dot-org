@@ -1103,9 +1103,21 @@ export function isSaveInProgress(state) {
 function assignedUnit(state) {
   const {sectionBeingEdited, courseOfferings} = getRoot(state);
 
-  return courseOfferings[sectionBeingEdited.courseOfferingId]?.course_versions[
-    sectionBeingEdited.courseVersionId
-  ]?.units[sectionBeingEdited.unitId];
+  let assignedUnit = null;
+  const courseVersion =
+    courseOfferings[sectionBeingEdited.courseOfferingId]?.course_versions[
+      sectionBeingEdited.courseVersionId
+    ];
+
+  if (courseVersion) {
+    if (sectionBeingEdited.unitId) {
+      assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
+    } else if (courseVersion.type === 'Script') {
+      assignedUnit = courseVersion;
+    }
+  }
+
+  return assignedUnit;
 }
 
 export function assignedUnitName(state) {
