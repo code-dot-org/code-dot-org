@@ -10,7 +10,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "<img src=\"https://images.code.org/549ed406305bb6b2aad1f997324d5120-image-1640037426611.png\" style=\"width:200px; float:right;\">\r\n\r\n# Debugging\r\n\r\nRunning the app should create the image on the right, but something is wrong. Can you fix all of the errors in the code?",
+    "long_instructions": "<img src=\"https://images.code.org/549ed406305bb6b2aad1f997324d5120-image-1640037426611.png\" style=\"width:200px; float:right;\">\r\n\r\n# Debugging\r\n\r\nErika wanted to practice using Text Mode to create an app that looks like the image on the right. When she finished, she tried running the app but she got a lot of errors. Can you fix all of the errors in the code so her app looks like the example app on he right?\r\n\r\n_Note: This level starts in Text Mode because some of the bugs are typos with the blocks themselves! As you fix the bugs, one way to check your work is by trying to convert the level back into block mode._",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -67,8 +67,8 @@
     "display_name": "Debugging",
     "bubble_choice_description": "Help fix the bugs so the app appears correctly",
     "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L3/practice/C.png",
-    "preload_asset_list": null,
-    "encrypted_examples": "md5c7MypYMYL70QlzH018W2sO+2YsE+tJqI8hc2IRjkog6hatyKYK3VtwpHI\nW7rHnOh839qJA4Of1vWP0l9AxA==\n"
+    "encrypted_examples": "md5c7MypYMYL70QlzH018W2sO+2YsE+tJqI8hc2IRjkog6hatyKYK3VtwpHI\nW7rHnOh839qJA4Of1vWP0l9AxA==\n",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:03:16.614+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - PracB_2022\"},{\"changed_at\":\"2021-12-16 03:03:19 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:52:40 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:55:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:58:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:54:38 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-25 15:33:48 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-02 02:19:09 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:03:16.614+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - PracB_2022\"},{\"changed_at\":\"2021-12-16 03:03:19 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:52:40 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:55:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:58:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:54:38 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-25 15:33:48 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-02 02:19:09 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-07 13:51:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-07 13:56:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
