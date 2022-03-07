@@ -13,7 +13,6 @@
   teacher_dashboard_data[:userName] = @current_user.short_name
   teacher_dashboard_data[:validGrades] = @valid_grades
   teacher_dashboard_data[:localeCode] = request.locale
-  teacher_dashboard_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
   teacher_dashboard_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
 
 %script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
