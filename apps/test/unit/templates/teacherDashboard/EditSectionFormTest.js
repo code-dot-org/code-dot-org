@@ -25,7 +25,7 @@ describe('EditSectionForm', () => {
         section={testSection}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -63,7 +63,7 @@ describe('EditSectionForm', () => {
         section={noStudentsSection}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -101,7 +101,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -139,7 +139,7 @@ describe('EditSectionForm', () => {
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -180,7 +180,7 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -206,7 +206,7 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -229,7 +229,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -255,7 +255,7 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -278,7 +278,7 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -301,7 +301,7 @@ describe('EditSectionForm', () => {
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -325,7 +325,7 @@ describe('EditSectionForm', () => {
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => false}
+        assignedUnitTextToSpeechEnabled={false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
@@ -349,7 +349,7 @@ describe('EditSectionForm', () => {
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         lessonExtrasAvailable={() => false}
-        assignedUnitTextToSpeechEnabled={() => true}
+        assignedUnitTextToSpeechEnabled={true}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
