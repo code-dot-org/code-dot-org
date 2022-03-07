@@ -12,7 +12,6 @@ import {
   pageTypes,
   setAuthProviders,
   setPageType,
-  setTextToSpeechUnitIds,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
@@ -34,7 +33,6 @@ function showHomepage() {
   const query = queryString.parse(window.location.search);
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
-  store.dispatch(setTextToSpeechUnitIds(homepageData.textToSpeechUnitIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));

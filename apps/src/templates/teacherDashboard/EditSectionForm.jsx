@@ -10,6 +10,7 @@ import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
   assignedUnitName,
+  assignedTextToSpeech,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
@@ -46,10 +47,10 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     assignedUnitLessonExtrasAvailable: PropTypes.bool.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
     assignedUnitName: PropTypes.string.isRequired,
+    assignedTextToSpeech: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
@@ -138,7 +139,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       assignedUnitLessonExtrasAvailable,
-      textToSpeechUnitIds,
+      assignedTextToSpeech,
       assignedUnitName,
       localeCode,
       isNewSection,
@@ -224,7 +225,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
+          {assignedTextToSpeech && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
@@ -541,9 +542,9 @@ let defaultPropsFromState = state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   assignedUnitLessonExtrasAvailable: assignedUnitLessonExtrasAvailable(state),
-  textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
   hiddenLessonState: state.hiddenLesson,
   assignedUnitName: assignedUnitName(state),
+  assignedTextToSpeech: assignedTextToSpeech(state),
   localeCode: state.locales.localeCode,
 
   // DCDO Flag - show/hide Lock Section field
