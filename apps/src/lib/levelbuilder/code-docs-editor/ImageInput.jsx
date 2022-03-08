@@ -30,7 +30,10 @@ export default function ImageInput({updateImageUrl, imageUrl}) {
       {removeImageDialogOpen && (
         <StylizedBaseDialog
           body="Are you sure you want to remove this image?"
-          handleConfirmation={() => updateImageUrl(null)}
+          handleConfirmation={() => {
+            updateImageUrl(null);
+            setRemoveImageDialogOpen(false);
+          }}
           handleClose={() => setRemoveImageDialogOpen(false)}
           isOpen
         />
