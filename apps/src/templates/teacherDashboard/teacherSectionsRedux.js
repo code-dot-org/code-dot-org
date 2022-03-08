@@ -44,7 +44,6 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
@@ -108,7 +107,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
   providers
@@ -515,7 +513,6 @@ const initialState = {
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
   // for consistency and ease of comparison).
   providers: [],
-  validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
   // A map from assignmentId to assignment (see assignmentShape PropType).
@@ -610,13 +607,6 @@ export default function teacherSections(state = initialState, action) {
       providers: action.providers.map(provider =>
         mapProviderToSectionType(provider)
       )
-    };
-  }
-
-  if (action.type === SET_VALID_GRADES) {
-    return {
-      ...state,
-      validGrades: action.grades
     };
   }
 
