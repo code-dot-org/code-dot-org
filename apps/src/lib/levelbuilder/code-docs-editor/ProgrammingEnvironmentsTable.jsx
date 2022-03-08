@@ -16,7 +16,8 @@ const actionsCellFormatter = (actions, {rowData}) => {
 };
 
 export default function ProgrammingEnvironmentsTable({
-  programmingEnvironments
+  programmingEnvironments,
+  hidden
 }) {
   const getColumns = () => {
     return [
@@ -41,16 +42,20 @@ export default function ProgrammingEnvironmentsTable({
       }
     ];
   };
+  if (hidden) {
+    return null;
+  }
   return (
     <Table.Provider columns={getColumns()} style={{width: '100%'}}>
       <Table.Header />
-      <Table.Body rows={programmingEnvironments} rowKey="id" />
+      <Table.Body rows={programmingEnvironments} rowKey="name" />
     </Table.Provider>
   );
 }
 
 ProgrammingEnvironmentsTable.propTypes = {
-  programmingEnvironments: PropTypes.arrayOf(PropTypes.object)
+  programmingEnvironments: PropTypes.arrayOf(PropTypes.object),
+  hidden: PropTypes.bool
 };
 
 const styles = {
