@@ -328,17 +328,9 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
-  def self.lesson_extras_script_ids
-    @@lesson_extras_script_ids ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
-  end
-
   def self.maker_units(user)
     return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?)
     return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
-  end
-
-  def self.text_to_speech_unit_ids
-    @@text_to_speech_unit_ids ||= all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
   end
 
   # Get the set of units that are valid for the current user, ignoring those
@@ -1904,6 +1896,7 @@ class Script < ApplicationRecord
     info[:supported_locales] = supported_locale_names
     info[:supported_locale_codes] = supported_locale_codes
     info[:lesson_extras_available] = lesson_extras_available
+    info[:text_to_speech_enabled] = text_to_speech_enabled?
     if has_standards_associations?
       info[:standards] = standards
     end
