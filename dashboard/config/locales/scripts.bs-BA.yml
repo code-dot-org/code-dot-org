@@ -3641,3 +3641,7 @@ bs:
               display_name: Digitalno Državljanstvo
             lessonGroup-8:
               display_name: Varijable
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Varijable
