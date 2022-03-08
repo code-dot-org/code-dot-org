@@ -26,7 +26,7 @@ const defaultProps = {
   unitHasLockableLessons: false,
   unitAllowsHiddenLessons: false,
   publishedState: 'beta',
-  versions: [],
+  versions: {},
   redirectScriptUrl: null,
   unitCalendarLessons: [],
   completedLessonNumber: undefined
