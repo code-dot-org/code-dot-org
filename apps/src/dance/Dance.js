@@ -42,7 +42,6 @@ import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArti
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import queryString from 'query-string';
-import DCDO from '@cdo/apps/dcdo';
 
 const ButtonState = {
   UP: 0,
@@ -683,8 +682,7 @@ Dance.prototype.displayFeedback_ = function() {
 
   const comma = '%2C';
   const hashtags =
-    artistTwitterHandle === 'Coldplay' &&
-    !!DCDO.get('higher-power-promotion', false)
+    artistTwitterHandle === 'Coldplay'
       ? ['codeplay', 'HourOfCode'].join(comma)
       : ['HourOfCode'];
 
