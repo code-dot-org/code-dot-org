@@ -18,7 +18,6 @@ export default storybook => {
         handleSave={action('handleSave')}
         handleClose={action('handleClose')}
         editSectionProperties={action('editSectionProperties')}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -27,11 +26,11 @@ export default storybook => {
           loginType: loginType
         }}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     ));
     storybook = storybook.add('no students yet', () => (
@@ -40,7 +39,6 @@ export default storybook => {
         handleSave={action('handleSave')}
         handleClose={action('handleClose')}
         editSectionProperties={action('editSectionProperties')}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -49,11 +47,11 @@ export default storybook => {
           studentCount: 0
         }}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     ));
     storybook = storybook.add('save in progress', () => (
@@ -62,17 +60,16 @@ export default storybook => {
         handleSave={action('handleSave')}
         handleClose={action('handleClose')}
         editSectionProperties={action('editSectionProperties')}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={testSection}
         isSaveInProgress={true}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     ));
   });

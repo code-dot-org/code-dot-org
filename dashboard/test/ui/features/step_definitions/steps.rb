@@ -811,6 +811,7 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")}
 end
 
