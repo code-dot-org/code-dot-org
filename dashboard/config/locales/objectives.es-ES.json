@@ -1316,6 +1316,24 @@
         "c10da89e-729b-4d0f-b376-3e14e931b870": {
           "description": "Representar diferentes métodos de obtención de datos del usuario"
         },
+        "37fbfc3d-4e38-4c1c-86bc-6fe3342ba7ff": {
+          "description": "Conectar un manejador de eventos a una entrada de hardware"
+        },
+        "809dcd9a-f37c-4bfd-9b58-b4024c4fd2ec": {
+          "description": "Elige el evento apropiado para un escenario determinado"
+        },
+        "21ba6c31-018e-4d23-b652-77d6ef65324d": {
+          "description": "Utilizar getters para acceder a las propiedades de los elementos de un sistema"
+        },
+        "bdd6a1a3-5115-4486-8e0e-b61c7041c5ce": {
+          "description": "Desarrollar programas que respondan a la entrada analógica"
+        },
+        "bf9edfe9-1d42-4a71-a6e5-3cda32406544": {
+          "description": "Escalar un rango de números para satisfacer una necesidad específica"
+        },
+        "5b183dd0-2691-4e31-81d2-74139e335e46": {
+          "description": "Representar el valor de un sensor de varias maneras"
+        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Entrena y prueba un modelo de aprendizaje automático."
         },
