@@ -38,7 +38,7 @@ const defaultProps = {
   ],
   isVerifiedInstructor: true,
   hasVerifiedResources: false,
-  versions: [],
+  versions: {},
   sectionsForDropdown: [],
   announcements: [],
   isSignedIn: true,
@@ -168,26 +168,46 @@ describe('CourseOverview', () => {
     });
 
     it('appears when two versions are present and viewable', () => {
-      const versions = [
-        {
-          name: 'csp-2017',
-          year: '2017',
-          title: '2017',
-          canViewVersion: true,
-          isStable: true,
-          locales: [],
-          localeCodes: []
+      const versions = {
+        1: {
+          id: 1,
+          version_year: '2017',
+          content_root_id: 10,
+          name: 'Course A',
+          path: '/s/coursea-2017',
+          type: 'Script',
+          is_stable: true,
+          is_recommended: false,
+          locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
+          units: {
+            1: {
+              id: 1,
+              name: 'Course A',
+              path: '/s/coursea-2017',
+              lesson_extras_available: true
+            }
+          }
         },
-        {
-          name: 'csp-2018',
-          year: '2018',
-          title: '2018',
-          canViewVersion: true,
-          isStable: true,
-          locales: [],
-          localeCodes: []
+        2: {
+          id: 2,
+          version_year: '2018',
+          content_root_id: 11,
+          name: 'Course A',
+          path: '/s/coursea-2018',
+          type: 'Script',
+          is_stable: true,
+          is_recommended: true,
+          locales: ['English', 'Italiano', 'Slovenčina'],
+          units: {
+            2: {
+              id: 2,
+              name: 'Course A (2018)',
+              path: '/s/coursea-2018',
+              lesson_extras_available: true
+            }
+          }
         }
-      ];
+      };
       const wrapper = shallow(
         <CourseOverview
           {...defaultProps}
@@ -198,34 +218,32 @@ describe('CourseOverview', () => {
 
       const versionSelector = wrapper.find('AssignmentVersionSelector');
       expect(versionSelector.length).to.equal(1);
-      const renderedVersions = versionSelector.props().versions;
-      assert.equal(2, renderedVersions.length);
-      const csp2018 = renderedVersions.find(v => v.name === 'csp-2018');
-      assert.equal(true, csp2018.isRecommended);
-      assert.equal(true, csp2018.isSelected);
+      const renderedVersions = versionSelector.props().courseVersions;
+      assert.equal(2, Object.values(renderedVersions).length);
     });
 
     it('does not appear when only one version is viewable', () => {
-      const versions = [
-        {
-          name: 'csp-2017',
-          year: '2017',
-          title: '2017',
-          canViewVersion: false,
-          isStable: true,
-          locales: [],
-          localeCodes: []
-        },
-        {
-          name: 'csp-2018',
-          year: '2018',
-          title: '2018',
-          canViewVersion: true,
-          isStable: true,
-          locales: [],
-          localeCodes: []
+      const versions = {
+        1: {
+          id: 1,
+          version_year: '2017',
+          content_root_id: 10,
+          name: 'Course A',
+          path: '/s/coursea-2017',
+          type: 'Script',
+          is_stable: true,
+          is_recommended: false,
+          locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
+          units: {
+            1: {
+              id: 1,
+              name: 'Course A',
+              path: '/s/coursea-2017',
+              lesson_extras_available: true
+            }
+          }
         }
-      ];
+      };
       const wrapper = shallow(
         <CourseOverview
           {...defaultProps}
