@@ -70,20 +70,9 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
           Blockly.ContextMenu.hide();
         }.bind(this)
       };
-      const lockToParent = {
-        text: this.canDisconnectFromParent_
-          ? 'Lock to Parent Block'
-          : 'Unlock from Parent Block',
-        enabled: true,
-        callback: function() {
-          this.setCanDisconnectFromParent(!this.canDisconnectFromParent_);
-          Blockly.ContextMenu.hide();
-        }.bind(this)
-      };
       menuOptions.push(deletable);
       menuOptions.push(movable);
       menuOptions.push(editable);
-      menuOptions.push(lockToParent);
     }
   }
 
