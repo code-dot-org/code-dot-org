@@ -10,11 +10,12 @@ import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
   assignedUnitName,
+  assignedUnitTextToSpeechEnabled,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  lessonExtrasAvailable
+  assignedUnitLessonExtrasAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -46,10 +47,10 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    lessonExtrasAvailable: PropTypes.func.isRequired,
+    assignedUnitLessonExtrasAvailable: PropTypes.bool.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
     assignedUnitName: PropTypes.string.isRequired,
+    assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
@@ -138,8 +139,8 @@ class EditSectionForm extends Component {
       isSaveInProgress,
       editSectionProperties,
       handleClose,
-      lessonExtrasAvailable,
-      textToSpeechUnitIds,
+      assignedUnitLessonExtrasAvailable,
+      assignedUnitTextToSpeechEnabled,
       assignedUnitName,
       localeCode,
       isNewSection,
@@ -214,7 +215,7 @@ class EditSectionForm extends Component {
             localeCode={localeCode}
             isNewSection={isNewSection}
           />
-          {lessonExtrasAvailable(section.scriptId) && (
+          {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
               value={section.lessonExtras}
               onChange={lessonExtras => editSectionProperties({lessonExtras})}
@@ -226,7 +227,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
+          {assignedUnitTextToSpeechEnabled && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
@@ -544,10 +545,10 @@ let defaultPropsFromState = state => ({
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
-  lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
+  assignedUnitLessonExtrasAvailable: assignedUnitLessonExtrasAvailable(state),
   hiddenLessonState: state.hiddenLesson,
   assignedUnitName: assignedUnitName(state),
+  assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
 
   // DCDO Flag - show/hide Lock Section field
