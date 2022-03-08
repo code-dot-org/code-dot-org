@@ -6657,3 +6657,7 @@ ta:
           lesson_groups:
             lessonGroup-5:
               display_name: சாண்ட்பாக்ஸ்
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: மாறிலிகள்
