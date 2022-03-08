@@ -18,7 +18,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -56,7 +55,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -94,7 +92,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -132,7 +129,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -170,7 +166,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -196,7 +191,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -222,7 +216,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -245,7 +238,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -271,7 +263,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -294,7 +285,6 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
