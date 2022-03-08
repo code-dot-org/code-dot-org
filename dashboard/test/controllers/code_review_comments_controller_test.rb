@@ -16,7 +16,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     @teacher = create :teacher
-    @section = create :section, user: @teacher, code_review_enabled: true
+    @section = create :section, user: @teacher, code_review_expires_at: Time.now.utc + 1.day
     @another_student = create :student
 
     create :reviewable_project,
@@ -59,12 +59,9 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'student in same section with project owner can comment on project' do
+  test 'student in same section and code review group with project owner can comment on project' do
     stub_storage_apps_calls
-
-    [@project_owner, @another_student].each do |student|
-      create :follower, student_user: student, section: @section
-    end
+    put_students_in_section_and_code_review_group
 
     sign_in @another_student
     post :create, params: @new_comment_params
@@ -201,13 +198,10 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_includes comment_ids, teacher_comment.id
   end
 
-  test 'student in same section as project owner can see non-teacher project comments' do
+  test 'student in same section and code review group as project owner can see non-teacher project comments' do
     stub_storage_apps_calls
     setup_project_comments_tests
-
-    [@project_owner, @another_student].each do |student|
-      create :follower, student_user: student, section: @section
-    end
+    put_students_in_section_and_code_review_group
 
     sign_in @another_student
     get :project_comments, params: {
@@ -218,13 +212,10 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_equal 2, JSON.parse(response.body).length
   end
 
-  test 'student in same section as project owner cannot see teacher comments' do
+  test 'student in same section and code review group as project owner cannot see teacher comments' do
     stub_storage_apps_calls
     setup_project_comments_tests
-
-    [@project_owner, @another_student].each do |student|
-      create :follower, student_user: student, section: @section
-    end
+    put_students_in_section_and_code_review_group
 
     teacher_comment = create :code_review_comment,
       commenter: @teacher,
@@ -322,5 +313,13 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     # Create third code review comment from another project
     # to make sure we only fetch the correct set of comments.
     create :code_review_comment
+  end
+
+  def put_students_in_section_and_code_review_group
+    code_review_group = create :code_review_group, section: @section
+    [@project_owner, @another_student].each do |student|
+      follower = create :follower, student_user: student, section: @section
+      create :code_review_group_member, follower: follower, code_review_group: code_review_group
+    end
   end
 end
