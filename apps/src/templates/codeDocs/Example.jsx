@@ -27,7 +27,7 @@ export default function Example({example, programmingEnvironmentName}) {
               ...embeddedIdeStyles[programmingEnvironmentName]
             }}
           />
-          {example.imageUrl && <img src={example.imageUrl} />}
+          {example.image && <img src={example.image} />}
         </div>
       );
     } else {
@@ -46,7 +46,7 @@ export default function Example({example, programmingEnvironmentName}) {
               }}
             />
           </div>
-          {example.imageUrl && <img src={example.imageUrl} />}
+          {example.image && <img src={example.image} />}
         </div>
       );
     }
@@ -54,7 +54,7 @@ export default function Example({example, programmingEnvironmentName}) {
     return (
       <div>
         {content}
-        {example.imageUrl && <img src={example.imageUrl} />}
+        {example.image && <img src={example.image} />}
       </div>
     );
   }
