@@ -38,6 +38,7 @@ require 'cdo/safe_names'
 
 class Section < ApplicationRecord
   include SerializedProperties
+  include SharedConstants
   self.inheritance_column = :login_type
 
   class << self
@@ -80,6 +81,8 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+  validates :grade, acceptance: {accept: SharedConstants::STUDENT_GRADE_LEVELS, message: "must be one of the valid student grades. Expected one of: #{SharedConstants::STUDENT_GRADE_LEVELS}. Got: \"%{value}\"."}
+
   validate :pl_sections_must_use_email_logins
   validate :participant_type_not_changed
 
@@ -132,6 +135,10 @@ class Section < ApplicationRecord
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
+  end
+
+  def self.valid_grade?(grade)
+    SharedConstants::STUDENT_GRADE_LEVELS.include? grade
   end
 
   # Override default script accessor to use our cache
@@ -346,14 +353,6 @@ class Section < ApplicationRecord
       post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
       code_review_expires_at: code_review_expires_at
     }
-  end
-
-  def self.valid_grades
-    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
-  end
-
-  def self.valid_grade?(grade)
-    valid_grades.include? grade
   end
 
   def provider_managed?

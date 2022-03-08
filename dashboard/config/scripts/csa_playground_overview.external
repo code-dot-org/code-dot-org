@@ -1,10 +1,10 @@
 name 'CSA Playground Overview'
 title 'The Playground'
-description 'description here'
+description 'The Playground is a simple interface for creating interactive games in Java, such as Tic-Tac-Toe, Checkers, or Connect Four. The Playground presents images and text on a board and can play sound effects.'
 
 markdown <<MARKDOWN
 #The Playground
-The Neighborhood is a non-interactive environment where the student writes code to achieve a goal. The Neighborhood consists of a rectangular grid of spaces that can contain obstacles or items, with a `Painter` object that can move around on the grid. Paint can be picked up or placed by a `Painter` object, and there is a destination that a `Painter` object can be navigating toward or the level can be open-ended to encourage creative "painted" designs.
+The Playground is a simple interface for creating interactive games in Java, such as Tic-Tac-Toe, Checkers, or Connect Four. The Playground presents images and text on a board and can play sound effects.
 
 ##Board Class
 The following are the constructors and methods in the `Board` class.

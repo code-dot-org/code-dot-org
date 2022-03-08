@@ -134,6 +134,17 @@ class SectionTest < ActiveSupport::TestCase
     assert student.sharing_disabled?
   end
 
+  test 'should raise error if grade is not valid' do
+    section1 = Section.create @default_attrs
+
+    error = assert_raises do
+      section1.grade = 'fake_grade'
+      section1.save!
+    end
+
+    assert_includes error.message, 'Grade must be one of the valid student grades. Expected one of:'
+  end
+
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
   # sections. As this situation cannot happen without manipulating the DB (dependent callbacks),
   # we do not worry about testing it.

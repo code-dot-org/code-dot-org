@@ -13,7 +13,6 @@
           "visibility": "Teacher-only"
         }
       ],
-      "deprecated": true,
       "is_migrated": true,
       "professional_learning_course": "CSP Support",
       "student_detail_progress_view": true
@@ -21,7 +20,7 @@
     "new_name": null,
     "family_name": null,
     "serialized_at": "2021-11-22 19:56:40 UTC",
-    "published_state": "beta",
+    "published_state": "deprecated",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
