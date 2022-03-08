@@ -48,11 +48,17 @@
     "long_instructions": "Use the `counter` variable twice to solve this puzzle.",
     "bubble_choice_description": "Use a variable twice within the loop.",
     "thumbnail_url": "https://images.code.org/5f31b92b53cff687766a9a4388c03eeb-image-1615822817432.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:16.999+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_for5_2021\\\"\"],\"cloned_from\":\"courseF_bee_for5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:16.999+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_for5_2021\\\"\"],\"cloned_from\":\"courseF_bee_for5_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "for_loops": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -12,9 +12,6 @@ import {
   pageTypes,
   setAuthProviders,
   setPageType,
-  setLessonExtrasUnitIds,
-  setTextToSpeechUnitIds,
-  setValidGrades,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
@@ -36,9 +33,6 @@ function showHomepage() {
   const query = queryString.parse(window.location.search);
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
-  store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setLessonExtrasUnitIds(homepageData.lessonExtrasUnitIds));
-  store.dispatch(setTextToSpeechUnitIds(homepageData.textToSpeechUnitIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
@@ -81,8 +75,10 @@ function showHomepage() {
             announcement={announcement}
             hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
+            plCourses={homepageData.plCourses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
+            topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             isEnglish={isEnglish}
@@ -93,6 +89,10 @@ function showHomepage() {
             showFinishTeacherApplication={
               allowTeacherAppReopening &&
               homepageData.showFinishTeacherApplication
+            }
+            showReturnToReopenedTeacherApplication={
+              allowTeacherAppReopening &&
+              homepageData.showReturnToReopenedTeacherApplication
             }
             donorBannerName={homepageData.donorBannerName}
             teacherName={homepageData.teacherName}
@@ -111,6 +111,9 @@ function showHomepage() {
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
             isEnglish={isEnglish}
+            showVerifiedTeacherWarning={
+              homepageData.showStudentAsVerifiedTeacherWarning
+            }
           />
         )}
       </div>

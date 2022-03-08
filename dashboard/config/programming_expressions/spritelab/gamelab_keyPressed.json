@@ -1,7 +1,0 @@
-{
-  "key": "gamelab_keyPressed",
-  "name": "keyPressed",
-  "category": "Events",
-  "block_name": "gamelab_keyPressed",
-  "syntax": "keyPressed"
-}

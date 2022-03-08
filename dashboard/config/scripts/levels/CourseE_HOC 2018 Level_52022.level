@@ -49,11 +49,17 @@
     "long_instructions": "There's a **nautilus shell** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) hidden somewhere! Explore the shipwreck to reach the **chest** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).",
     "ideal": "5",
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:15.342+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_5_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:15.342+00:00\",\"changed\":[\"cloned from \\\"CourseE_HOC 2018 Level_5_2021\\\"\"],\"cloned_from\":\"CourseE_HOC 2018 Level_5_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "repeat_loops": 2,
+    "repeat_until_while": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

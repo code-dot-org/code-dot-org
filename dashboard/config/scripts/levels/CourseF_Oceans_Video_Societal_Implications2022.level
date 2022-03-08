@@ -14,10 +14,13 @@
     "parent_level_id": 22326,
     "encrypted": "false",
     "instructions_important": "false",
-    "name_suffix": "2022"
+    "name_suffix": "2022",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:46.350+00:00\",\"changed\":[\"cloned from \\\"CourseF_Oceans_Video_Societal_Implications_2021\\\"\"],\"cloned_from\":\"CourseF_Oceans_Video_Societal_Implications_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:25:46.350+00:00\",\"changed\":[\"cloned from \\\"CourseF_Oceans_Video_Societal_Implications_2021\\\"\"],\"cloned_from\":\"CourseF_Oceans_Video_Societal_Implications_2021\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

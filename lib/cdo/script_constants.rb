@@ -455,6 +455,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd, script) ||
       ScriptConstants.unit_in_category?(:csd_2018, script) ||
       ScriptConstants.unit_in_category?(:csd_2019, script) ||
+      ScriptConstants.unit_in_category?(:csd_2021, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||

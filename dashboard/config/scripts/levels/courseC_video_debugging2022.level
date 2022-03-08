@@ -11,10 +11,13 @@
     "skip_sound": true,
     "name_suffix": "2022",
     "parent_level_id": 21156,
-    "encrypted": "false"
+    "encrypted": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:13.165+00:00\",\"changed\":[\"cloned from \\\"courseC_video_debugging_2021\\\"\"],\"cloned_from\":\"courseC_video_debugging_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:13.165+00:00\",\"changed\":[\"cloned from \\\"courseC_video_debugging_2021\\\"\"],\"cloned_from\":\"courseC_video_debugging_2021\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

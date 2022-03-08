@@ -3,7 +3,7 @@ import {assert, expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
 import {searchOptions} from './activitiesTestData';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 
 describe('AddLevelDialogTop', () => {
   let defaultProps, addLevel;

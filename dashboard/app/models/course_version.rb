@@ -26,6 +26,7 @@ class CourseVersion < ApplicationRecord
   belongs_to :course_offering
   has_many :resources
   has_many :vocabularies
+  has_many :reference_guides
 
   attr_readonly :content_root_type
   attr_readonly :content_root_id

@@ -10,7 +10,6 @@ import reducer, {
   __testInterface__,
   setAuthProviders,
   setRosterProvider,
-  setValidGrades,
   setValidAssignments,
   setSections,
   selectSection,
@@ -313,14 +312,6 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('setValidGrades', () => {
-    it('sets a list of valid grades', () => {
-      const action = setValidGrades(['K', '1', '2']);
-      const nextState = reducer(initialState, action);
-      assert.deepEqual(nextState.validGrades, ['K', '1', '2']);
-    });
-  });
-
   describe('setValidAssignments', () => {
     const action = setValidAssignments(validCourses, validScripts);
     const nextState = reducer(initialState, action);
@@ -509,10 +500,7 @@ describe('teacherSectionsRedux', () => {
     it('does set selectedSectionId if passed a single section', () => {
       const action = setSections(sections.slice(0, 1));
       const nextState = reducer(startState, action);
-      assert.strictEqual(
-        nextState.selectedSectionId,
-        sections[0].id.toString()
-      );
+      assert.strictEqual(nextState.selectedSectionId, sections[0].id);
     });
 
     it('throws rather than let us destroy data', () => {
@@ -642,7 +630,9 @@ describe('teacherSectionsRedux', () => {
         hidden: false,
         isAssigned: undefined,
         restrictSection: false,
-        postMilestoneDisabled: false
+        postMilestoneDisabled: false,
+        codeReviewExpiresAt: null,
+        isAssignedCSA: undefined
       });
     });
   });
@@ -916,7 +906,9 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           isAssigned: undefined,
           restrictSection: false,
-          postMilestoneDisabled: false
+          postMilestoneDisabled: false,
+          codeReviewExpiresAt: null,
+          isAssignedCSA: undefined
         }
       });
     });

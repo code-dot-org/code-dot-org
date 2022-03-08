@@ -57,6 +57,7 @@ class CourseEditor extends Component {
     useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
     coursePath: PropTypes.string.isRequired,
+    courseOfferingEditorLink: PropTypes.string,
 
     // Provided by redux
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
@@ -375,6 +376,7 @@ class CourseEditor extends Component {
               this.props.initialFamilyName !== ''
             }
             isCourse
+            courseOfferingEditorLink={this.props.courseOfferingEditorLink}
           />
         </CollapsibleEditorSection>
 

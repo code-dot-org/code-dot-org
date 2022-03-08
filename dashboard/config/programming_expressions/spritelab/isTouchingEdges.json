@@ -1,7 +1,0 @@
-{
-  "key": "isTouchingEdges",
-  "name": "isTouchingEdges",
-  "category": "Sprites",
-  "block_name": "gamelab_isTouchingEdges",
-  "syntax": "isTouchingEdges"
-}

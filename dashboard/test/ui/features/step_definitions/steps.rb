@@ -811,6 +811,7 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")}
 end
 
@@ -1033,10 +1034,6 @@ And(/^I submit this level$/) do
     And I wait to see ".modal"
     And I press "confirm-button" to load a new page
   }
-end
-
-And(/^I get hidden script access$/) do
-  browser_request(url: '/api/test/hidden_script_access', method: 'POST')
 end
 
 And(/^I wait until I am on the join page$/) do

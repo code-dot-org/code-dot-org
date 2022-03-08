@@ -76,11 +76,18 @@
       "upButton"
     ],
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:34.318+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_multiprompt\\\"\"],\"cloned_from\":\"courseF_text_choice_multiprompt\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:34.318+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_multiprompt\\\"\"],\"cloned_from\":\"courseF_text_choice_multiprompt\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 2,
+    "events": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

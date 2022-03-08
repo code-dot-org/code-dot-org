@@ -114,6 +114,9 @@ class OwnedSections extends React.Component {
                 <div style={styles.hiddenSectionLabel}>
                   {i18n.archivedSections()}
                 </div>
+                <div style={styles.hiddenSectionDesc}>
+                  {i18n.archivedSectionsTeacherDescription()}
+                </div>
                 <OwnedSectionsTable
                   sectionIds={hiddenSectionIds}
                   onEdit={this.onEditSection}
@@ -142,8 +145,14 @@ const styles = {
     paddingBottom: 10
   },
   hiddenSectionLabel: {
+    fontSize: 18,
+    paddingBottom: 10,
+    color: color.charcoal
+  },
+  hiddenSectionDesc: {
     fontSize: 14,
-    paddingBottom: 5,
+    lineHeight: '22px',
+    paddingBottom: 10,
     color: color.charcoal
   },
   spinner: {

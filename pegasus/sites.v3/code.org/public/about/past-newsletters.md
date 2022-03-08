@@ -9,6 +9,18 @@ style_min: true
 
 # <a name="previous"></a>Past Newsletters from Code.org
 
+### 2022
+- <a href="http://go.pardot.com/webmail/153401/838745674/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">January/February 2022</a>
+
+### 2021
+- <a href="http://go.pardot.com/webmail/153401/831876577/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93 ", target=_"blank">December 2021</a>
+- <a href="http://go.pardot.com/webmail/153401/823064571/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93 ", target=_"blank">November 2021</a>
+- <a href="http://go.pardot.com/webmail/153401/812354951/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">October 2021</a>
+- <a href="http://go.pardot.com/webmail/153401/838658380/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">August/September 2021</a>
+- <a href="http://go.pardot.com/webmail/153401/838744556/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">July 2021</a>
+- <a href="http://go.pardot.com/webmail/153401/838744574/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">May/June 2021</a>
+- <a href="http://go.pardot.com/webmail/153401/838744582/456a099d63175eb85d04eb6984bc4cb796f893ca4be2da99d1924886c757df93", target=_"blank">March/April 2021</a>
+
 ### 2020
 - <a href="http://go.pardot.com/webmail/153401/715783320/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">December 2020</a>
 - <a href="http://go.pardot.com/webmail/153401/715783332/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">November 2020</a>

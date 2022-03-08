@@ -168,14 +168,15 @@ const styles = {
   },
   ellipsisVertical: {
     width: '100%',
-    height: '100%',
     color: color.lighter_gray,
     fontSize: 24,
     textAlign: 'center',
     cursor: 'ew-resize',
     whiteSpace: 'nowrap',
     lineHeight: RESIZER_HEIGHT + 'px',
-    paddingTop: 120
+    top: '50%',
+    position: 'absolute',
+    transform: 'translateY(-50%)'
   }
 };
 

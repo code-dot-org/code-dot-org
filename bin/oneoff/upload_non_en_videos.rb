@@ -134,7 +134,7 @@ def main(options)
       puts "uploading " + video[:key]
       download = upload_to_s3(File.open(video[:file_path]), options[:run])
       youtube_code = upload_to_youtube(service, video[:file_path], video[:title], options[:run])
-      Video.merge_and_write_attributes(video[:key], youtube_code, download, options[:locale], 'dashboard/config/videos.csv')
+      Video.merge_and_write_attributes(video[:key], youtube_code, "https://videos.code.org/#{download}", options[:locale], 'dashboard/config/videos.csv')
       uploaded_videos += 1
     else
       puts "Failed to validate " + video[:key]

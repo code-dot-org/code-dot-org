@@ -52,7 +52,7 @@ social:
 <p>وحدة التعلم الآلي والذكاء الاصطناعي هي وحدة منهج مكون تقريبًا من خمسة أسابيع يمكن تدريسها كـ<a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >وحدة قائمة بذاتها</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. تركز على أخلاقيات الذكاء الاصطناعي وتدريس قضايا الانحياز وتستكشف وتشرح المفاهيم الأساسية</p><p>يعتمد التعلم الآلي على مجموعات كبيرة من البيانات لذلك تتضمن الوحدة الجديدة مجموعات من البيانات من الحياة الواقعية عن الرعاية الصحية والتركيبات السكانية والمزيد لإشراك الدارسين في العملية التعليمية إذ يستكشفون أسئلة مثل: "ما هي المشكلة التي يمكن أن يساعد التعلم الآلي في حلها؟" "كيف يمكن للذكاء الاصطناعي مساعدة المجتمع؟" "من المستفيد من الذكاء الاصطناعي؟" "من المتضرر؟" "من المشتَرِك؟" "من الغائب؟"  </p>
 <p>ستكون الاعتبارات الأخلاقية في طليعة هذه المناقشات مع وجود دروس ونقاط نقاشية متكررة حول تأثيرات هذه التكنولوجيات. سيساعد هذا الدارسين على تكوين فهم عميق وشامل عن هذه التكنولوجيات عندما يتعلمون الركائز الأساسية الفنية عن كيفية عمل التكنولوجيات.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>استكشف الوحدة</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 

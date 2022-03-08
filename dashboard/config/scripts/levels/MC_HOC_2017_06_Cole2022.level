@@ -61,11 +61,16 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"MC_HOC_2017_06_Cole_1\",\r\n  \"callout_text\": \"You cannot throw these blocks away, but you can edit them!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 21545,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:50.004+00:00\",\"changed\":[\"cloned from \\\"MC_HOC_2017_06_Cole_2021\\\"\"],\"cloned_from\":\"MC_HOC_2017_06_Cole_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:50.004+00:00\",\"changed\":[\"cloned from \\\"MC_HOC_2017_06_Cole_2021\\\"\"],\"cloned_from\":\"MC_HOC_2017_06_Cole_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>

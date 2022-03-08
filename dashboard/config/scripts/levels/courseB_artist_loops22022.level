@@ -46,11 +46,17 @@
     "long_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
     "mini_rubric": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:53.114+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops2_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:53.114+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops2_2021\\\"\"],\"cloned_from\":\"courseB_artist_loops2_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -9,6 +9,8 @@ import TeacherHomepage from './TeacherHomepage';
 import {
   announcement,
   courses,
+  plCourses,
+  topPlCourse,
   topCourse,
   taughtSections,
   joinedSections
@@ -50,6 +52,7 @@ export default storybook => {
               <TeacherHomepage
                 announcements={[announcement]}
                 courses={[]}
+                plCourses={[]}
                 joinedSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
@@ -137,6 +140,30 @@ export default storybook => {
                 announcements={[announcement]}
                 courses={courses}
                 topCourse={topCourse}
+                joinedSections={joinedSections}
+                isEnglish={true}
+                showCensusBanner={false}
+              />
+            </Provider>
+          );
+        }
+      },
+      {
+        name: 'Teacher Homepage - courses, sections and joinedSections',
+        description:
+          'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
+        story: () => {
+          withFakeServer({courses: serverCourses, sections: serverSections});
+          registerReducers({teacherSections});
+          const store = createStoreWithReducers();
+          return (
+            <Provider store={store}>
+              <TeacherHomepage
+                announcements={[announcement]}
+                courses={courses}
+                topCourse={topCourse}
+                plCourses={plCourses}
+                topPlCourse={topPlCourse}
                 joinedSections={joinedSections}
                 isEnglish={true}
                 showCensusBanner={false}

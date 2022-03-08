@@ -48,11 +48,17 @@
     "display_name": "Increments",
     "bubble_choice_description": "Practice with increments that count down.",
     "thumbnail_url": "https://images.code.org/2c742a83843979db96b30d965f77b053-image-1615823186657.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:16.845+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_for11_2021\\\"\"],\"cloned_from\":\"courseF_bee_for11_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:16.845+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_for11_2021\\\"\"],\"cloned_from\":\"courseF_bee_for11_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 5,
+    "for_loops": 4
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -47,11 +47,17 @@
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
     "long_instructions": "Collect all honey and make all the nectar!",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:57.139+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_0a_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_0a_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:57.139+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_0a_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_0a_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3,
+    "repeat_until_while": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

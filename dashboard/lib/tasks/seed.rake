@@ -69,7 +69,8 @@ namespace :seed do
     'ui-test-script-in-course-2017',
     'ui-test-script-in-course-2019',
     'ui-test-versioned-script-2017',
-    'ui-test-versioned-script-2019'
+    'ui-test-versioned-script-2019',
+    'ui-test-csa-family-script'
   ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
@@ -86,6 +87,13 @@ namespace :seed do
     'course3',
     'course4',
     'coursea-2017',
+    'courseb-2017',
+    'coursec-2017',
+    'coursed-2017',
+    'coursee-2017',
+    'coursef-2017',
+    'pre-express-2017',
+    'express-2017',
     'coursea-2019',
     'coursec-2019',
     'coursee-2019',
@@ -165,6 +173,7 @@ namespace :seed do
     :standards,
     :shared_blockly_functions,
     :libraries,
+    :course_offerings
   ].freeze
 
   # Do the minimum amount of work to seed a single script or glob, without
@@ -275,6 +284,10 @@ namespace :seed do
       # preferably the id of the callout is not important ;)
       Callout.find_or_create_all_from_tsv!('config/callouts.tsv')
     end
+  end
+
+  timed_task course_offerings: :environment do
+    CourseOffering.seed_all
   end
 
   # Seeds Standards

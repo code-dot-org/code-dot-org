@@ -64,11 +64,16 @@
     "teacher_markdown": "This lesson extra is a “free play”. These levels have some characteristics you may want to explore before starting. \r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.\r\n",
     "default_num_example_blocks": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:10.189+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_events_challenge1_2021\\\"\"],\"cloned_from\":\"courseB_playlab_events_challenge1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:10.189+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_events_challenge1_2021\\\"\"],\"cloned_from\":\"courseB_playlab_events_challenge1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

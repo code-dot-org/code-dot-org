@@ -52,6 +52,7 @@ export default function ProgrammingExpressionEditor({
   const {
     id,
     key,
+    showPath,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
   remainingProgrammingExpression.parameters.forEach(
@@ -67,7 +68,7 @@ export default function ProgrammingExpressionEditor({
   const [error, setError] = useState(null);
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
-  const save = () => {
+  const save = (e, shouldCloseAfterSave) => {
     if (isSaving) {
       return;
     }
@@ -83,7 +84,12 @@ export default function ProgrammingExpressionEditor({
       .then(response => {
         setIsSaving(false);
         if (response.ok) {
-          setLastUpdated(Date.now());
+          if (shouldCloseAfterSave) {
+            navigateToHref(showPath);
+          } else {
+            setLastUpdated(Date.now());
+            setError(null);
+          }
         } else {
           setError(response.statusText);
         }
@@ -186,9 +192,9 @@ export default function ProgrammingExpressionEditor({
         <label>
           Category
           <select
-            value={programmingExpression.category}
+            value={programmingExpression.categoryKey}
             onChange={e =>
-              updateProgrammingExpression('category', e.target.value)
+              updateProgrammingExpression('categoryKey', e.target.value)
             }
             style={styles.selectInput}
           >
@@ -196,8 +202,8 @@ export default function ProgrammingExpressionEditor({
               (None)
             </option>
             {environmentCategories.map(category => (
-              <option key={category} value={category}>
-                {category}
+              <option key={category.key} value={category.key}>
+                {category.name}
               </option>
             ))}
           </select>
@@ -269,7 +275,7 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref(`/programming_expressions/${id}`)}
+        handleView={() => navigateToHref(showPath)}
       />
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}
@@ -285,7 +291,7 @@ const programmingExpressionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  category: PropTypes.string,
+  categoryKey: PropTypes.string,
   shortDescription: PropTypes.string,
   externalDocumentation: PropTypes.string,
   content: PropTypes.string,
@@ -298,7 +304,7 @@ const programmingExpressionShape = PropTypes.shape({
 
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
-  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  environmentCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
   videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-01-14 16:21:40 UTC",
+    "serialized_at": "2022-01-24 16:02:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -537,32 +537,12 @@
       }
     },
     {
-      "key": "Functions with Artist",
-      "name": "Functions with Artist",
+      "key": "Functions with Harvester",
+      "name": "Functions with Harvester",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 21,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **skill-building** lesson, students will use functions with the Artist.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
-        "purpose": "One of the most important components to this lesson is providing students with a space to create something they are proud of. These puzzles progress to more and more complex images, but each new puzzle only builds off the previous puzzle. At the end of this lesson, students will feel confident and proud of their hard work.",
-        "student_overview": "Make complex drawings more easily with functions!"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions with Artist",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022"
-      }
-    },
-    {
-      "key": "Functions with Harvester",
-      "name": "Functions with Harvester",
-      "absolute_position": 22,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 22,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use conditionals with functions to harvest crops in Harvester.",
@@ -572,6 +552,26 @@
       },
       "seeding_key": {
         "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "key": "Functions with Artist",
+      "name": "Functions with Artist",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **skill-building** lesson, students will use functions with the Artist.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
+        "purpose": "One of the most important components to this lesson is providing students with a space to create something they are proud of. These puzzles progress to more and more complex images, but each new puzzle only builds off the previous puzzle. At the end of this lesson, students will feel confident and proud of their hard work.",
+        "student_overview": "Make complex drawings more easily with functions!"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2022"
       }
@@ -1729,6 +1729,48 @@
       }
     },
     {
+      "key": "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624",
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "key": "f9b075e1-678f-4564-b33b-e6c7042f5908",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908",
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "key": "67447f42-3c3e-4f01-bfcd-c52f9448991b",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "67447f42-3c3e-4f01-bfcd-c52f9448991b",
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022"
+      }
+    },
+    {
       "key": "0155bb1f-f515-455c-8840-1944c6d52c49",
       "position": 1,
       "properties": {
@@ -1779,48 +1821,6 @@
       "seeding_key": {
         "lesson_activity.key": "38ea9ff5-2d6b-4e51-a245-751cabce4b8b",
         "lesson.key": "Functions with Artist",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022"
-      }
-    },
-    {
-      "key": "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624",
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022"
-      }
-    },
-    {
-      "key": "f9b075e1-678f-4564-b33b-e6c7042f5908",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908",
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022"
-      }
-    },
-    {
-      "key": "67447f42-3c3e-4f01-bfcd-c52f9448991b",
-      "position": 3,
-      "properties": {
-        "duration": 15,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "67447f42-3c3e-4f01-bfcd-c52f9448991b",
-        "lesson.key": "Functions with Harvester",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2022"
       }
@@ -4490,6 +4490,109 @@
       }
     },
     {
+      "key": "d2c0374f-fce3-4290-9058-8a47a9b14357",
+      "position": 1,
+      "properties": {
+        "description": "At this point, your students should already be introduced to functions. Take this time to have them discuss the advantages and disadvantages of using functions in a program. Either have them pair-share or discuss as a class. Try using examples of hard or easy puzzles in either Artist or Bee.\n\nAsk the class:\n\n - _When would you use a function?_\n - _Why does a function help to simplify your program?_\n - _Do you think functions make programming easier or harder? Why?_",
+        "name": "Introduction\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2c0374f-fce3-4290-9058-8a47a9b14357",
+        "lesson_activity.key": "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624"
+      }
+    },
+    {
+      "key": "e0582255-a83c-4278-8b18-9ce09ac1118d",
+      "position": 1,
+      "properties": {
+        "description": "\n####Online Puzzles\n\nSome puzzles will have a function pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a function first, then determine where a function would be useful in the program.\n\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use functions, set up teams of expert students within your class to go around and answer questions.\n\nDon't forget to provide pencils and paper to help students sketch out possible solutions.",
+        "name": "Functions with Harvester",
+        "progression_name": "The Harvester"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0582255-a83c-4278-8b18-9ce09ac1118d",
+        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
+      }
+    },
+    {
+      "key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f",
+        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
+      }
+    },
+    {
+      "key": "a2bdcd68-5873-4a71-82a9-049b343d1e33",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: How to Create a Simple Function"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2bdcd68-5873-4a71-82a9-049b343d1e33",
+        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
+      }
+    },
+    {
+      "key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4",
+        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
+      }
+    },
+    {
+      "key": "480098ab-4bb6-4713-bf04-3404e93c9fe3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "480098ab-4bb6-4713-bf04-3404e93c9fe3",
+        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
+      }
+    },
+    {
+      "key": "ff540d41-6f94-4e4e-affd-0d167ab24093",
+      "position": 6,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff540d41-6f94-4e4e-affd-0d167ab24093",
+        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
+      }
+    },
+    {
+      "key": "ba634679-9f17-4493-878d-b657dad934a2",
+      "position": 7,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba634679-9f17-4493-878d-b657dad934a2",
+        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
+      }
+    },
+    {
+      "key": "bf38bf0f-7ad7-4a0a-af66-0b71c6213644",
+      "position": 1,
+      "properties": {
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What makes you realize a function could help your program?\n - How do `while` loops and `if / else` statements help your program?",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf38bf0f-7ad7-4a0a-af66-0b71c6213644",
+        "lesson_activity.key": "67447f42-3c3e-4f01-bfcd-c52f9448991b"
+      }
+    },
+    {
       "key": "5f8d119b-736b-416c-b460-0cf8c13f4d49",
       "position": 1,
       "properties": {
@@ -4600,109 +4703,6 @@
       "seeding_key": {
         "activity_section.key": "95df7387-7459-4b08-a71f-076a99b92bb9",
         "lesson_activity.key": "38ea9ff5-2d6b-4e51-a245-751cabce4b8b"
-      }
-    },
-    {
-      "key": "d2c0374f-fce3-4290-9058-8a47a9b14357",
-      "position": 1,
-      "properties": {
-        "description": "At this point, your students should already be introduced to functions. Take this time to have them discuss the advantages and disadvantages of using functions in a program. Either have them pair-share or discuss as a class. Try using examples of hard or easy puzzles in either Artist or Bee.\n\nAsk the class:\n\n - _When would you use a function?_\n - _Why does a function help to simplify your program?_\n - _Do you think functions make programming easier or harder? Why?_",
-        "name": "Introduction\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "d2c0374f-fce3-4290-9058-8a47a9b14357",
-        "lesson_activity.key": "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624"
-      }
-    },
-    {
-      "key": "e0582255-a83c-4278-8b18-9ce09ac1118d",
-      "position": 1,
-      "properties": {
-        "description": "\n####Online Puzzles\n\nSome puzzles will have a function pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a function first, then determine where a function would be useful in the program.\n\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use functions, set up teams of expert students within your class to go around and answer questions.\n\nDon't forget to provide pencils and paper to help students sketch out possible solutions.",
-        "name": "Functions with Harvester",
-        "progression_name": "The Harvester"
-      },
-      "seeding_key": {
-        "activity_section.key": "e0582255-a83c-4278-8b18-9ce09ac1118d",
-        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
-      }
-    },
-    {
-      "key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f",
-      "position": 2,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f",
-        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
-      }
-    },
-    {
-      "key": "a2bdcd68-5873-4a71-82a9-049b343d1e33",
-      "position": 3,
-      "properties": {
-        "progression_name": "Video: How to Create a Simple Function"
-      },
-      "seeding_key": {
-        "activity_section.key": "a2bdcd68-5873-4a71-82a9-049b343d1e33",
-        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
-      }
-    },
-    {
-      "key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4",
-        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
-      }
-    },
-    {
-      "key": "480098ab-4bb6-4713-bf04-3404e93c9fe3",
-      "position": 5,
-      "properties": {
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "480098ab-4bb6-4713-bf04-3404e93c9fe3",
-        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
-      }
-    },
-    {
-      "key": "ff540d41-6f94-4e4e-affd-0d167ab24093",
-      "position": 6,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "ff540d41-6f94-4e4e-affd-0d167ab24093",
-        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
-      }
-    },
-    {
-      "key": "ba634679-9f17-4493-878d-b657dad934a2",
-      "position": 7,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "ba634679-9f17-4493-878d-b657dad934a2",
-        "lesson_activity.key": "f9b075e1-678f-4564-b33b-e6c7042f5908"
-      }
-    },
-    {
-      "key": "bf38bf0f-7ad7-4a0a-af66-0b71c6213644",
-      "position": 1,
-      "properties": {
-        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What makes you realize a function could help your program?\n - How do `while` loops and `if / else` statements help your program?",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "bf38bf0f-7ad7-4a0a-af66-0b71c6213644",
-        "lesson_activity.key": "67447f42-3c3e-4f01-bfcd-c52f9448991b"
       }
     },
     {
@@ -6773,6 +6773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_intro_apps2022"
+        ],
         "progression": "Exploration: Sample Apps"
       },
       "bonus": false,
@@ -11623,6 +11626,332 @@
       ]
     },
     {
+      "chapter": 271,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions12022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      },
+      "level_keys": [
+        "courseE_farmer_functions12022"
+      ]
+    },
+    {
+      "chapter": 272,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions1a2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions1a2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      },
+      "level_keys": [
+        "courseE_farmer_functions1a2022"
+      ]
+    },
+    {
+      "chapter": 273,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2b2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions2b2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      },
+      "level_keys": [
+        "courseE_farmer_functions2b2022"
+      ]
+    },
+    {
+      "chapter": 274,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions2ba2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions2ba2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      },
+      "level_keys": [
+        "courseE_farmer_functions2ba2022"
+      ]
+    },
+    {
+      "chapter": 275,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      },
+      "level_keys": [
+        "courseE_farmer_functions3c2022"
+      ]
+    },
+    {
+      "chapter": 276,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions3c12022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      },
+      "level_keys": [
+        "courseE_farmer_functions3c12022"
+      ]
+    },
+    {
+      "chapter": 277,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_createFunctions22022"
+        ],
+        "progression": "Video: How to Create a Simple Function"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_createFunctions22022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "a2bdcd68-5873-4a71-82a9-049b343d1e33"
+      },
+      "level_keys": [
+        "courseE_video_createFunctions22022"
+      ]
+    },
+    {
+      "chapter": 278,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions7a12022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions7a12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
+      },
+      "level_keys": [
+        "courseE_farmer_functions7a12022"
+      ]
+    },
+    {
+      "chapter": 279,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions8a12022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions8a12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
+      },
+      "level_keys": [
+        "courseE_farmer_functions8a12022"
+      ]
+    },
+    {
+      "chapter": 280,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions9a12022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions9a12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
+      },
+      "level_keys": [
+        "courseE_farmer_functions9a12022"
+      ]
+    },
+    {
+      "chapter": 281,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseE_farmer_functions10a12022"
+        ],
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions10a12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "480098ab-4bb6-4713-bf04-3404e93c9fe3"
+      },
+      "level_keys": [
+        "courseE_farmer_functions10a12022"
+      ]
+    },
+    {
+      "chapter": 282,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions132022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions132022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "ff540d41-6f94-4e4e-affd-0d167ab24093"
+      },
+      "level_keys": [
+        "courseE_farmer_functions132022"
+      ]
+    },
+    {
+      "chapter": 283,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_functions11_predict2022"
+        ],
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_functions11_predict2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "ba634679-9f17-4493-878d-b657dad934a2"
+      },
+      "level_keys": [
+        "courseE_farmer_functions11_predict2022"
+      ]
+    },
+    {
       "chapter": 256,
       "position": 1,
       "activity_section_position": 1,
@@ -11996,332 +12325,6 @@
       },
       "level_keys": [
         "courseE_artist_functions_challenge22022"
-      ]
-    },
-    {
-      "chapter": 271,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions12022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      },
-      "level_keys": [
-        "courseE_farmer_functions12022"
-      ]
-    },
-    {
-      "chapter": 272,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions1a2022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions1a2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      },
-      "level_keys": [
-        "courseE_farmer_functions1a2022"
-      ]
-    },
-    {
-      "chapter": 273,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions2b2022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions2b2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      },
-      "level_keys": [
-        "courseE_farmer_functions2b2022"
-      ]
-    },
-    {
-      "chapter": 274,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions2ba2022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions2ba2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      },
-      "level_keys": [
-        "courseE_farmer_functions2ba2022"
-      ]
-    },
-    {
-      "chapter": 275,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions3c2022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions3c2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      },
-      "level_keys": [
-        "courseE_farmer_functions3c2022"
-      ]
-    },
-    {
-      "chapter": 276,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions3c12022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions3c12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      },
-      "level_keys": [
-        "courseE_farmer_functions3c12022"
-      ]
-    },
-    {
-      "chapter": 277,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_video_createFunctions22022"
-        ],
-        "progression": "Video: How to Create a Simple Function"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_video_createFunctions22022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "a2bdcd68-5873-4a71-82a9-049b343d1e33"
-      },
-      "level_keys": [
-        "courseE_video_createFunctions22022"
-      ]
-    },
-    {
-      "chapter": 278,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions7a12022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions7a12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
-      },
-      "level_keys": [
-        "courseE_farmer_functions7a12022"
-      ]
-    },
-    {
-      "chapter": 279,
-      "position": 9,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions8a12022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions8a12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
-      },
-      "level_keys": [
-        "courseE_farmer_functions8a12022"
-      ]
-    },
-    {
-      "chapter": 280,
-      "position": 10,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions9a12022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions9a12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
-      },
-      "level_keys": [
-        "courseE_farmer_functions9a12022"
-      ]
-    },
-    {
-      "chapter": 281,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "challenge": true,
-        "level_keys": [
-          "courseE_farmer_functions10a12022"
-        ],
-        "progression": "Challenge"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions10a12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "480098ab-4bb6-4713-bf04-3404e93c9fe3"
-      },
-      "level_keys": [
-        "courseE_farmer_functions10a12022"
-      ]
-    },
-    {
-      "chapter": 282,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions132022"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions132022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "ff540d41-6f94-4e4e-affd-0d167ab24093"
-      },
-      "level_keys": [
-        "courseE_farmer_functions132022"
-      ]
-    },
-    {
-      "chapter": 283,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions11_predict2022"
-        ],
-        "progression": "Prediction"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions11_predict2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "ba634679-9f17-4493-878d-b657dad934a2"
-      },
-      "level_keys": [
-        "courseE_farmer_functions11_predict2022"
       ]
     },
     {

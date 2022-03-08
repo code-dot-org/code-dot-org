@@ -21,8 +21,6 @@ class UserPermission < ApplicationRecord
   VALID_PERMISSIONS = [
     # Grants access to managing workshops and workshop attendance.
     FACILITATOR = 'facilitator'.freeze,
-    # Grants access to viewing hidden scripts.
-    HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'.freeze,
     # Grants access to managing (e.g., editing) levels, lessons, scripts, etc.
     # Also grants access to viewing extra links related to editing these.
     # Also makes the account satisfy verified_instructor?.

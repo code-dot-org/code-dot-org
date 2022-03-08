@@ -48,11 +48,17 @@
     "display_name": "Challenge",
     "bubble_choice_description": "Combine everything you've learned to solve this puzzle.",
     "thumbnail_url": "https://images.code.org/6403a4aabf9ab2857957a6276aa0d51f-image-1615823056444.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:17.418+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_for10_2021\\\"\"],\"cloned_from\":\"courseF_bee_for10_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:50:17.418+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_for10_2021\\\"\"],\"cloned_from\":\"courseF_bee_for10_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "for_loops": 5
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -32,7 +32,7 @@
   ],
   "lessons": [
     {
-      "key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+      "key": "NOTE: Deprecated Teacher cannot see results CSP Culminating Assessment",
       "name": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
       "absolute_position": 1,
       "lockable": false,
@@ -41,7 +41,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson.key": "NOTE: Deprecated Teacher cannot see results CSP Culminating Assessment",
         "lesson_group.key": "",
         "script.name": "cspassessment"
       }
@@ -71,7 +71,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "829350ac-7a46-4706-bd0e-c5324d1a4353",
-        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson.key": "NOTE: Deprecated Teacher cannot see results CSP Culminating Assessment",
         "lesson_group.key": "",
         "script.name": "cspassessment"
       }
@@ -128,7 +128,7 @@
         "script_level.level_keys": [
           "CSP_Final_instructions"
         ],
-        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson.key": "NOTE: Deprecated Teacher cannot see results CSP Culminating Assessment",
         "lesson_group.key": "",
         "script.name": "cspassessment",
         "activity_section.key": "23103976-b230-4053-805b-be5e35a6d139"
@@ -152,7 +152,7 @@
         "script_level.level_keys": [
           "CSP Culminating Assessment"
         ],
-        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson.key": "NOTE: Deprecated Teacher cannot see results CSP Culminating Assessment",
         "lesson_group.key": "",
         "script.name": "cspassessment",
         "activity_section.key": "23103976-b230-4053-805b-be5e35a6d139"
@@ -193,7 +193,7 @@
         "script_level.level_keys": [
           "CSP_Final_instructions"
         ],
-        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson.key": "NOTE: Deprecated Teacher cannot see results CSP Culminating Assessment",
         "lesson_group.key": "",
         "script.name": "cspassessment",
         "activity_section.key": "23103976-b230-4053-805b-be5e35a6d139"
@@ -205,7 +205,7 @@
         "script_level.level_keys": [
           "CSP Culminating Assessment"
         ],
-        "lesson.key": "NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment",
+        "lesson.key": "NOTE: Deprecated Teacher cannot see results CSP Culminating Assessment",
         "lesson_group.key": "",
         "script.name": "cspassessment",
         "activity_section.key": "23103976-b230-4053-805b-be5e35a6d139"

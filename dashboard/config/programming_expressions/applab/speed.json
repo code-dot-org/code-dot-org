@@ -2,10 +2,8 @@
   "key": "speed",
   "name": "speed",
   "category": "Turtle",
-  "palette_params": [
-    {
-      "name": "value"
-    }
-  ],
+  "category_key": "turtle",
+  "content": "[name]\r\n\r\n## speed(value)\r\n\r\n[/name]\r\n\r\n[category]\r\n\r\nCategory: Turtle\r\n\r\n[/category]\r\n\r\n[description]\r\n\r\n[short_description]\r\n\r\nSets the speed for the app's execution, which includes the turtle's speed.\r\n\r\n[/short_description]\r\n\r\nSlowing down the speed of the turtle while drawing allows us to see the execution of each command more easily. \r\n\r\n[/description]\r\n\r\n### Examples\r\n____________________________________________________\r\n\r\n[example]\r\n\r\n```\r\n// Draw a line slowly.\r\nspeed(1);\r\nmoveForward();\r\n```\r\n\r\n[/example]\r\n\r\n____________________________________________________\r\n\r\n[example]\r\n\r\n**Example: Different Speeds** Draw a square with the turtle moving at increasingly faster speeds (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).\r\n\r\n<table>\r\n<tr>\r\n<td style=\"border-style:none; width:90%; padding:0px\">\r\n<pre>\r\n// Draw a square with the turtle moving at increasingly faster speeds\r\n// (10, 20, 30, 40, 50, 60, 70, 80, 90, 100).\r\ntextLabel(\"speed\", \"speed: 10\");\r\nfor (var i = 1; i &lt;= 10; i++) {\r\n  for (var j = 0; j &lt; 4; j++) {\r\n    setText(\"speed\", \"speed: \" + i * 10);\r\n    speed(i*10);\r\n    moveForward(100);\r\n    turnRight(90);\r\n  }\r\n}\r\n</pre>\r\n</td>\r\n<td style=\"border-style:none; width:10%; padding:0px\">\r\n<img src='https://images.code.org/5b3d4a5f9b27b99cfdebf0012a7f091e-image-1445619219090.gif'>\r\n</td>\r\n</tr>\r\n</table>\r\n\r\n[/example]\r\n\r\n____________________________________________________\r\n\r\n[syntax]\r\n\r\n### Syntax\r\n\r\n```\r\nspeed(value);\r\n```\r\n\r\n[/syntax]\r\n\r\n[parameters]\r\n\r\n### Parameters\r\n\r\n| Name  | Type | Required? | Description |\r\n|-----------------|------|-----------|-------------|\r\n| value | number | Yes | The speed of the app's execution in the range of (0-100)  |\r\n\r\n[/parameters]\r\n\r\n[returns]\r\n\r\n### Returns\r\nNo return value. Alters execution speed only.\r\n\r\n[/returns]\r\n\r\n[tips]\r\n\r\n### Tips\r\n- The app execution speed can also be set by the tortoise-to-hare slider bar at the top of the Debug Console. Using speed() in code is useful if you want your app to run at a specific speed. The tortoise-to-hare slider bar is not part of your program, but lets you set the execution speed in order to debug an app.\r\n\r\n[/tips]\r\n\r\n[bug]\r\n\r\nFound a bug in the documentation? Let us know at documentation@code.org\r\n\r\n[/bug]",
+  "short_description": "\nspeed(value)\nCategory: Turtle",
   "syntax": "speed(value)"
 }
