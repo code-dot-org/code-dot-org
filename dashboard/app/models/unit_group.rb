@@ -360,7 +360,7 @@ class UnitGroup < ApplicationRecord
     [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  def summarize(user = nil, for_edit: false)
+  def summarize(user = nil, for_edit: false, locale_code: nil)
     {
       name: name,
       id: id,
@@ -387,7 +387,7 @@ class UnitGroup < ApplicationRecord
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
-      versions: summarize_versions(user),
+      versions: summarize_versions(user, locale_code),
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
@@ -421,28 +421,9 @@ class UnitGroup < ApplicationRecord
     }
   end
 
-  # Returns an array of objects showing the name and version year for all courses
-  # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil)
-    return [] unless family_name
-
-    # Include launched courses, plus self if not already included
-    courses = UnitGroup.valid_courses(user: user).clone(freeze: false)
-    courses.append(self) unless courses.any? {|c| c.id == id}
-
-    versions = courses.
-      select {|c| c.family_name == family_name}.
-      map do |c|
-        {
-          name: c.name,
-          version_year: c.version_year,
-          version_title: c.localized_version_title,
-          can_view_version: c.can_view_version?(user),
-          is_stable: c.stable?
-        }
-      end
-
-    versions.sort_by {|info| info[:version_year]}.reverse
+  # Returns an array summarizing all the course versions in the same course offering as this script
+  def summarize_versions(user = nil, locale_code = nil)
+    course_version&.course_offering&.course_versions&.select {|cv| cv.course_assignable?(user)}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   # If a user has no experiments enabled, return the default set of units.

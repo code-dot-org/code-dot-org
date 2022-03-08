@@ -17,7 +17,7 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog
 } from '@cdo/apps/util/dismissVersionRedirect';
-import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
@@ -41,7 +41,7 @@ class UnitOverview extends React.Component {
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
     showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
+    versions: PropTypes.arrayOf(assignmentCourseVersionShape).isRequired,
     courseName: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
