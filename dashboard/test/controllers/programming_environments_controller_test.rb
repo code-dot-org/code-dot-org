@@ -184,10 +184,10 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     test_user_gets_response_for :show, params: -> {{name: @unpublished_programming_environment.name}}, user: :teacher, response: :forbidden, name: 'teacher cannot view unpublished programming environment'
     test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view unpublished programming environment'
 
-    test_user_gets_response_for :destroy, params: -> {{name: @programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :destroy, params: -> {{name: @programming_environment.name}}, user: :student, response: :forbidden
-    test_user_gets_response_for :destroy, params: -> {{name: @programming_environment.name}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :destroy, params: -> {{name: @programming_environment.name}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :destroy, params: -> {{name: @published_programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :destroy, params: -> {{name: @published_programming_environment.name}}, user: :student, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{name: @published_programming_environment.name}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :index, user: nil, response: :success
     test_user_gets_response_for :index, user: :student, response: :success
