@@ -546,7 +546,7 @@ class User < ApplicationRecord
   end
 
   # Only allow admin permission for studio accounts with Google OAuth authentication.
-  validate :enforce_google_sso_for_admin
+  # validate :enforce_google_sso_for_admin
   def enforce_google_sso_for_admin
     return unless admin
 
