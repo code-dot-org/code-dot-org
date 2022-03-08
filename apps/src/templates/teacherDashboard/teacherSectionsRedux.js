@@ -45,10 +45,6 @@ const importUrlByProvider = {
 // Action keys
 //
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_LESSON_EXTRAS_UNIT_IDS =
-  'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
-const SET_TEXT_TO_SPEECH_UNIT_IDS =
-  'teacherDashboard/SET_TEXT_TO_SPEECH_UNIT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -111,14 +107,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setLessonExtrasUnitIds = ids => ({
-  type: SET_LESSON_EXTRAS_UNIT_IDS,
-  ids
-});
-export const setTextToSpeechUnitIds = ids => ({
-  type: SET_TEXT_TO_SPEECH_UNIT_IDS,
-  ids
-});
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
   providers
@@ -544,8 +532,6 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
-  lessonExtrasUnitIds: [],
-  textToSpeechUnitIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -621,20 +607,6 @@ export default function teacherSections(state = initialState, action) {
       providers: action.providers.map(provider =>
         mapProviderToSectionType(provider)
       )
-    };
-  }
-
-  if (action.type === SET_LESSON_EXTRAS_UNIT_IDS) {
-    return {
-      ...state,
-      lessonExtrasUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_TEXT_TO_SPEECH_UNIT_IDS) {
-    return {
-      ...state,
-      textToSpeechUnitIds: action.ids
     };
   }
 
@@ -1145,14 +1117,38 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedUnitName(state) {
+export function assignedUnit(state) {
   const {sectionBeingEdited, validAssignments} = getRoot(state);
+
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  return validAssignments[assignId];
+}
+
+export function assignedUnitName(state) {
+  const {sectionBeingEdited} = getRoot(state);
   if (!sectionBeingEdited) {
     return '';
   }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+  const assignment = assignedUnit(state);
   return assignment ? assignment.name : '';
+}
+
+export function assignedUnitLessonExtrasAvailable(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.lesson_extras_available : false;
+}
+
+export function assignedUnitTextToSpeechEnabled(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.text_to_speech_enabled : false;
 }
 
 export function getVisibleSections(state) {
@@ -1289,14 +1285,6 @@ export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   return assignments.map(assignment => (assignment ? assignment.path : ''));
 };
-
-/**
- * Is the given unit ID a CSF course? `script.rb` owns the list.
- * @param state
- * @param id
- */
-export const lessonExtrasAvailable = (state, id) =>
-  state.teacherSections.lessonExtrasUnitIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using
