@@ -31851,7 +31851,15 @@ en:
           description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
           student_description: ''
         self-paced-pl-csa2-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Navigating the Code.org learning platform
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Navigating lesson plans and resources
+            lesson-3:
+              name: Navigating Support
           lesson_groups: {}
           name: self-paced-pl-csa2-2022
           title: ''
