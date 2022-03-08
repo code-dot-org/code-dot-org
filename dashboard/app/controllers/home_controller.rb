@@ -103,8 +103,6 @@ class HomeController < ApplicationController
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
 
     @homepage_data = {}
-    @homepage_data[:valid_grades] = Section.valid_grades
-    @homepage_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
@@ -192,7 +190,6 @@ class HomeController < ApplicationController
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
-      @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
 
       if show_census_banner
         teachers_school = current_user.school_info.school
