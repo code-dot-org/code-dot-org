@@ -5,6 +5,7 @@ import sinon from 'sinon';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import * as utils from '@cdo/apps/utils';
 
 describe('TeacherApplication', () => {
   const fakeOptionKeys = Object.values(PageLabels).reduce(
@@ -24,6 +25,7 @@ describe('TeacherApplication', () => {
 
   beforeEach(() => {
     sinon.stub(firehoseClient, 'putRecord');
+    sinon.stub(utils, 'reload');
     sinon
       .stub(window.sessionStorage, 'getItem')
       .withArgs('TeacherApplication')
@@ -34,16 +36,13 @@ describe('TeacherApplication', () => {
 
   afterEach(() => {
     firehoseClient.putRecord.restore();
+    utils.reload.restore();
     window.sessionStorage.getItem.restore();
     window.sessionStorage.setItem.restore();
     window.ga = undefined;
   });
 
-  it('Sends firehose event on initialization and save', () => {
-    // Also calls firehose event on submit, but we reload the page on submit
-    // The page reload can't be stubbed because `window.location.reload`
-    // is not writable nor configurable: Object.getOwnPropertyDescriptor(window.location, 'toString')
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#modifying_a_property
+  it('Sends firehose event on initialization, save, and submit', () => {
     const teacherApp = mount(
       <TeacherApplication {...defaultProps} allowPartialSaving />
     );
@@ -52,6 +51,9 @@ describe('TeacherApplication', () => {
 
     formControllerProps.onSuccessfulSave();
     sinon.assert.calledTwice(firehoseClient.putRecord);
+
+    formControllerProps.onSuccessfulSubmit();
+    sinon.assert.calledThrice(firehoseClient.putRecord);
   });
   it('Does not set schoolId if not provided', () => {
     const page = mount(<TeacherApplication {...defaultProps} />);

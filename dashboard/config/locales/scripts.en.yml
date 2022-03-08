@@ -32782,6 +32782,17 @@ en:
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
+        ui-test-csa-family-script:
+          lessons:
+            lesson-1:
+              name: UI Test CSA Family Lesson
+          lesson_groups: {}
+          name: ui-test-csa-family-script
+          title: UI Test CSA Family Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         csa-preview:
           lessons:
             lesson-1:
