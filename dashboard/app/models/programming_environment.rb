@@ -27,6 +27,8 @@ class ProgrammingEnvironment < ApplicationRecord
   has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
+  after_destroy :remove_serialization
+
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
     editor_type
@@ -75,6 +77,10 @@ class ProgrammingEnvironment < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
 
     File.write(file_path, JSON.pretty_generate(serialize))
+  end
+
+  def remove_serialization
+    File.delete(file_path) if File.exist?(file_path)
   end
 
   def summarize_for_lesson_edit

@@ -32,6 +32,8 @@ class ProgrammingExpression < ApplicationRecord
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format
 
+  after_destroy :remove_serialization
+
   serialized_attrs %w(
     color
     syntax
@@ -259,6 +261,10 @@ class ProgrammingExpression < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     object_to_serialize = serialize
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
+  end
+
+  def remove_serialization
+    File.delete(file_path) if File.exist?(file_path)
   end
 
   def clone_to_programming_environment(environment_name, new_category_key = nil)

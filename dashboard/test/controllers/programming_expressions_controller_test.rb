@@ -128,8 +128,24 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     delete :destroy, params: {
       id: programming_expression.id
     }
+    assert_response :ok
 
     assert_nil ProgrammingExpression.find_by_key('test-expression')
+  end
+
+  test 'destroying a programming expressions fails if File cannot be deleted' do
+    sign_in @levelbuilder
+    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+
+    File.expects(:exist?).returns(true).once
+    File.expects(:delete).throws(StandardError).once
+
+    delete :destroy, params: {
+      id: programming_expression.id
+    }
+    assert_response :not_acceptable
+
+    refute_nil ProgrammingExpression.find_by_key('test-expression')
   end
 
   test 'can clone programming expression' do
