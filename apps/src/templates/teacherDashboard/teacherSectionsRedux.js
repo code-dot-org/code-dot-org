@@ -44,7 +44,6 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_LESSON_EXTRAS_UNIT_IDS =
   'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
@@ -112,7 +111,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
 export const setLessonExtrasUnitIds = ids => ({
   type: SET_LESSON_EXTRAS_UNIT_IDS,
   ids
@@ -527,7 +525,6 @@ const initialState = {
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
   // for consistency and ease of comparison).
   providers: [],
-  validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
   // A map from assignmentId to assignment (see assignmentShape PropType).
@@ -638,13 +635,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       textToSpeechUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_VALID_GRADES) {
-    return {
-      ...state,
-      validGrades: action.grades
     };
   }
 
