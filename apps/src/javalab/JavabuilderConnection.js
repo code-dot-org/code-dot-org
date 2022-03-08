@@ -50,7 +50,8 @@ export default class JavabuilderConnection {
       return;
     }
 
-    this.onOutputMessage(javalabMsg.connecting());
+    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
+    this.onNewlineMessage();
 
     $.ajax({
       url: '/javabuilder/access_token',
@@ -259,21 +260,24 @@ export default class JavabuilderConnection {
   }
 
   onAuthorizerMessage(value, detail) {
+    let message = '';
     switch (value) {
       case AuthorizerSignalType.TOKEN_USED:
-        this.onOutputMessage(javalabMsg.authorizerTokenUsed());
+        message = javalabMsg.authorizerTokenUsed();
         break;
       case AuthorizerSignalType.NEAR_LIMIT:
-        this.onOutputMessage(
-          javalabMsg.authorizerNearLimit({attemptsLeft: detail.remaining})
-        );
+        message = javalabMsg.authorizerNearLimit({
+          attemptsLeft: detail.remaining
+        });
         break;
       case AuthorizerSignalType.USER_BLOCKED:
-        this.onOutputMessage(javalabMsg.userBlocked());
+        message = javalabMsg.userBlocked();
         break;
       case AuthorizerSignalType.CLASSROOM_BLOCKED:
-        this.onOutputMessage(javalabMsg.classroomBlocked());
+        message = javalabMsg.classroomBlocked();
         break;
     }
+    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    this.onNewlineMessage();
   }
 }
