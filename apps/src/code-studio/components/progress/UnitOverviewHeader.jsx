@@ -42,6 +42,7 @@ class UnitOverviewHeader extends Component {
     courseName: PropTypes.string,
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
+    courseVersionId: PropTypes.number.isRequired,
 
     // provided by redux
     plcHeaderProps: PropTypes.shape({
@@ -189,7 +190,7 @@ class UnitOverviewHeader extends Component {
                   onChangeVersion={this.onChangeVersion}
                   courseVersions={versions}
                   rightJustifiedPopupMenu={true}
-                  selectedCourseVersionId={'1'} //get id
+                  selectedCourseVersionId={this.props.courseVersionId}
                 />
               )}
             </div>

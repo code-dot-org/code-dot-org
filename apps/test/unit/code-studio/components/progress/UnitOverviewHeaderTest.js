@@ -23,7 +23,8 @@ const defaultProps = {
     '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   unitStudentDescription:
     '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
-  versions: []
+  versions: {},
+  courseVersionId: 1
 };
 
 describe('UnitOverviewHeader', () => {
@@ -107,53 +108,59 @@ describe('UnitOverviewHeader', () => {
   });
 
   it('passes properly-formatted versions to AssignmentVersionSelector', () => {
-    const versions = [
-      {
-        name: 'coursea-2017',
-        year: '2017',
-        title: '2017',
-        isStable: true,
-        locales: ['English', 'Italian'],
-        localeCodes: ['en-US', 'it-IT'],
-        canViewVersion: true
+    const versions = {
+      1: {
+        id: 1,
+        version_year: '2017',
+        content_root_id: 10,
+        name: 'Course A',
+        path: '/s/coursea-2017',
+        type: 'Script',
+        is_stable: true,
+        is_recommended: false,
+        locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
+        units: {
+          1: {
+            id: 1,
+            name: 'Course A',
+            path: '/s/coursea-2017',
+            lesson_extras_available: true
+          }
+        }
       },
-      {
-        name: 'coursea-2018',
-        year: '2018',
-        title: '2018',
-        isStable: true,
-        locales: ['English'],
-        localeCodes: ['en-US'],
-        canViewVersion: true
-      },
-      {
-        name: 'coursea-2019',
-        year: '2019',
-        title: '2019',
-        isStable: false,
-        locales: [],
-        localeCodes: [],
-        canViewVersion: false
+      2: {
+        id: 2,
+        version_year: '2018',
+        content_root_id: 11,
+        name: 'Course A',
+        path: '/s/coursea-2018',
+        type: 'Script',
+        is_stable: true,
+        is_recommended: true,
+        locales: ['English', 'Italiano', 'Slovenčina'],
+        units: {
+          2: {
+            id: 2,
+            name: 'Course A (2018)',
+            path: '/s/coursea-2018',
+            lesson_extras_available: true
+          }
+        }
       }
-    ];
+    };
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
-        scriptName="coursea-2018"
+        courseVersionId={2}
         versions={versions}
-        localeCode="it-IT"
       />,
       {disableLifecycleMethods: true}
     );
 
     const versionSelector = wrapper.find('AssignmentVersionSelector');
     assert.equal(1, versionSelector.length);
-    const renderedVersions = versionSelector.props().versions;
-    assert.equal(2, renderedVersions.length);
-    const coursea2017 = renderedVersions.find(v => v.name === 'coursea-2017');
-    assert.equal(true, coursea2017.isRecommended);
-    const coursea2018 = renderedVersions.find(v => v.name === 'coursea-2018');
-    assert.equal(true, coursea2018.isSelected);
+    const renderedVersions = versionSelector.props().courseVersions;
+    assert.equal(2, Object.values(renderedVersions).length);
   });
 
   it('has correct unit description for instructor', () => {
