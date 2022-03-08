@@ -7,7 +7,6 @@ import announcementReducer, {
   addAnnouncement
 } from '@cdo/apps/code-studio/announcementsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
-import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -102,7 +101,7 @@ function showCourseOverview() {
         migratedTeacherResources={courseSummary.migrated_teacher_resources}
         studentResources={courseSummary.student_resources}
         scripts={courseSummary.scripts}
-        versions={convertAssignmentVersionShapeFromServer(versions)}
+        versions={versions}
         showVersionWarning={
           !!scriptData.show_version_warning && versions.length > 1
         }

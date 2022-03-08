@@ -1442,7 +1442,7 @@ class Script < ApplicationRecord
     get_published_state == SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = false)
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
     # don't have a lesson group in the database right now)
@@ -1510,7 +1510,7 @@ class Script < ApplicationRecord
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
-      versions: summarize_versions(user),
+      versions: summarize_versions(user, locale_code),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: get_pilot_experiment,
@@ -1677,27 +1677,8 @@ class Script < ApplicationRecord
 
   # Returns an array of objects showing the name and version year for all units
   # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil)
-    return [] unless family_name
-    return [] unless has_other_versions?
-    return [] unless unit_groups.empty?
-    units = Script.
-      where(family_name: family_name).
-      all.
-      select {|unit| user&.levelbuilder? || unit.launched?}.
-      map do |s|
-      {
-        name: s.name,
-        version_year: s.version_year,
-        version_title: s.version_year,
-        can_view_version: s.can_view_version?(user),
-        is_stable: s.stable?,
-        locales: s.supported_locale_names,
-        locale_codes: s.supported_locales
-      }
-    end
-
-    units.sort_by {|info| info[:version_year]}.reverse
+  def summarize_versions(user = nil, locale_code = nil)
+    course_version&.course_offering&.course_versions&.select {|cv| cv.course_assignable?(user)}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def self.clear_cache

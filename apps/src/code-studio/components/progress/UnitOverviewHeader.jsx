@@ -15,13 +15,13 @@ import {
   dismissedRedirectWarning,
   onDismissRedirectWarning
 } from '@cdo/apps/util/dismissVersionRedirect';
-import AssignmentVersionSelector, {
-  setRecommendedAndSelectedVersions
-} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {queryParams} from '../../utils';
+import * as utils from '../../../utils';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -40,7 +40,7 @@ class UnitOverviewHeader extends Component {
     showRedirectWarning: PropTypes.bool,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
-    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
+    versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
 
     // provided by redux
@@ -65,15 +65,13 @@ class UnitOverviewHeader extends Component {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
-  onChangeVersion = versionYear => {
-    const script = this.props.versions.find(v => v.year === versionYear);
-    if (
-      script &&
-      script.name.length > 0 &&
-      script.name !== this.props.scriptName
-    ) {
-      const queryParams = window.location.search || '';
-      window.location.href = `/s/${script.name}${queryParams}`;
+  onChangeVersion = versionId => {
+    const version = this.props.versions[versionId];
+    if (versionId !== '1' && version) {
+      //get id here
+      const sectionId = queryParams('section_id');
+      const queryString = sectionId ? `?section_id=${sectionId}` : '';
+      utils.navigateToHref(`/s/${version.name}${queryString}`);
     }
   };
 
@@ -125,17 +123,6 @@ class UnitOverviewHeader extends Component {
     } else if (showScriptVersionWarning) {
       versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
-
-    // Only display viewable versions in script version dropdown.
-    const filteredVersions = versions.filter(version => version.canViewVersion);
-    const selectedVersion = filteredVersions.find(
-      v => v.name === this.props.scriptName
-    );
-    setRecommendedAndSelectedVersions(
-      filteredVersions,
-      this.props.localeCode,
-      selectedVersion && selectedVersion.year
-    );
 
     return (
       <div>
@@ -197,11 +184,12 @@ class UnitOverviewHeader extends Component {
               <h1 style={styles.title} id="script-title">
                 {unitTitle}
               </h1>
-              {filteredVersions.length > 1 && (
+              {versions.length > 1 && (
                 <AssignmentVersionSelector
                   onChangeVersion={this.onChangeVersion}
-                  versions={filteredVersions}
+                  courseVersions={versions}
                   rightJustifiedPopupMenu={true}
+                  selectedCourseVersionId={'1'} //get id
                 />
               )}
             </div>

@@ -48,6 +48,8 @@ class CoursesController < ApplicationController
     sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
     @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
 
+    @locale_code = request.locale
+
     render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
 
