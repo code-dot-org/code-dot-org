@@ -42,7 +42,6 @@ class UnitOverviewHeader extends Component {
     courseName: PropTypes.string,
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
-    courseVersionId: PropTypes.number.isRequired,
 
     // provided by redux
     plcHeaderProps: PropTypes.shape({
@@ -50,6 +49,7 @@ class UnitOverviewHeader extends Component {
       courseViewPath: PropTypes.string.isRequired
     }),
     announcements: PropTypes.arrayOf(announcementShape),
+    courseVersionId: PropTypes.number.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     unitTitle: PropTypes.string.isRequired,
@@ -68,11 +68,10 @@ class UnitOverviewHeader extends Component {
 
   onChangeVersion = versionId => {
     const version = this.props.versions[versionId];
-    if (versionId !== '1' && version) {
-      //get id here
+    if (versionId !== this.props.courseVersionId && version) {
       const sectionId = queryParams('section_id');
       const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`/s/${version.name}${queryString}`);
+      utils.navigateToHref(`${version.path}${queryString}`);
     }
   };
 
@@ -250,6 +249,7 @@ export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
   announcements: state.announcements || [],
+  courseVersionId: state.progress.courseVersionId,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   unitTitle: state.progress.unitTitle,
