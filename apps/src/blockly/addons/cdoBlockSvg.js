@@ -106,8 +106,8 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     super.onMouseDown_(e);
   }
 
-  render() {
-    super.render();
+  render(opt_bubble) {
+    super.render(opt_bubble);
     this.removeUnusedBlockFrame();
   }
 
