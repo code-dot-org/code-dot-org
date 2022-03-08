@@ -62,11 +62,11 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def destroy
     return render :not_found unless @programming_environment
-    if @programming_environment.destroy
-      File.delete(@programming_environment.file_path) if File.exist?(@programming_environment.file_path)
+    begin
+      @programming_environment.destroy!
       render(status: 200, plain: "Destroyed #{@programming_environment.name}")
-    else
-      render(status: :not_acceptable, plain: @programming_environment.errors.full_messages.join('. '))
+    rescue => e
+      render(status: :not_acceptable, plain: e.message)
     end
   end
 

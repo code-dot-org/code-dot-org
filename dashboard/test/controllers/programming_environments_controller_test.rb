@@ -132,7 +132,22 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     delete :destroy, params: {
       name: programming_environment.name
     }
+    assert_response :ok
     assert_nil ProgrammingEnvironment.find_by_name('test-environment')
+  end
+
+  test 'destroying a programming environment fails if File cannot be deleted' do
+    sign_in @levelbuilder
+
+    programming_environment = create :programming_environment, name: 'test-environment'
+
+    File.expects(:exist?).returns(true).once
+    File.expects(:delete).throws(StandardError).once
+    delete :destroy, params: {
+      name: programming_environment.name
+    }
+    assert_response :not_acceptable
+    refute_nil ProgrammingEnvironment.find_by_name('test-environment')
   end
 
   class AccessTests < ActionController::TestCase
