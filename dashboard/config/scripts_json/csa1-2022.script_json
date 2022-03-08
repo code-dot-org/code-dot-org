@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-07 13:47:47 UTC",
+    "serialized_at": "2022-03-08 15:04:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1386,7 +1386,7 @@
       "key": "a4e79239-1f3f-42c7-9eb4-fd7be4295d09",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term – software engineer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term – *software engineer*."
       },
       "seeding_key": {
         "activity_section.key": "a4e79239-1f3f-42c7-9eb4-fd7be4295d09",
@@ -1778,7 +1778,7 @@
       "key": "ae75ce69-603e-4bd7-9175-ba169d7b27e4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Object-Oriented Programming*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define package."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Object-Oriented Programming*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *package*."
       },
       "seeding_key": {
         "activity_section.key": "ae75ce69-603e-4bd7-9175-ba169d7b27e4",
@@ -1824,7 +1824,7 @@
       "key": "d7f32109-c4a7-44b1-a02b-7b3a0091ef2d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define UML diagram. Have students label the UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define attribute and behavior. Have students label the UML diagram on the Unit 1 Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *UML diagram*. Have students label the UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *attribute* and *behavior*. Have students label the UML diagram on the Unit 1 Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1889,7 +1889,7 @@
       "key": "0ed956fe-34c3-4807-b2c7-87fdd75a5099",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define bug.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the possible errors and potential console messages that can occur if an object is not instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define debugging.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *bug*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the possible errors and potential console messages that can occur if an object is not instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *debugging*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2361,7 +2361,7 @@
       "key": "9e75f437-a4fe-44d6-96fd-5a71195d06ec",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define logic error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain examples of logic errors and strategies to identify the causes."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *logic error*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain examples of logic errors and strategies to identify the causes."
       },
       "seeding_key": {
         "activity_section.key": "9e75f437-a4fe-44d6-96fd-5a71195d06ec",
@@ -3165,7 +3165,7 @@
       "key": "544009bf-76d3-4267-8321-31e6f2ab1781",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt. Click through the animated slide to define infinite loop.\n* *What is causing this outcome?*\n\n**Discussion Goal:** Students realize that the condition never becomes `false`, resulting in an infinite loop."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt. Click through the animated slide to define *infinite loop*.\n* *What is causing this outcome?*\n\n**Discussion Goal:** Students realize that the condition never becomes `false`, resulting in an infinite loop."
       },
       "seeding_key": {
         "activity_section.key": "544009bf-76d3-4267-8321-31e6f2ab1781",
@@ -3190,7 +3190,7 @@
       "key": "85ae7d08-f221-404d-af64-557293dfa08f",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for the methods and add them to the `PainterPlus` UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to complete Levels 3 and 4 to implement their algorithms in the `PainterPlus` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *pseudocode*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for the methods and add them to the `PainterPlus` UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to complete Levels 3 and 4 to implement their algorithms in the `PainterPlus` class.",
         "progression_name": "Using Loops and Boolean Methods"
       },
       "seeding_key": {
@@ -4007,7 +4007,7 @@
       "key": "d0676065-93ad-4ab2-8153-5eb6f5c53760",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define inheritance hierarchy.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the PatternPainter handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *inheritance hierarchy*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the PatternPainter handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -7741,7 +7741,7 @@
   ],
   "resources": [
     {
-      "name": "[KEY] Asphalt Art Project Planning Guide",
+      "name": "[EXEMPLAR] Asphalt Art Project Planning Guide",
       "url": "https://docs.google.com/document/d/1e9XAv0seL-f_PJrVkA98Bf43dU4LQL1uT-zuA7ceQxA/edit?usp=sharing",
       "key": "_key_asphalt_art_project_planning_guide",
       "properties": {

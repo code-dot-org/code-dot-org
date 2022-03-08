@@ -35,27 +35,12 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
   test 'teacher can review own students project' do
     project_owner = create :student
     teacher = create :teacher
-    section = create :section, code_review_enabled: Time.now.utc + 1.day, teacher: teacher
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day, teacher: teacher
     create :follower, section: section, student_user: project_owner
     assert CodeReviewComment.user_can_review_project?(project_owner, teacher, nil)
   end
 
-  test 'teacher can review own students project when code_review_enabled is false' do
-    # This is default behavior so stub is unnecessary, but adding this
-    # so when can search for the DCDO string to clean up
-    # we remember to delete this test at that time.
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(false)
-
-    project_owner = create :student
-    teacher = create :teacher
-    section = create :section, code_review_enabled: false, teacher: teacher
-    create :follower, section: section, student_user: project_owner
-    assert CodeReviewComment.user_can_review_project?(project_owner, teacher, nil)
-  end
-
-  test 'teacher can review own students project when code_review_enabled is false and code review groups enabled' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
+  test 'teacher can review own students project when code review is not enabled at section level' do
     project_owner = create :student
     teacher = create :teacher
     section = create :section, code_review_expires_at: Time.now.utc - 1.day, teacher: teacher
@@ -64,22 +49,6 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
   end
 
   test 'teacher cannot review project of a student in another section' do
-    # This is default behavior so stub is unnecessary, but adding this
-    # so when can search for the DCDO string to clean up
-    # we remember to delete this test at that time.
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(false)
-
-    project_owner = create :student
-    teacher = create :teacher
-    create :section, code_review_enabled: true, teacher: teacher
-    student_section = create :section, code_review_enabled: true
-    create :follower, section: student_section, student_user: project_owner
-    refute CodeReviewComment.user_can_review_project?(project_owner, teacher, nil)
-  end
-
-  test 'teacher cannot review project of a student in another section with code review groups enabled' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
     project_owner = create :student
     teacher = create :teacher
     create :section, code_review_expires_at: Time.now.utc + 1.day, teacher: teacher
@@ -88,28 +57,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     refute CodeReviewComment.user_can_review_project?(project_owner, teacher, nil)
   end
 
-  test 'can review peers project if code_review is enabled' do
-    # This is default behavior so stub is unnecessary, but adding this
-    # so when can search for the DCDO string to clean up
-    # we remember to delete this test at that time.
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(false)
-
-    project_owner = create :student
-    reviewer = create :student
-    section = create :section, code_review_enabled: true
-    create :follower, section: section, student_user: project_owner
-    create :follower, section: section, student_user: reviewer
-    create :reviewable_project,
-      user_id: project_owner.id,
-      storage_app_id: @project_storage_app_id,
-      level_id: @project_level_id,
-      script_id: @project_script_id
-    assert CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
-  end
-
   test 'can review peers project if in same section and in same code review group' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
     project_owner = create :student
     reviewer = create :student
     section = create :section, code_review_expires_at: Time.now.utc + 1.day
@@ -131,34 +79,13 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
   test 'cannot review peers project if there is no reviewable project' do
     project_owner = create :student
     reviewer = create :student
-    section = create :section, code_review_enabled: true
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
     create :follower, section: section, student_user: project_owner
     create :follower, section: section, student_user: reviewer
-    refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
-  end
-
-  test 'cannot review peers project if code_review is disabled' do
-    # This is default behavior so stub is unnecessary, but adding this
-    # so when can search for the DCDO string to clean up
-    # we remember to delete this test at that time.
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(false)
-
-    project_owner = create :student
-    reviewer = create :student
-    section = create :section, code_review_enabled: false
-    create :follower, section: section, student_user: project_owner
-    create :follower, section: section, student_user: reviewer
-    create :reviewable_project,
-      user_id: project_owner.id,
-      storage_app_id: @project_storage_app_id,
-      level_id: @project_level_id,
-      script_id: @project_script_id
     refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
   end
 
   test 'cannot review peers project if code_review is disabled and students are in same code review group' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
     project_owner = create :student
     reviewer = create :student
     section = create :section, code_review_expires_at: nil
@@ -176,29 +103,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
   end
 
-  test 'cannot review project of student in a different section' do
-    # This is default behavior so stub is unnecessary, but adding this
-    # so when can search for the DCDO string to clean up
-    # we remember to delete this test at that time.
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(false)
-
-    project_owner = create :student
-    reviewer = create :student
-    section = create :section, code_review_enabled: true
-    reviewer_section = create :section, code_review_enabled: true
-    create :follower, section: section, student_user: project_owner
-    create :follower, section: reviewer_section, student_user: reviewer
-    create :reviewable_project,
-      user_id: project_owner.id,
-      storage_app_id: @project_storage_app_id,
-      level_id: @project_level_id,
-      script_id: @project_script_id
-    refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
-  end
-
   test 'cannot review project of student in a different section even if both in code review groups' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
     project_owner = create :student
     reviewer = create :student
     section = create :section, code_review_expires_at: Time.now.utc + 1.day

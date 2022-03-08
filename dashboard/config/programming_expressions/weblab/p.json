@@ -1,6 +1,6 @@
 {
   "key": "P",
-  "name": "P",
+  "name": "Paragraph",
   "category": "HTML Tags",
   "category_key": "html_tags",
   "content": "# Paragraph\r\n\r\nThe `<p>` tag is used to  define a paragraph of text.\r\n",
