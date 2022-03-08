@@ -150,6 +150,9 @@ fr:
     L'informatique, c'est bien plus que du codage ! Cette première étape de Code.org
     vous emmène dans un nouveau voyage où vous en enseignerez davantage sur l'IA,
     tout au long de notre programme d'études.  "
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Lévènement "Une heure de code" en direct
   hoc_live_sign_up_title: S'inscrire à "Une heure de Code" en direct
   hoc_live_learn_title: Apprenez avec L'Heure du code en direct
@@ -1089,6 +1092,7 @@ fr:
   footer_menu_support: Aide
   footer_menu_terms: Conditions générales
   footer_menu_privacy: Politique de Confidentialité
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Activités Heure de Code
   learn_banner_blurb: Essayez notre tutoriel d’une heure destiné à tous les âges,
     disponible dans plus de 45 langues.  Rejoignez des millions d’élèves et d’éducateurs

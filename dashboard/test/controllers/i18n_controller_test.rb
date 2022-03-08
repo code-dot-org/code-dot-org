@@ -13,7 +13,7 @@ class I18nControllerTest < ActionController::TestCase
     }
 
     string_keys.each do |string_key|
-      I18nStringUrlTracker.instance.expects(:log).with(string_key, url, source)
+      I18nStringUrlTracker.instance.expects(:log).with(url, source, string_key)
     end
 
     post :track_string_usage, params: args

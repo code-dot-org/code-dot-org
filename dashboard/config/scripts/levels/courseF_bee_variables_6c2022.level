@@ -49,11 +49,17 @@
     "long_instructions": "Do you recognize this \"staircase\" pattern from other lessons? Give this puzzle a try!",
     "bubble_choice_description": "Now give this puzzle a try!",
     "thumbnail_url": "https://images.code.org/cca4a39dd80f2ac80b1be243e03c86ee-image-1615818857279.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:58.739+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_6c_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_6c_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:58.739+00:00\",\"changed\":[\"cloned from \\\"courseF_bee_variables_6c_2021\\\"\"],\"cloned_from\":\"courseF_bee_variables_6c_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4,
+    "repeat_until_while": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

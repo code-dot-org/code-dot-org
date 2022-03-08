@@ -185,7 +185,7 @@ class JavalabView extends React.Component {
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
-      document.body.style.backgroundColor = '#1b1c17';
+      document.body.style.backgroundColor = color.background_black;
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
@@ -248,9 +248,10 @@ class JavalabView extends React.Component {
                     disableTestButton={awaitingContainedResponse || !canTest}
                     onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
-                    showTestButton={experiments.isEnabled(
-                      experiments.JAVALAB_UNIT_TESTS
-                    )}
+                    showTestButton={
+                      isEditingStartSources ||
+                      experiments.isEnabled(experiments.JAVALAB_UNIT_TESTS)
+                    }
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
                   />

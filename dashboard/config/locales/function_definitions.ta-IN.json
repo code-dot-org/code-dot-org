@@ -119,14 +119,16 @@
         "Course 4 Play Lab Params 7": {
           "patrol": {
             "parameters": {
-              "actor": "நடிகர்"
+              "actor": "நடிகர்",
+              "speed": "வேகம்"
             }
           }
         },
         "Course 4 Play Lab Params 8": {
           "patrol": {
             "parameters": {
-              "actor": "நடிகர்"
+              "actor": "நடிகர்",
+              "speed": "வேகம்"
             }
           }
         },
@@ -166,11 +168,29 @@
         "Geometric Sun": {
           "draw a house": {
             "name": "ஒரு வீட்டை வரையவும்"
+          },
+          "sun": {
+            "name": "ஞாயிறு"
+          },
+          "diamond": {
+            "name": "வைரம்"
+          },
+          "square": {
+            "name": "சதுரம்"
           }
         },
         "Geometric Sun_2018": {
           "draw a house": {
             "name": "ஒரு வீட்டை வரையவும்"
+          },
+          "sun": {
+            "name": "ஞாயிறு"
+          },
+          "diamond": {
+            "name": "வைரம்"
+          },
+          "square": {
+            "name": "சதுரம்"
           }
         },
         "InspirationalArtwork": {
@@ -291,7 +311,8 @@
           "draw a star": {
             "name": "நட்சத்திரம் வரைக",
             "parameters": {
-              "length": "நீளம்"
+              "length": "நீளம்",
+              "points": "புள்ளிகள்"
             }
           },
           "draw a circle": {
@@ -423,7 +444,8 @@
           },
           "patrol": {
             "parameters": {
-              "actor": "நடிகர்"
+              "actor": "நடிகர்",
+              "speed": "வேகம்"
             }
           }
         },
@@ -431,7 +453,8 @@
           "draw a star": {
             "name": "நட்சத்திரம் வரைக",
             "parameters": {
-              "length": "நீளம்"
+              "length": "நீளம்",
+              "points": "புள்ளிகள்"
             }
           },
           "draw a circle": {
@@ -477,7 +500,8 @@
           },
           "patrol": {
             "parameters": {
-              "actor": "நடிகர்"
+              "actor": "நடிகர்",
+              "speed": "வேகம்"
             }
           }
         },
@@ -1069,7 +1093,8 @@
           "draw a star": {
             "name": "நட்சத்திரம் வரைக",
             "parameters": {
-              "length": "நீளம்"
+              "length": "நீளம்",
+              "points": "புள்ளிகள்"
             }
           },
           "draw a circle": {
@@ -1226,7 +1251,8 @@
           "draw a star": {
             "name": "நட்சத்திரம் வரைக",
             "parameters": {
-              "length": "நீளம்"
+              "length": "நீளம்",
+              "points": "புள்ளிகள்"
             }
           },
           "draw a circle": {
@@ -1902,6 +1928,47 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "நகர்ந்து, கவுண்டருடன் அமிர்தத்தைப் பெறுங்கள் "
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "புள்ளிகள்"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "புள்ளிகள்"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "ஸ்கோரை செட் செய்யவும்"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "ஸ்கோரை செட் செய்யவும்"
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "புள்ளிகள்"
+            }
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "ஒரு வடிவத்தை வரையவும்"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "என்னுடைய ஃபங்ஷன்"
           }
         }
       }

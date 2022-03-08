@@ -9,7 +9,7 @@ class Api::V1::Pd::ApplicationSerializerTest < ::ActionController::TestCase
   test 'Invalid application data does not break serializer result' do
     # Application data could have more than 1 invalid fields
     app_data = build :pd_teacher_application_hash, course: :csp, school: 'invalid code'
-    app = create :pd_teacher_application, form_data_hash: app_data
+    app = build :pd_teacher_application, form_data_hash: app_data
 
     serialized_app = Api::V1::Pd::ApplicationSerializer.new(app, {scope: {}}).attributes
     assert serialized_app.present?

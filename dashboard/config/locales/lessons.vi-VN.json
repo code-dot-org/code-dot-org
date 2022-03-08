@@ -82,6 +82,12 @@
         "text-compression/Text Compression": {
           "student_overview": "Tại một thời điểm nào đó, chúng ta sẽ đạt đến giới hạn vật lý về tốc độ gửi các bit và nếu muốn gửi một lượng lớn thông tin nhanh hơn, chúng ta phải tìm cách biểu diễn cùng một thông tin với số bit ít hơn – chúng ta phải nén dữ liệu."
         },
+        "outbreak/Outbreak": {
+          "overview": "Bài học này kết hợp **phát triển kỹ năng** liên quan đến sự kiện với một **dự án nhỏ**, trong đó học sinh có thể xây dựng bản mô phỏng máy tính của riêng mình trong Sprite Lab. Học sinh sẽ nghiên cứu bản mô phỏng để hiểu tốc độ lây lan nhanh chóng của vi rút và phương pháp làm chậm tốc độ đó.",
+          "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
+          "purpose": "Trong bài học trước, học sinh đã thu thập và giải thích dữ liệu từ một bản mô phỏng đơn giản. Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng.",
+          "student_overview": "Một loại vi rút đã lây lan tới Thị Trấn Quái Vật rồi! Hãy học cách tạo trình mô phỏng vi rút và giúp những con quái vật khỏe mạnh trở lại."
+        },
         "sports/Sports": {
           "overview": "Trong hoạt động trực tuyến này, học sinh sẽ tìm hiểu định nghĩa sự kiện và cách máy tính sử dụng chúng trong các chương trình như video game. Học sinh sẽ xử lý các bài tập lập trình để chương trình phản ứng với các sự kiện (như khi nhấn phím mũi tên). Sau khi hoàn thành bài tập, học sinh sẽ có cơ hội tùy chỉnh game của mình với tốc độ và âm thanh khác nhau.",
           "student_overview": "Bạn đã bao giờ ước mình có thể chơi game ở trường chưa? Trong bài học này, bạn sẽ tự làm game đấy!"
@@ -109,12 +115,6 @@
         "poem-art/lesson-1": {
           "overview": "Trong bài học kết hợp KHMT và ELA này, học sinh sẽ dùng mã lệnh tạo hình chuyển động trong bài thơ để minh họa một cảm xúc trong một bài thơ. Học sinh sẽ đọc và tìm ra cảm xúc trong bài thơ. Sau đó, họ sẽ tìm các hiệu ứng và hình ảnh tương ứng để giúp minh họa cảm xúc trong bài thơ. Cuối cùng, học sinh sẽ sử dụng các sự kiện (mã lệnh) để minh họa sự thay đổi cảm xúc hoặc tạo chuyển động mở hình ảnh mới trong một bài thơ. \n\nBài học này có thể hoàn thành dưới dạng bài học một giờ độc lập. Có một tùy chọn sử dụng bài học này với tư cách là bài đầu tiên trong học phần gồm nhiều bài học có tên gọi [Lập trình với thơ ca](http://code.org/poetry). Cuối học phần Lập trình với thơ ca này, học sinh sẽ tự sáng tác bài thơ của riêng mình và tạo ứng dụng sáng tác thơ để chia sẻ với bạn bè. \n\nLập trình với thơ ca là một phần của giáo trình Kết nối KHMT của Code.org nhằm mục đích kết hợp KHMT vào các môn học khác như toán, ELA và khoa học, tuân thủ các tiêu chuẩn CCSS, NGSS và CSTA.",
           "preparation": "-   Tự xem lại và hoàn thành phần hướng dẫn trực tuyến: [Nghệ Thuật Thơ Ca](http://studio.code.org/s/poem-art).- Nhớ thử các hoạt động trước trước khi yêu cầu học viên hoàn thành chúng. - Kiểm tra kỹ thuật và quyết định xem bạn có cần khắc phục sự cố trước hay không.- Một số cấp độ yêu cầu phát âm thanh. Phát tai nghe trước khi bắt đầu. - [Không bắt buộc] 2 tờ giấy nhớ cho mỗi học viên cho Bài đánh giá."
-        },
-        "outbreak/Outbreak": {
-          "overview": "Bài học này kết hợp **phát triển kỹ năng** liên quan đến sự kiện với một **dự án nhỏ**, trong đó học sinh có thể xây dựng bản mô phỏng máy tính của riêng mình trong Sprite Lab. Học sinh sẽ nghiên cứu bản mô phỏng để hiểu tốc độ lây lan nhanh chóng của vi rút và phương pháp làm chậm tốc độ đó.",
-          "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học trước, học sinh đã thu thập và giải thích dữ liệu từ một bản mô phỏng đơn giản. Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng.",
-          "student_overview": "Một loại vi rút đã lây lan tới Thị Trấn Quái Vật rồi! Hãy học cách tạo trình mô phỏng vi rút và giúp những con quái vật khỏe mạnh trở lại."
         },
         "jigsaw/Jigsaw": {
           "overview": "Bài học này sẽ cung cấp cho học sinh ý tưởng về những hoạt động sẽ diễn ra khi các em đến phòng máy tính. Bài học bắt đầu với một cuộc thảo luận ngắn giới thiệu về cách hành xử trong phòng máy tính, sau đó sẽ tiếp tục sử dụng máy tính để hoàn thành các bài tập trực tuyến.",
@@ -830,6 +830,9 @@
           "preparation": "-   Dành thời gian thực hiện dự án của riêng bạn với cả Họa sĩ và Sprite Lab. Hãy làm quen với các tính năng và hạn chế của từng công cụ.\n-   Sửa **\\*phiếu tự đánh giá** sao cho phù hợp với mục tiêu lớp học và in bản sao cho mỗi học sinh.\n-   Sửa **\\*bảng thiết kế dự án** để phù hợp với lớp học và in một gói cho mỗi học sinh.",
           "purpose": "Học sinh có thể sẵn sàng bắt tay ngay vào việc xây dựng các dự án của mình, nhưng bài học này sẽ giúp hình thành các ý tưởng của họ thành các kế hoạch. Cấu trúc này sẽ giúp những người hay mơ mộng suy nghĩ thực tế hơn và định hướng cho những người đang cảm thấy hoang mang. Hãy cho học sinh nhiều thời gian để tạo và sửa dự án của mình. Thử nghiệm và không thể tránh khỏi sai sót trong bài học này sẽ dạy học sinh cách giải quyết vấn đề cũng như sự kiên trì.",
           "student_overview": "Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!"
+        },
+        "csd7-2021/Similarity Models": {
+          "overview": "Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.\n\n**Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?"
         }
       }
     }

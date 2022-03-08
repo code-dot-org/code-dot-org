@@ -1,17 +1,72 @@
 {
   "key": "text",
-  "name": "text",
+  "name": "text()",
   "category": "Drawing",
-  "palette_params": [
+  "category_key": "drawing",
+  "content": "Draws text onto the display positioned at x and y.\r\n\r\nYou are not limited to just drawing shapes and lines in the display, you can also write text. Use `textFont()` and `textSize()` to change the default font, Arial, and the default size, 12 pixels. Use `textAlign()` to change where the text is displayed relative to the (x,y) position specified. The default is that (x,y) is the top left corner of the text.\r\n\r\nText that does not fit completely within the display area will not be drawn or seen. Use the fourth and fifth parameters to create a text box to display the text in with automatic line wrapping.",
+  "examples": [
     {
-      "name": "str"
+      "name": "Changing color and size",
+      "description": "Use additional text blocks to change the appearance of text on the screen. You can change: size, color, alignment, and other properties.",
+      "code": "```\ntextSize(60);\r\ntextAlign(CENTER, TOP);\r\ntextFont(\"Impact\");\r\nfill(\"yellow\");\r\nstroke(\"red\");\r\nstrokeWeight(5);\r\ntext(\"Ada Lovelace was one of the first computer programmers!\", 0, 0, 400, 400);\n```",
+      "app": "",
+      "image": "https://curriculum.code.org/media/text.PNG",
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
     },
     {
-      "name": "x"
+      "name": "",
+      "description": "",
+      "code": "```\n// Display Hello World in top left corner.\r\ntext(\"Hello world.\", 10, 10);\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
     },
     {
-      "name": "y"
+      "name": "No line wrap vs. line wrap",
+      "description": "Use parameters four and five to create a text box with line wrapping.",
+      "code": "```\n// No text wrapping\r\ntext(\"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\", 10, 100);\r\n\r\n// Use parameters four and five to create a text box with line wrapping.\r\n// This will wrap text in a 100 by 100 box\r\ntext(\"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\", 10, 200, 110, 300);\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
     }
   ],
-  "syntax": "text(str, x, y)"
+  "palette_params": [
+    {
+      "name": "str",
+      "type": "String",
+      "required": true,
+      "description": "The text to be displayed."
+    },
+    {
+      "name": "x",
+      "type": "Number",
+      "required": true,
+      "description": "The x-location in pixels of the text from left to right on the display. Should be a number from 0 to 400, but negative numbers will start the text to the left of the display and numbers greater than 400 will start the text to the right of the display (possibly unseen)."
+    },
+    {
+      "name": "y",
+      "type": "Number",
+      "required": true,
+      "description": "The y-location in pixels of the text from top to bottom on the display. Should be a number from 0 to 400, but negative numbers will start the text above the display and numbers greater than 400 will start the text below the display (possibly unseen)."
+    },
+    {
+      "name": "width",
+      "type": "Number",
+      "required": false,
+      "description": "The width of the rectangular area to display the text. Should be a number from 0 to 400. When the text reaches the end of this width, it will wrap to a new line."
+    },
+    {
+      "name": "height",
+      "type": "Number",
+      "required": false,
+      "description": "The height of the rectangular area to display the text. Should be a number from 0 to 400. When the text reaches the end of this width, it will wrap to a new line."
+    }
+  ],
+  "return_value": "No return value. Outputs to the display only.",
+  "short_description": "Draws text onto the display positioned at x and y.",
+  "syntax": "text(str, x, y)",
+  "tips": "- you can also specify `fill()`, `stroke()` and `strokeWeight()` before calling text to change the color and outline used."
 }

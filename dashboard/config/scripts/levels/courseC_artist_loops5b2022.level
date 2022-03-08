@@ -47,11 +47,16 @@
     "mini_rubric": "false",
     "encrypted_examples": "5ph0YaL9OpVQNH+eJWZkk1eypKkZ6cGJAKcVYYuTEXS6v1FVCS5vY9xPsmMo\n62RfBXNsVJ7luU5HexoUsLbxI51euMorXyZelPUrEIz4lYs3SytXtcvTo9K1\nJY8uH/a200oOq5/z+qwIJ3R7uv8B6IIOLCO/OItdwKEvf9f2IbXYqUYterd5\nZrpxZAsVeEB05BS4jt1A9U/gw1fBHz/Nig==\n",
     "teacher_markdown": "This lesson contains a **mini-project** called *Sticker Design*. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \r\n\r\n* The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \r\n* Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:17.793+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_loops5b_2021\\\"\"],\"cloned_from\":\"courseC_artist_loops5b_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:17.793+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_loops5b_2021\\\"\"],\"cloned_from\":\"courseC_artist_loops5b_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

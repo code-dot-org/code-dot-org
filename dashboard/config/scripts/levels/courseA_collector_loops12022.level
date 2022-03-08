@@ -43,11 +43,16 @@
     "include_shared_functions": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:47:27.038+00:00\",\"changed\":[\"cloned from \\\"courseA_collector_loops1_2021\\\"\"],\"cloned_from\":\"courseA_collector_loops1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:47:27.038+00:00\",\"changed\":[\"cloned from \\\"courseA_collector_loops1_2021\\\"\"],\"cloned_from\":\"courseA_collector_loops1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

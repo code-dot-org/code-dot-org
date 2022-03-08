@@ -17,7 +17,7 @@ class ProgressLevelSet extends React.Component {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     onBubbleClick: PropTypes.func,
     // Redux
     isRtl: PropTypes.bool

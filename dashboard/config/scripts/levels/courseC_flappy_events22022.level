@@ -41,11 +41,16 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The block you need to add is called `set speed`. \",\"hint_id\":\"courseC_flappy_events2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c4329249b80187e165899a20695cfe2a/courseC_flappy_events2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Connect the `set speed` block to the `when run` block to solve this puzzle.\",\"hint_id\":\"courseC_flappy_events2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c813cfa87e2681dd107f02f53d3b83d/courseC_flappy_events2.mp3\"}]",
     "parent_level_id": 21260,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:11.519+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events2_2021\\\"\"],\"cloned_from\":\"courseC_flappy_events2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:11.519+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events2_2021\\\"\"],\"cloned_from\":\"courseC_flappy_events2_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

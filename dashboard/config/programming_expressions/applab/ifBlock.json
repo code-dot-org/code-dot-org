@@ -1,6 +1,0 @@
-{
-  "key": "ifBlock",
-  "name": "ifBlock",
-  "category": "Control",
-  "syntax": "if (__) {\n  __;\n}"
-}

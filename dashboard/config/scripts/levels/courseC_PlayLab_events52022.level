@@ -49,11 +49,16 @@
     "encrypted": "false",
     "default_num_example_blocks": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.600+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events5_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events5_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:17.600+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events5_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_events5_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -21,6 +21,7 @@ de:
       Artist Intro with JR Hildebrande: Künstler-Intro mit JR Hildebrand
       Artist Project: Künstler Projekt
       'Artist: Variables': 'Künstler: Variablen'
+      Assessment: Prüfung
       Attribution: 'Namensnennung (Attribution):'
       Back and Forth: Hin und her
       Basic Conditionals: Einfach Bedingungen
@@ -104,6 +105,7 @@ de:
       'Exploration: Sample Project': 'Erkundung: Beispielprojekt'
       Explore HTML: HTML entdecken
       Exploring more CSS: Mehr CSS erkunden
+      Extra: Extra
       Final Personal Website: Die endgültige persönliche Website
       Finish a Screen: Erkundung llen eines Bildschirms
       Finish the Prototype: Fertigstellen des Prototyps
@@ -114,7 +116,7 @@ de:
       Follow the Mouse: Der Maus folgen
       Fonts and Style: Schriftarten und Stil
       For Loop Fun - Unplugged Activity: Spaß mit Für-Schleifen - Aktivität ohne Computer
-      For Loops: '"Zähle mit"-Schleifen'
+      For Loops: Schleifen mit dem Wiederhol-Block
       For Loops and Color LEDs: Für-Schleifen und Farb-LEDs
       For Loops and Repeat Blocks: Für-Schleifen und Wiederholungsblöcke
       Formatting HTML: HTML-Formatierung
@@ -275,6 +277,7 @@ de:
       Speed it Up, Slow it Down: Beschleunigen, verlangsamen
       Sprite Lab Example Project: Sprite Lab Beispielprojekt
       Sprite Lab Project: Sprite Lab-Projekt
+      Sprite Movement: Sprite-Bewegung
       Sprite Properties: Sprite Eigenschaften
       Sprites and the Draw Loop: Sprites und die Zeichenschleife
       Star Chaser: Sternenjäger
@@ -322,7 +325,7 @@ de:
       'Video: CS Matters': 'Video: Informatik-Angelegenheiten'
       'Video: Code Your Own Flappy Game': 'Video: Programmiere dein eigenes Flappy-Spiel'
       'Video: Conditional Statements': 'Video: Bedingte Anweisungen'
-      'Video: Conditionals': 'Video: Bedingungen'
+      'Video: Conditionals': 'Video: Konditionen mit dem Wenn/Sonst-Block'
       'Video: Conditionals: If Statements': 'Video: Bedingungen: Wenn-Anweisungen'
       'Video: Conditionals: If and If/Else Statements': 'Video: Bedingungen: Wenn- und Wenn/sonst-Anweisungen'
       'Video: Dance Party Events': 'Video: Tanzparty-Ereignisse'

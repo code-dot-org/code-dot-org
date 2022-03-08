@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-11 19:13:54 UTC",
+    "serialized_at": "2022-02-17 17:54:21 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1254,15 +1254,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "spritelab_validation_testing"
-        ],
         "progression": "Validation String testing"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "spritelab_validation_testing"
+          "spritelab_validation_prompt"
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",
@@ -1270,7 +1267,7 @@
         "activity_section.key": "8e5d4b68-ced5-4409-a126-8622a7bbebbf"
       },
       "level_keys": [
-        "spritelab_validation_testing"
+        "spritelab_validation_prompt"
       ]
     },
     {
@@ -1763,9 +1760,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "spritelab_validation_testing",
+        "level.key": "spritelab_validation_prompt",
         "script_level.level_keys": [
-          "spritelab_validation_testing"
+          "spritelab_validation_prompt"
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",

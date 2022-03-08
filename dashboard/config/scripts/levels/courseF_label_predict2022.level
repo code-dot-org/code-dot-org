@@ -58,7 +58,9 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:24:59.701+00:00\",\"changed\":[\"cloned from \\\"courseF_label_predict\\\"\"],\"cloned_from\":\"courseF_label_predict\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:24:59.701+00:00\",\"changed\":[\"cloned from \\\"courseF_label_predict\\\"\"],\"cloned_from\":\"courseF_label_predict\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1517,6 +1517,8 @@
   user_header_flappy: "Flappy"
   user_header_view_all: "Ukázat všechny projekty..."
   user_header_view_project_gallery: "Ukázat projekty"
+  user_header_view_my_projects: "Zobrazit moje projekty"
+  view_all_sections: "Zobrazit všechny sekce"
   view_section: "Pohled řezu"
   view_named_section: "Zobrazit %{section_name}"
   privacy_doc_explanation: "Klikněte zde pro náš dokument o ochraně osobních údajů, který lze sdílet nebo vytisknout vašim studentům."

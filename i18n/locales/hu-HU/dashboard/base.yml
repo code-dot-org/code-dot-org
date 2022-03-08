@@ -687,7 +687,7 @@ hu:
     unplugged_conditionals:
       title: "Feltételek"
     widgets:
-      audience: "Korosztály: 14 +"
+      audience: "14 éves kortól"
       cta: "Ismerd meg, hogyan"
   landing:
     report_bug: "Hiba bejelentése"
@@ -884,3 +884,4 @@ hu:
     not_now: "Most nem"
   behaviors:
     this_sprite: "ez a sprite"
+  teacher_feedback: "Tanári visszajelzés"

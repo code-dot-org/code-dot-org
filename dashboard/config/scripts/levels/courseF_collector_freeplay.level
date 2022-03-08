@@ -77,7 +77,7 @@
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-19T16:30:16.158+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_score\\\"\"],\"cloned_from\":\"courseF_collector_score\"},{\"changed_at\":\"2022-01-19 16:59:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"free_play\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 18:13:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 18:16:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 18:32:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_modal_function_editor\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-19T16:30:16.158+00:00\",\"changed\":[\"cloned from \\\"courseF_collector_score\\\"\"],\"cloned_from\":\"courseF_collector_score\"},{\"changed_at\":\"2022-01-19 16:59:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"free_play\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 18:13:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 18:16:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-19 18:32:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_modal_function_editor\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 14:37:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 14:38:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -92,7 +92,7 @@
       <xml>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs">
-            <field name="IMG">"cave"</field>
+            <field name="IMG">"grid_1"</field>
           </block>
           <block type="gamelab_setBackground">
             <value name="COLOR">
@@ -149,7 +149,7 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <field name="ANIMATION_NAME">"gold coin"</field>
+            <field name="ANIMATION_NAME">"bunny2_1"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
                 <field name="LOCATION">{"x":200,"y":200}</field>
@@ -157,7 +157,7 @@
             </value>
           </block>
           <block type="gamelab_makeNumSprites">
-            <field name="ANIMATION_NAME">"gold coin"</field>
+            <field name="ANIMATION_NAME">"bunny2_1"</field>
             <value name="NUM">
               <block type="math_number">
                 <field name="NUM">3</field>
@@ -166,7 +166,7 @@
           </block>
           <block type="gamelab_makeBurst">
             <field name="EFFECT">"pop"</field>
-            <field name="ANIMATION_NAME">"gold coin"</field>
+            <field name="ANIMATION_NAME">"bunny2_1"</field>
             <value name="NUM">
               <block type="math_number">
                 <field name="NUM">10</field>
@@ -174,7 +174,7 @@
             </value>
           </block>
           <block type="gamelab_allSpritesWithAnimation">
-            <field name="ANIMATION">"gold coin"</field>
+            <field name="ANIMATION">"bunny2_1"</field>
           </block>
           <block type="gamelab_getAllSprites"/>
           <block type="gamelab_destroy"/>
@@ -215,7 +215,7 @@
           </block>
           <block type="gamelab_removeTint"/>
           <block type="gamelab_setAnimation">
-            <field name="ANIMATION">"silver coin"</field>
+            <field name="ANIMATION">"bunny2_1"</field>
           </block>
           <block type="gamelab_jumpTo">
             <value name="LOCATION">
@@ -226,7 +226,7 @@
             <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"gold coin"</field>
+                <field name="ANIMATION">"bunny2_1"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -239,7 +239,7 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"gold coin"</field>
+                <field name="ANIMATION">"bunny2_1"</field>
               </block>
             </value>
             <value name="N">
@@ -252,14 +252,14 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"gold coin"</field>
+                <field name="ANIMATION">"bunny2_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_moveForward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"gold coin"</field>
+                <field name="ANIMATION">"bunny2_1"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -271,7 +271,7 @@
           <block type="gamelab_moveToward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"gold coin"</field>
+                <field name="ANIMATION">"bunny2_1"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -328,7 +328,7 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"gold coin"</field>
+                <field name="ANIMATION">"bunny2_1"</field>
               </block>
             </value>
           </block>
@@ -336,12 +336,12 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"bunny2_1"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"carrot"</field>
+                <field name="ANIMATION">"carrot_1"</field>
               </block>
             </value>
           </block>
@@ -363,49 +363,118 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_setPrompt">
-            <value name="QUESTION">
-              <block type="text" can_disconnect_from_parent="false">
-                <field name="TEXT"/>
-              </block>
-            </value>
-            <value name="VAR">
-              <block type="variables_get" can_disconnect_from_parent="false">
-                <field name="VAR">???</field>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_setPromptWithChoices">
-            <value name="QUESTION">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
-            </value>
-            <value name="VAR">
-              <block type="variables_get" movable="false">
-                <field name="VAR">???</field>
-              </block>
-            </value>
-            <value name="A">
-              <block type="text">
-                <field name="TEXT">choice 1</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="text">
-                <field name="TEXT">choice 2</field>
-              </block>
-            </value>
-            <value name="C">
-              <block type="text">
-                <field name="TEXT">choice 3</field>
-              </block>
-            </value>
-          </block>
           <block type="gamelab_textVariableJoin">
             <field name="VAR">??</field>
           </block>
         </category>
+        <category name="Math">
+          <block type="math_arithmetic">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_random_int">
+            <value name="FROM">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+          <block type="gamelab_getTime">
+            <field name="UNIT">"seconds"</field>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="gamelab_ifVarEquals">
+            <field name="NUM">???</field>
+            <value name="VAL">
+              <block type="text">
+                <field name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_ifVarEquals">
+            <field name="NUM">???</field>
+            <value name="VAL">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_ifVarEquals">
+            <field name="NUM">???</field>
+            <value name="VAL">
+              <block type="gamelab_costumeImage">
+                <field name="COSTUME">"purple bunny"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_withPercentChance">
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+          </block>
+          <block type="controls_if"/>
+          <block type="logic_compare">
+            <field name="OP">EQ</field>
+          </block>
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+          </block>
+          <block type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </block>
+          <block type="gamelab_isKeyPressed">
+            <field name="KEY">"up"</field>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat_ext">
+            <value name="TIMES">
+              <block type="math_number">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+          <block type="controls_for">
+            <field name="VAR">counter</field>
+            <value name="FROM">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_repeatForever"/>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
   </blocks>

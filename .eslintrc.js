@@ -3,7 +3,7 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  plugins: ["react", "mocha", "babel", "cdo-custom-rules"],
+  plugins: ["react", "react-hooks", "mocha", "babel", "cdo-custom-rules"],
   extends: [
     "plugin:prettier/recommended",
     "eslint:recommended",
@@ -57,6 +57,7 @@ module.exports = {
     "react/no-unescaped-entities": "off",
     "react/self-closing-comp": "error",
     "react/no-danger": "error",
+    "react-hooks/rules-of-hooks":"error",
     semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
     strict: "error",

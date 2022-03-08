@@ -610,6 +610,14 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': arrunta
+            '7': fast
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

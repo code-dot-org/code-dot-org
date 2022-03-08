@@ -373,6 +373,26 @@ ku:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': وورچەکان
@@ -819,7 +839,7 @@ ku:
       gamelab_clickedOn:
         text: کاتێک {SPRITE} کرتە دەکرێت
       gamelab_clickedSpritePointer:
-        text: کرتە کرا {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'کۆمێنت: {COMMENT}'
       gamelab_costumeImage:
@@ -846,6 +866,19 @@ ku:
             '"this"': ئەمە
       gamelab_hideTitleScreen:
         text: شاشەی ناونیشان بشارەوە
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -939,9 +972,9 @@ ku:
       gamelab_moveToward:
         text: "{SPRITE} وێنەخاڵ بجوڵێنە {DISTANCE} بە ئاڕاستەی {TARGET}"
       gamelab_newSpritePointer:
-        text: کرتە کرا {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: کرتە کرا {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: دەنگ هەڵکەر {SOUND}
       gamelab_playSoundOptions:
@@ -950,6 +983,10 @@ ku:
           SOUND:
             "'sound://category_animals/bear.mp3'": وورچ
             "'sound://category_animals/dolphin.mp3'": دۆلفین
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): دەتوانرێ بجوڵێنرێ
       gamelab_pointInDirection:
         text: ئاماژە {SPRITE} {DIRECTION}
         options:
@@ -1006,6 +1043,14 @@ ku:
         options:
           PROPERTY:
             '"width"': پانی
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': خاو
+            '5': normal
+            '7': خێرا
+            '9': extra fast
       gamelab_setTint:
         text: ڕەنگی {THIS} بگۆڕە بۆ {COLOR}
       gamelab_setupSim:
@@ -1022,7 +1067,7 @@ ku:
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} کرتە کراوە"
       gamelab_subjectSpritePointer:
-        text: کرتە کرا {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: "{SPRITE} بسوڕێنە {DIRECTION} بە پلەی {N}"
       gamelab_whenDownArrow:

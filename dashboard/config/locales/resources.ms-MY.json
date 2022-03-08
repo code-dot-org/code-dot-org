@@ -9,9 +9,19 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Video"
+        },
         "poem_art_introduction/poem-art/2021": {
           "name": "Seni Puisi 1 - Pengenalan",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Pengenalan Artis",
@@ -24,6 +34,12 @@
           "name": "Senarai Main Spotify (semua peringkat umur)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Video"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Video"
+        },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Senarai Main Spotify (semua peringkat umur)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
@@ -34,15 +50,18 @@
         },
         "ai-ml/oceans/unversioned": {
           "name": "AI: Pembelajaran Mesin",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
           "name": "AI: Kesan ke atas Masyarakat",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Video"
         },
         "ai-training/oceans/unversioned": {
           "name": "AI: Data Latihan & Kepincangan",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Senarai Sajak",
@@ -56,7 +75,8 @@
           "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Video"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "Meneroka Aplikasi",
@@ -77,7 +97,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "Kuasa Kata-kata: Kuasa Kata-kata\t",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Video"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Kuasa Kata-kata: Kata-kata Boleh Menyakitkan",
@@ -125,7 +146,8 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "Video"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "url": "https://youtu.be/mX857v5B4gE"
@@ -144,7 +166,8 @@
           "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "Penilaian"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": " Blok Nirplag (Kursus C-F)",
@@ -156,15 +179,18 @@
         },
         "ai-ml/coursef/2021": {
           "name": "AI: Pembelajaran Mesin",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
         },
         "ai-training/coursef/2021": {
           "name": "AI: Data Latihan & Kepincangan",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "name": "AI: Kesan ke atas Masyarakat",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet",
@@ -176,7 +202,8 @@
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet",
@@ -196,7 +223,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Projek Akhir Asas CS",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Pemetaan Standard CSTA",
@@ -299,7 +327,8 @@
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Bergoyang-goyang-Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Peraturan 20/20/20",
@@ -321,7 +350,8 @@
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
         },
         "unspotted_bugs/courseb/2021": {
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Video"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "url": "https://youtu.be/JoKTqHCni0M"
@@ -330,7 +360,8 @@
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
@@ -341,7 +372,8 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Senario Aplikasi yang Betul",
@@ -351,7 +383,8 @@
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-big-event/courseb/2021": {
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
@@ -437,11 +470,13 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Bergoyang-goyang-Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "Langkah Permulaan - Mencipta Bahagian Kelas",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Peta-peta Gembira",
@@ -473,11 +508,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Bergoyang-goyang-Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "Penyahpepijatan Dengan Butang Langkah",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Imej Wajah Beremosi",
@@ -505,7 +542,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "Pengaturcaraan Berpasangan",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Imej Wajah Beremosi",
@@ -517,7 +555,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Imej Wajah Beremosi",
@@ -531,7 +570,8 @@
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-big-event/coursea/2021": {
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
@@ -640,7 +680,8 @@
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair-programming-vid/coursec/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Petua Aktiviti Utama Asas CS",
@@ -672,7 +713,8 @@
           "url": "https://youtu.be/u0WV9shCoak"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-big-event/coursec/2021": {
           "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
@@ -683,7 +725,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "Tahap Pengaturcaraan Terbuka",
@@ -711,7 +754,8 @@
           "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
@@ -814,7 +858,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Pengaturcaraan kertas graf",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Pengaturcaraan kertas graf",
@@ -856,7 +901,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "Tahap Pengaturcaraan Terbuka",
@@ -887,7 +933,8 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "url": "https://youtu.be/UymN4lTL50s"
@@ -900,7 +947,8 @@
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "Penilaian"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "url": "https://youtu.be/TbUaEnAYPjI"
@@ -961,7 +1009,8 @@
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair_programming/express/2021": {
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "Blok Nirplag (Kursus C-F)",
@@ -969,10 +1018,12 @@
         },
         "artist_introduction/express/2021": {
           "name": "Pengenalan Artis",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video"
         },
         "turns_angles/express/2021": {
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video"
         },
         "turns_angles_1/express/2021": {
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
@@ -995,7 +1046,8 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Panduan Projek Majlis Tari-Menari",
@@ -1011,7 +1063,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "Video Pengaturcaraan Berpasangan",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "Blok Nirplag (Kursus C-F)",
@@ -1047,7 +1100,8 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Projek Akhir Asas CS",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Pemetaan Standard CSTA",
@@ -1078,15 +1132,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Peraturan 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Video"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Bergoyang-goyang-Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Pemetaan Standard CSTA",
@@ -1145,7 +1202,8 @@
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Jeda dan Fikir Dalam Talian",
-          "url": "https://youtu.be/X_duZ-1LApg"
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "Video"
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "Mengenai Panduan Perancangan Saya",
@@ -1157,7 +1215,8 @@
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Etika Perkongsian Digital (Video)",
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
@@ -1179,7 +1238,8 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Nirplag Fungsi: Penulisan Lagu",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "Nirplag Fungsi: Penulisan Lagu",
@@ -1203,7 +1263,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Projek Akhir Asas CS",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Rubrik"
         },
         "design-process/coursee/2021": {
           "name": "Proses Reka Bentuk",
@@ -1260,6 +1321,250 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Pengubahsuaian Pelajaran Maya",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Melihat AI",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: Data Latihan & Kepincangan",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Rubrik"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Rubrik"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "Rubrik"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Video"
+        },
+        "app-presentation/csd/2021": {
+          "type": "Rubrik"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Forum Guru"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "Video"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
+        },
+        "functions_2/csd/2021": {
+          "name": "Fungsi"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "Rubrik"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "Video"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "Video"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Rubrik"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Video"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Rubrik"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Pembelajaran Mesin",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Video"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Rubrik"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Video"
+        },
+        "variables_1/csd/2021": {
+          "name": "Pembolehubah"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "Video"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Jin"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "Rubrik"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "Video"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Rubrik"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "Video"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "Video"
+        },
+        "interactive_card/csd/2021": {
+          "type": "Rubrik"
+        },
+        "velocity_1/csd/2021": {
+          "type": "Video"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "Rubrik"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "Rubrik"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Fungsi",
+          "type": "Video"
+        },
+        "functions_1/csd/2021": {
+          "name": "Fungsi"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Rubrik"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Forum Guru"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "Rubrik"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Video"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Video"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "Rubrik"
+        },
+        "lists/csd/2021": {
+          "name": "Senarai"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Rubrik"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Rubrik"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "Video"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Video"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Rubrik"
         }
       }
     }

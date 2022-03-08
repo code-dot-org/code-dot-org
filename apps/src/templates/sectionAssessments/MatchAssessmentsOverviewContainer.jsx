@@ -13,7 +13,6 @@ import {
   matchDataPropType
 } from './assessmentDataShapes';
 import i18n from '@cdo/locale';
-import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
 class MatchAssessmentsOverviewContainer extends Component {
   static propTypes = {
@@ -89,7 +88,7 @@ export default connect(
   state => ({
     questionAnswerData: getMatchSectionSummary(state),
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
-    totalStudentCount: getTotalStudentCount(state),
+    totalStudentCount: state.teacherSections.selectedStudents.length,
     studentId: state.sectionAssessments.studentId
   }),
   dispatch => ({

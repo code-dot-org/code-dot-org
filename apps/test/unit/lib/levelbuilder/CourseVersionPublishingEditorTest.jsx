@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
-describe('CourseVersionPublishedStateSelector', () => {
+describe('CourseVersionPublishingEditor', () => {
   let defaultProps,
     updatePilotExperiment,
     updateFamilyName,
@@ -31,7 +31,8 @@ describe('CourseVersionPublishedStateSelector', () => {
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
       initialPublishedState: PublishedState.beta,
-      publishedState: PublishedState.beta
+      publishedState: PublishedState.beta,
+      courseOfferingEditorLink: null
     };
   });
 
@@ -45,7 +46,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     );
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
-    ).to.equal(5);
+    ).to.equal(7);
     expect(
       wrapper
         .find('.publishedStateSelector')
@@ -81,6 +82,20 @@ describe('CourseVersionPublishedStateSelector', () => {
         .at(4)
         .props().value
     ).to.equal('stable');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(5)
+        .props().value
+    ).to.equal('sunsetting');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(6)
+        .props().value
+    ).to.equal('deprecated');
   });
 
   it('published state dropdown shows only available published states when course is pilot', () => {
@@ -93,13 +108,28 @@ describe('CourseVersionPublishedStateSelector', () => {
     );
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
-    ).to.equal(1);
+    ).to.equal(3);
     expect(
       wrapper
         .find('.publishedStateSelector')
         .find('option')
+        .at(0)
         .props().value
     ).to.equal('pilot');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(1)
+        .props().value
+    ).to.equal('sunsetting');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(2)
+        .props().value
+    ).to.equal('deprecated');
   });
 
   it('published state dropdown shows only available published states when course is beta', () => {
@@ -112,7 +142,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     );
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
-    ).to.equal(3);
+    ).to.equal(5);
     expect(
       wrapper
         .find('.publishedStateSelector')
@@ -134,6 +164,20 @@ describe('CourseVersionPublishedStateSelector', () => {
         .at(2)
         .props().value
     ).to.equal('stable');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(3)
+        .props().value
+    ).to.equal('sunsetting');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(4)
+        .props().value
+    ).to.equal('deprecated');
   });
 
   it('published state dropdown shows only available published states when course is preview', () => {
@@ -146,7 +190,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     );
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
-    ).to.equal(2);
+    ).to.equal(4);
     expect(
       wrapper
         .find('.publishedStateSelector')
@@ -161,6 +205,20 @@ describe('CourseVersionPublishedStateSelector', () => {
         .at(1)
         .props().value
     ).to.equal('stable');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(2)
+        .props().value
+    ).to.equal('sunsetting');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(3)
+        .props().value
+    ).to.equal('deprecated');
   });
 
   it('published state dropdown shows only available published states when course is stable', () => {
@@ -173,13 +231,74 @@ describe('CourseVersionPublishedStateSelector', () => {
     );
     expect(
       wrapper.find('.publishedStateSelector').find('option').length
+    ).to.equal(3);
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(0)
+        .props().value
+    ).to.equal('stable');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(1)
+        .props().value
+    ).to.equal('sunsetting');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(2)
+        .props().value
+    ).to.equal('deprecated');
+  });
+
+  it('published state dropdown shows only available published states when course is sunsetting', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        initialPublishedState={PublishedState.sunsetting}
+        publishedState={PublishedState.sunsetting}
+      />
+    );
+    expect(
+      wrapper.find('.publishedStateSelector').find('option').length
+    ).to.equal(2);
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(0)
+        .props().value
+    ).to.equal('sunsetting');
+    expect(
+      wrapper
+        .find('.publishedStateSelector')
+        .find('option')
+        .at(1)
+        .props().value
+    ).to.equal('deprecated');
+  });
+
+  it('published state dropdown shows only available published states when course is deprecated', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        initialPublishedState={PublishedState.deprecated}
+        publishedState={PublishedState.deprecated}
+      />
+    );
+    expect(
+      wrapper.find('.publishedStateSelector').find('option').length
     ).to.equal(1);
     expect(
       wrapper
         .find('.publishedStateSelector')
         .find('option')
         .props().value
-    ).to.equal('stable');
+    ).to.equal('deprecated');
   });
 
   it('pilot input field shows if published state is pilot', () => {
@@ -292,5 +411,29 @@ describe('CourseVersionPublishedStateSelector', () => {
       .instance()
       .handleNewFamilyNameChange({target: {value: 'new-family'}});
     expect(wrapper.find('.familyNameSelector').props().disabled).to.be.true;
+  });
+
+  it('displays course offering editor button when courseOfferingEditorLink', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        courseOfferingEditorLink={'/link/link'}
+      />
+    );
+    expect(wrapper.find('Button').length).to.equal(1);
+    expect(wrapper.find('Button').props().text).to.equal(
+      'Edit Course Offering'
+    );
+    expect(wrapper.find('Button').props().href).to.equal('/link/link');
+  });
+
+  it('does not display course offering editor button when courseOfferingEditorLink is null', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        courseOfferingEditorLink={null}
+      />
+    );
+    expect(wrapper.find('Button').length).to.equal(0);
   });
 });

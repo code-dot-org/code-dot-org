@@ -938,6 +938,14 @@ et:
             '"scale"': suurus
             '"width"': laius
             '"height"': kõrgus
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': aeglane
+            '5': tavaline
+            '7': kiire
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

@@ -60,11 +60,16 @@
     "songs": "[\"nether2\"]",
     "parent_level_id": 21549,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:51.040+00:00\",\"changed\":[\"cloned from \\\"MC_HOC_2017_Ali_2021\\\"\"],\"cloned_from\":\"MC_HOC_2017_Ali_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:48:51.040+00:00\",\"changed\":[\"cloned from \\\"MC_HOC_2017_Ali_2021\\\"\"],\"cloned_from\":\"MC_HOC_2017_Ali_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "functions": 2
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>

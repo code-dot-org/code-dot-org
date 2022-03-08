@@ -5,11 +5,12 @@ import {
   ButtonsWithAdditionalTextFields,
   ButtonsWithAdditionalTextFieldsFromOptions
 } from '../form/Buttons';
-import {defaultOptions} from '../LabeledFormComponent';
+import {useDefaultOptions} from '../LabeledFormComponent';
 
 export const LabeledRadioButtons = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'radio',
     ...props
   };
@@ -21,8 +22,9 @@ LabeledRadioButtons.propTypes = {
 };
 
 export const LabeledRadioButtonsWithAdditionalTextFields = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'radio',
     textFieldMap: props.textFieldMap,
     ...props
@@ -36,8 +38,9 @@ LabeledRadioButtonsWithAdditionalTextFields.propTypes = {
 };
 
 export const LabeledDynamicRadioButtonsWithAdditionalTextFields = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'radio',
     options: props.options,
     textFieldMap: props.textFieldMap,

@@ -262,6 +262,7 @@ Dashboard::Application.routes.draw do
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
+      post 'update_start_code'
     end
   end
 
@@ -275,6 +276,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :course_offerings, only: [:edit, :update], param: 'key'
+
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
 
@@ -285,6 +288,9 @@ Dashboard::Application.routes.draw do
       get 'code'
       get 'standards'
       get 'get_rollup_resources'
+    end
+
+    resources :reference_guides, only: [:show], param: 'key', path: 'guides' do
     end
   end
 
@@ -324,8 +330,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_environments, only: [:edit, :update], param: 'name' do
-    resources :programming_expressions, param: 'programming_expression_key' do
+  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show], param: 'name' do
+    resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'
       end
@@ -399,6 +405,12 @@ Dashboard::Application.routes.draw do
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
+  get '/certificate_images/:filename', to: 'certificate_images#show'
+
+  get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+
+  get '/certificates/:encoded_params', to: 'certificates#show'
+
   get '/beta', to: redirect('/')
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
@@ -466,6 +478,8 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
   get '/admin/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
+  get '/admin/user_projects', to: 'admin_users#user_projects_form', as: 'user_projects_form'
+  put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
   get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
   post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
   get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
@@ -763,6 +777,7 @@ Dashboard::Application.routes.draw do
       get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
+      get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
@@ -867,9 +882,6 @@ Dashboard::Application.routes.draw do
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
-  get '/javabuilder_connection_test/csrf_token', to: 'javabuilder_connection_test#get_csrf_token'
-  post '/javabuilder_connection_test/log', to: 'javabuilder_connection_test#log'
-
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do
       get 'sprite_upload'
@@ -921,4 +933,11 @@ Dashboard::Application.routes.draw do
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
   get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
+
+  # offline-service-worker*.js needs to be loaded the the root level of the
+  # domain('studio.code.org/').
+  # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
+  get '/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
+  # Adds the experiment cookie in the User's browser which allows them to experience offline features
+  get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
 end

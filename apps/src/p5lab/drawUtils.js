@@ -1,3 +1,6 @@
+import {APP_HEIGHT} from './constants';
+import * as colors from '@cdo/apps/util/color';
+
 /**
  * A set of P5 helpers for drawing.
  */
@@ -107,12 +110,45 @@ export function multilineText(
   x,
   y,
   size,
-  {color = 'black', horizontalAlign = 'left', verticalAlign = 'top'} = {}
+  {color = colors.black, horizontalAlign = 'left', verticalAlign = 'top'} = {}
 ) {
   p5.push();
   p5.textSize(size);
   p5.textAlign(horizontalAlign, verticalAlign);
   p5.fill(color);
   lines.forEach((line, i) => p5.text(line, x, y + i * size));
+  p5.pop();
+}
+
+/**
+ * Draw a validation bar - a P5 shape comprised of a rectangle
+ * at the bottom of the canvas.
+ *
+ * @param {P5} p5
+ * @param {Number} width
+ * @param {String} state
+ * @returns {Object}
+ */
+export function validationBar(
+  p5,
+  width,
+  state,
+  {x = 0, y = APP_HEIGHT - 10, height = 10} = {}
+) {
+  let color = colors.black;
+  switch (state) {
+    case 'fail':
+      color = colors.purple;
+      break;
+    case 'pass':
+    case 'bonus':
+      color = colors.teal;
+      break;
+  }
+  p5.push();
+  p5.noStroke();
+  p5.fill(color);
+  p5.beginShape();
+  p5.rect(x, y, width, height);
   p5.pop();
 }

@@ -471,7 +471,7 @@
           "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स एकत्र जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "जेव्हा तुम्हाला हिंट हवी असेल तेव्हा लाईटबल्बवर क्लिक करा!  "
+          "courseA_maze_seq1_1": "जेव्हा तुम्हाला हिंट हवी असेल तेव्हा लाईटबल्बवर क्लिक करा!"
         },
         "courseB_Scrat_ramp3a_2021": {
           "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील. "
@@ -740,6 +740,16 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "कोड ब्लॉक्स येथे शोधा.",
           "run_button": "या बटणासह आपल्या अॅनिमेशनची चाचणी घ्या."
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "स्क्रीनचा रंग हिरवा झाला का? असेल तर \"Finish\" दाबा, नसेल तर \"Reset\" दाबा, तुमचा कोड बदला आणि पुन्हा 'Run' दाबा."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "तुम्ही आता डिझाईन मोडमध्ये आहात."
+        },
+        "frozen line": {
+          "run": "तुमचा प्रोग्रॅम करून पाहण्यासाठी \"रन\" दाबा!",
+          "move_elsa_forward": "\"move forward\" ब्लॉक ड्रॅग करा आणि एल्साला पुढे जायला लावण्यासाठी तो \"When Run\" ब्लॉकच्या खाली जोडा."
         }
       }
     }

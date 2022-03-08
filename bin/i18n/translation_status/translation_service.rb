@@ -12,8 +12,12 @@ class TranslationService
   end
 
   # Returns true if a translation exists for a given key, otherwise returns false.
-  def translated?(locale, key)
-    I18n.exists?(key, locale: locale)
+  def translated?(locale, key, scope = "")
+    if scope == ""
+      I18n.exists?(key, locale: locale)
+    else
+      !I18n.t(key, scope: JSON.parse(scope), smart: true).include?("translation missing:")
+    end
   end
 
   # Aggregate all blockly-mooc and blockly-core translation JSON files to be loaded into i18n

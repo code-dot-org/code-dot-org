@@ -3,6 +3,7 @@ import Accelerometer from '@cdo/apps/lib/kits/maker/boards/microBit/Acceleromete
 import {MicrobitStubBoard} from '../makeStubBoard';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import sinon from 'sinon';
+import {ACCEL_EVENT_ID} from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataWrapper';
 
 describe('MicroBitAccelerometer', function() {
   let boardClient;
@@ -165,7 +166,7 @@ describe('MicroBitAccelerometer', function() {
     });
 
     it('emits the shake event when only one variable changes', () => {
-      boardClient.receivedEvent(27, 11);
+      boardClient.receivedEvent(ACCEL_EVENT_ID, 11);
       expect(emitSpy).to.have.been.calledOnce;
       expect(emitSpy).to.have.been.calledWith('shake');
     });

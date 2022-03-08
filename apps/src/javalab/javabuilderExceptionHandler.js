@@ -10,7 +10,14 @@ import {
 } from './constants';
 
 export function handleException(exceptionDetails, callback) {
-  const type = exceptionDetails.value;
+  const error = `${EXCEPTION_PREFIX} ${getExceptionMessage(
+    exceptionDetails,
+    exceptionDetails.value
+  )}`;
+  callback(error);
+}
+
+export function getExceptionMessage(exceptionDetails, type) {
   const {connectionId, cause, causeMessage, fallbackMessage} =
     exceptionDetails.detail && exceptionDetails.detail;
   let error;
@@ -130,6 +137,5 @@ export function handleException(exceptionDetails, callback) {
       error = fallbackMessage || msg.unknownError({type, connectionId});
       break;
   }
-  error = `${EXCEPTION_PREFIX} ${error}`;
-  callback(error);
+  return error;
 }

@@ -18,6 +18,7 @@ sk:
       Artist Intro with JR Hildebrande: Úvod k Umelcovi s JR Hildebrandom
       Artist Project: Umelec - Projekt
       'Artist: Variables': 'Umelec: Premenné'
+      Assessment: Hodnotenie
       Attribution: Uvedenie zdroja
       Back and Forth: Dozadu a dopredu
       Basic Conditionals: Základné podmienky
@@ -106,7 +107,7 @@ sk:
       Follow the Mouse: Sleduj myš
       Fonts and Style: Druhy a štýly písma
       For Loop Fun - Unplugged Activity: Zábava s cyklami „for“ – aktivita bez počítača
-      For Loops: Cykly "For"
+      For Loops: Cykly "Pre"
       For Loops and Color LEDs: Cykly "for" a farebné LEDky
       For Loops and Repeat Blocks: Cykly "for" a opakujúce sa bloky
       Free Play: Voľná hra
@@ -257,6 +258,7 @@ sk:
       Speed it Up, Slow it Down: Zrýchli, spomaľ
       Sprite Lab Example Project: Sprite Lab ukážkový projekt
       Sprite Lab Project: Lab postáv projekt
+      Sprite Movement: Pohyb "sprite" objektu
       Sprite Properties: Vlastnosti postáv
       Sprite Velocity: Rýchlosť "sprite" objektu
       Sprites and the Draw Loop: '"Sprite" objekty a vykresľovací cyklus'
@@ -305,7 +307,7 @@ sk:
       'Video: CS Matters': 'Video: Na informatike záleží'
       'Video: Code Your Own Flappy Game': 'Video: Vytvor si vlastnú hru Flappy'
       'Video: Conditional Statements': 'Video: Podmienené príkazy'
-      'Video: Conditionals': 'Video: Podmienky'
+      'Video: Conditionals': 'Video: Blok Ak/Inak'
       'Video: Conditionals: If Statements': 'Video: Podmienky – Príkazy „ak“'
       'Video: Conditionals: If and If/Else Statements': 'Video: Podmienky – Príkazy
         „ak“ a „ak/inak“'

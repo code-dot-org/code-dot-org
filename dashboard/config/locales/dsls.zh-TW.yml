@@ -5970,3 +5970,178 @@ zh-TW:
           ## 資源
 
           * [變量介紹](https://youtu.be/G41G_PEWFjE) - 視訊 ([下載](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games variables practice_2021:
+        display_name: 變數的練習
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 查看以下的程式碼，並且預測網頁內容的標題會如何顯示。從右側的選項中選擇正確的答案。
+        markdown: |
+          <pre>
+          &lt;h3&gt; 蛋 &lt;/h3&gt;
+          &lt;h1&gt; 培根 &lt;/h1&gt;
+          &lt;h6&gt; 鬆餅 &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Level Types:** This multiple choice question that asks students to choose how HTML headings will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side.  Students who have successfully answered the question will have a green bubble.  Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer.
+
+          <div class="clear"></div>
+      CSD U2 CSS practice_pilot_2021:
+        display_name: 透過 CSS 修改文字樣式
+      CSD U2 Image challenge_pilot_2021:
+        display_name: 增加圖像
+      CSD U2 Image practice_pilot_2021:
+        display_name: 增加圖像
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: Match the buggy HTML code with the description of its bug.
+        questions:
+        - text: The `src` attribute is spelled incorrectly.
+        - text: The `src` and `alt` attributes are switched
+        - text: The file extension (.jpg) is missing from the image address
+        - text: The image address is not given as a `src` attribute
+        - text: There is a space in the file name
+        teacher_markdown: 'Although this level can be used to assess student understanding
+          of the syntax of the `<img>` tag, its main purpose is to make students aware
+          of the most common types of bugs they may encounter when adding images to
+          web pages.
+
+'
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: 在此描述
+        teacher_markdown: |
+          # 計畫檢查點
+
+          在同意讓學生們繼續剩下的階段之前，檢查他們的計畫。
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: 標題
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: 練習
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U6 LED create intro_2021:
+        content1: 在此描述
+        markdown: |
+          # LED 應用程式
+
+          在上一個等級中, 你完成了一個APP, 其在螢幕上有許多不同的按紐可用來控制LED. 在接下來的兩個等級中, 你將會看到其他應用程式的範例, 並且有機會自己動作做一個.
+
+          看完這些範例後, 思考有哪些代碼可能對這個應用程式是有用的並與你的夥伴一起完成它.
+          As you look at the examples, think of what code might be useful for the app that you and your partner want to create.
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: 在此描述
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: 閱讀這份程式並且預測這個應用程式將會如何執行
+        title: 預測一下
+      CSD games cake challenge choice_2021:
+        display_name: 挑戰
+      CSD games functions practice choice_2021:
+        display_name: 函式的練習
+      CSD games platform challenge choice_2021:
+        display_name: 挑戰
+      CSD web conditionals practice choice_2021:
+        display_name: 條件判斷的練習
+      CSD web draw loop practice choice_2021:
+        display_name: 練習
+      CSD web movement practice choice_2021:
+        display_name: 練習
+      CSD web text practice choice_2021:
+        display_name: 練習
+      csd-pre-survey-levelgroup_21_22:
+        title: 發現計算機科學, 學生先修課程調查

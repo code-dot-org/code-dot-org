@@ -3,7 +3,7 @@
 #
 "project_identifier" : "codeorg-testing"
 "project_id" : "346087"
-"base_path" : "../../i18n/locales"
+"base_path" : "i18n/locales"
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials

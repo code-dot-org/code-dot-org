@@ -1,6 +1,0 @@
-{
-  "key": "mouseDragged",
-  "name": "mouseDragged",
-  "category": "World",
-  "syntax": "function mouseDragged() {}"
-}

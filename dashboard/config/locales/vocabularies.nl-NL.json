@@ -196,6 +196,30 @@
         },
         "define/coursee/2021": {
           "word": "Definiëren"
+        },
+        "user_interface/csd/2021": {
+          "word": "Gebruikersinterface"
+        },
+        "debugging/csd/2021": {
+          "word": "Foutopsporing"
+        },
+        "variable/csd/2021": {
+          "word": "Variabele"
+        },
+        "conditionals/csd/2021": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstractie"
+        },
+        "function/csd/2021": {
+          "word": "Functie"
+        },
+        "input/csd/2021": {
+          "word": "Invoer"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

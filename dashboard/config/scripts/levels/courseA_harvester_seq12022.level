@@ -39,11 +39,15 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to pick the corn when the harvester finds it!\\n\\n<xml>\\n  <block type=\\\"harvester_corn\\\"/>\\n</xml>\",\"hint_id\":\"courseA_harvester_seq1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/516a3bf32df69335152bc13d2e7a130e/courseA_harvester_seq1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"The harvester will need to move East three times to get to the corn. Use this block:\\n\\n<xml>\\n  <block type=\\\"maze_moveEast\\\"/>\\n</xml>\",\"hint_id\":\"courseA_harvester_seq1_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f23dfa35362e3888844e27175f87f756/courseA_harvester_seq1.mp3\"}]",
     "parent_level_id": 21072,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:34.487+00:00\",\"changed\":[\"cloned from \\\"courseA_harvester_seq1_2021\\\"\"],\"cloned_from\":\"courseA_harvester_seq1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:07:34.487+00:00\",\"changed\":[\"cloned from \\\"courseA_harvester_seq1_2021\\\"\"],\"cloned_from\":\"courseA_harvester_seq1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

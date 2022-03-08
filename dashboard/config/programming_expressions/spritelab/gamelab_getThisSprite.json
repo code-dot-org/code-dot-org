@@ -1,7 +1,0 @@
-{
-  "key": "gamelab_getThisSprite",
-  "name": "getThisSprite",
-  "category": "Sprites",
-  "block_name": "gamelab_getThisSprite",
-  "syntax": "getThisSprite"
-}

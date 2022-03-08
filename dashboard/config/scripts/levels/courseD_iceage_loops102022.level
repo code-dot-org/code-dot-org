@@ -37,11 +37,16 @@
     "show_type_hints": "false",
     "short_instructions": "Help Scrat get all the way over to the acorn!",
     "long_instructions": "Help Scrat get all the way over to the acorn!",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:26.823+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops10_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops10_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:26.823+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops10_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops10_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

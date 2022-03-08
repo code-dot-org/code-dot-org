@@ -218,6 +218,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compressione senza perdita"
         },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "Un'azione che fa accadere qualcosa."
+        },
         "event/sports/unversioned": {
           "word": "Evento",
           "definition": "Un'azione che fa accadere qualcosa."
@@ -305,13 +309,13 @@
           "word": "Linea",
           "definition": "(poesia) - una suddivisione di una poesia disposta in una riga che termina al margine destro. "
         },
-        "event/outbreak/unversioned": {
-          "word": "Evento",
-          "definition": "Un'azione che fa accadere qualcosa."
-        },
         "sprite/coursef/2021": {
           "word": "Personaggio",
           "definition": "Un disegno sullo schermo con una posizione, dimensioni e aspetto."
+        },
+        "user/coursef/2021": {
+          "word": "Utente",
+          "definition": "Qualcuno che usa un oggetto, inclusi software e hardware."
         },
         "behavior/coursef/2021": {
           "word": "Comportamento",
@@ -322,7 +326,8 @@
           "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritmo"
+          "word": "Algoritmo",
+          "definition": "Un elenco di passaggi per completare un'attività."
         },
         "event/coursef/2021": {
           "word": "Evento",
@@ -332,8 +337,13 @@
           "word": "Variabile",
           "definition": "Un nome per un valore che può cambiare."
         },
+        "prompt/coursef/2021": {
+          "word": "Richiesta",
+          "definition": "Un messaggio sullo schermo del computer in attesa di input da parte dell'utente."
+        },
         "input/coursef/2021": {
-          "word": "Input"
+          "word": "Input",
+          "definition": "Le informazioni che i computer ricevono dagli utenti."
         },
         "loop/coursef/2021": {
           "word": "Ciclo",
@@ -594,6 +604,10 @@
           "word": "Istruzioni condizionali",
           "definition": "Dichiarazioni che funzionano solo a determinate condizioni."
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocodice",
+          "definition": "Una descrizione in linguaggio semplice dei passaggi di un algoritmo"
+        },
         "condition/coursed/2021": {
           "word": "Condizione",
           "definition": "Una situazione che un programma controlla per decidere se permettere o meno una certa azione."
@@ -642,6 +656,9 @@
           "word": "Evento",
           "definition": "Un'azione che fa accadere qualcosa."
         },
+        "code/express/2021": {
+          "definition": "scrivere codice o scrivere istruzioni per un computer."
+        },
         "loop/express/2021": {
           "word": "Ciclo",
           "definition": "L'azione di ripetere qualcosa più e più volte."
@@ -677,6 +694,10 @@
         "variable/express/2021": {
           "word": "Variabile",
           "definition": "Un nome per un valore che può cambiare."
+        },
+        "prompt/express/2021": {
+          "word": "immediato",
+          "definition": "Un messaggio sullo schermo del computer in attesa di input da parte dell'utente."
         },
         "for_loop/express/2021": {
           "word": "Cicli con contatore",
@@ -805,6 +826,58 @@
         "try/coursee/2021": {
           "word": "Prova",
           "definition": "Cerca di mettere in atto il tuo piano"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
+          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+        },
+        "user_interface/csd/2021": {
+          "word": "Interfaccia Utente"
+        },
+        "bug/csd/2021": {
+          "word": "Bug (errore)",
+          "definition": "Parte di un programma che non funziona correttamente."
+        },
+        "for_loop/csd/2021": {
+          "word": "Cicli con contatore",
+          "definition": "Un’istruzione di ripetizione (ciclo) basata su una variabile contatore, caratterizzata da un valore iniziale, un valore finale ed un “passo” (la quantità di cui viene incrementata o decrementata ad ogni ripetizione)."
+        },
+        "debugging/csd/2021": {
+          "word": "Correzione errori (debugging)",
+          "definition": "Individuazione e risoluzione di problemi in un algoritmo o in un programma."
+        },
+        "program/csd/2021": {
+          "word": "Programma",
+          "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
+        },
+        "variable/csd/2021": {
+          "word": "Variabile",
+          "definition": "Un nome per un valore che può cambiare."
+        },
+        "sprite/csd/2021": {
+          "word": "Personaggio"
+        },
+        "condition/csd/2021": {
+          "word": "Condizione"
+        },
+        "conditionals/csd/2021": {
+          "word": "Istruzioni condizionali"
+        },
+        "abstraction/csd/2021": {
+          "word": "Astrazione"
+        },
+        "function/csd/2021": {
+          "word": "Funzione"
+        },
+        "input/csd/2021": {
+          "word": "Input"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Orme digitali"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright",
+          "definition": "il diritto legale esclusivo di stampare, pubblicare, eseguire, filmare o registrare materiale letterario, artistico o musicale e di autorizzare altri a fare lo stesso"
         }
       }
     }

@@ -310,6 +310,14 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': normal
+            '7': سریع
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

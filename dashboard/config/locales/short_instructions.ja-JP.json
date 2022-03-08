@@ -3646,7 +3646,13 @@
         "poetry_hoc_spriteSizes": "すでに作成したスプライトのサイズを変更することができます。 ",
         "New Artist Project": "カッコイイのを描いてみましょう！コードはプロジェクトとして保存されるので、いつでも戻ることができます。",
         "New Basketball Project": "自分だけのバスケットボール ゲームを作りましょう。ルールは自由に変更できます。完了したら、「共有」ボタンをクリックして、友だちがゲームをスマホで試せるようにしよう。",
-        "New Bounce Project": "バウンス ゲームを作成しましょう。デザインやルールは自由に変更できます。完了したら、「共有」ボタンをクリックして、友だちがゲームをスマホで試せるようにしよう。"
+        "New Bounce Project": "バウンス ゲームを作成しましょう。デザインやルールは自由に変更できます。完了したら、「共有」ボタンをクリックして、友だちがゲームをスマホで試せるようにしよう。",
+        "CSD U5 black white images pixelation 2_2021": "スマイリーフェイスを描く (画像を表示するにはここをクリック)",
+        "CSD U5 black white images pixelation 3_2021": "イメージを検索するスライダーの幅と高さを変更します(詳細はこちら)",
+        "CSD U5 black white images pixelation 4_2021": "スマイリーフェイスに眉毛を追加(画像を表示するにはここをクリック)",
+        "CSD U5 black white images pixelation 5_2021": "好きなものをかく",
+        "CSD U5 black white images pixelation_2021": "0 と 1 を入力して X の形を完成させる",
+        "CSDU6 arrays select rainbow_2021": "配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)"
       }
     }
   }

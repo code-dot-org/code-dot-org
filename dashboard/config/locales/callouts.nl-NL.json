@@ -1088,6 +1088,90 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Hier vindt u codeblokken. ",
           "run_button": "Gebruik deze knop om uw animatie te testen. "
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Klik hier om het raster te tonen."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Wijzig het nummer hier"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Hier is de code"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Hier is de code",
+          "CSD_U3_rect_c2": "Sleep dit blok in de code-gebied."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Wijzig het nummer hier"
         }
       }
     }

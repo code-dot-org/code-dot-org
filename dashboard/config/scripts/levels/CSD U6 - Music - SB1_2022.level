@@ -48,7 +48,7 @@
       "onEvent": null,
       "buzzer.note": null
     },
-    "encrypted_examples": "MornGGADhQGOa3g4eaGogldwz4rUbS8VhWBKWB/aTYAudR7qApaI3QaqgO64\n6Q/Sc7aRWl2tB5dQPsWErFumkg==\n",
+    "encrypted_examples": "jpG6QLTUxyOC6PAxLQzrBFrZ1SHlgSzy1HQNm8reh7o20OmqWabxKp7K+Oi8\nMhuEWsx7x8ItGucF+iGpet2jzg==\n",
     "parent_level_id": 20524,
     "name_suffix": "_2021",
     "reference_links": [
@@ -69,7 +69,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-03T23:24:42.242+00:00\",\"changed\":[\"cloned from \\\"CSDU6 piano with notes_2021\\\"\"],\"cloned_from\":\"CSDU6 piano with notes_2021\"},{\"changed_at\":\"2021-12-03 23:26:48 +0000\",\"changed\":[\"hide_share_and_remix\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:23:18 +0000\",\"changed\":[\"hide_share_and_remix\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-03T23:24:42.242+00:00\",\"changed\":[\"cloned from \\\"CSDU6 piano with notes_2021\\\"\"],\"cloned_from\":\"CSDU6 piano with notes_2021\"},{\"changed_at\":\"2021-12-03 23:26:48 +0000\",\"changed\":[\"hide_share_and_remix\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:23:18 +0000\",\"changed\":[\"hide_share_and_remix\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 20:35:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

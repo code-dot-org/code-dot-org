@@ -22,6 +22,7 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
+import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -52,6 +53,7 @@ class UnitOverview extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
+    completedLessonNumber: PropTypes.string,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -105,7 +107,8 @@ class UnitOverview extends React.Component {
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
       showUnversionedRedirectWarning,
-      isCsdOrCsp
+      isCsdOrCsp,
+      completedLessonNumber
     } = this.props;
 
     const displayRedirectDialog =
@@ -121,6 +124,9 @@ class UnitOverview extends React.Component {
 
     return (
       <div>
+        {completedLessonNumber && (
+          <EndOfLessonDialog lessonNumber={completedLessonNumber} />
+        )}
         <div>
           {showUnversionedRedirectWarningDialog && (
             <UnversionedScriptRedirectDialog />
@@ -201,5 +207,5 @@ export default connect((state, ownProps) => ({
   scriptName: state.progress.scriptName,
   viewAs: state.viewAs,
   hiddenLessonState: state.hiddenLesson,
-  selectedSectionId: parseInt(state.teacherSections.selectedSectionId)
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(UnconnectedUnitOverview);

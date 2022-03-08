@@ -104,18 +104,33 @@
           "word": "Baris",
           "definition": "(puisi) - bagian dari sebuah puisi yang disusun dalam larik yang berakhir dengan batas kanan."
         },
+        "sprite/coursef/2021": {
+          "word": "Sprite",
+          "definition": "Sebuah benda grafis di layar dengan lokasi, ukuran, dan tampilan."
+        },
+        "user/coursef/2021": {
+          "word": "Pengguna",
+          "definition": "Seseorang yang menggunakan objek, termasuk perangkat lunak dan perangkat keras."
+        },
         "behavior/coursef/2021": {
-          "word": "Perilaku"
+          "word": "Perilaku",
+          "definition": "Sebuah tindakan yang dilakukan terus-menerus oleh sprite sampai dia disuruh berhenti."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritma"
+          "word": "Algoritma",
+          "definition": "Daftar langkah untuk menyelesaikan suatu tugas."
         },
         "variable/coursef/2021": {
           "word": "Variabel",
           "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
         },
+        "prompt/coursef/2021": {
+          "word": "Prompt",
+          "definition": "Sebuah pesan di layar komputer yang menunggu input dari pengguna."
+        },
         "input/coursef/2021": {
-          "word": "Input"
+          "word": "Input",
+          "definition": "Informasi yang diperoleh komputer dari pengguna."
         },
         "repeat/coursef/2021": {
           "word": "Ulangi",
@@ -315,9 +330,17 @@
         "conditionals/coursed/2021": {
           "word": "Kondisi"
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocode",
+          "definition": "Deskripsi bahasa polos tentang langkah-langkah dalam algorithm"
+        },
         "while_loop/coursed/2021": {
           "word": "While Loop",
           "definition": "Loop yang terus berulang ketika kondisinya benar."
+        },
+        "until/coursed/2021": {
+          "word": "Until",
+          "definition": "Perintah yang menyuruh Anda melakukan sesuatu hanya sampai titik bahwa sesuatu menjadi benar."
         },
         "algorithm/express/2021": {
           "word": "Algoritma",
@@ -339,7 +362,15 @@
           "definition": "Seni membuat program."
         },
         "behavior/express/2021": {
-          "word": "Perilaku"
+          "word": "Perilaku",
+          "definition": "Sebuah tindakan yang dilakukan terus-menerus oleh sprite sampai dia disuruh berhenti."
+        },
+        "sprite/express/2021": {
+          "word": "Sprite",
+          "definition": "Sebuah benda grafis di layar dengan lokasi, ukuran, dan tampilan."
+        },
+        "code/express/2021": {
+          "definition": "menulis code, atau menulis instruksi untuk komputer."
         },
         "repeat/express/2021": {
           "word": "Ulangi",
@@ -356,12 +387,20 @@
           "word": "While Loop",
           "definition": "Loop yang terus berulang ketika kondisinya benar."
         },
+        "until/express/2021": {
+          "word": "Until",
+          "definition": "Perintah yang menyuruh Anda melakukan sesuatu hanya sampai titik bahwa sesuatu menjadi benar."
+        },
         "function/express/2021": {
           "word": "Fungsi"
         },
         "variable/express/2021": {
           "word": "Variabel",
           "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
+        },
+        "prompt/express/2021": {
+          "word": "prompt",
+          "definition": "Sebuah pesan di layar komputer yang menunggu input dari pengguna."
         },
         "for_loop/express/2021": {
           "word": "For Loop",
@@ -423,10 +462,20 @@
           "definition": "Untuk melakukan sesuatu lagi."
         },
         "behavior/coursee/2021": {
-          "word": "Perilaku"
+          "word": "Perilaku",
+          "definition": "Sebuah tindakan yang dilakukan terus-menerus oleh sprite sampai dia disuruh berhenti."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algorithm",
+          "definition": "Daftar langkah untuk menyelesaikan suatu tugas"
+        },
+        "sprite/coursee/2021": {
+          "word": "Sprite",
+          "definition": "Sebuah benda grafis di layar dengan lokasi, ukuran, dan tampilan."
         },
         "copyright/coursee/2021": {
-          "word": "Hak cipta"
+          "word": "Hak cipta",
+          "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
         },
         "repeat/coursee/2021": {
           "word": "Ulangi",
@@ -457,6 +506,52 @@
         "try/coursee/2021": {
           "word": "Coba",
           "definition": "Mencoba melakukan sesuatu"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Pembelajaran Mesin"
+        },
+        "user_interface/csd/2021": {
+          "word": "Antarmuka Pengguna"
+        },
+        "bug/csd/2021": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "for_loop/csd/2021": {
+          "word": "For Loop",
+          "definition": "Loop yang memiliki awal, akhir, dan nilai kenaikan yang telah ditentukan (interval langkah)."
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging"
+        },
+        "variable/csd/2021": {
+          "word": "Variabel",
+          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "conditionals/csd/2021": {
+          "word": "Kondisi"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksi"
+        },
+        "function/csd/2021": {
+          "word": "Fungsi"
+        },
+        "input/csd/2021": {
+          "word": "Input"
+        },
+        "processing/csd/2021": {
+          "word": "Sedang memproses"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Jejak Digital"
+        },
+        "copyright/csd/2021": {
+          "word": "Hak cipta",
+          "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
         }
       }
     }

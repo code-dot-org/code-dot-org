@@ -157,6 +157,27 @@
         },
         "define/coursee/2021": {
           "word": "Definer"
+        },
+        "debugging/csd/2021": {
+          "word": "Fejlfinding"
+        },
+        "variable/csd/2021": {
+          "word": "Variabel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Betingelser"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2021": {
+          "word": "Funktion"
+        },
+        "input/csd/2021": {
+          "word": "input"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

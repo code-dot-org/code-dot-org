@@ -254,6 +254,14 @@
           "word": "Compresie fără pierderi",
           "definition": "un algoritm de comprimare a datelor care permite ca datele originale să fie reconstruite perfect din datele comprimate. Cel mai frecvent utilizat pentru compresia textului (de exemplu, compresia .zip)"
         },
+        "event/outbreak/unversioned": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modele și Simulări",
+          "definition": "un program care reproduce sau imită caracteristicile cheie ale unui eveniment din lumea reală pentru a-i investiga comportamentul fără cost, timp consumat sau pericolul derulării unui experiment în viața reală."
+        },
         "event/sports/unversioned": {
           "word": "Eveniment",
           "definition": "O acțiune care face ca ceva să se întâmple."
@@ -342,14 +350,6 @@
         "line/poem-art/unversioned": {
           "word": "Vers",
           "definition": "(poezie) - o subdiviziune a unui poem, care ocupă un rând, care se termină la marginea din dreapta a paginii."
-        },
-        "event/outbreak/unversioned": {
-          "word": "Eveniment",
-          "definition": "O acțiune care face ca ceva să se întâmple."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modele și Simulări",
-          "definition": "un program care reproduce sau imită caracteristicile cheie ale unui eveniment din lumea reală pentru a-i investiga comportamentul fără cost, timp consumat sau pericolul derulării unui experiment în viața reală."
         },
         "sprite/coursef/2021": {
           "word": "Spiriduș",
@@ -875,6 +875,55 @@
         "try/coursee/2021": {
           "word": "Încercare",
           "definition": "O acțiune întreprinsă pentru a face ceva"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Învățare Automată",
+          "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
+        },
+        "bug/csd/2021": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "for_loop/csd/2021": {
+          "word": "Buclă for",
+          "definition": "Bucle care au un început, un sfârșit și un pas (interval de pas) prestabilite."
+        },
+        "debugging/csd/2021": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "program/csd/2021": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "variable/csd/2021": {
+          "word": "Variabilă",
+          "definition": "O etichetă pentru un fragment de informație utilizat într-un program."
+        },
+        "sprite/csd/2021": {
+          "word": "Spiriduș"
+        },
+        "condition/csd/2021": {
+          "word": "Condiție"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condiţionale"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstractizare"
+        },
+        "function/csd/2021": {
+          "word": "Funcţie"
+        },
+        "input/csd/2021": {
+          "word": "Intrare"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Amprenta digitală"
+        },
+        "copyright/csd/2021": {
+          "word": "Drept de autor",
+          "definition": "dreptul legal exclusiv de a tipări, publica, interpreta, filma sau înregistra opere literare, artistice sau muzicale și de a autoriza pe alții să facă acest lucru"
         }
       }
     }

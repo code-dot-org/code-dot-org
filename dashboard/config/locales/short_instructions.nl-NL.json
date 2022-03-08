@@ -2122,7 +2122,18 @@
         "poetry_hoc_exemplar2": "Welke beelden komen in u op?",
         "poetry_hoc_sounds": "Voeg geluiden toe aan uw programma om het gevoel van het gedicht tijdens het lezen te veranderen. ",
         "poetry_hoc_spriteBehaviors": "Sprites kunnen bepaalde handelingen of gedragingen constant uitvoeren terwijl het programma wordt uitgevoerd. ",
-        "poetry_hoc_spriteSizes": "U kunt de grootte van een reeds gemaakte sprite veranderen. "
+        "poetry_hoc_spriteSizes": "U kunt de grootte van een reeds gemaakte sprite veranderen. ",
+        "CSD U3 L5 Freeplay_2021": "Verander de waarde van `petalSize` meerdere keren.\nHoe beïnvloedt dit je tekening?",
+        "CSD U3 Variables change circle size_2021": "Verander de waarde van `petalSize` meerdere keren.\nHoe beïnvloedt dit je tekening?",
+        "CSD U3 Variables naming rules v2_2021": "Verander de waarde van `petalSize` meerdere keren.\nHoe beïnvloedt dit je tekening?",
+        "CSD U3 Variables random with assignment_2021": "Verander de waarde van `petalSize` meerdere keren.\nHoe beïnvloedt dit je tekening?",
+        "CSD U5 black white images pixelation 2_2021": "Tegen een lachend gezicht (klik hier om de afbeelding te zien)",
+        "CSD U5 black white images pixelation 3_2021": "Verander de breedte en hoogte slijders om de afbeelding te vinden (klik hier om meer te zien)",
+        "CSD U5 black white images pixelation 4_2021": "Voeg wenkbrauwen toe aan het lachende gezicht (klik hier om een afbeelding te zien)",
+        "CSD U5 black white images pixelation 5_2021": "Teken wat je maar wil",
+        "CSD U5 black white images pixelation_2021": "Vervolledig de X vorm door 0'en en 1'en in te voeren",
+        "CSDU6 arrays select rainbow_2021": "Schrijf de inhoud van de array naar het scherm in numerieke volgorde. (Klik hier om de volledige instructies te zien)",
+        "U4 Model Design 1_2021": "Voeg een grote rode knop toe aan je scherm met behulp van Design Mode. (Klik voor volledige instructies)"
       }
     }
   }

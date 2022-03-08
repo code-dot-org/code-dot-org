@@ -1,9 +1,4 @@
-- unit_group = local_assigns[:unit_group]
-- course_editor_data = {course_summary: unit_group.summarize(current_user, for_edit: true),
-                        script_names: Script.all.map(&:name),
-                        course_families: UnitGroup.family_names,
-                        version_year_options: UnitGroup.get_version_year_options}
 - content_for(:head) do
-  %script{ src: webpack_asset_path('js/courses/edit.js'), data: {course_editor: course_editor_data.to_json}}
-= form_for(unit_group, {url: course_path(unit_group)}) do |f|
+  %script{ src: webpack_asset_path('js/courses/edit.js'), data: {course_editor: @unit_group_data.to_json}}
+= form_for(@unit_group, {url: course_path(@unit_group)}) do |f|
   #course_editor

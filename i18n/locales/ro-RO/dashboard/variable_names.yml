@@ -8,6 +8,7 @@ ro:
       age: vârsta
       answer: răspuns
       binary: binar
+      birds: păsări
       cats: pisicile
       color: culoare
       counter: numărător
@@ -20,11 +21,13 @@ ro:
       level: nivel
       name: nume
       nectar: nectar
+      planet: planetă
       points: puncte
       random: aleator
       repeat: repetă
       right: dreapta
       score: scor
+      shout: țipăt
       size: dimensiune
       speed: viteză
       startX: startX

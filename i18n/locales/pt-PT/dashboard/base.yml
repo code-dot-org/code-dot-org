@@ -347,7 +347,7 @@ pt:
       about_team: "Toda a equipa"
       about_news: "Imprensa"
       about_evaluation: "Avaliação"
-      about_jobs: "Empregos"
+      about_jobs: "Postos de Trabalho"
       about_contact: "Contacte-nos"
       about_faqs: "Perguntas frequentes"
       learn: "Aprender"
@@ -1094,3 +1094,4 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
+  teacher_feedback: "Feedback do Professor"

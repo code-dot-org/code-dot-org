@@ -357,6 +357,14 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': ធម្មតា
+            '7': លឿន
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

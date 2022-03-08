@@ -295,6 +295,7 @@ bg:
             '"row"': ред
             '"column"': колона
             '"plus"': плюс
+            '"spiral"': спирала
             '"random"': случаен
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -358,6 +359,26 @@ bg:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': всички извънземни
             '"BEAR"': мечки
@@ -378,6 +399,7 @@ bg:
             '"row"': ред
             '"column"': колона
             '"plus"': плюс
+            '"spiral"': спирала
             '"random"': случаен
       Dancelab_randomColor:
         text: случаен цвят
@@ -734,6 +756,19 @@ bg:
             '"seconds"': секунди
       gamelab_hideTitleScreen:
         text: скрива заглавния екран
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -819,6 +854,10 @@ bg:
             "'sound://category_instrumental/harpe_pluck_1.mp3'": арфа
             "'sound://category_retro/retro_game_ui_select_6.mp3'": изберете
             "'sound://category_digital/jump_7.mp3'": скок
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): може да се мести
       gamelab_randColor:
         text: случаен цвят
       gamelab_randomColor:
@@ -880,6 +919,14 @@ bg:
             '"scale"': размер
             '"width"': широчина
             '"height"': височина
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': бавно
+            '5': нормално
+            '7': бързо
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

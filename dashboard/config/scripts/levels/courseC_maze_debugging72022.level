@@ -37,11 +37,16 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "short_instructions": "**Challenge:** Debug this level by rearranging, adding, and deleting blocks.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:14.381+00:00\",\"changed\":[\"cloned from \\\"courseC_maze_debugging7_2021\\\"\"],\"cloned_from\":\"courseC_maze_debugging7_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:14.381+00:00\",\"changed\":[\"cloned from \\\"courseC_maze_debugging7_2021\\\"\"],\"cloned_from\":\"courseC_maze_debugging7_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -271,7 +271,7 @@ const styles = {
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
 export default connect(state => ({
-  selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
+  selectedSectionId: state.teacherSections.selectedSectionId,
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
     state.progress.scriptId,

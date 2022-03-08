@@ -14,7 +14,7 @@ crwdns2371582:0crwdne2371582:0 crwdns2371584:0{{ urls/learn }}crwdne2371584:0
 
 crwdns2058634:0crwdne2058634:0 crwdns2058636:0crwdne2058636:0
 
-crwdns2058638:0crwdne2058638:0 crwdns2058640:0crwdne2058640:0 crwdns2371586:0{{ campaign_date/year }}crwdnd2371586:0{{ campaign_date/year }}crwdne2371586:0
+crwdns2058638:0crwdne2058638:0 crwdns2058640:0crwdne2058640:0 crwdns2371586:0crwdne2371586:0
 
 crwdns2371588:0crwdne2371588:0
 
@@ -293,4 +293,4 @@ crwdns2371740:0crwdne2371740:0 crwdns2371742:0crwdne2371742:0 crwdns2371744:0crw
 
 [**crwdns2371760:0crwdne2371760:0**](crwdns2371758:0crwdne2371758:0)
 
-crwdns2371762:0{{ signup_button }}crwdne2371762:0
+crwdns2371762:0{{ signup_button }}crwdne2371762:0<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

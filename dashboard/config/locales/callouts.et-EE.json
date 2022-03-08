@@ -529,6 +529,99 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Uus plokk!",
           "poetry_remove_sprite": "Uus plokk!"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Klikka siin võrgustiku näitamiseks."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Muuda numbrit siin"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Siin on kood"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Määratle startGame siin"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Määratle movePlayer() siin"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Kontrollige, kas mängija on võitnud"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Muuda numbrit siin"
         }
       }
     }

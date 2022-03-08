@@ -3,43 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# EIPM Sequences
-##
+# Video: Teacher Tips - EIPM
 
-<div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
+## Consider the following when watching this video:
 
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">
-Do not skip the Explore lessons! Those are the lessons where my students have had the "Aha!" moments. Once you use those manipulatives, and they see how it's used, they're like, "Wow, I get it now!" So those things are really important. It lays the foundations for the Investigate, Practice, and Make lessons. So don't skip those lessons. Just plan ahead, get your resources ready early before the lesson, and you'll be ready to go.
- </p>
-<p style="font-size: 70px; text-align: right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 70px; margin-top: -20px; ">
-Terence Stone, Maryland
-</p>
+### Why is leading students through all four lessons of an EIPM sequence important?
 
-</div>
-<br>
-
-<div style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">The benefit of [EIPM] is that it actually gives students ownership in their work, a role in their learning. At the end of the day, the students explore themselves. They investigate, and they practice different tools. And when you ask them to make a project, they are not asking, "Okay, what am I supposed to be doing first?" They use those tools that have been building in class, that you helped them discover. And now they can create something original.</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Luna Ramirez, New York
-</p>
-</div>
-<br>
-
-<div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">The EIPM sequence can be a little intimidating at first, especially for a non-CS teacher. And that the Explore lesson really is teacher heavy. You're providing manipulatives, post-it notes and Ziploc bags. And so there is some anxiety around those lessons. But pushing through and saying, "Okay, I'm going to read through these slides. I'm going to do the manipulatives with the students," is important. At the end, they have these key takeaways. And that's a great opportunity for students say, "Okay, this makes sense."</p>
-
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Anna Mora, Washington
-</p>
-</div>
+<a href="https://youtu.be/jWf2IKQNnMc" target="blank" rel="noopener noreferrer">![](https://images.code.org/ad4dad3e8ca5b8c1898e4b73a4ebb429-image-1643328410941.56.31 PM.jpg)</a>
 MARKDOWN

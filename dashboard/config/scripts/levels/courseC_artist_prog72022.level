@@ -52,11 +52,16 @@
     "bubble_choice_description": "This pet's name tag is a special shape!",
     "thumbnail_url": "https://images.code.org/2ab617d96aae60ca7590cbadf14a39b2-image-1615564042745.png",
     "validation_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:25.575+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_prog7_2021\\\"\"],\"cloned_from\":\"courseC_artist_prog7_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:46:25.575+00:00\",\"changed\":[\"cloned from \\\"courseC_artist_prog7_2021\\\"\"],\"cloned_from\":\"courseC_artist_prog7_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
 // Reducer for script selection in teacher dashboard.
 // Tab specific reducers can import actions from this file
@@ -85,19 +84,6 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId
-    };
-  }
-
-  // Note: This listens to the sectionData redux, not the unitSelection redux.
-  if (action.type === SET_SECTION) {
-    // Default the scriptId to the script assigned to the section
-    const defaultScriptId = action.section.script
-      ? action.section.script.id
-      : null;
-
-    return {
-      ...state,
-      scriptId: defaultScriptId
     };
   }
 

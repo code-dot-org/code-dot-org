@@ -245,6 +245,7 @@
   volunteer_engineer_submission_field_description: "Keterangan"
   volunteer_engineer_submission_field_email: "Alamat e-mel"
   volunteer_engineer_submission_field_email_placeholder: "Alamat e-mel"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Lihat dasar privasi kami)"
   volunteer_engineer_submission_field_email_preference_yes: 'Ya'
   volunteer_engineer_submission_field_email_preference_no: 'Tidak'
   volunteer_engineer_submission_submit: "Hantar"
@@ -595,9 +596,11 @@
   alice_beyond_gradelevel: "Sekolah Menengah +"
   sphero_beyond_gradelevel: "Umur 8 keatas"
   flappy_shortcode: "mengepak"
+  header_my_dashboard: "Papan Pemuka Saya"
   header_courses: "kursus-kursus"
   header_course_catalog: "Katalog Kursus"
   header_project_gallery: "Projek"
+  header_professional_learning: "Pembelajaran Profesional"
   header_educate_hoc: "Hour of Code"
   header_stats: "Statistik"
   header_about: "Tentang"
@@ -615,6 +618,8 @@
   user_header_artist: 'Artis '
   user_header_dance: "Majlis Tari-Menari"
   user_header_flappy: "Flappy"
+  user_header_view_my_projects: "Lihat projek saya"
+  view_all_sections: "Lihat semua bahagian"
   applab_tile_subtitle: "Cipta aplikasi anda sendiri dalam JavaScript dengan menggunakan pengaturcaraan berasaskan blok. Atau tingkatkan kemahiran anda kepada tahap seterusnya dengan menggunakan pengaturcaraan berasaskan teks. (Bahasa Inggeris Sahaja)"
   applab_tile_start_tutorial: "Mula"
   applab_tile_teacher_guide: "Lihat panduan guru"
@@ -639,6 +644,7 @@
   hoc2018_mc_start: "Mula"
   hoc2018_mc_no_internet: "Tidak mempunyai Internet?"
   hoc2018_mc_download_adventurer: "Muat turun versi Pengembara Minecraft luar talian."
+  hoc2018_mc_educators_box2_button: "Muat turun"
   hoc2018_mc_educators_box3_title: "Menghadiri bengkel pelajar secara percuma"
   hoc2018_mc_educators_box3_desc: "Kunjungi Kedai Microsoft di kawasan anda untuk bengkel Jam Kod percuma. Dibuka kepada peserta daripada semua peringkat kemahiran, yang berumur enam tahun dan ke atas."
   hoc2018_mc_educators_box3_button: "Cari bengkel"
@@ -662,6 +668,9 @@
   hoc2018_mc_homepage_try_it: "Selamat mencuba"
   hoc2018_mc_back_journey: "Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod."
   hoc2018_mc_teacher_guide: "Lihat panduan guru"
+  hoc2018_mc_minecraft_education: "Pendidikan Minecraft"
+  hoc2018_mc_continue_learning: "Teruskan belajar dengan Minecraft."
+  hoc2018_mc_go_to_mc_education: "Akan Datang: Halaman Akaun Dikemas Kini"
   hoc2018_mc_short_description_shorter: "Gunakan kreativiti dan kemahiran menyelesaikan masalah anda untuk meneroka dan membina dunia di bawah permukaan air dengan kod."
   hoc2018_dance_party_main_heading: "Majlis Tari-Menari"
   hoc2018_dance_party_subheading: "Bantu menterjemahkan Majlis Tari-Menari"
@@ -705,6 +714,7 @@
   hoc2021_mc_mee_villages_description: 'Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman dengan pelajar anda dalam Minecraft: Edisi Pendidikan.'
   hoc2021_mc_mee_ai_title: "AI untuk Kebaikan"
   hoc2021_mc_mee_ai_description: 'Terokai AI dengan pelajar anda dan belajar mengekod dalam Minecraft: Edisi Pendidikan.'
+  codebytes_skinny_banner_english_only: "Bahasa Inggeris sahaja"
   footer_privacy_policy: "Dasar Privasi"
   footer_about: "Tentang"
   footer_donate: "Derma"
@@ -759,3 +769,4 @@
   ai_try_activity: "Cuba lakukan aktiviti"
   outbreak_tile_title: "Wabak"
   outbreak_tile_subtitle: "Virus telah menjangkiti Monster Town! Kodkan simulator wabak dan buat ramalan tentang perkara yang akan berlaku kepada jiran Monster Town."
+  footer_cookie_notice: "Notis Kuki"

@@ -26,6 +26,13 @@ const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 
+const MICROBIT_FIRMATA_URL =
+  'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
+const EXPRESS_FIRMATA_URL =
+  'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
+const CLASSIC_FIRMATA_URL =
+  'https://learn.adafruit.com/circuit-playground-firmata/overview';
+
 const initialState = {
   isDetecting: false,
   caughtError: null,
@@ -107,14 +114,23 @@ export default class SetupChecklist extends Component {
       )
 
       // Can we initialize components successfully?
-      .then(() =>
-        this.detectStep(STATUS_BOARD_COMPONENTS, () =>
-          setupChecker.detectComponentsInitialize()
-        )
-      )
+      .then(() => {
+        if (this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT) {
+          return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
+            setupChecker.detectComponentsInitialize()
+          );
+        }
+        return Promise.resolve();
+      })
 
       // Everything looks good, let's par-tay!
-      .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
+      .then(() =>
+        this.thumb(
+          this.state.boardTypeDetected === BOARD_TYPE.MICROBIT
+            ? STATUS_BOARD_CONNECT
+            : STATUS_BOARD_COMPONENTS
+        )
+      )
       .then(() => setupChecker.celebrate())
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
@@ -225,27 +241,37 @@ export default class SetupChecklist extends Component {
   }
 
   installFirmwareSketch() {
-    let firmataFromBoardType;
-    switch (this.state.boardTypeDetected) {
-      case BOARD_TYPE.EXPRESS:
-        firmataFromBoardType =
-          'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
-        break;
-      case BOARD_TYPE.MICROBIT:
-        firmataFromBoardType =
-          'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
-        break;
-      default:
-        firmataFromBoardType =
-          'https://learn.adafruit.com/circuit-playground-firmata/overview';
+    let firmataMarkdown;
+    if (this.state.boardTypeDetected === BOARD_TYPE.MICROBIT) {
+      firmataMarkdown = applabI18n.makerSetupInstallFirmataMB({
+        firmataURL: MICROBIT_FIRMATA_URL
+      });
+    } else if (
+      this.state.boardTypeDetected === BOARD_TYPE.EXPRESS ||
+      this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
+    ) {
+      firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
+        firmataURLExpress: EXPRESS_FIRMATA_URL,
+        firmataURLClassic: CLASSIC_FIRMATA_URL
+      });
+    } else {
+      // Board Type is Other/Unknown
+      if (experiments.isEnabled('microbit')) {
+        firmataMarkdown = applabI18n.makerSetupInstallFirmataOther({
+          firmataURLExpress: EXPRESS_FIRMATA_URL,
+          firmataURLClassic: CLASSIC_FIRMATA_URL,
+          firmataURLMB: MICROBIT_FIRMATA_URL
+        });
+      } else {
+        firmataMarkdown = applabI18n.makerSetupInstallFirmataCP({
+          firmataURLExpress: EXPRESS_FIRMATA_URL,
+          firmataURLClassic: CLASSIC_FIRMATA_URL
+        });
+      }
     }
     return (
-      <div>
-        <SafeMarkdown
-          markdown={applabI18n.makerSetupInstallFirmata({
-            firmataURL: firmataFromBoardType
-          })}
-        />
+      <div style={styles.suggestionHeader}>
+        <SafeMarkdown markdown={firmataMarkdown} />
       </div>
     );
   }
@@ -253,8 +279,7 @@ export default class SetupChecklist extends Component {
   render() {
     const linuxPermissionError =
       isLinux() &&
-      this.state.caughtError &&
-      this.state.caughtError.message.includes('Permission denied');
+      this.state.caughtError?.message?.includes('Permission denied');
 
     return (
       <div>
@@ -274,6 +299,7 @@ export default class SetupChecklist extends Component {
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_PLUG]}
             stepName={i18n.validationStepBoardPluggedIn()}
+            hideWaitingSteps={true}
           >
             {this.state.caughtError && this.state.caughtError.reason && (
               <pre>{this.state.caughtError.reason}</pre>
@@ -293,6 +319,7 @@ export default class SetupChecklist extends Component {
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
+            hideWaitingSteps={true}
           >
             {applabI18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
@@ -308,15 +335,18 @@ export default class SetupChecklist extends Component {
             {!linuxPermissionError && this.installFirmwareSketch()}
             {this.contactSupport()}
           </ValidationStep>
-          <ValidationStep
-            stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
-            stepName={i18n.validationStepBoardComponentsUsable()}
-          >
-            {applabI18n.makerSetupVerifyComponents()}
-            <br />
-            {this.installFirmwareSketch()}
-            {this.contactSupport()}
-          </ValidationStep>
+          {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
+            <ValidationStep
+              stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
+              stepName={i18n.validationStepBoardComponentsUsable()}
+              hideWaitingSteps={true}
+            >
+              {applabI18n.makerSetupVerifyComponents()}
+              <br />
+              {this.installFirmwareSketch()}
+              {this.contactSupport()}
+            </ValidationStep>
+          )}
         </div>
         <div>
           <h2>{i18n.support()}</h2>
@@ -333,3 +363,9 @@ function promiseWaitFor(ms) {
     setTimeout(resolve, ms);
   });
 }
+
+const styles = {
+  suggestionHeader: {
+    marginTop: 15
+  }
+};

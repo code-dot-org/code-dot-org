@@ -47,7 +47,7 @@ class FilesApi < Sinatra::Base
 
     # teachers can see abusive assets of their students
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     teaches_student?(owner_user_id)
   end
@@ -59,7 +59,7 @@ class FilesApi < Sinatra::Base
     # no active project exists, which is handled below.
     StorageApps.new(owner_storage_id).get(encrypted_channel_id)
 
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
     !get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
@@ -104,7 +104,7 @@ class FilesApi < Sinatra::Base
     return unless CDO.newrelic_logging
 
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
     event_details = {
       quota_type: quota_type,
       encrypted_channel_id: encrypted_channel_id,
@@ -388,7 +388,11 @@ class FilesApi < Sinatra::Base
     end
 
     # Block libraries with PII/profanity from being published.
-    if endpoint == 'libraries'
+    #
+    # Javalab's "backpack" feature uses libraries to allow students to share code
+    # between their own projects -- skip this check for .java files, since in this use case
+    # the files are only being used by a single user.
+    if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue OpenURI::HTTPError => e

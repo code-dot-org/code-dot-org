@@ -321,7 +321,12 @@ export default class PoetryLibrary extends CoreLibrary {
       desiredSize,
       (desiredSize * (PLAYSPACE_SIZE - OUTER_MARGIN)) / fullWidth
     );
-    const maxLineHeight = 30 / lines.length;
+    // We can also cap the font height.  If it's only a single line of text
+    // (say the title or author) then we cap at 30.  Otherwise, we take
+    // (PLAYSPACE_SIZE / 2) and divide it by the number of lines in the poem;
+    // even in this case, the cap only has an effect on particulary long poems.
+    const maxLineHeight =
+      lines.length === 1 ? 30 : PLAYSPACE_SIZE / 2 / lines.length;
 
     this.p5.pop();
     return Math.min(scaledSize, maxLineHeight);
@@ -442,13 +447,8 @@ export default class PoetryLibrary extends CoreLibrary {
       yCursor += LINE_HEIGHT;
     }
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
-    const longestLine = poemState.lines.reduce(
-      (accumulator, current) =>
-        accumulator.length > current.length ? accumulator : current,
-      '' /* default value */
-    );
     const lineSize = this.getScaledFontSize(
-      longestLine,
+      poemState.lines.join('\n'),
       poemState.font.font,
       FONT_SIZE
     );

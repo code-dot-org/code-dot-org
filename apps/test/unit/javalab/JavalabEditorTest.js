@@ -2,7 +2,10 @@ import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {mount} from 'enzyme';
-import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
+import JavalabEditor, {
+  editorDarkModeThemeOverride,
+  editorLightModeThemeOverride
+} from '@cdo/apps/javalab/JavalabEditor';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -327,15 +330,21 @@ describe('Java Lab Editor Test', () => {
         const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
         store.dispatch(setDisplayTheme(DisplayTheme.DARK));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            oneDark
-          )
+          effects: [
+            javalabEditor.editorThemeOverrideCompartment.reconfigure(
+              editorDarkModeThemeOverride
+            ),
+            javalabEditor.editorModeConfigCompartment.reconfigure(oneDark)
+          ]
         });
         store.dispatch(setDisplayTheme(DisplayTheme.LIGHT));
         expect(dispatchSpy).to.have.been.calledWith({
-          effects: javalabEditor.editorModeConfigCompartment.reconfigure(
-            lightMode
-          )
+          effects: [
+            javalabEditor.editorThemeOverrideCompartment.reconfigure(
+              editorLightModeThemeOverride
+            ),
+            javalabEditor.editorModeConfigCompartment.reconfigure(lightMode)
+          ]
         });
       });
     });

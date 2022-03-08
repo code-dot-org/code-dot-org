@@ -212,6 +212,12 @@
           },
           "draw a house": {
             "name": "gumuhit ng bahay"
+          },
+          "square": {
+            "name": "parisukat"
+          },
+          "sun": {
+            "name": "araw"
           }
         },
         "Geometric Sun_2018": {
@@ -220,6 +226,12 @@
           },
           "draw a house": {
             "name": "gumuhit ng bahay"
+          },
+          "square": {
+            "name": "parisukat"
+          },
+          "sun": {
+            "name": "araw"
           }
         },
         "InspirationalArtwork": {
@@ -2000,6 +2012,110 @@
             "parameters": {
               "binary": "binary"
             }
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "magtayo ng tulay"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "magtayo ng tulay"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "magtayo ng tulay"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "magtayo ng tulay"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "linisin ang landas"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "linisin ang landas"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "linisin ang landas"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "linisin ang landas"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "ayusin ang mahabang landas"
+          },
+          "fix short path": {
+            "name": "ayusin ang maikling landas"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "ayusin ang mahabang landas"
+          },
+          "fix short path": {
+            "name": "ayusin ang maikling landas"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "ayusin ang mahabang landas"
+          },
+          "fix short path": {
+            "name": "ayusin ang maikling landas"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "ayusin ang mahabang landas"
+          },
+          "fix short path": {
+            "name": "ayusin ang maikling landas"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "magtayo ng maikling tulay"
+          },
+          "build long bridge": {
+            "name": "magtayo ng mahabang tulay"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "magtayo ng maikling tulay"
+          },
+          "build long bridge": {
+            "name": "magtayo ng mahabang tulay"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "magtayo ng maikling tulay"
+          },
+          "build long bridge": {
+            "name": "magtayo ng mahabang tulay"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "magtayo ng maikling tulay"
+          },
+          "build long bridge": {
+            "name": "magtayo ng mahabang tulay"
           }
         }
       }

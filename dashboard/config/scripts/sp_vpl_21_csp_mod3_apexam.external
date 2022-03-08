@@ -3,43 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Preparing students for the AP Exam
-##
+# Video: Teacher Tips - Preparing for the AP Exam
 
-<div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
+## Consider the following when watching this video:
 
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">
-I've been an AP reader, which means I've scored the exams. I've gotten the opportunity to score the Create Performance Task before. Going through [the rubric] with your students and giving them the practice from the Hack-a-thon all the way up to the task, making sure that your students can hit those bullet points is important for gaining those points on the rubric. I think once you do that, your students will feel comfortable when they get to the task that they can hit the points the way they're supposed to.
- </p>
-<p style="font-size: 70px; text-align: right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%; font-style: italic; margin-right: 70px; margin-top: -20px; ">
-Terence Stone, Maryland
-</p>
+### What supports will you provide for students to ensure their success on the AP Exam?
 
-</div>
-<br>
-
-<div style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">I really push my AP computer science class to students who have no computer science background, and really wouldn't be your standard AP student, because it's brand new information. It's not like Language Arts, where there's years and years of leading up to it. So that gives students the confidence of having nothing to lose. There's no shame if you don't do well, because you're learning a whole new topic. It's a new experience for you. I've seen so many students be successful simply because they don't have that pressure of having to know what they're doing. It's a great opportunity to potentially get college credit just for trying something new.</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Anna Mora, Washington
-</p>
-</div>
-<br>
-
-<div style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">It's really essential to have students practice using scratch paper as they go through the [multiple-choice] exam. They're going to be running through some code that could be, in theory, infinite lines long if they have loops. Students try to remember everything all at once, and getting them in the habit of relying on the paper to help them remember things, like what variables have been assigned or what different booleans might be set to, can take them a long way.</p>
-
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-Eamon Marchant, California
-</p>
-</div>
+<a href="https://youtu.be/cqi9RTW8qB4" target="blank" rel="noopener noreferrer">![](https://images.code.org/210153369530da919cb78a262b0bcd2b-image-1643328579765.56.16 PM.jpg)</a>
 MARKDOWN

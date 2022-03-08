@@ -3,6 +3,7 @@ ur:
   data:
     script:
       category:
+        csf_category_name: CS کے بنیادی اصول
         hoc_category_name: آور-آف-کوڈ
         math_category_name: ریاضی
         other_category_name: دیگر
@@ -13,6 +14,8 @@ ur:
           lessons:
             Conditionals:
               name: شرائط
+            Flappy:
+              name: فلاپی
         course3:
           description_audience: Ages 8-18
         playlab:
@@ -75,6 +78,11 @@ ur:
           title: ایونٹس/واقعات
           description: ایونٹس/واقعات
           description_short: ایونٹس/واقعات
+          lessons:
+            Calc:
+              name: Calc
+            Eval:
+              name: Eval
           student_description: ایونٹس/واقعات
         step:
           title: اسٹیپ
@@ -104,12 +112,20 @@ ur:
               name: ٹیچر کا ڈیش بورڈ
         allthethings:
           lessons:
+            Flappy:
+              name: فلاپی
             Web Lab:
               name: ویب لیب
+            Java Lab:
+              name: جاوا لیب
         algebraPD2b:
           lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+        K5-OnlinePD:
+          lessons:
+            Computer Science Fundamentals:
+              name: کمپیوٹر سائنس کے بنیادی اصول
         algebraPD2:
           lessons:
             Teacher Dashboard:
@@ -118,6 +134,8 @@ ur:
           description_audience: Ages 6-13
         afterschool1:
           description_audience: Ages 7-13
+        cspunit4draft:
+          description_short: ڈیٹا
         Special Fun:
           description_audience: Ages 10-18
         SpecialSeries:
@@ -199,6 +217,8 @@ ur:
           lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+        CSDU5-Draft:
+          description_short: ڈیٹا
         CSF_Secret_Sample_Story:
           description_audience: Ages 8-18+
         MikeTest:
@@ -233,6 +253,9 @@ ur:
               name: شرائط
         grade2:
           description_audience: Ages 5-18
+          lessons:
+            Flappy:
+              name: فلاپی
         k5concepts:
           lessons:
             Conditionals:
@@ -283,6 +306,8 @@ ur:
           lessons:
             Lists:
               name: فہرستیں
+            Map:
+              name: نقشہ
         coursee-ramp:
           lessons:
             Conditionals:
@@ -503,6 +528,8 @@ ur:
           lesson_groups:
             csf_variables:
               display_name: متغیرات
+            csf_data:
+              display_name: ڈیٹا
           lessons:
             Loops in Artist:
               name: Artist میں لوپس
@@ -554,6 +581,8 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
           lessons:
             Loops in Artist:
               name: Artist میں لوپس
@@ -681,6 +710,8 @@ ur:
               description_teacher: اس سبق میں، ہر عمر کے سیکھنے والوں کو ایک محفوظ، معاون ماحول میں کوڈنگ اور کمپیوٹر سائنس کے ساتھ تعارفی تجربہ ملتا ہے۔ یہ سبق ہر عمر کے سیکھنے والوں کے لیے ڈیزائن کیا گیا ہے لیکن اسے میں پڑھنے کی ضرورت ہوتی ہے۔ اس سرگرمی کے لیے آواز کی ضرورت ہوتی ہے کیونکہ یہ ٹول موسیقی کا جواب دینے کے لیے بنایا گیا تھا۔
         k5-onlinepd-2019:
           lessons:
+            Computer Science Fundamentals:
+              name: کمپیوٹر سائنس کے بنیادی اصول
             Loops:
               name: لوپس
             Conditionals:
@@ -764,6 +795,8 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -782,6 +815,8 @@ ur:
           lesson_groups:
             csf_variables:
               display_name: متغیرات
+            csf_data:
+              display_name: ڈیٹا
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
@@ -807,6 +842,10 @@ ur:
           lessons:
             Loops in Artist:
               name: Artist میں لوپس
+        jess-test-script:
+          lessons:
+            Tools:
+              name: اوزار
         csp5-virtual:
           lessons:
             Variables:
@@ -859,6 +898,8 @@ ur:
               name: کورس E
             Course F:
               name: کورس F
+            csf:
+              name: CS کے بنیادی اصول
         virustest:
           title: وباء کے پھیلنے کا سیمیولیشن
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
@@ -936,6 +977,8 @@ ur:
               display_name: لوپس
             csf_events:
               display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
         coursed-2021:
           title: کورس D (2021)
           lessons:
@@ -1015,6 +1058,9 @@ ur:
           description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
           student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
@@ -1022,6 +1068,8 @@ ur:
           lessons:
             lesson-1:
               name: یونٹ 2 پائلٹ سروے
+            lesson-16:
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
@@ -1029,6 +1077,8 @@ ur:
           lessons:
             lesson-16:
               name: یونٹ 3 پائلٹ سروے
+            lesson-17:
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
@@ -1046,15 +1096,22 @@ ur:
             lesson-10:
               description_student: آپ متعدد شرائط پر مشتمل مسائل کو پرکھتے ہیں اور اپنے حل میں نیسٹڈ `if` بیانات، یعنی ایسے بیانات جو اور if بیانات کے اندر رکھے گئے ہوں، استعمال کرنا سیکھتے ہیں۔ آپ مشروط بیانات میں نئے منطقی آپریٹرز کا استعمال کرتے ہوئے اظہار (expressions) لکھتے ہیں اور نتیجہ پر ان آپریٹرز کے اثر کی نشاندہی کرتے ہیں۔ اس کے بعد آپ نیسٹڈ `if` بیانات اور منطقی آپریٹرز (logical operators) کا استعمال کرتے ہوئے اپنے Pop the Balloons گیم کے گیم پلے اور فعالیت کو بہتر بناتے ہیں۔
               description_teacher: طلباء متعدد شرائط پر مشتمل مسائل کو پرکھتے ہیں اور اپنے حل میں نیسٹڈ `if` بیانات، یعنی ایسے بیانات جو اور if بیانات کے اندر رکھے گئے ہوں، استعمال کرنا سیکھتے ہیں۔ طلباء مشروط بیانات میں نئے منطقی آپریٹرز کا استعمال کرتے ہوئے اظہار (expressions) لکھتے ہیں اور نتیجہ پر ان آپریٹرز کے اثر کی نشاندہی کرتے ہیں۔ اس کے بعد طلباء نیسٹڈ `if` بیانات اور منطقی آپریٹرز (logical operators) کا استعمال کرتے ہوئے اپنے Pop the Balloons گیم کے گیم پلے اور فعالیت کو بہتر بناتے ہیں۔
+            lesson-16:
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
         csa6-pilot:
           lessons:
+            Java Lab:
+              name: جاوا لیب
             lesson-1:
               description_student: پورے کورس کے دوران آپ کے تیار کردہ پروجیکٹس نے کمیونٹی میں بہت ساری تخلیقی صلاحیتوں کو متاثر کیا ہے! تخلیقی کہانیوں، اسکرپٹس، گانوں کے بول، خطوط اور نظموں کی نمائش کے لیے ایک Neighborhood Lit Fest منعقد کیا جائے گا۔ Neighborhood Lit Fest پروجیکٹ ایک بڑا پروجیکٹ ہے جس پر آپ پورے یونٹ میں کام کرتے ہیں، اور پروجیکٹ مینجمنٹ کی حکمت عملی آپ کے کام کو منظم اور تشکیل دینے میں مدد کرتی ہے۔ آپ کوڈ لکھنے اور ساخت کے لیے حکمت عملی تلاش کرتے ہیں تاکہ دوسرے سافٹ ویئر انجینئر آسانی سے سمجھ سکیں اور پروگرام کی دستاویزات بنانے کے لیے جاوا ٹول استعمال کر سکیں۔
               description_teacher: طلباء کو Neighborhood Lit Fest پروجیکٹ سے متعارف کرایا جاتا ہے اور سوالات اور اہم خصوصیات کی شناخت کے لیے تقاضوں اور مثالوں کا جائزہ لیتے ہیں۔ پروجیکٹ پر کام شروع کرنے سے پہلے، طلباء پروگرام کے ساخت کے بارے میں اپنی سمجھ کو بڑھاتے ہیں اور بہترین طریقوں کی نشاندہی کرکے اور پروگرام کی دستاویزات تیار کرنے کے لیے جاوا ڈاکس کے استعمال کو تلاش کرکے تبصرہ کرتے ہیں۔
@@ -1104,10 +1161,16 @@ ur:
             lessonGroup-5:
               display_name: سینڈباکس
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
         csa8-pilot:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
@@ -1129,21 +1192,34 @@ ur:
           lessons:
             lesson-9:
               name: شروعات کرنا 1
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: کمپیوٹر سائنس کے بنیادی اصول
+              name: کمپیوٹر سائنس کے بنیادی اصول
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
               name: ٹیچر کمیونٹی
         outbreak-module:
           title: وباء کا پھیلنا
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: وسائل
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
               description: آزمانا
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: اوزار
             lesson-17:
               name: کنسول
           lesson_groups:
+            lessonGroup-2:
+              display_name: اسباق
             lessonGroup-4:
               display_name: ڈیمو اور وسائل
         csa-self-paced-pl:
@@ -1209,6 +1285,7 @@ ur:
           lessons:
             lesson-1:
               key: سبق 1
+              name: جاوا لیب
             lesson-2:
               key: سبق 2
             lesson-3:
@@ -1287,6 +1364,7 @@ ur:
               key: سبق 15
             lesson-1:
               key: سبق 1
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
@@ -1297,6 +1375,7 @@ ur:
               name: یونٹ 3 پائلٹ سروے
             lesson-1:
               key: سبق 1
+              name: جاوا لیب
             lesson-2:
               key: سبق 2
             lesson-3:
@@ -1352,6 +1431,7 @@ ur:
               description_teacher: طلباء متعدد شرائط پر مشتمل مسائل کو پرکھتے ہیں اور اپنے حل میں نیسٹڈ `if` بیانات، یعنی ایسے بیانات جو اور if بیانات کے اندر رکھے گئے ہوں، استعمال کرنا سیکھتے ہیں۔ طلباء مشروط بیانات میں نئے منطقی آپریٹرز کا استعمال کرتے ہوئے اظہار (expressions) لکھتے ہیں اور نتیجہ پر ان آپریٹرز کے اثر کی نشاندہی کرتے ہیں۔ اس کے بعد طلباء نیسٹڈ `if` بیانات اور منطقی آپریٹرز (logical operators) کا استعمال کرتے ہوئے اپنے Pop the Balloons گیم کے گیم پلے اور فعالیت کو بہتر بناتے ہیں۔
             lesson-1:
               key: سبق 1
+              name: جاوا لیب
             lesson-3:
               key: سبق 3
             lesson-4:
@@ -1416,6 +1496,8 @@ ur:
               key: سبق 14
             lesson-15:
               key: سبق 15
+            Java Lab:
+              name: جاوا لیب
           lesson_groups:
             lessonGroup-4:
               display_name: سینڈباکس
@@ -1521,7 +1603,12 @@ ur:
               name: ہیلو ورلڈ
           name: hello-world-food
         csa-u7-dev:
+          lessons:
+            lesson-3:
+              name: اوزار
           lesson_groups:
+            lessonGroup-2:
+              display_name: اسباق
             lessonGroup-4:
               display_name: ڈیمو اور وسائل
         hello-world-animals:
@@ -1577,6 +1664,9 @@ ur:
           description_audience: سپرائٹ لیب کے وسطی/ترقی یافتہ صارفین
           description_short: سپرائٹ لیب استعمال کرتے ہوئے اپنے سپرائٹ بنانے کا چیلنج قبول کریں!
         csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: اوزار
           lesson_groups:
             lessonGroup-2:
               display_name: ڈیمو اور وسائل
@@ -1698,6 +1788,9 @@ ur:
             Assessment Day:
               description_student: اس یونٹ میں، آپ نے پروگرام ڈیٹا کو ذخیرہ کرنے کے لیے `ArrayList`s کا استعمال کیا اور 1D اور 2D ایریز اور `ArrayList`s کے استعمال کے مابین فرق پیدا کیا۔ آپ نے 'ArrayList' کے فوائد اور فعالیت کو دریافت کیا، ان کا استعمال کرتے ہوئے عددی اور آبجیکٹ ڈیٹا سے متعلق مسائل کو حل کیا جائے۔ آپ نے صارف اور فائل ان پٹ سے حاصل کردہ متن کا تجزیہ کرنے اور اس پر کارروائی کرنے کے لیے `String` کلاس میں طریقے استعمال کیے ہیں۔ پورے یونٹ میں، آپ نے API دستاویزات بنانے کے لیے سنگل لائن کمنٹس، ملٹی لائن کمنٹس، اور جاواڈاکس تبصروں کو استعمال کرتے ہوئے پروگرام کی دستاویزات لکھیں۔ اس عمل میں، آپ نے اشیاء اور طریقوں کی پیشگی شرائط اور پوسٹ کنڈیشنز کی نشاندہی اور دستاویز بندی کی۔ اب، آپ اکائی کے سیکھنے کے مقاصد اور مہارتوں کی کامیابی کو ایک سے زیادہ انتخابی تشخیص پر جانچتے ہیں۔
               description_teacher: اس یونٹ میں، طلباء نے پروگرام ڈیٹا کو ذخیرہ کرنے کے لیے `ArrayList`s کا استعمال کیا اور 1D اور 2D ایریز اور `ArrayList`s کے استعمال کے مابین فرق پیدا کیا۔ طلباء نے 'ArrayList' کے فوائد اور فعالیت کو دریافت کیا، ان کا استعمال کرتے ہوئے عددی اور آبجیکٹ ڈیٹا سے متعلق مسائل کو حل کیا جائے۔ طلباء نے صارف اور فائل ان پٹ سے حاصل کردہ متن کا تجزیہ کرنے اور اس پر کارروائی کرنے کے لیے `String` کلاس میں طریقے استعمال کیے ہیں۔ پورے یونٹ میں، طلباء نے API دستاویزات بنانے کے لیے سنگل لائن کمنٹس، ملٹی لائن کمنٹس، اور جاواڈاکس تبصروں کو استعمال کرتے ہوئے پروگرام کی دستاویزات لکھیں۔ اس عمل میں، طلباء نے اشیاء اور طریقوں کی پیشگی شرائط اور پوسٹ کنڈیشنز کی نشاندہی اور دستاویز بندی کی۔ اب، طلباء اکائی کے سیکھنے کے مقاصد اور مہارتوں کی کامیابی کو ایک سے زیادہ انتخابی تشخیص پر جانچتے ہیں۔
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
             lesson-1:
               key: سبق 1
             lesson-2:
@@ -1874,8 +1967,27 @@ ur:
           lessons:
             lesson-4:
               name: وباء کا سیمیولیٹر
+          lesson_groups:
+            lessonGroup-8:
+              display_name: آور-آف-کوڈ
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرات
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: ان پٹس کو ملانا
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+            lessonGroup-3:
+              display_name: باب 2
         csa7-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
             lesson-10:
               key: سبق 10
             lesson-6:
@@ -1913,6 +2025,9 @@ ur:
               display_name: سینڈباکس
         csa8-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
             lesson-1:
               key: سبق 1
             lesson-2:
@@ -1945,6 +2060,324 @@ ur:
               key: سبق 15
             lesson-16:
               key: سبق 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        coursea-2022:
+          lessons:
+            lesson-1:
+              key: سبق 1
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+          description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
+        express-2022:
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-1:
+              key: سبق 1
+              name: ڈانس پارٹی
+            lesson-4:
+              key: سبق 4
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        courseb-2022:
+          lessons:
+            Loops in Artist:
+              key: Artist میں لوپس
+            lesson-1:
+              key: سبق 1
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursec-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_data:
+              display_name: ڈیٹا
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: سبق 4
+        csp9-2022:
+          lessons:
+            lesson-10:
+              key: سبق 10
+        coursed-2022:
+          lessons:
+            Dance Party:
+              name: ڈانس پارٹی
+              key: ڈانس پارٹی
+            lesson-5:
+              key: سبق 5
+            Loops in Artist:
+              key: Artist میں لوپس
+            lesson-6:
+              key: سبق 6
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+          title: کورس D (2021)
+        coursee-2022:
+          lessons:
+            lesson-4:
+              key: سبق 4
+            Conditionals:
+              key: شرائط
+            lesson-1:
+              key: سبق 1
+            'Hello World: Food':
+              name: ہیلو ورلڈ
+          lesson_groups:
+            csf_nested_loops:
+              display_name: شرائط
+        coursef-2022:
+          lessons:
+            Outbreak:
+              name: وباء کا پھیلنا
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-2:
+              key: سبق 2
+            lesson-9:
+              key: سبق 9
+            lesson-10:
+              key: سبق 10
+            lesson-11:
+              key: سبق 11
+            lesson-5:
+              key: سبق 5
+          lesson_groups:
+            lessonGroup-8:
+              display_name: متغیرات
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: جاوا لیب
+            lesson-9:
+              name: لوپس
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: متغیرات
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: شرائط
+            lesson-17:
+              name: پروجیکٹ انسپائریشن
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: جاوا لیب
+            lesson-9:
+              name: لوپس
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
+            lesson-10:
+              key: سبق 10
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-9:
+              key: سبق 9
+            lesson-11:
+              key: سبق 11
+            lesson-12:
+              key: سبق 12
+            lesson-13:
+              key: سبق 13
+            lesson-14:
+              key: سبق 14
+            lesson-15:
+              key: سبق 15
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-4:
+              key: سبق 4
+            lesson-5:
+              key: سبق 5
+            lesson-16:
+              key: سبق 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-4:
+              key: سبق 4
+            lesson-5:
+              key: سبق 5
+            lesson-10:
+              key: سبق 10
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-9:
+              key: سبق 9
+            lesson-11:
+              key: سبق 11
+            lesson-12:
+              key: سبق 12
+            lesson-13:
+              key: سبق 13
+            lesson-14:
+              key: سبق 14
+            lesson-15:
+              key: سبق 15
+            lesson-16:
+              key: سبق 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        coursef-2022-pilot:
+          lessons:
+            Outbreak:
+              name: وباء کا پھیلنا
+              key: وباء کا پھیلنا
+          lesson_groups:
+            lessonGroup-8:
+              display_name: متغیرات
+          description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: پورے کورس کے دوران آپ کے تیار کردہ پروجیکٹس نے کمیونٹی میں بہت ساری تخلیقی صلاحیتوں کو متاثر کیا ہے! تخلیقی کہانیوں، اسکرپٹس، گانوں کے بول، خطوط اور نظموں کی نمائش کے لیے ایک Neighborhood Lit Fest منعقد کیا جائے گا۔ Neighborhood Lit Fest پروجیکٹ ایک بڑا پروجیکٹ ہے جس پر آپ پورے یونٹ میں کام کرتے ہیں، اور پروجیکٹ مینجمنٹ کی حکمت عملی آپ کے کام کو منظم اور تشکیل دینے میں مدد کرتی ہے۔ آپ کوڈ لکھنے اور ساخت کے لیے حکمت عملی تلاش کرتے ہیں تاکہ دوسرے سافٹ ویئر انجینئر آسانی سے سمجھ سکیں اور پروگرام کی دستاویزات بنانے کے لیے جاوا ٹول استعمال کر سکیں۔
+              description_teacher: طلباء کو Neighborhood Lit Fest پروجیکٹ سے متعارف کرایا جاتا ہے اور سوالات اور اہم خصوصیات کی شناخت کے لیے تقاضوں اور مثالوں کا جائزہ لیتے ہیں۔ پروجیکٹ پر کام شروع کرنے سے پہلے، طلباء پروگرام کے ساخت کے بارے میں اپنی سمجھ کو بڑھاتے ہیں اور بہترین طریقوں کی نشاندہی کرکے اور پروگرام کی دستاویزات تیار کرنے کے لیے جاوا ڈاکس کے استعمال کو تلاش کرکے تبصرہ کرتے ہیں۔
+            Exploring Integer and Double Objects:
+              description_student: آپ `انٹیجر` اور `ڈبل` قدیم قدروں کی بطور حوالہ قدریں نمائندگی کرنے کے لیے `انٹیجر` اور `ڈبل` آبجیکٹ بناتے ہیں۔ `انٹیجر` اور `ڈبل` کلاسز میں طریقوں کو استعمال کرتے ہوئے، آپ ان اقدار کو واپس کرتے ہیں جو یہ اوبجیکٹس قدیم قدروں کے طور پر ذخیرہ کرتی ہیں۔ آپ انٹیجرز کے لیے کم از کم اور زیادہ سے زیادہ قدروں کو بھی دریافت کرتے ہیں تاکہ وہ ٹاسک جو آپ کو اپنے Neighborhood Lit Fest پروجیکٹ کے لیے مکمل کرنے کی ضرورت ہے، کا منصوبہ بنانے سے پہلے اوور فلو کے نقائص سے بچا جا سکے۔
+              description_teacher: طلباء `انٹیجر` اور `ڈبل` قدیم قدروں کی بطور حوالہ قدریں نمائندگی کرنے کے لیے `انٹیجر` اور `ڈبل` آبجیکٹ بناتے ہیں۔ `انٹیجر` اور `ڈبل` کلاسز میں طریقوں کو استعمال کرتے ہوئے، طلباء ان اقدار کو واپس کرتے ہیں جو یہ اوبجیکٹس قدیم قدروں کے طور پر ذخیرہ کرتی ہیں۔ طلباء انٹیجرز کے لیے کم از کم اور زیادہ سے زیادہ قدروں کو بھی دریافت کرتے ہیں تاکہ وہ ٹاسک جو انہیں اپنے Neighborhood Lit Fest پروجیکٹ کے لیے مکمل کرنے کی ضرورت ہے، کا منصوبہ بنانے سے پہلے اوور فلو کے نقائص سے بچا جا سکے۔
+            Using ArrayLists to Store Data:
+              description_student: صفوں اور فہرستوں کے ساتھ کام کرتے وقت، ہمیں بعض اوقات ایسے مسائل کا سامنا کرنا پڑتا ہے جہاں عناصر کی تعداد نامعلوم ہوتی ہے یا فہرست کا سائز مستقل انداز میں تبدیل ہوتا رہتا ہے۔ اس سبق میں، آپ `ArrayList` کے بارے میں سیکھتے ہیں اور ان منظرناموں کی نشاندہی کرتے ہیں جہاں پر ڈیٹا کی یہ ساخت زیادہ موزوں ہے۔
+              description_teacher: طلباء `انٹیجر` اور `ڈبل` اقدار کو ذخیرہ کرنے کے لئے `ArrayList` بناتے ہیں۔ طلباء تعین کرنے کے لیے 'ArrayList' اور یک-جہتی صفوں میں فرق کرتے ہیں کہ کون سی ڈیٹا ساخت ایک منظر نامے کے لیے بہترین ہے۔ طلباء ایک `ArrayList` میں عناصر شامل کرتے ہیں اور سیکھتے ہیں کہ آٹو باکسنگ کس طرح قدیم اقدار اور ریپر کلاسز کے درمیان تبدیل ہوتی ہے جب وہ ذخیرہ شدہ ڈیٹا کے ساتھ کام کرتے ہیں۔
+            Working with ArrayList Data:
+              description_student: آپ عناصر کی بازیافت اور ترمیم کرنے کے لیے `ArrayList` کے طریقے `get()` اور `set()` استعمال کرتے ہیں اور `String` آبجیکٹ میں حروف کی تعداد گننے کے لئے `String` طریقہ `length()` کے بارے میں سیکھتے ہیں۔ آپ 'ArrayList' میں عناصر کو تبدیل کرنے کے لیے 1D اور 2D صفوں کے ساتھ تیار کردہ معیاری الگورتھم کا اطلاق کرتے ہیں۔ آپ سیکھتے ہیں کہ ان باکسنگ کس طرح قدیم اقدار اور ریپر کلاسز کے مابین تبادلوں کو انجام دیتی ہے کیونکہ وہ ایک `ArrayList` میں محفوظ کردہ ڈیٹا کے ساتھ کام کرتے ہیں۔
+              description_teacher: طلباء ایک `ArrayList` میں عناصر کی بازیافت اور ترمیم کرنے کے لئے `get()` اور `set()` طریقوں کے ساتھ کام کرتے ہیں اور `String` اوبجیکٹ میں حروف کی تعداد واپس کرنے کے لئے `String` طریقہ `length()` کے بارے میں سیکھتے ہیں۔ وہ 'ArrayList' میں عناصر کو تبدیل کرنے کے لیے 1D اور 2D صفوں کے ساتھ تیار کردہ معیاری الگورتھم کا اطلاق کرتے ہیں۔ طلباء سیکھتے ہیں کہ ان باکسنگ کس طرح قدیم اقدار اور ریپر کلاسز کے مابین تبادلوں کو انجام دیتی ہے کیونکہ وہ ایک `ArrayList` میں محفوظ کردہ ڈیٹا کے ساتھ کام کرتے ہیں۔
+            Storing Objects in an ArrayList:
+              description_student: اب تک، آپ نے 'Integer's، 'Double's، اور 'String's کو ذخیرہ کرنے کے لیے 'ArrayList' بنائی ہیں۔ جیسا کہ 1D اور 2D ایریز کی طرح، آپ ان اشیاء کو بھی اسٹور کر سکتے ہیں جو آپ `ArrayList` میں تخلیق کرتے ہیں۔ اس سبق میں، آپ ان معیاری الگورتھمز کو لاگو کرنے کے لیے اشیاء کی ایک `ArrayList` تخلیق کرتے ہیں جسے آپ نے اس فہرست میں ذخیرہ شدہ ڈیٹا کے ساتھ کام کرنے کے لیے پورا سال استعمال کیا ہے۔
+              description_teacher: طلباء اشیاء کو ذخیرہ کرنے اور جاوا میں عمومی اقسام کے بارے میں جاننے کے لیے `ArrayList` بناتے ہیں۔ طلباء کم از کم اور زیادہ سے زیادہ قدریں تلاش کرنے، میزان اور اوسط کا حساب لگانے، یا مخصوص معیار پر پورے اترنے والے عناصر تلاش کرنے کے لیے یک جہتی صفوں کے ساتھ سیکھے گئے الگورتھم کو `ArrayList`s پر لاگو کرتے ہیں۔
+            Removing Data from an ArrayList:
+              description_student: آپ `ArrayList` کلاس میں `remove()` طریقہ کی فعالیت کو دریافت کرتے ہیں اور فہرست سے گزرتے ہوئے آئٹمز کو ہٹانے کی کوشش کرتے وقت ممکنہ نقائص کی نشاندہی کرتے ہیں۔ اس عمل میں، آپ کو احساس ہوتا ہے کہ کسی منظر نامے یا مسئلے کے لیے 'ArrayList' کب بہترین ہے۔
+              description_teacher: طلباء `ArrayList` کلاس میں `remove()` طریقہ کی فعالیت کو دریافت کرتے ہیں اور فہرست سے گزرتے ہوئے آئٹمز کو ہٹانے کی کوشش کرتے وقت ممکنہ نقائص کی نشاندہی کرتے ہیں۔ طلباء کو احساس ہوتا ہے کہ کسی منظر نامے یا مسئلے کے لیے 'ArrayList' کب بہترین ہے۔
+            Using String Methods:
+              description_student: آپ `String` کی ساخت کو دریافت کرتے ہیں اور یاد کرتے ہیں کہ `String` اوبجیکٹس/اشیاء ہیں۔ آپ `String` کے اندر ذیلی سٹرنگز تلاش کرنے اور موجودہ `String` سے نئی `String` آبجیکٹ بنانے کے لئے `indexOf()` اور `substring()` طریقے استعمال کرتے ہیں۔
+              description_teacher: طلباء `String` کی ساخت کو دریافت کرتے ہیں اور یاد کرتے ہیں کہ `String` اوبجیکٹس/اشیاء ہیں۔ طلباء `String` کے اندر ذیلی سٹرنگز تلاش کرنے اور موجودہ `String` سے نئی `String` آبجیکٹ بنانے کے لئے `indexOf()` اور `substring()` طریقے استعمال کرتے ہیں۔
+            Comparing Strings:
+              description_student: آپ `compareTo()` استعمال کر کے یہ جانچ کرتے ہیں کہ آیا `String` حروف تہجی کی ترتیب میں ہیں یا نہیں۔ اس کے بعد آپ اپنے Neighborhood Lit Fest پروجیکٹ پر کام کرتے ہیں، خاص طور پر ان کاموں پر توجہ مرکوز کرتے ہوئے جو آپ کے پروجیکٹ پلاننگ بورڈ پر ہیں۔
+              description_teacher: طلباء `compareTo()` استعمال کر کے یہ جانچ کرتے ہیں کہ آیا `String` حروف تہجی کی ترتیب میں ہیں یا نہیں۔ اس کے بعد طلباء اپنے Neighbourhood Lit Fest پروجیکٹ پر کام کرتے ہیں، خاص طور پر ان کاموں پر توجہ مرکوز کرتے ہوئے جو ان کے پروجیکٹ پلاننگ بورڈ پر ہیں۔
+            Solving Problems with Strings:
+              description_student: آپ معیاری الگورتھم اور 'String's کے بارے میں اپنے علم کو یکجا کرکے یہ جانچ کرتے ہیں کہ آیا 'String' ایک پیلینڈروم ہے یا نہیں۔ اس کے بعد آپ فیڈ بیک سیشن میں شرکت کرتے ہیں اور اپنے Neighborhood Lit Fest پروجیکٹ پر اپنی پیش رفت پر غور کرتے ہیں۔
+              description_teacher: طلباء معیاری الگورتھم اور 'String's کے بارے میں اپنے علم کو یکجا کرکے یہ جانچ کرتے ہیں کہ آیا 'String' ایک پیلینڈروم ہے یا نہیں۔ اس کے بعد طلباء ساتھی فیڈ بیک سیشن میں شرکت کرتے ہیں اور اپنے Neighborhood Lit Fest پروجیکٹ پر اپنی پیش رفت پر غور کرتے ہیں۔
+            Solving Problems with ArrayLists:
+              description_student: آپ معیاری الگورتھم کا اطلاق کرتے ہیں جسے آپ `ArrayList`s پر 1D اور 2D ایریز کے لیے لکھتے ہیں۔ آپ عناصر کو سواپ کرنے، ڈپلیکیٹس کو ہٹانے، یا اپنے Neighbourhood Lit Fest پروجیکٹ میں مخصوص معیار پر پورا اترنے والے عناصر کو تلاش کرنے کے لیے پچھلے الگورتھمز میں ترمیم کرنے اور لاگو کرنے سے پہلے ایک انٹیجر سے انفرادی اعداد/ہندسوں کو حاصل کرنے کے لیے ایک نیا معیاری الگورتھم نافذ کرتے ہیں۔
+              description_teacher: طلباء معیاری الگورتھم کا اطلاق کرتے ہیں جسے وہ `ArrayList`s پر 1D اور 2D ایریز کے لیے لکھتے ہیں۔ طلباء عناصر کو سواپ کرنے، ڈپلیکیٹس کو ہٹانے، یا اپنے Neighbourhood Lit Fest پروجیکٹ میں مخصوص معیار پر پورا اترنے والے عناصر کو تلاش کرنے کے لیے پچھلے الگورتھمز میں ترمیم کرنے اور لاگو کرنے سے پہلے ایک انٹیجر سے انفرادی اعداد/ہندسوں کو حاصل کرنے کے لیے ایک نیا معیاری الگورتھم نافذ کرتے ہیں۔
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest پروجیکٹ - 1 دن
+              description_student: آپ اپنے پسندیدہ مصنف یا فنکار کے کام کے تجزیے کی بنیاد پر کہانی، شاعری، گانا، یا ادب کی دوسری شکل تخلیق کرنے کے لیے اپنا Neighborhood Lit Fest پروجیکٹ تیار کرنا جاری رکھتے رہتے ہیں۔ آپ پروجیکٹ کے تقاضوں کو پورا کرنے کے سلسلے میں اپنی پیشرفت کا جائزہ لینے کے لیے پہلے اپنے کام کا خود جائزہ لیتے ہیں، پھر اپنے پروجیکٹ میں اس خصوصیت کے لیے قبولیت کا معیار لکھتے ہیں جس کا ایک ساتھی تجربہ کرے گا۔ آپ اپنے بقیہ کاموں کو ترجیح دینے اور اپنے پروجیکٹ کو ترقی دینے کے لیے خود تشخیص اور ساتھی کے تاثرات کو استعمال کرتے ہیں۔
+              description_teacher: طلباء اپنے پسندیدہ مصنف یا فنکار کے کام کے تجزیے کی بنیاد پر کہانی، شاعری، گانا، یا ادب کی دوسری شکل تخلیق کرنے کے لیے اپنا Neighborhood Lit Fest پروجیکٹ تیار کرنا جاری رکھتے رہتے ہیں۔ طلباء پروجیکٹ کے تقاضوں کو پورا کرنے کے سلسلے میں اپنی پیشرفت کا جائزہ لینے کے لیے پہلے اپنے کام کا خود جائزہ لیتے ہیں، پھر اپنے پروجیکٹ میں اس خصوصیت کے لیے قبولیت کا معیار لکھتے ہیں جس کا ایک ساتھی تجربہ کرے گا۔ طلباء اپنے بقیہ کاموں کو ترجیح دینے اور اپنے پروجیکٹ کو ترقی دینے کے لیے خود تشخیص اور ساتھی کے تاثرات کو استعمال کرتے ہیں۔
+              key: Neighborhood Lit Fest پروجیکٹ - 1 دن
+            Neighborhood Lit Fest Project - Day 2:
+              name: Neighborhood Lit Fest پروجیکٹ - 2 دن
+              description_student: پچھلے سبق میں، آپ نے ایک خود تشخیص منعقد کی اور اپنے پروجیکٹ کے لیے قبولیت کا معیار لکھا۔ اس سبق میں، آپ اپنے Neighborhood Lit Fest پروجیکٹ کو مکمل کرنے اور اسے جاری رکھنے کے لیے باقی کاموں کی نشاندہی کرنے کے لیے ساتھی کی رائے حاصل کرتے ہیں۔
+              description_teacher: پچھلے سبق میں، طلباء نے ایک خود تشخیص منعقد کی اور اپنے پروجیکٹ کے لیے قبولیت کا معیار لکھا۔ طلباء اس سبق میں ساتھیوں کی رائے حاصل کرتے ہیں تاکہ اپنے Neighborhood Lit Fest پروجیکٹس کو مکمل کرنے اور اسے جاری رکھنے کے لیے باقی کاموں کی نشاندہی کریں۔
+              key: Neighborhood Lit Fest پروجیکٹ - 2 دن
+            Neighborhood Lit Fest Project - Day 3:
+              name: Neighborhood Lit Fest پروجیکٹ - 3 دن
+              description_student: آپ اپنے کوڈ کے جائزوں اور پروجیکٹ پلاننگ بورڈ کی بنیاد پر حتمی نظرثانی اور اپ ڈیٹس کرتے ہیں۔ آپ اپنے Neighborhood Lit Fest پروجیکٹ کا اپنے ساتھیوں کے ساتھ اشراک کرتے ہیں۔ اس کے بعد آپ اپنی کامیابی کا جشن مناتے ہیں اور ترقی کے عمل پر حتمی غور و تفکر کو پایہ تکمیل تک پہنچاتے ہیں۔
+              description_teacher: طلباء اپنے کوڈ کے جائزوں اور پروجیکٹ پلاننگ بورڈ کی بنیاد پر حتمی نظر ثانی اور اپ ڈیٹ کرتے ہیں۔ طلباء اپنے Neighborhood Lit Fest پروجیکٹس کا اپنے ساتھیوں کے ساتھ اشتراک کرتے ہیں۔ اس کے بعد طلباء اپنی کامیابی کا جشن مناتے ہیں اور ترقی کے عمل پر حتمی غور و تفکر کو پایہ تکمیل تک پہنچاتے ہیں۔
+              key: Neighborhood Lit Fest پروجیکٹ - 3 دن
+            Assessment Day:
+              description_student: اس یونٹ میں، آپ نے پروگرام ڈیٹا کو ذخیرہ کرنے کے لیے `ArrayList`s کا استعمال کیا اور 1D اور 2D ایریز اور `ArrayList`s کے استعمال کے مابین فرق پیدا کیا۔ آپ نے 'ArrayList' کے فوائد اور فعالیت کو دریافت کیا، ان کا استعمال کرتے ہوئے عددی اور آبجیکٹ ڈیٹا سے متعلق مسائل کو حل کیا جائے۔ آپ نے صارف اور فائل ان پٹ سے حاصل کردہ متن کا تجزیہ کرنے اور اس پر کارروائی کرنے کے لیے `String` کلاس میں طریقے استعمال کیے ہیں۔ پورے یونٹ میں، آپ نے API دستاویزات بنانے کے لیے سنگل لائن کمنٹس، ملٹی لائن کمنٹس، اور جاواڈاکس تبصروں کو استعمال کرتے ہوئے پروگرام کی دستاویزات لکھیں۔ اس عمل میں، آپ نے اشیاء اور طریقوں کی پیشگی شرائط اور پوسٹ کنڈیشنز کی نشاندہی اور دستاویز بندی کی۔ اب، آپ اکائی کے سیکھنے کے مقاصد اور مہارتوں کی کامیابی کو ایک سے زیادہ انتخابی تشخیص پر جانچتے ہیں۔
+              description_teacher: اس یونٹ میں، طلباء نے پروگرام ڈیٹا کو ذخیرہ کرنے کے لیے `ArrayList`s کا استعمال کیا اور 1D اور 2D ایریز اور `ArrayList`s کے استعمال کے مابین فرق پیدا کیا۔ طلباء نے 'ArrayList' کے فوائد اور فعالیت کو دریافت کیا، ان کا استعمال کرتے ہوئے عددی اور آبجیکٹ ڈیٹا سے متعلق مسائل کو حل کیا جائے۔ طلباء نے صارف اور فائل ان پٹ سے حاصل کردہ متن کا تجزیہ کرنے اور اس پر کارروائی کرنے کے لیے `String` کلاس میں طریقے استعمال کیے ہیں۔ پورے یونٹ میں، طلباء نے API دستاویزات بنانے کے لیے سنگل لائن کمنٹس، ملٹی لائن کمنٹس، اور جاواڈاکس تبصروں کو استعمال کرتے ہوئے پروگرام کی دستاویزات لکھیں۔ اس عمل میں، طلباء نے اشیاء اور طریقوں کی پیشگی شرائط اور پوسٹ کنڈیشنز کی نشاندہی اور دستاویز بندی کی۔ اب، طلباء اکائی کے سیکھنے کے مقاصد اور مہارتوں کی کامیابی کو ایک سے زیادہ انتخابی تشخیص پر جانچتے ہیں۔
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
+            lesson-1:
+              key: سبق 1
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa7-2022:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa8-2022:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس

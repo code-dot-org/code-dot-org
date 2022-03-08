@@ -1103,3 +1103,4 @@ is:
   behaviors:
     this_sprite: "þessi vera"
   unit_prefix: "Eining %{n}"
+  teacher_feedback: "Endurgjöf kennara"

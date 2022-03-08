@@ -252,6 +252,17 @@ def sanitize_data_and_write(data, dest_path)
   end
 end
 
+# Wraps hash in correct format to be loaded by our i18n backend.
+# This will most likely be JSON file data due to Crowdin only
+# setting the locale for yml files.
+def wrap_with_locale(data, locale, type)
+  final_hash = Hash.new
+  final_hash[locale] = Hash.new
+  final_hash[locale]["data"] = Hash.new
+  final_hash[locale]["data"][type] = data
+  final_hash
+end
+
 def serialize_i18n_strings(level, strings)
   result = Hash.new
 
@@ -324,10 +335,8 @@ def distribute_course_content(locale)
       parse_file(type_file).dig(locale, "data", type) || {} :
       {}
 
-    type_data = Hash.new
-    type_data[locale] = Hash.new
-    type_data[locale]["data"] = Hash.new
-    type_data[locale]["data"][type] = existing_data.deep_merge(translations.sort.to_h)
+    merged_data = existing_data.deep_merge(translations.sort.to_h)
+    type_data = wrap_with_locale(merged_data, locale, type)
 
     sanitize_data_and_write(type_data, type_file)
   end
@@ -358,7 +367,14 @@ def distribute_translations(upload_manifests)
         "dashboard/config/locales/#{locale}#{ext}" :
         "dashboard/config/locales/#{basename}.#{locale}#{ext}"
 
-      sanitize_file_and_write(loc_file, destination)
+      if ext == ".json"
+        # JSON files in this directory need the root key to be set to the locale
+        loc_data = JSON.load(File.read(loc_file))
+        loc_data = wrap_with_locale(loc_data, locale, basename)
+        sanitize_data_and_write(loc_data, destination)
+      else
+        sanitize_file_and_write(loc_file, destination)
+      end
     end
 
     ### Course Content

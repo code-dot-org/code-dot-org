@@ -434,6 +434,26 @@ el:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
@@ -980,7 +1000,7 @@ el:
       gamelab_clickedOn:
         text: όταν {SPRITE} πατηθεί
       gamelab_clickedSpritePointer:
-        text: έγινε κλικ στο {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'σχόλιο: {COMMENT}'
       gamelab_costumeImage:
@@ -1015,6 +1035,19 @@ el:
             '"seconds"': δευτερόλεπτα
       gamelab_hideTitleScreen:
         text: κρύψε την οθόνη τίτλων
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1143,9 +1176,9 @@ el:
       gamelab_moveToward:
         text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
       gamelab_newSpritePointer:
-        text: έγινε κλικ στο {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: έγινε κλικ στο {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSound:
         text: παίξεΉχο {SOUND}
       gamelab_playSoundOptions:
@@ -1165,6 +1198,11 @@ el:
             "'sound://category_animals/dog.mp3'": σκύλος
             "'sound://category_animals/tiger.mp3'": τίγρης
             "'sound://category_digital/jump_7.mp3'": πήδα
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
+            draggable(): είναι συρόμενο
       gamelab_pointInDirection:
         text: στρίψε το {SPRITE} {DIRECTION}
         options:
@@ -1244,6 +1282,14 @@ el:
             '"scale"': μέγεθος
             '"width"': πλάτος
             '"height"': ύψος
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': αργή
+            '5': κανονικό
+            '7': γρήγορη
+            '9': extra fast
       gamelab_setTint:
         text: άλλαξε το χρώμα του {THIS} σε {COLOR}
       gamelab_setupSim:
@@ -1262,7 +1308,7 @@ el:
             '"when"': όταν
             '"while"': όσο
       gamelab_subjectSpritePointer:
-        text: έγινε κλικ στο {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
         options:

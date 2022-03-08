@@ -6,6 +6,7 @@ ta:
       Red: சிவப்பு
       actor: நடிகர்
       age: வயது
+      birds: பறவைகள்
       cats: பூனைகள்
       color: நிறம்
       counter: கணக்கிடுகிளவன்
@@ -17,11 +18,16 @@ ta:
       length: நீளம்
       name: பெயர்
       nectar: பூ அமுது
+      planet: விண் கோள்
+      points: புள்ளிகள்
       random: தொடர்பின்றி எடுக்கப்பட்ட
       repeat: மறுபடி
       right: வலது
       score: மதிப்பெண்
+      shout: கத்தும் ஓசை
       size: அளவு
+      speed: வேகம்
       variable: மாறி
       width: அகலம்
+      wizard: மந்திரவாதி
       x: x

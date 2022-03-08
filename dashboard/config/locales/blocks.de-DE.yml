@@ -375,6 +375,7 @@ de:
             '"right"': rechte Spalte
             '"x"': kreuz und quer
             '"plus"': plus
+            '"spiral"': Spirale
             '"random"': zufällig
       Dancelab_makeAnonymousDanceSprite:
         text: erstelle neues {COSTUME} in {LOCATION}
@@ -457,6 +458,26 @@ de:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': alle Aliens
             '"BEAR"': Bären
@@ -484,6 +505,7 @@ de:
             '"right"': rechte Spalte
             '"x"': kreuz und quer
             '"plus"': plus
+            '"spiral"': Spirale
             '"random"': zufällig
       Dancelab_mixColors:
         text: Mische {COLOR1} und {COLOR2}
@@ -1013,7 +1035,25 @@ de:
       gamelab_clickedOn:
         text: wenn {SPRITE} angeklickt
       gamelab_clickedSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): nach rechts drehen
+            new Behavior(spinning_left, []): nach links drehen
+            new Behavior(fluttering, []): flattern
+            new Behavior(jittering, []): zittern
+            new Behavior(wobbling, []): wackelnd
+            new Behavior(wandering, []): wandern
+            new Behavior(patrolling, []): patroullieren
+            new Behavior(moving_west_and_looping, []): nach Westen bewegen und eine
+              Schleife drehen
+            new Behavior(moving_east_and_looping, []): nach Osten bewegen und eine
+              Schleife drehen
+            new Behavior(moving_north_and_looping, []): nach Norden bewegen und eine
+              Schleife drehen
+            new Behavior(moving_south_and_looping, []): nach Süden bewegen und eine
+              Schleife drehen
       gamelab_comment:
         text: 'Kommentar: {COMMENT}'
       gamelab_costumeImage:
@@ -1066,6 +1106,19 @@ de:
         text: |-
           wenn {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} Kostüm ist {COSTUME}"
       gamelab_isKeyPressed:
@@ -1208,9 +1261,9 @@ de:
       gamelab_moveToward:
         text: bewege {SPRITE} {DISTANCE} Pixel zu {TARGET}
       gamelab_newSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrouilliert auf und ab
       gamelab_playSound:
@@ -1259,6 +1312,12 @@ de:
             "'sound://category_digital/jump_7.mp3'": springen
       gamelab_playSpeech:
         text: Sprache wiedergeben {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): Scrollen mit Pfeiltasten
+            new Behavior(driving_with_arrow_keys, []): fahren mit den Pfeiltasten
+            draggable(): verschiebbar sein
       gamelab_pointInDirection:
         text: richte {SPRITE} nach {DIRECTION} aus
         options:
@@ -1367,6 +1426,14 @@ de:
             '"scale"': Größe
             '"width"': Breite
             '"height"': Höhe
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': langsam
+            '5': Normal
+            '7': schnell
+            '9': extra fast
       gamelab_setTint:
         text: ändere die Farbe von {THIS} nach {COLOR}
       gamelab_setupScoreboard:
@@ -1405,7 +1472,7 @@ de:
       gamelab_stopGliding:
         text: "{SPRITE} stoppt das Gleiten"
       gamelab_subjectSpritePointer:
-        text: "{SPRITE} geklicked"
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

@@ -1,6 +1,0 @@
-{
-  "key": "accessListItem",
-  "name": "accessListItem",
-  "category": "Variables",
-  "syntax": "list[0]"
-}

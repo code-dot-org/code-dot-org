@@ -135,6 +135,9 @@ ur:
     استعمال کے بارے میں جان رہے ہوتے ہیں. کمپیوٹر سائنس میں کوڈنگ کے علاوہ اور بھی
     بہت کچھ ہے! Code.org کے سارے نصاب میں ہماری طرف سے AI پڑھانے کے نئے سفر کے پہلے
     قدم سے لطف اٹھائیں.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -235,7 +238,7 @@ ur:
   hoc2018_tutorial_mchoc_description: ایک نئی نئی سرگرمی کے ساتھ کوڈ کا قیام کے لئے
     میرا کرافٹ واپس آتا ہے! کوڈ کے ساتھ میرا دستکاری کے ذریعے سفر.
   codeorg_homepage_hoc2019_dance_heading: نیا آزمائیں <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: سکول کی بندش سے دوچار والدین اور اساتذہ کے لئے
     حمایت
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1012,6 +1015,7 @@ ur:
   footer_menu_support: سہارا
   footer_menu_terms: Terms
   footer_menu_privacy: پرائیویسی پالیسی
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: کوڈ کی گھڑی
   learn_banner_blurb: 45 سے زائد زبانوں میں تمام عمر کے لئے ڈیزائن کیا گیا ایک ایک
     گھنٹہ ٹیوٹوریل کی کوشش کریں ۔  لاکھوں طلبہ اور اساتذہ میں 180 سے زیادہ ملکوں کی

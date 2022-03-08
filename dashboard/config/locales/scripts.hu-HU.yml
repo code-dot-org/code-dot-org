@@ -1319,7 +1319,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
         grade2:
@@ -1711,7 +1711,7 @@ hu:
             Introduction:
               name: Bevezető
             Sprites:
-              name: manók
+              name: sprite-ok
             Input:
               name: Bemenet
         coursed-ramp:
@@ -1745,7 +1745,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -1789,7 +1789,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -2279,7 +2279,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -2296,7 +2296,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -2853,7 +2853,7 @@ hu:
             csf_internet:
               display_name: Internet
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             end_of_course_project:
@@ -2933,7 +2933,7 @@ hu:
             és családjával.
           lesson_groups:
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -2983,7 +2983,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
           lessons:
             Relay Programming:
               name: Váltó programozás
@@ -3191,7 +3191,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -3309,7 +3309,7 @@ hu:
         time4csdemo:
           lesson_groups:
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
           lessons:
             Crowdsourcing:
               name: Csoportos megoldás
@@ -3466,7 +3466,7 @@ hu:
             Variables:
               name: változók
             Sprites:
-              name: manók
+              name: sprite-ok
             Conditionals:
               name: Feltételek
             Functions:
@@ -3679,7 +3679,7 @@ hu:
             csf_events:
               display_name: Események
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
           lessons:
@@ -3700,7 +3700,7 @@ hu:
             csf_events:
               display_name: Események
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
           lessons:
@@ -3787,7 +3787,7 @@ hu:
             Text:
               name: szöveg
             Sprites:
-              name: manók
+              name: sprite-ok
         coursea-2020:
           title: A tanfolyam (2020)
           description: Ismerje meg a számítástechnika és az internetbiztonság alapjait.
@@ -3928,7 +3928,7 @@ hu:
             és családjával.
           lesson_groups:
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -3971,7 +3971,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             end_of_course_project:
               display_name: Kurzus Projekt vége
           lessons:
@@ -4008,7 +4008,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             end_of_course_project:
               display_name: Kurzus Projekt vége
           lessons:
@@ -4134,7 +4134,7 @@ hu:
             Random Numbers:
               name: Véletlen számok
             Sprites:
-              name: manók
+              name: sprite-ok
             Sprite Properties:
               name: Sprite tulajdonságok
             Text:
@@ -4244,8 +4244,8 @@ hu:
               key: Véletlen számok
               name: Véletlen számok
             Sprites:
-              key: manók
-              name: manók
+              key: sprite-ok
+              name: sprite-ok
             Sprite Properties:
               key: Sprite tulajdonságok
               name: Sprite tulajdonságok
@@ -4258,13 +4258,13 @@ hu:
             Collisions:
               description_teacher: "**A nap kérdése: Hogyan tudnak a programozók absztrakciókra
                 alapozni, hogy további absztrakciókat hozzanak létre?**\\\r\n\\\r\nEbben
-                a leckében a diákok úgy programozzák a manókat, hogy azok új módon
+                a leckében a diákok úgy programozzák a sprite-okat, hogy azok új módon
                 lépjenek kapcsolatba egymással. Röviden áttekintik, hogy hogyan kell
                 a(z) [`isTouching`(#f78183)](/docs/gamelab/isTouching/) blokkot használni,
-                majd a diákok ötletbörzét tartanak arról, hogy a manók még milyen
+                majd a diákok ötletbörzét tartanak arról, hogy a sprite-ok még milyen
                 más módokon léphetnek kapcsolatba egymással. Majd a(z) [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
-                segítségével az egyik manóval átlökik a másik manót a képernyőn, majd
-                a négy ütközőblokkal gyakorolnak: ([`collide`(#f78183)](/docs/gamelab/collide/),
+                segítségével az egyik sprite-tal átlökik a másik sprite-ot a képernyőn,
+                majd a négy ütközőblokkal gyakorolnak: ([`collide`(#f78183)](/docs/gamelab/collide/),
                 [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/),
                 and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
@@ -4324,12 +4324,31 @@ hu:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: algoritmusok
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kérdőív
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kérdőív
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
               description_student: Lecke áttekintése
             'Project: Innovation Simulation Part 7':
               description_student: Lecke áttekintése
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
         coursea-2021:
           description_short: Bevezetés a számítástechnikába az előolvasók számára.
           lessons:
@@ -4477,7 +4496,7 @@ hu:
             ramp_up:
               display_name: Egymásba ágyazott ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
@@ -4506,7 +4525,7 @@ hu:
               name: Kurzus Projekt vége
           lesson_groups:
             ramp_up:
-              display_name: manók
+              display_name: sprite-ok
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_variables:
@@ -4548,7 +4567,7 @@ hu:
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
-              display_name: manók
+              display_name: sprite-ok
             end_of_course_project:
               display_name: Kurzus Projekt vége
             lessonGroup-9:
@@ -4573,7 +4592,7 @@ hu:
             lessonGroup-3:
               display_name: változók
             Sprites:
-              display_name: manók
+              display_name: sprite-ok
             variables:
               display_name: változók
         csd4-preview-2021:
@@ -6242,10 +6261,36 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Szórakozás a For ciklussal
+          lesson_groups:
+            lessonGroup-8:
+              display_name: A kódolás órája
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: sprite-ok
+            lessonGroup-3:
+              display_name: változók
+            lessonGroup-4:
+              display_name: Kurzus Projekt vége
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: Bemenetek kombinálása
+            Functions with Parameters:
+              name: funkciók
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -6323,6 +6368,679 @@ hu:
               key: 15. lecke
             lesson-16:
               key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Vidám térképek
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
+              key: Programozás Rey és BB-8 segítségével
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Programming: Happy Maps':
+              name: Vidám térképek
+            lesson-1:
+              key: 1.  lecke
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            lessonGroup-5:
+              display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság
+            alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit
+            megoszthatsz.
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Táncos buli
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              key: Ciklusok Reyjel és BB-8-tel
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-1:
+              key: 1.  lecke
+              name: Táncos buli
+            lesson-4:
+              key: 4.  lecke
+          lesson_groups:
+            csf_sprites:
+              display_name: sprite-ok
+            lessonGroup-9:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_functions:
+              display_name: funkciók
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        csp1-2022:
+          lessons:
+            Representing Information:
+              name: Az információ ábrázolása
+              key: Az információ ábrázolása
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp_unit1_2020:
+              display_name: '1.  fejezet: Digitális információ'
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lecke: Az internet'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Hibakeresés
+              key: Hibakeresés
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listák
+            csp_loops:
+              display_name: hurkok
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Gyerünk, gyerünk!
+              key: Gyerünk, gyerünk!
+            Getting Loopy:
+              name: Ciklikusság
+            The Right App:
+              name: A megfelelő alkalmazás
+              key: A megfelelő alkalmazás
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Loops: Getting Loopy':
+              name: Ciklikusság
+            lesson-1:
+              key: 1.  lecke
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság
+            alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit
+            megoszthatsz.
+        coursec-2022:
+          lessons:
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              description_teacher: A „Getting Loopy” című utasítások ismétlődésének
+                koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
+                amiben BB-8 lesz a segítségükre.
+              key: Ciklusok Reyjel és BB-8-tel
+            The Big Event:
+              name: A nagy esemény
+            Picturing Data:
+              name: Az adatok leképezése
+              key: Az adatok leképezése
+            Binary Bracelets:
+              name: Bináris karkötők
+              key: Bináris karkötők
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Events: The Big Event':
+              name: A nagy esemény
+            'End of Course Project: Create a Play Lab Game':
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            csf_data:
+              display_name: Adat
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal
+            és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a
+            különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon
+            a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted,
+            amit megoszthatsz!
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre
+            saját műalkotásokat, történeteket és játékokat.
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: 4.  lecke
+        csp9-2022:
+          lessons:
+            lesson-10:
+              key: 10. lecke
+        csp10-2022:
+          lessons:
+            Project   Innovation Simulation Part 6:
+              description_student: Lecke áttekintése
+            Project   Innovation Simulation Part 7:
+              description_student: Lecke áttekintése
+            'Project: Innovation Simulation Part 6':
+              description_student: Lecke áttekintése
+            'Project: Innovation Simulation Part 7':
+              description_student: Lecke áttekintése
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Grafikus programozás
+            Relay Programming:
+              name: Váltó programozás
+              key: Váltó programozás
+            Dance Party:
+              name: Táncos buli
+              key: Táncos buli
+            Conditionals with Cards:
+              name: Feltételek kártyákkal
+              key: Feltételek kártyákkal
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+            lesson-5:
+              key: 5.  lecke
+            'Algorithms: Graph Paper Programming':
+              name: Grafikus programozás
+            lesson-6:
+              key: 6.  lecke
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitális állampolgárság
+            csf_events:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Magán és személyes információk
+              key: Magán és személyes információk
+            Digital Sharing:
+              name: Digitális megosztás
+              key: Digitális megosztás
+            Songwriting:
+              name: Dalszerzés paraméterekkel
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+            Simon Says:
+              key: Simon mondja
+            lesson-4:
+              key: 4.  lecke
+            'Functions: Songwriting':
+              name: Dalszerzés paraméterekkel
+            Conditionals:
+              key: Feltételek
+            lesson-1:
+              key: 1.  lecke
+            'Hello World: Food':
+              name: Helló világ
+          lesson_groups:
+            csf_sprites:
+              display_name: sprite-ok
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            ramp_up:
+              display_name: Egymásba ágyazott ciklusok
+            csf_functions:
+              display_name: funkciók
+            csf_nested_loops:
+              display_name: Feltételek
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Szórakozás a For ciklussal
+              key: Szórakozás a For ciklussal
+            The Internet:
+              name: Az internet
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-10:
+              key: 10. lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-5:
+              key: 5.  lecke
+            AI for Oceans:
+              key: AI óceánok
+            Internet:
+              key: Internet
+              name: Az internet
+          lesson_groups:
+            ramp_up:
+              display_name: sprite-ok
+            lessonGroup-7:
+              display_name: Digitális állampolgárság
+            lessonGroup-8:
+              display_name: változók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját,
+            és hozzon létre saját művészetét, történetét vagy
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: hurkok
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        pre-express-2022:
+          lessons:
+            Programming with Rey and BB-8:
+              key: Programozás Rey és BB-8 segítségével
+              name: Programozás Rey és BB-8 segítségével
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: változók
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Feltételek
+            lesson-16:
+              name: Hibakeresés
+            lesson-17:
+              name: Projekt inspiráció
+            lesson-19:
+              name: Hibakeresés
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: hurkok
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-pilot-extra:
+          lessons:
+            lesson-10:
+              key: 10. lecke
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-12:
+              key: 12. lecke
+            lesson-13:
+              key: 13. lecke
+            lesson-14:
+              key: 14. lecke
+            lesson-15:
+              key: 15. lecke
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-4:
+              key: 4.  lecke
+            lesson-5:
+              key: 5.  lecke
+            lesson-16:
+              key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-pilot-extra:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-4:
+              key: 4.  lecke
+            lesson-5:
+              key: 5.  lecke
+            lesson-10:
+              key: 10. lecke
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-12:
+              key: 12. lecke
+            lesson-13:
+              key: 13. lecke
+            lesson-14:
+              key: 14. lecke
+            lesson-15:
+              key: 15. lecke
+            lesson-16:
+              key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Az internet
+              key: Az internet
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitális állampolgárság
+            ramp_up:
+              display_name: sprite-ok
+            lessonGroup-8:
+              display_name: változók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját,
+            és hozzon létre saját művészetét, történetét vagy
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: A tanfolyam során kidolgozott projektek óriási
+                kreativitásra ösztönzik a közösséget! A Szomszédsági irodalmi fesztiválon
+                kreatív történeteket, forgatókönyveket, dalszövegeket, leveleket és
+                verseket mutatunk be. A Szomszédsági irodalmi fesztivál egy nagyszabású
+                projekt, amelyen végig dolgoztok az egység során, és projektmenedzsment-stratégiák
+                segítenek munkátok megszervezésében és strukturálásában. Felfedezitek
+                kódírás és -strukturálás stratégiáit, hogy más szoftvermérnökök könnyen
+                megértsék, és egy Java eszközzel programdokumentációt készíthessetek.
+              description_teacher: A tanulók megismerkednek a Szomszédsági irodalmi
+                fesztivál projekttel, és értékelik a követelményeket és a példákat,
+                hogy azonosítsák a kérdéseket és a legfontosabb jellemzőket. Mielőtt
+                megkezdik a munkát a projekten, a tanulók bővítik ismereteiket a programszerkezetről
+                és kommentálják azt a legjobb gyakorlatok azonosításával, és felfedezik,
+                hogyan lehet használni a Javadocs-ot a programdokumentáció létrehozásához.
+            Exploring Integer and Double Objects:
+              description_student: '"Integer" és "Double" objektumokat hozunk létre
+                az "int" és a "double" primitív értékek referenciaértékként történő
+                megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek
+                használatával az objektumok primitív értékként tárolt értékeit kapjuk
+                vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához
+                szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése
+                érdekében meg kell határozni az egész számok minimális és maximális
+                értékét.'
+              description_teacher: A tanulók "Integer" és "Double" objektumokat hoznak
+                létre az "int" és a "double" primitív értékek referenciaértékként
+                történő megjelenítésére. Az "Integer" és a "Double" osztályok módszereinek
+                használatával a tanulók az objektumok primitív értékként tárolt értékeit
+                kapják vissza. A Szomszédsági irodalmi fesztivál projekt végrehajtásához
+                szükséges feladatok megtervezése előtt a túlcsordulási hibák elkerülése
+                érdekében a tanulók meghatározzák az egész számok minimális és maximális
+                értékét.
+            Using ArrayLists to Store Data:
+              description_student: Amikor tömbökkel és listákkal dolgozunk, néha találkozunk
+                olyan problémákkal, amikor az elemek száma ismeretlen, vagy a lista
+                mérete folyamatosan változik. Ebben a leckében megismerkedünk az „ArrayList”-ekkel,
+                és azonosítjuk azokat az eseteket, amikor ez az adatszerkezet megfelelőbb.
+              description_teacher: A tanulók „ArrayList”-eket hoznak létre az „int”
+                és „double” értékek tárolására. A tanulók különbséget tesznek az „ArrayList”
+                és az egydimenziós tömbök között, hogy meghatározzák, melyik adatszerkezet
+                a legalkalmasabb egy forgatókönyvhöz. A tanulók elemeket adnak hozzá
+                egy „ArrayList”-hez, és megtanulják, hogy a tárolt adatokkal való
+                munka során hogyan konvertálnak autoboxing segítségével a primitív
+                értékek és a csomagoló osztályok között.
+            Working with ArrayList Data:
+              description_student: Az „ArrayList” „get()” és „set()” metódusokat használhatod
+                az elemek lekérésére és módosítására, valamint megismerheted a „String”
+                „length()” metódusát egy „String” objektumban lévő karakterek számának
+                megszámlálásához. Az 1D és 2D tömbökkel általad kifejlesztett szabványos
+                algoritmusokat alkalmazod az "ArrayList" elemeinek módosításához.
+                Megtanulhatod, hogy az unboxing hogyan hajtja végre a primitív értékek
+                és a csomagoló osztályok közötti konverziót, miközben ezek az „ArrayList”-ben
+                tárolt adatokkal dolgoznak.
+              description_teacher: A tanulók a „get()” és „set()” metódusokat használják
+                az elemek lekérésére és módosítására egy „ArrayList”-ben, valamint
+                megismerhetik a „String” „length()” metódusát egy „String” objektumban
+                lévő karakterek számának visszaadásához. Az 1D és 2D tömbökkel általuk
+                kifejlesztett szabványos algoritmusokat alkalmazzák az "ArrayList"
+                elemeinek módosításához. A tanulók megtanulják, hogy az unboxing hogyan
+                hajtja végre a primitív értékek és a csomagoló osztályok közötti konverziót,
+                miközben ezek az „ArrayList”-ben tárolt adatokkal dolgoznak.
+            Storing Objects in an ArrayList:
+              description_student: Eddig létrehoztál egy „ArrayList”-et az „Integer”,
+                „Double” és „String” tárolására. Az 1D és 2D tömbökhöz hasonlóan az
+                objektumokat egy "ArrayList"-ben is tárolhatod. Ebben a leckében létrehozod
+                az objektumok "ArrayList"-jét, hogy alkalmazd a szabványos algoritmusokat,
+                amelyeket egész évben használtál a listában tárolt adatokkal való
+                munkavégzéshez.
+              description_teacher: A tanulók „ArrayList”-eket hoznak létre az objektumok
+                tárolására és a Java általános típusainak megismerésére. A tanulók
+                az egydimenziós tömbökkel tanult algoritmusokat alkalmazzák az „ArrayList”-re,
+                hogy megtalálják a minimális és maximális értékeket, kiszámítsák az
+                összegeket és az átlagokat, vagy megtalálják az adott kritériumoknak
+                megfelelő elemeket.
+            Removing Data from an ArrayList:
+              description_student: Felfedezed a „remove()” módszer funkcióit az „ArrayList”
+                osztályban, és azonosítod a potenciális hibákat, amikor megpróbál
+                elemeket eltávolítani, miközben végigmegy a listán. A folyamat során
+                rájössz, hogy az „ArrayList” mikor a legjobb egy forgatókönyvhöz vagy
+                problémához.
+              description_teacher: A tanulók felfedezik a „remove()” módszer funkcióit
+                az „ArrayList” osztályban, és azonosítják a potenciális hibákat, amikor
+                megpróbál elemeket eltávolítani, miközben végigmegy a listán. A tanulók
+                rájönnek, hogy az „ArrayList” mikor a legjobb egy forgatókönyvhöz
+                vagy problémához.
+            Using String Methods:
+              description_student: Felfedezed a „String” szerkezetét, és visszaemlékszel,
+                hogy a „String”-ek objektumok. Az "indexOf()" és a "substring()" metódusok
+                segítségével kereshetsz rész-karakterláncokat a "String"-en belül,
+                és új "String" objektumokat hozhatsz létre egy meglévő "String"-ből.
+              description_teacher: A tanulók felfedezik a „String” szerkezetét, és
+                visszaemlékeznek, hogy a „String”-ek objektumok. Az "indexOf()" és
+                a "substring()" metódusok segítségével a tanulók kereshetnek rész-karakterláncokat
+                a "String"-en belül, és új "String" objektumokat hozhatnak létre egy
+                meglévő "String"-ből.
+            Comparing Strings:
+              description_student: A "compareTo()" segítségével ellenőrzöd, hogy a
+                "String" betűrendben van-e. Ezután a Szomszédsági irodalmi fesztivál
+                projekten dolgozol, kifejezetten a projekttervezési tábládon lévő
+                feladatokra összpontosítva.
+              description_teacher: A tanulók "compareTo()" segítségével ellenőrzik,
+                hogy a "String" betűrendben van-e. Ezután a Szomszédsági irodalmi
+                fesztivál projekten dolgoznak, kifejezetten a projekttervezési táblájukon
+                lévő feladatokra összpontosítva.
+            Solving Problems with Strings:
+              description_student: Kombinálod a szabványos algoritmusokkal és a "karakterláncokkal"
+                kapcsolatos ismereteidet annak ellenőrzésére, hogy a "String" palindrom-e.
+                Ezután részt veszel egy visszajelző megbeszélésen, és átgondolod a
+                Szomszédsági irodalmi fesztivál projekted előrehaladását.
+              description_teacher: A tanulók kombinálják a szabványos algoritmusokkal
+                és a "karakterláncokkal" kapcsolatos ismereteiket annak ellenőrzésére,
+                hogy a "String" palindrom-e. Ezután a tanulók részt vesznek egy visszajelző
+                megbeszélésen, és átgondolják a Szomszédsági irodalmi fesztivál projektjük
+                előrehaladását.
+            Solving Problems with ArrayLists:
+              description_student: Az 1D és 2D tömbökhöz írt szabványos algoritmusokat
+                alkalmazod az „ArrayList”-ekre. Egy új szabványos algoritmust alkalmazol,
+                amellyel egyedi számjegyeket kaphatsz egész számokból, mielőtt módosítanád
+                és alkalmaznád a korábbi algoritmusokat az elemek cseréjéhez, a duplikátok
+                eltávolításához vagy a Szomszédsági irodalmi fesztivál projektben
+                meghatározott feltételeknek megfelelő elemek megtalálásához.
+              description_teacher: A tanulók 1D és 2D tömbökhöz írt szabványos algoritmusokat
+                alkalmaznak az „ArrayList”-ekre. A tanulók egy új szabványos algoritmust
+                alkalmaznak, amellyel egyedi számjegyeket kaphatnak egész számokból,
+                mielőtt módosítanák és alkalmaznák a korábbi algoritmusokat az elemek
+                cseréjéhez, a duplikátok eltávolításához vagy a Szomszédsági irodalmi
+                fesztivál projektjükben meghatározott feltételeknek megfelelő elemek
+                megtalálásához.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Szomszédsági irodalmi fesztivál projekt - 1. nap
+              description_student: Továbbra is fejleszted a Szomszédsági irodalmi
+                fesztivál projektet, hogy kedvenc szerződ vagy művészed munkáinak
+                elemzése alapján történetet, verset, dalt vagy más irodalmi formát
+                hozzál létre. Először értékeld saját munkádat, hogy értékeld a projektkövetelmények
+                teljesítésében elért előrehaladásodat, majd írj a projekt egyik funkciójához
+                jóváhagyási kritériumokat, amelyeket egy társad fog tesztelni. Az
+                önértékelés és a társad visszajelzése segítségével rangsorolhatod
+                hátralévő feladataidat, és folytathatod a projekt fejlesztését.
+              description_teacher: A tanulók továbbra is fejlesztik a Szomszédsági
+                irodalmi fesztivál projektet, hogy kedvenc szerzik vagy művészik munkáinak
+                elemzése alapján történetet, verset, dalt vagy más irodalmi formát
+                hozzanak létre. Először a tanulók értékelik saját munkájukat, hogy
+                értékeljék a projektkövetelmények teljesítésében elért előrehaladásukat,
+                majd jóváhagyási kritériumokat írnak a projekt egyik funkciójához,
+                amelyeket egy társuk fog tesztelni. Az önértékelés és a társuk visszajelzése
+                segítségével a tanulók rangsorolják hátralévő feladataikat, és folytathatják
+                a projekt fejlesztését.
+              key: Szomszédsági irodalmi fesztivál projekt - 1. nap
+            Neighborhood Lit Fest Project - Day 2:
+              name: Szomszédsági irodalmi fesztivál projekt - 2. nap
+              description_student: Az előző leckében önértékelést végeztél, és megírtad
+                a projekt jóváhagyási kritériumait. Ebben a leckében társadtól visszajelzést
+                kapsz, hogy azonosítsd a Szomszédsági irodalmi fesztivál projekt megvalósításához
+                és fejlesztéséhez szükséges hátralévő feladatokat.
+              description_teacher: Az előző leckében a tanulók önértékelést végeztek,
+                és megírták a projekt jóváhagyási kritériumait. Ebben a leckében a
+                tanulók társuktól visszajelzést kapnak, hogy azonosítsák a Szomszédsági
+                irodalmi fesztivál projektjük megvalósításához és fejlesztéséhez szükséges
+                hátralévő feladatokat.
+              key: Szomszédsági irodalmi fesztivál projekt - 2. nap
+            Neighborhood Lit Fest Project - Day 3:
+              name: Szomszédsági irodalmi fesztivál projekt - 3. nap
+              description_student: A kód-ellenőrzések és a projekttervezési táblád
+                alapján végső felülvizsgálatokat és frissítéseket végzel. Megosztod
+                Szomszédsági irodalmi fesztivál projektedet társaiddal. Ezután megünnepelheted
+                a sikert, és még egyszer visszatekinthetsz a fejlesztési folyamatra.
+              description_teacher: A kód-ellenőrzések és a projekttervezési táblájuk
+                alapján a tanulók végső felülvizsgálatokat és frissítéseket végeznek.
+                A tanulók megosztják Szomszédsági irodalmi fesztivál projektedet társaikkal.
+                Ezután a tanulók megünnepelhetik a sikert, és még egyszer visszatekinthetnek
+                a fejlesztési folyamatra.
+              key: Szomszédsági irodalmi fesztivál projekt - 3. nap
+            Assessment Day:
+              description_student: Ebben egységben „ArrayList”-et használtál a programadatok
+                tárolására, és különbséget tettél az 1D és 2D tömbök és az „ArrayList”
+                között. Felfedezted az "ArrayList" előnyeit és működését, felhasználva
+                azokat numerikus és objektumadatokkal kapcsolatos problémák megoldására.
+                A „String” osztály metódusait használtad a felhasználói és fájlbevitelből
+                származó szöveg elemzésére és feldolgozására. Az egység végrehajtása
+                során programdokumentációt írtál egysoros megjegyzésekkel, többsoros
+                megjegyzésekkel és Javadoc megjegyzésekkel az API-dokumentáció létrehozásához.
+                Ennek során azonosítottad és dokumentáltad az objektumok és módszerek
+                elő- és utófeltételeit. Most egy feleletválasztós értékelés révén
+                értékeled, milyen mértékben érted el az egység tanulási célkitűzéseit
+                és a kitűzött készségeket.
+              description_teacher: Ebben egységben a tanulók „ArrayList”-et használtak
+                a programadatok tárolására, és különbséget tettek az 1D és 2D tömbök
+                és az „ArrayList” között. A tanulók felfedezték az "ArrayList" előnyeit
+                és működését, felhasználva azokat numerikus és objektumadatokkal kapcsolatos
+                problémák megoldására. A tanulók a „String” osztály metódusait használták
+                a felhasználói és fájlbevitelből származó szöveg elemzésére és feldolgozására.
+                Az egység végrehajtása során a tanulók programdokumentációt írtak
+                egysoros megjegyzésekkel, többsoros megjegyzésekkel és Javadoc megjegyzésekkel
+                az API-dokumentáció létrehozásához. Ennek során a tanulók azonosították
+                és dokumentálták az objektumok és módszerek elő- és utófeltételeit.
+                Most a tanulók egy feleletválasztós értékelés révén értékelik, milyen
+                mértékben érték el az egység tanulási célkitűzéseit és a kitűzött
+                készségeket.
+            lesson-1:
+              key: 1.  lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
