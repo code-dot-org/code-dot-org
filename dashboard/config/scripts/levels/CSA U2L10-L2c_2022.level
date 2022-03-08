@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `IceCream`(#e7e8ea) class represents an ice cream that is available at the Project Mercury Pastries Food Truck.\r\n\r\n##Getting Started\r\n1. Import `Dessert.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://studio.code.org/s/csa-backpack-2022/lessons/2/levels/5).*\r\n\r\n##In IceCream.java:\r\n\r\n2. Complete the parameterized constructor.\r\n\r\n   * Use `super()`(#e7e8ea) to initialize the `flavor`(#e7e8ea) and `price`(#e7e8ea) instance variables.\r\n   \r\n   * Use the `this`(#e7e8ea) keyword to initialize the `hasCone`(#e7e8ea) parameter to the value passed to the parameter.\r\n\r\n3. Complete the `setCone()`(#e7e8ea) method. Use the `this`(#e7e8ea) keyword to set the `hasCone`(#e7e8ea) instance variable to the value passed to the parameter.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "The IceCream Class",
+    "bubble_choice_description": "The IceCream class represents an ice cream that is available at the Project Mercury Pastries Food Truck. Complete its parameterized constructor and setCone() method.",
+    "thumbnail_url": "https://images.code.org/c6c8bc32b0b58cba2d429f24d6a9d764-image-1646615307506.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    IceCream myIceCream = new IceCream(\"rocky road\", true, 2.75);\n\n    System.out.println(myIceCream);\n\n    myIceCream.setCone(false);\n\n    System.out.println(myIceCream);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "IceCream.java": {
+        "text": "/*\n * Represents an ice cream that is available\n * at Project Mercury Pastries Food Truck\n */\npublic class IceCream extends Dessert {\n    \n  private boolean hasCone;  // Whether or not the ice cream has a cone\n\n  /*\n   * Creates a plain IceCream with\n   * no cone that costs 0.00\n   */\n  public IceCream() {\n    hasCone = false;\n  }\n\n  /*\n   * Creates an IceCream with the specified\n   * flavor, cone status, and price\n   */\n  public IceCream(String flavor, boolean hasCone, double price) {\n    // TO DO: Initialize the instance variables for the IceCream.\n    \n    \n  }\n\n  /*\n   * Returns the current value of hasCone\n   */\n  public boolean getCone() {\n    return hasCone;\n  }\n\n  /*\n   * Sets hasCone to the given value\n   */\n  public void setCone(boolean hasCone) {\n    // TO DO: Set the hasCone instance variable\n    // to the value passed to the parameter.\n    \n    \n  }\n\n  /*\n   * Returns a string that contains the\n   * flavor, price, and cone status\n   */\n  public String toString() {\n    return super.toString() + \"\\nHas Cone: \" + hasCone;\n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-07T00:55:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-07T00:55:29.043+00:00\",\"changed\":[\"cloned from \\\"CSA U2L10-L2b_2022\\\"\"],\"cloned_from\":\"CSA U2L10-L2b_2022\"},{\"changed_at\":\"2022-03-07 00:55:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 01:08:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 01:09:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 13:12:33 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -18,23 +18,21 @@ social:
 
 Notre dernier programme fait le lien entre l'apprentissage de l'informatique et d'autres matières comme les mathématiques, la littérature, les sciences et les études sociales. Grâce à Connexions en Informatique, les classes de la maternelle à la 12e année explorent leurs matières habituelles de nouvelles façons amusants !
 
-## Essayes Connexions en l'Informatique avec ces activités de l'Heure de Code
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "l’Art de la poésie", left_description: "Sois créatif ! Utilises du code pour créer des poèmes animés.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Commencer", right_heading: "Hello World", right_description: "Choisis entre quatre activités amusantes pour programmer des personnages interactifs dans un monde que tu a créé !.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Commencer"}}
-{{ clearfix }}
-
 ## Modules
 
-Les modules Connexions en l'Informatique sont une série structurée de leçons qui intègrent l'apprentissage de l'informatique dans des matières de base telles que la littérature, les mathématiques et les sciences. Ces modules sont alignés sur les normes dans toutes les matières et aboutissent à un projet multidisciplinaire.
+CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
 
-Parfaits pour les enseignants qui souhaitent intégrer l'informatique dans leurs plans de cours pour d'autres matières, ainsi que pour ceux en informatique qui souhaitent renforcer ce que les élèves apprennent dans d'autres matières.
+They're perfect for teachers who'd like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
 
-{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "Littérature", duration: "5 heures", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Codage par la poésie", right_description: "Associez l'informatique et la poésie dans votre classe grâce à cette série de leçons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 
-## Projet ouvert
+## Open-ended projects
 
-Continues à faire des liens entre l'informatique et les matières traditionnelles avec nos projets multidisciplinaires. Ils ne nécessitent que 1 à 2 heures d'enseignement et sont idéaux pour tout enseignant cherchant à développer des projets spécifiques à un sujet qui s'intègrent dans leur programme d'études existant.
+Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
 
 <em>Astuce : Ces projets demandent une certaine compréhension des bases de l'informatique, nous vous recommandons donc de terminer notre activité Heure de Code Hello World avant de commencer !</em>
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/helloworld/helloworld_textbox.jpg", text_color: "white", grades: "3+", subject: "All", duration: "1 hour", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Hello World", right_description: "Get students started with the basics of Sprite Lab. With these new skills, students can create projects on any topic, including some of the cross-curricular options below.", right_specs: "", right_button_url: "https://studio.code.org/s/hello-world-food-2021/lessons/1", right_button_text: "View lesson plan" }}
 
 {{ csc_module, title: "Ecosystems", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. This model could also be adapted into interactions between the geosphere, biosphere, hydrosphere, and/or atmosphere.", button_text: "Learn more", url: "https://bit.ly/3wEMAyc" }}
 {{ csc_module, title: "Life Cycles", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Science", duration: "1-2 hours", description: "Go from egg to tadpole to frog with this project, in which students use code to create a model of a scientific cycle - like the life cycle of a frog or the transfer of energy!", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}

@@ -2438,14 +2438,14 @@
         },
         "courseA_harvester_seq3_2021": {
           "courseA_harvester_seq3_a": "तुमच्या हा ब्लॉक वापरायचे लक्षात होते का?\n\n<xml><block type=\"harvester_corn\"/></xml>",
-          "courseA_harvester_seq3_b": "पायऱ्या मोठ्याने म्हणून बघा आणि त्यातून तुम्हाला उत्तर शोधायला मदत मिळते का पहा."
+          "courseA_harvester_seq3_b": "या पायऱ्या मोठ्याने म्हणा आणि त्यातून तुम्हाला उत्तर शोधायला मदत मिळते का बघा."
         },
         "courseA_harvester_seq4_2021": {
           "courseA_harvester_seq4_a": "हार्वेस्टर आणि कणसामध्ये किती स्पेसेस आहेत? तुमच्या वर्कस्पेसमध्ये आधीपासून किती ब्लॉक्स आहेत?",
           "courseA_harvester_seq4_b": "तुम्हाला पाच 'पूर्वकडे जा' ब्लॉक्स आणि एक 'कणीस खुडा' ब्लॉक लागेल:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5_2021": {
-          "courseA_harvester_seq5_a": "कोणता ब्लॉक हार्वेस्टरला चुकीच्या दिशेने हलवतो?",
+          "courseA_harvester_seq5_a": "कोणता ब्लॉक हार्वेस्टरला चुकीच्या दिशेने हलवतो?  ",
           "courseA_harvester_seq5_b": "तुम्ही एक ब्लॉक हलवणे आवश्यक आहे.",
           "courseA_harvester_seq5_c": "हा ब्लॉक कचऱ्यात टाका!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
@@ -2503,7 +2503,7 @@
           "courseB_collector_loops1_a": "जेव्हा तुम्ही खजिन्यावर उभे असाल तेव्हा <xml><block type=\"collector_collect_simplified\"/></xml> ब्लॉक खजिना गोळा करण्यासाठी वापरता येईल."
         },
         "courseB_collector_loops2_2021": {
-          "courseB_collector_loops2_a": "तुम्ही कोणता खजिना गोळा करण्यापूर्वी तुम्हाला हालचाल करावी लागेल.",
+          "courseB_collector_loops2_a": "तुम्ही कोणताही खजिना गोळा करण्यापूर्वी तुम्हाला हालचाल करावी लागेल.",
           "courseB_collector_loops2_b": "जेव्हा तुम्ही खजिन्याच्या जागी पोचाल तेव्हा तो गोळा करण्यासाठी <xml><block type=\"collector_collect\"/></xml> ब्लॉक वापरा."
         },
         "courseB_collector_loops3_2021": {

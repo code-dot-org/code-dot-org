@@ -3072,6 +3072,9 @@ hy:
             csf_events:
               display_name: Իրադարձություններ
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: փոփոխականների
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
@@ -3107,6 +3110,28 @@ hy:
             lessonGroup-2:
               display_name: պարունակություն
         csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Համացանց
+              key: Համացանց
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: փոփոխականների
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն

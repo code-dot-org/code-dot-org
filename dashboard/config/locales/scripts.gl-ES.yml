@@ -2665,6 +2665,10 @@ gl:
               display_name: Bucles
             csf_events:
               display_name: Eventos
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variables
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2673,3 +2677,13 @@ gl:
           lessons:
             lesson-9:
               name: Bucles
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: A Internet
+              key: A Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+            lessonGroup-8:
+              display_name: Variables

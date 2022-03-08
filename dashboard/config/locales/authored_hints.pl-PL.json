@@ -9340,7 +9340,7 @@
         },
         "courseB_iceage_loops2_2021": {
           "courseB_iceage_loops2_a": "Podziel tę łamigłówkę na dwie części: pierwszą przed zakrętem, a drugą po zakręcie.",
-          "courseB_iceage_loops2_b": "Jeśli gdzieś utkniesz, spróbuj wypowiedzieć kroki na głos.",
+          "courseB_iceage_loops2_b": "Jeśli gdzieś utkniesz, spróbuj wypowiedzieć kroki/ czynności na głos.",
           "courseB_iceage_loops2_c": "Podążaj tę ścieżkę, aby doprowadzić Scrata do żołędzia."
         },
         "courseB_iceage_loops3_2021": {
@@ -9369,7 +9369,7 @@
         "courseB_iceage_loops9_2021": {
           "courseB_iceage_loops9_a": "Masz kłopot? Spróbuj podzielić tę łamigłówkę na mniejsze kawałki. Nie bój się uruchomić swoją łamigłówkę w trakcie kodowania!",
           "courseB_iceage_loops9_b": "Twój kod końcowy powinien zawierać **4** pętle.",
-          "courseB_iceage_loops9_c": "Scrat powinien podążać tą ścieżką, aby dojść do żołędzia."
+          "courseB_iceage_loops9_c": "Scrat powinien podążać tę ścieżkę, aby dojść do żołędzia."
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "Połącz bloki z blokiem <xml><block type=\"when_run\"/></xml>, aby wprawić Scrata w ruch!",
@@ -9487,7 +9487,7 @@
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "Nie bój się popełniać błędów! Uruchom kod, aby zobaczyć, co się dzieje, nawet jeśli nie rozwiązałeś jeszcze zagadki.",
           "courseB_starWars_prog9_b": "Jest wiele sposobów na rozwiązanie tej zagadki.",
-          "courseB_starWars_prog9_c": "Czy pętla \"powtórz\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
+          "courseB_starWars_prog9_c": "Czy pętla \"powtarzaj\" <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> mogłaby tutaj pomóc?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "Blok \"ustaw postać 1 w obrazku ???\" może być użyty, aby dodać postać do sceny.",

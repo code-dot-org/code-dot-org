@@ -1522,8 +1522,8 @@
   },
   "https://studio.code.org/s/csd3-2021/lessons/21/levels/7": {
     "dsls": {
-      "description": "Try out these new blocks and challenges with collisions.",
-      "display_name": "Collision Challenges"
+      "description": "Try out these new blocks and challenges with velocity and the counter pattern.",
+      "display_name": "Complex Sprite Movement Challenges"
     },
     "sublevels": {
       "CSD U3 complex sprite movement practice parabola_2021": {

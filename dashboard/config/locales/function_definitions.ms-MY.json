@@ -1541,7 +1541,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "lukis nyalaan api"
+          },
+          "draw fire": {
+            "name": "lukis api"
           }
         },
         "courseC_data wizard_2021": {
@@ -1867,6 +1871,11 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "fungsi saya"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "penggalak"
           }
         }
       }

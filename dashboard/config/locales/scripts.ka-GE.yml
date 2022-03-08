@@ -10800,6 +10800,9 @@ ka:
             csf_events:
               display_name: მოვლენები
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: ცვლადები
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
@@ -10840,6 +10843,44 @@ ka:
             lessonGroup-2:
               display_name: შიგთავსი
         csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: სიტყვების ძალა
+              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით,
+                თუ რისი გაკეთება შეიძლება ონლაინ და რისი - არა.
+              key: სიტყვების ძალა
+            Sprites in Action:
+              name: სპრაიტები მოქმედებაში
+              key: სპრაიტები მოქმედებაში
+            AI For Oceans:
+              name: AI ოკეანეებისთვის
+              key: AI ოკეანეებისთვის
+            The Internet:
+              name: ინტერნეტი
+              key: ინტერნეტი
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ციფრული მოქალაქეობა
+            ramp_up:
+              display_name: სპრაიტები
+            lessonGroup-8:
+              display_name: ცვლადები
+          description_audience: 'ასაკი: 9-13'
+          description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები
+            და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa8-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი

@@ -12,19 +12,23 @@
         },
         "poem_art_celebration/poem-art/2021": {
           "name": "Sztuka poezji 4 - Świętowania",
-          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5"
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
+          "type": "Wideo"
         },
         "poem_art_events/poem-art/2021": {
           "name": "Sztuka poezji 2 - Zdarzenia",
-          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3"
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
+          "type": "Wideo"
         },
         "poem_art_imagery/poem-art/2021": {
           "name": "Sztuka poezji 3 - Zobrazowanie",
-          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4"
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
+          "type": "Wideo"
         },
         "poem_art_introduction/poem-art/2021": {
           "name": "Sztuka poezji 1 - Wprowadzenie",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Wideo"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Przedstawienie artysty",
@@ -40,6 +44,12 @@
         "dance-party-playlist/dance/unversioned": {
           "name": "Playlista Spotify (każdy wiek)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Wideo"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Wideo"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
@@ -57,15 +67,18 @@
         },
         "ai-ml/oceans/unversioned": {
           "name": "AI: Nauka maszynowa",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Wideo"
         },
         "ai-societal/oceans/unversioned": {
           "name": "AI: Oddziaływanie na społeczeństwo",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Wideo"
         },
         "ai-training/oceans/unversioned": {
           "name": "AI: Dane treningowe i skłonność",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Wideo"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Lista wierszy",
@@ -81,7 +94,8 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Wprowadzenie Sprite Lab",
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Wideo"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "Badanie aplikacji",
@@ -105,7 +119,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "Potęga słów: Potęga słów",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Wideo"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Potęga słów: Słowa mogą zranić",
@@ -153,7 +168,8 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "Wideo"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Zabawa z pętlą \"dla\"",
@@ -177,7 +193,8 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Zabawa z pętlą \"dla\"",
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "Ocena"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "Bloki Blockly w trybie \"unplugged\" - (Kursy C-F)",
@@ -189,15 +206,18 @@
         },
         "ai-ml/coursef/2021": {
           "name": "AI: Nauka maszynowa",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Wideo"
         },
         "ai-training/coursef/2021": {
           "name": "AI: Dane treningowe i skłonność",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Wideo"
         },
         "ai-societal/coursef/2021": {
           "name": "AI: Oddziaływanie na społeczeństwo",
-          "url": "https://youtu.be/ng4c1g3COfs"
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Wideo"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet",
@@ -209,7 +229,8 @@
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "Ocena"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet",
@@ -229,7 +250,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Projekt końcowy w ramach \"Podstaw informatyki\"",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Kategoria"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Mapowanie standardów CSTA",
@@ -337,7 +359,8 @@
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggles - Gonoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Wideo"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Zasada 20/20/20 ",
@@ -361,7 +384,8 @@
         },
         "unspotted_bugs/courseb/2021": {
           "name": "Niewykryte Błędy",
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Wideo"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Poznając pętle",
@@ -373,7 +397,8 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Poznając pętle",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Ocena"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Poznając pętle",
@@ -385,7 +410,8 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Wideo"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Właściwe scenariusze aplikacji",
@@ -397,7 +423,8 @@
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Wielkie wydarzenie",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Ocena"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Wielkie wydarzenie",
@@ -485,11 +512,13 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Makaron Wiggles-Go",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Wideo"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "Pierwsze kroki - Tworzenie sekcji klasy",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Wideo"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Szczęśliwe Mapy (Happy Maps)",
@@ -521,11 +550,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - Gonoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Wideo"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "Debugowanie z użyciem przycisku Krok",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Wideo"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Czucia Twarze Obraz emocji",
@@ -553,7 +584,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "Programowanie w parach",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Wideo"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Czucia Twarze Obraz emocji",
@@ -565,7 +597,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Wideo"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Czucia Twarze Obraz emocji",
@@ -581,7 +614,8 @@
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Wielkie wydarzenie",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Ocena"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Wielkie wydarzenie",
@@ -697,7 +731,8 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Programowanie w parach",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Wideo"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Wskazówki do zajęć głównych \"Podstaw informatyki\"",
@@ -733,7 +768,8 @@
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Wielkie wydarzenie",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Ocena"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Wielkie wydarzenie",
@@ -745,7 +781,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Wideo"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "Poziomy programowania otwartego",
@@ -777,7 +814,8 @@
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Binarne bransoletki",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "Ocena"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binarne bransoletki",
@@ -881,7 +919,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Programowanie na papierze milimetrowym",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Ocena"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Programowanie na papierze milimetrowym",
@@ -924,7 +963,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Wideo"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "Poziomy programowania otwartego",
@@ -956,7 +996,8 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Wideo"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Warunkowe z kartami",
@@ -972,7 +1013,8 @@
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Warunkowe z kartami",
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "Ocena"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Warunkowe z kartami",
@@ -984,7 +1026,8 @@
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "CSF Course D Koniec kursu Poradnik planowania projektu",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "Przewodnik projektu"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Mapowanie standardów CSTA",
@@ -1036,7 +1079,8 @@
         },
         "pair_programming/express/2021": {
           "name": "Programowanie w parach",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Wideo"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "Odłączone bloki (kursy C-F)",
@@ -1044,11 +1088,13 @@
         },
         "artist_introduction/express/2021": {
           "name": "Przedstawienie artysty",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Wideo"
         },
         "turns_angles/express/2021": {
           "name": "Skręty i kąty",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Wideo"
         },
         "turns_angles_1/express/2021": {
           "name": "Skręty i kąty",
@@ -1076,7 +1122,8 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Wideo"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Przewodnik po projekcie imprezy tanecznej",
@@ -1092,7 +1139,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "Film: o programowaniu w parach",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Wideo"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "Odłączone bloki (kursy C-F)",
@@ -1124,11 +1172,13 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "CSF Express Poradnik planowania projektu na koniec kursu",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "Przewodnik projektu"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Projekt końcowy w ramach \"Podstaw informatyki\"",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Kategoria"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Mapowanie standardów CSTA",
@@ -1160,15 +1210,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Zasada 20/20/20 ",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Wideo"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Wiggles - Go Makaron",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Wideo"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Wideo"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Mapowanie standardów CSTA",
@@ -1225,7 +1278,8 @@
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "\"Zatrzymaj się i myśl online\"",
-          "url": "https://youtu.be/X_duZ-1LApg"
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "Wideo"
         },
         "about_me_planning_guide/coursee/2021": {
           "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
@@ -1236,7 +1290,8 @@
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Etyka udostępniania cyfrowego (wideo)",
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "Wideo"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Skręty i kąty",
@@ -1260,7 +1315,8 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Funkcje w trybie \"unplugged\" - bez komputera: Pisanie piosenek ",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "Ocena"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "Funkcje w trybie \"unplugged\" - bez komputera: Pisanie piosenek ",
@@ -1282,7 +1338,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Projekt końcowy w ramach \"Podstaw informatyki\"",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Kategoria"
         },
         "design-process/coursee/2021": {
           "name": "Proces projektowania",
@@ -1344,35 +1401,56 @@
           "name": "Wprowadzenie do uczenia maszynowego"
         },
         "ai_what_is_machine_learning_/csd/2021": {
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Wideo"
         },
         "innovations_in_ai/csd/2021": {
           "name": "Innowacje w AI"
         },
         "seeing_ai/csd/2021": {
-          "name": "Widząc AI"
+          "name": "Widząc AI",
+          "type": "Wideo"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Wideo"
         },
         "introduction_to_ai_lab/csd/2021": {
           "name": "Wprowadzenie do AI Lab"
         },
         "introduction_to_ai_lab_1/csd/2021": {
-          "name": "Wprowadzenie do AI Lab"
+          "name": "Wprowadzenie do AI Lab",
+          "type": "Wideo"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
-          "name": "Szkolenie i testowanie w AI Lab "
+          "name": "Szkolenie i testowanie w AI Lab ",
+          "type": "Wideo"
         },
         "ai_training_data_bias/csd/2021": {
           "name": "AI: Dane treningowe i skłonność",
-          "url": "https://youtu.be/x2mRoFNm22g"
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Wideo"
         },
         "model_cards_in_ai_lab/csd/2021": {
-          "name": "Karty modeli w AI Lab"
+          "name": "Karty modeli w AI Lab",
+          "type": "Wideo"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Wideo"
         },
         "numerical_models/csd/2021": {
           "name": "KNN bez komputera"
         },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Wideo"
+        },
         "ai_code_of_ethics/csd/2021": {
           "name": "Kodeks etyczny AI "
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Wideo"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Kategoria"
         },
         "issue_statements/csd/2021": {
           "name": "Zaplanuj aplikację uczenia maszynowego"
@@ -1382,6 +1460,12 @@
         },
         "survey_data_in_ai_lab/csd/2021": {
           "name": "Model treningowy na podstawie dobrych danych "
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Wideo"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Wideo"
         },
         "troubleshooting_models/csd/2021": {
           "name": "Model treningowy na podstawie złych danych "
@@ -1393,13 +1477,19 @@
           "name": "Utwórz aplikację „AI dla dobra społecznego”"
         },
         "design_an_ai_app_1/csd/2021": {
-          "name": "Utwórz aplikację „AI dla dobra społecznego”"
+          "name": "Utwórz aplikację „AI dla dobra społecznego”",
+          "type": "Kategoria"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Wideo"
         },
         "computer-science-practices/csd/2021": {
-          "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit"
+          "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+          "type": "Refleksja"
         },
         "paper-prototypes/csd/2021": {
-          "name": "Prototypy na papierze"
+          "name": "Prototypy na papierze",
+          "type": "Kategoria"
         },
         "market-research/csd/2021": {
           "name": "Badania rynku"
@@ -1409,6 +1499,12 @@
         },
         "design_mode/csd/2021": {
           "name": "Tryb projektowania"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Wideo"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Wideo"
         },
         "design_mode_1/csd/2021": {
           "name": "Tryb projektowania"
@@ -1423,7 +1519,8 @@
           "name": "Aktualizacja Twojego prototypu"
         },
         "app-presentation/csd/2021": {
-          "name": "Prezentacja aplikacji"
+          "name": "Prezentacja aplikacji",
+          "type": "Kategoria"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "Prezentacja aplikacji"
@@ -1435,7 +1532,8 @@
           "name": "Losowe liczby"
         },
         "how_computers_word_hardware_software/csd/2021": {
-          "name": "Jak działają komputery: sprzęt i oprogramowanie"
+          "name": "Jak działają komputery: sprzęt i oprogramowanie",
+          "type": "Wideo"
         },
         "board_events/csd/2021": {
           "name": "Zdarzenia na tablicy"
@@ -1443,11 +1541,21 @@
         "physical_input/csd/2021": {
           "name": "Wejście fizyczne"
         },
+        "analog-digital-video/csd/2021": {
+          "type": "Wideo"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "Przewodnik projektu"
+        },
         "functions_2/csd/2021": {
           "name": "Funkcje"
         },
+        "make_a_game_1/csd/2021": {
+          "type": "Kategoria"
+        },
         "introduction_to_arrays/csd/2021": {
-          "name": "Wprowadzenie do tablic"
+          "name": "Wprowadzenie do tablic",
+          "type": "Wideo"
         },
         "arrays/csd/2021": {
           "name": "Tablice"
@@ -1456,7 +1564,8 @@
           "name": "Granie z nut"
         },
         "loops_in_app_lab/csd/2021": {
-          "name": "Pętle dla (for)"
+          "name": "Pętle dla (for)",
+          "type": "Wideo"
         },
         "for_loops/csd/2021": {
           "name": "Pętle dla (for)"
@@ -1465,16 +1574,32 @@
           "name": "Akcelerometr Zdarzeń"
         },
         "circuits-logic-video/csd/2021": {
-          "name": "Jak działają komputery: układy i logika"
+          "name": "Jak działają komputery: układy i logika",
+          "type": "Wideo"
+        },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Przewodnik projektu"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Kategoria"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Przewodnik projektu"
         },
         "representing-information-1/csd/2021": {
           "name": "Reprezentowanie informacji"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Wideo"
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Reprezentacja liczb"
         },
         "keeping-data-secret-exemplar-2019/csd/2021": {
           "name": "Zachowywanie danych w tajemnicy"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Kategoria"
         },
         "structuring_data/csd/2021": {
           "name": "Strukturyzacja danych"
@@ -1500,15 +1625,40 @@
         "automating-data-decisions-1/csd/2021": {
           "name": "Automatyzacja decyzji dotyczących danych"
         },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Wideo"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Wideo"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Wideo"
+        },
         "data-in-the-real-world-exemplar-2019/csd/2021": {
           "name": "Dane w świecie rzeczywistym"
         },
         "data-in-the-real-world/csd/2021": {
           "name": "Dane w świecie rzeczywistym"
         },
+        "video_impact_on_society/csd/2021": {
+          "type": "Wideo"
+        },
         "video_machine_learning/csd/2021": {
           "name": "Wideo: uczenie maszynowe",
-          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Wideo"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Wideo"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Wzajemne recenzje"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Kategoria"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Przewodnik projektu"
         },
         "make_a_recommendation_-_student_checklist/csd/2021": {
           "url": "https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/edit"
@@ -1526,10 +1676,12 @@
           "url": "/s/csd5-2021/vocab"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
-          "url": "https://youtu.be/PXn9gKiKKFo"
+          "url": "https://youtu.be/PXn9gKiKKFo",
+          "type": "Wideo"
         },
         "drawing_in_game_lab_-_part_2/csd/2021": {
-          "url": "https://youtu.be/QLabeWhw_O0"
+          "url": "https://youtu.be/QLabeWhw_O0",
+          "type": "Wideo"
         },
         "drawing_shapes/csd/2021": {
           "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing"
@@ -1541,7 +1693,8 @@
           "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing"
         },
         "introduction-to-variables/csd/2021": {
-          "url": "https://youtu.be/UG7Q1Sr0_F0"
+          "url": "https://youtu.be/UG7Q1Sr0_F0",
+          "type": "Wideo"
         },
         "naming_variables/csd/2021": {
           "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view"
@@ -1554,11 +1707,13 @@
           "name": "Losowe liczby"
         },
         "introduction_to_sprites/csd/2021": {
-          "url": "https://youtu.be/aUHzpGt9nso"
+          "url": "https://youtu.be/aUHzpGt9nso",
+          "type": "Wideo"
         },
         "the_animation_tab/csd/2021": {
           "name": "Karta Animacji",
-          "url": "https://youtu.be/DQPruYTJ0Fk"
+          "url": "https://youtu.be/DQPruYTJ0Fk",
+          "type": "Wideo"
         },
         "animation_tab/csd/2021": {
           "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view"
@@ -1574,7 +1729,8 @@
           "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit"
         },
         "captioned-scenes/csd/2021": {
-          "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit"
+          "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
+          "type": "Kategoria"
         },
         "sprite-scene-planning/csd/2021": {
           "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit"
@@ -1586,17 +1742,20 @@
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "youtube-flipbook/csd/2021": {
-          "url": "https://youtu.be/hol0p29cd8o"
+          "url": "https://youtu.be/hol0p29cd8o",
+          "type": "Wideo"
         },
         "introduction_to_the_draw_loop/csd/2021": {
-          "url": "https://youtu.be/G6QJeuHhqCM"
+          "url": "https://youtu.be/G6QJeuHhqCM",
+          "type": "Wideo"
         },
         "the_draw_loop/csd/2021": {
           "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing"
         },
         "animating-sprites/csd/2021": {
           "name": "Ruch duszka",
-          "url": "https://youtu.be/G666sFzAg5g"
+          "url": "https://youtu.be/G666sFzAg5g",
+          "type": "Wideo"
         },
         "the_counter_pattern/csd/2021": {
           "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing"
@@ -1607,7 +1766,8 @@
         },
         "animated-scene-1/csd/2021": {
           "name": "Animowana scena",
-          "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit"
+          "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit",
+          "type": "Kategoria"
         },
         "animated-scene/csd/2021": {
           "name": "Animowana scena",
@@ -1615,11 +1775,13 @@
         },
         "boolean_expressions/csd/2021": {
           "name": "Wyrażenia logiczne",
-          "url": "https://youtu.be/_j9nvYKaOVE"
+          "url": "https://youtu.be/_j9nvYKaOVE",
+          "type": "Wideo"
         },
         "conditional_statements/csd/2021": {
           "name": "Instrukcje warunkowe",
-          "url": "https://youtu.be/TuLIK7DcPWs"
+          "url": "https://youtu.be/TuLIK7DcPWs",
+          "type": "Wideo"
         },
         "booleans_and_comparison_operators/csd/2021": {
           "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing"
@@ -1632,7 +1794,8 @@
         },
         "if_else_statements/csd/2021": {
           "name": "Instrukcje If/Else",
-          "url": "https://youtu.be/6m6FFUJsOzo"
+          "url": "https://youtu.be/6m6FFUJsOzo",
+          "type": "Wideo"
         },
         "interactive-card-exemplar-2020/csd/2021": {
           "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/"
@@ -1641,14 +1804,20 @@
           "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view"
         },
         "interactive-card-project-guide-2019/csd/2021": {
-          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/"
+          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
+          "type": "Przewodnik projektu"
         },
         "interactive-card-1-2-3-4/csd/2021": {
-          "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/"
+          "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
+          "type": "Wzajemne recenzje"
+        },
+        "interactive_card/csd/2021": {
+          "type": "Kategoria"
         },
         "velocity_1/csd/2021": {
           "name": "Prędkość",
-          "url": "https://youtu.be/zcP94yMYqrI"
+          "url": "https://youtu.be/zcP94yMYqrI",
+          "type": "Wideo"
         },
         "velocity_2/csd/2021": {
           "name": "Prędkość",
@@ -1661,28 +1830,45 @@
           "name": "Wykrywanie kolizji"
         },
         "side-scroller-1/csd/2021": {
-          "name": "Suwak boczny"
+          "name": "Suwak boczny",
+          "type": "Kategoria"
         },
         "side-scroller/csd/2021": {
-          "name": "Suwak boczny"
+          "name": "Suwak boczny",
+          "type": "Przewodnik projektu"
         },
         "flyer-game-1/csd/2021": {
-          "name": "Gra Flyer"
+          "name": "Gra Flyer",
+          "type": "Kategoria"
         },
         "flyer-game/csd/2021": {
-          "name": "Gra Flyer"
+          "name": "Gra Flyer",
+          "type": "Przewodnik projektu"
         },
         "calling_and_defining_functions/csd/2021": {
-          "name": "Funkcje"
+          "name": "Funkcje",
+          "type": "Wideo"
         },
         "functions_1/csd/2021": {
           "name": "Funkcje"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "Przewodnik projektu"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Wzajemne recenzje"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Kategoria"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Forum Nauczycieli"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Czym jest komputer?"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Wideo"
         },
         "input-and-output-2020/csd/2021": {
           "name": "Wejście i Wyjście",
@@ -1692,14 +1878,19 @@
           "name": "Wejście i Wyjście",
           "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY"
         },
+        "what-do-computers-do/csd/2021": {
+          "type": "Wideo"
+        },
         "app-proposal-project/csd/2021": {
           "name": "Aplikacje i rozwiązywanie problemów"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "Aplikacje i rozwiązywanie problemów"
+          "name": "Aplikacje i rozwiązywanie problemów",
+          "type": "Wzajemne recenzje"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "Aplikacje i rozwiązywanie problemów"
+          "name": "Aplikacje i rozwiązywanie problemów",
+          "type": "Kategoria"
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "url": "https://docs.google.com/presentation/d/1rg7Lf6ahVruRMzmYnZuXZZqLUgqK5ahp53tCIPtl8wc/copy"
@@ -1709,36 +1900,43 @@
           "url": "https://drive.google.com/file/d/1Eh3mxDIgNE1guUs_sCB4SBR_hHMBMs26/view"
         },
         "intro_to_web_lab_part_2/csd/2021": {
-          "url": "https://youtu.be/Hjl6gbg9kmk"
+          "url": "https://youtu.be/Hjl6gbg9kmk",
+          "type": "Wideo"
         },
         "video_intro_to_web_lab_part_1/csd/2021": {
-          "url": "https://www.youtube.com/watch?v=itx0RYOnoBs"
+          "url": "https://www.youtube.com/watch?v=itx0RYOnoBs",
+          "type": "Wideo"
         },
         "video_pair_programming/csd/2021": {
           "name": "Film: Programowanie parami",
-          "url": "https://youtu.be/q7d_JtyCq1A"
+          "url": "https://youtu.be/q7d_JtyCq1A",
+          "type": "Wideo"
         },
         "headings_and_paragraphs/csd/2021": {
           "name": "Nagłówki i akapity",
           "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view"
         },
         "video_debugging/csd/2021": {
-          "url": "https://youtu.be/auv10y-dN4s"
+          "url": "https://youtu.be/auv10y-dN4s",
+          "type": "Wideo"
         },
         "project-guide-html-project-2020/csd/2021": {
           "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view"
         },
         "html-web-page-1/csd/2021": {
-          "url": "https://docs.google.com/document/d/1__6xm9Bpb8c4lw21YH_Nbu-N1Tx7XoBzFnWw0gB9xKM/edit"
+          "url": "https://docs.google.com/document/d/1__6xm9Bpb8c4lw21YH_Nbu-N1Tx7XoBzFnWw0gB9xKM/edit",
+          "type": "Kategoria"
         },
         "mini-project-html-page/csd/2021": {
           "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy"
         },
         "html-web-page/csd/2021": {
-          "url": "https://docs.google.com/document/d/1IFhjs4IjCM-mKs28FxJTDTADPS4XTa30aoQR1pG1570/"
+          "url": "https://docs.google.com/document/d/1IFhjs4IjCM-mKs28FxJTDTADPS4XTa30aoQR1pG1570/",
+          "type": "Wzajemne recenzje"
         },
         "html-page/csd/2021": {
-          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg"
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg",
+          "type": "Przewodnik projektu"
         },
         "formatting_html/csd/2021": {
           "name": "Formatowanie HTML",
@@ -1762,11 +1960,13 @@
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Wprowadzenie do CSS - Część 1",
-          "url": "https://www.youtube.com/watch?v=EP9QMdoXvXE"
+          "url": "https://www.youtube.com/watch?v=EP9QMdoXvXE",
+          "type": "Wideo"
         },
         "intro_to_css_-_part_2/csd/2021": {
           "name": "Wprowadzenie do CSS - Część 2",
-          "url": "https://youtu.be/VgBVKlpLqsE"
+          "url": "https://youtu.be/VgBVKlpLqsE",
+          "type": "Wideo"
         },
         "style_sheets/csd/2021": {
           "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view"
@@ -1781,13 +1981,16 @@
           "url": "https://docs.google.com/document/d/1y_uZjW57RlPgqvO8qjfVbGTVrTehSNGxUfaQXtPZLv0/view"
         },
         "your-personal-style-1-2-3/csd/2021": {
-          "url": "https://docs.google.com/document/d/1znQdx7gLR3CcKYNnq0TJFPw3lpvfvzxIFa9-gZ_6twQ/edit"
+          "url": "https://docs.google.com/document/d/1znQdx7gLR3CcKYNnq0TJFPw3lpvfvzxIFa9-gZ_6twQ/edit",
+          "type": "Kategoria"
         },
         "your-personal-style-1/csd/2021": {
-          "url": "https://docs.google.com/document/d/1Wp_EdUOlhiEw4BQJBRwOidqcgBnJChHUTWOhZclOnBE"
+          "url": "https://docs.google.com/document/d/1Wp_EdUOlhiEw4BQJBRwOidqcgBnJChHUTWOhZclOnBE",
+          "type": "Wzajemne recenzje"
         },
         "your-personal-style/csd/2021": {
-          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit"
+          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit",
+          "type": "Przewodnik projektu"
         },
         "licensing-your-work-exemplar-2020/csd/2021": {
           "url": "https://docs.google.com/document/d/1Fx-NsWsvtGJf4uMM4OuOAE3LCj1bFypoVcRahdpkre0/edit?usp=sharing"
@@ -1796,13 +1999,27 @@
           "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/"
         },
         "creative-commons-video/csd/2021": {
-          "url": "https://www.youtube.com/watch?v=srVPLrmlBJY"
+          "url": "https://www.youtube.com/watch?v=srVPLrmlBJY",
+          "type": "Wideo"
         },
         "images_in_html/csd/2021": {
           "name": "Obrazy w HTML"
         },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Przewodnik projektu"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Wzajemne recenzje"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Przewodnik projektu"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Kategoria"
+        },
         "publishing_your_website/csd/2021": {
-          "name": "Publikowanie Twojej witryny "
+          "name": "Publikowanie Twojej witryny ",
+          "type": "Wideo"
         },
         "websites-for-a-purpose-2020/csd/2021": {
           "name": "Strony internetowe dla określonego celu"
@@ -1810,11 +2027,32 @@
         "websites-for-a-purpose/csd/2021": {
           "name": "Strony internetowe dla określonego celu"
         },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Wideo"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Wideo"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Wideo"
+        },
         "classes/csd/2021": {
           "name": "Klasy"
         },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Kategoria"
+        },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Przewodnik projektu"
+        },
         "hyperlinks/csd/2021": {
           "name": "Odnośniki"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Wzajemne recenzje"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Przewodnik projektu"
         }
       }
     }
