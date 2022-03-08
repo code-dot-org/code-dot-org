@@ -67,7 +67,7 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
-      courseVersionId: 3,
+      courseVersionId: 4,
       unitId: null
     });
   });
@@ -125,7 +125,7 @@ describe('AssignmentSelector', () => {
     ]);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
-      courseVersionId: 3,
+      courseVersionId: 4,
       unitId: null
     });
   });
@@ -142,7 +142,7 @@ describe('AssignmentSelector', () => {
       .simulate('change', {target: {value: 3}});
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
-      courseVersionId: 3,
+      courseVersionId: 4,
       unitId: 3
     });
   });
@@ -156,7 +156,7 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
-      courseVersionId: 3,
+      courseVersionId: 4,
       unitId: null
     });
 
@@ -262,7 +262,7 @@ describe('AssignmentSelector', () => {
         .simulate('change', {target: {value: 2}});
       expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: 2,
-        courseVersionId: 3,
+        courseVersionId: 4,
         unitId: null
       });
     });
@@ -279,7 +279,7 @@ describe('AssignmentSelector', () => {
         .simulate('change', {target: {value: 3}});
       expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: 2,
-        courseVersionId: 3,
+        courseVersionId: 4,
         unitId: 3
       });
     });
