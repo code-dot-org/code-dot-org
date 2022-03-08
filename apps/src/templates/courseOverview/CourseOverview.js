@@ -186,7 +186,7 @@ class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification />}
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
-          {versions.length > 1 && (
+          {Object.values(versions).length > 1 && (
             <AssignmentVersionSelector
               onChangeVersion={this.onChangeVersion}
               courseVersions={versions}

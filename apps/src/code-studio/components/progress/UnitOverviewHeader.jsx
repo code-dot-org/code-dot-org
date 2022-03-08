@@ -184,7 +184,7 @@ class UnitOverviewHeader extends Component {
               <h1 style={styles.title} id="script-title">
                 {unitTitle}
               </h1>
-              {versions.length > 1 && (
+              {Object.values(versions).length > 1 && (
                 <AssignmentVersionSelector
                   onChangeVersion={this.onChangeVersion}
                   courseVersions={versions}
