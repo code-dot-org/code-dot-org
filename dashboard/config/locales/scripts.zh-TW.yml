@@ -22035,3 +22035,16 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 沙盒
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 歡迎
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: 變數
+            lesson-15:
+              name: 單元 2 評估
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
