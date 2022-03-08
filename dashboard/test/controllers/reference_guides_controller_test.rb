@@ -72,7 +72,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, name: 'regular teacher cannot view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :index, name: 'regular teacher cannot view pilot ref guide index',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version}}, user: :teacher, response: :not_found
+    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, name: 'pilot student can view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: -> {@pilot_student}, response: :success
   test_user_gets_response_for :show, name: 'pilot teacher can view pilot ref guide',
