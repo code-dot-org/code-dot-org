@@ -23,11 +23,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={testSection}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -60,11 +60,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={noStudentsSection}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -97,11 +97,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -134,11 +134,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -174,11 +174,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -199,11 +199,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.email
         }}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitTextToSpeechEnabled={false}
+        assignedUnitLessonExtrasAvailable={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -221,11 +221,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitTextToSpeechEnabled={false}
+        assignedUnitLessonExtrasAvailable={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -246,11 +246,11 @@ describe('EditSectionForm', () => {
           loginType: SectionLoginType.google_classroom
         }}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitTextToSpeechEnabled={false}
+        assignedUnitLessonExtrasAvailable={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -268,11 +268,11 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -290,14 +290,112 @@ describe('EditSectionForm', () => {
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
-        textToSpeechUnitIds={[]}
-        lessonExtrasAvailable={() => false}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
     assert.equal(loginTypeField.length, 0);
+  });
+
+  it('does not render TtsAutoplayField when assignedUnitTextToSpeechEnabled is false', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        localeCode="en_us"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
+      />
+    );
+    const ttsAutoplayField = wrapper.find('TtsAutoplayField');
+    assert.equal(ttsAutoplayField.length, 0);
+  });
+
+  it('renders TtsAutoplayField when assignedUnitTextToSpeechEnabled is true', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        localeCode="en_us"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={true}
+      />
+    );
+    const ttsAutoplayField = wrapper.find('TtsAutoplayField');
+    assert.equal(ttsAutoplayField.length, 1);
+  });
+
+  it('does not render LessonExtrasField when assignedUnitLessonExtrasAvailable is false', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={false}
+        assignedUnitTextToSpeechEnabled={false}
+      />
+    );
+    const lessonExtrasField = wrapper.find('LessonExtrasField');
+    assert.equal(lessonExtrasField.length, 0);
+  });
+
+  it('renders LessonExtrasField when assignedUnitLessonExtrasAvailable is true', () => {
+    const wrapper = mount(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+        assignedUnitLessonExtrasAvailable={true}
+        assignedUnitTextToSpeechEnabled={false}
+      />
+    );
+    const lessonExtrasField = wrapper.find('LessonExtrasField');
+    assert.equal(lessonExtrasField.length, 1);
   });
 });
