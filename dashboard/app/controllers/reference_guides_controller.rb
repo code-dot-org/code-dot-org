@@ -29,11 +29,12 @@ class ReferenceGuidesController < ApplicationController
   end
 
   def find_reference_guides
-    course_version_id = find_matching_course_version(params[:course_course_name])&.id
-    unless course_version_id
+    course_version = find_matching_course_version(params[:course_course_name])
+    authorize! :read, course_version.content_root
+    unless course_version&.id
       flash[:alert] = 'No matching course version found.'
       render :not_found
     end
-    @reference_guides = ReferenceGuide.where(course_version_id: course_version_id).map(&:summarize_for_index)
+    @reference_guides = ReferenceGuide.where(course_version_id: course_version&.id).map(&:summarize_for_index)
   end
 end
