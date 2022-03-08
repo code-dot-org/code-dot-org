@@ -394,8 +394,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # Transfer sections and destroy new user if takeover is possible
     if allows_section_takeover(oauth_user)
+      # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
       if (oauth_user.id == lookup_user.id)
-        # Duplicate params only because this log is temporary and will be removed
+        # Duplicate params only because this log is temporary
         firehose_params = {
           source_user: oauth_user,
           destination_user: lookup_user,

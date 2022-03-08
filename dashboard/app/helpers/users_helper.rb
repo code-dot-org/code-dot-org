@@ -29,6 +29,7 @@ module UsersHelper
       return false
     end
 
+    # TODO: Remove this call https://codedotorg.atlassian.net/browse/FND-1927
     log_self_takeover_investigation_to_firehose(firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
 
     ActiveRecord::Base.transaction do
@@ -50,6 +51,7 @@ module UsersHelper
     log_account_takeover_to_firehose(firehose_params)
     true
   rescue => e
+    # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
     if source_user && destination_user
       log_self_takeover_investigation_to_firehose({
         source_user: source_user,
@@ -79,6 +81,7 @@ module UsersHelper
     )
   end
 
+  # TODO: Remove this function https://codedotorg.atlassian.net/browse/FND-1927
   def log_self_takeover_investigation_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
     FirehoseClient.instance.put_record(
       :analysis,
