@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-03 13:48:39 UTC",
+    "serialized_at": "2022-03-07 13:47:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -485,6 +485,7 @@
       "key": "d11f3015-34bb-4b5f-934a-c9685d13c2c4",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2124,7 +2125,13 @@
       "key": "335702e6-967f-424c-9668-b4e8372b4992",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the code for the `takePaint()` method."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the code for the `takePaint()` method.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Focus on the code that is highlighted on the slide rather than discussing the unfamiliar components of the code segment. Students learn about the purpose and functionality of these code segments in later lessons."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "335702e6-967f-424c-9668-b4e8372b4992",

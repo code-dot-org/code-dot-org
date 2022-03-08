@@ -45,7 +45,7 @@
   "created_at": "2022-03-03T19:41:25.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2022-03-03T19:41:25.323+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay\"},{\"changed_at\":\"2022-03-03 19:42:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-03 19:46:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-03 19:46:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-03 19:59:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-03T19:41:25.323+00:00\",\"changed\":[\"cloned from \\\"poetry_hoc_freeplay\\\"\"],\"cloned_from\":\"poetry_hoc_freeplay\"},{\"changed_at\":\"2022-03-03 19:42:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-03 19:46:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-03 19:46:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-03 19:59:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-04 18:48:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-04 18:51:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -53,8 +53,20 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
-  </block>
-        <block type="Poetry_whenLineShows" y="175">
+          <next>
+            <block type="Poetry_makeNewSpriteAnon" id="3">
+              <field name="ANIMATION_NAME">"night_cloud"</field>
+              <field name="LOCATION">{"x":200,"y":225}</field>
+              <next>
+                <block type="Poetry_setSize" id="4" movable="false">
+                  <field name="SPRITE">"night_cloud"</field>
+                  <field name="VAL">50</field>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="Poetry_whenLineShows" y="175" movable="false">
           <field name="N">0</field>
         </block>
       </xml>

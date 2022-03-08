@@ -10,18 +10,22 @@ import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
   assignedUnitName,
+  assignedUnitTextToSpeechEnabled,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  lessonExtrasAvailable
+  assignedUnitLessonExtrasAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {
+  SectionLoginType,
+  StudentGradeLevels
+} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -36,7 +40,6 @@ class EditSectionForm extends Component {
     //Comes from redux
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
-    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     section: sectionShape.isRequired,
@@ -44,10 +47,10 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    lessonExtrasAvailable: PropTypes.func.isRequired,
+    assignedUnitLessonExtrasAvailable: PropTypes.bool.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
     assignedUnitName: PropTypes.string.isRequired,
+    assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
@@ -131,14 +134,13 @@ class EditSectionForm extends Component {
     const {
       section,
       title,
-      validGrades,
       validAssignments,
       assignmentFamilies,
       isSaveInProgress,
       editSectionProperties,
       handleClose,
-      lessonExtrasAvailable,
-      textToSpeechUnitIds,
+      assignedUnitLessonExtrasAvailable,
+      assignedUnitTextToSpeechEnabled,
       assignedUnitName,
       localeCode,
       isNewSection,
@@ -194,7 +196,6 @@ class EditSectionForm extends Component {
           <GradeField
             value={section.grade || ''}
             onChange={grade => editSectionProperties({grade})}
-            validGrades={validGrades}
             disabled={isSaveInProgress}
           />
           {showLoginTypeField && (
@@ -214,7 +215,7 @@ class EditSectionForm extends Component {
             localeCode={localeCode}
             isNewSection={isNewSection}
           />
-          {lessonExtrasAvailable(section.scriptId) && (
+          {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
               value={section.lessonExtras}
               onChange={lessonExtras => editSectionProperties({lessonExtras})}
@@ -226,7 +227,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
+          {assignedUnitTextToSpeechEnabled && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
@@ -303,8 +304,8 @@ const SectionNameField = ({value, onChange, disabled}) => (
 );
 SectionNameField.propTypes = FieldProps;
 
-const GradeField = ({value, onChange, validGrades, disabled}) => {
-  const gradeOptions = [''].concat(validGrades).map(grade => ({
+const GradeField = ({value, onChange, disabled}) => {
+  const gradeOptions = [''].concat(StudentGradeLevels).map(grade => ({
     value: grade,
     text: grade === 'Other' ? 'Other/Mixed' : grade
   }));
@@ -325,10 +326,7 @@ const GradeField = ({value, onChange, validGrades, disabled}) => {
     </div>
   );
 };
-GradeField.propTypes = {
-  ...FieldProps,
-  validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
-};
+GradeField.propTypes = FieldProps;
 
 const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
   const friendlyNameByLoginType = {
@@ -543,15 +541,14 @@ YesNoDropdown.propTypes = FieldProps;
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialUnitId: state.teacherSections.initialUnitId,
-  validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
-  lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
+  assignedUnitLessonExtrasAvailable: assignedUnitLessonExtrasAvailable(state),
   hiddenLessonState: state.hiddenLesson,
   assignedUnitName: assignedUnitName(state),
+  assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
 
   // DCDO Flag - show/hide Lock Section field

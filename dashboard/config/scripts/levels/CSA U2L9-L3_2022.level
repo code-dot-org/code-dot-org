@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##In MyConsole.java:\r\n1. Refactor the code to print the information about the `myDessert`(#e7e8ea) object to the console.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyClass.java": {
+        "text": "",
+        "isVisible": true
+      }
+    },
+    "project_template_level_name": "CSA U2L9 PBT_2022",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-07T00:18:30.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-07T00:18:30.266+00:00\",\"changed\":[\"cloned from \\\"CSA U2L9-L2_2022\\\"\"],\"cloned_from\":\"CSA U2L9-L2_2022\"},{\"changed_at\":\"2022-03-07 00:19:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

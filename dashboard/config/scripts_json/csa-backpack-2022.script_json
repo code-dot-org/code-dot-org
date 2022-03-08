@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-18 16:29:13 UTC",
+    "serialized_at": "2022-03-07 00:30:24 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -45,6 +45,21 @@
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Project Mercury Pastries Food Truck",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022"
+      }
     }
   ],
   "lesson_activities": [
@@ -56,6 +71,18 @@
       "seeding_key": {
         "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022"
+      }
+    },
+    {
+      "key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022"
       }
@@ -137,6 +164,72 @@
       "seeding_key": {
         "activity_section.key": "7b54923a-b024-4b0f-8ce4-1c21534a5345",
         "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
+      "key": "38e7637b-a057-4a11-a6a6-71530941d7fe",
+      "position": 8,
+      "properties": {
+        "progression_name": "Unit 2 Lesson 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "38e7637b-a057-4a11-a6a6-71530941d7fe",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
+      "key": "fc9d62f0-0d2c-483c-b108-acaba66dd861",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 2 Lesson 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc9d62f0-0d2c-483c-b108-acaba66dd861",
+        "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6"
+      }
+    },
+    {
+      "key": "6bcc34a6-80e1-40ac-9cd9-2d32aad51a1e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit 2 Lesson 6"
+      },
+      "seeding_key": {
+        "activity_section.key": "6bcc34a6-80e1-40ac-9cd9-2d32aad51a1e",
+        "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6"
+      }
+    },
+    {
+      "key": "ab8d50c5-2cd9-4072-a38e-82f710d2f818",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 2 Lesson 7"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab8d50c5-2cd9-4072-a38e-82f710d2f818",
+        "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6"
+      }
+    },
+    {
+      "key": "bb356a01-8b41-4c2d-9ee2-dcddd8eefac9",
+      "position": 4,
+      "properties": {
+        "progression_name": "Unit 2 Lesson 8"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb356a01-8b41-4c2d-9ee2-dcddd8eefac9",
+        "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6"
+      }
+    },
+    {
+      "key": "c572f3b3-f49c-45f9-b49a-25348f266190",
+      "position": 5,
+      "properties": {
+        "progression_name": "Unit 2 Lesson 9"
+      },
+      "seeding_key": {
+        "activity_section.key": "c572f3b3-f49c-45f9-b49a-25348f266190",
+        "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6"
       }
     }
   ],
@@ -222,6 +315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11 PainterPlus"
+        ],
         "progression": "Unit 1 Lesson 11"
       },
       "bonus": false,
@@ -244,6 +340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12 PainterPlus"
+        ],
         "progression": "Unit 1 Lesson 12"
       },
       "bonus": false,
@@ -266,6 +365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13 PainterPlus and PatternPainter"
+        ],
         "progression": "Unit 1 Lesson 13"
       },
       "bonus": false,
@@ -288,6 +390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14 BackgroundPainter"
+        ],
         "progression": "Unit 1 Lesson 14"
       },
       "bonus": false,
@@ -302,6 +407,138 @@
       },
       "level_keys": [
         "CSA U1L14 BackgroundPainter"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 2 Lesson 4"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "38e7637b-a057-4a11-a6a6-71530941d7fe"
+      },
+      "level_keys": [
+        "CSA U2L4 PainterPlus"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 2 Lesson 4"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "fc9d62f0-0d2c-483c-b108-acaba66dd861"
+      },
+      "level_keys": [
+        "CSA U2L4 Dessert"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 2 Lesson 6"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L6 Cake and Cookie"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "6bcc34a6-80e1-40ac-9cd9-2d32aad51a1e"
+      },
+      "level_keys": [
+        "CSA U2L6 Cake and Cookie"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 2 Lesson 7"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L7 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "ab8d50c5-2cd9-4072-a38e-82f710d2f818"
+      },
+      "level_keys": [
+        "CSA U2L7 Dessert"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 2 Lesson 8"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L8 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "bb356a01-8b41-4c2d-9ee2-dcddd8eefac9"
+      },
+      "level_keys": [
+        "CSA U2L8 Dessert"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 2 Lesson 9"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L9 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "c572f3b3-f49c-45f9-b49a-25348f266190"
+      },
+      "level_keys": [
+        "CSA U2L9 Dessert"
       ]
     }
   ],
@@ -388,6 +625,78 @@
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022",
         "activity_section.key": "7b54923a-b024-4b0f-8ce4-1c21534a5345"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4 PainterPlus",
+        "script_level.level_keys": [
+          "CSA U2L4 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "38e7637b-a057-4a11-a6a6-71530941d7fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L4 Dessert",
+        "script_level.level_keys": [
+          "CSA U2L4 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "fc9d62f0-0d2c-483c-b108-acaba66dd861"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L6 Cake and Cookie",
+        "script_level.level_keys": [
+          "CSA U2L6 Cake and Cookie"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "6bcc34a6-80e1-40ac-9cd9-2d32aad51a1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L7 Dessert",
+        "script_level.level_keys": [
+          "CSA U2L7 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "ab8d50c5-2cd9-4072-a38e-82f710d2f818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L8 Dessert",
+        "script_level.level_keys": [
+          "CSA U2L8 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "bb356a01-8b41-4c2d-9ee2-dcddd8eefac9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L9 Dessert",
+        "script_level.level_keys": [
+          "CSA U2L9 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "c572f3b3-f49c-45f9-b49a-25348f266190"
       }
     }
   ],
