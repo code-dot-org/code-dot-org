@@ -24,7 +24,15 @@ class ProgrammingExpressionsController < ApplicationController
     num_pages = (total_expressions / results_per_page).ceil
 
     @programming_expressions.page(params[:page]).per(results_per_page)
-    @programming_expressions = @programming_expressions.map(&:summarize_for_edit)
+    @programming_expressions = @programming_expressions.map do |exp|
+      {
+        id: exp.id,
+        key: exp.key,
+        name: exp.name,
+        environmentTitle: exp.programming_environment.title,
+        categoryName: exp.programming_environment_category&.name
+      }
+    end
     render json: {numPages: num_pages, expressions: @programming_expressions}
   end
 
