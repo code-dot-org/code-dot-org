@@ -106,10 +106,11 @@ class GatekeeperBase
 
     cache_expiration = 5
 
-    # Use the memory adapter if we're running tests, but not if we running the test Rails server.
-    if env == 'test' && File.basename($0) != 'unicorn'
+    # Use the memory adapter if we're running unit tests, but not if we're running the web application server.
+    if env == 'test' && File.basename($0) != 'puma'
       adapter = MemoryAdapter.new
-    elsif env == 'production'
+    # Production and the managed test system web application servers (test.code.org / studio.code.org) use DynamoDB.
+    elsif env == 'production' || (CDO.test_system? && File.basename($0) == 'puma')
       cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
     else

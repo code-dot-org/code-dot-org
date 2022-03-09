@@ -69,9 +69,11 @@ class DCDOBase
     env = Rails.env.to_s if defined?(Rails) && Rails.respond_to?(:env)
 
     cache_expiration = 5
-    if env == 'test'
+    # Use the memory adapter if we're running unit tests, but not if we're running the web application server.
+    if env == 'test' && File.basename($0) != 'puma'
       adapter = MemoryAdapter.new
-    elsif env == 'production'
+    # Production and the managed test system web application servers (test.code.org / studio.code.org) use DynamoDB.
+    elsif env == 'production' || (CDO.test_system? && File.basename($0) == 'puma')
       cache_expiration = 30
       adapter = DynamoDBAdapter.new CDO.dcdo_table_name
     else
