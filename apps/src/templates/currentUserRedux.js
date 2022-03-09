@@ -33,7 +33,8 @@ const initialState = {
   userName: null,
   userType: 'unknown',
   signInState: SignInState.Unknown,
-  hasSeenStandardsReportInfo: false
+  hasSeenStandardsReportInfo: false,
+  under13: true
 };
 
 export default function currentUser(state = initialState, action) {
@@ -65,12 +66,13 @@ export default function currentUser(state = initialState, action) {
   }
 
   if (action.type === SET_INITIAL_DATA) {
-    const {id, username, user_type} = action.serverUser;
+    const {id, username, user_type, under_13} = action.serverUser;
     return {
       ...state,
       userId: id,
       userName: username,
-      userType: user_type
+      userType: user_type,
+      under13: under_13
     };
   }
 
