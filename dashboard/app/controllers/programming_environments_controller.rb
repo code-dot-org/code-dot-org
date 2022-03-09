@@ -4,7 +4,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   authorize_resource
 
   def index
-    @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
+    @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
   end
 
   def new
@@ -57,6 +57,7 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def show
     return render :not_found unless @programming_environment
+    return head :forbidden unless can?(:read, @programming_environment)
     @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
   end
 
@@ -76,6 +77,7 @@ class ProgrammingEnvironmentsController < ApplicationController
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :title,
+      :published,
       :description,
       :editor_type,
       :image_url,
