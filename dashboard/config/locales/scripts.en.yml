@@ -31858,8 +31858,12 @@ en:
               description_teacher: 
             lesson-2:
               name: Navigating lesson plans and resources
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Navigating Support
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csa2-2022
           title: ''
@@ -32994,3 +32998,122 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        k5-onlinepd-2022:
+          lessons:
+            Welcome and Introduction:
+              name: Welcome and Introduction
+              description_student: 
+              description_teacher: 
+            Getting Started:
+              name: Getting Started
+              description_student: ''
+              description_teacher: ''
+              key: Getting Started
+            Teaching Practices and Strategies:
+              name: Teaching Practices and Strategies
+              description_student: 
+              description_teacher: 
+            Teaching a Lesson:
+              name: Teaching a Lesson
+              description_student: 
+              description_teacher: 
+            Addressing Barriers:
+              name: Addressing Barriers
+              description_student: 
+              description_teacher: 
+            Part II Overview:
+              name: Part II Overview
+              description_student: ''
+              description_teacher: ''
+              key: Part II Overview
+            Sequencing:
+              name: Sequencing
+              description_student: ''
+              description_teacher: ''
+              key: Sequencing
+            Sequencing with Sprites:
+              name: Sequencing with Sprites
+              description_student: ''
+              description_teacher: ''
+              key: Sequencing with Sprites
+            Loops:
+              name: Loops
+              description_student: ''
+              description_teacher: ''
+              key: Loops
+            Events:
+              name: Events
+              description_student: ''
+              description_teacher: ''
+              key: Events
+            Conditionals:
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+              key: Conditionals
+            Functions:
+              name: Functions
+              description_student: ''
+              description_teacher: ''
+              key: Functions
+            Variables:
+              name: Variables
+              description_student: ''
+              description_teacher: ''
+              key: Variables
+            For Loops:
+              name: For Loops
+              description_student: ''
+              description_teacher: ''
+              key: For Loops
+            End of Course projects:
+              name: End of Course projects
+              description_student: ''
+              description_teacher: ''
+              key: End of Course projects
+            Reviewing your reflections:
+              name: Reviewing your reflections
+              description_student: ''
+              description_teacher: ''
+              key: Reviewing your reflections
+            Taking next steps:
+              name: Taking next steps
+              description_student: 
+              description_teacher: 
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Welcome to "Teaching Computer Science Fundamentals"
+              name: Welcome and Introduction
+              description_student: ''
+              description_teacher: ''
+            CS Teaching and Student Practices:
+              key: CS Teaching and Student Practices
+              name: Teaching Practices and Strategies
+              description_student: ''
+              description_teacher: ''
+            Lesson Planning:
+              key: Lesson Planning
+              name: Teaching a Lesson
+              description_student: ''
+              description_teacher: ''
+            Implementation Approaches and Barriers:
+              key: Implementation Approaches and Barriers
+              name: Addressing Barriers
+              description_student: ''
+              description_teacher: ''
+            Next steps:
+              key: Next steps
+              name: Taking next steps
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            Implementing and Teaching CS:
+              display_name: 'Part I:  Teaching and Implementing Computer Science'
+            k5_basic_concepts_1:
+              display_name: 'Part II:  Concepts in Courses A - F'
+            k5_next_steps_1:
+              display_name: 'Part III:  Next Steps'
+          title: Teaching Computer Science Fundamentals ('21-'22)
+          description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
+          student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
