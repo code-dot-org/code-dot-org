@@ -539,7 +539,7 @@ const FormController = props => {
       >
         <p>
           {savedStatus === 'reopened'
-            ? 'Your Regional Partner has requested more information.  Please update and resubmit.'
+            ? 'Your Regional Partner has requested more information. Please update and resubmit.'
             : 'We found an application you started! Your saved responses have been loaded.'}
         </p>
       </Alert>
