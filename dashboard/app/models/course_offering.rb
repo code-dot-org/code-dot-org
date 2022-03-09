@@ -122,7 +122,7 @@ class CourseOffering < ApplicationRecord
     return false unless can_be_instructor?(user)
     return true if any_versions_launched?
     return true if Script.has_any_pilot_access?(user) && any_version_has_pilot_access?(user)
-    return true if user.permission?(UserPermission::LEVELBUILDER) && any_versions_in_development?
+    return true if user.permission?(UserPermission::LEVELBUILDER)
 
     false
   end
