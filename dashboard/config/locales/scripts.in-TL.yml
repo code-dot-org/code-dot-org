@@ -26206,6 +26206,7 @@ in:
           name: crwdns2862259:0crwdne2862259:0
           title: crwdns2862261:0crwdne2862261:0
           description: crwdns2862267:0crwdne2862267:0
+          student_description: crwdns2862269:0crwdne2862269:0
         csa3-2022:
           lessons:
             lesson-1:
@@ -26741,6 +26742,8 @@ in:
           lessons:
             lesson-1:
               name: crwdns2883564:0crwdne2883564:0
+            lesson-2:
+              name: crwdns2886620:0crwdne2886620:0
           name: crwdns2883570:0crwdne2883570:0
           title: crwdns2883572:0crwdne2883572:0
           description: crwdns2883578:0crwdne2883578:0
@@ -27175,3 +27178,127 @@ in:
           title: crwdns2886472:0crwdne2886472:0
           description: crwdns2886474:0[0]crwdnd2886474:0[1]crwdne2886474:0
           student_description: crwdns2886476:0crwdne2886476:0
+        csa-preview:
+          lessons:
+            lesson-1:
+              name: crwdns2886626:0crwdne2886626:0
+            lesson-2:
+              name: crwdns2886632:0crwdne2886632:0
+            lesson-3:
+              name: crwdns2886638:0crwdne2886638:0
+          name: crwdns2886644:0crwdne2886644:0
+          title: crwdns2886646:0crwdne2886646:0
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: crwdns2886656:0crwdne2886656:0
+            lesson-2:
+              name: crwdns2886662:0crwdne2886662:0
+              description_student: crwdns2886664:0crwdne2886664:0
+              description_teacher: crwdns2886666:0crwdne2886666:0
+            lesson-3:
+              name: crwdns2886668:0crwdne2886668:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2886674:0crwdne2886674:0
+            lessonGroup-3:
+              display_name: crwdns2886676:0crwdne2886676:0
+            lessonGroup-4:
+              display_name: crwdns2886678:0crwdne2886678:0
+            lessonGroup-5:
+              display_name: crwdns2886680:0crwdne2886680:0
+          name: crwdns2886682:0crwdne2886682:0
+          title: crwdns2886684:0crwdne2886684:0
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: crwdns2886694:0crwdne2886694:0
+            lesson-2:
+              name: crwdns2886700:0crwdne2886700:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2886706:0crwdne2886706:0
+            lessonGroup-3:
+              display_name: crwdns2886708:0crwdne2886708:0
+            lessonGroup-4:
+              display_name: crwdns2886710:0crwdne2886710:0
+            lessonGroup-5:
+              display_name: crwdns2886712:0crwdne2886712:0
+          name: crwdns2886714:0crwdne2886714:0
+          title: crwdns2886716:0crwdne2886716:0
+        vpl-csd3-summer-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2886726:0crwdne2886726:0
+            lessonGroup-3:
+              display_name: crwdns2886728:0crwdne2886728:0
+            lessonGroup-4:
+              display_name: crwdns2886730:0crwdne2886730:0
+            lessonGroup-5:
+              display_name: crwdns2886732:0crwdne2886732:0
+          name: crwdns2886734:0crwdne2886734:0
+          title: crwdns2886736:0crwdne2886736:0
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: crwdns2886746:0[TEMPLATE]crwdne2886746:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2886752:0crwdne2886752:0
+            lessonGroup-3:
+              display_name: crwdns2886754:0crwdne2886754:0
+            lessonGroup-4:
+              display_name: crwdns2886756:0crwdne2886756:0
+            lessonGroup-5:
+              display_name: crwdns2886758:0crwdne2886758:0
+          name: crwdns2886760:0crwdne2886760:0
+          title: crwdns2886762:0crwdne2886762:0
+        vpl-csd5-summer-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2886772:0crwdne2886772:0
+            lessonGroup-3:
+              display_name: crwdns2886774:0crwdne2886774:0
+            lessonGroup-4:
+              display_name: crwdns2886776:0crwdne2886776:0
+          name: crwdns2886778:0crwdne2886778:0
+          title: crwdns2886780:0crwdne2886780:0
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: crwdns2886790:0crwdne2886790:0
+            lesson-2:
+              name: crwdns2886792:0crwdne2886792:0
+            lesson-3:
+              name: crwdns2886794:0crwdne2886794:0
+            lesson-4:
+              name: crwdns2886796:0crwdne2886796:0
+            lesson-5:
+              name: crwdns2886798:0crwdne2886798:0
+            lesson-6:
+              name: crwdns2886800:0crwdne2886800:0
+            lesson-7:
+              name: crwdns2886802:0crwdne2886802:0
+            lesson-8:
+              name: crwdns2886804:0crwdne2886804:0
+            lesson-9:
+              name: crwdns2886806:0crwdne2886806:0
+            lesson-10:
+              name: crwdns2886808:0crwdne2886808:0
+            lesson-11:
+              name: crwdns2886810:0crwdne2886810:0
+            lesson-12:
+              name: crwdns2886812:0crwdne2886812:0
+            lesson-13:
+              name: crwdns2886814:0crwdne2886814:0
+            lesson-14:
+              name: crwdns2886816:0crwdne2886816:0
+            lesson-15:
+              name: crwdns2886822:0crwdne2886822:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2886828:0crwdne2886828:0
+            lessonGroup-3:
+              display_name: crwdns2886830:0crwdne2886830:0
+          name: crwdns2886832:0crwdne2886832:0
+          title: crwdns2886834:0[Exemplars]crwdne2886834:0

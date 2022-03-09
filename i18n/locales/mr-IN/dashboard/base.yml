@@ -229,6 +229,8 @@ mr:
       subjects:
         cs: 'संगणक विज्ञान'
         math: 'गणित'
+        science: 'विज्ञान'
+        la: 'भाषा कला '
       workshop_course:
         csf_express: 'संगणक शास्त्र मूलभूत गोष्टी (एक्सप्रेस-पूर्व किंवा एक्सप्रेस)'
         not_applicable: "लागू नाही"

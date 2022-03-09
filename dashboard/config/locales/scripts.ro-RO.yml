@@ -15430,3 +15430,10 @@ ro:
               display_name: Conţinut
             lessonGroup-5:
               display_name: Cutie cu nisip
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variabile
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut

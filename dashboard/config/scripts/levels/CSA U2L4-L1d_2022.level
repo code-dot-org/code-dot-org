@@ -1325,17 +1325,18 @@
     ],
     "start_sources": {
       "MyNeighborhood.java": {
-        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    // TO DO: Instantiate a PainterPlus object to start\n    // in front of the red house with 20 units of paint.\n\n\n    \n  }\n}",
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    // TO DO #4: Instantiate a PainterPlus object to start\n    // in front of the red house with 20 units of paint.\n\n\n    \n  }\n}",
         "isVisible": true
       }
     },
-    "thumbnail_url": "https://images.code.org/d7513bb29e6db7b26f122eef8ac78d01-image-1646572758221.png"
+    "thumbnail_url": "https://images.code.org/d7513bb29e6db7b26f122eef8ac78d01-image-1646572758221.png",
+    "encrypted_examples": "S0XHCAVgygv9yh2Y5fYLnOCD8yPKheOn0mhvPSP86qOaqgpb0cOzbmP58pGV\ni8lXkLxZ6X/bsCqHxV/7X8W6sb/SKAcywjMNm5gbklznreSYlYRiwPZ18kxQ\nC9+UroRC\n"
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-03-06T13:08:38.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-06T13:08:38.828+00:00\",\"changed\":[\"cloned from \\\"CSA U2L4-L1c_2022\\\"\"],\"cloned_from\":\"CSA U2L4-L1c_2022\"},{\"changed_at\":\"2022-03-06 13:19:40 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"serialized_maze\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-06 13:20:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-06T13:08:38.828+00:00\",\"changed\":[\"cloned from \\\"CSA U2L4-L1c_2022\\\"\"],\"cloned_from\":\"CSA U2L4-L1c_2022\"},{\"changed_at\":\"2022-03-06 13:19:40 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"serialized_maze\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-06 13:20:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:18:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:22:21 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

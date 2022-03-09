@@ -21484,3 +21484,16 @@ ja:
               display_name: 内容
             lessonGroup-5:
               display_name: サンド ボックス
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: ようこそ
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: 変数（へんすう）
+            lesson-15:
+              name: ユニット2 評価
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
