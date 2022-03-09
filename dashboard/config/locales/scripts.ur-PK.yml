@@ -3337,3 +3337,7 @@ ur:
           lesson_groups:
             lessonGroup-5:
               display_name: سینڈباکس
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: متغیرات

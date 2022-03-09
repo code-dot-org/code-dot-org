@@ -14950,3 +14950,10 @@ it:
               display_name: Contenuto
             lessonGroup-5:
               display_name: Sandbox
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variabili
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto

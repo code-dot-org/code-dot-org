@@ -26872,3 +26872,13 @@ mn:
           description_audience: 9-13 насныхан
           description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи
             бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Мэндчилгээ
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Хувьсагчууд
+            lesson-15:
+              name: Нэгж 2 Үнэлгээ

@@ -20272,3 +20272,16 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Área restrita
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Bem-vindo
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: variáveis
+            lesson-15:
+              name: Unidade 2 Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo

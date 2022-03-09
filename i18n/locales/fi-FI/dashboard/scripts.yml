@@ -3477,3 +3477,7 @@ fi:
               display_name: Digitaalinen kansalaisuus
             lessonGroup-8:
               display_name: Muuttujat
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Muuttujat
