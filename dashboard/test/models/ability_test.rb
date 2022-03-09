@@ -3,13 +3,22 @@ require 'test_helper'
 class AbilityTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
+      CourseOffering.add_course_offering(unit_group)
+      @reference_guide_student_unit_group = create(:reference_guide, course_version: unit_group.course_version)
+    end
+
     @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @public_teacher_to_student_script_level = create(:script_level, script: script)
     end
 
     @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
       @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
+    end
+
+    @public_facilitator_to_teacher_unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher) do |unit_group|
+      CourseOffering.add_course_offering(unit_group)
+      @reference_guide_teacher_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
     @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
@@ -70,6 +79,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
+
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
     assert ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
@@ -104,6 +116,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
+
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
     assert ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
@@ -137,6 +152,9 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -173,6 +191,9 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    refute ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     refute ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -213,6 +234,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    refute ability.can?(:read, @reference_guide_teacher_unit_group)
+
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     refute ability.can?(:read, @public_facilitator_to_teacher_script_level)
     refute ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
@@ -246,6 +270,9 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -285,6 +312,9 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -326,6 +356,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
+
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
     assert ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
@@ -365,6 +398,9 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -410,6 +446,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, @login_required_migrated_lesson)
     assert ability.cannot?(:student_lesson_plan, @login_required_migrated_lesson)
 
+    assert ability.cannot?(:read, @reference_guide_student_unit_group)
+    assert ability.cannot?(:read, @reference_guide_teacher_unit_group)
+
     assert ability.cannot?(:read, @public_teacher_to_student_script_level)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_script_level)
     assert ability.cannot?(:read, @public_universal_instructor_to_teacher_script_level)
@@ -453,6 +492,9 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @reference_guide_student_unit_group)
+    assert ability.can?(:read, @reference_guide_teacher_unit_group)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
@@ -519,6 +561,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:manage, Level)
     refute ability.can?(:manage, Script)
     refute ability.can?(:manage, Lesson)
+    refute ability.can?(:manage, ReferenceGuide)
     refute ability.can?(:manage, ScriptLevel)
     refute ability.can?(:manage, UnitGroup)
   end
@@ -533,6 +576,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:manage, Level)
     assert ability.can?(:manage, Script)
     assert ability.can?(:manage, Lesson)
+    assert ability.can?(:manage, ReferenceGuide)
     assert ability.can?(:manage, ScriptLevel)
     assert ability.can?(:manage, UnitGroup)
     assert ability.can?(:manage, CourseOffering)
@@ -624,16 +668,15 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
   end
 
-  test 'student in same CSA code review enabled section as student seeking code review can view as peer' do
+  test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
       levels: [create(:javalab)]
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section, code_review_enabled: true
-    section.add_student project_owner
-    section.add_student peer_reviewer
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
     create :reviewable_project,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
@@ -643,7 +686,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
-  test 'student in same CSA code review enabled section as student seeking code review can view as peer on bubble choice level' do
+  test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer on bubble choice level' do
     javalab_sublevel = create(:javalab)
     bubble_choice_level = create :bubble_choice_level, sublevels: [javalab_sublevel]
     bubble_choice_script_level = create :script_level,
@@ -651,9 +694,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section, code_review_enabled: true
-    section.add_student project_owner
-    section.add_student peer_reviewer
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
     create :reviewable_project,
       user_id: project_owner.id,
       script_id: bubble_choice_script_level.script_id,
@@ -663,16 +705,34 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, bubble_choice_script_level, project_owner, javalab_sublevel
   end
 
-  test 'student in same CSA non code review enabled section as student seeking code review cannot view as peer' do
+  test 'student in same CSA non code review enabled section and code review group as student seeking code review cannot view as peer' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
       levels: [create(:javalab)]
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section, code_review_enabled: false
-    section.add_student project_owner
-    section.add_student peer_reviewer
+    section = create :section, code_review_expires_at: Time.now.utc - 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
+    create :reviewable_project,
+      user_id: project_owner.id,
+      script_id: javalab_script_level.script_id,
+      level_id: javalab_script_level.levels[0].id
+
+    refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
+    refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
+  end
+
+  test 'student in same CSA code review enabled section but different code review groups as student seeking code review cannot view as peer' do
+    # We enable read only access to other student work only on Javalab levels
+    javalab_script_level = create :script_level,
+      levels: [create(:javalab)]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner], section)
+    put_students_in_section_and_code_review_group([peer_reviewer], section)
     create :reviewable_project,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
@@ -698,16 +758,15 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
-  test 'student in same section cannot view as peer if peer is not seeking code review' do
+  test 'student in same section and code review group cannot view as peer if peer is not seeking code review' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
       levels: [create(:javalab)]
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section, code_review_enabled: true
-    section.add_student project_owner
-    section.add_student peer_reviewer
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -719,8 +778,8 @@ class AbilityTest < ActiveSupport::TestCase
       levels: [create(:javalab)]
 
     project_owner = create :student
-    section = create :section, code_review_enabled: true
-    section.add_student project_owner
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    put_students_in_section_and_code_review_group([project_owner], section)
     create :reviewable_project,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
@@ -761,5 +820,15 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(program_manager).can? :show, incomplete_application
     refute Ability.new(program_manager).can? :update, incomplete_application
     refute Ability.new(program_manager).can? :destroy, incomplete_application
+  end
+
+  private
+
+  def put_students_in_section_and_code_review_group(students, section)
+    code_review_group = create :code_review_group, section: section
+    students.each do |student|
+      follower = create :follower, student_user: student, section: section
+      create :code_review_group_member, follower: follower, code_review_group: code_review_group
+    end
   end
 end

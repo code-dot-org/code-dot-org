@@ -69,7 +69,8 @@ namespace :seed do
     'ui-test-script-in-course-2017',
     'ui-test-script-in-course-2019',
     'ui-test-versioned-script-2017',
-    'ui-test-versioned-script-2019'
+    'ui-test-versioned-script-2019',
+    'ui-test-csa-family-script'
   ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',

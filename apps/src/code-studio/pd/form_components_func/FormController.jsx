@@ -6,6 +6,7 @@ import {Pagination} from '@react-bootstrap/pagination';
 import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const defaultSubmitButtonText = i18n.submit();
 
@@ -357,8 +358,6 @@ const FormController = props => {
   };
 
   const handleSave = () => {
-    // [MEG] TODO: Consider rendering spinner if saving
-
     // clear errors so we can more clearly detect "new" errors and toggle
     // submitting flag so we can prevent duplicate submission
     setErrors([]);
@@ -367,7 +366,6 @@ const FormController = props => {
     setSaving(true);
 
     const handleSuccessfulSave = response => {
-      console.log('on successful save, data is', data, response);
       scrollToTop();
       setShowSavedMessage(true);
       setShowDataWasLoadedMessage(false);
@@ -541,7 +539,7 @@ const FormController = props => {
       >
         <p>
           {savedStatus === 'reopened'
-            ? 'Your Regional Partner has requested more information.  Please update and resubmit.'
+            ? 'Your Regional Partner has requested more information. Please update and resubmit.'
             : 'We found an application you started! Your saved responses have been loaded.'}
         </p>
       </Alert>
@@ -626,6 +624,9 @@ const FormController = props => {
         {pageButtons}
         {shouldShowSubmit() ? submitButton : nextButton}
         {allowPartialSaving && savedStatus !== 'reopened' && saveButton}
+        {(saving || submitting) && (
+          <Spinner style={styles.spinner} size="medium" />
+        )}
       </FormGroup>
     );
   };
@@ -648,7 +649,12 @@ const styles = {
     margin: '0 10px'
   },
   saveButton: {
-    marginLeft: '10px'
+    marginLeft: '10px',
+    marginRight: '10px'
+  },
+  spinner: {
+    verticalAlign: 'top',
+    marginTop: '5px'
   }
 };
 
@@ -657,7 +663,7 @@ FormController.propTypes = {
   applicationId: PropTypes.number,
   autoComputedFields: PropTypes.arrayOf(PropTypes.string),
   options: PropTypes.object.isRequired,
-  requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+  requiredFields: PropTypes.arrayOf(PropTypes.string),
   pageComponents: PropTypes.arrayOf(PropTypes.func),
   allowPartialSaving: PropTypes.bool,
   getPageProps: PropTypes.func,
