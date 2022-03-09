@@ -73,6 +73,33 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
       menuOptions.push(deletable);
       menuOptions.push(movable);
       menuOptions.push(editable);
+      if (this.getSurroundParent()) {
+        const shadow = {
+          text: 'Make Shadow',
+          enabled: true,
+          callback: function() {
+            this.setShadow(true);
+            Blockly.ContextMenu.hide();
+          }.bind(this)
+        };
+        menuOptions.push(shadow);
+      }
+      if (this.getChildren().length) {
+        const children = this.getChildren();
+        if (children.filter(child => child.isShadow()).length) {
+          const unshadow = {
+            text: 'Make All Child Blocks Non-Shadow',
+            enabled: true,
+            callback: function() {
+              for (let i = 0; i < children.length; i++) {
+                children[i].setShadow(false);
+              }
+              Blockly.ContextMenu.hide();
+            }.bind(this)
+          };
+          menuOptions.push(unshadow);
+        }
+      }
     }
   }
 
