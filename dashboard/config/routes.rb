@@ -937,4 +937,5 @@ Dashboard::Application.routes.draw do
   get '/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
   # Adds the experiment cookie in the User's browser which allows them to experience offline features
   get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
+  get '/cached-files.json', action: :cached_asset_paths, controller: :offline
 end

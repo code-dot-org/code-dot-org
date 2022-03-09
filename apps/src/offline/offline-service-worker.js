@@ -3,9 +3,14 @@
  * caching html, javascript, images, etc so that they can be used when students don't have an
  * internet connection.
  */
-const cacheVersion = 1;
+const cacheVersion = 2;
 const cacheName = `code-org-pwa-v${cacheVersion}`;
-const cachedFiles = ['/s/express-2021/lessons/1/levels/1'];
+// const webpackManifest = require('../../build/package/js/webpackManifest.json');
+
+//TODO this path doesn't work
+const cachedFiles = require('./cachedFiles.json').cachedFiles;
+
+console.log('ANNA CACHEDFILES', cachedFiles);
 
 self.addEventListener('install', e => {
   console.log('[Service Worker] installing offline service worker!');
