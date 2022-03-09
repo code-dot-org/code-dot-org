@@ -63,9 +63,9 @@
               <next>
                 <block type="Poetry_setFontColor">
                   <value name="FILL">
-                    <block type="colour_picker">
+                    <shadow type="colour_picker">
                       <title name="COLOUR">#000099</title>
-                    </block>
+                    </shadow>
                   </value>
                 </block>
               </next>
@@ -115,9 +115,9 @@
         </block>
         <block type="Poetry_setFontColor">
           <value name="FILL">
-            <block type="colour_picker" can_disconnect_from_parent="false">
+            <shadow type="colour_picker" can_disconnect_from_parent="false">
               <title name="COLOUR">#000099</title>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="Poetry_setTextEffect">
@@ -125,16 +125,16 @@
         </block>
         <block type="Poetry_addTextHighlight">
           <value name="COLOR">
-            <block type="colour_picker" can_disconnect_from_parent="false">
+            <shadow type="colour_picker" can_disconnect_from_parent="false">
               <title name="COLOUR">#ffcccc</title>
             </block>
           </value>
-        </block>
+        </shadow>
         <block type="Poetry_setBackground">
           <value name="COLOR">
-            <block type="colour_picker" can_disconnect_from_parent="false">
+            <shadow type="colour_picker" can_disconnect_from_parent="false">
               <title name="COLOUR">#ff6666</title>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs">

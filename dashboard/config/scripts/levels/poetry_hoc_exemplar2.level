@@ -64,9 +64,9 @@
               <next>
                 <block type="Poetry_setFontColor">
                   <value name="FILL">
-                    <block type="colour_picker">
+                    <shadow type="colour_picker">
                       <title name="COLOUR">#ffffff</title>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="Poetry_setForegroundEffect">
@@ -116,9 +116,9 @@
               <next>
                 <block type="Poetry_setFontColor">
                   <value name="FILL">
-                    <block type="colour_picker">
+                    <shadow type="colour_picker">
                       <title name="COLOUR">#000000</title>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="Poetry_setBackgroundEffect">
@@ -150,9 +150,9 @@
               <next>
                 <block type="Poetry_setFontColor">
                   <value name="FILL">
-                    <block type="colour_picker">
+                    <shadow type="colour_picker">
                       <title name="COLOUR">#ffffff</title>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
@@ -206,9 +206,9 @@
           <next>
             <block type="Poetry_setFontColor">
               <value name="FILL">
-                <block type="colour_picker">
+                <shadow type="colour_picker">
                   <title name="COLOUR">#ffffff</title>
-                </block>
+                </shadow>
               </value>
               <next>
                 <block type="Poetry_setForegroundEffect">
@@ -243,9 +243,9 @@
               <next>
                 <block type="Poetry_setFontColor">
                   <value name="FILL">
-                    <block type="colour_picker">
+                    <shadow type="colour_picker">
                       <title name="COLOUR">#ffff00</title>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="Poetry_destroy">
