@@ -68,6 +68,7 @@ describe('FormController', () => {
     const setPage = i => {
       form.findOne('Pagination').props.onSelect(i + 1);
     };
+    const clickSaveButton = () => form.findAll('Button')[1].props.onClick();
 
     it('Initially renders the first page', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
@@ -245,14 +246,14 @@ describe('FormController', () => {
         form = isolateComponent(
           <FormController {...defaultProps} getInitialData={() => testData} />
         );
-        form.findAll('Button')[1].props.onClick();
+        clickSaveButton();
 
         expect(getData(DummyPage1)).to.eql({...testData});
       });
 
       it('Disables the save button during save and renders spinner', () => {
         form = isolateComponent(<FormController {...defaultProps} />);
-        form.findAll('Button')[1].props.onClick();
+        clickSaveButton();
         expect(form.findAll('Button')[1].props.disabled).to.be.true;
         expect(form.findAll('Spinner')).to.have.length(1);
       });
@@ -267,7 +268,7 @@ describe('FormController', () => {
           JSON.stringify({})
         ]);
 
-        form.findAll('Button')[1].props.onClick();
+        clickSaveButton();
         server.respond();
 
         expect(form.findAll('Button')[1].props.disabled).to.be.false;
@@ -288,7 +289,7 @@ describe('FormController', () => {
           })
         ]);
 
-        form.findAll('Button')[1].props.onClick();
+        clickSaveButton();
         server.respond();
 
         expect(form.findAll('Button')[1].props.disabled).to.be.false;
@@ -308,7 +309,7 @@ describe('FormController', () => {
           JSON.stringify({})
         ]);
 
-        form.findAll('Button')[1].props.onClick();
+        clickSaveButton();
         server.respond();
 
         const alert = form.findOne('Alert');
@@ -323,6 +324,28 @@ describe('FormController', () => {
 
         server.restore();
       });
+    });
+
+    it('Saved message alert disappears after changing pages', () => {
+      form = isolateComponent(
+        <FormController {...defaultProps} applicationId={applicationId} />
+      );
+
+      const server = sinon.fakeServer.create();
+      server.respondWith([
+        201,
+        {'Content-Type': 'application/json'},
+        JSON.stringify({})
+      ]);
+
+      clickSaveButton(form);
+      server.respond();
+
+      expect(form.findOne('Alert')).to.exist;
+      setPage(1);
+      expect(form.findAll('Alert')).to.have.length(0);
+
+      server.restore();
     });
 
     describe('Page validation', () => {
