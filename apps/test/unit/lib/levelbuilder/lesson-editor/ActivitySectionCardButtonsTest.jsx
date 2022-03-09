@@ -39,6 +39,7 @@ describe('ActivitySectionCardButtons', () => {
       appendVocabularyLink,
       appendSlide,
       hasLessonPlan: true,
+      allowMajorCurriculumChanges: true,
       vocabularies: []
     };
   });
@@ -49,6 +50,28 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.find('AddButton').length).to.equal(6);
     wrapper.setProps({hasLessonPlan: false});
     expect(wrapper.find('AddButton').length).to.equal(1);
+  });
+
+  it('hides add level button if major curriculum changes are not allowed', () => {
+    const wrapper = shallow(
+      <ActivitySectionCardButtons
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+      />
+    );
+
+    expect(wrapper.find('.uitest-open-add-level-button').length).to.equal(0);
+  });
+
+  it('shows add level button if major curriculum changes are allowed', () => {
+    const wrapper = shallow(
+      <ActivitySectionCardButtons
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+      />
+    );
+
+    expect(wrapper.find('.uitest-open-add-level-button').length).to.equal(1);
   });
 
   it('opens "add level" dialog when button pressed', () => {
