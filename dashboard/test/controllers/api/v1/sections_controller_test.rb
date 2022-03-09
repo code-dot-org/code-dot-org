@@ -19,7 +19,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
     @script = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(@script)
+    @script.reload
+
     @script_in_preview_state = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(@script_in_preview_state)
+    @script_in_preview_state.reload
+
     @section_with_script = create(:section, user: @teacher, script: @script_in_preview_state)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
@@ -823,7 +829,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
-      script_id: @script.id
+      course_offering_id: @script.course_version.course_offering.id,
+      course_version_id: @script.course_version.id
     }
     assert_response :success
     section.reload

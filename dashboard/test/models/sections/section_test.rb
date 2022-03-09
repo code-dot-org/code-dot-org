@@ -449,6 +449,7 @@ class SectionTest < ActiveSupport::TestCase
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
     CourseOffering.add_course_offering(script)
+    script.reload
 
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: script, unit_group: nil
