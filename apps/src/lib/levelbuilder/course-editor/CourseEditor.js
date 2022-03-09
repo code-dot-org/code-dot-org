@@ -338,7 +338,6 @@ class CourseEditor extends Component {
               onChange={() =>
                 this.setState({hasNumberedUnits: !hasNumberedUnits})
               }
-              disabled={!allowMajorCurriculumChanges}
             />
           </label>
           <AnnouncementsEditor
