@@ -51,7 +51,9 @@
       "tempSensor.F": null,
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+      "declareAssign_list_abd": null,
+      "appendItem": null
     },
     "edit_code": true,
     "embed": "false",
@@ -108,18 +110,17 @@
       "/docs/concepts/maker-toolkit/playing-notes/",
       "/docs/concepts/javascript/arrays/"
     ],
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"aButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 50px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 25px;\">A</button><button id=\"bButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 50px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 80px;\">B</button><button id=\"cButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 50px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 135px;\">C</button><button id=\"dButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 50px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 190px;\">D</button><button id=\"eButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 50px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 245px;\">E</button><button id=\"fButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 50px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 300px;\">F</button><button id=\"gButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 50px; width: 50px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 10px; top: 355px;\">G</button><button id=\"playButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 210px; top: 310px;\">Play Song!</button><button id=\"clearButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 210px; top: 365px;\">Clear Song</button></div></div>",
+    "start_blocks": "var song = [];\nonEvent(\"aButton\", \"click\", function() {\n  appendItem(song, \"A4\");\n});\nonEvent(\"bButton\", \"click\", function() {\n  \n});\nonEvent(\"cButton\", \"click\", function() {\n  \n});\nonEvent(\"dButton\", \"click\", function() {\n  \n});\nonEvent(\"eButton\", \"click\", function() {\n  \n});\nonEvent(\"fButton\", \"click\", function() {\n  \n});\nonEvent(\"gButton\", \"click\", function() {\n  \n});\nonEvent(\"playButton\", \"click\", function() {\n  buzzer.playNotes(song, 120);\n});\nonEvent(\"clearButton\", \"click\", function() {\n  song = [];\n});\n",
+    "preload_asset_list": null
   },
   "game_id": 41,
-  "published": true,
   "created_at": "2022-02-15T20:20:55.000Z",
   "level_num": "custom",
   "user_id": 568,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-15T20:20:55.272+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - ChalC_2022\"},{\"changed_at\":\"2022-02-15 20:21:06 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-15T20:20:55.272+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - ChalC_2022\"},{\"changed_at\":\"2022-02-15 20:21:06 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-09 22:39:57 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-09 22:40:10 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-09 22:40:31 +0000\",\"changed\":[\"code_functions\",\"start_html\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-09 23:09:23 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-09 23:14:01 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
