@@ -53,13 +53,14 @@ module UsersHelper
   rescue => e
     # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
     if source_user && destination_user
-      log_self_takeover_investigation_to_firehose({
+      firehose_params = {
         source_user: source_user,
         destination_user: destination_user,
         type: takeover_type,
         provider: provider,
         error: "Type: #{e.class} Message: #{e.message}"
-      })
+      }
+      log_self_takeover_investigation_to_firehose(firehose_params)
     end
     false
   end
