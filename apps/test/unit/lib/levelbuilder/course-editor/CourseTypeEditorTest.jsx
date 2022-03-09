@@ -15,13 +15,13 @@ const defaultProps = {
   handleInstructionTypeChange: () => {},
   handleInstructorAudienceChange: () => {},
   handleParticipantAudienceChange: () => {},
-  canChangeParticipantType: true
+  allowMajorCurriculumChanges: true
 };
 
 describe('CourseTypeEditor', () => {
-  it('participant audience dropdown is disabled if canChangeParticipantType is false', () => {
+  it('participant audience dropdown is disabled if allowMajorCurriculumChanges is false', () => {
     const wrapper = shallow(
-      <CourseTypeEditor {...defaultProps} canChangeParticipantType={false} />
+      <CourseTypeEditor {...defaultProps} allowMajorCurriculumChanges={false} />
     );
     assert.equal(
       wrapper.find('.participantAudienceSelector').props().disabled,
@@ -29,9 +29,9 @@ describe('CourseTypeEditor', () => {
     );
   });
 
-  it('participant audience dropdown is not disabled if canChangeParticipantType is true', () => {
+  it('participant audience dropdown is not disabled if allowMajorCurriculumChanges is true', () => {
     const wrapper = shallow(
-      <CourseTypeEditor {...defaultProps} canChangeParticipantType={true} />
+      <CourseTypeEditor {...defaultProps} allowMajorCurriculumChanges={true} />
     );
     assert.equal(
       wrapper.find('.participantAudienceSelector').props().disabled,
