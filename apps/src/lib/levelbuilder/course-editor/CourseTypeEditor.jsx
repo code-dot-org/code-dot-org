@@ -107,7 +107,6 @@ export default function CourseTypeEditor({
         <label>
           Who will participate in this course?
           <select
-            className="participantAudienceSelector"
             value={participantAudience}
             style={styles.dropdown}
             onChange={handleParticipantAudienceChange}

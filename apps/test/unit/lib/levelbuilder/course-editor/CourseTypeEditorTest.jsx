@@ -19,22 +19,56 @@ const defaultProps = {
 };
 
 describe('CourseTypeEditor', () => {
-  it('participant audience dropdown is disabled if allowMajorCurriculumChanges is false', () => {
+  it('disables all selects when allowMajorCurriculumChanges is false', () => {
     const wrapper = shallow(
       <CourseTypeEditor {...defaultProps} allowMajorCurriculumChanges={false} />
     );
     assert.equal(
-      wrapper.find('.participantAudienceSelector').props().disabled,
+      wrapper
+        .find('select')
+        .at(0)
+        .props().disabled,
+      true
+    );
+    assert.equal(
+      wrapper
+        .find('select')
+        .at(1)
+        .props().disabled,
+      true
+    );
+    assert.equal(
+      wrapper
+        .find('select')
+        .at(2)
+        .props().disabled,
       true
     );
   });
 
-  it('participant audience dropdown is not disabled if allowMajorCurriculumChanges is true', () => {
+  it('allow editing selects when allowMajorCurriculumChanges is true', () => {
     const wrapper = shallow(
       <CourseTypeEditor {...defaultProps} allowMajorCurriculumChanges={true} />
     );
     assert.equal(
-      wrapper.find('.participantAudienceSelector').props().disabled,
+      wrapper
+        .find('select')
+        .at(0)
+        .props().disabled,
+      false
+    );
+    assert.equal(
+      wrapper
+        .find('select')
+        .at(1)
+        .props().disabled,
+      false
+    );
+    assert.equal(
+      wrapper
+        .find('select')
+        .at(2)
+        .props().disabled,
       false
     );
   });
