@@ -82,6 +82,7 @@ describe('ActivitySectionCard', () => {
       setTargetActivitySection,
       targetActivitySectionPos: 1,
       hasLessonPlan: true,
+      allowMajorCurriculumChanges: true,
 
       //redux
       moveActivitySection,
@@ -107,6 +108,26 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.contains('Remarks')).to.be.true;
     expect(wrapper.contains('Progression Title:')).to.be.false;
+  });
+
+  it('show OrderControls when allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+      />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+  });
+
+  it('hides OrderControls when not allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+      />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(0);
   });
 
   it('renders activity section with levels', () => {
