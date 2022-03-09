@@ -14,6 +14,7 @@ describe('ProgrammingEnvironmentEditor', () => {
       initialProgrammingEnvironment: {
         name: 'spritelab',
         title: 'Spritelab',
+        published: true,
         imageUrl: 'images.code.org/spritelab',
         projectUrl: '/p/spritelab',
         description: 'A description of spritelab',
@@ -38,7 +39,10 @@ describe('ProgrammingEnvironmentEditor', () => {
     expect(nameInput.props().value).to.equal('spritelab');
     expect(nameInput.props().readOnly).to.be.true;
 
-    const projectUrlInput = wrapper.find('input').at(2);
+    const publishedCheckbox = wrapper.find('input').at(2);
+    expect(publishedCheckbox.props().checked).to.be.true;
+
+    const projectUrlInput = wrapper.find('input').at(3);
     expect(projectUrlInput.props().value).to.equal('/p/spritelab');
 
     const descriptionMarkdownInput = wrapper
@@ -95,6 +99,7 @@ describe('ProgrammingEnvironmentEditor', () => {
     expect(Object.keys(fetchCallBody).sort()).to.eql(
       [
         'title',
+        'published',
         'description',
         'editorType',
         'projectUrl',
@@ -103,6 +108,7 @@ describe('ProgrammingEnvironmentEditor', () => {
       ].sort()
     );
     expect(fetchCallBody.title).to.equal('Spritelab');
+    expect(fetchCallBody.published).to.be.true;
     expect(fetchCallBody.description).to.equal('A description of spritelab');
     expect(fetchCallBody.editorType).to.equal('blockly');
     expect(fetchCallBody.projectUrl).to.equal('/p/spritelab');

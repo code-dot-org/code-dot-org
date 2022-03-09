@@ -20250,3 +20250,16 @@ fr:
               display_name: Contenu
             lessonGroup-5:
               display_name: Le jeu Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Bienvenue
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: variables
+            lesson-15:
+              name: Unité 2 Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu

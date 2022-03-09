@@ -2501,13 +2501,28 @@ ms-MY:
             akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+          correct: true
           feedback: Betul!
-        - {}
-        - {}
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
         questions:
-        - {}
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
       courseF_sprites_predict_multi:
         answers:
         - {}
@@ -3196,3 +3211,8 @@ ms-MY:
       express_EOC_examples_2021:
         description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
           luangkan sedikit masa dengan melihat projek contoh.
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # Gelung Untuk yang Menyeronokkan
+
+          Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan terbina di dalam.
