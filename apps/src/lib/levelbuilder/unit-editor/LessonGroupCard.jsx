@@ -310,20 +310,20 @@ class LessonGroupCard extends Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         ))}
-        {allowMajorCurriculumChanges ||
-          (this.props.lessonGroup.position === this.props.lessonGroupsCount && (
-            <div style={styles.bottomControls}>
-              <button
-                onMouseDown={this.handleAddLesson}
-                className="btn"
-                style={styles.addButton}
-                type="button"
-              >
-                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                Lesson
-              </button>
-            </div>
-          ))}
+        {(allowMajorCurriculumChanges ||
+          this.props.lessonGroup.position === this.props.lessonGroupsCount) && (
+          <div style={styles.bottomControls}>
+            <button
+              onMouseDown={this.handleAddLesson}
+              className="btn"
+              style={styles.addButton}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Lesson
+            </button>
+          </div>
+        )}
         {/* This dialog lives outside LessonToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}
         <RemoveLessonDialog
