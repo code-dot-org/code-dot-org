@@ -204,7 +204,13 @@ class CourseEditor extends Component {
   };
 
   render() {
-    const {name, unitNames, courseFamilies, versionYearOptions} = this.props;
+    const {
+      name,
+      unitNames,
+      courseFamilies,
+      versionYearOptions,
+      initialPublishedState
+    } = this.props;
     const {
       announcements,
       teacherResources,
@@ -224,6 +230,11 @@ class CourseEditor extends Component {
       instructorAudience,
       participantAudience
     } = this.state;
+
+    const allowMajorCurriculumChanges =
+      initialPublishedState === PublishedState.in_development ||
+      initialPublishedState === PublishedState.pilot;
+
     return (
       <div>
         <h1>{name}</h1>
@@ -327,6 +338,7 @@ class CourseEditor extends Component {
               onChange={() =>
                 this.setState({hasNumberedUnits: !hasNumberedUnits})
               }
+              disabled={!allowMajorCurriculumChanges}
             />
           </label>
           <AnnouncementsEditor
@@ -349,9 +361,7 @@ class CourseEditor extends Component {
           handleParticipantAudienceChange={e =>
             this.setState({participantAudience: e.target.value})
           }
-          canChangeParticipantType={
-            publishedState === PublishedState.in_development
-          }
+          allowMajorCurriculumChanges={allowMajorCurriculumChanges}
         />
 
         <CollapsibleEditorSection title="Publishing Settings">
@@ -420,11 +430,13 @@ class CourseEditor extends Component {
             </div>
             <CourseUnitsEditor
               inputStyle={styles.input}
+              initialUnitsInCourse={this.props.initialUnitsInCourse}
               unitsInCourse={unitsInCourse}
               updateUnitsInCourse={unitsInCourse =>
                 this.setState({unitsInCourse})
               }
               unitNames={unitNames}
+              allowMajorCurriculumChanges={allowMajorCurriculumChanges}
             />
           </label>
         </CollapsibleEditorSection>
