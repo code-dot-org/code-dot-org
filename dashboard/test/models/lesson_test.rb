@@ -806,7 +806,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url,
-      "http://test-studio.code.org/s/#{new_script.name}/lockable/1/levels/1"
+      "//test-studio.code.org/s/#{new_script.name}/lockable/1/levels/1"
     )
   end
 
@@ -818,7 +818,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url,
-      "http://test-studio.code.org/s/#{new_script.name}/lessons/1/levels/1"
+      "//test-studio.code.org/s/#{new_script.name}/lessons/1/levels/1"
     )
   end
 

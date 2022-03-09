@@ -10366,3 +10366,7 @@ th:
           lesson_groups:
             lessonGroup-5:
               display_name: แซนด์บ็อกซ์
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: ตัวแปร

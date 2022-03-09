@@ -2967,15 +2967,15 @@
           "courseB_maze_seq11_b": "Resuelve el desafío en dos partes: una antes de la esquina y otra después de la esquina."
         },
         "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> Scrat hará movimiento!",
+          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> ¡para hacer que Scrat se mueva!",
           "courseB_maze_seq1_b": "Arrastre tres de estas <xml><block type=\"maze_moveSouth\"/></xml> flechas y conectalas al bloque <xml><block type=\"when_run\"/></xml> para que Scrat llegue a la bellota."
         },
         "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> Scrat hará movimiento!",
+          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> ¡para hacer que Scrat se mueva!",
           "courseB_maze_seq1_b": "Arrastre tres de estas <xml><block type=\"maze_moveSouth\"/></xml> flechas y conectalas al bloque <xml><block type=\"when_run\"/></xml> para que Scrat llegue a la bellota."
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> Scrat hará movimiento!",
+          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> ¡para hacer que Scrat se mueva!",
           "courseB_maze_seq1_b": "Arrastre tres de estas <xml><block type=\"maze_moveSouth\"/></xml> flechas y conectalas al bloque <xml><block type=\"when_run\"/></xml> para que Scrat llegue a la bellota."
         },
         "courseB_maze_seq2": {
@@ -9084,7 +9084,7 @@
         "courseA_harvester_loops5b_2021": {
           "courseA_harvester_loops5b_a": "Presiona `Ejecutar` y mira lo que sucede!",
           "courseA_harvester_loops5b_b": "¿Se repiten sus bucles (loops) el correcto número de veces?",
-          "courseA_harvester_loops5b_c": "Muevete de una forma, luego de la otra con este camino."
+          "courseA_harvester_loops5b_c": "Muevete de una dirección, luego de la otra con este camino."
         },
         "courseA_harvester_loops6_2021": {
           "courseA_harvester_loops6_a": "Si te quedas atascado /a, intenta escribir los pasos en un papel y busca los patrones que se repiten.",
@@ -9105,7 +9105,7 @@
           "courseA_harvester_seq10_c": "¡Utiliza esta ruta para recoger todo el maíz."
         },
         "courseA_harvester_seq13_2021": {
-          "courseA_bee_seq1_a": "Usa este bloque para recoger maíz una vez que el cosechador llegue a él.\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
+          "courseA_bee_seq1_a": "Usa este bloque para recoger maíz una vez que la cosechadora llegue a él.\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2021": {
           "courseA_harvester_seq1_a": "¡Usa este bloque para recoger el maíz en cuanto la cosechadora lo encuentre!\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
@@ -9124,12 +9124,12 @@
           "courseA_harvester_seq4_b": "Necesitas cinco bloques de `Mover al Este` y un bloque de `Recoger Maíz`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5_2021": {
-          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora de la manera incorrecta?",
+          "courseA_harvester_seq5_a": "¿Qué bloque mueve a la cosechadora de la dirección incorrecta?",
           "courseA_harvester_seq5_b": "Necesitas eliminar un bloque.",
           "courseA_harvester_seq5_c": "¡Tira este bloque a la basura!\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq6_2021": {
-          "courseA_harvester_seq6_a": "Si estás atascado, trata de decir los pasos en voz alta. Podría ayudarte a descubrir el camino correcto."
+          "courseA_harvester_seq6_a": "Si estás atascado/a, trata de decir los pasos en voz alta. Podría ayudarte a descubrir el camino correcto."
         },
         "courseA_harvester_seq7_2021": {
           "courseA_harvester_seq7_a": "Intenta resolver el rompecabezas en 2 partes, una parte antes de la esquina y una parte después de la esquina.",
@@ -9199,7 +9199,7 @@
           "courseA_maze_seq7_b": "Si no puede descubrir qué hacer, intente dibujar el rompecabezas en papel y use su dedo para descubrir en qué dirección moverse."
         },
         "courseA_maze_seq8_2021": {
-          "courseA_maze_seq8_a": "Si estás atascado, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
+          "courseA_maze_seq8_a": "Si estás atascado/a, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
         },
         "courseA_maze_seq8_dani": {
           "courseA_maze_seq8_a": "Si estás atascado, intenta dibujar la imagen en papel para ver cómo se debe mover el pájaro."
@@ -9248,7 +9248,7 @@
         },
         "courseB_Scrat_ramp1_2021": {
           "1": "Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic en ambos bloques al mismo tiempo, luego haz clic en \"ejecutar\" otra vez.",
-          "2": "¡No tengas miedo de cometer un error! ¡Prueba algo y si no funciona, prueba con algo más!"
+          "2": "¡No tengas miedo de equivocarte! Intenta algo, y si no funciona, ¡prueba otra cosa!"
         },
         "courseB_Scrat_ramp2_2021": {
           "1": "Tu código debería tener este aspecto:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -9275,7 +9275,7 @@
         },
         "courseB_artist_loops4_2021": {
           "courseB_artist_loops4_a": "El bloque saltar te permite avanzar sin dibujar una línea.",
-          "courseB_artist_loops4_b": "Deberás agregar un bloque dentro del bucle (loop) de 'repetir' para resolver este rompecabezas.",
+          "courseB_artist_loops4_b": "Deberás agregar un bloque dentro del bucle (loop) de 'repetir' para resolver este rompecabeza.",
           "courseB_artist_loops4_c": "No olvides cambiar el número de veces que el bucle (loop) se repite."
         },
         "courseB_artist_loops5_2021": {
@@ -9286,7 +9286,7 @@
         },
         "courseB_artist_loops7_2021": {
           "courseB_artist_loops7_a": "Este desafío usa **4** bucles (loops), ¡uno tras de otro!",
-          "courseB_artist_loops7_b": "Observa que cada bucle crea un patrón de escalera que va en una dirección diferente. \n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_b": "Observa que cada bucle (loop) crea un patrón de escalera que va en una dirección diferente. \n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
           "courseB_artist_loops7_c": "Los bucles (loops) deberían hacer esto:\n\n-   Bucle 1\n    -   Derecha\n    -   Abajo\n\n-   Bucle 2\n    -   Derecha\n    -   Arriba\n\n-   Bucle 3\n    -   Izquierda\n    -   Arriba\n\n-   Bucle 4\n    -   Izquierda\n    -   Abajo"
         },
         "courseB_artist_loops8_2021": {
@@ -9325,7 +9325,7 @@
         "courseB_collector_loops4_2021": {
           "courseB_collector_loops4_a": "Pruebe usar el botón de paso para descubrir dónde van las cosas mal.",
           "courseB_collector_loops4_b": "Para cambiar qué tan lejos va Laurel, cambia la cantidad de veces que se ejecuta el bucle (loop).",
-          "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro antes de terminar el bucle (loop) 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
+          "courseB_collector_loops4_c": "¡Laurel necesita caminar hacia abajo y recoger el tesoro después de terminar el bucle (loop) 'repetir' <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>!"
         },
         "courseB_collector_loops5_2021": {
           "courseB_collector_loops5_a": "Use más de un bucle (loop) para finalizar el trabajo.",
@@ -9335,11 +9335,11 @@
           "courseB_collector_loops6_a": "¿No puedes averiguar dónde las cosas empiezan a fallar? Usa el botón \"Paso\" para ejecutar tu programa un bloque a la vez.",
           "courseB_collector_loops6_b": "Puedes cambiar el número de veces que el bucle (loop) se repite y ejecutar haciendo clic en el \"3\" y eligiendo un número distinto.",
           "courseB_collector_loops6_c": "Querrá utilizar 3 bucles (loops) de 'repetir' para resolver este rompecabezas <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>.",
-          "courseB_collector_loops6_d": "Si estás confundido/a, intenta dividir este desafío en 3 partes."
+          "courseB_collector_loops6_d": "Si estás confundido/a, intenta dividir este rompecabeza en 3 partes."
         },
         "courseB_collector_loops7_2021": {
           "courseB_collector_loops7_a": "Si tienes dificultades con este rompecabeza, intenta dibujarlo en un papel para ayudarte a resolverlo.",
-          "courseB_collector_loops7_b": "Necesitarás 3 loops de 'repetir' para resolver este rompecabezas, ¡y no olvides el tesoro extra al final!"
+          "courseB_collector_loops7_b": "Necesitarás 3 bucles (loops) de 'repetir' para resolver este rompecabezas, ¡y no olvides el tesoro extra al final!"
         },
         "courseB_collector_loops8_2021": {
           "courseB_collector_loops8_challenge_a": "Si no puedes averiguar donde poner los bucles (loops) de 'repetir', escribe tu código paso a paso y busca un patrón."
@@ -9401,7 +9401,7 @@
           "courseB_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> Scrat hará movimiento!",
+          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> ¡para hacer que Scrat se mueva!",
           "courseB_maze_seq1_b": "Arrastre tres de estas <xml><block type=\"maze_moveSouth\"/></xml> flechas y conectalas al bloque <xml><block type=\"when_run\"/></xml> para que Scrat llegue a la bellota."
         },
         "courseB_maze_seq4_2021": {

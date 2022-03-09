@@ -20350,3 +20350,16 @@ zh-CN:
               display_name: 内容
             lessonGroup-5:
               display_name: 沙盒
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 欢迎
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: 变量
+            lesson-15:
+              name: 第2单元评估
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容

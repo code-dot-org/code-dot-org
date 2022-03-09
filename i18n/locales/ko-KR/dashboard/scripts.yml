@@ -21420,3 +21420,16 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 샌드박스
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 환영합니다
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: 변수
+            lesson-15:
+              name: 단원 2 평가
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
