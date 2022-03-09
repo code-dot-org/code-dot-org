@@ -68,6 +68,11 @@ describe('FormController', () => {
   const setPage = i => {
     form.findOne('Pagination').props.onSelect(i + 1);
   };
+  const serverResponse = (statusNumber = 200, data = {}) => [
+    statusNumber,
+    {'Content-Type': 'application/json'},
+    JSON.stringify(data)
+  ];
 
   it('Initially renders the first page', () => {
     form = isolateComponent(<FormController {...defaultProps} />);
@@ -216,7 +221,7 @@ describe('FormController', () => {
     it('Disables the save button during save and renders spinner', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
       form.findAll('Button')[1].props.onClick();
-      expect(form.findAll('Button')[1].props.disabled).to.be.true;
+      expect(form.findAll('Button')[1].props).to.be.disabled;
       expect(form.findAll('Spinner')).to.have.length(1);
     });
 
@@ -224,39 +229,41 @@ describe('FormController', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
 
       const server = sinon.fakeServer.create();
-      server.respondWith([
-        201,
-        {'Content-Type': 'application/json'},
-        JSON.stringify({})
-      ]);
+      server.respondWith(serverResponse(201));
 
       form.findAll('Button')[1].props.onClick();
       server.respond();
 
-      expect(form.findAll('Button')[1].props.disabled).to.be.false;
+      expect(form.findAll('Button')[1].props).to.be.disabled;
       expect(form.findAll('Spinner')).to.have.length(0);
 
       server.restore();
     });
 
-    it('Re-enables the save button after unsuccessful save', () => {
-      form = isolateComponent(<FormController {...defaultProps} />);
+    [
+      serverResponse(400, {
+        errors: {form_data: ['an error']}
+      }),
+      serverResponse(500)
+    ].forEach(response => {
+      const statusNumber = response[0];
+      it(`Re-enables the save button after unsuccessful save with ${statusNumber} error`, () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
 
-      const server = sinon.fakeServer.create();
-      server.respondWith([
-        400,
-        {'Content-Type': 'application/json'},
-        JSON.stringify({
-          errors: {form_data: ['an error']}
-        })
-      ]);
+        const server = sinon.fakeServer.create();
+        server.respondWith(
+          serverResponse(400, {
+            errors: {form_data: ['an error']}
+          })
+        );
 
-      form.findAll('Button')[1].props.onClick();
-      server.respond();
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
 
-      expect(form.findAll('Button')[1].props.disabled).to.be.false;
+        expect(form.findAll('Button')[1].props).to.be.disabled;
 
-      server.restore();
+        server.restore();
+      });
     });
 
     it('Shows saved message alert after saving is complete, and user can close it', () => {
@@ -265,11 +272,7 @@ describe('FormController', () => {
       );
 
       const server = sinon.fakeServer.create();
-      server.respondWith([
-        201,
-        {'Content-Type': 'application/json'},
-        JSON.stringify({})
-      ]);
+      server.respondWith(serverResponse(201));
 
       form.findAll('Button')[1].props.onClick();
       server.respond();
@@ -282,7 +285,7 @@ describe('FormController', () => {
       alert.props.onDismiss();
       expect(form.exists('Alert')).to.be.false;
 
-      expect(form.findAll('Button')[1].props.disabled).to.be.false;
+      expect(form.findAll('Button')[1].props).to.be.disabled;
 
       server.restore();
     });
@@ -374,26 +377,29 @@ describe('FormController', () => {
       it('Disables the submit button during submit and renders spinner', () => {
         setupValid();
         triggerSubmit();
-        expect(form.findOne('#submit').props.disabled).to.be.true;
+        expect(form.findOne('#submit').props).to.be.disabled;
         expect(form.findAll('Spinner')).to.have.length(1);
       });
 
-      it('Re-enables the submit button on error and removes spinner', () => {
-        setupValid();
-        server.respondWith([
-          400,
-          {'Content-Type': 'application/json'},
-          JSON.stringify({
-            errors: {form_data: ['an error']}
-          })
-        ]);
+      [
+        serverResponse(400, {
+          errors: {form_data: ['an error']}
+        }),
+        serverResponse(500)
+      ].forEach(response => {
+        const statusNumber = response[0];
+        it(`Re-enables the submit button on ${statusNumber} error and removes spinner`, () => {
+          setupValid();
+          server.respondWith(response);
 
-        triggerSubmit();
-        server.respond();
+          triggerSubmit();
+          server.respond();
 
-        expect(getErrors(DummyPage3)).to.eql(['an error']);
-        expect(form.findOne('#submit').props.disabled).to.be.false;
-        expect(form.findAll('Spinner')).to.have.length(0);
+          statusNumber === 400 &&
+            expect(getErrors(DummyPage3)).to.eql(['an error']);
+          expect(form.findOne('#submit').props).to.be.disabled;
+          expect(form.findAll('Spinner')).to.have.length(0);
+        });
       });
 
       it('Sends application status as unreviewed on submit', () => {
@@ -407,16 +413,12 @@ describe('FormController', () => {
 
       it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {
         setupValid();
-        server.respondWith([
-          200,
-          {'Content-Type': 'application/json'},
-          JSON.stringify({})
-        ]);
+        server.respondWith(serverResponse(200));
 
         triggerSubmit();
         server.respond();
 
-        expect(form.findOne('#submit').props.disabled).to.be.true;
+        expect(form.findOne('#submit').props).to.be.disabled;
         expect(onSuccessfulSubmit).to.be.calledOnce;
       });
     });
