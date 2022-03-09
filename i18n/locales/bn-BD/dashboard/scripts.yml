@@ -1945,3 +1945,7 @@ bn:
           lesson_groups:
             lessonGroup-8:
               display_name: চলকগুলো
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: চলকগুলো

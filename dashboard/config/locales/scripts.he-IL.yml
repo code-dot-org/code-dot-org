@@ -4344,3 +4344,7 @@ he:
               display_name: דמויות
             lessonGroup-8:
               display_name: משתנים
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: משתנים

@@ -11253,3 +11253,14 @@ ru:
               display_name: Содержимое
             lessonGroup-5:
               display_name: Песочница
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Добро пожаловать
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Переменные
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое

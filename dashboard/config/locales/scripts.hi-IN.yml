@@ -30349,3 +30349,13 @@ hi:
           lesson_groups:
             lessonGroup-5:
               display_name: सैंडबॉक्स
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: स्वागत है
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: चर
+            lesson-15:
+              name: इकाई 2 मूल्यांकन

@@ -2400,3 +2400,7 @@ ky:
           lesson_groups:
             lessonGroup-8:
               display_name: Өзгөрмөлөр
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Өзгөрмөлөр

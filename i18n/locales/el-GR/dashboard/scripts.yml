@@ -3466,3 +3466,7 @@ el:
               display_name: Χαρακτήρας
             lessonGroup-8:
               display_name: Μεταβλητές
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Μεταβλητές

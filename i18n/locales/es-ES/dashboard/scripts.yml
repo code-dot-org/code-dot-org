@@ -540,7 +540,7 @@ es:
             Jigsaw:
               name: Rompecabezas
               description_student: Haz clic y arrastra para terminar los desafíos.
-              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
+              description_teacher: Esta lección dará a los alumnos una idea de lo que pueden esperar cuando vayan al laboratorio de informática. Comienza con un breve debate en el que se introducen los modales en el laboratorio de informática y, a continuación, pasarán a utilizar un ordenador para completar rompecabezas en línea.
           student_description: Prueba nuestro tutorial de Jigsaw.
         step:
           title: Paso
@@ -5661,31 +5661,31 @@ es:
               description_teacher: En esta lección, los estudiantes deben plantar una semilla, lo que les permitirá relacionar el concepto de algoritmo con las actividades cotidianas. El objetivo es empezar a construir habilidades para convertir situaciones del mundo real en escenarios en línea y viceversa.\\r
             Learn to Drag and Drop:
               name: Secuencias con Arrastrar y Soltar
-              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
+              description_teacher: Esta lección dará a los alumnos una idea de lo que pueden esperar cuando vayan al laboratorio de informática. Comienza con un breve debate en el que se introducen los modales en el laboratorio de informática y, a continuación, pasarán a utilizar un ordenador para completar rompecabezas en línea.
             'Programming: Happy Maps':
               name: 'Programación: Mapas Felices'
               description_teacher: La transición desde los algoritmos hacia la programación puede ser corta si los estudiantes entienden la diferencia entre planificar una secuencia y codificar esa secuencia en el lenguaje apropiado. Esta actividad ayudará a los estudiantes a adquirir experiencia en la lectura y escritura de código abreviado.
             Programming in Maze:
               name: Programación en Laberinto
-              description_teacher: En esta serie de desafíos en línea, los estudiantes aprenderán sobre algoritmos, depuración y conocimientos generales de computación. A través de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales para que el pájaro llegue hasta el cerdo sin chocarse con los muros o el TNT. Este nivel además incluye desafíos de depuración que fomentan la resolución de problemas y el pensamiento crítico.
+              description_teacher: En esta serie de rompecabezas en línea, los alumnos se basarán en la comprensión de los algoritmos, la depuración y los conocimientos informáticos generales. Con los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales para que el pájaro llegue al cerdo sin chocar con las paredes o la TNT. Los rompecabezas de depuración también se han mezclado en esta etapa para una mayor práctica con la resolución de problemas y el pensamiento crítico.
             Going Places Safely:
               name: 'Ciudadanía Digital: Ir a los Sitios con Seguridad'
-              description_teacher: En colaboración con [r common-sense-media], esta lección ayuda a los estudiantes a aprender que muchos sitios solicitan información privada y aborda la forma de manejar responsablemente esas solicitudes. Los estudiantes también descubren que pueden explorar lugares emocionantes en línea, pero necesitan seguir ciertas reglas para permanecer seguros.
+              description_teacher: En colaboración con [r common-sense-media], esta lección ayuda a los alumnos a aprender que muchos sitios web piden información que es privada y analiza cómo manejar responsablemente esas solicitudes. Los alumnos también descubren que pueden ir a lugares emocionantes en Internet, pero que deben seguir ciertas reglas para estar seguros.
             'Loops: Happy Loops':
               name: 'Bucles: Bucles Felices'
-              description_teacher: Los bucles son una herramienta muy útil e importante en la programación. Para entender cuán útiles pueden ser, los estudiantes deben ser motivados a querer resolver problemas cotidianos de manera más fácil.
+              description_teacher: Los bucles son una herramienta muy útil y poderosa en la programación. Para entender lo útiles que pueden ser los bucles, los alumnos tendrán que sentirse impulsados a desear una forma más fácil de resolver problemas mundanos.
             Loops in Collector:
               name: Bucles en Recolectora
-              description_teacher: Durante esta etapa se desarrolla el concepto de instrucciones repetidas de "Bucles Felices", para que los estudiantes puedan usar bucles y recoger tesoros de manera más eficiente en Code.org.
+              description_teacher: Partiendo del concepto de repetición de instrucciones de "Bucles Felices", en esta etapa los alumnos utilizarán bucles para recoger el tesoro de forma más eficiente en Code.org.
             Loops in Artist:
               name: Loops en Artista
-              description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
+              description_teacher: Volviendo a los bucles, los alumnos aprenden a dibujar imágenes mediante la creación de bucles con secuencias de instrucciones sencillas. En la lección anterior, los bucles se utilizaron para atravesar un laberinto y recoger un tesoro. Aquí, los bucles crean patrones. Al final de esta etapa, los alumnos tendrán la oportunidad de crear sus propias imágenes utilizando bucles.
             'Events: The Big Event':
               name: 'Eventos: El Gran Evento'
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: Los eventos son una gran manera de añadir variedad a un algoritmo pre-escrito. A veces quieres que tu programa sea capaz de responder al usuario exactamente cuando el usuario lo solicite. Para eso están los eventos.
             Events in Play Lab:
               name: Eventos en Laboratorio de Juegos
-              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a utilizar los eventos en el Laboratorio de Juegos y aplicar todas las habilidades de codificación que han aprendido para crear un juego animado. ¡Es hora de ser creativo y programar una historia en el Laboratorio de Juegos!
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           name: Curso A - 2017
         courseb-2017:
@@ -5720,7 +5720,7 @@ es:
             Events in Play Lab:
               name: Eventos en Laboratorio de Juegos
             More Programming in Maze:
-              name: Más programación en Laberinto
+              name: Más Programación en Laberinto
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
@@ -5757,7 +5757,7 @@ es:
             Events in Play Lab:
               name: Eventos en Laboratorio de Juegos
             Screen Out the Mean:
-              name: 'Ciudadanía Digital: Descartar la maldad'
+              name: 'Ciudadanía Digital: Descartar la Maldad'
             Binary Bracelets:
               name: 'Más Allá de la Programación: Pulseras Binarias'
             Loops in Artist:
@@ -5771,10 +5771,10 @@ es:
           assignment_family_title: Curso D
           description_audience: Edades de 7 a 11 años
           description_short: Aprende rápidamente los conceptos del Curso C, y luego continúa avanzando con algoritmos, bucles anidados, condicionales y mucho más.
-          description: Aprende nuevos conceptos de programación incluyendo algoritmos, bucles anidados, bucles, condicionales y eventos. Recibe una introducción a la ciudadanía digital antes de crear tu propio juego o historia que puedes compartir.
+          description: Aprende nuevos conceptos de programación incluyendo algoritmos, bucles anidados, bucles `while`, condicionales y eventos. Recibe una introducción a la ciudadanía digital antes de crear tu propio juego o historia que puedes compartir.
           lessons:
             Introduction:
-              name: Introducción a los desafíos en línea
+              name: Introducción a los Rompecabezas en Línea
               description_student: Esta lección te entrenará en las habilidades que necesitarás para este curso.
               description_teacher: En este conjunto de rompecabezas, los alumnos comenzarán con una introducción (o repaso, dependiendo de la experiencia de su clase) del espacio de trabajo en línea de Code.org. Habrá vídeos que mostrarán la funcionalidad básica del espacio de trabajo, incluyendo los botones `Ejecutar`, `Reiniciar` y `Paso`. En estos vídeos también se hablará de arrastrar bloques Blockly, eliminar bloques Blockly y conectar bloques Blockly. A continuación, los alumnos practicarán sus habilidades de _secuenciación_ y _depuración_ en el laberinto. A partir de ahí, los estudiantes verán nuevos tipos de rompecabezas como la Coleccionista, el Artista y la Cosechadora cuando aprendan los fundamentos de los _bucles_.
             'Algorithms: Graph Paper Programming':
@@ -5845,7 +5845,7 @@ es:
               name: Depuración en Recolector
               description_student: "¿Alguna vez has tenido problemas al programar? En esta lección, aprenderás sobre los secretos de debugging. Debugging es el proceso de encontrar y arreglar problemas en tu código."
               description_teacher: En esta actividad online, los/as estudiantes practicarán debugging en el entorno "recolector". Los/as estudiantes podrán practicar la lectura y edición de código para arreglar desafíos con algoritmos simples, loops y loops anidados.
-          student_description: Aprende nuevos conceptos de programación incluyendo algoritmos, bucles anidados, bucles, condicionales y eventos. Recibe una introducción a la ciudadanía digital antes de crear tu propio juego o historia que puedes compartir.
+          student_description: Aprende nuevos conceptos de programación incluyendo algoritmos, bucles anidados, bucles `while`, condicionales y eventos. Recibe una introducción a la ciudadanía digital antes de crear tu propio juego o historia que puedes compartir.
           name: Curso D - 2017
         coursee-2017:
           title: Curso E
@@ -5866,7 +5866,7 @@ es:
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tangrams'
             Introduction:
-              name: Introducción a los desafíos en línea
+              name: Introducción a los Rompecabezas en Línea
               description_student: Esta introducción rápida te dará la oportunidad de practicar la mayoría de las habilidades que necesitas para resolver los desafíos de este curso.
               description_teacher: En esta progresión, los estudiantes comenzarán con una introducción (o repaso según la experiencia de la clase) del espacio de trabajo en línea de Code.org. Aprenderán la funcionalidad básica de la interfaz, la cual incluye los botones `Ejecutar`, `Volver a empezar` y `Paso`. En el video inicial también se presenta cómo arrastrar, eliminar y conectar bloques Blockly. En los desafíos, los estudiantes practicarán sus habilidades de secuencias y depuración en el Laberinto y el Artista.
             The Power of Words:
@@ -6010,7 +6010,7 @@ es:
               description_student: "¡Aquí aprenderás acerca de algoritmos con el juego llamado tangram!"
               description_teacher: Esta lección nos muestra algo importante acerca de los algoritmos. Siempre y cuando el algoritmo sea simple, hay muchas maneras de usarlo. Sin embargo, si quieres asegurarte de que todos los algoritmos den el mismo resultado, entonces necesitan más detalles. Los estudiantes jugarán al tangram para aprender la diferencia entre un algoritmo detallado y uno general.
             Introduction:
-              name: Introducción a los desafíos en línea
+              name: Introducción a los Rompecabezas en Línea
               description_student: "¡Esta lección te dará una breve introducción a algunas de las cosas asombrosas que aprenderás en este curso!"
               description_teacher: 'En esta lección, los alumnos conocerán secuencias, bucles y bucles anidados que los prepararán para entender los conceptos más complejos en la parte final del curso. Esta lección de "refuerzo" iguala las condiciones entre los alumnos avanzados y los principiantes en tu clase. '
             The Power of Words:
@@ -6502,7 +6502,7 @@ es:
             'Common Sense Education: Digital Citizenship':
               name: 'Ciudadanía Digital: Practicando Ciudadanía Digital'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Ciudadanía Digital: Descartar la maldad'
+              name: 'Ciudadanía Digital: Descartar la Maldad'
             Events in Star Wars:
               name: Eventos en la Guerra de las Galaxias
             Events with Flappy:
@@ -7911,31 +7911,31 @@ es:
               description_teacher: En esta lección, los estudiantes deben plantar una semilla, lo que les permitirá relacionar el concepto de algoritmo con las actividades cotidianas. El objetivo es empezar a construir habilidades para convertir situaciones del mundo real en escenarios en línea y viceversa.\\r
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
-              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
+              description_teacher: Esta lección dará a los alumnos una idea de lo que pueden esperar cuando vayan al laboratorio de informática. Comienza con un breve debate en el que se introducen los modales en el laboratorio de informática y, a continuación, pasarán a utilizar un ordenador para completar rompecabezas en línea.
             'Programming: Happy Maps':
               name: Mapas Felices
               description_teacher: La transición desde los algoritmos hacia la programación puede ser corta si los estudiantes entienden la diferencia entre planificar una secuencia y codificar esa secuencia en el lenguaje apropiado. Esta actividad ayudará a los estudiantes a adquirir experiencia en la lectura y escritura de código abreviado.
             Programming in Maze:
               name: Programación con Angry Birds
-              description_teacher: En esta serie de desafíos en línea, los estudiantes aprenderán sobre algoritmos, depuración y conocimientos generales de computación. A través de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales para que el pájaro llegue hasta el cerdo sin chocarse con los muros o el TNT. Este nivel además incluye desafíos de depuración que fomentan la resolución de problemas y el pensamiento crítico.
+              description_teacher: En esta serie de rompecabezas en línea, los alumnos se basarán en la comprensión de los algoritmos, la depuración y los conocimientos informáticos generales. Con los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales para que el pájaro llegue al cerdo sin chocar con las paredes o la TNT. Los rompecabezas de depuración también se han mezclado en esta etapa para una mayor práctica con la resolución de problemas y el pensamiento crítico.
             Going Places Safely:
               name: Ir a Sitios Seguro
-              description_teacher: En colaboración con [r common-sense-media], esta lección ayuda a los estudiantes a aprender que muchos sitios solicitan información privada y aborda la forma de manejar responsablemente esas solicitudes. Los estudiantes también descubren que pueden explorar lugares emocionantes en línea, pero necesitan seguir ciertas reglas para permanecer seguros.
+              description_teacher: En colaboración con [r common-sense-media], esta lección ayuda a los alumnos a aprender que muchos sitios web piden información que es privada y analiza cómo manejar responsablemente esas solicitudes. Los alumnos también descubren que pueden ir a lugares emocionantes en Internet, pero que deben seguir ciertas reglas para estar seguros.
             'Loops: Happy Loops':
               name: Bucles felices
-              description_teacher: Los bucles son una herramienta muy útil e importante en la programación. Para entender cuán útiles pueden ser, los estudiantes deben ser motivados a querer resolver problemas cotidianos de manera más fácil.
+              description_teacher: Los bucles son una herramienta muy útil y poderosa en la programación. Para entender lo útiles que pueden ser los bucles, los alumnos tendrán que sentirse impulsados a desear una forma más fácil de resolver problemas mundanos.
             Loops in Collector:
               name: Bucles con Laurel
-              description_teacher: Durante esta etapa se desarrolla el concepto de instrucciones repetidas de "Bucles Felices", para que los estudiantes puedan usar bucles y recoger tesoros de manera más eficiente en Code.org.
+              description_teacher: Partiendo del concepto de repetición de instrucciones de "Bucles Felices", en esta etapa los alumnos utilizarán bucles para recoger el tesoro de forma más eficiente en Code.org.
             Loops in Artist:
               name: Escena del océano con bucles
-              description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
+              description_teacher: Volviendo a los bucles, los alumnos aprenden a dibujar imágenes mediante la creación de bucles con secuencias de instrucciones sencillas. En la lección anterior, los bucles se utilizaron para atravesar un laberinto y recoger un tesoro. Aquí, los bucles crean patrones. Al final de esta etapa, los alumnos tendrán la oportunidad de crear sus propias imágenes utilizando bucles.
             'Events: The Big Event':
               name: El Gran Evento Jr.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: Los eventos son una gran manera de añadir variedad a un algoritmo pre-escrito. A veces quieres que tu programa sea capaz de responder al usuario exactamente cuando el usuario lo solicite. Para eso están los eventos.
             Events in Play Lab:
               name: En movimiento con eventos
-              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a utilizar los eventos en el Laboratorio de Juegos y aplicar todas las habilidades de codificación que han aprendido para crear un juego animado. ¡Es hora de ser creativo y programar una historia en el Laboratorio de Juegos!
             Programming in Bee:
               name: Programación con la abeja
             Programming in Harvester:
@@ -8199,7 +8199,7 @@ es:
             Relay Programming:
               name: Programación de Relevos
             Introduction to Online Puzzles:
-              name: Introducción a los desafíos en línea
+              name: Introducción a los Rompecabezas en Línea
             Events in Bouncey:
               name: Eventos en Bouncey
             Nested Loops in Bees:
@@ -10077,7 +10077,7 @@ es:
               description_student: En esta lección, programarás a tu compañero de clase para que dibujar imágenes.
               description_teacher: 'Al "programarse" entre sí para dibujar imágenes, los estudiantes obtienen una oportunidad de experimentar algunos de los conceptos centrales de programar de una manera divertida y accesible. La clase comenzará haciendo que los estudiantes usen símbolos para instruirse entre ellos para colorear cuadrados en papel cuadriculado en un intento por producir una imagen existente. Si queda tiempo, la lección puede concluir con imágenes que los mismos estudiantes crean. '
             Introduction to Online Puzzles:
-              name: Introducción a los desafíos en línea
+              name: Introducción a los Rompecabezas en Línea
               description_student: Esta lección te entrenará en las habilidades que necesitarás para este curso.
               description_teacher: En este conjunto de rompecabezas, los alumnos comenzarán con una introducción (o repaso, dependiendo de la experiencia de su clase) del espacio de trabajo en línea de Code.org. Habrá vídeos que mostrarán la funcionalidad básica del espacio de trabajo, incluyendo los botones `Ejecutar`, `Reiniciar` y `Paso`. En estos vídeos también se hablará de arrastrar bloques Blockly, eliminar bloques Blockly y conectar bloques Blockly. A continuación, los alumnos practicarán sus habilidades de _secuenciación_ y _depuración_ en el laberinto. A partir de ahí, los estudiantes verán nuevos tipos de rompecabezas como la Coleccionista, el Artista y la Cosechadora cuando aprendan los fundamentos de los _bucles_.
             Relay Programming:
@@ -10723,7 +10723,7 @@ es:
               description_teacher: La transición desde los algoritmos hacia la programación puede ser corta si los estudiantes entienden la diferencia entre planificar una secuencia y codificar esa secuencia en el lenguaje apropiado. Esta actividad ayudará a los estudiantes a adquirir experiencia en la lectura y escritura de código abreviado.
             Programming in Maze:
               name: Programación en Laberinto
-              description_teacher: En esta serie de desafíos en línea, los estudiantes aprenderán sobre algoritmos, depuración y conocimientos generales de computación. A través de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales para que el pájaro llegue hasta el cerdo sin chocarse con los muros o el TNT. Este nivel además incluye desafíos de depuración que fomentan la resolución de problemas y el pensamiento crítico.
+              description_teacher: En esta serie de rompecabezas en línea, los alumnos se basarán en la comprensión de los algoritmos, la depuración y los conocimientos informáticos generales. Con los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales para que el pájaro llegue al cerdo sin chocar con las paredes o la TNT. Los rompecabezas de depuración también se han mezclado en esta etapa para una mayor práctica con la resolución de problemas y el pensamiento crítico.
             Programming in Harvester:
               name: Programación con la cosechadora
             Going Places Safely:
@@ -10740,23 +10740,23 @@ es:
               description_teacher: Durante esta etapa se desarrolla el concepto de instrucciones repetidas de "Bucles felices", para que los estudiantes puedan usar bucles y recoger tesoros de manera más eficiente en Code.org.
             Loops in Artist:
               name: Loops en Artista
-              description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
+              description_teacher: Volviendo a los bucles, los alumnos aprenden a dibujar imágenes mediante la creación de bucles con secuencias de instrucciones sencillas. En la lección anterior, los bucles se utilizaron para atravesar un laberinto y recoger un tesoro. Aquí, los bucles crean patrones. Al final de esta etapa, los alumnos tendrán la oportunidad de crear sus propias imágenes utilizando bucles.
             'Events: The Big Event':
               name: El Gran Evento Jr.
               description_student: Muévete y grita cuando tus docentes presionen los botones de un control remoto gigante.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: Los eventos son una gran manera de añadir variedad a un algoritmo pre-escrito. A veces quieres que tu programa sea capaz de responder al usuario exactamente cuando el usuario lo solicite. Para eso están los eventos.
             Events in Play Lab:
               name: En movimiento con eventos
               description_student: Crea tu propio juego o historia.
-              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a utilizar los eventos en el Laboratorio de Juegos y aplicar todas las habilidades de codificación que han aprendido para crear un juego animado. ¡Es hora de ser creativo y programar una historia en el Laboratorio de Juegos!
             Ocean Scene with Loops:
               name: Escena del océano con bucles
               description_student: Usa bucles y patrones para finalizar las imágenes.
-              description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
+              description_teacher: Volviendo a los bucles, los alumnos aprenden a dibujar imágenes mediante la creación de bucles con secuencias de instrucciones sencillas. En la lección anterior, los bucles se utilizaron para atravesar un laberinto y recoger un tesoro. Aquí, los bucles crean patrones. Al final de esta etapa, los alumnos tendrán la oportunidad de crear sus propias imágenes utilizando bucles.
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
               description_student: Haz clic y arrastra para terminar los desafíos.
-              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
+              description_teacher: Esta lección dará a los alumnos una idea de lo que pueden esperar cuando vayan al laboratorio de informática. Comienza con un breve debate en el que se introducen los modales en el laboratorio de informática y, a continuación, pasarán a utilizar un ordenador para completar rompecabezas en línea.
             Loops in Ice Age:
               name: Bucles con Scrat
               description_student: Usa los bucles para ayudar a Scrat a cubrir más terreno.
@@ -10824,7 +10824,7 @@ es:
             'Events: The Big Event':
               name: El Gran Evento Jr.
               description_student: Muévete o grita cuando tu docente presione los botones de un control remoto gigante.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: Los eventos son una gran manera de añadir variedad a un algoritmo pre-escrito. A veces quieres que tu programa sea capaz de responder al usuario exactamente cuando el usuario lo solicite. Para eso están los eventos.
             Events in Play Lab:
               name: Una batalla real con eventos
               description_student: Usa los eventos para crear una historia o un juego interactivo.
@@ -15022,7 +15022,7 @@ es:
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
               description_student: Haz clic y arrastra para terminar los desafíos.
-              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
+              description_teacher: Esta lección dará a los alumnos una idea de lo que pueden esperar cuando vayan al laboratorio de informática. Comienza con un breve debate en el que se introducen los modales en el laboratorio de informática y, a continuación, pasarán a utilizar un ordenador para completar rompecabezas en línea.
             'Programming: Happy Maps':
               name: Mapas Felices
               description_student: Escribe instrucciones para que el Flurb llegue hasta la fruta.
@@ -15054,15 +15054,15 @@ es:
             Ocean Scene with Loops:
               name: Escena del océano con bucles
               description_student: Usa bucles y patrones para finalizar las imágenes.
-              description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
+              description_teacher: Volviendo a los bucles, los alumnos aprenden a dibujar imágenes mediante la creación de bucles con secuencias de instrucciones sencillas. En la lección anterior, los bucles se utilizaron para atravesar un laberinto y recoger un tesoro. Aquí, los bucles crean patrones. Al final de esta etapa, los alumnos tendrán la oportunidad de crear sus propias imágenes utilizando bucles.
             'Events: The Big Event':
               name: El Gran Evento Jr.
               description_student: Muévete y grita cuando tus docentes presionen los botones de un control remoto gigante.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: Los eventos son una gran manera de añadir variedad a un algoritmo pre-escrito. A veces quieres que tu programa sea capaz de responder al usuario exactamente cuando el usuario lo solicite. Para eso están los eventos.
             Events in Play Lab:
               name: En movimiento con eventos
               description_student: Crea tu propio juego o historia.
-              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a utilizar los eventos en el Laboratorio de Juegos y aplicar todas las habilidades de codificación que han aprendido para crear un juego animado. ¡Es hora de ser creativo y programar una historia en el Laboratorio de Juegos!
             Safety in My Online Neighborhood:
               name: Seguridad en mi Vecindario de Internet
               description_student: Aprenda a ir a sitios seguros en Internet.
@@ -15128,7 +15128,7 @@ es:
             'Events: The Big Event':
               name: El Gran Evento Jr.
               description_student: Muévete o grita cuando tu docente presione los botones de un control remoto gigante.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: Los eventos son una gran manera de añadir variedad a un algoritmo pre-escrito. A veces quieres que tu programa sea capaz de responder al usuario exactamente cuando el usuario lo solicite. Para eso están los eventos.
             Events in Play Lab:
               name: Una batalla real con eventos
               description_student: Usa los eventos para crear una historia o un juego interactivo.
@@ -15269,7 +15269,7 @@ es:
               description_student: En esta lección, programarás a tu compañero de clase para que dibujar imágenes.
               description_teacher: 'Al "programarse" entre sí para dibujar imágenes, los estudiantes obtienen una oportunidad de experimentar algunos de los conceptos centrales de programar de una manera divertida y accesible. La clase comenzará haciendo que los estudiantes usen símbolos para instruirse entre ellos para colorear cuadrados en papel cuadriculado en un intento por producir una imagen existente. Si queda tiempo, la lección puede concluir con imágenes que los mismos estudiantes crean. '
             Introduction to Online Puzzles:
-              name: Introducción a los desafíos en línea
+              name: Introducción a los Rompecabezas en Línea
               description_student: Esta lección te entrenará en las habilidades que necesitarás para este curso.
               description_teacher: En este conjunto de rompecabezas, los alumnos comenzarán con una introducción (o repaso, dependiendo de la experiencia de su clase) del espacio de trabajo en línea de Code.org. Habrá vídeos que mostrarán la funcionalidad básica del espacio de trabajo, incluyendo los botones `Ejecutar`, `Reiniciar` y `Paso`. En estos vídeos también se hablará de arrastrar bloques Blockly, eliminar bloques Blockly y conectar bloques Blockly. A continuación, los alumnos practicarán sus habilidades de _secuenciación_ y _depuración_ en el laberinto. A partir de ahí, los estudiantes verán nuevos tipos de rompecabezas como la Coleccionista, el Artista y la Cosechadora cuando aprendan los fundamentos de los _bucles_.
             Relay Programming:
@@ -15721,7 +15721,7 @@ es:
           lessons:
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
-              description_teacher: Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.
+              description_teacher: Esta lección dará a los alumnos una idea de lo que pueden esperar cuando vayan al laboratorio de informática. Comienza con un breve debate en el que se introducen los modales en el laboratorio de informática y, a continuación, pasarán a utilizar un ordenador para completar rompecabezas en línea.
             Sequencing with Scrat:
               name: Secuencias con Scrat
               description_teacher: Utilizando a Scrat, de la franquicia Ice Age, los estudiantes desarrollarán algoritmos secuenciales para mover a un personaje "ardilla" desde un lado del laberinto hasta la bellota en el otro lado. Para ello, apilarán bloques de código en una secuencia lineal.
@@ -15744,13 +15744,13 @@ es:
               description_teacher: En esta lección, los estudiantes continúan aprendiendo el concepto de bucles. Aquí, Laurel la Aventurera utiliza bucles para recolectar tesoros en cuevas abiertas. Se introduce un nuevo bloque `obtener tesoro` que la ayudará en su recorrido.
             Ocean Scene with Loops:
               name: Escena del océano con bucles
-              description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
+              description_teacher: Volviendo a los bucles, los alumnos aprenden a dibujar imágenes mediante la creación de bucles con secuencias de instrucciones sencillas. En la lección anterior, los bucles se utilizaron para atravesar un laberinto y recoger un tesoro. Aquí, los bucles crean patrones. Al final de esta etapa, los alumnos tendrán la oportunidad de crear sus propias imágenes utilizando bucles.
             Loops in Artist:
               name: Loops en Artista
               description_teacher: Volviendo a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la lección sin conexión anterior, se usaron los bucles para recorrer un laberinto y recoger tesoro. Aquí, los estudiantes usan los bucles para crear patrones. Al final de esta etapa, tendrán la oportunidad de usar bucles para crear sus propias imágenes.
             Tell a Story in Play Lab:
               name: Contar una historia en el Laboratorio de juegos
-              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
+              description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a utilizar los eventos en el Laboratorio de Juegos y aplicar todas las habilidades de codificación que han aprendido para crear un juego animado. ¡Es hora de ser creativo y programar una historia en el Laboratorio de Juegos!
             Make a Game in Play Lab:
               name: Crear un juego en el Laboratorio de juegos
               description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a utilizar los eventos en el Laboratorio de juegos y aplicar todas las habilidades de codificación que han aprendido para crear un juego animado. ¡Es hora de ser creativo y crear un juego en el Laboratorio de Juegos!
@@ -18870,7 +18870,7 @@ es:
               key: Aprendiendo de los datos
               name: Aprendiendo de los datos
               description_student: Explora la herramienta Google Trends para contar una "historia de datos".
-              description_teacher: 'En esta lección, los alumnos analizan la herramienta Google Trends para contar una "historia de datos" que explique tanto lo que muestran los datos como el motivo de ello. A continuación, se presenta a los alumnos el concepto de metadatos y se buscan los metadatos de los conjuntos de datos en Laboratorio de Aplicaciones. '
+              description_teacher: En esta lección, los alumnos analizan la herramienta Google Trends para contar una "historia de datos" que explique tanto lo que muestran los datos como el motivo de ello. A continuación, se presenta a los alumnos el concepto de metadatos y se buscan los metadatos de los conjuntos de datos en Laboratorio de Aplicaciones.
             Exploring One Column:
               key: Explorando una columna
               name: Explorando una columna
@@ -19317,8 +19317,8 @@ es:
               description_student: En esta lección, programarás a tu compañero de clase para que dibujar imágenes.
               description_teacher: 'Al "programarse" entre sí para dibujar imágenes, los estudiantes obtienen una oportunidad de experimentar algunos de los conceptos centrales de programar de una manera divertida y accesible. La clase comenzará haciendo que los estudiantes usen símbolos para instruirse entre ellos para colorear cuadrados en papel cuadriculado en un intento por producir una imagen existente. Si queda tiempo, la lección puede concluir con imágenes que los mismos estudiantes crean. '
             Introduction to Online Puzzles:
-              key: Introducción a los desafíos en línea
-              name: Introducción a los desafíos en línea
+              key: Introducción a los Rompecabezas en Línea
+              name: Introducción a los Rompecabezas en Línea
               description_student: Esta lección te entrenará en las habilidades que necesitarás para este curso.
               description_teacher: 'En este grupo de desafíos, los/as estudiantes comenzarán con una introducción (o revisión dependiendo de la experiencia de su clase) al espacio de trabajo online de Code.org. Habrá videos señalando la funcionalidad básica del espacio de trabajo incluyendo los botones Ejecutar, Reiniciar y Paso. También se discute en estos videos: Arrastrar los bloques Blockly, borrar bloques Blockly y conectar bloques Blockly. Luego, los/as estudiantes practicarán sus habilidades de secuenciación y debugging en laberinto. Desde ahí en adelante, los/as estudiantes verán nuevos desafíos como Recolector, Artista y Cosechador una vez comprendan las bases de -loops-.'
             Relay Programming:
@@ -25991,6 +25991,7 @@ es:
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
           description_audience: De 5 a 8 años
+          name: cursob-2022
         coursec-2022:
           lessons:
             Putting a STOP to Online Meanness:
@@ -26534,10 +26535,10 @@ es:
               description_student: En esta lección, programarás a tu compañero de clase para que dibujar imágenes.
               description_teacher: 'Al "programarse" entre sí para dibujar imágenes, los estudiantes obtienen una oportunidad de experimentar algunos de los conceptos centrales de programar de una manera divertida y accesible. La clase comenzará haciendo que los estudiantes usen símbolos para instruirse entre ellos para colorear cuadrados en papel cuadriculado en un intento por producir una imagen existente. Si queda tiempo, la lección puede concluir con imágenes que los mismos estudiantes crean. '
             Introduction to Online Puzzles:
-              name: Introducción a los desafíos en línea
+              name: Introducción a los Rompecabezas en Línea
               description_student: Esta lección te entrenará en las habilidades que necesitarás para este curso.
               description_teacher: 'En este grupo de desafíos, los/as estudiantes comenzarán con una introducción (o revisión dependiendo de la experiencia de su clase) al espacio de trabajo online de Code.org. Habrá videos señalando la funcionalidad básica del espacio de trabajo incluyendo los botones Ejecutar, Reiniciar y Paso. También se discute en estos videos: Arrastrar los bloques Blockly, borrar bloques Blockly y conectar bloques Blockly. Luego, los/as estudiantes practicarán sus habilidades de secuenciación y debugging en laberinto. Desde ahí en adelante, los/as estudiantes verán nuevos desafíos como Recolector, Artista y Cosechador una vez comprendan las bases de -loops-.'
-              key: Introducción a los desafíos en línea
+              key: Introducción a los Rompecabezas en Línea
             Relay Programming:
               name: Programación de Relevos
               description_student: "¿Recuerdas al principio del curso cuando hiciste dibujos con código? ¡En esta lección trabajarás con un equipo para hacer algo muy similar!"
@@ -26661,6 +26662,7 @@ es:
           student_description: Aprende sobre bucles, condicionales y eventos. Más allá de la codificación, aprende sobre la ciudadanía digital.
           description_short: Aprende sobre sentencias condicionales y crea tu propio arte, historia o juego.
           description_audience: Edades de 7 a 11 años
+          name: cursod-2022
         coursee-2022:
           lessons:
             Follow the Algorithm:
@@ -27107,14 +27109,47 @@ es:
               name: Convertirse en Ingenieros de Software
             lesson-16:
               name: Proyecto de Arte en el Asfalto - Día 1
+              description_student: |-
+                **¿Qué quiero representar utilizando la programación y el arte?**
+
+                En este proyecto, utilizarás las habilidades que has desarrollado para crear arte en el asfalto de El Barrio. Eliges un tema o concepto para tu arte en el asfalto que represente algo que te interese o sea significativo para ti. Después de una lluvia de ideas y una planificación, desarrollarás tu programa para crear tu diseño.
+              description_teacher: |-
+                **¿Qué quiero representar utilizando la programación y el arte?**
+
+                En este proyecto, los alumnos utilizan las habilidades que han desarrollado para crear arte en el asfalto de El Barrio. Los alumnos eligen un tema o concepto para su arte en el asfalto que represente algo que les interese o sea significativo para ellos. Después de una lluvia de ideas y una planificación, los estudiantes desarrollan sus programas para crear sus diseños.
             lesson-17:
               name: Proyecto de Arte en el Asfalto - Día 2
+              description_student: |-
+                **¿Cómo voy a poner en práctica mis planes para crear mi programa?**
+
+                Ahora has diseñado una nueva clase para crear tu arte en el asfalto. En esta lección, decides qué clases y métodos has desarrollado a lo largo de la unidad y tu nueva clase para crear tu diseño. También refuerzas tus habilidades y procesos de desarrollo de software participando en una revisión de código para dar y utilizar la experiencia.
+              description_teacher: |-
+                **¿Cómo voy a poner en práctica mis planes para crear mi programa?**
+
+                Los estudiantes han diseñado una nueva clase para crear su arte en el asfalto. En esta lección, los estudiantes deciden qué clases y métodos que han desarrollado a lo largo de la unidad van a utilizar y su nueva clase para crear su diseño. Los estudiantes refuerzan las habilidades y los procesos de desarrollo de software participando en una revisión del código para dar y utilizar los comentarios.
             lesson-18:
               name: Proyecto de Arte en el Asfalto - Día 3
+              description_student: |-
+                **¿Cómo se refleja mi crecimiento como ingeniero de software en mi proyecto?**
+
+                Participaste en una revisión de código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraste. Considera esta experiencia al finalizar el desarrollo en esta lección. A continuación, compartirás tu proyecto final con tus compañeros para celebrar tu éxito.
+              description_teacher: |-
+                **¿Cómo se refleja mi crecimiento como ingeniero de software en mi proyecto?**
+
+                Los estudiantes participaron en una revisión del código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraron. Los estudiantes tienen en cuenta estos comentarios cuando finalizan el desarrollo en esta lección. Los estudiantes comparten sus proyectos finales con sus compañeros para celebrar sus éxitos.
             lesson-19:
               name: Práctica de FRQ
+              description_student: |-
+                **¿Cómo utilizaré lo que sé sobre clases y objetos para responder a una Pregunta de Respuesta Libre?**
+
+                Se te pedirá que desarrolles soluciones a Preguntas de Respuesta Libre (FRQs) en el examen AP CSA. Aprenderás sobre la estructura de una FRQ y practicarás las habilidades de descomposición y resolución de problemas para desarrollar soluciones a una FRQ simulada. Utilizarás estrategias de anotación para identificar los componentes clave del problema y validarás tus soluciones utilizando las Guías de Puntuación.
+              description_teacher: |-
+                **¿Cómo utilizaré lo que sé sobre clases y objetos para responder a una Pregunta de Respuesta Libre?**
+
+                Los estudiantes se familiarizan con las Preguntas de Respuesta Libre (FRQs) de AP CSA y practican las habilidades de descomposición y resolución de problemas para desarrollar soluciones a una FRQ simulada. Los estudiantes utilizan estrategias de anotación para identificar los componentes clave del problema y validar sus soluciones utilizando las Guías de Puntuación.
             lesson-20:
               name: Evaluación de la Unidad 1
+              description_student: Enhorabuena, has completado tu primera unidad. Evalúa tu progreso a través de la Evaluación de la Unidad 1.
               description_teacher: Los alumnos realizan una evaluación de opción múltiple que abarca los temas de la unidad.
           lesson_groups:
             lessonGroup-2:
@@ -27180,6 +27215,24 @@ es:
               name: Evaluación de la Unidad 2
             lesson-6:
               name: Variables
+            lesson-7:
+              name: Operadores y Expresiones
+            lesson-8:
+              name: Atributos
+            lesson-9:
+              name: Constructores
+            lesson-10:
+              name: Entrada de Usuario
+            lesson-11:
+              name: Jerarquías de Clase
+            lesson-12:
+              name: Métodos de Acceso
+            lesson-13:
+              name: Métodos Mutadores
+            lesson-14:
+              name: Imprimiendo Objetos
+            lesson-15:
+              name: Ámbito
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -27371,7 +27424,14 @@ es:
               name: Bienvenido a "Enseñando CSA"
           name: autodidáctico-pl-csa1-2022
           title: 'Unidad 1 - Módulo 1: Bienvenida'
+        self-paced-pl-csa2-2022:
+          name: autodidáctico-pl-csa2-2022
         self-paced-pl-csa3-2022:
+          lessons:
+            lesson-1:
+              name: Introducción a Laboratorio Java
+            lesson-2:
+              name: Usando variables en Java
           name: autodidáctico-pl-csa3-2022
           title: Soporte para la programación basada en texto
         csa7-pilot-extra:
@@ -27537,6 +27597,7 @@ es:
               display_name: Encuesta Piloto
             lessonGroup-5:
               display_name: Aislamiento
+          title: 'Ampliando el Diseño de Software '
           name: csa7-piloto-extra
         csa8-pilot-extra:
           lessons:
@@ -27697,6 +27758,7 @@ es:
               display_name: Encuesta Piloto
             lessonGroup-5:
               display_name: Aislamiento
+          name: csa8-piloto-extra
         csa-backpack-2022:
           lessons:
             lesson-1:
@@ -27712,6 +27774,15 @@ es:
               name: 'Proyecto: Interacción entre Dispositivos Humanos'
             'Mini-Project: Interactive Art':
               name: 'Mini-Proyecto: Arte Interactivo'
+            lesson-4:
+              name: Niveles de Práctica Independiente
+              description_teacher: |-
+                Esta lección contiene una colección de niveles que aparecen en nuestro plan de estudios. Puedes utilizar estos niveles para experimentar cómo funciona el MicroBit en el contexto de nuestra progresión de niveles en el plan de estudios, o para probar componentes individuales del MicroBit en un entorno más pequeño.
+
+                Todos los niveles se han diseñado teniendo en cuenta el Adafruit Circuit Playground, por lo que es posible que no haya una coincidencia exacta entre las instrucciones del nivel y el MicroBit.
+          name: csd6-proyectos
+          title: CSD Unidad 6 - Proyectos
+          description: Estos son los nuevos proyectos de la unidad CS Descubrimientos de Computación Física. Esta unidad existe para ayudar a probar las nuevas características de MicroBit en la plataforma Code.org
         coursef-2022-pilot:
           lessons:
             The Power of Words:
@@ -27804,6 +27875,7 @@ es:
               display_name: Datos y Simulaciones
             end_of_course_project:
               display_name: Proyecto de fin de curso
+          name: cursof-2022-piloto
           title: Curso F (2022)
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
@@ -28112,3 +28184,50 @@ es:
             lessonGroup-5:
               display_name: Aislamiento
           description: "En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.\n\n### Controles de progreso personal del Aula AP\n\nPara asignar preguntas del Banco de Preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\\*\\*Estándares\\*\\*](https://studio.code.org/s/csa8-pilot-facilitator/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\\*\\*AP Central\\*\\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nLas siguientes comprobaciones de progreso personal en el Aula AP pueden asignarse durante la semana de \"Demuestra lo que sabes\":\n\n-   Control de Progreso Personal 10\n\n**_Nota:_** Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores.\\_"
+        csa-preview:
+          lessons:
+            lesson-1:
+              name: Clases y Objetos
+            lesson-2:
+              name: Utilización de comandos
+            lesson-3:
+              name: La Zona de Juego
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Bienvenidos
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+            lesson-2:
+              name: Operadores y Expresiones
+            lesson-3:
+              name: Atributos
+            lesson-4:
+              name: Constructores
+            lesson-5:
+              name: Entrada de Usuario
+            lesson-6:
+              name: Jerarquías de Clase
+            lesson-7:
+              name: Métodos de Acceso
+            lesson-8:
+              name: Métodos Mutadores
+            lesson-9:
+              name: Imprimiendo Objetos
+            lesson-11:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 1'
+            lesson-12:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 2'
+            lesson-13:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 3'
+            lesson-14:
+              name: Práctica de FRQ
+            lesson-15:
+              name: Evaluación de la Unidad 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
