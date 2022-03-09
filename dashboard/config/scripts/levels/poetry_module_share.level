@@ -114,7 +114,7 @@
               </shadow>
             </value>
             <value name="VAR">
-              <block type="variables_get" movable="false" movable="false">
+              <block type="variables_get" movable="false">
                 <title name="VAR">???</title>
               </block>
             </value>
@@ -126,7 +126,7 @@
               </shadow>
             </value>
             <value name="VAR">
-              <block type="variables_get" movable="false" movable="false">
+              <block type="variables_get" movable="false">
                 <title name="VAR">???</title>
               </block>
             </value>
