@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-08 21:50:50 UTC",
+    "serialized_at": "2022-03-09 17:46:15 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -96,7 +96,7 @@
       "key": "6957d1be-1e99-4889-a83a-7c7ee8943907",
       "position": 1,
       "properties": {
-        "progression_name": "Overview"
+        "progression_name": "Overview (~1 minute)"
       },
       "seeding_key": {
         "activity_section.key": "6957d1be-1e99-4889-a83a-7c7ee8943907",
@@ -107,6 +107,7 @@
       "key": "4c410a50-4ff6-4f50-bf3d-3ba0b8f3ea74",
       "position": 2,
       "properties": {
+        "progression_name": "Tour the Code.org learning platform"
       },
       "seeding_key": {
         "activity_section.key": "4c410a50-4ff6-4f50-bf3d-3ba0b8f3ea74",
@@ -117,9 +118,32 @@
       "key": "5b10d47e-d10f-40ba-8e07-7923ff41af0c",
       "position": 3,
       "properties": {
+        "progression_name": "Set up a class section"
       },
       "seeding_key": {
         "activity_section.key": "5b10d47e-d10f-40ba-8e07-7923ff41af0c",
+        "lesson_activity.key": "3a029518-d9c2-4387-8703-5d937c5b19bd"
+      }
+    },
+    {
+      "key": "c9ae234b-feb0-404e-805b-61207f5f7813",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore the student view"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9ae234b-feb0-404e-805b-61207f5f7813",
+        "lesson_activity.key": "3a029518-d9c2-4387-8703-5d937c5b19bd"
+      }
+    },
+    {
+      "key": "6e1c7e1a-a5b2-476d-96a5-748b1fd29d00",
+      "position": 5,
+      "properties": {
+        "progression_name": "Track student progress and provide feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e1c7e1a-a5b2-476d-96a5-748b1fd29d00",
         "lesson_activity.key": "3a029518-d9c2-4387-8703-5d937c5b19bd"
       }
     }
@@ -131,7 +155,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Overview"
+        "level_keys": [
+          "SP-VPL-22-mod2-Overview-WebsiteNavigation-CSA"
+        ],
+        "progression": "Overview (~1 minute)"
       },
       "bonus": false,
       "seeding_key": {
@@ -153,6 +180,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod2-tour-vid-CSA"
+        ],
+        "progression": "Tour the Code.org learning platform"
       },
       "bonus": false,
       "seeding_key": {
@@ -174,6 +205,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid-CSA"
+        ],
+        "progression": "Set up a class section"
       },
       "bonus": false,
       "seeding_key": {
@@ -195,6 +230,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection-CSA"
+        ],
+        "progression": "Set up a class section"
       },
       "bonus": false,
       "seeding_key": {
@@ -208,6 +247,116 @@
       },
       "level_keys": [
         "SP-VPL-21-mod2-Task-ClassSection-CSA"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the student view"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid-CSA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "c9ae234b-feb0-404e-805b-61207f5f7813"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-StudentExperience-vid-CSA"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the student view"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView-CSA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "c9ae234b-feb0-404e-805b-61207f5f7813"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-StudentView-CSA"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "6e1c7e1a-a5b2-476d-96a5-748b1fd29d00"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u-csp"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "6e1c7e1a-a5b2-476d-96a5-748b1fd29d00"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-progress-c4u-csp"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u-CSA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "6e1c7e1a-a5b2-476d-96a5-748b1fd29d00"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-feedback-c4u-CSA"
       ]
     }
   ],
@@ -258,6 +407,66 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa2-2022",
         "activity_section.key": "5b10d47e-d10f-40ba-8e07-7923ff41af0c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-StudentExperience-vid-CSA",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid-CSA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "c9ae234b-feb0-404e-805b-61207f5f7813"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-StudentView-CSA",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView-CSA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "c9ae234b-feb0-404e-805b-61207f5f7813"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "6e1c7e1a-a5b2-476d-96a5-748b1fd29d00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-progress-c4u-csp",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u-csp"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "6e1c7e1a-a5b2-476d-96a5-748b1fd29d00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-feedback-c4u-CSA",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u-CSA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa2-2022",
+        "activity_section.key": "6e1c7e1a-a5b2-476d-96a5-748b1fd29d00"
       }
     }
   ],
