@@ -433,6 +433,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       lockable: lockable,
       key: key,
+      duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
       displayName: localized_name_for_lesson_show,
       overview: render_property(:overview),
       announcements: announcements,
