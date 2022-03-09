@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-08 19:20:49 UTC",
+    "serialized_at": "2022-03-08 20:12:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -128,7 +128,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students use symbols to instruct each other to color squares on graph paper. By \"programming\" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. ",
-        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Print out one ***worksheet** and ***assessment** for each student.\n- Make sure every student has a reflection journal.\n",
+        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Print out one ***worksheet** and ***assessment** for each student.\n\n",
         "purpose": "The goal of this activity is to build critical thinking skills and excitement for the course, while introducing some of the fundamental programming concepts that will be used throughout the course. By introducing basic concepts like sequencing and algorithms to the class in an unplugged activity, students who are intimidated by computers can still build a foundation of understanding on these topics. In this lesson, students will learn how to develop an algorithm and encode it into a program. ",
         "student_overview": "In this lesson, you will program your classmate to draw pictures!",
         "unplugged": true
@@ -1507,10 +1507,34 @@
       }
     },
     {
-      "key": "d80d3591-db5f-43bb-b3be-3a0eb14690a7",
+      "key": "0661508e-1aa3-488f-8064-beaec4c40e7a",
       "position": 1,
       "properties": {
-        "description": "In this activity, students will encode instructions to guide each other toward making drawings without letting the rest of their group see the original image. This warm-up frames the activity for the class.\r\n\r\n**Display:** Watch one of the videos below to give students context for the types of things that robots can do:\r\n\r\n - [Asimo by Honda](https://youtu.be/QdQL11uWWcI) (3:58)\r\n - [Egg Drawing Robot](https://youtu.be/slh5vMIc33I) (3:15)\r\n - [Dancing Lego Robot](https://youtu.be/NPIq5qldbio) (1:35)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When would you need to complete a list of steps in order?_\n",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "0661508e-1aa3-488f-8064-beaec4c40e7a",
+        "lesson_activity.key": "abaa6b2f-5158-4a3b-b861-28580f6362af"
+      }
+    },
+    {
+      "key": "835c16c0-8a24-43c1-889b-493814eb50d1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n * Algorithm - A list of steps to finish a task.\n * Program - An algorithm that has been coded into something that can be run by a machine.\n",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "835c16c0-8a24-43c1-889b-493814eb50d1",
+        "lesson_activity.key": "abaa6b2f-5158-4a3b-b861-28580f6362af"
+      }
+    },
+    {
+      "key": "d80d3591-db5f-43bb-b3be-3a0eb14690a7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Introduction” slide\n\nWatch one of the videos below to give students context for the types of things that robots can do:\n  - [Asimo by Honda](https://youtu.be/QdQL11uWWcI) (3:58)\n - [Egg Drawing Robot](https://youtu.be/slh5vMIc33I) (3:15)\n - [Dancing Lego Robot](https://youtu.be/NPIq5qldbio) (1:35)\n\nIn this activity, students will encode instructions to guide each other toward making drawings without letting the rest of their group see the original image. This warm-up frames the activity for the class.\n\n**Display:** Watch one of the videos below to give students context for the types of things that robots can do:\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1520,9 +1544,9 @@
     },
     {
       "key": "5263a44d-bdc5-4a33-ae74-33eb50c4ec28",
-      "position": 2,
+      "position": 4,
       "properties": {
-        "description": "**Discuss:** _How do you suppose that robots know how to do the things that they do? Do they have brains that work the same way that ours do?_\n\nThe goal of this quick discussion is to call out that while robots may seem to behave like people, they're actually responding only to their programming. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** _How do you suppose that robots know how to do the things that they do? Do they have brains that work the same way that ours do?_\n\n**Discussion Goal:** Call out that while robots may seem to behave like people, they're actually responding only to their programming. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_.\n\nWork this into a discussion on how people have to program robots to do specific things, using specific commands.\n"
       },
       "seeding_key": {
         "activity_section.key": "5263a44d-bdc5-4a33-ae74-33eb50c4ec28",
@@ -1531,9 +1555,8 @@
     },
     {
       "key": "7b39edc8-353d-43a0-b489-0c354a91cded",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "description": "Work this into a discussion on how people have to program robots to do specific things, using specific commands."
       },
       "seeding_key": {
         "activity_section.key": "7b39edc8-353d-43a0-b489-0c354a91cded",
@@ -1556,7 +1579,7 @@
       "key": "69bac9e1-3ac8-4641-bd12-2ea9fe9dd83a",
       "position": 1,
       "properties": {
-        "description": "In this activity, students will act as both programmers and robots, coloring in squares according to programs that they have written for one another.\n\n**Distribute:** Students will use 4x4 grids (or sheets of graph paper with 4x4 boxes sectioned off). They will also need the image worksheet.\n\n**Display:** Project these commands, or write them on the board.  They won't persist long, but they will help students make the transition from Algorithm to Program.\n \n    Move one square right\n    Move one square left\n    Move one square up\n    Move one square down\n    Fill in square with color\n\n**Say:** Today, we all get to program robots...and they're already here in the room!  It's you!  We're going to write programs using symbols with special meanings to help each other recreate a picture. First, we'll practice together as if I am the robot and you are the programmers, then we can break up into groups so that everyone can get a turn.\n\n**Display:** Display both the image that you are going to have the students walk you through, and a blank grid that you will fill-in with your ARM. Make sure that the instructions, grid, and image remain visible at the same time.  \n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
+        "description": "In this activity, students will act as both programmers and robots, coloring in squares according to programs that they have written for one another.\n\n**Distribute:** Students will use 4x4 grids (or sheets of graph paper with 4x4 boxes sectioned off). They will also need the image worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Commands” slide\n\n**Do This:** Project these commands, or write them on the board.  They won't persist long, but they will help students make the transition from Algorithm to Program.\n \n    Move one square right\n    Move one square left\n    Move one square up\n    Move one square down\n    Fill in square with color\n\n"
       },
       "seeding_key": {
         "activity_section.key": "69bac9e1-3ac8-4641-bd12-2ea9fe9dd83a",
@@ -1564,8 +1587,31 @@
       }
     },
     {
-      "key": "78086b29-2d45-4172-91f8-a56000ef094c",
+      "key": "fcd4343e-894a-46df-8506-60461c8b0dc8",
       "position": 2,
+      "properties": {
+        "description": "oday, we all get to program robots...and they're already here in the room! It's you! We're going to write programs using symbols with special meanings to help each other recreate a picture. First, we'll practice together as if I am the robot and you are the programmers, then we can break up into groups so that everyone gets a turn.\n\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fcd4343e-894a-46df-8506-60461c8b0dc8",
+        "lesson_activity.key": "6f71e5c5-4881-41a1-b22b-989ca514a6a2"
+      }
+    },
+    {
+      "key": "ae4453c2-6859-4fe5-9fde-625cfd390cb1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #1” slide\n\nDisplay both the image that you are going to have the students walk you through, and a blank grid that you will fill-in with your ARM. Make sure that the instructions, grid, and image remain visible at the same time. When the direction “fill in square with color” is given, drag one of the two squares on the slide onto the grid to represent a square filled in with color.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae4453c2-6859-4fe5-9fde-625cfd390cb1",
+        "lesson_activity.key": "6f71e5c5-4881-41a1-b22b-989ca514a6a2"
+      }
+    },
+    {
+      "key": "78086b29-2d45-4172-91f8-a56000ef094c",
+      "position": 4,
       "properties": {
         "description": "_Here is an image.  Pretend that I am the robot with an Automatic Realization Machine (ARM).  These are the only instructions that I understand._\n\n_Starting at the upper left-hand corner, guide my ARM out loud with your words._",
         "remarks": true
@@ -1577,9 +1623,9 @@
     },
     {
       "key": "2dc8720c-7b51-4e23-bff7-caf758dea9b3",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?\n\n**Display:** Show the students a more complicated image, like the one below.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n\n**Display:** Show the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
+        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #2” slide\n\nShow the students a more complicated image, like the one below.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\nShow the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
       },
       "seeding_key": {
         "activity_section.key": "2dc8720c-7b51-4e23-bff7-caf758dea9b3",
@@ -1588,7 +1634,7 @@
     },
     {
       "key": "c24df0cf-2ab1-4b43-b556-7da15019dc60",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "**Discussion:** How could we use these symbols to make our instructions easier?"
       },
@@ -1599,9 +1645,9 @@
     },
     {
       "key": "66e69e6f-d274-4340-a191-d6223b0c3fcb",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "Draw out ideas that relate to transitioning from the verbal instructions to the symbols. Once the students get to that place, point out that this text:\n\n- “Move one square right, Move one square right, Fill-in square with color”\n\nwould now correspond to the program:\n\n![](https://levelbuilder.code.org/curriculum/course2/1/program.png)\n\nThe goal for this discussion is to get at the idea that students can use symbols to stand for entire phrases.  Once they understand that, share with them that making the switch from listing steps in detail to encoding them is called **\"programming.\"** "
+        "description": "Draw out ideas that relate to transitioning from the verbal instructions to the symbols. Once the students get to that place, point out that this text:\n\n- “Move one square right, Move one square right, Fill-in square with color”\n\nwould now correspond to the program:\n\n![](https://levelbuilder.code.org/curriculum/course2/1/program.png)\n\n**Discussion Goal:** Get at the idea that students can use symbols to stand for entire phrases.  Once they understand that, share with them that making the switch from listing steps in detail to encoding them is called **\"programming.\"** "
       },
       "seeding_key": {
         "activity_section.key": "66e69e6f-d274-4340-a191-d6223b0c3fcb",
@@ -1610,9 +1656,9 @@
     },
     {
       "key": "be35d4b6-5785-44f3-9d9b-158e356ebb0d",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "**Model:** Now, have the class help you draw the larger image using only symbols.  Do not worry about unnecessary steps for now.  If their final program works to create the image, consider it a win.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Model:** Now, have the class help you draw the larger image using only symbols.  Do not worry about unnecessary steps for now.  If their final program works to create the image, consider it a win. (The symbols are infinitely cloned on this slide for your use in modeling this puzzle.)\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1627,9 +1673,9 @@
     },
     {
       "key": "d8c187b2-ad4b-4aaa-85e8-1585da13a6fa",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "The classroom may be buzzing with suggestions by this point. If the class gets the gist of the exercise, this is a good place to discuss alternate ways of filling out the same grid. If there is still confusion, save that piece for another day and work with another example.\n\nSee a sample solution below:\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper4.png)\n\n\n---"
+        "description": "The classroom may be buzzing with suggestions by this point. If the class gets the gist of the exercise, this is a good place to discuss alternate ways of filling out the same grid. If there is still confusion, save that piece for another day and work with another example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample Solution” slide\n\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper4.png)\n\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "d8c187b2-ad4b-4aaa-85e8-1585da13a6fa",
@@ -1638,9 +1684,9 @@
     },
     {
       "key": "a44a9180-d414-4934-82ef-09e1d14355b1",
-      "position": 8,
+      "position": 10,
       "properties": {
-        "description": "####The Students' Turn\n\n**Group:** Divide students into pairs or small groups.  \n\n- Have each pair/group choose an image from the worksheet.\n- Discuss the algorithm to draw chosen image with partner(s).\n- Convert algorithm into a program using symbols.\n- Trade programs with another pair/group and draw one another's image.\n- Choose another image and go again!\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper7.png)"
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Your Turn!” slide.\n\n\n\n####The Students' Turn\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Activity Sheet” slide\n\n\n**Group:** Divide students into pairs or small groups.  \n\n- Have each pair/group choose an image from the worksheet.\n- Discuss the algorithm to draw chosen image with partner(s).\n- Convert algorithm into a program using symbols.\n- Trade programs with another pair/group and draw one another's image.\n- Choose another image and go again!\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper7.png)"
       },
       "seeding_key": {
         "activity_section.key": "a44a9180-d414-4934-82ef-09e1d14355b1",
@@ -1648,10 +1694,20 @@
       }
     },
     {
+      "key": "fb8d3443-62f5-478c-95b5-1530c6d592e7",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fb8d3443-62f5-478c-95b5-1530c6d592e7",
+        "lesson_activity.key": "6f71e5c5-4881-41a1-b22b-989ca514a6a2"
+      }
+    },
+    {
       "key": "711dd3c2-55d7-4e71-8714-fea9ceb6cb4a",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw another image that you could code. Can you write the program that goes with this drawing?\n - What other types of robots could we program if we changed what the arrows meant?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Prompts:**\n\n \n - Draw another image that you could code. Can you write the program that goes with this drawing?\n - What other types of robots could we program if we changed what the arrows meant?",
         "name": "Reflection",
         "tips": [
           {
@@ -1669,7 +1725,7 @@
       "key": "f996a13c-3afe-49d4-9698-afca4cbd77c1",
       "position": 1,
       "properties": {
-        "description": "- Hand out ***Graph Paper Programming - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide if using the Optional Assessment\n- Hand out ***Graph Paper Programming - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "f996a13c-3afe-49d4-9698-afca4cbd77c1",
