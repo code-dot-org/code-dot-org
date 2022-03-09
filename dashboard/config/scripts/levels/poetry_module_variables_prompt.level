@@ -59,9 +59,9 @@
           <next>
             <block type="gamelab_setPrompt" deletable="false">
               <value name="QUESTION">
-                <block type="Poetry_stringValue" deletable="false">
+                <shadow type="Poetry_stringValue" deletable="false">
                   <title name="TEXT">Choose a title for the poem:</title>
-                </block>
+                </shadow>
               </value>
             </block>
           </next>
@@ -72,6 +72,9 @@
               <next>
                 <block type="Poetry_addLine" deletable="false">
                   <value name="LINE">
+                    <shadow type="text">
+                      <title name="TEXT"/>
+                    </shadow>
                     <block type="gamelab_textJoin" deletable="false">
                       <title name="TEXT1">Five little speckled frogs</title>
                     </block>
@@ -79,6 +82,9 @@
                   <next>
                     <block type="Poetry_addLine" deletable="false">
                       <value name="LINE">
+                        <shadow type="text">
+                          <title name="TEXT"/>
+                        </shadow>
                         <block type="gamelab_textJoin" deletable="false">
                           <title name="TEXT1">Sat on a speckled log</title>
                         </block>
@@ -86,6 +92,9 @@
                       <next>
                         <block type="Poetry_addLine" deletable="false">
                           <value name="LINE">
+                            <shadow type="text">
+                              <title name="TEXT"/>
+                            </shadow>
                             <block type="gamelab_textJoin" deletable="false">
                               <title name="TEXT1">Eating the most delicious bugs</title>
                             </block>
@@ -93,6 +102,9 @@
                           <next>
                             <block type="Poetry_addLine" deletable="false">
                               <value name="LINE">
+                                <shadow type="text">
+                                  <title name="TEXT"/>
+                                </shadow>
                                 <block type="gamelab_textJoin" deletable="false">
                                   <title name="TEXT1">One jumped into the pool</title>
                                 </block>
@@ -100,6 +112,9 @@
                               <next>
                                 <block type="Poetry_addLine" deletable="false">
                                   <value name="LINE">
+                                    <shadow type="text">
+                                      <title name="TEXT"/>
+                                    </shadow>
                                     <block type="gamelab_textJoin" deletable="false">
                                       <title name="TEXT1">Where it was nice and cool</title>
                                     </block>
@@ -107,6 +122,9 @@
                                   <next>
                                     <block type="Poetry_addLine" deletable="false">
                                       <value name="LINE">
+                                        <shadow type="text">
+                                          <title name="TEXT"/>
+                                        </shadow>
                                         <block type="gamelab_textJoin" deletable="false">
                                           <title name="TEXT1">Then there were four green speckled frogs</title>
                                         </block>
