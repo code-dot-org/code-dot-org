@@ -39,13 +39,7 @@ describe('TeacherApplication', () => {
   });
 
   afterEach(() => {
-    $.ajax.restore();
-    $.param.restore();
-    window.fetch.restore();
-    firehoseClient.putRecord.restore();
-    utils.reload.restore();
-    window.sessionStorage.getItem.restore();
-    window.sessionStorage.setItem.restore();
+    sinon.restore();
     window.ga = undefined;
   });
 
