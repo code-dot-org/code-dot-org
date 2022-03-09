@@ -1087,7 +1087,8 @@ class User < ApplicationRecord
   # most relevant user levels are at the end. The list is then indexed by level ID, which will
   # pick up the last matching user level in the list.
   def self.index_user_levels_by_level_id(user_levels)
-    # The correct user level is the one most recently updated or the first created
+    # Sorts by updated_at asc then id desc
+    # the correct user level is the one most recently updated or the first created
     relevant_user_levels_last = user_levels.sort {|a, b| [a.updated_at, b.id] <=> [b.updated_at, a.id]}
     relevant_user_levels_last.index_by(&:level_id)
   end
