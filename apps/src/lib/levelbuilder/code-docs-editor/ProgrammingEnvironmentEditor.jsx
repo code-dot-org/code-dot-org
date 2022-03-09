@@ -7,6 +7,7 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import Button from '@cdo/apps/templates/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -126,6 +127,22 @@ export default function ProgrammingEnvironmentEditor({
         <input value={name} style={styles.textInput} readOnly />
       </label>
       <label>
+        Published
+        <HelpTip>
+          If checked, this programming environment will appear on /docs and all
+          pages will be accessible. If unchecked, only levelbuilders will be
+          able to access the pages.
+        </HelpTip>
+        <input
+          checked={programmingEnvironment.published}
+          onChange={e =>
+            updateProgrammingEnvironment('published', e.target.checked)
+          }
+          type="checkbox"
+          style={styles.checkboxInput}
+        />
+      </label>
+      <label>
         How should this document render?
         <select
           value={programmingEnvironment.editorType || EDITOR_TYPES[0]}
@@ -230,5 +247,8 @@ const styles = {
     borderRadius: 4,
     marginBottom: 0,
     height: 25
+  },
+  checkboxInput: {
+    margin: '0px 4px'
   }
 };

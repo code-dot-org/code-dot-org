@@ -1,5 +1,6 @@
 {
   "name": "spritelab",
+  "published": true,
   "block_pool_name": "GamelabJr",
   "description": "Sprite Lab is a Blockly programming environment where you can create interactive projects.",
   "editor_type": "blockly",
