@@ -27,7 +27,7 @@ describe('TeacherApplication', () => {
   beforeEach(() => {
     sinon.stub($, 'ajax').returns(new $.Deferred());
     sinon.stub($, 'param').returns(new $.Deferred());
-    sinon.stub(window, 'fetch').resolves();
+    sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
     sinon.stub(firehoseClient, 'putRecord');
     sinon.stub(utils, 'reload');
     sinon
