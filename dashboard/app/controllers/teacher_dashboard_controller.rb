@@ -4,7 +4,6 @@ class TeacherDashboardController < ApplicationController
   def show
     @section_summary = @section.summarize
     @sections = current_user.sections.map(&:summarize)
-    @valid_grades = Section.valid_grades
   end
 
   def parent_letter

@@ -4995,6 +4995,9 @@ ga:
             csf_events:
               display_name: Teagmhais
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Athróga
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
@@ -5030,6 +5033,48 @@ ga:
             lessonGroup-2:
               display_name: Ábhar
         csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        coursef-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+              key: Fáilte go dtí Saotharlann na Sprideanna
+            Sprites in Action:
+              name: Sprideanna ar Obair
+              key: Sprideanna ar Obair
+            AI For Oceans:
+              name: AI ar son an Aigéin
+              key: AI ar son an Aigéin
+            The Internet:
+              name: An tIdirlíon
+              key: An tIdirlíon
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Saoránacht Dhigiteach
+            ramp_up:
+              display_name: Sprideanna
+            lessonGroup-8:
+              display_name: Athróga
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
+            agus cruthaigh ealaín, scéal, nó cluiche.
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Athróga
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar

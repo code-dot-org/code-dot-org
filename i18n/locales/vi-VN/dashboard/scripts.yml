@@ -13167,6 +13167,9 @@ vi:
             csf_events:
               display_name: Các sự kiện
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Các biến
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -13284,3 +13287,156 @@ vi:
               display_name: Nội dung
             lessonGroup-5:
               display_name: Hộp cát
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Sức mạnh của ngôn từ
+              description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Bài học này ban đầu được tạo bởi Common Sense Education. [Tìm hiểu thêm.] \(<https://www.commonsense.org/education/digital-citizenship/curriculum>)
+
+                Khi trẻ lớn lên, tự nhiên chúng sẽ bắt đầu giao tiếp trực tuyến nhiều hơn. Nhưng một số những gì họ nhìn thấy có thể khiến họ cảm thấy bị tổn thương, buồn bã, tức giận hoặc thậm chí là sợ hãi. Giúp học sinh của bạn xây dựng sự đồng cảm với người khác và học các chiến lược để sử dụng khi đối mặt với bắt nạt trên mạng.
+              key: Sức mạnh của ngôn từ
+            Introducing Sprite Lab:
+              description_student: Bạn sẽ thảo luận về vai trò của máy tính và công nghệ trong cuộc sống, tập trung vào cách thức các ứng dụng và công cụ cho người dùng lựa chọn cách sử dụng.
+            Making Sprites:
+              name: Tạo nhân vật
+              description_teacher: 'Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ thích. Học sinh sẽ viết chương trình và tìm hiểu về hai khái niệm trọng tâm của Sprite Lab: Nhân vật và hành vi.'
+              key: Tạo nhân vật
+            Sprites in Action:
+              description_student: Bạn sẽ hoàn thành từng cấp độ lập trình và kết thúc với một nhiệm vụ “chơi tự do” có kết thúc mở để có thể phát triển bất cứ chương trình nào bạn thích.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ thích. Học sinh sẽ viết chương trình phản hồi lại các sự kiện theo thời gian và dữ liệu đầu vào của người dùng.
+            'Mini-Project: Virtual Pet':
+              description_student: Hãy tạo Thú cưng ảo tương tác có vẻ ngoài và hành động theo ý muốn! Hãy mang lại sức sống riêng cho thú cưng của bạn nhé!
+              description_teacher: Học sinh sẽ tạo Thú cưng ảo tương tác có vẻ ngoài và hành động theo ý muốn của mình trong bài học **dự án nhỏ** này. Học sinh sẽ sử dụng công cụ “Trang phục” của Sprite Lab để tùy chỉnh vẻ ngoài cho thú cưng. Sau đó, họ sẽ sử dụng các sự kiện, hành vi và các khái niệm khác đã học để mang lại sức sống cho thú cưng của riêng mình!
+            Blank Space Stories:
+              name: Câu chuyện khoảng trống
+              description_student: Trong hoạt động này, học sinh sẽ sử dụng các câu chuyện dạng điền vào chỗ trống (tương tự như Mad Libs®) làm ngữ cảnh để sẵn sàng hiểu cách máy tính lấy và lưu trữ dữ liệu đầu vào từ người dùng, sau đó sử dụng dữ liệu này khi chương trình chạy.
+              description_teacher: Trong bài học **thiết lập ngữ cảnh** này, học sinh sẽ sử dụng các câu chuyện dạng điền vào chỗ trống (tương tự như Mad Libs®) làm ngữ cảnh để hiểu cách máy tính lấy và lưu trữ dữ liệu đầu vào từ người dùng, sau đó sử dụng dữ liệu này khi chương trình chạy.
+              key: Câu chuyện khoảng trống
+            Text and Prompts:
+              name: Văn bản và Lời nhắc
+              description_student: Trong bài học này, bạn sẽ thực hành với các biến trong Sprite Lab.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hành với biến trong Sprite Lab.
+              key: Văn bản và Lời nhắc
+            'Mini-Project: User Input Programs':
+              description_student: Hãy áp dụng các kỹ năng mới với biến trong một trong ba dự án mở.
+              description_teacher: Học sinh sẽ áp dụng các kỹ năng mới với biến vào một trong ba **dự án nhỏ** có kết thúc mở. Học sinh sẽ khám phá các chương trình mẫu, lập kế hoạch cho dự án của riêng mình và lập trình từ đầu.
+            Simulating Experiments:
+              name: Thử nghiệm mô phỏng
+              description_student: Chạy trình mô phỏng trên máy tính và thử nghiệm bằng cách thay đổi biến.
+              description_teacher: Trong bài học **thiết lập ngữ cảnh** này, học sinh sẽ chạy và thu thập dữ liệu từ một bản mô phỏng đơn giản trong Sprite Lab. Sau khi chạy mô phỏng nhiều lần, học sinh sẽ có cơ hội dự đoán tác động của sự thay đổi biến trong bản mô phỏng đến kết quả và kiểm tra giả thuyết đó.
+              key: Thử nghiệm mô phỏng
+            Outbreak:
+              name: Dịch bệnh bùng phát
+              description_student: Một loại vi rút đã lây lan tới Thị Trấn Quái Vật rồi! Hãy học cách tạo trình mô phỏng vi rút và giúp những con quái vật khỏe mạnh trở lại.
+              description_teacher: Bài học này kết hợp **phát triển kỹ năng** liên quan đến sự kiện với một **dự án nhỏ**, trong đó học sinh có thể xây dựng bản mô phỏng máy tính của riêng mình trong Sprite Lab. Học sinh sẽ nghiên cứu bản mô phỏng để hiểu tốc độ lây lan nhanh chóng của vi rút và phương pháp làm chậm tốc độ đó.
+              key: Dịch bệnh bùng phát
+            AI For Oceans:
+              name: Trí Tuệ Nhân Tạo cho Đại Dương
+              description_student: Hãy phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, hãy mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, hãy chọn nhãn của riêng bạn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình máy học mà sau đó có thể tự gắn nhãn các hình ảnh mới.
+              description_teacher: Trong bài học **khám phá** này, học sinh sẽ đào tạo một mô hình máy học bằng cách phân loại cá và các đối tượng khác.
+              key: Trí Tuệ Nhân Tạo cho Đại Dương
+            The Internet:
+              name: Internet
+              description_student: Bạn đã bao giờ tự hỏi thông tin di chuyển trên Internet như thế nào chưa? Không phải nhờ phép thuật đâu nhé! Bài học này sẽ dạy bạn những kiến thức cơ bản về cách thức hoạt động của Internet.
+              description_teacher: Học sinh sẽ giả vờ lướt mạng và tìm hiểu về các kết nối, URL, Địa chỉ IP và DNS trong bài học **khám phá** này.
+              key: Internet
+            End of Course Project:
+              name: Dự án tổng kết khóa học
+              description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!
+              description_teacher: Bài học **dự án** này dẫn dắt học sinh qua quá trình thiết kế, phát triển và giới thiệu các dự án mới!
+              key: Dự án tổng kết khóa học
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Công dân số
+            ramp_up:
+              display_name: Nhân vật
+            lessonGroup-8:
+              display_name: Các biến
+            end_of_course_project:
+              display_name: Dự án tổng kết khóa học
+          description_audience: 'Độ tuổi: 9-13'
+          description_short: Tìm hiểu tất cả các khái niệm trong bài học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện và game của riêng bạn.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: Các dự án bạn đã phát triển trong suốt khóa học đã truyền cảm hứng cho rất nhiều sự sáng tạo trong cộng đồng! Neighborhood Lit Fest sẽ được tổ chức để giới thiệu những câu chuyện sáng tạo, kịch bản, lời bài hát, lá thư và bài thơ. Dự án Neighborhood Lit Fest là một dự án lớn mà bạn thực hiện trong toàn bộ học phần và các chiến lược quản lý dự án giúp tổ chức và cấu trúc công việc của bạn. Bạn khám phá các chiến lược viết và cấu trúc code để các kỹ sư phần mềm khác có thể dễ dàng hiểu và sử dụng công cụ Java để tạo tài liệu chương trình.
+              description_teacher: Học viên được giới thiệu về Dự án Neighborhood Lit Fest và đánh giá các yêu cầu và ví dụ để xác định các câu hỏi và các đặc điểm chính. Trước khi bắt đầu thực hiện dự án, học viên mở rộng hiểu biết của mình về cấu trúc chương trình và nhận xét bằng cách xác định các phương pháp hay nhất và khám phá việc sử dụng Javadocs để tạo tài liệu chương trình.
+            Exploring Integer and Double Objects:
+              description_student: Bạn xây dựng các đối tượng `Integer` và`Double` để biểu diễn các giá trị nguyên thủy `int` và`double` làm giá trị tham chiếu. Sử dụng các phương thức trong các lớp `Integer` và`Double`, bạn trả về giá trị mà các đối tượng này lưu trữ dưới dạng giá trị nguyên thủy. Bạn cũng khám phá các giá trị tối thiểu và tối đa cho số nguyên để tránh lỗi tràn trước khi lập kế hoạch các nhiệm vụ mà bạn cần hoàn thành cho Dự án Neighborhood Lit Fest.
+              description_teacher: Học viên xây dựng các đối tượng `Integer` và`Double` để biểu diễn các giá trị nguyên thủy `int` và`double` làm giá trị tham chiếu. Sử dụng các phương thức trong các lớp `Integer` và`Double`, học viên trả về giá trị mà các đối tượng này lưu trữ dưới dạng giá trị nguyên thủy. Học viên cũng khám phá các giá trị tối thiểu và tối đa cho số nguyên để tránh lỗi tràn trước khi lập kế hoạch các nhiệm vụ mà họ cần hoàn thành cho Dự án Neighborhood Lit Fest.
+            Using ArrayLists to Store Data:
+              description_student: Khi làm việc với mảng và danh sách, đôi khi chúng ta gặp phải vấn đề số lượng phần tử không xác định hoặc kích thước của danh sách liên tục thay đổi. Trong bài học này, bạn tìm hiểu về `ArrayList` và xác định các tình huống phù hợp với cấu trúc dữ liệu này.
+              description_teacher: Học viên tạo `ArrayList` để lưu trữ các giá trị `int` và `double`. Học viên phân biệt giữa `ArrayList` và mảng một chiều để xác định cấu trúc dữ liệu nào phù hợp nhất cho một kịch bản. Học viên thêm các phần tử vào một `ArrayList` và tìm hiểu cách autoboxing chuyển đổi giữa các giá trị nguyên thủy và các lớp trình bao bọc khi họ làm việc với dữ liệu được lưu trữ.
+            Working with ArrayList Data:
+              description_student: Bạn sử dụng các phương thức ```ArrayList``get ()```và`set ()`để truy xuất và sửa đổi các phần tử và tìm hiểu về phương thức ```String``length ()```để đếm số ký tự trong một đối tượng`String`. Bạn áp dụng các thuật toán tiêu chuẩn mà bạn đã phát triển với mảng 1D và 2D để sửa đổi các phần tử trong một `ArrayList`. Bạn tìm hiểu cách unboxing thực hiện chuyển đổi giữa các giá trị nguyên thủy và các lớp trình bao bọc khi chúng hoạt động với dữ liệu được lưu trữ trong một `ArrayList`.
+              description_teacher: Học viên làm việc với các phương thức `get ()` và `set ()` để truy xuất và sửa đổi các phần tử trong một `ArrayList` và tìm hiểu về phương thức ```String``length ()```để trả về số ký tự trong một đối tượng `String`. Họ áp dụng các thuật toán tiêu chuẩn mà họ đã phát triển với các mảng 1D và 2D để sửa đổi các phần tử trong một `ArrayList`. Học viên học cách unboxing thực hiện chuyển đổi giữa các giá trị nguyên thủy và các lớp trình bao bọc khi chúng làm việc với dữ liệu được lưu trữ trong một `ArrayList`.
+            Storing Objects in an ArrayList:
+              description_student: Tới đây, bạn đã tạo `ArrayList` để lưu trữ `Integer`, `Double` và `String`. Giống như với mảng 1D và 2D, bạn cũng có thể lưu trữ các đối tượng mà bạn tạo trong một `ArrayList`. Trong bài học này, bạn tạo một `ArrayList` của các đối tượng để áp dụng các thuật toán tiêu chuẩn mà bạn đã sử dụng trong suốt cả năm để làm việc với dữ liệu được lưu trữ trong danh sách này.
+              description_teacher: Học viên tạo `ArrayList` để lưu trữ các đối tượng và tìm hiểu về các kiểu chung trong Java. Học viên áp dụng các thuật toán đã học với mảng một chiều vào `ArrayList` để tìm các giá trị nhỏ nhất và lớn nhất, tính tổng và trung bình cộng hoặc tìm các phần tử đáp ứng các tiêu chí cụ thể.
+            Removing Data from an ArrayList:
+              description_student: Bạn khám phá chức năng của phương thức `remove ()` trong lớp `ArrayList` và xác định các lỗi tiềm ẩn khi cố gắng xóa các mục trong khi duyệt qua danh sách. Trong quá trình này, bạn nhận ra khi nào một `ArrayList` là tốt nhất cho một tình huống hoặc sự cố.
+              description_teacher: Học viên khám phá chức năng của phương thức `remove ()` trong lớp `ArrayList` và xác định các lỗi tiềm ẩn khi cố gắng xóa các mục trong khi duyệt qua danh sách. Khi đó, học viên nhận ra khi nào một `ArrayList` là tốt nhất cho một tình huống hoặc sự cố.
+            Using String Methods:
+              description_student: Bạn khám phá cấu trúc của một 'String`và nhớ lại rằng`String`là các đối tượng. Bạn sử dụng các phương thức`indexOf ()`và`substring ()`để tìm kiếm các chuỗi con trong một`String`và để tạo các đối tượng`String`mới từ một`String\` hiện có.
+              description_teacher: Học viên khám phá cấu trúc của một 'String`và nhớ lại rằng`String`là các đối tượng. Học viên sử dụng các phương thức`indexOf ()`và`substring ()`để tìm kiếm các chuỗi con trong một`String`và để tạo các đối tượng`String`mới từ một`String\` hiện có.
+            Comparing Strings:
+              description_student: Bạn khám phá bằng cách sử dụng `CompareTo()` để kiểm tra xem các `String` có theo thứ tự bảng chữ cái hay không. Sau đó, bạn làm việc trong Dự án Neighborhood Lit Fest, đặc biệt tập trung vào các nhiệm vụ bạn có trong Ban lập kế hoạch dự án của mình.
+              description_teacher: Học viên khám phá bằng cách sử dụng `CompareTo()` để kiểm tra xem các `String` có theo thứ tự bảng chữ cái hay không. Sau đó, học viên làm việc trong Dự án Neighborhood Lit Fest, đặc biệt tập trung vào các nhiệm vụ họ có trong Ban lập kế hoạch dự án của mình.
+            Solving Problems with Strings:
+              description_student: Bạn kết hợp kiến thức của mình về các thuật toán chuẩn và `String` để kiểm tra xem 'String\` có phải là một xâu đối xứng (palindrome) hay không. Sau đó, bạn tham gia vào một phiên phản hồi từ bạn học và phản ánh về tiến độ của bạn trong Dự án Neighborhood Lit Fest.
+              description_teacher: Học viên kết hợp kiến thức của mình về các thuật toán chuẩn và `String` để kiểm tra xem 'String\` có phải là một xâu đối xứng (palindrome) hay không. Sau đó, học viên tham gia vào một phiên phản hồi từ bạn học và phản ánh về tiến độ của họ trong Dự án Neighborhood Lit Fest.
+            Solving Problems with ArrayLists:
+              description_student: Bạn áp dụng các thuật toán tiêu chuẩn mà bạn đã viết cho mảng 1D và 2D vào `ArrayList`. Bạn triển khai một thuật toán tiêu chuẩn mới để lấy các chữ số riêng lẻ từ một số nguyên trước khi sửa đổi và áp dụng các thuật toán trước đó để hoán đổi các phần tử, xóa các phần tử trùng lặp hoặc tìm các phần tử đáp ứng các tiêu chí cụ thể trong Dự án Neighborhood Lit Fest của bạn.
+              description_teacher: Học viên áp dụng các thuật toán tiêu chuẩn mà học viên đã viết cho mảng 1D và 2D vào `ArrayList`. Học viên triển khai một thuật toán tiêu chuẩn mới để lấy các chữ số riêng lẻ từ một số nguyên trước khi sửa đổi và áp dụng các thuật toán trước đó để hoán đổi các phần tử, xóa các phần tử trùng lặp hoặc tìm các phần tử đáp ứng các tiêu chí cụ thể trong Dự án Neighborhood Lit Fest của họ.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Dự án Neighborhood Lit Fest - Ngày 1
+              description_student: Bạn tiếp tục phát triển Dự án Neighborhood Lit Fest của mình để tạo ra một câu chuyện, thơ, bài hát hoặc một hình thức văn học khác dựa trên phân tích tác phẩm của tác giả hoặc nghệ sĩ yêu thích của bạn. Trước tiên, bạn tự đánh giá công việc của mình để đánh giá tiến độ hoàn thành các yêu cầu của dự án, sau đó viết các tiêu chí chấp nhận cho một tính năng trong dự án của bạn mà một bạn học sẽ kiểm tra. Bạn thực hiện tự đánh giá và phản hồi từ bạn học để ưu tiên các nhiệm vụ còn lại và tiếp tục phát triển dự án của mình.
+              description_teacher: Học viên tiếp tục phát triển Dự án Neighborhood Lit Fest của mình để tạo ra một câu chuyện, thơ, bài hát hoặc một hình thức văn học khác dựa trên phân tích tác phẩm của tác giả hoặc nghệ sĩ yêu thích của họ. Trước tiên, học viên tự đánh giá công việc của mình để đánh giá tiến độ hoàn thành các yêu cầu của dự án, sau đó viết các tiêu chí chấp nhận cho một tính năng trong dự án của họ mà một bạn học sẽ kiểm tra. Học viên thực hiện tự đánh giá và phản hồi từ bạn học để ưu tiên các nhiệm vụ còn lại và tiếp tục phát triển dự án của mình.
+              key: Dự án Neighborhood Lit Fest - Ngày 1
+            Neighborhood Lit Fest Project - Day 2:
+              name: Dự án Neighborhood Lit Fest - Ngày 2
+              description_student: Trong bài học trước, bạn đã tự đánh giá và viết các tiêu chí nghiệm thu cho dự án của mình. Trong bài học này, bạn nhận được phản hồi của bạn học để xác định các nhiệm vụ còn lại cần hoàn thành và tiếp tục phát triển Dự án Neighborhood Lit Fest của mình.
+              description_teacher: Trong bài học trước, học viên đã tự đánh giá và viết các tiêu chí nghiệm thu cho dự án của mình. Trong bài học này, học viên nhận được phản hồi của bạn học để xác định các nhiệm vụ còn lại cần hoàn thành và tiếp tục phát triển Dự án Neighborhood Lit Fest của mình.
+              key: Dự án Neighborhood Lit Fest - Ngày 2
+            Neighborhood Lit Fest Project - Day 3:
+              name: Dự án Neighborhood Lit Fest - Ngày 3
+              description_student: Bạn thực hiện các bản sửa đổi và cập nhật cuối cùng dựa trên các đánh giá code của bạn và Ban lập kế hoạch dự án. Bạn chia sẻ dự án Neighborhood Lit Fest với bạn học của mình. Sau đó, bạn ăn mừng thành công của mình và hoàn thành bản phản ánh cuối cùng của quá trình phát triển.
+              description_teacher: Học viên thực hiện các bản sửa đổi và cập nhật cuối cùng dựa trên các đánh giá code của họ và Ban lập kế hoạch dự án. Học viên chia sẻ dự án Neighborhood Lit Fest với bạn học của mình. Học viên ăn mừng thành công của mình và hoàn thành bản phản ánh cuối cùng của quá trình phát triển.
+              key: Dự án Neighborhood Lit Fest - Ngày 3
+            Assessment Day:
+              description_student: Trong học phần này, bạn đã sử dụng `ArrayList` để lưu trữ dữ liệu chương trình và phân biệt thời điểm sử dụng mảng 1D và 2D và `ArrayList`. Bạn đã khám phá những lợi ích và chức năng của một `ArrayList`, sử dụng chúng để giải quyết các vấn đề liên quan đến dữ liệu số và dữ liệu đối tượng. Bạn đã sử dụng các phương thức trong lớp `String` để phân tích và xử lý văn bản thu được từ đầu vào của người dùng và tệp. Trong suốt học phần, bạn đã viết tài liệu chương trình bằng cách sử dụng nhận xét một dòng, nhận xét nhiều dòng và nhận xét Javadoc để tạo tài liệu API. Trong quá trình này, bạn đã xác định và ghi lại các điều kiện trước và điều kiện sau của các đối tượng và phương pháp. Giờ đây, bạn thực hiện đánh giá việc đạt được các mục tiêu học tập của học phần và các kỹ năng thông qua một bài đánh giá trắc nghiệm.
+              description_teacher: Trong học phần này, học viên đã sử dụng `ArrayList` để lưu trữ dữ liệu chương trình và phân biệt thời điểm sử dụng mảng 1D và 2D và `ArrayList`. Học viên đã khám phá các lợi ích và chức năng của một `ArrayList`, sử dụng chúng để giải quyết các vấn đề liên quan đến dữ liệu số và dữ liệu đối tượng. Học viên đã sử dụng các phương thức trong lớp `String` để phân tích và xử lý văn bản thu được từ đầu vào của người dùng và tệp. Trong suốt học phần, học viên đã viết tài liệu chương trình bằng cách sử dụng nhận xét một dòng, nhận xét nhiều dòng và nhận xét Javadoc để tạo tài liệu API. Trong quá trình này, học viên đã xác định và ghi lại các điều kiện trước và điều kiện sau của các đối tượng và phương pháp. Giờ đây, học viên thực hiện đánh giá việc đạt được các mục tiêu và kỹ năng của đơn vị học tập thông qua một bài đánh giá trắc nghiệm.
+            lesson-1:
+              key: lesson-1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+            lessonGroup-5:
+              display_name: Hộp cát
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Chào mừng bạn
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Các biến
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung

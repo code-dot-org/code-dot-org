@@ -30760,6 +30760,8 @@ tr:
           lessons:
             lesson-5:
               name: Ünite 2 Değerlendirme
+            lesson-6:
+              name: Değişkenler
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -30886,3 +30888,343 @@ tr:
               display_name: İçerik
             lessonGroup-5:
               display_name: Sandbox
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Kelimelerin gücü
+              description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size,
+                çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış
+                olduğunu öğretecektir.
+              key: Kelimelerin gücü
+            Introducing Sprite Lab:
+              name: Hareketli Nesne Laboratuvarı Tanıtımı
+              key: Hareketli Nesne Laboratuvarı Tanıtımı
+            Making Sprites:
+              name: Hareketli Nesne Oluşturma
+              key: Hareketli Nesne Oluşturma
+            Sprites in Action:
+              name: Eylem halindeki Hareketli Nesneler
+              key: Eylem halindeki Hareketli Nesneler
+            'Mini-Project: Virtual Pet':
+              name: 'Mini Proje: Sanal Hayvan'
+              description_student: Bu derste öğrenciler, istedikleri gibi görünen
+                ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
+                kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
+                Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında,
+                evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları,
+                davranışları ve diğer kavramları kullanacaktır.
+              description_teacher: Bu derste öğrenciler, istedikleri gibi görünen
+                ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
+                kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
+                Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında,
+                evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları,
+                davranışları ve diğer kavramları kullanacaktır.
+              key: 'Mini Proje: Sanal Hayvan'
+            Simulating Experiments:
+              name: Deneyleri Benzetme
+              description_student: Değişkenleri değiştirerek deney ve bilgisayarda
+                simülasyonları çalıştır.
+              description_teacher: Hareketli Nesne Laboratuvarında basit bir simülasyonu
+                çalıştırarak öğrenciler, trendleri ve desenleri tanımlayan veriyi
+                toplamak için bilişimin nasıl kullanılabileceğini görecekler. Simülasyonu
+                birçok kere çalıştırdıktan sonra öğrenciler, simülasyonda bir değişkenin
+                değiştirilmesinin, sonucu nasıl etkileyebileceğine dair bir tahminde
+                bulunma ve sonrasında bu hipotezi test etme fırsatını bulacaktır.
+              key: Deneyleri Benzetme
+            Outbreak:
+              name: Salgın
+              key: Salgın
+            AI For Oceans:
+              name: Okyanuslar için Yapay Zeka
+              description_student: 'Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri
+                kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak
+                sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait
+                olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir.
+                Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş
+                balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir.
+                Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen
+                bir makine öğrenim modeli için kullanılır.'
+              description_teacher: "**Ders Özeti**: Öncelikle öğrenciler, okyanustan
+                çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\"
+                olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini
+                suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi
+                gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana
+                getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini
+                seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri
+                etiketleyebilen bir makine öğrenim modeli için kullanılır.\\\r\n\\\r\n\\\r\n**Doğruluğunu
+                Kontrol Etme** Bu ders, öğrencilere bu seviyeyi doğru bir şekilde
+                tamamlayıp tamamlamadıklarını gösterecektir. Aktivitenin farklı kısımlarını
+                hızlıca atlamak mümkündür. Öğrencileri bu ders boyunca videolar izleme,
+                talimatları okuma ve farklı şeyleri deneme konusunda teşvik edin.
+                Bulgularını dilediği zaman sizinle veya bir sınıf arkadaşı ile paylaşabilirler.\\\r"
+              key: Okyanuslar için Yapay Zeka
+            The Internet:
+              name: İnternet
+              description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini
+                hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl
+                çalıştığının temellerini öğretecek.
+              description_teacher: Birçok kişi interneti her gün kullanıyor olmasına
+                rağmen, çok fazla insan nasıl çalıştığını bilmiyor. Bu derste, öğrenciler
+                bağlantıları, URL'ler, IP Adresleri ve DNS hakkında bilgi edinecek
+                ve internet üzerinden akmaya devam edeceklerini iddia edeceklerdir.
+              key: İnternet
+            End of Course Project:
+              name: Ders Projesinin Sonu
+              description_student: Bu kadar büyük projeler zaman alır ve bir sürü
+                planlama gerektirir. İlhamını bul, bir plan geliştir ve yaratıcılığını
+                serbest bırak!
+              description_teacher: Bu bitirme dersi, öğrencileri kendi projelerini
+                tasarlama, geliştirme ve sergileme süreçlerinden geçirir.
+              key: Ders Projesinin Sonu
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Sayısal Vatandaşlık
+            ramp_up:
+              display_name: Hareketli Nesneler
+            lessonGroup-8:
+              display_name: Değişkenler
+            end_of_course_project:
+              display_name: Ders Projesinin Sonu
+          description_audience: 'Yaş: 9-13'
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
+            hikayelerinizi ve sanatınızı oluşturun.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: Kurs boyunca geliştirdiğiniz projeler, toplulukta
+                çok fazla yaratıcılığa ilham verdi! Yaratıcı hikâyeler, senaryolar,
+                şarkı sözleri, mektuplar ve şiirler sergilemek için bir Mahalle Aydınlanma
+                Festivali düzenlenecek. Mahalle Aydınlanma Festivali Projesi, ünite
+                genelinde üzerinde çalıştığınız büyük bir projedir ve proje yönetimi
+                stratejileri, işinizi organize etmenize ve yapılandırmanıza yardımcı
+                olur. Diğer yazılım mühendislerinin program belgeleri oluşturmak için
+                bir Java aracını kolayca anlayabilmesi ve kullanabilmesi için kod
+                yazma ve yapılandırma stratejilerini keşfedersiniz.
+              description_teacher: Öğrenciler, Mahalle Aydınlanma Festivali Projesi
+                ile tanıştırılır ve soruları ve temel özellikleri belirlemek için
+                gereksinimleri ve örnekleri değerlendirir. Proje üzerinde çalışmaya
+                başlamadan önce, öğrenciler en iyi uygulamaları belirleyerek ve program
+                dokümantasyonu oluşturmak için Javadocs kullanımını keşfederek program
+                yapısı ve yorum yapma anlayışlarını genişletirler.
+            Exploring Integer and Double Objects:
+              description_student: '"Tamsayı" ve "Çift" temel değerlerini referans
+                değerleri olarak temsil etmek için "Tamsayı" ve "Çift" nesneleri oluşturursunuz.
+                ''Tamsayı'' ve ''Çift'' sınıflarındaki yöntemleri kullanarak, bu nesnelerin
+                depoladığı değerleri ilkel değerler olarak döndürürsünüz. Ayrıca Mahalle
+                Aydınlanma Festivali Projeniz için tamamlamanız gereken görevleri
+                planlamadan önce taşma hatalarını önlemek için tamsayılar için minimum
+                ve maksimum değerleri keşfedersiniz.'
+              description_teacher: Öğrenciler, "Tamsayı" ve "Çift" temel değerlerini
+                referans değerleri olarak temsil etmek için "Tamsayı" ve "Çift" nesneleri
+                oluşturur. "Tamsayı" ve "Çift" sınıflarındaki yöntemleri kullanarak
+                öğrenciler, bu nesnelerin depoladığı değerleri ilkel değerler olarak
+                döndürür. Öğrenciler ayrıca, Mahalle Aydınlanma Festivali Project
+                için tamamlamaları gereken görevleri planlamadan önce taşma hatalarından
+                kaçınmak için tamsayılar için minimum ve maksimum değerleri keşfederler.
+            Using ArrayLists to Store Data:
+              description_student: Diziler ve listelerle çalışırken, bazen eleman
+                sayısının bilinmediği veya listenin boyutunun sürekli değiştiği sorunlarla
+                karşılaşırız. Bu derste, `Dizi Listeleri`ni öğrenecek ve bu veri yapısının
+                daha uygun olduğu senaryoları belirleyeceksiniz.
+              description_teacher: Öğrenciler 'tamsayı' ve 'çift' değerlerini saklamak
+                için 'Dizi Listeleri`oluştururlar. Öğrenciler, bir senaryo için hangi
+                veri yapısının en uygun olduğunu belirlemek için 'Dizi Listei`' ve
+                tek boyutlu diziler arasında ayrım yapar. Öğrenciler bir "Dizi Listesi"ne
+                öğeler ekler ve depolanan verilerle çalışırken otomatik kutulamanın
+                ilkel değerler ile sarmalayıcı sınıflar arasında nasıl dönüştüğünü
+                öğrenir.
+            Working with ArrayList Data:
+              description_student: Öğeleri almak ve değiştirmek için 'Dizi Listesi'
+                yöntemleri 'al()' ve 'ayarla()' kullanırsınız ve bir 'Dize' nesnesindeki
+                karakter sayısını saymak için 'Dize' yöntemi 'uzunluk()' hakkında
+                bilgi edinirsiniz. Bir 'Dizi Listesi' içindeki öğeleri değiştirmek
+                için 1B ve 2B dizilerle geliştirdiğiniz standart algoritmaları uygularsınız.
+                Bir 'Dizi Listesi' içinde depolanan verilerle çalışırken, kutudan
+                çıkarmanın ilkel değerler ve sarmalayıcı sınıflar arasındaki dönüşümleri
+                nasıl gerçekleştirdiğini öğreneceksiniz.
+              description_teacher: 'Öğrenciler, bir "Dizi Listesi"ndeki öğeleri almak
+                ve değiştirmek için "al()" ve "ayarla()" yöntemleriyle çalışırlar
+                ve bir "Dize" nesnesindeki karakter sayısını döndürmek için "Dize"
+                yöntemi "uzunluk()" hakkında bilgi edinirler. Bir ''Dizi Listesi''
+                içindeki öğeleri değiştirmek için 1B ve 2B dizilerle geliştirdikleri
+                standart algoritmaları uygularlar. Öğrenciler, bir "Dizi Listesi"nde
+                depolanan verilerle çalışırken, kutudan çıkarmanın ilkel değerler
+                ve sarmalayıcı sınıflar arasındaki dönüşümleri nasıl gerçekleştirdiğini
+                öğrenirler. '
+            Storing Objects in an ArrayList:
+              description_student: Şimdiye kadar, 'Tamsayı', 'Çift' ve 'Dize'leri
+                depolamak için 'Dizi Listeleri' oluşturdunuz. 1B ve 2B dizilerde olduğu
+                gibi, oluşturduğunuz nesneleri de bir 'dizi Listesi' içinde saklayabilirsiniz.
+                Bu derste, bu listede depolanan verilerle çalışmak için yıl boyunca
+                kullandığınız standart algoritmaları uygulamak için nesnelerin bir
+                'Dizi Listesi'ni oluşturacaksınız.
+              description_teacher: Öğrenciler, nesneleri depolamak ve Java'daki genel
+                türler hakkında bilgi edinmek için 'Dizi Listleri' oluşturur. Öğrenciler,
+                tek boyutlu dizilerle öğrendikleri algoritmaları, minimum ve maksimum
+                değerleri bulmak, toplamları ve ortalamaları hesaplamak veya belirli
+                kriterleri karşılayan öğeleri bulmak için `Dizi Listeleri`ne uygularlar.
+            Removing Data from an ArrayList:
+              description_student: '''Dizi Listesi'' sınıfında ''kaldır()'' yönteminin
+                işlevselliğini keşfedersiniz ve listede gezinirken öğeleri kaldırmaya
+                çalışırken olası hataları belirlersiniz. Bu süreçte, bir "Dizi Listesi"nin
+                bir senaryo veya problem için en iyisinin ne zaman olduğunu anlarsınız.'
+              description_teacher: Öğrenciler, "Dizi Listesi" sınıfındaki "kaldır()"
+                yönteminin işlevselliğini keşfeder ve listede gezinirken öğeleri kaldırmaya
+                çalışırken olası hataları belirler. Öğrenciler daha sonra bir "Dizi
+                Listesi"nin bir senaryo veya problem için ne zaman en iyi olduğunu
+                anlarlar.
+            Using String Methods:
+              description_student: Bir "Dize"nin yapısını keşfedersiniz ve "Dize"lerin
+                nesneler olduğunu hatırlarsınız. Bir "Dize" içindeki alt dizeleri
+                aramak ve mevcut bir "Dize"den yeni "Dize" nesneleri oluşturmak için
+                "()indeksi" ve "altdize()" yöntemlerini kullanırsınız.
+              description_teacher: Öğrenciler bir "Dize"nin yapısını keşfeder ve "Dize"lerin
+                nesneler olduğunu hatırlar. Öğrenciler, bir "Dize" içindeki alt dizeleri
+                aramak ve mevcut bir "Dize"den yeni "Dize" nesneleri oluşturmak için
+                "()indeksi" ve "altdize()" yöntemlerini kullanır.
+            Comparing Strings:
+              description_student: '"Dize"lerin alfabetik sırada olup olmadığını kontrol
+                etmek için "karşılaştır()" işlevini kullanarak keşfedersiniz. Daha
+                sonra, özellikle Proje Planlama Kurulunuzda sahip olduğunuz görevlere
+                odaklanarak, Mahalle Aydınlatan Festivali Projeniz üzerinde çalışırsınız.'
+              description_teacher: Öğrenciler, "Dize"lerin alfabetik sırada olup olmadığını
+                kontrol etmek için "karşılaştır()" yöntemini kullanarak keşfederler.
+                Öğrenciler daha sonra, özellikle Proje Planlama Kurullarında sahip
+                oldukları görevlere odaklanarak Mahalle Aydınlanma Festivali Projesi
+                üzerinde çalışırlar.
+            Solving Problems with Strings:
+              description_student: 'Bir "Dize"nin bir palindrom olup olmadığını kontrol
+                etmek için standart algoritmalar ve "Dizeler" hakkındaki bilginizi
+                birleştirirsiniz. Daha sonra bir akran geri bildirim oturumuna katılırsınız
+                ve Mahalle Aydınlanma Festivali Projenizdeki ilerlemenizi yansıtırsınız. '
+              description_teacher: Öğrenciler, bir "Dize"nin bir palindrom olup olmadığını
+                kontrol etmek için standart algoritmalar ve "Dize" bilgilerini birleştirir.
+                Öğrenciler daha sonra bir akran geri bildirim oturumuna katılırlar
+                ve Mahalle Aydınlanma Festivali Projelerindeki ilerlemeleri üzerinde
+                düşünürler.
+            Solving Problems with ArrayLists:
+              description_student: 1D ve 2D diziler için yazdığınız standart algoritmaları
+                `Dizi Listeleri`ne uygularsınız. Mahalle Aydınlanma Festivali Projenizde
+                öğeleri takas etmek, yinelenenleri kaldırmak veya belirli kriterleri
+                karşılayan öğeleri bulmak için önceki algoritmaları değiştirmeden
+                ve uygulamadan önce bir tam sayıdan tek tek basamakları almak için
+                yeni bir standart algoritma uygularsınız.
+              description_teacher: Öğrenciler 1D ve 2D diziler için yazdıkları standart
+                algoritmaları `Dizi Listeleri`ne uygular. Öğrenciler, Mahalle Aydınlanma
+                Festivali Projelerinde öğeleri takas etmek, yinelemeleri kaldırmak
+                veya belirli kriterleri karşılayan öğeleri bulmak için önceki algoritmaları
+                değiştirmeden ve uygulamadan önce bir tam sayıdan bireysel basamakları
+                almak için yeni bir standart algoritma uygular.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Mahalle Aydınlanma Festivali Projesi - 1. Gün
+              description_student: En sevdiğiniz yazar veya sanatçının çalışmalarının
+                analizine dayalı bir hikâye, şiir, şarkı veya başka bir edebiyat biçimi
+                oluşturmak için Mahalle Aydınlanma Festivali Projenizi geliştirmeye
+                devam ediyorsunuz. Proje gereksinimlerini tamamlamadaki ilerlemenizi
+                değerlendirmek için önce çalışmanızı kendiniz değerlendirirsiniz,
+                ardından projenizdeki bir meslektaşın test edeceği bir özellik için
+                kabul kriterleri yazarsınız. Kalan görevlerinize öncelik vermek ve
+                projenizi geliştirmeye devam etmek için öz değerlendirme ve akran
+                geri bildirimini kullanırsınız.
+              description_teacher: Öğrenciler, en sevdikleri yazar veya sanatçının
+                çalışmalarının analizine dayalı bir hikâye, şiir, şarkı veya başka
+                bir edebiyat biçimi oluşturmak için Mahalle Aydınlatma Festivali Projelerini
+                geliştirmeye devam eder. Öğrenciler proje gereksinimlerini tamamlamadaki
+                ilerlemelerini değerlendirmek için önce çalışmalarını kendileri değerlendirir,
+                ardından projelerinde bir akranının test edeceği bir özellik için
+                kabul kriterleri yazarlar. Öğrenciler, kalan görevlerine öncelik vermek
+                ve projelerini geliştirmeye devam etmek için öz değerlendirme ve akran
+                geri bildirimini kullanır.
+              key: Mahalle Aydınlanma Festivali Projesi - 1. Gün
+            Neighborhood Lit Fest Project - Day 2:
+              name: Mahalle Aydınlanma Festivali Projesi - 2. Gün
+              description_student: Bir önceki derste, bir öz değerlendirme yaptınız
+                ve projeniz için kabul kriterleri yazdınız. Bu derste, Mahalle Aydınlanma
+                Festivali Projenizi tamamlamak ve geliştirmeye devam etmek için kalan
+                görevleri belirlemek amacıyla akran geri bildirimi alırsınız.
+              description_teacher: Bir önceki derste öğrenciler öz değerlendirme yaptılar
+                ve projeleri için kabul kriterleri yazdılar. Öğrenciler bu derste,
+                Mahalle Aydınlanma Festivali Projelerini tamamlamak ve geliştirmeye
+                devam etmek için kalan görevleri belirlemek amacıyla akran geri bildirimi
+                alırlar.
+              key: Mahalle Aydınlanma Festivali Projesi - 2. Gün
+            Neighborhood Lit Fest Project - Day 3:
+              name: Mahalle Aydınlanma Festivali Projesi - 3. Gün
+              description_student: Kod incelemelerinize ve Proje Planlama Kurulunuza
+                göre son revizyonları ve güncellemeleri yaparsınız. Mahalle Aydınlanma
+                Festivali Projenizi akranlarınızla paylaşıyorsunuz. Ardından başarınızı
+                kutlar ve geliştirme sürecinin son bir yansımasını tamamlarsınız.
+              description_teacher: Öğrenciler, kod incelemelerine ve Proje Planlama
+                Kuruluna göre son revizyonları ve güncellemeleri yaparlar. Öğrenciler,
+                Mahalle Aydınlatma Festivali Projelerini akranlarıyla paylaşırlar.
+                Öğrenciler daha sonra başarılarını kutlar ve geliştirme sürecinin
+                son bir yansımasını tamamlarlar.
+              key: Mahalle Aydınlanma Festivali Projesi - 3. Gün
+            Assessment Day:
+              name: Değerlendirme Günü
+              description_student: Bu ünitede, program verilerini depolamak ve 1D
+                ve 2D dizilerin ne zaman kullanılacağını ve 'Dizi Listeleri'ni ayırt
+                etmek için 'Dizi Listeleri' kullandınız. Sayısal ve nesne verilerini
+                içeren sorunları çözmek için bunları kullanarak bir ''Dizi Listesi'nin
+                faydalarını ve işlevselliğini keşfettiniz. Kullanıcı ve dosya girişinden
+                elde edilen metni analiz etmek ve işlemek için `Dize` sınıfındaki
+                yöntemleri kullandınız. Ünite boyunca, API belgeleri oluşturmak için
+                tek satırlı yorumları, çok satırlı yorumları ve Javadoc yorumlarını
+                kullanarak program belgeleri yazdınız. Bu süreçte, nesnelerin ve yöntemlerin
+                ön koşullarını ve son koşullarını belirlediniz ve belgelediniz. Şimdi,
+                çoktan seçmeli bir değerlendirmede ünite öğrenme hedeflerinin ve becerilerinin
+                başarısını değerlendirirsiniz.
+              description_teacher: Bu ünitede öğrenciler, program verilerini depolamak
+                ve 1D ve 2D dizilerin ne zaman kullanılacağını ve 'Dizi Listleri'ni
+                ne zaman kullanacaklarını ayırt etmek için 'Dizi Listeleri' kullandılar.
+                Öğrenciler, sayısal ve nesne verilerini içeren problemleri çözmek
+                için bunları kullanarak bir 'Dizi Listesi'nin faydalarını ve işlevselliğini
+                keşfettiler. Öğrenciler, kullanıcı ve dosya girişinden elde edilen
+                metni analiz etmek ve işlemek için `Dize` sınıfındaki yöntemleri kullandılar.
+                Ünite boyunca öğrenciler, API belgeleri oluşturmak için tek satırlı
+                yorumları, çok satırlı yorumları ve Javadoc yorumlarını kullanarak
+                program belgeleri yazdılar. Bu süreçte öğrenciler, nesnelerin ve yöntemlerin
+                ön koşullarını ve son koşullarını belirledi ve belgeledi. Artık öğrenciler,
+                ünite öğrenme hedeflerine ve becerilerine ulaşılmasını çoktan seçmeli
+                bir değerlendirmede değerlendirirler.
+              key: Değerlendirme Günü
+            lesson-1:
+              key: ders-1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-5:
+              display_name: Sandbox
+        csa7-2022:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+              key: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-2022:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+              key: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-5:
+              display_name: Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Hoşgeldiniz
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Değişkenler
+            lesson-15:
+              name: Ünite 2 Değerlendirme
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik

@@ -1925,6 +1925,10 @@ bn:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: চলকগুলো
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -1933,3 +1937,15 @@ bn:
           lessons:
             lesson-9:
               name: চক্র
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: ইন্টারনেট
+              key: ইন্টারনেট
+          lesson_groups:
+            lessonGroup-8:
+              display_name: চলকগুলো
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: চলকগুলো

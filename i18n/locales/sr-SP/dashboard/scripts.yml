@@ -2437,6 +2437,10 @@ sr:
               display_name: Петље
             csf_events:
               display_name: Догађаји
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Променљиве
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2449,3 +2453,17 @@ sr:
           lessons:
             lesson-9:
               name: Петље
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Интернет
+              key: Интернет
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Дигитално држављанство
+            lessonGroup-8:
+              display_name: Променљиве
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Променљиве

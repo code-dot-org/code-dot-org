@@ -20368,6 +20368,8 @@ zh-TW:
           lessons:
             lesson-5:
               name: 單元 2 評估
+            lesson-6:
+              name: 變數
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -20502,3 +20504,155 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 沙盒
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: 語言的力量
+              description_student: 欺凌絕對是不恰當的行為。本課堂會教導你可以和不可以在線上做些甚麼。
+              key: 語言的力量
+            Introducing Sprite Lab:
+              name: Sprite Lab 簡介
+              key: Sprite Lab 簡介
+            Making Sprites:
+              name: 製作精靈圖
+              key: 製作精靈圖
+            Sprites in Action:
+              name: 運行中的角色
+              key: 運行中的角色
+            'Mini-Project: Virtual Pet':
+              name: '小專案: 虛擬寵物'
+              description_student: 在本課堂中，學生會製作互動的虛擬寵物，並依據學生的喜好設計寵物的外觀與行為。學生會使用 Sprite Lab 的「Costumes」（造型）工具自訂寵物的外表。然後，學生會使用學到的事件、行為與其他概念，讓寵物擁有自己的生命！
+              description_teacher: 在本課堂中，學生會製作互動的虛擬寵物，並依據學生的喜好設計寵物的外觀與行為。學生會使用 Sprite Lab 的「Costumes」（造型）工具自訂寵物的外表。然後，學生會使用學到的事件、行為與其他概念，讓寵物擁有自己的生命！
+              key: '小專案: 虛擬寵物'
+            Simulating Experiments:
+              name: 模擬實驗
+              description_student: 在電腦上執行模擬，並實驗一下變更參數後的情況。
+              description_teacher: 在 Sprite Lab 上執行簡單模擬，學生便會體驗到電腦運算可怎樣用來收集資料，從而找出各種趨勢與模式。多次執行模擬後，學生便會有機會預測一下，變更模擬中的變數可能會怎樣影響結果，然後再測試這個假設。
+              key: 模擬實驗
+            Outbreak:
+              name: 疫情爆發
+              key: 疫情爆發
+            AI For Oceans:
+              name: 在海洋中使用的 AI
+              key: 在海洋中使用的 AI
+            The Internet:
+              name: 網際網路
+              description_student: 你有沒有想過，資訊怎樣在網際網路中傳輸？不是魔術！本課堂將會教導網際網路運作方面的基本知識。
+              description_teacher: 即便許多人每天都會上網，但是理解其中原理的中卻不多。在本課堂中，學生會假裝流經網際網路，同時學習連線、URL、IP 位址與 DNS 的知識。
+              key: 網際網路
+            End of Course Project:
+              name: 課程結束專案
+              description_student: 這麼大型的專案需要時間與充分計畫。找出靈感、制訂計畫，激發你的創意！
+              key: 課程結束專案
+          lesson_groups:
+            lessonGroup-7:
+              display_name: 數位公民
+            ramp_up:
+              display_name: 角色
+            lessonGroup-8:
+              display_name: 變數
+            end_of_course_project:
+              display_name: 課程結束專案
+          description_audience: 年齡 9-13
+          description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: 你在整個課程中所開發的專案已為社群帶來諸多創意！《四鄰燈光節》即將到來，鄰居們將展示創意故事、劇本、歌詞、文字和詩歌。《四鄰燈光節》是一個大型專案，你將在整個單元中參與其中，專案管理戰略板將説明你組織和構建你的創作。你將探索編寫和構建代碼的策略，供其他軟體工程師輕鬆理解和使用Java工具來創建程式文檔。
+              description_teacher: 向學生們介紹《四鄰燈光節》專案，並評估要求和示例，明確其中的問題和關鍵特徵。在著手專案之前，學生們透過確定最佳實踐和探索如何使用Javadoc生成程式文檔，來擴展他們對程式結構和注釋的理解。
+            Exploring Integer and Double Objects:
+              description_student: 你將構建`Integer`和`Double`物件來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，你可以返回這些物件存儲為原始值的值。 在規劃《四鄰燈光節》所需的籌備任務前，你還將探索整數的最小和最大值，以避免溢出錯誤。
+              description_teacher: 學生們將構建`Integer`和`Double`對象來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，學生們可以返回這些物件存儲為原始值的值。 在規劃《四鄰燈光節》所需的籌備任務前，學生們還將探索整數的最小和最大值，以避免溢出錯誤。
+            Using ArrayLists to Store Data:
+              description_student: 在處理陣列和清單時，我們有時會遇到元素數量未知或清單大小不斷變化的問題。在本節課中，你將學習`ArrayList`結構，並明確這種資料結構較適宜的場景。
+              description_teacher: 學生們將創建`ArrayList`來存儲`int`和`double`值。學生們區分`ArrayList`和一維陣列，以確定某個特定場景下最適宜的資料結構。 學生們將向`ArrayList`中添加元素，並在處理存儲的資料時，學習如何在原始值和包裝類之間進行自動裝箱轉換。
+            Working with ArrayList Data:
+              description_student: 你將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來計算`String`物件中的字元數。你將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。你將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+              description_teacher: 學生們將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來返回`String`物件中的字元數。他們將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。學生們將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+            Storing Objects in an ArrayList:
+              description_student: 到目前為止，你已經創建了`ArrayList`來存儲`Integer`、`Double`和`String`。與一維和二維陣列一樣，你也可以將創建的物件存儲在`ArrayList`中。在本節課中，你將創建一個物件的`ArrayList`，以應用你在全年中所使用的標準演算法來處理存儲在此清單中的資料。
+              description_teacher: 學生將創建`ArrayList`來存儲物件，並學習Java中的通用類型。學生們將一維陣列中所學到的演算法應用於`ArrayList`，以查找最小值和最大值、計算總和及平均值，或找出滿足特定條件的元素。
+            Removing Data from an ArrayList:
+              description_student: 你將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。在此過程中，你會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+              description_teacher: 學生們將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。學生們會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+            Using String Methods:
+              description_student: 你將探索`String`結構，了解`String`屬於物件。你將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+              description_teacher: 學生們將探索`String`結構，了解`String`屬於物件。學生們將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+            Comparing Strings:
+              description_student: 你將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，你將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+              description_teacher: 學生們將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，學生們將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+            Solving Problems with Strings:
+              description_student: 你將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，你將參加同行評議會話，並反思《四鄰燈光節》項目的進展。
+              description_teacher: 學生們將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，學生們將參加同行評議會話，並反思各自《四鄰燈光節》項目的進展。
+            Solving Problems with ArrayLists:
+              description_student: 你將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。你將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+              description_teacher: 學生們將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。學生們將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+            Neighborhood Lit Fest Project - Day 1:
+              name: "《四鄰燈光節》項目 - 第1天"
+              description_student: 你將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先你將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。你借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+              description_teacher: 學生們將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先學生們將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。學生們借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+              key: "《四鄰燈光節》項目 - 第1天"
+            Neighborhood Lit Fest Project - Day 2:
+              name: "《四鄰燈光節》項目 - 第2天"
+              description_student: 在上一課中，你已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，你將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+              description_teacher: 在上一課中，學生們已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，學生們將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+              key: "《四鄰燈光節》項目 - 第2天"
+            Neighborhood Lit Fest Project - Day 3:
+              name: "《四鄰燈光節》項目 - 第3天"
+              description_student: 你根據代碼審查和專案規劃板，完成最終的修改和更新任務。你將與同行分享各自的《四鄰燈光節》項目。隨後，你將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
+              description_teacher: 學生們根據代碼審查和專案規劃板，完成最終的修改和更新任務。學生們將與同行分享各自的《四鄰燈光節》項目。隨後，學生們將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
+              key: "《四鄰燈光節》項目 - 第3天"
+            Assessment Day:
+              name: 評估日
+              description_student: 在本單元中，你將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。你將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。你將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，你將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，你將確定並記錄物件和方法的前置條件和後置條件。此外，你將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
+              description_teacher: 在本單元中，學生們將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。學生們將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。學生們將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，學生們將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，學生們將確定並記錄物件和方法的前置條件和後置條件。此外，學生們將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
+              key: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+            lesson-1:
+              key: 第1課
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        csa7-2022:
+          lessons:
+            Assessment Day:
+              name: 評估日
+              key: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        csa8-2022:
+          lessons:
+            Assessment Day:
+              name: 評估日
+              key: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 歡迎
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: 變數
+            lesson-15:
+              name: 單元 2 評估
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容

@@ -345,7 +345,7 @@
           "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `ulang`! Klik pada ruang kerja dan tambahkan kod yang anda mahu jalankan berulang kali."
+          "MC_HOC_2017_03_Cole_1": "Ini ialah gelung `berulang`! Klik pada ruang kerja dan masukkan kod yang anda mahu jalankan berulang kali."
         },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Ejen boleh berlegar di atas air, tetapi pemain tidak boleh!"
@@ -392,6 +392,70 @@
           "New Play Lab Project_callout1": "Klik kategori untuk melihat blok dalam kotak alat anda! Seret blok ke ruang kerja tambahkannya pada program anda",
           "New Play Lab Project_callout2": "Tekan \"Jalankan\" untuk menyimpan dan menjalankan program anda",
           "sign_in_to_save_project": "Mahu mengakses projek anda nanti? Log masuk untuk menyimpan projek ini ke akaun anda!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Klik di sini untuk menambah kostum baharu kepada projek anda!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Klik di sini untuk menambah kostum baharu kepada projek anda!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Tekan butang Jalankan terlebih dahulu!",
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Seret 3 titik untuk mengubah saiz kawasan permainan."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Klik di sini untuk melihat cara tingkah laku ini berfungsi."
+        },
+        "courseF_events_time": {
+          "events_category": "Klik di sini untuk membuka kategori Peristiwa."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Lihat dengan teliti pada kod di bawah titik ini."
+        },
+        "courseF_text_events": {
+          "events_category": "Klik di sini untuk membuka kategori Peristiwa."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Lihat dengan teliti pada kod di bawah titik ini."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Kotak alatan berada dalam mod \"kategori\" supaya memberikan lebih banyak ruang untuk kod anda. Gelung `untuk` berada di sini."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Anda akan menemui gelung `untuk` di sini!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Anda akan menemui gelung `matematik` di sini."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Anda boleh menemui pemboleh ubah anda di bawah sini!"
         }
       }
     }

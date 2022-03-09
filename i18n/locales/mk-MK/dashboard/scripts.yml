@@ -377,7 +377,19 @@ mk:
           lesson_groups:
             csf_loops:
               display_name: Лупови
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Променливи
         csa1-2022-exemplars:
           lessons:
             lesson-9:
               name: Лупови
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Променливи
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Променливи

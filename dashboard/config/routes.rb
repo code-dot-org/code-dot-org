@@ -289,6 +289,9 @@ Dashboard::Application.routes.draw do
       get 'standards'
       get 'get_rollup_resources'
     end
+
+    resources :reference_guides, only: [:show], param: 'key', path: 'guides' do
+    end
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
@@ -321,13 +324,16 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [:new, :create, :edit, :update, :show] do
+  resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
     end
+    member do
+      post :clone
+    end
   end
 
-  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show], param: 'name' do
+  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show, :destroy], param: 'name' do
     resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'

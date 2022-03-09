@@ -561,7 +561,7 @@
           "get nectar": {
             "name": "gyűjts nektárt",
             "parameters": {
-              "counter": "számláló"
+              "counter": "counter"
             }
           }
         },
