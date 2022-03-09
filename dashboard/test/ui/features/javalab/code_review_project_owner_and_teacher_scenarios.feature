@@ -4,6 +4,7 @@
 
 @no_mobile
 @no_ie
+@skip
 Feature: Code review (project owner/teacher scenarios)
 
   # At the end of the setup, we will have created

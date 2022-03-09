@@ -20759,8 +20759,8 @@ en:
             Learning From Data:
               key: Learning From Data
               name: Learning from Data
-              description_student: Explore the Google Trends tool in order to tell a "data story".
-              description_teacher: 'In this lesson students explore the Google Trends tool in order to tell a "data story" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab. '
+              description_student: In this lesson, you will explore the “What’s Going on in this Graph?” site in order to tell a "data story" which explains both what the data shows and why that might be. Following this, you will learn about the concept of metadata and look for the metadata of datasets on App Lab.
+              description_teacher: In this lesson students explore the “What’s Going on in this Graph?” site in order to tell a "data story" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab.
             Exploring One Column:
               key: Exploring One Column
               name: Exploring One Column
@@ -31163,8 +31163,8 @@ en:
           title: Class Structure and Design ('22-'23)
           description_audience: ''
           description_short: ''
-          description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to work with variables and user input as they develop and utilize classes and objects to represent desserts and customers for the Project Mercury Pastries Food Truck. After designing a class to represent a dessert and a customer, students build on their knowledge of inheritance to design subclasses that represent specific types of desserts and customers. While working with variables, students learn to create and evaluate expressions using assignment operators and trace code segments to determine the result of output. Throughout this unit, students continue to develop software engineering skills as they learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
-          student_description: ''
+          description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to work with variables and user input as they develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As students work with the `Dessert` class, they build on their knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, students learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, students continue to develop software engineering skills as they learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
+          student_description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
         csa3-2022:
           lessons:
             lesson-1:
@@ -31349,40 +31349,76 @@ en:
               description_teacher: 
             lesson-3:
               name: The Neighborhood
+              description_student: 
+              description_teacher: 
             lesson-4:
               name: Navigating and Painting
+              description_student: 
+              description_teacher: 
             lesson-5:
               name: One-Way Selection Statements
+              description_student: 
+              description_teacher: 
             lesson-6:
               name: PainterPlus
+              description_student: 
+              description_teacher: 
             lesson-7:
               name: Writing Methods
+              description_student: 
+              description_teacher: 
             lesson-8:
               name: Code Reviews
+              description_student: 
+              description_teacher: 
             lesson-9:
               name: Loops
+              description_student: 
+              description_teacher: 
             lesson-10:
               name: Two-Way Selection Statements
+              description_student: 
+              description_teacher: 
             lesson-11:
               name: Debugging Strategies
+              description_student: 
+              description_teacher: 
             lesson-12:
               name: Decomposition and Design
+              description_student: 
+              description_teacher: 
             lesson-13:
               name: PatternPainter
+              description_student: 
+              description_teacher: 
             lesson-14:
               name: BackgroundPainter
+              description_student: 
+              description_teacher: 
             lesson-15:
               name: Open Source Code
+              description_student: 
+              description_teacher: 
             lesson-16:
               name: Asphalt Art Project — Day 1
+              description_student: 
+              description_teacher: 
             lesson-17:
               name: Asphalt Art Project — Day 2
+              description_student: 
+              description_teacher: 
             lesson-18:
               name: Asphalt Art Project — Day 3
+              description_student: 
+              description_teacher: 
             lesson-19:
               name: FRQ Practice
+              description_student: 
+              description_teacher: 
             lesson-20:
               name: Unit 1 Assessment
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -31811,6 +31847,10 @@ en:
           lessons:
             lesson-1:
               name: PainterPlus
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Project Mercury Pastries Food Truck
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -32311,3 +32351,178 @@ en:
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
+        csa-preview:
+          lessons:
+            lesson-1:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: The Playground
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-preview
+          title: CSA Curriculum and Tools Preview
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Welcome
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Equity in CS
+              description_student: This appears for participants / students
+              description_teacher: This appears for teachers / facilitators
+            lesson-3:
+              name: Model Lesson 1 - Unit 1 Lesson 2
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd1-summer-pilot-2022
+          title: 'Module 1: Introduction to CS Discoveries '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Welome
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: TLO 1
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd2-summer-pilot-2022
+          title: 'Module 2: Tools and Instructional Strategies'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd3-summer-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd3-summer-pilot-2022
+          title: 'Module 3: Classroom Context and Culture'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: "[TEMPLATE] Introduction to..."
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Curriculum Investigation
+          name: vpl-csd4-summer-pilot-2022
+          title: 'Module 4: Addressing Student Needs'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd5-summer-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+          name: vpl-csd5-summer-pilot-2022
+          title: 'Module 5: Preparing to Teach CS Discoveries'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+            lesson-2:
+              name: Operators and Expressions
+            lesson-3:
+              name: Attributes
+            lesson-4:
+              name: Constructors
+            lesson-5:
+              name: User Input
+            lesson-6:
+              name: Class Hierarchies
+            lesson-7:
+              name: Accessor Methods
+            lesson-8:
+              name: Mutator Methods
+            lesson-9:
+              name: Printing Objects
+            lesson-10:
+              name: Scope and this
+            lesson-11:
+              name: Store Management Project – Day 1
+            lesson-12:
+              name: Store Management Project – Day 2
+            lesson-13:
+              name: Store Management Project – Day 3
+            lesson-14:
+              name: FRQ Practice
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Unit 2 Assessment
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa2-2022-exemplars
+          title: Unit 2 - Class Structure and Design [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
