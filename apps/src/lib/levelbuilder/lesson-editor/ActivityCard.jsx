@@ -34,6 +34,7 @@ class ActivityCard extends Component {
     handleCollapse: PropTypes.func.isRequired,
     collapsed: PropTypes.bool.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
 
     //redux
     addActivitySection: PropTypes.func.isRequired,
@@ -88,7 +89,8 @@ class ActivityCard extends Component {
       updateTargetActivitySection,
       clearTargetActivitySection,
       updateActivitySectionMetrics,
-      hasLessonPlan
+      hasLessonPlan,
+      allowMajorCurriculumChanges
     } = this.props;
 
     return (
@@ -127,13 +129,15 @@ class ActivityCard extends Component {
                   <span style={{fontSize: 10}}>{'(mins)'}</span>
                 </label>
               </div>
-              <OrderControls
-                name={activity.displayName || 'Unnamed Activity'}
-                move={this.handleMoveActivity}
-                remove={this.handleRemoveActivity}
-                item={this.props.activity}
-                itemType={'activity'}
-              />
+              {allowMajorCurriculumChanges && (
+                <OrderControls
+                  name={activity.displayName || 'Unnamed Activity'}
+                  move={this.handleMoveActivity}
+                  remove={this.handleRemoveActivity}
+                  item={this.props.activity}
+                  itemType={'activity'}
+                />
+              )}
             </div>
           )}
         </div>
@@ -155,17 +159,21 @@ class ActivityCard extends Component {
               targetActivitySectionPos={this.props.targetActivitySectionPos}
               updateActivitySectionMetrics={updateActivitySectionMetrics}
               hasLessonPlan={hasLessonPlan}
+              allowMajorCurriculumChanges={allowMajorCurriculumChanges}
             />
           ))}
-          <button
-            onMouseDown={this.handleAddActivitySection.bind()}
-            className="btn add-activity-section"
-            style={styles.addButton}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Activity Section
-          </button>
+          {(allowMajorCurriculumChanges ||
+            this.props.activity.position === this.props.activitiesCount) && (
+            <button
+              onMouseDown={this.handleAddActivitySection.bind()}
+              className="btn add-activity-section"
+              style={styles.addButton}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Activity Section
+            </button>
+          )}
         </div>
       </div>
     );
