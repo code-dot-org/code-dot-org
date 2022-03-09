@@ -171,10 +171,24 @@ describe('FormController', () => {
       );
 
       alert.props.onDismiss();
-      expect(form.exists('Alert')).to.be.false;
+      expect(form.findAll('Alert')).to.have.length(0);
     });
 
-    it('Shows data was loaded message if status is reopened', () => {
+    it('Removes data was loaded message after first page', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          applicationId={applicationId}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+        />
+      );
+      expect(form.findOne('Alert')).to.exist;
+      setPage(1);
+      expect(form.findAll('Alert')).to.have.length(0);
+    });
+
+    it('Shows reopened message if status is reopened, and user can close message', () => {
       form = isolateComponent(
         <FormController
           {...defaultProps}
@@ -190,7 +204,22 @@ describe('FormController', () => {
       );
 
       alert.props.onDismiss();
-      expect(form.exists('Alert')).to.be.false;
+      expect(form.findAll('Alert')).to.have.length(0);
+    });
+
+    it('Removes reopened message after first page', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          applicationId={applicationId}
+          savedStatus={'reopened'}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+        />
+      );
+      expect(form.findOne('Alert')).to.exist;
+      setPage(1);
+      expect(form.findAll('Alert')).to.have.length(0);
     });
 
     it('Does not show data was loaded message if there is no application id', () => {
@@ -201,7 +230,7 @@ describe('FormController', () => {
           validateOnSubmitOnly={true}
         />
       );
-      expect(form.exists('Alert')).to.be.false;
+      expect(form.findAll('Alert')).to.have.length(0);
     });
 
     describe('Saving', () => {
@@ -288,7 +317,7 @@ describe('FormController', () => {
         );
 
         alert.props.onDismiss();
-        expect(form.exists('Alert')).to.be.false;
+        expect(form.findAll('Alert')).to.have.length(0);
 
         expect(form.findAll('Button')[1].props.disabled).to.be.false;
 
