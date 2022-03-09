@@ -370,6 +370,11 @@ class UnitEditor extends React.Component {
   render() {
     const useMigratedTeacherResources =
       this.props.isMigrated && !this.state.teacherResources?.length;
+
+    const allowMajorCurriculumChanges =
+      this.props.initialPublishedState === PublishedState.in_development ||
+      this.props.initialPublishedState === PublishedState.pilot;
+
     return (
       <div>
         <label>
@@ -639,9 +644,7 @@ class UnitEditor extends React.Component {
             handleParticipantAudienceChange={e =>
               this.setState({participantAudience: e.target.value})
             }
-            canChangeParticipantType={
-              this.state.publishedState === PublishedState.in_development
-            }
+            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         )}
 
@@ -879,6 +882,7 @@ class UnitEditor extends React.Component {
                       .includeStudentLessonPlans
                   })
                 }
+                disabled={!allowMajorCurriculumChanges}
               />
               <HelpTip>
                 <p>
@@ -1074,7 +1078,7 @@ class UnitEditor extends React.Component {
         )}
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
-          <UnitCard />
+          <UnitCard allowMajorCurriculumChanges={allowMajorCurriculumChanges} />
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
