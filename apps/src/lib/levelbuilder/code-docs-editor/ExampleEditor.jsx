@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-import Button from '@cdo/apps/templates/Button';
+import React from 'react';
 import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+import ImageInput from './ImageInput';
 
 const APP_DISPLAY_OPTIONS = {
   embedAppWithCode: 'Embed app with code directly',
@@ -14,8 +13,6 @@ const APP_DISPLAY_OPTIONS = {
 const DEFAULT_EMBED_HEIGHT = 310;
 
 export default function ExampleEditor({example, updateExample}) {
-  const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
-
   return (
     <div>
       <label>
@@ -47,17 +44,10 @@ export default function ExampleEditor({example, updateExample}) {
           style={styles.textInput}
         />
       </label>
-      <label>
-        Image
-        <Button
-          onClick={() => setUploadImageDialogOpen(true)}
-          text="Choose Image"
-          color="gray"
-          icon="plus-circle"
-        />
-        {example.imageUrl && <span>{example.imageUrl}</span>}
-      </label>
-
+      <ImageInput
+        imageUrl={example.image}
+        updateImageUrl={img => updateExample('image', img)}
+      />
       <label>
         Example App Display Type
         <select
@@ -89,12 +79,6 @@ export default function ExampleEditor({example, updateExample}) {
           style={styles.textInput}
         />{' '}
       </label>
-      <UploadImageDialog
-        isOpen={uploadImageDialogOpen}
-        handleClose={() => setUploadImageDialogOpen(false)}
-        uploadImage={imgUrl => updateExample('image', imgUrl)}
-        allowExpandable={false}
-      />
     </div>
   );
 }
