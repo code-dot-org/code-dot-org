@@ -6,6 +6,7 @@ import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as utils from '@cdo/apps/utils';
+import $ from 'jquery';
 
 describe('TeacherApplication', () => {
   const fakeOptionKeys = Object.values(PageLabels).reduce(
@@ -24,6 +25,9 @@ describe('TeacherApplication', () => {
   };
 
   beforeEach(() => {
+    sinon.stub($, 'ajax').returns(new $.Deferred());
+    sinon.stub($, 'param').returns(new $.Deferred());
+    sinon.stub(window, 'fetch').resolves();
     sinon.stub(firehoseClient, 'putRecord');
     sinon.stub(utils, 'reload');
     sinon
@@ -35,6 +39,9 @@ describe('TeacherApplication', () => {
   });
 
   afterEach(() => {
+    $.ajax.restore();
+    $.param.restore();
+    window.fetch.restore();
     firehoseClient.putRecord.restore();
     utils.reload.restore();
     window.sessionStorage.getItem.restore();
