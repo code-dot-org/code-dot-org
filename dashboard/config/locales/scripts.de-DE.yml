@@ -34329,3 +34329,16 @@ de:
               display_name: Inhalt
             lessonGroup-5:
               display_name: Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Willkommen
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variablen
+            lesson-15:
+              name: Lerneinheit 2 Bewertung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
