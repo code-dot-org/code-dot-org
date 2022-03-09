@@ -873,6 +873,7 @@ class UnitEditor extends React.Component {
             <label>
               Include student-facing lesson plans
               <input
+                className="student-facing-lesson-plan-checkbox"
                 type="checkbox"
                 checked={this.state.includeStudentLessonPlans}
                 style={styles.checkbox}
