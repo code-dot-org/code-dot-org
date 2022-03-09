@@ -1574,7 +1574,7 @@ class Script < ApplicationRecord
 
   def summarize_for_lesson_edit
     {
-      isLaunched: launched?,
+      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
