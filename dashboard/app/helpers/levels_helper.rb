@@ -46,7 +46,7 @@ module LevelsHelper
   end
 
   def url_from_path(path)
-    "#{root_url.chomp('/')}#{path}"
+    CDO.studio_url(path)
   end
 
   def readonly_view_options
