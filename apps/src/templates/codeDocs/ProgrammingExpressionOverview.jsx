@@ -78,18 +78,20 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
   return (
     <div>
       <div>{getTitle()}</div>
-      <div>
-        <strong>{`${i18n.category()}:`}</strong>
-        <span
-          style={{
-            backgroundColor: getColor(),
-            marginLeft: 10,
-            padding: '5px 10px'
-          }}
-        >
-          {programmingExpression.category}
-        </span>
-      </div>
+      {programmingExpression.category && (
+        <div>
+          <strong>{`${i18n.category()}:`}</strong>
+          <span
+            style={{
+              backgroundColor: getColor(),
+              marginLeft: 10,
+              padding: '5px 10px'
+            }}
+          >
+            {programmingExpression.category}
+          </span>
+        </div>
+      )}
       {programmingExpression.video && (
         <div
           id={'programming-expression-video'}
