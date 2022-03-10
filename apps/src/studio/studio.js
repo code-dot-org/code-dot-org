@@ -55,7 +55,6 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
-import UserPreferences from '../lib/util/UserPreferences';
 import cookies from 'js-cookie';
 import {
   showArrowButtons,
@@ -2206,7 +2205,7 @@ Studio.init = function(config) {
     skin.assetUrl,
     levelTracks,
     undefined,
-    UserPreferences.getMuteMusic() || cookies.get(muteMusic) === 'true'
+    config.muteMusic() || cookies.get(muteMusic) === 'true'
   );
 
   /**
