@@ -1,0 +1,11 @@
+{
+  "key": "board",
+  "name": "Board",
+  "category": "org.code.playground",
+  "category_key": "org_code_playground",
+  "examples": [
+    {
+      "code": "```\nBoard b = new Board();\nb.setBackgroundImage(\"path/to/file.png\")\n```"
+    }
+  ]
+}
