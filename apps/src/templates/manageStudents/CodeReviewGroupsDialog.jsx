@@ -132,6 +132,7 @@ export default function CodeReviewGroupsDialog({
       {/* use div instead of button HTML element via __useDeprecatedTag
           for consistent spacing with other "buttons" in ManageStudentsTable header */}
       <Button
+        id="uitest-code-review-groups-button"
         __useDeprecatedTag
         onClick={openDialog}
         color={Button.ButtonColor.gray}
