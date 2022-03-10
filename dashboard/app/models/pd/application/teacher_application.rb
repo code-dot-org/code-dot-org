@@ -131,7 +131,7 @@ module Pd::Application
     # Since teacher applications may be created on save before they are submitted, we cannot rely
     # on the created_at field. When applications are submitted, they have status 'unreviewed'
     def date_applied
-      status_log.find {|status_entry| status_entry["status"] == "unreviewed"}&.[]("at")&.to_date&.iso8601 || ""
+      status_log.find {|status_entry| status_entry["status"] == "unreviewed"}&.[]("at")&.to_date&.iso8601
     end
 
     def self.next_year(year)

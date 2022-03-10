@@ -109,10 +109,10 @@ module Pd::Application
       assert_equal Pd::Application::TeacherApplication::REVIEWING_INCOMPLETE, teacher_application.meets_criteria
     end
 
-    test 'date_applied finds date of first unreviewed status, or empty string' do
+    test 'date_applied finds date of first unreviewed status' do
       tomorrow = Date.tomorrow.to_time
       application = create :pd_teacher_application, status: 'incomplete'
-      assert_equal "", application.date_applied
+      assert_nil application.date_applied
 
       Timecop.freeze(tomorrow) do
         application.update!(status: 'unreviewed')
