@@ -33,6 +33,7 @@ module SetupI18nStringUrlTracker
     super
     stub_firehose
     stub_dcdo(true)
+    I18n.backend.store_translations(I18n.default_locale, {'string': {'key': 'a valid string'}})
   end
 
   def teardown
@@ -291,6 +292,14 @@ class TestI18nStringUrlTracker < Minitest::Test
     I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source] + '2', test_record[:string_key], test_record[:scope], test_record[:separator])
     I18nStringUrlTracker.instance.send(:flush)
     assert_equal %w(test test2), @firehose_records&.map {|x| x[:source]}
+  end
+
+  def test_log_given_unknown_string_key_should_not_be_logged
+    unstub_firehose
+    FirehoseClient.instance.expects(:put_record).never
+    test_record = {url: 'https://studio.code.org/s/outbreak', source: 'test', string_key: 'invalid_key', scope: [], separator: '.'}
+    I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source], test_record[:string_key], test_record[:scope], test_record[:separator])
+    I18nStringUrlTracker.instance.send(:flush)
   end
 end
 

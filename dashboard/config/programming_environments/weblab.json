@@ -1,5 +1,6 @@
 {
   "name": "weblab",
+  "published": true,
   "description": "Web based HTML/CSS editor.",
   "editor_type": "text",
   "image_url": "https://studio.code.org/shared/images/courses/logo_weblab.png",
