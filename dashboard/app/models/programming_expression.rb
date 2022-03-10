@@ -288,6 +288,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def clone_to_programming_environment(environment_name, new_category_key = nil)
     new_env = ProgrammingEnvironment.find_by_name(environment_name)
+    puts new_category_key.inspect
     raise "Cannot find programming environment with name #{environment_name}" unless new_env
 
     # Find the category for the new expressions:
@@ -297,11 +298,11 @@ class ProgrammingExpression < ApplicationRecord
     # As there's no (current) problem with an expression not having a category,
     # stop there. It won't appear in navigation but will still be valid
     new_category = nil
-    if new_category_key
-      new_category = new_env.categories.find_by_key(new_category_key)
-    else
+    if new_category_key.blank?
       new_category ||= new_env.categories.find_by_key(programming_environment_category&.key)
       new_category ||= new_env.categories.find_by_name(programming_environment_category&.name)
+    else
+      new_category = new_env.categories.find_by_key(new_category_key)
     end
 
     new_exp = dup
