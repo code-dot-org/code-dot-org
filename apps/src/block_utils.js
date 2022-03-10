@@ -795,6 +795,8 @@ const STANDARD_INPUT_TYPES = {
 };
 
 /**
+ * Adds a second value to options array elements if a second one does not exist.
+/**
  * Given a type string for a field input, returns an appropriate change handler function
  * for that type, which customizes the input field and provides validation on blur.
  * @param {Blockly} blockly
