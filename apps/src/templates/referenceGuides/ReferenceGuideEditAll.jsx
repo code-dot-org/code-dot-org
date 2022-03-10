@@ -35,7 +35,7 @@ const organizeReferenceGuides = (referenceGuides, parent = null, level = 0) => {
   return flatten(organizedGuides);
 };
 
-export default function ReferenceGuideIndex({referenceGuides}) {
+export default function ReferenceGuideEditAll({referenceGuides}) {
   // useMemo here so that we only do the organizing once
   const organizedGuides = useMemo(
     () => organizeReferenceGuides(referenceGuides),
@@ -85,6 +85,6 @@ const referenceGuideShape = PropTypes.shape({
   position: PropTypes.number
 });
 
-ReferenceGuideIndex.propTypes = {
+ReferenceGuideEditAll.propTypes = {
   referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired
 };

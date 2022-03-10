@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import ReferenceGuideIndex from '@cdo/apps/templates/referenceGuides/ReferenceGuideIndex';
+import ReferenceGuideEditAll from '@cdo/apps/templates/referenceGuides/ReferenceGuideEditAll';
 
 $(() => {
   const referenceGuides = getScriptData('referenceGuides');
   ReactDOM.render(
-    <ReferenceGuideIndex referenceGuides={referenceGuides} />,
+    <ReferenceGuideEditAll referenceGuides={referenceGuides} />,
     document.getElementById('show-container')
   );
 });
