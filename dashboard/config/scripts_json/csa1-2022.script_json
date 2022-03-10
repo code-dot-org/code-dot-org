@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-09 14:46:45 UTC",
+    "serialized_at": "2022-03-10 00:23:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4610,7 +4610,7 @@
       "key": "491090ee-8831-4b32-9663-303aaf184761",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a new subclass that extends PainterPlus with a new method. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 16, 17, and 18 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Asphalt Art Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1FMk0zXXkBms6SdWuVQUnrsxrSAxKN6OT3N92JD1XbAM/edit?usp=sharing), which includes a one-day version of the [**Asphalt Art Project Planning Guide**](https://docs.google.com/document/d/1ZCM53HkkeLt3xFW3Mc4hc4TrV2dqq1Fy9rN-EA7q_jU/edit?usp=sharing). Direct students to develop their program on Lesson 18 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a new subclass that extends `PainterPlus` with a new method. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 16, 17, and 18 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Asphalt Art Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1FMk0zXXkBms6SdWuVQUnrsxrSAxKN6OT3N92JD1XbAM/edit?usp=sharing), which includes a one-day version of the [**Asphalt Art Project Planning Guide**](https://docs.google.com/document/d/1ZCM53HkkeLt3xFW3Mc4hc4TrV2dqq1Fy9rN-EA7q_jU/edit?usp=sharing). Direct students to develop their program on Lesson 18 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "491090ee-8831-4b32-9663-303aaf184761",
