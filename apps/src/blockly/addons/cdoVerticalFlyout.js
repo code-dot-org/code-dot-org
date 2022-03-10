@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import {getToolboxWidth} from './cdoUtils';
 
 export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
   /**
@@ -90,7 +91,7 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
       return;
     }
     this.reflowInternal_();
-    const toolboxWidth = this.targetWorkspace.getToolboxWidth();
+    const toolboxWidth = getToolboxWidth();
     document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
   }
 }
