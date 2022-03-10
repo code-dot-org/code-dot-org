@@ -44,7 +44,7 @@ export function PoemEditor(props) {
     }
 
     setError(null);
-  }, [props.isOpen]);
+  }, [props.isOpen, error]);
 
   const body = (
     <div>
