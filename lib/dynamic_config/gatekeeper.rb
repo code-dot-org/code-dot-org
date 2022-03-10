@@ -17,6 +17,7 @@
 # This allows you to turn on feature-sharing for specific scripts
 
 require 'dynamic_config/datastore_cache'
+require 'dynamic_config/environment_aware_dynamic_config_helper'
 require 'dynamic_config/adapters/dynamodb_adapter'
 require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
@@ -101,23 +102,7 @@ class GatekeeperBase
   # Factory method for creating GatekeeperBase objects
   # @returns [GatekeeperBase]
   def self.create
-    env = rack_env.to_s
-    env = Rails.env.to_s if defined?(Rails) && Rails.respond_to?(:env)
-
-    cache_expiration = 5
-
-    # Use the memory adapter if we're running unit tests, but not if we're running the web application server.
-    if env == 'test' && File.basename($0) != 'puma'
-      adapter = MemoryAdapter.new
-    # Production and the managed test system web application servers (test.code.org / studio.code.org) use DynamoDB.
-    elsif env == 'production' || (CDO.test_system? && File.basename($0) == 'puma')
-      cache_expiration = 30
-      adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
-    else
-      adapter = JSONFileDatastoreAdapter.new("#{dashboard_dir(CDO.gatekeeper_table_name)}_temp.json")
-    end
-
-    datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
+    datastore_cache = EnvironmentAwareDynamicConfigHelper.create_datastore_cache(CDO.gatekeeper_table_name)
     GatekeeperBase.new datastore_cache
   end
 
