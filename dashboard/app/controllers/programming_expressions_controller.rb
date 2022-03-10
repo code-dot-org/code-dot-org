@@ -1,15 +1,19 @@
 class ProgrammingExpressionsController < ApplicationController
+  include Rails.application.routes.url_helpers
+
   load_and_authorize_resource
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
 
   def index
-    @programming_environments = ProgrammingEnvironment.all.map(&:summarize_for_edit)
+    @programming_environments = ProgrammingEnvironment.all.map do |env|
+      {id: env.id, name: env.name, title: env.title, published: env.published, editPath: edit_programming_environment_path(env.name)}
+    end
     @environments_for_select = ProgrammingEnvironment.all.map do |env|
       {id: env.id, name: env.name, title: env.title}
     end
     @categories_for_select = ProgrammingEnvironmentCategory.all.map do |cat|
-      {id: cat.id, envId: cat.programming_environment.id, name: cat.name, formattedName: "#{cat.programming_environment.title}:#{cat.name}"}
+      {id: cat.id, key: cat.key, envId: cat.programming_environment.id, envName: cat.programming_environment.name, name: cat.name, formattedName: "#{cat.programming_environment.title}:#{cat.name}"}
     end
   end
 
@@ -29,8 +33,10 @@ class ProgrammingExpressionsController < ApplicationController
         id: exp.id,
         key: exp.key,
         name: exp.name,
+        environmentId: exp.programming_environment.id,
         environmentTitle: exp.programming_environment.title,
-        categoryName: exp.programming_environment_category&.name
+        categoryName: exp.programming_environment_category&.name,
+        editPath: edit_programming_expression_path(exp)
       }
     end
     render json: {numPages: num_pages, expressions: @programming_expressions}
@@ -124,10 +130,11 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
-  # POST /programming_expressions/:id/clone
+  # POST /programming_expression/:id/clone
   def clone
     return render :not_found unless @programming_expression
-    return render :not_acceptable unless params[:destinationProgrammingEnvironmentName]
+    return render :not_acceptable if params[:destinationProgrammingEnvironmentName].blank?
+    #return render(status: not_acceptable, plain: 'Must provide destination programming environment') if params[:destinationProgrammingEnvironmentName].blank?
     begin
       new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
       render(status: 200, json: {editUrl: edit_programming_expression_path(new_exp)})
