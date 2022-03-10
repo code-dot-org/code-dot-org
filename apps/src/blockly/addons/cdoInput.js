@@ -1,11 +1,10 @@
 import GoogleBlockly from 'blockly/core';
 
-export default class Input extends GoogleBlockly.Input {
-  setStrictCheck(check) {
-    return super.setCheck(check);
-  }
+GoogleBlockly.Input.prototype.setStrictCheck = function(check) {
+  return this.setCheck(check);
+};
 
-  getFieldRow() {
-    return this.fieldRow;
-  }
-}
+// Technically we can just use fieldRow since it is public.
+GoogleBlockly.Input.prototype.getFieldRow = function() {
+  return this.fieldRow;
+};
