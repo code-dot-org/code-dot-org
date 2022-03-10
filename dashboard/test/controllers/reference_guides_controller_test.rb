@@ -42,10 +42,10 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     assert_equal reference_guide.summarize_for_show.to_json, show_data
   end
 
-  test 'data is passed to index page' do
+  test 'data is passed to edit_all page' do
     sign_in @levelbuilder
 
-    get :index, params: {
+    get :edit_all, params: {
       course_course_name: @reference_guide.course_offering_version
     }
     assert_response :ok
@@ -56,13 +56,18 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
   end
 
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
-  test_user_gets_response_for :index, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :success
 
   # everyone can see basic reference guides
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: nil, response: :success
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :student, response: :success
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :levelbuilder, response: :success
+
+  # edit_all page is levelbuilder only
+  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: nil, response: :redirect
+  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
 
   # pilot reference guides are restricted
   test_user_gets_response_for :show, name: 'not signed-in cannot view pilot ref guide',
@@ -71,7 +76,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, name: 'regular teacher cannot view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :index, name: 'regular teacher cannot view pilot ref guide index',
+  test_user_gets_response_for :edit_all, name: 'regular teacher cannot view pilot ref guide edit_all',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, name: 'pilot student can view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: -> {@pilot_student}, response: :success

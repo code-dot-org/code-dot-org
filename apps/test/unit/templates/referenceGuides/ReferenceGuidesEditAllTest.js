@@ -1,7 +1,7 @@
 import React from 'react';
 import {isolateComponent} from 'isolate-react';
 import {expect} from '../../../util/reconfiguredChai';
-import ReferenceGuideIndex from '@cdo/apps/templates/referenceGuides/ReferenceGuideIndex';
+import ReferenceGuideEditAll from '@cdo/apps/templates/referenceGuides/ReferenceGuideEditAll';
 
 const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   display_name: key,
@@ -10,11 +10,11 @@ const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   position: pos
 });
 
-describe('ReferenceGuideIndex', () => {
+describe('ReferenceGuideEditAll', () => {
   it('displays the name of the reference guide', () => {
     const referenceGuides = [makeReferenceGuide('hello_world')];
     const wrapper = isolateComponent(
-      <ReferenceGuideIndex referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(wrapper.findOne('.categories-box').content()).to.equal(
       'hello_world'
@@ -24,7 +24,7 @@ describe('ReferenceGuideIndex', () => {
   it('sets up all the actions for a ref guide', () => {
     const referenceGuides = [makeReferenceGuide('hello_world')];
     const wrapper = isolateComponent(
-      <ReferenceGuideIndex referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(wrapper.findAll('MiniIconButton').length).to.equal(4);
     expect(wrapper.findOne('.actions-box').toString()).to.contain('edit');
@@ -53,7 +53,7 @@ describe('ReferenceGuideIndex', () => {
       makeReferenceGuide('f', 'c', 1)
     ];
     let wrapper = isolateComponent(
-      <ReferenceGuideIndex referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(
       wrapper.findAll('.categories-box').map(box => box.content())
@@ -69,7 +69,7 @@ describe('ReferenceGuideIndex', () => {
       makeReferenceGuide('a', null, 0)
     ];
     wrapper = isolateComponent(
-      <ReferenceGuideIndex referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(
       wrapper.findAll('.categories-box').map(box => box.content())
@@ -85,7 +85,7 @@ describe('ReferenceGuideIndex', () => {
       makeReferenceGuide('e', null, 2)
     ];
     const wrapper = isolateComponent(
-      <ReferenceGuideIndex referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(
       wrapper.findAll('.categories-box').map(box => box.content())
@@ -102,7 +102,7 @@ describe('ReferenceGuideIndex', () => {
       makeReferenceGuide('f', 'c', 1)
     ];
     const wrapper = isolateComponent(
-      <ReferenceGuideIndex referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(
       wrapper.findAll('.categories-box').map(box => box.props.style.paddingLeft)

@@ -1,12 +1,12 @@
 class ReferenceGuidesController < ApplicationController
   include CurriculumHelper
   before_action :find_reference_guide, only: [:show]
-  before_action :find_reference_guides, only: [:index]
+  before_action :find_reference_guides, only: [:edit_all]
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   authorize_resource id_param: :key
 
   # GET /courses/:course_name/guides/edit
-  def index
+  def edit_all
     render :not_found unless params[:course_course_name]
   end
 
