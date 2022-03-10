@@ -1008,9 +1008,9 @@ export default class P5Lab {
   runButtonClick() {
     this.studioApp_.toggleRunReset('reset');
     // document.getElementById('spinner').style.visibility = 'visible';
-    if (this.studioApp_.isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
-    }
+    // if (this.studioApp_.isUsingBlockly()) {
+    //   Blockly.mainBlockSpace.traceOn(true);
+    // }
     this.studioApp_.attempts++;
     this.execute();
 
