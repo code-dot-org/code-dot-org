@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-08 20:12:21 UTC",
+    "serialized_at": "2022-03-10 17:16:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1590,7 +1590,7 @@
       "key": "fcd4343e-894a-46df-8506-60461c8b0dc8",
       "position": 2,
       "properties": {
-        "description": "oday, we all get to program robots...and they're already here in the room! It's you! We're going to write programs using symbols with special meanings to help each other recreate a picture. First, we'll practice together as if I am the robot and you are the programmers, then we can break up into groups so that everyone gets a turn.\n\n\n",
+        "description": "Today we all get to program robots...and they're already here in the room! It's you! We're going to write programs using symbols with special meanings to help each other recreate a picture. First, we'll practice together as if I am the robot and you are the programmers, then we can break up into groups so that everyone gets a turn.\n\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -1625,7 +1625,7 @@
       "key": "2dc8720c-7b51-4e23-bff7-caf758dea9b3",
       "position": 5,
       "properties": {
-        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #2” slide\n\nShow the students a more complicated image, like the one below.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\nShow the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
+        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #2” slide\n\nShow the students a more complicated image, like the one below. Feel free to use the \"List of steps\" table in the slide to write down the steps students suggest.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\nShow the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
       },
       "seeding_key": {
         "activity_section.key": "2dc8720c-7b51-4e23-bff7-caf758dea9b3",
@@ -1636,7 +1636,7 @@
       "key": "c24df0cf-2ab1-4b43-b556-7da15019dc60",
       "position": 6,
       "properties": {
-        "description": "**Discussion:** How could we use these symbols to make our instructions easier?"
+        "description": "**Discuss:** _How could we use these symbols to make our instructions easier?_"
       },
       "seeding_key": {
         "activity_section.key": "c24df0cf-2ab1-4b43-b556-7da15019dc60",
@@ -1707,7 +1707,7 @@
       "key": "711dd3c2-55d7-4e71-8714-fea9ceb6cb4a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Prompts:**\n\n \n - Draw another image that you could code. Can you write the program that goes with this drawing?\n - What other types of robots could we program if we changed what the arrows meant?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n \n - _Draw another image that you could code. Can you write the program that goes with this drawing?_\n - _What other types of robots could we program if we changed what the arrows meant?_",
         "name": "Reflection",
         "tips": [
           {
@@ -6803,6 +6803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge12022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6825,6 +6828,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge22022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7173,6 +7179,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while_challenge12022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
