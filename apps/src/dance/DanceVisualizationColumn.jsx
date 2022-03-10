@@ -85,7 +85,12 @@ class DanceVisualizationColumn extends React.Component {
     const signedInOver13 =
       this.props.userType === 'teacher' || this.props.userType === 'student';
     const signedOutAge = signedOutOver13();
-    return signedInOver13 || signedOutAge;
+    // Student is signed out and <13 or the override filter is on
+    if (!signedOutAge) {
+      return signedOutAge;
+    }
+    // Check whether user is signed in and >13
+    return signedInOver13;
   }
 
   render() {
