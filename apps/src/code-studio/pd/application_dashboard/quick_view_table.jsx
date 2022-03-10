@@ -91,11 +91,12 @@ export class QuickViewTable extends React.Component {
         cell: {
           formatters: [
             date_applied =>
-              date_applied &&
-              new Date(date_applied).toLocaleDateString('en-us', {
-                month: 'long',
-                day: 'numeric'
-              })
+              date_applied
+                ? new Date(date_applied).toLocaleDateString('en-us', {
+                    month: 'long',
+                    day: 'numeric'
+                  })
+                : 'Not Yet Submitted'
           ]
         }
       },
