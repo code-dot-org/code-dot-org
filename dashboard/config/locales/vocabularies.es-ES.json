@@ -876,6 +876,14 @@
           "word": "Bug o error",
           "definition": "parte de un programa que no funciona correctamente."
         },
+        "analog/csd/2021": {
+          "word": "Analógico",
+          "definition": "Cualquier señal que cambia continuamente y que no está restringida a un conjunto finito de valores. Por ejemplo, las formas de onda de las palabras cuando hablamos son una señal analógica."
+        },
+        "digital/csd/2021": {
+          "word": "Digital",
+          "definition": "Datos o señales representados por un número finito de valores. Las señales analógicas (que pueden tener infinitos valores) deben ser convertidas a digitales para poder ser computadas."
+        },
         "for_loop/csd/2021": {
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."

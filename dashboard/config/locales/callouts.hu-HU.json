@@ -227,7 +227,7 @@
           "add_and_drag_parameter": "Írd be ide a paramétered nevét, kattints a hozzáadásra, majd húzd a függvényed leírásába"
         },
         "NEW Course 4 Artist Vars 6": {
-          "place_length_variable": "Húzd a hossza változót ide a kérdőjelek helyére"
+          "place_length_variable": "Húzd a length változót ide a kérdőjelek helyére"
         },
         "NEW Course 4 Bee For Loops 4": {
           "bee_for_loop": "Írd ide a legtöbb nektár számát, amit a méhnek egyszerre össze kell gyűjtenie"
@@ -1117,6 +1117,10 @@
         },
         "courseF_sprites_positioning": {
           "locations_category": "Kattints ide, hogy megnyisd a pozíció kategóriát."
+        },
+        "Course 4 Playlab For Loops 4b": {
+          "Course_4_Playlab_For_Loops_4b_1": "Mindkét karakternek saját `counter` változója van. Így mindkét `számold` ciklus egymástól függetlenül tud működni.",
+          "Course_4_Playlab_For_Loops_4b_2": "Ebben a feladatban csak a \"lépésköz\" értékét változtathatod meg, ráadásul csak az egyik `számold` ciklusban."
         }
       }
     }

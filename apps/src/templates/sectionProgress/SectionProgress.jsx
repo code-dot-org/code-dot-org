@@ -61,7 +61,7 @@ class SectionProgress extends Component {
   componentDidUpdate() {
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
       logToCloud.addPageAction(
-        logToCloud.PageAction.LoadScriptProgressFinished,
+        logToCloud.PageAction.SectionProgressRenderedWithData,
         {
           sectionId: this.props.sectionId,
           scriptId: this.props.scriptId

@@ -8,8 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-07 00:30:24 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-03-09 14:06:54 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -415,6 +415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4 PainterPlus"
+        ],
         "progression": "Unit 2 Lesson 4"
       },
       "bonus": false,
@@ -437,6 +440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4 Dessert"
+        ],
         "progression": "Unit 2 Lesson 4"
       },
       "bonus": false,
@@ -459,6 +465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6 Cake and Cookie"
+        ],
         "progression": "Unit 2 Lesson 6"
       },
       "bonus": false,
@@ -481,6 +490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7 Dessert"
+        ],
         "progression": "Unit 2 Lesson 7"
       },
       "bonus": false,
@@ -503,6 +515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8 Dessert"
+        ],
         "progression": "Unit 2 Lesson 8"
       },
       "bonus": false,
@@ -525,6 +540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9 Dessert"
+        ],
         "progression": "Unit 2 Lesson 9"
       },
       "bonus": false,
