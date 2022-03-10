@@ -31843,12 +31843,24 @@ en:
           lessons:
             lesson-1:
               name: Welcome to Code.org
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                You will:
+
+                * Get an introduction to Code.org.
+                * Learn how to engage in these professional learning modules.
+
+                **Estimated time:** 20 minutes
+              description_teacher: |
+                You will:
+
+                * Get an introduction to Code.org.
+                * Learn how to engage in these professional learning modules.
+
+                **Estimated time:** 20 minutes
             lesson-2:
               name: Get to know Computer Science A
-              description_student: 
-              description_teacher: 
+              description_student: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+              description_teacher: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
           lesson_groups: {}
           name: self-paced-pl-csa1-2022
           title: 'Unit 1 - Module 1: Welcome'
