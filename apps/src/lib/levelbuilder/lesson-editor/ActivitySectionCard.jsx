@@ -526,6 +526,10 @@ class ActivitySectionCard extends Component {
           appendSlide={this.appendSlide}
           hasLessonPlan={hasLessonPlan}
           allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+          lastActivitySection={
+            this.props.activitySection.position ===
+            this.props.activitySectionsCount
+          }
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

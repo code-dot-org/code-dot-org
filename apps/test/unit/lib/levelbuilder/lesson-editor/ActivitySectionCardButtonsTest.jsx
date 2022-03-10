@@ -40,6 +40,7 @@ describe('ActivitySectionCardButtons', () => {
       appendSlide,
       hasLessonPlan: true,
       allowMajorCurriculumChanges: true,
+      lastActivitySection: false,
       vocabularies: []
     };
   });
@@ -52,15 +53,40 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.find('AddButton').length).to.equal(1);
   });
 
-  it('hides add level button if major curriculum changes are not allowed', () => {
+  it('hides add level button if major curriculum changes are not allowed and lastActivitySection is false', () => {
     const wrapper = shallow(
       <ActivitySectionCardButtons
         {...defaultProps}
         allowMajorCurriculumChanges={false}
+        lastActivitySection={false}
       />
     );
 
     expect(wrapper.find('.uitest-open-add-level-button').length).to.equal(0);
+  });
+
+  it('shows add level button if major curriculum changes are not allowed but lastActivitySection is true', () => {
+    const wrapper = shallow(
+      <ActivitySectionCardButtons
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+        lastActivitySection={true}
+      />
+    );
+
+    expect(wrapper.find('.uitest-open-add-level-button').length).to.equal(1);
+  });
+
+  it('shows add level button if major curriculum changes are allowed', () => {
+    const wrapper = shallow(
+      <ActivitySectionCardButtons
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+        lastActivitySection={false}
+      />
+    );
+
+    expect(wrapper.find('.uitest-open-add-level-button').length).to.equal(1);
   });
 
   it('shows add level button if major curriculum changes are allowed', () => {
