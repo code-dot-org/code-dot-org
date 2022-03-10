@@ -223,7 +223,7 @@ module ProjectsList
         select(*project_and_featured_project_and_user_fields).
         join(storage_apps, id: :storage_app_id).
         join(user_project_storage_ids, id: Sequel[:storage_apps][:storage_id]).
-        join(:users, id: Sequel[:user_project_storage_ids][:user_id]).
+        join(:users, id: Sequel[user_project_storage_ids][:user_id]).
         where(
           unfeatured_at: nil,
           project_type: project_type.to_s,
