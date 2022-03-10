@@ -39,31 +39,27 @@ def migrate_user_storage_ids_to_dashboard
   pegasus_user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
   dashboard_user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
-  DB.transaction do
-    puts "Renaming table pegasus.user_storage_ids -> dashboard.user_project_storage_ids"
-    # Rename the table to move it from the Pegasus schema to Dashboard
-    # Also change the name from user_storage_ids to user_project_storage_ids
-    DB.rename_table(pegasus_user_storage_ids, dashboard_user_project_storage_ids)
+  puts "Renaming table pegasus.user_storage_ids -> dashboard.user_project_storage_ids"
+  # Rename the table to move it from the Pegasus schema to Dashboard
+  # Also change the name from user_storage_ids to user_project_storage_ids
+  DB.rename_table(pegasus_user_storage_ids, dashboard_user_project_storage_ids)
 
-    puts "Creating view pegasus.user_storage_ids"
-    # This view exists as a safe-guard during the time between when the table rename is applied
-    # And the code referencing the new name is deployed, during that time queries to the old table name
-    # will hit this view and query from the renamed table
-    DB.create_view(pegasus_user_storage_ids, DB[dashboard_user_project_storage_ids].select_all)
-  end
+  puts "Creating view pegasus.user_storage_ids"
+  # This view exists as a safe-guard during the time between when the table rename is applied
+  # And the code referencing the new name is deployed, during that time queries to the old table name
+  # will hit this view and query from the renamed table
+  DB.create_view(pegasus_user_storage_ids, DB[dashboard_user_project_storage_ids].select_all)
 end
 
 def revert_migrate_user_storage_ids_to_dashboard
   pegasus_user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
   dashboard_user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
-  DB.transaction do
-    puts "Dropping view pegasus.user_storage_ids"
-    DB.drop_view(pegasus_user_storage_ids)
+  puts "Dropping view pegasus.user_storage_ids"
+  DB.drop_view(pegasus_user_storage_ids)
 
-    puts "Renaming table dashboard.user_project_storage_ids -> pegasus.user_storage_ids"
-    DB.rename_table(dashboard_user_project_storage_ids, pegasus_user_storage_ids)
-  end
+  puts "Renaming table dashboard.user_project_storage_ids -> pegasus.user_storage_ids"
+  DB.rename_table(dashboard_user_project_storage_ids, pegasus_user_storage_ids)
 end
 
 if $revert
