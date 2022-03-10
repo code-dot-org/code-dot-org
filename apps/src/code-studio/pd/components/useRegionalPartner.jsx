@@ -58,6 +58,7 @@ export const useRegionalPartner = data => {
 
   // debounce the search term to prevent making too many calls as input changes
   const [searchTerm, setSearchTerm] = useState(null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedSetSearchTerm = useCallback(debounce(setSearchTerm, 500), [
     setSearchTerm
   ]);
