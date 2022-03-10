@@ -73,7 +73,21 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
       menuOptions.push(deletable);
       menuOptions.push(movable);
       menuOptions.push(editable);
-      if (this.getSurroundParent()) {
+      // menuOptions for Shadow Blocks require awareness of parents and children.
+      const children = this.getChildren();
+      const shadowChildCount = children.filter(child => child.isShadow())
+        .length;
+      const nonShadowChildrenCount = children.filter(child => !child.isShadow())
+        .length;
+      // A block can be made into a shadow if:
+      //* It has a surrounding parent block.
+      //* It does not contain a variable field.
+      //* It does not have any non-shadow children.
+      if (
+        this.getSurroundParent() &&
+        !this.getVarModels().length &&
+        !nonShadowChildrenCount
+      ) {
         const shadow = {
           text: 'Make Shadow',
           enabled: true,
@@ -84,11 +98,13 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
         };
         menuOptions.push(shadow);
       }
-      if (this.getChildren().length) {
-        const children = this.getChildren();
-        if (children.filter(child => child.isShadow()).length) {
+      // If a block has shadow child(ren), it can be used to convert them to blocks.
+      if (children.length) {
+        if (shadowChildCount) {
           const unshadow = {
-            text: 'Make All Child Blocks Non-Shadow',
+            text: `Make ${
+              shadowChildCount > 1 ? `${shadowChildCount} ` : ''
+            }Child Block${shadowChildCount > 1 ? 's' : ''} Non-Shadow`,
             enabled: true,
             callback: function() {
               for (let i = 0; i < children.length; i++) {
