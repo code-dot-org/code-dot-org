@@ -444,6 +444,18 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "Lihat dengan teliti pada kod di bawah titik ini."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Kotak alatan berada dalam mod \"kategori\" supaya memberikan lebih banyak ruang untuk kod anda. Gelung `untuk` berada di sini."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Anda akan menemui gelung `untuk` di sini!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Anda akan menemui gelung `matematik` di sini."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Anda boleh menemui pemboleh ubah anda di bawah sini!"
         }
       }
     }

@@ -3,7 +3,7 @@ hu:
     parameter_names:
       actor: szereplő
       color: szín
-      counter: számláló
+      counter: counter
       height: magasság
       honey: méz
       left: balra

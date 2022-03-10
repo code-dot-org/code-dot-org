@@ -12,7 +12,6 @@ import {
   gradeFormatter,
   loginInfoFormatter,
   studentsFormatter,
-  GRADES,
   COLUMNS
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
@@ -215,7 +214,6 @@ describe('OwnedSectionsTable Sorting', () => {
         expectedGradeOrder[rowIndex]
       );
     });
-    expect(GRADES.length).to.equal(15);
   });
 
   it('can be sorted by grade in the reverse order with a second click', () => {
@@ -229,7 +227,6 @@ describe('OwnedSectionsTable Sorting', () => {
       </Provider>
     );
 
-    expect(GRADES.length).to.equal(15);
     // first click should sort sections K-12
     wrapper.find('.uitest-grade-header').simulate('click');
     // second click should sort sections in reverse order

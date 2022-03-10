@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-04 18:25:42 UTC",
+    "serialized_at": "2022-03-07 18:13:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3598,6 +3598,18 @@
       }
     },
     {
+      "name": "Learning From Data",
+      "url": "https://docs.google.com/document/d/11uJjxHRdQwKq0gWJuFEhvPKNCt0_Vw8r62jFlXrj0Ww/edit?usp=sharing",
+      "key": "learning_from_data",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "learning_from_data"
+      }
+    },
+    {
       "name": "Sharing learnings about our image cropping algorithm (Twitter)",
       "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
       "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
@@ -3772,6 +3784,12 @@
       "seeding_key": {
         "lesson.key": "Learning From Data",
         "resource.key": "csp-u9-presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "resource.key": "learning_from_data"
       }
     },
     {

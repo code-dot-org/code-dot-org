@@ -31100,11 +31100,11 @@ es-MX:
               name: Aprendiendo de los datos
               description_student: Explora la herramienta Google Trends para contar
                 una "historia de datos".
-              description_teacher: 'En esta lección, los alumnos analizan la herramienta
+              description_teacher: En esta lección, los alumnos analizan la herramienta
                 Google Trends para contar una "historia de datos" que explique tanto
                 lo que muestran los datos como el motivo de ello. A continuación,
                 se presenta a los alumnos el concepto de metadatos y se buscan los
-                metadatos de los conjuntos de datos en Laboratorio de Aplicaciones. '
+                metadatos de los conjuntos de datos en Laboratorio de Aplicaciones.
             Exploring One Column:
               key: Explorando una columna
               name: Explorando una columna
@@ -45701,6 +45701,7 @@ es-MX:
           description_short: Una introducción a las ciencias de la computación para
             prelectores. Es similar al Curso A, pero con conceptos más avanzados.
           description_audience: De 5 a 8 años
+          name: cursob-2022
         coursec-2022:
           lessons:
             Putting a STOP to Online Meanness:
@@ -47255,6 +47256,7 @@ es-MX:
           description_short: Aprende sobre sentencias condicionales y crea tu propio
             arte, historia o juego.
           description_audience: Edades de 7 a 11 años
+          name: cursod-2022
         coursee-2022:
           lessons:
             Follow the Algorithm:
@@ -48090,14 +48092,48 @@ es-MX:
               name: Convertirse en Ingenieros de Software
             lesson-16:
               name: Proyecto de Arte en el Asfalto - Día 1
+              description_student: |-
+                **¿Qué quiero representar utilizando la programación y el arte?**
+
+                En este proyecto, utilizarás las habilidades que has desarrollado para crear arte en el asfalto de El Barrio. Eliges un tema o concepto para tu arte en el asfalto que represente algo que te interese o sea significativo para ti. Después de una lluvia de ideas y una planificación, desarrollarás tu programa para crear tu diseño.
+              description_teacher: |-
+                **¿Qué quiero representar utilizando la programación y el arte?**
+
+                En este proyecto, los alumnos utilizan las habilidades que han desarrollado para crear arte en el asfalto de El Barrio. Los alumnos eligen un tema o concepto para su arte en el asfalto que represente algo que les interese o sea significativo para ellos. Después de una lluvia de ideas y una planificación, los estudiantes desarrollan sus programas para crear sus diseños.
             lesson-17:
               name: Proyecto de Arte en el Asfalto - Día 2
+              description_student: |-
+                **¿Cómo voy a poner en práctica mis planes para crear mi programa?**
+
+                Ahora has diseñado una nueva clase para crear tu arte en el asfalto. En esta lección, decides qué clases y métodos has desarrollado a lo largo de la unidad y tu nueva clase para crear tu diseño. También refuerzas tus habilidades y procesos de desarrollo de software participando en una revisión de código para dar y utilizar la experiencia.
+              description_teacher: |-
+                **¿Cómo voy a poner en práctica mis planes para crear mi programa?**
+
+                Los estudiantes han diseñado una nueva clase para crear su arte en el asfalto. En esta lección, los estudiantes deciden qué clases y métodos que han desarrollado a lo largo de la unidad van a utilizar y su nueva clase para crear su diseño. Los estudiantes refuerzan las habilidades y los procesos de desarrollo de software participando en una revisión del código para dar y utilizar los comentarios.
             lesson-18:
               name: Proyecto de Arte en el Asfalto - Día 3
+              description_student: |-
+                **¿Cómo se refleja mi crecimiento como ingeniero de software en mi proyecto?**
+
+                Participaste en una revisión de código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraste. Considera esta experiencia al finalizar el desarrollo en esta lección. A continuación, compartirás tu proyecto final con tus compañeros para celebrar tu éxito.
+              description_teacher: |-
+                **¿Cómo se refleja mi crecimiento como ingeniero de software en mi proyecto?**
+
+                Los estudiantes participaron en una revisión del código al final de la lección anterior para dar y recibir comentarios para identificar las áreas de mejora y las correcciones de los problemas que encontraron. Los estudiantes tienen en cuenta estos comentarios cuando finalizan el desarrollo en esta lección. Los estudiantes comparten sus proyectos finales con sus compañeros para celebrar sus éxitos.
             lesson-19:
               name: Práctica de FRQ
+              description_student: |-
+                **¿Cómo utilizaré lo que sé sobre clases y objetos para responder a una Pregunta de Respuesta Libre?**
+
+                Se te pedirá que desarrolles soluciones a Preguntas de Respuesta Libre (FRQs) en el examen AP CSA. Aprenderás sobre la estructura de una FRQ y practicarás las habilidades de descomposición y resolución de problemas para desarrollar soluciones a una FRQ simulada. Utilizarás estrategias de anotación para identificar los componentes clave del problema y validarás tus soluciones utilizando las Guías de Puntuación.
+              description_teacher: |-
+                **¿Cómo utilizaré lo que sé sobre clases y objetos para responder a una Pregunta de Respuesta Libre?**
+
+                Los estudiantes se familiarizan con las Preguntas de Respuesta Libre (FRQs) de AP CSA y practican las habilidades de descomposición y resolución de problemas para desarrollar soluciones a una FRQ simulada. Los estudiantes utilizan estrategias de anotación para identificar los componentes clave del problema y validar sus soluciones utilizando las Guías de Puntuación.
             lesson-20:
               name: Evaluación de la Unidad 1
+              description_student: Enhorabuena, has completado tu primera unidad.
+                Evalúa tu progreso a través de la Evaluación de la Unidad 1.
               description_teacher: Los alumnos realizan una evaluación de opción múltiple
                 que abarca los temas de la unidad.
           lesson_groups:
@@ -48164,6 +48200,24 @@ es-MX:
               name: Evaluación de la Unidad 2
             lesson-6:
               name: Variables
+            lesson-7:
+              name: Operadores y Expresiones
+            lesson-8:
+              name: Atributos
+            lesson-9:
+              name: Constructores
+            lesson-10:
+              name: Entrada de Usuario
+            lesson-11:
+              name: Jerarquías de Clase
+            lesson-12:
+              name: Métodos de Acceso
+            lesson-13:
+              name: Métodos Mutadores
+            lesson-14:
+              name: Imprimiendo Objetos
+            lesson-15:
+              name: Ámbito
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -48388,7 +48442,14 @@ es-MX:
               name: Bienvenido a "Enseñando CSA"
           name: autodidáctico-pl-csa1-2022
           title: 'Unidad 1 - Módulo 1: Bienvenida'
+        self-paced-pl-csa2-2022:
+          name: autodidáctico-pl-csa2-2022
         self-paced-pl-csa3-2022:
+          lessons:
+            lesson-1:
+              name: Introducción a Laboratorio Java
+            lesson-2:
+              name: Usando variables en Java
           name: autodidáctico-pl-csa3-2022
           title: Soporte para la programación basada en texto
         csa7-pilot-extra:
@@ -48870,6 +48931,7 @@ es-MX:
               display_name: Encuesta Piloto
             lessonGroup-5:
               display_name: Aislamiento
+          title: 'Ampliando el Diseño de Software '
           name: csa7-piloto-extra
         csa8-pilot-extra:
           lessons:
@@ -49296,6 +49358,7 @@ es-MX:
               display_name: Encuesta Piloto
             lessonGroup-5:
               display_name: Aislamiento
+          name: csa8-piloto-extra
         csa-backpack-2022:
           lessons:
             lesson-1:
@@ -49312,6 +49375,17 @@ es-MX:
               name: 'Proyecto: Interacción entre Dispositivos Humanos'
             'Mini-Project: Interactive Art':
               name: 'Mini-Proyecto: Arte Interactivo'
+            lesson-4:
+              name: Niveles de Práctica Independiente
+              description_teacher: |-
+                Esta lección contiene una colección de niveles que aparecen en nuestro plan de estudios. Puedes utilizar estos niveles para experimentar cómo funciona el MicroBit en el contexto de nuestra progresión de niveles en el plan de estudios, o para probar componentes individuales del MicroBit en un entorno más pequeño.
+
+                Todos los niveles se han diseñado teniendo en cuenta el Adafruit Circuit Playground, por lo que es posible que no haya una coincidencia exacta entre las instrucciones del nivel y el MicroBit.
+          name: csd6-proyectos
+          title: CSD Unidad 6 - Proyectos
+          description: Estos son los nuevos proyectos de la unidad CS Descubrimientos
+            de Computación Física. Esta unidad existe para ayudar a probar las nuevas
+            características de MicroBit en la plataforma Code.org
         coursef-2022-pilot:
           lessons:
             The Power of Words:
@@ -49486,6 +49560,7 @@ es-MX:
               display_name: Datos y Simulaciones
             end_of_course_project:
               display_name: Proyecto de fin de curso
+          name: cursof-2022-piloto
           title: Curso F (2022)
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias
@@ -50276,3 +50351,50 @@ es-MX:
             -   Control de Progreso Personal 10
 
             **_Nota:_** Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores.\_
+        csa-preview:
+          lessons:
+            lesson-1:
+              name: Clases y Objetos
+            lesson-2:
+              name: Utilización de comandos
+            lesson-3:
+              name: Tratando los Datos como Tipos Diferentes
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Bienvenidos
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+            lesson-2:
+              name: Operadores y Expresiones
+            lesson-3:
+              name: Atributos
+            lesson-4:
+              name: Constructores
+            lesson-5:
+              name: Entrada de Usuario
+            lesson-6:
+              name: Jerarquías de Clase
+            lesson-7:
+              name: Métodos de Acceso
+            lesson-8:
+              name: Métodos Mutadores
+            lesson-9:
+              name: Imprimiendo Objetos
+            lesson-11:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 1'
+            lesson-12:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 2'
+            lesson-13:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 3'
+            lesson-14:
+              name: Práctica de FRQ
+            lesson-15:
+              name: Evaluación de la Unidad 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"

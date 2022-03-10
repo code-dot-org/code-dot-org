@@ -323,6 +323,7 @@ mr:
           FORMAT:
             '"border"': सीमारेषा
             '"inner"': चौरस च्या आत
+            '"diamond"': हिरा
             '"circle"': वर्तुळ
             '"grid"': ग्रिड
             '"row"': ओळ
@@ -432,6 +433,7 @@ mr:
           LAYOUT:
             '"border"': सीमारेषा
             '"inner"': चौरस च्या आत
+            '"diamond"': हिरा
             '"circle"': वर्तुळ
             '"grid"': ग्रिड
             '"row"': ओळ
@@ -814,6 +816,7 @@ mr:
         options:
           STRING:
             '"hearts_colorful"': ह्रदय
+            '"diamond"': हिरा
             '"s"': s
             '"t"': t
             '"u"': u
@@ -1900,6 +1903,12 @@ mr:
             '10': '10'
       Poetry_whenPromptAnswered:
         text: जेव्हा {VAR} ने उत्तर दिले
+      RyanLab_moveForward:
+        text: पुढे जा
+      RyanLab_turnLeft:
+        text: डावीकडे वळा
+      RyanLab_turnRight:
+        text: उजवीकडे वळा
       Vector_randomLocation:
         text: कोणतेही यादृच्छिक स्थान
       aalab_layoutSprites:
@@ -1967,6 +1976,8 @@ mr:
         options:
           TYPE:
             "'sand'": वाळू
+      craft_moveForward:
+        text: पुढे जा
       craft_placeBlock:
         text: "{blockType} ठेवा"
       craft_placePrismarine:

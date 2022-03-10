@@ -2602,3 +2602,7 @@ gl:
               display_name: Cidadanía dixital
             lessonGroup-8:
               display_name: Variables
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
