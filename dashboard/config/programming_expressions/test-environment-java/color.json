@@ -1,0 +1,13 @@
+{
+  "key": "color",
+  "name": "Color",
+  "category": "org.code.media",
+  "category_key": "org_code_media",
+  "content": "This class defines the colors used in the Theater.",
+  "examples": [
+    {
+      "code": "```\nColor c = new Color(\"turquoise\");\n```"
+    }
+  ],
+  "tips": "- Only use the list of colors listed in the constructor"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "test-environment-blockly",
+  "published": false,
+  "editor_type": "blockly",
+  "title": "Test Environment: Blockly",
+  "categories": [
+    {
+      "key": "sprites",
+      "name": "Sprites",
+      "color": "#df9399",
+      "position": 0
+    },
+    {
+      "key": "functions",
+      "name": "Functions",
+      "color": "#a3e770",
+      "position": 1
+    }
+  ]
+}

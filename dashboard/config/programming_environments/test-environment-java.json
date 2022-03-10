@@ -1,0 +1,26 @@
+{
+  "name": "test-environment-java",
+  "published": false,
+  "editor_type": "text",
+  "title": "Test Environment: Java",
+  "categories": [
+    {
+      "key": "general",
+      "name": "General",
+      "color": "#72d8da",
+      "position": 0
+    },
+    {
+      "key": "org_code_media",
+      "name": "org.code.media",
+      "color": "#8871c6",
+      "position": 1
+    },
+    {
+      "key": "org_code_playground",
+      "name": "org.code.playground",
+      "color": "#1eae5c",
+      "position": 2
+    }
+  ]
+}

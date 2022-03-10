@@ -1,0 +1,38 @@
+{
+  "name": "test-environment-droplet",
+  "published": false,
+  "editor_type": "droplet",
+  "title": "Test Environment: Droplet",
+  "categories": [
+    {
+      "key": "ui_controls",
+      "name": "UI Controls",
+      "color": "#fff176",
+      "position": 0
+    },
+    {
+      "key": "turtle",
+      "name": "Turtle",
+      "color": "#4dd0e1",
+      "position": 1
+    },
+    {
+      "key": "sprites",
+      "name": "Sprites",
+      "color": "#f78183",
+      "position": 2
+    },
+    {
+      "key": "math",
+      "name": "Math",
+      "color": "#ffb74d",
+      "position": 3
+    },
+    {
+      "key": "unused",
+      "name": "Unused",
+      "color": "#d4c4c4",
+      "position": 4
+    }
+  ]
+}
