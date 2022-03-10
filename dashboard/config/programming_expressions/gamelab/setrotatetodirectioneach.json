@@ -3,7 +3,7 @@
   "name": "group.setRotateToDirectionEach()",
   "category": "Groups",
   "category_key": "groups",
-  "content": "Lock the rotation property of each sprite in the group to the sprite's movement direction.\r\n\r\nYou animations and games are more realistic if the sprites turn in the direction they are moving.",
+  "content": "Lock the rotation property of each sprite in the group to the sprite's movement direction.\n\nYour animations and games are more realistic if the sprites turn in the direction they are moving.",
   "examples": [
     {
       "name": "Swarm",
@@ -22,6 +22,9 @@
       "required": true,
       "description": "Should each sprite in the group rotate to its movement direction or not."
     }
+  ],
+  "parameters": [
+    "bool"
   ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Lock the rotation property of each sprite in the group to the sprite's movement direction.",
