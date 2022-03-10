@@ -249,6 +249,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   };
 
+  blocklyWrapper.Block.prototype.getFieldValue = function(name) {
+    return blocklyWrapper.Block.prototype.getTitleValue.call(this, name);
+  };
+
   blocklyWrapper.cdoUtils = {
     getToolboxWidth: function() {
       return Blockly.mainBlockSpaceEditor.getToolboxWidth();
