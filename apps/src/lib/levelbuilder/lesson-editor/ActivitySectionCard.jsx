@@ -526,6 +526,9 @@ class ActivitySectionCard extends Component {
           appendSlide={this.appendSlide}
           hasLessonPlan={hasLessonPlan}
           allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+          lastActivity={
+            this.props.activityPosition === this.props.activitiesCount
+          }
           lastActivitySection={
             this.props.activitySection.position ===
             this.props.activitySectionsCount
