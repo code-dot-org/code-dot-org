@@ -179,10 +179,10 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
       this.setHSV(184, 1.0, 0.74);
       var input = this.appendDummyInput();
       if (title) {
-        input.appendTitle(title);
+        input.appendField(title);
       }
       if (titleImage) {
-        input.appendTitle(new blockly.FieldImage(titleImage));
+        input.appendField(new blockly.FieldImage(titleImage));
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -708,7 +708,7 @@ const STANDARD_INPUT_TYPES = {
   },
   [DROPDOWN_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const dropdown = new blockly.FieldDropdown(inputConfig.options);
+      const options = sanitizeOptions(inputConfig.options);
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(dropdown, inputConfig.name);
@@ -779,8 +779,6 @@ const STANDARD_INPUT_TYPES = {
         getFieldInputChangeHandler(blockly, inputConfig.type)
       );
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(field, inputConfig.name);
     },
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
@@ -793,6 +791,8 @@ const STANDARD_INPUT_TYPES = {
   }
 };
 
+/**
+ * Adds a second value to options array elements if a second one does not exist.
 /**
  * Given a type string for a field input, returns an appropriate change handler function
  * for that type, which customizes the input field and provides validation on blur.
