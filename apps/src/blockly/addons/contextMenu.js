@@ -1,9 +1,11 @@
+import GoogleBlockly from 'blockly/core';
+
 /**
- * Option to undo previous action.
- * @alias Blockly.ContextMenuItems.registerUndo
+ * Example method that moved the registerDeletable from BlockSvg
+ * customContextMenu to here.
  */
  const registerDeletable = function() {
-    /** @type {!ContextMenuRegistry.RegistryItem} */
+    /** @type {!GoogleBlockly.ContextMenuRegistry.RegistryItem} */
     const deletableOption = {
       displayText: function(scope) {
         // isDeletale is a built in Blockly function that checks whether the block
@@ -19,15 +21,15 @@
         }
         return 'hidden';
       },
-      callback: function(/** @type {!ContextMenuRegistry.Scope} */
+      callback: function(/** @type {!GoogleBlockly.ContextMenuRegistry.Scope} */
                          scope) {
         scope.block.setDeletable(!this.isDeletable());
       },
-      scopeType: ContextMenuRegistry.ScopeType.BLOCK,
+      scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
       id: 'blockDeletable',
       weight: 1,
     };
-    ContextMenuRegistry.registry.register(deletableOption);
+    GoogleBlockly.ContextMenuRegistry.registry.register(deletableOption);
   };
 
 const registerAllContextMenuItems = function() {
