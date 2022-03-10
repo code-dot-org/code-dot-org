@@ -59,7 +59,8 @@ class ActivitySectionCardButtons extends Component {
     hasLessonPlan: PropTypes.bool.isRequired,
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
-    lastActivitySection: PropTypes.bool.isRequired
+    lastActivitySection: PropTypes.bool.isRequired,
+    lastActivity: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -186,13 +187,18 @@ class ActivitySectionCardButtons extends Component {
   };
 
   render() {
-    const {allowMajorCurriculumChanges, lastActivitySection} = this.props;
+    const {
+      allowMajorCurriculumChanges,
+      lastActivitySection,
+      lastActivity
+    } = this.props;
 
     return (
       <div>
         <div style={styles.bottomControls}>
           <span>
-            {(allowMajorCurriculumChanges || lastActivitySection) && (
+            {(allowMajorCurriculumChanges ||
+              (lastActivity && lastActivitySection)) && (
               <AddButton
                 className="uitest-open-add-level-button"
                 displayText="Level"
