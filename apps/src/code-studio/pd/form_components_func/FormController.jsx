@@ -511,6 +511,8 @@ const FormController = props => {
    */
   const setPage = i => {
     const newPage = Math.min(Math.max(i, 0), pageComponents.length - 1);
+    setShowDataWasLoadedMessage(false);
+    setShowSavedMessage(false);
 
     const currentPageValid =
       validateOnSubmitOnly || validateCurrentPageRequiredFields();
