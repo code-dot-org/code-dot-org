@@ -1,0 +1,69 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: Kinesis Firehose Delivery Stream for browser events.
+
+Parameters:
+  DeliveryStreamName:
+    Type: String
+    Default: analysis-events
+  AbuseAlarmTopic:
+    Type: String
+    Default: CDO-WorkdayUrgent
+
+Resources:
+  AnonymousFirehoseUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: anonymous-firehose-client
+      Policies:
+        - PolicyName: FirehosePutOnly
+          Policydocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - firehose:DescribeDeliveryStream
+                  - firehose:PutRecord
+                  - firehose:PutRecordBatch
+                Resource:
+                  - !Sub arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/${DeliveryStreamName}
+
+  DeliveryStreamPutRecordAlarm:
+    Type: AWS::Cloudwatch::Alarm
+    Properties: 
+      AlarmName: AnonymousFirehosePutRequests
+      AlarmDescription: Possible abuse of anonymous-firehose-client user, exposed in firehose.js
+      Namespace: AWS/Firehose
+      Dimensions: 
+        - Name: DeliveryStreamName
+          Value: !Ref DeliveryStreamName
+      MetricName: PutRecord.Requests
+      Statistic: Sum
+      Period: 300
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 43000
+      EvaluationPeriods: 1
+      Unit: Count                
+      TreatMissingData: missing
+      AlarmActions: 
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:${AbuseAlarmTopic}"
+
+  DeliveryStreamPutRecordBatchAlarm:
+    Type: AWS::Cloudwatch::Alarm
+    Properties: 
+      AlarmName: AnonymousFirehosePutBatchRequests
+      AlarmDescription: Possible abuse of anonymous-firehose-client user, exposed in firehose.js
+      Namespace: AWS/Firehose
+      Dimensions: 
+        - Name: DeliveryStreamName
+          Value: !Ref DeliveryStreamName
+      MetricName: PutRecordBatch.Requests
+      Statistic: Sum
+      Period: 300
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 9500
+      EvaluationPeriods: 1
+      Unit: Count                
+      TreatMissingData: missing
+      AlarmActions: 
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:${AbuseAlarmTopic}"
