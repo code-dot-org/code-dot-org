@@ -334,10 +334,10 @@ const FormController = props => {
       setErrors(data.responseJSON.errors.form_data);
       setErrorHeader(i18n.formErrorsBelow());
     } else if (data?.status === 409) {
-      // We are trying to create an application that has already been created
+      // trying to create an application that has already been created
       setGlobalError(true);
       setErrorHeader(
-        'We found an application that you already started. Reload the page to continue the form you have saved.'
+        'We found an application that you already started. Reload the page to continue.'
       );
     } else {
       // Otherwise, something unknown went wrong on the server
