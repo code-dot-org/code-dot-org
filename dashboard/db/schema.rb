@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_220633) do
+ActiveRecord::Schema.define(version: 2022_03_11_164141) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1363,6 +1363,19 @@ ActiveRecord::Schema.define(version: 2022_03_01_220633) do
     t.datetime "updated_at", null: false
     t.boolean "published", default: false, null: false
     t.index ["name"], name: "index_programming_environments_on_name", unique: true
+  end
+
+  create_table "programming_expression_methods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "programming_expression_id", null: false
+    t.string "key", null: false
+    t.string "name"
+    t.string "syntax"
+    t.string "external_link"
+    t.text "parameters"
+    t.text "examples"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key", "programming_expression_id"], name: "index_programming_expression_methods_on_key_and_expression_id", unique: true
   end
 
   create_table "programming_expressions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
