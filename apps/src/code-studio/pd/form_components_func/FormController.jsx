@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
@@ -83,9 +83,11 @@ const FormController = props => {
   } = props;
 
   // We use functions here as the initial value so that these values are only calculated once
-  const [currentPage, setCurrentPage] = useState(
-    () => getInitialStored(sessionStorageKey, 'currentPage') || 0
+  const initialPage = useMemo(
+    () => getInitialStored(sessionStorageKey, 'currentPage') || 0,
+    []
   );
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const [data, setData] = useState(() => ({
     ...getInitialStored(sessionStorageKey, 'data'),
     ...getInitialData()
@@ -118,9 +120,8 @@ const FormController = props => {
   // do this once on mount only
   useEffect(() => {
     onInitialize();
-    onSetPageInternal(currentPage);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    onSetPageInternal(initialPage);
+  }, [onInitialize, onSetPageInternal, initialPage]);
 
   useEffect(() => {
     if (
