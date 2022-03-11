@@ -16,9 +16,7 @@ describe('ReferenceGuideEditAll', () => {
     const wrapper = isolateComponent(
       <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
-    expect(wrapper.findOne('.categories-box').content()).to.equal(
-      'hello_world'
-    );
+    expect(wrapper.findOne('.guide-box').content()).to.equal('hello_world');
   });
 
   it('sets up all the actions for a ref guide', () => {
@@ -56,7 +54,7 @@ describe('ReferenceGuideEditAll', () => {
       <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(
-      wrapper.findAll('.categories-box').map(box => box.content())
+      wrapper.findAll('.guide-box').map(box => box.content())
     ).to.deep.equal(['a', 'b', 'c', 'e', 'f', 'd']);
 
     // input order shouldn't matter
@@ -74,7 +72,7 @@ describe('ReferenceGuideEditAll', () => {
       <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(
-      wrapper.findAll('.categories-box').map(box => box.content())
+      wrapper.findAll('.guide-box').map(box => box.content())
     ).to.deep.equal(['a', 'b', 'c', 'e', 'f', 'g', 'h', 'd']);
   });
 
@@ -91,7 +89,7 @@ describe('ReferenceGuideEditAll', () => {
       <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(
-      wrapper.findAll('.categories-box').map(box => box.props.style.paddingLeft)
+      wrapper.findAll('.guide-box').map(box => box.props.style.paddingLeft)
     ).to.deep.equal(['4px', '24px', '24px', '44px', '44px', '24px']); // a b c e f d
   });
 });
