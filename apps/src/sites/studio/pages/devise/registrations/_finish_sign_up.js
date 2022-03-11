@@ -144,12 +144,6 @@ $(document).ready(() => {
     }
   }
 
-  // Optimizely-related code for sharing email with regional partners experiment
-  function optimizelyCountSuccessSignupWithRegPartnerOpt() {
-    window['optimizely'] = window['optimizely'] || [];
-    window['optimizely'].push({type: 'event', eventName: 'successSignUp'});
-  }
-
   // Keep if sign-up user type experiment favors original (just func. below)
   $('#user_user_type').change(function() {
     var value = $(this).val();
@@ -223,6 +217,12 @@ $(document).ready(() => {
   function optimizelyCountUserTypeSelection(userType) {
     window['optimizely'] = window['optimizely'] || [];
     window['optimizely'].push({type: 'event', eventName: userType});
+  }
+
+  // Optimizely-related code for sharing email with regional partners experiment
+  function optimizelyCountSuccessSignupWithRegPartnerOpt() {
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({type: 'event', eventName: 'successSignUp'});
   }
 
   function fadeInFields(fields) {
