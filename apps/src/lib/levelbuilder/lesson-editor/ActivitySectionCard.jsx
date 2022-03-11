@@ -438,7 +438,8 @@ class ActivitySectionCard extends Component {
                 />
               </span>
             )}
-            {allowMajorCurriculumChanges && (
+            {(allowMajorCurriculumChanges ||
+              activitySection.scriptLevels.length === 0) && (
               <OrderControls
                 name={
                   this.props.activitySection.displayName ||

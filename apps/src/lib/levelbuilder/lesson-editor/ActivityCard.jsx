@@ -162,18 +162,15 @@ class ActivityCard extends Component {
               allowMajorCurriculumChanges={allowMajorCurriculumChanges}
             />
           ))}
-          {(allowMajorCurriculumChanges ||
-            this.props.activity.position === this.props.activitiesCount) && (
-            <button
-              onMouseDown={this.handleAddActivitySection.bind()}
-              className="btn add-activity-section"
-              style={styles.addButton}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Activity Section
-            </button>
-          )}
+          <button
+            onMouseDown={this.handleAddActivitySection.bind()}
+            className="btn add-activity-section"
+            style={styles.addButton}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Activity Section
+          </button>
         </div>
       </div>
     );
