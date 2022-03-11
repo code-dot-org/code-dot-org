@@ -61,6 +61,8 @@ describe('FormController', () => {
   });
 
   const saveButtonText = 'Save and Return Later';
+  const appAlreadyExistsErrorText =
+    'We found an application that you already started. Reload the page to continue.';
   const applicationId = 7;
   const getCurrentPage = () => form.findOne('Pagination').props.activePage;
   const getData = page => form.findOne(page).props.data;
@@ -240,11 +242,28 @@ describe('FormController', () => {
       server.restore();
     });
 
+    it('Shows error message if user tries to save an application that already exists', () => {
+      form = isolateComponent(<FormController {...defaultProps} />);
+
+      const server = sinon.fakeServer.create();
+      server.respondWith(serverResponse(409));
+
+      form.findAll('Button')[1].props.onClick();
+      server.respond();
+
+      const alerts = form.findAll('Alert');
+      expect(alerts).to.have.length(2);
+      expect(alerts[0].content()).to.contain(appAlreadyExistsErrorText);
+
+      server.restore();
+    });
+
     [
       serverResponse(400, {
         errors: {form_data: ['an error']}
       }),
-      serverResponse(500)
+      serverResponse(500),
+      serverResponse(409)
     ].forEach(response => {
       const statusNumber = response[0];
       it(`Re-enables the save button after unsuccessful save with ${statusNumber} error`, () => {
@@ -381,11 +400,24 @@ describe('FormController', () => {
         expect(form.findAll('Spinner')).to.have.length(1);
       });
 
+      it('Shows error message if user tries to submit an application that already exists', () => {
+        setupValid();
+        server.respondWith(serverResponse(409));
+
+        triggerSubmit();
+        server.respond();
+
+        const alerts = form.findAll('Alert');
+        expect(alerts).to.have.length(2);
+        expect(alerts[0].content()).to.contain(appAlreadyExistsErrorText);
+      });
+
       [
         serverResponse(400, {
           errors: {form_data: ['an error']}
         }),
-        serverResponse(500)
+        serverResponse(500),
+        serverResponse(409)
       ].forEach(response => {
         const statusNumber = response[0];
         it(`Re-enables the submit button on ${statusNumber} error and removes spinner`, () => {
