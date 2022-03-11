@@ -111,13 +111,20 @@ module Pd::Application
 
     test 'date_applied finds date of first unreviewed status' do
       tomorrow = Date.tomorrow.to_time
+      next_day = tomorrow + 1.day
       application = create :pd_teacher_application, status: 'incomplete'
       assert_nil application.date_applied
 
       Timecop.freeze(tomorrow) do
         application.update!(status: 'unreviewed')
-        assert_equal tomorrow, application.date_applied.to_time
       end
+
+      Timecop.freeze(next_day) do
+        application.update!(status: 'reopened')
+        application.update!(status: 'unreviewed')
+      end
+
+      assert_equal tomorrow, application.date_applied.to_time
     end
 
     test 'accepted_at updates times' do
