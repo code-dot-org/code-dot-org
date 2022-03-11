@@ -90,10 +90,14 @@ export const commands = {
         let type = typeof speechText;
         switch (type) {
           case 'string':
-            result = speechText.includes(value);
+            if (speechText.includes(value)) {
+              result = true;
+            }
             break;
           case 'number':
-            result = speechText === value;
+            if (speechText === value) {
+              result = true;
+            }
             break;
           default:
             break;
