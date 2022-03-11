@@ -1,7 +1,7 @@
 {
   "key": "mouseDidMove",
   "name": "mouseDidMove()",
-  "category": "World",
+  "category": "Game Lab",
   "category_key": "game_lab",
   "content": "Checks if the mouse moved.\r\n\r\nSome interactive games use the mouse for the user to control the game.",
   "examples": [
@@ -26,6 +26,6 @@
   ],
   "return_value": "Boolean true or false.",
   "short_description": "Checks if the mouse moved.",
-  "syntax": "mouseDidMove",
+  "syntax": "mouseDidMove()",
   "tips": "- When testing your games that use keyboard or mouse input make sure you click in the display area before you run, otherwise the Workspace will record your keyboard and mouse actions."
 }
