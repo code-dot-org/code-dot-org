@@ -58,6 +58,11 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render json: {display_theme: @user&.display_theme}
   end
 
+  # GET /api/v1/users/<user_id>/mute_music
+  def get_mute_music
+    render json: {mute_music: !!@user.mute_music}
+  end
+
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
   def get_donor_teacher_banner_details
     if current_user.teacher?

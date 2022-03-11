@@ -2205,7 +2205,7 @@ Studio.init = function(config) {
     skin.assetUrl,
     levelTracks,
     undefined,
-    config.muteMusic || cookies.get(muteMusic) === 'true'
+    config.level.muteMusic || cookies.get(muteMusic) === 'true'
   );
 
   /**
