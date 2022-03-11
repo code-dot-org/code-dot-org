@@ -53,20 +53,20 @@ export default function ReferenceGuideEditAll({referenceGuides}) {
         />
       </div>
 
-      <div className="categories-table">
+      <div className="guides-table">
         <span className="header">Actions</span>
-        <span className="header">Categories</span>
+        <span className="header">Reference Guides</span>
         {organizedGuides.map(guide => {
           return [
             <div key={`${guide.key}-actions`} className="actions-box">
               <MiniIconButton icon="pencil-square-o" alt="edit" />
               <MiniIconButton icon="trash" alt="delete" />
-              <MiniIconButton icon="caret-up" alt="move category up" />
-              <MiniIconButton icon="caret-down" alt="move category down" />
+              <MiniIconButton icon="caret-up" alt="move guide up" />
+              <MiniIconButton icon="caret-down" alt="move guide down" />
             </div>,
             <div
-              key={`${guide.key}-categories`}
-              className="categories-box"
+              key={`${guide.key}-guide`}
+              className="guide-box"
               style={{paddingLeft: `${guide.level * 20 + 4}px`}}
             >
               {guide.display_name}
