@@ -3,7 +3,6 @@
 # and those that do not (code_review_project_owner_and_teacher_scenarios.feature)
 
 @no_mobile
-@no_ie
 Feature: Code review (project owner/teacher scenarios)
 
   # At the end of the setup, we will have created

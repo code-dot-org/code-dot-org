@@ -1,6 +1,5 @@
 @eyes
 @no_mobile
-@no_ie
 Feature: Code Review Eyes
 
   @no_circle
