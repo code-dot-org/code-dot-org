@@ -79,9 +79,8 @@ $(document).ready(() => {
       return false;
     }
 
-    // Optimizely-related code for new sign-up user-type buttons (start)
+    // Track user type selection in Optimizely Event
     optimizelyCountUserTypeSelection(getUserType());
-    // Optimizely-related code for new sign-up user-type buttons (end)
 
     // Optimizely-related code for teacher opting to share email with regional partner (start)
     optimizelyCountSuccessSignupWithRegPartnerOpt();
@@ -134,7 +133,6 @@ $(document).ready(() => {
     }
   }
 
-  // Keep if sign-up user type experiment favors variant (start)
   // Event listeners for changing the user type
   document.addEventListener('selectUserTypeTeacher', e => {
     $('#user_user_type').val('teacher');
@@ -147,6 +145,7 @@ $(document).ready(() => {
     setUserType('student');
   });
 
+  // Style selected user type button to show it has been clicked
   function styleSelectedUserTypeButton(value) {
     if (value === 'teacher') {
       teacherButton.classList.add('select-user-type-button-selected');
@@ -156,9 +155,8 @@ $(document).ready(() => {
       teacherButton.classList.remove('select-user-type-button-selected');
     }
   }
-  // Keep if sign-up user type experiment favors variant (end)
 
-  // Optimizely-related code for new sign-up user-type buttons
+  // Optimizely Event to track user type selection
   function optimizelyCountUserTypeSelection(userType) {
     window['optimizely'] = window['optimizely'] || [];
     window['optimizely'].push({type: 'event', eventName: userType});
