@@ -62,7 +62,8 @@ class DanceVisualizationColumn extends React.Component {
     levelRunIsStarting: PropTypes.bool,
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
-    userType: PropTypes.string.isRequired
+    userType: PropTypes.string.isRequired,
+    under13: PropTypes.bool.isRequired
   };
 
   state = {
@@ -83,7 +84,8 @@ class DanceVisualizationColumn extends React.Component {
     // userType - 'teacher', assumed age > 13. 'student', age > 13.
     //            'student_y', age < 13. 'unknown', signed out users
     const signedInOver13 =
-      this.props.userType === 'teacher' || this.props.userType === 'student';
+      this.props.userType === 'teacher' ||
+      (this.props.userType === 'student' && !this.props.under13);
     const signedOutAge = signedOutOver13();
     // Student is signed out and <13 or the override filter is on
     if (!signedOutAge) {
@@ -178,6 +180,7 @@ export default connect(state => ({
   songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,
   userType: state.currentUser.userType,
+  under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.songs.runIsStarting
 }))(DanceVisualizationColumn);
