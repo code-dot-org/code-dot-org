@@ -4187,6 +4187,32 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
+  test 'index_user_levels_by_level_id returns most recently updated user levels' do
+    user = create :user
+    level = create :level
+    script = create :script
+    user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 2.days.ago
+    user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 2.days.ago
+    user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+
+    result = User.index_user_levels_by_level_id([user_level_1, user_level_2, user_level_3])
+
+    assert_equal({level.id => user_level_3}, result)
+  end
+
+  test 'index_user_levels_by_level_id returns first created user level if updated_at is identical' do
+    user = create :user
+    level = create :level
+    script = create :script
+    user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+    user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+    user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+
+    result = User.index_user_levels_by_level_id([user_level_1, user_level_2, user_level_3])
+
+    assert_equal({level.id => user_level_1}, result)
+  end
+
   test 'find_by_email_or_hashed_email returns nil when no user is found' do
     assert_nil User.find_by_email_or_hashed_email 'nonexistent@example.org'
   end

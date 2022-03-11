@@ -34,7 +34,7 @@ export default function CourseTypeEditor({
   handleInstructionTypeChange,
   handleInstructorAudienceChange,
   handleParticipantAudienceChange,
-  canChangeParticipantType
+  allowMajorCurriculumChanges
 }) {
   return (
     <div>
@@ -46,6 +46,7 @@ export default function CourseTypeEditor({
             value={instructionType}
             style={styles.dropdown}
             onChange={handleInstructionTypeChange}
+            disabled={!allowMajorCurriculumChanges}
           >
             {Object.values(InstructionType).map(state => (
               <option key={state} value={state}>
@@ -87,6 +88,7 @@ export default function CourseTypeEditor({
             value={instructorAudience}
             style={styles.dropdown}
             onChange={handleInstructorAudienceChange}
+            disabled={!allowMajorCurriculumChanges}
           >
             {Object.values(InstructorAudience).map(audience => (
               <option key={audience} value={audience}>
@@ -105,11 +107,10 @@ export default function CourseTypeEditor({
         <label>
           Who will participate in this course?
           <select
-            className="participantAudienceSelector"
             value={participantAudience}
             style={styles.dropdown}
             onChange={handleParticipantAudienceChange}
-            disabled={!canChangeParticipantType}
+            disabled={!allowMajorCurriculumChanges}
           >
             {Object.values(ParticipantAudience).map(audience => (
               <option key={audience} value={audience}>
@@ -139,7 +140,7 @@ CourseTypeEditor.propTypes = {
   handleInstructionTypeChange: PropTypes.func,
   handleInstructorAudienceChange: PropTypes.func,
   handleParticipantAudienceChange: PropTypes.func,
-  canChangeParticipantType: PropTypes.bool.isRequired
+  allowMajorCurriculumChanges: PropTypes.bool.isRequired
 };
 
 const styles = {
