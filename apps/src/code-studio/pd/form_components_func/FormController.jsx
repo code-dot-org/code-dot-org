@@ -511,6 +511,8 @@ const FormController = props => {
    */
   const setPage = i => {
     const newPage = Math.min(Math.max(i, 0), pageComponents.length - 1);
+    setShowDataWasLoadedMessage(false);
+    setShowSavedMessage(false);
 
     const currentPageValid =
       validateOnSubmitOnly || validateCurrentPageRequiredFields();
@@ -539,7 +541,7 @@ const FormController = props => {
       >
         <p>
           {savedStatus === 'reopened'
-            ? 'Your Regional Partner has requested more information.  Please update and resubmit.'
+            ? 'Your Regional Partner has requested more information. Please update and resubmit.'
             : 'We found an application you started! Your saved responses have been loaded.'}
         </p>
       </Alert>

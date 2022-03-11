@@ -16,6 +16,9 @@
               "width": "रुंदी",
               "height": "उंची"
             }
+          },
+          "draw a circle": {
+            "name": "एक वर्तुळ काढा"
           }
         },
         "Course 4 Play Lab Params 3": {
@@ -35,6 +38,11 @@
         "Course 4 SCF 3": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "Course E: Play Lab Project": {
@@ -52,6 +60,16 @@
             "parameters": {
               "size": "आकार"
             }
+          },
+          "n-sided shape": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a loop": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "InspirationalArtwork_2018": {
@@ -59,38 +77,96 @@
             "parameters": {
               "size": "आकार"
             }
+          },
+          "draw a loop": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "NEW Course 4 Artist Params 10": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw a hexagon": {
+            "name": "एक षटकोन काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "NEW Course 4 Artist Params 11": {
           "do something": {
-            "name": "काहीतरी करा"
+            "name": "काहीतरी करा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a polygon": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "NEW Course 4 Artist Params 15": {
           "draw a pinwheel": {
             "parameters": {
-              "repeat": "पुन्हा करा"
+              "repeat": "पुन्हा करा",
+              "length": "लांबी"
             }
           },
           "draw a star": {
             "parameters": {
-              "points": "गुण"
+              "points": "गुण",
+              "length": "लांबी"
+            },
+            "name": "एक चांदणी काढा"
+          },
+          "draw a circle": {
+            "name": "एक वर्तुळ काढा"
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
             }
           }
         },
         "NEW Course 4 Artist Params 2": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "description": "एक त्रिकोण काढा"
           }
         },
         "NEW Course 4 Artist Params 9": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "NEW Course 4 Play Lab Params 11": {
@@ -111,12 +187,41 @@
         "New Artist Project": {
           "draw a pinwheel": {
             "parameters": {
-              "repeat": "पुन्हा करा"
+              "repeat": "पुन्हा करा",
+              "length": "लांबी"
             }
           },
           "draw a star": {
             "parameters": {
-              "points": "गुण"
+              "points": "गुण",
+              "length": "लांबी"
+            },
+            "name": "एक चांदणी काढा"
+          },
+          "draw a circle": {
+            "name": "एक वर्तुळ काढा"
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
             }
           }
         },
@@ -178,6 +283,9 @@
         "courseE_artist_concept1": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw a hexagon": {
+            "name": "एक षटकोन काढा"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -233,16 +341,25 @@
         "courseE_artist_functions8a_2018": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा"
           }
         },
         "courseE_artist_functions8a_2019": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा"
           }
         },
         "courseE_artist_functions8a_2020": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा"
           }
         },
         "courseE_artist_functions8b_2018": {
@@ -418,6 +535,14 @@
             "parameters": {
               "size": "आकार"
             }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          },
+          "black outline": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "courseF_artist_fwp2": {
@@ -433,6 +558,17 @@
             "parameters": {
               "size": "आकार"
             }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "courseF_artist_fwp3": {
@@ -445,22 +581,63 @@
             "parameters": {
               "size": "आकार"
             }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "black outline": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "courseF_artist_fwp9": {
           "draw a pinwheel": {
             "parameters": {
-              "repeat": "पुन्हा करा"
+              "repeat": "पुन्हा करा",
+              "length": "लांबी"
             }
           },
           "draw a spiral edge": {
             "parameters": {
-              "min": "किमान"
+              "min": "किमान",
+              "length": "लांबी"
             }
           },
           "draw a star": {
             "parameters": {
-              "points": "गुण"
+              "points": "गुण",
+              "length": "लांबी"
+            },
+            "name": "एक चांदणी काढा"
+          },
+          "draw a circle": {
+            "name": "एक वर्तुळ काढा"
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
             }
           }
         },
@@ -472,6 +649,11 @@
         "courseF_artist_fwp_challenge2": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw an octagon": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "courseF_bee_functions8a": {
@@ -517,12 +699,41 @@
         "CourseD_EOC_artist": {
           "draw a pinwheel": {
             "parameters": {
-              "repeat": "पुन्हा करा"
+              "repeat": "पुन्हा करा",
+              "length": "लांबी"
             }
           },
           "draw a star": {
             "parameters": {
-              "points": "गुण"
+              "points": "गुण",
+              "length": "लांबी"
+            },
+            "name": "एक चांदणी काढा"
+          },
+          "draw a circle": {
+            "name": "एक वर्तुळ काढा"
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
             }
           }
         },
@@ -1144,6 +1355,12 @@
           },
           "square": {
             "name": "चौरस"
+          },
+          "diamond": {
+            "name": "हिरा"
+          },
+          "draw a house": {
+            "name": "एक घर काढा"
           }
         },
         "Geometric Sun_2018": {
@@ -1152,6 +1369,12 @@
           },
           "square": {
             "name": "चौरस"
+          },
+          "diamond": {
+            "name": "हिरा"
+          },
+          "draw a house": {
+            "name": "एक घर काढा"
           }
         },
         "Standalone_Artist_9": {
@@ -1205,14 +1428,16 @@
         "courseF_artist_fwp7": {
           "draw a spiral edge": {
             "parameters": {
-              "min": "किमान"
+              "min": "किमान",
+              "length": "लांबी"
             }
           }
         },
         "courseF_artist_fwp8": {
           "draw a spiral edge": {
             "parameters": {
-              "min": "किमान"
+              "min": "किमान",
+              "length": "लांबी"
             }
           }
         },
@@ -1312,6 +1537,405 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "गोळा करा"
+          }
+        },
+        "2-3 Artist 3.4": {
+          "draw a circle": {
+            "name": "एक वर्तुळ काढा"
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "एक षटकोन काढा"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "एक षटकोन काढा"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "एक फूल काढा"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "एक हिमकण काढा"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "एक फूल काढा"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "एक झाड काढा"
+          }
+        },
+        "4-5 Artist 7": {
+          "draw a circle": {
+            "name": "एक वर्तुळ काढा"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "एक षटकोन काढा"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": " परागकण मिळवा",
+            "parameters": {
+              "counter": "काऊंटर"
+            }
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a hexagon": {
+            "name": "एक षटकोन काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a sqaure": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "एक फूल काढा"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "एक षटकोन काढा"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "एक चांदणी काढा"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "parameters": {
+              "length": "लांबी"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         }
       }

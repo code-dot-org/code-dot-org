@@ -2,12 +2,14 @@ import {
   WebSocketMessageType,
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
-  ExecutionType
+  ExecutionType,
+  AuthorizerSignalType
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
+import experiments from '@cdo/apps/util/experiments';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -49,6 +51,9 @@ export default class JavabuilderConnection {
       return;
     }
 
+    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
+    this.onNewlineMessage();
+
     $.ajax({
       url: '/javabuilder/access_token',
       type: 'get',
@@ -59,7 +64,9 @@ export default class JavabuilderConnection {
         levelId: this.levelId,
         options: this.options,
         executionType: this.executionType,
-        useDashboardSources: true,
+        useDashboardSources: !experiments.isEnabled(
+          experiments.DECOUPLED_JAVABUILDER
+        ),
         miniAppType: this.miniAppType
       }
     })
@@ -182,6 +189,9 @@ export default class JavabuilderConnection {
           this.onNewlineMessage();
         }
         break;
+      case WebSocketMessageType.AUTHORIZER:
+        this.onAuthorizerMessage(data.value, data.detail);
+        break;
       default:
         break;
     }
@@ -250,5 +260,27 @@ export default class JavabuilderConnection {
         this.setIsTesting(false);
         break;
     }
+  }
+
+  onAuthorizerMessage(value, detail) {
+    let message = '';
+    switch (value) {
+      case AuthorizerSignalType.TOKEN_USED:
+        message = javalabMsg.authorizerTokenUsed();
+        break;
+      case AuthorizerSignalType.NEAR_LIMIT:
+        message = javalabMsg.authorizerNearLimit({
+          attemptsLeft: detail.remaining
+        });
+        break;
+      case AuthorizerSignalType.USER_BLOCKED:
+        message = javalabMsg.userBlocked();
+        break;
+      case AuthorizerSignalType.CLASSROOM_BLOCKED:
+        message = javalabMsg.classroomBlocked();
+        break;
+    }
+    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    this.onNewlineMessage();
   }
 }

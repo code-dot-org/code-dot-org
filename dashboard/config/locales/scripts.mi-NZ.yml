@@ -2755,3 +2755,10 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Ngā Taurangi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi

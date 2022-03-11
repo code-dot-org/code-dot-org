@@ -19,6 +19,8 @@ class Ability
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
+      ProgrammingEnvironment, # see override below
+      ProgrammingExpression, # see override below
       ReferenceGuide, # see override below
       :reports,
       User,
@@ -75,8 +77,12 @@ class Ability
       can? :update, level
     end
 
-    can [:show_by_keys], ProgrammingExpression do |expression|
-      can? :read, expression
+    can [:read], ProgrammingEnvironment do |environment|
+      environment.published || user.permission?(UserPermission::LEVELBUILDER)
+    end
+
+    can [:read, :show_by_keys], ProgrammingExpression do |expression|
+      can? :read, expression.programming_environment
     end
 
     if user.persisted?

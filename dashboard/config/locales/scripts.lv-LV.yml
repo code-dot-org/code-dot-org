@@ -2592,3 +2592,7 @@ lv:
               display_name: Digitālā pilsonība
             lessonGroup-8:
               display_name: Mainīgie
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Mainīgie

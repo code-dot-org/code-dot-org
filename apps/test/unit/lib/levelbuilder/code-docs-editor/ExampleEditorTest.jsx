@@ -65,12 +65,9 @@ describe('ExampleEditor', () => {
     );
   });
 
-  it('displays image upload dialog when button is pressed', () => {
+  it('displays ImageInput for image', () => {
     const wrapper = shallow(<ExampleEditor {...defaultProps} />);
-    const uploadButton = wrapper.find('Button').first();
-    expect(uploadButton).to.not.be.null;
-    uploadButton.simulate('click');
-    expect(wrapper.find('UploadImageDialog').length).to.equal(1);
+    expect(wrapper.find('ImageInput').length).to.equal(1);
   });
 
   it('displays a select for display type', () => {

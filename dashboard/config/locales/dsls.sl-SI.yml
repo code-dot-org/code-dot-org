@@ -61,6 +61,14 @@ sl-SI:
         questions:
         - text: Kateri komplet kart je po pravilniku igre točkovan pravilno?
         title: Izbirno vprašanje
+        teacher_markdown: |-
+          ## Učitelji:
+
+          Študentje morda delujejo napačno, in to je odličen kraj, da to razkrijete. Če študentje mislijo, da *ni* pravilnega odgovora, potem verjetno še ne razumejo pogojnikov.
+
+          Tukaj je videoposnetek, ki pomaga razložiti, kaj se dogaja v tem vprašanju:
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - {}
@@ -68,7 +76,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kako bi poenostavil/-a to zaporedje z zankami?
         title: Izbirno vprašanje
       2-3 Graph Paper Match 1:
         answers:
@@ -836,7 +844,7 @@ sl-SI:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kako bi poenostavil/-a to zaporedje z zankami?
         title: Izbirno vprašanje
       K-1 Happy Maps Multi 1:
         answers:
