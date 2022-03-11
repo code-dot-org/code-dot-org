@@ -50,8 +50,13 @@
       "description": "The alpha transparency, a number between 0 (fully transparent) and 1(fully opaque), of the color. Default is 1."
     }
   ],
+  "parameters": [
+    "r",
+    "g",
+    "b"
+  ],
   "return_value": "Returns a color. Usually used as a parameter to background(), fill(), or stroke().",
   "short_description": "Using RGBA values, creates colors for using in the background, shapes, lines and points.",
-  "syntax": "rgb(r, g, b)",
+  "syntax": "rgb(r, g, b, a)",
   "tips": "- If any of the RGBA values is out of range (0-255), then the value is rounded into range. For example, 300 becomes 255 and -100 becomes 0."
 }

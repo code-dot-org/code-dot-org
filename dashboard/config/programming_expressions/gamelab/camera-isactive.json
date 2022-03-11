@@ -17,6 +17,6 @@
   ],
   "return_value": "Boolean true or false.",
   "short_description": "Returns true if the camera is active, else returns false.",
-  "syntax": "camera.isActive",
+  "syntax": "camera.isActive()",
   "tips": "- The camera is automatically turned on at the start of each `draw()` loop. "
 }

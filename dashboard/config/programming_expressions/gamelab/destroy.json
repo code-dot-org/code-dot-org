@@ -26,5 +26,5 @@
   ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called",
   "short_description": "Removes the sprite from the animation.",
-  "syntax": "destroy"
+  "syntax": "sprite.destroy()"
 }
