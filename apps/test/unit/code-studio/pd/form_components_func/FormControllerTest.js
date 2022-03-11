@@ -73,6 +73,7 @@ describe('FormController', () => {
     {'Content-Type': 'application/json'},
     JSON.stringify(data)
   ];
+  const clickSaveButton = () => form.findAll('Button')[1].props.onClick();
 
   it('Initially renders the first page', () => {
     form = isolateComponent(<FormController {...defaultProps} />);
@@ -176,10 +177,24 @@ describe('FormController', () => {
     );
 
     alert.props.onDismiss();
-    expect(form.exists('Alert')).to.be.false;
+    expect(form.findAll('Alert')).to.have.length(0);
   });
 
-  it('Shows data was loaded message if status is reopened', () => {
+  it('Removes data was loaded message after first page', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        applicationId={applicationId}
+        allowPartialSaving={true}
+        validateOnSubmitOnly={true}
+      />
+    );
+    expect(form.findOne('Alert')).to.exist;
+    setPage(1);
+    expect(form.findAll('Alert')).to.have.length(0);
+  });
+
+  it('Shows reopened message if status is reopened, and user can close message', () => {
     form = isolateComponent(
       <FormController
         {...defaultProps}
@@ -195,7 +210,22 @@ describe('FormController', () => {
     );
 
     alert.props.onDismiss();
-    expect(form.exists('Alert')).to.be.false;
+    expect(form.findAll('Alert')).to.have.length(0);
+  });
+
+  it('Removes reopened message after first page', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        applicationId={applicationId}
+        savedStatus={'reopened'}
+        allowPartialSaving={true}
+        validateOnSubmitOnly={true}
+      />
+    );
+    expect(form.findOne('Alert')).to.exist;
+    setPage(1);
+    expect(form.findAll('Alert')).to.have.length(0);
   });
 
   it('Does not show data was loaded message if there is no application id', () => {
@@ -206,21 +236,21 @@ describe('FormController', () => {
         validateOnSubmitOnly={true}
       />
     );
-    expect(form.exists('Alert')).to.be.false;
+    expect(form.findAll('Alert')).to.have.length(0);
   });
 
   describe('Saving', () => {
     it('Sends incomplete status on save', () => {
       sinon.spy($, 'ajax');
       form = isolateComponent(<FormController {...defaultProps} />);
-      form.findAll('Button')[1].props.onClick(); // save button
+      clickSaveButton();
       const serverCalledWith = $.ajax.getCall(0).args[0];
       expect(JSON.parse(serverCalledWith.data).status).to.equal('incomplete');
     });
 
     it('Disables the save button during save and renders spinner', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
-      form.findAll('Button')[1].props.onClick();
+      clickSaveButton();
       expect(form.findAll('Button')[1].props).to.be.disabled;
       expect(form.findAll('Spinner')).to.have.length(1);
     });
@@ -231,7 +261,7 @@ describe('FormController', () => {
       const server = sinon.fakeServer.create();
       server.respondWith(serverResponse(201));
 
-      form.findAll('Button')[1].props.onClick();
+      clickSaveButton();
       server.respond();
 
       expect(form.findAll('Button')[1].props).to.be.disabled;
@@ -257,7 +287,7 @@ describe('FormController', () => {
           })
         );
 
-        form.findAll('Button')[1].props.onClick();
+        clickSaveButton();
         server.respond();
 
         expect(form.findAll('Button')[1].props).to.be.disabled;
@@ -274,6 +304,9 @@ describe('FormController', () => {
       const server = sinon.fakeServer.create();
       server.respondWith(serverResponse(201));
 
+      clickSaveButton();
+      server.respond();
+
       form.findAll('Button')[1].props.onClick();
       server.respond();
 
@@ -283,9 +316,31 @@ describe('FormController', () => {
       );
 
       alert.props.onDismiss();
-      expect(form.exists('Alert')).to.be.false;
+      expect(form.findAll('Alert')).to.have.length(0);
 
       expect(form.findAll('Button')[1].props).to.be.disabled;
+
+      server.restore();
+    });
+
+    it('Saved message alert disappears after changing pages', () => {
+      form = isolateComponent(
+        <FormController {...defaultProps} applicationId={applicationId} />
+      );
+
+      const server = sinon.fakeServer.create();
+      server.respondWith([
+        201,
+        {'Content-Type': 'application/json'},
+        JSON.stringify({})
+      ]);
+
+      clickSaveButton(form);
+      server.respond();
+
+      expect(form.findOne('Alert')).to.exist;
+      setPage(1);
+      expect(form.findAll('Alert')).to.have.length(0);
 
       server.restore();
     });
