@@ -40,8 +40,8 @@ describe('ActivitySectionCardButtons', () => {
       appendSlide,
       hasLessonPlan: true,
       allowMajorCurriculumChanges: true,
-      lastActivity: false,
-      lastActivitySection: false,
+      isLastActivity: false,
+      isLastActivitySection: false,
       vocabularies: []
     };
   });
@@ -54,39 +54,39 @@ describe('ActivitySectionCardButtons', () => {
     expect(wrapper.find('AddButton').length).to.equal(1);
   });
 
-  it('hides add level button if major curriculum changes are not allowed and lastActivitySection is false', () => {
+  it('hides add level button if major curriculum changes are not allowed and isLastActivitySection is false', () => {
     const wrapper = shallow(
       <ActivitySectionCardButtons
         {...defaultProps}
         allowMajorCurriculumChanges={false}
-        lastActivity={true}
-        lastActivitySection={false}
+        isLastActivity={true}
+        isLastActivitySection={false}
       />
     );
 
     expect(wrapper.find('.uitest-open-add-level-button').length).to.equal(0);
   });
 
-  it('hides add level button if major curriculum changes are not allowed and lastActivity is false', () => {
+  it('hides add level button if major curriculum changes are not allowed and isLastActivity is false', () => {
     const wrapper = shallow(
       <ActivitySectionCardButtons
         {...defaultProps}
         allowMajorCurriculumChanges={false}
-        lastActivity={false}
-        lastActivitySection={true}
+        isLastActivity={false}
+        isLastActivitySection={true}
       />
     );
 
     expect(wrapper.find('.uitest-open-add-level-button').length).to.equal(0);
   });
 
-  it('shows add level button if major curriculum changes are not allowed but lastActivity and lastActivitySection are true', () => {
+  it('shows add level button if major curriculum changes are not allowed but isLastActivity and isLastActivitySection are true', () => {
     const wrapper = shallow(
       <ActivitySectionCardButtons
         {...defaultProps}
         allowMajorCurriculumChanges={false}
-        lastActivity={true}
-        lastActivitySection={true}
+        isLastActivity={true}
+        isLastActivitySection={true}
       />
     );
 
@@ -98,8 +98,8 @@ describe('ActivitySectionCardButtons', () => {
       <ActivitySectionCardButtons
         {...defaultProps}
         allowMajorCurriculumChanges={true}
-        lastActivity={false}
-        lastActivitySection={false}
+        isLastActivity={false}
+        isLastActivitySection={false}
       />
     );
 
