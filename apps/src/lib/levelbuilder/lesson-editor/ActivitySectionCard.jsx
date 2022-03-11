@@ -527,10 +527,10 @@ class ActivitySectionCard extends Component {
           appendSlide={this.appendSlide}
           hasLessonPlan={hasLessonPlan}
           allowMajorCurriculumChanges={allowMajorCurriculumChanges}
-          lastActivity={
+          isLastActivity={
             this.props.activityPosition === this.props.activitiesCount
           }
-          lastActivitySection={
+          isLastActivitySection={
             this.props.activitySection.position ===
             this.props.activitySectionsCount
           }
