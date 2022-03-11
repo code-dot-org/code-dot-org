@@ -428,7 +428,6 @@ class SectionTest < ActiveSupport::TestCase
         hidden: false,
         students: [],
         restrict_section: false,
-        code_review_enabled: true,
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil
@@ -471,7 +470,6 @@ class SectionTest < ActiveSupport::TestCase
         hidden: false,
         students: [],
         restrict_section: false,
-        code_review_enabled: true,
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil
@@ -518,7 +516,6 @@ class SectionTest < ActiveSupport::TestCase
         hidden: false,
         students: [],
         restrict_section: false,
-        code_review_enabled: true,
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil
@@ -559,7 +556,6 @@ class SectionTest < ActiveSupport::TestCase
         hidden: false,
         students: [],
         restrict_section: false,
-        code_review_enabled: true,
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil
@@ -619,23 +615,17 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'code review disabled for sections with no code review expiration' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
     section = create :section
-
     refute section.code_review_enabled?
   end
 
   test 'code review enabled for sections with code review expiration later than current time' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
     section = create :section, code_review_expires_at: Time.now.utc + 1.day
-
     assert section.code_review_enabled?
   end
 
   test 'code review disabled for sections with code review expiration before current time' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
     section = create :section, code_review_expires_at: Time.now.utc - 1.day
-
     refute section.code_review_enabled?
   end
 

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-03-05 16:36:32 UTC",
+    "serialized_at": "2022-03-09 20:45:36 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -124,7 +124,7 @@
       "properties": {
         "assessment_opportunities": "1. **Use a board event handler to control buttons on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use a board event handler to control the toggle switch on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
+        "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
         "preparation": "- Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
       },
@@ -1941,7 +1941,7 @@
       "key": "7cc52ce6-a194-42f6-a5ba-9a2183c70399",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.\n",
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {

@@ -347,7 +347,6 @@ class Section < ApplicationRecord
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
       restrict_section: restrict_section,
-      code_review_enabled: code_review_enabled?,
       is_assigned_csa: assigned_csa?,
       # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
       post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
@@ -444,12 +443,8 @@ class Section < ApplicationRecord
   end
 
   def code_review_enabled?
-    if DCDO.get('code_review_groups_enabled', false)
-      return false if code_review_expires_at.nil?
-      return code_review_expires_at > Time.now.utc
-    else
-      return code_review_enabled.nil? ? true : code_review_enabled
-    end
+    return false if code_review_expires_at.nil?
+    return code_review_expires_at > Time.now.utc
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,
