@@ -103,7 +103,7 @@ test:
      password: <%= reader.password %>
      host: <%= reader.host %>
      port: <%= reader.port || 3306 %>
-     database: <%= reader.path.sub(%r{^/},"") + ENV['TEST_ENV_NUMBER'] %>
+     database: <%= reader.path.sub(%r{^/},"") %><%= ENV['TEST_ENV_NUMBER'] %>
   <% end %>
 
 production:
