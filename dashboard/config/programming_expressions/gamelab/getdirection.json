@@ -17,5 +17,5 @@
   ],
   "return_value": "The direction angle of the sprite in degrees.",
   "short_description": "The sprite's movement direction in degrees.",
-  "syntax": "getDirection"
+  "syntax": "sprite.getDirection()"
 }
