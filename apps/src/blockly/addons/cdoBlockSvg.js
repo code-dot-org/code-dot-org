@@ -70,53 +70,61 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
           Blockly.ContextMenu.hide();
         }.bind(this)
       };
+      const shadow = {
+        text: 'Make Shadow',
+        enabled: true,
+        callback: function() {
+          this.setShadow(true);
+          Blockly.ContextMenu.hide();
+        }.bind(this)
+      };
+      const unshadow = {
+        // If there's 1 child, text should be 'Make Child Block Non-Shadow'
+        // If there's n children, text should be `Make ${n} Child Blocks Non-Shadow`
+        text: `Make ${
+          this.shadowChildCount() > 1 ? `${this.shadowChildCount()} ` : ''
+        }Child Block${this.shadowChildCount() > 1 ? 's' : ''} Non-Shadow`,
+        enabled: true,
+        callback: function() {
+          this.getChildren().forEach(child => child.setShadow(false));
+          Blockly.ContextMenu.hide();
+        }.bind(this)
+      };
       menuOptions.push(deletable);
       menuOptions.push(movable);
       menuOptions.push(editable);
-      // menuOptions for Shadow Blocks require awareness of parents and children.
-      const children = this.getChildren();
-      const shadowChildCount = children.filter(child => child.isShadow())
-        .length;
-      const nonShadowChildrenCount = children.filter(child => !child.isShadow())
-        .length;
-      // A block can be made into a shadow if:
-      //* It has a surrounding parent block.
-      //* It does not contain a variable field.
-      //* It does not have any non-shadow children.
-      if (
-        this.getSurroundParent() &&
-        !this.getVarModels().length &&
-        !nonShadowChildrenCount
-      ) {
-        const shadow = {
-          text: 'Make Shadow',
-          enabled: true,
-          callback: function() {
-            this.setShadow(true);
-            Blockly.ContextMenu.hide();
-          }.bind(this)
-        };
+      if (this.canBeShadow()) {
         menuOptions.push(shadow);
       }
-      // If a block has shadow child(ren), it can be used to convert them to blocks.
-      if (children.length) {
-        if (shadowChildCount) {
-          const unshadow = {
-            text: `Make ${
-              shadowChildCount > 1 ? `${shadowChildCount} ` : ''
-            }Child Block${shadowChildCount > 1 ? 's' : ''} Non-Shadow`,
-            enabled: true,
-            callback: function() {
-              for (let i = 0; i < children.length; i++) {
-                children[i].setShadow(false);
-              }
-              Blockly.ContextMenu.hide();
-            }.bind(this)
-          };
-          menuOptions.push(unshadow);
-        }
+      if (this.hasShadowChildren()) {
+        menuOptions.push(unshadow);
       }
     }
+  }
+
+  /** A block can be made into a shadow if:
+   * -It has a surrounding parent block.
+   * -It does not contain a variable field.
+   * -It does not have any non-shadow children.
+   */
+  canBeShadow() {
+    return (
+      this.getSurroundParent() &&
+      !this.getVarModels().length &&
+      !this.nonShadowChildrenCount()
+    );
+  }
+
+  shadowChildCount() {
+    return this.getChildren().filter(child => child.isShadow()).length;
+  }
+
+  nonShadowChildrenCount() {
+    return this.getChildren().filter(child => !child.isShadow()).length;
+  }
+
+  hasShadowChildren() {
+    return this.nonShadowChildrenCount().length > 0;
   }
 
   dispose() {
