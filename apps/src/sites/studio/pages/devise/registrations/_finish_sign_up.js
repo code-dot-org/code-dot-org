@@ -40,6 +40,11 @@ let schoolData = {
 // Keep track of whether the current user is in the U.S. or not (for regional partner email sharing)
 let isInUnitedStates = schoolData.countryCode === 'US';
 
+// Track whether clearer user type buttons rollout is enabled
+const inClearerUserTypeRollout = experiments.isEnabled(
+  experiments.CLEARER_SIGN_UP_USER_TYPE
+);
+
 // TO-DELETE ONCE SHARE EMAIL WITH REGIONAL PARTNER OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
 let userInOptimizelyVariant = experiments.isEnabled(
   experiments.OPT_IN_EMAIL_REG_PARTNER
@@ -52,14 +57,20 @@ $(document).ready(() => {
 
   function init() {
     // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
-    if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
+    if (inClearerUserTypeRollout) {
       // If in variant, toggle large buttons
       document.getElementById('select-user-type-original').style.cssText =
         'display:none;';
+      document.getElementById('select-user-type-variant').style.cssText =
+        'display:flex;';
+      document.getElementById('signup-select-user-type-label').style.cssText =
+        'width:135px;';
     } else {
       // Otherwise (also the default), keep original dropdown
       document.getElementById('select-user-type-variant').style.cssText =
         'display:none;';
+      document.getElementById('select-user-type-original').style.cssText =
+        'display:flex;';
       document.getElementById('signup-select-user-type-label').style.cssText =
         'width:220px;';
     }
@@ -133,35 +144,6 @@ $(document).ready(() => {
     }
   }
 
-  // Event listeners for changing the user type
-  document.addEventListener('selectUserTypeTeacher', e => {
-    $('#user_user_type').val('teacher');
-    styleSelectedUserTypeButton('teacher');
-    setUserType('teacher');
-  });
-  document.addEventListener('selectUserTypeStudent', e => {
-    $('#user_user_type').val('student');
-    styleSelectedUserTypeButton('student');
-    setUserType('student');
-  });
-
-  // Style selected user type button to show it has been clicked
-  function styleSelectedUserTypeButton(value) {
-    if (value === 'teacher') {
-      teacherButton.classList.add('select-user-type-button-selected');
-      studentButton.classList.remove('select-user-type-button-selected');
-    } else if (value === 'student') {
-      studentButton.classList.add('select-user-type-button-selected');
-      teacherButton.classList.remove('select-user-type-button-selected');
-    }
-  }
-
-  // Optimizely Event to track user type selection
-  function optimizelyCountUserTypeSelection(userType) {
-    window['optimizely'] = window['optimizely'] || [];
-    window['optimizely'].push({type: 'event', eventName: userType});
-  }
-
   // Optimizely-related code for sharing email with regional partners experiment
   function optimizelyCountSuccessSignupWithRegPartnerOpt() {
     window['optimizely'] = window['optimizely'] || [];
@@ -172,6 +154,18 @@ $(document).ready(() => {
   $('#user_user_type').change(function() {
     var value = $(this).val();
     setUserType(value);
+  });
+
+  // Event listeners for changing the user type
+  document.addEventListener('selectUserTypeTeacher', e => {
+    $('#user_user_type').val('teacher');
+    styleSelectedUserTypeButton('teacher');
+    setUserType('teacher');
+  });
+  document.addEventListener('selectUserTypeStudent', e => {
+    $('#user_user_type').val('student');
+    styleSelectedUserTypeButton('student');
+    setUserType('student');
   });
 
   function getUserType() {
@@ -190,6 +184,17 @@ $(document).ready(() => {
     } else {
       // Show student fields by default.
       switchToStudent();
+    }
+  }
+
+  // Style selected user type button to show it has been clicked
+  function styleSelectedUserTypeButton(value) {
+    if (value === 'teacher') {
+      teacherButton.classList.add('select-user-type-button-selected');
+      studentButton.classList.remove('select-user-type-button-selected');
+    } else if (value === 'student') {
+      studentButton.classList.add('select-user-type-button-selected');
+      teacherButton.classList.remove('select-user-type-button-selected');
     }
   }
 
@@ -212,6 +217,12 @@ $(document).ready(() => {
       event: 'select-' + type,
       data_string: signUpUID
     });
+  }
+
+  // Optimizely Event to track user type selection
+  function optimizelyCountUserTypeSelection(userType) {
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({type: 'event', eventName: userType});
   }
 
   function fadeInFields(fields) {
