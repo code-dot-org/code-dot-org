@@ -157,18 +157,6 @@ And(/^I create some fake applications of each type and status$/) do
   time_start = Time.now
 
   # There's no need to create more applications if a lot already exist in the system
-  if Pd::Application::ActiveApplicationModels::FACILITATOR_APPLICATION_CLASS.count < 100
-    %w(csf csd csp).each do |course|
-      Pd::Application::ApplicationBase.statuses.each do |status|
-        10.times do
-          teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application = FactoryGirl.create(Pd::Application::ActiveApplicationModels::FACILITATOR_APPLICATION_FACTORY, course: course, user: teacher)
-          application.update(status: status)
-        end
-      end
-    end
-  end
-
   if Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.count < 100
     %w(csd csp).each do |course|
       (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
