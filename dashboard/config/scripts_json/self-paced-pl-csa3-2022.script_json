@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-02 20:08:54 UTC",
+    "serialized_at": "2022-03-11 18:32:40 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -84,7 +84,7 @@
       "properties": {
         "description": "a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text",
         "name": "smaller header",
-        "progression_name": "Test levels in a progression"
+        "progression_name": "Overview"
       },
       "seeding_key": {
         "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410",
@@ -95,7 +95,7 @@
       "key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a",
       "position": 2,
       "properties": {
-        "progression_name": "Printing to the console"
+        "progression_name": "Introduction to Java Lab"
       },
       "seeding_key": {
         "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a",
@@ -106,9 +106,21 @@
       "key": "ee698b7b-813d-4c68-a616-24af954e7bb7",
       "position": 3,
       "properties": {
+        "progression_name": "Printing to the console"
       },
       "seeding_key": {
         "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7",
+        "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163"
+      }
+    },
+    {
+      "key": "ab365644-ee84-46d3-8ebf-5cf218887350",
+      "position": 4,
+      "properties": {
+        "progression_name": "Holder info"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab365644-ee84-46d3-8ebf-5cf218887350",
         "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163"
       }
     }
@@ -120,7 +132,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test levels in a progression"
+        "level_keys": [
+          "Introduction to Module 3"
+        ],
+        "progression": "Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -139,10 +154,10 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test levels in a progression"
+        "progression": "Introduction to Java Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -152,7 +167,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       },
       "level_keys": [
         "Java Lab Video"
@@ -161,10 +176,10 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Test levels in a progression"
+        "progression": "Introduction to Java Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -174,7 +189,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       },
       "level_keys": [
         "Intro to Java Lab - debugging 1"
@@ -183,51 +198,45 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Example Markdown (External Level) with Video"
-        ],
-        "progression": "Test levels in a progression"
+        "progression": "Introduction to Java Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Example Markdown (External Level) with Video"
+          "SP-VPL-CSD-22-mod3-Printing-to-the-console-map"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       },
       "level_keys": [
-        "Example Markdown (External Level) with Video"
+        "SP-VPL-CSD-22-mod3-Printing-to-the-console-map"
       ]
     },
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Javalab Example - Using Instructor in Training"
-        ],
-        "progression": "Test levels in a progression"
+        "progression": "Introduction to Java Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Javalab Example - Using Instructor in Training"
+          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       },
       "level_keys": [
-        "Javalab Example - Using Instructor in Training"
+        "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
       ]
     },
     {
@@ -246,7 +255,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
       },
       "level_keys": [
         "Intro to Java Lab - System"
@@ -255,9 +264,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging1"
+        ],
+        "progression": "Printing to the console"
       },
       "bonus": false,
       "seeding_key": {
@@ -276,9 +289,13 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging2"
+        ],
+        "progression": "Printing to the console"
       },
       "bonus": false,
       "seeding_key": {
@@ -297,9 +314,13 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging3"
+        ],
+        "progression": "Printing to the console"
       },
       "bonus": false,
       "seeding_key": {
@@ -313,6 +334,50 @@
       },
       "level_keys": [
         "CSAPL3-1-SyntaxDebugging3"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Holder info"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Example Markdown (External Level) with Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ab365644-ee84-46d3-8ebf-5cf218887350"
+      },
+      "level_keys": [
+        "Example Markdown (External Level) with Video"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Holder info"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Javalab Example - Using Instructor in Training"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ab365644-ee84-46d3-8ebf-5cf218887350"
+      },
+      "level_keys": [
+        "Javalab Example - Using Instructor in Training"
       ]
     }
   ],
@@ -338,7 +403,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       }
     },
     {
@@ -350,31 +415,31 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Example Markdown (External Level) with Video",
+        "level.key": "SP-VPL-CSD-22-mod3-Printing-to-the-console-map",
         "script_level.level_keys": [
-          "Example Markdown (External Level) with Video"
+          "SP-VPL-CSD-22-mod3-Printing-to-the-console-map"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Javalab Example - Using Instructor in Training",
+        "level.key": "SP-VPL-CSA-22-mod3-Printing-to-the-console-map",
         "script_level.level_keys": [
-          "Javalab Example - Using Instructor in Training"
+          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
       }
     },
     {
@@ -386,7 +451,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
+        "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
       }
     },
     {
@@ -423,6 +488,30 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
         "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Example Markdown (External Level) with Video",
+        "script_level.level_keys": [
+          "Example Markdown (External Level) with Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ab365644-ee84-46d3-8ebf-5cf218887350"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Javalab Example - Using Instructor in Training",
+        "script_level.level_keys": [
+          "Javalab Example - Using Instructor in Training"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "ab365644-ee84-46d3-8ebf-5cf218887350"
       }
     }
   ],

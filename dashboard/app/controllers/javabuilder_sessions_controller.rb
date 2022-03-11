@@ -37,7 +37,7 @@ class JavabuilderSessionsController < ApplicationController
     issued_at_time = Time.now.to_i
     # expire token in 15 minutes
     expiration_time = (Time.now + 15.minutes).to_i
-    session_id = SecureRandom.hex(18)
+    session_id = SecureRandom.uuid
     payload = {
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
