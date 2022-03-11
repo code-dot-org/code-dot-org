@@ -1177,7 +1177,7 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData());
       expect(state().validAssignments).to.deep.equal({});
 
-      expect(server.requests).to.have.length(3);
+      expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith(
         'GET',
@@ -1188,6 +1188,11 @@ describe('teacherSectionsRedux', () => {
         'GET',
         '/dashboardapi/sections/valid_scripts',
         successResponse(validScripts)
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_course_offerings',
+        successResponse(courseOfferings)
       );
       server.respond();
 
@@ -1202,13 +1207,18 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
       expect(state().validAssignments).to.deep.equal({});
 
-      expect(server.requests).to.have.length(4);
+      expect(server.requests).to.have.length(5);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith('GET', '/dashboardapi/courses', successResponse());
       server.respondWith(
         'GET',
         '/dashboardapi/sections/valid_scripts',
         successResponse()
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_course_offerings',
+        successResponse(courseOfferings)
       );
       server.respondWith(
         'GET',
@@ -1632,6 +1642,11 @@ describe('teacherSectionsRedux', () => {
         '/dashboardapi/sections/valid_scripts',
         successResponse([])
       );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_course_offerings',
+        successResponse([])
+      );
     });
     afterEach(() => server.restore());
 
@@ -1723,7 +1738,7 @@ describe('teacherSectionsRedux', () => {
         importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
       );
       return expect(promise).to.be.fulfilled.then(() => {
-        expect(server.requests).to.have.length(4);
+        expect(server.requests).to.have.length(5);
         expect(server.requests[1].method).to.equal('GET');
         expect(server.requests[1].url).to.equal('/dashboardapi/sections');
         expect(server.requests[2].method).to.equal('GET');
@@ -1731,6 +1746,10 @@ describe('teacherSectionsRedux', () => {
         expect(server.requests[3].method).to.equal('GET');
         expect(server.requests[3].url).to.equal(
           '/dashboardapi/sections/valid_scripts'
+        );
+        expect(server.requests[4].method).to.equal('GET');
+        expect(server.requests[4].url).to.equal(
+          '/dashboardapi/sections/valid_course_offerings'
         );
         expect(Object.keys(getState().teacherSections.sections)).to.have.length(
           sections.length
