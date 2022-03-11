@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import AgeDialog, {signedOutOver13} from '../templates/AgeDialog';
+import AgeDialog, {signedOutOver13, songFilterOn} from '../templates/AgeDialog';
 
 const SongSelector = Radium(
   class extends React.Component {
@@ -86,13 +86,14 @@ class DanceVisualizationColumn extends React.Component {
     const signedInOver13 =
       this.props.userType === 'teacher' ||
       (this.props.userType === 'student' && !this.props.under13);
-    const signedOutAge = signedOutOver13();
-    // Student is signed out and <13 or the override filter is on
-    if (!signedOutAge) {
-      return signedOutAge;
+    const signedOutOverAge = signedOutOver13();
+    const songFilter = songFilterOn();
+    // Override filter is on
+    if (songFilter) {
+      return false;
     }
-    // Check whether user is signed in and >13
-    return signedInOver13;
+    // Check whether user is > 13
+    return signedInOver13 || signedOutOverAge;
   }
 
   render() {
