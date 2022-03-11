@@ -120,14 +120,25 @@ describe('ActivitySectionCard', () => {
     expect(wrapper.find('OrderControls').length).to.equal(1);
   });
 
-  it('hides OrderControls when not allowed to make major curriculum changes', () => {
+  it('hides OrderControls when not allowed to make major curriculum changes and levels in activity section', () => {
+    const wrapper = shallow(
+      <ActivitySectionCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+        activitySection={sampleActivities[0].activitySections[2]}
+      />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(0);
+  });
+
+  it('show OrderControls when not allowed to make major curriculum changes and no levels in activity section', () => {
     const wrapper = shallow(
       <ActivitySectionCard
         {...defaultProps}
         allowMajorCurriculumChanges={false}
       />
     );
-    expect(wrapper.find('OrderControls').length).to.equal(0);
+    expect(wrapper.find('OrderControls').length).to.equal(1);
   });
 
   it('renders activity section with levels', () => {
