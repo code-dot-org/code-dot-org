@@ -4,6 +4,7 @@
 
 @no_mobile
 @no_ie
+@skip
 Feature: Code review (peer scenarios)
 
   # At the end of the setup, we will have created
@@ -21,9 +22,6 @@ Feature: Code review (peer scenarios)
     And I join the section
     Given I create a student named "Harry"
     And I join the section
-    # Observed flakiness trying to navigate to teacher dashboard while still signed in as Harry.
-    # Explicitly wait for sign out to occur to avoid this.
-    And I sign out using jquery
     # Create a code review group with students in it.
     # Save the group, and enable code review for the section.
     Given I sign in as "Dumbledore" and go home
