@@ -1,20 +1,23 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import $ from 'jquery';
+import StylizedBaseDialog, {
+  FooterButton
+} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {TextLink} from '@dsco_/link';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
-export default function CloneProgrammingExpressionDialog({
+export function CloneFormDialog({
   itemToClone,
   programmingEnvironmentsForSelect,
   categoriesForSelect,
-  onClose
+  onClose,
+  onCloneSuccess
 }) {
   const [destinationEnvironment, setDestinationEnvironment] = useState(null);
   const [destinationCategory, setDestinationCategory] = useState(null);
   const [error, setError] = useState(null);
-  const [clonedEditUrl, setClonedEditUrl] = useState(null);
-
   const cloneExpression = () => {
     const clonePath = `/programming_expressions/${itemToClone.id}/clone`;
     let success = false;
@@ -37,17 +40,22 @@ export default function CloneProgrammingExpressionDialog({
       })
       .then(json => {
         if (success) {
-          setClonedEditUrl(json.editUrl);
           setError(null);
+          onCloneSuccess(json.editUrl);
         } else {
           setError(json.error);
-          setClonedEditUrl(null);
         }
       });
   };
-
-  const cloneForm = (
-    <>
+  return (
+    <StylizedBaseDialog
+      handleConfirmation={() => {
+        cloneExpression(destinationEnvironment, destinationCategory);
+      }}
+      handleClose={onClose}
+      isOpen
+    >
+      {error && <div style={{color: 'red'}}>{error}</div>}
       <label>
         IDE to clone to
         <select
@@ -84,33 +92,56 @@ export default function CloneProgrammingExpressionDialog({
           </select>
         </label>
       )}
-    </>
+    </StylizedBaseDialog>
   );
+}
 
-  const cloneSucceededMessage = (
-    <span>
-      Clone succeeded1 Visit{' '}
-      <TextLink
-        openInNewTab
-        href={clonedEditUrl}
-        text="the new code doc's edit page"
-      />{' '}
-      to make further changes.
-    </span>
-  );
-
+function CloneSuccessDialog({editUrl, onClose}) {
   return (
     <StylizedBaseDialog
-      handleConfirmation={() => {
-        cloneExpression(destinationEnvironment, destinationCategory);
-      }}
       handleClose={onClose}
+      renderFooter={() => (
+        <FooterButton type="cancel" text={i18n.dialogOK()} onClick={onClose} />
+      )}
       isOpen
     >
-      <h3>{`Cloning "${itemToClone.key}"`}</h3>
-      {error && <div style={{color: 'red'}}>{error}</div>}
-      {!!clonedEditUrl ? cloneSucceededMessage : cloneForm}
+      <span>
+        Clone succeeded1 Visit{' '}
+        <TextLink
+          openInNewTab
+          href={editUrl}
+          text="the new code doc's edit page"
+        />{' '}
+        to make further changes.
+      </span>
     </StylizedBaseDialog>
+  );
+}
+
+export default function CloneProgrammingExpressionDialog({
+  itemToClone,
+  programmingEnvironmentsForSelect,
+  categoriesForSelect,
+  onClose
+}) {
+  const [clonedEditUrl, setClonedEditUrl] = useState(null);
+
+  return (
+    <>
+      {!!clonedEditUrl && (
+        <CloneSuccessDialog editUrl={clonedEditUrl} onClose={onClose} />
+      )}
+
+      {!clonedEditUrl && (
+        <CloneFormDialog
+          itemToClone={itemToClone}
+          programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
+          categoriesForSelect={categoriesForSelect}
+          onClose={onClose}
+          onCloneSuccess={setClonedEditUrl}
+        />
+      )}
+    </>
   );
 }
 
@@ -119,6 +150,20 @@ CloneProgrammingExpressionDialog.propTypes = {
   programmingEnvironmentsForSelect: PropTypes.arrayOf(PropTypes.object)
     .isRequired,
   categoriesForSelect: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onClose: PropTypes.func.isRequired
+};
+
+CloneFormDialog.propTypes = {
+  itemToClone: PropTypes.object.isRequired,
+  programmingEnvironmentsForSelect: PropTypes.arrayOf(PropTypes.object)
+    .isRequired,
+  categoriesForSelect: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onClose: PropTypes.func.isRequired,
+  onCloneSuccess: PropTypes.func
+};
+
+CloneSuccessDialog.propTypes = {
+  editUrl: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired
 };
 
