@@ -89,6 +89,7 @@ export const lessonShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
+  duration: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   purpose: PropTypes.string.isRequired,
