@@ -65,31 +65,17 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('e', 'c', 0),
       makeReferenceGuide('d', 'a', 2),
       makeReferenceGuide('c', 'a', 1),
+      makeReferenceGuide('g', 'c', 3),
       makeReferenceGuide('b', 'a', 0),
-      makeReferenceGuide('a', null, 0)
+      makeReferenceGuide('a', null, 0),
+      makeReferenceGuide('h', 'c', 4)
     ];
     wrapper = isolateComponent(
       <ReferenceGuideEditAll referenceGuides={referenceGuides} />
     );
     expect(
       wrapper.findAll('.categories-box').map(box => box.content())
-    ).to.deep.equal(['a', 'b', 'c', 'e', 'f', 'd']);
-  });
-
-  it('sorts reference guides within a category', () => {
-    const referenceGuides = [
-      makeReferenceGuide('a', null, 0),
-      makeReferenceGuide('b', null, 4),
-      makeReferenceGuide('c', null, 1),
-      makeReferenceGuide('d', null, 3),
-      makeReferenceGuide('e', null, 2)
-    ];
-    const wrapper = isolateComponent(
-      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
-    );
-    expect(
-      wrapper.findAll('.categories-box').map(box => box.content())
-    ).to.deep.equal(['a', 'c', 'e', 'd', 'b']);
+    ).to.deep.equal(['a', 'b', 'c', 'e', 'f', 'g', 'h', 'd']);
   });
 
   it('indents the reference guides by level depth', () => {
