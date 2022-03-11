@@ -25,9 +25,9 @@ class ProgrammingExpressionsController < ApplicationController
 
     results_per_page = 20
     total_expressions = @programming_expressions.length
-    num_pages = (total_expressions / results_per_page).ceil
+    num_pages = (total_expressions / results_per_page.to_f).ceil
 
-    @programming_expressions.page(params[:page]).per(results_per_page)
+    @programming_expressions = @programming_expressions.page(params[:page].to_i).per(results_per_page)
     @programming_expressions = @programming_expressions.map do |exp|
       {
         id: exp.id,

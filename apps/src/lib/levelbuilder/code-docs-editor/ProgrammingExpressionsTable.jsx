@@ -4,6 +4,8 @@ import * as Table from 'reactabular-table';
 import queryString from 'query-string';
 import Button from '@cdo/apps/templates/Button';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';
 
 const ALL_VALUE = 'all';
 
@@ -16,33 +18,6 @@ const destroyExpression = (destroyPath, callback) => {
       callback();
     } else {
       console.log(response.error);
-    }
-  });
-};
-
-const cloneExpression = (
-  clonePath,
-  destinationEnvironmentName,
-  destinationCategoryKey,
-  successCallback,
-  errorCallback
-) => {
-  fetch(clonePath, {
-    method: 'POST',
-    headers: {
-      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      destinationProgrammingEnvironmentName: destinationEnvironmentName,
-      destinationCategoryKey: destinationCategoryKey
-    })
-  }).then(response => {
-    if (response.ok) {
-      successCallback();
-    } else {
-      console.log(response.error);
-      errorCallback(response.statusText);
     }
   });
 };
@@ -60,15 +35,10 @@ export default function ProgrammingExpressionsTable({
     setCategoriesAvailableForSelect
   ] = useState(categoriesForSelect);
   const [itemToClone, setItemToClone] = useState(null);
-  const [
-    cloneEnvironmentDestination,
-    setCloneEnvironmentDestination
-  ] = useState(null);
-  const [cloneCategoryDestination, setCloneCategoryDestination] = useState(
-    null
-  );
-  const [cloneError, setCloneError] = useState(null);
+
   const [itemToDelete, setItemToDelete] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [numPages, setNumPages] = useState(null);
 
   const actionsCellFormatter = (actions, {rowData}) => {
     return (
@@ -99,7 +69,7 @@ export default function ProgrammingExpressionsTable({
     );
   };
 
-  const fetchExpressions = (environmentId, categoryId) => {
+  const fetchExpressions = (environmentId, categoryId, callback) => {
     const data = {};
     if (environmentId !== ALL_VALUE) {
       data.programmingEnvironmentId = environmentId;
@@ -107,16 +77,25 @@ export default function ProgrammingExpressionsTable({
     if (categoryId !== ALL_VALUE) {
       data.categoryId = categoryId;
     }
+    data.page = currentPage;
     const url =
       '/programming_expressions/get_filtered_expressions?' +
       queryString.stringify(data);
     fetch(url)
       .then(response => response.json())
-      .then(data => setProgrammingExpressions(data.expressions));
+      .then(data => {
+        setProgrammingExpressions(data.expressions);
+        setNumPages(data.numPages);
+        if (callback) {
+          callback();
+        }
+      });
   };
 
   useEffect(() => {
-    fetchExpressions(selectedEnvironment, selectedCategory);
+    fetchExpressions(selectedEnvironment, selectedCategory, () =>
+      setCurrentPage(1)
+    );
   }, [selectedCategory]);
 
   useEffect(() => {
@@ -134,8 +113,14 @@ export default function ProgrammingExpressionsTable({
         categoryToFetch = ALL_VALUE;
       }
     }
-    fetchExpressions(selectedEnvironment, categoryToFetch);
+    fetchExpressions(selectedEnvironment, categoryToFetch, () =>
+      setCurrentPage(1)
+    );
   }, [selectedEnvironment]);
+
+  useEffect(() => {
+    fetchExpressions(selectedEnvironment, selectedCategory);
+  }, [currentPage]);
 
   const getColumns = () => {
     return [
@@ -203,6 +188,11 @@ export default function ProgrammingExpressionsTable({
         <Table.Header />
         <Table.Body rows={programmingExpressions} rowKey="id" />
       </Table.Provider>
+      <PaginationWrapper
+        totalPages={numPages}
+        currentPage={currentPage}
+        onChangePage={setCurrentPage}
+      />
       {!!itemToDelete && (
         <StylizedBaseDialog
           body={`Are you sure you want to remove ${
@@ -222,63 +212,15 @@ export default function ProgrammingExpressionsTable({
         />
       )}
       {!!itemToClone && (
-        <StylizedBaseDialog
-          handleConfirmation={() => {
-            cloneExpression(
-              `/programming_expressions/${itemToClone.id}/clone`,
-              cloneEnvironmentDestination,
-              cloneCategoryDestination,
-              () => {
-                setItemToClone(null);
-                setCloneEnvironmentDestination(null);
-                setCloneCategoryDestination(null);
-                setCloneError(null);
-              },
-              err => {
-                setCloneError(err);
-              }
-            );
+        <CloneProgrammingExpressionDialog
+          itemToClone={itemToClone}
+          programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
+          categoriesForSelect={categoriesForSelect}
+          onClose={() => {
+            setItemToClone(null);
+            fetchExpressions();
           }}
-          handleClose={() => setItemToClone(null)}
-          isOpen
-        >
-          <h3>{`Cloning "${itemToClone.key}"`}</h3>
-          {cloneError && <div style={{color: 'red'}}>{cloneError}</div>}
-          <label>
-            IDE to clone to
-            <select
-              onChange={e => setCloneEnvironmentDestination(e.target.value)}
-              value={cloneEnvironmentDestination || ''}
-            >
-              <option value="" />
-              {programmingEnvironmentsForSelect
-                .filter(env => env.id !== itemToClone.environmentId)
-                .map(env => (
-                  <option key={env.name} value={env.name}>
-                    {env.title || env.name}
-                  </option>
-                ))}
-            </select>
-          </label>
-          {cloneEnvironmentDestination && (
-            <label>
-              Category to clone to
-              <select
-                onChange={e => setCloneCategoryDestination(e.target.value)}
-                value={cloneCategoryDestination || ''}
-              >
-                <option value="" />
-                {categoriesForSelect
-                  .filter(c => c.envName === cloneEnvironmentDestination)
-                  .map(cat => (
-                    <option key={cat.key} value={cat.key}>
-                      {cat.formattedName}
-                    </option>
-                  ))}
-              </select>
-            </label>
-          )}
-        </StylizedBaseDialog>
+        />
       )}
     </>
   );
