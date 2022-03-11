@@ -21,6 +21,7 @@ Feature: Code review (project owner/teacher scenarios)
     And I join the section
     # Observed flakiness trying to navigate to teacher dashboard while still signed in as Hermione.
     # Explicitly wait for sign out to occur to avoid this.
+    And I wait to see ".alert-success"
     And I sign out using jquery
     # Create a code review group with students in it.
     # Save the group, and enable code review for the section.
