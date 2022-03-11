@@ -85,7 +85,7 @@ const FormController = props => {
   // We use functions here as the initial value so that these values are only calculated once
   const initialPage = useMemo(
     () => getInitialStored(sessionStorageKey, 'currentPage') || 0,
-    []
+    [sessionStorageKey]
   );
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [data, setData] = useState(() => ({
