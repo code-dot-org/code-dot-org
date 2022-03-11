@@ -23,7 +23,8 @@ const defaultProps = {
     '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   unitStudentDescription:
     '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
-  versions: []
+  versions: [],
+  courseVersionId: 1
 };
 
 describe('UnitOverviewHeader', () => {
