@@ -31929,6 +31929,8 @@ en:
               description_teacher: 
             lesson-2:
               name: Using variables in Java
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
           title: Support for text-based programming
