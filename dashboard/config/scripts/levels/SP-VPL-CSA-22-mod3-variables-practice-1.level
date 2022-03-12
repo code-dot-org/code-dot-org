@@ -1,0 +1,30 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "contained_level_names": [
+      "SP-VPL-CSA-22-mod3-variables-practice-1-Predict"
+    ],
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyClass.java": {
+        "text": "",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "**Do this:**\r\n1. Modify your program to declare a variable of type int named favoriteNumber. \r\n2. Initialize the value of favoriteNumber to your personal favorite number. \r\n3. Print favoriteNumber to the console. "
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-11T21:31:30.000Z",
+  "level_num": "custom",
+  "user_id": 977,
+  "audit_log": "[{\"changed_at\":\"2022-03-11 21:41:19 +0000\",\"changed\":[\"published\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-11 21:44:47 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-11 21:52:33 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-11 22:53:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+}]]></config>
+</Javalab>
