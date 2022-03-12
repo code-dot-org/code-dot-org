@@ -40,12 +40,12 @@ VCR.configure do |c|
 end
 
 # Truncate database tables to ensure repeatable tests.
-PEGASUS_TEST_TABLES = %w(storage_apps user_storage_ids).freeze
+PEGASUS_TEST_TABLES = %w(storage_apps).freeze
 PEGASUS_TEST_TABLES.each do |table|
   PEGASUS_DB[table.to_sym].truncate
 end.freeze
 
-DASHBOARD_TEST_TABLES = %w(channel_tokens).freeze
+DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids).freeze
 DASHBOARD_TEST_TABLES.each do |table|
   DASHBOARD_DB[table.to_sym].truncate
 end.freeze
