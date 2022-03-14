@@ -3252,3 +3252,23 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: cikle
+              key: cikle
+            Events:
+              name: Ngjarje
+              key: Ngjarje
+            Conditionals:
+              name: Kushtet
+              key: Kushtet
+            Functions:
+              name: funksione
+              key: funksione
+            Variables:
+              name: variabla
+              key: variabla
+            For Loops:
+              name: Për Ciklet
+              key: Për Ciklet
