@@ -11,7 +11,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const EDITOR_TYPES = ['blockly', 'droplet', 'text'];
+const EDITOR_TYPES = ['blockly', 'droplet', 'html/css', 'java'];
 
 const useProgrammingEnvironment = initialProgrammingEnvironment => {
   const [programmingEnvironment, setProgrammingEnvironment] = useState(
@@ -145,9 +145,9 @@ export default function ProgrammingEnvironmentEditor({
       <label>
         How should this document render?
         <select
-          value={programmingEnvironment.editorType || EDITOR_TYPES[0]}
+          value={programmingEnvironment.editorLanguage || EDITOR_TYPES[0]}
           onChange={e =>
-            updateProgrammingEnvironment('editorType', e.target.value)
+            updateProgrammingEnvironment('editorLanguage', e.target.value)
           }
           style={styles.selectInput}
         >
@@ -158,7 +158,7 @@ export default function ProgrammingEnvironmentEditor({
           ))}
         </select>
       </label>
-      {programmingEnvironment.editorType === 'blockly' && (
+      {programmingEnvironment.editorLanguage === 'blockly' && (
         <label>
           Block Pool Name
           <HelpTip>
