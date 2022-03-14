@@ -58,6 +58,7 @@ function showHomepage() {
     updateQueryParam('scriptId', undefined, true);
   }
   if (courseId || scriptId) {
+    //Need to do something here to deal with expect course offering, course version and unit id
     store.dispatch(beginEditingNewSection(courseId, scriptId));
   }
 
