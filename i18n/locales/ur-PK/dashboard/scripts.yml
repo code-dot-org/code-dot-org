@@ -2385,3 +2385,17 @@ ur:
           lessons:
             lesson-1:
               name: متغیرات
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: لوپس
+              key: لوپس
+            Events:
+              name: ایونٹس/واقعات
+              key: ایونٹس/واقعات
+            Conditionals:
+              name: شرائط
+              key: شرائط
+            Variables:
+              name: متغیرات
+              key: متغیرات
