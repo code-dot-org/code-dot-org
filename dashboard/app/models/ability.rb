@@ -66,7 +66,6 @@ class Ability
       ReviewableProject
     ]
     cannot :index, Level
-    cannot :index, ProgrammingExpression
 
     # If you can see a level, you can also do these things:
     can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
@@ -85,6 +84,7 @@ class Ability
     can [:read, :show_by_keys], ProgrammingExpression do |expression|
       can? :read, expression.programming_environment
     end
+    cannot :index, ProgrammingExpression
 
     if user.persisted?
       can :manage, user
