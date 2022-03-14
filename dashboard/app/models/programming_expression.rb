@@ -260,6 +260,8 @@ class ProgrammingExpression < ApplicationRecord
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
     object_to_serialize = serialize
+    directory_name = File.dirname(file_path)
+    Dir.mkdir(directory_name) unless File.exist?(directory_name)
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 
