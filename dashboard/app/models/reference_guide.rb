@@ -110,4 +110,14 @@ class ReferenceGuide < ApplicationRecord
       position: position
     }
   end
+
+  def summarize_for_edit
+    {
+      key: key,
+      parent_reference_guide_key: parent_reference_guide_key,
+      display_name: display_name,
+      content: content,
+      position: position
+    }
+  end
 end

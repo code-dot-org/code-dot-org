@@ -7,9 +7,9 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     File.stubs(:write)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
-    unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
-    CourseOffering.add_course_offering(unit_group)
-    @reference_guide = create :reference_guide, course_version: unit_group.course_version
+    @unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
+    CourseOffering.add_course_offering(@unit_group)
+    @reference_guide = create :reference_guide, course_version: @unit_group.course_version
 
     @in_development_unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
       family_name: 'indev-course', version_year: '2022', name: 'indev-course-2022'
@@ -53,6 +53,25 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     show_data = css_select('script[data-referenceguides]').first.attribute('data-referenceguides').to_s
 
     assert_equal [@reference_guide.summarize_for_index].to_json, show_data
+  end
+
+  test 'ref guide is updated through update route' do
+    editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version
+
+    sign_in @levelbuilder
+
+    assert_not_equal editable_reference_guide.content, 'new content'
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once
+
+    post :update, params: {
+      course_course_name: editable_reference_guide.course_offering_version,
+      key: editable_reference_guide.key,
+      content: 'new content'
+    }
+    assert_response :ok
+
+    editable_reference_guide.reload
+    assert_equal 'new content', editable_reference_guide.content
   end
 
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
