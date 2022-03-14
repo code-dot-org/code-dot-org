@@ -164,3 +164,8 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
+        k5-onlinepd-2022:
+          lessons:
+            Events:
+              name: އިވެންޓުތައް
+              key: އިވެންޓުތައް
