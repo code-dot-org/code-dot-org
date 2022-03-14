@@ -12,8 +12,16 @@ class OfflineController < ApplicationController
   end
 
   def cached_asset_paths
+    # Load the image and mp3 assets used by 'birds' levels.
+    bird_paths = Dir.glob('blockly/media/skins/birds/*', base: 'public/')
+    bird_asset_paths = bird_paths.map {|path| helpers.asset_path(path)}
+
+    # Load fonts distributed by dashboard
+    font_paths = Dir.glob('fonts/**/*.*', base: 'public').map {|path| "/#{path}"}
+
     render json: {
       cachedFiles: [
+        "/s/express-2021/lessons/1/manifest.webmanifest",
         "/s/express-2021/lessons/1/levels/2",
         helpers.asset_path("application.js"),
         webpack_asset_path("js/webpack-runtime.js"),
@@ -31,45 +39,26 @@ class OfflineController < ApplicationController
         webpack_asset_path("js/blockly.js"),
         helpers.asset_path("css/code-studio.css"),
         helpers.asset_path("application.css"),
-        helpers.asset_path("hamburger.css"),
         helpers.asset_path("logo.svg"),
         helpers.asset_path("shared/images/Powered-By_logo-horiz_RGB_REV.png"),
         helpers.asset_path("shared/images/user-not-signed-in.png"),
         helpers.asset_path("css/levels.css"),
         helpers.asset_path("css/common.css"),
-        helpers.asset_path("blockly/css/maze.css"),
+        helpers.asset_path("css/maze.css"),
         webpack_asset_path("js/maze.js"),
         helpers.asset_path("c/video_thumbnails/CSF_maze_intro_text_blocks.jpg"),
         helpers.asset_path("spinner-big.gif"),
-        helpers.asset_path("fonts/fontawesome-webfont.woff2"),
         helpers.asset_path("blockly/media/common_images/shared-sprites-26x26.png"),
-        helpers.asset_path("blockly/media/skins/birds/win.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/start.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/failure.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/obstacle.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/wall.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/wall0.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/wall1.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/wall2.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/wall3.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/wall4.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/win_goal.mp3"),
-        helpers.asset_path("blockly/media/skins/birds/small_static_avatar.png"),
-        helpers.asset_path("blockly/media/skins/birds/avatar.png"),
-        helpers.asset_path("blockly/media/skins/birds/wall_avatar.png"),
-        helpers.asset_path("blockly/media/skins/birds/obstacle.png"),
-        helpers.asset_path("blockly/media/skins/birds/tiles.png"),
-        helpers.asset_path("blockly/media/skins/birds/goalIdle.gif"),
-        helpers.asset_path("blockly/media/skins/birds/idle_avatar.gif"),
         helpers.asset_path("blockly/media/canclosed.png"),
         helpers.asset_path("blockly/media/canopen.png"),
-        helpers.asset_path("blockly/media/skins/birds/background.png"),
         helpers.asset_path("blockly/media/click.mp3"),
         helpers.asset_path("blockly/media/delete.mp3"),
         helpers.asset_path("blockly/media/handopen.cur"),
         helpers.asset_path("x_button.png"),
-        helpers.asset_path("blockly/media/1x1.gif")
-      ]
+        helpers.asset_path("blockly/media/1x1.gif"),
+        '/favicon.ico',
+        '/shared/css/hamburger.css'
+      ].concat(bird_asset_paths, font_paths)
     }
   end
 

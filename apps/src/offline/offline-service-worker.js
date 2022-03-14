@@ -10,13 +10,31 @@ const cacheName = `code-org-pwa-v${cacheVersion}`;
 
 self.addEventListener('install', e => {
   console.log('[Service Worker] installing offline service worker!');
-  e.waitUntil(
-    (async () => {
-      const cache = await caches.open(cacheName);
-      const cachedFiles = await getCachedFilesList();
-      console.log('[Service Worker] Caching:', cachedFiles);
-      await cache.addAll(cachedFiles);
-    })()
+  // TODO - Add retry logic if cache.addAll fails for one of the assets.
+  e.waitUntil(caches.open(cacheName).then(cache => cacheFiles(cache)));
+});
+
+async function cacheFiles(cache) {
+  return getCachedFilesList().then(filepaths =>
+    Promise.all(
+      filepaths.map(async filepath =>
+        cache
+          .add(filepath)
+          .catch(err => console.log(`Failed to cache ${filepath}`, err))
+      )
+    )
+  );
+}
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.open(cacheName).then(cache =>
+      cache.match(event.request).then(
+        response =>
+          // Return the cached response, otherwise fetch it over the internet.
+          response || fetch(event.request).then(response => response)
+      )
+    )
   );
 });
 
