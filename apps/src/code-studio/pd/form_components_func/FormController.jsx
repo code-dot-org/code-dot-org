@@ -168,7 +168,12 @@ const FormController = props => {
     if (newErrors) {
       scrollToTop();
     }
-  }, [errors, previousErrors.length, pageComponents.length, pageHasError]);
+  }, [
+    errors.length,
+    previousErrors.length,
+    pageComponents.length,
+    pageHasError
+  ]);
 
   // on page changed
   useEffect(() => {
@@ -318,10 +323,14 @@ const FormController = props => {
 
       // update state with new data
       const updatedData = {...data, ...newState};
-      setData(updatedData);
-      setErrors(updatedErrors);
+      if (!isEqual(data, updatedData)) {
+        setData(updatedData);
+        saveToSessionStorage({data: updatedData});
+      }
 
-      saveToSessionStorage({data: updatedData});
+      if (!isEqual(errors, updatedErrors)) {
+        setErrors(updatedErrors);
+      }
     },
     [errors, data, saveToSessionStorage]
   );
