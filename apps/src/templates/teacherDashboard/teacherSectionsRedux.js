@@ -283,30 +283,13 @@ export const unassignSection = (sectionId, location) => (
 };
 
 /**
- * Opens the UI for adding a new section.
- */
-export const beginEditingNewSection = (
-  courseId,
-  scriptId,
-  courseOfferingId,
-  courseVersionId,
-  unitId
-) => ({
-  type: EDIT_SECTION_BEGIN,
-  courseId,
-  scriptId,
-  courseOfferingId,
-  courseVersionId,
-  unitId
-});
-
-/**
  * Opens the UI for editing the specified section.
- * @param {number} sectionId
+ * @param {number} sectionId - Optional param for the id of the section to edit. If blank means
+ * new section
  * @param {bool} [silent] - Optional param for when we want to begin editing the
  *   section without launching our dialog
  */
-export const beginEditingSection = (sectionId, silent = false) => ({
+export const beginEditingSection = (sectionId = null, silent = false) => ({
   type: EDIT_SECTION_BEGIN,
   sectionId,
   silent
@@ -581,15 +564,7 @@ const initialState = {
  * @param loginType
  * @returns {sectionShape}
  */
-function newSectionData(
-  id,
-  courseId,
-  scriptId,
-  courseOfferingId,
-  courseVersionId,
-  unitId,
-  loginType
-) {
+function newSectionData(id, loginType) {
   return {
     id: id,
     name: '',
@@ -602,11 +577,11 @@ function newSectionData(
     sharingDisabled: false,
     studentCount: 0,
     code: '',
-    courseId: courseId || null,
-    scriptId: scriptId || null,
-    courseOfferingId: courseOfferingId || null,
-    courseVersionId: courseVersionId || null,
-    unitId: unitId || null,
+    courseId: null,
+    scriptId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    unitId: null,
     hidden: false,
     isAssigned: undefined,
     restrictSection: false
@@ -790,15 +765,7 @@ export default function teacherSections(state = initialState, action) {
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId
       ? {...state.sections[action.sectionId]}
-      : newSectionData(
-          PENDING_NEW_SECTION_ID,
-          action.courseId,
-          action.scriptId,
-          action.courseOfferingId,
-          action.courseVersionId,
-          action.unitId,
-          undefined
-        );
+      : newSectionData(PENDING_NEW_SECTION_ID, undefined);
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
