@@ -96,28 +96,6 @@ export function CloneFormDialog({
   );
 }
 
-function CloneSuccessDialog({editUrl, onClose}) {
-  return (
-    <StylizedBaseDialog
-      handleClose={onClose}
-      renderFooter={() => (
-        <FooterButton type="cancel" text={i18n.dialogOK()} onClick={onClose} />
-      )}
-      isOpen
-    >
-      <span>
-        Clone succeeded1 Visit{' '}
-        <TextLink
-          openInNewTab
-          href={editUrl}
-          text="the new code doc's edit page"
-        />{' '}
-        to make further changes.
-      </span>
-    </StylizedBaseDialog>
-  );
-}
-
 export default function CloneProgrammingExpressionDialog({
   itemToClone,
   programmingEnvironmentsForSelect,
@@ -126,23 +104,41 @@ export default function CloneProgrammingExpressionDialog({
 }) {
   const [clonedEditUrl, setClonedEditUrl] = useState(null);
 
-  return (
-    <>
-      {!!clonedEditUrl && (
-        <CloneSuccessDialog editUrl={clonedEditUrl} onClose={onClose} />
-      )}
-
-      {!clonedEditUrl && (
-        <CloneFormDialog
-          itemToClone={itemToClone}
-          programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
-          categoriesForSelect={categoriesForSelect}
-          onClose={onClose}
-          onCloneSuccess={setClonedEditUrl}
-        />
-      )}
-    </>
-  );
+  if (clonedEditUrl) {
+    return (
+      <StylizedBaseDialog
+        handleClose={onClose}
+        renderFooter={() => (
+          <FooterButton
+            type="cancel"
+            text={i18n.dialogOK()}
+            onClick={onClose}
+          />
+        )}
+        isOpen
+      >
+        <span>
+          Clone succeeded1 Visit{' '}
+          <TextLink
+            openInNewTab
+            href={clonedEditUrl}
+            text="the new code doc's edit page"
+          />{' '}
+          to make further changes.
+        </span>
+      </StylizedBaseDialog>
+    );
+  } else {
+    return (
+      <CloneFormDialog
+        itemToClone={itemToClone}
+        programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
+        categoriesForSelect={categoriesForSelect}
+        onClose={onClose}
+        onCloneSuccess={setClonedEditUrl}
+      />
+    );
+  }
 }
 
 CloneProgrammingExpressionDialog.propTypes = {
@@ -160,11 +156,6 @@ CloneFormDialog.propTypes = {
   categoriesForSelect: PropTypes.arrayOf(PropTypes.object).isRequired,
   onClose: PropTypes.func.isRequired,
   onCloneSuccess: PropTypes.func
-};
-
-CloneSuccessDialog.propTypes = {
-  editUrl: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired
 };
 
 const styles = {
