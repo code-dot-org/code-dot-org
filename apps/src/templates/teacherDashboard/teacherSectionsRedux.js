@@ -1263,14 +1263,6 @@ export function isEditingSection(state) {
 }
 
 /**
- * Ask for the id of the section we're currently editing, or null if we're not
- * editing a section.
- */
-export function editedSectionId(state) {
-  return state.sectionBeingEdited ? state.sectionBeingEdited.id : null;
-}
-
-/**
  * @param {object} state - state.teacherSections in redux tree
  * Extract a list of name/id for each section
  */
