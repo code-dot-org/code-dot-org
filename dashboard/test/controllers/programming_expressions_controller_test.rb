@@ -185,6 +185,70 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal destination_category.id, new_exp.programming_environment_category_id
   end
 
+  class FilterTests < ActionController::TestCase
+    setup do
+      ProgrammingEnvironment.all.destroy_all
+      @programming_environment1 = create :programming_environment
+      @programming_environment2 = create :programming_environment
+      [@programming_environment1, @programming_environment2].each do |programming_environment|
+        3.times do
+          category = create :programming_environment_category, programming_environment: programming_environment
+          4.times do
+            create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
+          end
+        end
+      end
+
+      @levelbuilder = create :levelbuilder
+    end
+
+    test 'get_filtered_expressions returns everything with no filters' do
+      sign_in @levelbuilder
+
+      get :get_filtered_expressions, params: {}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 1, response['numPages']
+      assert_equal 24, response['expressions'].length
+    end
+
+    test 'get_filtered_expressions returns paged expressions' do
+      sign_in @levelbuilder
+
+      get :get_filtered_expressions, params: {page: 1}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 2, response['numPages']
+      assert_equal 20, response['expressions'].length
+
+      get :get_filtered_expressions, params: {page: 2}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 2, response['numPages']
+      assert_equal 4, response['expressions'].length
+    end
+
+    test 'get_filtered_expressions only returns expressions in environment if specified' do
+      sign_in @levelbuilder
+
+      get :get_filtered_expressions, params: {programmingEnvironmentId: @programming_environment1.id, page: 1}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 1, response['numPages']
+      assert_equal 12, response['expressions'].length
+    end
+
+    test 'get_filtered_expressions only returns expressions in category if specified' do
+      sign_in @levelbuilder
+
+      get :get_filtered_expressions, params: {programmingEnvironmentId: @programming_environment2.id, categoryId: @programming_environment2.categories.first.id, page: 1}
+      assert_response :ok
+      response = JSON.parse(@response.body)
+      assert_equal 1, response['numPages']
+      assert_equal 4, response['expressions'].length
+    end
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
@@ -195,6 +259,11 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       destination_programming_environment = create :programming_environment
       @clone_params = {id: @programming_expression.id, destinationProgrammingEnvironmentName: destination_programming_environment.name}
     end
+
+    test_user_gets_response_for :index, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :index, user: :student, response: :forbidden
+    test_user_gets_response_for :index, user: :teacher, response: :forbidden
+    test_user_gets_response_for :index, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :new, user: :student, response: :forbidden

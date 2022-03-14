@@ -272,7 +272,6 @@ class ProgrammingExpression < ApplicationRecord
 
   def clone_to_programming_environment(environment_name, new_category_key = nil)
     new_env = ProgrammingEnvironment.find_by_name(environment_name)
-    puts new_category_key.inspect
     raise "Cannot find programming environment with name #{environment_name}" unless new_env
 
     # Find the category for the new expressions:
