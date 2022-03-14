@@ -1,6 +1,0 @@
-{
-  "key": "mathPow",
-  "name": "mathPow",
-  "category": "Math",
-  "syntax": "Math.pow(__, __)"
-}

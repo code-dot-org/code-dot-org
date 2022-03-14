@@ -7,7 +7,8 @@ export default function OrderableList({
   list,
   setList,
   addButtonText,
-  renderItem
+  renderItem,
+  checkItemDeletionAllowed = item => true
 }) {
   const addItem = () => {
     const newParams = [...list, {key: createUuid()}];
@@ -51,11 +52,13 @@ export default function OrderableList({
                 className="fa fa-caret-down"
               />
             )}
-            <i
-              onClick={() => removeItem(idx)}
-              style={styles.controlButton}
-              className="fa fa-trash"
-            />
+            {checkItemDeletionAllowed(item) && (
+              <i
+                onClick={() => removeItem(idx)}
+                style={styles.controlButton}
+                className="fa fa-trash"
+              />
+            )}
           </div>
           {renderItem(item, (key, value) => updateItem(idx, key, value))}
         </div>
@@ -74,7 +77,8 @@ OrderableList.propTypes = {
   list: PropTypes.arrayOf(PropTypes.object).isRequired,
   setList: PropTypes.func.isRequired,
   addButtonText: PropTypes.string.isRequired,
-  renderItem: PropTypes.func.isRequired
+  renderItem: PropTypes.func.isRequired,
+  checkItemDeletionAllowed: PropTypes.func
 };
 
 const styles = {

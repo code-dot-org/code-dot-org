@@ -91,7 +91,7 @@ describe('ProgressPill', () => {
       <ProgressPill
         levels={[levelWithUrl]}
         text="Unplugged Activity"
-        selectedSectionId="1234"
+        selectedSectionId={1234}
       />
     );
     assert.equal(wrapper.find('a').props().href, '/foo/bar?section_id=1234');

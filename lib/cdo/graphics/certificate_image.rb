@@ -4,6 +4,10 @@
 require 'honeybadger/ruby'
 require 'rmagick'
 require_relative '../script_constants'
+require 'cdo/pegasus/donor'
+
+# needed for force_8859_to_utf8
+require 'cdo/pegasus/string'
 
 # The area in pixels under the "Certificate of Completion" on the certificate reserved for the name.
 CERT_NAME_AREA_WIDTH = 900
@@ -165,8 +169,7 @@ class CertificateImage
     end
 
     unless sponsor
-      weight = SecureRandom.random_number
-      donor = DB[:cdo_donors].all.find {|d| d[:weight_f] - weight >= 0}
+      donor = CdoDonor.get_random_donor_by_weight
       sponsor = donor[:name_s]
     end
 
@@ -236,17 +239,7 @@ class CertificateImage
     end
   end
 
-  # generate a url for a certificate image, given options:
-  #   name: student name
-  #   course: course name
-  #   course_title: course title
-  #   sponsor: (optional)
-  def self.certificate_image_url(opts = {})
-    encoded = Base64.urlsafe_encode64(JSON.pretty_generate(opts))
-    "http://#{CDO.canonical_hostname('code.org')}/v2/hoc/certificate/#{encoded}.jpg"
-  end
-
   def self.tutorial_codes
-    @@tutorial_codes ||= DB[:tutorials].all.map {|t| t[:code]}
+    @@tutorial_codes ||= PEGASUS_DB[:tutorials].all.map {|t| t[:code]}
   end
 end

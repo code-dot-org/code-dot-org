@@ -1,16 +1,13 @@
 require_relative '../../test_helper'
 require_relative '../../../middleware/helpers/storage_apps'
+require_relative '../../../middleware/helpers/storage_id'
 
 class StorageAppsTest < Minitest::Test
   include SetupTest
 
-  def setup
-    @user_storage_ids_table = PEGASUS_DB[:user_storage_ids]
-  end
-
   def test_get_anonymous_age_restricted_app
-    signedout_storage_id = @user_storage_ids_table.insert(user_id: nil)
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    signedout_storage_id = create_storage_id_for_user(nil)
+    signedin_storage_id = create_storage_id_for_user(20)
 
     # Create an applab project as signed out user
     # Other users should not be able to access app
@@ -34,7 +31,7 @@ class StorageAppsTest < Minitest::Test
   end
 
   def test_users_paired_on_level_when_no_level
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 123)
+    signedin_storage_id = create_storage_id_for_user(123)
     storage_apps = StorageApps.new(signedin_storage_id)
 
     mock_where = mock
@@ -48,7 +45,7 @@ class StorageAppsTest < Minitest::Test
   end
 
   def test_users_paired_on_level_with_level_not_paired
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 123)
+    signedin_storage_id = create_storage_id_for_user(123)
     storage_apps = StorageApps.new(signedin_storage_id)
 
     mock_where = mock
@@ -74,7 +71,7 @@ class StorageAppsTest < Minitest::Test
   end
 
   def test_users_paired_on_level_with_level_paired
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 123)
+    signedin_storage_id = create_storage_id_for_user(123)
     storage_apps = StorageApps.new(signedin_storage_id)
 
     mock_where = mock
@@ -100,7 +97,7 @@ class StorageAppsTest < Minitest::Test
   end
 
   def test_derive_project_type
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    signedin_storage_id = create_storage_id_for_user(20)
     storage_apps = StorageApps.new(signedin_storage_id)
 
     # Create without type
@@ -121,7 +118,7 @@ class StorageAppsTest < Minitest::Test
   end
 
   def test_content_moderation_disabled?
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    signedin_storage_id = create_storage_id_for_user(20)
     storage_apps = StorageApps.new(signedin_storage_id)
 
     # Create a new typeless project
@@ -131,7 +128,7 @@ class StorageAppsTest < Minitest::Test
   end
 
   def test_set_content_moderation
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    signedin_storage_id = create_storage_id_for_user(20)
     storage_apps = StorageApps.new(signedin_storage_id)
 
     # Create a new typeless project
@@ -149,7 +146,7 @@ class StorageAppsTest < Minitest::Test
   end
 
   def test_restore
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    signedin_storage_id = create_storage_id_for_user(20)
     storage_apps = StorageApps.new(signedin_storage_id)
 
     # Create a new project
@@ -171,7 +168,7 @@ class StorageAppsTest < Minitest::Test
   end
 
   def test_buffer_abuse_score
-    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    signedin_storage_id = create_storage_id_for_user(20)
     storage_apps = StorageApps.new(signedin_storage_id)
 
     # Create a new typeless project

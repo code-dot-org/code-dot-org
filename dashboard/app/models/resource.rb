@@ -97,7 +97,7 @@ class Resource < ApplicationRecord
       url: get_localized_property(:url),
       download_url: download_url,
       audience: audience || 'All',
-      type: type
+      type: get_localized_property(:type)
     }
   end
 

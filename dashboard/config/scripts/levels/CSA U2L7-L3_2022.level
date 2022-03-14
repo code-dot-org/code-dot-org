@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U2L7 PBT_2022",
+    "long_instructions": "##In MyConsole.java:\r\n\r\n1. Instantiate a `Dessert`(#e7e8ea) object called `myDessert`(#e7e8ea) with `\"coconut\"`(#e7e8ea) as the `flavor`(#e7e8ea) and `1.75`(#e7e8ea) as the `price`(#e7e8ea).\r\n\r\n2. Call the accessor method to get and print the `flavor`(#e7e8ea) of `myDessert`(#e7e8ea).\r\n\r\n3. Call the accessor method to get and print the `price`(#e7e8ea) of `myDessert`(#e7e8ea).\r\n\r\n![](https://images.code.org/d7ba3ec5d29814ba8203a4f26ec386a1-image-1646596658645.png)\r\n\r\n::: details [**Show Me How**]\r\nTo call a method, use the following syntax:\r\n\r\n  ```\r\n  objectName.methodName();\r\n  ```\r\n\r\nBe sure to replace `objectName`(#e7e8ea) with the name of the reference variable for the object.\r\n\r\nTo print the value returned from a method call, use the following syntax:\r\n\r\n  ```\r\n  System.out.print(objectName.methodName());\r\n  \r\n  OR\r\n  \r\n  System.out.println(objectName.methodName());\r\n  ```\r\n\r\nYou may want to concatenate the value returned from the method call with a string to label the value. For example `System.out.println(\"X Location \" + myPainter.getX());`(#e7e8ea)\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "encrypted_examples": "mZB7BNRoUfVP+xe/M7KOnuvdOgK/ZEEXUmzYMFb5QmYsMFo36jxA2RCtrX7n\nXFtFejC1yOH02cTiOPbPz67qMXnG4yNdmfSgYSnx3RAtCwU=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-06T18:13:55.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-06T18:13:55.817+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L2_2022\\\"\"],\"cloned_from\":\"CSA U2L7-L2_2022\"},{\"changed_at\":\"2022-03-06 18:19:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-06 19:57:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:32:41 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

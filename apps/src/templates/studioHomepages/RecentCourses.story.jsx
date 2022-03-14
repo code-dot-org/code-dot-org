@@ -92,7 +92,7 @@ const plCourses = [
   }
 ];
 
-const topPLCourse = {
+const topPlCourse = {
   assignableName: 'Virtual PL',
   lessonName: 'Assignment 3',
   linkToOverview: 'http://studio.code.org/s/vpl-csd-2021',
@@ -193,7 +193,7 @@ export default storybook => {
             courses={plCourses.slice(0, 4)}
             showAllCoursesLink={true}
             isProfessionalLearningCourse={true}
-            topCourse={topPLCourse}
+            topCourse={topPlCourse}
           />
         )
       },

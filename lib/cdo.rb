@@ -132,6 +132,14 @@ module Cdo
       end
     end
 
+    def javabuilder_upload_url(path = '', scheme = '')
+      if rack_env?(:development)
+        'http://localhost:8080/javabuilderfiles/seedsources'
+      else
+        'https://javabuilderbeta-http.code.org/seedsources/sources.json'
+      end
+    end
+
     # Get a list of all languages for which we want to link to a localized
     # version of CurriculumBuilder. This list is distinct from the list of
     # languages officially supported by CurriculumBuilder in that there are

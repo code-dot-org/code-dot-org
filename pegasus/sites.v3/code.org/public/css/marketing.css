@@ -104,3 +104,11 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 .bhm-banner h1, .bhm-banner h2{text-align: center; color:#000000}
 .banner-pt1, .banner-pt2 {  text-align:center;  padding: 15px;}
 }
+
+.center {
+  text-align: center;
+}
+
+.clearboth {
+  clear: both;
+}

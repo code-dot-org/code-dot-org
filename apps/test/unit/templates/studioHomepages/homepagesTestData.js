@@ -26,6 +26,21 @@ export const courses = [
   }
 ];
 
+export const plCourses = [
+  {
+    title: 'PL Course 1',
+    description: 'Teachers learning things about teaching',
+    link: 'https://studio.code.org/s/pl-course1',
+    assignedSections: []
+  },
+  {
+    title: 'Course 2',
+    description: 'Facilitators learning stuff about facilitating',
+    link: 'https://studio.code.org/s/pl-course2',
+    assignedSections: []
+  }
+];
+
 export const moreCourses = [
   ...courses,
   {
@@ -148,7 +163,7 @@ export const topCourse = {
     'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1'
 };
 
-export const topPLCourse = {
+export const topPlCourse = {
   assignableName: 'PL Course 1',
   lessonName: 'Learning how to teacher',
   linkToOverview: 'http://studio.code.org/s/vpl-csp-2021',

@@ -52,9 +52,11 @@ function Certificate(props) {
   };
 
   const getEncodedParams = () => {
+    const donor = studentName ? props.randomDonorName : null;
     const data = {
       name: studentName,
-      course: props.tutorial
+      course: props.tutorial,
+      donor
     };
     return btoa(JSON.stringify(data));
   };
@@ -194,6 +196,7 @@ Certificate.propTypes = {
   tutorial: PropTypes.string,
   certificateId: PropTypes.string,
   randomDonorTwitter: PropTypes.string,
+  randomDonorName: PropTypes.string,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,

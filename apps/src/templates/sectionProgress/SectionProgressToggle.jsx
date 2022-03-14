@@ -91,7 +91,7 @@ export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 export default connect(
   state => ({
     currentView: state.sectionProgress.currentView,
-    sectionId: state.sectionData.section.id,
+    sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId
   }),
   dispatch => ({

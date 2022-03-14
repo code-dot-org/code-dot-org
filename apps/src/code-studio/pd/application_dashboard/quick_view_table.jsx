@@ -83,18 +83,20 @@ export class QuickViewTable extends React.Component {
         }
       },
       {
-        property: 'created_at',
+        property: 'date_applied',
         header: {
           label: 'Submitted',
           transforms: [sortable]
         },
         cell: {
           formatters: [
-            created_at =>
-              new Date(created_at).toLocaleDateString('en-us', {
-                month: 'long',
-                day: 'numeric'
-              })
+            date_applied =>
+              date_applied
+                ? new Date(date_applied).toLocaleDateString('en-us', {
+                    month: 'long',
+                    day: 'numeric'
+                  })
+                : 'Not Yet Submitted'
           ]
         }
       },

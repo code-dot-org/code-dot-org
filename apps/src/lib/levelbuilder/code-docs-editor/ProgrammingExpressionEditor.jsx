@@ -3,12 +3,11 @@ import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
 import ParameterEditor from './ParameterEditor';
+import ImageInput from './ImageInput';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import Button from '@cdo/apps/templates/Button';
-import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
@@ -52,6 +51,7 @@ export default function ProgrammingExpressionEditor({
   const {
     id,
     key,
+    showPath,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
   remainingProgrammingExpression.parameters.forEach(
@@ -65,9 +65,8 @@ export default function ProgrammingExpressionEditor({
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
-  const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
-  const save = () => {
+  const save = (e, shouldCloseAfterSave) => {
     if (isSaving) {
       return;
     }
@@ -83,7 +82,12 @@ export default function ProgrammingExpressionEditor({
       .then(response => {
         setIsSaving(false);
         if (response.ok) {
-          setLastUpdated(Date.now());
+          if (shouldCloseAfterSave) {
+            navigateToHref(showPath);
+          } else {
+            setLastUpdated(Date.now());
+            setError(null);
+          }
         } else {
           setError(response.statusText);
         }
@@ -146,18 +150,12 @@ export default function ProgrammingExpressionEditor({
           ))}
         </select>
       </label>
-      <label>
-        Image
-        <Button
-          onClick={() => setUploadImageDialogOpen(true)}
-          text="Choose Image"
-          color="gray"
-          icon="plus-circle"
-        />
-        {programmingExpression.imageUrl && (
-          <span>{programmingExpression.imageUrl}</span>
-        )}
-      </label>
+      <ImageInput
+        updateImageUrl={imgUrl =>
+          updateProgrammingExpression('imageUrl', imgUrl)
+        }
+        imageUrl={programmingExpression.imageUrl}
+      />
       <label>
         Short Description
         <textarea
@@ -186,9 +184,9 @@ export default function ProgrammingExpressionEditor({
         <label>
           Category
           <select
-            value={programmingExpression.category}
+            value={programmingExpression.categoryKey}
             onChange={e =>
-              updateProgrammingExpression('category', e.target.value)
+              updateProgrammingExpression('categoryKey', e.target.value)
             }
             style={styles.selectInput}
           >
@@ -196,8 +194,8 @@ export default function ProgrammingExpressionEditor({
               (None)
             </option>
             {environmentCategories.map(category => (
-              <option key={category} value={category}>
-                {category}
+              <option key={category.key} value={category.key}>
+                {category.name}
               </option>
             ))}
           </select>
@@ -269,13 +267,7 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref(`/programming_expressions/${id}`)}
-      />
-      <UploadImageDialog
-        isOpen={uploadImageDialogOpen}
-        handleClose={() => setUploadImageDialogOpen(false)}
-        uploadImage={imgUrl => updateProgrammingExpression('imageUrl', imgUrl)}
-        allowExpandable={false}
+        handleView={() => navigateToHref(showPath)}
       />
     </div>
   );
@@ -285,7 +277,7 @@ const programmingExpressionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  category: PropTypes.string,
+  categoryKey: PropTypes.string,
   shortDescription: PropTypes.string,
   externalDocumentation: PropTypes.string,
   content: PropTypes.string,
@@ -298,7 +290,7 @@ const programmingExpressionShape = PropTypes.shape({
 
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
-  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  environmentCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
   videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 

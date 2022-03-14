@@ -1,2 +1,4 @@
-%a{href: @certificate_print_url}
-  %img{src: @certificate_image_url, alt: 'Certificate for Completion of One Hour of Code', width:"100%"}
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/certificates/show.js'), data: {certificate: @certificate_data.to_json}}
+
+#certificate-share

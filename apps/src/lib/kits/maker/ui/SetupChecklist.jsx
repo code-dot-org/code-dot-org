@@ -99,7 +99,7 @@ export default class SetupChecklist extends Component {
 
       // What type of board is this?
       .then(() => {
-        this.setState({boardTypeDetected: BOARD_TYPE.OTHER});
+        this.setState({boardTypeDetected: setupChecker.detectBoardType()});
         if (experiments.isEnabled('microbit')) {
           console.log('Board detected: ' + setupChecker.detectBoardType());
         }
@@ -114,14 +114,23 @@ export default class SetupChecklist extends Component {
       )
 
       // Can we initialize components successfully?
-      .then(() =>
-        this.detectStep(STATUS_BOARD_COMPONENTS, () =>
-          setupChecker.detectComponentsInitialize()
-        )
-      )
+      .then(() => {
+        if (this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT) {
+          return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
+            setupChecker.detectComponentsInitialize()
+          );
+        }
+        return Promise.resolve();
+      })
 
       // Everything looks good, let's par-tay!
-      .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
+      .then(() =>
+        this.thumb(
+          this.state.boardTypeDetected === BOARD_TYPE.MICROBIT
+            ? STATUS_BOARD_CONNECT
+            : STATUS_BOARD_COMPONENTS
+        )
+      )
       .then(() => setupChecker.celebrate())
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
@@ -270,8 +279,7 @@ export default class SetupChecklist extends Component {
   render() {
     const linuxPermissionError =
       isLinux() &&
-      this.state.caughtError &&
-      this.state.caughtError.message.includes('Permission denied');
+      this.state.caughtError?.message?.includes('Permission denied');
 
     return (
       <div>
@@ -291,6 +299,7 @@ export default class SetupChecklist extends Component {
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_PLUG]}
             stepName={i18n.validationStepBoardPluggedIn()}
+            hideWaitingSteps={true}
           >
             {this.state.caughtError && this.state.caughtError.reason && (
               <pre>{this.state.caughtError.reason}</pre>
@@ -310,6 +319,7 @@ export default class SetupChecklist extends Component {
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
+            hideWaitingSteps={true}
           >
             {applabI18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
@@ -325,15 +335,18 @@ export default class SetupChecklist extends Component {
             {!linuxPermissionError && this.installFirmwareSketch()}
             {this.contactSupport()}
           </ValidationStep>
-          <ValidationStep
-            stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
-            stepName={i18n.validationStepBoardComponentsUsable()}
-          >
-            {applabI18n.makerSetupVerifyComponents()}
-            <br />
-            {this.installFirmwareSketch()}
-            {this.contactSupport()}
-          </ValidationStep>
+          {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
+            <ValidationStep
+              stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
+              stepName={i18n.validationStepBoardComponentsUsable()}
+              hideWaitingSteps={true}
+            >
+              {applabI18n.makerSetupVerifyComponents()}
+              <br />
+              {this.installFirmwareSketch()}
+              {this.contactSupport()}
+            </ValidationStep>
+          )}
         </div>
         <div>
           <h2>{i18n.support()}</h2>

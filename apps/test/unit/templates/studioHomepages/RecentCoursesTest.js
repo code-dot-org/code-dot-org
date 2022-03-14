@@ -10,7 +10,7 @@ import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import {
   courses,
   moreCourses,
-  topPLCourse,
+  topPlCourse,
   topCourse
 } from './homepagesTestData';
 
@@ -173,7 +173,7 @@ describe('RecentCourses', () => {
       const wrapper = shallow(
         <RecentCourses
           courses={[]}
-          topCourse={topPLCourse}
+          topCourse={topPlCourse}
           isProfessionalLearningCourse={true}
         />
       );

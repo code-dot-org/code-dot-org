@@ -8,7 +8,7 @@ Feature: Viewing and Printing Standards Progress
     Given I am assigned to unit "allthethings"
 
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-teacher-dashboard-nav" is visible

@@ -42,6 +42,7 @@ class Script < ApplicationRecord
   include SharedCourseConstants
   include SharedConstants
   include Curriculum::CourseTypes
+  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
 
   include Seeded
@@ -290,7 +291,6 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
-    deprecated
     is_course
     show_calendar
     weekly_instructional_minutes
@@ -329,16 +329,9 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
-  def self.lesson_extras_script_ids
-    @@lesson_extras_script_ids ||= all_scripts.select(&:lesson_extras_available?).pluck(:id)
-  end
-
-  def self.maker_units
-    @@maker_units ||= visible_units.select(&:is_maker_unit?)
-  end
-
-  def self.text_to_speech_unit_ids
-    @@text_to_speech_unit_ids ||= all_scripts.select(&:text_to_speech_enabled?).pluck(:id)
+  def self.maker_units(user)
+    return_units = @@maker_units ||= visible_units.select(&:is_maker_unit?)
+    return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
   end
 
   # Get the set of units that are valid for the current user, ignoring those
@@ -346,18 +339,18 @@ class Script < ApplicationRecord
   # @param [User] user
   # @return [Script[]]
   def self.valid_scripts(user)
-    has_any_course_experiments = UnitGroup.has_any_course_experiments?(user)
-    with_hidden = !has_any_course_experiments && user.hidden_script_access?
-    units = with_hidden ? all_scripts : visible_units
+    return all_scripts if user.levelbuilder?
 
-    if has_any_course_experiments
+    units = visible_units
+
+    if UnitGroup.has_any_course_experiments?(user)
       units = units.map do |unit|
         alternate_script = unit.alternate_script(user)
         alternate_script.presence || unit
       end
     end
 
-    if !with_hidden && has_any_pilot_access?(user)
+    if has_any_pilot_access?(user)
       units += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
 
@@ -626,13 +619,24 @@ class Script < ApplicationRecord
 
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    # Only students should be redirected based on unit progress and/or section assignments.
-    if user&.student?
+    return nil unless family_units.last.can_be_instructor?(user) || family_units.last.can_be_participant?(user)
+
+    # Only signed in participants should be redirected based on unit progress and/or section assignments.
+    if user && family_units.last.can_be_participant?(user)
       assigned_unit_ids = user.section_scripts.pluck(:id)
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) if unit_name
+      if unit_name
+        # This creates a temporary script which is used to redirect the user. The audiences are set
+        # to allow the redirect to happen for any user
+        return Script.new(
+          redirect_to: unit_name,
+          published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
+          instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+          participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+        )
+      end
     end
 
     locale_str = locale&.to_s
@@ -651,7 +655,16 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) : nil
+
+    unit_name ?
+      # This creates a temporary script which is used to redirect the user. The audiences are set
+      # to allow the redirect to happen for any user
+      Script.new(
+        redirect_to: unit_name,
+        published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      ) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
@@ -679,8 +692,8 @@ class Script < ApplicationRecord
   def redirect_to_unit_url(user, locale: nil)
     # No redirect unless unit belongs to a family.
     return nil unless family_name
-    # Only redirect students.
-    return nil unless user && user.student?
+    # Only redirect participants.
+    return nil unless user && can_be_participant?(user)
     return nil unless has_other_versions?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
@@ -705,6 +718,8 @@ class Script < ApplicationRecord
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
   def can_view_version?(user, locale: nil)
+    return false unless Ability.new(user).can?(:read, self)
+
     # Users can view any course not in a family.
     return true unless family_name
 
@@ -715,9 +730,9 @@ class Script < ApplicationRecord
     # All users can see the latest unit version in English and in their locale.
     return true if is_latest
 
-    # Restrictions only apply to students and logged out users.
+    # Restrictions only apply to participants and logged out users.
     return false if user.nil?
-    return true unless user.student?
+    return true if can_be_instructor?(user)
 
     # A student can view the unit version if they have progress in it or the course it belongs to.
     has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
@@ -1415,6 +1430,10 @@ class Script < ApplicationRecord
     [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
+  def deprecated?
+    get_published_state == SharedCourseConstants::PUBLISHED_STATE.deprecated
+  end
+
   def stable?
     get_published_state == SharedCourseConstants::PUBLISHED_STATE.stable
   end
@@ -1550,12 +1569,13 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
+    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
     summary
   end
 
   def summarize_for_lesson_edit
     {
-      isLaunched: launched?,
+      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
@@ -1661,22 +1681,21 @@ class Script < ApplicationRecord
     return [] unless family_name
     return [] unless has_other_versions?
     return [] unless unit_groups.empty?
-    with_hidden = user&.hidden_script_access?
     units = Script.
       where(family_name: family_name).
       all.
-      select {|unit| with_hidden || unit.launched?}.
+      select {|unit| user&.levelbuilder? || unit.launched?}.
       map do |s|
-        {
-          name: s.name,
-          version_year: s.version_year,
-          version_title: s.version_year,
-          can_view_version: s.can_view_version?(user),
-          is_stable: s.stable?,
-          locales: s.supported_locale_names,
-          locale_codes: s.supported_locales
-        }
-      end
+      {
+        name: s.name,
+        version_year: s.version_year,
+        version_title: s.version_year,
+        can_view_version: s.can_view_version?(user),
+        is_stable: s.stable?,
+        locales: s.supported_locale_names,
+        locale_codes: s.supported_locales
+      }
+    end
 
     units.sort_by {|info| info[:version_year]}.reverse
   end
@@ -1755,7 +1774,6 @@ class Script < ApplicationRecord
       :has_verified_resources,
       :project_sharing,
       :tts,
-      :deprecated,
       :is_course,
       :show_calendar,
       :is_migrated,
@@ -1849,6 +1867,19 @@ class Script < ApplicationRecord
     nil
   end
 
+  def summarize_for_assignment_dropdown
+    [
+      id,
+      {
+        id: id,
+        name: localized_title,
+        path: link,
+        lesson_extras_available: lesson_extras_available?,
+        text_to_speech_enabled: text_to_speech_enabled?
+      }
+    ]
+  end
+
   # @return {AssignableInfo} with strings translated
   def assignable_info
     info = ScriptConstants.assignable_info(self)
@@ -1879,6 +1910,7 @@ class Script < ApplicationRecord
     info[:supported_locales] = supported_locale_names
     info[:supported_locale_codes] = supported_locale_codes
     info[:lesson_extras_available] = lesson_extras_available
+    info[:text_to_speech_enabled] = text_to_speech_enabled?
     if has_standards_associations?
       info[:standards] = standards
     end

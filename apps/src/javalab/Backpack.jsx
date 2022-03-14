@@ -340,30 +340,30 @@ const styles = {
     position: 'absolute',
     flexDirection: 'column',
     top: 30,
-    backgroundColor: color.lightest_gray,
+    backgroundColor: color.white,
     zIndex: 20,
     borderWidth: 1,
-    borderColor: color.darkest_gray,
+    borderColor: color.light_gray,
     borderStyle: 'solid',
-    borderTopWidth: 0,
     borderRadius: 4,
     maxWidth: '35%',
     maxHeight: '80%',
     minWidth: 150,
-    color: color.darkest_gray,
+    color: color.dark_charcoal,
     marginLeft: 3
   },
   dropdown: {
     overflow: 'auto',
-    padding: 10
+    padding: '10px 0',
+    minWidth: 'inherit'
   },
   dropdownDark: {
-    backgroundColor: color.darkest_gray,
-    color: color.lightest_gray,
-    borderColor: color.lightest_gray
+    backgroundColor: color.darkest_slate_gray,
+    color: color.background_gray
   },
   listContainer: {
-    width: 'fit-content'
+    width: 'fit-content',
+    minWidth: 'inherit'
   },
   dropdownOpenButton: {
     backgroundColor: color.cyan
@@ -371,15 +371,16 @@ const styles = {
   fileListItem: {
     display: 'flex',
     flexDirection: 'row',
-    padding: '5px',
+    boxSizing: 'border-box',
+    padding: '5px 15px',
     width: '100%',
     ':hover': {
-      backgroundColor: color.lighter_gray
+      backgroundColor: color.background_gray
     }
   },
   fileListItemDark: {
     ':hover': {
-      backgroundColor: color.black
+      backgroundColor: color.dark_charcoal
     }
   },
   fileListLabel: {
@@ -391,7 +392,11 @@ const styles = {
     color: color.white,
     fontSize: 13,
     padding: '5px 16px',
-    width: 'fit-content'
+    width: 'fit-content',
+    borderColor: color.orange,
+    ':disabled': {
+      borderColor: color.light_gray
+    }
   },
   backpackIcon: {
     height: 15,

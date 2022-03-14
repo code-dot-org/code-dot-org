@@ -2,13 +2,6 @@
 class TestController < ApplicationController
   layout false
 
-  def hidden_script_access
-    return unless (user = current_user)
-    user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
-    user.save!
-    head :ok
-  end
-
   def levelbuilder_access
     return unless (user = current_user)
     user.permission = UserPermission::LEVELBUILDER
@@ -19,6 +12,13 @@ class TestController < ApplicationController
   def universal_instructor_access
     return unless (user = current_user)
     user.permission = UserPermission::UNIVERSAL_INSTRUCTOR
+    user.save!
+    head :ok
+  end
+
+  def facilitator_access
+    return unless (user = current_user)
+    user.permission = UserPermission::FACILITATOR
     user.save!
     head :ok
   end
@@ -40,6 +40,14 @@ class TestController < ApplicationController
         unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
       ]
     )
+  end
+
+  def create_section_assigned_to_script
+    return unless (user = current_user)
+    script = Script.find_by_name(params.require(:script_name))
+
+    Section.create!(name: "New Section", user: user, script: script)
+    head :ok
   end
 
   def assign_script_as_student

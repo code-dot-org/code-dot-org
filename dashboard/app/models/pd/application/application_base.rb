@@ -56,12 +56,7 @@ module Pd::Application
 
     after_initialize :set_type_and_year
 
-    # Set the status only if (a) the application is new, or (b) the applicant updates form_data.
-    # Avoid setting the status when an RP or admin changes the application status, which only happens
-    # from the application dashboard, not from changing form_data.
-    before_validation -> {self.status = (sanitize_form_data_hash && sanitize_form_data_hash[:status] || :unreviewed)},
-      if: -> {form_data_changed? || new_record?}
-
+    before_validation -> {self.status = 'unreviewed' unless status}
     validate :status_is_valid_for_application_type
     validates_presence_of :type
     validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}

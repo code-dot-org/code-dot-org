@@ -24,6 +24,7 @@ export default function AssignedStudentsPanel({
       <div style={styles.header}>
         <span style={styles.headerTitle}>{i18n.groups()}</span>
         <JavalabButton
+          id="uitest-create-code-review-group"
           onClick={onCreateGroupClick}
           icon={<FontAwesome icon="plus" className="fa" />}
           text={i18n.createGroup()}

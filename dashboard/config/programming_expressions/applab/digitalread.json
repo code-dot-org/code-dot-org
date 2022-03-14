@@ -1,0 +1,8 @@
+{
+  "key": "digitalRead",
+  "name": "digitalRead()",
+  "category": "Maker",
+  "category_key": "maker",
+  "short_description": "Maker Toolkit - digitalRead()",
+  "syntax": "digitalRead(pin)"
+}

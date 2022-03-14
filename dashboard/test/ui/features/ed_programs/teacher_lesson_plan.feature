@@ -1,7 +1,9 @@
 @no_mobile
 Feature: Teacher Lesson Plan
 
+  @eyes
   Scenario: Viewing Teacher Lesson Plan
+    When I open my eyes to test "teacher lesson plan"
     Given I create a teacher named "Ms_Frizzle"
     And I am on "http://studio.code.org/s/allthemigratedthings/lessons/1"
     And I wait until element "#show-container" is visible
@@ -53,6 +55,9 @@ Feature: Teacher Lesson Plan
     And I wait until element "h2:contains(Activity 1)" is visible
     And I wait until element ".uitest-ProgressPill" is visible
 
+    # Check that the lesson plan looks correct
+    And I see no difference for "teacher lesson plan"
+
     # Discussion goal is collapsible
     And I wait until element ".unit-test-tip-tab" is visible
     And I wait until element "p:contains(Get students to talk)" is visible
@@ -83,6 +88,7 @@ Feature: Teacher Lesson Plan
     And I wait until element "a:contains(All the Migrated Things)" is visible
     And I click selector "a:contains(All the Migrated Things)"
     And I wait until I am on "http://studio.code.org/s/allthemigratedthings"
+    And I close my eyes
 
   @eyes
   Scenario: Viewing Level Details Dialogs

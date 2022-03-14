@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import PropTypes from 'prop-types';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -25,8 +26,8 @@ const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
 
-/** @const {string} Empty string used to indicate no section selected */
-export const NO_SECTION = '';
+/** @const {null} null used to indicate no section selected */
+export const NO_SECTION = null;
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
@@ -43,12 +44,7 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_LESSON_EXTRAS_UNIT_IDS =
-  'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
-const SET_TEXT_TO_SPEECH_UNIT_IDS =
-  'teacherDashboard/SET_TEXT_TO_SPEECH_UNIT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -111,15 +107,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
-export const setLessonExtrasUnitIds = ids => ({
-  type: SET_LESSON_EXTRAS_UNIT_IDS,
-  ids
-});
-export const setTextToSpeechUnitIds = ids => ({
-  type: SET_TEXT_TO_SPEECH_UNIT_IDS,
-  ids
-});
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
   providers
@@ -526,7 +513,6 @@ const initialState = {
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
   // for consistency and ease of comparison).
   providers: [],
-  validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
   // A map from assignmentId to assignment (see assignmentShape PropType).
@@ -537,7 +523,7 @@ const initialState = {
   assignmentFamilies: [],
   // Mapping from sectionId to section object
   sections: {},
-  // List of students in section currently being edited
+  // List of students in section currently being edited (see studentShape PropType)
   selectedStudents: [],
   sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
@@ -546,8 +532,6 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
-  lessonExtrasUnitIds: [],
-  textToSpeechUnitIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -623,27 +607,6 @@ export default function teacherSections(state = initialState, action) {
       providers: action.providers.map(provider =>
         mapProviderToSectionType(provider)
       )
-    };
-  }
-
-  if (action.type === SET_LESSON_EXTRAS_UNIT_IDS) {
-    return {
-      ...state,
-      lessonExtrasUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_TEXT_TO_SPEECH_UNIT_IDS) {
-    return {
-      ...state,
-      textToSpeechUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_VALID_GRADES) {
-    return {
-      ...state,
-      validGrades: action.grades
     };
   }
 
@@ -730,12 +693,13 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SET_STUDENT_SECTION) {
-    const students = action.students.map(student =>
+    const students = action.students || [];
+    const selectedStudents = students.map(student =>
       studentFromServerStudent(student, action.sectionId)
     );
     return {
       ...state,
-      selectedStudents: students
+      selectedStudents
     };
   }
 
@@ -783,13 +747,20 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SELECT_SECTION) {
-    let sectionId = action.sectionId;
+    let sectionId;
+    if (action.sectionId) {
+      sectionId = parseInt(action.sectionId);
+    } else {
+      sectionId = NO_SECTION;
+    }
+
     if (
       sectionId !== NO_SECTION &&
       !state.sectionIds.includes(parseInt(sectionId, 10))
     ) {
       sectionId = NO_SECTION;
     }
+
     return {
       ...state,
       selectedSectionId: sectionId
@@ -1146,14 +1117,38 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedUnitName(state) {
+export function assignedUnit(state) {
   const {sectionBeingEdited, validAssignments} = getRoot(state);
+
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  return validAssignments[assignId];
+}
+
+export function assignedUnitName(state) {
+  const {sectionBeingEdited} = getRoot(state);
   if (!sectionBeingEdited) {
     return '';
   }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+  const assignment = assignedUnit(state);
   return assignment ? assignment.name : '';
+}
+
+export function assignedUnitLessonExtrasAvailable(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.lesson_extras_available : false;
+}
+
+export function assignedUnitTextToSpeechEnabled(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.text_to_speech_enabled : false;
 }
 
 export function getVisibleSections(state) {
@@ -1292,14 +1287,6 @@ export const assignmentPaths = (validAssignments, section) => {
 };
 
 /**
- * Is the given unit ID a CSF course? `script.rb` owns the list.
- * @param state
- * @param id
- */
-export const lessonExtrasAvailable = (state, id) =>
-  state.teacherSections.lessonExtrasUnitIds.indexOf(id) > -1;
-
-/**
  * Ask whether the user is currently adding a new section using
  * the Add Section dialog.
  */
@@ -1377,3 +1364,13 @@ export function hiddenSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(id => state.sections[id].hidden);
 }
+
+export const studentShape = PropTypes.shape({
+  sectionId: PropTypes.number,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  sharingDisabled: PropTypes.bool,
+  totalLines: PropTypes.number,
+  secretPicturePath: PropTypes.string,
+  secretWords: PropTypes.string
+});

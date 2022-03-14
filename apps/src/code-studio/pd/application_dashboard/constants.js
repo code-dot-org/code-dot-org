@@ -3,6 +3,8 @@
  */
 
 import color from '@cdo/apps/util/color';
+import {omit} from 'lodash';
+import experiments from '@cdo/apps/util/experiments';
 
 const STATUS_GREEN = {
   backgroundColor: color.level_perfect,
@@ -16,6 +18,10 @@ export const StatusColors = {
   unreviewed: {
     backgroundColor: color.charcoal,
     color: color.white
+  },
+  reopened: {
+    backgroundColor: color.lighter_orange,
+    color: color.black
   },
   incomplete: {
     backgroundColor: color.lightest_cyan,
@@ -81,21 +87,28 @@ export const ScholarshipStatusRequiredStatuses = [
  */
 export function getApplicationStatuses(type, addAutoEmail = true) {
   if (type === 'teacher') {
-    return {
-      unreviewed: 'Unreviewed',
-      incomplete: 'Incomplete',
-      pending: 'Pending',
-      waitlisted: `Waitlisted${autoEmailText(addAutoEmail)}`,
-      declined: `Declined${autoEmailText(addAutoEmail)}`,
-      accepted_not_notified: 'Accepted - Not notified',
-      accepted_notified_by_partner: 'Accepted - Notified by partner',
-      accepted_no_cost_registration: `Accepted - No cost registration${autoEmailText(
-        addAutoEmail
-      )}`,
-      registration_sent: `Registration Sent${autoEmailText(addAutoEmail)}`,
-      paid: 'Paid',
-      withdrawn: 'Withdrawn'
-    };
+    // [MEG] TODO: Once experiment is complete, remove omit
+    return omit(
+      {
+        unreviewed: 'Unreviewed',
+        incomplete: 'Incomplete',
+        reopened: 'Reopened',
+        pending: 'Pending',
+        waitlisted: `Waitlisted${autoEmailText(addAutoEmail)}`,
+        declined: `Declined${autoEmailText(addAutoEmail)}`,
+        accepted_not_notified: 'Accepted - Not notified',
+        accepted_notified_by_partner: 'Accepted - Notified by partner',
+        accepted_no_cost_registration: `Accepted - No cost registration${autoEmailText(
+          addAutoEmail
+        )}`,
+        registration_sent: `Registration Sent${autoEmailText(addAutoEmail)}`,
+        paid: 'Paid',
+        withdrawn: 'Withdrawn'
+      },
+      experiments.isEnabled(experiments.TEACHER_APPLICATION_SAVING_REOPENING)
+        ? []
+        : ['incomplete', 'reopened']
+    );
   } else if (type === 'facilitator') {
     return {
       unreviewed: 'Unreviewed',

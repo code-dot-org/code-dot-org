@@ -766,7 +766,7 @@ FactoryGirl.define do
       after(:create) do |script, evaluator|
         lesson_group = create :lesson_group, script: script
         evaluator.lessons_count.times do
-          create :lesson, :with_activity_section, lesson_group: lesson_group
+          create :lesson, :with_activity_section, lesson_group: lesson_group, script: script, has_lesson_plan: true
         end
       end
     end
@@ -971,11 +971,13 @@ FactoryGirl.define do
 
   factory :programming_environment do
     sequence(:name) {|n| "programming-environment-#{n}"}
+    published true
   end
 
   factory :programming_environment_category do
-    sequence(:key) {|n| "programming-environment-category-#{n}"}
-    sequence(:name) {|n| "programming-environment-category-#{n}"}
+    sequence(:key, 'a') {|n| "programming_environment_category_#{n}"}
+    sequence(:name, 'b') {|n| "programming-environment-category-#{n}"}
+    color '#000000'
   end
 
   factory :programming_expression do

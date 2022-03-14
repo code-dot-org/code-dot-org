@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
 import {assignmentVersionShape} from './shapes';
 import i18n from '@cdo/locale';
@@ -7,6 +7,66 @@ import FontAwesome from './../FontAwesome';
 import color from '../../util/color';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
+
+export default function AssignmentVersionMenuItem(props) {
+  // Returns whether we should display this version as english-only.
+  const englishOnly = () => {
+    const locales = props.version.locales;
+    return (
+      locales.length === 0 || (locales.length === 1 && locales[0] === 'English')
+    );
+  };
+
+  const {version, onClick} = props;
+  const tooltipId = _.uniqueId();
+  return (
+    <PopUpMenu.Item onClick={onClick}>
+      <div style={style.wrapper}>
+        <span style={style.selectedColumn}>
+          {version.isSelected && <FontAwesome icon="check" />}
+        </span>
+        <span style={style.titleColumn} className="assignment-version-title">
+          {version.title}
+        </span>
+        <span style={style.statusColumn}>
+          {version.isRecommended && (
+            <span style={style.recommended}>{i18n.recommended()}</span>
+          )}
+          {!version.isStable && (
+            <span>
+              <FontAwesome
+                icon="exclamation-triangle"
+                style={{color: color.light_orange}}
+              />
+              &nbsp;
+              {i18n.preview()}
+            </span>
+          )}
+        </span>
+        <span style={style.languageColumn}>
+          {englishOnly() && i18n.englishOnly()}
+          {!englishOnly() && (
+            <div>
+              <span data-tip data-for={tooltipId}>
+                {i18n.numLanguages({numLanguages: version.locales.length})}
+                &nbsp;
+                <FontAwesome icon="info-circle" style={style.infoCircle} />
+              </span>
+              <ReactTooltip id={tooltipId} place="right">
+                {version.locales.join(', ')}
+              </ReactTooltip>
+            </div>
+          )}
+        </span>
+      </div>
+    </PopUpMenu.Item>
+  );
+}
+
+AssignmentVersionMenuItem.propTypes = {
+  version: assignmentVersionShape,
+  onClick: PropTypes.func.isRequired
+};
 
 export const columnWidths = {
   selected: 25,
@@ -57,65 +117,3 @@ const style = {
     fontSize: 18
   }
 };
-
-export default class AssignmentVersionMenuItem extends Component {
-  static propTypes = {
-    version: assignmentVersionShape,
-    onClick: PropTypes.func.isRequired
-  };
-
-  // Returns whether we should display this version as english-only.
-  englishOnly() {
-    const locales = this.props.version.locales;
-    return (
-      locales.length === 0 || (locales.length === 1 && locales[0] === 'English')
-    );
-  }
-
-  render() {
-    const {version, onClick} = this.props;
-    const tooltipId = _.uniqueId();
-    return (
-      <PopUpMenu.Item onClick={onClick}>
-        <div style={style.wrapper}>
-          <span style={style.selectedColumn}>
-            {version.isSelected && <FontAwesome icon="check" />}
-          </span>
-          <span style={style.titleColumn} className="assignment-version-title">
-            {version.title}
-          </span>
-          <span style={style.statusColumn}>
-            {version.isRecommended && (
-              <span style={style.recommended}>{i18n.recommended()}</span>
-            )}
-            {!version.isStable && (
-              <span>
-                <FontAwesome
-                  icon="exclamation-triangle"
-                  style={{color: color.light_orange}}
-                />
-                &nbsp;
-                {i18n.preview()}
-              </span>
-            )}
-          </span>
-          <span style={style.languageColumn}>
-            {this.englishOnly() && i18n.englishOnly()}
-            {!this.englishOnly() && (
-              <div>
-                <span data-tip data-for={tooltipId}>
-                  {i18n.numLanguages({numLanguages: version.locales.length})}
-                  &nbsp;
-                  <FontAwesome icon="info-circle" style={style.infoCircle} />
-                </span>
-                <ReactTooltip id={tooltipId} place="right">
-                  {version.locales.join(', ')}
-                </ReactTooltip>
-              </div>
-            )}
-          </span>
-        </div>
-      </PopUpMenu.Item>
-    );
-  }
-}

@@ -1,0 +1,245 @@
+{
+  "script": {
+    "name": "vpl-csd1-summer-pilot-2022",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2022-03-09 20:53:40 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csd1-summer-pilot-2022"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Welcome",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Equity in CS",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "This appears for teachers / facilitators",
+        "student_overview": "This appears for participants / students"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Model Lesson 1 - Unit 1 Lesson 2",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f799a35e-e8f0-4bca-8b7a-12bfa327d770",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f799a35e-e8f0-4bca-8b7a-12bfa327d770",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "766003f5-a9e9-429a-bb55-c6f6a20bf686",
+      "position": 1,
+      "properties": {
+        "name": "Where is the Lesson Plan?"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "766003f5-a9e9-429a-bb55-c6f6a20bf686",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "1200b09b-ff82-40e8-8e3e-2dd6395f16a1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1200b09b-ff82-40e8-8e3e-2dd6395f16a1",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "8da301db-e1c0-412f-a905-2254fc527d71",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8da301db-e1c0-412f-a905-2254fc527d71",
+        "lesson_activity.key": "f799a35e-e8f0-4bca-8b7a-12bfa327d770"
+      }
+    },
+    {
+      "key": "54647d60-2b30-4223-b0bc-58d682912089",
+      "position": 1,
+      "properties": {
+        "description": "This lesson plan exists to provide resources to teachers. Any actual facilitation guidance is in the Google Doc agenda: [link]"
+      },
+      "seeding_key": {
+        "activity_section.key": "54647d60-2b30-4223-b0bc-58d682912089",
+        "lesson_activity.key": "766003f5-a9e9-429a-bb55-c6f6a20bf686"
+      }
+    },
+    {
+      "key": "dd1e0165-224a-4ca9-80bc-a9fa840dbeef",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dd1e0165-224a-4ca9-80bc-a9fa840dbeef",
+        "lesson_activity.key": "1200b09b-ff82-40e8-8e3e-2dd6395f16a1"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+    {
+      "name": "Fake Equity Video",
+      "url": "https://www.youtube.com/watch?v=uhcA6K8rWp0",
+      "key": "fake_equity_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "fake_equity_video"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "fake_equity_video"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

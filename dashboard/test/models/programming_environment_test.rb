@@ -6,6 +6,21 @@ class ProgrammingEnvironmentTest < ActiveSupport::TestCase
     assert programming_environment.name
   end
 
+  test "enforces name format" do
+    programming_environment = create :programming_environment, name: 'simple-name'
+    assert programming_environment.valid?
+
+    programming_environment.update(name: "NaMeWiThUpCaSe")
+    refute programming_environment.valid?
+    assert_equal [{error: :invalid, value: "NaMeWiThUpCaSe"}],
+      programming_environment.errors.details[:name]
+
+    programming_environment.update(name: "name~with/invalid characters")
+    refute programming_environment.valid?
+    assert_equal [{error: :invalid, value: "name~with/invalid characters"}],
+      programming_environment.errors.details[:name]
+  end
+
   test "can serialize and seed programming environment" do
     env = create :programming_environment, name: 'ide', editor_type: 'droplet', title: 'IDE', description: 'A description of the IDE.', image_url: 'images.code.org/ide'
     serialization = env.serialize

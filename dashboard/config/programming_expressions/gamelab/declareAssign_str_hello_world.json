@@ -1,6 +1,0 @@
-{
-  "key": "declareAssign_str_hello_world",
-  "name": "declareAssign_str_hello_world",
-  "category": "Variables",
-  "syntax": "var str = \"Hello World\";"
-}
