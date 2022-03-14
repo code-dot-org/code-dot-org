@@ -40,8 +40,8 @@ const {
   studentScriptIds,
   validCourses,
   validCourseOfferings,
-  hasSeenStandardsReportInfo,
-  localeCode
+  localeCode,
+  hasSeenStandardsReportInfo
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
