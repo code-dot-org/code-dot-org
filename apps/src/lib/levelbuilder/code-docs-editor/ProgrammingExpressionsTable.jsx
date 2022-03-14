@@ -7,7 +7,7 @@ import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';
 
-const ALL_VALUE = 'all';
+const DEFAULT_VALUE = 'all';
 
 const destroyExpression = (destroyPath, callback) => {
   fetch(destroyPath, {
@@ -27,8 +27,8 @@ export default function ProgrammingExpressionsTable({
   categoriesForSelect,
   hidden
 }) {
-  const [selectedEnvironment, setSelectedEnvironment] = useState(ALL_VALUE);
-  const [selectedCategory, setSelectedCategory] = useState(ALL_VALUE);
+  const [selectedEnvironment, setSelectedEnvironment] = useState(DEFAULT_VALUE);
+  const [selectedCategory, setSelectedCategory] = useState(DEFAULT_VALUE);
   const [programmingExpressions, setProgrammingExpressions] = useState([]);
   const [
     categoriesAvailableForSelect,
@@ -38,7 +38,7 @@ export default function ProgrammingExpressionsTable({
 
   const [itemToDelete, setItemToDelete] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [numPages, setNumPages] = useState(null);
+  const [numPages, setNumPages] = useState(1);
 
   const actionsCellFormatter = (actions, {rowData}) => {
     return (
@@ -71,10 +71,10 @@ export default function ProgrammingExpressionsTable({
 
   const fetchExpressions = (environmentId, categoryId, callback) => {
     const data = {};
-    if (environmentId !== ALL_VALUE) {
+    if (environmentId !== DEFAULT_VALUE) {
       data.programmingEnvironmentId = environmentId;
     }
-    if (categoryId !== ALL_VALUE) {
+    if (categoryId !== DEFAULT_VALUE) {
       data.categoryId = categoryId;
     }
     data.page = currentPage;
@@ -100,17 +100,17 @@ export default function ProgrammingExpressionsTable({
 
   useEffect(() => {
     let categoryToFetch = selectedCategory;
-    if (selectedEnvironment === ALL_VALUE) {
+    if (selectedEnvironment === DEFAULT_VALUE) {
       setCategoriesAvailableForSelect(categoriesForSelect);
     } else {
       setCategoriesAvailableForSelect(
         categoriesForSelect.filter(
-          cat => String(cat.envId) === selectedEnvironment
+          cat => String(cat.envId) === String(selectedEnvironment)
         )
       );
       if (String(selectedCategory.envId) !== selectedEnvironment) {
-        setSelectedCategory(ALL_VALUE);
-        categoryToFetch = ALL_VALUE;
+        setSelectedCategory(DEFAULT_VALUE);
+        categoryToFetch = DEFAULT_VALUE;
       }
     }
     fetchExpressions(selectedEnvironment, categoryToFetch, () =>
@@ -166,7 +166,7 @@ export default function ProgrammingExpressionsTable({
         onChange={e => setSelectedEnvironment(e.target.value)}
         value={selectedEnvironment}
       >
-        <option value={ALL_VALUE}>All IDEs</option>
+        <option value={DEFAULT_VALUE}>All IDEs</option>
         {programmingEnvironmentsForSelect.map(env => (
           <option key={env.id} value={env.id}>
             {env.title}
@@ -177,7 +177,7 @@ export default function ProgrammingExpressionsTable({
         onChange={e => setSelectedCategory(e.target.value)}
         value={selectedCategory}
       >
-        <option value={ALL_VALUE}>All Categories</option>
+        <option value={DEFAULT_VALUE}>All Categories</option>
         {categoriesAvailableForSelect.map(category => (
           <option key={category.id} value={category.id}>
             {category.formattedName}
@@ -195,9 +195,8 @@ export default function ProgrammingExpressionsTable({
       />
       {!!itemToDelete && (
         <StylizedBaseDialog
-          body={`Are you sure you want to remove ${
-            itemToDelete.name
-          } and its associated code doc?`}
+          body={`Are you sure you want to remove ${itemToDelete.name ||
+            itemToDelete.key} and its associated code doc?`}
           handleConfirmation={() => {
             destroyExpression(
               `/programming_expressions/${itemToDelete.id}`,
