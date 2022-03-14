@@ -544,8 +544,6 @@ const initialState = {
 /**
  * Generate shape for new section
  * @param id
- * @param courseId
- * @param scriptId
  * @param loginType
  * @returns {sectionShape}
  */
