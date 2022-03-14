@@ -333,6 +333,12 @@ const FormController = props => {
     if (data?.responseJSON?.errors?.form_data) {
       setErrors(data.responseJSON.errors.form_data);
       setErrorHeader(i18n.formErrorsBelow());
+    } else if (data?.status === 409) {
+      // trying to create an application that has already been created
+      setGlobalError(true);
+      setErrorHeader(
+        'We found an application that you already started. Reload the page to continue.'
+      );
     } else {
       // Otherwise, something unknown went wrong on the server
       setGlobalError(true);
@@ -648,7 +654,7 @@ const FormController = props => {
 const styles = {
   pageButtons: {
     verticalAlign: 'middle',
-    margin: '0 10px'
+    margin: '0px 10px 5px'
   },
   saveButton: {
     marginLeft: '10px',
