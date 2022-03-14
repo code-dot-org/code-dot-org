@@ -5078,3 +5078,28 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: Seicheamhú
+              key: Seicheamhú
+            Loops:
+              name: Lúba
+              key: Lúba
+            Events:
+              name: Teagmhais
+              key: Teagmhais
+            Conditionals:
+              name: Coinníollacha
+              key: Coinníollacha
+            Functions:
+              name: Feidhmeanna
+              key: Feidhmeanna
+            Variables:
+              name: Athróga
+              key: Athróga
+            For Loops:
+              name: Lúba "Do Gach"
+              key: Lúba "Do Gach"
+            Lesson Planning:
+              key: Ceachtanna a Phleanáil
