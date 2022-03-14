@@ -2844,3 +2844,23 @@ fa:
           lessons:
             lesson-1:
               name: متغیرها
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: حلقه‌ها
+              key: حلقه‌ها
+            Events:
+              name: رویدادها
+              key: رویدادها
+            Conditionals:
+              name: شرطی ها
+              key: شرطی ها
+            Functions:
+              name: توابع
+              key: توابع
+            Variables:
+              name: متغیرها
+              key: متغیرها
+            For Loops:
+              name: حلقه های "برای"
+              key: حلقه های "برای"
