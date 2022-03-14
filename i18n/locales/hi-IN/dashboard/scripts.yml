@@ -19390,3 +19390,41 @@ hi:
               name: चर
             lesson-15:
               name: इकाई 2 मूल्यांकन
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: शुरू करें
+              key: शुरू करें
+            Sequencing:
+              name: अनुक्रमण
+              key: अनुक्रमण
+            Loops:
+              name: फंदे
+              key: फंदे
+            Events:
+              name: घटनाएँ
+              key: घटनाएँ
+            Conditionals:
+              name: कंडीशनल्स
+              key: कंडीशनल्स
+            Functions:
+              name: कार्य
+              key: कार्य
+            Variables:
+              name: चर
+              key: चर
+            For Loops:
+              name: फॉर लूप्स
+              key: फॉर लूप्स
+            End of Course projects:
+              name: कोर्स की समाप्ति प्रोजेक्ट
+              key: कोर्स की समाप्ति प्रोजेक्ट
+            Reviewing your reflections:
+              name: आपके प्रतिबिंबों की समीक्षा करना
+              key: आपके प्रतिबिंबों की समीक्षा करना
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: '"कंप्यूटर साइंस के मूल सिद्धांतों को पढ़ाना" में आपका स्वागत है'
+            Lesson Planning:
+              key: पाठ योजना बनाना
+            Next steps:
+              key: अगले चरण

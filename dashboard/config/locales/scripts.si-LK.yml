@@ -3118,3 +3118,23 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: ලූපයන්
+              key: ලූපයන්
+            Events:
+              name: වැඩසටහන්
+              key: වැඩසටහන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+              key: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+              key: ශ්‍රිතයන්
+            Variables:
+              name: විචල්‍යන්
+              key: විචල්‍යන්
+            For Loops:
+              name: ලූපයන් සඳහා
+              key: ලූපයන් සඳහා

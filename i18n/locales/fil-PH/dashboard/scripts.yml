@@ -13810,3 +13810,26 @@ fil:
           lessons:
             lesson-1:
               name: Mga variable
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Pagsisimula
+              key: Pagsisimula
+            Loops:
+              name: Mga loop
+              key: Mga loop
+            Events:
+              name: Mga event
+              key: Mga event
+            Conditionals:
+              name: Mga conditional
+              key: Mga conditional
+            Functions:
+              name: Mga function
+              key: Mga function
+            Variables:
+              name: Mga variable
+              key: Mga variable
+            For Loops:
+              name: For Loops
+              key: For Loops
