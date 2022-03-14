@@ -14,7 +14,6 @@ import reducer, {
   setSections,
   selectSection,
   removeSection,
-  beginEditingNewSection,
   beginEditingSection,
   editSectionProperties,
   cancelEditingSection,
@@ -582,10 +581,10 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('beginEditingNewSection', () => {
-    it('populates sectionBeingEdited', () => {
+  describe('beginEditingSection', () => {
+    it('populates sectionBeingEdited is no section provided', () => {
       assert.isNull(initialState.sectionBeingEdited);
-      const state = reducer(initialState, beginEditingNewSection());
+      const state = reducer(initialState, beginEditingSection());
       assert.deepEqual(state.sectionBeingEdited, {
         id: PENDING_NEW_SECTION_ID,
         name: '',
@@ -605,9 +604,7 @@ describe('teacherSectionsRedux', () => {
         restrictSection: false
       });
     });
-  });
 
-  describe('beginEditingSection', () => {
     it('populates sectionBeingEdited', () => {
       const stateWithSections = reducer(initialState, setSections(sections));
       assert.isNull(stateWithSections.sectionBeingEdited);
@@ -641,7 +638,7 @@ describe('teacherSectionsRedux', () => {
     let editingNewSectionState;
 
     before(() => {
-      editingNewSectionState = reducer(initialState, beginEditingNewSection());
+      editingNewSectionState = reducer(initialState, beginEditingSection());
     });
 
     it('throws if not currently editing a section', () => {
@@ -727,7 +724,7 @@ describe('teacherSectionsRedux', () => {
 
   describe('cancelEditingSection', () => {
     it('clears sectionBeingEdited', () => {
-      const initialState = reducer(initialState, beginEditingNewSection());
+      const initialState = reducer(initialState, beginEditingSection());
       assert.isNotNull(initialState.sectionBeingEdited);
       const state = reducer(initialState, cancelEditingSection());
       assert.isNull(state.sectionBeingEdited);
@@ -791,7 +788,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('immediately makes saveInProgress true', () => {
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       expect(state().saveInProgress).to.be.false;
 
       store.dispatch(finishEditingSection());
@@ -799,7 +796,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('makes saveInProgress false after the server responds with success', () => {
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       server.respondWith('POST', '/dashboardapi/sections', successResponse());
 
       store.dispatch(finishEditingSection());
@@ -810,7 +807,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('makes saveInProgress false after the server responds with failure', () => {
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       server.respondWith('POST', '/dashboardapi/sections', failureResponse);
 
       store.dispatch(finishEditingSection()).catch(() => {});
@@ -821,7 +818,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('resolves a returned promise when the server responds with success', () => {
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       server.respondWith('POST', '/dashboardapi/sections', successResponse());
 
       const promise = store.dispatch(finishEditingSection());
@@ -830,7 +827,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('rejects a returned promise when the server responds with failure', () => {
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       server.respondWith('POST', '/dashboardapi/sections', failureResponse);
 
       const promise = store.dispatch(finishEditingSection());
@@ -839,7 +836,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('clears sectionBeingEdited after the server responds with success', () => {
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       server.respondWith('POST', '/dashboardapi/sections', successResponse());
 
       store.dispatch(finishEditingSection());
@@ -850,7 +847,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('keeps sectionBeingEdited after the server responds with failure', () => {
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       const originalSectionBeingEdited = state().sectionBeingEdited;
       expect(originalSectionBeingEdited).not.to.be.null;
       server.respondWith('POST', '/dashboardapi/sections', failureResponse);
@@ -864,7 +861,7 @@ describe('teacherSectionsRedux', () => {
 
     it('adds a new section to the sections map on success', () => {
       const originalSections = state().sections;
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       store.dispatch(
         editSectionProperties({
           name: 'Aquarius PM Block 2',
@@ -935,7 +932,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('does not modify sections map on failure', () => {
-      store.dispatch(beginEditingNewSection());
+      store.dispatch(beginEditingSection());
       server.respondWith('POST', '/dashboardapi/sections', failureResponse);
       const originalSections = state().sections;
 
@@ -1378,7 +1375,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('is true when creating a new section', () => {
-      const state = reducer(initialState, beginEditingNewSection());
+      const state = reducer(initialState, beginEditingSection());
       assert(isAddingSection(state));
     });
 
@@ -1389,7 +1386,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('is false after editing is cancelled', () => {
-      const initialState = reducer(initialState, beginEditingNewSection());
+      const initialState = reducer(initialState, beginEditingSection());
       const state = reducer(initialState, cancelEditingSection());
       assert.isFalse(isAddingSection(state));
     });
@@ -1401,7 +1398,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('is false when creating a new section', () => {
-      const state = reducer(initialState, beginEditingNewSection());
+      const state = reducer(initialState, beginEditingSection());
       assert.isFalse(isEditingSection(state));
     });
 
@@ -1412,7 +1409,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('is false after editing is cancelled', () => {
-      const initialState = reducer(initialState, beginEditingNewSection());
+      const initialState = reducer(initialState, beginEditingSection());
       const state = reducer(initialState, cancelEditingSection());
       assert.isFalse(isEditingSection(state));
     });

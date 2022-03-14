@@ -265,19 +265,13 @@ export const unassignSection = (sectionId, location) => (
 };
 
 /**
- * Opens the UI for adding a new section.
- */
-export const beginEditingNewSection = () => ({
-  type: EDIT_SECTION_BEGIN
-});
-
-/**
  * Opens the UI for editing the specified section.
- * @param {number} sectionId
+ * @param {number} sectionId - Optional param for the id of the section to edit. If blank means
+ * new section
  * @param {bool} [silent] - Optional param for when we want to begin editing the
  *   section without launching our dialog
  */
-export const beginEditingSection = (sectionId, silent = false) => ({
+export const beginEditingSection = (sectionId = null, silent = false) => ({
   type: EDIT_SECTION_BEGIN,
   sectionId,
   silent
