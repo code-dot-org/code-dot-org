@@ -38,7 +38,11 @@
       "description": "The direction angle of the movement of the sprite relative to 0 angle which is to the right. If the direction angle is not supplied, the current direction angle is maintained. If the direction angle is not supplied and there is no current velocity, the current rotation angle used for the direction angle."
     }
   ],
+  "parameters": [
+    "speed",
+    "angle"
+  ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Set the speed and direction of the sprite. ",
-  "syntax": "setSpeedAndDirection(speed, angle)"
+  "syntax": "sprite.setSpeedAndDirection(speed, angle)"
 }

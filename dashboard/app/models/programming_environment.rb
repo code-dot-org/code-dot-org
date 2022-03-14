@@ -80,6 +80,8 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+
     File.delete(file_path) if File.exist?(file_path)
   end
 

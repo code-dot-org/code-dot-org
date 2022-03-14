@@ -3994,6 +3994,7 @@ en:
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
           student_description: ''
+          name: csp-pre-survey
         csd1-2017:
           title: CSD Unit 1 - Problem Solving ('17-'18)
           description_short: "  Learn how humans work with computers to solve problems."
@@ -5988,6 +5989,7 @@ en:
             CSP post-course survey:
               name: CSP Student Post-Course Survey ('17-'18)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-post-survey
         public-key-cryptography:
           title: Public Key Cryptography Widgets
           description_audience: ''
@@ -10553,6 +10555,7 @@ en:
             CSD post-course survey:
               name: CSD Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csd-post-survey
         csd-novice-18:
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
@@ -11988,6 +11991,7 @@ en:
             CSP Mid-year survey:
               name: CSP Student Mid-year Survey
           student_description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-mid-survey
         gamelab:
           title: Game Lab
           description_audience: ''
@@ -14222,6 +14226,7 @@ en:
             CSD post-course survey:
               name: CSD Student Post-Course Survey ('18-'19)
           student_description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \r\n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
+          name: csd-post-survey-2018
         csp-post-survey-2018:
           title: CSP Student Post-Course Survey ('18-'19)
           description_audience: CSP Students
@@ -14234,6 +14239,7 @@ en:
             CSP post-course survey:
               name: CSP Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-post-survey-2018
         csp5-pilot:
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
@@ -28433,7 +28439,7 @@ en:
               name: Board Events
               description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
               description_teacher: |-
-                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.
 
                 **Question of the Day:** How can the user interact with the circuit playground for input?
             Arrays and Color LEDs:
@@ -31837,12 +31843,24 @@ en:
           lessons:
             lesson-1:
               name: Welcome to Code.org
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                You will:
+
+                * Get an introduction to Code.org.
+                * Learn how to engage in these professional learning modules.
+
+                **Estimated time:** 20 minutes
+              description_teacher: |
+                You will:
+
+                * Get an introduction to Code.org.
+                * Learn how to engage in these professional learning modules.
+
+                **Estimated time:** 20 minutes
             lesson-2:
               name: Get to know Computer Science A
-              description_student: 
-              description_teacher: 
+              description_student: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+              description_teacher: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
           lesson_groups: {}
           name: self-paced-pl-csa1-2022
           title: 'Unit 1 - Module 1: Welcome'
@@ -31854,16 +31872,48 @@ en:
           lessons:
             lesson-1:
               name: Navigating the Code.org learning platform
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
             lesson-2:
               name: Navigating lesson plans and resources
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
             lesson-3:
               name: Navigating Support
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Suggested time:** 15 minutes
           lesson_groups: {}
           name: self-paced-pl-csa2-2022
           title: ''
@@ -31879,6 +31929,8 @@ en:
               description_teacher: 
             lesson-2:
               name: Using variables in Java
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
           title: Support for text-based programming
@@ -32545,6 +32597,7 @@ en:
           student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
           description_short: ''
           description_audience: ''
+          name: csa6-2022
         csa7-2022:
           lessons:
             Writing Methods to Satisfy Conditions:

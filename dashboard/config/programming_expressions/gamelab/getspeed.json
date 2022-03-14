@@ -17,5 +17,5 @@
   ],
   "return_value": "The speed of the sprite in pixels per frame..",
   "short_description": "The sprite's scalar speed.",
-  "syntax": "getSpeed"
+  "syntax": "sprite.getSpeed()"
 }

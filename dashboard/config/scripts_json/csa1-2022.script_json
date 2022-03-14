@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-09 14:46:45 UTC",
+    "serialized_at": "2022-03-11 23:27:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1486,7 +1486,7 @@
       "key": "974352dc-2541-4b67-b54b-5046331b160d",
       "position": 1,
       "properties": {
-        "description": "Computing and programming used to have different meanings than they have today. Before electronic computers were invented, a computer was a person who performed mathematical calculations. From the late nineteenth century onwards, women would perform long, tedious calculations.",
+        "description": "Computing and programming used to have different meanings than they have today. Before electronic computers were invented, a computer was a person who performed mathematical calculations. From the late nineteenth century onwards, people had to perform long, tedious calculations. It was common for women to do this job.",
         "name": "Human Computers",
         "remarks": true
       },
@@ -1580,10 +1580,33 @@
       }
     },
     {
-      "key": "b73866c4-57d5-43fb-9296-7c199f0bb034",
+      "key": "4995868c-0a8d-47d7-a79a-1f5ef2bf015e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *software* and *integrated development environment (IDE)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through 4 on Code Studio. Students use Levels 1 and 2 to complete the Java Lab Scavenger Hunt on the Unit 1 Guide. On Level 3, students complete a Check for Understanding to identify the error in the program. On Level 4, students write the class header and `main` method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *software* and *integrated development environment (IDE)*."
+      },
+      "seeding_key": {
+        "activity_section.key": "4995868c-0a8d-47d7-a79a-1f5ef2bf015e",
+        "lesson_activity.key": "1ad725fe-8e78-4cb3-84a2-d0a8116deb61"
+      }
+    },
+    {
+      "key": "cff97a1e-3ae1-45fb-9b71-93ae65b785ba",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java Lab is the IDE we will use in this class. With it, we can write our source code, which will contain our programming commands.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cff97a1e-3ae1-45fb-9b71-93ae65b785ba",
+        "lesson_activity.key": "1ad725fe-8e78-4cb3-84a2-d0a8116deb61"
+      }
+    },
+    {
+      "key": "b73866c4-57d5-43fb-9296-7c199f0bb034",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through 4 on Code Studio. Students use Levels 1 and 2 to complete the Java Lab Scavenger Hunt on the Unit 1 Guide. On Level 3, students complete a Check for Understanding to identify the error in the program. On Level 4, students write the class header and `main` method.",
         "progression_name": "Java Basics",
         "tips": [
           {
@@ -1599,7 +1622,7 @@
     },
     {
       "key": "9bfd6dd4-e654-4244-a406-1f59ec310080",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "Now that you have had a chance to get comfortable with Java Lab and look at a Java file, let's review the key components and features you found.",
         "remarks": true
@@ -1611,9 +1634,9 @@
     },
     {
       "key": "daffe131-0f3a-43a0-9b07-bb7c86e52163",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Java Lab Features*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Java Lab Features*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the Java syntax rules.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the components of a class."
       },
       "seeding_key": {
         "activity_section.key": "daffe131-0f3a-43a0-9b07-bb7c86e52163",
@@ -1622,7 +1645,7 @@
     },
     {
       "key": "6e75aeb5-4bc8-4908-a44c-36bbf982903a",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "On Level 3, you used your new knowledge of Java syntax to find the error in the program. Software engineers spend a lot of time finding and fixing errors in programs. The error that you encountered is called a syntax error.",
         "remarks": true
@@ -1634,7 +1657,7 @@
     },
     {
       "key": "b2340d99-3906-4646-8902-75981e1c752b",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Now that you have learned about syntax, what do you think it means to have a syntax error?*\n\n**Discussion Goal:** Students make predictions about the definition of syntax error based on what they know about syntax. Students may share examples that might cause a syntax error, such as forgetting a semicolon or writing the main method incorrectly.",
         "tips": [
@@ -1651,7 +1674,7 @@
     },
     {
       "key": "fa18965b-c9cf-4d51-b2c0-a5ce0f3ddd21",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *syntax error*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify example syntax errors.",
         "tips": [
@@ -2139,8 +2162,19 @@
       }
     },
     {
-      "key": "32de7f8f-5764-488e-888d-908b6f7f4abb",
+      "key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
       "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to call a method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the `paint()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "32de7f8f-5764-488e-888d-908b6f7f4abb",
+      "position": 10,
       "properties": {
         "description": "Let's practice calling these methods to move around and paint The Neighborhood! As you work, use the guiding questions and debugging checklist on your Unit 1 Guide to help you write and debug code.",
         "duration": "15",
@@ -2154,7 +2188,7 @@
     },
     {
       "key": "f453b0d5-c881-42b3-a6f4-f18f212ed238",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5 using the Unit 1 Guide. Students debug the program on Level 2, then continue to complete Level 3. Students complete a choice level on Level 4. Students debug the program on Level 5.",
         "progression_name": "Moving and Painting"
@@ -4610,7 +4644,7 @@
       "key": "491090ee-8831-4b32-9663-303aaf184761",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a new subclass that extends PainterPlus with a new method. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 16, 17, and 18 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Asphalt Art Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1FMk0zXXkBms6SdWuVQUnrsxrSAxKN6OT3N92JD1XbAM/edit?usp=sharing), which includes a one-day version of the [**Asphalt Art Project Planning Guide**](https://docs.google.com/document/d/1ZCM53HkkeLt3xFW3Mc4hc4TrV2dqq1Fy9rN-EA7q_jU/edit?usp=sharing). Direct students to develop their program on Lesson 18 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a new subclass that extends `PainterPlus` with a new method. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 16, 17, and 18 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Asphalt Art Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1FMk0zXXkBms6SdWuVQUnrsxrSAxKN6OT3N92JD1XbAM/edit?usp=sharing), which includes a one-day version of the [**Asphalt Art Project Planning Guide**](https://docs.google.com/document/d/1ZCM53HkkeLt3xFW3Mc4hc4TrV2dqq1Fy9rN-EA7q_jU/edit?usp=sharing). Direct students to develop their program on Lesson 18 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "491090ee-8831-4b32-9663-303aaf184761",
@@ -8724,16 +8758,6 @@
       }
     },
     {
-      "key": "_new_keyword",
-      "word": "`new` keyword",
-      "definition": "a Java keyword used to create an instance of a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_new_keyword"
-      }
-    },
-    {
       "key": "_super_keyword",
       "word": "`super` keyword",
       "definition": "a keyword used to refer to the superclass",
@@ -8814,26 +8838,6 @@
       }
     },
     {
-      "key": "camel_case",
-      "word": "camel case",
-      "definition": "a naming convention in which the first letter of the first word is either uppercase or lowercase, and the first letter of each additional word is uppercase",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "camel_case"
-      }
-    },
-    {
-      "key": "case_sensitive",
-      "word": "case-sensitive",
-      "definition": "differentiating between lower and uppercase letters",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "case_sensitive"
-      }
-    },
-    {
       "key": "class",
       "word": "class",
       "definition": "a programmer-defined blueprint from which objects are created",
@@ -8871,16 +8875,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "comment"
-      }
-    },
-    {
-      "key": "compile",
-      "word": "compile",
-      "definition": "to translate human-readable source code into computer-executable machine code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "compile"
       }
     },
     {
@@ -8951,16 +8945,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "decomposition",
-      "word": "decomposition",
-      "definition": "the process of breaking a problem down into smaller parts",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "decomposition"
       }
     },
     {
@@ -9094,6 +9078,16 @@
       }
     },
     {
+      "key": "method_decomposition",
+      "word": "Method Decomposition",
+      "definition": "the process of breaking a problem down into smaller parts to write methods for each part",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method_decomposition"
+      }
+    },
+    {
       "key": "method_signature",
       "word": "method signature",
       "definition": "consists of a name and parameter list",
@@ -9194,16 +9188,6 @@
       }
     },
     {
-      "key": "reference_variable",
-      "word": "reference variable",
-      "definition": "a variable that points to an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "reference_variable"
-      }
-    },
-    {
       "key": "return",
       "word": "return",
       "definition": "to exit a method and go back to the point in the program that called it with the requested value or information",
@@ -9254,26 +9238,6 @@
       }
     },
     {
-      "key": "statement",
-      "word": "statement",
-      "definition": "a one-line instruction that tells Java what to do",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "statement"
-      }
-    },
-    {
-      "key": "string_literal",
-      "word": "string literal",
-      "definition": "a sequence of characters",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "string_literal"
-      }
-    },
-    {
       "key": "subclass",
       "word": "subclass",
       "definition": "a class that extends a superclass and inherits its attributes and behaviors",
@@ -9311,16 +9275,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "syntax_error"
-      }
-    },
-    {
-      "key": "tester_class",
-      "word": "tester class",
-      "definition": "a class that contains the main method and is where a program starts running",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "tester_class"
       }
     },
     {
@@ -9368,13 +9322,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "vocabulary.key": "decomposition"
+        "vocabulary.key": "edge_case"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "vocabulary.key": "edge_case"
+        "vocabulary.key": "method_decomposition"
       }
     },
     {
@@ -9398,25 +9352,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "camel_case"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "case_sensitive"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
         "vocabulary.key": "class_header"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "compile"
       }
     },
     {
@@ -9440,12 +9376,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
         "vocabulary.key": "syntax"
       }
     },
@@ -9453,18 +9383,6 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "vocabulary.key": "syntax_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "tester_class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "vocabulary.key": "_new_keyword"
       }
     },
     {
@@ -9530,12 +9448,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "vocabulary.key": "reference_variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
         "vocabulary.key": "state"
       }
     },
@@ -9573,12 +9485,6 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "vocabulary.key": "string_literal"
       }
     },
     {
@@ -10286,6 +10192,13 @@
         "lesson.key": "lesson-11",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.4"
       }
     },
     {
