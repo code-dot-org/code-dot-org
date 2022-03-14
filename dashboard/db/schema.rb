@@ -1981,6 +1981,12 @@ ActiveRecord::Schema.define(version: 2022_03_01_220633) do
     t.index ["user_id"], name: "index_user_proficiencies_on_user_id", unique: true
   end
 
+  create_table "user_project_storage_ids", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.index ["user_id"], name: "user_id", unique: true
+    t.index ["user_id"], name: "user_storage_ids_user_id_index"
+  end
+
   create_table "user_school_infos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "start_date", null: false
