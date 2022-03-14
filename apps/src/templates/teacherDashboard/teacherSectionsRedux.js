@@ -824,6 +824,8 @@ export default function teacherSections(state = initialState, action) {
       : newSectionData(PENDING_NEW_SECTION_ID, undefined);
     return {
       ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialUnitId: initialSectionData.scriptId,
       initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
