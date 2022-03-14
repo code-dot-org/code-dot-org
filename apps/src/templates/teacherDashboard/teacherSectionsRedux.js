@@ -590,15 +590,6 @@ function newSectionData(id, loginType) {
 
 const defaultLessonExtras = false;
 
-// Fields to copy from the assignmentInfo when creating an assignmentFamily.
-export const assignmentFamilyFields = [
-  'category_priority',
-  'category',
-  'position',
-  'assignment_family_title',
-  'assignment_family_name'
-];
-
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
 // (i.e., Google auth is 'google_oauth2' but the section type is 'google_classroom').
 export const mapProviderToSectionType = provider => {
