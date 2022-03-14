@@ -253,6 +253,20 @@ Resources:
       EvaluationPeriods: 5
       Threshold: 5
       TreatMissingData: missing
+  FileSystem:
+    Type: AWS::EFS::FileSystem
+    Properties:
+      BackupPolicy:
+        # Protect Percona Monitoring historical metrics from accidental deletion.
+        Status: ENABLED
+      Encrypted: true
+  FileSystemMountTarget:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref FileSystem
+      SecurityGroups:
+        - !Ref EcsSecurityGroup
+      SubnetId: !ImportValue VPC-SubnetB
 Outputs:
   InternalDNSName:
     Description: Internal DNS name of the service.
