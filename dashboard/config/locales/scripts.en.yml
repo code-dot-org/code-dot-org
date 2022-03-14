@@ -31929,6 +31929,8 @@ en:
               description_teacher: 
             lesson-2:
               name: Using variables in Java
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
           title: Support for text-based programming
@@ -32595,6 +32597,7 @@ en:
           student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
           description_short: ''
           description_audience: ''
+          name: csa6-2022
         csa7-2022:
           lessons:
             Writing Methods to Satisfy Conditions:
