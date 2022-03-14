@@ -1081,10 +1081,22 @@ class User < ApplicationRecord
     )
   end
 
+  # There is a bug (fix: https://codedotorg.atlassian.net/browse/INF-571) where some users have
+  # duplicate user levels for the same level. To ensure that we return the relevant user level for
+  # each level and not one of the duplicates, the list is first sorted so that the
+  # most relevant user levels are at the end. The list is then indexed by level ID, which will
+  # pick up the last matching user level in the list.
+  def self.index_user_levels_by_level_id(user_levels)
+    # Sorts by updated_at asc then id desc
+    # the correct user level is the one most recently updated or the first created
+    relevant_user_levels_last = user_levels.sort {|a, b| [a.updated_at, b.id] <=> [b.updated_at, a.id]}
+    relevant_user_levels_last.index_by(&:level_id)
+  end
+
   def user_levels_by_level(script)
-    user_levels.
-      where(script_id: script.id).
-      index_by(&:level_id)
+    user_levels_for_script = user_levels.
+      where(script_id: script.id)
+    User.index_user_levels_by_level_id(user_levels_for_script)
   end
 
   # Retrieves all user_level objects for the given users, script, and levels.
@@ -1131,7 +1143,7 @@ class User < ApplicationRecord
     ).
       group_by(&:user_id).
       inject(initial_hash) do |memo, (user_id, user_levels)|
-        memo[user_id] = user_levels.index_by(&:level_id)
+        memo[user_id] = User.index_user_levels_by_level_id(user_levels)
         memo
       end
   end
