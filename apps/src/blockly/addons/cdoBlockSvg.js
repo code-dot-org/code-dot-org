@@ -111,7 +111,7 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     return (
       this.getSurroundParent() &&
       !this.getVarModels().length &&
-      !this.nonShadowChildrenCount()
+      !this.nonShadowChildCount()
     );
   }
 
@@ -119,12 +119,12 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     return this.getChildren().filter(child => child.isShadow()).length;
   }
 
-  nonShadowChildrenCount() {
+  nonShadowChildCount() {
     return this.getChildren().filter(child => !child.isShadow()).length;
   }
 
   hasShadowChildren() {
-    return this.nonShadowChildrenCount().length > 0;
+    return this.shadowChildCount() > 0;
   }
 
   dispose() {
