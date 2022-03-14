@@ -47,7 +47,7 @@ export default function CodeReviewGroupsDialog({
     setGroups(groups);
   };
 
-  useEffect(() => getInitialGroups(), [isDialogOpen, getInitialGroups]);
+  useEffect(() => getInitialGroups(), [getInitialGroups]);
 
   const renderModalBody = () => {
     switch (loadingStatus) {
