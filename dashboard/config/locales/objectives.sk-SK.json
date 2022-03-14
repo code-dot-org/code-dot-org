@@ -44,6 +44,12 @@
         "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
           "description": "Vytvor nové postavičky a priraď im kostýmy a umiestnenie."
         },
+        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
+          "description": "Vytvárať a zdieľať v App Labe vlastné aplikácie s tlačidlami, textom, obrázkami, zvukmi a obrazovkami."
+        },
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "Pokračovať vo vytváraní projektov v plnohodnotnom rozhraní App Labu pomocou materiálov poskytnutých na stránke code.org/applab."
+        },
         "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
           "description": "Vytvor interaktívnu animáciu pomocou postavičiek a udalostí."
         },
