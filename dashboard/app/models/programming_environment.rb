@@ -98,6 +98,7 @@ class ProgrammingEnvironment < ApplicationRecord
       projectUrl: project_url,
       description: description,
       editorType: editor_type,
+      blockPoolName: block_pool_name,
       categories: categories.map(&:serialize_for_edit),
       showPath: programming_environment_path(name)
     }
