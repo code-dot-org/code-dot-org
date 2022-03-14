@@ -121,6 +121,29 @@ export default function ProgrammingExpressionEditor({
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
       </label>
+      <label>
+        Category
+        <select
+          value={programmingExpression.categoryKey}
+          onChange={e =>
+            updateProgrammingExpression('categoryKey', e.target.value)
+          }
+          style={styles.selectInput}
+        >
+          <option key="none" value={''}>
+            (None)
+          </option>
+          {environmentCategories.map(category => (
+            <option key={category.key} value={category.key}>
+              {category.name}
+            </option>
+          ))}
+        </select>
+        <HelpTip>
+          Choose a category for the code documentation to fall beneath
+        </HelpTip>
+      </label>
+
       {programmingExpression.environmentEditorType === 'blockly' && (
         <label>
           Block Name
@@ -180,28 +203,6 @@ export default function ProgrammingExpressionEditor({
             }
             style={styles.textInput}
           />
-        </label>
-        <label>
-          Category
-          <select
-            value={programmingExpression.categoryKey}
-            onChange={e =>
-              updateProgrammingExpression('categoryKey', e.target.value)
-            }
-            style={styles.selectInput}
-          >
-            <option key="none" value={''}>
-              (None)
-            </option>
-            {environmentCategories.map(category => (
-              <option key={category.key} value={category.key}>
-                {category.name}
-              </option>
-            ))}
-          </select>
-          <HelpTip>
-            Chose a category for the code documentation to fall beneath
-          </HelpTip>
         </label>
         <TextareaWithMarkdownPreview
           markdown={programmingExpression.content}
