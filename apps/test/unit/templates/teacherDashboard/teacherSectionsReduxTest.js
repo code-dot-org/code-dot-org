@@ -1322,6 +1322,11 @@ describe('teacherSectionsRedux', () => {
         '/dashboardapi/sections/valid_course_offerings',
         successResponse([])
       );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_course_offerings',
+        successResponse([])
+      );
     });
     afterEach(() => server.restore());
 
