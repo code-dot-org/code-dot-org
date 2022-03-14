@@ -140,7 +140,7 @@ export default function ProgrammingExpressionEditor({
           ))}
         </select>
         <HelpTip>
-          Chose a category for the code documentation to fall beneath
+          Choose a category for the code documentation to fall beneath
         </HelpTip>
       </label>
 
