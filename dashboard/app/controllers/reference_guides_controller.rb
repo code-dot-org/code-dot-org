@@ -1,6 +1,6 @@
 class ReferenceGuidesController < ApplicationController
   include CurriculumHelper
-  before_action :find_reference_guide, only: [:show]
+  before_action :find_reference_guide, only: [:show, :update]
   before_action :find_reference_guides, only: [:edit_all]
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   authorize_resource id_param: :key
@@ -13,6 +13,13 @@ class ReferenceGuidesController < ApplicationController
   # GET /courses/:course_name/guides/:key
   def show
     render :not_found unless params[:course_course_name] && params[:key]
+  end
+
+  # PATCH /courses/:course_name/guides/:key
+  def update
+    @reference_guide.update!(reference_guide_params.except(:key, :course_course_name))
+    @reference_guide.write_serialization
+    render json: @reference_guide.summarize_for_edit.to_json
   end
 
   private
@@ -38,5 +45,14 @@ class ReferenceGuidesController < ApplicationController
       render :not_found
     end
     @reference_guides = ReferenceGuide.where(course_version_id: course_version&.id).map(&:summarize_for_index)
+  end
+
+  def reference_guide_params
+    params.permit(
+      :parent_reference_guide_key,
+      :display_name,
+      :content,
+      :position
+    )
   end
 end
