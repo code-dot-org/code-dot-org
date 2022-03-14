@@ -53,6 +53,7 @@ let userInOptimizelyVariant = experiments.isEnabled(
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
+  let user_type = $('#user_user_type').val();
   init();
 
   function init() {
@@ -75,7 +76,7 @@ $(document).ready(() => {
         'width:220px;';
     }
     // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
-    setUserType(getUserType());
+    setUserType(user_type);
     renderSchoolInfo();
     renderParentSignUpSection();
   }
@@ -91,7 +92,7 @@ $(document).ready(() => {
     }
 
     // Track user type selection in Optimizely Event
-    optimizelyCountUserTypeSelection(getUserType());
+    optimizelyCountUserTypeSelection(user_type);
 
     // Optimizely-related code for teacher opting to share email with regional partner (start)
     optimizelyCountSuccessSignupWithRegPartnerOpt();
@@ -99,7 +100,7 @@ $(document).ready(() => {
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
-    if (getUserType() === 'teacher') {
+    if (user_type === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
@@ -125,7 +126,8 @@ $(document).ready(() => {
   $('#user_parent_email_preference_opt_in_required').change(function() {
     // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
     // allows the parent sign up section of the form.
-    if (getUserType() === '') {
+    if (user_type === '') {
+      setUserType('student');
       $('#user_user_type')
         .val('student')
         .change();
@@ -153,32 +155,28 @@ $(document).ready(() => {
   // Event listeners for changing the user type
   document.addEventListener('selectUserTypeTeacher', e => {
     $('#user_user_type').val('teacher');
-    styleSelectedUserTypeButton('teacher');
     setUserType('teacher');
   });
   document.addEventListener('selectUserTypeStudent', e => {
     $('#user_user_type').val('student');
-    styleSelectedUserTypeButton('student');
     setUserType('student');
   });
 
-  function getUserType() {
-    var value = $('#user_user_type')[0].value;
-    styleSelectedUserTypeButton(value);
-    return value;
-  }
-
-  function setUserType(userType) {
-    if (userType) {
-      trackUserType(userType);
+  function setUserType(new_user_type) {
+    if (new_user_type) {
+      trackUserType(new_user_type);
     }
-
-    if (userType === 'teacher') {
+    // Switch to new user type
+    if (new_user_type === 'teacher') {
       switchToTeacher();
     } else {
       // Show student fields by default.
       switchToStudent();
     }
+    if (inClearerUserTypeRollout) {
+      styleSelectedUserTypeButton(new_user_type);
+    }
+    user_type = new_user_type;
   }
 
   // Style selected user type button to show it has been clicked
@@ -214,9 +212,9 @@ $(document).ready(() => {
   }
 
   // Optimizely Event to track user type selection
-  function optimizelyCountUserTypeSelection(userType) {
+  function optimizelyCountUserTypeSelection(selected_user_type) {
     window['optimizely'] = window['optimizely'] || [];
-    window['optimizely'].push({type: 'event', eventName: userType});
+    window['optimizely'].push({type: 'event', eventName: selected_user_type});
   }
 
   // Optimizely-related code for sharing email with regional partners experiment
