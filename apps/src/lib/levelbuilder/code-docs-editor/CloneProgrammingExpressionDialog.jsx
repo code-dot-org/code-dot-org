@@ -118,7 +118,7 @@ export default function CloneProgrammingExpressionDialog({
         isOpen
       >
         <span>
-          Clone succeeded1 Visit{' '}
+          Clone succeeded! Visit{' '}
           <TextLink
             openInNewTab
             href={clonedEditUrl}
