@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 22:55:31 UTC",
+    "serialized_at": "2022-03-13 16:09:28 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -173,9 +173,44 @@
       "key": "00579f7b-9cc1-444f-8960-be2d2332a448",
       "position": 2,
       "properties": {
+        "progression_name": "Introduction to variables"
       },
       "seeding_key": {
         "activity_section.key": "00579f7b-9cc1-444f-8960-be2d2332a448",
+        "lesson_activity.key": "1d68583a-a0fa-4418-9c77-cf5d4fa059d8"
+      }
+    },
+    {
+      "key": "4fa66468-08de-4b86-a043-ae58df311f5a",
+      "position": 3,
+      "properties": {
+        "description": "Want a predict level between 8 and 9",
+        "progression_name": "Updating variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a",
+        "lesson_activity.key": "1d68583a-a0fa-4418-9c77-cf5d4fa059d8"
+      }
+    },
+    {
+      "key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881",
+      "position": 4,
+      "properties": {
+        "progression_name": "Compound assignment operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881",
+        "lesson_activity.key": "1d68583a-a0fa-4418-9c77-cf5d4fa059d8"
+      }
+    },
+    {
+      "key": "cc0cadbc-62a6-4b43-8145-9e1dca19c99b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Vocabulary overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc0cadbc-62a6-4b43-8145-9e1dca19c99b",
         "lesson_activity.key": "1d68583a-a0fa-4418-9c77-cf5d4fa059d8"
       }
     }
@@ -212,6 +247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Java Lab Video"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -234,6 +272,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Java Lab - debugging 1"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -256,6 +297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
+        ],
         "progression": "Printing to the console"
       },
       "bonus": false,
@@ -278,6 +322,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Java Lab - System"
+        ],
         "progression": "Printing to the console"
       },
       "bonus": false,
@@ -300,6 +347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging1"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -322,6 +372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging2"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -344,6 +397,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSAPL3-1-SyntaxDebugging3"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -366,6 +422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-1"
+        ],
         "progression": "Vocabulary (delete one)"
       },
       "bonus": false,
@@ -388,6 +447,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-1-matching"
+        ],
         "progression": "Vocabulary (delete one)"
       },
       "bonus": false,
@@ -410,6 +472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Example Markdown (External Level) with Video"
+        ],
         "progression": "Holder info"
       },
       "bonus": false,
@@ -432,6 +497,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Javalab Example - Using Instructor in Training"
+        ],
         "progression": "Holder info"
       },
       "bonus": false,
@@ -454,6 +522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Intro-to-Lesson-2"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -476,6 +547,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-video"
+        ],
+        "progression": "Introduction to variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -497,6 +572,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-data-types-matching"
+        ],
+        "progression": "Introduction to variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -518,6 +597,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-1"
+        ],
+        "progression": "Introduction to variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -539,6 +622,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-1-Predict"
+        ],
+        "progression": "Introduction to variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -560,6 +647,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-2"
+        ],
+        "progression": "Introduction to variables"
       },
       "bonus": false,
       "seeding_key": {
@@ -573,6 +664,248 @@
       },
       "level_keys": [
         "SP-VPL-CSA-22-mod3-variables-practice-2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-updating-variables-math-map"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-updating-variables-math-map"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-modifying-variables-mc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-modifying-variables-mc"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-modify-variables-practice-1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-modify-variables-practice-1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-variables-practice-3"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound assignment operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-map"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-compound-assignment-map"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound assignment operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-mc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-compound-assignment-mc"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound assignment operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-practice-1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-compound-assignment-practice-1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 14,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound assignment operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-increment-op-map"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-increment-op-map"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 15,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound assignment operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-increment-practice-1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-variables-increment-practice-1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 16,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound assignment operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-increment-mc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-increment-mc"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocabulary overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-2-matching"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "cc0cadbc-62a6-4b43-8145-9e1dca19c99b"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-Vocab-lesson-2-matching"
       ]
     }
   ],
@@ -791,6 +1124,138 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
         "activity_section.key": "00579f7b-9cc1-444f-8960-be2d2332a448"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-updating-variables-math-map",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-updating-variables-math-map"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-modifying-variables-mc",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-modifying-variables-mc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-modify-variables-practice-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-modify-variables-practice-1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-variables-practice-3",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-practice-3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "4fa66468-08de-4b86-a043-ae58df311f5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-compound-assignment-map",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-map"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-compound-assignment-mc",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-mc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-compound-assignment-practice-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-compound-assignment-practice-1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-increment-op-map",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-increment-op-map"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-variables-increment-practice-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-variables-increment-practice-1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-increment-mc",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-increment-mc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-Vocab-lesson-2-matching",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-2-matching"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "cc0cadbc-62a6-4b43-8145-9e1dca19c99b"
       }
     }
   ],
