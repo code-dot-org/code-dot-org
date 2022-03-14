@@ -3587,3 +3587,25 @@ el:
           lessons:
             lesson-1:
               name: Μεταβλητές
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Βρόχοι
+              key: Βρόχοι
+            Events:
+              name: Συμβάντα
+              key: Συμβάντα
+            Conditionals:
+              name: Συνθήκες
+              key: Συνθήκες
+            Functions:
+              name: Συναρτήσεις
+              key: Συναρτήσεις
+            Variables:
+              name: Μεταβλητές
+              key: Μεταβλητές
+            For Loops:
+              name: Βρόχοι Για
+              key: Βρόχοι Για
+            Lesson Planning:
+              key: Σχεδιασμός μαθημάτων
