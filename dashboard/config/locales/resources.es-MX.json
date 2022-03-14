@@ -61,7 +61,8 @@
         },
         "activity-guide-text-compression/text-compression/unversioned": {
           "name": "Guía de Actividad - Compresión de Textos",
-          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/",
+          "type": "Guía de actividades"
         },
         "activity-recap-decode-this-message/text-compression/unversioned": {
           "name": "Resumen de la Actividad - Descifra este Mensaje",
@@ -70,7 +71,8 @@
         },
         "decode-this-message/text-compression/unversioned": {
           "name": "Descifra este mensaje",
-          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/",
+          "type": "Guía de actividades"
         },
         "textcompressioncodestudio/text-compression/unversioned": {
           "name": "Widget de Compresión de Texto en Code Studio",
@@ -185,7 +187,8 @@
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Historias del espacio en blanco",
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
+          "type": "Guía de actividades"
         },
         "blank_space_stories/coursef/2021": {
           "name": "Historias del espacio en blanco",
@@ -199,7 +202,8 @@
         },
         "user_input_programs/coursef/2021": {
           "name": "Programas de entrada de usuario",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
+          "type": "Guía de actividades"
         },
         "mini_project_user_input_programs/coursef/2021": {
           "name": "Mini proyecto: programas de entrada de usuario",
@@ -1189,7 +1193,7 @@
           "type": "Guía de respuestas"
         },
         "dance-party-project-guide/coursed/2021": {
-          "name": "Guía de proyectos de fiesta de baile",
+          "name": "Guía de trabajo – Proyecto de fiesta de baile",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
           "type": "Guía de trabajo"
         },
@@ -1228,7 +1232,7 @@
           "type": "Video - Lección en acción"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "Programa Condicionales con Cartas de Muestra",
+          "name": "Programa ejemplo - Condicionales con cartas",
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
           "type": "Guía de preparación para el docente"
         },
@@ -1248,22 +1252,22 @@
           "type": "Guía de respuestas de la evaluación"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "Curso D de CSF Guía de planificación de proyectos de fin de curso",
+          "name": "Guía de planificación – Proyecto del curso D",
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
           "type": "Guía de Proyecto"
         },
         "csta_standards_mapping/coursed/2021": {
-          "name": "Normas de la CSTA",
+          "name": "Evaluación de estándares de CSTA",
           "url": "https://studio.code.org/s/coursed-2021/standards",
           "type": "Recurso"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "Guia de Common Core y NGSS (para EEUU)",
+          "name": "Guía de Common Core y NGSS",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
           "type": "Recurso"
         },
         "cross-curricular_extension_activities/coursed/2021": {
-          "name": "Extensión de Actividades multidisciplinarias",
+          "name": "Actividades de extensión multidisciplinaria",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "Recurso"
         },
@@ -1278,12 +1282,12 @@
           "type": "Recurso"
         },
         "lesson_type_guide/coursed/2021": {
-          "name": "Guia de Tipos de Lecciones",
+          "name": "Guía de tipos de lecciones",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "Recurso"
         },
         "debugging_guide/coursed/2021": {
-          "name": "Guia de Depuración",
+          "name": "Guía de depuración",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "Recurso"
         },
@@ -1293,12 +1297,12 @@
           "type": "Recurso"
         },
         "2021_change_log/coursed/2021": {
-          "name": "Record de Cambios 2021",
+          "name": "Registro de cambios 2021",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "Recurso"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "Foro de profesores",
+          "name": "Foro de docentes",
           "url": "https://forum.code.org/c/csf/",
           "type": "Recurso"
         },
@@ -1366,7 +1370,7 @@
           "type": "Vídeo"
         },
         "dance-party-project-guide/express/2021": {
-          "name": "Guía de proyectos de fiesta de baile",
+          "name": "Guía de trabajo – Proyecto de fiesta de baile",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
           "type": "Guía de trabajo"
         },
@@ -1464,7 +1468,7 @@
           "type": "Vídeo"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "Meneos - Go Noodle",
+          "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
         },
@@ -1474,7 +1478,7 @@
           "type": "Vídeo"
         },
         "csta_standards_mapping/pre-express/2021": {
-          "name": "Normas de la CSTA",
+          "name": "Evaluación de estándares de CSTA",
           "url": "https://studio.code.org/s/pre-express-2021/standards",
           "type": "Recurso"
         },
@@ -1484,12 +1488,12 @@
           "type": "Recurso"
         },
         "teacher_forum_1/pre-express/2021": {
-          "name": "Foro de profesores",
+          "name": "Foro de docentes",
           "url": "https://forum.code.org/c/csf/",
           "type": "Recurso"
         },
         "debugging_guide/pre-express/2021": {
-          "name": "Guia de Depuración",
+          "name": "Guía de depuración",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
@@ -1508,34 +1512,34 @@
           "type": "Recurso"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "Ser un Super Ciudadano Digital: Diapositivas de la lección",
+          "name": "Ser un Superciudadano Digital: Diapositivas de la lección",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "Ser un Super Ciudadano Digital: Super Ciudadano Digital",
+          "name": "Ser un Superciudadano Digital: Superciudadano Digital",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "Información Privada y Personal: Diapositivas de la lección",
+          "name": "Información privada y personal: diapositivas de la lección",
           "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "Información Privada y Personal: Información Privada y Personal",
+          "name": "Información privada y personal: información privada y personal",
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
           "type": "Video del estudiante"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "Información Privada y Personal: Ticket de Salida",
+          "name": "Información privada y personal: boleto de salida",
           "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
           "type": "Guía del estudiante"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "Información Privada y Personal: Prueba de la Lección",
+          "name": "Información privada y personal: prueba de la lección",
           "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
           "type": "Formulario"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "Información Privada y Personal: Prueba de la Lección",
+          "name": "Información privada y personal: prueba de la lección",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
           "type": "Guía de respuestas"
         },
@@ -1570,27 +1574,27 @@
           "type": "Video del estudiante"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "Componer Canciones con Funciones",
+          "name": "Componer canciones con funciones",
           "url": "https://youtu.be/5iDCKkI6y2Y",
           "type": "Video sin conexión"
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "Funciones Sin Conexión: Componer Canciones",
+          "name": "Funciones sin conexión: Componer canciones",
           "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
           "type": "Video - Lección en acción"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Funciones Sin Conexión: Componer Canciones",
+          "name": "Funciones sin conexión: Componer canciones",
           "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit",
           "type": "Guía de trabajo"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "Funciones Sin Conexión: Componer Canciones",
+          "name": "Funciones sin conexión: Componer canciones",
           "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
           "type": "Evaluación"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "Funciones Sin Conexión: Componer Canciones",
+          "name": "Funciones sin conexión: Componer canciones",
           "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
           "type": "Guía de respuestas de la evaluación"
         },
@@ -1688,6 +1692,9 @@
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit",
           "type": "Recurso"
         },
+        "classifying_fish/csd/2021": {
+          "type": "Guía de actividades"
+        },
         "introduction_to_machine_learning/csd/2021": {
           "name": "Introducción al aprendizaje automático (Machine Learning)",
           "type": "Diapositivas"
@@ -1701,7 +1708,8 @@
           "type": "Diapositivas"
         },
         "types_of_machine_learning_1/csd/2021": {
-          "name": "Tipos de Aprendizaje Automático"
+          "name": "Tipos de Aprendizaje Automático",
+          "type": "Guía de actividades"
         },
         "types_of_machine_learning_2/csd/2021": {
           "name": "Tipos de Aprendizaje Automático",
@@ -1723,7 +1731,8 @@
           "type": "Diapositivas"
         },
         "patterns_in_data_1/csd/2021": {
-          "name": "Patrones en los Datos"
+          "name": "Patrones en los Datos",
+          "type": "Guía de actividades"
         },
         "shoe_survey/csd/2021": {
           "type": "Recurso"
@@ -1735,7 +1744,8 @@
           "type": "Guía de respuestas"
         },
         "classification_models/csd/2021": {
-          "name": "Modelos de Clasificación"
+          "name": "Modelos de Clasificación",
+          "type": "Guía de actividades"
         },
         "classification_models_1/csd/2021": {
           "name": "Modelos de Clasificación",
@@ -1751,6 +1761,9 @@
         "introduction_to_ai_lab_1/csd/2021": {
           "name": "Introducción al Laboratorio de Inteligencia Artificial",
           "type": "Vídeo"
+        },
+        "training_a_model_in_ai_lab/csd/2021": {
+          "type": "Guía de actividades"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
           "name": "Entrenamiento y Pruebas en Laboratorio de Inteligencia Artificial",
@@ -1786,7 +1799,8 @@
           "type": "Diapositivas"
         },
         "model_cards_1/csd/2021": {
-          "name": "Tarjetas Modelo"
+          "name": "Tarjetas Modelo",
+          "type": "Guía de actividades"
         },
         "model_cards_in_ai_lab/csd/2021": {
           "name": "Tarjetas Modelo en Laboratorio de Inteligencia Artificial",
@@ -1795,6 +1809,9 @@
         "saving_models_in_ai_lab/csd/2021": {
           "name": "Guardar Modelos en el Laboratorio de Inteligencia Artificial",
           "type": "Diapositivas"
+        },
+        "zoo_models/csd/2021": {
+          "type": "Guía de actividades"
         },
         "_key_zoo_models/csd/2021": {
           "type": "Guía de respuestas"
@@ -1809,9 +1826,15 @@
           "name": "Tarjetas Modelo en el Laboratorio de Aplicaciones",
           "type": "Diapositivas"
         },
+        "numerical_accuracy_-_activity_guide/csd/2021": {
+          "type": "Guía de actividades"
+        },
         "numerical_models/csd/2021": {
           "name": "Modelos Numéricos",
           "type": "Diapositivas"
+        },
+        "zombie_prediction_-_activity_guide/csd/2021": {
+          "type": "Guía de actividades"
         },
         "zombie_prediction_-_answer_key/csd/2021": {
           "type": "Guía de respuestas"
@@ -1824,7 +1847,8 @@
           "type": "Diapositivas"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
-          "name": "Datos Numéricos en el Laboratorio de Inteligencia Artificial"
+          "name": "Datos Numéricos en el Laboratorio de Inteligencia Artificial",
+          "type": "Guía de actividades"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "name": "Datos Numéricos en el Laboratorio de Inteligencia Artificial",
@@ -1916,32 +1940,94 @@
         "unit-4-the-design-process/csd/2021": {
           "type": "Diapositivas"
         },
+        "reacting-as-your-user-exemplar-19/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "reacting-as-your-user/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "reacting_as_your_user_profile_2/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "reacting_as_your_user_profile_3/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "reacting_as_your_user_profile_4/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "user-centered-design-2021/csd/2021": {
+          "type": "Guía de actividades"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Vídeo"
+        },
+        "user_centered_design_define_prepare_/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "user-centered-design-reflect-2021/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "user_centered_design_try_reflect_/csd/2021": {
+          "type": "Ejemplar"
         },
         "user-interface-screens/csd/2021": {
           "type": "Recurso"
         },
+        "user-experience-computer/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "user-experience-user/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "improve-a-screen-exemplar-19/csd/2021": {
+          "type": "Ejemplar"
+        },
         "paper-prototype-sample-feedback/csd/2021": {
           "type": "Recurso"
+        },
+        "improve-a-screen/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "user-interviews-1/csd/2021": {
+          "type": "Guía de actividades"
         },
         "user-interviews/csd/2021": {
           "type": "Recurso"
         },
         "computer-science-practices/csd/2021": {
-          "type": "Reflexión",
           "name": "Prácticas de las ciencias de la computación",
+          "type": "Reflexión",
           "url": "https://docs.google.com/document/d/1HvuGaW0nADVZv69TTFDGAVSdMfJaBfBS/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
         },
         "paper-prototypes/csd/2021": {
           "name": "Prototipos en papel",
           "type": "Rúbrica"
         },
+        "sample_marked_rubrics/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "app-design-kickoff-2019/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "app_design_kickoff/csd/2021": {
+          "type": "Ejemplar"
+        },
         "market-research/csd/2021": {
-          "name": "Investigación del mercado"
+          "name": "Investigación del mercado",
+          "type": "Guía de actividades"
         },
         "market_research/csd/2021": {
-          "name": "Investigación del mercado"
+          "name": "Investigación del mercado",
+          "type": "Ejemplar"
+        },
+        "explore-ui-elements/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "explore_ui_elements/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "paper-prototype-planning/csd/2021": {
+          "type": "Guía de actividades"
         },
         "design_mode/csd/2021": {
           "name": "Modo de diseño",
@@ -1951,8 +2037,29 @@
           "name": "Elementos del modo de diseño",
           "type": "Recurso"
         },
+        "paper_prototype_planning/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "user-test-cases/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "paper-prototype-user-testing-1-2/csd/2021": {
+          "type": "Guía de actividades"
+        },
         "whats-for-lunch-testing/csd/2021": {
           "type": "Vídeo"
+        },
+        "paper_prototype_user_testing/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "user_test_cases/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "screen-ownership-2021/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "screen-design-1/csd/2021": {
+          "type": "Guía de actividades"
         },
         "model-screen-design/csd/2021": {
           "type": "Recurso"
@@ -1985,21 +2092,37 @@
           "name": "Responder a las contribuciones de los usuarios",
           "type": "Recurso"
         },
+        "digital-prototype-user-testing/csd/2021": {
+          "type": "Guía de actividades"
+        },
         "bugs-and-features-planning/csd/2021": {
-          "name": "Errores y Características"
+          "name": "Errores y Características",
+          "type": "Guía de actividades"
         },
         "bugs_and_features/csd/2021": {
-          "name": "Errores y Características"
+          "name": "Errores y Características",
+          "type": "Ejemplar"
         },
         "updating-your-prototype/csd/2021": {
-          "name": "Actualizando tu Prototipo"
+          "name": "Actualizando tu Prototipo",
+          "type": "Guía de actividades"
         },
         "app-presentation/csd/2021": {
           "name": "Presentación de aplicaciones",
           "type": "Rúbrica"
         },
         "app-presentation-exemplar/csd/2021": {
-          "name": "Presentación de aplicaciones"
+          "name": "Presentación de aplicaciones",
+          "type": "Ejemplar"
+        },
+        "sample_marked_rubrics_1_1/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "peer_review_1/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "peer_review_2/csd/2021": {
+          "type": "Ejemplar"
         },
         "teacher_forum/csd/2021": {
           "name": "Foro de profesores",
@@ -2036,7 +2159,8 @@
         },
         "input-and-events/csd/2021": {
           "name": "Entrada y Eventos",
-          "url": "https://docs.google.com/document/d/1Pqq09UzF8xNP688FwK7x9zrsjxxM4WajAVtEwM1wYPE/edit"
+          "url": "https://docs.google.com/document/d/1Pqq09UzF8xNP688FwK7x9zrsjxxM4WajAVtEwM1wYPE/edit",
+          "type": "Guía de actividades"
         },
         "board_events/csd/2021": {
           "name": "Eventos del tablero",
@@ -2091,8 +2215,14 @@
           "name": "Sentencias si",
           "type": "Recurso"
         },
+        "make-game-guide/csd/2021": {
+          "type": "Guía de actividades"
+        },
         "make_a_game_1/csd/2021": {
           "type": "Rúbrica"
+        },
+        "make_a_game_sample_marked_rubrics/csd/2021": {
+          "type": "Ejemplar"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "Introducción a los arreglos",
@@ -2153,6 +2283,15 @@
         "planning-your-innovation/csd/2021": {
           "type": "Guía de Proyecto"
         },
+        "peer_review_1_1/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "peer_review_2_1/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "sample_marked_rubrics_4/csd/2021": {
+          "type": "Ejemplar"
+        },
         "circuit_playground_1/csd/2021": {
           "name": "Circuit Playground",
           "type": "Recurso"
@@ -2161,10 +2300,23 @@
           "type": "Diapositivas"
         },
         "representing-information-1/csd/2021": {
-          "name": "Representación de la información"
+          "name": "Representación de la información",
+          "type": "Guía de actividades"
+        },
+        "representing-information-exemplar-2019/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "representing_information_2/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "ascii-exemplar-2019/csd/2021": {
+          "type": "Ejemplar"
         },
         "ascii-text/csd/2021": {
           "type": "Recurso"
+        },
+        "ascii-challenges/csd/2021": {
+          "type": "Guía de actividades"
         },
         "ascii_challenges/csd/2021": {
           "type": "Guía de respuestas"
@@ -2173,20 +2325,38 @@
           "name": "Binario y datos",
           "type": "Vídeo"
         },
+        "representing-numbers-2021/csd/2021": {
+          "type": "Guía de actividades"
+        },
         "representing-numbers-exemplar-2019/csd/2021": {
-          "name": "Representar números"
+          "name": "Representar números",
+          "type": "Ejemplar"
+        },
+        "pet-records-exemplar-2019/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "activity-guide-pet-records/csd/2021": {
+          "type": "Guía de actividades"
         },
         "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "Mantener los datos en secreto"
+          "name": "Mantener los datos en secreto",
+          "type": "Ejemplar"
+        },
+        "keeping-data-secret/csd/2021": {
+          "type": "Guía de actividades"
         },
         "unit_5_data_society/csd/2021": {
           "type": "Diapositivas"
+        },
+        "secret_messages_2021/csd/2021": {
+          "type": "Guía de actividades"
         },
         "medical_records/csd/2021": {
           "type": "Guía de respuestas"
         },
         "create-a-representation-exemplar-2019/csd/2021": {
-          "name": "Crear una Representación"
+          "name": "Crear una Representación",
+          "type": "Ejemplar"
         },
         "encode-a-thing/csd/2021": {
           "name": "Crear una Representación"
@@ -2198,34 +2368,55 @@
           "name": "Crear una Representación",
           "type": "Rúbrica"
         },
+        "create_a_representation_marked_rubrics/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "problem-solving-with-data-exemplar-2019/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "problem-solving-with-data/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "structuring-data-2021/csd/2021": {
+          "type": "Guía de actividades"
+        },
         "structuring_data/csd/2021": {
-          "name": "Estructurar datos"
+          "name": "Estructurar datos",
+          "type": "Ejemplar"
         },
         "interpreting-data-exemplar-2019/csd/2021": {
-          "name": "Interpretar datos"
+          "name": "Interpretar datos",
+          "type": "Ejemplar"
         },
         "interpreting-data/csd/2021": {
-          "name": "Interpretar datos"
+          "name": "Interpretar datos",
+          "type": "Guía de actividades"
         },
         "interpreting-data-1/csd/2021": {
           "name": "Interpretar datos",
           "type": "Recurso"
         },
+        "making-decisions-with-data-exemplar-2019/csd/2021": {
+          "type": "Ejemplar"
+        },
         "making-decisions-with-data/csd/2021": {
-          "name": "Tomar decisiones con datos"
+          "name": "Tomar decisiones con datos",
+          "type": "Guía de actividades"
         },
         "problem-solving-process-with-data/csd/2021": {
           "type": "Recurso"
         },
         "automating-data-decisions-exemplar-2019/csd/2021": {
-          "name": "Automatizar las decisiones basadas en datos"
+          "name": "Automatizar las decisiones basadas en datos",
+          "type": "Ejemplar"
         },
         "data-decisions-resource/csd/2021": {
           "name": "Automatizar las decisiones basadas en datos",
           "type": "Recurso"
         },
         "automating-data-decisions-1/csd/2021": {
-          "name": "Automatizar las decisiones basadas en datos"
+          "name": "Automatizar las decisiones basadas en datos",
+          "type": "Guía de actividades"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "Vídeo"
@@ -2237,10 +2428,12 @@
           "type": "Vídeo"
         },
         "data-in-the-real-world-exemplar-2019/csd/2021": {
-          "name": "Los datos en el mundo real"
+          "name": "Los datos en el mundo real",
+          "type": "Ejemplar"
         },
         "data-in-the-real-world/csd/2021": {
-          "name": "Los datos en el mundo real"
+          "name": "Los datos en el mundo real",
+          "type": "Guía de actividades"
         },
         "video_impact_on_society/csd/2021": {
           "name": "Vídeo: Impacto en la Sociedad",
@@ -2264,32 +2457,68 @@
         "solve-a-data-problem/csd/2021": {
           "type": "Guía de Proyecto"
         },
+        "project_guide_exemplar/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "peer_review_exemplar_1/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "peer_review_exemplar_2/csd/2021": {
+          "type": "Ejemplar"
+        },
         "unit_5_data_society_2/csd/2021": {
           "type": "Diapositivas"
         },
+        "sample_marked_rubrics_3/csd/2021": {
+          "type": "Ejemplar"
+        },
         "drawing-shapes-exemplar-2020/csd/2021": {
-          "name": "Dibujar formas"
+          "name": "Dibujar formas",
+          "url": "https://docs.google.com/document/d/1XOYjB5q6b4A7A6Bo4C3Lcs0cWXeU-P0b/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
+        },
+        "colored-shape-drawing/csd/2021": {
+          "name": "Muestra de dibujo para compartir",
+          "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
+          "type": "Ejemplar"
+        },
+        "drawing_shapes_version_b_/csd/2021": {
+          "name": "Dibujando Formas (Versión B)",
+          "url": "https://docs.google.com/document/d/17EpcSPBF0NP0NYXRpppASEYLwy-uwDjg/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Guía de actividades"
+        },
+        "drawing_shapes_version_a_/csd/2021": {
+          "name": "Dibujando Formas (Versión A)",
+          "url": "https://docs.google.com/document/d/1XOYjB5q6b4A7A6Bo4C3Lcs0cWXeU-P0b/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Guía de actividades"
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "name": "CSD Unidad 3 - Animaciones y Juegos Interactivos",
           "type": "Diapositivas"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "Vídeo"
+          "name": "Dibujando en el Laboratorio de Juego - Parte 1",
+          "url": "https://youtu.be/PXn9gKiKKFo",
+          "type": "Video"
         },
         "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "Vídeo"
+          "name": "Dibujando en el Laboratorio de Juego - Parte 2",
+          "url": "https://youtu.be/QLabeWhw_O0",
+          "type": "Video"
         },
         "drawing_shapes/csd/2021": {
-          "name": "Dibujar formas",
+          "name": "Dibujando Formas",
+          "url": "https://docs.google.com/document/d/1vI__ly1JiqvnOM30Af41u8gWmpNiRXEL/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Recurso"
         },
         "shapes_and_parameters_-_map_level/csd/2021": {
           "name": "Formas y parámetros",
+          "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
           "type": "Recurso"
         },
         "shapes_and_parameters/csd/2021": {
           "name": "Formas y parámetros",
+          "url": "https://docs.google.com/document/d/1E9bGSW3SMWT7Yzrs-DJByD4pkxCKFpHz/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Recurso"
         },
         "introduction-to-variables/csd/2021": {
@@ -2299,6 +2528,7 @@
         },
         "naming_variables/csd/2021": {
           "name": "Nombrar variables",
+          "url": "https://docs.google.com/document/d/1gs0Hx39ZC9c0A14cUnyn8RdZXLRloNfA/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Recurso"
         },
         "variables_1/csd/2021": {
@@ -2331,14 +2561,16 @@
           "type": "Recurso"
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
-          "name": "Mini Proyecto - Escenas subtituladas"
+          "name": "Mini Proyecto - Escenas subtituladas",
+          "type": "Ejemplar"
         },
         "captioned-scenes/csd/2021": {
           "name": "Escenas subtituladas",
           "type": "Rúbrica"
         },
         "sprite-scene-planning/csd/2021": {
-          "name": "Planificación de escena sprite"
+          "name": "Planificación de escena sprite",
+          "type": "Guía de actividades"
         },
         "random-dot-flipbook/csd/2021": {
           "name": "Flipbook de puntos aleatorios"
@@ -2352,30 +2584,43 @@
           "type": "Vídeo"
         },
         "introduction_to_the_draw_loop/csd/2021": {
+          "name": "Introducción al ciclo de dibujo",
           "url": "https://youtu.be/G6QJeuHhqCM",
           "type": "Video"
         },
         "the_draw_loop/csd/2021": {
-          "name": "El bucle 'dibujar'",
+          "name": "El ciclo de dibujo",
           "type": "Recurso"
         },
         "animating-sprites/csd/2021": {
           "name": "Movimiento de sprites",
+          "url": "https://youtu.be/G666sFzAg5g",
           "type": "Vídeo"
         },
         "the_counter_pattern/csd/2021": {
           "name": "El patrón del contador",
           "type": "Recurso"
         },
+        "animated-scene-planning-exemplar-2020/csd/2021": {
+          "name": "Planificación de una escena animada",
+          "type": "Ejemplar"
+        },
         "animated-scene-1/csd/2021": {
+          "name": "Escena animada",
           "type": "Rúbrica"
+        },
+        "animated-scene/csd/2021": {
+          "name": "Escena animada",
+          "type": "Guía de actividades"
         },
         "boolean_expressions/csd/2021": {
           "name": "Expresiones booleanas",
+          "url": "https://youtu.be/_j9nvYKaOVE",
           "type": "Vídeo"
         },
         "conditional_statements/csd/2021": {
           "name": "Sentencias condicionales",
+          "url": "https://youtu.be/TuLIK7DcPWs",
           "type": "Vídeo"
         },
         "booleans_and_comparison_operators/csd/2021": {
@@ -2392,10 +2637,16 @@
         },
         "if_else_statements/csd/2021": {
           "name": "Sentencias `si/si no`",
+          "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Vídeo"
         },
         "interactive-card-exemplar-2020/csd/2021": {
-          "name": "Tarjeta interactiva"
+          "name": "Tarjeta interactiva",
+          "type": "Ejemplar"
+        },
+        "interactive-card-marked-rubrics/csd/2021": {
+          "name": "Tarjeta interactiva - Ejemplo de rúbricas marcadas",
+          "type": "Ejemplar"
         },
         "interactive-card-project-guide-2019/csd/2021": {
           "name": "Tarjeta interactiva",
@@ -2409,7 +2660,11 @@
           "name": "Tarjeta interactiva",
           "type": "Rúbrica"
         },
+        "interactive_card_-_student_checklist/csd/2021": {
+          "name": "Tarjetas interactivas - Checklist del estudiante"
+        },
         "extra_code_in_challenge_levels_1/csd/2021": {
+          "name": "Código extra en los niveles de desafío",
           "type": "Recurso"
         },
         "velocity_1/csd/2021": {
@@ -2421,11 +2676,21 @@
           "type": "Recurso"
         },
         "collision-detection-exemplar-2020/csd/2021": {
-          "name": "Detección de colisiones"
+          "name": "Detección de colisiones",
+          "type": "Ejemplar"
+        },
+        "collision_detection_version_b_/csd/2021": {
+          "type": "Guía de actividades"
+        },
+        "collision_detection_version_a_/csd/2021": {
+          "type": "Guía de actividades"
         },
         "collision_detection/csd/2021": {
           "name": "Detección de colisiones",
           "type": "Recurso"
+        },
+        "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "type": "Ejemplar"
         },
         "side-scroller-1/csd/2021": {
           "name": "Desplazamiento Lateral",
@@ -2438,6 +2703,9 @@
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "name": "Velocidad y patrón del contador",
           "type": "Recurso"
+        },
+        "flyer-game-project-guide-exemplar/csd/2021": {
+          "type": "Ejemplar"
         },
         "flyer-game-1/csd/2021": {
           "name": "Juego de volantes",
@@ -2455,6 +2723,15 @@
           "name": "Funciones",
           "type": "Recurso"
         },
+        "planning-your-platform-game-exemplar-2020/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "make-your-own-game-exemplar-2020/csd/2021": {
+          "type": "Ejemplar"
+        },
+        "make-your-own-game-sample-marked-rubrics/csd/2021": {
+          "type": "Ejemplar"
+        },
         "make-your-own-game/csd/2021": {
           "type": "Guía de Proyecto"
         },
@@ -2469,7 +2746,8 @@
         },
         "aluminum-boats-exemplar-2020/csd/2021": {
           "name": "Barcos de aluminio",
-          "url": "https://docs.google.com/document/d/1j8qo8FCNO9pyacL2-bKlwCEzlyMI8GyD/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1j8qo8FCNO9pyacL2-bKlwCEzlyMI8GyD/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "aluminum-boats-activity-guide-2020/csd/2021": {
           "name": "Barcos de aluminio",
@@ -2497,7 +2775,8 @@
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "¿Qué es una computadora?",
-          "url": "https://docs.google.com/document/d/1KeIqMxixqhspN4iO9cbPkngVVb9o1nZK/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1KeIqMxixqhspN4iO9cbPkngVVb9o1nZK/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "name": "¿Qué es una computadora?",
@@ -2516,7 +2795,8 @@
         },
         "input-and-output-2020/csd/2021": {
           "name": "Entrada y salida",
-          "url": "https://docs.google.com/document/d/12Ns3QRMjf9cgWs1CVzxbvDe0K05mb0MS/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/12Ns3QRMjf9cgWs1CVzxbvDe0K05mb0MS/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "input-and-output-1/csd/2021": {
           "name": "Entrada y salida",
@@ -2549,7 +2829,8 @@
           "type": "Guía de actividades"
         },
         "project-propose-an-app-2020/csd/2021": {
-          "url": "https://docs.google.com/document/d/1eiaJ9LhuzHBc5CQPYY9kKeEe6Ht4Wc0e/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1eiaJ9LhuzHBc5CQPYY9kKeEe6Ht4Wc0e/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "app-proposal-project/csd/2021": {
           "name": "Aplicaciones y resolución de problemas",
@@ -2562,11 +2843,13 @@
         },
         "apps-and-problem-solving-marked-rubrics/csd/2021": {
           "name": "Muestras de rubricas evaluadas",
-          "url": "https://docs.google.com/document/d/1R0Trpqz9e_7cku37r4XZhtFQsLuqqb81/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1R0Trpqz9e_7cku37r4XZhtFQsLuqqb81/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "peer_review_exemplar/csd/2021": {
           "name": "Revisión de compañeros",
-          "url": "https://docs.google.com/document/d/1BO-Sn4OUtDivWRR1m5qvD-xRednOq9uO/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1BO-Sn4OUtDivWRR1m5qvD-xRednOq9uO/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Aplicaciones y resolución de problemas",
@@ -2580,7 +2863,8 @@
         },
         "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
           "name": "Construye una mesa de papel periódico",
-          "url": "https://docs.google.com/document/d/1iAp8OvnSLcxBjsXI3GIKh__KsbINMgiG/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1iAp8OvnSLcxBjsXI3GIKh__KsbINMgiG/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "build-a-newspaper-table/csd/2021": {
           "name": "Construye una mesa de papel periódico",
@@ -2589,7 +2873,8 @@
         },
         "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
           "name": "Puente de Espagueti",
-          "url": "https://docs.google.com/document/d/1edc0urEbYvWjeZun4ry7Z4AwyDBviXz9/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1edc0urEbYvWjeZun4ry7Z4AwyDBviXz9/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "spaghetti-bridge-activity-guide/csd/2021": {
           "name": "Puente de Espagueti - Guía de actividades",
@@ -2597,7 +2882,8 @@
         },
         "intro-to-problem-solving-paper-tower-2020/csd/2021": {
           "name": "Introducción a la Resolución de Problemas - La Torre de Papel",
-          "url": "https://docs.google.com/document/d/1vBJ896O_5bqiUCSQp21PXOy178HB0s_G/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1vBJ896O_5bqiUCSQp21PXOy178HB0s_G/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "paper-planes/csd/2021": {
           "name": "Torre de Papel",
@@ -2610,7 +2896,8 @@
         },
         "exploring-problem-solving-animal-theme-2020/csd/2021": {
           "name": "Explorando la resolución de problemas - Temática animal",
-          "url": "https://docs.google.com/document/d/1DdG_SNPAwpBinoyQB6dqVeO6ixlzwq-o/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1DdG_SNPAwpBinoyQB6dqVeO6ixlzwq-o/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "solving-problems-tangrams-2020/csd/2021": {
           "name": "Tanagrams",
@@ -2624,7 +2911,8 @@
         },
         "exploring-problem-solving-games-theme-2020/csd/2021": {
           "name": "Explorando la resolución de Problemas - Temática De Juegos",
-          "url": "https://docs.google.com/document/d/1bv4tZrvPyYp5h-pj3g2YT8kN2cMOyKqm/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1bv4tZrvPyYp5h-pj3g2YT8kN2cMOyKqm/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "solving-problems-activity-guide-game-2020/csd/2021": {
           "name": "Solucionando Problemas",
@@ -2685,11 +2973,13 @@
         },
         "project-guide-html-project-2020/csd/2021": {
           "name": "Guía de proyecto - Proyecto HTML",
-          "url": "https://docs.google.com/document/d/1XBGLcAr9DWDohBSjSIo1mX95d4xDsF3y/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1XBGLcAr9DWDohBSjSIo1mX95d4xDsF3y/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "peer-review-html-web-page-exemplar-2020/csd/2021": {
           "name": "Revisión de compañeros - Página Web HTML",
-          "url": "https://docs.google.com/document/d/16fbMh8ScHGcwhsesC5wTnOaPrqG0YZuG/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/16fbMh8ScHGcwhsesC5wTnOaPrqG0YZuG/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "html-web-page-1/csd/2021": {
           "name": "Página Web HTML",
@@ -2728,7 +3018,8 @@
         },
         "social-sleuth-exemplar-2020/csd/2021": {
           "name": "Investigador Social",
-          "url": "https://docs.google.com/document/d/10DQ0ctP4Z-5aX8JJW2F_wSP3cvj-e-Ha/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/10DQ0ctP4Z-5aX8JJW2F_wSP3cvj-e-Ha/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "social-sleuth/csd/2021": {
           "name": "Investigador Social",
@@ -2757,11 +3048,13 @@
         },
         "project-guide-your-personal-style-exemplar-2020/csd/2021": {
           "name": "Guía de Proyectos - Tu estilo personal",
-          "url": "https://docs.google.com/document/d/1ZdoedsacEt7jJM0CvEppQOZwebFXo6tk/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1ZdoedsacEt7jJM0CvEppQOZwebFXo6tk/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "peer-review-your-personal-style-exemplar-2020/csd/2021": {
           "name": "Revisión de pares - Tu estilo personal",
-          "url": "https://docs.google.com/document/d/1M9N6q8f9mzt0H7CgtqfH16czIJVKh0vP/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1M9N6q8f9mzt0H7CgtqfH16czIJVKh0vP/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "your-personal-style-1-2-3/csd/2021": {
           "name": "Tu estilo personal",
@@ -2780,7 +3073,8 @@
         },
         "licensing-your-work-exemplar-2020/csd/2021": {
           "name": "Patentando tu trabajo",
-          "url": "https://docs.google.com/document/d/12w1BAhfRsJawQt4B_WR9NcNiHo9iD9Yz/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/12w1BAhfRsJawQt4B_WR9NcNiHo9iD9Yz/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "licensing-your-work-2020/csd/2021": {
           "name": "Patentando tu trabajo",
@@ -2804,7 +3098,8 @@
         },
         "define-your-webpage-2020/csd/2021": {
           "name": "Explorando sitios web",
-          "url": "https://docs.google.com/document/d/1U7JYq79dKmfnTGPHOIIkGMlTsS3_9yU1/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1U7JYq79dKmfnTGPHOIIkGMlTsS3_9yU1/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "define-your-web-page/csd/2021": {
           "name": "Explorando sitios web",
@@ -2823,7 +3118,8 @@
         },
         "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
           "name": "Guía de proyecto - Página Web Personal - Preparar",
-          "url": "https://docs.google.com/document/d/1xHo70I67T_RgHoVEAby6YVWAbdLQQLNu/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1xHo70I67T_RgHoVEAby6YVWAbdLQQLNu/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "person-web-page-prepare/csd/2021": {
           "name": "Página Web Personal - Preparar",
@@ -2832,15 +3128,18 @@
         },
         "practices-reflection-exemplar-2020/csd/2021": {
           "name": "Reflexión sobre Prácticas ",
-          "url": "https://docs.google.com/document/d/1QijwlqA33Ao_b8Ti1wKHOc0Y0UHutTm0/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1QijwlqA33Ao_b8Ti1wKHOc0Y0UHutTm0/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
           "name": "Guía de proyecto - Página Web Personal - Reflexionar",
-          "url": "https://docs.google.com/document/d/10LTsuEFOPRwrlQVh6jYyATHwcJYWmZHb/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/10LTsuEFOPRwrlQVh6jYyATHwcJYWmZHb/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "peer-review-personal-website-exemplar-2020/csd/2021": {
           "name": "Revisión de compañeros - Página Web Personal",
-          "url": "https://docs.google.com/document/d/16ieiGwSaVainE1WTvPc8OtfU0dRsdYJf/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/16ieiGwSaVainE1WTvPc8OtfU0dRsdYJf/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "personal-web-page-1/csd/2021": {
           "name": "Página Web Personal",
@@ -2874,7 +3173,8 @@
         },
         "websites-for-a-purpose-2020/csd/2021": {
           "name": "Sitios web con un propósito",
-          "url": "https://docs.google.com/document/d/1wiP1IJ_5PAfeaOiniQIw5s96aOYP9Ckc/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1wiP1IJ_5PAfeaOiniQIw5s96aOYP9Ckc/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "websites-for-a-purpose/csd/2021": {
           "name": "Sitios Web para un Propósito",
@@ -2883,7 +3183,8 @@
         },
         "website-team-plan-2020/csd/2021": {
           "name": "Plan de equipo para el sitio web",
-          "url": "https://docs.google.com/document/d/1AXNWwHITg5u07gyMKieITTBh33OXwwzb/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1AXNWwHITg5u07gyMKieITTBh33OXwwzb/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
           "name": "Video: Resolviendo desacuerdos",
@@ -2902,7 +3203,8 @@
         },
         "links-and-research-1/csd/2021": {
           "name": "Enlaces e investigación",
-          "url": "https://docs.google.com/document/d/1AVeTwMWDUrf1Kd051rMe-BPWpaiqJhFV/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1AVeTwMWDUrf1Kd051rMe-BPWpaiqJhFV/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "links-and-research/csd/2021": {
           "name": "Enlaces e investigación",
@@ -2926,7 +3228,8 @@
         },
         "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
           "name": "Guía de proyecto - Sitios web para un propósito - Praparar",
-          "url": "https://docs.google.com/document/d/1IUIDjxnQeePwtkY3vUNm3algRt1uncLG/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1IUIDjxnQeePwtkY3vUNm3algRt1uncLG/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "website-for-a-purpose-1/csd/2021": {
           "name": "Sitios web para un propósito",
@@ -2949,15 +3252,18 @@
         },
         "practices-reflection-l21-exemplar-2020/csd/2021": {
           "name": "Reflexión sobre Prácticas ",
-          "url": "https://docs.google.com/document/d/1HvuGaW0nADVZv69TTFDGAVSdMfJaBfBS/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1HvuGaW0nADVZv69TTFDGAVSdMfJaBfBS/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "project-guide-website-for-a-purpose-reflect-exemplar-2020/csd/2021": {
           "name": "Guia de proyecto - Sitios web para un propósito - Reflexión",
-          "url": "https://docs.google.com/document/d/1SEq3meLtTY3xQPWniBKI5nNKLhAXO-sd/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1SEq3meLtTY3xQPWniBKI5nNKLhAXO-sd/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "peer-review-final-personal-website-exemplar-2020/csd/2021": {
           "name": "Revisión por pares - Sitio web personal final",
-          "url": "https://docs.google.com/document/d/1IOslR2oj7Q_rLFVuTg1su9raidtoVXc2/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true"
+          "url": "https://docs.google.com/document/d/1IOslR2oj7Q_rLFVuTg1su9raidtoVXc2/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "type": "Ejemplar"
         },
         "website-for-a-purpose/csd/2021": {
           "name": "Sitios web para un propósito",

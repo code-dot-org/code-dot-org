@@ -12317,3 +12317,23 @@ ms:
           lessons:
             lesson-1:
               name: Pembolehubah
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: Penjujukan
+              key: Penjujukan
+            Loops:
+              name: Gelung
+              key: Gelung
+            Events:
+              name: Acara-acara
+              key: Acara-acara
+            Conditionals:
+              name: Bersyarat
+              key: Bersyarat
+            Functions:
+              name: Fungsi
+              key: Fungsi
+            Variables:
+              name: Pembolehubah
+              key: Pembolehubah

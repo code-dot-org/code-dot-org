@@ -5299,3 +5299,23 @@ mr:
           lessons:
             lesson-1:
               name: व्हेरीएबल्स
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: सिक्वेन्सिंग
+              key: सिक्वेन्सिंग
+            Loops:
+              name: लूप्स
+              key: लूप्स
+            Events:
+              name: ईव्हेंट्स
+              key: ईव्हेंट्स
+            Conditionals:
+              name: कंडीशनल्स
+              key: कंडीशनल्स
+            Variables:
+              name: व्हेरीएबल्स
+              key: व्हेरीएबल्स
+            End of Course projects:
+              name: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स
+              key: अभ्यासक्रमाच्या समाप्तीचे प्रोजेक्ट्स

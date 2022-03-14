@@ -810,10 +810,10 @@
           "description": "Identificar las señales de frustración."
         },
         "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
-          "description": "Leer y comprender el código dado."
+          "description": "Leer y comprender un código dado."
         },
         "71cede4e-3e93-41d6-a422-f2443f756a61": {
-          "description": "Identificar un error y los problemas que causa en un programa."
+          "description": "Identificar un bug y los problemas que causa en un programa."
         },
         "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
           "description": "Describir e implementar un plan para depurar un programa."
@@ -828,7 +828,7 @@
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
         "bafea2a8-7a23-4046-9360-77d760c54c2b": {
-          "description": "Crear un juego animado e interactivo mediante secuencia y eventos."
+          "description": "Crear un juego animado e interactivo usando secuencias y eventos."
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "Identificar acciones que se correlacionan con eventos de entrada."
@@ -864,37 +864,37 @@
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "fd3464fd-5921-4873-a850-c0799c55eecd": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir circunstancias en que ciertas partes de un programa deban ejecutarse y cuándo no."
         },
         "494526f8-7392-4788-9126-b2e2dd53b241": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar cuándo se cumple una condicional, en base a ciertas normas."
         },
         "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
-          "description": "Recorrer un programa y predecir el resultado dado un conjunto de información."
+          "description": "Seguir un programa y predecir el resultado, dada una serie de entradas."
         },
         "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir circunstancias en que ciertas partes de un programa deban ejecutarse y cuándo no."
         },
         "83b6020a-2273-4966-abd6-0049afa1eb4e": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar cuándo se cumple una condicional, en base a ciertas normas."
         },
         "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
-          "description": "Convertir sentencias condicionales de lenguaje hablado en un programa."
+          "description": "Traspasar declaraciones condicionales desde el lenguaje hablado hasta un programa."
         },
         "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
-          "description": "Resolver desafíos mediante una combinación de secuencias en bucle y condicionales."
+          "description": "Resolver desafíos usando una combinación de secuencias en bucle y condicionales."
         },
         "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
-          "description": "Distinguir entre bucles que se repiten un número fijo de veces y bucles que se repiten siempre que una condición sea verdadera."
+          "description": "Distinguir entre bucles que se repiten una cantidad fija de veces y bucles que se repiten mientras se cumpla una condición."
         },
         "38cd04a9-3d07-4df9-b22d-18e39369e387": {
-          "description": "Usar un bucle mientras para crear programas que puedan resolver problemas con valores desconocidos."
+          "description": "Usar un bucle mientras para desarrollar programas que resuelvan problemas con valores desconocidos."
         },
         "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
-          "description": "Desarrollar programas con la comprensión de varias estrategias para implementar condicionales."
+          "description": "Desarrollar programas comprendiendo múltiples estrategias para implementar condicionales."
         },
         "630e79db-15ec-49fd-804c-060b8adf40ea": {
-          "description": "Convertir sentencias condicionales de lenguaje hablado y bucles en un programa."
+          "description": "Traspasar declaraciones condicionales y bucles desde el lenguaje hablado hasta un programa."
         },
         "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
           "description": "Superar obstáculos como limitaciones de tiempo o errores."
@@ -999,34 +999,34 @@
           "description": "Describir cuándo se necesita un bucle o un bucle anidado, o cuándo no se necesita ningún bucle."
         },
         "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir circunstancias en que ciertas partes de un programa deban ejecutarse y cuándo no."
         },
         "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar cuándo se cumple una condicional, en base a ciertas normas."
         },
         "7002da51-158a-4849-b733-48282a764b82": {
-          "description": "Convertir sentencias condicionales de lenguaje hablado en un programa."
+          "description": "Traspasar declaraciones condicionales desde el lenguaje hablado hasta un programa."
         },
         "08f476a4-492c-47ee-8291-a435761059ac": {
-          "description": "Resolver desafíos mediante una combinación de secuencias en bucle y condicionales."
+          "description": "Resolver desafíos usando una combinación de secuencias en bucle y condicionales."
         },
         "e85d8d23-86c2-4644-9449-94af8b02f763": {
-          "description": "Distinguir entre bucles que se repiten un número fijo de veces y bucles que se repiten siempre que una condición sea verdadera."
+          "description": "Distinguir entre bucles que se repiten una cantidad fija de veces y bucles que se repiten mientras se cumpla una condición."
         },
         "8bee7277-31d3-4032-a8ea-2d2c820425ec": {
-          "description": "Usar un bucle mientras para crear programas que puedan resolver problemas con valores desconocidos."
+          "description": "Usar un bucle mientras para desarrollar programas que resuelvan problemas con valores desconocidos."
         },
         "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir circunstancias en que ciertas partes de un programa deban ejecutarse y cuándo no."
         },
         "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar cuándo se cumple una condicional, en base a ciertas normas."
         },
         "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
-          "description": "Desarrollar programas con la comprensión de varias estrategias para implementar condicionales."
+          "description": "Desarrollar programas comprendiendo múltiples estrategias para implementar condicionales."
         },
         "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
-          "description": "Convertir sentencias condicionales de lenguaje hablado y bucles en un programa."
+          "description": "Traspasar declaraciones condicionales y bucles desde el lenguaje hablado hasta un programa."
         },
         "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
           "description": "Anidar condicionales para analizar condiciones de valor múltiple mediante la lógica, si, si no si, si no."
@@ -1185,13 +1185,13 @@
           "description": "Crea una animación interactiva utilizando sprites, comportamientos y eventos."
         },
         "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
-          "description": "Identifica las razones por las que la gente comparte información sobre sí misma en Internet."
+          "description": "Identificar las razones por las cuales las personas comparten información de ellas mismas en Internet."
         },
         "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
-          "description": "Explica la diferencia entre información privada y personal."
+          "description": "Explicar la diferencia entre información privada e información personal."
         },
         "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
-          "description": "Explica por qué es arriesgado compartir información privada en línea."
+          "description": "Explicar por qué es peligroso compartir información privada en Internet."
         },
         "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
           "description": "Elegir qué información sobre ellos mismos es segura para compartir en línea."
@@ -1251,16 +1251,16 @@
           "description": "Reconocer cuándo una función podría ayudar a simplificar un programa."
         },
         "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir circunstancias en que ciertas partes de un programa deban ejecutarse y cuándo no."
         },
         "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar cuándo se cumple una condicional, en base a ciertas normas."
         },
         "9c7ff713-c208-4acf-9691-da7a4a152565": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir circunstancias en que ciertas partes de un programa deban ejecutarse y cuándo no."
         },
         "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar cuándo se cumple una condicional, en base a ciertas normas."
         },
         "dc1b604a-9814-45f4-aed5-b76776ad818c": {
           "description": "Reconocer cuándo una función podría ayudar a simplificar un programa."
@@ -1340,6 +1340,21 @@
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
         },
+        "27e5577c-a619-4ef6-8f34-b252c18deb58": {
+          "description": "Razonar acerca de las ubicaciones en la cuadrícula de coordenadas del Game Lab"
+        },
+        "e5a564d4-8723-4ee1-92c5-f9262ee8722d": {
+          "description": "Expresar cómo dibujar una imagen en el Game Lab, tomando en cuenta la posición de la forma, el color y el orden"
+        },
+        "92707a88-4d6e-44a5-a1ba-e888e9ea27c8": {
+          "description": "Usar un sistema de coordenadas para ubicar elementos en la pantalla."
+        },
+        "d8f92cff-b148-455d-b1c9-690e0d8c3929": {
+          "description": "Secuenciar el código correctamente para sobreponer las formas."
+        },
+        "1fc6f9a4-a172-4504-a702-e0f6b219e62c": {
+          "description": "Usar y analizar comandos de dibujo con parámetros múltiples."
+        },
         "5fc17aef-b130-416f-8746-54fe3f0ed390": {
           "description": "Identificar a una variable como una forma de etiquetar y referenciar un valor en un programa."
         },
@@ -1371,7 +1386,37 @@
           "description": "Explicar cómo el bucle dibujar permite la creación de animaciones en el Game Lab"
         },
         "9ed14237-271b-4890-b05c-04bde1c706fc": {
-          "description": "Utilizar el bucle dibujar en conjunto con el comando de números aleatorios randomNumber(), formas, y sprites para elaborar animaciones simples."
+          "description": "Utilizar el ciclo dibujar en conjunto con el comando de números aleatorios randomNumber(), formas, y sprites para elaborar animaciones simples."
+        },
+        "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9": {
+          "description": "Utilizar el patrón contador para incrementar o reducir las propiedades de los sprite"
+        },
+        "32725306-4405-48d1-871c-ce44cd180b0c": {
+          "description": "Identificar que propiedades de sprite deberían cambiarse y de que manera, para lograr un movimiento específico"
+        },
+        "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16": {
+          "description": "Utilizar condicionales para reaccionar a los cambios en las variables y propiedades de sprite"
+        },
+        "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102": {
+          "description": "Utilizar condicionales para reaccionar a la entrada de teclado"
+        },
+        "aee02da5-9e5d-4c9b-b43d-7576a405fd5d": {
+          "description": "Mover sprites en respuesta a la entrada de teclado"
+        },
+        "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7": {
+          "description": "Utilizar una sentencia if-else para controlar el flujo del programa."
+        },
+        "317b8134-0316-46e4-b56c-4adba284eab6": {
+          "description": "Responder a varios tipos de entrada de usuario."
+        },
+        "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0": {
+          "description": "Utilizar las condicionales para reaccionar a las entradas de teclado o a los cambios en las variables o propiedades"
+        },
+        "286ec7b0-0776-4049-9174-3deeb1d80c14": {
+          "description": "Secuenciar comandos para dibujar en un orden correcto."
+        },
+        "899e51b2-2cb8-4948-9987-aaada64c6a85": {
+          "description": "Aplicar un patrón iterador a las variables o propiedades en un bucle"
         },
         "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
           "description": " Comunicarse y colaborar con sus compañeros de clase con el fin de buscar soluciones a distintos problemas "

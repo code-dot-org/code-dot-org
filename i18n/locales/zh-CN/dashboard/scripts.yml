@@ -20363,3 +20363,41 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: 开始
+              key: 开始
+            Sequencing:
+              name: 序列
+              key: 序列
+            Loops:
+              name: 循环
+              key: 循环
+            Events:
+              name: 事件
+              key: 事件
+            Conditionals:
+              name: 条件语句
+              key: 条件语句
+            Functions:
+              name: 函数
+              key: 函数
+            Variables:
+              name: 变量
+              key: 变量
+            For Loops:
+              name: 计数循环
+              key: 计数循环
+            End of Course projects:
+              name: 结课项目
+              key: 结课项目
+            Reviewing your reflections:
+              name: 评审反思
+              key: 评审反思
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: 欢迎来到 "教师的计算机科学基础"
+            Lesson Planning:
+              key: 课程计划
+            Next steps:
+              key: 下一步
