@@ -21077,3 +21077,41 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Dapat Dimulai
+              key: Dapat Dimulai
+            Sequencing:
+              name: Urutan
+              key: Urutan
+            Loops:
+              name: Loop
+              key: Loop
+            Events:
+              name: kegiatan
+              key: kegiatan
+            Conditionals:
+              name: Kondisi
+              key: Kondisi
+            Functions:
+              name: fungsi
+              key: fungsi
+            Variables:
+              name: variabel
+              key: variabel
+            For Loops:
+              name: For Loop
+              key: For Loop
+            End of Course projects:
+              name: Proyek Akhir-Kursus
+              key: Proyek Akhir-Kursus
+            Reviewing your reflections:
+              name: Meninjau kembali renungan Anda
+              key: Meninjau kembali renungan Anda
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+            Lesson Planning:
+              key: Perencanaan Pelajaran
+            Next steps:
+              key: Langkah berikutnya
