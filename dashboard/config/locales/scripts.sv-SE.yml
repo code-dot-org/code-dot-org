@@ -5974,3 +5974,25 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: loopar
+              key: loopar
+            Events:
+              name: Händelser
+              key: Händelser
+            Conditionals:
+              name: Villkor
+              key: Villkor
+            Functions:
+              name: funktioner
+              key: funktioner
+            Variables:
+              name: variabler
+              key: variabler
+            For Loops:
+              name: "'För' loopar"
+              key: "'För' loopar"
+            Next steps:
+              key: Nästa steg
