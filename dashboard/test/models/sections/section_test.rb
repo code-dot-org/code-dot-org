@@ -399,7 +399,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    unit_group = create :unit_group, name: 'somecourse'
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     CourseOffering.add_course_offering(unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -448,7 +448,6 @@ class SectionTest < ActiveSupport::TestCase
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
     CourseOffering.add_course_offering(script)
-    script.reload
 
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: script, unit_group: nil
@@ -495,7 +494,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    unit_group = create :unit_group, name: 'somecourse'
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     CourseOffering.add_course_offering(unit_group)
 
     Timecop.freeze(Time.zone.now) do

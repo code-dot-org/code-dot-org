@@ -549,7 +549,8 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "summarize" do
-    unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999'
+    unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group)
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -583,14 +584,14 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     unit_group.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
-    summary = unit_group.summarize
+    summary = unit_group.summarize(create(:teacher))
 
     assert_equal [:name, :id, :title, :assignment_family_title,
                   :family_name, :version_year, :published_state, :instruction_type, :instructor_audience, :participant_audience,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,
-                  :announcements, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
+                  :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -605,9 +606,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'unit1', summary[:scripts][0][:name]
     assert_equal 'unit1-description', summary[:scripts][0][:description]
 
-    assert_equal 1, summary[:versions].length
-    assert_equal 'my-unit-group', summary[:versions].first[:name]
-    assert_equal '1999', summary[:versions].first[:version_year]
+    assert_equal 1, summary[:versions].keys.length
 
     # make sure we dont have lesson info
     assert_nil summary[:scripts][0][:lessons]
@@ -685,19 +684,19 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test 'summarize_version' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(csp_2017)
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(csp_2018)
     csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
-    csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(csp_2019)
+    csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(csp_2020)
 
-    [csp_2017, csp_2018, csp_2019].each do |c|
-      summary = c.summarize_versions
-      assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
-      assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+    [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
+      summary = c.summarize_versions(create(:teacher))
+      assert_equal ["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]}
+      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
     end
-
-    # Result should include self, even if it's not launched
-    summary = csp_2020.summarize_versions
-    assert_equal ['csp-2020', 'csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
   end
 
   class SelectCourseScriptTests < ActiveSupport::TestCase

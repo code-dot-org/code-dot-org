@@ -14,7 +14,7 @@ class AssignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string,
-    courseId: PropTypes.string,
+    courseId: PropTypes.number,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     scriptId: PropTypes.number,

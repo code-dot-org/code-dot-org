@@ -18,11 +18,11 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @unit_group = create(:unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
-    @script = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @script = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@script)
     @script.reload
 
-    @script_in_preview_state = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @script_in_preview_state = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@script_in_preview_state)
     @script_in_preview_state.reload
 
@@ -30,6 +30,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
     @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(@csp_unit_group)
     @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     @csp_script = create(:script, name: 'csp1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
@@ -804,7 +805,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, as: :json, params: {
       id: section.id,
-      course_id: @csp_unit_group.id,
+      course_offering_id: @csp_unit_group.course_version.course_offering.id,
+      course_version_id: @csp_unit_group.course_version.id,
       script_id: @csp_script.id
     }
     assert_response :success

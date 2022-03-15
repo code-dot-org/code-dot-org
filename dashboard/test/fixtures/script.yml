@@ -59,7 +59,7 @@ jigsaw:
   participant_audience: student
   user_id:
   login_required: false
-  properties: '{"version_year":"unversioned"}'
+  properties: '{"version_year":"unversioned", "is_course":true}'
   new_name: 
   family_name: jigsaw
 hourofcode:
