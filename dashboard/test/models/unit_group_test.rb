@@ -1104,29 +1104,66 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal UnitGroup.valid_courses(user: teacher), [csp_2019]
   end
 
-  test "assignable_for_user?: normal courses" do
-    student = create :student
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
-    course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+  class AssignableForUser < ActiveSupport::TestCase
+    setup_all do
+      @student = create :student
+      @teacher = create :teacher
+      @facilitator = create :facilitator
+      @levelbuilder = create :levelbuilder
+      @plc_reviewer = create :plc_reviewer
+    end
 
-    refute course.assignable_for_user?(student)
-    assert course.assignable_for_user?(teacher)
-    assert course.assignable_for_user?(levelbuilder)
-  end
+    test "assignable_for_user?: launched course taught by teachers for students" do
+      course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
 
-  test "assignable_for_user?: works for pilot courses" do
-    student = create :student
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
-    assert UnitGroup.any?(&:pilot?)
+      refute course.assignable_for_user?(@student)
+      assert course.assignable_for_user?(@teacher)
+      assert course.assignable_for_user?(@facilitator)
+      assert course.assignable_for_user?(@plc_reviewer)
+      assert course.assignable_for_user?(@levelbuilder)
+    end
 
-    refute pilot_course.assignable_for_user?(student)
-    refute pilot_course.assignable_for_user?(teacher)
-    assert pilot_course.assignable_for_user?(pilot_teacher)
-    assert pilot_course.assignable_for_user?(levelbuilder)
+    test "assignable_for_user?: launched course taught by plc reviewer for facilitators" do
+      pl_course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
+
+      refute pl_course.assignable_for_user?(@student)
+      refute pl_course.assignable_for_user?(@teacher)
+      refute pl_course.assignable_for_user?(@facilitator)
+      assert pl_course.assignable_for_user?(@plc_reviewer)
+      assert pl_course.assignable_for_user?(@levelbuilder)
+    end
+
+    test "assignable_for_user?: works for pilot courses taught by teachers for students" do
+      pilot_course = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+      pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+      pilot_facilitator = create :facilitator, pilot_experiment: 'my-experiment'
+      pilot_plc_reviewer = create :plc_reviewer, pilot_experiment: 'my-experiment'
+
+      refute pilot_course.assignable_for_user?(@student)
+      refute pilot_course.assignable_for_user?(@teacher)
+      refute pilot_course.assignable_for_user?(@plc_reviewer)
+      refute pilot_course.assignable_for_user?(@facilitator)
+      assert pilot_course.assignable_for_user?(pilot_facilitator)
+      assert pilot_course.assignable_for_user?(pilot_teacher)
+      assert pilot_course.assignable_for_user?(pilot_plc_reviewer)
+      assert pilot_course.assignable_for_user?(@levelbuilder)
+    end
+
+    test "assignable_for_user?: works for pilot courses taught by plc reviewer for facilitators" do
+      pl_pilot_course = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
+      pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+      pilot_facilitator = create :facilitator, pilot_experiment: 'my-experiment'
+      pilot_plc_reviewer = create :plc_reviewer, pilot_experiment: 'my-experiment'
+
+      refute pl_pilot_course.assignable_for_user?(@student)
+      refute pl_pilot_course.assignable_for_user?(@teacher)
+      refute pl_pilot_course.assignable_for_user?(@plc_reviewer)
+      refute pl_pilot_course.assignable_for_user?(@facilitator)
+      refute pl_pilot_course.assignable_for_user?(pilot_facilitator)
+      refute pl_pilot_course.assignable_for_user?(pilot_teacher)
+      assert pl_pilot_course.assignable_for_user?(pilot_plc_reviewer)
+      assert pl_pilot_course.assignable_for_user?(@levelbuilder)
+    end
   end
 
   test "update_teacher_resources" do

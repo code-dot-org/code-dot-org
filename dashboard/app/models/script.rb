@@ -386,7 +386,7 @@ class Script < ApplicationRecord
   # This includes the units that are assignable for everyone as well
   # as unit that might be assignable based on users permissions
   def assignable_for_user?(user)
-    if user&.teacher?
+    if can_be_instructor?(user)
       Script.valid_unit_id?(user, id)
     end
   end
