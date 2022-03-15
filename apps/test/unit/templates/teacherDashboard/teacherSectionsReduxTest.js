@@ -628,6 +628,8 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         scriptId: 36,
         courseId: null,
+        courseOfferingId: undefined,
+        courseVersionId: undefined,
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
@@ -635,7 +637,8 @@ describe('teacherSectionsRedux', () => {
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
-        isAssignedCSA: undefined
+        isAssignedCSA: undefined,
+        unitId: undefined
       });
     });
   });
@@ -754,11 +757,14 @@ describe('teacherSectionsRedux', () => {
       student_count: 0,
       code: 'BCDFGH',
       courseId: null,
+      courseOfferingId: undefined,
+      courseVersionId: undefined,
       scriptId: null,
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      post_milestone_disabled: false
+      post_milestone_disabled: false,
+      unitId: undefined
     };
 
     function successResponse(customProps = {}) {
@@ -905,6 +911,9 @@ describe('teacherSectionsRedux', () => {
           studentCount: undefined,
           code: 'BCDFGH',
           courseId: undefined,
+          courseOfferingId: undefined,
+          courseVersionId: undefined,
+          unitId: undefined,
           scriptId: null,
           createdAt: createdAt,
           hidden: false,
