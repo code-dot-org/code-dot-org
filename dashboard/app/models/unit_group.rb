@@ -338,22 +338,6 @@ class UnitGroup < ApplicationRecord
     Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
   end
 
-  # Returns whether the course id is valid, even if it is not "stable" yet.
-  # @param course_id [String] id of the course we're checking the validity of
-  # @return [Boolean] Whether this is a valid course ID
-  def self.valid_course_id?(course_id, user)
-    UnitGroup.valid_courses(user: user).any? {|unit_group| unit_group.id == course_id.to_i}
-  end
-
-  # @param user [User]
-  # @returns [Boolean] Whether the user can assign this course.
-  # Users should only be able to assign one of their valid courses.
-  def assignable_for_user?(user)
-    if user&.teacher?
-      UnitGroup.valid_course_id?(id, user)
-    end
-  end
-
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
@@ -388,7 +372,7 @@ class UnitGroup < ApplicationRecord
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user, locale_code),
-      show_assign_button: assignable_for_user?(user),
+      show_assign_button: course_assignable?(user),
       announcements: announcements,
       course_offering_id: course_version&.course_offering&.id,
       course_version_id: course_version&.id,

@@ -38,8 +38,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
-    valid_script = params[:script] && Script.valid_unit_id?(current_user, params[:script][:id])
-    script_to_assign = valid_script && Script.get_from_cache(params[:script][:id])
+    script = Script.get_from_cache(params[:script] ? params[:script][:id] : params[:script_id])
+    script_to_assign = script if script&.course_assignable?(current_user)
 
     section = Section.create(
       {
@@ -47,8 +47,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
-        script_id: script_to_assign ? script_to_assign.id : params[:script_id],
-        course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id], current_user) ?
+        script_id: script_to_assign.id,
+        course_id: params[:course_id] && UnitGroup.get_from_cache(params[:course_id]).course_assignable?(current_user) ?
           params[:course_id].to_i : nil,
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
@@ -89,8 +89,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = set_course_id(course_id)
-    fields[:script_id] = set_script_id(unit_id)
+    fields[:course_id] = course_id if UnitGroup.get_from_cache(course_id).course_assignable?(current_user)
+    fields[:script_id] = unit_id if Script.get_from_cache(unit_id).course_assignable?(current_user)
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
@@ -259,19 +259,5 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       return
     end
     @follower = Follower.where(section: @section.id, student_user_id: current_user.id).first
-  end
-
-  # Update script_id if user provided valid script_id
-  # Set script_id to nil if invalid or no script_id provided
-  def set_script_id(script_id)
-    return script_id if Script.valid_unit_id?(current_user, script_id)
-    nil
-  end
-
-  # Update course_id if user provided valid course_id
-  # Set course_id to nil if invalid or no course_id provided
-  def set_course_id(course_id)
-    return course_id if UnitGroup.valid_course_id?(course_id, current_user)
-    nil
   end
 end

@@ -380,24 +380,6 @@ class Script < ApplicationRecord
     end
   end
 
-  # @param user [User]
-  # @returns [Boolean] Whether the user can assign this unit.
-  # Users should only be able to assign one of their valid units.
-  # This includes the units that are assignable for everyone as well
-  # as unit that might be assignable based on users permissions
-  def assignable_for_user?(user)
-    if user&.teacher?
-      Script.valid_unit_id?(user, id)
-    end
-  end
-
-  # @param [User] user
-  # @param script_id [String] id of the unit we're checking the validity of
-  # @return [Boolean] Whether this is a valid unit ID
-  def self.valid_unit_id?(user, script_id)
-    valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
-  end
-
   # @return [Array<Script>] An array of modern elementary units.
   def self.modern_elementary_courses
     Script::CATEGORIES[:csf].map {|name| Script.get_from_cache(name)}
@@ -1515,7 +1497,7 @@ class Script < ApplicationRecord
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: get_pilot_experiment,
       editor_experiment: editor_experiment,
-      show_assign_button: assignable_for_user?(user),
+      show_assign_button: course_assignable?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
