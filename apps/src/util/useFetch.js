@@ -24,13 +24,18 @@ const baseFetchState = {
  * request is not successful or the body could not be parsed as json, the
  * 'error' field will contain an object representing the error.
  *
+ * A new fetch request is sent whenever the given url or options change. As with
+ * all React hooks, Object.is() is used to determine equality so callers should
+ * use useMemo() if needed to ensure that the same options object is passed in
+ * when the options have not changed.
+ *
  * @param {string} url - URL of resource to fetch
  * @param {RequestInit} options - options to pass to fetch
  * @param {any[]} deps - array of values that fetch depends on; a new fetch
  *    request will be sent if any of the values in the array change
  * @returns {{loading: boolean, data: Object, error: Object}}
  */
-export const useFetch = (url, options, deps) => {
+export const useFetch = (url, options) => {
   const [fetchState, setFetchState] = useState(baseFetchState);
 
   useEffect(() => {
@@ -46,7 +51,7 @@ export const useFetch = (url, options, deps) => {
       abortController = new AbortController();
     }
 
-    options = {
+    const calculatedOptions = {
       credentials: 'same-origin',
       signal: abortController ? abortController.signal : undefined,
       ...options
@@ -58,7 +63,7 @@ export const useFetch = (url, options, deps) => {
     (async () => {
       setFetchState({...baseFetchState, loading: true});
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(url, calculatedOptions);
         if (!response.ok) {
           throw new Error(
             `fetch request to ${url} failed with status code ${response.status}`
@@ -83,7 +88,7 @@ export const useFetch = (url, options, deps) => {
         abortController.abort();
       }
     };
-  }, deps);
+  }, [url, options]);
 
   return {
     loading: fetchState.loading,

@@ -12,8 +12,8 @@ const UseFetchHarness = ({url, options, deps}) => {
   return null;
 };
 
-// Convenience method; tests can use "await clearEventLoop()" to wait for the
-// event loop to clear.
+// Convenience method; tests can use "await processEventLoop()" to wait for
+// all items in the event loop to be processed.
 const processEventLoop = () => new Promise(resolve => setTimeout(resolve, 0));
 
 describe('useFetch', () => {
