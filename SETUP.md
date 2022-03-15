@@ -271,6 +271,7 @@ Return to the [Overview](#overview) to continue installation. Note that there ar
 
 16. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
+
 ### Ubuntu 18.04 ([Download iso][ubuntu-iso-url])
 
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
