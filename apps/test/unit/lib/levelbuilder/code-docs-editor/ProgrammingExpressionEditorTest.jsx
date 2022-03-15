@@ -74,8 +74,15 @@ describe('ProgrammingExpressionEditor', () => {
         .props().readOnly
     ).to.be.true;
 
+    // Category select
+    const categorySelect = wrapper.find('select').at(0);
+    expect(categorySelect.find('option').length).to.equal(4);
+    expect(
+      categorySelect.find('option').map(option => option.props().value)
+    ).to.eql(['', 'circuit', 'variables', 'canvas']);
+
     // Video select
-    const videoSelect = wrapper.find('select').at(0);
+    const videoSelect = wrapper.find('select').at(1);
     expect(videoSelect.find('option').length).to.equal(3);
     expect(
       videoSelect.find('option').map(option => option.props().value)
@@ -100,12 +107,6 @@ describe('ProgrammingExpressionEditor', () => {
         .at(0)
         .props().value
     ).to.equal('developer.mozilla.org');
-    expect(
-      documentationSection
-        .find('select')
-        .at(0)
-        .find('option').length
-    ).to.equal(4);
     expect(
       documentationSection
         .find('TextareaWithMarkdownPreview')
