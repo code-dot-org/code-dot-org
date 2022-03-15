@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-10 17:16:45 UTC",
+    "serialized_at": "2022-03-14 20:46:34 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -898,7 +898,8 @@
       "key": "f4151504-1d9a-4bf3-9d39-94f6fd1e142a",
       "position": 1,
       "properties": {
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started"
       },
       "seeding_key": {
         "lesson_activity.key": "f4151504-1d9a-4bf3-9d39-94f6fd1e142a",
@@ -911,7 +912,8 @@
       "key": "cab760ed-3878-474c-a0f0-e9392b4bb0b5",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "cab760ed-3878-474c-a0f0-e9392b4bb0b5",
@@ -1235,6 +1237,7 @@
       "key": "ed43bde5-d607-4d7e-be4a-02eba3ef011e",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
