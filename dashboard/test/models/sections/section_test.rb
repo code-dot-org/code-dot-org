@@ -399,7 +399,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    unit_group = create :unit_group, name: 'somecourse'
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: nil, unit_group: unit_group
 
@@ -420,6 +422,9 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        course_offering_id: unit_group.course_version.course_offering.id,
+        course_version_id: unit_group.course_version.id,
+        unit_id: nil,
         course_id: unit_group.id,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -442,6 +447,8 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
+    CourseOffering.add_course_offering(script)
+
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: script, unit_group: nil
 
@@ -462,6 +469,9 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        course_offering_id: script.course_version.course_offering.id,
+        course_version_id: script.course_version.id,
+        unit_id: nil,
         course_id: nil,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -484,7 +494,8 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    unit_group = create :unit_group, name: 'somecourse'
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
 
     Timecop.freeze(Time.zone.now) do
       # If this were a real section, it would actually have a script that is part of
@@ -508,6 +519,9 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        course_offering_id: unit_group.course_version.course_offering.id,
+        course_version_id: unit_group.course_version.id,
+        unit_id: script.id,
         course_id: unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -548,6 +562,9 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        course_offering_id: nil,
+        course_version_id: nil,
+        unit_id: nil,
         course_id: nil,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
