@@ -447,10 +447,13 @@ class FilesApi < Sinatra::Base
       return source.force_encoding("UTF-8").valid_encoding?
     end
 
-    # Some labs types have a source that is a hash, for example Java Lab
+    # Handle Java Lab Multi-file Projects
     if source.is_a?(Hash)
+      # Iterate over each file
       source.each_key do |key|
-        return false unless source[key].force_encoding("UTF-8").valid_encoding?
+        # Multi-file source structure:
+        # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
+        return false unless source[key]["text"] && source[key]["text"].force_encoding("UTF-8").valid_encoding?
       end
       return true
     end

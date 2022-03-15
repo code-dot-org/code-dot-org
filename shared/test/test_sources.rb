@@ -776,9 +776,10 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(MAIN_JSON)
   end
 
+  # Test sources with nested hashes, example: Java Lab
   def test_sources_with_nested_hash
     filename = MAIN_JSON
-    file_data = '{ "source": { "MyClass.java": "…code…" } }'
+    file_data = '{ "source": { "MyClass.java": {"text":"public class ClassName: {...code here...}","isVisible":true} } }'
     file_headers = {'CONTENT_TYPE' => 'application/json'}
 
     @api.put_object(filename, file_data, file_headers)
