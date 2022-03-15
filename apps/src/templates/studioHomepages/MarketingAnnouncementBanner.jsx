@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {TwoColumnActionBlock} from './TwoColumnActionBlock';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
@@ -26,17 +26,17 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       );
     }
     checkShouldDisplayBanner();
-  }, []);
+  }, [checkShouldDisplayBanner]);
 
-  const checkShouldDisplayBanner = () => {
+  const checkShouldDisplayBanner = useCallback(() => {
     const bannerKey = getLocalStorageBannerKey();
     const displayBanner = tryGetLocalStorage(bannerKey, true);
     if (displayBanner === 'false') {
       setDisplayBanner(false);
     }
-  };
+  }, [getLocalStorageBannerKey]);
 
-  const getLocalStorageBannerKey = () => {
+  const getLocalStorageBannerKey = useCallback(() => {
     let bannerId = announcement.id;
 
     const optimizelyId = getOptimizelyModifiedElementId();
@@ -45,9 +45,9 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
     }
 
     return `display-announcement-${bannerId}`;
-  };
+  }, [getOptimizelyModifiedElementId]);
 
-  const getOptimizelyModifiedElementId = () => {
+  const getOptimizelyModifiedElementId = useCallback(() => {
     const allBannerElements = bannerRef.current.querySelectorAll('*');
 
     const getOptlyDataAttrKey = element => {
@@ -64,7 +64,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       // will be something like optly-0ef57bf5F12b-4290A4dbA1de95a9b5cd
       return getOptlyDataAttrKey(optlyModifiedElement);
     }
-  };
+  }, [bannerRef]);
 
   const onDismiss = () => {
     const bannerKey = getLocalStorageBannerKey();
