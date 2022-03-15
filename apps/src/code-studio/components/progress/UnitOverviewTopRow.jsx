@@ -220,9 +220,9 @@ class UnitOverviewTopRow extends React.Component {
             selectedSectionId={selectedSectionId}
             assignmentName={unitTitle}
             showAssignButton={showAssignButton}
+            courseId={currentCourseId}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
-            courseId={currentCourseId}
             scriptId={scriptId}
             forceReload={true}
             buttonLocationAnalytics={'unit-overview-top'}
