@@ -39,7 +39,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
     script_id = params[:script] ? params[:script][:id] : params[:script_id]
-    script = Script.get_from_cache(script_id)
+    script = Script.get_from_cache(script_id) if script_id
     script_to_assign = script if script&.course_assignable?(current_user)
 
     section = Section.create(
@@ -49,8 +49,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign&.id,
-        course_id: params[:course_id] && UnitGroup.get_from_cache(params[:course_id]).course_assignable?(current_user) ?
-          params[:course_id].to_i : nil,
+        course_id: params[:course_id] && UnitGroup.get_from_cache(params[:course_id]).course_assignable?(current_user) ? params[:course_id].to_i : nil,
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
