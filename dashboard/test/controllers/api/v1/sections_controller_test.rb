@@ -16,6 +16,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
     @unit_group = create(:unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(@unit_group)
+    @unit_group.reload
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
     @script = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
@@ -31,6 +33,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(@csp_unit_group)
+    @csp_unit_group.reload
     @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     @csp_script = create(:script, name: 'csp1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
@@ -653,7 +656,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section_with_script.id,
-      course_id: @unit_group.id,
+      course_version_id: @unit_group.course_version.id,
       name: "My Section",
       login_type: Section::LOGIN_TYPE_PICTURE,
       grade: "K",
@@ -713,13 +716,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.course_id
   end
 
-  test "update: sets course to script's default course if course_id is not provided" do
+  test "update: sets course to script's default course if course version is not provided" do
     sign_in @teacher
     section = create(:section, user: @teacher, course_id: nil)
 
     post :update, params: {
       id: section.id,
-      script_id: @csp_script.id
+      unit_id: @csp_script.id
     }
     section.reload
     assert_response :success
@@ -749,7 +752,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section.id,
-      course_id: 1,
+      course_version_id: 1,
     }
     section.reload
     assert_response :success
@@ -764,7 +767,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section.id,
-      script_id: 1,
+      unit_id: 1,
     }
     section.reload
     assert_response :success
@@ -777,7 +780,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     refute_nil SectionHiddenScript.find_by(script: @csp_script, section: @section)
     post :update, params: {
       id: @section.id,
-      script_id: @csp_script.id,
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @csp_script.id
     }
     assert_nil SectionHiddenScript.find_by(script: @csp_script, section: @section)
   end
@@ -787,7 +791,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in other_teacher
     post :update, params: {
       id: @section.id,
-      course_id: @unit_group.id,
+      course_version_id: @unit_group.course_version.id,
     }
     assert_response :forbidden
   end
@@ -795,19 +799,18 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "update: cannot update section if not logged in " do
     post :update, params: {
       id: @section.id,
-      course_id: @unit_group.id,
+      course_version_id: @unit_group.course_version.id,
     }
     assert_response :forbidden
   end
 
-  test "update: can set course and script" do
+  test "update: can set course and unit" do
     sign_in @teacher
     section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, as: :json, params: {
       id: section.id,
-      course_offering_id: @csp_unit_group.course_version.course_offering.id,
       course_version_id: @csp_unit_group.course_version.id,
-      script_id: @csp_script.id
+      unit_id: @csp_script.id
     }
     assert_response :success
     section.reload
@@ -815,13 +818,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(@csp_script.id, section.script_id)
   end
 
-  test "update: non-matching course/script rejected" do
+  test "update: non-matching course_version and script rejected" do
     sign_in @teacher
     section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
-      course_id: @unit_group.id,
-      script_id: @script.id
+      course_version_id: @unit_group.course_version.id,
+      unit_id: @script.id
     }
     assert_response 400
   end
@@ -831,7 +834,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
-      course_offering_id: @script.course_version.course_offering.id,
       course_version_id: @script.course_version.id
     }
     assert_response :success
@@ -849,22 +851,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section.id,
-      script_id: @script.id
+      course_version_id: @script.course_version.id
     }
 
     assert_not_nil UserScript.find_by(script: @script, user: student)
-  end
-
-  test "update: can set script from nested script param" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
-    post :update, as: :json, params: {
-      id: section.id,
-      script: {id: @script.id}
-    }
-    assert_response :success
-    section.reload
-    assert_equal(@script.id, section.script_id)
   end
 
   test 'logged out cannot delete a section' do
