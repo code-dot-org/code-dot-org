@@ -19,6 +19,7 @@ describe('ProgrammingEnvironmentEditor', () => {
         projectUrl: '/p/spritelab',
         description: 'A description of spritelab',
         editorType: 'blockly',
+        blockPoolName: 'GamelabJr',
         categories: [{id: 1, key: 'sprites', name: 'Sprites', color: '#00FF00'}]
       }
     };
@@ -42,7 +43,14 @@ describe('ProgrammingEnvironmentEditor', () => {
     const publishedCheckbox = wrapper.find('input').at(2);
     expect(publishedCheckbox.props().checked).to.be.true;
 
-    const projectUrlInput = wrapper.find('input').at(3);
+    const editorTypeSelect = wrapper.find('select').at(0);
+    expect(editorTypeSelect.props().value).to.equal('blockly');
+    expect(editorTypeSelect.find('option').length).to.equal(3);
+
+    const blockPoolInput = wrapper.find('input').at(3);
+    expect(blockPoolInput.props().value).to.equal('GamelabJr');
+
+    const projectUrlInput = wrapper.find('input').at(4);
     expect(projectUrlInput.props().value).to.equal('/p/spritelab');
 
     const descriptionMarkdownInput = wrapper
@@ -51,10 +59,6 @@ describe('ProgrammingEnvironmentEditor', () => {
     expect(descriptionMarkdownInput.props().markdown).to.equal(
       'A description of spritelab'
     );
-
-    const editorTypeSelect = wrapper.find('select').at(0);
-    expect(editorTypeSelect.props().value).to.equal('blockly');
-    expect(editorTypeSelect.find('option').length).to.equal(3);
 
     const categoriesSection = wrapper.find('CollapsibleEditorSection');
     expect(
@@ -102,6 +106,7 @@ describe('ProgrammingEnvironmentEditor', () => {
         'published',
         'description',
         'editorType',
+        'blockPoolName',
         'projectUrl',
         'imageUrl',
         'categories'

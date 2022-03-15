@@ -96,6 +96,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'membership'
         get 'valid_scripts'
+        get 'valid_course_offerings'
         get 'require_captcha'
       end
     end
@@ -280,6 +281,8 @@ Dashboard::Application.routes.draw do
 
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+  # this route uses course_course_name to match generated routes below that are nested within courses
+  get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all'
 
   resources :courses, param: 'course_name' do
     member do

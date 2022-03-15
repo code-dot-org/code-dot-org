@@ -69,6 +69,35 @@ export const assignmentShape = PropTypes.shape({
   supported_locale_codes: PropTypes.arrayOf(PropTypes.string)
 });
 
+export const assignmentUnitShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
+  lesson_extras_available: PropTypes.bool.isRequired,
+  text_to_speech_enabled: PropTypes.bool.isRequired
+});
+
+export const assignmentCourseVersionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  version_year: PropTypes.string.isRequired,
+  content_root_id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  is_stable: PropTypes.bool.isRequired,
+  is_recommended: PropTypes.bool.isRequired,
+  locales: PropTypes.array,
+  units: PropTypes.object.isRequired
+});
+
+export const assignmentCourseOfferingShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  display_name: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  is_featured: PropTypes.bool.isRequired,
+  course_versions: PropTypes.object.isRequired
+});
+
 // An assignment family is a collection of versions of a course or script like
 // "csd" or "coursea". For example, the assignment family "csd" could contain the
 // courses csd-2017 and csd-2018.
