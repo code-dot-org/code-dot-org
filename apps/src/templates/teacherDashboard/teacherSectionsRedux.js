@@ -205,7 +205,14 @@ function removeNullValues(key, val) {
  * @param {number} courseId
  * @param {number} scriptId
  */
-export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+export const assignToSection = (
+  sectionId,
+  courseId,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  pageType
+) => {
   firehoseClient.putRecord(
     {
       study: 'assignment',
@@ -213,7 +220,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
       data_json: JSON.stringify(
         {
           sectionId,
-          scriptId,
+          unitId,
           courseId,
           date: new Date()
         },
@@ -227,7 +234,10 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
     dispatch(
       editSectionProperties({
         courseId: courseId,
-        scriptId: scriptId
+        scriptId: unitId,
+        courseOfferingId: courseOfferingId,
+        courseVersionId: courseVersionId,
+        unitId: unitId
       })
     );
     return dispatch(finishEditingSection(pageType));

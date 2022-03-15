@@ -21,7 +21,10 @@ export const sections = [
     lessonExtras: false,
     pairingAllowed: true,
     courseId: null,
-    scriptId: null
+    scriptId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    unitId: null
   },
   {
     id: 12,
@@ -37,7 +40,10 @@ export const sections = [
     lessonExtras: false,
     pairingAllowed: true,
     courseId: null,
-    scriptId: null
+    scriptId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    unitId: null
   }
 ];
 

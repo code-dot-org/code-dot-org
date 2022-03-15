@@ -10,6 +10,8 @@ export default class CourseOverviewTopRow extends Component {
   static propTypes = {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     id: PropTypes.number.isRequired,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
@@ -21,6 +23,8 @@ export default class CourseOverviewTopRow extends Component {
   render() {
     const {
       id,
+      courseOfferingId,
+      courseVersionId,
       teacherResources,
       migratedTeacherResources,
       studentResources,
@@ -47,6 +51,8 @@ export default class CourseOverviewTopRow extends Component {
             sections={sectionsForDropdown}
             showAssignButton={showAssignButton}
             courseId={id}
+            courseOfferingId={courseOfferingId}
+            courseVersionId={courseVersionId}
             buttonLocationAnalytics={'course-overview-top'}
           />
         )}
