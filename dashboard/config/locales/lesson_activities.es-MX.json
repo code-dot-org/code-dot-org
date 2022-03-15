@@ -4065,7 +4065,7 @@
           "name": "Calentamiento"
         },
         "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
-          "name": "Actividades puente: elija una"
+          "name": "Actividades puente: elige una"
         },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Actividad Principal"
@@ -4137,7 +4137,7 @@
           "name": "Actividad de cierre"
         },
         "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": "Calentamiento "
+          "name": "Actividad inicial"
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Actividad Principal"
@@ -4524,7 +4524,7 @@
           "name": "Ampliación del aprendizaje"
         },
         "a5713eec-33e7-45ba-acc9-fba5383c6355": {
-          "name": "Calentamiento: Programación Previa en el Laberinto"
+          "name": "Actividad previa: revisión de la programación en el Laberinto"
         },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Actividad Principal"
@@ -4569,7 +4569,7 @@
           "name": "Calentamiento"
         },
         "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
-          "name": "Fundación en Línea: Vista Previa de Bucles en Coleccionista"
+          "name": "Bases en línea: revisión de bucles de la Recolectora"
         },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Actividad Principal"
@@ -4653,10 +4653,10 @@
           "name": "Calentamiento: Superhéroe Secreto"
         },
         "f642093a-def9-467e-a8cc-8950b21d62c8": {
-          "name": "Aprende: Ser un defensor de los demás (Upstander)"
+          "name": "Aprende: Ser un defensor de los demás "
         },
         "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
-          "name": "Crear: Tu Superhéroe Ciudadano Digital"
+          "name": "Crea: Tu Superhéroe Ciudadano Digital"
         },
         "7d491d29-d496-450c-aece-a776f7fbd3d3": {
           "name": "Recapitulación: ¡Salvemos el día! Cómic"
@@ -4668,13 +4668,13 @@
           "name": "Calentamiento: Levantarse, Sentarse"
         },
         "3d33781b-194e-4311-b493-e6cd3bf140ac": {
-          "name": "Analizar: ¿Por qué la gente comparte?"
+          "name": "Analizar: ¿por qué la gente comparte?"
         },
         "202398a5-6b48-4360-9ed8-10db2039b064": {
-          "name": "Analizar: ¿Privado o Personal?"
+          "name": "Analizar: ¿privado o personal?"
         },
         "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
-          "name": "Resumen: Ticket de Salida"
+          "name": "Actividad de cierre: boleto de salida"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Ampliación del aprendizaje"
@@ -5316,7 +5316,7 @@
           "name": "Actividad de cierre"
         },
         "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
-          "name": "Calentamiento "
+          "name": "Actividad inicial"
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Actividad"
@@ -5502,7 +5502,7 @@
           "name": "Modificaciones de la lección"
         },
         "fa7bb816-68d0-4964-a4c9-acf09377edc3": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "d72bfe99-62ed-4a91-87e0-27d873cc3aa8": {
           "name": "Actividad"
@@ -5514,7 +5514,7 @@
           "name": "Modificaciones de la lección"
         },
         "7e77a0b3-3a58-4d8d-9efa-b796c1496bde": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "20458bdc-a944-45dd-b4a5-ddc0acf2a104": {
           "name": "Actividad"
@@ -5625,7 +5625,7 @@
           "name": "Calentamiento"
         },
         "e22dd0d5-97b3-4829-9d90-3a213360c254": {
-          "name": "Actividad"
+          "name": "Actividad principal"
         },
         "7867053c-45a1-4d10-a159-8dc70ab53a0b": {
           "name": "Cierre"
@@ -5673,7 +5673,7 @@
           "name": "Calentamiento"
         },
         "ee232401-7aef-488e-b0f1-4b169a7a854e": {
-          "name": "Actividad"
+          "name": "Actividad Principal"
         },
         "6ad1cd24-169f-4b80-b9a4-8cc111becfd1": {
           "name": "Actividad de cierre"
@@ -5685,7 +5685,7 @@
           "name": "Calentamiento"
         },
         "c56d186e-9346-4a55-b871-3547db946cb0": {
-          "name": "Actividad"
+          "name": "Actividad Principal"
         },
         "639761f1-fc44-4250-ab0d-0e4b0565f95e": {
           "name": "Actividad de cierre"

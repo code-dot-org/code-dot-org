@@ -495,28 +495,39 @@
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
           "name": "Úvod",
+          "description": "#### Vyvolajte u žiakov záujem\n\n**Motivujte žiakov:** Vysvetlite žiakom, aký je cieľ dnešnej aktivity. Budú používať nový nástroj na rýchle vytváranie aplikácií, ktoré môžu okamžite používať, či už oni sami alebo sa ich rozhodnú poslať kamarátom \n\n**Video:** Prvú úroveň tejto aktivity tvorí video, ktoré by malo žiakov motivovať, aby aktivitu dokončili, a vysvetliť im, ako bude aktivita fungovať. Video môžete pustiť celej triede a dať potom žiakom priestor na rýchlu diskusiu a zodpovedanie otázok.",
           "progression_name": "Úvod do App Labu – video"
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
-          "name": "Úvod do App Labu"
+          "name": "Úvod do App Labu",
+          "description": "**Všeobecná podpora:** Ako učiteľ je vašou hlavnou úlohou poskytovať žiakom podporu pri práci na lekcii. Pripravili sme pre vás zopár tipov, ktoré by mali žiakom pomôcť nezávisle od toho, na ktorej úrovni práve robia.\n\n-   **Kontroluj si správnosť riešenia:** Táto aktivita žiakom nebude hovoriť, či danú úroveň vyriešili správne. Motivujte žiakov k tomu, aby si správnosť svojho aktuálneho riešenia odkontrolovali podľa vzorových obrázkov a pokynov v danej úrovni. Ak chcú žiaci preskočiť úroveň, ktorá im pripadá príliš náročná, môžu jednoducho kliknúť na tlačidlo „Dokončiť“ a pokračovať.\n-   **Pomôž si so susedom:** Motivujte žiakov k tomu, aby sa obrátili na suseda v prípade, že sa niekde zasekli. Keďže táto lekcia obsahuje aj videá a žiaci budú mať možno nasadené slúchadlá, môže byť pre nich ľahké nevedomky sa príliš odizolovať od ostatných. Pomáhajte žiakom prekonať túto prekážku tým, že im pridelíte dvojicu, keď budú zdanlivo potrebovať pomoc.\n-   **Prečítaj si pokyny:** V pokynoch žiaci zvyčajne nájdu užitočné tipy, ktoré im pomôžu dokončiť danú úroveň. Pred dokončením úrovne by si mal žiak skontrolovať, či si dôkladne prezrel vzorový obrázok a prečítal si celé pokyny.\n-   **Keď sa zasekneš, klikni sem:** Každá úroveň obsahuje animáciu, ktorá žiakom presne ukáže, ako úroveň dokončiť. Ak žiaci potrebujú pomoc, mali by tieto animácie používať. Ak chcú animácie využiť iba ako pomôcku, povedzte im, aby animáciu vypli v bode, keď im už pomohla vyriešiť aktuálny problém.\n-   **Zatiaľ to preskoč, potom sa k tomu vrátiš:** Pre žiakov niekedy býva najužitočnejšie, ak sa k náročnej úrovni vrátia neskôr. S výnimkou úrovne zameranej na „dizajnový režim“ sa všetky úrovne dajú riešiť samostatne, hoci neskoršie úrovne sa do istej miery odvolávajú na koncepty predstavené v úvodných úrovniach."
         },
         "11f7be58-02e1-4667-84e4-6310924c189d": {
-          "progression_name": "Základné nastavenia"
+          "description": "#### Nastavovanie vlastností – úrovne č. 2 až 4\n\nTieto úrovne sa zameriavajú na používanie bloku `setProperty()`. Z rozbaľovacích ponúk v tomto bloku je žiakom jasné, čo presne sa dá pomocou bloku zmeniť. V každom prípade však vieme žiakom poskytnúť zopár tipov, ktoré im pomôžu.\n\n-   **Kedy používať úvodzovky:** Keď používateľ vyberie, aké vlastnosti chce zmeniť, blok `setProperty()` automaticky upraví poslednú rozbaľovaciu ponuku tak, aby v nej boli správne použité úvodzovky. Ak majú žiaci pochybnosti, vždy by mali najprv upraviť prvé dve rozbaľovacie ponuky a potom brať poslednú ako vzor toho, aké hodnoty je možné použiť. Najčastejšou chybou je, že žiaci zabudnú dať do úvodzoviek názov farby.\n-   **Podrž kurzor myši a pozri si identifikátor:** Keď používateľ vo svojej aplikácii podrží kurzor myši nad nejakým prvkom, zobrazí sa mu identifikátor daného prvku. Táto funkcia žiakom pomôže, keď sa snažia zmeniť viacero prvkov na obrazovke.",
+          "progression_name": "Nastavenie vlastností"
         },
         "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "description": "#### Sprav to interaktívne – úrovne č. 5 až 7\n\nV týchto úrovniach sa žiaci oboznámia s blokom `onEvent()`. Pripravili sme zopár užitočných tipov pre žiakov, ktorí sa na niečom zasekli.\n\n-   **Bloky onEvent by nemali byť navzájom vnorené:** Žiaci, ktorí sa do aktivity práve pustili, možno vyskúšajú vložiť jeden blok onEvent do druhého. V tomto kurze sa však s takýmto niečím nepočíta. Hoci sa táto skutočnosť spomína vo videách, môžete to žiakom rýchlo pripomenúť, ak sa kvôli tomu zaseknú.\n-   **Skontroluj si identifikátory:** V bloku `onEvent()` treba upraviť vlastnosť `\"id\"`, aby program rozoznával udalosti pri správnom prvku.\n-   **V bloku `onEvent()` môže byť vložených viacero iných blokov:** Ak žiaci chcú, aby sa po kliknutí na dané tlačidlo spustilo viacero udalostí, stačí vložiť viacero blokov do jedného bloku `onEvent()`. Žiaci by nikdy nemali vytvárať programy, ktoré obsahujú dva bloky `onEvent()` pre tú istú kombináciu prvku (napr. tlačidlo – \"button1\") a typu udalosti (napr. kliknutie – \"click\").",
           "tips": [
-            null
+            "**Hľadanie obrázkov:** Na dokončenie tejto lekcie žiaci nemusia hľadať obrázky a zvuky na internete, no možno to budú chcieť urobiť. Odporúčame pripraviť sa na to vopred a dať žiakom pokyny, aby k vyhľadávaniu obrázkov pristupovali zodpovedne a používali len vhodné obrázky."
           ],
           "progression_name": "Spravte to interaktívne"
         },
         "56a31e52-412b-45c1-a8d4-dec1754ba819": {
+          "description": "Táto časť lekcie obsahuje úroveň, v ktorej majú žiaci pridať zviera do aplikácie so zvukmi zvierat. Táto úroveň je o niečo nárovnejšia než predchádzajúce, takže žiaci si pred ňou pravdepodobne budú potrebovať znova pustiť video alebo si veľmi dôkladne prečítať pokyny, aby ich dokázali všetky splniť.\n\n#### Obrázky a zvuky – úrovne č. 8 až 9\n\n-   **Obrázky využívajú blok `setProprety()`:** Ak chcú žiaci do prvku na obrazovke pridať obrázok, môžu použiť vlastnosť `\"image\"`. Na tento úkon sa nepoužíva žiadny nový blok.\n-   **Odkazy na obrázky:** Na pridávanie obrázkov do aplikácie potrebujú žiaci získať URL adresu obrázkov, ktorú potom skopírujú priamo do bloku `setProperty()`. Obrázky nie je potrebné sťahovať do počítača ani nahrávať do App Labu.",
           "progression_name": "Obrázky a zvuky"
         },
         "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
+          "description": "#### Dizajnový režim – úrovne č. 10 až 13\n\nV poslednej časti lekcie budú žiaci pracovať na jednom projekte, ktorý je rozložený do troch úrovní za sebou. Naučia sa pridávať na obrazovku nové prvky, vďaka čomu sa ich možnosti používania App Labu výrazne rozšíria. Môžete predpokladať, že niektorí žiaci v tejto časti lekcie strávia istý čas objavovaním a skúšaním nových nástrojov.\n\n-   **Používaj správne identifikátory (id):** Pri programovaní v App Labe je dôležité označovať prvky na obrazovke správnymi identifikátormi. Doteraz sme identifikátory prvkov vytvárali za žiakov, takže zatiaľ nemali príležitosť precvičiť si túto zručnosť. Preto vás ako učiteľa upozorňujeme, že v tejto sekcii je dôležité túto zručnosť u žiakov rozvíjať.",
           "progression_name": "Dizajnový mód"
         },
         "2113da19-595f-418e-be70-5219f0b47aa8": {
+          "description": "#### Zdieľaj svoju apku – úrovne č. 14 až 15\n\nV tejto časti lekcie majú žiaci veľkú slobodu v tom, ako budú úlohy riešiť. Samotná lekcia je navrhnutá tak, aby mali žiaci dostatok času na prácu na záverečnom projekte, či už sa rozhodnú spraviť interaktívny príbeh alebo aplikáciu podľa svojho výberu.\n\n-   **Ukážkové apky na vyskúšanie:** Žiaci majú k dispozícii tri ukážkové aplikácie, ktoré by im mali pomôcť prísť s vlastnými nápadmi.\n-   **Podporujte zdieľanie:** Ak majú žiaci telefóny s mobilnými dátami, odkaz na svoj projekt môžu rýchlo poslať na svoj alebo kamarátov mobil. Ak to školský poriadok umožňuje, podporte žiakov v tom, aby svoje projekty zdieľali.\n-   **Podporujte tvorivosť:** V porovnaní s ostatnými aktivitami v tejto lekcii si táto časť lekcie vyžaduje od žiakov viac tvorivosti. Povedzte žiakom, aby sa zamysleli nad tým, o čom bude ich interaktívny príbeh, alebo si v rámci triedy usporiadajte krátke zdieľanie nápadov, aby sa žiaci mohli navzájom inšpirovať.",
           "progression_name": "Zdieľaj svoju appku"
+        },
+        "1fd99689-e90c-478b-8ae2-ce8b5d489906": {
+          "name": "Čas na oslavu a môžeme pokračovať!",
+          "description": "**Vytlačte certifikáty:** Vytlačte pre žiakov certifikáty, ktorými oslávite ich úspechy.\n\n**code.org/applab:** Na konci lekcie motivujte žiakov k tomu, aby si otvorili domovskú stránku App Labu, kde nájdu nápady na ďalšie dobrodružstvá s App Labom."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
@@ -712,6 +723,7 @@
           "name": "Ďalšie kroky"
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "name": "Vyvolajte u žiakov záujem!",
           "tips": [
             null
           ],
@@ -1136,7 +1148,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "0e2f3c45-54d9-4caa-8d46-34bd2164efe5": {
-          "progression_name": "Základné nastavenia"
+          "progression_name": "Nastavenie vlastností"
         },
         "dd2c6b75-07f5-41f6-b791-7d5fd972a30e": {
           "progression_name": "Udalosti a vlastnosti"
@@ -3455,6 +3467,10 @@
         "da39537c-01a9-4613-bc81-c20b9baf0747": {
           "progression_name": "Záverečné projekty"
         },
+        "2a4fff7a-2742-430a-a17d-971c6f2db713": {
+          "name": "Interaktívny príbeh",
+          "progression_name": "Interaktívny príbeh"
+        },
         "3e46807c-bd15-43b1-937f-defdb5fd6c35": {
           "progression_name": "Kurz F: Projekt v Umelcovi"
         },
@@ -3483,6 +3499,10 @@
         },
         "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
           "progression_name": "Záverečné projekty"
+        },
+        "74f741d0-5df0-4813-a002-03d78ee8e56d": {
+          "name": "Interaktívny príbeh",
+          "progression_name": "Interaktívny príbeh"
         },
         "aaecdd68-26fd-47df-a470-f8519163ca38": {
           "progression_name": "Kurz F: Projekt v Umelcovi"
@@ -3824,7 +3844,7 @@
           "progression_name": "Prehľad lekcie"
         },
         "253d14d2-023c-4055-b6d8-180cd3312ddf": {
-          "progression_name": "Základné nastavenia"
+          "progression_name": "Nastavenie vlastností"
         },
         "a95228f9-b9fa-4c3e-beb6-aae6e6b1b82a": {
           "progression_name": "Udalosti a vlastnosti"
@@ -4977,6 +4997,7 @@
           "name": "Reflexia"
         },
         "2c7244e0-80ea-472a-9dbe-051909768cfc": {
+          "name": "Vyvolajte u žiakov záujem!",
           "description": "**Motivácia:** Vysvetlite žiakom ciele dnešnej aktivity. Začnú používať nový nástroj, ktorý im umožní vytrénovať skutočný model strojového učenia, čo je forma umelej inteligencie.\n\n**Video:** Prvá úroveň tejto aktivity je video, ktoré poskytuje dôležitý kontext pre umelú inteligenciu a strojové učenie. Pozrite si **\\*UI: Strojové učenie** spolu ako trieda a nakoniec si ho spoločne zhrňte, aby ste žiakom pomohli nájsť spojenie s obsahom."
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
@@ -10431,7 +10452,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Základné nastavenia"
+          "progression_name": "Nastavenie vlastností"
         },
         "fe4404fa-4e67-4c56-b117-6aa3dd7fd8ef": {
           "tips": [

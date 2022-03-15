@@ -155,9 +155,9 @@
           </block>
           <block type="Poetry_setFontColor">
             <value name="FILL">
-              <block type="colour_picker">
+              <shadow type="colour_picker">
                 <title name="COLOUR">#99ff99</title>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_setTextEffect">
@@ -171,9 +171,9 @@
           </block>
           <block type="Poetry_setBackground">
             <value name="COLOR">
-              <block type="colour_picker">
+              <shadow type="colour_picker">
                 <title name="COLOUR">#cc0000</title>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_setBackgroundEffect">

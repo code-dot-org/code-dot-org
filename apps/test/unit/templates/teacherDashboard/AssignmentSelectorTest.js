@@ -1,11 +1,13 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   localeCode: 'en-US',
+  courseOfferings: courseOfferings,
   section: {
     id: 11,
     name: 'foo',
@@ -114,6 +116,7 @@ const defaultProps = {
 };
 
 const hiddenSectionProps = {
+  courseOfferings: courseOfferings,
   section: {
     id: 11,
     name: 'foo',

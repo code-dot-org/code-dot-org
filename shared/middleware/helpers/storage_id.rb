@@ -161,9 +161,9 @@ rescue ArgumentError, OpenSSL::Cipher::CipherError
   false
 end
 
-# All operations to the user_storage_ids table listed below
+# All operations to the user_project_storage_ids table listed below
 def user_storage_ids_table
-  DCDO.get('user_storage_ids_in_dashboard', false) ? DASHBOARD_DB[:user_project_storage_ids] : PEGASUS_DB[:user_storage_ids]
+  DASHBOARD_DB[:user_project_storage_ids]
 end
 
 # Returns first user storage ID row matching query
