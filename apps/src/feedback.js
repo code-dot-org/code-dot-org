@@ -983,13 +983,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       .click(window.dashboard.popupWindow);
   }
 
-  var sharingInput = sharingDiv.querySelector('#sharing-input');
+  var sharingInput = sharingDiv.querySelector('#sharing-input-copy-button');
   if (sharingInput) {
-    dom.addClickTouchEvent(sharingInput, function() {
-      sharingInput.focus();
-      sharingInput.select();
-      sharingInput.setSelectionRange(0, 9999);
-    });
     var sharingInputCopyButton = sharingDiv.querySelector(
       '#sharing-input-copy-button'
     );

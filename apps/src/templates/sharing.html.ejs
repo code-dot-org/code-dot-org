@@ -12,9 +12,9 @@
   <% } %>
 
   <div id="sharing-input-container">
-    <input type="text" id="sharing-input" value=<%= options.shareLink %> readonly>
     <button id="sharing-input-copy-button">
       <i class="fa fa-clipboard fa-lg"></i>
+        <%= msg.copyLinkToProject() %>
     </button>
   </div>
   <div class='social-buttons'>
