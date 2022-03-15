@@ -39,9 +39,9 @@ class AssignButton extends React.Component {
   unhideAndAssign = () => {
     const {
       sectionId,
+      courseId,
       courseOfferingId,
       courseVersionId,
-      courseId,
       scriptId,
       assignToSection,
       updateHiddenScript
@@ -59,9 +59,9 @@ class AssignButton extends React.Component {
   handleClick = () => {
     const {
       scriptId,
+      courseId,
       courseOfferingId,
       courseVersionId,
-      courseId,
       sectionId,
       hiddenLessonState,
       assignToSection
