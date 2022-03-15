@@ -7,6 +7,7 @@ import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   name: 'csp',
@@ -38,7 +39,7 @@ const defaultProps = {
   ],
   isVerifiedInstructor: true,
   hasVerifiedResources: false,
-  versions: {},
+  versions: courseOfferings['1'].course_versions,
   sectionsForDropdown: [],
   announcements: [],
   isSignedIn: true,
@@ -171,6 +172,7 @@ describe('CourseOverview', () => {
       const versions = {
         1: {
           id: 1,
+          key: '2017',
           version_year: '2017',
           content_root_id: 10,
           name: 'Course A',
@@ -190,6 +192,7 @@ describe('CourseOverview', () => {
         },
         2: {
           id: 2,
+          key: '2018',
           version_year: '2018',
           content_root_id: 11,
           name: 'Course A',
@@ -226,6 +229,7 @@ describe('CourseOverview', () => {
       const versions = {
         1: {
           id: 1,
+          key: '2017',
           version_year: '2017',
           content_root_id: 10,
           name: 'Course A',
