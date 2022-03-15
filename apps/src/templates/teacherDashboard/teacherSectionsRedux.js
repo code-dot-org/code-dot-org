@@ -1020,8 +1020,6 @@ export default function teacherSections(state = initialState, action) {
 
 // Helpers and Selectors
 
-export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
-
 function getRoot(state) {
   return state.teacherSections; // Global knowledge eww.
 }
