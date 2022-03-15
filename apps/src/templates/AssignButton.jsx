@@ -14,7 +14,9 @@ class AssignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string,
-    courseId: PropTypes.number,
+    courseId: PropTypes.string,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     scriptId: PropTypes.number,
     assignmentName: PropTypes.string,
     // Redux
@@ -37,18 +39,28 @@ class AssignButton extends React.Component {
   unhideAndAssign = () => {
     const {
       sectionId,
+      courseOfferingId,
+      courseVersionId,
       courseId,
       scriptId,
       assignToSection,
       updateHiddenScript
     } = this.props;
     updateHiddenScript(sectionId, scriptId, false);
-    assignToSection(sectionId, courseId, scriptId);
+    assignToSection(
+      sectionId,
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      scriptId
+    );
   };
 
   handleClick = () => {
     const {
       scriptId,
+      courseOfferingId,
+      courseVersionId,
       courseId,
       sectionId,
       hiddenLessonState,
@@ -64,7 +76,13 @@ class AssignButton extends React.Component {
         confirmationDialogOpen: true
       });
     } else {
-      assignToSection(sectionId, courseId, scriptId);
+      assignToSection(
+        sectionId,
+        courseId,
+        courseOfferingId,
+        courseVersionId,
+        scriptId
+      );
     }
   };
 
