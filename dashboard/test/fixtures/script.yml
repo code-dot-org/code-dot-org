@@ -60,7 +60,7 @@ jigsaw:
   user_id:
   login_required: false
   properties: '{"version_year":"unversioned", "is_course":true}'
-  new_name: 
+  new_name:
   family_name: jigsaw
 hourofcode:
   id: 341
