@@ -51,10 +51,6 @@ function wrapShareClick(handler, type) {
   };
 }
 
-function select(event) {
-  event.target.select();
-}
-
 function checkImageReachability(imageUrl, callback) {
   const img = new Image();
   img.onabort = () => callback(false);
@@ -297,15 +293,6 @@ class ShareAllowedDialog extends React.Component {
                     <img style={styles.thumbnailImg} src={thumbnailUrl} />
                   </div>
                   <div>
-                    <p style={{fontSize: 20}}>{i18n.shareCopyLink()}</p>
-                    <input
-                      type="text"
-                      id="sharing-input"
-                      onClick={select}
-                      readOnly
-                      value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 450}}
-                    />
                     <button
                       type="button"
                       id="share-dialog-copy-button"
@@ -316,7 +303,10 @@ class ShareAllowedDialog extends React.Component {
                       }}
                       onClick={wrapShareClick(this.copy, 'copy')}
                     >
-                      <FontAwesome icon="clipboard" style={{fontSize: 14}} />
+                      <FontAwesome icon="clipboard" style={{fontSize: 16}} />
+                      <span style={{paddingLeft: 10}}>
+                        {i18n.copyLinkToProject()}
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -510,9 +500,8 @@ const styles = {
   },
   copyButton: {
     paddingTop: 5,
-    marginLeft: 8,
-    width: 30,
-    height: 30
+    paddingBottom: 5,
+    marginBottom: 5
   },
   copyButtonLight: {
     backgroundColor: color.light_purple
