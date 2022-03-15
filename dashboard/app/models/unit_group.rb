@@ -424,6 +424,8 @@ class UnitGroup < ApplicationRecord
 
   # Returns an array summarizing all the course versions in the same course offering as this script
   def summarize_versions(user = nil, locale_code = nil)
+    return {} unless user
+
     course_version&.course_offering&.course_versions&.select {|cv| cv.course_assignable?(user)}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 

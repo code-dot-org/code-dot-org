@@ -998,14 +998,12 @@ class ScriptTest < ActiveSupport::TestCase
     )
     CourseOffering.add_course_offering(foo18)
 
-    versions = foo17.summarize[:versions]
-    assert_equal 2, versions.length
-    assert_equal 'foo-2018', versions[0][:name]
-    assert_equal '2018', versions[0][:version_year]
-    assert_equal '2018', versions[0][:version_title]
-    assert_equal 'foo-2017', versions[1][:name]
-    assert_equal '2017', versions[1][:version_year]
-    assert_equal '2017', versions[1][:version_title]
+    versions = foo17.summarize(false, create(:teacher))[:versions]
+    assert_equal 2, versions.keys.length
+    assert_equal 'foo-2017', versions.values[0][:name]
+    assert_equal '2017', versions.values[0][:version_year]
+    assert_equal 'foo-2018', versions.values[1][:name]
+    assert_equal '2018', versions.values[1][:version_year]
   end
 
   test 'summarize excludes unlaunched versions' do
@@ -1026,14 +1024,12 @@ class ScriptTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(foo19)
 
     versions = foo17.summarize[:versions]
-    assert_equal 2, versions.length
-    assert_equal 'foo-2018', versions[0][:name]
-    assert_equal 'foo-2017', versions[1][:name]
+    assert_equal 0, versions.keys.length
 
     versions = foo17.summarize(true, create(:teacher))[:versions]
-    assert_equal 2, versions.length
-    assert_equal 'foo-2018', versions[0][:name]
-    assert_equal 'foo-2017', versions[1][:name]
+    assert_equal 2, versions.keys.length
+    assert_equal 'foo-2017', versions.values[0][:name]
+    assert_equal 'foo-2018', versions.values[1][:name]
   end
 
   test 'summarize includes show assign button' do
