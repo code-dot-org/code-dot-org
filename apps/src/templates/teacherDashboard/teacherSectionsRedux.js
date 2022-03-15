@@ -17,6 +17,9 @@ const USER_EDITABLE_SECTION_PROPS = [
   'ttsAutoplayEnabled',
   'courseId',
   'scriptId',
+  'courseOfferingId',
+  'courseVersionId',
+  'unitId',
   'grade',
   'hidden',
   'restrictSection',
@@ -208,7 +211,14 @@ function removeNullValues(key, val) {
  * @param {number} courseId
  * @param {number} scriptId
  */
-export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+export const assignToSection = (
+  sectionId,
+  courseId,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  pageType
+) => {
   firehoseClient.putRecord(
     {
       study: 'assignment',
@@ -216,7 +226,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
       data_json: JSON.stringify(
         {
           sectionId,
-          scriptId,
+          unitId,
           courseId,
           date: new Date()
         },
@@ -230,7 +240,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
     dispatch(
       editSectionProperties({
         courseId: courseId,
-        scriptId: scriptId
+        scriptId: unitId
       })
     );
     return dispatch(finishEditingSection(pageType));
@@ -1211,6 +1221,9 @@ export const sectionFromServerSection = serverSection => ({
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
+  courseOfferingId: serverSection.course_offering_id,
+  courseVersionId: serverSection.course_version_id,
+  unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   scriptId: serverSection.script
     ? serverSection.script.id
@@ -1254,6 +1267,9 @@ export function serverSectionFromSection(section) {
     pairing_allowed: section.pairingAllowed,
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
+    course_offering_id: section.courseOfferingId,
+    course_version_id: section.courseVersionId,
+    unit_id: section.unitId,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined,
     restrict_section: section.restrictSection
