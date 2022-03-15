@@ -80,6 +80,8 @@ export default class AssignmentVersionSelector extends Component {
       y: 0
     };
 
+    let orderedCourseVersions = _.orderBy(courseVersions, 'key', 'desc');
+
     return (
       <span style={styles.version} id="uitest-version-selector">
         <div style={styles.dropdownLabel}>
@@ -95,7 +97,7 @@ export default class AssignmentVersionSelector extends Component {
           disabled={disabled}
           ref={select => (this.select = select)}
         >
-          {Object.values(courseVersions).map(version => (
+          {Object.values(orderedCourseVersions).map(version => (
             <option key={version.id} value={version.id}>
               {version.is_recommended
                 ? `${version.version_year} (${i18n.recommended()})`
@@ -111,7 +113,7 @@ export default class AssignmentVersionSelector extends Component {
           onClose={this.closeMenu}
         >
           <AssignmentVersionMenuHeader />
-          {Object.values(courseVersions).map(version => (
+          {Object.values(orderedCourseVersions).map(version => (
             <AssignmentVersionMenuItem
               selectedCourseVersionId={selectedCourseVersionId}
               courseVersion={version}

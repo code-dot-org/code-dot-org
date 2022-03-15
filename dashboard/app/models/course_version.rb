@@ -153,7 +153,8 @@ class CourseVersion < ApplicationRecord
       id,
       {
         id: id,
-        version_year: key,
+        key: key,
+        version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
         content_root_id: content_root.id,
         name: content_root.localized_title,
         path: content_root.link,

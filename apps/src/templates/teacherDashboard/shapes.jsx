@@ -32,6 +32,7 @@ export const assignmentUnitShape = PropTypes.shape({
 
 export const assignmentCourseVersionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
   version_year: PropTypes.string.isRequired,
   content_root_id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
