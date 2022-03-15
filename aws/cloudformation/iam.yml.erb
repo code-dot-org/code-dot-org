@@ -228,6 +228,15 @@ Resources:
               - 'redshift:*'
               - 'dms:*'
             Resource: '*'
+          - Sid: DataAnalystQueryEditor
+            Effect: Allow
+            Action:
+              - redshift-data:GetStatementResult
+              - redshift-data:CancelStatement
+              - redshift-data:DescribeStatement
+              - redshift-data:ListStatements
+            Resource: "*"
+            Condition: "StringEquals": {"redshift-data:statement-owner-iam-userid": "${aws:userid}"}
           - Sid: DataAnalystS3ImportExportBucket
             Effect: Allow
             Action:
