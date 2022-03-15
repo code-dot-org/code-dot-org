@@ -8,6 +8,7 @@ import {
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement
 } from './FakeAnnouncementsTestData';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   plcHeaderProps: undefined,
@@ -23,7 +24,7 @@ const defaultProps = {
     '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   unitStudentDescription:
     '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
-  versions: {},
+  versions: courseOfferings['1'].course_versions,
   courseVersionId: 1
 };
 
