@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useRef, useReducer} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {TwoColumnActionBlock} from './TwoColumnActionBlock';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
@@ -11,7 +11,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 // MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock
 // which adds a button to dismiss the banner.
 const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
-  const [, forceUpdate] = useReducer(x => x + 1, 0);
+  const [displayBanner, setDisplayBanner] = useState(true);
   const bannerRef = useRef(null);
 
   // The banner may be changed via Google Optimize. In order to correctly
@@ -45,24 +45,24 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
     });
   }, []);
 
-  const shouldDisplayBanner = () => {
-    const bannerKey = getLocalStorageBannerKey();
-    const displayBanner = tryGetLocalStorage(bannerKey, true);
-    return !(displayBanner === 'false');
-  };
-
-  const getLocalStorageBannerKey = () => {
+  const getLocalStorageBannerKey = useCallback(() => {
     let bannerId = announcement.id;
     if (activeExperimentId) {
       bannerId = activeExperimentId;
     }
     return `display-announcement-${bannerId}`;
-  };
+  }, [announcement.id, activeExperimentId]);
+
+  useEffect(() => {
+    const bannerKey = getLocalStorageBannerKey();
+    const displayBannerValue = tryGetLocalStorage(bannerKey, true);
+    setDisplayBanner(displayBannerValue !== 'false');
+  }, [getLocalStorageBannerKey]);
 
   const onDismiss = () => {
     const bannerKey = getLocalStorageBannerKey();
     trySetLocalStorage(bannerKey, false);
-    forceUpdate();
+    setDisplayBanner(false);
     logEvent('close_button_clicked');
   };
 
@@ -84,7 +84,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
 
   // This banner is hidden through css because it still needs to be accessible
   // in the DOM so that it can be manipulated by Google Optimize.
-  const bannerDisplayStyle = shouldDisplayBanner() ? 'block' : 'none';
+  const bannerDisplayStyle = displayBanner ? 'block' : 'none';
 
   const button = {
     id: announcement.buttonId
