@@ -26729,3 +26729,41 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: 시작하기
+              key: 시작하기
+            Sequencing:
+              name: 시퀸싱
+              key: 시퀸싱
+            Loops:
+              name: 반복
+              key: 반복
+            Events:
+              name: 이벤트
+              key: 이벤트
+            Conditionals:
+              name: 조건
+              key: 조건
+            Functions:
+              name: 함수
+              key: 함수
+            Variables:
+              name: 변수
+              key: 변수
+            For Loops:
+              name: 반복을 위한
+              key: 반복을 위한
+            End of Course projects:
+              name: 과정말 프로젝트
+              key: 과정말 프로젝트
+            Reviewing your reflections:
+              name: 성찰 검토
+              key: 성찰 검토
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: '"컴퓨터 과학 기초"에 오신 걸 환영합니다'
+            Lesson Planning:
+              key: 레슨 계획
+            Next steps:
+              key: 다음 단계

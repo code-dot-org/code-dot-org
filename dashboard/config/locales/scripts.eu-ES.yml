@@ -2782,3 +2782,23 @@ eu:
           lessons:
             lesson-1:
               name: Aldagaiak
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Itzuliak
+              key: Itzuliak
+            Events:
+              name: Gertaerak
+              key: Gertaerak
+            Conditionals:
+              name: Baldintzak
+              key: Baldintzak
+            Functions:
+              name: Funtzioak
+              key: Funtzioak
+            Variables:
+              name: Aldagaiak
+              key: Aldagaiak
+            For Loops:
+              name: For begiztak
+              key: For begiztak

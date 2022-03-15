@@ -922,3 +922,17 @@ ku:
           lessons:
             lesson-1:
               name: گۆڕاوەکان
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: گرێکان
+              key: گرێکان
+            Conditionals:
+              name: مەرجیەکان
+              key: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+              key: فرمانەکان
+            Variables:
+              name: گۆڕاوەکان
+              key: گۆڕاوەکان

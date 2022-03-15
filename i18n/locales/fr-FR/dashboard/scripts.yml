@@ -20263,3 +20263,41 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: La Mise en Route
+              key: La Mise en Route
+            Sequencing:
+              name: Séquençage
+              key: Séquençage
+            Loops:
+              name: boucles
+              key: boucles
+            Events:
+              name: Événements
+              key: Événements
+            Conditionals:
+              name: Instructions conditionnelles
+              key: Instructions conditionnelles
+            Functions:
+              name: fonctions
+              key: fonctions
+            Variables:
+              name: variables
+              key: variables
+            For Loops:
+              name: Les Boucles « Pour »
+              key: Les Boucles « Pour »
+            End of Course projects:
+              name: Projets de Fin de Cours
+              key: Projets de Fin de Cours
+            Reviewing your reflections:
+              name: Examiner vos réflexions
+              key: Examiner vos réflexions
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique »
+            Lesson Planning:
+              key: Planifier la Leçon
+            Next steps:
+              key: Prochaines étapes

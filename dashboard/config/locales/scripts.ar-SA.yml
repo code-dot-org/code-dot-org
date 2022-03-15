@@ -30360,3 +30360,43 @@ ar:
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: البدء
+              key: البدء
+            Sequencing:
+              name: التجزيء
+              key: التجزيء
+            Loops:
+              name: الحلقات
+              key: الحلقات
+            Events:
+              name: الأحداث
+              key: الأحداث
+            Conditionals:
+              name: الجمل الشرطية
+              key: الجمل الشرطية
+            Functions:
+              name: دوال
+              key: دوال
+            Variables:
+              name: المتغيرات
+              key: المتغيرات
+            For Loops:
+              name: للحلقات
+              key: للحلقات
+            End of Course projects:
+              name: مشاريع نهاية الدورة
+              key: مشاريع نهاية الدورة
+            Reviewing your reflections:
+              name: مراجعة تأملاتك
+              key: مراجعة تأملاتك
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: مرحبًا بك في "تدريس أساسيات علم الحاسوب"
+            Lesson Planning:
+              key: تخطيط الدرس
+            Next steps:
+              key: الخطوات التالية
+          student_description: تعرف على كيفية تدريس علم الحاسوب باستخدام أساسيات علم
+            الحاسوب في Code.org من خلال هذه الدورة التدريبية المجانية عبر الإنترنت!

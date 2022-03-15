@@ -158,6 +158,21 @@ export default function ProgrammingEnvironmentEditor({
           ))}
         </select>
       </label>
+      {programmingEnvironment.editorType === 'blockly' && (
+        <label>
+          Block Pool Name
+          <HelpTip>
+            The block pool that will be used to show embedded blocks.{' '}
+          </HelpTip>
+          <input
+            value={programmingEnvironment.blockPoolName || ''}
+            onChange={e =>
+              updateProgrammingEnvironment('blockPoolName', e.target.value)
+            }
+            style={styles.textInput}
+          />
+        </label>
+      )}
       <label>
         Project URL
         <input

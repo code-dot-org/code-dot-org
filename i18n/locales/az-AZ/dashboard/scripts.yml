@@ -9946,3 +9946,43 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+        k5-onlinepd-2022:
+          lessons:
+            Welcome and Introduction:
+              name: Xoş gəldiniz və Giriş
+            Getting Started:
+              name: Başlanğıc
+              key: Başlanğıc
+            Teaching a Lesson:
+              name: Dərs keçmək
+            Sequencing:
+              name: Ardıcıllıq qurmaq
+              key: Ardıcıllıq qurmaq
+            Loops:
+              name: dövrlər
+              key: dövrlər
+            Events:
+              name: Tədbirlər
+              key: Tədbirlər
+            Conditionals:
+              name: Şərti ifadələr
+              key: Şərti ifadələr
+            Functions:
+              name: Funksiyalar
+              key: Funksiyalar
+            Variables:
+              name: dəyişənlər
+              key: dəyişənlər
+            For Loops:
+              name: '"For" dövrü'
+              key: '"For" dövrü'
+            Taking next steps:
+              name: Növbəti addımları atmaq
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Xoş gəldiniz və Giriş
+            Lesson Planning:
+              key: Dərs Planlaşdırma
+              name: Dərs keçmək
+            Next steps:
+              key: Növbəti addımlar
+              name: Növbəti addımları atmaq

@@ -1958,3 +1958,23 @@ bn:
           lessons:
             lesson-1:
               name: চলকগুলো
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: চক্র
+              key: চক্র
+            Events:
+              name: ঘটনাবলী
+              key: ঘটনাবলী
+            Conditionals:
+              name: শর্তযুক্ত
+              key: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি
+              key: ফাংশনগুলি
+            Variables:
+              name: চলকগুলো
+              key: চলকগুলো
+            For Loops:
+              name: ফর লুপ
+              key: ফর লুপ

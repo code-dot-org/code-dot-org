@@ -21497,3 +21497,41 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: 使用開始
+              key: 使用開始
+            Sequencing:
+              name: シークエンス
+              key: シークエンス
+            Loops:
+              name: くりかえし
+              key: くりかえし
+            Events:
+              name: イベント
+              key: イベント
+            Conditionals:
+              name: 条件
+              key: 条件
+            Functions:
+              name: 関数(かんすう)
+              key: 関数(かんすう)
+            Variables:
+              name: 変数（へんすう）
+              key: 変数（へんすう）
+            For Loops:
+              name: ループ用
+              key: ループ用
+            End of Course projects:
+              name: コース最後のプロジェクト
+              key: コース最後のプロジェクト
+            Reviewing your reflections:
+              name: 復習内容をレビューする
+              key: 復習内容をレビューする
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: "「コンピュータ サイエンスを教える」へようこそ"
+            Lesson Planning:
+              key: レッスンプラン
+            Next steps:
+              key: 次の手順
