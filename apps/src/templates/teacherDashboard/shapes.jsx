@@ -5,8 +5,6 @@ export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   createdAt: PropTypes.string,
-  // Though we validate valid login types here, the server actually owns the
-  // canonical list, and passes us the list of valid login types.
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
   lessonExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
@@ -22,54 +20,6 @@ export const sectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool.isRequired,
   restrictSection: PropTypes.bool,
   postMilestoneDisabled: PropTypes.bool
-});
-
-// Used on the Teacher Dashboard for components that
-// require more specific information.
-export const summarizedSectionShape = PropTypes.shape({
-  assignedTitle: PropTypes.string.isRequired,
-  code: PropTypes.string.isRequired,
-  course_id: PropTypes.number,
-  currentUnitTitle: PropTypes.string,
-  grade: PropTypes.string,
-  hidden: PropTypes.bool,
-  id: PropTypes.number.isRequired,
-  linkToAssigned: PropTypes.string,
-  linkToCurrentUnit: PropTypes.string,
-  linkToProgress: PropTypes.string,
-  linkToStudents: PropTypes.string,
-  login_type: PropTypes.string,
-  name: PropTypes.string,
-  numberOfStudents: PropTypes.number,
-  pairing_allowed: PropTypes.bool,
-  tts_autoplay_enabled: PropTypes.bool,
-  providerManaged: PropTypes.bool,
-  script: PropTypes.object,
-  sharing_disabled: PropTypes.bool,
-  lesson_extras: PropTypes.bool,
-  studentCount: PropTypes.number,
-  students: PropTypes.array,
-  teacherName: PropTypes.string
-});
-
-// An assignment is a course or script that a user can be assigned to.
-export const assignmentShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  courseId: PropTypes.number,
-  scriptId: PropTypes.number,
-  assignId: PropTypes.string.isRequried,
-  category_priority: PropTypes.number.isRequired,
-  category: PropTypes.string.isRequired,
-  position: PropTypes.number,
-  name: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired,
-  script_name: PropTypes.string.isRequired,
-  assignment_family_name: PropTypes.string.isRequired,
-  version_year: PropTypes.string,
-  version_title: PropTypes.string,
-  is_stable: PropTypes.bool,
-  supported_locales: PropTypes.arrayOf(PropTypes.string),
-  supported_locale_codes: PropTypes.arrayOf(PropTypes.string)
 });
 
 export const assignmentUnitShape = PropTypes.shape({
