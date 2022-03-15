@@ -254,12 +254,7 @@ export const unassignSection = (sectionId, location) => (
   getState
 ) => {
   dispatch(beginEditingSection(sectionId, true));
-  const {
-    initialCourseId,
-    initialUnitId,
-    initialCourseOfferingId,
-    initialCourseVersionId
-  } = getState().teacherSections;
+  const {initialCourseId, initialUnitId} = getState().teacherSections;
   dispatch(
     editSectionProperties({
       courseId: '',
@@ -278,9 +273,6 @@ export const unassignSection = (sectionId, location) => (
           sectionId,
           scriptId: initialUnitId,
           courseId: initialCourseId,
-          courseOfferingId: initialCourseOfferingId,
-          courseVersionId: initialCourseVersionId,
-          unitId: initialUnitId,
           location: location,
           date: new Date()
         },
