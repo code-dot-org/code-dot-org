@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-09 20:53:40 UTC",
+    "serialized_at": "2022-03-15 04:47:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -114,6 +114,96 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Overview of CS Discoveries",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Asynchronous Debrief",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Model Lesson 2 - Unit 2 Lesson 2",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Identity",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Lesson Assignment",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Lesson Planning",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "vpl-csd1-summer-pilot-2022"
       }
     }

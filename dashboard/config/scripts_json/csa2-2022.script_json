@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-13 13:18:42 UTC",
+    "serialized_at": "2022-03-14 22:57:22 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,6 +46,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2022"
       }
     }
@@ -315,6 +327,36 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2022"
       }
     }
@@ -945,6 +987,30 @@
         "lesson_activity.key": "43ff342e-239f-4cbf-a7d8-176e6a0e791d",
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "a22351c7-391b-4fb3-9cee-4848839b0428",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a22351c7-391b-4fb3-9cee-4848839b0428",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "key": "48b5d5c9-1aa9-4e70-bef7-e22599356419",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48b5d5c9-1aa9-4e70-bef7-e22599356419",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2022"
       }
     }
@@ -1874,7 +1940,7 @@
       "properties": {
         "description": "The methods we saw in the video earlier are not the only methods available in the `Scanner` class. We can refer to the documentation for the `Scanner` class to see what methods it has and how to use them.",
         "duration": "15",
-        "name": "Creating Objects from User Input",
+        "name": "Getting User Input",
         "remarks": true
       },
       "seeding_key": {
@@ -1887,7 +1953,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to access documentation in Java Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students debug a program on Level 2 with a `NullPointer` exception, then continue to Level 3 to complete a choice level to create and use a `Scanner` object to obtain user input.",
-        "progression_name": "Creating Objects from User Input"
+        "progression_name": "Getting User Input"
       },
       "seeding_key": {
         "activity_section.key": "55930d62-5967-421a-a7be-1def044d7878",
@@ -3487,6 +3553,38 @@
         "activity_section.key": "81855817-2852-40dd-98ad-aee052c6b791",
         "lesson_activity.key": "43ff342e-239f-4cbf-a7d8-176e6a0e791d"
       }
+    },
+    {
+      "key": "5be06fef-2b9b-44b7-8077-84dfbdeb9c3b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5be06fef-2b9b-44b7-8077-84dfbdeb9c3b",
+        "lesson_activity.key": "a22351c7-391b-4fb3-9cee-4848839b0428"
+      }
+    },
+    {
+      "key": "b1105898-30f5-4618-8d89-b802b43f8bb7",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "b1105898-30f5-4618-8d89-b802b43f8bb7",
+        "lesson_activity.key": "48b5d5c9-1aa9-4e70-bef7-e22599356419"
+      }
+    },
+    {
+      "key": "d387deda-144b-4df5-aa22-46a521c8fd1e",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "d387deda-144b-4df5-aa22-46a521c8fd1e",
+        "lesson_activity.key": "48b5d5c9-1aa9-4e70-bef7-e22599356419"
+      }
     }
   ],
   "script_levels": [
@@ -3496,6 +3594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L1v2_2022"
+        ],
         "progression": "Predict: Creating Variables"
       },
       "bonus": false,
@@ -3518,6 +3619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2v2_2022"
+        ],
         "progression": "Investigate: Working with Variables"
       },
       "bonus": false,
@@ -3540,6 +3644,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L3v2_2022"
+        ],
         "progression": "Creating and Printing Variables"
       },
       "bonus": false,
@@ -3562,6 +3669,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4v2_2022"
+        ],
         "progression": "Creating and Printing Variables"
       },
       "bonus": false,
@@ -3584,6 +3694,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L5_2022"
+        ],
         "progression": "Creating and Printing Variables"
       },
       "bonus": false,
@@ -3606,6 +3719,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3628,6 +3744,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L1v2_2022"
+        ],
         "progression": "Predict: Evaluating Expressions"
       },
       "bonus": false,
@@ -3650,6 +3769,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_2022"
+        ],
         "progression": "Investigate: Exploring Expressions"
       },
       "bonus": false,
@@ -3672,6 +3794,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3744,6 +3869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L1v2_2022"
+        ],
         "progression": "Predict: Parameterized Constructor"
       },
       "bonus": false,
@@ -3766,6 +3894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L2v2_2022"
+        ],
         "progression": "Writing and Using Constructors"
       },
       "bonus": false,
@@ -3788,6 +3919,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L3v2_2022"
+        ],
         "progression": "Writing and Using Constructors"
       },
       "bonus": false,
@@ -3810,6 +3944,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L4v2_2022"
+        ],
         "progression": "Writing and Using Constructors"
       },
       "bonus": false,
@@ -3832,6 +3969,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3854,6 +3994,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L1v2_2022"
+        ],
         "progression": "Predict: Getting User Input"
       },
       "bonus": false,
@@ -3876,7 +4019,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Creating Objects from User Input"
+        "level_keys": [
+          "CSA U2L5-L2v2_2022"
+        ],
+        "progression": "Getting User Input"
       },
       "bonus": false,
       "seeding_key": {
@@ -3898,7 +4044,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Creating Objects from User Input"
+        "level_keys": [
+          "CSA U2L5-L3v2_2022"
+        ],
+        "progression": "Getting User Input"
       },
       "bonus": false,
       "seeding_key": {
@@ -3920,6 +4069,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3942,6 +4094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L1v2_2022"
+        ],
         "progression": "Predict: Redundant Code"
       },
       "bonus": false,
@@ -3964,6 +4119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L2v2_2022"
+        ],
         "progression": "Investigate: Superclasses and Subclasses"
       },
       "bonus": false,
@@ -3986,6 +4144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L3v2_2022"
+        ],
         "progression": "Refactoring Desserts"
       },
       "bonus": false,
@@ -4008,6 +4169,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L4v2_2022"
+        ],
         "progression": "Code Review: Refactoring Desserts"
       },
       "bonus": false,
@@ -4030,6 +4194,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4202,6 +4369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L1v2_2022"
+        ],
         "progression": "Predict: Mutator Methods"
       },
       "bonus": false,
@@ -4224,6 +4394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L2v2_2022"
+        ],
         "progression": "Investigate: Exploring Edge Cases"
       },
       "bonus": false,
@@ -4246,6 +4419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L3v2_2022"
+        ],
         "progression": "Writing Mutator Methods"
       },
       "bonus": false,
@@ -4268,6 +4444,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L4v2_2022"
+        ],
         "progression": "Writing Mutator Methods"
       },
       "bonus": false,
@@ -4290,6 +4469,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L5v2_2022"
+        ],
         "progression": "Writing Mutator Methods"
       },
       "bonus": false,
@@ -4312,6 +4494,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4626,6 +4811,71 @@
       },
       "level_keys": [
         "CSA U2L13-L1_2022"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2022",
+        "activity_section.key": "5be06fef-2b9b-44b7-8077-84dfbdeb9c3b"
+      },
+      "level_keys": [
+        "CSA 2022 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2022",
+        "activity_section.key": "b1105898-30f5-4618-8d89-b802b43f8bb7"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2022",
+        "activity_section.key": "d387deda-144b-4df5-aa22-46a521c8fd1e"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood - No Bucket Sandbox"
       ]
     }
   ],
@@ -5216,6 +5466,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-2022",
         "activity_section.key": "311ede3b-cae0-4cee-aafe-bcf18a013a9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2022",
+        "activity_section.key": "5be06fef-2b9b-44b7-8077-84dfbdeb9c3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2022",
+        "activity_section.key": "b1105898-30f5-4618-8d89-b802b43f8bb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2022",
+        "activity_section.key": "d387deda-144b-4df5-aa22-46a521c8fd1e"
       }
     }
   ],
