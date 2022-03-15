@@ -263,11 +263,15 @@ class LevelsController < ApplicationController
       render json: @level.errors, status: :unprocessable_entity
       return
     end
+    old_name = @level.name
 
     @level.assign_attributes(level_params)
     @level.log_changes(current_user)
 
     if @level.save
+      if old_name != @level.name
+        delete_custom_level_file_by_name(old_name)
+      end
       redirect = params["redirect"] || level_url(@level, show_callouts: 1)
       render json: {redirect: redirect}
     else
