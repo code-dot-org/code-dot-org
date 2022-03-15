@@ -16,7 +16,6 @@ const USER_EDITABLE_SECTION_PROPS = [
   'pairingAllowed',
   'ttsAutoplayEnabled',
   'courseId',
-  'scriptId',
   'courseOfferingId',
   'courseVersionId',
   'unitId',
@@ -203,7 +202,7 @@ function removeNullValues(key, val) {
  * the server
  * @param {number} sectionId
  * @param {number} courseId
- * @param {number} scriptId
+ * @param {number} unitId
  */
 export const assignToSection = (
   sectionId,
@@ -234,7 +233,6 @@ export const assignToSection = (
     dispatch(
       editSectionProperties({
         courseId: courseId,
-        scriptId: unitId,
         courseOfferingId: courseOfferingId,
         courseVersionId: courseVersionId,
         unitId: unitId
@@ -258,7 +256,6 @@ export const unassignSection = (sectionId, location) => (
   dispatch(
     editSectionProperties({
       courseId: '',
-      scriptId: '',
       courseOfferingId: '',
       courseVersionId: '',
       unitId: ''
@@ -578,7 +575,6 @@ function newSectionData(id, loginType) {
     studentCount: 0,
     code: '',
     courseId: null,
-    scriptId: null,
     courseOfferingId: null,
     courseVersionId: null,
     unitId: null,
@@ -858,9 +854,6 @@ export default function teacherSections(state = initialState, action) {
       section_creation_timestamp: section.createdAt,
       page_name: state.pageType
     };
-    if (section.scriptId !== state.initialUnitId) {
-      assignmentData.script_id = section.scriptId;
-    }
     if (section.unitId !== state.initialUnitId) {
       assignmentData.unit_id = section.unitId;
     }
@@ -1150,11 +1143,11 @@ export const sectionFromServerSection = serverSection => ({
   code: serverSection.code,
   courseOfferingId: serverSection.course_offering_id,
   courseVersionId: serverSection.course_version_id,
-  unitId: serverSection.unit_id,
+  unitId:
+    serverSection.unit_id || serverSection.script
+      ? serverSection.script.id
+      : serverSection.script_id || null,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script
-    ? serverSection.script.id
-    : serverSection.script_id || null,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
@@ -1198,7 +1191,7 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    script: section.scriptId ? {id: section.scriptId} : undefined,
+    script: section.unitId ? {id: section.unitId} : undefined,
     restrict_section: section.restrictSection
   };
 }
@@ -1278,16 +1271,11 @@ export function sectionsNameAndId(state) {
 /**
  * @param {object} state - state.teacherSections in redux tree
  */
-export function sectionsForDropdown(
-  state,
-  scriptId,
-  courseId,
-  onCourseOverview
-) {
+export function sectionsForDropdown(state, unitId, courseId, onCourseOverview) {
   return sortedSectionsList(state.sections).map(section => ({
     ...section,
     isAssigned:
-      (scriptId !== null && section.scriptId === scriptId) ||
+      (unitId !== null && section.unitId === unitId) ||
       (courseId !== null && section.courseId === courseId && onCourseOverview)
   }));
 }
