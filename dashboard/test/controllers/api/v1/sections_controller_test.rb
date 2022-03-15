@@ -640,7 +640,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: can update section you own" do
-    UnitGroup.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:course_assignable?).returns(true)
 
     sign_in @teacher
     section_with_script = create(
@@ -687,7 +687,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: name is ignored if empty or all whitespace" do
-    UnitGroup.stubs(:valid_course_id?).returns(true)
+    UnitGroup.stubs(:course_assignable?).returns(true)
 
     section = create :section, name: 'Old section name'
     sign_in section.teacher
@@ -745,7 +745,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: course_id is not updated if invalid" do
-    UnitGroup.stubs(:valid_course_id?).returns(false)
+    UnitGroup.stubs(:course_assignable?).returns(false)
 
     sign_in @teacher
     section = create(:section, user: @teacher, course_id: nil)
@@ -760,7 +760,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "update: script_id is not updated if invalid" do
-    Script.stubs(:valid_unit_id?).returns(false)
+    Script.stubs(:course_assignable?).returns(false)
 
     sign_in @teacher
     section = create(:section, user: @teacher, script_id: nil)
