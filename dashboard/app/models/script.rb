@@ -1838,7 +1838,7 @@ class Script < ApplicationRecord
       id,
       {
         id: id,
-        name: localized_title,
+        name: launched? ? localized_title : localized_title + " *",
         path: link,
         lesson_extras_available: lesson_extras_available?,
         text_to_speech_enabled: text_to_speech_enabled?
