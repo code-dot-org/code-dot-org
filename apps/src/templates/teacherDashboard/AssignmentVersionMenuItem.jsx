@@ -28,10 +28,7 @@ export default function AssignmentVersionMenuItem(props) {
             <FontAwesome icon="check" />
           )}
         </span>
-        <span
-          style={style.titleColumn}
-          className="assignment-courseVersion-title"
-        >
+        <span style={style.titleColumn} className="assignment-version-title">
           {courseVersion.version_year}
         </span>
         <span style={style.statusColumn}>
