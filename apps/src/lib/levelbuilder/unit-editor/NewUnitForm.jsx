@@ -70,7 +70,11 @@ export default function NewUnitForm(props) {
                 </HelpTip>
                 {/* Need both of these inputs because if the hidden one with name=
                   is also disabled it will not save properly*/}
-                <input value={getScriptName()} disabled={true} />
+                <input
+                  className="newUnitSlug"
+                  value={getScriptName()}
+                  disabled={true}
+                />
                 <input
                   name="script[name]"
                   value={getScriptName()}

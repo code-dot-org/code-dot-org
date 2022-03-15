@@ -35,7 +35,8 @@ const organizeReferenceGuides = (referenceGuides, parent = null, level = 0) => {
   return flatten(organizedGuides);
 };
 
-export default function ReferenceGuideEditAll({referenceGuides}) {
+export default function ReferenceGuideEditAll(props) {
+  const {referenceGuides} = props;
   // useMemo here so that we only do the organizing once
   const organizedGuides = useMemo(
     () => organizeReferenceGuides(referenceGuides),

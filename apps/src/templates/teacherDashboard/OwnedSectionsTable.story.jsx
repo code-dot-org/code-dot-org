@@ -4,8 +4,10 @@ import {combineReducers, createStore} from 'redux';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import teacherSections, {
   setValidAssignments,
+  setCourseOfferings,
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const serverSections = [
   {
@@ -173,6 +175,7 @@ export default storybook => {
         story: () => {
           const store = createStore(combineReducers({teacherSections}));
           store.dispatch(setValidAssignments(validCourses, validScripts));
+          store.dispatch(setCourseOfferings(courseOfferings));
           store.dispatch(setSections(serverSections));
           return (
             <Provider store={store}>
