@@ -22,8 +22,9 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   //
   // Note that Optimize supports multiple experiments on the same page, but
   // there is no supported way to determine which elements on the page were
-  // modified by which experiments. We assume that there will be only one
-  // Personalization experiment on a given page.
+  // modified by which experiments. We assume that there will be at most one
+  // Personalization experiment on a given page and that that experiment updates
+  // this banner.
   const [activeExperimentId, setActiveExperimentId] = useState(null);
   useEffect(() => {
     // Sites that use Google Analytics typically have a gtag() function which
@@ -51,13 +52,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       bannerId = activeExperimentId;
     }
     return `display-announcement-${bannerId}`;
-  }, [announcement.id, activeExperimentId]);
-
-  useEffect(() => {
-    const bannerKey = getLocalStorageBannerKey();
-    const displayBannerValue = tryGetLocalStorage(bannerKey, true);
-    setDisplayBanner(displayBannerValue !== 'false');
-  }, [getLocalStorageBannerKey]);
+  }, [activeExperimentId]);
 
   const onDismiss = () => {
     const bannerKey = getLocalStorageBannerKey();
@@ -81,6 +76,14 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       {includeUserId: true}
     );
   };
+
+  // Set displayBanner value if the function to get the storage banner key
+  // has changed.
+  useEffect(() => {
+    const bannerKey = getLocalStorageBannerKey();
+    const displayBannerValue = tryGetLocalStorage(bannerKey, true);
+    setDisplayBanner(displayBannerValue !== 'false');
+  }, [getLocalStorageBannerKey]);
 
   // This banner is hidden through css because it still needs to be accessible
   // in the DOM so that it can be manipulated by Google Optimize.
