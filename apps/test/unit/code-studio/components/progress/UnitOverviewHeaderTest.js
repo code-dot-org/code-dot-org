@@ -112,6 +112,7 @@ describe('UnitOverviewHeader', () => {
     const versions = {
       1: {
         id: 1,
+        key: '2017',
         version_year: '2017',
         content_root_id: 10,
         name: 'Course A',
@@ -131,6 +132,7 @@ describe('UnitOverviewHeader', () => {
       },
       2: {
         id: 2,
+        key: '2018',
         version_year: '2018',
         content_root_id: 11,
         name: 'Course A',
