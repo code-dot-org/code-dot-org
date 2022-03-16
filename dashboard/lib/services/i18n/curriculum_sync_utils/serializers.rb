@@ -103,6 +103,7 @@ module Services
         attributes :description
 
         belongs_to :framework, serializer: CurriculumSyncUtils::FrameworkCrowdinSerializer
+        belongs_to :parent_category, serializer: CurriculumSyncUtils::StandardCategoryCrowdinSerializer
         belongs_to :category, serializer: CurriculumSyncUtils::StandardCategoryCrowdinSerializer
 
         # override
