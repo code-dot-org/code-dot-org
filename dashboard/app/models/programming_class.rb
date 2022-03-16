@@ -22,4 +22,21 @@
 #  index_programming_classes_on_key_and_programming_environment_id  (key,programming_environment_id) UNIQUE
 #
 class ProgrammingClass < ApplicationRecord
+  belongs_to :programming_environment
+  belongs_to :programming_environment_category
+
+  def summarize_for_edit
+    {
+      id: id,
+      key: key,
+      name: name,
+      content: content,
+      fields: fields,
+      examples: examples || [],
+      tips: tips,
+      syntax: syntax,
+      external_documentation: external_documentation,
+      categoryKey: programming_environment_category&.key
+    }
+  end
 end
