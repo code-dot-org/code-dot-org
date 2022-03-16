@@ -2,7 +2,6 @@ import {assert} from '../../util/reconfiguredChai';
 import currentUser, {
   SignInState,
   setUserSignedIn,
-  setUserType,
   setCurrentUserHasSeenStandardsReportInfo,
   setCurrentUserName,
   setInitialData
@@ -30,15 +29,6 @@ describe('currentUserRedux', () => {
     });
     it('initially sets signInState to Unknown', () => {
       assert.equal(initialState.signInState, SignInState.Unknown);
-    });
-  });
-
-  describe('setUserType', () => {
-    it('can set the current user type', () => {
-      const action = setUserType('teacher');
-      const nextState = currentUser(initialState, action);
-
-      assert.deepEqual(nextState.userType, 'teacher');
     });
   });
 
