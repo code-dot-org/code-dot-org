@@ -15,10 +15,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @unit_group = create(:unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
-    CourseOffering.add_course_offering(@unit_group)
-    @unit_group.reload
-    @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
+    @beta_unit_group = create(:unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(@beta_unit_group)
+    @beta_unit_group.reload
+    @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @beta_unit_group.id)
 
     @script = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@script)
@@ -96,7 +96,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
 
     course_id = returned_json.find {|section| section['id'] == @section_with_unit_group.id}['course_id']
-    assert_equal @unit_group.id, course_id
+    assert_equal @beta_unit_group.id, course_id
   end
 
   test 'logged out cannot view section detail' do
@@ -136,7 +136,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :show, params: {id: @section_with_unit_group.id}
     assert_response :success
 
-    assert_equal @unit_group.id, returned_json['course_id']
+    assert_equal @beta_unit_group.id, returned_json['course_id']
   end
 
   test "join with invalid section code" do
@@ -557,7 +557,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_version_id: @unit_group.course_version.id,
+      course_version_id: @beta_unit_group.course_version.id,
       unit_id: 'MALYON' # Script IDs are numeric
     }
     assert_response :forbidden
@@ -654,7 +654,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section_with_script.id,
-      course_version_id: @unit_group.course_version.id,
+      course_version_id: @csp_unit_group.course_version.id,
       name: "My Section",
       login_type: Section::LOGIN_TYPE_PICTURE,
       grade: "K",
@@ -667,7 +667,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # Cannot use section_with_script.reload because login_type has changed
     section_with_script = Section.find(section_with_script.id)
 
-    assert_equal(@unit_group.id, section_with_script.course_id)
+    assert_equal(@csp_unit_group .id, section_with_script.course_id)
     assert_nil(section_with_script.script_id)
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
@@ -702,7 +702,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update: course_id is cleared if not provided and script has no default course" do
     sign_in @teacher
-    section = create(:section, user: @teacher, course_id: @unit_group.id)
+    section = create(:section, user: @teacher, course_id: @beta_unit_group.id)
 
     refute_nil section.course_id
 
@@ -760,7 +760,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section.id,
-      course_version_id: @unit_group.course_version.id,
+      course_version_id: @beta_unit_group.course_version.id,
       unit_id: 1,
     }
     assert_response :forbidden
@@ -783,7 +783,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in other_teacher
     post :update, params: {
       id: @section.id,
-      course_version_id: @unit_group.course_version.id,
+      course_version_id: @beta_unit_group.course_version.id,
     }
     assert_response :forbidden
   end
@@ -791,7 +791,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "update: cannot update section if not logged in " do
     post :update, params: {
       id: @section.id,
-      course_version_id: @unit_group.course_version.id,
+      course_version_id: @beta_unit_group.course_version.id,
     }
     assert_response :forbidden
   end
@@ -815,7 +815,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
-      course_version_id: @unit_group.course_version.id,
+      course_version_id: @beta_unit_group.course_version.id,
       unit_id: @script.id
     }
     assert_response :forbidden

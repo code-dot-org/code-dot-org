@@ -7,7 +7,7 @@ module Curriculum::AssignableCourse
   def course_assignable?(user)
     return false unless can_be_instructor?(user)
     return true if launched?
-    return true if Script.has_any_pilot_access?(user) && has_pilot_access?(user)
+    return true if (UnitGroup.has_any_pilot_access?(user) || Script.has_any_pilot_access?(user)) && has_pilot_access?(user)
     return true if user.permission?(UserPermission::LEVELBUILDER)
 
     false
