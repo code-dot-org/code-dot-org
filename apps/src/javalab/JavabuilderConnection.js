@@ -9,7 +9,6 @@ import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
-import experiments from '@cdo/apps/util/experiments';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -64,9 +63,7 @@ export default class JavabuilderConnection {
         levelId: this.levelId,
         options: this.options,
         executionType: this.executionType,
-        useDashboardSources: !experiments.isEnabled(
-          experiments.DECOUPLED_JAVABUILDER
-        ),
+        useDashboardSources: false,
         miniAppType: this.miniAppType
       }
     })
