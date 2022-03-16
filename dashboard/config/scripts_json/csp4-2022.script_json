@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-05 15:44:02 UTC",
+    "serialized_at": "2022-03-15 21:04:56 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -4318,15 +4318,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 42022"
-        ],
         "progression": "Putting it Together"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L03 Variables operator practice 42022"
+          "CSP U4L3 Choice"
         ],
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
@@ -4334,7 +4331,7 @@
         "activity_section.key": "697cdbc1-a1ed-460a-9226-3286d84f9655"
       },
       "level_keys": [
-        "U4 L03 Variables operator practice 42022"
+        "CSP U4L3 Choice"
       ]
     },
     {
@@ -6069,9 +6066,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L03 Variables operator practice 42022",
+        "level.key": "CSP U4L3 Choice",
         "script_level.level_keys": [
-          "U4 L03 Variables operator practice 42022"
+          "CSP U4L3 Choice"
         ],
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
