@@ -9,19 +9,6 @@ import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog
 
 const DEFAULT_VALUE = 'all';
 
-const destroyExpression = (destroyPath, callback) => {
-  fetch(destroyPath, {
-    method: 'DELETE',
-    headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
-  }).then(response => {
-    if (response.ok) {
-      callback();
-    } else {
-      console.log(response.error);
-    }
-  });
-};
-
 export default function ProgrammingExpressionsTable({
   programmingEnvironmentsForSelect,
   categoriesForSelect,
@@ -39,6 +26,7 @@ export default function ProgrammingExpressionsTable({
   const [itemToDelete, setItemToDelete] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [numPages, setNumPages] = useState(1);
+  const [error, setError] = useState(null);
 
   const actionsCellFormatter = (actions, {rowData}) => {
     return (
@@ -81,17 +69,42 @@ export default function ProgrammingExpressionsTable({
     const url =
       '/programming_expressions/get_filtered_expressions?' +
       queryString.stringify(data);
+    let success = false;
     fetch(url)
-      .then(response => response.json())
+      .then(response => {
+        if (response.ok) {
+          success = true;
+        } else {
+          setError(response.statusText);
+        }
+        return response.json();
+      })
       .then(data => {
-        setProgrammingExpressions(data.expressions);
-        setNumPages(data.numPages);
-        if (callback) {
-          callback();
+        if (success) {
+          setProgrammingExpressions(data.expressions);
+          setNumPages(data.numPages);
+          if (callback) {
+            callback();
+          }
         }
       });
   };
 
+  const destroyExpression = (destroyPath, callback) => {
+    fetch(destroyPath, {
+      method: 'DELETE',
+      headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
+    }).then(response => {
+      if (response.ok) {
+        setItemToDelete(null);
+        fetchExpressions();
+      } else {
+        setError(response.statusText);
+      }
+    });
+  };
+
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     fetchExpressions(selectedEnvironment, selectedCategory, () =>
       setCurrentPage(1)
@@ -121,6 +134,7 @@ export default function ProgrammingExpressionsTable({
   useEffect(() => {
     fetchExpressions(selectedEnvironment, selectedCategory);
   }, [currentPage]);
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   const getColumns = () => {
     return [
@@ -184,6 +198,7 @@ export default function ProgrammingExpressionsTable({
           </option>
         ))}
       </select>
+      {error && <div>{error}</div>}
       <Table.Provider columns={getColumns()} style={{width: '100%'}}>
         <Table.Header />
         <Table.Body rows={programmingExpressions} rowKey="id" />
