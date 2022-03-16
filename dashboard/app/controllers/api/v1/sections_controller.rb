@@ -38,8 +38,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
-    script_id = params[:script] ? params[:script][:id] : params[:script_id]
-    script = Script.get_from_cache(script_id) if script_id
+    unit_id = params[:script] ? params[:script][:id] : params[:unit_id]
+    script = Script.get_from_cache(unit_id) if unit_id
     script_to_assign = script if script&.course_assignable?(current_user)
 
     section = Section.create(
