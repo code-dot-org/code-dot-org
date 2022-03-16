@@ -299,7 +299,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('beginEditingSection', () => {
-    it('populates sectionBeingEdited is no section provided', () => {
+    it('populates sectionBeingEdited if no section provided', () => {
       assert.isNull(initialState.sectionBeingEdited);
       const state = reducer(initialState, beginEditingSection());
       assert.deepEqual(state.sectionBeingEdited, {
@@ -315,7 +315,6 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null,
         courseOfferingId: null,
         courseVersionId: null,
         unitId: null,
@@ -344,7 +343,6 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: 1,
         unitId: null,
         courseId: undefined,
-        scriptId: null,
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
@@ -448,10 +446,10 @@ describe('teacherSectionsRedux', () => {
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
       let state = editingNewSectionState;
-      state = reducer(state, editSectionProperties({scriptId: 2}));
+      state = reducer(state, editSectionProperties({unitId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
 
-      state = reducer(state, editSectionProperties({scriptId: 37}));
+      state = reducer(state, editSectionProperties({unitId: 37}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
     });
   });
@@ -634,9 +632,8 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseOfferingId: undefined,
           courseVersionId: undefined,
-          unitId: undefined,
+          unitId: null,
           courseId: undefined,
-          scriptId: null,
           createdAt: createdAt,
           hidden: false,
           isAssigned: undefined,
@@ -696,7 +693,8 @@ describe('teacherSectionsRedux', () => {
       student_count: 0,
       code: 'BCDFGH',
       course_id: null,
-      script_id: null,
+      course_offering_id: null,
+      course_version_id: null,
       hidden: false,
       restrict_section: false,
       post_milestone_disabled: false
@@ -958,7 +956,7 @@ describe('teacherSectionsRedux', () => {
 
     it('maps from a script object to a script_id', () => {
       const sectionWithoutScript = sectionFromServerSection(serverSection);
-      assert.strictEqual(sectionWithoutScript.scriptId, null);
+      assert.strictEqual(sectionWithoutScript.unitId, null);
 
       const sectionWithScript = sectionFromServerSection({
         ...serverSection,
@@ -967,7 +965,7 @@ describe('teacherSectionsRedux', () => {
           name: 'Accelerated Course'
         }
       });
-      assert.strictEqual(sectionWithScript.scriptId, 1);
+      assert.strictEqual(sectionWithScript.unitId, 1);
     });
 
     it('sets student count', () => {

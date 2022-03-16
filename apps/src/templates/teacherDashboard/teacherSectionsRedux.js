@@ -1144,9 +1144,10 @@ export const sectionFromServerSection = serverSection => ({
   courseOfferingId: serverSection.course_offering_id,
   courseVersionId: serverSection.course_version_id,
   unitId:
-    serverSection.unit_id || serverSection.script
-      ? serverSection.script.id
-      : serverSection.script_id || null,
+    serverSection.unit_id ||
+    serverSection.script?.id ||
+    serverSection.script_id ||
+    null,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
