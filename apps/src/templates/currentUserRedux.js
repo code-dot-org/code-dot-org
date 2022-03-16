@@ -22,7 +22,11 @@ export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
   isSignedIn
 });
-export const setUserType = userType => ({type: SET_USER_TYPE, userType});
+export const setUserType = (userType, under13) => ({
+  type: SET_USER_TYPE,
+  userType,
+  under13
+});
 export const setInitialData = serverUser => ({
   type: SET_INITIAL_DATA,
   serverUser
@@ -61,7 +65,8 @@ export default function currentUser(state = initialState, action) {
   if (action.type === SET_USER_TYPE) {
     return {
       ...state,
-      userType: action.userType
+      userType: action.userType,
+      under13: action.under13
     };
   }
 
