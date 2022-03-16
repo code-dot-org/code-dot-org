@@ -12,6 +12,7 @@ cron-pii:
         - name
         - session
 - pegasus.storage_apps
+- pegasus.poste_deliveries
 - dashboard.regional_partners
 - dashboard.regional_partners_school_districts
 - dashboard.pd_%
