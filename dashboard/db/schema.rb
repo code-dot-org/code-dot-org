@@ -1410,7 +1410,7 @@ ActiveRecord::Schema.define(version: 2022_03_16_125751) do
     t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true
   end
 
-  create_table "reference_guides", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "reference_guides", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.bigint "course_version_id", null: false
     t.string "parent_reference_guide_key"
@@ -1980,6 +1980,12 @@ ActiveRecord::Schema.define(version: 2022_03_16_125751) do
     t.integer "conditionals_d5_count", default: 0
     t.datetime "basic_proficiency_at"
     t.index ["user_id"], name: "index_user_proficiencies_on_user_id", unique: true
+  end
+
+  create_table "user_project_storage_ids", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.index ["user_id"], name: "user_id", unique: true
+    t.index ["user_id"], name: "user_storage_ids_user_id_index"
   end
 
   create_table "user_school_infos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
