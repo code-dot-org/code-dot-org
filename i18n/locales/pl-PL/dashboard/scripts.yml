@@ -23948,6 +23948,20 @@ pl:
           name: self-paced-pl-csa1-2022
           title: 'Jednostka 1 - Moduł 1: Powitanie'
         self-paced-pl-csa2-2022:
+          lessons:
+            lesson-3:
+              description_student: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+              description_teacher: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
           name: self-paced-pl-csa2-2022
         self-paced-pl-csa3-2022:
           lessons:
@@ -24725,3 +24739,41 @@ pl:
               display_name: Pokaż, co wiesz
           name: csa2-2022-exemplars
           title: Jednostka 2 - Struktura i projektowanie klas [Exemplars]
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Pierwsze kroki
+              key: Pierwsze kroki
+            Sequencing:
+              name: Sekwencjonowanie
+              key: Sekwencjonowanie
+            Loops:
+              name: Pętle
+              key: Pętle
+            Events:
+              name: Zdarzenia
+              key: Zdarzenia
+            Conditionals:
+              name: Zdania z warunkami
+              key: Zdania z warunkami
+            Functions:
+              name: Funkcje
+              key: Funkcje
+            Variables:
+              name: Zmienne
+              key: Zmienne
+            For Loops:
+              name: Pętle dla (for)
+              key: Pętle dla (for)
+            End of Course projects:
+              name: Projekty na koniec kursu
+              key: Projekty na koniec kursu
+            Reviewing your reflections:
+              name: Przeglądanie Twoich refleksji
+              key: Przeglądanie Twoich refleksji
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Witamy na "Podstawach Nauczania Informatyki"
+            Lesson Planning:
+              key: Planowanie lekcji
+            Next steps:
+              key: Następne kroki
