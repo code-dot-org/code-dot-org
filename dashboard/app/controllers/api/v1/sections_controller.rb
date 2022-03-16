@@ -39,8 +39,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
     unit_id = params[:script] ? params[:script][:id] : params[:unit_id]
-    script = Script.get_from_cache(unit_id) if unit_id
-    script_to_assign = script if script&.course_assignable?(current_user)
+    unit = Script.get_from_cache(unit_id) if unit_id
+    unit_to_assign = unit if unit&.course_assignable?(current_user)
 
     section = Section.create(
       {
@@ -48,7 +48,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
-        script_id: script_to_assign&.id,
+        script_id: unit_to_assign&.id,
         course_id: params[:course_id] && UnitGroup.get_from_cache(params[:course_id]).course_assignable?(current_user) ? params[:course_id].to_i : nil,
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
@@ -59,8 +59,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render head :bad_request unless section
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
-    if script_to_assign
-      current_user.assign_script script_to_assign
+    if unit_to_assign
+      current_user.assign_script unit_to_assign
     end
 
     render json: section.summarize
@@ -77,14 +77,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     unit_id = course_version&.content_root_type == 'Script' ? course_version.content_root_id : params[:unit_id]
 
     if unit_id
-      script = Script.get_from_cache(unit_id)
-      return head :bad_request if script.nil?
-      # If given a course and script, make sure the script is in that course
-      return head :bad_request if course_id && course_id != script.unit_group.try(:id)
-      # If script has a course and no course_id was provided, use default course
-      course_id ||= script.unit_group.try(:id)
-      # Unhide script for this section before assigning
-      section.toggle_hidden_script script, false
+      unit = Script.get_from_cache(unit_id)
+      return head :bad_request if unit.nil?
+      # If given a course and unit, make sure the unit is in that course
+      return head :bad_request if course_id && course_id != unit.unit_group.try(:id)
+      # If unit has a course and no course_id was provided, use default course
+      course_id ||= unit.unit_group.try(:id)
+      # Unhide unit for this section before assigning
+      section.toggle_hidden_script unit, false
     end
 
     # TODO: (madelynkasula) refactor to use strong params
@@ -103,7 +103,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section.update!(fields)
     if unit_id
       section.students.each do |student|
-        student.assign_script(script)
+        student.assign_script(unit)
       end
     end
     render json: section.summarize
