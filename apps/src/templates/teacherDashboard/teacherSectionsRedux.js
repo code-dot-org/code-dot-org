@@ -255,10 +255,10 @@ export const unassignSection = (sectionId, location) => (
   const {initialCourseId, initialUnitId} = getState().teacherSections;
   dispatch(
     editSectionProperties({
-      courseId: '',
-      courseOfferingId: '',
-      courseVersionId: '',
-      unitId: ''
+      courseId: null,
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
     })
   );
   firehoseClient.putRecord(
