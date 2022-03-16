@@ -21,6 +21,10 @@ class Framework < ApplicationRecord
     }
   end
 
+  def crowdin_key
+    shortcode
+  end
+
   def self.seed_all
     filename = 'config/standards/frameworks.csv'
     CSV.foreach(filename, {headers: true}) do |row|

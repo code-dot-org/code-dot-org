@@ -26,6 +26,10 @@ class StandardCategory < ApplicationRecord
     description
   )
 
+  def crowdin_key
+    [framework.shortcode, shortcode].join('/')
+  end
+
   def self.seed_all
     Framework.all.each do |framework|
       filename = "config/standards/#{framework.shortcode}_categories.csv"

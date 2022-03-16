@@ -84,19 +84,13 @@ module Services
       class FrameworkCrowdinSerializer < CrowdinSerializer
         attributes :name
 
-        # override
-        def crowdin_key
-          object.shortcode
-        end
+        delegate :crowdin_key, to: :object
       end
 
       class StandardCategoryCrowdinSerializer < CrowdinSerializer
         attributes :description
 
-        # override
-        def crowdin_key
-          [object.framework.shortcode, object.shortcode].join('/')
-        end
+        delegate :crowdin_key, to: :object
       end
 
       class StandardCrowdinSerializer < CrowdinSerializer
@@ -106,10 +100,7 @@ module Services
         belongs_to :parent_category, serializer: CurriculumSyncUtils::StandardCategoryCrowdinSerializer
         belongs_to :category, serializer: CurriculumSyncUtils::StandardCategoryCrowdinSerializer
 
-        # override
-        def crowdin_key
-          [object.framework.shortcode, object.shortcode].join('/')
-        end
+        delegate :crowdin_key, to: :object
       end
 
       class LessonCrowdinSerializer < CrowdinSerializer
