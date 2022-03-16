@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
@@ -128,13 +128,73 @@ describe('ProgrammingExpressionsTable', () => {
     expect(categorySelector.findAll('option').length).to.equal(2);
   });
 
-  it('fetches programming expressions on load', () => {
+  it('shows table with programming expressions after load', () => {
     fetchStub
       .withArgs('/programming_expressions/get_filtered_expressions?page=1')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
-    isolateComponent(<ProgrammingExpressionsTable {...defaultProps} />);
+    const wrapper = isolateComponent(
+      <ProgrammingExpressionsTable {...defaultProps} />
+    );
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       expect(fetchStub.callCount).to.be.greaterThan(1);
+      // A reactabular table has a Header and a Body
+      expect(wrapper.findAll('Header').length).to.equal(1);
+      expect(wrapper.findAll('Body').length).to.equal(1);
+      expect(wrapper.findOne('Body').props.rows).to.eql(returnData.expressions);
+    });
+  });
+
+  it('loads data but doesnt show expressions if hidden is true', () => {
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_expressions?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    const wrapper = isolateComponent(
+      <ProgrammingExpressionsTable {...defaultProps} hidden />
+    );
+    return new Promise(resolve => setImmediate(resolve)).then(() => {
+      expect(fetchStub.callCount).to.be.greaterThan(1);
+      // A reactabular table has a Header and a Body
+      expect(wrapper.findAll('Header').length).to.equal(0);
+      expect(wrapper.findAll('Body').length).to.equal(0);
+    });
+  });
+
+  it('shows confirmation dialog before destroying expression', () => {
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_expressions?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
+    return new Promise(resolve => setImmediate(resolve)).then(() => {
+      const fetchCount = fetchStub.callCount;
+      expect(fetchCount).to.be.greaterThan(1);
+      wrapper.update();
+      const destroyButton = wrapper
+        .find('BodyRow')
+        .at(1)
+        .find('Button')
+        .at(2);
+      destroyButton.simulate('click');
+      expect(wrapper.find('StylizedBaseDialog').length).to.equal(1);
+      expect(fetchStub.callCount).to.equal(fetchCount);
+    });
+  });
+
+  it('shows clone dialog to clone expression', () => {
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_expressions?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
+    return new Promise(resolve => setImmediate(resolve)).then(() => {
+      wrapper.update();
+      const destroyButton = wrapper
+        .find('BodyRow')
+        .at(2)
+        .find('Button')
+        .at(1);
+      destroyButton.simulate('click');
+      expect(wrapper.find('CloneProgrammingExpressionDialog').length).to.equal(
+        1
+      );
     });
   });
 });

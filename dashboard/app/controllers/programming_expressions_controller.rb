@@ -133,8 +133,7 @@ class ProgrammingExpressionsController < ApplicationController
   # POST /programming_expression/:id/clone
   def clone
     return render :not_found unless @programming_expression
-    return render :not_acceptable if params[:destinationProgrammingEnvironmentName].blank?
-    #return render(status: not_acceptable, plain: 'Must provide destination programming environment') if params[:destinationProgrammingEnvironmentName].blank?
+    return render(status: not_acceptable, plain: 'Must provide destination programming environment') if params[:destinationProgrammingEnvironmentName].blank?
     begin
       new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
       render(status: 200, json: {editUrl: edit_programming_expression_path(new_exp)})
