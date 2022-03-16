@@ -27,10 +27,11 @@ async function cacheFiles(cache) {
 }
 
 self.addEventListener('fetch', event => {
-  // TODO - Ignore query string parameters.
+  //Strip the query string parameters
+  const url = event.request.url.split('?')[0];
   event.respondWith(
     caches.open(cacheName).then(cache =>
-      cache.match(event.request).then(
+      cache.match(url).then(
         response =>
           // Return the cached response, otherwise fetch it over the internet.
           response || fetch(event.request)
