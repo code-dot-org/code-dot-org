@@ -5,6 +5,10 @@ Scenario: Reload the project with a blank animation
   Given I start a new Game Lab project
   And I switch to the animation tab
   And I add a new, blank animation
+  And I add the bear animal head animation from the library
+  And I switch to the first iframe
+  And element ".icon-tool-pen" is visible
+  And I switch to the default content
   And I switch to the code tab in Game Lab
   And I press "runButton"
 
