@@ -667,7 +667,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # Cannot use section_with_script.reload because login_type has changed
     section_with_script = Section.find(section_with_script.id)
 
-    assert_equal(@csp_unit_group .id, section_with_script.course_id)
+    assert_equal(@csp_unit_group.id, section_with_script.course_id)
     assert_nil(section_with_script.script_id)
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
