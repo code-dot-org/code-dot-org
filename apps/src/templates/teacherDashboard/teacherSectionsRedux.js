@@ -1062,7 +1062,7 @@ function assignedUnit(state) {
     if (sectionBeingEdited.unitId) {
       assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
     } else if (courseVersion.type === 'Script') {
-      assignedUnit = courseVersion;
+      assignedUnit = courseVersion.units[0];
     }
   }
 

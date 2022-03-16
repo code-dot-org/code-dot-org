@@ -116,9 +116,14 @@ export default class AssignmentSelector extends Component {
       const courseVersionId = Number(value);
 
       if (this.state.selectedCourseVersionId !== courseVersionId) {
+        const units = Object.values(
+          this.props.courseOfferings[this.state.selectedCourseOfferingId]
+            ?.course_versions[courseVersionId].units
+        );
+        const firstUnitId = units.length > 1 ? units[0] : noAssignment;
         this.setState(
           {
-            selectedUnitId: noAssignment,
+            selectedUnitId: firstUnitId,
             selectedCourseVersionId: courseVersionId
           },
           this.reportChange

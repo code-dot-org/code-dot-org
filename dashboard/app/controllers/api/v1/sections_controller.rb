@@ -38,7 +38,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
-    unit_id = params[:script] ? params[:script][:id] : params[:unit_id]
+    course_version_id = params[:course_version_id]
+    course_version = CourseVersion.find_by_id(course_version_id) if course_version_id
+    course_id = course_version.content_root_id if course_version&.content_root_type == 'UnitGroup'
+    unit_id = course_version&.content_root_type == 'Script' ? course_version.content_root_id : params[:unit_id]
     unit = Script.get_from_cache(unit_id) if unit_id
     unit_to_assign = unit if unit&.course_assignable?(current_user)
 
@@ -48,8 +51,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
-        script_id: unit_to_assign&.id,
-        course_id: params[:course_id] && UnitGroup.get_from_cache(params[:course_id]).course_assignable?(current_user) ? params[:course_id].to_i : nil,
+        script_id: unit_to_assign ? unit_to_assign.id : nil,
+        course_id: course_id && UnitGroup.get_from_cache(course_id)&.course_assignable?(current_user) ? course_id : nil,
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
@@ -89,8 +92,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = course_id if UnitGroup.get_from_cache(course_id)&.course_assignable?(current_user)
-    fields[:script_id] = unit_id if Script.get_from_cache(unit_id)&.course_assignable?(current_user)
+    fields[:course_id] = course_id && UnitGroup.get_from_cache(course_id)&.course_assignable?(current_user) ? course_id : nil
+    fields[:script_id] = unit_id && Script.get_from_cache(unit_id)&.course_assignable?(current_user) ? unit_id : nil
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
