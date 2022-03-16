@@ -145,6 +145,12 @@ module Cdo
     module I18nStringUrlTrackerPlugin
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
         result = super
+        # If we don't want to track this string lookup, just return the translation
+        # :tracking is assumed to be true unless explicitly set to false.
+        # :tracking is a custom flag we added to skip i18n string tracking for this translation
+        # lookup.
+        return result if options[:tracking] == false
+
         url = Thread.current[:current_request_url]
         scope = options[:scope]
         # Note that the separator here might not cover some edge cases. If we find that the separator used here is not
