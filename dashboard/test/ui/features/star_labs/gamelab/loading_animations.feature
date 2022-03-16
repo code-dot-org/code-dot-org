@@ -1,7 +1,7 @@
 @as_student
 Feature: Game Lab Loading Animations
 
-Scenario: Reload the project with a blank animation
+Scenario: Check Piskel loads and reload the project with a blank animation
   Given I start a new Game Lab project
   And I switch to the animation tab
   And I add a new, blank animation

@@ -1,7 +1,7 @@
 @as_student
 Feature: Sprite Lab Loading Animations
 
-  Scenario: Reload the project with a blank animation
+  Scenario: Load the project with default animations and load Piskel
     Given I start a new Sprite Lab project
     And I switch to the animation tab
     And I wait for the page to fully load
