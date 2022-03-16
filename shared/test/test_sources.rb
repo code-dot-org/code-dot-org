@@ -776,6 +776,17 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(MAIN_JSON)
   end
 
+  def test_rejects_source_with_invalid_utf8
+    filename = MAIN_JSON
+    file_data = '{ "source": "\"𝕄𝕖𝕣𝕣\ud835 ℂ𝕙𝕣𝕚\ud835𝕥𝕞𝕒𝕤 \"" }'
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+
+    @api.put_object(filename, file_data, file_headers)
+    assert bad_request?
+
+    delete_all_source_versions(filename)
+  end
+
   # Test sources with nested hashes, example: Java Lab
   def test_sources_with_nested_hash
     filename = MAIN_JSON
@@ -784,6 +795,17 @@ class SourcesTest < FilesApiTestBase
 
     @api.put_object(filename, file_data, file_headers)
     assert successful?
+
+    delete_all_source_versions(filename)
+  end
+
+  def test_rejects_source_with_nested_hash_and_invalid_utf8
+    filename = MAIN_JSON
+    file_data = '{ "source": { "MyClass.java": {"text":"public class ClassName: \"𝕄𝕖𝕣𝕣\ud835 ℂ𝕙𝕣𝕚\ud835𝕥𝕞𝕒𝕤 \"","isVisible":true} } }'
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+
+    @api.put_object(filename, file_data, file_headers)
+    assert bad_request?
 
     delete_all_source_versions(filename)
   end
