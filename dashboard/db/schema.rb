@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_11_000924) do
+ActiveRecord::Schema.define(version: 2022_03_16_125751) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -718,8 +718,8 @@ ActiveRecord::Schema.define(version: 2022_03_11_000924) do
     t.string "type"
     t.string "md5"
     t.boolean "published", default: false, null: false
-    t.text "notes"
-    t.text "audit_log"
+    t.text "notes", limit: 16777215
+    t.text "audit_log", limit: 16777215
     t.index ["game_id"], name: "index_levels_on_game_id"
     t.index ["level_num"], name: "index_levels_on_level_num"
     t.index ["name"], name: "index_levels_on_name"
@@ -846,6 +846,7 @@ ActiveRecord::Schema.define(version: 2022_03_11_000924) do
     t.text "properties"
     t.datetime "deleted_at"
     t.text "status_timestamp_change_log"
+    t.datetime "applied_at"
     t.index ["application_guid"], name: "index_pd_applications_on_application_guid"
     t.index ["application_type"], name: "index_pd_applications_on_application_type"
     t.index ["application_year"], name: "index_pd_applications_on_application_year"
@@ -1409,7 +1410,7 @@ ActiveRecord::Schema.define(version: 2022_03_11_000924) do
     t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true
   end
 
-  create_table "reference_guides", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "reference_guides", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.bigint "course_version_id", null: false
     t.string "parent_reference_guide_key"
@@ -1979,12 +1980,6 @@ ActiveRecord::Schema.define(version: 2022_03_11_000924) do
     t.integer "conditionals_d5_count", default: 0
     t.datetime "basic_proficiency_at"
     t.index ["user_id"], name: "index_user_proficiencies_on_user_id", unique: true
-  end
-
-  create_table "user_project_storage_ids", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.index ["user_id"], name: "user_id", unique: true
-    t.index ["user_id"], name: "user_storage_ids_user_id_index"
   end
 
   create_table "user_school_infos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
