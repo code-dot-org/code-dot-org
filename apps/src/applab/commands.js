@@ -1686,10 +1686,9 @@ applabCommands.startWebRequest = function(opts) {
     '&c=' +
     encodeURIComponent(Applab.channelId);
   const {isExported} = getAppOptions() || {};
-  const {needsHeader} = opts.header || "";
+  const {needsHeader} = opts.header.split(': ') || "";
   req.open('GET', isExported ? opts.url : url, true);
   if (needsHeader) {
-    var header = opts.header.split(': ')
     req.setRequestHeader(header[0], header[1]);
   };
   req.send();
