@@ -25,6 +25,10 @@ class Framework < ApplicationRecord
     shortcode
   end
 
+  def localized_name
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name, crowdin_key)
+  end
+
   def self.seed_all
     filename = 'config/standards/frameworks.csv'
     CSV.foreach(filename, {headers: true}) do |row|
