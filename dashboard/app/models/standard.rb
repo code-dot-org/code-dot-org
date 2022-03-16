@@ -61,6 +61,10 @@ class Standard < ApplicationRecord
     }
   end
 
+  def crowdin_key
+    [framework.shortcode, shortcode].join('/')
+  end
+
   # Loads/merges the data from a CSV into the Standards table.
   # Can be used to overwrite the description and category of
   # existing Standards and to create new Standards.
