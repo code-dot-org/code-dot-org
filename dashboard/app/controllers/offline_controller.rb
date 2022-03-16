@@ -11,16 +11,17 @@ class OfflineController < ApplicationController
     send_file(dashboard_dir("public", "blockly", "js", filename), type: "application/javascript")
   end
 
-  def cached_asset_paths
+  # Responds with a JSON object which contains a list of files which should be cached for offline use.
+  def offline_files
     # Load the image and mp3 assets used by 'birds' levels.
     bird_paths = Dir.glob('blockly/media/skins/birds/*', base: 'public/')
     bird_asset_paths = bird_paths.map {|path| helpers.asset_path(path)}
 
     # Load fonts distributed by dashboard
-    font_paths = Dir.glob('fonts/**/*.*', base: 'public').map {|path| "/#{path}"}
+    font_paths = Dir.glob('*.*', base: 'public/fonts').map {|path| "/assets/#{path}"}
 
     render json: {
-      cachedFiles: [
+      files: [
         "/s/express-2021/lessons/1/manifest.webmanifest",
         "/s/express-2021/lessons/1/levels/2",
         helpers.asset_path("application.js"),

@@ -27,12 +27,13 @@ async function cacheFiles(cache) {
 }
 
 self.addEventListener('fetch', event => {
+  // TODO - Ignore query string parameters.
   event.respondWith(
     caches.open(cacheName).then(cache =>
       cache.match(event.request).then(
         response =>
           // Return the cached response, otherwise fetch it over the internet.
-          response || fetch(event.request).then(response => response)
+          response || fetch(event.request)
       )
     )
   );
@@ -40,7 +41,7 @@ self.addEventListener('fetch', event => {
 
 async function getCachedFilesList() {
   // Request the manifest of all the files which should be cached.
-  const response = await fetch('/cached-files.json', {
+  const response = await fetch('/offline-files.json', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -48,5 +49,5 @@ async function getCachedFilesList() {
   });
   // TODO Add check for 404 status
   const responseJson = await response.json();
-  return responseJson.cachedFiles;
+  return responseJson.files;
 }
