@@ -6,6 +6,8 @@
 
 set -xe
 
+mispipe "echo 'Starting timestamp'" ts
+
 ulimit -n 4096
 
 export CI=true
@@ -26,7 +28,7 @@ mkdir $CIRCLE_ARTIFACTS
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
-bundle install --verbose
+mispipe "bundle install --verbose" ts
 
 # set up locals.yml
 # Need to actually write all the commented out lines also
@@ -68,10 +70,10 @@ echo "Wrote secrets from env vars into locals.yml."
 set -x
 
 # name: rake install
-RAKE_VERBOSE=true bundle exec rake install --trace
+RAKE_VERBOSE=true mispipe "bundle exec rake install --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # name: rake build
-RAKE_VERBOSE=true bundle exec rake build --trace
+RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # reprint the hostname in case the first printing has already been truncated by the drone UI
 hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
@@ -81,3 +83,5 @@ bundle exec rake circle:seed_ui_test --trace
 
 # name: run ui tests
 bundle exec rake circle:run_ui_tests --trace
+
+mispipe "echo 'Ending timestamp'" ts
