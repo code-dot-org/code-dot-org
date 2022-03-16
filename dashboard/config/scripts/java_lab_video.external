@@ -1,6 +1,7 @@
 name 'Java Lab Video'
 title 'title'
 description 'description here'
+video_key 'csp_cs_is_changing_everything'
 
 markdown <<MARKDOWN
 ## HOLDER SPACE for VIDEO

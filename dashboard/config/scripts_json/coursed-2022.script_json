@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-14 20:46:34 UTC",
+    "serialized_at": "2022-03-15 23:14:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -149,7 +149,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will practice their _sequencing_ and debugging skills in maze puzzles.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n",
         "purpose": "We recognize that every classroom has a spectrum of understanding for every subject. Some students in your class may be computer wizards, while others haven't had much experience at all. In order to create an equal playing (and learning) field, we have developed this \"Ramp Up Stage\" for Course D. This can be used as either an introduction or a review of how to use Code.org and basic computer science concepts. This stage covers all prerequisites needed to start Course D.",
         "student_overview": "This lesson will give you practice in the skills you will need for this course."
       },
@@ -169,7 +169,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting** lesson will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.",
-        "preparation": "- Watch the ***Teacher Video**.\n- Locate a wide open space for this activity, such as the gym or outdoor field.\n- Print out one ***Activity Packet** for each group.\n- Supply each group with plenty of paper and pens/pencils.\n- Print one ***Worksheet** for each student.\n- Make sure every student has a reflection journal.",
+        "preparation": "- Watch the ***Teacher Video**.\n- Locate a wide open space for this activity, such as the gym or outdoor field.\n- Print out one ***Activity Packet** for each group.\n- Supply each group with plenty of paper and pens/pencils.\n- Print one ***Worksheet** for each student.\n",
         "purpose": "Teamwork is very important in computer science. Teams write and debug code with each other, instead of working as individuals. In this lesson, students will learn to work together while being as efficient as possible. \n\nThis activity also provides a sense of urgency that will teach students to balance their time carefully and avoid mistakes without falling too far behind.  This experience can be stressful (which is expected!)  Make sure you provide students with the tools to deal with potential frustration.",
         "student_overview": "Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!",
         "unplugged": true
@@ -1750,7 +1750,7 @@
       "key": "96499db1-0002-4488-b370-2d718a5c90ec",
       "position": 1,
       "properties": {
-        "description": "Students will either be learning a lot of new concepts or reviewing a lot of basic concepts. Based on your class's experience, you can cover the following vocabulary or move on to a bridging activity. We recommend using the following words in sentences if the definitions aren't explicitly covered.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to give a robot specific instructions when you “program” it?_\n\nStudents will either be learning a lot of new concepts or reviewing a lot of basic concepts. Based on your class's experience, you can cover the following vocabulary or move on to a bridging activity. We recommend using the following words in sentences if the definitions aren't explicitly covered.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1762,7 +1762,7 @@
       "key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n\nThis lesson has four new and important vocabulary words:\n\n - **Program** - *Say it with me: Pro - Gram*\n\n    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** - *Say it with me: Pro - Gramm - ing*\n\n   The art of creating a program. \n\n - **Bug** - *Say it with me: Bug*\n\n   An error in a program that prevents the program from running as expected. \n\n - **Debugging** - *Say it with me: De - Bugg - ing*\n\n   Finding and fixing errors in programs. \n\n - **Loop** - *Say it with me: Loo-p*\n\n   The action of doing something over and over again"
+        "description": "\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has the following important vocabulary words:\n\n\n\n - **Bug** -    An error in a program that prevents the program from running as expected. \n\n - **Debugging** -    Finding and fixing errors in programs. \n\n - **Loop** -    The action of doing something over and over again\n\n - **Program** -    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** -    The art of creating a program. "
       },
       "seeding_key": {
         "activity_section.key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
@@ -1784,7 +1784,7 @@
       "key": "802031af-637b-4e3d-bb6f-afee7b4454fa",
       "position": 2,
       "properties": {
-        "description": "Pull up a puzzle from the lesson. We recommend puzzle 6 for this activity. Break up the students into groups of three or four. Have them \"program\" Red, the angry bird, to get to the pig using arrows from \"Graph Paper Programming.\"\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)\n\nThe class will not need to use the last arrow.\n\nOnce all the groups have an answer, discuss the path as a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\nPull up a puzzle from the lesson. We recommend puzzle 6 for this activity. Break up the students into groups of three or four. Have them \"program\" Red, the angry bird, to get to the pig using arrows from \"Graph Paper Programming.\"\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)\n\nThe class will not need to use the last arrow.\n\nOnce all the groups have an answer, discuss the path as a class.",
         "name": "Preview of Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -1824,6 +1824,7 @@
       "key": "2437214a-2077-4e3c-b231-e943e66a693f",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Maze Intro: Programming with Blocks” video",
         "progression_name": "Video: Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
@@ -1835,6 +1836,7 @@
       "key": "4e14f7ca-7b1a-4769-ae57-9f128722a0dd",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1846,7 +1848,8 @@
       "key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0",
       "position": 5,
       "properties": {
-        "progression_name": "Challenge"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8-10 - Challenge” slide",
+        "progression_name": "Challenge/Practice"
       },
       "seeding_key": {
         "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0",
@@ -1854,21 +1857,10 @@
       }
     },
     {
-      "key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb",
-      "position": 6,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb",
-        "lesson_activity.key": "34f9cd2c-cd89-445e-9323-d83630338704"
-      }
-    },
-    {
       "key": "aa5e1de6-0f8d-4e95-82cc-da2f38e8a9ad",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - List some of the bugs you found in your programs today.\n - What was your favorite puzzle to complete? Draw your favorite character completing a puzzle.",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Reflect**\n\n - Why is it important to program your blocks in a specific order?\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1877,8 +1869,36 @@
       }
     },
     {
-      "key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
+      "key": "f5627332-703a-420b-ab72-660c350b87d9",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect:** _When have you “debugged” a frustrating problem in your life?_",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make sure that students understand that the question refers to a real life problem - not a previous computer problem. Give an example that is relevant for your students, or come up with an example from your own life."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f5627332-703a-420b-ab72-660c350b87d9",
+        "lesson_activity.key": "2483ab95-65f1-4cb0-a3e9-fa3f9c64d2e5"
+      }
+    },
+    {
+      "key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Algorithm** - A list of steps to finish a task.\n\n**Bug** - Part of a program that does not work correctly.\n**Debugging** - Finding and fixing problems in an algorithm or program.\n**Program** - An algorithm that has been coded into something that can be run by a machine.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\nFrustrated - Feeling annoyed or angry because something is not the way you want it. \n\nPersistence - Trying again and again, even when something is very hard.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
+        "lesson_activity.key": "2483ab95-65f1-4cb0-a3e9-fa3f9c64d2e5"
+      }
+    },
+    {
+      "key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
+      "position": 3,
       "properties": {
         "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity."
       },
@@ -1889,7 +1909,7 @@
     },
     {
       "key": "1a76c73e-a54d-4d84-ae77-8cf516d6661e",
-      "position": 2,
+      "position": 4,
       "properties": {
         "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n**Display:** Show your students the provided ***Teacher Debugging Image**.\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!",
         "name": "Where did I go wrong?"
@@ -1901,7 +1921,7 @@
     },
     {
       "key": "02a52fe1-85a9-4a07-83a8-5469bf8ac7e6",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "**Discuss:** Ask the students if they could tell how you were feeling when you couldn't figure out the answer.  They might suggest that you were \"mad\" or \"sad\".  Instead of telling them \"no\", describe that you were feeling a little bit mad, a little bit sad, and a little bit confused.  When you put all of those emotions together, it makes a feeling called \"frustration\".  When you are \"frustrated\" you might think you are mad, sad, or confused -- and you might be tempted to give up -- but frustration is a natural feeling and it's a big hint that you are about to learn something!  Instead of quitting, practice persistence.  Keep trying over and over again.  After a few times, you will start to understand how to debug your problems!",
         "tips": [
@@ -1918,7 +1938,7 @@
     },
     {
       "key": "3630ffe8-f7ca-410f-8854-bb4a0e2bea95",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "**Distribute:** To make sure that students understand the idea of finding and fixing errors (debugging) pass out the  ***Worksheet** and have students complete the task in pairs.  \n\n*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.\n\n**Transition:** Now it's time to play the game!"
       },
@@ -3852,7 +3872,7 @@
         "level_keys": [
           "courseD_maze_ramp5b2022"
         ],
-        "progression": "Challenge"
+        "progression": "Challenge/Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -3871,13 +3891,10 @@
     {
       "chapter": 11,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_intro5c2022"
-        ],
-        "progression": "Practice"
+        "progression": "Challenge/Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -3887,7 +3904,7 @@
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2022",
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb"
+        "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0"
       },
       "level_keys": [
         "courseD_maze_intro5c2022"
@@ -3896,13 +3913,10 @@
     {
       "chapter": 12,
       "position": 10,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp5d2022"
-        ],
-        "progression": "Practice"
+        "progression": "Challenge/Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -3912,7 +3926,7 @@
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2022",
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb"
+        "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0"
       },
       "level_keys": [
         "courseD_maze_ramp5d2022"
@@ -7658,7 +7672,7 @@
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2022",
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb"
+        "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0"
       }
     },
     {
@@ -7670,7 +7684,7 @@
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2022",
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb"
+        "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0"
       }
     },
     {
