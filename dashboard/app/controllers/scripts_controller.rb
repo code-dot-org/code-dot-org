@@ -72,7 +72,7 @@ class ScriptsController < ApplicationController
       sections: @sections_with_assigned_info
     }
 
-    @script_data = @script.summarize(true, current_user, request.locale).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
