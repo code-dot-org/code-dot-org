@@ -1,6 +1,6 @@
 name 'CSA U2L5-L3v2_2022'
 display_name 'Getting User Input'
-description 'level description here'
+description 'Get user input to greet the user, perform calculations, or create objects.'
 
 sublevels
 level 'CSA U2L5-L2a_2022'
