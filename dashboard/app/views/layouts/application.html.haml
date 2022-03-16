@@ -62,8 +62,7 @@
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
-    - cookie_key = environment_specific_cookie_name('_user_type')
-    - user_type = request.cookies[cookie_key]
+    - user_type = current_user ? current_user.user_type : 'nil'
 
     - gdpr_data = {}
     - if current_user
