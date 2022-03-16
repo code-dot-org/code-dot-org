@@ -411,7 +411,8 @@ class FilesApi < Sinatra::Base
       html = body_json["html"]
 
       source_is_valid = source && has_valid_encoding?(source)
-      html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true # HTML only exists for AppLab projects
+      # HTML only exists for AppLab projects
+      html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true
 
       return bad_request unless source_is_valid && html_is_valid
     end
@@ -447,7 +448,7 @@ class FilesApi < Sinatra::Base
       return source.force_encoding("UTF-8").valid_encoding?
     end
 
-    # Handle Java Lab Multi-file Projects
+    # Handle Multi-file Projects, like Java Lab
     if source.is_a?(Hash)
       # Iterate over each file
       source.each_key do |key|
