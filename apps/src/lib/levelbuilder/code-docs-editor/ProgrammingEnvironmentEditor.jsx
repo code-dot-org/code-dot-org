@@ -11,7 +11,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const EDITOR_TYPES = ['blockly', 'droplet', 'html/css', 'java'];
+const EDITOR_LANGUAGES = ['blockly', 'droplet', 'html/css', 'java'];
 
 const useProgrammingEnvironment = initialProgrammingEnvironment => {
   const [programmingEnvironment, setProgrammingEnvironment] = useState(
@@ -145,13 +145,13 @@ export default function ProgrammingEnvironmentEditor({
       <label>
         How should this document render?
         <select
-          value={programmingEnvironment.editorLanguage || EDITOR_TYPES[0]}
+          value={programmingEnvironment.editorLanguage || EDITOR_LANGUAGES[0]}
           onChange={e =>
             updateProgrammingEnvironment('editorLanguage', e.target.value)
           }
           style={styles.selectInput}
         >
-          {EDITOR_TYPES.map(type => (
+          {EDITOR_LANGUAGES.map(type => (
             <option key={type} value={type}>
               {type}
             </option>
