@@ -7,7 +7,6 @@ import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   name: 'csp',
@@ -39,7 +38,7 @@ const defaultProps = {
   ],
   isVerifiedInstructor: true,
   hasVerifiedResources: false,
-  versions: courseOfferings['1'].course_versions,
+  versions: {},
   sectionsForDropdown: [],
   announcements: [],
   isSignedIn: true,
