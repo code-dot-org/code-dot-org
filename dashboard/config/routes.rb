@@ -294,6 +294,9 @@ Dashboard::Application.routes.draw do
     end
 
     resources :reference_guides, only: [:show, :update], param: 'key', path: 'guides' do
+      member do
+        get 'edit', to: 'reference_guides#edit'
+      end
     end
   end
 

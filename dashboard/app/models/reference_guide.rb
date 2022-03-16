@@ -114,10 +114,10 @@ class ReferenceGuide < ApplicationRecord
   def summarize_for_edit
     {
       key: key,
+      course_version_name: course_offering_version,
       parent_reference_guide_key: parent_reference_guide_key,
       display_name: display_name,
-      content: content,
-      position: position
+      content: content
     }
   end
 end
