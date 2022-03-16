@@ -89,8 +89,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = course_id if UnitGroup.get_from_cache(course_id).course_assignable?(current_user)
-    fields[:script_id] = unit_id if Script.get_from_cache(unit_id).course_assignable?(current_user)
+    fields[:course_id] = course_id if UnitGroup.get_from_cache(course_id)&.course_assignable?(current_user)
+    fields[:script_id] = unit_id if Script.get_from_cache(unit_id)&.course_assignable?(current_user)
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
