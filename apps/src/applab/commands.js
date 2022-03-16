@@ -1667,6 +1667,7 @@ function logWebRequest(url) {
 
 applabCommands.startWebRequest = function(opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
+  apiValidateType(opts, 'startWebRequest', 'header', opts.header, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
   logWebRequest(opts.url);
   var req = new XMLHttpRequest();
@@ -1685,7 +1686,11 @@ applabCommands.startWebRequest = function(opts) {
     '&c=' +
     encodeURIComponent(Applab.channelId);
   const {isExported} = getAppOptions() || {};
+  const {needsHeader} = opts.header || "";
   req.open('GET', isExported ? opts.url : url, true);
+  if (needsHeader) {
+    req.setRequestHeader(opts.header);
+  };
   req.send();
 };
 

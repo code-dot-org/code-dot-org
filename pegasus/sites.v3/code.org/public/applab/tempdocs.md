@@ -93,7 +93,7 @@
 | [getUserId()](https://code.org/applab/docs/getUserId) |Gets a unique identifier for the current user of this app.|
 | [readRecords(table, terms, callback)](https://code.org/applab/docs/readRecords) |Using App Lab's table data storage, reads the records from the provided *table* that match the *terms*, and calls the *callback* function when the action is finished. The records read from the table are then returned as a parameter to the callback function.|
 | [setKeyValue(key, value, callback)](https://code.org/applab/docs/setKeyValue) |Stores a key/value pair in App Lab's key/value data storage, and calls the callback function when the action is finished.|
-| [startWebRequest(url, callback)](https://code.org/applab/docs/startWebRequest) |Requests data from the internet and executes code when the request is complete.|
+| [startWebRequest(url, header, callback)](https://code.org/applab/docs/startWebRequest) |Requests data from the internet and executes code when the request is complete.|
 | [updateRecord(table, record, callback)](https://code.org/applab/docs/updateRecord) |Using App Lab's table data storage, updates the record from the provided table with the matching record id, and calls the callback function when the action is finished. The updated record and a boolean variable success is returned as a parameter to the callback function.|
 
 

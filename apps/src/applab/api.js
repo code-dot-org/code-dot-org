@@ -325,12 +325,13 @@ export function open(url) {
 }
 
 export function startWebRequest(url, func) {
-  return Applab.executeCmd(null, 'startWebRequest', {url: url, func: func});
+  return Applab.executeCmd(null, 'startWebRequest', {url: url, header: header, func: func});
 }
 
 export function startWebRequestSync(url, func) {
   return Applab.executeCmd(null, 'startWebRequest', {
     url: url,
+    header: header,
     func: (status, contentType, responseText) => {
       func(responseText);
     }
