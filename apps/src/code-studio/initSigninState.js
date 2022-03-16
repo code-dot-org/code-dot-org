@@ -5,7 +5,10 @@ import {Provider} from 'react-redux';
 import cookies from 'js-cookie';
 import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
 import {getStore} from './redux';
-import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
+import {
+  setUserSignedIn,
+  setUserType
+} from '@cdo/apps/templates/currentUserRedux';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
 /**
@@ -32,10 +35,13 @@ export function getUserSignedInFromCookieAndDom() {
  * Determines signin state and dispatches to the store. Shows a dialog asking
  * the user for their age or to sign in if necessary.
  */
-export default function initSigninState() {
+export default function initSigninState(userType) {
   $(document).ready(() => {
     const store = getStore();
     store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
+    if (userType) {
+      store.dispatch(setUserType(userType));
+    }
 
     const div = document.createElement('div');
     ReactDOM.render(
