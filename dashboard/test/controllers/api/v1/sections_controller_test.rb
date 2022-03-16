@@ -34,10 +34,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(@csp_unit_group)
     @csp_unit_group.reload
-    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     @csp_script = create(:script, name: 'csp1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
     @csp_script.reload
+
+    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(@csp_unit_group_soft_launched)
+    @csp_unit_group.reload
 
     Script.clear_cache
   end
@@ -453,7 +456,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_unit_group_name|
-    test "can create with a course id but no script id - #{existing_unit_group_name}" do
+    test "can create with a course as course version but no unit selected - #{existing_unit_group_name}" do
       existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
       CourseOffering.add_course_offering(existing_unit_group)
 
@@ -470,25 +473,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'cannot assign an invalid course id' do
+  # Check this
+  test 'cannot assign an invalid course version id' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_version_id: @unit_group.course_version.id, # Not CSP or CSD
+      course_version_id: -1,
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['course_id']
-    assert_nil returned_section.unit_group
+    assert_response :bad_request
   end
 
-  test 'pilot teacher can assign the pilot course id' do
+  test 'pilot teacher can assign the pilot course' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(pilot_unit_group)
-
-    puts pilot_unit_group.inspect
 
     sign_in pilot_teacher
     post :create, params: {
@@ -501,7 +499,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal pilot_unit_group, returned_section.unit_group
   end
 
-  test 'non pilot teacher cannot assign the pilot course id' do
+  test 'non pilot teacher cannot assign the pilot course' do
     pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(pilot_unit_group)
 
@@ -510,20 +508,18 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       course_version_id: pilot_unit_group.course_version.id
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['course_id']
-    assert_nil returned_section.unit_group
+    assert_response :forbidden
   end
 
   test 'pilot teacher can assign pilot script' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_script = create :script, :is_course, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    CourseOffering.add_course_offering(pilot_script)
+
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      unit_id: pilot_script.id
+      course_version_id: pilot_script.course_version.id
     }
     assert_response :success
 
@@ -532,25 +528,24 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign a pilot script' do
-    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_script = create :script, :is_course, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    CourseOffering.add_course_offering(pilot_script)
+
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      unit_id: pilot_script.id
+      course_version_id: pilot_script.course_version.id
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['script']['id']
-    assert_nil returned_section.script
+    assert_response :forbidden
   end
 
-  test 'can create with a script id but no course id' do
+  test 'can create with a script as course version' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      unit_id: @script.id,
+      course_version_id: @script.course_version.id,
     }
+    assert_response :success
 
     assert_equal @script.id, returned_json['script']['id']
     assert_equal @script, returned_section.script
@@ -562,12 +557,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
+      course_version_id: @unit_group.course_version.id,
       unit_id: 'MALYON' # Script IDs are numeric
     }
     assert_response :forbidden
   end
 
-  [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_unit_group_name|
+  [CSP_COURSE_NAME].each do |existing_unit_group_name|
     test "can create with both a course id and a script id - #{existing_unit_group_name}" do
       existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
       CourseOffering.add_course_offering(existing_unit_group)
@@ -595,7 +591,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      unit_id: @script.id,
+      course_version_id: @script.course_version.id,
     }
     assert_response :success
     assert_includes teacher.scripts, @csp_script
@@ -611,7 +607,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      unit_id: @script.id,
+      course_version_id: @script.course_version.id,
     }
     assert_response :success
     assert_equal 1, teacher.scripts.size
@@ -718,7 +714,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.course_id
   end
 
-  test "update: sets course to script's default course if course version is not provided" do
+  test "update: fails if course version is not provided and unit is" do
     sign_in @teacher
     section = create(:section, user: @teacher, course_id: nil)
 
@@ -726,10 +722,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       id: section.id,
       unit_id: @csp_script.id
     }
-    section.reload
-    assert_response :success
-    assert_equal @csp_script.id, section.script_id
-    assert_equal @csp_script.unit_group.id, section.course_id
+    assert_response :bad_request
   end
 
   test "update: script_id is cleared if not provided" do
@@ -756,9 +749,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       id: section.id,
       course_version_id: 1,
     }
-    section.reload
-    assert_response :success
-    assert_nil section.course_id
+    assert_response :bad_request
   end
 
   test "update: script_id is not updated if invalid" do
@@ -769,11 +760,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section.id,
+      course_version_id: @unit_group.course_version.id,
       unit_id: 1,
     }
-    section.reload
-    assert_response :success
-    assert_nil section.script_id
+    assert_response :forbidden
   end
 
   test "update: hidden script is unhidden when assigned" do
@@ -828,7 +818,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       course_version_id: @unit_group.course_version.id,
       unit_id: @script.id
     }
-    assert_response 400
+    assert_response :forbidden
   end
 
   test "update: can set course-less script" do

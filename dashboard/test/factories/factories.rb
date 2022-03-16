@@ -31,6 +31,9 @@ FactoryGirl.define do
     sequence(:family_name) {|n| "bogus-course-#{n}"}
     version_year "1991"
     published_state "beta"
+    instruction_type "teacher_led"
+    participant_audience "student"
+    instructor_audience "teacher"
   end
 
   factory :experiment do
