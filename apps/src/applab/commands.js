@@ -1689,7 +1689,8 @@ applabCommands.startWebRequest = function(opts) {
   const {needsHeader} = opts.header || "";
   req.open('GET', isExported ? opts.url : url, true);
   if (needsHeader) {
-    req.setRequestHeader(opts.header);
+    var header = opts.header.split(': ')
+    req.setRequestHeader(header[0], header[1]);
   };
   req.send();
 };
