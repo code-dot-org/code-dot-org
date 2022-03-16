@@ -109,9 +109,9 @@ module Pd::Application
       assert_equal Pd::Application::TeacherApplication::REVIEWING_INCOMPLETE, teacher_application.meets_criteria
     end
 
-    # [MEG] TODO: Remove this test once the applied_at column exists, i.e. once
-    # ActiveRecord::Base.connection.column_exists?(:pd_applications, :applied_at) is true
+    # [MEG] TODO: Remove this test once the applied_at column exists
     test 'date_applied finds date of first unreviewed status' do
+      skip 'now using the applied_at field' if ActiveRecord::Base.connection.column_exists?(:pd_applications, :applied_at)
       tomorrow = Date.tomorrow.to_time
       next_day = tomorrow + 1.day
       application = create :pd_teacher_application, status: 'incomplete'
