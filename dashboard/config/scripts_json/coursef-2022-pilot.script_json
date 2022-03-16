@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-02-28 16:44:22 UTC",
+    "serialized_at": "2022-03-14 20:29:05 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1012,6 +1012,7 @@
       "key": "2892e2fb-77aa-41c7-8065-406a04177b67",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -1025,6 +1026,7 @@
       "key": "acbe1d00-925b-435f-aaaf-fd491ff37b50",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2069,8 +2071,7 @@
       "key": "8f7c6adb-ca6c-40d9-aefe-95ac180e45a4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unplugged Variables in Envelopes” video\n",
-        "name": "Create Your Own Story (20 mins)"
+        "description": "####Create Your Own Story (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unplugged Variables in Envelopes” video\n"
       },
       "seeding_key": {
         "activity_section.key": "8f7c6adb-ca6c-40d9-aefe-95ac180e45a4",
