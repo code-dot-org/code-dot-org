@@ -62,8 +62,8 @@
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
-    - user_type = current_user ? current_user.user_type : 'nil'
-    - under_13 = current_user ? current_user.under_13? : 'nil'
+    - user_type = current_user ? current_user.user_type : nil
+    - under_13 = current_user ? current_user.under_13? : nil
 
     - gdpr_data = {}
     - if current_user
@@ -72,7 +72,7 @@
 
     #gdpr-dialog
 
-    %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json}}
+    %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json, under13: under_13.to_json}}
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]
