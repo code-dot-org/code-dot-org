@@ -17,5 +17,5 @@
   ],
   "return_value": "The item from the list.",
   "short_description": "Select List Item\nThe block used to select an element, or item, from a list. ",
-  "syntax": "list[0]"
+  "syntax": "list[index];"
 }
