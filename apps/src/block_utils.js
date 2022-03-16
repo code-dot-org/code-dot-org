@@ -796,6 +796,18 @@ const STANDARD_INPUT_TYPES = {
 
 /**
  * Adds a second value to options array elements if a second one does not exist.
+ * The second value is used as the generated code for that option.
+ * Required for backwards compatibility with existing blocks that are missing the second value.
+ *
+ * @param  {string[][]| string[]} dropdownOptions
+ * @returns {string[][]} Sanitized array of dropdownOptions, ensuring that both a first and second value exist
+ */
+const sanitizeOptions = function(dropdownOptions) {
+  return dropdownOptions.map(option =>
+    option.length === 1 ? [option[0], option[0]] : option
+  );
+};
+
 /**
  * Given a type string for a field input, returns an appropriate change handler function
  * for that type, which customizes the input field and provides validation on blur.
