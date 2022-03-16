@@ -1,5 +1,6 @@
 export const testSection = {
   id: 11,
+  courseId: 29,
   courseOfferingId: 2,
   courseVersionId: 3,
   unitId: null,
@@ -16,6 +17,7 @@ export const testSection = {
 
 export const noStudentsSection = {
   id: 11,
+  courseId: 29,
   courseOfferingId: 2,
   courseVersionId: 3,
   unitId: null,
