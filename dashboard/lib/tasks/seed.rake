@@ -426,6 +426,8 @@ namespace :seed do
     ].exclude('db/ui_test_data.*')
     current_hash = HashUtils.file_contents_hash(watched_files)
 
+    # Making a change to this file (which is in lib/tasks) to prevent caching here.
+
     if File.exist?(HASH_FILE)
       dump_hash = File.read(HASH_FILE)
 
