@@ -81,6 +81,36 @@ module Services
         attribute :description
       end
 
+      class FrameworkCrowdinSerializer < CrowdinSerializer
+        attributes :name
+
+        # override
+        def crowdin_key
+          object.shortcode
+        end
+      end
+
+      class StandardCategoryCrowdinSerializer < CrowdinSerializer
+        attributes :description
+
+        # override
+        def crowdin_key
+          [object.framework.shortcode, object.shortcode].join('/')
+        end
+      end
+
+      class StandardCrowdinSerializer < CrowdinSerializer
+        attributes :description
+
+        belongs_to :framework, serializer: CurriculumSyncUtils::FrameworkCrowdinSerializer
+        belongs_to :category, serializer: CurriculumSyncUtils::StandardCategoryCrowdinSerializer
+
+        # override
+        def crowdin_key
+          [object.framework.shortcode, object.shortcode].join('/')
+        end
+      end
+
       class LessonCrowdinSerializer < CrowdinSerializer
         # Note that we don't include "name" here, because that's already
         # handled by existing logic. We could in the future consider moving
@@ -97,6 +127,8 @@ module Services
         has_many :objectives, serializer: CurriculumSyncUtils::ObjectiveCrowdinSerializer
         has_many :resources, serializer: CurriculumSyncUtils::ResourceCrowdinSerializer
         has_many :vocabularies, serializer: CurriculumSyncUtils::VocabularyCrowdinSerializer
+        has_many :standards, serializer: CurriculumSyncUtils::StandardCrowdinSerializer
+        has_many :opportunity_standards, serializer: CurriculumSyncUtils::StandardCrowdinSerializer
 
         # override
         def crowdin_key
