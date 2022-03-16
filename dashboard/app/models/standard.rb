@@ -31,20 +31,20 @@ class Standard < ApplicationRecord
     {
       id: id,
       shortcode: shortcode,
-      category_description: category.description,
-      description: description
+      category_description: category.localized_description,
+      description: localized_description
     }
   end
 
   def summarize_for_lesson_show
     {
-      frameworkName: framework.name,
+      frameworkName: framework.localized_name,
       parentCategoryShortcode: parent_category&.shortcode,
-      parentCategoryDescription: parent_category&.description,
+      parentCategoryDescription: parent_category&.localized_description,
       categoryShortcode: category&.shortcode,
-      categoryDescription: category&.description,
+      categoryDescription: category&.localized_description,
       shortcode: shortcode,
-      description: description
+      description: localized_description
     }
   end
 
@@ -63,6 +63,10 @@ class Standard < ApplicationRecord
 
   def crowdin_key
     [framework.shortcode, shortcode].join('/')
+  end
+
+  def localized_description
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description, crowdin_key)
   end
 
   # Loads/merges the data from a CSV into the Standards table.
