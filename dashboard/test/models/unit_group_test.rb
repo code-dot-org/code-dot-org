@@ -549,7 +549,8 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "summarize" do
-    unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999'
+    unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group)
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -590,7 +591,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,
-                  :announcements, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
+                  :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
