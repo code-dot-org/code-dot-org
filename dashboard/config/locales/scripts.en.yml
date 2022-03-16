@@ -31320,11 +31320,21 @@ en:
               name: Unit 1 Assessment
               description_student: Congratulations, you completed your first unit! Assess your progress through the Unit 1 Assessment.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            lesson-21:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-22:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
           description_audience: ''
@@ -31547,11 +31557,21 @@ en:
                 **How does the scope of a variable impact its accessibility and use?**
 
                 Students explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. Students learn to use the `this` keyword to refer to the current object in constructors and methods.
+            lesson-16:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-17:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa2-2022
           title: Class Structure and Design ('22-'23)
           description_audience: ''
@@ -32873,8 +32893,8 @@ en:
           lessons:
             lesson-1:
               name: Welcome
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n"
+              description_teacher: "**Overview:**\nThis session serves as both a welcome to the workshop experience and an opportunity to begin getting to know the workshop cohort. \n\n**Participants will:**\n\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n**Suggested time:** 30 minutes"
             lesson-2:
               name: Equity in CS
               description_student: This appears for participants / students
@@ -32883,6 +32903,40 @@ en:
               name: Model Lesson 1 - Unit 1 Lesson 2
               description_student: 
               description_teacher: 
+            lesson-4:
+              name: Overview of CS Discoveries
+              description_student: |-
+                **You will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+            lesson-5:
+              name: Asynchronous Debrief
+            lesson-6:
+              name: Model Lesson 2 - Unit 2 Lesson 2
+            lesson-7:
+              name: Identity
+            lesson-8:
+              name: Lesson Assignment
+            lesson-9:
+              name: Lesson Planning
+            lesson-10:
+              name: The role of the teacher
+              description_student: |-
+                **You will:**
+                * Consider your role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 10 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Consider their role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 10 minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -32905,9 +32959,13 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: TLO 1
+              name: Model Lesson 3 - Unit 2 Lesson 3
               description_student: 
               description_teacher: 
+            lesson-3:
+              name: TLO 1 - Unit 3 Lesson 3
+            lesson-4:
+              name: TLO 2 - Unit 3 Lesson 4
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
