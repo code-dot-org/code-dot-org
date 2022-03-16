@@ -5,8 +5,9 @@ import {getToolboxType} from './cdoUtils';
 GoogleBlockly.WorkspaceSvg.prototype.registerGlobalVariables = function(
   variableList
 ) {
+  let variableMap = this.getVariableMap();
   this.globalVariables = variableList;
-  this.getVariableMap().addVariables(variableList);
+  variableList.forEach(varName => variableMap.createVariable(varName));
 };
 
 GoogleBlockly.WorkspaceSvg.prototype.getContainer = function() {
