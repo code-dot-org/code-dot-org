@@ -63,6 +63,7 @@
       = render partial: 'layouts/age_interstitial'
 
     - user_type = current_user ? current_user.user_type : 'nil'
+    - under_13 = current_user ? current_user.under_13? : 'nil'
 
     - gdpr_data = {}
     - if current_user
