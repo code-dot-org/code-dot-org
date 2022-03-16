@@ -9,7 +9,7 @@ export default function AllCodeDocs({
   programmingEnvironmentsForSelect,
   categoriesForSelect
 }) {
-  const [ideSelected, setIdeSelectted] = useState(true);
+  const [ideSelected, setIdeSelected] = useState(true);
   const ideSelectButtonStyle = {
     ...styles.button,
     ...styles.leftButton,
@@ -29,14 +29,14 @@ export default function AllCodeDocs({
           <button
             type="button"
             style={ideSelectButtonStyle}
-            onClick={() => setIdeSelectted(true)}
+            onClick={() => setIdeSelected(true)}
           >
             IDEs
           </button>
           <button
             type="button"
             style={docsSelectButtonStyle}
-            onClick={() => setIdeSelectted(false)}
+            onClick={() => setIdeSelected(false)}
           >
             Code Documentation
           </button>
@@ -75,9 +75,10 @@ export default function AllCodeDocs({
 }
 
 AllCodeDocs.propTypes = {
-  programmingEnvironments: PropTypes.arrayOf(PropTypes.object),
-  programmingEnvironmentsForSelect: PropTypes.arrayOf(PropTypes.object),
-  categoriesForSelect: PropTypes.arrayOf(PropTypes.object)
+  programmingEnvironments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  programmingEnvironmentsForSelect: PropTypes.arrayOf(PropTypes.object)
+    .isRequired,
+  categoriesForSelect: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const styles = {
