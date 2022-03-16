@@ -1189,7 +1189,7 @@ const assignmentsForSection = (courseOfferings, section) => {
       ];
     if (courseVersion) {
       assignments.push(courseVersion);
-      if (section.unitId) {
+      if (section.unitId && courseVersion.type === 'UnitGroup') {
         if (courseVersion.units[section.unitId]) {
           assignments.push(courseVersion.units[section.unitId]);
         }
