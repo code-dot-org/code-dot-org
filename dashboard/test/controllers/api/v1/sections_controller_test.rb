@@ -455,11 +455,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_unit_group_name|
     test "can create with a course id but no script id - #{existing_unit_group_name}" do
       existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
+      CourseOffering.add_course_offering(existing_unit_group)
 
       sign_in @teacher
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        course_id: existing_unit_group.id,
+        course_version_id: existing_unit_group.course_version.id,
       }
 
       assert_equal existing_unit_group.id, returned_json['course_id']
@@ -473,7 +474,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_id: @unit_group.id, # Not CSP or CSD
+      course_version_id: @unit_group.course_version.id, # Not CSP or CSD
     }
     assert_response :success
     # TODO: Better to fail here?
@@ -485,10 +486,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'pilot teacher can assign the pilot course id' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    CourseOffering.add_course_offering(pilot_unit_group)
+
+    puts pilot_unit_group.inspect
+
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_id: pilot_unit_group.id
+      course_version_id: pilot_unit_group.course_version.id
     }
     assert_response :success
 
@@ -498,10 +503,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'non pilot teacher cannot assign the pilot course id' do
     pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    CourseOffering.add_course_offering(pilot_unit_group)
+
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_id: pilot_unit_group.id
+      course_version_id: pilot_unit_group.course_version.id
     }
     assert_response :success
     # TODO: Better to fail here?
@@ -516,7 +523,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: pilot_script.id}
+      unit_id: pilot_script.id
     }
     assert_response :success
 
@@ -529,7 +536,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: pilot_script.id}
+      unit_id: pilot_script.id
     }
     assert_response :success
     # TODO: Better to fail here?
@@ -542,7 +549,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: @script.id},
+      unit_id: @script.id,
     }
 
     assert_equal @script.id, returned_json['script']['id']
@@ -555,26 +562,21 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: 'MALYON'}, # Script IDs are numeric
+      unit_id: 'MALYON' # Script IDs are numeric
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['script']['id']
-    assert_nil returned_section.script
-    assert_nil returned_json['course_id']
-    assert_nil returned_section.unit_group
+    assert_response :forbidden
   end
 
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_unit_group_name|
     test "can create with both a course id and a script id - #{existing_unit_group_name}" do
       existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
+      CourseOffering.add_course_offering(existing_unit_group)
 
       sign_in @teacher
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
-        course_id: existing_unit_group.id,
-        script: {id: @csp_script.id},
+        course_version_id: existing_unit_group.course_version.id,
+        unit_id: @csp_script.id,
       }
 
       assert_equal existing_unit_group.id, returned_json['course_id']
@@ -593,7 +595,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: @script.id},
+      unit_id: @script.id,
     }
     assert_response :success
     assert_includes teacher.scripts, @csp_script
@@ -609,7 +611,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: @script.id},
+      unit_id: @script.id,
     }
     assert_response :success
     assert_equal 1, teacher.scripts.size
@@ -622,7 +624,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_id: @csp_unit_group.id,
+      course_version_id: @csp_unit_group.course_version.id,
     }
     assert_response :success
     assert_equal 0, @teacher.scripts.size

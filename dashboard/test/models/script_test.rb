@@ -1034,23 +1034,24 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'summarize includes show assign button' do
     unit = create(:script, name: 'script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    teacher = create(:teacher)
 
-    # No user, show_assign_button set to nil
-    assert_nil unit.summarize[:show_assign_button]
+    # No user, show_assign_button set to false
+    refute unit.summarize[:show_assign_button]
 
     # Teacher should be able to assign a launched unit.
     assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    assert_equal true, unit.summarize(true, create(:teacher))[:show_assign_button]
+    assert_equal true, unit.summarize(true, teacher)[:show_assign_button]
 
     # Teacher should not be able to assign a unlaunched script.
     hidden_unit = create(:script, name: 'unassignable-hidden', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     assert_equal SharedCourseConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
-    assert_equal false, hidden_unit.summarize(true, create(:teacher))[:show_assign_button]
+    refute hidden_unit.summarize(true, create(:teacher))[:show_assign_button]
 
     # Student should not be able to assign a unit,
     # regardless of visibility.
     assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    assert_nil unit.summarize(true, create(:student))[:show_assign_button]
+    refute unit.summarize(true, create(:student))[:show_assign_button]
   end
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
