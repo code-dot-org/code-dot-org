@@ -84,15 +84,22 @@ export default class AssignmentSelector extends Component {
       const courseOfferingId = Number(event.target.value);
 
       if (this.state.selectedCourseOfferingId !== courseOfferingId) {
-        const recommendedCourseVersionId = Object.values(
-          this.props.courseOfferings[courseOfferingId]?.course_versions
-        )?.find(versions => versions.is_recommended)?.id;
+        const courseVersions = this.props.courseOfferings[courseOfferingId]
+          ?.course_versions;
+        const recommendedCourseVersionId = Object.values(courseVersions)?.find(
+          versions => versions.is_recommended
+        )?.id;
+
+        const units = recommendedCourseVersionId
+          ? Object.values(courseVersions[recommendedCourseVersionId].units)
+          : null;
+        const firstUnitId = units?.length > 1 ? units[0].id : noAssignment;
 
         this.setState(
           {
             selectedCourseOfferingId: courseOfferingId,
             selectedCourseVersionId: recommendedCourseVersionId,
-            selectedUnitId: noAssignment
+            selectedUnitId: firstUnitId
           },
           this.reportChange
         );
@@ -120,7 +127,7 @@ export default class AssignmentSelector extends Component {
           this.props.courseOfferings[this.state.selectedCourseOfferingId]
             ?.course_versions[courseVersionId].units
         );
-        const firstUnitId = units.length > 1 ? units[0] : noAssignment;
+        const firstUnitId = units.length > 1 ? units[0].id : noAssignment;
         this.setState(
           {
             selectedUnitId: firstUnitId,

@@ -584,8 +584,6 @@ function newSectionData(id, loginType) {
   };
 }
 
-const defaultLessonExtras = false;
-
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
 // (i.e., Google auth is 'google_oauth2' but the section type is 'google_classroom').
 export const mapProviderToSectionType = provider => {
@@ -779,25 +777,10 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    const lessonExtraSettings = {};
-    const ttsAutoplayEnabledSettings = {};
-    if (action.props.unitId) {
-      const unit =
-        state.courseOfferings[action.props.courseOfferingId]?.course_versions[
-          action.props.courseVersionId
-        ]?.units[action.props.unitId];
-      if (unit) {
-        lessonExtraSettings.lessonExtras =
-          unit.lesson_extras_available || defaultLessonExtras;
-      }
-    }
-
     return {
       ...state,
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
-        ...lessonExtraSettings,
-        ...ttsAutoplayEnabledSettings,
         ...action.props
       }
     };
@@ -1062,7 +1045,7 @@ function assignedUnit(state) {
     if (sectionBeingEdited.unitId) {
       assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
     } else if (courseVersion.type === 'Script') {
-      assignedUnit = courseVersion.units[0];
+      assignedUnit = Object.values(courseVersion.units)[0];
     }
   }
 

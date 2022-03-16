@@ -38,12 +38,29 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
-    course_version_id = params[:course_version_id]
-    course_version = CourseVersion.find_by_id(course_version_id) if course_version_id
-    course_id = course_version.content_root_id if course_version&.content_root_type == 'UnitGroup'
-    unit_id = course_version&.content_root_type == 'Script' ? course_version.content_root_id : params[:unit_id]
-    unit = Script.get_from_cache(unit_id) if unit_id
-    unit_to_assign = unit if unit&.course_assignable?(current_user)
+    course = nil
+    unit = nil
+    if params[:course_version_id]
+      course_version = CourseVersion.find_by_id(params[:course_version_id])
+      return head :bad_request unless course_version
+
+      if course_version.content_root_type == 'UnitGroup'
+        course_id = course_version.content_root_id
+        course = UnitGroup.get_from_cache(course_id)
+        return head :bad_request unless course
+        return head :forbidden unless course.course_assignable?(current_user)
+        unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
+        return head :bad_request if unit && course.id != unit.unit_group.try(:id)
+      elsif course_version.content_root_type == 'Script'
+        unit_id = course_version.content_root_id
+        unit = Script.get_from_cache(unit_id)
+        return head :bad_request unless unit
+        return head :forbidden unless unit.course_assignable?(current_user)
+      end
+    else
+      # Should not get a unit_id unless also get a course version which is course
+      return head :bad_request if params[:unit_id]
+    end
 
     section = Section.create(
       {
@@ -51,8 +68,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
-        script_id: unit_to_assign ? unit_to_assign.id : nil,
-        course_id: course_id && UnitGroup.get_from_cache(course_id)&.course_assignable?(current_user) ? course_id : nil,
+        script_id: unit&.id,
+        course_id: course&.id,
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
@@ -62,9 +79,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render head :bad_request unless section
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
-    if unit_to_assign
-      current_user.assign_script unit_to_assign
-    end
+    current_user.assign_script unit if unit
 
     render json: section.summarize
   end
@@ -74,26 +89,37 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.find(params[:id])
     authorize! :manage, section
 
-    course_version_id = params[:course_version_id]
-    course_version = CourseVersion.find_by_id(course_version_id) if course_version_id
-    course_id = course_version.content_root_id if course_version&.content_root_type == 'UnitGroup'
-    unit_id = course_version&.content_root_type == 'Script' ? course_version.content_root_id : params[:unit_id]
+    course = nil
+    unit = nil
+    if params[:course_version_id]
+      course_version = CourseVersion.find_by_id(params[:course_version_id])
+      return head :bad_request unless course_version
 
-    if unit_id
-      unit = Script.get_from_cache(unit_id)
-      return head :bad_request if unit.nil?
-      # If given a course and unit, make sure the unit is in that course
-      return head :bad_request if course_id && course_id != unit.unit_group.try(:id)
-      # If unit has a course and no course_id was provided, use default course
-      course_id ||= unit.unit_group.try(:id)
-      # Unhide unit for this section before assigning
-      section.toggle_hidden_script unit, false
+      if course_version.content_root_type == 'UnitGroup'
+        course_id = course_version.content_root_id
+        course = UnitGroup.get_from_cache(course_id)
+        return head :bad_request unless course
+        return head :forbidden unless course.course_assignable?(current_user)
+        unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
+        return head :bad_request if unit && course.id != unit.unit_group.try(:id)
+      elsif course_version.content_root_type == 'Script'
+        unit_id = course_version.content_root_id
+        unit = Script.get_from_cache(unit_id)
+        return head :bad_request unless unit
+        return head :forbidden unless unit.course_assignable?(current_user)
+      end
+    else
+      # Should not get a unit_id unless also get a course version which is course
+      return head :bad_request if params[:unit_id]
     end
+
+    # Unhide unit for this section before assigning
+    section.toggle_hidden_script unit, false if unit
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = course_id && UnitGroup.get_from_cache(course_id)&.course_assignable?(current_user) ? course_id : nil
-    fields[:script_id] = unit_id && Script.get_from_cache(unit_id)&.course_assignable?(current_user) ? unit_id : nil
+    fields[:course_id] = course&.id
+    fields[:script_id] = unit&.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
@@ -104,7 +130,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
 
     section.update!(fields)
-    if unit_id
+    if unit
       section.students.each do |student|
         student.assign_script(unit)
       end
