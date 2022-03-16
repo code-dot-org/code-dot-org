@@ -15,8 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-14 22:57:22 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-03-15 18:55:51 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -4819,6 +4819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4840,6 +4843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4862,6 +4868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,

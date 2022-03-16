@@ -32895,8 +32895,8 @@ en:
           lessons:
             lesson-1:
               name: Welcome
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n"
+              description_teacher: "**Overview:**\nThis session serves as both a welcome to the workshop experience and an opportunity to begin getting to know the workshop cohort. \n\n**Participants will:**\n\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n**Suggested time:** 30 minutes"
             lesson-2:
               name: Equity in CS
               description_student: This appears for participants / students
@@ -32907,6 +32907,16 @@ en:
               description_teacher: 
             lesson-4:
               name: Overview of CS Discoveries
+              description_student: |-
+                **You will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
             lesson-5:
               name: Asynchronous Debrief
             lesson-6:
@@ -32917,6 +32927,18 @@ en:
               name: Lesson Assignment
             lesson-9:
               name: Lesson Planning
+            lesson-10:
+              name: The role of the teacher
+              description_student: |-
+                **You will:**
+                * Consider your role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 10 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Consider their role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 10 minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
