@@ -38,10 +38,14 @@ module JavalabFilesHelper
       all_files["assetUrls"][asset[:filename]] = generate_asset_url(asset[:filename], channel_id)
     end
 
-    return all_files
+    all_files
   end
 
-  # def self.get_project_files_with_provided_sources(sources, level_id)
+  def self.get_project_files_with_provided_sources(sources, level_id)
+    all_files = get_level_project_files(level_id)
+    all_files["sources"]["main.json"] = sources
+    all_files
+  end
 
   def self.generate_asset_url(filename, channel_id)
     prefix = get_dashboard_url_prefix
