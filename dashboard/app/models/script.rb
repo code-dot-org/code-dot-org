@@ -1519,7 +1519,7 @@ class Script < ApplicationRecord
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       updated_at: updated_at.to_s,
-      validCourseOfferings: CourseOffering.assignable_course_offerings_info(user)
+      validCourseOfferings: CourseOffering.assignable_course_offerings_info(user, locale_code)
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
