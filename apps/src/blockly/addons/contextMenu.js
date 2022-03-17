@@ -1,7 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 
 const registerDeletable = function() {
-  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const deletableOption = {
     displayText: function(scope) {
       // isDeletale is a built in Blockly function that checks whether the block
@@ -17,10 +16,7 @@ const registerDeletable = function() {
       }
       return 'hidden';
     },
-    callback: function(
-      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
-      scope
-    ) {
+    callback: function(scope) {
       scope.block.setDeletable(!scope.block.isDeletable());
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
@@ -31,7 +27,6 @@ const registerDeletable = function() {
 };
 
 const registerMovable = function() {
-  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const movableOption = {
     displayText: function(scope) {
       // isMovable is a built in Blockly function that checks whether the block
@@ -47,10 +42,7 @@ const registerMovable = function() {
       }
       return 'hidden';
     },
-    callback: function(
-      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
-      scope
-    ) {
+    callback: function(scope) {
       scope.block.setMovable(!scope.block.isMovable());
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
@@ -61,7 +53,6 @@ const registerMovable = function() {
 };
 
 const registerEditable = function() {
-  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const editableOption = {
     displayText: function(scope) {
       // isEditable is a built in Blockly function that checks whether the block
@@ -77,10 +68,7 @@ const registerEditable = function() {
       }
       return 'hidden';
     },
-    callback: function(
-      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
-      scope
-    ) {
+    callback: function(scope) {
       scope.block.setEditable(!scope.block.isEditable());
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
@@ -91,7 +79,6 @@ const registerEditable = function() {
 };
 
 const registerShadow = function() {
-  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const shadowOption = {
     displayText: () => 'Make Shadow',
     preconditionFn: function(scope) {
@@ -102,10 +89,7 @@ const registerShadow = function() {
       }
       return 'hidden';
     },
-    callback: function(
-      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
-      scope
-    ) {
+    callback: function(scope) {
       scope.block.setShadow(true);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
@@ -115,7 +99,6 @@ const registerShadow = function() {
   GoogleBlockly.ContextMenuRegistry.registry.register(shadowOption);
 };
 const registerUnshadow = function() {
-  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const unshadowOption = {
     // If there's 1 child, text should be 'Make Child Block Non-Shadow'
     // If there's n children, text should be `Make ${n} Child Blocks Non-Shadow`
@@ -135,10 +118,7 @@ const registerUnshadow = function() {
       }
       return 'hidden';
     },
-    callback: function(
-      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
-      scope
-    ) {
+    callback: function(scope) {
       scope.block.getChildren().forEach(child => child.setShadow(false));
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
