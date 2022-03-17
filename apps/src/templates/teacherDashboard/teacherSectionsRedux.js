@@ -891,7 +891,7 @@ export default function teacherSections(state = initialState, action) {
     }
     if (
       // If either of these is not undefined, then assignment changed and should be logged
-      !(typeof assignmentData.script_id === 'undefined') ||
+      !(typeof assignmentData.unit_id === 'undefined') ||
       !(typeof assignmentData.course_id === 'undefined')
     ) {
       firehoseClient.putRecord(
@@ -1166,11 +1166,7 @@ export const sectionFromServerSection = serverSection => ({
   code: serverSection.code,
   courseOfferingId: serverSection.course_offering_id,
   courseVersionId: serverSection.course_version_id,
-  unitId:
-    serverSection.unit_id ||
-    serverSection.script?.id ||
-    serverSection.script_id ||
-    null,
+  unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
@@ -1215,7 +1211,6 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    script: section.unitId ? {id: section.unitId} : undefined,
     restrict_section: section.restrictSection
   };
 }
