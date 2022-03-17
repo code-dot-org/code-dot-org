@@ -34,7 +34,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.collector_ifCollectible = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(
         msg.ifCode() + ' ' + msg.collectiblePresent()
       );
@@ -57,7 +57,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.collector_whileCollectible = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendTitle(
         msg.whileMsg() + ' ' + msg.collectiblePresent()
       );
