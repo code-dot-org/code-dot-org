@@ -1,6 +1,6 @@
-class CreateProgrammingClassMethods < ActiveRecord::Migration[5.2]
+class CreateProgrammingMethods < ActiveRecord::Migration[5.2]
   def change
-    create_table :programming_class_methods do |t|
+    create_table :programming_methods do |t|
       t.integer :programming_class_id
       t.string :key
       t.string :name
