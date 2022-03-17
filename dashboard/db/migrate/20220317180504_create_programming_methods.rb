@@ -3,6 +3,7 @@ class CreateProgrammingMethods < ActiveRecord::Migration[5.2]
     create_table :programming_methods do |t|
       t.integer :programming_class_id
       t.string :key
+      t.integer :position
       t.string :name
       t.text :content
       t.text :parameters

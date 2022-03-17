@@ -5,6 +5,7 @@
 #  id                   :bigint           not null, primary key
 #  programming_class_id :integer
 #  key                  :string(255)
+#  position             :integer
 #  name                 :string(255)
 #  content              :text(65535)
 #  parameters           :text(65535)
