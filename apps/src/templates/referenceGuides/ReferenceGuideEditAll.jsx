@@ -1,17 +1,22 @@
-import React, {useMemo} from 'react';
+import React, {useMemo, useCallback, useState} from 'react';
 import PropTypes from 'prop-types';
 import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {flatten} from 'lodash';
 
-const MiniIconButton = ({icon, alt, func, href}) =>
-  func ? (
-    <button onClick={func} type="button">
-      <FontAwesome icon={icon} title={alt} />
-    </button>
-  ) : (
-    <TextLink href={href} icon={<FontAwesome icon={icon} title={alt} />} />
-  );
+// editAll url without the /edit
+const BASE_URL = window.location.href
+  .split('/')
+  .slice(0, -1)
+  .join('/');
+
+const MiniIconButton = ({icon, alt, func, href}) => (
+  <TextLink
+    onClick={func}
+    href={href}
+    icon={<FontAwesome icon={icon} title={alt} />}
+  />
+);
 MiniIconButton.propTypes = {
   icon: FontAwesome.propTypes.icon,
   alt: PropTypes.string,
@@ -36,12 +41,70 @@ const organizeReferenceGuides = (referenceGuides, parent = null, level = 0) => {
 };
 
 export default function ReferenceGuideEditAll(props) {
-  const {referenceGuides} = props;
+  const [referenceGuides, setReferenceGuides] = useState(props.referenceGuides);
   // useMemo here so that we only do the organizing once
   const organizedGuides = useMemo(
     () => organizeReferenceGuides(referenceGuides),
     [referenceGuides]
   );
+
+  // To move guides, we will swap the positions of guides in the direction we want to move.
+  // The positions might sometimes have gaps (in the case of deletion or changing parents),
+  // but if we swap position values, they'll still sort correctly.
+  // Using this strategy, we don't need to update the positions for everything in the list.
+  // `direction` should be -1 or 1
+  const moveGuide = useCallback(
+    (
+      {key: targetGuideKey, parent_reference_guide_key: targetParentKey},
+      direction
+    ) => {
+      const guideSiblings = getGuideChildren(targetParentKey, referenceGuides);
+      const targetGuideIndex = guideSiblings.findIndex(
+        guide => guide.key === targetGuideKey
+      );
+      const swapGuideIndex = targetGuideIndex + direction;
+      if (swapGuideIndex < 0 || swapGuideIndex >= guideSiblings.length) {
+        // we don't need up update anything if it is at the top or bottom of the list
+        return;
+      }
+
+      // the target guide is the one we clicked the move button on,
+      // and the swap guide is the one in the direction we want to move
+      const targetGuide = guideSiblings[targetGuideIndex];
+      const swapGuide = guideSiblings[swapGuideIndex];
+
+      // update the local list
+      const swapPosition = swapGuide.position;
+      swapGuide.position = targetGuide.position;
+      targetGuide.position = swapPosition;
+      setReferenceGuides([...referenceGuides]);
+
+      // update the db (using the updated positions)
+      const targetUpdate = fetch(`${BASE_URL}/${targetGuide.key}`, {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json',
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        },
+        body: JSON.stringify({
+          position: targetGuide.position
+        })
+      });
+      const swapUpdate = fetch(`${BASE_URL}/${swapGuide.key}`, {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json',
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        },
+        body: JSON.stringify({
+          position: swapGuide.position
+        })
+      });
+      return Promise.all([targetUpdate, swapUpdate]);
+    },
+    [referenceGuides]
+  );
+
   return (
     <div>
       <h1>Reference Guides</h1>
@@ -60,10 +123,22 @@ export default function ReferenceGuideEditAll(props) {
         {organizedGuides.map(guide => {
           return [
             <div key={`${guide.key}-actions`} className="actions-box">
-              <MiniIconButton icon="pencil-square-o" alt="edit" />
+              <MiniIconButton
+                icon="pencil-square-o"
+                alt="edit"
+                href={`${BASE_URL}/${guide.key}/edit`}
+              />
               <MiniIconButton icon="trash" alt="delete" />
-              <MiniIconButton icon="caret-up" alt="move guide up" />
-              <MiniIconButton icon="caret-down" alt="move guide down" />
+              <MiniIconButton
+                icon="caret-up"
+                alt="move guide up"
+                func={() => moveGuide(guide, -1)}
+              />
+              <MiniIconButton
+                icon="caret-down"
+                alt="move guide down"
+                func={() => moveGuide(guide, 1)}
+              />
             </div>,
             <div
               key={`${guide.key}-guide`}
