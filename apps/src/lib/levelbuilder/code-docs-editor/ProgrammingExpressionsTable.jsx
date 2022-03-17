@@ -57,7 +57,7 @@ export default function ProgrammingExpressionsTable({
     );
   };
 
-  const fetchExpressions = (environmentId, categoryId, callback) => {
+  const fetchExpressions = (environmentId, categoryId, page) => {
     const data = {};
     if (environmentId !== DEFAULT_VALUE) {
       data.programmingEnvironmentId = environmentId;
@@ -65,7 +65,7 @@ export default function ProgrammingExpressionsTable({
     if (categoryId !== DEFAULT_VALUE) {
       data.categoryId = categoryId;
     }
-    data.page = currentPage;
+    data.page = page;
     const url =
       '/programming_expressions/get_filtered_expressions?' +
       queryString.stringify(data);
@@ -83,9 +83,6 @@ export default function ProgrammingExpressionsTable({
         if (success) {
           setProgrammingExpressions(data.expressions);
           setNumPages(data.numPages);
-          if (callback) {
-            callback();
-          }
         }
       });
   };
@@ -104,37 +101,27 @@ export default function ProgrammingExpressionsTable({
     });
   };
 
-  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
-    fetchExpressions(selectedEnvironment, selectedCategory, () =>
-      setCurrentPage(1)
-    );
-  }, [selectedCategory]);
+    fetchExpressions(selectedEnvironment, selectedCategory, currentPage);
+  }, [selectedEnvironment, selectedCategory, currentPage]);
 
-  useEffect(() => {
-    let categoryToFetch = selectedCategory;
-    if (selectedEnvironment === DEFAULT_VALUE) {
+  const onEnvironmentSelect = e => {
+    const newSelectedEnvironment = e.target.value;
+    setSelectedEnvironment(newSelectedEnvironment);
+    if (newSelectedEnvironment === DEFAULT_VALUE) {
       setCategoriesAvailableForSelect(categoriesForSelect);
     } else {
       setCategoriesAvailableForSelect(
         categoriesForSelect.filter(
-          cat => String(cat.envId) === String(selectedEnvironment)
+          cat => String(cat.envId) === String(newSelectedEnvironment)
         )
       );
-      if (String(selectedCategory.envId) !== selectedEnvironment) {
+      if (String(selectedCategory.envId) !== newSelectedEnvironment) {
         setSelectedCategory(DEFAULT_VALUE);
-        categoryToFetch = DEFAULT_VALUE;
       }
     }
-    fetchExpressions(selectedEnvironment, categoryToFetch, () =>
-      setCurrentPage(1)
-    );
-  }, [selectedEnvironment]);
-
-  useEffect(() => {
-    fetchExpressions(selectedEnvironment, selectedCategory);
-  }, [currentPage]);
-  /* eslint-enable react-hooks/exhaustive-deps */
+    setCurrentPage(1);
+  };
 
   const getColumns = () => {
     return [
@@ -176,10 +163,7 @@ export default function ProgrammingExpressionsTable({
   }
   return (
     <>
-      <select
-        onChange={e => setSelectedEnvironment(e.target.value)}
-        value={selectedEnvironment}
-      >
+      <select onChange={onEnvironmentSelect} value={selectedEnvironment}>
         <option value={DEFAULT_VALUE}>All IDEs</option>
         {programmingEnvironmentsForSelect.map(env => (
           <option key={env.id} value={env.id}>
@@ -188,7 +172,10 @@ export default function ProgrammingExpressionsTable({
         ))}
       </select>
       <select
-        onChange={e => setSelectedCategory(e.target.value)}
+        onChange={e => {
+          setSelectedCategory(e.target.value);
+          setCurrentPage(1);
+        }}
         value={selectedCategory}
       >
         <option value={DEFAULT_VALUE}>All Categories</option>
