@@ -393,3 +393,11 @@ mk:
           lessons:
             lesson-1:
               name: Променливи
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Лупови
+              key: Лупови
+            Variables:
+              name: Променливи
+              key: Променливи

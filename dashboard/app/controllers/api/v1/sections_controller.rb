@@ -191,6 +191,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: scripts
   end
 
+  # GET /api/v1/sections/valid_course_offerings
+  def valid_course_offerings
+    return head :forbidden unless current_user
+
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user)
+    render json: course_offerings
+  end
+
   # GET /api/v1/sections/require_captcha
   # Get the recaptcha site key for frontend and whether current user requires captcha verification
   def require_captcha

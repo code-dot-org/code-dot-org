@@ -12361,13 +12361,16 @@ es-ES:
         title: 'Prueba Fin de Proyecto: Ordenadores y Resolución de Problemas '
       CSD U2 CSS practice_pilot_2021:
         display_name: Estilos de texto con CSS
+        description: "¡Prueba tus nuevas habilidades en estos desafíos diferentes!"
       CSD U2 Image challenge_pilot_2021:
         display_name: Añadiendo Imágenes
+        description: Encuentra aquí un desafío adicional o un nuevo tipo de código.
       CSD U2 Image practice_pilot_2021:
         display_name: Añadiendo Imágenes
+        description: Practica tus nuevas habilidades aquí.
       CSD U2 image debug match_pilot_2021:
         answers:
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png
         - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
             PM.png">
         - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
@@ -12396,6 +12399,33 @@ es-ES:
           # Punto de control de la planificación
 
           Revise los planes de los alumnos antes de permitirles continuar en el resto de los niveles.
+        markdown: |
+          # Tu Página Web Personal
+
+          En los próximos niveles, completarás y publicarás tu página web personal.  Esta es tu oportunidad de compartir tus ideas con el mundo, y también de mostrar todo lo que has aprendido.
+
+          Necesitarás...
+
+          * Tu guía de proyecto completada
+          * Las imágenes que has descargado
+          * La rúbrica del proyecto
+
+          Estas son las cosas que has aprendido...
+
+          * Cómo usar HTML para estructurar el contenido de tu página
+          * Cómo usar CSS para dar estilo al texto, los colores y el diseño de tu página
+          * Cómo dar formato a tu código para que sea más fácil de leer
+          * Cómo depurar el código HTML y CSS
+          * Cómo utilizar las imágenes de forma responsable
+          * Cómo proteger tu información personal en línea
+
+          ## Ejemplos
+
+          <div style="float: left; text-align:center;"><strong>El Perro Más Bonito</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mi Viaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumentos Musicales</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de Reciclaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
       CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
         answers:
         - text: perro.rotacion &lt; gato.rotacion
@@ -12896,3 +12926,70 @@ es-ES:
       ml-models in applab-choice parent:
         description: Prueba lo que has aprendido en una o varias de las siguientes
           actividades.
+      CSD CSS project RGB_2021:
+        description: Comprueba cómo puedes conseguir aún más colores utilizando los
+          códigos RGB.
+        display_name: Colores RGB
+      CSD CSS project Review_2021:
+        description: Aquí hay algunas propiedades CSS que tal vez hayas visto en las
+          últimas lecciones.  Puedes usarlas para revisar los estilos que podrías
+          necesitar para tu página web.
+        display_name: Revisión de CSS
+      CSD U2 CSS challenge_pilot_2021:
+        description: Hay muchas formas diferentes de dar estilo al texto.  Utiliza
+          los siguientes desafíos para obtener nuevas ideas y aplicarlas en tu página
+          web.
+        display_name: Desafíos y Código Adicional
+      CSD U2 Expression Exemplars_2018_2019_pilot_2021:
+        markdown: |
+          # Ejemplos de Sitios Web Personales
+
+          Haz clic en los sitios web que aparecen a continuación para ver los sitios web personales que han creado otros alumnos.
+
+          ## Ejemplos
+
+          <div style="float: left; text-align:center;"><strong>El Perro Más Bonito</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mi Viaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumentos Musicales</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de Reciclaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Sample CSS layout_2021:
+        markdown: "# Ejemplos de Sitios Web \nHaz clic en el sitio web de abajo para
+          descubrir algunos nuevos tipos de estilo para tus páginas.\n\n|Ejemplo 1|Ejemplo
+          2|Ejemplo 3|\n|-|-|-|\n|[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13
+          PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47
+          PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|\n\n\n"
+      CSD U2 Sample classes_2021:
+        markdown: |
+          # Ejemplo de Sitio Web
+
+          Haz clic en la página web que aparece a continuación para descubrir nuevas formas de dar estilo a los elementos.
+
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)](https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+      CSD U2 Top Websites_2018_2019_pilot_2021:
+        markdown: |
+          # Sitios Web para la Resolución de Problemas
+
+          Aquí tienes algunas páginas web creadas para resolver problemas.  Elige dos sitios y utilízalos para completar la guía de actividades.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
+      CSD U2 layout style challenge_pilot_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Elementos de Estilo
+      CSD U2 layout style practice_pilot_2021:
+        description: Practica tus nuevas habilidades aquí.
+        display_name: Elementos de Estilo
+      CSD U2 links challenge_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+      CSD web classes challenge_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Usando las Clases
+      CSD web classes practice_2021:
+        description: Practica tus nuevas habilidades aquí.
+        display_name: Usando las Clases

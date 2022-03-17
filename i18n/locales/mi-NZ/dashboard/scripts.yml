@@ -2670,3 +2670,23 @@ mi:
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Ngā Koromeke
+              key: Ngā Koromeke
+            Events:
+              name: Ngā Takunetanga
+              key: Ngā Takunetanga
+            Conditionals:
+              name: Ngā Here
+              key: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+              key: Ngā Taumahi
+            Variables:
+              name: Ngā Taurangi
+              key: Ngā Taurangi
+            For Loops:
+              name: Mō Ngā Koromeke
+              key: Mō Ngā Koromeke

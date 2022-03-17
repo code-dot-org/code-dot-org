@@ -311,7 +311,10 @@ class BenchI18nStringUrlTracker < Minitest::Benchmark
     [1, 1, 1_000, 1_000, 2_000, 5_000, 10_000]
   end
 
+  # Tests that the tracker's performance scales linearly as the data increases.
+  # This tests is skipped because we found it to be flaky when running on our build servers.
   def bench_linear_performance
+    skip 'test is flaky when running on build servers'
     assert_performance_linear(0.95) do |n|
       n.times {|m| I18nStringUrlTracker.instance.log(n.to_s, m.to_s, m.to_s, [], '.')}
     end

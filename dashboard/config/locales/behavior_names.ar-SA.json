@@ -1361,12 +1361,12 @@
           "wandering": "التحرك",
           "growing": "النمو",
           "jittering": "الاهتزاز",
-          "moving east": "التحرك ناحية الشرق",
-          "moving north": "التحرك ناحية الشمال",
-          "moving south": "التحرك ناحية الجنوب",
+          "moving east": "التحرك باتجاه الشرق",
+          "moving north": "التحرك باتجاه الشمال",
+          "moving south": "التحرك باتجاه الجنوب",
           "moving west": "التحرك باتجاه الغرب",
           "spinning right": "الدوران ناحية اليمين",
-          "swimming left and right": "يسبح يسار و يمين "
+          "swimming left and right": "السباحة لليسار ولليمين"
         },
         "Fish Tank 3-validated_2019": {
           "shrinking": "الانقباض",
@@ -1398,10 +1398,10 @@
           "wandering": "التحرك",
           "growing": "النمو",
           "jittering": "الاهتزاز",
-          "moving east": "التحرك ناحية الشرق",
-          "moving north": "التحرك ناحية الشمال",
-          "moving south": "التحرك ناحية الجنوب",
-          "moving west": "التحرك ناحية الغرب",
+          "moving east": "التحرك باتجاه الشرق",
+          "moving north": "التحرك باتجاه الشمال",
+          "moving south": "التحرك باتجاه الجنوب",
+          "moving west": "التحرك باتجاه الغرب",
           "spinning right": "الدوران ناحية اليمين",
           "swimming left and right": "السباحة لليسار ولليمين"
         },
@@ -1438,9 +1438,9 @@
           "moving east": "التحرك ناحية الشرق",
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
-          "moving west": "التحرك ناحية الغرب",
+          "moving west": "التحرك باتجاه الغرب",
           "spinning right": "الدوران ناحية اليمين",
-          "swimming left and right": "يسبح يسار و يمين"
+          "swimming left and right": "السباحة لليسار ولليمين"
         },
         "Fish Tank 5-validated_2019": {
           "shrinking": "الانقباض",
@@ -1475,9 +1475,9 @@
           "moving east": "التحرك ناحية الشرق",
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
-          "moving west": "التحرك ناحية الغرب",
+          "moving west": "التحرك باتجاه الغرب",
           "spinning right": "الدوران ناحية اليمين",
-          "swimming left and right": "يسبح يسار و يمين"
+          "swimming left and right": "السباحة لليسار ولليمين"
         },
         "Fish Tank 6-validated_2019": {
           "shrinking": "الانقباض",
@@ -1512,9 +1512,9 @@
           "moving east": "التحرك ناحية الشرق",
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
-          "moving west": "التحرك ناحية الغرب",
+          "moving west": "التحرك باتجاه الغرب",
           "spinning right": "الدوران ناحية اليمين",
-          "swimming left and right": "يسبح يسار و يمين"
+          "swimming left and right": "السباحة لليسار ولليمين"
         },
         "OPD-K5-spritelab-2": {
           "shrinking": "الانقباض",

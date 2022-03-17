@@ -80,6 +80,8 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+
     File.delete(file_path) if File.exist?(file_path)
   end
 
@@ -96,6 +98,7 @@ class ProgrammingEnvironment < ApplicationRecord
       projectUrl: project_url,
       description: description,
       editorType: editor_type,
+      blockPoolName: block_pool_name,
       categories: categories.map(&:serialize_for_edit),
       showPath: programming_environment_path(name)
     }

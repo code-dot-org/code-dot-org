@@ -15437,3 +15437,28 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: Secvențiere
+              key: Secvențiere
+            Loops:
+              name: Bucle
+              key: Bucle
+            Events:
+              name: Evenimente
+              key: Evenimente
+            Conditionals:
+              name: Condiţionale
+              key: Condiţionale
+            Functions:
+              name: Funcţii
+              key: Funcţii
+            Variables:
+              name: Variabile
+              key: Variabile
+            For Loops:
+              name: Bucle Pentru
+              key: Bucle Pentru
+            Lesson Planning:
+              key: Planificare lecție

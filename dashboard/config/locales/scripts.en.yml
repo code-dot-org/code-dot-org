@@ -1486,7 +1486,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           lessons:
-            Code.org Equity PD:
+            Codeorg Equity PD:
               name: Code.org Equity PD
             Necessary Background:
               name: Necessary Background
@@ -3994,6 +3994,7 @@ en:
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
           student_description: ''
+          name: csp-pre-survey
         csd1-2017:
           title: CSD Unit 1 - Problem Solving ('17-'18)
           description_short: "  Learn how humans work with computers to solve problems."
@@ -5988,6 +5989,7 @@ en:
             CSP post-course survey:
               name: CSP Student Post-Course Survey ('17-'18)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-post-survey
         public-key-cryptography:
           title: Public Key Cryptography Widgets
           description_audience: ''
@@ -10553,6 +10555,7 @@ en:
             CSD post-course survey:
               name: CSD Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csd-post-survey
         csd-novice-18:
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
@@ -11988,6 +11991,7 @@ en:
             CSP Mid-year survey:
               name: CSP Student Mid-year Survey
           student_description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-mid-survey
         gamelab:
           title: Game Lab
           description_audience: ''
@@ -14222,6 +14226,7 @@ en:
             CSD post-course survey:
               name: CSD Student Post-Course Survey ('18-'19)
           student_description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \r\n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
+          name: csd-post-survey-2018
         csp-post-survey-2018:
           title: CSP Student Post-Course Survey ('18-'19)
           description_audience: CSP Students
@@ -14234,6 +14239,7 @@ en:
             CSP post-course survey:
               name: CSP Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-post-survey-2018
         csp5-pilot:
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
@@ -18886,8 +18892,6 @@ en:
               name: USE Programs (AppLab Only)
             MODIFY Programs:
               name: MODIFY Programs (AppLab -> Widget -> AppLab)
-            Does Code.org Like Your Dog?:
-              name: Does Code.org Like Your Dog?
             dog:
               name: Does Code.org Like Your Dog?
             AI for Oceans:
@@ -23429,7 +23433,7 @@ en:
               name: Module 1
             Getting Started:
               name: Getting Started
-            What is Code.org:
+            What is Codeorg:
               name: What is Code.org?
             Addressing Implementation Approaches and Barriers:
               name: Implementation Approaches and Barriers
@@ -25813,7 +25817,7 @@ en:
           student_description: ''
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
+            Navigating the Codeorg learning platform:
               name: " Navigating Code.org learning platform"
               description_student: 
               description_teacher: |-
@@ -28433,7 +28437,7 @@ en:
               name: Board Events
               description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
               description_teacher: |-
-                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.
 
                 **Question of the Day:** How can the user interact with the circuit playground for input?
             Arrays and Color LEDs:
@@ -29116,7 +29120,7 @@ en:
               description_student: Use loops and patterns to finish the images.
               description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.
               key: Ocean Scene with Loops
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Move and shout when your teachers presses buttons on a giant remote.
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
@@ -29942,7 +29946,7 @@ en:
               description_student: Sketch your own smartphone app.
               description_teacher: In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.
               key: The Right App
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Move or shout when your teacher presses buttons on a giant remote.
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
@@ -30035,7 +30039,7 @@ en:
 
                 The internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.
               key: Putting a STOP to Online Meanness
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: My Robotic Friends Jr.
               description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
               description_teacher: In this **context-setting** lessons, students will use a set of symbols to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.
@@ -30056,7 +30060,7 @@ en:
               name: Creating Art with Code
               description_student: Create beautiful images by programming the Artist.
               description_teacher: In this **skill-building** lesson, students will take control of the Artist to complete drawings on the screen.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: My Loopy Robotic Friends Jr.
               description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
               description_teacher: 'This **context-setting** lesson builds on the initial "My Robotic Friends" activity, featuring larger and more complicated designs. '
@@ -31316,11 +31320,21 @@ en:
               name: Unit 1 Assessment
               description_student: Congratulations, you completed your first unit! Assess your progress through the Unit 1 Assessment.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            lesson-21:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-22:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
           description_audience: ''
@@ -31543,11 +31557,21 @@ en:
                 **How does the scope of a variable impact its accessibility and use?**
 
                 Students explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. Students learn to use the `this` keyword to refer to the current object in constructors and methods.
+            lesson-16:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-17:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa2-2022
           title: Class Structure and Design ('22-'23)
           description_audience: ''
@@ -31837,12 +31861,24 @@ en:
           lessons:
             lesson-1:
               name: Welcome to Code.org
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                You will:
+
+                * Get an introduction to Code.org.
+                * Learn how to engage in these professional learning modules.
+
+                **Estimated time:** 20 minutes
+              description_teacher: |
+                You will:
+
+                * Get an introduction to Code.org.
+                * Learn how to engage in these professional learning modules.
+
+                **Estimated time:** 20 minutes
             lesson-2:
               name: Get to know Computer Science A
-              description_student: 
-              description_teacher: 
+              description_student: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+              description_teacher: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
           lesson_groups: {}
           name: self-paced-pl-csa1-2022
           title: 'Unit 1 - Module 1: Welcome'
@@ -31854,16 +31890,48 @@ en:
           lessons:
             lesson-1:
               name: Navigating the Code.org learning platform
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
             lesson-2:
               name: Navigating lesson plans and resources
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
             lesson-3:
               name: Navigating Support
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Suggested time:** 15 minutes
           lesson_groups: {}
           name: self-paced-pl-csa2-2022
           title: ''
@@ -31879,6 +31947,8 @@ en:
               description_teacher: 
             lesson-2:
               name: Using variables in Java
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
           title: Support for text-based programming
@@ -32545,6 +32615,7 @@ en:
           student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
           description_short: ''
           description_audience: ''
+          name: csa6-2022
         csa7-2022:
           lessons:
             Writing Methods to Satisfy Conditions:
@@ -32822,8 +32893,8 @@ en:
           lessons:
             lesson-1:
               name: Welcome
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n"
+              description_teacher: "**Overview:**\nThis session serves as both a welcome to the workshop experience and an opportunity to begin getting to know the workshop cohort. \n\n**Participants will:**\n\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n**Suggested time:** 30 minutes"
             lesson-2:
               name: Equity in CS
               description_student: This appears for participants / students
@@ -32832,6 +32903,40 @@ en:
               name: Model Lesson 1 - Unit 1 Lesson 2
               description_student: 
               description_teacher: 
+            lesson-4:
+              name: Overview of CS Discoveries
+              description_student: |-
+                **You will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 30 minutes
+            lesson-5:
+              name: Asynchronous Debrief
+            lesson-6:
+              name: Model Lesson 2 - Unit 2 Lesson 2
+            lesson-7:
+              name: Identity
+            lesson-8:
+              name: Lesson Assignment
+            lesson-9:
+              name: Lesson Planning
+            lesson-10:
+              name: The role of the teacher
+              description_student: |-
+                **You will:**
+                * Consider your role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 10 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Consider their role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 10 minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -32854,9 +32959,13 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: TLO 1
+              name: Model Lesson 3 - Unit 2 Lesson 3
               description_student: 
               description_teacher: 
+            lesson-3:
+              name: TLO 1 - Unit 3 Lesson 3
+            lesson-4:
+              name: TLO 2 - Unit 3 Lesson 4
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1

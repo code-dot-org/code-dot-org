@@ -34342,3 +34342,41 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Erste Schritte
+              key: Erste Schritte
+            Sequencing:
+              name: Sequencing
+              key: Sequencing
+            Loops:
+              name: Schleifen
+              key: Schleifen
+            Events:
+              name: Ereignisse
+              key: Ereignisse
+            Conditionals:
+              name: Bedingungen
+              key: Bedingungen
+            Functions:
+              name: Funktionen
+              key: Funktionen
+            Variables:
+              name: Variablen
+              key: Variablen
+            For Loops:
+              name: Schleifen mit dem Wiederhol-Block
+              key: Schleifen mit dem Wiederhol-Block
+            End of Course projects:
+              name: Projekte am Ende des Kurses
+              key: Projekte am Ende des Kurses
+            Reviewing your reflections:
+              name: Überprüfung Ihrer Reflexionen
+              key: Überprüfung Ihrer Reflexionen
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Willkommen bei "Grundlagen der Informatik unterrichten"
+            Lesson Planning:
+              key: Unterrichtsplanung
+            Next steps:
+              key: Nächste Schritte
