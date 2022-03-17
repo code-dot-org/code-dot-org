@@ -1401,6 +1401,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_180504) do
   create_table "programming_methods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "programming_class_id"
     t.string "key"
+    t.integer "position"
     t.string "name"
     t.text "content"
     t.text "parameters"
