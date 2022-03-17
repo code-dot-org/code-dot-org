@@ -813,6 +813,10 @@ ku:
           lesson_groups:
             lessonGroup-3:
               display_name: گۆڕاوەکان
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: فرمانەکان
         coursea-2022:
           lessons:
             Happy Maps:
@@ -886,11 +890,49 @@ ku:
           lesson_groups:
             lessonGroup-8:
               display_name: گۆڕاوەکان
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: گرێکان
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: گرێکان
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: گۆڕاوەکان
         cs4all-invasive-species:
           lessons:
             lesson-12:
               name: مەرجیەکان
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: گرێکان
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: ئینتەرنێت
+              key: ئینتەرنێت
+          lesson_groups:
+            lessonGroup-8:
+              display_name: گۆڕاوەکان
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: گۆڕاوەکان
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: گرێکان
+              key: گرێکان
+            Conditionals:
+              name: مەرجیەکان
+              key: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+              key: فرمانەکان
+            Variables:
+              name: گۆڕاوەکان
+              key: گۆڕاوەکان

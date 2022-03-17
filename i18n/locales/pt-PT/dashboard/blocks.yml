@@ -438,6 +438,26 @@ pt:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': alienígenas
             '"BEAR"': Ursos
@@ -1204,7 +1224,7 @@ pt:
       gamelab_mouseLocation:
         text: posição do mouse
       gamelab_moveBackward:
-        text: mover [SPRITE] [0] [DISTANCE] [1] pixels para trás
+        text: mover {SPRITE} {DISTANCE} pixels para trás
       gamelab_moveForward:
         text: mover {SPRITE} {DISTANCE} pixels pra frente
       gamelab_moveInDirection:
@@ -1435,7 +1455,7 @@ pt:
             '"right"': para a direita
             '"left"': para a esquerda
       gamelab_updateTitleWithColor:
-        text: mostra a tela do título [BREAK] [0] título [TITLE] [1] cor [COLOR] [2]
+        text: mostra a tela do título {BREAK} título {TITLE} cor {COLOR}
       gamelab_whenAllPromptsAnswered:
         text: quando todos os prompts forem respondidos
       gamelab_whenDownArrow:

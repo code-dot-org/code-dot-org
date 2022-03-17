@@ -4,14 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "deprecated": true,
       "is_migrated": true,
       "professional_learning_course": "ECS Support Legacy"
     },
     "new_name": null,
     "family_name": null,
     "serialized_at": "2021-11-22 19:55:38 UTC",
-    "published_state": "beta",
+    "published_state": "deprecated",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

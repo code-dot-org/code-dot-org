@@ -106,6 +106,8 @@ az:
               name: Arı Sazlama
             'Bee: Loops':
               name: 'Arı: Dövrlər'
+            Binary Bracelets:
+              name: ikili bilərziklər
             Conditionals:
               name: Şərti ifadələr
             Flappy:
@@ -403,10 +405,10 @@ az:
           student_description: Cəbr vasitəsilə Funksional Proqramlaşdırmanı öyrən.
         infinity:
           title: Disney Sonsuz Oyun Labaratoriyası
-          description: Disney Infinity personajlarının oynadığı bir hekayə və ya oyun
-            yaratmaq üçün Play Labdan istifadə edin.
-          description_short: Disney Infinity personajlarının oynadığı bir hekayə və
-            ya oyun yaratmaq üçün Play Labdan istifadə edin.
+          description: Disney Infinity personajlarının oynadığı hekayə və ya oyun
+            yaratmaq üçün Play Lab-dan istifadə edin.
+          description_short: Disney Infinity personajlarının oynadığı hekayə və ya
+            oyun yaratmaq üçün Play Lab-dan istifadə edin.
           lessons:
             Infinity:
               name: Disney Sonsuz Oyun Labaratoriyası
@@ -417,8 +419,8 @@ az:
                 dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
                 lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu
                 şagirdləri üçün də uyğunlaşdırıla bilər.
-          student_description: Disney Infinity personajlarının oynadığı bir hekayə
-            və ya oyun yaratmaq üçün Play Labdan istifadə edin.
+          student_description: Disney Infinity personajlarının oynadığı hekayə və
+            ya oyun yaratmaq üçün Play Lab-dan istifadə edin.
         algebrademo:
           title: Cəbr Demo
           description: Code.org CS -də Cəbrdə istifadə olunan mühiti və proqramlaşdırma
@@ -747,6 +749,7 @@ az:
               name: "CSP -content security policy. \nMəzmun təhlükəsizlik siyasəti "
           student_description: 'Mərhələ 1: CSP - ə Online Giriş'
         CSPLessonSamples:
+          title: CSP dərs nümunələri
           description: CSP üçün dərs nümunələri
           description_short: CSP üçün dərs nümunələri
           lessons:
@@ -1202,6 +1205,8 @@ az:
               name: Pikselləmə
             Public Key Cryptography:
               name: Açıq Açarlı Kriptoqrafiya
+            Rich long assessment:
+              name: Zəngin uzun qiymətləndirmə
             Sample PLC Assessment:
               name: Nümunə PLC Qiymətləndirilməsi
             Star wars:
@@ -1476,6 +1481,8 @@ az:
             kurs
           description_audience: 6-13 yaş
           lessons:
+            Binary Bracelets:
+              name: ikili bilərziklər
             Building a Foundation:
               name: Təməl qurmaq
             Graph Paper Programming:
@@ -1804,7 +1811,7 @@ az:
           title: Maynkraft Kod Saatı
           description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft
             dünyasında bir macəra yaşadın.
-          description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
+          description_short: Explore a Minecraft world through code.
           lessons:
             Hour of Code 2015:
               name: Kod Saatı 2015
@@ -3044,6 +3051,8 @@ az:
               name: Onlayn İnternet Təhlükəsizliyi
             Online My New Pet Jigsaw:
               name: Onlayn Mənim Yeni Heyvanım Yapboz
+            Binary Bracelets:
+              name: ikili bilərziklər
             The Big Event:
               name: Böyük hadisə
         transferring-over:
@@ -3338,10 +3347,10 @@ az:
             CSD Post-Course Survey:
               name: CSD Kursdan Sonra Sorğu
         minecraft:
-          description_short: Öz Minecraft versiyanızda heyvanları və başqa Minecraft
-            varlıqlarını proqramlaşdırın.
-          description: Öz Minecraft versiyanızda heyvanları və başqa Minecraft varlıqlarını
-            proqramlaşdırın.
+          description_short: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft
+            canlılarını proqramlaşdırın.
+          description: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft
+            canlılarını proqramlaşdırın.
           lessons:
             Minecraft Hour of Code Designer:
               description_student: Bu dərsdə hər yaşda olan öyrənənlər təhlükəsiz,
@@ -3358,8 +3367,8 @@ az:
                 lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta
                 məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun
                 səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
-          student_description: Öz Minecraft versiyanızda heyvanları və başqa Minecraft
-            varlıqlarını proqramlaşdırın.
+          student_description: Minecraft-ın öz versiyanızda heyvanları və digər Minecraft
+            canlılarını proqramlaşdırın.
         flappy-impact-study:
           title: Sorğu ilə Flappy Kodu
           lessons:
@@ -3411,6 +3420,8 @@ az:
               name: Onlayn İnternet Təhlükəsizliyi
             More CS with Run Marco:
               name: Run Marco ilə daha çox CS
+            Binary Bracelets:
+              name: ikili bilərziklər
             Building a Foundation:
               name: Təməl qurmaq
             Loops in Harvester:
@@ -4390,7 +4401,7 @@ az:
             other:
               name: digər
             Thanks:
-              name: Təşəkkürlər,
+              name: Təşəkkürlər.
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -5068,6 +5079,8 @@ az:
               name: Artistdəki funksiyalar
             The Power of Words:
               name: Sözlərin Gücü
+            Binary Bracelets:
+              name: ikili bilərziklər
             'Unplugged: Binary':
               name: İkilik təsvirlər
             Internet:
@@ -5141,6 +5154,8 @@ az:
               name: Laurel ilə xəzinə toplama
             'Events: The Big Event':
               name: Böyük hadisə
+            Binary Bracelets:
+              name: ikili bilərziklər
           student_description: Ardıcıllıq, döngələr və hadisələrlə proqramlar yaradın.
             Baş hərflərinizi binar hərflərə tərcümə edin, müxtəlif problemlərin həlli
             üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun
@@ -6073,6 +6088,8 @@ az:
               name: Layihənizi Qurun
             Present Your Project:
               name: Layihənizi Təqdim edin
+            Binary Bracelets:
+              name: ikili bilərziklər
             'Unplugged: Binary':
               name: 'Sərbəst: İkilik say sistemi '
             Artist Binary:
@@ -6205,6 +6222,8 @@ az:
               name: Rəssamdakı döngələr
             'Events: The Big Event':
               name: Böyük hadisə
+            Binary Bracelets:
+              name: ikili bilərziklər
             'End of Course Project: Create a Play Lab Game':
               name: Kurs layihələrinin sonu!
             Powerful Passwords:
@@ -7790,6 +7809,8 @@ az:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Collector:
               name: Laurel ilə xəzinə toplama
+            Binary Bracelets:
+              name: ikili bilərziklər
             'Events: The Big Event':
               name: Böyük hadisə
             'End of Course Project: Create a Play Lab Game':
@@ -8856,6 +8877,9 @@ az:
               name: Əsəbi quşlarla proqramlaşdırma
             Programming in Collector:
               name: Laurel ilə xəzinə toplama
+            Binary Bracelets:
+              key: ikili bilərziklər
+              name: ikili bilərziklər
             Loops in Harvester:
               key: Biçinçidə Dövrlər
             Looking Ahead:
@@ -10104,6 +10128,21 @@ az:
               display_name: dəyişənlər
             lessonGroup-4:
               display_name: Kurs layihələrinin sonu!
+        csd6-pilot-2022:
+          lessons:
+            Board Events:
+              name: İdarə Heyətinin Tədbirləri
+            Arrays and Color LEDs:
+              name: Rəngli LEDlər
+            Making Music:
+              name: Musiqi bəstələmək
+            Functions with Parameters:
+              name: Funksiyalar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-ci Fəsil
+            lessonGroup-3:
+              display_name: 2-ci Fəsil
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -10414,6 +10453,9 @@ az:
               name: Laurel ilə xəzinə toplama
             The Big Event:
               name: Böyük hadisə
+            Binary Bracelets:
+              name: ikili bilərziklər
+              key: ikili bilərziklər
             End of Course Project:
               name: Kurs layihələrinin sonu!
             'Programming: My Robotic Friends':
@@ -10679,6 +10721,10 @@ az:
           lessons:
             lesson-1:
               name: CSA-ya Xoş Gəldiniz
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: dövrlər
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -10704,6 +10750,9 @@ az:
             csf_events:
               display_name: Tədbirlər
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: dəyişənlər
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -10729,3 +10778,212 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+        csa1-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: CSA-ya Xoş Gəldiniz
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: dövrlər
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: dərs-10
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+              name: Qiymətləndirmə günü
+            lesson-16:
+              key: dərs-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-10:
+              key: dərs-10
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+              name: Qiymətləndirmə günü
+            lesson-16:
+              key: dərs-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Sözlərin Gücü
+              key: Sözlərin Gücü
+            Introducing Sprite Lab:
+              name: Sprite Laboratoriyasını təqdim edirik
+              description_student: Proqramların və vasitələrin istifadəçilərə onlardan
+                necə istifadə etmələri ilə bağlı seçimlər verdiyinə diqqət yetirərək
+                kompüterlər və texnologiyanın həyatınızdakı rolunu müzakirə edəcəksiniz.
+              key: Sprite Laboratoriyasını təqdim edirik
+            Making Sprites:
+              name: Spraytlar düzəltmək
+              key: Spraytlar düzəltmək
+            Sprites in Action:
+              name: Spritelar Hərəkətdə
+              key: Spritelar Hərəkətdə
+            'Mini-Project: User Input Programs':
+              description_student: Dəyişənlərlə yeni bacarıqlarınızı üç açıq layihədən
+                birinə tətbiq edin.
+            The Internet:
+              name: İnternet
+              key: İnternet
+            End of Course Project:
+              name: Kurs layihələrinin sonu!
+              key: Kurs layihələrinin sonu!
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Rəqəmsal vətəndaşlıq
+            ramp_up:
+              display_name: Spraytlar
+            lessonGroup-8:
+              display_name: dəyişənlər
+            end_of_course_project:
+              display_name: Kurs layihələrinin sonu!
+          description_audience: 'Yaşlar: 9-13'
+          description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin
+            və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
+        csa6-2022:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+              key: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: dərs-1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa7-2022:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+              key: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa8-2022:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+              key: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Xoş gəlmişsiniz
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: dəyişənlər
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        k5-onlinepd-2022:
+          lessons:
+            Welcome and Introduction:
+              name: Xoş gəldiniz və Giriş
+            Getting Started:
+              name: Başlanğıc
+              key: Başlanğıc
+            Teaching a Lesson:
+              name: Dərs keçmək
+            Sequencing:
+              name: Ardıcıllıq qurmaq
+              key: Ardıcıllıq qurmaq
+            Loops:
+              name: dövrlər
+              key: dövrlər
+            Events:
+              name: Tədbirlər
+              key: Tədbirlər
+            Conditionals:
+              name: Şərti ifadələr
+              key: Şərti ifadələr
+            Functions:
+              name: Funksiyalar
+              key: Funksiyalar
+            Variables:
+              name: dəyişənlər
+              key: dəyişənlər
+            For Loops:
+              name: '"For" dövrü'
+              key: '"For" dövrü'
+            Taking next steps:
+              name: Növbəti addımları atmaq
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Xoş gəldiniz və Giriş
+            Lesson Planning:
+              key: Dərs Planlaşdırma
+              name: Dərs keçmək
+            Next steps:
+              key: Növbəti addımlar
+              name: Növbəti addımları atmaq

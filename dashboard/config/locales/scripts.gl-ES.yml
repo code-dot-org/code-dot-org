@@ -2525,6 +2525,10 @@ gl:
           lesson_groups:
             lessonGroup-3:
               display_name: Variables
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funcións
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2651,13 +2655,59 @@ gl:
               display_name: Cidadanía dixital
             lessonGroup-8:
               display_name: Variables
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Bucles
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: Bucles
             csf_events:
               display_name: Eventos
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variables
         cs4all-invasive-species:
           lessons:
             lesson-12:
               name: Condicionais
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Bucles
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: A Internet
+              key: A Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+            lessonGroup-8:
+              display_name: Variables
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Bucles
+              key: Bucles
+            Events:
+              name: Eventos
+              key: Eventos
+            Conditionals:
+              name: Condicionais
+              key: Condicionais
+            Functions:
+              name: Funcións
+              key: Funcións
+            Variables:
+              name: Variables
+              key: Variables
+            For Loops:
+              name: Bucles "Para" (For)
+              key: Bucles "Para" (For)

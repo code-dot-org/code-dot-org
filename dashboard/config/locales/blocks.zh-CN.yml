@@ -357,6 +357,7 @@ zh-CN:
             '"right"': 右列
             '"x"': 十字交叉
             '"plus"': 添加
+            '"infinity"': 无穷线
             '"random"': 随机
       Dancelab_makeAnonymousDanceSprite:
         text: 在 {LOCATION} 创建一个新的 {COSTUME}
@@ -437,6 +438,26 @@ zh-CN:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': 外星人
             '"BEAR"': 熊
@@ -464,6 +485,7 @@ zh-CN:
             '"right"': 右列
             '"x"': 十字交叉
             '"plus"': 添加
+            '"infinity"': 无穷线
             '"random"': 随机
       Dancelab_mixColors:
         text: 混合 {COLOR1} 和 {COLOR2}
@@ -527,6 +549,7 @@ zh-CN:
             '"fireworks"': 烟火
             '"flowers"': 花朵
             '"growing_stars"': 变大的星星
+            '"higher_power"': Higher Power
             '"swirl"': 催眠
             '"kaleidoscope"': 万花筒
             '"lasers"': 激光舞池
@@ -1001,6 +1024,7 @@ zh-CN:
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
       gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(spinning_right, []): 向右旋转
@@ -1066,6 +1090,7 @@ zh-CN:
           假如{NUM}={VAL}
           {STATEMENT}
       gamelab_int10:
+        text: "{VALUE}"
         options:
           VALUE:
             '1': '1'
@@ -1259,6 +1284,7 @@ zh-CN:
       gamelab_playSpeech:
         text: 游戏言语{SOUND}
       gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): 使用方向键移动
@@ -1288,6 +1314,8 @@ zh-CN:
         text: 从 {THIS} 删除颜色
       gamelab_repeatForever:
         text: 一直重复
+      gamelab_resetTimer:
+        text: 重置计时器
       gamelab_setAnimation:
         text: 将 {THIS} 的服装改为 {ANIMATION}
       gamelab_setBackground:

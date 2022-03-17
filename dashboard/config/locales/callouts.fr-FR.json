@@ -115,7 +115,7 @@
           "arrow_buttons": "Appuie sur les boutons fléchés pour contrôler ton danseur."
         },
         "CourseD_Dance_2020_04": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Ajoute un nouvel événement à ton programme."
@@ -131,23 +131,23 @@
           "new_block_4": "Nouveau bloc !"
         },
         "CourseD_Dance_Party_01": {
-          "dance_callout_01": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_01": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_Party_02": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_Party_04": {
-          "dance_callout_04": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_04": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_Party_06": {
-          "dance_callout_06": "Ajoutez votre nouveau danseur ici"
+          "dance_callout_06": "Ajoute ton nouveau danseur ici"
         },
         "CourseD_Dance_Party_11": {
           "dance_callout_11_a": "Nouveau bloc !",
           "dance_callout_11_b": "Nouveau bloc !"
         },
         "CourseD_Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Regardez ici les blocs « tous les canards »"
+          "dance_party_11_5_groups": "Retrouve les blocs « tous les canards » ici"
         },
         "Dance_2019_01": {
           "dance_callout_01": "Choisis le type de danseur ici."
@@ -157,7 +157,7 @@
           "arrow_buttons": "Appuie sur les boutons fléchés pour contrôler ton danseur."
         },
         "Dance_2019_04": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "Dance_2019_05": {
           "dance_callout_05": "Ajoute un nouvel événement à ton programme."
@@ -173,23 +173,23 @@
           "new_block_4": "Nouveau bloc !"
         },
         "Dance_Party_01": {
-          "dance_callout_01": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_01": "Ajoute ce bloc à ton programme ! "
         },
         "Dance_Party_02": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "Dance_Party_04": {
-          "dance_callout_04": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_04": "Ajoute ce bloc à ton programme ! "
         },
         "Dance_Party_06": {
-          "dance_callout_06": "Ajoutez votre nouveau danseur ici"
+          "dance_callout_06": "Ajoute ton nouveau danseur ici"
         },
         "Dance_Party_11": {
           "dance_callout_11_a": "Nouveau bloc !",
           "dance_callout_11_b": "Nouveau bloc !"
         },
         "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Regardez ici les blocs « tous les canards »"
+          "dance_party_11_5_groups": "Retrouve les blocs « tous les canards » ici"
         },
         "Fish Tank 3-validated_2019": {
           "spritelab_comment": "Utilise ce bloc pour laisser, à ton professeur ou toi-même, des notes sur le fonctionnement de ton code.\n"
@@ -1404,7 +1404,7 @@
           "arrow_buttons": "Appuie sur les boutons fléchés pour contrôler ton danseur."
         },
         "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+          "dance_callout_02": "Ajoute ce bloc à ton programme ! "
         },
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Ajoute un nouvel événement à ton programme."
@@ -1491,7 +1491,7 @@
           "courseA_playLab_events5_1": "Clique ici pour changer la direction de la flèche évènement."
         },
         "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_1": "Ceci te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras jusqu'à ce que tu l'entende!"
+          "courseA_playLab_events6_1": "Ceci te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras jusqu'à ce que tu l'entendes !"
         },
         "courseB_Scrat_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
@@ -1936,6 +1936,21 @@
           "poetry_background": "Trouvez les blocs de code ici. ",
           "pause_button": "Testez l'animation que vous avez créée avec ce bouton.",
           "run_button": "Testez l'animation que vous avez créée avec ce bouton."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Ajoute tes blocs ici"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Que fait cette ligne?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Définie startGame ici"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Définie movePlayer() ici"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Vérifie si un joueur a gagné"
         }
       }
     }

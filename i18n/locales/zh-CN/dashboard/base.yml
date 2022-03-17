@@ -296,6 +296,7 @@ zh-CN:
       provider_managed_section: "这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过 %{provider} 将你加入，并重新同步该小组。"
       restricted_section: "我们无法将您添加到%{section_code}小组，因为它被锁定。请联系你的老师寻求帮助。"
       full_section: "我们无法将您添加到%{section_code}部分，因为其中已经有%{section_capacity}个学生。请联系你的老师寻求帮助。"
+      not_participant_type: "我们无法将您添加到%{section_code}部分，因为您不满足该部分的参与者类型。"
     mail:
       student_disassociated:
         subject: "Code.org 提醒：%{student_name} 已不再是您的学生。"
@@ -555,6 +556,7 @@ zh-CN:
     all_students_must_be_in_current_section: "所有的学生都必须注册到小组中。"
     already_enrolled_in_new_section: "无法移动这些学生，因为他们已经在这个新的小组里了。"
     third_party_login: "不能将从第三方工具同步的学生移动到另一个小组。"
+    not_correct_participant_type: "您无法移动这些用户，因为他们没有成为新部分的参与者的权限。"
   share:
     title: "在代码工作室学习"
     description: "任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。"
@@ -596,6 +598,7 @@ zh-CN:
     how_it_works: '它是如何工作的（查看代码）'
     try_hour_of_code: '试试《编程一小时》！'
     store: '商店'
+    cookie_notice: 'Cookie通知'
   reference_area:
     title: '需要帮助吗？'
     subtitle: '看看这些视频和提示'

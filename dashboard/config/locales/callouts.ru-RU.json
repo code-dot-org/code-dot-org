@@ -2017,6 +2017,99 @@
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Найдите блоки кода здесь. ",
           "run_button": "Протестируйте анимацию, нажав на эту кнопку."
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Нажмите здесь, чтобы показать сетку."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Поменяйте число здесь"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Вот код"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Вот код",
+          "CSD_U3_rect_c2": "Перетащите этот блок в область кода."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Добавь свой код здесь"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Что делает эта линия?"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Проверьте, если игрок выиграл"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Поменяйте число здесь"
         }
       }
     }

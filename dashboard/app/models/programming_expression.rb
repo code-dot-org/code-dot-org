@@ -22,6 +22,7 @@
 class ProgrammingExpression < ApplicationRecord
   include CurriculumHelper
   include SerializedProperties
+  include Rails.application.routes.url_helpers
 
   belongs_to :programming_environment
   belongs_to :programming_environment_category
@@ -30,6 +31,8 @@ class ProgrammingExpression < ApplicationRecord
 
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format
+
+  after_destroy :remove_serialization
 
   serialized_attrs %w(
     color
@@ -59,7 +62,7 @@ class ProgrammingExpression < ApplicationRecord
       else
         environment_name == 'spritelab' ? expression_config['color'] : ProgrammingExpression.get_category_color(expression_config['category'])
       end
-    expression_config.symbolize_keys.except(:category_key).merge(
+    expression_config.symbolize_keys.except(:category_key, :parameters).merge(
       {
         programming_environment_id: programming_environment.id,
         programming_environment_category_id: env_category&.id,
@@ -125,11 +128,11 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def self.seed_all
-    removed_records = all.pluck(:name)
+    removed_records = all.pluck(:id)
     Dir.glob(Rails.root.join("config/programming_expressions/{applab,gamelab,weblab,spritelab}/*.json")).each do |path|
       removed_records -= [ProgrammingExpression.seed_record(path)]
     end
-    where(name: removed_records).destroy_all
+    where(id: removed_records).destroy_all
   end
 
   def self.seed_record(file_path)
@@ -137,11 +140,15 @@ class ProgrammingExpression < ApplicationRecord
     record = ProgrammingExpression.find_or_initialize_by(key: properties[:key], programming_environment_id: properties[:programming_environment_id])
     record.assign_attributes(properties)
     record.save! if record.changed?
-    record.name
+    record.id
   end
 
   def documentation_path
     "/docs/#{programming_environment.name}/#{key}/"
+  end
+
+  def studio_documentation_path
+    programming_environment_programming_expression_path(programming_environment.name, key)
   end
 
   def summarize_for_lesson_edit
@@ -176,7 +183,8 @@ class ProgrammingExpression < ApplicationRecord
       returnValue: return_value || '',
       tips: tips || '',
       parameters: palette_params || [],
-      examples: examples || []
+      examples: examples || [],
+      showPath: studio_documentation_path
     }
   end
 
@@ -216,7 +224,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       color: get_color,
       syntax: syntax,
-      link: documentation_path
+      link: studio_documentation_path
     }
   end
 
@@ -236,6 +244,10 @@ class ProgrammingExpression < ApplicationRecord
     end
   end
 
+  def file_path
+    Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
+  end
+
   def serialize
     {
       key: key,
@@ -247,8 +259,42 @@ class ProgrammingExpression < ApplicationRecord
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    file_path = Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: true)}.json")
     object_to_serialize = serialize
+    directory_name = File.dirname(file_path)
+    Dir.mkdir(directory_name) unless File.exist?(directory_name)
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
+  end
+
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    File.delete(file_path) if File.exist?(file_path)
+  end
+
+  def clone_to_programming_environment(environment_name, new_category_key = nil)
+    new_env = ProgrammingEnvironment.find_by_name(environment_name)
+    raise "Cannot find programming environment with name #{environment_name}" unless new_env
+
+    # Find the category for the new expressions:
+    # - if new_category_key is provided, use that
+    # - if not, try to find a category with the same key as the original expression's category
+    # - if that doesn't exist, search for a category with the same name as the original expression's category
+    # As there's no (current) problem with an expression not having a category,
+    # stop there. It won't appear in navigation but will still be valid
+    new_category = nil
+    if new_category_key
+      new_category = new_env.categories.find_by_key(new_category_key)
+    else
+      new_category ||= new_env.categories.find_by_key(programming_environment_category&.key)
+      new_category ||= new_env.categories.find_by_name(programming_environment_category&.name)
+    end
+
+    new_exp = dup
+    new_exp.programming_environment_id = new_env.id
+    new_exp.programming_environment_category_id = new_category&.id
+
+    new_exp.save!
+    new_exp.write_serialization
+
+    new_exp
   end
 end

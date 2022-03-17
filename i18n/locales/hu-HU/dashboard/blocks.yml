@@ -435,6 +435,26 @@ hu:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': földönkívüliek
             '"BEAR"': összes medve
@@ -1164,7 +1184,7 @@ hu:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
-        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
+        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} sprite-okkal"
         options:
           EFFECT:
             '"burst"': robbanás
@@ -1192,7 +1212,7 @@ hu:
       gamelab_mouseLocation:
         text: egér helye
       gamelab_moveBackward:
-        text: vidd {SPRITE} manót {DISTANCE} képponttal vissza
+        text: vidd {SPRITE} sprite-ot {DISTANCE} képponttal vissza
       gamelab_moveForward:
         text: "{SPRITE} lépj {DISTANCE} képpontot előre"
       gamelab_moveInDirection:
@@ -1325,7 +1345,7 @@ hu:
       gamelab_setBackgroundImageAs:
         text: háttér beállítása {IMG}
       gamelab_setDefaultSpriteSize:
-        text: új manó készítése szokásosról {SIZE} méretben
+        text: új sprite készítése szokásosról {SIZE} méretben
         options:
           SIZE:
             '25': nagyon kicsi
@@ -1401,11 +1421,11 @@ hu:
       gamelab_startGliding:
         text: "{SPRITE} kezd siklani"
       gamelab_stopAvoiding:
-        text: "{SPRITE} abbahagyja más manók elkerülését"
+        text: "{SPRITE} abbahagyja más sprite-ok elkerülését"
       gamelab_stopCollectingData:
         text: adatgyűjtés befejezése
       gamelab_stopFollowing:
-        text: "{SPRITE} abbahagyja más manók követését"
+        text: "{SPRITE} abbahagyja más sprite-ok követését"
       gamelab_stopGliding:
         text: "{SPRITE} befejezi a siklást"
       gamelab_subjectSpritePointer:
@@ -1832,7 +1852,7 @@ hu:
       Poetry_hideText:
         text: szöveg elrejtése
       Poetry_makeBurst:
-        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
+        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} sprite-okkal"
         options:
           EFFECT:
             '"burst"': robbanás

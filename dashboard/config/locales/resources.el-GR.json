@@ -211,6 +211,90 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Οδηγός εφαρμογής"
+        },
+        "design_mode/csd/2021": {
+          "name": "Κατάσταση Σχεδίασης"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Κατάσταση Σχεδίασης"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Πως λειτουργούν οι Υπολογιστές: Hardware & Software"
+        },
+        "functions_2/csd/2021": {
+          "name": "Συναρτήσεις"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Βρόχοι Για"
+        },
+        "for_loops/csd/2021": {
+          "name": "Βρόχοι Για"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Πως λειτουργούν οι Υπολογιστές: Κυκλώματα και Λογική"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Βίντεο: Μηχανική Μάθηση"
+        },
+        "naming_variables/csd/2021": {
+          "name": "Ορίζοντας Μεταβλητές"
+        },
+        "variables_1/csd/2021": {
+          "name": "Μεταβλητές"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Η Καρτέλα Κίνησης"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Χαρακτήρας"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Ιδιότητες Χαρακτήρα"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Boolean Εκφράσεις"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Συνθήκες Ελέγχου"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Δηλώσεις Αν/Αλλιώς"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Ταχύτητα"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Ταχύτητα"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Συναρτήσεις"
+        },
+        "functions_1/csd/2021": {
+          "name": "Συναρτήσεις"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Κεφαλίδες και Παράγραφοι"
+        },
+        "lists/csd/2021": {
+          "name": "Λίστες"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Εισαγωγή στην CSS - μέρος 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Εισαγωγή στην CSS - μέρος 2"
+        },
+        "layout-properties/csd/2021": {
+          "name": "Ιδιότητες Διάταξης"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Υπερσύνδεσμοι"
         }
       }
     }

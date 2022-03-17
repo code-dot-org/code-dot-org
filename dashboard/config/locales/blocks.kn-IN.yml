@@ -5,68 +5,144 @@ kn:
       Dancelab_alternateMoves:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          MOVE1:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+          MOVE2:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': ಸೆಕೆಂಡುಗಳು
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          MOVE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_changeMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
       Dancelab_changePropEachBy:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
       Dancelab_doMoveEachLR:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          MOVE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ಸೆಕೆಂಡುಗಳು
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ಸೆಕೆಂಡುಗಳು
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': ಸೆಕೆಂಡುಗಳು
       Dancelab_jumpTo:
         options:
           LOCATION:
+            "{x: 100, y: 200}": ಎಡಕ್ಕೆ
+            "{x: 300, y: 200}": ಬಲಕ್ಕೆ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ಯಾದೃಚ್ಛಿಕ
       Dancelab_jumpToEach:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
           LOCATION:
+            "{x: 100, y: 200}": ಎಡಕ್ಕೆ
+            "{x: 300, y: 200}": ಬಲಕ್ಕೆ
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ಯಾದೃಚ್ಛಿಕ
       Dancelab_layoutSprites:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
           FORMAT:
+            '"diamond"': ವಜ್ರ
             '"grid"': ಗ್ರಿಡ್
             '"spiral"': ಸ್ಪೈರಲ್
             '"random"': ಯಾದೃಚ್ಛಿಕ
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
+            '"ALIEN"': ಏಲಿಯನ್
             '"BEAR"': ಕರಡಿ
+            '"CAT"': ಬೆಕ್ಕು
+            '"DOG"': ನಾಯಿ
+            '"DUCK"': ಡಕ್
             '"FROG"': ಕಪ್ಪೆ
             '"MOOSE"': ಮೂಸ್
             '"PINEAPPLE"': ಪೈನಾಪಲ್
+            '"ROBOT"': ರೋಬೋಟ್
             '"SHARK"': ಶಾರ್ಕ್
+            '"UNICORN"': ಯುನಿಕಾರ್ನ್
           LOCATION:
+            "{x: 100, y: 200}": ಎಡಕ್ಕೆ
+            "{x: 300, y: 200}": ಬಲಕ್ಕೆ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ಯಾದೃಚ್ಛಿಕ
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
+            '"ALIEN"': ಏಲಿಯನ್
             '"BEAR"': ಕರಡಿ
+            '"CAT"': ಬೆಕ್ಕು
+            '"DOG"': ನಾಯಿ
+            '"DUCK"': ಡಕ್
             '"FROG"': ಕಪ್ಪೆ
             '"MOOSE"': ಮೂಸ್
             '"PINEAPPLE"': ಪೈನಾಪಲ್
+            '"ROBOT"': ರೋಬೋಟ್
             '"SHARK"': ಶಾರ್ಕ್
+            '"UNICORN"': ಯುನಿಕಾರ್ನ್
           LOCATION:
+            "{x: 100, y: 200}": ಎಡಕ್ಕೆ
+            "{x: 300, y: 200}": ಬಲಕ್ಕೆ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ಯಾದೃಚ್ಛಿಕ
       Dancelab_makeNewDanceSpriteGroup:
         options:
@@ -75,15 +151,24 @@ kn:
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
           LAYOUT:
+            '"diamond"': ವಜ್ರ
             '"grid"': ಗ್ರಿಡ್
             '"spiral"': ಸ್ಪೈರಲ್
             '"random"': ಯಾದೃಚ್ಛಿಕ
       Dancelab_randomColor:
         text: ಯಾದೃಚ್ಛಿಕ ಬಣ್ಣ
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': ಯಾವುದೂ ಅಲ್ಲ
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': ಸಾಮಾನ್ಯ
             '2': ತ್ವರಿತ
             '4': very fast
             '0.5': slow
@@ -91,57 +176,121 @@ kn:
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
           SPEED:
-            '1': normal
+            '1': ಸಾಮಾನ್ಯ
             '2': ತ್ವರಿತ
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
       Dancelab_setPropEach:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
       Dancelab_setPropRandomEach:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
       Dancelab_setTintEach:
         options:
           THIS:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
       Dancelab_setTintEachInline:
         options:
           THIS:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
       Dancelab_setVisibleEach:
         options:
           THIS:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
       Dancelab_startMappingEach:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
       Dancelab_stopMappingEach:
         options:
           GROUP:
+            sprites: ಎಲ್ಲ
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ವಜ್ರ
+            '"x"': x
+            '"y"': y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ಮೇಲಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
+            '"down"': ಕೆಳಕ್ಕೆ
+            '"right"': ಬಲಕ್ಕೆ
+            '"space"': ಸ್ಪೇಸ್
+            '"x"': x
+            '"y"': y
       gamelab_addBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} ಆರಂಭ {BEHAVIOR}
       gamelab_addTarget:
@@ -156,6 +305,7 @@ kn:
         text: "{N} {UNIT} ನಲ್ಲಿ"
         options:
           UNIT:
+            '"seconds"': ಸೆಕೆಂಡುಗಳು
             '"frames"': ಫ್ರೇಮ್‌ಗಳು
       gamelab_avoidingTargets:
         text: ಟಾರ್ಗೆಟ್‌ಗಳನ್ನು ದೂರವಿಡುವುದು
@@ -164,8 +314,19 @@ kn:
           ಆರಂಭಿಸಿ"
       gamelab_bounceOff:
         text: "{SPRITE} {TARGET} ಗೆ ಬೌನ್ಸ್ ಆಗುತ್ತದೆ"
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
+            '"speed"': ವೇಗ
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} ಇದು {SPRITE2} ಅನ್ನು ಸ್ಪರ್ಶಿಸುತ್ತದೆ"
+        options:
+          CONDITION:
+            '"when"': ಯಾವಾಗ
+            '"while"': ಅದೇ ಸಮಯದಲ್ಲಿ
       gamelab_clickedOn:
         text: "{SPRITE} ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ"
       gamelab_clickedSpritePointer:
@@ -198,6 +359,13 @@ kn:
         text: ಟಾರ್ಗೆಟ್‌ಗಳನ್ನು ಹಿಂಬಾಲಿಸುವುದು
       gamelab_getAllSprites:
         text: ಎಲ್ಲ ಸ್ಪ್ರೈಟ್‌ಗಳು
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
+            '"speed"': ವೇಗ
       gamelab_getThisSprite:
         text: "{CHOICE} ಸ್ಪ್ರೈಟ್"
         options:
@@ -208,6 +376,7 @@ kn:
         text: "{UNIT} ನಲ್ಲಿ ಸಮಯ"
         options:
           UNIT:
+            '"seconds"': ಸೆಕೆಂಡುಗಳು
             '"frames"': ಫ್ರೇಮ್‌ಗಳು
       gamelab_glideTo:
         text: "{SPRITE} ಇದು {LOCATION} ಗ್ಲೈಡ್ ಮಾಡಿ"
@@ -221,12 +390,33 @@ kn:
         text: "{SPRITE} ಕಾಸ್ಟ್ಯೂಮ್‌ {COSTUME}"
       gamelab_isKeyPressed:
         text: "{KEY} ಅನ್ನು ಒತ್ತಲಾಗಿದೆ"
+        options:
+          KEY:
+            '"up"': ಮೇಲಕ್ಕೆ
+            '"down"': ಕೆಳಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
+            '"right"': ಬಲಕ್ಕೆ
+            '"space"': ಸ್ಪೇಸ್
+            '"x"': x
+            '"y"': y
       gamelab_isTouchingEdges:
         text: "{SPRITE} ಅಂಚುಗಳನ್ನು ಸ್ಪರ್ಶಿಸುತ್ತಿದೆ"
       gamelab_isTouchingSprite:
         text: "{SPRITE} ಇದು {TARGET} ಅನ್ನು ಸ್ಪರ್ಶಿಸುತ್ತಿದೆ"
       gamelab_keyPressed:
         text: "{CONDITION} {KEY} ಒತ್ತಲಾಗಿದೆ"
+        options:
+          CONDITION:
+            '"when"': ಯಾವಾಗ
+            '"while"': ಅದೇ ಸಮಯದಲ್ಲಿ
+          KEY:
+            '"up"': ಮೇಲಕ್ಕೆ
+            '"down"': ಕೆಳಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
+            '"right"': ಬಲಕ್ಕೆ
+            '"space"': ಸ್ಪೇಸ್
+            '"x"': x
+            '"y"': y
       gamelab_locationAt:
         text: 'ಸ್ಥಳ x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -249,6 +439,7 @@ kn:
           EFFECT:
             '"burst"': ಬರ್ಸ್ಟ್‌
             '"pop"': ಪಾಪ್
+            '"rain"': ಮಳೆ
             '"spiral"': ಸ್ಪೈರಲ್
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
@@ -257,8 +448,18 @@ kn:
       gamelab_makeProjectile:
         text: "{SPEED} ವೇಗದಲ್ಲಿ {DIRECTION} ದಿಕ್ಕಿನಲ್ಲಿ {LOCATION} ಇಂದ {ANIMATION_NAME}
           ಪ್ರಾಜೆಕ್ಟೈಲ್ ರಚಿಸಿ"
+        options:
+          DIRECTION:
+            '0': ಬಲಕ್ಕೆ
+            '90': ಕೆಳಕ್ಕೆ
+            '180': ಎಡಕ್ಕೆ
+            '270': ಮೇಲಕ್ಕೆ
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ಕಡೆಗೆ"
+        options:
+          DIRECTION:
+            '"right"': ಬಲಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
       gamelab_mouseLocation:
         text: ಮೌಸ್ ಸ್ಥಳ
       gamelab_moveBackward:
@@ -292,19 +493,25 @@ kn:
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": ಪಾಪ್
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": ಟ್ವಿಂಕಲ್
             "'sound://category_app/app_button_1.mp3'": ಬಟನ್
+            "'sound://category_collect/clicky_crunch.mp3'": ಕ್ರಂಚ್
             "'sound://category_swish/quick_swing.mp3'": ಸ್ವಿಂಗ್
             "'sound://category_nature/summer_night_loop.mp3'": ಬೇಸಿಗೆಯ ರಾತ್ರಿ
             "'sound://category_background/ocean_waves.mp3'": ಸಮುದ್ರದ ಅಲೆಗಳು
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": ಬೀಚ್ ರಿಪಲ್
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": ಬಬಲ್
             "'sound://category_animals/bear.mp3'": ಕರಡಿ
+            "'sound://category_animals/cat.mp3'": ಬೆಕ್ಕು
+            "'sound://category_animals/cow.mp3'": ಆಕಳು
             "'sound://category_animals/pig.mp3'": ಹಂದಿ
+            "'sound://category_animals/sheep.mp3'": ಶೀಪ್
             "'sound://category_animals/goat.mp3'": ಕುರಿ
+            "'sound://category_animals/chicken.mp3'": ಚಿಕನ್
             "'sound://category_animals/rooster.mp3'": ರೂಸ್ಟರ್
             "'sound://category_animals/elephant.mp3'": ಆನೆ
             "'sound://category_animals/dolphin.mp3'": ಡಾಲ್ಫಿನ್
             "'sound://category_nature/thunderstorm_1.mp3'": ಗುಡುಗು
             "'sound://category_animals/chick.mp3'": ಚಿಕ್
+            "'sound://category_animals/dog.mp3'": ನಾಯಿ
             "'sound://category_animals/tiger.mp3'": ಹುಲಿ
             "'sound://category_collect/trill_stings.mp3'": ಟ್ರಿಲ್
             "'sound://category_instrumental/harpe_pluck_1.mp3'": ಹಾರ್ಪ್‌
@@ -321,6 +528,7 @@ kn:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": ಆಯ್ದ
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": ಕ್ವಿರ್ಕಿ
               ಬಾಸ್
+            "'sound://category_digital/jump_7.mp3'": ಜಂಪ್
       gamelab_playSpeech:
         text: "{SOUND} ಸ್ಪೀಚ್ ಪ್ಲೇ ಮಾಡಿ"
       gamelab_playerBehaviors:
@@ -349,15 +557,20 @@ kn:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} {BEHAVIOR}  ನಿಲ್ಲಿಸುತ್ತದೆ
       gamelab_removeTint:
         text: "{THIS} ಇಂದ ಬಣ್ಣವನ್ನು ತೆಗೆದುಹಾಕಿ"
+      gamelab_repeatForever:
+        text: ಎಂದಿಗೂ ರಿಪೀಟ್ ಮಾಡಿ
       gamelab_setAnimation:
         text: "{THIS} ಕಾಸ್ಟ್ಯೂಮ್ ಅನ್ನು {ANIMATION} ಗೆ ಬದಲಿಸಿ"
       gamelab_setBackgroundImage:
         text: "{IMG} ಗೆ ಹಿನ್ನೆಲೆಯನ್ನು ನಿಗದಿಸಿ"
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ಗುಹೆ
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ನಗರ
             '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': ನಿರಂತರ
               ಗ್ರಾಸ್
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': ಕೋರ್ಟ್‌
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ಮರುಭೂಮಿ
             '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ಡೆಸರ್ಟ್
               ರಸ್ತೆ
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': ಕೃಷಿ
@@ -375,6 +588,7 @@ kn:
               ನೋಟ
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': ಪೈನ್
               ಮರಗಳು
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ರೇನ್‌ಬೋ
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ಸೈಫೈ
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': ಸಾಕರ್
               ಫೀಲ್ಡ್
@@ -390,6 +604,8 @@ kn:
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': ಮರದ
               ದ್ವೀಪ
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ಅಂಡರ್‌ಗ್ರೌಂಡ್
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ನೀರೊಳಗಿನ
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ಚಳಿಗಾಲ
             undefined: ಇಲ್ಲ
       gamelab_setBackgroundImageAs:
         text: "{IMG} ಗೆ ಹಿನ್ನೆಲೆಯನ್ನು ನಿಗದಿಸಿ"
@@ -399,7 +615,7 @@ kn:
           SIZE:
             '25': ಹೆಚ್ಚುವರಿ ಸಣ್ಣ
             '50': ಸಣ್ಣ
-            '75': medium
+            '75': ಮಧ್ಯಮ
             '100': ದೊಡ್ಡ
       gamelab_setPrompt:
         text: "{VAR} ವೇರಿಯಬಲ್‌ಗೆ {QUESTION}  ಬಳಕೆದಾರರನ್ನು ಪ್ರಾಂಪ್ಟ್ ಮಾಡಿ"
@@ -408,22 +624,34 @@ kn:
           ಮಾಡಿ"
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} ಅನ್ನು {VAL} ಗೆ ನಿಗದಿಸಿ"
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
+            '"speed"': ವೇಗ
       gamelab_setProp_dropdown:
         text: "{SPRITE} {PROPERTY} ಅನ್ನು {SIZE} ಗೆ ನಿಗದಿಸಿ"
         options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
           SIZE:
             '25': ಹೆಚ್ಚುವರಿ ಸಣ್ಣ
             '50': ಸಣ್ಣ
-            '75': medium
+            '75': ಮಧ್ಯಮ
             '100': ದೊಡ್ಡ
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} ಅನ್ನು {N}% ಗೆ ನಿಗದಿಸಿ"
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"height"': ಎತ್ತರ
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
             '1': extra slow
             '3': slow
-            '5': normal
+            '5': ಸಾಮಾನ್ಯ
             '7': ತ್ವರಿತ
             '9': extra fast
       gamelab_setTint:
@@ -443,6 +671,10 @@ kn:
         text: ಟೈಟಲ್ ಸ್ಕ್ರೀನ್ ತೋರಿಸಿ {BREAK} ಟೈಟಲ್‌ {TITLE} ಸಬ್‌ಟೈಟಲ್ {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} ಕ್ಲಿಕ್ ಮಾಡಲಾಗಿದೆ"
+        options:
+          CONDITION:
+            '"when"': ಯಾವಾಗ
+            '"while"': ಅದೇ ಸಮಯದಲ್ಲಿ
       gamelab_spriteSay:
         text: "{SPRITE} ಹೇಳಿ {SPEECH}"
       gamelab_spriteSayTime:
@@ -471,12 +703,24 @@ kn:
         text: ಟಂಬ್ಲಿಂಗ್
       gamelab_turn:
         text: "{SPRITE} {DIRECTION} {N} ಡಿಗ್ರಿಗಳನ್ನು ತಿರುಗಿಸುತ್ತದೆ"
+        options:
+          DIRECTION:
+            '"right"': ಬಲಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
       gamelab_updateTitleWithColor:
         text: ಟೈಟಲ್ ಸ್ಕ್ರೀನ್ ತೋರಿಸಿ {BREAK} ಟೈಟಲ್ {TITLE} ಕಲರ್ {COLOR}
       gamelab_whenAllPromptsAnswered:
         text: ಎಲ್ಲ ಪ್ರಾಂಪ್ಟ್‌ಗಳಿಗೆ ಉತ್ತರಿಸಿದಾಗ
       gamelab_whenDownArrow:
         text: ಕೆಳ ಬಾಣದ ಗುರುತನ್ನು ಒತ್ತಿದಾಗ
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ಮೇಲಕ್ಕೆ
+            '"down"': ಕೆಳಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
+            '"right"': ಬಲಕ್ಕೆ
+            '"space"': ಸ್ಪೇಸ್
       gamelab_whenLeftArrow:
         text: ಎಡ ಬಾಣದ ಗುರುತು ಒತ್ತಿದಾಗ
       gamelab_whenPromptAnswered:
@@ -493,6 +737,13 @@ kn:
         text: ಕೆಳ ಬಾಣದ ಗುರುತು ಒತ್ತಿದಾಗ
       gamelab_whileKey:
         text: "{KEY} ಒತ್ತಿದಾಗ"
+        options:
+          KEY:
+            '"up"': ಮೇಲಕ್ಕೆ
+            '"down"': ಕೆಳಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
+            '"right"': ಬಲಕ್ಕೆ
+            '"space"': ಸ್ಪೇಸ್
       gamelab_whileLeftArrow:
         text: ಎಡ ಬಾಣದ ಗುರುತು ಒತ್ತಿದಾಗ
       gamelab_whileRightArrow:
@@ -527,42 +778,88 @@ kn:
       Mikelab_beginDataCollection:
         text: "{A}{B}{C} ಆಯ್ಕೆಗಳೊಂದಿಗೆ {VAR} ವೇರಿಯಬಲ್‌ಗೆ {QUESTION} ಬಳಕೆದಾರರನ್ನು ಪ್ರಾಂಪ್ಟ್
           ಮಾಡಿ"
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ಎಡಕ್ಕೆ
+            "{x: 300, y: 200}": ಬಲಕ್ಕೆ
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
       Mikelab_groupChangeAnim:
         options:
           SELECT:
+            '"all"': ಎಲ್ಲ
             '"this"': ಈ
       Mikelab_groupChangePropBy:
         options:
           SELECT:
+            '"all"': ಎಲ್ಲ
             '"this"': ಈ
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ಎಡಕ್ಕೆ
+            "{x: 300, y: 200}": ಬಲಕ್ಕೆ
       Mikelab_groupDestroy:
         options:
           SELECT:
+            '"all"': ಎಲ್ಲ
             '"this"': ಈ
       Mikelab_groupGetProp:
         options:
           SELECT:
             '"this"': ಈ
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
+            '"all"': ಎಲ್ಲ
             '"this"': ಈ
       Mikelab_groupRemoveBehaviorSimple:
         options:
           SELECT:
+            '"all"': ಎಲ್ಲ
             '"this"': ಈ
       Mikelab_groupRemoveTint:
         options:
           SELECT:
+            '"all"': ಎಲ್ಲ
             '"this"': ಈ
       Mikelab_groupSetProp:
         options:
           SELECT:
+            '"all"': ಎಲ್ಲ
             '"this"': ಈ
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
       Mikelab_groupSetTint:
         options:
           SELECT:
+            '"all"': ಎಲ್ಲ
             '"this"': ಈ
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
       Mikelab_locationAt:
         text: 'ಸ್ಥಳ x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -573,9 +870,12 @@ kn:
         text: ಯಾದೃಚ್ಛಿಕ ಬಣ್ಣ
       Mikelab_removeBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} {BEHAVIOR}  ನಿಲ್ಲಿಸುತ್ತದೆ
+      Mikelab_repeatUntilComplete:
+        text: ಎಂದಿಗೂ ರಿಪೀಟ್ ಮಾಡಿ
       Mikelab_setBG:
         options:
           BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ನಗರ
             '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': ನಿರಂತರ
               ಗ್ರಾಸ್
             '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ಡೆಸರ್ಟ್
@@ -606,6 +906,12 @@ kn:
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': ಮರದ
               ದ್ವೀಪ
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ಅಂಡರ್‌ಗ್ರೌಂಡ್
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ಗಾತ್ರ
+            '"x"': X ಸ್ಥಾನ
+            '"y"': Y ಸ್ಥಾನ
       Mikelab_setupOutbreak:
         text: 'ಔಟ್‌ಬ್ರೇಕ್ ಸೆಟಪ್ ಪಾಪ್ಯುಲೇಶನ್: [SPRITE2N] [TOGGLE] ವೈರಸ್'
       Mikelab_setupSim:
@@ -615,18 +921,47 @@ kn:
           {SPRITE2N}{SPRITE2COSTUME}ವೇಗ{SPRITE2SPEED}
           ಸಂಗ್ರಹಿಸಲಾಗುತ್ತಿದೆ
           {SPRITE3N}{SPRITE3COSTUME}
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': ಬಲಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ಎಡಕ್ಕೆ
+            "{x: 300, y: 200}": ಬಲಕ್ಕೆ
       Mikelab_whenClickedOn:
         text: "{SPRITE} ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ"
       Mikelab_whenKeyPressed:
         options:
           KEY:
+            '"up"': ಮೇಲಿನ ಬಾಣ
+            '"down"': ಕೆಳಮುಖ ಬಾಣ
+            '"left"': ಎಡ ಬಾಣ
+            '"right"': ಬಲ ಬಾಣ
+            '"w"': W
             '"a"': A
+            '"s"': S
             '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
+            '"up"': ಮೇಲಿನ ಬಾಣ
+            '"down"': ಕೆಳಮುಖ ಬಾಣ
+            '"left"': ಎಡ ಬಾಣ
+            '"right"': ಬಲ ಬಾಣ
+            '"w"': W
             '"a"': A
+            '"s"': S
             '"d"': D
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': ಮೇಲಿನ ಬಾಣ
+            '"down"': ಕೆಳಮುಖ ಬಾಣ
+            '"left"': ಎಡ ಬಾಣ
+            '"right"': ಬಲ ಬಾಣ
       Mikelab_xLocationOf:
         text: x {SPRITE} ನ ಕೋಆರ್ಡಿನೇಟ್
       Mikelab_yLocationOf:
@@ -657,7 +992,9 @@ kn:
             '"brick"': ಬ್ರಿಕ್
             '"fire"': ಅಗ್ನಿ
             '"flowers"': ಹೂವುಗಳು
+            '"hearts"': ಹೃದಯಗಳು
             '"leaves"': ಎಲೆಗಳು
+            '"rainbow"': ರೇನ್‌ಬೋ
             '"stars"': ನಕ್ಷತ್ರಗಳು
             '"waves"': ಅಲೆಗಳು
       Poetry_addLine:
@@ -676,6 +1013,7 @@ kn:
           EFFECT:
             '"burst"': ಬರ್ಸ್ಟ್‌
             '"pop"': ಪಾಪ್
+            '"rain"': ಮಳೆ
             '"spiral"': ಸ್ಪೈರಲ್
       Poetry_makeNewSpriteAnon:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
@@ -691,6 +1029,7 @@ kn:
             '"sound://category_loops/faultering_desicion_loop1.mp3"': ಹಾಂಟೆಡ್
             '"sound://category_background/inside_plane.mp3"': ಹಮ್
             '"sound://category_loops/red_flag_loop1.mp3"': ಧ್ಯೇಯ
+            '"sound://category_nature/summer_night_loop.mp3"': ರಾತ್ರಿ
             '"sound://category_background/ocean_waves.mp3"': ಸಮುದ್ರ
             '"sound://category_background/rainforest_ambient_sound.mp3"': ಮಳೆಕಾಡು
             '"sound://category_background/repitition.mp3"': ರೈಡಿಂಗ್
@@ -726,12 +1065,15 @@ kn:
             '"clouds"': ಮೋಡಕವಿದ ವಾತಾವರಣ
             '"darkCircles"': ಫೇಡಿಂಗ್
             '"fadeColors"': ಫ್ರಾಸ್ಟೆಡ್
+            '"hearts"': ಹೃದಯಗಳು
+            '"rain"': ಮಳೆ
           PALETTE:
             '"autumn"': ಶರತ್ಕಾಲ
             '"sunrise"': ಇಳಿಸಂಜೆ
             '"sunset"': ಮುಸ್ಸಂಜೆ
             '"grayscale"': ಗ್ರೇಗಳು
             '"ocean"': ಸಮುದ್ರ
+            '"rainbow"': ರೇನ್‌ಬೋ
             '"roses"': ಗುಲಾಬಿ
             '"sky"': ಆಕಾಶ
             '"spring"': ವಸಂತ ಕಾಲ
@@ -755,7 +1097,9 @@ kn:
         text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
         options:
           EFFECT:
+            '"hearts"': ಹೃದಯಗಳು
             '"emojis"': ಖುಷಿಯ ಎಮೋಜಿಗಳು
+            '"rain"': ಮಳೆ
             '"glass"': ಗ್ಲಾಸ್ ಒಡೆಯುವುದು
             '"twinkling"': ಟ್ವಿಂಕಲ್ ಆಗುವುದು
       Poetry_setPrompt:
@@ -802,6 +1146,12 @@ kn:
         text: ಸಾಲು {N} ತೋರಿಸಿದಾಗ
       Poetry_whenPromptAnswered:
         text: "{VAR} ಉತ್ತರಿಸಿದಾಗ"
+      RyanLab_moveForward:
+        text: ಮುಂದೆ ಸಾಗಿ
+      RyanLab_turnLeft:
+        text: ಎಡಕ್ಕೆ ತಿರುಗಿ
+      RyanLab_turnRight:
+        text: ಬಲಕ್ಕೆ ತಿರುಗು
       Vector_randomLocation:
         text: ಯಾದೃಚ್ಛಿಕ ಸ್ಥಳ
       aalab_layoutSprites:
@@ -809,24 +1159,67 @@ kn:
           FORMAT:
             '"grid"': ಗ್ರಿಡ್
             '"random"': ಯಾದೃಚ್ಛಿಕ
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': ಎಲ್ಲ
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': ಎಲ್ಲ
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} ಹೇಳಿ {SPEECH}"
+      binary_move:
+        options:
+          DIR:
+            '"up"': ಮೇಲಕ್ಕೆ
+            '"down"': ಕೆಳಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
+            '"right"': ಬಲಕ್ಕೆ
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': ಮೇಲಕ್ಕೆ
+            '"down"': ಕೆಳಕ್ಕೆ
+            '"left"': ಎಡಕ್ಕೆ
+            '"right"': ಬಲಕ್ಕೆ
+            '"space"': ಸ್ಪೇಸ್
       craft_ifPath:
         text: |-
           ಪಾಥ್‌ ಇದಾಗಿದ್ದರೆ {DIR}
           {STATEMENT}
+        options:
+          DIR:
+            "'ahead'": ಮುಂದೆ
       craft_ifStandingOn:
         text: |-
           ಮೇಲೆ ನಿಂತಿದ್ದರೆ {TYPE}
           {STATEMENT}
+        options:
+          TYPE:
+            "'sand'": ಮರಳು
+            "'planksOak'": ಓಕ್‌ ಪ್ಲಾಂಕ್‌ಗಳು
       craft_ifStandingOnLimit:
         text: |-
           ಮೇಲೆ ನಿಂತಿದ್ದರೆ {TYPE}
           {STATEMENT}
+        options:
+          TYPE:
+            "'sand'": ಮರಳು
+      craft_moveForward:
+        text: ಮುಂದೆ ಸಾಗಿ
       craft_placeBlock:
         text: ಸ್ಥಳ {blockType}
       craft_placePrismarine:
         text: ಸ್ಥಳ ಪ್ರಿಸ್ಮರಿನ್
+      craft_placeTorch:
+        text: ಟಾರ್ಚ್ ಇಡಿ
       craft_repeatUntilConduit:
         text: |-
           ಕಂಡ್ಯೂಟ್ ಪೂರ್ಣಗೊಳ್ಳುವವರೆಗೆ ಪುನರಾವರ್ತಿಸಿ

@@ -1,4 +1,5 @@
 {
+  "abortedTestResult": "{className} > {methodName} PRZERWANY",
   "addAComment": "Dodaj komentarz",
   "authorLabel": "autor",
   "allFilesCompile": "Kompilacja wszystkich plików! ",
@@ -57,6 +58,8 @@
   "errorTheaterInvalidShape": "Kształt musi zawierać parzystą liczbę wartości reprezentujących współrzędne (x,y) i musi zawierać co najmniej 4 wartości.",
   "errorTheaterVideoTooLarge": "Twój film jest za duży. Zmniejsz liczbę klatek w swoim filmie i spróbuj ponownie.",
   "errorTheaterVideoTooLong": "Twój film przekroczył maksymalny czas odtwarzania. Zmniejsz długość filmu i spróbuj ponownie.",
+  "exceptionThrown": "[EXCEPTION] {exceptionName} został rzucony",
+  "failedTestResult": "{className} > {methodName} PRZEGRANY",
   "feedbackBeginning": "To jest początek informacji zwrotnej dla Twojego projektu.",
   "feedbackBeginningPeer": "To jest początek opinii o projekcie {peerName}.",
   "illegalMethodAccess": "Próbowałeś uzyskać dostęp do metody, która jest blokowana przez naszą politykę bezpieczeństwa.\n{cause}",
@@ -104,6 +107,7 @@
   "saveToBackpack": "Zapisz w plecaku",
   "sendingVideo": "Wysyłanie filmu. Całkowita długość: {totalTime} sekund.",
   "startingPainter": "Początkujący malarz.",
+  "successfulTestResult": "{className} > {methodName} WYGRANY",
   "switchToDisplayTheme": "Przełącz na {displayTheme}",
   "timeoutWarning": "Ostrzeżenie: Twój projekt przestanie działać za 15 sekund.",
   "timeout": "Twój projekt się zatrzymał.",

@@ -3357,7 +3357,20 @@
         "courseF_variables_madlib_finish": "Selesaikan kisa spasi kosong khusus Anda.",
         "express_maze_debugging9_2021": "Gunakan blok di dalam toolbox untuk membuat program. Gerakkan Scrat sampai ke akorn.",
         "ramp_artist_loops6v1_2021": "Gunakan loop untuk menggambar tangga ini.Gunakan loop untuk menggambar tangga ini.",
-        "simcustom_2021": "Coba lakukan sedikit perubahan pada kostum sprite atau code berikut. "
+        "simcustom_2021": "Coba lakukan sedikit perubahan pada kostum sprite atau code berikut. ",
+        "CSD U3 L5 Freeplay_2021": "Ubahlah nilai ukuran petalSize beberapa kali.\nBagaimana cara mengubah gambar anda?",
+        "CSD U3 Variables change circle size_2021": "Ubahlah nilai ukuran petalSize beberapa kali.\nBagaimana cara mengubah gambar anda?",
+        "CSD U3 Variables naming rules v2_2021": "Ubahlah nilai ukuran petalSize beberapa kali.\nBagaimana cara mengubah gambar anda?",
+        "CSD U3 Variables random with assignment_2021": "Ubahlah nilai ukuran petalSize beberapa kali.\nBagaimana cara mengubah gambar anda?",
+        "CSD U5 black white images pixelation 2_2021": "Gambarlah wajah tersenyum (klik\ndi sini untuk melihat gambar)",
+        "CSD U5 black white images pixelation 3_2021": "Ubah alat pengendali lebar dan tinggi untuk menemukan gambar (klik disini untuk melihat lebih lanjut)",
+        "CSD U5 black white images pixelation 4_2021": "Tambahkan alis pada wajah\ntersenyum (klik di sini untuk melihat gambar)",
+        "CSD U5 black white images pixelation 5_2021": "Gambar apa saja yang Anda suka",
+        "CSD U5 black white images pixelation_2021": "Selesaikan bentuk X dengan\ncara mengetik 0s dan 1s",
+        "CSD U6 params modify planes_2021": "# Multi-pesawat Controller\\\r \\\r program ini bergerak tiga pesawat menggunakan accelerometer papan dan layar kotak centang.  Sekarang, hanya pesawat merah bekerja. \\\r \\\r # This\\\r melakukan \\* membuat baru 'movePlane(name)' fungsi yang dapat memindahkan apapun pesawat. \\\r \\* memanggil fungsi 'movePlane(name)' dalam blok event, sehingga hanya bergerak ketika dengan kotak centang dicentang. \\\r \\\r \\_Challenge: Sekarang pesawat bergerak terlalu cepat.  Dapatkah Anda mengetahui bagaimana untuk mengubah kode sehingga mereka bergerak lebih lambat? \\_zxsxXXsx",
+        "CSDU6 arrays select rainbow_2021": "Tulis isi larik ke layar dalam urutan bilangan. (klik untuk melihat petunjuk lengkap)",
+        "CSDU6 arrays select random_2021": "Tulis sebuah program yang menampilkan warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)",
+        "CSDU6 arrays select variable_2021": "Tulis sebuah program yang menampilkan warna yang dipilih secara acak dari larik. (Klik untuk melihat petunjuk lengkap)"
       }
     }
   }

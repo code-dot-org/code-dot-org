@@ -725,6 +725,7 @@ ms-MY:
   header_courses: kursus-kursus
   header_course_catalog: Katalog Kursus
   header_project_gallery: Projek
+  header_professional_learning: Pembelajaran Profesional
   header_educate_hoc: Hour of Code
   header_stats: Statistik
   header_about: Tentang
@@ -985,3 +986,4 @@ ms-MY:
   outbreak_tile_title: Wabak
   outbreak_tile_subtitle: Virus telah menjangkiti Monster Town! Kodkan simulator wabak
     dan buat ramalan tentang perkara yang akan berlaku kepada jiran Monster Town.
+  footer_cookie_notice: Notis Kuki

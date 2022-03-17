@@ -3,5 +3,6 @@
   "name": "lightSensor.value",
   "category": "Circuit",
   "category_key": "circuit",
+  "short_description": "lightSensor.value",
   "syntax": "lightSensor.value"
 }

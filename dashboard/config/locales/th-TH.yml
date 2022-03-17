@@ -226,6 +226,7 @@ th:
       cant_join_own_section: ขออภัย คุณไม่สามารถร่วมเซคชั่นของคุณเอง
       restricted_section: เราไม่สามารถเพิ่มคุณไปที่ส่วน %{section_code} เพราะส่วนนี้ถูกล็อคไว้
         โปรดติดต่อขอความช่วยเหลือจากผู้สอน
+      not_participant_type: เราไม่สามารถเพิ่มคุณไปยังหมวด %{section_code} ได้ เนื่องจากคุณมีคุณสมบัติไม่ตรงตามประเภทของผู้เข้าร่วมหมวดนั้น
     mail:
       student_disassociated:
         subject: 'การแจ้งเตือนของ Code.org: ขณะนี้ %{student_name} ไม่เเป็นนักเรียนของคุณ'
@@ -405,6 +406,8 @@ th:
     no_primary_course: ทดลองคอร์ส Code Studio
     choose_next_course: ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้
     print_certificate: พิมพ์ใบรับรอง
+  move_students:
+    not_correct_participant_type: คุณไม่สามารถย้ายผู้ใช้งานได้ เนื่องจากผู้ใช้งานเหล่านั้นยังไม่มีสิทธิ์เข้าร่วมในหมวดใหม่
   share:
     title: เรียนกับ Code Studio
   gender:
@@ -431,6 +434,7 @@ th:
     built_on_code_studio: สร้างด้วย Code Studio
     make_my_own_app: สร้าง app ของฉันเอง
     how_it_works: มันทำงานได้อย่างไร
+    cookie_notice: ประกาศเกี่ยวกับคุกกี้
   reference_area:
     title: ต้องการความช่วยเหลือ?
     subtitle: ดูวิดีโอและคำบอกใบ้พวกนี้

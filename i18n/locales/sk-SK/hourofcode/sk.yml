@@ -133,6 +133,9 @@ sk:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -262,7 +265,7 @@ sk:
   header_menu_resources: Zdroje
   header_menu_faq: Časté otázky
   header_menu_how_to: Ako na to
-  header_menu_promote: Šírte ďalej
+  header_menu_promote: Propagácia
   header_menu_activities: Aktivity
   not_found_title: Stránka sa nenašla
   not_found_desc: Požadovaná stránka sa nenašla
@@ -412,7 +415,7 @@ sk:
     <a href='http://code.org/learn'> Vyskúšajte si návody</a> pre akýkoľvek prehliadač,
     smartphone – či dokonca bez počítača!
   whats_next_how_to: "<a href='/how-to'>Ako spustiť Hodinu kódu</a>"
-  whats_next_promote: "<a href='/promote'>Šírte ďalej Hodinu kódu</a>"
+  whats_next_promote: "<a href='/promote'>Propagujte Hodinu kódu</a>"
   whats_next_how_to_promote: "<a href='/promote'>Ako šíriť ďalej Hodinu kódu?</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Ako šíriť ďalej Hodinu kódu?</a>"
   whats_next_try: "<a href='http://code.org/learn'> Vyskúšajte si aktivity</a>"
@@ -420,7 +423,7 @@ sk:
   n_have_learned_an_hoc: "<h1>Vyskúšajte</h1> <h2>Hodinu kódu</h2> <h3># obslúžený</h3>"
   anybody_can_learn: Ktokoľvek sa môže učiť.
   get_started: Začať
-  beyond_an_hour: Za hranice Hodiny kódu
+  beyond_an_hour: Ako ďalej po hodine kódu
   register_now: Registrácia
   share_on_facebook: Zdieľať na Facebook
   share_on_twitter: Zdieľať na Twitter
@@ -504,7 +507,7 @@ sk:
   signup_event_location_label: Miesto udalosti
   signup_event_location_error: Miesto udalosti je povinné pole.
   signup_special_event_flag_label: Zvýraznite svoju špeciálnu udalosť
-  signup_special_event_details_label: Podrobnosti o špeciálnej udalosti
+  signup_special_event_details_label: Prihláste sa ako špeciálne podujatie
   signup_send_posters_flag_label: Odoslať <a href= "/resources/promote#posters"> plagáty</a>
     mojej škole alebo organizácii (iba USA)
   signup_send_posters_address_label: Adresa školy alebo organizácie
@@ -607,7 +610,7 @@ sk:
     you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: Najčastejšie otázky
   hoc_faq_what_is_hoc_q: 'Čo je Hodina kódu? '
-  hoc_faq_what_is_hoc_a: Projekt Hodina Kódu začal ako jednohodinový úvod do informatiky.
+  hoc_faq_what_is_hoc_a: Projekt Hodina kódu začal ako jednohodinový úvod do informatiky.
     Bol navrhnutý tak, aby demystifikoval programovanie, zapojil viac ľudí do oblasti
     informatiky a poukázal na to, že základy programovania sa môže naučiť ktokoľvek.
     Odvtedy sa z neho stalo celosvetové hnutie oslavujúce informatiku, ktorého súčasťou
@@ -615,7 +618,7 @@ sk:
     Vyskúšajte si naše <a href='%{tutorials}'>návody a aktivity</a>. Túto kampaň podporuje
     viac ako <a href='%{partners}'>400 partnerov</a> a 200 000 pedagógov po celom
     svete.
-  hoc_faq_what_is_hoc_a_markdown: Projekt Hodina Kódu začal ako jednohodinový úvod
+  hoc_faq_what_is_hoc_a_markdown: Projekt Hodina kódu začal ako jednohodinový úvod
     do informatiky. Bol navrhnutý tak, aby demystifikoval programovanie, zapojil viac
     ľudí do oblasti informatiky a poukázal na to, že základy programovania sa môže
     naučiť ktokoľvek. Odvtedy sa z neho stalo celosvetové hnutie oslavujúce informatiku,
@@ -657,11 +660,11 @@ sk:
     A od %{campaign_date} si ju môžete vyskúšať aj sami."
   hoc_faq_behind_hoc_q: Kto je zodpovedný za Hodinu kódu?
   hoc_faq_behind_hoc_a: Projekt Hodina kódu majú na starosti <a href='%{partner_url}'>poradný
-    a revízny výbor</a> Hodiny kódu a Týždňa informatiky spolu s výnimočnou koalíciou
+    a kontrolný výbor</a> Hodiny kódu a Týždňa informatiky spolu s výnimočnou koalíciou
     partnerov, ktorí sa spojili, aby tento projekt podporili. Medzi týchto partnerov
     patria spoločnosti Microsoft, Apple či Amazon, ako aj neziskové organizácie Boys
     and Girls Clubs of America a College Board.
-  hoc_faq_behind_hoc_a_markdown: Projekt Hodina kódu majú na starosti [poradný a revízny
+  hoc_faq_behind_hoc_a_markdown: Projekt Hodina kódu majú na starosti [poradný a kontrolný
     výbor](%{partner_url}) Hodiny kódu a Týždňa informatiky spolu s výnimočnou koalíciou
     partnerov, ktorí sa spojili, aby tento projekt podporili. Medzi týchto partnerov
     patria spoločnosti Microsoft, Apple či Amazon, ako aj neziskové organizácie Boys
@@ -882,28 +885,28 @@ sk:
   stats_michael: '"<b>Nikdy som nevidel</b>mojich študentov tak nadšených z učenia."-Michael
     Clark, učiteľ'
   resources_how_to: Návod pre učiteľov
-  resources_how_to_events: Sprievodca - ako na udalosť
+  resources_how_to_events: Návod na zorganizovanie podujatia
   resources_how_to_districts: Návod pre samosprávy
   resources_how_to_officials: Návod pre verejných činiteľov
   resources_handouts: Podklady na zdieľanie
-  resources_one_pager: Jednostránkový návod
+  resources_one_pager: Jednostránková príručka
   resources_brochure: Brožúra
   resources_posters: Plagáty
   resources_videos: Videá
-  resources_banners: Sociálne médiá
-  resources_emails: Vzorové emaily
+  resources_banners: Sociálne siete
+  resources_emails: Vzorové e-maily
   resources_logo: Logo Hodiny kódu
   resources_stats: Štatistiky a upútavky
-  resources_press_kit: Press balíček
-  resources_social: Sociálne médiá
+  resources_press_kit: Materiály pre tlač
+  resources_social: Sociálne siete
   resources_country_resources: Špecifické zdroje pre krajinu
   resources_stickers: Samolepky
   resources_how_to_guides: Organizačné príručky
-  resources_promote: Šírte ďalej
+  resources_promote: Propagácia
   resources_nav_tutorials: Vyskúšajte si aktivity
   resources_nav_promote: Informujte ostatných
   resources_nav_spread_word: Ako sa zapojiť
-  resources_banner_promote_text: Šírte ďalej
+  resources_banner_promote_text: Propagácia
   resources_banner_promote_button: Povzbuďte ostatných, aby zaregistrovať prostredníctvom
     brožúr, inšpiratívnych plagátov a bannerov na sociálne siete.
   resources_banner_howto_text: Ako na to
@@ -916,47 +919,47 @@ sk:
   videos_title: Ukážte tieto videá študentom a inšpirujte ich
   videos_what_most_schools_dont_teach: Čo školy najčastejšie nevyučujú (5 min)
   videos_hoc_2014: Hodina kódu je tu - ktokoľvek sa môže učiť
-  videos_obama_cs: Prezident Obama na informatike
+  videos_obama_cs: Americký prezident Barack Obama na informatike
   videos_anybody_can_learn: Každý sa môže učiť (1 min)
   videos_creativity: What is Creativity?
   videos_creativity_series: What is Creativity? View Full Series.
   title_country_resources: Špecifické zdroje pre krajinu
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_hoc_advisory_committee: Poradný výbor Hodiny kódu a Týždňa informatiky
   title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
   title_how_to_promote: Informujte ostatných
-  title_how_to_districts: Návod k Hodine kódu pre samosprávy
-  title_how_to_events: Ako na udalosť Hodina hódu
+  title_how_to_districts: 'Hodina kódu: príručka pre samosprávy'
+  title_how_to_events: Ako zorganizovať podujatie Hodina kódu
   title_how_to_organizations: Ako zogranizovať Hodinu kódu - Organizácie
   title_how_to_companies: Ako zogranizovať Hodinu kódu - Spoločnosti
   title_how_to_officials: Návod pre verejných činiteľov
-  title_how_to_volunteers: Príručka - Ako na to pre dobrovoľníkov Hodiny kódu
-  title_how_to_parents: Ako na to? Návod pre rodičov
-  title_how_to: Príručka - Ako na to
-  title_international_partners: Contact International Partners
-  title_press_release: Oficiálna tlačová správa Hodiny kódu
+  title_how_to_volunteers: Návod pre dobrovoľníkov Hodiny kódu
+  title_how_to_parents: Návod pre rodičov
+  title_how_to: Organizačný návod
+  title_international_partners: Kontaktujte medzinárodných partnerov
+  title_press_release: Oficiálna tlačová správa Hodiny kódu pre politikov
   title_op_ed: Ukážkový článok napísaný na podporu Týždňa informatiky a Hodiny kódu
-  title_press_kit: Press balíček
-  title_proclamation: Ukážkové vyhlásenie napísané na podporu Týždňa informatiky a
-    Hodiny kódu
+  title_press_kit: Materiály pre tlač
+  title_proclamation: Vzorové uznesenie napísané na podporu Týždňa informatiky a Hodiny
+    kódu
   title_stats: Upútavky a štatistiky
   title_partners: Partneri
   title_resources: Zdroje
-  title_past_posters: Past Hour of Code Posters
-  title_signup_thanks: Ďakujeme Vám, že organizujete udalosť Hodina kódu!
+  title_past_posters: Staršíe plagáty k Hodine kódu
+  title_signup_thanks: Ďakujeme vám, že organizujete Hodinu kódu!
   title_tutorial_guidelines: Výukový návod
   title_whole_school: Účasť celej školy
   events_nav_title: Udalosti Hodiny kódu
   events_nav_all: Všetky udalosti
-  events_nav_whole_schools: Všetky školy
-  events_nav_special: Špeciálne udalosti
+  events_nav_whole_schools: Celoškolské podujatia
+  events_nav_special: Špeciálne podujatia
   events_nav_orgs: Organizácie
-  events_all_old_title: Všetky udalosti Hodiny kódu @year
-  events_all_title: Všetky udalosti Hodiny kódu
+  events_all_old_title: Všetky podujatia Hodiny kódu v roku @year
+  events_all_title: Všetky podujatia Hodiny kódu
   events_whole_school_title: Celoškolské udalosti Hodiny kódu
-  events_special_title: Hodina kódu špeciálne udalosti
+  events_special_title: Špeciálne podujatia Hodiny kódu
   events_orgs_title: Všetky Hodiny kódu organizované partnerskými organizáciami
   event: udalosť
-  events: udalosti
+  events: udalostí
   highlights_title: Dávame do pozornosti
   highlights_header: Hodina kódu - Highlights
   highlights_description: Niektoré z našich obľúbených momentov kampane Hodina kódu.
@@ -999,7 +1002,8 @@ sk:
     vo viac ako 180 krajinách, ktorí sa zúčastňujú Hodiny kódu.
   learn_banner_beyond: Chcete sa naučiť viac? <a id='learn_banner_beyond'>Preskúmajte
     ďalšie možnosti</a>
-  learn_banner_beyond_markdown: Chcete sa naučiť viac? [Preskúmajte ďalšie možnosti](%{url})
+  learn_banner_beyond_markdown: Chcete sa naučiť viac? [Pokračujte v učení aj po Hodine
+    kódu](%{url})
   learn_banner_teachers: 'Učitelia: <a id=''teacher_banner_host''>Usporiadajte Hodinu
     kódu</a> alebo <a id=''teacher_banner_howto''>si prečítajte návod, ako na to</a>'
   learn_banner_teachers_markdown: 'Učitelia: [Usporiadajte Hodinu kódu](%{host_url})
@@ -1195,7 +1199,7 @@ sk:
   tutorial_tlcmicro_name: Video aktivita Mikrovlnné súťaže
   tutorial_imathematician_name: iMatematik
   tutorial_tlcmagic_name: Kúzlo magickej knihy
-  tutorial_scratchmus_name: Tvorte hudbu so Scratchom
+  tutorial_scratchmus_name: Tvoríme hudbu so Scratchom
   tutorial_scratchanim_name: Animujte svoje meno so Scratchom
   tutorial_scratchfly_name: Lietaj so Scratch-om
   tutorial_tynkerarc_name: Podmorská arkádová hra

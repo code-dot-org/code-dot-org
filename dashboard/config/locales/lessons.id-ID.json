@@ -830,6 +830,36 @@
           "preparation": "-   Luangkan waktu untuk membuat proyek Anda sendiri dengan Artis dan juga Sprite Lab. Pelajari betul-betul kemampuan dan kekurangan setiap alat.-   Ubah **\\*rubrik** agar sesuai dengan tujuan kelas Anda lalu cetak salinan untuk setiap murid.-   Ubah lembar kerja desain **\\*lembar kerja desain proyek** agar sesuai dengan kelas Anda lalu cetak satu paket untuk setiap murid.",
           "purpose": "Murid mungkin siap untuk langsung melompat ke membangun proyek, tetapi pelajaran kali ini akan membantu membentuk ide-ide mereka menjadi rencana. Struktur pelajaran ini akan menjaga impian murid pemimpi tetap realistis dan menerangi jalan bagi murid-murid yang merasa tertinggal dalam kegelapan. Beri waktu yang longgar kepada murid untuk membangun dan merevisi proyek mereka. Uji coba dan salah yang sudah pasti muncul dalam pelajaran ini akan mengajari murid tentang pemecahan masalah dan kegigihan.",
           "student_overview": "Proyek sebesar ini pasti menyita waktu dan banyak perencanaan. Cari inspirasi, susun rencana, dan kerahkan kreativitas Anda!"
+        },
+        "csd6-2021/The Circuit Playground": {
+          "overview": "Dalam pelajaran ini, murid memperoleh kesempatan pertama mereka untuk menulis program yang menggunakan Circuit Playground. Setelah terlebih dahulu menyelidiki papan secara visual dan berhipotesis kemungkinan fungsionalitas, murid berpindah ke online untuk belajar menulis aplikasi yang mengontrol LED. Dengan menggabungkan layar App Lab dan Circuit Playgrounds, murid secara bertahap dapat mulai mengintegrasikan elemen papan sebagai perangkat ouput sambil mengandalkan App Lab untuk input pengguna."
+        },
+        "csd6-2021/Input Unplugged": {
+          "overview": "Sebagai persiapan untuk mendalami pemrograman dengan App Lab, murid akan mengeksplorasi cara beberapa program berbeda yang ditulis di Game Lab dan App Lab menangani pengambilan input dari pengguna. Setelah membandingkan dan mengontraskan berbagai pendekatan yang mereka lihat dalam aplikasi contoh, murid membentuk kelompok untuk menerapkan dua model input yang berbeda (conditional dalam loop tak terhingga dan event yang asinkron) untuk mendapatkan pemahaman yang lebih baik tentang cara kerjanya."
+        },
+        "csd6-2021/Analog Input": {
+          "overview": "Dalam pelajaran ini, murid mengekplorasi cara menggunakan tiga sensor analog (bunyi, cahaya, dan suhu) untuk menulis program yang dapat menanggapi perubahan di lingkungan. Penggunaan ketiga sensor ini menandai transisi dari sisi cara pengguna berinteraksi dengan program. Dengan menggunakan sensor sebagai input, pengguna aplikasi tidak harus berinteraksi langsung dengan aplikasi sama sekali, atau mungkin berinteraksi tanpa benar-benar sadar sedang melakukannya."
+        },
+        "csd6-2021/The Program Design Process": {
+          "overview": "Pelajaran ini memperkenalkan murid dengan proses yang akan mereka tempuh untuk merancang permainan sendiri di sepanjang unit ini. Proses ini berpusat pada proyek panduan yang meminta murid membuat sketsa layar sendiri, mengidentifikasi elemen-elemen Circuit Playground yang akan digunakan, mendefinisikan variable, dan mendeskripsikan event sebelum mereka memulai pemrograman. Proses ini mirip dengan Game Design Process yang kita gunakan dalam Unit 3. Dalam pelajaran ini, murid mulai dengan bermain permainan gaya tarik tambang yang code-nya tersembunyi. Mereka mendiskusikan apa yang mereka anggap sebagai tugas komponen, event, dan variable papan agar program bisa terbentuk. Mereka kemudian diberi panduan proyek yang sudah jadi yang menunjukkan satu cara untuk menerapkan proyek tersebut. Murid lantas menjalani proses ini melalui sederet level. Pada akhir pelajaran, murid berkesempatan melakukan perbaikan pada program agar dapat membuatnya menjadi karya mereka sendiri."
+        },
+        "csd6-2021/Arrays and Color LEDs": {
+          "overview": "Array adalah kumpulan item yang tersusun rapi, biasanya berjenis sama. Dalam pelajaran ini, murid mempelajari cara-cara mengakses nilai spesifik atau nilai acak dari sebuah daftar menggunakan indeksnya. Mereka kemudian mempelajari cara mengakses array colorLED yang mengontrol perilaku LED warna di Circuit Playground.  Murid akan mengontrol warna dan intensitas masing-masing LED, lalu menggunakan materi yang sudah dipelajari untuk memprogram pola-pola cahaya untuk membuat pertunjukan cahaya di Circuit Playground mereka."
+        },
+        "csd6-2021/Arrays and For Loops": {
+          "overview": "Penggunaan _for loop_ untuk mengulang semua elemen dalam sebuah array adalah sebuah konstruk yang sangat bermanfaat di sebagian besar bahasa pemrograman. Dalam pelajaran ini, murid mempelajari dasar-dasar tentang cara menggunakan _for loop_ untuk mengulang code, dan kemudian menggabungkannya dengan materi yang sudah mereka pelajari tentang array untuk menulis program yang memproses semua elemen dalam sebuah array. Murid menggunakan loop 'for' untuk menyelisik setiap elemen dalam sebuah daftar satu per satu tanpa harus menulis code untuk setiap elemen. Menjelang akhir pelajaran, murid akan menerapkan ini dengan daftar `colorLed` di papan untuk membuat sebuah aplikasi yang mengubah semua LED setiap kali tombol diklik. "
+        },
+        "csd6-2021/Accelerometer": {
+          "overview": "Dalam pelajaran ini, murid akan mengeksplorasi akselerometer dan kemampuannya. Mereka akan mengakrabi event dan propertinya, serta membuat berbagai program dengan memanfaatkan akselerometer yang mirip dengan akselerometer yang kemungkinan akan mereka jumpai dalam aplikasi dunia nyata."
+        },
+        "csd6-2021/Functions with Parameters": {
+          "overview": "Pelajaran dimulai dengan tinjauan singkat parameter, di dalam konteks blok App Lab yang sudah disaksikan oleh murid belum lama ini.  Murid kemudian mencermati contoh-contoh parameter di dalam function buatan pengguna di App Lab lalu membuat dan memanggil function dengan parameter mereka sendiri, dengan tujuan mengontrol berbagai elemen di layar.  Setelah itu, murid menggunakan loop 'for' untuk mengulang-ulang array, yang memindahkan setiap elemen ke function.  Terakhir, murid menggunakan materi yang sudah dipelajari untuk membuat permainan menangkap bintang."
+        },
+        "csd6-2021/Circuits and Physical Prototypes": {
+          "overview": "Sebagai persiapan untuk proyek terakhir bab ini, murid akan mempelajari cara mengembangkan prototipe objek fisik yang meliputi Circuit Playground. Dengan menggunakan panduan perencanaan proyek bermodel, murid akan mempelajari cara menghubungkan beberapa sirkuit sederhana dan membuat prototipe yang dapat mengomunikasikan desain produk yang dikehendaki, dengan menggunakan bahan yang murah dan mudah dicari, seperti kertas karton dan lakban."
+        },
+        "csd6-2021/Project: Prototype an Innovation": {
+          "overview": "Dalam proyek terakhir untuk kursus ini, murid membentuk tim untuk mengembangkan dan menguji sebuah prototipe perangkat komputasi inovatif berdasarkan Circuit Playground. Dengan menggunakan input dan output yang tersedia di papan, grup-grup murid akan membuat program yang memudahkan interaksi pengguna yang menarik dan unik. "
         }
       }
     }

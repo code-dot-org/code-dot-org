@@ -10,6 +10,8 @@ ms:
       length: panjang
       min: terkecil
       points: mata
+      radius: jejari
+      sides: tepi
       size: saiz
       speed: kelajuan
       width: lebar

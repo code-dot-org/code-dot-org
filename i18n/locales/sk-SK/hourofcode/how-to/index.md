@@ -141,7 +141,7 @@ Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 - Vytlačte pre svojich žiakov [certifikáty]({{ urls/certificates }}).
 - Vytlačte pre žiakov [nálepky s textom „I did the Hour of Code!“]({{ urls/promote_stickers }}) (Mám za sebou Hodinu kódu!).
 - Objednajte pre svoju školu [špeciálne tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
-- Zdieľajte na sociálnych sieťach fotky a videá z vašej Hodiny kódu. Použite hashtag #HourOfCode a označenie @codeorg, aby sme sa o vaše úspechy mohli podeliť aj my!
+- Zdieľajte na sociálnych sieťach fotky a videá z vašej Hodiny kódu. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
 
 * * *
 
@@ -154,6 +154,6 @@ Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 
 ### Čo nasleduje po Hodine kódu?
 
-Informatika sa Hodinou kódu nekončí. Naše lekcie sú stále k dispozícii on‑line, a to úplne zadarmo. Prečítajte si viac o tom, [ako na vašu školu priniesť kvalitné vyučovanie informatiky](/beyond).
+Informatika sa Hodinou kódu nekončí! Naše učebné materiály sú neustále k dispozícii on‑line, a to úplne zadarmo. Prečítajte si viac o tom, [ako na vašu školu priniesť kvalitné vyučovanie informatiky](/beyond).
 
 {{ signup_button }}

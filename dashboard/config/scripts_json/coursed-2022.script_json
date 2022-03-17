@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-02-08 19:48:21 UTC",
+    "serialized_at": "2022-03-15 23:14:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -128,7 +128,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students use symbols to instruct each other to color squares on graph paper. By \"programming\" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. ",
-        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Print out one ***worksheet** and ***assessment** for each student.\n- Make sure every student has a reflection journal.\n",
+        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Print out one ***worksheet** and ***assessment** for each student.\n\n",
         "purpose": "The goal of this activity is to build critical thinking skills and excitement for the course, while introducing some of the fundamental programming concepts that will be used throughout the course. By introducing basic concepts like sequencing and algorithms to the class in an unplugged activity, students who are intimidated by computers can still build a foundation of understanding on these topics. In this lesson, students will learn how to develop an algorithm and encode it into a program. ",
         "student_overview": "In this lesson, you will program your classmate to draw pictures!",
         "unplugged": true
@@ -149,7 +149,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will practice their _sequencing_ and debugging skills in maze puzzles.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n",
         "purpose": "We recognize that every classroom has a spectrum of understanding for every subject. Some students in your class may be computer wizards, while others haven't had much experience at all. In order to create an equal playing (and learning) field, we have developed this \"Ramp Up Stage\" for Course D. This can be used as either an introduction or a review of how to use Code.org and basic computer science concepts. This stage covers all prerequisites needed to start Course D.",
         "student_overview": "This lesson will give you practice in the skills you will need for this course."
       },
@@ -169,7 +169,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting** lesson will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.",
-        "preparation": "- Watch the ***Teacher Video**.\n- Locate a wide open space for this activity, such as the gym or outdoor field.\n- Print out one ***Activity Packet** for each group.\n- Supply each group with plenty of paper and pens/pencils.\n- Print one ***Worksheet** for each student.\n- Make sure every student has a reflection journal.",
+        "preparation": "- Watch the ***Teacher Video**.\n- Locate a wide open space for this activity, such as the gym or outdoor field.\n- Print out one ***Activity Packet** for each group.\n- Supply each group with plenty of paper and pens/pencils.\n- Print one ***Worksheet** for each student.\n",
         "purpose": "Teamwork is very important in computer science. Teams write and debug code with each other, instead of working as individuals. In this lesson, students will learn to work together while being as efficient as possible. \n\nThis activity also provides a sense of urgency that will teach students to balance their time carefully and avoid mistakes without falling too far behind.  This experience can be stressful (which is expected!)  Make sure you provide students with the tools to deal with potential frustration.",
         "student_overview": "Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!",
         "unplugged": true
@@ -898,7 +898,8 @@
       "key": "f4151504-1d9a-4bf3-9d39-94f6fd1e142a",
       "position": 1,
       "properties": {
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started"
       },
       "seeding_key": {
         "lesson_activity.key": "f4151504-1d9a-4bf3-9d39-94f6fd1e142a",
@@ -911,7 +912,8 @@
       "key": "cab760ed-3878-474c-a0f0-e9392b4bb0b5",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "cab760ed-3878-474c-a0f0-e9392b4bb0b5",
@@ -1235,6 +1237,7 @@
       "key": "ed43bde5-d607-4d7e-be4a-02eba3ef011e",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1507,10 +1510,34 @@
       }
     },
     {
-      "key": "d80d3591-db5f-43bb-b3be-3a0eb14690a7",
+      "key": "0661508e-1aa3-488f-8064-beaec4c40e7a",
       "position": 1,
       "properties": {
-        "description": "In this activity, students will encode instructions to guide each other toward making drawings without letting the rest of their group see the original image. This warm-up frames the activity for the class.\r\n\r\n**Display:** Watch one of the videos below to give students context for the types of things that robots can do:\r\n\r\n - [Asimo by Honda](https://youtu.be/QdQL11uWWcI) (3:58)\r\n - [Egg Drawing Robot](https://youtu.be/slh5vMIc33I) (3:15)\r\n - [Dancing Lego Robot](https://youtu.be/NPIq5qldbio) (1:35)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When would you need to complete a list of steps in order?_\n",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "0661508e-1aa3-488f-8064-beaec4c40e7a",
+        "lesson_activity.key": "abaa6b2f-5158-4a3b-b861-28580f6362af"
+      }
+    },
+    {
+      "key": "835c16c0-8a24-43c1-889b-493814eb50d1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n * Algorithm - A list of steps to finish a task.\n * Program - An algorithm that has been coded into something that can be run by a machine.\n",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "835c16c0-8a24-43c1-889b-493814eb50d1",
+        "lesson_activity.key": "abaa6b2f-5158-4a3b-b861-28580f6362af"
+      }
+    },
+    {
+      "key": "d80d3591-db5f-43bb-b3be-3a0eb14690a7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Introduction” slide\n\nWatch one of the videos below to give students context for the types of things that robots can do:\n  - [Asimo by Honda](https://youtu.be/QdQL11uWWcI) (3:58)\n - [Egg Drawing Robot](https://youtu.be/slh5vMIc33I) (3:15)\n - [Dancing Lego Robot](https://youtu.be/NPIq5qldbio) (1:35)\n\nIn this activity, students will encode instructions to guide each other toward making drawings without letting the rest of their group see the original image. This warm-up frames the activity for the class.\n\n**Display:** Watch one of the videos below to give students context for the types of things that robots can do:\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1520,9 +1547,9 @@
     },
     {
       "key": "5263a44d-bdc5-4a33-ae74-33eb50c4ec28",
-      "position": 2,
+      "position": 4,
       "properties": {
-        "description": "**Discuss:** _How do you suppose that robots know how to do the things that they do? Do they have brains that work the same way that ours do?_\n\nThe goal of this quick discussion is to call out that while robots may seem to behave like people, they're actually responding only to their programming. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** _How do you suppose that robots know how to do the things that they do? Do they have brains that work the same way that ours do?_\n\n**Discussion Goal:** Call out that while robots may seem to behave like people, they're actually responding only to their programming. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_.\n\nWork this into a discussion on how people have to program robots to do specific things, using specific commands.\n"
       },
       "seeding_key": {
         "activity_section.key": "5263a44d-bdc5-4a33-ae74-33eb50c4ec28",
@@ -1531,9 +1558,8 @@
     },
     {
       "key": "7b39edc8-353d-43a0-b489-0c354a91cded",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "description": "Work this into a discussion on how people have to program robots to do specific things, using specific commands."
       },
       "seeding_key": {
         "activity_section.key": "7b39edc8-353d-43a0-b489-0c354a91cded",
@@ -1556,7 +1582,7 @@
       "key": "69bac9e1-3ac8-4641-bd12-2ea9fe9dd83a",
       "position": 1,
       "properties": {
-        "description": "In this activity, students will act as both programmers and robots, coloring in squares according to programs that they have written for one another.\n\n**Distribute:** Students will use 4x4 grids (or sheets of graph paper with 4x4 boxes sectioned off). They will also need the image worksheet.\n\n**Display:** Project these commands, or write them on the board.  They won't persist long, but they will help students make the transition from Algorithm to Program.\n \n    Move one square right\n    Move one square left\n    Move one square up\n    Move one square down\n    Fill in square with color\n\n**Say:** Today, we all get to program robots...and they're already here in the room!  It's you!  We're going to write programs using symbols with special meanings to help each other recreate a picture. First, we'll practice together as if I am the robot and you are the programmers, then we can break up into groups so that everyone can get a turn.\n\n**Display:** Display both the image that you are going to have the students walk you through, and a blank grid that you will fill-in with your ARM. Make sure that the instructions, grid, and image remain visible at the same time.  \n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
+        "description": "In this activity, students will act as both programmers and robots, coloring in squares according to programs that they have written for one another.\n\n**Distribute:** Students will use 4x4 grids (or sheets of graph paper with 4x4 boxes sectioned off). They will also need the image worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Commands” slide\n\n**Do This:** Project these commands, or write them on the board.  They won't persist long, but they will help students make the transition from Algorithm to Program.\n \n    Move one square right\n    Move one square left\n    Move one square up\n    Move one square down\n    Fill in square with color\n\n"
       },
       "seeding_key": {
         "activity_section.key": "69bac9e1-3ac8-4641-bd12-2ea9fe9dd83a",
@@ -1564,8 +1590,31 @@
       }
     },
     {
-      "key": "78086b29-2d45-4172-91f8-a56000ef094c",
+      "key": "fcd4343e-894a-46df-8506-60461c8b0dc8",
       "position": 2,
+      "properties": {
+        "description": "Today we all get to program robots...and they're already here in the room! It's you! We're going to write programs using symbols with special meanings to help each other recreate a picture. First, we'll practice together as if I am the robot and you are the programmers, then we can break up into groups so that everyone gets a turn.\n\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fcd4343e-894a-46df-8506-60461c8b0dc8",
+        "lesson_activity.key": "6f71e5c5-4881-41a1-b22b-989ca514a6a2"
+      }
+    },
+    {
+      "key": "ae4453c2-6859-4fe5-9fde-625cfd390cb1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #1” slide\n\nDisplay both the image that you are going to have the students walk you through, and a blank grid that you will fill-in with your ARM. Make sure that the instructions, grid, and image remain visible at the same time. When the direction “fill in square with color” is given, drag one of the two squares on the slide onto the grid to represent a square filled in with color.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae4453c2-6859-4fe5-9fde-625cfd390cb1",
+        "lesson_activity.key": "6f71e5c5-4881-41a1-b22b-989ca514a6a2"
+      }
+    },
+    {
+      "key": "78086b29-2d45-4172-91f8-a56000ef094c",
+      "position": 4,
       "properties": {
         "description": "_Here is an image.  Pretend that I am the robot with an Automatic Realization Machine (ARM).  These are the only instructions that I understand._\n\n_Starting at the upper left-hand corner, guide my ARM out loud with your words._",
         "remarks": true
@@ -1577,9 +1626,9 @@
     },
     {
       "key": "2dc8720c-7b51-4e23-bff7-caf758dea9b3",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?\n\n**Display:** Show the students a more complicated image, like the one below.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n\n**Display:** Show the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
+        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #2” slide\n\nShow the students a more complicated image, like the one below. Feel free to use the \"List of steps\" table in the slide to write down the steps students suggest.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\nShow the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
       },
       "seeding_key": {
         "activity_section.key": "2dc8720c-7b51-4e23-bff7-caf758dea9b3",
@@ -1588,9 +1637,9 @@
     },
     {
       "key": "c24df0cf-2ab1-4b43-b556-7da15019dc60",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "description": "**Discussion:** How could we use these symbols to make our instructions easier?"
+        "description": "**Discuss:** _How could we use these symbols to make our instructions easier?_"
       },
       "seeding_key": {
         "activity_section.key": "c24df0cf-2ab1-4b43-b556-7da15019dc60",
@@ -1599,9 +1648,9 @@
     },
     {
       "key": "66e69e6f-d274-4340-a191-d6223b0c3fcb",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "Draw out ideas that relate to transitioning from the verbal instructions to the symbols. Once the students get to that place, point out that this text:\n\n- “Move one square right, Move one square right, Fill-in square with color”\n\nwould now correspond to the program:\n\n![](https://levelbuilder.code.org/curriculum/course2/1/program.png)\n\nThe goal for this discussion is to get at the idea that students can use symbols to stand for entire phrases.  Once they understand that, share with them that making the switch from listing steps in detail to encoding them is called **\"programming.\"** "
+        "description": "Draw out ideas that relate to transitioning from the verbal instructions to the symbols. Once the students get to that place, point out that this text:\n\n- “Move one square right, Move one square right, Fill-in square with color”\n\nwould now correspond to the program:\n\n![](https://levelbuilder.code.org/curriculum/course2/1/program.png)\n\n**Discussion Goal:** Get at the idea that students can use symbols to stand for entire phrases.  Once they understand that, share with them that making the switch from listing steps in detail to encoding them is called **\"programming.\"** "
       },
       "seeding_key": {
         "activity_section.key": "66e69e6f-d274-4340-a191-d6223b0c3fcb",
@@ -1610,9 +1659,9 @@
     },
     {
       "key": "be35d4b6-5785-44f3-9d9b-158e356ebb0d",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "**Model:** Now, have the class help you draw the larger image using only symbols.  Do not worry about unnecessary steps for now.  If their final program works to create the image, consider it a win.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Model:** Now, have the class help you draw the larger image using only symbols.  Do not worry about unnecessary steps for now.  If their final program works to create the image, consider it a win. (The symbols are infinitely cloned on this slide for your use in modeling this puzzle.)\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1627,9 +1676,9 @@
     },
     {
       "key": "d8c187b2-ad4b-4aaa-85e8-1585da13a6fa",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "The classroom may be buzzing with suggestions by this point. If the class gets the gist of the exercise, this is a good place to discuss alternate ways of filling out the same grid. If there is still confusion, save that piece for another day and work with another example.\n\nSee a sample solution below:\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper4.png)\n\n\n---"
+        "description": "The classroom may be buzzing with suggestions by this point. If the class gets the gist of the exercise, this is a good place to discuss alternate ways of filling out the same grid. If there is still confusion, save that piece for another day and work with another example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample Solution” slide\n\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper4.png)\n\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "d8c187b2-ad4b-4aaa-85e8-1585da13a6fa",
@@ -1638,9 +1687,9 @@
     },
     {
       "key": "a44a9180-d414-4934-82ef-09e1d14355b1",
-      "position": 8,
+      "position": 10,
       "properties": {
-        "description": "####The Students' Turn\n\n**Group:** Divide students into pairs or small groups.  \n\n- Have each pair/group choose an image from the worksheet.\n- Discuss the algorithm to draw chosen image with partner(s).\n- Convert algorithm into a program using symbols.\n- Trade programs with another pair/group and draw one another's image.\n- Choose another image and go again!\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper7.png)"
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Your Turn!” slide.\n\n\n\n####The Students' Turn\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Activity Sheet” slide\n\n\n**Group:** Divide students into pairs or small groups.  \n\n- Have each pair/group choose an image from the worksheet.\n- Discuss the algorithm to draw chosen image with partner(s).\n- Convert algorithm into a program using symbols.\n- Trade programs with another pair/group and draw one another's image.\n- Choose another image and go again!\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper7.png)"
       },
       "seeding_key": {
         "activity_section.key": "a44a9180-d414-4934-82ef-09e1d14355b1",
@@ -1648,10 +1697,20 @@
       }
     },
     {
+      "key": "fb8d3443-62f5-478c-95b5-1530c6d592e7",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fb8d3443-62f5-478c-95b5-1530c6d592e7",
+        "lesson_activity.key": "6f71e5c5-4881-41a1-b22b-989ca514a6a2"
+      }
+    },
+    {
       "key": "711dd3c2-55d7-4e71-8714-fea9ceb6cb4a",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw another image that you could code. Can you write the program that goes with this drawing?\n - What other types of robots could we program if we changed what the arrows meant?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n \n - _Draw another image that you could code. Can you write the program that goes with this drawing?_\n - _What other types of robots could we program if we changed what the arrows meant?_",
         "name": "Reflection",
         "tips": [
           {
@@ -1669,7 +1728,7 @@
       "key": "f996a13c-3afe-49d4-9698-afca4cbd77c1",
       "position": 1,
       "properties": {
-        "description": "- Hand out ***Graph Paper Programming - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide if using the Optional Assessment\n- Hand out ***Graph Paper Programming - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "f996a13c-3afe-49d4-9698-afca4cbd77c1",
@@ -1691,7 +1750,7 @@
       "key": "96499db1-0002-4488-b370-2d718a5c90ec",
       "position": 1,
       "properties": {
-        "description": "Students will either be learning a lot of new concepts or reviewing a lot of basic concepts. Based on your class's experience, you can cover the following vocabulary or move on to a bridging activity. We recommend using the following words in sentences if the definitions aren't explicitly covered.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to give a robot specific instructions when you “program” it?_\n\nStudents will either be learning a lot of new concepts or reviewing a lot of basic concepts. Based on your class's experience, you can cover the following vocabulary or move on to a bridging activity. We recommend using the following words in sentences if the definitions aren't explicitly covered.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1703,7 +1762,7 @@
       "key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n\nThis lesson has four new and important vocabulary words:\n\n - **Program** - *Say it with me: Pro - Gram*\n\n    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** - *Say it with me: Pro - Gramm - ing*\n\n   The art of creating a program. \n\n - **Bug** - *Say it with me: Bug*\n\n   An error in a program that prevents the program from running as expected. \n\n - **Debugging** - *Say it with me: De - Bugg - ing*\n\n   Finding and fixing errors in programs. \n\n - **Loop** - *Say it with me: Loo-p*\n\n   The action of doing something over and over again"
+        "description": "\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has the following important vocabulary words:\n\n\n\n - **Bug** -    An error in a program that prevents the program from running as expected. \n\n - **Debugging** -    Finding and fixing errors in programs. \n\n - **Loop** -    The action of doing something over and over again\n\n - **Program** -    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** -    The art of creating a program. "
       },
       "seeding_key": {
         "activity_section.key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
@@ -1725,7 +1784,7 @@
       "key": "802031af-637b-4e3d-bb6f-afee7b4454fa",
       "position": 2,
       "properties": {
-        "description": "Pull up a puzzle from the lesson. We recommend puzzle 6 for this activity. Break up the students into groups of three or four. Have them \"program\" Red, the angry bird, to get to the pig using arrows from \"Graph Paper Programming.\"\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)\n\nThe class will not need to use the last arrow.\n\nOnce all the groups have an answer, discuss the path as a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\nPull up a puzzle from the lesson. We recommend puzzle 6 for this activity. Break up the students into groups of three or four. Have them \"program\" Red, the angry bird, to get to the pig using arrows from \"Graph Paper Programming.\"\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)\n\nThe class will not need to use the last arrow.\n\nOnce all the groups have an answer, discuss the path as a class.",
         "name": "Preview of Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -1765,6 +1824,7 @@
       "key": "2437214a-2077-4e3c-b231-e943e66a693f",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Maze Intro: Programming with Blocks” video",
         "progression_name": "Video: Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
@@ -1776,6 +1836,7 @@
       "key": "4e14f7ca-7b1a-4769-ae57-9f128722a0dd",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1787,7 +1848,8 @@
       "key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0",
       "position": 5,
       "properties": {
-        "progression_name": "Challenge"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8-10 - Challenge” slide",
+        "progression_name": "Challenge/Practice"
       },
       "seeding_key": {
         "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0",
@@ -1795,21 +1857,10 @@
       }
     },
     {
-      "key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb",
-      "position": 6,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb",
-        "lesson_activity.key": "34f9cd2c-cd89-445e-9323-d83630338704"
-      }
-    },
-    {
       "key": "aa5e1de6-0f8d-4e95-82cc-da2f38e8a9ad",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - List some of the bugs you found in your programs today.\n - What was your favorite puzzle to complete? Draw your favorite character completing a puzzle.",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Reflect**\n\n - Why is it important to program your blocks in a specific order?\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1818,8 +1869,36 @@
       }
     },
     {
-      "key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
+      "key": "f5627332-703a-420b-ab72-660c350b87d9",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect:** _When have you “debugged” a frustrating problem in your life?_",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make sure that students understand that the question refers to a real life problem - not a previous computer problem. Give an example that is relevant for your students, or come up with an example from your own life."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f5627332-703a-420b-ab72-660c350b87d9",
+        "lesson_activity.key": "2483ab95-65f1-4cb0-a3e9-fa3f9c64d2e5"
+      }
+    },
+    {
+      "key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Algorithm** - A list of steps to finish a task.\n\n**Bug** - Part of a program that does not work correctly.\n**Debugging** - Finding and fixing problems in an algorithm or program.\n**Program** - An algorithm that has been coded into something that can be run by a machine.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\nFrustrated - Feeling annoyed or angry because something is not the way you want it. \n\nPersistence - Trying again and again, even when something is very hard.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
+        "lesson_activity.key": "2483ab95-65f1-4cb0-a3e9-fa3f9c64d2e5"
+      }
+    },
+    {
+      "key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
+      "position": 3,
       "properties": {
         "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity."
       },
@@ -1830,7 +1909,7 @@
     },
     {
       "key": "1a76c73e-a54d-4d84-ae77-8cf516d6661e",
-      "position": 2,
+      "position": 4,
       "properties": {
         "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n**Display:** Show your students the provided ***Teacher Debugging Image**.\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!",
         "name": "Where did I go wrong?"
@@ -1842,7 +1921,7 @@
     },
     {
       "key": "02a52fe1-85a9-4a07-83a8-5469bf8ac7e6",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "**Discuss:** Ask the students if they could tell how you were feeling when you couldn't figure out the answer.  They might suggest that you were \"mad\" or \"sad\".  Instead of telling them \"no\", describe that you were feeling a little bit mad, a little bit sad, and a little bit confused.  When you put all of those emotions together, it makes a feeling called \"frustration\".  When you are \"frustrated\" you might think you are mad, sad, or confused -- and you might be tempted to give up -- but frustration is a natural feeling and it's a big hint that you are about to learn something!  Instead of quitting, practice persistence.  Keep trying over and over again.  After a few times, you will start to understand how to debug your problems!",
         "tips": [
@@ -1859,7 +1938,7 @@
     },
     {
       "key": "3630ffe8-f7ca-410f-8854-bb4a0e2bea95",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "**Distribute:** To make sure that students understand the idea of finding and fixing errors (debugging) pass out the  ***Worksheet** and have students complete the task in pairs.  \n\n*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.\n\n**Transition:** Now it's time to play the game!"
       },
@@ -3184,7 +3263,7 @@
       "key": "8c1a0c94-5769-44d7-90a2-af9b521835d7",
       "position": 10,
       "properties": {
-        "progression_name": "Lesson Extras"
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "8c1a0c94-5769-44d7-90a2-af9b521835d7",
@@ -3793,7 +3872,7 @@
         "level_keys": [
           "courseD_maze_ramp5b2022"
         ],
-        "progression": "Challenge"
+        "progression": "Challenge/Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -3812,13 +3891,10 @@
     {
       "chapter": 11,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_intro5c2022"
-        ],
-        "progression": "Practice"
+        "progression": "Challenge/Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -3828,7 +3904,7 @@
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2022",
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb"
+        "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0"
       },
       "level_keys": [
         "courseD_maze_intro5c2022"
@@ -3837,13 +3913,10 @@
     {
       "chapter": 12,
       "position": 10,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp5d2022"
-        ],
-        "progression": "Practice"
+        "progression": "Challenge/Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -3853,7 +3926,7 @@
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2022",
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb"
+        "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0"
       },
       "level_keys": [
         "courseD_maze_ramp5d2022"
@@ -5970,6 +6043,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "coursed_looking_ahead_minecraft_intro"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursed_looking_ahead_minecraft_intro"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec"
+      },
+      "level_keys": [
+        "coursed_looking_ahead_minecraft_intro"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "Overworld Move to Sheep2022"
         ],
         "progression": "Skill Building"
@@ -5989,9 +6087,9 @@
       ]
     },
     {
-      "chapter": 98,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 99,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6014,9 +6112,9 @@
       ]
     },
     {
-      "chapter": 99,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 100,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6039,9 +6137,9 @@
       ]
     },
     {
-      "chapter": 100,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 101,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6064,9 +6162,34 @@
       ]
     },
     {
-      "chapter": 101,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 102,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_repeat_loops"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursed_looking_ahead_minecraft_repeat_loops"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec"
+      },
+      "level_keys": [
+        "coursed_looking_ahead_minecraft_repeat_loops"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6089,9 +6212,9 @@
       ]
     },
     {
-      "chapter": 102,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 104,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6114,9 +6237,9 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 105,
+      "position": 9,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6139,9 +6262,9 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 106,
+      "position": 10,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6164,9 +6287,9 @@
       ]
     },
     {
-      "chapter": 105,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 107,
+      "position": 11,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6189,9 +6312,9 @@
       ]
     },
     {
-      "chapter": 106,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 108,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6214,8 +6337,33 @@
       ]
     },
     {
-      "chapter": 107,
-      "position": 11,
+      "chapter": 109,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_if_statements"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursed_looking_ahead_minecraft_if_statements"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec"
+      },
+      "level_keys": [
+        "coursed_looking_ahead_minecraft_if_statements"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6240,8 +6388,8 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 12,
+      "chapter": 111,
+      "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6266,8 +6414,8 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 13,
+      "chapter": 112,
+      "position": 16,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -6291,9 +6439,34 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 14,
+      "chapter": 113,
+      "position": 17,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_congratulations"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursed_looking_ahead_minecraft_congratulations"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "c892041f-8717-4cbf-b00b-9d0b5faaf3f5"
+      },
+      "level_keys": [
+        "coursed_looking_ahead_minecraft_congratulations"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 18,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6316,7 +6489,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6341,7 +6514,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 116,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6366,7 +6539,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 117,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6391,7 +6564,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 118,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6416,7 +6589,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 119,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6441,7 +6614,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 120,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -6466,7 +6639,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 121,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -6491,7 +6664,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 122,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6516,7 +6689,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 123,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6541,7 +6714,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 124,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6566,7 +6739,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 125,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6592,7 +6765,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 126,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6617,7 +6790,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 127,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -6642,7 +6815,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 128,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6650,9 +6823,9 @@
         "level_keys": [
           "courseD_bee_conditionals_challenge12022"
         ],
-        "progression": "Lesson Extras"
+        "progression": "Challenge"
       },
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge12022"
@@ -6667,7 +6840,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 129,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -6675,9 +6848,9 @@
         "level_keys": [
           "courseD_bee_conditionals_challenge22022"
         ],
-        "progression": "Lesson Extras"
+        "progression": "Challenge"
       },
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_conditionals_challenge22022"
@@ -6692,7 +6865,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 130,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6717,7 +6890,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 131,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6742,7 +6915,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 132,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6767,7 +6940,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 133,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6792,7 +6965,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 134,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6817,7 +6990,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 135,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6842,7 +7015,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 136,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6867,7 +7040,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 137,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -6892,7 +7065,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 138,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -6917,7 +7090,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 139,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6943,7 +7116,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 140,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6968,7 +7141,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 141,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -6993,7 +7166,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 142,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7018,7 +7191,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 143,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7028,7 +7201,7 @@
         ],
         "progression": "Challenge"
       },
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_farmer_while_challenge12022"
@@ -7043,7 +7216,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 144,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7068,7 +7241,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 145,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7093,7 +7266,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 146,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7118,7 +7291,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 147,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7143,7 +7316,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 148,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7168,7 +7341,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 149,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7193,7 +7366,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 150,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -7218,7 +7391,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 151,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -7243,7 +7416,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 152,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7269,7 +7442,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 153,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7294,7 +7467,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 154,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7319,7 +7492,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 155,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7344,7 +7517,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 156,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7499,7 +7672,7 @@
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2022",
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb"
+        "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0"
       }
     },
     {
@@ -7511,7 +7684,7 @@
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2022",
-        "activity_section.key": "72873f1d-56e6-4e83-8f56-48a6d36c83bb"
+        "activity_section.key": "8e887047-0b51-46cf-8c62-4ef56d1b58c0"
       }
     },
     {
@@ -8524,6 +8697,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "coursed_looking_ahead_minecraft_intro",
+        "script_level.level_keys": [
+          "coursed_looking_ahead_minecraft_intro"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Overworld Move to Sheep2022",
         "script_level.level_keys": [
           "Overworld Move to Sheep2022"
@@ -8563,6 +8748,18 @@
         "level.key": "Overworld Chop Trees2022",
         "script_level.level_keys": [
           "Overworld Chop Trees2022"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursed_looking_ahead_minecraft_repeat_loops",
+        "script_level.level_keys": [
+          "coursed_looking_ahead_minecraft_repeat_loops"
         ],
         "lesson.key": "Looking Ahead with Minecraft",
         "lesson_group.key": "csf_conditionals",
@@ -8644,6 +8841,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "coursed_looking_ahead_minecraft_if_statements",
+        "script_level.level_keys": [
+          "coursed_looking_ahead_minecraft_if_statements"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "c6bd1d9a-a98f-444b-b24b-05fef7ca82ec"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Underground Avoiding Lava2022",
         "script_level.level_keys": [
           "Underground Avoiding Lava2022"
@@ -8676,6 +8885,18 @@
         "lesson_group.key": "csf_conditionals",
         "script.name": "coursed-2022",
         "activity_section.key": "4d4e1c44-ff30-4ba6-bdcc-67dc52d3c85a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursed_looking_ahead_minecraft_congratulations",
+        "script_level.level_keys": [
+          "coursed_looking_ahead_minecraft_congratulations"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "c892041f-8717-4cbf-b00b-9d0b5faaf3f5"
       }
     },
     {

@@ -67,6 +67,21 @@
         },
         "define/coursee/2021": {
           "word": "កំណត់"
+        },
+        "variable/csd/2021": {
+          "word": "អថេរ"
+        },
+        "conditionals/csd/2021": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "function/csd/2021": {
+          "word": "អនុគមន៍"
+        },
+        "input/csd/2021": {
+          "word": "ធាតុបញ្ចូល"
+        },
+        "copyright/csd/2021": {
+          "word": "រក្សាសិទ្ធដោយ"
         }
       }
     }

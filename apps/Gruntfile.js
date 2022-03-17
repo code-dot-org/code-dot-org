@@ -4,6 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
 var webpackConfig = require('./webpack');
+var offlineWebpackConfig = require('./webpackOffline.config');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
@@ -345,6 +346,10 @@ describe('entry tests', () => {
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
+            'build/package/css/reference_guides.css',
+            'style/curriculum/reference_guides.scss'
+          ],
+          [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
           ],
@@ -580,6 +585,8 @@ describe('entry tests', () => {
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'report_abuse/report_abuse_form':
       './src/sites/studio/pages/report_abuse/report_abuse_form.js',
+    'reference_guides/show':
+      './src/sites/studio/pages/reference_guides/show.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
     'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
@@ -649,6 +656,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
       './src/sites/studio/pages/programming_expressions/edit.js',
+    'reference_guides/edit_all':
+      './src/sites/studio/pages/reference_guides/edit_all.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -1055,6 +1064,8 @@ describe('entry tests', () => {
       watch: false
     }),
 
+    buildOffline: offlineWebpackConfig,
+
     uglify: createConfig({
       minify: true,
       watch: false
@@ -1272,10 +1283,14 @@ describe('entry tests', () => {
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
+    'webpack:buildOffline',
     'notify:js-build',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash'
   ]);
+
+  // Builds the Service Worker used for the Code.org offline experience.
+  grunt.registerTask('buildOffline', ['webpack:buildOffline']);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 

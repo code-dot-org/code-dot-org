@@ -103,8 +103,6 @@ class HomeController < ApplicationController
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
 
     @homepage_data = {}
-    @homepage_data[:valid_grades] = Section.valid_grades
-    @homepage_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
@@ -112,6 +110,9 @@ class HomeController < ApplicationController
     @homepage_data[:providers] = current_user.providers
     @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
     @homepage_data[:currentUserId] = current_user.id
+
+    current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
+    @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
 
     # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
     @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
@@ -186,9 +187,9 @@ class HomeController < ApplicationController
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
+      @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
-      @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
 
       if show_census_banner
         teachers_school = current_user.school_info.school

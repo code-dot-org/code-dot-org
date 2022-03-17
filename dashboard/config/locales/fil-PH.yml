@@ -487,6 +487,7 @@ fil:
       infinity: Walang katapusan
       makerlab: Maker Toolkit
       minecraft_adventurer: Tagapaglakbay sa Minecraft
+      minecraft_aquatic: Minecraft Aquatic
       minecraft_codebuilder: 'Minecraft: Koneksyon sa Code'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
@@ -619,6 +620,7 @@ fil:
     none: Wala
     only_one_parent_email_supported_warning: 'Tandaan: masusuportahan lang namin ang
       isang email address ng magulang/tagapag-alaga sa bawat estudyante sa ngayon. '
+    encrypted: Na-encrypt na
   user_level:
     completed: Nakompleto
     tried: Sinubukan

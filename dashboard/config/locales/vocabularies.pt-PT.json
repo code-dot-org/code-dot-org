@@ -828,6 +828,60 @@
         "try/coursee/2021": {
           "word": "Tentar",
           "definition": "Empenhar-se para fazer algo."
+        },
+        "machine_learning/csd/2021": {
+          "word": "Máquina de aprendizado",
+          "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
+        },
+        "user_interface/csd/2021": {
+          "word": "Interface do Usuário"
+        },
+        "bug/csd/2021": {
+          "word": "Bug",
+          "definition": "Parte de um programa que não funciona corretamente."
+        },
+        "for_loop/csd/2021": {
+          "word": "Laço “for”",
+          "definition": "Laço com início, fim e incremento predeterminados (intervalo de passos)."
+        },
+        "debugging/csd/2021": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/csd/2021": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "variable/csd/2021": {
+          "word": "Variável",
+          "definition": "Espaço reservado para uma informação que pode mudar."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "condition/csd/2021": {
+          "word": "Condição"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstração"
+        },
+        "function/csd/2021": {
+          "word": "Função"
+        },
+        "input/csd/2021": {
+          "word": "Entrada"
+        },
+        "processing/csd/2021": {
+          "word": "Processando"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Pegada Digital"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

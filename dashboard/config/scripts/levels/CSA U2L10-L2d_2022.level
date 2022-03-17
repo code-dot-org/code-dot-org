@@ -1,0 +1,32 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `FoodTruck`(#e7e8ea) class represents a single food truck that is part of the Project Mercury Pastries Food Truck business.\r\n\r\n##Getting Started\r\n1. Import `Dessert.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://studio.code.org/s/csa-backpack-2022/lessons/2/levels/5).*\r\n\r\n##In FoodTruck.java:\r\n2. Complete the parameterized constructor. Use the `this`(#e7e8ea) keyword to initialize the instance variables to the values passed to the parameters.\r\n\r\n3. Complete the `hasGreaterProfit()`(#e7e8ea) method.\r\n\r\n   * If the result of a call to `addBonus()`(#e7e8ea) with the current object using the `this`(#e7e8ea) keyword is greater than the result of a call to `addBonus()`(#e7e8ea) with `otherTruck`(#e7e8ea), return `true`(#e7e8ea).\r\n   \r\n   * Otherwise, return `false`(#e7e8ea).",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "The FoodTruck Class",
+    "bubble_choice_description": "The FoodTruck class represents a single food truck that is part of the Project Mercury Pastries Food Truck business. Complete its parameterized constructor and hasGreaterProfit() method.",
+    "thumbnail_url": "https://images.code.org/9c436c06bc850fb25f4e797e0603b0b6-image-1646615592652.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Dessert amyDessert = new Dessert(\"strawberry\", 4.50);\n    Dessert saraDessert = new Dessert(\"blueberry\", 3.75);\n\n    FoodTruck amyFoodTruck = new FoodTruck(\"Amy\", amyDessert, 5700);\n    FoodTruck saraFoodTruck = new FoodTruck(\"Sara\", saraDessert, 4500);\n\n    System.out.println(\"Did Amy's food truck have a greater profit than Sara's?\");\n    System.out.println(amyFoodTruck.hasGreaterProfit(saraFoodTruck));\n    \n  }\n}",
+        "isVisible": true
+      },
+      "FoodTruck.java": {
+        "text": "/*\n * Represents a single food truck at the\n * Project Mercury Pastries Food Truck business\n */\npublic class FoodTruck {\n\n  private String owner;         // The owner of the FoodTruck\n  private Dessert newDessert;   // The Dessert the FoodTruck sells\n  private double profit;        // The profit of the FoodTruck\n\n  /*\n   * Creates a FoodTruck with the specified\n   * owner, Dessert, and profit\n   */\n  public FoodTruck(String owner, Dessert newDessert, double profit) {\n    // TO DO #2: Initialize the instance variables to the values\n    // passed to the parameters.\n    \n    \n  }\n\n  /*\n   * Gets the current value of profit\n   */\n  public double getProfit() {\n    return profit;\n  }\n\n  /*\n   * Sets profit to the given value\n   */\n  public void setProfit(double newProfit) {\n    profit = newProfit;\n  }\n\n  /*\n   * Adds a bonus to the specified FoodTruck\n   */\n  public double addBonus(FoodTruck truck) {\n    double bonus = truck.getProfit() * 0.15;\n    truck.setProfit(truck.getProfit() + bonus);\n    \n    return truck.getProfit();\n  }\n\n  /*\n   * Checks whether or not this FoodTruck has a greater\n   * profit than otherTruck after receiving a bonus\n   */\n  public boolean hasGreaterProfit(FoodTruck otherTruck) {\n    // TO DO #3: Use an if-else statement to check if the result\n    // of addBonus with this FoodTruck is greater than the\n    // result of addBonus with the otherTruck\n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": "+2JDDQW62ZlqxWyXdQHBCFy8OtybMPAt2n9mnOWWxaY9Yp+Wj1aArmnuZjS9\nusYerJBNuSXrWQpiU1P9yF65u54ivVbj0JeIlGeKt7gGKbiy976YQm057x56\nzro6GZVd\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-07T00:56:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-07T00:56:03.644+00:00\",\"changed\":[\"cloned from \\\"CSA U2L10-L2c_2022\\\"\"],\"cloned_from\":\"CSA U2L10-L2c_2022\"},{\"changed_at\":\"2022-03-07 00:56:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 01:13:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-07 13:25:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:52:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:52:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

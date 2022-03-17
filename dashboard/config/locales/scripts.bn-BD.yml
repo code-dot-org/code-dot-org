@@ -1812,6 +1812,10 @@ bn:
           lesson_groups:
             lessonGroup-3:
               display_name: চলকগুলো
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: ফাংশনগুলি
         coursea-2022:
           lessons:
             Happy Maps:
@@ -1920,13 +1924,57 @@ bn:
           lesson_groups:
             lessonGroup-8:
               display_name: চলকগুলো
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: চক্র
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: চলকগুলো
         cs4all-invasive-species:
           lessons:
             lesson-12:
               name: শর্তযুক্ত
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: চক্র
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: ইন্টারনেট
+              key: ইন্টারনেট
+          lesson_groups:
+            lessonGroup-8:
+              display_name: চলকগুলো
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: চলকগুলো
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: চক্র
+              key: চক্র
+            Events:
+              name: ঘটনাবলী
+              key: ঘটনাবলী
+            Conditionals:
+              name: শর্তযুক্ত
+              key: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি
+              key: ফাংশনগুলি
+            Variables:
+              name: চলকগুলো
+              key: চলকগুলো
+            For Loops:
+              name: ফর লুপ
+              key: ফর লুপ

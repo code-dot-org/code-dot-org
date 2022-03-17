@@ -1,0 +1,53 @@
+{
+  "it-IT": {
+    "data": {
+      "course_offerings": {
+        "coursea": "Corso A",
+        "courseb": "Corso B",
+        "coursec": "Corso C",
+        "coursed": "Corso D",
+        "coursee": "Corso E",
+        "coursef": "Corso F",
+        "express": "Corso Rapido (2018)",
+        "pre-express": "Corso rapido pre-scolare",
+        "csd": "Alla scoperta dell'informatica",
+        "csp": "Principi di informatica",
+        "20-hour": "Corso rapido in 20 ore",
+        "flappy": "Flappy",
+        "jigsaw": "Puzzle",
+        "algebra": "Informatica in Algebra",
+        "applab-intro": "Introduzione a Sviluppo App",
+        "aquatic": "Minecraft: Viaggio Acquatico",
+        "artist": "Artista",
+        "basketball": "https://studio.code.org/s/basketball/stage/\n\nScegli la tua squadra e fai una partita di basket",
+        "course1": "Corso 1",
+        "course2": "Corso 2",
+        "course3": "Corso 3",
+        "course4": "Corso 4",
+        "dance-extras-2019": "Continua a ballare (2019)",
+        "dance-extras": "Continua a ballare (2018)",
+        "frozen": "Programma con Anna ed Elsa",
+        "gumball": "Laboratorio con Gumball",
+        "hourofcode": "Labirinto Classico",
+        "iceage": "Laboratorio con L'Era Glaciale",
+        "infinity": "Disney Infinity",
+        "mc": "L'Ora del Codice con Minecraft",
+        "minecraft": "Programma il tuo Minecraft",
+        "oceans": "L'Intelligenza Artificiale per il mare",
+        "outbreak": "Simulazione di epidemia",
+        "pixelation": "Conversione di pixel",
+        "playlab": "Laboratorio",
+        "sports": "Programma il tuo sport",
+        "text-compression": "Compressione del testo",
+        "csa-self-paced-pl": "Navigare nel sito Code.org per gli Insegnanti di CSA Pilota",
+        "counting-csc": "Conteggio con la collezionista",
+        "explore-data-1": "Scatola di esplorazione - Trame e istogrammi",
+        "outbreak-csc": "Epidemia",
+        "poem-art": "L'arte della poesia",
+        "poetry": "Informatica e poesia",
+        "edit-code": "Modifica il Codice",
+        "tesstest921": "tesstest921"
+      }
+    }
+  }
+}

@@ -506,6 +506,52 @@
         "try/coursee/2021": {
           "word": "Coba",
           "definition": "Mencoba melakukan sesuatu"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Pembelajaran Mesin"
+        },
+        "user_interface/csd/2021": {
+          "word": "Antarmuka Pengguna"
+        },
+        "bug/csd/2021": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "for_loop/csd/2021": {
+          "word": "For Loop",
+          "definition": "Loop yang memiliki awal, akhir, dan nilai kenaikan yang telah ditentukan (interval langkah)."
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging"
+        },
+        "variable/csd/2021": {
+          "word": "Variabel",
+          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "conditionals/csd/2021": {
+          "word": "Kondisi"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksi"
+        },
+        "function/csd/2021": {
+          "word": "Fungsi"
+        },
+        "input/csd/2021": {
+          "word": "Input"
+        },
+        "processing/csd/2021": {
+          "word": "Sedang memproses"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Jejak Digital"
+        },
+        "copyright/csd/2021": {
+          "word": "Hak cipta",
+          "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
         }
       }
     }

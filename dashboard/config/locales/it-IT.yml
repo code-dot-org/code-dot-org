@@ -367,6 +367,8 @@ it:
       provider_managed_section: Questa sezione è gestita da un altro provider e non
         può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider}
         e risincronizza la loro sezione.
+      not_participant_type: Non siamo riusciti ad aggiungerti alla sezione %{section_code}
+        perché non soddisfi la tipologia di partecipante per la sezione.
     mail:
       student_disassociated:
         subject: 'Notifica da Code.org: %{student_name} non è più iscritto come tuo
@@ -681,6 +683,8 @@ it:
       già ad una classe di questo insegnante.
     third_party_login: Non puoi spostare gli studenti in una classe sincronizzata
       con un strumento di terze parti.
+    not_correct_participant_type: Non puoi spostare questi utenti perché non hanno
+      le autorizzazioni a partecipare alla nuova sezione.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -743,6 +747,7 @@ it:
     how_it_works: Come funziona
     try_hour_of_code: Prova l'Ora del Codice!
     store: Negozio
+    cookie_notice: Informativa sui cookie
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti

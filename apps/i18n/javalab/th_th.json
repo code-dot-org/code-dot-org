@@ -98,6 +98,8 @@
   "reviewClassmateProject": "รีวิวโปรเจกต์ของเพื่อนร่วมชั้นเรียน...",
   "returnToMyProject": "กลับไปที่โปรเจกต์ของฉัน",
   "running": "กำลังดำเนินการ...",
+  "runningProjectTests": "กำลังเรียกใช้การทดสอบโปรเจกต์ของคุณ...",
+  "runningValidation": "กำลังเรียกใช้การทดสอบเลเวล...",
   "runtimeError": "โค้ดมีความผิดปกติขณะทำงาน\n{cause}",
   "saveToBackpack": "บันทึกในแบ็กแพ็ก",
   "sendingVideo": "กำลังส่งวิดีโอ ความยาวทั้งหมด: {totalTime} วินาที",

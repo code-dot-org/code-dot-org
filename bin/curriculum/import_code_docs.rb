@@ -96,6 +96,9 @@ def main(options)
         log "#{exp.key} has a video with URL #{cb_exp['video']}"
       end
       exp.examples = cb_exp['examples']
+      exp.examples.each do |example|
+        example['code'] = "```\n#{example['code']}\n```" if example['code']
+      end
       exp.palette_params = cb_exp['parameters']
 
       category = exp.programming_environment.categories.find_by_name(cb_exp['category'])

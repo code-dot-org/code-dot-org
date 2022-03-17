@@ -3013,6 +3013,10 @@ lt:
           lesson_groups:
             lessonGroup-3:
               display_name: Kintamieji
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Komandų kūrimas
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3154,6 +3158,9 @@ lt:
             lessonGroup-8:
               display_name: Kintamieji
         csa1-2022:
+          lessons:
+            lesson-9:
+              name: Kartojimas
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -3164,6 +3171,9 @@ lt:
             csf_events:
               display_name: Įvykiai
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Kintamieji
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
@@ -3183,3 +3193,67 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Kartojimas
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internetas
+              key: Internetas
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Virtuali pilietybė
+            lessonGroup-8:
+              display_name: Kintamieji
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Kintamieji
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Kartojimas
+              key: Kartojimas
+            Events:
+              name: Įvykiai
+              key: Įvykiai
+            Conditionals:
+              name: Sąlyginiai sakiniai
+              key: Sąlyginiai sakiniai
+            Functions:
+              name: Komandų kūrimas
+              key: Komandų kūrimas
+            Variables:
+              name: Kintamieji
+              key: Kintamieji
+            For Loops:
+              name: Kartojimas
+              key: Kartojimas

@@ -23,7 +23,7 @@ public static void insertionSort(ArrayList<Integer> nums) {
   for (int i = 1; i < nums.size(); i ++){
     int temp = nums.get(i);
     int index = i;
-    while (index >= 0 && temp > nums.get(index - 1)){
+    while (index > 0 && temp < nums.get(index - 1)){
       nums.set(index, nums.get(index-1));
       index --;
     }

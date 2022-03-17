@@ -181,6 +181,30 @@
         },
         "define/coursee/2021": {
           "word": "Sainmhínigh"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "debugging/csd/2021": {
+          "word": "Dífhabhtú"
+        },
+        "variable/csd/2021": {
+          "word": "Athróg"
+        },
+        "conditionals/csd/2021": {
+          "word": "Coinníollacha"
+        },
+        "abstraction/csd/2021": {
+          "word": "Teibíocht"
+        },
+        "function/csd/2021": {
+          "word": "Feidhm"
+        },
+        "input/csd/2021": {
+          "word": "Ionchur"
+        },
+        "copyright/csd/2021": {
+          "word": "Cóipcheart"
         }
       }
     }

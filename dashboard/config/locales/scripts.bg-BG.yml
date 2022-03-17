@@ -4502,6 +4502,10 @@ bg:
               display_name: Спрайт
             lessonGroup-3:
               display_name: Променливи
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функции
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -4680,6 +4684,11 @@ bg:
             lessonGroup-8:
               display_name: Променливи
         csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-9:
+              name: Повторения
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -4690,6 +4699,9 @@ bg:
             csf_events:
               display_name: Събития
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Променливи
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -4715,3 +4727,91 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-9:
+              name: Повторения
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Интернет
+              key: Интернет
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Цифрови граждани
+            ramp_up:
+              display_name: Спрайт
+            lessonGroup-8:
+              display_name: Променливи
+        csa6-2022:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-2022:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-2022:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Променливи
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Повторения
+              key: Повторения
+            Events:
+              name: Събития
+              key: Събития
+            Conditionals:
+              name: Условия
+              key: Условия
+            Functions:
+              name: Функции
+              key: Функции
+            Variables:
+              name: Променливи
+              key: Променливи
+            For Loops:
+              name: За циклите
+              key: За циклите

@@ -1,7 +1,0 @@
-{
-  "key": "whileBlock",
-  "name": "whileBlock",
-  "category": "Control",
-  "category_key": "control",
-  "syntax": "while (__) {\n  __;\n}"
-}

@@ -3689,7 +3689,28 @@
         "ramp_artist_loops9_2018": "Resolva este enigma desenhando um quadrado.",
         "ramp_artist_loops9_2019": "Resolva este enigma desenhando um quadrado.",
         "ramp_artist_loops9_2020": "Resolva este enigma desenhando um quadrado.",
-        "ramp_artist_loops9_2021": "Resolva este enigma desenhando um quadrado."
+        "ramp_artist_loops9_2021": "Resolva este enigma desenhando um quadrado.",
+        "CSD U3 Boolean Modify_2021": "Modifique o código para que todos os comandos console.log imprimam 'verdadeiro'",
+        "CSD U3 Boolean Predict_2021": "O que você acha que este código irá fazer quando for executado? Preveja o que cada comando console.log() irá imprimir, e então execute o programa para verificar suas previsões.",
+        "CSD U3 Keypress Boolean_2021": "Modifique o código para que todos os comandos console.log imprimam 'verdadeiro'",
+        "CSD U3 L5 Freeplay_2021": "Mude o valor de petalSize múltiplas vezes. Como isto muda o seu desenho?",
+        "CSD U3 Mouse Input Bee 2_2021": "Faça isso",
+        "CSD U3 Sprites intro sprites_2021": "Faça isso",
+        "CSD U3 Variables change circle size_2021": "Mude o valor de petalSize múltiplas vezes. Como isto muda o seu desenho?",
+        "CSD U3 Variables naming rules v2_2021": "Mude o valor de petalSize múltiplas vezes. Como isto muda o seu desenho?",
+        "CSD U3 Variables random with assignment_2021": "Mude o valor de petalSize múltiplas vezes. Como isto muda o seu desenho?",
+        "CSD U5 black white images pixelation 2_2021": "Desenhar uma cara de sorriso (clique aqui para ver a imagem)",
+        "CSD U5 black white images pixelation 3_2021": "Altere os controles deslizantes de largura e altura para encontrar a imagem (clique aqui para ver mais)",
+        "CSD U5 black white images pixelation 4_2021": "Adicione sobrancelhas ao rosto sorridente (clique aqui para ver a imagem)",
+        "CSD U5 black white images pixelation 5_2021": "Desenho algo que você gosta",
+        "CSD U5 black white images pixelation_2021": "Complete a forma X digitando 0s e 1s",
+        "CSD U6 params modify planes_2021": "# Controlador Multiplo de Aviões\n\nEste programa move os três aviões usando a placa do acelerômetro e as caixas de seleção na tela.  Neste momento, apenas o avião vermelho funciona.\n\n# Faça isso\n\n-   Crie uma nova função de 'moverAviao(nome)' que pode mover qualquer avião.\n-   Chame a função 'moverAviao(nome)' dentro do bloco do evento, tal que ele só se move quando a sua caixa de seleção está marcada.\n\n_Desafio: Neste momento, os aviões se movem rápido demais. Você consegue descobrir como alterar o código para que eles se movam mais lentamente?_",
+        "CSD games conditionals bowl_2021": "Modifique o código para que todos os comandos console.log imprimam 'verdadeiro'",
+        "CSD games conditionals practice spaceship_2021": "Modifique o código para que todos os comandos console.log imprimam 'verdadeiro'",
+        "CSDU6 arrays select rainbow_2021": "Mostre o conteúdo da lista na tela em ordem numérica. (Clique aqui para ver todas as instruções)",
+        "CSDU6 arrays select random_2021": "Escreva um programa que escolha e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)",
+        "CSDU6 arrays select variable_2021": "Escreva um programa que escolha e mostre uma cor aleatória do vetor. (Clique aqui para ver todas as instruções)",
+        "U4 Model Design 1_2021": "Adicione um grande botão vermelho na sua tela usando o Modo de Design. (Clique para ver as instruções completas)"
       }
     }
   }

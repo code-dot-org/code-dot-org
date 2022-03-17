@@ -1,7 +1,0 @@
-{
-  "key": "declareAssign_object",
-  "name": "declareAssign_object",
-  "category": "Variables",
-  "category_key": "variables",
-  "syntax": "var object = {\"key\": \"value\"};"
-}

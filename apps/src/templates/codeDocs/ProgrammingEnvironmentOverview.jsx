@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
+import i18n from '@cdo/locale';
+import {TextLink} from '@dsco_/link';
 
 export function CategorySection({category}) {
   return (
@@ -18,7 +20,7 @@ export function CategorySection({category}) {
       <ul>
         {category.programmingExpressions.map(expression => (
           <li key={expression.key}>
-            <CodeDocLink programmingExpression={expression} />
+            <CodeDocLink programmingExpression={expression} showBlocks />
           </li>
         ))}
       </ul>
@@ -30,10 +32,18 @@ export default function ProgrammingEnvironmentOverview({
   programmingEnvironment
 }) {
   return (
-    <div>
-      {programmingEnvironment.title && <h1>{programmingEnvironment.title}</h1>}
+    <div style={{width: '100%'}}>
       {programmingEnvironment.description && (
         <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
+      )}
+      {programmingEnvironment.projectUrl && (
+        <div>
+          <TextLink
+            href={programmingEnvironment.projectUrl}
+            weight="medium"
+            text={i18n.tryItOut()}
+          />
+        </div>
       )}
       {programmingEnvironment.categories.map(category => (
         <CategorySection key={category.key} category={category} />

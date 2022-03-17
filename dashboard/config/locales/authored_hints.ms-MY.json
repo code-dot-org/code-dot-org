@@ -184,38 +184,38 @@
           "verionhistory": "Rasa tersekat? Anda sentiasa boleh menetapkan semula kod anda dengan mengklik `Sejarah Versi` di bawah kemudian pilih untuk  \"Mulakan Semula\"."
         },
         "CourseD_Dance_2020_01_2021": {
-          "validation": "**Bagaimanakah saya boleh lulus peringkat ini?**\n\n-   Pastikan penari muncul di skrin.\n\n_Peringkat ini berakhir selepas 4 corak berirama._",
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Pastikan penari muncul pada skrin.\n\n_Tahap ini berakhir selepas 4 corak berirama._",
           "challenges": "**Cabaran Pilihan**\n\n-   Pilih lagu yang berlainan untuk dimainkan.\n-   Pindahkan penari anda ke lokasi baharu.\n-   Buat lebih daripada seorang penari."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "**Bagaimanakah saya boleh lulus peringkat ini?**\n\n-   Penari mesti melakukan gerakan.\n-   Anda mesti menekan kekunci anak panah.\n\n_Peringkat ini berakhir selepas 4 corak berirama._",
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Penari mesti melakukan gerakan.\n-   Anda mesti menekan kekunci anak panah.\n\n_Tahap ini berakhir selepas 4 corak berirama._",
           "challenges": "**Cabaran Pilihan**\n\n-   Gunakan lebih daripada satu blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "CourseD_Dance_2020_03_2021": {
-          "validation": "**Bagaimanakah saya boleh lulus peringkat ini?**\n\n-   Kedua-dua penari mesti melakukan gerakan.\n-   Anda mesti menekan kekunci anak panah.\n\n_Peringkat ini berakhir selepas 4 corak berirama._",
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Kedua-dua penari mesti melakukan gerakan.\n-   Anda mesti menekan kekunci anak panah.\n\n_Peringkat ini berakhir selepas 4 corak berirama._",
           "challenges": "**Cabaran Pilihan**\n\n-   Buatkan penari bertindak balas terhadap kekunci anak panah kiri dan kanan."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**Bagaimanakah saya boleh melepasi peringkat ini?**\n\n-   Penari perlu beralih kepada gerakan baharu selepas 4 corak berirama.\n\n_Peringkat ini berakhir selepas 7 corak berirama._"
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Penari perlu beralih kepada gerakan baharu selepas 4 corak berirama.\n\n_Tahap ini berakhir selepas 7 corak berirama._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**Bagaimanakah saya boleh melepasi peringkat ini?**\n\n-   Selepas 6 corak berirama, penari anda perlu melakukan tarian yang berbeza berbanding sebelum ini selepas 4 corak berirama.\n\n_Peringkat ini berakhir selepas 11 corak berirama._",
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Selepas 6 corak berirama, penari anda perlu melakukan tarian yang berbeza berbanding sebelum ini selepas 4 corak berirama.\n\n_Tahap ini berakhir selepas 11 corak berirama._",
           "challenges": "**Cabaran Pilihan**\n\n-   Tukar latar belakang bila-bila masa penari menukar gerakan."
         },
         "CourseD_Dance_2020_06_2021": {
-          "validation": "**Bagaimanakah saya boleh lulus peringkat ini?**\n\n-   Cipta seorang penari utama dan kumpulan penari sandaran.\n\n_Peringkat ini berakhir selepas 11 corak berirama._",
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Cipta seorang penari utama dan kumpulan penari sandaran dalam 4 corak berirama pertama lagu itu.\n\n_Tahap ini berakhir selepas 7 corak berirama._",
           "challenges": "**Cabaran Pilihan**\n\n-   Cipta pelbagai kumpulan penari sandaran."
         },
         "CourseD_Dance_2020_07_2021": {
-          "validation": "**Bagaimanakah saya boleh lulus peringkat ini?**\n\n-   Tukar saiz sekurang-kurangnya seorang penari selepas muzik bermula.\n\n_Peringkat ini berakhir selepas 6 corak berirama._",
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Tukar saiz sekurang-kurangnya seorang penari.\n\n_Tahap ini berakhir selepas 6 corak berirama._",
           "challenges": "**Cabaran Pilihan**\n\n-   Eksperimen dengan menukar sifat lain (kelebaran, ketinggian, putaran dan sebagainya)"
         },
         "CourseD_Dance_2020_08_2021": {
-          "validation": "**Bagaimanakah saya boleh lulus peringkat ini?**\n\n-   Tukar warna sekurang-kurangnya seorang penari.\n\n_Peringkat ini berakhir selepas 6 corak berirama._",
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Tukar warna sekurang-kurangnya seorang penari.\n\n_Tahap ini berakhir selepas 6 corak berirama._",
           "tint_hint": "Adakah anda perasan bahawa penari anda tidak menukar mengikut warna sebenar yang anda pilih? Ini berlaku kerana **warna** campurkan warna yang anda pilih dengan warna penari."
         },
         "CourseD_Dance_2020_09_2021": {
-          "validation": "**Bagaimanakah saya boleh lulus peringkat ini?**\n\n-   Hanya tekan butang \"Selesai\"!",
+          "validation": "**Bagaimanakah saya boleh melepasi tahap ini?**\n\n-   Hanya tekan butang \"Selesai\"!",
           "repeat_every_ideas": "**Perlu beberapa idea?**\n\n-   Berulang kali menukar saiz penari untuk membuatkannya berkembang.\n-   Berulang kali menukar putaran penari untuk membuatkannya berputar.\n-   Berulang kali menukar kedudukan mendatar atau menegak penari membuatkannya bergerak di seluruh skrin.\n\n_Anda juga boleh menggunakan nombor negatif untuk mewujudkan kesan bertentangan!_",
           "next_previous": "**Cabaran Pilihan**\n\n-   Anda juga boleh gunakan blok acara baharu ini untuk merentasi senarai gerakan tarian dengan menetapkan langkah kepada `(Rawak)`, `(Seterusnya)`, atau `(Terdahulu)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
@@ -231,7 +231,7 @@
           "hint1": "Klik butang `+` pada blok peristiwa. Isi ruang kosong dalam blok `tukar kostum` dengan blok `subjek` yang berada di dalam.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Untuk memberikan raksasa pelitup, gunakan blok `tukar kostum` bersama peristiwa `apabila diklik`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nPastikan blok merah kecil `diklick` ditarik sekali!",
+          "hint1": "Untuk memberikan raksasa pelitup, gunakan blok `tukar kostum` dengan peristiwa `apabila diklik`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nPastikan menyeret blok merah kecil yang `diklik` ke dalam juga!",
           "hint2": "Kod baru untuk peringkat ini sepatutnya kelihatan begini:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
@@ -392,6 +392,1311 @@
         },
         "iceage_move_to_flag": {
           "iceage_hello3_a": "Gunakan blok `move actor 1 right by 200 pixels` untuk menyelesaikan teka-teki ini."
+        },
+        "CourseE_HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
+        },
+        "CourseE_HOC 2018 Level_10_2020": {
+          "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
+        },
+        "CourseE_HOC 2018 Level_7a": {
+          "aquatic7": "Anda boleh menggunakan blok laluan jika untuk membantu anda membuat selekoh yang betul."
+        },
+        "CourseE_HOC 2018 Level_7a_2020": {
+          "aquatic7": "Anda boleh menggunakan blok laluan jika untuk membantu anda membuat selekoh yang betul."
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "Anda boleh menggunakan blok laluan jika ia membantu anda membuat pusingan yang betul."
+        },
+        "CourseE_HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Nampak bongkah karang merah dan biru? Gunakannya sebagai tiang panduan untuk membelok ke kanan dan kiri melalui terumbu."
+        },
+        "CourseE_HOC 2018 Level_9b_2020": {
+          "voyage_aquatic_9a": "Nampak bongkah karang merah dan biru? Gunakannya sebagai tiang panduan untuk membelok ke kanan dan kiri melalui terumbu."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Nampak blok terumbu karang merah dan biru? Gunakan sebagai tiang panduan untuk pusing ke kanan dan ke kiri melalui terumbu karang tersebut."
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali di dalam program anda! Cuba panggil dua kali untuk menyelesaikan teka-teki ini."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali di dalam program anda! Cuba panggil dua kali untuk menyelesaikan teka-teki ini."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali di dalam program anda! Cuba panggil dua kali untuk menyelesaikan teka-teki ini."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Jika anda memanggil fungsi dengan betul, ini adalah laluan yang anda akan tempuh...",
+          "Function_intro_Ryan_a": "Anda boleh memanggil fungsi berkali-kali dalam atur cara anda! Cuba panggil dua kali untuk menyelesaikan teka-teki ini."
+        },
+        "HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "Lihat **Tanlung Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimanakah anda boleh menggunakan bersyarat dengan mereka untuk melalui Monumen Lautan?"
+        },
+        "HOC 2018 Level_7a": {
+          "aquatic7": "Anda boleh menggunakan blok laluan jika untuk membantu anda membuat selekoh yang betul."
+        },
+        "HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "Nampak bongkah karang merah dan biru? Gunakannya sebagai tiang panduan untuk membelok ke kanan dan kiri melalui terumbu."
+        },
+        "MC_HOC_2017_01_RETRY": {
+          "MC_HOC_2017_01_RETRY_a": "Seret satu blok `bergerak ke hadapan` dari kotak alat ke ruang kerja, dan pasangkannya ke tempatnya di bawah blok `apabila dijalankan`.",
+          "MC_HOC_2017_01_RETRY_b": "Jangan lupa klik \"Run\" untuk menjalankan kod untuk Ejen.",
+          "MC_HOC_2017_01_RETRY_c": "Setelah Ejen menjalankan semua kodnya, anda boleh menggerakkan pemain dengan kekunci anak panah!"
+        },
+        "MC_HOC_2017_01_RETRY_2019": {
+          "MC_HOC_2017_01_RETRY_a": "Seret satu blok `bergerak ke hadapan` dari kotak alat ke ruang kerja, dan pasangkannya ke tempatnya di bawah blok `apabila dijalankan`.",
+          "MC_HOC_2017_01_RETRY_b": "Jangan lupa klik \"Run\" untuk menjalankan kod untuk Ejen.",
+          "MC_HOC_2017_01_RETRY_c": "Setelah Ejen menjalankan semua kodnya, anda boleh menggerakkan pemain dengan kekunci anak panah!"
+        },
+        "MC_HOC_2017_01_RETRY_2020": {
+          "MC_HOC_2017_01_RETRY_a": "Seret satu blok `bergerak ke hadapan` dari kotak alat ke ruang kerja, dan pasangkannya ke tempatnya di bawah blok `apabila dijalankan`.",
+          "MC_HOC_2017_01_RETRY_b": "Jangan lupa klik \"Run\" untuk menjalankan kod untuk Ejen.",
+          "MC_HOC_2017_01_RETRY_c": "Setelah Ejen menjalankan semua kodnya, anda boleh menggerakkan pemain dengan kekunci anak panah!"
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Seret satu blok `bergerak ke hadapan` dari kotak alat ke ruang kerja, dan pasangkannya ke tempatnya di bawah blok `apabila dijalankan`.",
+          "MC_HOC_2017_01_RETRY_b": "Jangan lupa klik \"Run\" untuk menjalankan kod untuk Ejen.",
+          "MC_HOC_2017_01_RETRY_c": "Setelah Ejen menjalankan semua kodnya, anda boleh menggerakkan pemain dengan kekunci anak panah!"
+        },
+        "MC_HOC_2017_02_Cole": {
+          "MC_HOC_2017_02_Cole_a": "Gerakkan Ejen ke hadapan dua ruang untuk berdiri di atas plat tekanan. Itu akan membuka pintu untuk pemain anda.",
+          "MC_HOC_2017_02_Cole_b": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_02_Cole_c": "Sebaik sahaja Ejen telah membuka pintu, gunakan kekunci anak panah untuk mengalihkan pemain ke peta!",
+          "MC_HOC_2017_02_Cole_d": "Pastikan Ejen mengikuti laluan yang digariskan pada peta!"
+        },
+        "MC_HOC_2017_02_Cole_2019": {
+          "MC_HOC_2017_02_Cole_a": "Gerakkan Ejen ke hadapan dua ruang untuk berdiri di atas plat tekanan. Itu akan membuka pintu untuk pemain anda.",
+          "MC_HOC_2017_02_Cole_b": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_02_Cole_c": "Sebaik sahaja Ejen telah membuka pintu, gunakan kekunci anak panah untuk mengalihkan pemain ke peta!",
+          "MC_HOC_2017_02_Cole_d": "Pastikan Ejen mengikuti laluan yang digariskan pada peta!"
+        },
+        "MC_HOC_2017_02_Cole_2020": {
+          "MC_HOC_2017_02_Cole_a": "Gerakkan Ejen ke hadapan dua ruang untuk berdiri di atas plat tekanan. Itu akan membuka pintu untuk pemain anda.",
+          "MC_HOC_2017_02_Cole_b": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_02_Cole_c": "Sebaik sahaja Ejen telah membuka pintu, gunakan kekunci anak panah untuk mengalihkan pemain ke peta!",
+          "MC_HOC_2017_02_Cole_d": "Pastikan Ejen mengikuti laluan yang digariskan pada peta!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Gerakkan Ejen ke hadapan dua ruang untuk berdiri di atas plat tekanan. Itu akan membuka pintu untuk pemain anda.",
+          "MC_HOC_2017_02_Cole_b": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_02_Cole_c": "Sebaik sahaja Ejen telah membuka pintu, gunakan kekunci anak panah untuk mengalihkan pemain ke peta!",
+          "MC_HOC_2017_02_Cole_d": "Pastikan Ejen mengikuti laluan yang digariskan pada peta!"
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_a": "Sebaik sahaja anda mendapatkan Ejen ke plat tekanan, anda boleh menggunakan kekunci anak panah anda untuk membawa pemain ke kompas!",
+          "MC_HOC_2017_03_Cole_b": "Adakah kod itu terasa agak panjang? Cuba gunakan gelung `ulang` dan lihat jika anda boleh memikirkan cara untuk menjadikannya lebih pendek!"
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_a": "Sebaik sahaja anda mendapatkan Ejen ke plat tekanan, anda boleh menggunakan kekunci anak panah anda untuk membawa pemain ke kompas!",
+          "MC_HOC_2017_03_Cole_b": "Adakah kod itu terasa agak panjang? Cuba gunakan gelung `ulang` dan lihat jika anda boleh memikirkan cara untuk menjadikannya lebih pendek!"
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_a": "Sebaik sahaja anda mendapatkan Ejen ke plat tekanan, anda boleh menggunakan kekunci anak panah anda untuk membawa pemain ke kompas!",
+          "MC_HOC_2017_03_Cole_b": "Adakah kod itu terasa agak panjang? Cuba gunakan gelung `ulang` dan lihat jika anda boleh memikirkan cara untuk menjadikannya lebih pendek!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Sebaik sahaja anda mendapatkan Ejen ke plat tekanan, anda boleh menggunakan kekunci anak panah anda untuk membawa pemain ke kompas!",
+          "MC_HOC_2017_03_Cole_b": "Adakah anda berasa kod itu agak panjang? Cuba gunakan gelung `berulang` dan lihat jika anda boleh memikirkan cara menjadikan kod lebih pendek!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gunakan blok `belok kanan` untuk menukar arah ejen",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ejen hanya perlu pergi ke plat tekanan pertama untuk membiarkan Alex atau Steve melalui kapak."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2019": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gunakan blok `belok kanan` untuk menukar arah ejen",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ejen hanya perlu pergi ke plat tekanan pertama untuk membiarkan Alex atau Steve melalui kapak."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2020": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gunakan blok `belok kanan` untuk menukar arah ejen",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ejen hanya perlu pergi ke plat tekanan pertama untuk membiarkan Alex atau Steve melalui kapak."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gunakan blok `pusing kanan` untuk menukar arah ejen",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ejen hanya perlu pergi ke plat tekanan pertama untuk membiarkan Alex atau Steve melalui kapak."
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Ejen perlu `move forward` sebanyak 7 kali. Bagaimanakah anda boleh menggunakan gelung `ulang` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_c": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_04_Cole_b": "Sebaik sahaja Ejen sampai ke plat tekanan, Ejen akan membuka pintu untuk pemain."
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Ejen perlu `move forward` sebanyak 7 kali. Bagaimanakah anda boleh menggunakan gelung `ulang` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_c": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_04_Cole_b": "Sebaik sahaja Ejen sampai ke plat tekanan, Ejen akan membuka pintu untuk pemain."
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Ejen perlu `move forward` sebanyak 7 kali. Bagaimanakah anda boleh menggunakan gelung `ulang` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_c": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_04_Cole_b": "Sebaik sahaja Ejen sampai ke plat tekanan, Ejen akan membuka pintu untuk pemain."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Ejen perlu `bergerak ke hadapan` sebanyak 7 kali. Bagaimanakah anda boleh menggunakan gelung `berulang` untuk merealisasikan perkara tersebut?",
+          "MC_HOC_2017_04_Cole_c": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_04_Cole_b": "Sebaik sahaja Ejen sampai ke plat tekanan, Ejen akan membuka pintu untuk pemain."
+        },
+        "MC_HOC_2017_05_Cole": {
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu keping kod di dalam gelung? Cuba bergerak ke hadapan **dan** letakkan papan di dalam `ulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
+        },
+        "MC_HOC_2017_05_Cole_2019": {
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu keping kod di dalam gelung? Cuba bergerak ke hadapan **dan** letakkan papan di dalam `ulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
+        },
+        "MC_HOC_2017_05_Cole_2020": {
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu keping kod di dalam gelung? Cuba bergerak ke hadapan **dan** letakkan papan di dalam `ulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Adakah anda tahu bahawa anda boleh meletakkan lebih daripada satu kod dalam gelung? Cuba bergerak ke hadapan **dan** letakkan papan dalam `berulang` untuk menyelesaikan teka-teki ini.",
+          "MC_HOC_2017_05_Cole_b": "Bawa Ejen menyeberangi sungai, bina jambatan semasa anda pergi."
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_a": "Berapa kali gelung ini dijalankan? Berapa kali _harus_ ia dijalankan?",
+          "MC_HOC_2017_06_Cole_b": "Bantu Ejen membina jambatan sepanjang jalan merentasi air!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_a": "Berapa kali gelung ini dijalankan? Berapa kali _harus_ ia dijalankan?",
+          "MC_HOC_2017_06_Cole_b": "Bantu Ejen membina jambatan sepanjang jalan merentasi air!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_a": "Berapa kali gelung ini dijalankan? Berapa kali _harus_ ia dijalankan?",
+          "MC_HOC_2017_06_Cole_b": "Bantu Ejen membina jambatan sepanjang jalan merentasi air!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Berapa kali gelung ini dijalankan? Berapa kali _harus_ ia dijalankan?",
+          "MC_HOC_2017_06_Cole_b": "Bantu Ejen membina jambatan sepanjang jalan merentasi air!"
+        },
+        "MC_HOC_2017_07_Cole": {
+          "MC_HOC_2017_07_Cole_c": "Apa yang anda perlu lakukan oleh Ejen ialah mengosongkan laluan ke Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Untuk menyelesaikan teka-teki ini, ketahui fungsi `clear path` dan panggilnya seberapa banyak yang anda perlukan menggunakan blok `clear path` hijau kecil dari kotak alat.",
+          "MC_HOC_2017_07_Cole_b": "Cuba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu anda menyelesaikan teka-teki ini."
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "MC_HOC_2017_07_Cole_c": "Apa yang anda perlu lakukan oleh Ejen ialah mengosongkan laluan ke Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Untuk menyelesaikan teka-teki ini, ketahui fungsi `clear path` dan panggilnya seberapa banyak yang anda perlukan menggunakan blok `clear path` hijau kecil dari kotak alat.",
+          "MC_HOC_2017_07_Cole_b": "Cuba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu anda menyelesaikan teka-teki ini."
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "MC_HOC_2017_07_Cole_c": "Apa yang anda perlu lakukan oleh Ejen ialah mengosongkan laluan ke Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Untuk menyelesaikan teka-teki ini, ketahui fungsi `clear path` dan panggilnya seberapa banyak yang anda perlukan menggunakan blok `clear path` hijau kecil dari kotak alat.",
+          "MC_HOC_2017_07_Cole_b": "Cuba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu anda menyelesaikan teka-teki ini."
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "Apa yang anda perlu lakukan oleh Ejen ialah mengosongkan laluan ke Minecart.",
+          "MC_HOC_2017_07_Cole_a": "Untuk menyelesaikan teka-teki ini, ketahui fungsi `clear path` dan panggilnya seberapa banyak yang anda perlukan menggunakan blok `clear path` hijau kecil dari kotak alat.",
+          "MC_HOC_2017_07_Cole_b": "Cuba campurkan blok fungsi dengan blok lain dari kotak alat untuk membantu anda menyelesaikan teka-teki ini."
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "MC_HOC_2017_10_Cole_b": "Tidak tahu hendak ke mana? Lihat jika anda boleh mencari garis putus-putus!",
+          "MC_HOC_2017_10_Cole_a": "Gunakan fungsi untuk memudahkan penyelesaian teka-teki ini!"
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "MC_HOC_2017_10_Cole_b": "Tidak tahu hendak ke mana? Lihat jika anda boleh mencari garis putus-putus!",
+          "MC_HOC_2017_10_Cole_a": "Gunakan fungsi untuk memudahkan penyelesaian teka-teki ini!"
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "MC_HOC_2017_10_Cole_b": "Tidak tahu hendak ke mana? Lihat jika anda boleh mencari garis putus-putus!",
+          "MC_HOC_2017_10_Cole_a": "Gunakan fungsi untuk memudahkan penyelesaian teka-teki ini!"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "Tidak tahu hendak ke mana? Lihat jika anda boleh mencari garis putus-putus!",
+          "MC_HOC_2017_10_Cole_a": "Gunakan fungsi untuk memudahkan penyelesaian teka-teki ini!"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_a": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_08_RY_b": "Terdapat BANYAK cara untuk menyelesaikan teka-teki ini. Cuba beberapa di antaranya!",
+          "MC_HOC_2017_08_RY_c": "Cuba ikuti garis putus-putus untuk laluan mudah melalui lava."
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_a": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_08_RY_b": "Terdapat BANYAK cara untuk menyelesaikan teka-teki ini. Cuba beberapa di antaranya!",
+          "MC_HOC_2017_08_RY_c": "Cuba ikuti garis putus-putus untuk laluan mudah melalui lava."
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_a": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_08_RY_b": "Terdapat BANYAK cara untuk menyelesaikan teka-teki ini. Cuba beberapa di antaranya!",
+          "MC_HOC_2017_08_RY_c": "Cuba ikuti garis putus-putus untuk laluan mudah melalui lava."
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Tekan \"Run\"! Anda boleh menjalankan kod anda walaupun ia tidak betul. Jalankan dan tetapkan semula kod anda berulang kali sehingga anda mengetahui apa yang salah.",
+          "MC_HOC_2017_08_RY_b": "Terdapat BANYAK cara untuk menyelesaikan teka-teki ini. Cuba beberapa di antaranya!",
+          "MC_HOC_2017_08_RY_c": "Cuba ikuti garis putus-putus untuk laluan mudah melalui lava."
+        },
+        "MC_HOC_2017_FP20x20": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa trek kereta api supaya anda boleh meneroka dunia!"
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa trek kereta api supaya anda boleh meneroka dunia!"
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa trek kereta api supaya anda boleh meneroka dunia!"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa trek kereta api supaya anda boleh meneroka dunia!"
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "Cuba minta Ejen membina beberapa jambatan supaya Alex atau Steve boleh berjalan-jalan di luar tepi peta."
+        },
+        "Overworld Avoid Monsters": {
+          "mc_8_a": "Terdapat beberapa laluan yang anda boleh ambil. Yang manakah paling pendek?",
+          "mc_8_b": "Gunakan gelung `repeat` untuk memudahkan kod anda.",
+          "mc_8_c": "Matlamat anda adalah untuk masuk ke ambang pintu rumah di bahagian atas skrin."
+        },
+        "Overworld Avoid Monsters_2019": {
+          "mc_8_a": "Terdapat beberapa laluan yang anda boleh ambil. Yang manakah paling pendek?",
+          "mc_8_b": "Gunakan gelung `repeat` untuk memudahkan kod anda.",
+          "mc_8_c": "Matlamat anda adalah untuk masuk ke ambang pintu rumah di bahagian atas skrin."
+        },
+        "Overworld Avoid Monsters_2020": {
+          "mc_8_a": "Terdapat beberapa laluan yang anda boleh ambil. Yang manakah paling pendek?",
+          "mc_8_b": "Gunakan gelung `repeat` untuk memudahkan kod anda.",
+          "mc_8_c": "Matlamat anda adalah untuk masuk ke ambang pintu rumah di bahagian atas skrin."
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "Terdapat beberapa laluan yang anda boleh ambil. Yang manakah paling pendek?",
+          "mc_8_b": "Gunakan gelung `berulang` untuk memudahkan kod anda.",
+          "mc_8_c": "Matlamat anda adalah untuk masuk ke ambang pintu rumah di bahagian atas skrin."
+        },
+        "Overworld Chop Tree": {
+          "mc_2_a": "Anda perlu `bergerak ke hadapan` dua kali untuk berdiri di hadapan pokok.",
+          "mc_2_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Tree_2019": {
+          "mc_2_a": "Anda perlu `bergerak ke hadapan` dua kali untuk berdiri di hadapan pokok.",
+          "mc_2_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Tree_2020": {
+          "mc_2_a": "Anda perlu `bergerak ke hadapan` dua kali untuk berdiri di hadapan pokok.",
+          "mc_2_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Anda perlu `bergerak ke hadapan` dua kali untuk berdiri di hadapan pokok.",
+          "mc_2_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Trees": {
+          "mc_4_a": "Anda boleh menebang pokok dalam sebarang susunan. Laluan apakah yang mengambil bilangan blok terkecil?",
+          "mc_4_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Trees_2019": {
+          "mc_4_a": "Anda boleh menebang pokok dalam sebarang susunan. Laluan apakah yang mengambil bilangan blok terkecil?",
+          "mc_4_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Trees_2020": {
+          "mc_4_a": "Anda boleh menebang pokok dalam sebarang susunan. Laluan apakah yang mengambil bilangan blok terkecil?",
+          "mc_4_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "Anda boleh menebang pokok dalam sebarang susunan. Laluan apakah yang mengambil bilangan blok terkecil?",
+          "mc_4_b": "Arahan `blok musnah` menebang pokok di hadapan anda."
+        },
+        "Overworld House Frame Chosen": {
+          "mc_6_a": "Klik anak panah pada blok `tempat` untuk memilih perkara yang anda mahu letak.",
+          "mc_6_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "mc_6_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld House Frame Chosen_2019": {
+          "mc_6_a": "Klik anak panah pada blok `tempat` untuk memilih perkara yang anda mahu letak.",
+          "mc_6_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "mc_6_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld House Frame Chosen_2020": {
+          "mc_6_a": "Klik anak panah pada blok `tempat` untuk memilih perkara yang anda mahu letak.",
+          "mc_6_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "mc_6_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "Klik anak panah pada blok `tempat` untuk memilih perkara yang anda mahu letak.",
+          "mc_6_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "mc_6_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Move to Sheep": {
+          "mc_1_a": "Blok `maju ke hadapan` berada di bahagian atas kotak alat.",
+          "mc_1_b": "Pastikan kedua-dua blok `maju ke hadapan` disentap ke blok `apabila dijalankan`."
+        },
+        "Overworld Move to Sheep_2019": {
+          "mc_1_a": "Blok `maju ke hadapan` berada di bahagian atas kotak alat.",
+          "mc_1_b": "Pastikan kedua-dua blok `maju ke hadapan` disentap ke blok `apabila dijalankan`."
+        },
+        "Overworld Move to Sheep_2020": {
+          "mc_1_a": "Blok `maju ke hadapan` berada di bahagian atas kotak alat.",
+          "mc_1_b": "Pastikan kedua-dua blok `maju ke hadapan` disentap ke blok `apabila dijalankan`."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "Blok `maju ke hadapan` berada di bahagian atas kotak alat.",
+          "mc_1_b": "Pastikan kedua-dua blok `maju ke hadapan` disentap ke blok `apabila dijalankan`."
+        },
+        "Overworld Place Wall": {
+          "mc_5_a": "Gunakan blok `letakkan` dahulu, dan kemudian blok `gerakkan`.",
+          "mc_5_b": "Pastikan kedua-dua blok berada di dalam gelung `ulang` untuk menjalankan kod lebih daripada sekali.",
+          "mc_5_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Place Wall_2019": {
+          "mc_5_a": "Gunakan blok `letakkan` dahulu, dan kemudian blok `gerakkan`.",
+          "mc_5_b": "Pastikan kedua-dua blok berada di dalam gelung `ulang` untuk menjalankan kod lebih daripada sekali.",
+          "mc_5_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Place Wall_2020": {
+          "mc_5_a": "Gunakan blok `letakkan` dahulu, dan kemudian blok `gerakkan`.",
+          "mc_5_b": "Pastikan kedua-dua blok berada di dalam gelung `ulang` untuk menjalankan kod lebih daripada sekali.",
+          "mc_5_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "Gunakan blok `letakkan` dahulu, dan kemudian blok `gerakkan`.",
+          "mc_5_b": "Pastikan kedua-dua blok berada dalam gelung `berulang` untuk menjalankan kod lebih daripada sekali.",
+          "mc_5_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Plant Crops": {
+          "mc_7_a": "Gunakan blok `tanam tanaman` untuk menanam tanaman di ruang tempat anda berdiri.",
+          "mc_7_b": "Kedua-dua jalur tanah coklat gelap di tepi air perlu diisi dengan tanaman.",
+          "mc_7_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Plant Crops_2019": {
+          "mc_7_a": "Gunakan blok `tanam tanaman` untuk menanam tanaman di ruang tempat anda berdiri.",
+          "mc_7_b": "Kedua-dua jalur tanah coklat gelap di tepi air perlu diisi dengan tanaman.",
+          "mc_7_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Plant Crops_2020": {
+          "mc_7_a": "Gunakan blok `tanam tanaman` untuk menanam tanaman di ruang tempat anda berdiri.",
+          "mc_7_b": "Kedua-dua jalur tanah coklat gelap di tepi air perlu diisi dengan tanaman.",
+          "mc_7_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "Gunakan blok `tanam tanaman` untuk menanam tanaman di ruang tempat anda berdiri.",
+          "mc_7_b": "Kedua-dua jalur tanah coklat gelap di tepi air perlu diisi dengan tanaman.",
+          "mc_7_c": "Anda boleh meletakkan lebih daripada satu blok di dalam gelung `ulang`."
+        },
+        "Overworld Powered Minecart": {
+          "mc_13_a": "Gunakan `letak rel` untuk meletakkan rel di dataran tempat anda berdiri.",
+          "mc_13_b": "Gunakan gelung `ulang` untuk menjadikan kod anda lebih pendek."
+        },
+        "Overworld Powered Minecart_2019": {
+          "mc_13_a": "Gunakan `letak rel` untuk meletakkan rel di dataran tempat anda berdiri.",
+          "mc_13_b": "Gunakan gelung `ulang` untuk menjadikan kod anda lebih pendek."
+        },
+        "Overworld Powered Minecart_2020": {
+          "mc_13_a": "Gunakan `letak rel` untuk meletakkan rel di dataran tempat anda berdiri.",
+          "mc_13_b": "Gunakan gelung `ulang` untuk menjadikan kod anda lebih pendek."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Gunakan `letak rel` untuk meletakkan rel di dataran tempat anda berdiri.",
+          "mc_13_b": "Gunakan gelung `berulang` untuk menjadikan kod anda lebih pendek."
+        },
+        "Overworld Shear Sheep": {
+          "mc_3_a": "Blok `ricih` membawa biri-biri di hadapan anda. Adakah anda menghadap kambing biri-biri?",
+          "mc_3_b": "Jika anda perlu menukar cara anda menghadapi, gunakan blok `pusing`.",
+          "mc_3_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Shear Sheep_2019": {
+          "mc_3_a": "Blok `ricih` membawa biri-biri di hadapan anda. Adakah anda menghadap kambing biri-biri?",
+          "mc_3_b": "Jika anda perlu menukar cara anda menghadapi, gunakan blok `pusing`.",
+          "mc_3_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Shear Sheep_2020": {
+          "mc_3_a": "Blok `ricih` membawa biri-biri di hadapan anda. Adakah anda menghadap kambing biri-biri?",
+          "mc_3_b": "Jika anda perlu menukar cara anda menghadapi, gunakan blok `pusing`.",
+          "mc_3_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "Blok `ricih` membawa biri-biri di hadapan anda. Adakah anda menghadap kambing biri-biri?",
+          "mc_3_b": "Jika anda perlu menukar cara anda menghadapi, gunakan blok `pusing`.",
+          "mc_3_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Avoiding Lava": {
+          "mc_11_a": "Semua kod disediakan untuk memeriksa lava dan menanganinya. Anda perlu menambah blok untuk bergerak.",
+          "mc_11_b": "Patutkah perintah `bergerak ke hadapan` anda masuk ke dalam pernyataan `if` atau selepas?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "mc_11_a": "Semua kod disediakan untuk memeriksa lava dan menanganinya. Anda perlu menambah blok untuk bergerak.",
+          "mc_11_b": "Patutkah perintah `bergerak ke hadapan` anda masuk ke dalam pernyataan `if` atau selepas?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "mc_11_a": "Semua kod disediakan untuk memeriksa lava dan menanganinya. Anda perlu menambah blok untuk bergerak.",
+          "mc_11_b": "Patutkah perintah `bergerak ke hadapan` anda masuk ke dalam pernyataan `if` atau selepas?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Semua kod disediakan untuk memeriksa lava dan menanganinya. Anda perlu menambah blok untuk bergerak.",
+          "mc_11_b": "Patutkah perintah `bergerak ke hadapan` anda masuk ke dalam pernyataan `if` atau selepas?"
+        },
+        "Underground If Statements": {
+          "mc_12_a": "Ruang dengan bintik merah adalah tempat anda akan menemui Redstone.",
+          "mc_12_b": "Bolehkah anda menggunakan gelung `repeat` untuk menjadikan kod anda lebih pendek?",
+          "mc_12_c": "Gunakan pernyataan `jika` untuk memeriksa ruang untuk lava, kemudian letakkan batu buntar."
+        },
+        "Underground If Statements_2019": {
+          "mc_12_a": "Ruang dengan bintik merah adalah tempat anda akan menemui Redstone.",
+          "mc_12_b": "Bolehkah anda menggunakan gelung `repeat` untuk menjadikan kod anda lebih pendek?",
+          "mc_12_c": "Gunakan pernyataan `jika` untuk memeriksa ruang untuk lava, kemudian letakkan batu buntar."
+        },
+        "Underground If Statements_2020": {
+          "mc_12_a": "Ruang dengan bintik merah adalah tempat anda akan menemui Redstone.",
+          "mc_12_b": "Bolehkah anda menggunakan gelung `repeat` untuk menjadikan kod anda lebih pendek?",
+          "mc_12_c": "Gunakan pernyataan `jika` untuk memeriksa ruang untuk lava, kemudian letakkan batu buntar."
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Ruang dengan bintik merah adalah tempat anda akan menemui Redstone.",
+          "mc_12_b": "Bolehkah anda menggunakan gelung `berulang` untuk menjadikan kod anda lebih pendek?",
+          "mc_12_c": "Gunakan pernyataan `jika` untuk memeriksa ruang untuk lava, kemudian letakkan batu buntar."
+        },
+        "Underground Iron": {
+          "mc_10_a": "Blok besi adalah ruang berbintik-bintik di belakang obor! Bagaimana anda akan pergi ke sana?",
+          "mc_10_b": "Apabila anda berdiri di tepi lava, gunakan `place cobblestone ahead` untuk membuat laluan selamat. Kemudian, anda boleh berjalan di atasnya!",
+          "mc_10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Iron_2019": {
+          "mc_10_a": "Blok besi adalah ruang berbintik-bintik di belakang obor! Bagaimana anda akan pergi ke sana?",
+          "mc_10_b": "Apabila anda berdiri di tepi lava, gunakan `place cobblestone ahead` untuk membuat laluan selamat. Kemudian, anda boleh berjalan di atasnya!",
+          "mc_10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Iron_2020": {
+          "mc_10_a": "Blok besi adalah ruang berbintik-bintik di belakang obor! Bagaimana anda akan pergi ke sana?",
+          "mc_10_b": "Apabila anda berdiri di tepi lava, gunakan `place cobblestone ahead` untuk membuat laluan selamat. Kemudian, anda boleh berjalan di atasnya!",
+          "mc_10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "Blok besi adalah ruang berbintik-bintik di belakang obor! Bagaimana anda akan pergi ke sana?",
+          "mc_10_b": "Apabila anda berdiri di tepi lava, gunakan `place cobblestone ahead` untuk membuat laluan selamat. Kemudian, anda boleh berjalan di atasnya!",
+          "mc_10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "Underground Mining Coal": {
+          "mc_9_a": "Adakah anda menghadapi jalan yang betul? `destroy block` melombong blok di hadapan anda.",
+          "mc_9_b": "Bintik hitam di dinding adalah arang batu! Gunakan `destroy block` padanya untuk melombong arang batu.",
+          "mc_9_c": "Gunakan `tempat obor` untuk meletakkan obor di ruang tempat anda berdiri."
+        },
+        "Underground Mining Coal_2019": {
+          "mc_9_a": "Adakah anda menghadapi jalan yang betul? `destroy block` melombong blok di hadapan anda.",
+          "mc_9_b": "Bintik hitam di dinding adalah arang batu! Gunakan `destroy block` padanya untuk melombong arang batu.",
+          "mc_9_c": "Gunakan `tempat obor` untuk meletakkan obor di ruang tempat anda berdiri."
+        },
+        "Underground Mining Coal_2020": {
+          "mc_9_a": "Adakah anda menghadapi jalan yang betul? `destroy block` melombong blok di hadapan anda.",
+          "mc_9_b": "Bintik hitam di dinding adalah arang batu! Gunakan `destroy block` padanya untuk melombong arang batu.",
+          "mc_9_c": "Gunakan `tempat obor` untuk meletakkan obor di ruang tempat anda berdiri."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Adakah anda menghadapi jalan yang betul? `destroy block` melombong blok di hadapan anda.",
+          "mc_9_b": "Bintik hitam di dinding adalah arang batu! Gunakan `destroy block` padanya untuk melombong arang batu.",
+          "mc_9_c": "Gunakan `tempat obor` untuk meletakkan obor di ruang tempat anda berdiri."
+        },
+        "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseB_starWars_prog9_2018": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseB_starWars_prog9_2019": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseB_starWars_prog9_2020": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi.",
+          "courseB_starWars_prog9_b": "Terdapat banyak cara untuk menyelesaikan teka-teki ini.",
+          "courseB_starWars_prog9_c": "Bolehkah gelung <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> `berulang` membantu di sini?"
+        },
+        "courseC_starWars_loops1": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1_2018": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1_2019": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1_2020": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_b": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_c": "Jangan takut untuk membuat kesilapan! Jalankan kod untuk melihat apa yang berlaku, walaupun anda belum menyelesaikan teka-teki itu lagi."
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "Tambahkan satu atau lebih blok `pelakon 1 berkata` pada acara `apabila diklik` untuk melengkapkan teka-teki ini."
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "Bolehkah anda membuat Sid dan Manny pergaduhan Ais Kristal?",
+          "iceage_free_play_b": "Buat Nenek mengejar Diego. Tamatkan permainan sebagai kemenangan jika dia menangkapnya.",
+          "iceage_free_play_c": "Bolehkah anda meminta Sid membaling kepingan salji ke Diego dan meminta Diego menjadi lebih besar setiap kali terkena? Tamatkan permainan sebagai kemenangan jika Diego terkena 5 kali."
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": " Setiap peristiwa `apabila ___ anak panah` perlu mempunyai perintah `gerakkan pelakon 1` berbeza yang disambungkan kepadanya untuk menyelesaikan teka-teki ini."
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": " Setiap peristiwa `apabila ___ anak panah` perlu mempunyai perintah `gerakkan pelakon 1` berbeza yang disambungkan kepadanya untuk menyelesaikan teka-teki ini."
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "Untuk teka-teki ini, anda boleh sama ada memindahkan Diego ke bawah sebanyak 200 piksel, atau menaikkan Manny sebanyak 200 piksel.",
+          "iceage_move_to_actor_b": "Sambungkan blok `mainkan ___ bunyi` ke acara `apabila pelakon 1 menyentuh pelakon 2` untuk menyelesaikan cabaran ini"
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "Gunakan kedua-dua blok `gerakkan pelakon 1 ke kiri` dan `gerakkan pelakon 1 ke kanan` untuk menyelesaikan teka-teki ini."
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "Anda perlu menambah dua blok di bawah acara `apabila pelakon 1 menyentuh pelakon 2`.",
+          "iceage_sound_and_points_b": "Anda memerlukan kedua-dua blok `menjaringkan mata` dan blok 'mainkan \\_\\_\\_\\_ sound\\` untuk melepasi tahap ini."
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "Anda perlu menambah dua blok di bawah acara `apabila pelakon 1 menyentuh pelakon 2`.",
+          "iceage_sound_and_points_b": "Anda memerlukan kedua-dua blok `menjaringkan mata` dan blok 'mainkan \\_\\_\\_\\_ sound\\` untuk melepasi tahap ini."
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "Bila nak lemparkan hati pada nenek? Apabila anak panah ditekan? Apabila anda mengklik pada Sid? Apabila anda mengklik pada Nenek? Pilihan adalah milik anda!",
+          "iceage_throw_hearts_b": "Untuk membuat nenek gembira apabila dia menerima hati, anda perlu menyambungkan blok `menetapkan mood pelakon 2 kepada gembira` di bawah acara `apabila pelakon 2 menyentuh peluru`."
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "Anda hanya perlu menambah dua blok untuk mendapatkan teka-teki ini di tempat yang sepatutnya.",
+          "iceage_warn_ice_age_b": "Tambahkan kedua-dua blok baharu di bawah acara `apabila dijalankan` agar ia berlaku serta-merta selepas program bermula."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "Anda hanya perlu menambah dua blok untuk mendapatkan teka-teki ini di tempat yang sepatutnya.",
+          "iceage_warn_ice_age_b": "Tambahkan kedua-dua blok baharu di bawah acara `apabila dijalankan` agar ia berlaku serta-merta selepas program bermula."
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "Kod baharu anda sepatutnya kelihatan begini:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_d": "Cuba ini!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseB_collector_loops_challenge1_b": "Mulakan dengan menggelungkan perintah berikut:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Bergerak ke Timur dua kali antara setiap laluan.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nAnda boleh melakukan ini dengan hanya menggunakan 14 blok. Klik untuk satu lagi petunjuk bagi melihat penyelesaian."
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "Untuk mencipta tingkap ini, hanya lukis segi empat sama dengan sisi 100 piksel.\n\n-   bergerak ke hadapan\n-   pusing\n-   bergerak ke hadapan\n-   pusing\n-   bergerak ke hadapan\n-   pusing\n-   bergerak ke hadapan",
+          "courseC_artist_prog3_b": "Mahu membuat kod yang lebih pendek? Cuba gunakan gelung dalam teka-teki ini."
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "Untuk menghabiskan roket, hanya lukis segi tiga di bahagian atas!",
+          "courseC_artist_prog4_b": "Anda boleh menggunakan menu ke bawah pada blok `pusing` untuk melihat sudut yang anda perlukan!",
+          "courseC_artist_prog4_c": "Untuk melukis segi tiga, anda perlu:\n\n-   bergerak ke hadapan\n-   pusing ke kiri 120 darjah\n-   bergerak ke hadapan\n-   pusing ke kiri 120 darjah\n-   bergerak ke hadapan"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_b": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "Setiap sudut ialah sama ada 45 atau 90 darjah.",
+          "courseC_artist_prog7_c": "Anda boleh menggunakan menu ke bawah pada blok pusing untuk melihat sudut yang anda perlukan!",
+          "courseC_artist_prog7_e": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "Anda boleh melukis ini sebagai segi empat tepat dengan garisan di tengah atau dua segi empat yang berbeza!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "Selepas anda melukis garisan pertama, pusing ke kiri sebelum anda melukis garisan kedua anda.",
+          "courseC_artist_prog_challenge2_b": "Selepas anda melukis garisan kedua, pusing ke kanan sebelum anda melukis garisan ketiga anda."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_b": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_b": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_b": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_b": "Cuba gelung bersarang!\n\nGunakan kod yang anda cipta untuk melukis garisan bentuk dan sarangkan di dalam gelung lain. Di bahagian bawah, sebelum gelung luar berakhir, tambahkan blok yang akan memusingkan Elsa.  \n\n-   Cuba 72 darjah jika anda mengulangi gelung luar sebanyak 5 kali\n-   Cuba 60 darjah jika anda mengulangi gelung luar sebanyak 6 kali"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_c": "Anda tidak perlu memeriksa sarang lebah, hanya akan ada bunga atau ruangan kosong di bawah awan."
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_b": "Teka-teki ini sukar, kerana anda tidak boleh memeriksa petak kosong, nektar, _dan_ madu dengan hanya bersyarat tunggal.\n\nHanya periksa nektar dan madu di hujung laluan anda."
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "Tidak berfungsi dengan betul? Cuba gunakan butang \"Langkah\" untuk melihat perkara yang berlaku baris demi baris.",
+          "courseD_bee_nestedLoops1_b": "Cuba menulis kod untuk satu sisi segi empat sama terlebih dahulu. Bolehkah anda gelungkan ini untuk mendapatkan semua nektar?",
+          "courseD_bee_nestedLoops1_c": "Jangan lupa menggunakan blok `dapatkan nektar` sebaik sahaja anda berada di atas segi empat sama bersama bunga."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Tidak berfungsi dengan betul? Cuba gunakan butang \"Langkah\" untuk melihat perkara yang berlaku baris demi baris.",
+          "courseD_bee_nestedLoops1_c": "Jangan lupa menggunakan blok `dapatkan nektar` sebaik sahaja anda berada di atas segi empat sama bersama bunga."
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_d": "**Penyelesaian:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_c": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Jika burung tidak sampai kepada khinzir, pastikan semua ketiga-tiga blok telah diklik bersama sepenuhnya, kemudian klik \"Jalankan\" sekali lagi.",
+          "courseC_maze_programming1_b": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_c": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_c": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda tidak fikir yang anda telah menyelesaikan teka-teki itu."
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_c": "Ingin tahu cara imej sampel dibuat?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseF_artist_for10_a": "Imej dalam lukisan dibuat dengan menggunakan pembilang untuk `tetapkan alpha` dan `pembilang` / 10 sebagai saiz berus.",
+          "courseF_artist_for10_b": "Imej dalam lukisan menggunakan pusingan 61 darjah."
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_d": "**Penyelesaian:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseF_artist_for_challenge1_a": "`Lebar pen` ialah 1. Segi empat sama yang pertama mempunyai 50 sisi piksel dan setiap segi empat sama 50 piksel lebih lebar daripada yang lalu.",
+          "courseF_artist_for_challenge1_b": "Kelegapan pada berus sentiasa `pembilang`/2.",
+          "courseF_artist_for_challenge1_c": "Selepas anda membuat setiap segi empat sama, jangan lupa lompat ke belakang, pusing, lompat lagi, kemudian pusing balik!"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_d": "**Penyelesaian:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)",
+          "courseF_artist_for_challenge2_c": "`Gelung untuk` bermula daripada 5 hingga 250 berselang 2. ",
+          "courseF_artist_for_challenge2_a": "Perubahan warna berlaku dengan menggunakan blok `tetapkan warna dengan warna merah, hijau, biru`. Merah ditetapkan pemalar pada 255, hijau sentiasa menjadi nilai `pembilang` dan biru sentiasa di tetapkan sebagai `255 - pembilang`.",
+          "courseF_artist_for_challenge2_b": "Kod untuk ini adalah lebih mudah daripada yang anda mungkin fikirkan. Hanya tetapkan warna dalam gelung untuk, bergerak ke hadapan, kemudian pusing."
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "Berseronoklah dengan tahap ini! Lihat perkara yang boleh dilakukan pada kod anda dengan perubahan kecil.",
+          "courseF_artist_variables10_b": "Anda boleh mencuba pelbagai perkara dan menjalankan kod anda beberapa kali."
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "Mulakan kod anda dengan menggunakan blok `tetapkan panjang`. Tetapkan pemboleh ubah panjang kepada 150.",
+          "courseF_artist_variables7_b": "Anda boleh menggunakan gelung `berulang` untuk membuatkan kod segi tiga anda lebih mudah.",
+          "courseF_artist_variables7_c": "Anda perlu berpusing ke kiri 120 darjah untuk membuat sudut segi tiga."
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "Jangan lupa untuk memulakan kod anda bagi segi tiga dengan blok `tetapkan panjang` dan mulakan pada 150 piksel.",
+          "courseF_artist_variables8_c": "Pastikan anda menggunakan gelung `berulang` untuk melukis segi tiga anda."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "Untuk teka-teki ini, perkara yang anda perlu lakukan ialah menukar bilangan gelung tersebut berulang sahaja."
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_d": "**Penyelesaian:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "courseF_bee_for_challenge2_a": "Sila lihat pilihan ini untuk pergerakan:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "Cuba gunakan dua gelung `untuk`: Satu untuk memanjat dan mengambil nektar dan satu lagi untuk menuruni dan membuat madu.",
+          "courseF_bee_for_challenge2_c": "Perhatikan bahawa satu gelung `untuk` memerlukan beberapa gelung biasa di bahagian dalam yang berulang `pembilang` kali untuk membuat corak tangga yang semakin meningkat. \n\nGelung `untuk` yang lain hanya memerlukan satu gelung biasa untuk membuat jumlah `pembilang` madu."
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "Cuba gunakan tingkah laku seperti \"bergerak ke timur dan bergelung\", \"berputar ke kanan\" dan \"merayau\"."
+        },
+        "courseF_text_concat": {
+          "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea2": "Anda boleh melakukan perubahan daripada satu tingkah laku kepada yang lain dengan menggunakan blok `peperi berhenti` dengan blok `peperi bermula` di bawah peristiwa.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "Anda boleh membuat atur cara anda berinteraktif dengan menjadikan perkara lain berlaku apabila pengguna menekan kekunci atau selepas tempoh masa tertentu berlalu.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea2": "Anda boleh melakukan perubahan daripada satu tingkah laku kepada yang lain dengan menggunakan blok `peperi berhenti` dengan blok `peperi bermula` di bawah peristiwa.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "Anda boleh membuat atur cara anda berinteraktif dengan menjadikan perkara lain berlaku apabila pengguna menekan kekunci atau selepas tempoh masa tertentu berlalu.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Jika burung tidak sampai kepada khinzir, pastikan kedua-dua blok telah diklik bersama sepenuhnya, kemudian klik \"Jalankan\" sekali lagi.",
+          "courseC_maze_programming1_b": "Jangan takut melakukan kesilapan! Cuba lakukan sesuatu dan sekiranya ia tidak berjaya, cuba lakukan sesuatu yang lain pula!"
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda masih belum menyelesaikan teka-teki itu."
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_c": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda masih belum menyelesaikan teka-teki itu."
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "Untuk menyelesaikan teka-teki ini, anda perlu memuatkan satu gelung `berulang` ke dalam gelung lain.",
+          "courseD_bee_nestedLoops2_b": "Tidak tahu di mana hendak meletakkan gelung? Cuba tuliskan kod langkah demi langkah di atas kertas dan cari corak yang dipaparkan.",
+          "courseD_bee_nestedLoops2_c": "Jangan lupa bahawa anda boleh meletakkan lebih daripada satu blok dalam gelung."
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "Anda perlu mengulangi `dapatkan nektar` di bahagian dalam blok `berulang` lain yang juga mempunyai blok `bergerak ke hadapan` di bahagian dalam.",
+          "courseD_bee_nestedLoops7_b": "Anda perlu menggunakan ketiga-tiga blok `berulang` yang tersedia untuk menyelesaikan teka-teki ini."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "Adakah anda boleh melukis sesuatu seperti ini:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "Gelung `untuk` anda akan mengira daripada 15 hingga 300 berselang 15.",
+          "courseF_artist_for6_b": "Letakkan blok `bergerak ke hadapan` dan `pusing` dalam gelung `untuk` ini.",
+          "courseF_artist_for6_c": "Anda hanya perlu mengubah jumlah darjah dalam blok `pusing`."
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "Pen menjadi lebih nipis dalam teka-teki ini. Anda perlu menetapkan pen tersebut kepada `1` sebelum bermula.",
+          "courseF_artist_for7_b": "Perhatikan yang lingkaran ini berpusing ke kanan dan bukannya ke kiri!",
+          "courseF_artist_for7_c": "Gelung `untuk` dalam teka-teki ini bermula daripada 15 hingga 300 berselang 2.",
+          "courseF_artist_for7_d": "Imej ini dibuat dengan memusingkan hanya 89 darjah."
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "Pastikan semua yang lain sama dalam kod anda, hanya sudut pusingan perlu diubah.",
+          "courseF_artist_for8_b": "Jika anda mahu, anda boleh memilih warna berbeza untuk lingkaran anda!"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "Jika anda meletakkan blok `tetapkan alpha` dalam gelung `untuk` anda dan menggunakan pemboleh ubah `pembilang` untuk mengubah blok tersebut, anda boleh mencipta reka bentuk seperti ini.",
+          "courseF_artist_for9_b": "Blok `tetapkan alpha` mengubah kelegapan warna. Semakin kecil nilai, semakin telus warna blok."
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "Bolehkah anda mencari corak antara bilangan langkah yang perlu diambil dan bilangan nektar untuk dikumpulkan oleh anda?",
+          "courseF_bee_for10_b": "Set bunga pertama mempunyai sebanyak **14 kuntum bunga**. Untuk mendapatkan set pertama ini, lebah mesti berdengung ke bawah **7 segi empat sama** (atau 14 segi empat sama dibahagikan dengan 2.) Berapa banyakkah bilangan bunga dalam set seterusnya dan berapa banyakkah segi empat sama yang diperlukan oleh lebah untuk sampai ke sana?",
+          "courseF_bee_for10_d": "Anda perlu mempunyai 2 ulangan, satu akan menggunakan blok matematik."
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "Anda perlukan dua blok dalam gelung 'berulang' anda untuk mengumpul semua nektar."
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "Jika anda keliru, usahakan satu bunga pada satu masa dan lakukan ujian dengan kerap.",
+          "courseF_bee_for2_b": "Jangan lupa bergerak ke hadapan antara setiap gelung, supaya anda mencapai setiap bunga."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "Gunakan gelung `untuk` yang bermula daripada 1 hingga 7 dengan kenaikan sebanyak 1 untuk menyelesaikan teka-teki ini.",
+          "courseF_bee_for4_b": "Dalam gelung `untuk`, anda perlu mempunyai perintah `bergerak ke hadapan` dan gelung untuk mengumpul nektar.",
+          "courseF_bee_for4_c": "Pastikan anda menggunakan pemboleh ubah `pembilang` dalam gelung `berulang` bersarang anda untuk mendapatkan nektar yang mencukupi!"
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_a": "Kali ini, blok `bergerak ke hadapan` dan `dapatkan nektar` anda perlu berada dalam gelung `berulang` yang berasingan, kedua-dua blok berada dalam gelung `untuk` yang sama.",
+          "courseF_bee_for5_b": "Gunakan pemboleh ubah `pembilang` dalam setiap gelung supaya lebah bergerak mengikut jarak berbeza antara setiap bunga.",
+          "courseF_bee_for5_c": "Jangan takut membuat kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku, walaupun anda masih belum menyelesaikan teka-teki itu."
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "Jangan lupa menggunakan pemboleh ubah `pembilang` dalam gelung `berulang` anda.",
+          "courseF_bee_for6_b": "Dalam gelung `untuk`, anda perlu mempunyai perintah `bergerak ke hadapan` dan gelung untuk mengumpul nektar.",
+          "courseF_bee_for6_c": "Gelung anda hendaklah mengira **daripada 5 hingga 1**."
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "Gelung `untuk` anda perlu mengira daripada 1 hingga 7 berselang 2.",
+          "courseF_bee_for7_b": "Dalam gelung `untuk`, anda perlu mempunyai perintah `bergerak ke hadapan` dan gelung untuk mengumpul nektar.",
+          "courseF_bee_for7_c": "Jangan lupa menggunakan pemboleh ubah `pembilang` dalam gelung `berulang` anda."
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "Jika gelung anda mengira jumlah, kenaikan ditambah kepada pemboleh ubah pembilang anda setiap kali melalui gelung. \n\nApakah yang anda perlu tambah kepada setiap nombor untuk mendapatkan jumlah nektar seterusnya?",
+          "courseF_bee_for8_b": "Dalam teka-teki ini, anda perlu bergerak mengikut corak tetingkat tangga untuk sampai kepada bunga."
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "Cuba lakukan beberapa pengiraan matematik dengan pemboleh ubah pembilang.\n\nApakah yang perlu anda lakukan kepada pembilang setiap bunga untuk menyamai jumlah nektar yang perlu anda kumpulkan?",
+          "courseF_bee_for9_c": "Nampaknya anda perlu memusingkan lebah pada permulaan setiap lelaran gelung jika anda mahu menyelesaikan teka-teki.",
+          "courseF_bee_for9_b": "**Perlu diingat:** Jika gelung anda mengira jumlah, kenaikan ditambah kepada pemboleh ubah `pembilang` anda setiap kali melalui gelung."
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "Jika anda mahu gelung berulang lebih daripada 4 kali, anda boleh mengubah bilangan di bahagian atas blok."
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_b": "Jika anda mahu gelung berulang lebih daripada 4 kali, anda boleh mengubah bilangan di bahagian atas blok."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "Tidak tahu di mana hendak meletakkan gelung? Cuba tuliskan kod langkah demi langkah dan cari corak yang dipaparkan."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "Selepas anda bergerak ke segi empat sama dengan harta karun, gunakan blok ini untuk mengambilnya.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "Penyelesaian mudah ialah dengan bergerak ke Timur 2 kali, kemudian dapatkan harta karun itu."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "Anda perlu bergerak sebelum anda boleh mengumpul mana-mana harta karun.",
+          "courseA_collector_loops2_b": "Selepas anda bergerak ke segi empat sama dengan harta karun, gunakan blok ini untuk mengambilnya.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Cuba gunakan \n\ngelung\n\n <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
+          "courseA_collector_loops3_b": "Jangan lupa, bahawa anda boleh meletakkan lebih daripada 1 blok dalam gelung <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "Untuk mengubah sejauh mana Laurel pergi, ubah jumlah bilangan kali gelung berjalan.",
+          "courseA_collector_loops4_b": "Jangan lupa bahawa Laurel perlu berjalan turun ke bawah dan mengumpul harta karun itu selepas dia menyelesaikan gelung <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "Jika anda tidak dapat memikirkan jawapan dengan segera, cuba gunakan sehelai kertas untuk memikirkan anak panah yang anda perlukan dan cari coraknya.",
+          "courseA_collector_loops5_b": "Cuba bahagikan masalah kepada 2 bahagian, bergerak ke sisi dan kemudian ke bawah.",
+          "courseA_collector_loops5_c": "Anda perlu bermula dengan gelung <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> yang menggerakkan Laurel ke barat dan mengumpul harta karun."
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Tidak tahu apakah masalah yang dihadapi? Cuba jalankan kod itu beberapa kali untuk melihat perkara yang berlaku.",
+          "courseA_collector_loops6_b": "Penyelesaian terpendek mempunyai 2 gelung <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, satu demi satu."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "Jika anda tidak dapat memikirkan perkara yang akan berlaku seterusnya, cuba jalankan kod untuk melihat kesudahan Laurel."
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "Jika anda menghadapi masalah memikirkan penyelesaian teka-teki ini, cuba tuliskan gerakan di atas sehelai kertas dan cari corak yang terbentuk.",
+          "courseA_collector_loops8_b": "Cuba pecahkan teka-teki ini kepada 3 masalah berasingan dan tulis gelung untuk setiap masalah itu."
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "Sebaik sahaja anda bergerak kepada beberapa jagung lain, gunakan blok ini untuk memetik jagung tersebut!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "Kod anda akan mempunyai **empat** blok `bergerak ke barat`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ndan **empat** blok <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. ",
+          "courseA_harvester_loops2_b": "Jika anda masih menghadapi masalah, cuba sebutkan langkah dengan kuat. "
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "Gunakan blok `berulang` seperti ini untuk membantu anda!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "Untuk mengulangi kod, seret keluar gelung (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) `berulang`, kemudian letakkan blok yang anda mahukan ke dalam gelung tersebut."
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "Jangan takut menekan `Jalankan` untuk melihat perkara yang berlaku!",
+          "courseA_harvester_loops4_b": "Berapa banyakkah tongkol jagung yang ada? Berapa kalikah kod anda berulang?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "Jika anda menghadapi kesulitan, cuba selesaikan teka-teki dalam 2 bahagian, satu bahagian sebelum sudut dan satu bahagian lagi selepas sudut.",
+          "courseA_harvester_loops5_b": "Kod akhir anda akan mempunyai **satu** gelung `berulang` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **satu** `blok bergerak ke Selatan` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> dan **satu** blok `bergerak ke Timur` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_c": "Gunakan laluan ini untuk memetik semua jagung!"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "Anda perlukan satu gelung `berulang` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> secara berterusan.",
+          "courseA_harvester_loops5a_b": "Satu gelung akan mengulangi `bergerak ke Selatan`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> dan satu lagi akan mengulangi `bergerak ke Timur` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "Gunakan laluan ini untuk bergerak satu arah dan kemudian yang lain."
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "Tekan `Jalankan` dan lihat perkara yang berlaku!",
+          "courseA_harvester_loops5b_b": "Adakah gelung anda mengulangi jumlah bilangan kali yang betul?",
+          "courseA_harvester_loops5b_c": "Bergerak satu arah, kemudian yang lain dengan laluan ini."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "Jika anda menghadapi kesulitan, cuba tuliskan langkah di atas kertas dan cari corak yang berulang.",
+          "courseA_harvester_loops6_b": "Ini ialah laluan yang perlu anda ambil untuk memetik semua jagung."
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "Anda perlukan dua gelung `berulang` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> secara berturut-turut!",
+          "courseA_harvester_loops7_b": "Gunakan dua gelung untuk mengikuti laluan ini."
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "Pecahkan teka-teki ini kepada tiga bahagian berbeza. Satu bahagian di sudut pertama, satu bahagian di sudut kedua dan satu bahagian di penghujung.",
+          "courseA_harvester_loops9_b": "Jangan takut menjalankan kod anda selepas setiap bahagian untuk melihat perkara yang berlaku!",
+          "courseA_harvester_loops9_c": "Ikuti laluan ini untuk memetik semua jagung."
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "Adakah anda menghadapi masalah? Cuba tuliskan langkah di atas sehelai kertas terlebih dahulu.",
+          "courseA_harvester_seq10_b": "Anda perlu `Bergerak ke Timur`, kemudian `Bergerak ke Utara`. Lakukan ini dua kali. Jangan lupa mendapatkan semua jagung juga!",
+          "courseA_harvester_seq10_c": "Cuba gunakan laluan ini untuk memetik semua jagung."
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "Gunakan blok ini untuk memetik jagung sebaik sahaja penuai mendapatkan jagung tersebut!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "Gunakan blok ini untuk memetik jagung apabila penuai menjumpai jagung tersebut!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "Penuai perlu bergerak ke Timur tiga kali untuk sampai kepada jagung. Gunakan blok ini:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "Jangan lupa gunakan <xml><block type=\"harvester_corn\"/></xml> untuk memetik jagung!",
+          "courseA_harvester_seq2_b": "Cuba tuliskan langkah di atas kertas untuk mencari penyelesaian!"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "Adakah anda ingat untuk menggunakan blok ini?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "Sebutkan langkah dengan kuat dan lihat sekiranya ini membantu anda memikirkan jawapan."
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "Berapa banyak ruang yang ada antara Penuai dan jagung? Berapa banyak blok yang sudah tersedia di ruang kerja anda?",
+          "courseA_harvester_seq4_b": "Anda perlukan lima blok `Bergerak ke Timur` dan satu blok `Petik Jagung`:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "Blok yang manakah menggerakkan penuai ke arah yang salah?",
+          "courseA_harvester_seq5_b": "Anda perlu mengalih keluar satu blok.",
+          "courseA_harvester_seq5_c": "Buang blok ini ke dalam tong sampah!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "Jika anda merasa buntu, cuba sebutkan langkah dengan kuat. Ini boleh membantu anda memikirkan laluan yang betul."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "Cuba selesaikan teka-teki dalam 2 bahagian, satu bahagian sebelum sudut dan satu bahagian lagi selepas sudut.",
+          "courseA_harvester_seq7_b": "Mengalami masalah? Ini ialah laluan yang harus diambil oleh penuai."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "Kod akhir anda mesti mempunyai **4** blok pergerakan dan **2** blok petik."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "Jalankan kod beberapa kali untuk melihat perkara yang berlaku. Di manakah penuai berhenti?",
+          "courseA_harvester_seq9_b": "Jangan lupa memetik semua jagung! Anda perlukan **3** blok petik jagung.",
+          "courseA_harvester_seq9_c": "Anda perlu mengambil laluan ini untuk memetik semua jagung."
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "Jika anda menghadapi masalah, cuba tuliskan langkah di atas sehelai kertas terlebih dahulu.",
+          "courseA_maze_seq10_b": "Anda perlu pergi ke 3 arah yang berbeza untuk menyelesaikan teka-teki ini."
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "Jika laluan yang anda perlu lalui tidak jelas, sila gunakan jari anda untuk mengesan jalan anda daripada burung kepada khinzir.",
+          "courseA_maze_seq13_b": "Jangan takut melakukan kesilapan! Cuba tambahkan blok dan jalankan kod untuk melihat perkara yang akan berlaku.",
+          "courseA_maze_seq13_c": "Blok <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n ini akan membantu anda bergerak lebih dekat dengan khinzir."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "Jika anda menghadapi masalah untuk membuatkan burung bergerak, pastikan blok dipasang pada tempat yang ditetapkan di bawah <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "Burung perlu bergerak ke Barat 3 kali untuk sampai kepada khinzir. Gunakan blok ini:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "Cuba tuliskan langkah di atas kertas untuk mencari penyelesaian!",
+          "2": "Anda perlu menggunakan blok ini:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "Sebutkan langkah dengan kuat dan lihat sekiranya ini membantu anda memikirkan jawapan."
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "Kod akhir anda mesti mempunyai 3 blok pergerakan.",
+          "courseA_maze_seq6_b": "Jika anda menghadapi kesulitan, cuba selesaikan teka-teki dalam 2 bahagian, satu bahagian sebelum sudut dan satu bahagian lagi selepas sudut."
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "Jika anda merasa buntu, cuba lukiskan imej di atas kertas untuk melihat cara burung perlu bergerak."
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "Terdapat dua penyelesaian kepada teka-teki ini."
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "Cuba mengira ruang dengan jari anda. Perlu diingatkan supaya tidak mengira ruang tempat anda bermula!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "Jika Scrat tidak melakukan perkara yang anda mahu, pastikan kedua-dua blok telah diklik bersama sepenuhnya, kemudian klik \"Jalankan\" sekali lagi.",
+          "2": "Jangan takut melakukan kesilapan! Cuba lakukan sesuatu dan sekiranya ia tidak berjaya, cuba lakukan sesuatu yang lain pula!"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "Jika anda mahu gelung berulang lebih daripada 4 kali, anda boleh mengubah bilangan di bahagian atas blok.",
+          "courseB_artist_loops2_b": "Cuba jalankan kod terlebih dahulu untuk melihat kesudahan artis."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "Jangan lupa menggunakan gelung <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `berulang` untuk kod yang lebih baik!",
+          "courseB_artist_loops3_b": "Artis perlu bergerak ke Selatan untuk melukis garisan ini."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "Blok lompat membolehkan anda bergerak ke hadapan tanpa melukis garisan.",
+          "courseB_artist_loops4_b": "Anda perlu menambah blok dalam gelung berulang untuk menyelesaikan teka-teki ini.",
+          "courseB_artist_loops4_c": "Jangan lupa mengubah jumlah bilangan kali gelung berulang."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "Seret keluar gelung <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `berulang`, kemudian letakkan blok lain ke dalam. Berapa kali anda perlu mengulangi?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "Cuba tuliskan gerakan di atas sehelai kertas dan cari corak yang terbentuk."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "Cabaran ini menggunakan **4** gelung, satu demi satu!",
+          "courseB_artist_loops7_b": "Perhatikan bahawa setiap gelung membuat corak tangga yang menghala ke arah berbeza.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "Gelung sepatutnya melakukan ini:\n\n-   Gelung 1\n    -   Kanan\n    -   Bawah\n\n-   Gelung 2\n    -   Kanan\n    -   Atas\n\n-   Gelung 3\n    -   Kiri\n    -   Atas\n\n-   Gelung 4\n    -   Kiri\n    -   Bawah"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "Berapa kali anda perlu mengulangi corak itu untuk membuat tangga?",
+          "courseB_artist_loops8_b": "Cuba jalankan kod yang diberikan kepada anda untuk melihat perkara yang ia boleh lakukan."
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "Perlu diingatkan bahawa blok lompat boleh digunakan untuk bergerak tanpa melukis garisan.",
+          "courseB_artist_loops9_b": "Anda perlu menggunakan blok W untuk menyelesaikan teka-teki ini.",
+          "courseB_artist_loops9_c": "Tidak tahu di mana hendak meletakkan gelung? Cuba tuliskan kod langkah demi langkah dan cari corak yang dipaparkan."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membolehkan artis anda bergerak secara menyerong!",
+          "courseB_artist_loops_challenge1_b": "Apabila anda menyelesaikan satu daripada dadu itu, `lompat` kepada yang seterusnya!",
+          "courseB_artist_loops_challenge1_c": "Anda perlu `bergerak` atau `melompat` di atas beberapa baris yang sama sebanyak dua kali. "
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "Kod untuk melukis X telah diberikan kepada anda. Perkara yang perlu anda lakukan ialah mengulangi X dan `lompat` ke tempat seterusnya.",
+          "courseB_artist_loops_challenge2_b": "Anda boleh menggunakan blok `lompat` untuk bergerak ke ruangan lain tanpa melukis."
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "Jika anda tidak boleh memikirkan tempat meletakkan gelung `berulang`, tuliskan kod langkah demi langkah dan cari corak yang terbentuk.",
+          "courseB_collector_loops10_b": "Cuba tuliskan gerakan di atas sehelai kertas dan cari corak yang terbentuk."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "Blok <xml><block type=\"collector_collect_simplified\"/></xml> boleh digunakan untuk mengambil harta karun apabila anda berdiri di atas blok tersebut."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "Anda perlu bergerak sebelum anda boleh mengumpul mana-mana harta karun.",
+          "courseB_collector_loops2_b": "Apabila anda telah sampai di sesuatu tempat bersama harta karun, gunakan blok <xml><block type=\"collector_collect\"/></xml> untuk mengambil harta karun tersebut."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "Cuba gunakan blok <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> untuk mengumpul harta karun anda.",
+          "courseB_collector_prog3_b": "Jangan lupa bahawa anda boleh meletakkan lebih daripada satu blok dalam gelung berulang."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "Cuba gunakan butang langkah untuk memikirkan punca masalah boleh berlaku.",
+          "courseB_collector_loops4_b": "Untuk mengubah sejauh mana Laurel pergi, ubah jumlah bilangan kali gelung berjalan.",
+          "courseB_collector_loops4_c": "Laurel perlu berjalan turun ke bawah dan mengumpul harta karun itu selepas dia menyelesaikan gelung <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `berulang`!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "Gunakan lebih daripada satu gelung untuk menyelesaikan kerja.",
+          "courseB_collector_loops5_b": "Cuba jalankan kod itu beberapa kali untuk melihat perkara yang berlaku."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "Tidak tahu punca masalah mula berlaku? Gunakan butang \"Langkah\" untuk menjalankan atur cara anda satu blok pada satu masa.",
+          "courseB_collector_loops6_b": "Anda boleh mengubah jumlah bilangan kali gelung berulang dijalankan dengan mengklik pada \"3\" dan memilih nombor lain.",
+          "courseB_collector_loops6_c": "Anda perlu menggunakan 3 gelung <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `berulang` untuk menyelesaikan teka-teki ini.",
+          "courseB_collector_loops6_d": "Jika anda keliru, cuba pecahkan teka-teki ini kepada 3 bahagian."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "Jika anda menghadapi kesukaran dengan teka-teki, cuba lukiskan di atas kertas bagi membantu anda berfikir menyelesaikan teka-teki tersebut.",
+          "courseB_collector_loops7_b": "Anda memerlukan 3 gelung berulang untuk menyelesaikan teka-teki ini dan jangan lupa harta karun tambahan pada penghujungnya!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "Jika anda tidak boleh memikirkan tempat meletakkan gelung berulang, tuliskan kod langkah demi langkah dan cari corak yang terbentuk."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "Adakah ini kelihatan terlalu sukar? Pecahkan kepada 3 masalah kecil untuk memudahkan penyelesaian.",
+          "courseB_collector_loops9_b": "Anda memerlukan 3 gelung berulang, satu demi satu, untuk penyelesaian ini."
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Jika berlaku masalah, cuba nyahpepijat. Jangan putus asa!",
+          "courseB_collector_loops_challenge2a_b": "Lihat pilihan ini untuk melalui pagar sesat. Adakah anda dapat melihat corak yang boleh anda ulangi?",
+          "courseB_collector_loops_challenge2a_c": "Untuk mengumpul semua harta karun, sama ada anda perlu menambahkan dua blok <xml> <block type=\"collector_collect\"/></xml> dalam gelung anda, atau meletakkan blok dalam blok `berulang` sendiri."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Berhati-hati dengan ais yang pecah! Scrat akan jatuh ke dalam air!",
+          "courseB_iceage_loops10_b": "Cuba sebutkan langkah dengan kuat atau tuliskan di atas sehelai kertas. Adakah anda dapat melihat apa-apa corak?",
+          "courseB_iceage_loops10_c": "Ini ialah teka-teki yang panjang! Ikuti laluan ini."
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "Berhati-hati dengan ais yang pecah! Scrat akan jatuh terus!",
+          "courseB_iceage_loops1_b": "Anda mesti menggunakan blok ini:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "Pecahkan teka-teki ini kepada dua bahagian, satu sebelum sudut dan satu lagi selepas sudut.",
+          "courseB_iceage_loops2_b": "Jika anda menghadapi kesulitan, cuba sebutkan langkah dengan kuat.",
+          "courseB_iceage_loops2_c": "Ikuti laluan ini untuk membawa Scrat kepada buah oak."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Gunakan blok baharu ini!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "Untuk mengulangi kod, seret keluar gelung <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `berulang`, kemudian letakkan blok yang anda mahukan ke dalam gelung tersebut."
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "Cuba tuliskan langkah yang akan diambil oleh Scrat untuk sampai kepada buah oak. Adakah anda dapat melihat corak?",
+          "courseB_iceage_loops4_b": "Jangan takut menjalankan kod anda dan lihat perkara yang berlaku!",
+          "courseB_iceage_loops4_c": "Ini ialah laluan yang sepatutnya diambil oleh Scrat."
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "Kod akhir anda akan mempunyai **tiga** blok pergerakan.",
+          "courseB_iceage_loops6_b": "Anda hanya perlu tambahkan **satu** gelung lagi!",
+          "courseB_iceage_loops6_c": "Laluan akhir anda sepatutnya kelihatan seperti ini."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Jika anda menghadapi kesulitan, cuba tuliskan langkah di atas sehelai kertas. Adakah anda dapat melihat corak?",
+          "courseB_iceage_loops7_b": "Ini ialah laluan yang perlu diambil oleh Scrat untuk sampai kepada buah oak."
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "Adakah blok pergerakan betul? Apakah yang boleh anda ubah lagi?",
+          "courseB_iceage_loops8_b": "Gelung pertama perlu berulang **3** kali, gelung kedua perlu berulang **5** kali, gelung ketiga perlu berulang **4** kali dan gelung terakhir perlu berulang **4** kali.",
+          "courseB_iceage_loops8_c": "Gunakan gelung untuk membantu Scrat mengikuti laluan ini."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "Cuba pecahkan teka-teki ini kepada bahagian yang lebih kecil. Jangan takut menjalankan teka-teki anda semasa anda mengekod!",
+          "courseB_iceage_loops9_b": "Kod akhir anda mesti mempunyai **4** gelung.",
+          "courseB_iceage_loops9_c": "Scrat sepatutnya mengikuti laluan ini untuk mendapatkan buah oak."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Sambungkan blok kepada blok <xml><block type=\"when_run\"/></xml> untuk membuatkan Scrat bergerak!",
+          "courseB_maze_seq1_b": "Seret keluar tiga anak panah <xml><block type=\"maze_moveSouth\"/></xml> ini dan sambungkan kepada blok <xml><block type=\"when_run\"/></xml> untuk membawa Scrat kepada buah oak."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Cuba tambah satu arahan pada satu masa sehingga anda sampai kepada buah oak.",
+          "courseB_maze_seq4_b": "Anda perlu menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> `berulang` untuk menyelesaikan teka-teki ini."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "Jika anda menghadapi kesulitan, cuba lukiskan laluan di atas kertas.",
+          "courseB_maze_seq5_b": "Terdapat 2 cara untuk menyelesaikan teka-teki ini!",
+          "courseB_maze_seq5_c": "Tidak pasti bagaimanakah untuk sampai kepada buah oak? Cuba laluan ini."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "Kod akhir anda mesti mempunyai tiga blok pergerakan.",
+          "courseB_maze_seq6_b": "Jika anda menghadapi kesulitan, cuba selesaikan teka-teki dalam dua bahagian, satu ke sisi dan satu ke atas-dan-bawah.",
+          "courseB_maze_seq5_c": "Terdapat dua cara untuk menyelesaikan teka-teki ini.",
+          "courseB_maze_seq5_d": "Tidak pasti bagaimanakah untuk sampai kepada buah oak? Cuba laluan ini!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "Tambah 1 blok untuk menggerakkan Scrat kepada buah oak.",
+          "courseB_maze_seq7_b": "Cuba jalankan kod yang diberikan kepada anda dan lihat kesudahannya.",
+          "courseB_maze_seq7_c": "Tidak dapat sampai kepada buah oak? Cuba laluan ini!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Cuba tambah satu blok pada satu masa sehingga anda menyelesaikan teka-teki.",
+          "courseB_maze_seq8_b": "Terdapat lebih daripada satu cara untuk menyelesaikan teka-teki ini!",
+          "courseB_maze_seq8_c": "Tidak tahu ke arah mana hendak dituju? Cuba laluan ini!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "Cuba tuliskan semua langkah di atas sehelai kertas kertas dahulu.",
+          "courseB_maze_seq9_b": "Bina atur cara anda satu blok pada satu masa dan uji semasa anda membina.",
+          "courseB_maze_seq9_c": "Terdapat dua cara untuk menyelesaikan teka-teki ini.",
+          "courseB_maze_seq9_d": "Menghadapi Kesulitan?  Cuba laluan ini!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Laluan paling pendek mungkin tidak berfungsi pada kali ini.",
+          "courseB_maze_seq_challenge1_b": "Cuba gunakan blok <xml><block type=\"maze_moveWest\"/></xml> untuk bermula."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau mengalih keluar blok untuk menyelesaikan teka-teki ini.",
+          "courseB_maze_seq_challenge2_b": "Susun semula blok dan ambil laluan corak anak tangga."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "Ini ialah blok untuk meminta Daisy mengatakan sesuatu:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "Ini ialah blok yang perlu anda gunakan untuk menambahkan peristiwa:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "Ini ialah blok yang anda perlukan untuk menukar mood Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "Ini ialah peristiwa yang mengawal anak panah kiri:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "Ini ialah blok yang membuatkan kesatria bergerak ke kiri.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "Ini ialah blok peristiwa yang mengawal anak panah kanan: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "Ini ialah blok yang membuatkan kesatria melarikan diri. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Anda perlu menggunakan blok peristiwa ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "Gunakan anak panah ke bawah pada blok peristiwa `apabila ___ anak panah ditekan` hijau untuk memilih arah berbeza.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "Pergi ke semua bendera untuk melepaskan diri!"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "Ini ialah blok peristiwa yang anda perlukan: \n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "Ini ialah blok yang anda perlukan untuk memainkan bunyi.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "Ini ialah blok yang anda perlukan untuk membuatkan kesatria menghilangkan diri:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "Buatkan haiwan lain bergerak ke bawah apabila anda menekan `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "Ubah kelajuan haiwan dengan menggunakan blok ini:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "Apakah yang akan dikatakan oleh semua individu apabila perlumbaan tamat? Buatkan mereka bercakap dengan peristiwa ini:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "Setiap haiwan dalam permainan sepatutnya hilang apabila diklik. Haiwan tersebut juga sepatutnya muncul kembali selepas satu atau dua saat!",
+          "courseB_playlab_events_challenge2_b": "Gunakan blok peristiwa lain untuk membuatkan haiwan lain hilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "Gunakan perintah tambahan untuk memainkan bunyi atau mendapatkan mata apabila anda mengklik pada haiwan!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "Campurkan!\n\nBuatkan beberapa haiwan memberikan lebih banyak mata berbanding yang lain.\nGunakan bunyi yang berbeza.\nUbah mood haiwan!"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "Cuba tambah blok satu demi satu, kemudian klik \"Jalankan\" untuk melihat perkara yang berlaku.",
+          "courseB_starWars_prog1_b": "Anda akan mahu bergerak ke Timur untuk menyelesaikan teka-teki ini. Sejauh mana anda perlu bergerak?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "Pecahkan masalah ini kepada dua bahagian. Dapatkan satu longgokan logam sekerap, kemudian fikirkan cara untuk mendapatkan longgokan yang lain."
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "Anda perlu bergerak dengan 3 cara untuk menyelesaikan teka-teki ini.",
+          "courseB_starWars_prog3_b": "Bina satu kod pada satu masa. Jalankan kod tersebut untuk memikirkan hala tuju dari sana."
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "Bina satu kod pada satu masa. Jalankan kod tersebut untuk memikirkan hala tuju dari sana.",
+          "courseB_starWars_prog4_b": "Cuba gunakan blok `berulang` untuk kod yang lebih pendek.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "Bukankah corak ini kelihatan sedikit seperti teka-teki yang lalu?",
+          "courseB_starWars_prog5_b": "BB-8 akan mencengkam logam sekerap semasa ia bergolek di atas logam tersebut.",
+          "courseB_starWars_prog5_c": "Jejaki corak ini dengan jari anda. Kira kepingan logam semasa anda bergerak.",
+          "courseB_starWars_prog5_da": "Sila lihat perkara yang berlaku jika anda menggunakan penyelesaian yang sama seperti teka-teki tetingkat tangga:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "Corak ini hanyalah tetingkat tangga dengan dua pergerakan setiap arah!",
+          "courseB_starWars_prog6_b": "Cuba gunakan blok `berulang` untuk kod yang lebih pendek.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "Bukankah corak ini kelihatan sedikit seperti teka-teki yang lalu?",
+          "courseB_starWars_prog7_b": "BB-8 akan mencengkam logam sekerap semasa ia bergolek di atas logam tersebut.",
+          "courseB_starWars_prog7_c": "Cuba lukiskan corak tetingkat tangga yang besar di atas teka-teki ini. Adakah ia meliputi semua logam sekerap?"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "Tidak menjadi masalah untuk kembali ke satu set ruangan yang telah anda lalui.",
+          "courseB_starWars_prog8_b": "Cuba gunakan blok `berulang` untuk melihat perkara yang berlaku kepada kod yang anda masukkan ke dalam.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "Lampirkan dua daripada blok ini kepada blok `apabila dijalankan`:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "Jika anda menghadapi kesulitan, cuba tuliskan langkah di atas kertas dan cari corak yang berulang."
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_c": "Tidak tahu apakah masalah yang dihadapi? Cuba jalankan kod itu beberapa kali untuk melihat perkara yang berlaku."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_b": "Tidak tahu apakah masalah yang dihadapi? Cuba jalankan kod itu beberapa kali untuk melihat perkara yang berlaku."
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Terdapat dua cara untuk menyelesaikan teka-teki ini!"
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "Cuba tuliskan semua gerakan di atas sehelai kertas dan cari corak yang terbentuk."
+        },
+        "courseD_bounce_events10s_2021": {
+          "courseD_bounce_events10s_a": "Anda mesti mempunyai kedua-dua peristiwa ini dalam kod anda:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Berhati-hati dengan ais yang pecah! Scrat akan jatuh ke dalam air!",
+          "courseB_iceage_loops10_b": "Cuba sebutkan langkah dengan kuat atau tuliskan di atas sehelai kertas. Adakah anda dapat melihat apa-apa corak?",
+          "courseB_iceage_loops10_c": "Ini ialah teka-teki yang panjang! Ikuti laluan ini."
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "Berhati-hati dengan ais yang pecah! Scrat akan jatuh terus!",
+          "courseD_iceage_loops1_b": "Anda mesti menggunakan blok ini:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "Pecahkan teka-teki ini kepada dua bahagian, satu sebelum sudut dan satu lagi selepas sudut.",
+          "courseD_iceage_loops2_b": "Jika anda menghadapi kesulitan, cuba sebutkan langkah dengan kuat.",
+          "courseD_iceage_loops2_c": "Ikuti laluan ini untuk membawa Scrat kepada buah oak."
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Gunakan blok baharu ini!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>"
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "Jangan takut menjalankan kod anda dan lihat perkara yang berlaku!",
+          "courseD_iceage_loops4_b": "Cuba tuliskan langkah yang akan diambil oleh Scrat untuk sampai kepada buah oak. Adakah anda dapat melihat corak?",
+          "courseD_iceage_loops4_c": "Ini ialah laluan yang sepatutnya diambil oleh Scrat."
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_b": "Anda hanya perlu tambahkan **satu** gelung lagi!",
+          "courseD_iceage_loops6_c": "Laluan akhir anda sepatutnya kelihatan seperti ini."
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Jika anda menghadapi kesulitan, cuba tuliskan langkah di atas sehelai kertas. Adakah anda dapat melihat corak?",
+          "courseB_iceage_loops7_b": "Ini ialah laluan yang perlu diambil oleh Scrat untuk sampai kepada buah oak."
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_b": "Gelung pertama perlu berulang **3** kali, gelung kedua perlu berulang **5** kali, gelung ketiga perlu berulang **4** kali dan gelung terakhir perlu berulang **4** kali.",
+          "courseD_iceage_loops8_c": "Gunakan gelung untuk membantu Scrat mengikuti laluan ini."
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "Cuba pecahkan teka-teki ini kepada bahagian yang lebih kecil. Jangan takut menjalankan teka-teki anda semasa anda mengekod!",
+          "courseD_iceage_loops9_b": "Kod akhir anda mesti mempunyai **4** gelung.",
+          "courseD_iceage_loops9_c": "Scrat sepatutnya mengikuti laluan ini untuk mendapatkan buah oak."
         }
       }
     }

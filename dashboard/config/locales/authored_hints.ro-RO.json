@@ -2537,6 +2537,9 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Trebuie doar să adaugi două blocuri pentru a duce acest puzzle acolo unde trebuie să fie.",
           "iceage_warn_ice_age_b": "Adaugă ambele blocuri noi sub evenimentul `când se rulează`, pentru ca ambele să aibă loc imediat după ce programul pornește."
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "Codul tău ar trebui să arate așa:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         }
       }
     }

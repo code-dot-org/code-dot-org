@@ -2572,6 +2572,10 @@ hr:
               display_name: Likovi
             lessonGroup-3:
               display_name: Varijable
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funkcije
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2715,12 +2719,20 @@ hr:
               display_name: Digitalno građanstvo
             lessonGroup-8:
               display_name: Varijable
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Petlje
         pre-express-2022:
           lesson_groups:
             csf_loops:
               display_name: Petlje
             csf_events:
               display_name: Događaji
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Varijable
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2729,3 +2741,45 @@ hr:
               name: Otklanjanje pogriješaka
             lesson-19:
               name: Otklanjanje pogriješaka
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Petlje
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internet
+              key: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno građanstvo
+            ramp_up:
+              display_name: Likovi
+            lessonGroup-8:
+              display_name: Varijable
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Varijable
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Petlje
+              key: Petlje
+            Events:
+              name: Događaji
+              key: Događaji
+            Conditionals:
+              name: Uvjeti
+              key: Uvjeti
+            Functions:
+              name: Funkcije
+              key: Funkcije
+            Variables:
+              name: Varijable
+              key: Varijable
+            For Loops:
+              name: Petlja brojača
+              key: Petlja brojača
+            Lesson Planning:
+              key: Nastavni plan

@@ -207,6 +207,42 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Водич за имплементацију"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizajn mod"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizajn mod"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функције"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Бројачке петље"
+        },
+        "for_loops/csd/2021": {
+          "name": "Бројачке петље"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Bидео: Mашинско учење"
+        },
+        "variables_1/csd/2021": {
+          "name": "Променљиве"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Брзина"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Брзина"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функције"
+        },
+        "functions_1/csd/2021": {
+          "name": "Функције"
+        },
+        "lists/csd/2021": {
+          "name": "Листе"
         }
       }
     }

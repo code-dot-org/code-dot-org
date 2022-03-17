@@ -617,9 +617,9 @@ de:
         C4_bee_conditional: Biene Bedingungen
         C4_variables_artist: Variablen - Künstler
         C4_variables_playlab: Variablen - Spielelabor
-        C4_for_loops: '"Zähle mit"-Schleifen'
-        C4_for_loops_bee: '"Zähle mit"-Schleifen'
-        C4_for_loops_no_bee: '"Zähle mit"-Schleifen'
+        C4_for_loops: Schleifen mit dem Wiederhol-Block
+        C4_for_loops_bee: Schleifen mit dem Wiederhol-Block
+        C4_for_loops_no_bee: Schleifen mit dem Wiederhol-Block
         C4_math_artist: Programmiere den Künstler mit Mathematik
         C4_function_edit: Funktionen bearbeiten
         C4_function_create: Funktionen erstellen
@@ -628,7 +628,7 @@ de:
         C4_unplugged_algorithms: Algorithmen mit Tangram
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variablen in Briefumschlägen
-        C4_unplugged_forloops: '"Zähle mit"-Schleifen'
+        C4_unplugged_forloops: Schleifen mit dem Wiederhol-Block
         C4_unplugged_parameters: Songschreiben mit Parametern
         C4_unplugged_binary: Binärdatei
         CSF_a_b_artist_loops: Schleifen beim Künstler

@@ -61,6 +61,21 @@
         },
         "define/coursee/2021": {
           "word": "Apibrėžti"
+        },
+        "variable/csd/2021": {
+          "word": "Kintamasis"
+        },
+        "conditionals/csd/2021": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "abstraction/csd/2021": {
+          "word": "Komandos su parametrais"
+        },
+        "function/csd/2021": {
+          "word": "Komanda"
+        },
+        "copyright/csd/2021": {
+          "word": "Autorinės teisės"
         }
       }
     }

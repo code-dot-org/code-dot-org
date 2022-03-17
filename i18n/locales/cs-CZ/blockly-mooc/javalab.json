@@ -98,6 +98,8 @@
   "reviewClassmateProject": "Revidovat projekt spolužáka...",
   "returnToMyProject": "Vrátit se k mému projektu",
   "running": "Spouštím...",
+  "runningProjectTests": "Probíhá testování projektu…",
+  "runningValidation": "Probíhá testování úrovně…",
   "runtimeError": "Váš kód za chodu narazil na překážku.\n{cause}",
   "saveToBackpack": "Uložit do batohu",
   "sendingVideo": "Odesílání videa. Celková délka: {totalTime} sekund.",

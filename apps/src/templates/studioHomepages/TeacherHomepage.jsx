@@ -34,6 +34,7 @@ export const UnconnectedTeacherHomepage = ({
   schoolYear,
   showCensusBanner,
   showFinishTeacherApplication,
+  showReturnToReopenedTeacherApplication,
   showNpsSurvey,
   specialAnnouncement,
   teacherEmail,
@@ -187,6 +188,16 @@ export const UnconnectedTeacherHomepage = ({
             solidBorder={true}
           />
         )}
+        {showReturnToReopenedTeacherApplication && (
+          <BorderedCallToAction
+            headingText="Return to Your Application"
+            descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
+            buttonText="Return to Application"
+            buttonColor={Button.ButtonColor.orange}
+            buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+            solidBorder={true}
+          />
+        )}
         {displayCensusBanner && (
           <div>
             <CensusTeacherBanner
@@ -265,6 +276,7 @@ UnconnectedTeacherHomepage.propTypes = {
   showCensusBanner: PropTypes.bool.isRequired,
   showNpsSurvey: PropTypes.bool,
   showFinishTeacherApplication: PropTypes.bool,
+  showReturnToReopenedTeacherApplication: PropTypes.bool,
   specialAnnouncement: shapes.specialAnnouncement,
   teacherEmail: PropTypes.string,
   teacherId: PropTypes.number,

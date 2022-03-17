@@ -19,6 +19,9 @@ class Ability
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
+      ProgrammingEnvironment, # see override below
+      ProgrammingExpression, # see override below
+      ReferenceGuide, # see override below
       :reports,
       User,
       UserPermission,
@@ -72,6 +75,14 @@ class Ability
     # If you can update a level, you can also do these things:
     can [:edit_blocks, :update_blocks, :update_properties], Level do |level|
       can? :update, level
+    end
+
+    can [:read], ProgrammingEnvironment do |environment|
+      environment.published || user.permission?(UserPermission::LEVELBUILDER)
+    end
+
+    can [:read, :show_by_keys], ProgrammingExpression do |expression|
+      can? :read, expression.programming_environment
     end
 
     if user.persisted?
@@ -208,15 +219,12 @@ class Ability
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
         if user.regional_partners.any?
-          # regional partners by default have read, quick_view, and update
-          # permissions
+          # regional partners by default have read, quick_view, and update permissions
           can [:read, :quick_view, :cohort_view, :update, :search, :destroy], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
 
-          # G3 regional partners should have full management permission
-          group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
-          unless group_3_partner_ids.empty?
-            can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
-          end
+          # regional partners cannot see or update incomplete teacher applications
+          cannot [:show, :update, :destroy], Pd::Application::TeacherApplication, &:incomplete?
+
           can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
@@ -262,48 +270,53 @@ class Ability
     end
 
     can :read, UnitGroup do |unit_group|
-      if unit_group.in_development?
-        user.permission?(UserPermission::LEVELBUILDER)
-      elsif unit_group.pilot?
-        unit_group.has_pilot_access?(user)
+      if unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+        if unit_group.in_development?
+          user.permission?(UserPermission::LEVELBUILDER)
+        elsif unit_group.pilot?
+          unit_group.has_pilot_access?(user)
+        else
+          true
+        end
       else
-        true
+        false
       end
     end
 
     can :read, Script do |script|
-      if script.in_development?
-        user.permission?(UserPermission::LEVELBUILDER)
-      elsif script.pilot?
-        script.has_pilot_access?(user)
+      if script.can_be_participant?(user) || script.can_be_instructor?(user)
+        if script.in_development?
+          user.permission?(UserPermission::LEVELBUILDER)
+        elsif script.pilot?
+          script.has_pilot_access?(user)
+        else
+          true
+        end
       else
-        true
+        false
       end
     end
 
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
-      if script.in_development?
-        user.permission?(UserPermission::LEVELBUILDER)
-      elsif script.pilot?
-        script.has_pilot_access?(user)
-      else
+      if can?(:read, script)
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
         user.persisted? || !login_required
+      else
+        false
       end
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
-      if script.in_development?
-        user.permission?(UserPermission::LEVELBUILDER)
-      elsif script.pilot?
-        script.has_pilot_access?(user)
-      else
-        true
-      end
+      can?(:read, script)
+    end
+
+    can :read, ReferenceGuide do |guide|
+      course_or_unit = guide.course_version.content_root
+      can?(:read, course_or_unit)
     end
 
     # Handle standalone projects as a special case.
@@ -344,6 +357,7 @@ class Ability
         Lesson,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        ReferenceGuide,
         CourseOffering,
         UnitGroup,
         Resource,
@@ -415,6 +429,7 @@ class Ability
         CourseOffering,
         Script,
         Lesson,
+        ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,

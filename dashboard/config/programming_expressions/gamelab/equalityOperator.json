@@ -1,7 +1,0 @@
-{
-  "key": "equalityOperator",
-  "name": "equalityOperator",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "__ == __"
-}

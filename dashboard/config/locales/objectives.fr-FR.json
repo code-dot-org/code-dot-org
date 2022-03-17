@@ -2,6 +2,15 @@
   "fr-FR": {
     "data": {
       "objectives": {
+        "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
+          "description": "Définir « codage » et « informatique »."
+        },
+        "bdb824f7-9d5c-4465-b019-0294329fd999": {
+          "description": "Identifier le vocabulaire informatique clé."
+        },
+        "69ffb469-2601-46aa-bc80-82043d8dcd1e": {
+          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
+        },
         "6902d2bc-a266-487c-b0de-49de79f6fb98": {
           "description": "Illustrer les changements d'humeur d'un poème."
         },
@@ -59,6 +68,12 @@
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
+        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
+          "description": "Identifier le vocabulaire informatique clé."
+        },
+        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
+          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
+        },
         "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
           "description": "Identifier les actions qui aux événements d'entrée."
         },
@@ -67,6 +82,21 @@
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
+          "description": "Identifier le vocabulaire informatique clé."
+        },
+        "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
+          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
+        },
+        "83f493e8-9941-4154-b2f4-f34836741746": {
+          "description": "Définir « codage » et « informatique »."
+        },
+        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
+          "description": "Identifier le vocabulaire informatique clé."
+        },
+        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
+          "description": "Identifier où aller pour continuer à apprendre l'informatique et le codage."
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
           "description": "Développer des programmes qui répondent aux événements chronométrés"
@@ -1036,6 +1066,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Articuler le processus de conception et la façon dont il a contribué à façonner le projet final terminé."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Se former et tester un modèle d'apprentissage automatique."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
         }
       }
     }

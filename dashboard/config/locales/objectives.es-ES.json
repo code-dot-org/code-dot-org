@@ -93,7 +93,7 @@
           "description": "Crear un programa para completar una imagen mediante pasos secuenciales."
         },
         "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
-          "description": "Dividir formas complejas en partes simples."
+          "description": "Divide las formas complejas en partes simples."
         },
         "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
           "description": "Definir \"codificación\" e \"informática\""
@@ -699,7 +699,7 @@
           "description": "Crear un programa para completar una imagen mediante pasos secuenciales."
         },
         "d47b51d2-9114-4dfd-ad21-810573d85543": {
-          "description": "Dividir formas complejas en partes simples."
+          "description": "Divide las formas complejas en partes simples."
         },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
           "description": "Identificar patrones repetidos en el código que podrían reemplazarse con un bucle"
@@ -864,19 +864,19 @@
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
         },
         "fd3464fd-5921-4873-a850-c0799c55eecd": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir cuándo deben ejecutarse ciertas partes de un programa y cuándo no."
         },
         "494526f8-7392-4788-9126-b2e2dd53b241": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar si se cumple una condicional basándose en unos criterios."
         },
         "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
-          "description": "Recorrer un programa y predecir el resultado dado un conjunto de información."
+          "description": "Recorrer un programa y predecir el resultado, teniendo en cuenta un conjunto de entradas."
         },
         "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir cuándo deben ejecutarse ciertas partes de un programa y cuándo no."
         },
         "83b6020a-2273-4966-abd6-0049afa1eb4e": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar si se cumple una condicional basándose en unos criterios."
         },
         "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
           "description": "Convertir sentencias condicionales de lenguaje hablado en un programa."
@@ -927,7 +927,7 @@
           "description": "Crear un programa para completar una imagen mediante pasos secuenciales."
         },
         "36081e5f-1a5d-4102-a1de-27865168ee09": {
-          "description": "Dividir formas complejas en partes simples."
+          "description": "Divide las formas complejas en partes simples."
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
           "description": "Define «sprite» como un personaje u objeto de la pantalla que se puede mover y cambiar."
@@ -999,10 +999,10 @@
           "description": "Describir cuándo se necesita un bucle o un bucle anidado, o cuándo no se necesita ningún bucle."
         },
         "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir cuándo deben ejecutarse ciertas partes de un programa y cuándo no."
         },
         "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar si se cumple una condicional basándose en unos criterios."
         },
         "7002da51-158a-4849-b733-48282a764b82": {
           "description": "Convertir sentencias condicionales de lenguaje hablado en un programa."
@@ -1017,10 +1017,10 @@
           "description": "Usar un bucle mientras para crear programas que puedan resolver problemas con valores desconocidos."
         },
         "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir cuándo deben ejecutarse ciertas partes de un programa y cuándo no."
         },
         "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar si se cumple una condicional basándose en unos criterios."
         },
         "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
           "description": "Desarrollar programas con la comprensión de varias estrategias para implementar condicionales."
@@ -1251,16 +1251,16 @@
           "description": "Reconocer cuándo una función podría ayudar a simplificar un programa."
         },
         "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir cuándo deben ejecutarse ciertas partes de un programa y cuándo no."
         },
         "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar si se cumple una condicional basándose en unos criterios."
         },
         "9c7ff713-c208-4acf-9691-da7a4a152565": {
-          "description": "Definir las circunstancias en que ciertas partes de un programa deben ejecutarse y cuándo no."
+          "description": "Definir cuándo deben ejecutarse ciertas partes de un programa y cuándo no."
         },
         "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
-          "description": "Determinar si se cumple un condicional según los criterios."
+          "description": "Determinar si se cumple una condicional basándose en unos criterios."
         },
         "dc1b604a-9814-45f4-aed5-b76776ad818c": {
           "description": "Reconocer cuándo una función podría ayudar a simplificar un programa."
@@ -1291,6 +1291,54 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
+        },
+        "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
+          "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
+        },
+        "04724c46-add4-4ec1-af15-4c44eed0a91b": {
+          "description": "Responder a la entrada del usuario mediante un manejador de eventos"
+        },
+        "8902d86e-40fd-47c8-92d0-c4a9b766f913": {
+          "description": "Escribir programas que cambien varios elementos en una sola pantalla en lugar de cambiar de pantalla"
+        },
+        "61fb8052-ffea-4adf-a134-8d730ad54e8b": {
+          "description": "Conectar y solucionar problemas de dispositivos externos"
+        },
+        "d69128fd-98d6-4897-966d-76362dbaf0ac": {
+          "description": "Encender y apagar un LED con un código"
+        },
+        "617e327c-d4cc-4b6e-b456-7233bb9c845b": {
+          "description": "Utilizar el código para controlar un dispositivo físico"
+        },
+        "2b306542-728e-4848-a27f-c0521831a6f4": {
+          "description": "Comparar y contrastar múltiples formas de obtener entradas"
+        },
+        "c10da89e-729b-4d0f-b376-3e14e931b870": {
+          "description": "Representar diferentes métodos de obtención de datos del usuario"
+        },
+        "37fbfc3d-4e38-4c1c-86bc-6fe3342ba7ff": {
+          "description": "Conectar un manejador de eventos a una entrada de hardware"
+        },
+        "809dcd9a-f37c-4bfd-9b58-b4024c4fd2ec": {
+          "description": "Elige el evento apropiado para un escenario determinado"
+        },
+        "21ba6c31-018e-4d23-b652-77d6ef65324d": {
+          "description": "Utilizar getters para acceder a las propiedades de los elementos de un sistema"
+        },
+        "bdd6a1a3-5115-4486-8e0e-b61c7041c5ce": {
+          "description": "Desarrollar programas que respondan a la entrada analógica"
+        },
+        "bf9edfe9-1d42-4a71-a6e5-3cda32406544": {
+          "description": "Escalar un rango de números para satisfacer una necesidad específica"
+        },
+        "5b183dd0-2691-4e31-81d2-74139e335e46": {
+          "description": "Representar el valor de un sensor de varias maneras"
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Entrena y prueba un modelo de aprendizaje automático."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
         }
       }
     }

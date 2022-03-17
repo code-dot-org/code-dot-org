@@ -5,13 +5,68 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "ویڈیو"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "ویڈیو"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "ویڈیو"
+        },
         "poem_art_introduction/poem-art/2021": {
           "name": "نظم کا فن 1 - تعارف",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "ویڈیو"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "ویڈیو"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "ویڈیو"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "ویڈیو"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "ویڈیو"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "ویڈیو"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "نظموں کی فہرست",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "ویڈیو"
+        },
+        "making_sprites/coursef/2021": {
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "ویڈیو"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "type": "تشخیصات"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "ویڈیو"
+        },
+        "ai-training/coursef/2021": {
+          "type": "ویڈیو"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "type": "تشخیصات"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "type": "روبرک"
         },
         "curriculum_guide_1/coursef/2021": {
           "name": "نصابی رہنما"
@@ -23,6 +78,21 @@
           "name": "ورچوئل اسباق میں ترمیم",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "ویڈیو"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "type": "تشخیصات"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "type": "تشخیصات"
+        },
         "curriculum_guide_1/courseb/2021": {
           "name": "نصابی رہنما"
         },
@@ -32,6 +102,27 @@
         "virtual_lesson_modifications/courseb/2021": {
           "name": "ورچوئل اسباق میں ترمیم",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "ویڈیو"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "ویڈیو"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "ویڈیو"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "ویڈیو"
+        },
+        "pair-programming/coursea/2021": {
+          "type": "ویڈیو"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "type": "تشخیصات"
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "نصابی رہنما"
@@ -43,6 +134,18 @@
           "name": "ورچوئل اسباق میں ترمیم",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
+        "pair-programming-vid/coursec/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "type": "تشخیصات"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "type": "تشخیصات"
+        },
         "curriculum_guide_1/coursec/2021": {
           "name": "نصابی رہنما"
         },
@@ -52,6 +155,18 @@
         "virtual_lesson_modifications/coursec/2021": {
           "name": "ورچوئل اسباق میں ترمیم",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "type": "تشخیصات"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "type": "ویڈیو"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "type": "تشخیصات"
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "نصابی رہنما"
@@ -63,14 +178,53 @@
           "name": "ورچوئل اسباق میں ترمیم",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
+        "pair_programming/express/2021": {
+          "type": "ویڈیو"
+        },
+        "artist_introduction/express/2021": {
+          "type": "ویڈیو"
+        },
+        "turns_angles/express/2021": {
+          "type": "ویڈیو"
+        },
+        "pause_and_think_online/express/2021": {
+          "type": "ویڈیو"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "ویڈیو"
+        },
         "variables_video/express/2021": {
           "name": "متغیرات"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "type": "روبرک"
         },
         "teacher_forum_1/express/2021": {
           "name": "ٹیچر فورم"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "ویڈیو"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "ویڈیو"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "type": "ویڈیو"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "ٹیچر فورم"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "ویڈیو"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "ویڈیو"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "type": "تشخیصات"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "type": "روبرک"
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "نصابی رہنما"
@@ -81,6 +235,235 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "ورچوئل اسباق میں ترمیم",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "روبرک"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "روبرک"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "روبرک"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "app-presentation/csd/2021": {
+          "type": "روبرک"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "روبرک"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "روبرک"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "روبرک"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "ویڈیو: مشین لرننگ",
+          "type": "ویڈیو"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "روبرک"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "variables_1/csd/2021": {
+          "name": "متغیرات"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "روبرک"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "روبرک"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "interactive_card/csd/2021": {
+          "type": "روبرک"
+        },
+        "velocity_1/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "روبرک"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "روبرک"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "روبرک"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "ٹیچر فورم"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "روبرک"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "video_debugging/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "روبرک"
+        },
+        "lists/csd/2021": {
+          "name": "فہرستیں"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "روبرک"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "روبرک"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "ویڈیو"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "روبرک"
         }
       }
     }

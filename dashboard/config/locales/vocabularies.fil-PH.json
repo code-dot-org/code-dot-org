@@ -151,6 +151,33 @@
         },
         "define/coursee/2021": {
           "word": "magtakda"
+        },
+        "debugging/csd/2021": {
+          "word": "Pagdedebug"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2021": {
+          "word": "Mga conditional"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraction"
+        },
+        "function/csd/2021": {
+          "word": "Function"
+        },
+        "input/csd/2021": {
+          "word": "Input"
+        },
+        "processing/csd/2021": {
+          "word": "Pagproseso"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digital na Bakas"
+        },
+        "copyright/csd/2021": {
+          "word": "Karapatang-ari"
         }
       }
     }

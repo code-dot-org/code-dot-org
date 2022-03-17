@@ -2174,18 +2174,6 @@ ta-IN:
           ***
           ## படி 4: கற்பிக்கத் தொடங்குங்கள்!
           கணினி அறிவியல் கருத்துக்களை உங்கள் வகுப்பறைக்குள் கொண்டுவருவதற்கான ஒரு படிப்பினை மட்டுமே இது எடுக்கும். சி.எஸ்ஸிற்கான உங்கள் மாணவர்களின் ஆர்வத்தை நீங்கள் கண்டவுடன், உங்கள் மாணவர்களுக்கு வழிகாட்டும் தினசரி பாடம் திட்டங்கள், கணினி இல்லாமல் நீங்கள் செய்யக்கூடிய பிரிக்கப்படாத நடவடிக்கைகள் மற்றும் பிற ஆசிரியர்களுடன் இணைவதற்கான மன்றங்களுடன் மேலும் செல்லுங்கள்.
-      OPD-K5 CS Courses_dani:
-        markdown: |-
-          # திட்டமிடல்> Code.org இல் தொடங்குதல்
-
-          ## படி 1: ஒரு பாடத்தைத் தேர்வுசெய்க
-          எங்கள் படிப்புகள் அனைத்தும் - முன் வாசகர்கள் முதல் உயர்நிலை பள்ளி வரை - எங்கள் ** இல் பட்டியலிடப்பட்டுள்ளன [course catalog]
-          (https://studio.code.org/courses)**.நீங்கள் பயிற்சி செய்து வரும் CS அடிப்படை பாடங்களைக் கண்டுபிடிக்க, எங்கள் ** elementary page க்குச் செல்லவும்(https://code.org/educate/curriculum/elementary-school)** "படிப்புகள்" பகுதிக்கு கீழே உருட்டவும். எங்கள் படிப்புகள் அனைத்தும் எந்த கட்டணமும் இல்லாமல் கிடைக்கின்றன. பாடத்திட்டத்தை எவ்வாறு பல்வேறு பாடங்களுடன் ஒருங்கிணைக்க முடியும் என்பதை தீர்மானிக்க உங்கள் பள்ளியில் உள்ள சக ஊழியர்களுடன் கேட்கவும்.
-          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
-          ***
-          ## படி 2: உங்கள் வகுப்பறை பகுதியை அமைக்கவும்உங்கள் மாணவரின் முன்னேற்றத்தைக் காண வகுப்பறை பிரிவை அமைக்கவும், உங்கள் மாணவர்களுக்கான உள்நுழைவு அட்டைகளை அச்சிடவும், அவர்களின் கணக்குகளை நிர்வகிக்கவும், அவர்கள் படிப்பை முடிக்கும்போது அவர்கள் வீட்டிற்கு கொண்டு வரக்கூடிய சான்றிதழ்களை அச்சிடவும்.இதற்கு இந்த இணைப்பைக் கிளிக் செய்க**[watch a brief video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)*இது Code.Orgல் உங்கள் முதல் கணினி அறிவியல் வகுப்பை எவ்வாறு அமைப்பது என்பதை நிரூபிக்கிறது. உள்ள படிகளையும் நீங்கள் காணலாம்.**[this support article](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.
-          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
-          ***
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: 'கலைஞர் மூன்று சம பக்கங்களுடன் ஒரு முக்கோணத்தை வரைவார். '
@@ -3754,3 +3742,106 @@ ta-IN:
         content1: விவரம் இங்கே
       csf_putting_a_stop_to_online_meanness:
         content1: விவரம் இங்கே
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: விவரம் இங்கே
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: தலைப்பு
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: விவரம் இங்கே
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: விவரம் இங்கே
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: விவரம் இங்கே
+      CSD U6 LED create intro_2021:
+        content1: விவரம் இங்கே
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: விவரம் இங்கே
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

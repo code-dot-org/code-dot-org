@@ -5992,3 +5992,226 @@ sk-SK:
         description: Zatiaľ skvelá práca! Vyber si ďalšiu aktivitu. Dokonči ich čo
           najviac. Pokračuj v precvičovaní s cyklami a Umelcom!
         display_name: Precvičovanie s Umelcom
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Vlastnosti postáv
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
+          si z možností  napravo . '
+        teacher_markdown: "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png\"
+          style=\"width:200px; float:right\">\n\n**Druhy urovní:** Na otázku, ako
+          budú HTML nadpisy zobrazené na webovej stránke, sú študenti vyzvaní odpovedať
+          výberom správnej odpovede spomedzi viacerých možností. Ak chcete vidieť,
+          ktorí študenti odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
+          na webovej stránke, vyhľadajte si túto úroveň cez panel pre učiteľov vpravo.
+          Študenti so správnou odpoveďou budú mať zobratený zelený gombík. Študenti
+          majú možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
+          kontrola odpovede môže rovnako viesť k správnej odpovedi. \n\n<div class=\"clear\"></div>"
+        title: 'Kontrola nadpisov '
+      CSD Interactive Animations and Games Post-Project Test_pilot_2021:
+        title: 'Záverečný test: Interaktívne animácie a hry'
+      CSD Physical Computing Post-Project Test_2021:
+        title: 'Záverečný test: Fyzické výpočty'
+      CSD U1 Test_2021:
+        title: 'Záverečný test: Počítače a riešenie problémov'
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Pridanie obrázkov
+      CSD U2 Image practice_pilot_2021:
+        display_name: Pridanie obrázkov
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: Priraďte chybný HTML kód k popisu chyby.
+        questions:
+        - text: Atribút `src` je napísaný nesprávne.
+        - text: Atribúty `src` a `alt` sú vymenené.
+        - text: Prípona súboru (.jpg) chýba v adrese obrázka.
+        - text: Adresa obrázka nie je zadaná ako `src` attribút.
+        - text: V názve súboru je medzera.
+        teacher_markdown: Aj keď túto úroveň možno použiť na vyhodnotenie porozumenia
+          študentov syntaxu `<img>` tagu, jej hlavným účelom je upozorniť študentov
+          na najbežnejšie typy chýb, s ktorými sa môžu stretnúť pri pridávaní obrázkov
+          na webové stránky.
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Spoj logický výraz s jeho popisom.
+        questions:
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
+        title: 'Spájanie: porovnávacie znamienka'
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - text: "true  \nfalse  \ntrue"
+          correct: true
+        - {}
+        - text: "true  \nerror  \ntrue"
+        - text: "false  \ntrue  \nfalse"
+        questions:
+        - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
+        title: nadpis
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        markdown: "# Tvoja interaktívna pohľadnica\n\nV nasledujúcich cvičeniach dokonči
+          vlastnú interaktívnu pohľadnicu. Príklady pohľadníc si pozri nižšie. Nezabudni
+          sa pozrieť aj na kód, aby si zistil/a ako funguje. \n\n## Príklady\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+'
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+          correct: true
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
+        markdown: |-
+          #Záleží na tom, kde sa funkcie vytvoria?
+
+          Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
+
+          Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
+        content1: Spoj kód s obrázkom, ktorý vytvorí.
+        questions:
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
+        title: drawSprites
+      CSD U3 drawing practice choice_2021:
+        display_name: Cvičenie
+      CSD U3 game intro_2018_2019_pilot_2021:
+        markdown: "# Vytvor svoju vlastnú hru\n\nNaučili sme sa všetko, čo potrebuješ
+          na vytvorenie vlastnej hry! V dvojici popremýšľajte nad rôznymi možnosťami.
+          Spomeňte si na hry, ktoré ste už videli, alebo si pozrite tieto dalšie vzorové
+          hry, ktoré vám poskytnú nové nápady. \n\n<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\"
+          style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24
+          PM.png\" style=\"width: 200px; float: left; margin: 10px;\">\n\n<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59
+          PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
+          PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa dohodnete na type
+          hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,  \"sprite\"
+          objekty a funkcie, ktoré budete potrebovať. V nasledujúcich cvičeniach začnete
+          na svojej hre pracovať.\n"
+      CSD U5 test_2021:
+        title: 'Záverečný test: Údaje a spoločnosť'
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 game project stop_2021:
+        markdown: |
+          # Zastav sa
+
+          Predtým, ako budeš pokračovať, pozri sa na Sprievodcu projektom. Počkaj tiež na inštrukcie od svojho učiteľa.
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Odhadni výsledok
+      CSD U6 tugowar stop_2021:
+        markdown: |
+          # Zastav sa
+
+          Predtým, ako budeš pokračovať, pozri sa na Sprievodcu projektom. Počkaj tiež na inštrukcie od svojho učiteľa.
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Záverečný test: Dizajn zameraný na používateľa'
+      CSD Web Development Post-Project Test_pilot_2021:
+        title: 'Záverečný test: Vývoj webových stránok'
+      CSD games cake challenge choice_2021:
+        display_name: Výzvy
+      CSD games platform challenge choice_2021:
+        display_name: Výzvy
+      CSD web draw loop practice choice_2021:
+        display_name: Cvičenie
+      CSD web movement practice choice_2021:
+        display_name: Cvičenie
+      CSD web text practice choice_2021:
+        display_name: Cvičenie
+      csd-pre-survey-levelgroup_21_22:
+        title: Objavujeme Informatiku - Študentský dotazník pred kurzom
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
+        title: Objavujeme informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
+        title: Objavujeme informatiku - rýchly prieskum!

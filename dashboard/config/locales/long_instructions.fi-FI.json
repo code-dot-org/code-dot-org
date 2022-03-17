@@ -245,7 +245,20 @@
         "Underground If Statements": "Nyt homma muuttuu hankalaksi. Louhi kolme punakiveä mutta älä putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä \"jos\" -komentoa.",
         "Underground If Statements_2019": "Nyt homma muuttuu hankalaksi. Louhi kolme punakiveä mutta älä putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä \"jos\" -komentoa.",
         "Underground If Statements_2020": "Nyt homma muuttuu hankalaksi. Louhi kolme punakiveä mutta älä putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä \"jos\" -komentoa.",
-        "Underground If Statements_2021": "Nyt homma muuttuu hankalaksi. Louhi kolme punakiveä mutta älä putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä \"jos\" -komentoa."
+        "Underground If Statements_2021": "Nyt homma muuttuu hankalaksi. Louhi kolme punakiveä mutta älä putoa laavaan. Aseta paljastamasi laavan päälle mukulakivi käyttämällä \"jos\" -komentoa.",
+        "Standalone_Artist_2": "Piirrä vinoneliö 120 ja 60 asteen kulmilla ja 150 pikseliä pitkillä sivuilla.",
+        "Standalone_Artist_3": "Pystytkö piirtämään kuusikulmion 100 pikselin sivuilla ja 60 asteen käännöksillä?",
+        "Standalone_Artist_4": "Sinulla on uusi lohko kokeiltavaksi, silmukka. Se toistaa joukon käskyjä. Mitä tapahtuu jos teet nämä komennot silmukassa 6 kertaa?",
+        "Standalone_Artist_5": "Kuinka monta kertaa sinun täytyy toistaa tämä vinoneliö silmukassa piirtääksesi kukan?",
+        "Standalone_Artist_5.5": "Huomaa kuinka yksinkertaistimme vinoneliön koodia muuttamalla sen silmukaksi. Voit toistaa koko komentosarjan 12 kertaa piirtääksesi kukan. Vinkki: Sinun täytyy kääntyä 30 astetta vinoneliösilmukan jälkeen jotta et piirrä uudelleen samaa kohtaa.",
+        "Standalone_Artist_6": "Toista tämä kuusikolmion koodi kuusi kertaa luodaksesi halutun suunnitelman. Kuinka monta astettta sinun tulee kääntyä jokaisella kerralla? Vinkki: jaa ympyrässä olevien asteiden määrä toistojen lukumäärällä.",
+        "Standalone_Artist_7": "Funktio on toinen ohjelmointityökalu joka auttaa vähentämään koodin toistamista. Tämä funktio piirtää kukan, joten voit käyttää sitä milloin vain piirtääksesi kukan. Käytä funktiota ja uuttaa \"hyppää\" -lohkoa piirtääksesi nämä kukat. Vinkki: kukat ovat 150 pikseliä erillään toisistaan.",
+        "Standalone_Artist_8": "Tässä on funktio nimeltä \"piirrä muoto\", jonka koodasimme kuusikulmion piirtämiseen. Suorita koodi nähdäksesi mitä se tekee ja kokeile funktiota nähdäksesi mitä se tekee. Saatko sen piirtämään neliöistä, kolmioista tai kahdeksankulmioista koostuvia kuvioita?",
+        "Standalone_Artist_9": "Nyt voit tehdä juuri sellaisen kuvan kuin haluat! Sinulla on käytössäsi jopa muutamia uusia lohkoja ja tyhjä funktio, jonka voit laittaa tekemään mitä ikinä haluat!",
+        "iceage_hello1": "Sid (hahmo 1) haluaa koota kaikki uuteen seikkailuun. Voitko auttaa häntä sanomaan \"Moi! siirtämällä \"hahmo 1 sanoo\" lohko työtilaan ja yhdistämällä sen \"suorittaessa\" tapahtuman alle.\n\nÄlä unohda kirjoittaa \"Moi!\" lohkon sisään!",
+        "iceage_hello2": "Manu (hahmo 2) löysi Sidin (hahmo 1) ja haluaa kutsua hänet seikkailulle. Auta heitä tervehtimään toisiaan käyttämällä \"hahmo \\_\\_\\_ sanoo\" lohkoa kahdesti.",
+        "iceage_move_to_actor": "Diego (hahmo 1) etsii Manua (hahmo 2). Voitko auttaa saattamaan nämä kaksi yhteen? Yhdistä lohko \"kun hahmo koskee\" tapahtumaan soittaaksesi äänen kun he löytävät toisensa.",
+        "iceage_move_to_flag": "Jyrsis etsii tammenterhoaan! Voitko auttaa häntä liikkumaan viimeiset 200 kuvapistettä?"
       }
     }
   }

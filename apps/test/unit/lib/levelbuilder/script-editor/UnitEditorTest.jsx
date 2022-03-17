@@ -86,7 +86,8 @@ describe('UnitEditor', () => {
       initialInstructorAudience: InstructorAudience.teacher,
       initialParticipantAudience: ParticipantAudience.student,
       hasCourse: false,
-      scriptPath: '/s/test-unit'
+      scriptPath: '/s/test-unit',
+      allowMajorCurriculumChanges: true
     };
   });
 
@@ -121,8 +122,8 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1
       });
 
-      expect(wrapper.find('input').length).to.equal(26);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(13);
+      expect(wrapper.find('input').length).to.equal(25);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
@@ -130,6 +131,17 @@ describe('UnitEditor', () => {
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
+    });
+
+    it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
+      const wrapper = createWrapper({
+        allowMajorCurriculumChanges: false,
+        isMigrated: true
+      });
+
+      expect(
+        wrapper.find('.student-facing-lesson-plan-checkbox').props().disabled
+      ).to.equal(true);
     });
 
     describe('Teacher Resources', () => {

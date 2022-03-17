@@ -95,7 +95,7 @@ class DCDOBase
     # 'my-new-feature': DCDO.get('my-new-feature', false)
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
-      'higher-power-promotion': DCDO.get('higher-power-promotion', false)
+      'clearerSignUpUserType': DCDO.get('clearerSignUpUserType', false)
     }
   end
 end

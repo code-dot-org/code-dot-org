@@ -897,6 +897,19 @@
         },
         "courseC_starWars_loops7_dani": {
           "courseC_starWars_loops7_c": "Virheiden tekemistä ei tarvitse pelätä! Suorita koodi nähdäksesi mitä tapahtuu vaikka et olisikaan vielä ratkaissut koko tehtävää."
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "Sinun tarvitsee lisätä vain yksi lohko ratkaistaksesi tämän pulman. Siirrä \"hahmo 1 sanoo\" lohko lohkot-osiosta työtilaan ja yhdistä se \"suorittaessa\" tapahtumalohkon alle, joka on jo työtilassa. Kirjoita sittten \"Moi!\" lohkon sisälle."
+        },
+        "iceage_hello2": {
+          "iceage_hello2_a": "Ratkaistaksesi tämän pulman sinun pitää saada Sid sanomaan jotain käyttämällä \"hahmo 1 sanoo\" lohkoa. Sinun pitää myös saada Manu sanomaan jotain \"hahmo 2 sanoo\" lohkon avulla."
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "Tässä pulmassa sinun pitää liikuttaa Diegoa alas 200 kuvapistettä tai siirtää Manua ylös 200 kuvapistettä.",
+          "iceage_move_to_actor_b": "Yhdistä \"soita \\_\\_\\_ ääni\" lohko \"kun hahmo 1 koskee hahmoa 2\" tapahtuman alle ratkaistaksesi tämän haasteen."
+        },
+        "iceage_move_to_flag": {
+          "iceage_hello3_a": "Käytä \"siirrä hahmoa 1 oikealle 200 kuvapistettä\" lohkoa ratkaistaksesi tämän pulman."
         }
       }
     }

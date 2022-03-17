@@ -279,6 +279,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "code/dance-2019/unversioned": {
+          "word": "coder",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "event/dance-2019/unversioned": {
@@ -442,7 +443,7 @@
           "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
         },
         "drop/courseb/2021": {
-          "word": "Grand écart",
+          "word": "Drop",
           "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
         },
         "double_click/courseb/2021": {
@@ -494,7 +495,7 @@
           "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
         },
         "drop/coursea/2021": {
-          "word": "Grand écart",
+          "word": "Drop",
           "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
         },
         "double_click/coursea/2021": {
@@ -727,7 +728,7 @@
           "definition": "Clique sur le bouton de ta souris et maintiens la pression pendant que tu déplaces le pointeur de la souris vers un nouvel emplacement"
         },
         "drop/pre-express/2021": {
-          "word": "Grand écart",
+          "word": "Drop",
           "definition": "Relâche le bouton de ta souris pour « lâcher » un élément que tu fais glisser"
         },
         "double_click/pre-express/2021": {
@@ -824,6 +825,57 @@
         "try/coursee/2021": {
           "word": "Essayer",
           "definition": "Tenter de faire quelque chose"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Apprentissage Automatique",
+          "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
+        },
+        "bug/csd/2021": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "for_loop/csd/2021": {
+          "word": "La Boucle « Pour »",
+          "definition": "Boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
+        },
+        "debugging/csd/2021": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "program/csd/2021": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "variable/csd/2021": {
+          "word": "Variable",
+          "definition": "Un espace réservé pour une information qui peut changer."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "condition/csd/2021": {
+          "word": "Condition"
+        },
+        "conditionals/csd/2021": {
+          "word": "Instructions conditionnelles"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraction"
+        },
+        "function/csd/2021": {
+          "word": "Fonction"
+        },
+        "input/csd/2021": {
+          "word": "Entrée"
+        },
+        "processing/csd/2021": {
+          "word": "Le Traitement"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "L'Empreinte Numérique"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

@@ -3411,6 +3411,10 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: អ​ថេរ
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: អនុ​គមន៍
         coursea-2022:
           lessons:
             Learn to Drag and Drop:
@@ -3754,6 +3758,10 @@ km:
               display_name: អ​ថេរ
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: រង្វិល​ជុំ
         pre-express-2022:
           lessons:
             Programming with Rey and BB-8:
@@ -3764,9 +3772,55 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: អ​ថេរ
         cs4all-invasive-species:
           lessons:
             lesson-12:
               name: លក្ខខណ្ឌ
             lesson-14:
               name: លក្ខខណ្ឌនៅក្នុង Minecraft
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: រង្វិល​ជុំ
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              description_student: ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ
+                និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។
+            The Internet:
+              name: អ៊ីនធឺណិត
+              description_student: ធ្លាប់ឆ្ងល់ទេថាតើព័ត៌មានធ្វើដំណើរឆ្លងកាត់អ៊ីនធឺណិតយ៉ាងដូចម្តេច?
+                វាមិនមែនជាវេទមន្តទេ! មេរៀននេះនឹងបង្រៀនអ្នកអំពីរបៀបដំណើរការអ៊ីនធឺណិត។
+              description_teacher: ទោះបីជាមនុស្សជាច្រើនប្រើអ៊ិនធឺរណែតជារៀងរាល់ថ្ងៃក៏ដោយក៏មិនមានមនុស្សជាច្រើនដែរដឹងថាវាដំណើរការយ៉ាងដូចម្តេច។
+                នៅក្នុងមេរៀននេះសិស្សនឹងរៀនអំពីបណ្ដាញ URLs អាសយដ្ឋាន IP និង DNS ។
+              key: អ៊ីនធឺណិត
+          lesson_groups:
+            lessonGroup-8:
+              display_name: អ​ថេរ
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: អ​ថេរ
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: រង្វិល​ជុំ
+              key: រង្វិល​ជុំ
+            Events:
+              name: ព្រឹត្តិការណ៍
+              key: ព្រឹត្តិការណ៍
+            Conditionals:
+              name: លក្ខខណ្ឌ
+              key: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+              key: អនុ​គមន៍
+            Variables:
+              name: អ​ថេរ
+              key: អ​ថេរ

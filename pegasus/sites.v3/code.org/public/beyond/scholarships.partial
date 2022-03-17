@@ -12,13 +12,13 @@ social:
   "twitter:description": "Explore potential opportunities to fund your CS education"
   "twitter:image": "/images/csjourneys/og-scholarships.jpg"
 ---
-<div class="col-100" style="padding:25px; border:1px solid #c69662; border-radius:15px">
-  <a class="linktag" id="nucamp_nit" href="https://www.nucamp.co/scholarships/nativesintech" target="_blank">
-    <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/natives-in-tech.png" alt="Natives in Tech logo">
+<div class="col-100" style="padding:25px; border:1px solid #000000; border-radius:15px">
+  <a class="linktag" msft-bam-scholarships" href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank">
+    <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
   </a>
   <div style="width: 85%; float: left">
-    <a class="linktag" id="nucamp_nit" href="https://www.nucamp.co/scholarships/nativesintech" target="_blank"><h3 style="margin-top:0; color:#c69662"><strong>Scholarship funds still available for tribal members to launch technology careers!</strong></h3></a>
-    <p>Thousands of dollars in funds are still available to any verified member of a federally recognized tribal nation at least 18 years old to attend one of four Nucamp computer science bootcamps. <a class="linktag" id="nucamp_nit" href="https://www.nucamp.co/scholarships/nativesintech" target="_blank" style="color:#c69662">View details</a>.</p>
+    <a class="linktag" msft-bam-scholarships" href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank"><h3 style="margin-top:0; color:#000000"><strong>Applications open for Microsoft's Blacks at Microsoft (BAM) scholarships!</strong></h3></a>
+    <p>The Blacks at Microsoft (BAM) group offers a number of scholarships to high school students of African descent planning on majoring in engineering, computer science, or business. Applications are open until March 15th. <a class="linktag" msft-bam-scholarships" href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank" style="color:#000000">View details</a>.</p>
   </div>
   <div style="clear:both"></div>
 </div>

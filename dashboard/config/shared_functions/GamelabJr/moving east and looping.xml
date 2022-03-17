@@ -4,29 +4,29 @@
     <arg name="this sprite" type="Sprite"/>
     <description>Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.</description>
   </mutation>
-  <title name="NAME" id="moving east and looping">moving east and looping</title>
+  <field name="NAME" id="moving east and looping">moving east and looping</field>
   <statement name="STACK">
     <block type="gamelab_mirrorSprite">
-      <title name="DIRECTION">"right"</title>
+      <field name="DIRECTION">"right"</field>
       <value name="SPRITE">
         <block type="sprite_parameter_get">
-          <title name="VAR">this sprite</title>
+          <field name="VAR">this sprite</field>
         </block>
       </value>
       <next>
         <block type="gamelab_moveInDirection">
-          <title name="DIRECTION">"East"</title>
+          <field name="DIRECTION">"East"</field>
           <value name="SPRITE">
             <block type="sprite_parameter_get">
-              <title name="VAR">this sprite</title>
+              <field name="VAR">this sprite</field>
             </block>
           </value>
           <value name="DISTANCE">
             <block type="gamelab_getProp">
-              <title name="PROPERTY">"speed"</title>
+              <field name="PROPERTY">"speed"</field>
               <value name="SPRITE">
                 <block type="sprite_parameter_get">
-                  <title name="VAR">this sprite</title>
+                  <field name="VAR">this sprite</field>
                 </block>
               </value>
             </block>
@@ -35,35 +35,35 @@
             <block type="controls_if">
               <value name="IF0">
                 <block type="logic_compare">
-                  <title name="OP">GT</title>
+                  <field name="OP">GT</field>
                   <value name="A">
                     <block type="gamelab_getProp">
-                      <title name="PROPERTY">"x"</title>
+                      <field name="PROPERTY">"x"</field>
                       <value name="SPRITE">
                         <block type="sprite_parameter_get">
-                          <title name="VAR">this sprite</title>
+                          <field name="VAR">this sprite</field>
                         </block>
                       </value>
                     </block>
                   </value>
                   <value name="B">
                     <block type="math_number">
-                      <title name="NUM">450</title>
+                      <field name="NUM">450</field>
                     </block>
                   </value>
                 </block>
               </value>
               <statement name="DO0">
                 <block type="gamelab_setProp">
-                  <title name="PROPERTY">"x"</title>
+                  <field name="PROPERTY">"x"</field>
                   <value name="SPRITE">
                     <block type="sprite_parameter_get">
-                      <title name="VAR">this sprite</title>
+                      <field name="VAR">this sprite</field>
                     </block>
                   </value>
                   <value name="VAL">
                     <block type="math_number">
-                      <title name="NUM">-50</title>
+                      <field name="NUM">-50</field>
                     </block>
                   </value>
                 </block>

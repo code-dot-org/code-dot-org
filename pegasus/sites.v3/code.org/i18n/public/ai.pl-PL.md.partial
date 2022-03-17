@@ -52,7 +52,7 @@ Dołącz do nas, aby odkrywać sztuczną inteligencję w nowej serii filmów, tr
 <p>Moduł AI i uczenia maszynowego to w przybliżeniu pięciotygodniowy moduł nauczania, który może być <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >samodzielnym modułem</a> lub opcjonalnie <a href="https://studio.code.org/s/csd7-2021">jednostką w Odkryciach informatyki</a>. Koncentruje się na etyce AI, analizuje kwestie stronniczości oraz bada i wyjaśnia podstawowe pojęcia</p><p>Ponieważ uczenie maszynowe zależy od dużych zestawów danych, nowa jednostka zawiera zestawy danych z życia wzięte dotyczące opieki zdrowotnej, demografii i nie tylko, aby zaangażować uczniów podczas badania pytań typu „Na czym polega problem, w którym może pomóc uczenie maszynowe?” „Jak AI może pomóc społeczeństwu?” „Kto korzysta z AI?” „Kto jest krzywdzony?” "Kto jest zamieszany?" "Kto traci?"  </p>
 <p>Kwestie etyczne będą na czele tych dyskusji, z częstymi kwestiami i lekcjami na temat wpływu tych technologii. Pomoże to uczniom rozwinąć całościowe, przemyślane zrozumienie tych technologii, jednocześnie poznając techniczne podstawy ich działania.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Poznaj moduł</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Poznaj moduł</button></a></div>
 <div class="clear"></div>
 </div>
 
