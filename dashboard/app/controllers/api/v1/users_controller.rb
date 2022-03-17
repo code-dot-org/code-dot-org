@@ -50,7 +50,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # GET /api/v1/users/<user_id>/using_text_mode
   def get_using_text_mode
-    render json: {using_text_mode: !!@user.using_text_mode}
+    render json: {using_text_mode: @user&.using_text_mode}
   end
 
   # GET /api/v1/users/<user_id>/display_theme
@@ -60,7 +60,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # GET /api/v1/users/<user_id>/mute_music
   def get_mute_music
-    render json: {mute_music: !!@user.mute_music}
+    render json: {mute_music: @user&.mute_music}
   end
 
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
@@ -103,7 +103,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.using_text_mode = !!params[:using_text_mode].try(:to_bool)
     @user.save
 
-    render json: {using_text_mode: !!@user.using_text_mode}
+    render json: {using_text_mode: @user&.using_text_mode}
   end
 
   # POST /api/v1/users/<user_id>/mute_music
@@ -111,7 +111,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.mute_music = !!params[:mute_music].try(:to_bool)
     @user.save
 
-    render json: {mute_music: !!@user.mute_music}
+    render json: {mute_music: @user&.mute_music}
   end
 
   # POST /api/v1/users/<user_id>/display_theme
