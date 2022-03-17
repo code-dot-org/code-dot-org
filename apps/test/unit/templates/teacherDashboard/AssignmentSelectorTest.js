@@ -56,7 +56,7 @@ describe('AssignmentSelector', () => {
     });
   });
 
-  it('unit dropdown defaults to no selection when no section is provided', () => {
+  it('unit dropdown defaults to first unit when picking new course offering and course version', () => {
     const wrapper = shallow(
       <AssignmentSelector {...defaultProps} section={null} />
     );
@@ -68,7 +68,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: null
+      unitId: 5
     });
   });
 
@@ -126,7 +126,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: null
+      unitId: 5
     });
   });
 
@@ -157,7 +157,7 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseOfferingId: 2,
       courseVersionId: 4,
-      unitId: null
+      unitId: 5
     });
 
     wrapper
@@ -263,7 +263,7 @@ describe('AssignmentSelector', () => {
       expect(onChange).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseOfferingId: 2,
         courseVersionId: 4,
-        unitId: null
+        unitId: 5
       });
     });
 
