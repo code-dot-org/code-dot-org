@@ -691,7 +691,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(csp_2018)
     csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(csp_2019)
-    csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     CourseOffering.add_course_offering(csp_2020)
 
     [csp_2017, csp_2018, csp_2019].each do |c|
