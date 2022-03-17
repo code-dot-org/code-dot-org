@@ -13,8 +13,12 @@ class JavabuilderSessionsController < ApplicationController
 
   # GET /javabuilder/access_token
   def get_access_token
-    require_default_params
-    params.require(:channelId)
+    begin
+      require_default_params
+      params.require(:channelId)
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
     channel_id = params[:channelId]
 
     begin
@@ -35,9 +39,7 @@ class JavabuilderSessionsController < ApplicationController
     log_token_creation(payload)
     encoded_payload = create_encoded_payload(payload)
 
-    # level_id duplicated -- require?
-    level_id = params[:levelId]
-
+    level_id = params[:levelId].to_i
     project_files = JavalabFilesHelper.get_project_files(channel_id, level_id)
     success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
     return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
@@ -45,8 +47,14 @@ class JavabuilderSessionsController < ApplicationController
     render json: {token: encoded_payload, session_id: session_id}
   end
 
-  def get_access_token_provided_sources
-    params.require(:overrideSources)
+  # GET /javabuilder/access_token_with_override_sources
+  def get_access_token_with_override_sources
+    begin
+      require_default_params
+      params.require(:overrideSources)
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
     override_sources = params[:overrideSources]
 
     session_id = SecureRandom.uuid
@@ -55,10 +63,8 @@ class JavabuilderSessionsController < ApplicationController
     log_token_creation(payload)
     encoded_payload = create_encoded_payload(payload)
 
-    # level_id duplicated -- require?
-    level_id = params[:levelId]
-
-    project_files = JavalabFilesHelper.get_project_files_with_provided_sources(override_sources, level_id)
+    level_id = params[:levelId].to_i
+    project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id)
     success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
     return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
 
@@ -93,6 +99,7 @@ class JavabuilderSessionsController < ApplicationController
     options = params[:options]
     execution_type = params[:executionType]
     mini_app_type = params[:miniAppType]
+    use_dashboard_sources = 'false'
     options = options ? options.to_json : '{}'
 
     issued_at_time = Time.now.to_i
@@ -110,7 +117,7 @@ class JavabuilderSessionsController < ApplicationController
       level_id: level_id,
       execution_type: execution_type,
       mini_app_type: mini_app_type,
-      use_dashboard_sources: false,
+      use_dashboard_sources: use_dashboard_sources,
       options: options,
       verified_teachers: teacher_list
     }

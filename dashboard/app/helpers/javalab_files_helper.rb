@@ -15,7 +15,7 @@ module JavalabFilesHelper
   end
 
   # Get all files related to the project at the given channel id as a hash.
-  # Much of this can be constructed from the level where this project was created (get_level_project_files).
+  # Much of this can be constructed from the level where this project was created (get_level_files).
   # This method adds in user-specific code and assets uploaded on the level where the project was created.
   # The returned hash is in the format below. All values are strings.
   # {
@@ -25,7 +25,7 @@ module JavalabFilesHelper
   # }
   # If the level doesn't have validation and/or a maze, those fields will not be present.
   def self.get_project_files(channel_id, level_id)
-    all_files = get_level_project_files(level_id)
+    all_files = get_level_files(level_id)
 
     # get main.json
     source_data = SourceBucket.new.get(channel_id, "main.json")
@@ -41,9 +41,19 @@ module JavalabFilesHelper
     all_files
   end
 
-  def self.get_project_files_with_provided_sources(sources, level_id)
-    all_files = get_level_project_files(level_id)
-    all_files["sources"]["main.json"] = sources
+  # Get all files for the project to be executed as a hash, with source code provided as an argument.
+  # Much of this can be constructed from the level where this project was created (get_level_files).
+  # This method adds in code provided the sources argument.
+  # The returned hash is in the format below. All values are strings.
+  # {
+  #   "sources": {"main.json": <main source file for a project>, "grid.txt": <serialized maze if it exists>},
+  #   "assetUrls": {"asset_name_1": <asset_url>, ...}
+  #   "validation": <all validation code for a project, in json format>
+  # }
+  # If the level doesn't have validation and/or a maze, those fields will not be present.
+  def self.get_project_files_with_override_sources(sources, level_id)
+    all_files = get_level_files(level_id)
+    all_files["sources"]["main.json"]["source"] = sources
     all_files
   end
 
@@ -63,55 +73,40 @@ module JavalabFilesHelper
       "https://" + CDO.dashboard_hostname
   end
 
-  def self.get_javabuilder_uri(auth_token)
-    URI.parse("#{CDO.javabuilder_upload_url}?Authorization=#{auth_token}")
-  end
-
-  def self.create_default_javabuilder_request(uri, hostname)
-    default_javabuilder_request = Net::HTTP::Put.new(uri)
-    default_javabuilder_request['Origin'] = hostname
-    default_javabuilder_request['Content-Type'] = 'application/json'
-
-    default_javabuilder_request
-  end
-
   # Get all files that can be derived from the level where a project was built (ie, files that are not user-specific).
   # The hash is in the format below. All values are strings.
-  # Note that this hash does not include a "main.json" entry in under "sources", which is required for Javabuilder.
+  # Note that this hash does **not** include a "main.json" entry in under "sources", which is required for Javabuilder.
   # {
   #   "sources": {"grid.txt": <serialized maze if it exists>},
   #   "assetUrls": {"asset_name_1": <asset_url>, ...}
   #   "validation": <all validation code for a project, in json format>
   # }
   # If the level doesn't have validation and/or a maze, those fields will not be present.
-  def self.get_level_project_files(level_id)
-    default_files = {}
-    default_sources = {}
-    default_assets = {}
+  def self.get_level_files(level_id)
+    all_level_files = {}
+    sources = {}
+    assets = {}
+
+    level = Level.find(level_id)
 
     # get maze file
-    level = Level.find(level_id)
-    if level
-      serialized_maze = level.try(:get_serialized_maze)
-      if serialized_maze
-        default_sources["grid.txt"] = serialized_maze.to_json
-      end
+    serialized_maze = level.try(:get_serialized_maze)
+    if serialized_maze
+      sources["grid.txt"] = serialized_maze.to_json
     end
-    default_files["sources"] = default_sources
+    all_level_files["sources"] = sources
 
     # get starter assets
-    if level
-      (level&.project_template_level&.starter_assets || level.starter_assets || []).map do |friendly_name, _|
-        default_assets[friendly_name] = generate_starter_asset_url(friendly_name, level)
-      end
+    (level&.project_template_level&.starter_assets || level.starter_assets || []).map do |friendly_name, _|
+      assets[friendly_name] = generate_starter_asset_url(friendly_name, level)
     end
-    default_files["assetUrls"] = default_assets
+    all_level_files["assetUrls"] = assets
 
     # get validation code
     if level.respond_to?(:validation) && level.validation
-      default_files["validation"] = level.validation.to_json
+      all_level_files["validation"] = level.validation.to_json
     end
 
-    default_files
+    all_level_files
   end
 end
