@@ -1,6 +1,6 @@
 class ReferenceGuidesController < ApplicationController
   include CurriculumHelper
-  before_action :find_reference_guide, only: [:show, :update, :edit]
+  before_action :find_reference_guide, only: [:show, :update, :edit, :destroy]
   before_action :find_reference_guides, only: [:edit_all]
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   authorize_resource id_param: :key
@@ -20,6 +20,11 @@ class ReferenceGuidesController < ApplicationController
     @reference_guide.update!(reference_guide_params.except(:key, :course_course_name))
     @reference_guide.write_serialization
     render json: @reference_guide.summarize_for_edit.to_json
+  end
+
+  # DELETE /courses/:course_name/guides/:key
+  def destroy
+    @reference_guide.destroy
   end
 
   # GET /courses/:course_name/guides/:key/edit
