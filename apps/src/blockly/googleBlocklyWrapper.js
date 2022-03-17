@@ -371,6 +371,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
   blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
+  blocklyWrapper.setHSV = function(block, h, s, v) {
+    block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
+  };
+
   return blocklyWrapper;
 }
 
