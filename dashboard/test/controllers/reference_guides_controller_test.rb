@@ -74,6 +74,22 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     assert_equal 'new content', editable_reference_guide.content
   end
 
+  test 'ref guide is deleted through destroy route' do
+    editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version
+
+    sign_in @levelbuilder
+
+    post :destroy, params: {
+      course_course_name: editable_reference_guide.course_offering_version,
+      key: editable_reference_guide.key
+    }
+    assert_response :no_content
+
+    assert_raise ActiveRecord::RecordNotFound do
+      editable_reference_guide.reload
+    end
+  end
+
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
 
   # everyone can see basic reference guides
