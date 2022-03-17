@@ -411,7 +411,7 @@ class Ability
 
     # This action allows levelbuilders to work on exemplars in levelbuilder
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
-      can :get_access_token_provided_sources, :javabuilder_session
+      can :get_access_token_with_override_sources, :javabuilder_session
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

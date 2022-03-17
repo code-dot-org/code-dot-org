@@ -98,8 +98,8 @@ class JavabuilderSessionsController < ApplicationController
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
-    mini_app_type = params[:miniAppType]
     use_dashboard_sources = 'false'
+    mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
 
     issued_at_time = Time.now.to_i
