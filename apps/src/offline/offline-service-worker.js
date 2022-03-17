@@ -46,13 +46,33 @@ self.addEventListener('fetch', event => {
 async function cacheFiles(cache) {
   return getOfflineFilesList().then(filepaths =>
     Promise.all(
-      filepaths.map(async filepath =>
-        cache
-          .add(filepath)
-          .catch(err => console.log(`Failed to cache ${filepath}`, err))
-      )
+      filepaths.map(async filepath => cacheFilesHelper(cache, filepath, 1, 3))
     )
   );
+}
+
+/**
+ * This function attempts to cache files to be available offline.
+ * In the event of a cache failure, it recursively retries caching
+ * for a specified number of times
+ *
+ * @param cache - the cache to which we add files
+ * @param filepath - the file to be added to the cache
+ * @param attempt - # of retries attempted so far
+ * @param retries - total number of retries to attempt
+ * @returns {*}
+ */
+function cacheFilesHelper(cache, filepath, attempt, retries) {
+  if (attempt > retries) {
+    throw `Failed to cache ${filepath} after ${retries} retries`;
+  }
+  return cache.add(filepath).catch(err => {
+    console.log(
+      `Failed to cache ${filepath}, attempt ${attempt}/${retries}`,
+      err
+    );
+    cacheFilesHelper(cache, filepath, attempt + 1, retries);
+  });
 }
 
 /**
