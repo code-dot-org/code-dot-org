@@ -62,8 +62,16 @@
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
-    - user_type = current_user ? current_user.user_type : nil
-    - under_13 = current_user ? current_user.under_13? : nil
+
+    - cookie_key = environment_specific_cookie_name('_user_type')
+    - user_type = request.cookies[cookie_key]
+    -# The _user_type cookie is set in devise.rb to differentiate under13 students as 'student_y'
+    -# Splitting that single value here into two variables to align with user_type standards of "teacher/student"
+    - if user_type ==  == 'student_y'
+      - user_type = "student"
+      - under_13 = true
+    - else
+      - under_13 = false
 
     - gdpr_data = {}
     - if current_user
