@@ -123,7 +123,7 @@ function addIfOnlyFlower(blockly, generator) {
   blockly.Blocks.bee_ifOnlyFlower = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(msg.ifCode());
       this.appendDummyInput().appendTitle(msg.atFlower());
       this.setInputsInline(true);
@@ -157,7 +157,7 @@ function addIfFlowerHive(blockly, generator) {
         [msg.atHoneycomb(), 'atHoneycomb']
       ];
 
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(msg.ifCode());
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(LOCATIONS),
@@ -196,7 +196,7 @@ function addIfElseFlowerHive(blockly, generator) {
         [msg.atHoneycomb(), 'atHoneycomb']
       ];
 
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(msg.ifCode());
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(LOCATIONS),
@@ -237,7 +237,7 @@ function addRepeatedActionBlock(
   blockly.Blocks[name] = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         blockMsg,
         ['NUM', 'Number', Blockly.ALIGN_RIGHT],
@@ -274,15 +274,15 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       switch (type) {
         case 'if':
           conditionalMsg = msg.ifCode();
-          this.setHSV(196, 1.0, 0.79);
+          Blockly.setHSV(this, 196, 1.0, 0.79);
           break;
         case 'ifelse':
           conditionalMsg = msg.ifCode();
-          this.setHSV(196, 1.0, 0.79);
+          Blockly.setHSV(this, 196, 1.0, 0.79);
           break;
         case 'while':
           conditionalMsg = msg.whileMsg();
-          this.setHSV(322, 0.9, 0.95);
+          Blockly.setHSV(this, 322, 0.9, 0.95);
           break;
         default:
           throw 'Unexpected type for addConditionalComparisonBlock';
