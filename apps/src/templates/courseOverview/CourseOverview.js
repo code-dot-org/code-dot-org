@@ -81,7 +81,7 @@ class CourseOverview extends Component {
     if (versionId !== this.props.id && version) {
       const sectionId = queryParams('section_id');
       const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`/courses/${version.name}${queryString}`);
+      utils.navigateToHref(`${version.path}${queryString}`);
     }
   };
 
