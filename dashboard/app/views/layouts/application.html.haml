@@ -67,8 +67,8 @@
     - user_type = request.cookies[cookie_key]
     -# The _user_type cookie is set in devise.rb to differentiate under13 students as 'student_y'
     -# Splitting that single value here into two variables to align with user_type standards of "teacher/student"
-    - if user_type ==  == 'student_y'
-      - user_type = "student"
+    - if user_type == 'student_y'
+      - user_type = 'student'
       - under_13 = true
     - else
       - under_13 = false
