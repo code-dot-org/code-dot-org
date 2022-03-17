@@ -12,7 +12,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     @fake_channel_id = storage_encrypt_channel_id(1, 1)
 
     JavalabFilesHelper.stubs(:get_project_files).returns({})
-    JavalabFilesHelper.stubs(:get_project_files_with_provided_sources).returns({})
+    JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
     JavalabFilesHelper.stubs(:upload_project_files).returns(true)
   end
 
@@ -24,13 +24,13 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :levelbuilder,
     response: :success
 
-  test_user_gets_response_for :get_access_token_with_provided_sources,
+  test_user_gets_response_for :get_access_token_with_override_sources,
     user: :student,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_provided_sources,
+  test_user_gets_response_for :get_access_token_with_override_sources,
     user: :teacher,
     response: :forbidden
-  test_user_gets_response_for :get_access_token_with_provided_sources,
+  test_user_gets_response_for :get_access_token_with_override_sources,
     params: {overrideSources: "{'source': {}}", projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
@@ -121,7 +121,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'param for override sources is required when using override sources route' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token_with_provided_sources, params: {projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token_with_override_sources, params: {projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
