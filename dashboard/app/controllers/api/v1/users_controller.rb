@@ -106,6 +106,14 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render json: {using_text_mode: !!@user.using_text_mode}
   end
 
+  # POST /api/v1/users/<user_id>/mute_music
+  def post_mute_music
+    @user.mute_music = !!params[:mute_music].try(:to_bool)
+    @user.save
+
+    render json: {mute_music: !!@user.mute_music}
+  end
+
   # POST /api/v1/users/<user_id>/display_theme
   def update_display_theme
     @user.display_theme = params[:display_theme]
