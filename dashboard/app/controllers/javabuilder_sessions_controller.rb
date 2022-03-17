@@ -13,12 +13,9 @@ class JavabuilderSessionsController < ApplicationController
 
   # GET /javabuilder/access_token
   def get_access_token
-    # Maybe create helper to require the right list of params
-    params.require([:projectVersion, :projectUrl, :executionType, :miniAppType])
+    require_default_params
+    params.require(:channelId)
     channel_id = params[:channelId]
-    unless channel_id
-      return render status: :bad_request, json: {}
-    end
 
     begin
       storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
@@ -38,36 +35,35 @@ class JavabuilderSessionsController < ApplicationController
     log_token_creation(payload)
     encoded_payload = create_encoded_payload(payload)
 
-    # level_id also duplicated
+    # level_id duplicated -- require?
     level_id = params[:levelId]
-    # use_dashboard_sources goes in payload, this is duplicated
-    if params[:useDashboardSources] == 'false'
-      project_files = JavalabFilesHelper.get_project_files(channel_id, level_id)
-      success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
-      return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
-    end
+
+    project_files = JavalabFilesHelper.get_project_files(channel_id, level_id)
+    success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
+    return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
 
     render json: {token: encoded_payload, session_id: session_id}
   end
 
-  # def get_access_token_provided_sources
-  #   # require levelbuilder
-  #
-  #   override_sources = params[:overrideSources]
-  #   unless override_sources
-  #     return render status: :bad_request, json: {}
-  #   end
-  #
-  #   session_id = SecureRandom.uuid
-  #   payload = get_shared_payload(session_id)
-  #
-  #   log_token_creation(payload)
-  #   encoded_payload = create_encoded_payload(payload)
-  #
-  #   # add in uploading of project files here
-  #   # update return value here
-  #   return encoded_payload
-  # end
+  def get_access_token_provided_sources
+    params.require(:overrideSources)
+    override_sources = params[:overrideSources]
+
+    session_id = SecureRandom.uuid
+    payload = get_shared_payload(session_id)
+
+    log_token_creation(payload)
+    encoded_payload = create_encoded_payload(payload)
+
+    # level_id duplicated -- require?
+    level_id = params[:levelId]
+
+    project_files = JavalabFilesHelper.get_project_files_with_provided_sources(override_sources, level_id)
+    success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
+    return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
+
+    render json: {token: encoded_payload, session_id: session_id}
+  end
 
   private
 
@@ -96,12 +92,8 @@ class JavabuilderSessionsController < ApplicationController
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
-    use_dashboard_sources = params[:useDashboardSources]
     mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
-    # if !project_version || !project_url || !execution_type || !mini_app_type
-    #   return render status: :bad_request, json: {}
-    # end
 
     issued_at_time = Time.now.to_i
     # expire token in 15 minutes
@@ -118,7 +110,7 @@ class JavabuilderSessionsController < ApplicationController
       level_id: level_id,
       execution_type: execution_type,
       mini_app_type: mini_app_type,
-      use_dashboard_sources: use_dashboard_sources,
+      use_dashboard_sources: false,
       options: options,
       verified_teachers: teacher_list
     }
@@ -142,5 +134,9 @@ class JavabuilderSessionsController < ApplicationController
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSWORD),
       'RS256'
     )
+  end
+
+  def require_default_params
+    params.require([:projectVersion, :projectUrl, :executionType, :miniAppType])
   end
 end
