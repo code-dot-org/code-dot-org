@@ -75,7 +75,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def teacher_enrollment_receipt__admin
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
   def teacher_enrollment_receipt__csp_for_returning_teachers
@@ -240,15 +240,15 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def teacher_enrollment_reminder__admin
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
   def teacher_enrollment_receipt__counselor
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_COUNSELOR
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
   def teacher_enrollment_reminder__counselor
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
+    mail :teacher_enrollment_reminder, PPd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
   def teacher_enrollment_receipt__facilitator
@@ -386,7 +386,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def detail_change_notification__admin
-    mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN
+    mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
   # Exit survey has variations for CSF and CSP Local Summer. It's the same for all other courses.
