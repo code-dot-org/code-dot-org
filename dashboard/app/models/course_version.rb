@@ -63,7 +63,9 @@ class CourseVersion < ApplicationRecord
   delegate :stable?, to: :content_root
   delegate :launched?, to: :content_root
   delegate :in_development?, to: :content_root
-  delegate :has_pilot_access?, to: :content_root
+  delegate :pilot?, to: :content_root
+  delegate :has_pilot_experiment?, to: :content_root
+  delegate :has_editor_experiment?, to: :content_root
   delegate :can_be_instructor?, to: :content_root
   delegate :course_assignable?, to: :content_root
 
@@ -153,7 +155,8 @@ class CourseVersion < ApplicationRecord
       id,
       {
         id: id,
-        version_year: key,
+        key: key,
+        version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
         content_root_id: content_root.id,
         name: content_root.localized_title,
         path: content_root.link,
