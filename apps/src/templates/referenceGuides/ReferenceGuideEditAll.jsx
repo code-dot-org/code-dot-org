@@ -48,6 +48,22 @@ export default function ReferenceGuideEditAll(props) {
     [referenceGuides]
   );
 
+  const deleteGuide = useCallback(
+    guideKey => {
+      setReferenceGuides([
+        ...referenceGuides.filter(guide => guide.key !== guideKey)
+      ]);
+      fetch(`${BASE_URL}/${guideKey}`, {
+        method: 'DELETE',
+        headers: {
+          'content-type': 'application/json',
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+    },
+    [referenceGuides]
+  );
+
   // To move guides, we will swap the positions of guides in the direction we want to move.
   // The positions might sometimes have gaps (in the case of deletion or changing parents),
   // but if we swap position values, they'll still sort correctly.
@@ -128,7 +144,11 @@ export default function ReferenceGuideEditAll(props) {
                 alt="edit"
                 href={`${BASE_URL}/${guide.key}/edit`}
               />
-              <MiniIconButton icon="trash" alt="delete" />
+              <MiniIconButton
+                icon="trash"
+                alt="delete"
+                func={() => deleteGuide(guide.key)}
+              />
               <MiniIconButton
                 icon="caret-up"
                 alt="move guide up"

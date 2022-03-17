@@ -293,7 +293,7 @@ Dashboard::Application.routes.draw do
       get 'get_rollup_resources'
     end
 
-    resources :reference_guides, only: [:show, :update], param: 'key', path: 'guides' do
+    resources :reference_guides, only: [:show, :update, :destroy], param: 'key', path: 'guides' do
       member do
         get 'edit', to: 'reference_guides#edit'
       end
