@@ -116,16 +116,13 @@ describe('ProgrammingExpressionsTable', () => {
   });
 
   it('updates category dropdown when environment is selected', () => {
-    fetchStub.returns(Promise.resolve({ok: true, json: () => returnData}));
-    const wrapper = isolateComponent(
-      <ProgrammingExpressionsTable {...defaultProps} />
-    );
+    const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
 
-    const environmentSelector = wrapper.findAll('select')[0];
-    environmentSelector.props.onChange({target: {value: 1}});
+    const environmentSelector = wrapper.find('select').at(0);
+    environmentSelector.simulate('change', {target: {value: 1}});
 
-    const categorySelector = wrapper.findAll('select')[1];
-    expect(categorySelector.findAll('option').length).to.equal(2);
+    const categorySelector = wrapper.find('select').at(1);
+    expect(categorySelector.find('option').length).to.equal(2);
   });
 
   it('shows table with programming expressions after load', () => {
@@ -136,7 +133,7 @@ describe('ProgrammingExpressionsTable', () => {
       <ProgrammingExpressionsTable {...defaultProps} />
     );
     return new Promise(resolve => setImmediate(resolve)).then(() => {
-      expect(fetchStub.callCount).to.be.greaterThan(1);
+      expect(fetchStub.callCount).to.equal(1);
       // A reactabular table has a Header and a Body
       expect(wrapper.findAll('Header').length).to.equal(1);
       expect(wrapper.findAll('Body').length).to.equal(1);
@@ -152,7 +149,7 @@ describe('ProgrammingExpressionsTable', () => {
       <ProgrammingExpressionsTable {...defaultProps} hidden />
     );
     return new Promise(resolve => setImmediate(resolve)).then(() => {
-      expect(fetchStub.callCount).to.be.greaterThan(1);
+      expect(fetchStub.callCount).to.equal(1);
       // A reactabular table has a Header and a Body
       expect(wrapper.findAll('Header').length).to.equal(0);
       expect(wrapper.findAll('Body').length).to.equal(0);
@@ -166,7 +163,7 @@ describe('ProgrammingExpressionsTable', () => {
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setImmediate(resolve)).then(() => {
       const fetchCount = fetchStub.callCount;
-      expect(fetchCount).to.be.greaterThan(1);
+      expect(fetchCount).to.equal(1);
       wrapper.update();
       const destroyButton = wrapper
         .find('BodyRow')
