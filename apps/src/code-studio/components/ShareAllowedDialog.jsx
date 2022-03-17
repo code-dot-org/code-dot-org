@@ -295,7 +295,7 @@ class ShareAllowedDialog extends React.Component {
                   <div>
                     <button
                       type="button"
-                      id="share-dialog-copy-button"
+                      id="sharing-input-copy-button"
                       style={{
                         ...styles.button,
                         ...styles.copyButton,
