@@ -38,7 +38,7 @@ const initialState = {
   userType: 'unknown',
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
-  // Setting default under13 value to true to err on the side of caution for age-restricted content
+  // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true
 };
 

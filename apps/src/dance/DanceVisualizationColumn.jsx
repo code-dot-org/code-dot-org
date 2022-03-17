@@ -78,11 +78,11 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   /*
-    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off
+    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
    */
   setFilterStatus() {
-    // userType - 'teacher', assumed age > 13. 'student', age > 13.
-    //            'student_y', age < 13. 'unknown', signed out users
+    // userType - 'teacher', 'student', 'unknown' - signed out users.
+    // under13 - boolean for signed in user representing age category. Teacher assumed > 13.
     const signedInOver13 =
       this.props.userType === 'teacher' ||
       (this.props.userType === 'student' && !this.props.under13);
