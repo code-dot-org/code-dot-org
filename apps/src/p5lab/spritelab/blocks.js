@@ -479,7 +479,7 @@ export default {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        Blockly.setHSV(this, 136, 0.84, 0.8);
+        Blockly.cdoUtils.setHSV(this, 136, 0.84, 0.8);
         const mainTitle = this.appendDummyInput()
           .appendTitle(fieldLabel, 'VAR')
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);

@@ -86,7 +86,7 @@ exports.install = function(blockly, blockInstallOptions) {
       return {
         helpUrl: '',
         init: function() {
-          Blockly.setHSV(this, 184, 1.0, 0.74);
+          Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
           this.appendDummyInput()
             .appendTitle(
               new blockly.FieldLabel(directionConfig.letter, {
@@ -140,7 +140,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving forward/backward
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
     init: function() {
-      Blockly.setHSV(this, 184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -166,7 +166,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function() {
-      Blockly.setHSV(this, 184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -192,7 +192,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for checking if there a path.
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.setOutput(true, blockly.BlockValueType.NUMBER);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -218,7 +218,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for 'if' conditional if there is a path.
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -246,7 +246,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for 'if/else' conditional if there is a path.
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -277,7 +277,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for 'if' conditional if there is a path.
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(msg.ifCode());
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -311,7 +311,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for 'if/else' conditional if there is a path.
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(this, 196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(msg.ifCode());
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -342,7 +342,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_whileNotClear = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
-      Blockly.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -370,7 +370,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_untilBlocked = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
-      Blockly.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendTitle(msg.repeatUntilBlocked());
       this.appendStatementInput('DO').appendTitle(msg.doCode());
       this.setPreviousStatement(true);
@@ -390,7 +390,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Do forever loop.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
-      Blockly.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
         .appendTitle(msg.repeatUntil())
         .appendTitle(new blockly.FieldImage(skin.maze_forever, 35, 35));
@@ -413,7 +413,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.maze_untilBlockedOrNotClear = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
-      Blockly.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'

@@ -84,7 +84,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function() {
       this.setInputsInline(true);
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         mathBlockColor.h,
         mathBlockColor.s,
@@ -129,7 +129,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_move = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -151,7 +151,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_turn = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -173,7 +173,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_place = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -203,7 +203,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_till = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -225,7 +225,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_attack = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -247,7 +247,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_destroy = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -269,7 +269,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_collectall = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -290,7 +290,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_collect = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -316,7 +316,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_drop = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -354,7 +354,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_dropall = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -376,7 +376,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_detect = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -400,7 +400,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_inspect = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -424,7 +424,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_inspectdata = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -448,7 +448,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_detectredstone = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -472,7 +472,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_getitemdetail = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -502,7 +502,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_getitemspace = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -532,7 +532,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_getitemcount = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -562,7 +562,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_transfer = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -609,7 +609,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_tptoplayer = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         agentBlockColor.h,
         agentBlockColor.s,
@@ -630,7 +630,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_wait = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         customControlColor.h,
         customControlColor.s,
@@ -659,7 +659,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_executeasother = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -698,7 +698,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_timesetbyname = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -720,7 +720,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_timesetbynumber = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -749,7 +749,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_weather = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -771,7 +771,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_tptotarget = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -798,7 +798,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_tptopos = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -833,7 +833,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_fill = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -892,7 +892,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_give = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -932,7 +932,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_kill = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -955,7 +955,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_setblock = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -1004,7 +1004,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_summon = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -1041,7 +1041,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_testforblock = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -1087,7 +1087,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_testforblocks = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -1155,7 +1155,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_clone = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -1225,7 +1225,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_clonefiltered = {
     helpUrl: '',
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
@@ -1298,7 +1298,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_createblock = {
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
         itemBlockColor.s,
@@ -1333,7 +1333,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_block = {
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
         itemBlockColor.s,
@@ -1359,7 +1359,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_miscellaneous = {
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
         itemBlockColor.s,
@@ -1385,7 +1385,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_decoration = {
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
         itemBlockColor.s,
@@ -1411,7 +1411,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_tool = {
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
         itemBlockColor.s,
@@ -1437,7 +1437,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_getnameof = {
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
         itemBlockColor.s,
@@ -1461,7 +1461,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_getdataof = {
     init: function() {
-      Blockly.setHSV(
+      Blockly.cdoUtils.setHSV(
         this,
         itemBlockColor.h,
         itemBlockColor.s,
