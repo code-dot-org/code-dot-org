@@ -13,6 +13,8 @@ class JavabuilderSessionsController < ApplicationController
 
   # GET /javabuilder/access_token
   def get_access_token
+    # Maybe create helper to require the right list of params
+    params.require([:projectVersion, :projectUrl, :executionType, :miniAppType])
     channel_id = params[:channelId]
     unless channel_id
       return render status: :bad_request, json: {}
@@ -33,35 +35,39 @@ class JavabuilderSessionsController < ApplicationController
     }
     payload.merge! channel_specific_payload
 
-    log_token_creation
+    log_token_creation(payload)
     encoded_payload = create_encoded_payload(payload)
 
-    if use_dashboard_sources == 'false'
-      success = JavalabFilesHelper.upload_project_files(channel_id, level_id, request.host, encoded_payload)
+    # level_id also duplicated
+    level_id = params[:levelId]
+    # use_dashboard_sources goes in payload, this is duplicated
+    if params[:useDashboardSources] == 'false'
+      project_files = JavalabFilesHelper.get_project_files(channel_id, level_id)
+      success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
       return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
     end
 
     render json: {token: encoded_payload, session_id: session_id}
   end
 
-  def get_access_token_provided_sources
-    # require levelbuilder
-
-    override_sources = params[:overrideSources]
-    unless override_sources
-      return render status: :bad_request, json: {}
-    end
-
-    session_id = SecureRandom.uuid
-    payload = get_shared_payload(session_id)
-
-    log_token_creation
-    encoded_payload = create_encoded_payload(payload)
-
-    # add in uploading of project files here
-    # update return value here
-    return encoded_payload
-  end
+  # def get_access_token_provided_sources
+  #   # require levelbuilder
+  #
+  #   override_sources = params[:overrideSources]
+  #   unless override_sources
+  #     return render status: :bad_request, json: {}
+  #   end
+  #
+  #   session_id = SecureRandom.uuid
+  #   payload = get_shared_payload(session_id)
+  #
+  #   log_token_creation(payload)
+  #   encoded_payload = create_encoded_payload(payload)
+  #
+  #   # add in uploading of project files here
+  #   # update return value here
+  #   return encoded_payload
+  # end
 
   private
 
@@ -93,14 +99,15 @@ class JavabuilderSessionsController < ApplicationController
     use_dashboard_sources = params[:useDashboardSources]
     mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
-    if !project_version || !project_url || !execution_type || !mini_app_type
-      return render status: :bad_request, json: {}
-    end
+    # if !project_version || !project_url || !execution_type || !mini_app_type
+    #   return render status: :bad_request, json: {}
+    # end
 
     issued_at_time = Time.now.to_i
     # expire token in 15 minutes
     expiration_time = (Time.now + 15.minutes).to_i
-    shared_payload = {
+
+    {
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
       exp: expiration_time,
@@ -115,11 +122,9 @@ class JavabuilderSessionsController < ApplicationController
       options: options,
       verified_teachers: teacher_list
     }
-
-    shared_payload
   end
 
-  def log_token_creation
+  def log_token_creation(payload)
     FirehoseClient.instance.put_record(
       :analysis,
       {
