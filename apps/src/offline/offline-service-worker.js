@@ -6,7 +6,7 @@ import 'whatwg-fetch';
  * internet connection.
  */
 const cacheVersion = 2;
-const cacheName = `code-org-pwa-v${cacheVersion}`;
+const cacheName = `code-org-pwa-express-2021-lessons-1-v${cacheVersion}`;
 
 self.addEventListener('install', e => {
   console.log('[Service Worker] installing offline service worker!');

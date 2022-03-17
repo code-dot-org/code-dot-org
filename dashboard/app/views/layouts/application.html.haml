@@ -12,7 +12,7 @@
     -# Setup variables used by the Offline feature.
     :javascript
       window.OFFLINE_SERVICE_WORKER_PATH =
-        "#{webpack_offline_asset_path('js/offline-service-worker.js')}"
+        "/s/express-2021/lessons/1#{webpack_offline_asset_path('js/offline-service-worker.js')}"
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
