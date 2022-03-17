@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: programming_class_methods
+# Table name: programming_methods
 #
 #  id                   :bigint           not null, primary key
 #  programming_class_id :integer
@@ -16,7 +16,7 @@
 #
 # Indexes
 #
-#  index_programming_class_methods_on_key_and_programming_class_id  (key,programming_class_id) UNIQUE
+#  index_programming_methods_on_key_and_programming_class_id  (key,programming_class_id) UNIQUE
 #
-class ProgrammingClassMethod < ApplicationRecord
+class ProgrammingMethod < ApplicationRecord
 end
