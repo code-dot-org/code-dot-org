@@ -1,5 +1,6 @@
 import React, {useMemo, useCallback, useState} from 'react';
 import PropTypes from 'prop-types';
+import $ from 'jquery';
 import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {flatten} from 'lodash';
