@@ -90,8 +90,12 @@ class CourseOffering < ApplicationRecord
     course_versions.any?(&:in_development?)
   end
 
-  def any_version_has_pilot_access?(user)
-    course_versions.any? {|cv| cv.has_pilot_access?(user)}
+  def any_version_is_assignable_pilot?(user)
+    course_versions.any? {|cv| cv.pilot?(user) && cv.has_pilot_experiment?(user)}
+  end
+
+  def any_version_is_editor_experiment?(user)
+    course_versions.any? {|cv| cv.is_a?(Script) && cv.has_editor_experiment?(user)}
   end
 
   def self.assignable_course_offerings(user)
@@ -121,7 +125,8 @@ class CourseOffering < ApplicationRecord
   def assignable?(user)
     return false unless can_be_instructor?(user)
     return true if any_versions_launched?
-    return true if Script.has_any_pilot_access?(user) && any_version_has_pilot_access?(user)
+    return true if any_version_is_assignable_pilot?(user)
+    return true if any_version_is_editor_experiment?(user)
     return true if user.permission?(UserPermission::LEVELBUILDER)
 
     false
