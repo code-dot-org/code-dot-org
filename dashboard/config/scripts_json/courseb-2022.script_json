@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-03-01 04:57:48 UTC",
+    "serialized_at": "2022-03-15 15:50:25 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1787,7 +1787,7 @@
       "key": "4709a0b0-10cf-444a-95c2-79194cef926d",
       "position": 1,
       "properties": {
-        "description": "\n####Vocabulary\n\nThis lesson has three new and important vocabulary words:\n\n - **Bug** - _Say it with me: Buhh-g._\n\nSomething that is going wrong. An error.\n\n - **Debugging** - _Say it with me: Dee-bug-ing._\n\nTo find and fix errors.\n\n - **Persistence** - __Say it with me: Purr-siss-tense._ \n\nNot giving up. Persistence works best when you try things many different ways, many different times.",
+        "description": "\n####Vocabulary\n\nThis lesson has three new and important vocabulary words:\n\n - **Bug** - _Say it with me: Buhh-g._\n\nSomething that is going wrong. An error.\n\n - **Debugging** - _Say it with me: Dee-bug-ing._\n\nTo find and fix errors.\n\n - **Persistence** - _Say it with me: Purr-siss-tense._ \n\nNot giving up. Persistence works best when you try things many different ways, many different times.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1799,7 +1799,7 @@
       "key": "cf252e6b-3a51-4e06-959e-e45d962462c4",
       "position": 2,
       "properties": {
-        "description": "####Debugging, Persistence, and Frustration\n\n**Discuss:** Prepare students for today's online exercises by asking them what they would do if they thought they had a bug in their code. More specifically, what would they ask themselves? \n\n- Was everything in the first step right?\n- How about the second? Third?\n- Where did my program go wrong?\n- What does that tell me?\n    \n**Prompt**: **Debugging** can be frustrating! But persistence can help us get through it. What are some things we can do to persist through frustration? \n\nExample responses:\n\n- Count to 10\n- Take deep breathsProg\n- Journal about bugs we've found\n- Talk to a partner about bugs\n- Ask for help\n\n**Transition:** Let your students know that frustration is part of coding. Everyone gets bugs! It's okay if they think they have a bug but they can't find or fix it right away. Using strategies like those listed above can help them persist through frustration and solve any problem!"
+        "description": "####Debugging, Persistence, and Frustration\n\n**Discuss:** Prepare students for today's online exercises by asking them what they would do if they thought they had a bug in their code. More specifically, what would they ask themselves? \n\n- Was everything in the first step right?\n- How about the second? Third?\n- Where did my program go wrong?\n- What does that tell me?\n    \n**Prompt**: **Debugging** can be frustrating! But persistence can help us get through it. What are some things we can do to persist through frustration? \n\nExample responses:\n\n- Count to 10\n- Take deep breaths\n- Journal about bugs we've found\n- Talk to a partner about bugs\n- Ask for help\n\n**Transition:** Let your students know that frustration is part of coding. Everyone gets bugs! It's okay if they think they have a bug but they can't find or fix it right away. Using strategies like those listed above can help them persist through frustration and solve any problem!"
       },
       "seeding_key": {
         "activity_section.key": "cf252e6b-3a51-4e06-959e-e45d962462c4",

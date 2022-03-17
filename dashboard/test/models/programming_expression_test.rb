@@ -79,6 +79,7 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
     to_update.name = "Updated name"
     File.stubs(:read).with("#{programming_environment.name}/#{to_update.key}.json").returns(to_update.serialize.to_json)
     File.stubs(:read).with("#{programming_environment.name}/#{to_create.key}.json").returns(to_create.serialize.to_json)
+    File.stubs(:delete)
 
     to_create.destroy!
     to_update.reload

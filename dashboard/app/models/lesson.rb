@@ -354,12 +354,16 @@ class Lesson < ApplicationRecord
     ScriptConfig.hoc_scripts.include?(script.name) ? lesson_path(id: id) : script_lesson_path(script, self)
   end
 
+  def total_lesson_duration
+    lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0}
+  end
+
   def summarize_for_calendar
     {
       id: id,
       lessonNumber: relative_position,
       title: localized_title,
-      duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
+      duration: total_lesson_duration,
       assessment: !!assessment,
       unplugged: unplugged,
       url: script_lesson_path(script, self)
@@ -433,6 +437,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       lockable: lockable,
       key: key,
+      duration: total_lesson_duration,
       displayName: localized_name_for_lesson_show,
       overview: render_property(:overview),
       announcements: announcements,
