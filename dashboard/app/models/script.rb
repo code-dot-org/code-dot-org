@@ -1442,7 +1442,7 @@ class Script < ApplicationRecord
     get_published_state == SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
     # don't have a lesson group in the database right now)
@@ -1536,7 +1536,8 @@ class Script < ApplicationRecord
       courseOfferingId: get_course_version&.course_offering&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      updated_at: updated_at.to_s
+      updated_at: updated_at.to_s,
+      validCourseOfferings: CourseOffering.assignable_course_offerings_info(user, locale_code)
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
