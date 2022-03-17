@@ -568,7 +568,7 @@ function newSectionData(id, loginType) {
     loginType: loginType,
     grade: '',
     providerManaged: false,
-    lessonExtras: true,
+    lessonExtras: false,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
@@ -777,10 +777,50 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    const lessonExtraSettings = {};
+    const ttsAutoplayEnabledSettings = {};
+    if (
+      action.props.unitId ||
+      action.props.courseVersionId ||
+      action.props.courseOfferingId
+    ) {
+      const courseOfferingId =
+        action.props.courseOfferingId ||
+        state.sectionBeingEdited.courseOfferingId;
+      const courseVersionId =
+        action.props.courseVersionId ||
+        state.sectionBeingEdited.courseVersionId;
+      const unitId = action.props.unitId || state.sectionBeingEdited.unitId;
+
+      if (courseOfferingId && courseVersionId) {
+        const courseVersion =
+          state.courseOfferings[courseOfferingId].course_versions[
+            courseVersionId
+          ];
+
+        if (courseVersion) {
+          if (courseVersion.type === 'Script') {
+            lessonExtraSettings.lessonExtras = Object.values(
+              courseVersion.units
+            )[0].lesson_extras_available;
+          } else if (unitId) {
+            lessonExtraSettings.lessonExtras =
+              courseVersion.units[unitId].lesson_extras_available;
+          } else {
+            lessonExtraSettings.lessonExtras = false;
+          }
+        }
+      } else {
+        lessonExtraSettings.lessonExtras = false;
+      }
+    }
+
     return {
       ...state,
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
+        ...lessonExtraSettings,
+        ...ttsAutoplayEnabledSettings,
         ...action.props
       }
     };

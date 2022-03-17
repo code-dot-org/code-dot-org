@@ -308,7 +308,7 @@ describe('teacherSectionsRedux', () => {
         loginType: undefined,
         grade: '',
         providerManaged: false,
-        lessonExtras: true,
+        lessonExtras: false,
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
