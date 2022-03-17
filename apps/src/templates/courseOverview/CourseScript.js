@@ -92,7 +92,7 @@ class CourseScript extends Component {
     const assignedByTeacher =
       viewAs === ViewType.Instructor &&
       selectedSection &&
-      selectedSection.scriptId === id;
+      selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
     return (
