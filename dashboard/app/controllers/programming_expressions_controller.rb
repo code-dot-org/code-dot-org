@@ -1,7 +1,7 @@
 class ProgrammingExpressionsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:search]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
 
   # GET /programming_expressions/search
   def search
@@ -63,6 +63,8 @@ class ProgrammingExpressionsController < ApplicationController
     if params[:id]
       @programming_expression = ProgrammingExpression.find(params[:id])
       return render :not_found unless @programming_expression
+      return head :forbidden unless can?(:read, @programming_expression)
+      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
     else
       render :not_found
     end
@@ -71,9 +73,34 @@ class ProgrammingExpressionsController < ApplicationController
   def show_by_keys
     if params[:programming_environment_name] && params[:programming_expression_key]
       @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
-      return render :show if @programming_expression
+      return render :not_found unless @programming_expression
+      return head :forbidden unless can?(:read, @programming_expression)
+      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      return render :show
     end
     render :not_found
+  end
+
+  def destroy
+    return render :not_found unless @programming_expression
+    begin
+      @programming_expression.destroy
+      render(status: 200, plain: "Destroyed #{@programming_expression.name}")
+    rescue
+      render(status: :not_acceptable, plain: @programming_expression.errors.full_messages.join('. '))
+    end
+  end
+
+  # POST /programming_expressions/:id/clone
+  def clone
+    return render :not_found unless @programming_expression
+    return render :not_acceptable unless params[:destinationProgrammingEnvironmentName]
+    begin
+      new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
+      render(status: 200, json: {editUrl: edit_programming_expression_path(new_exp)})
+    rescue => err
+      render(json: {error: err.message}.to_json, status: :not_acceptable)
+    end
   end
 
   private
@@ -93,7 +120,7 @@ class ProgrammingExpressionsController < ApplicationController
       :return_value,
       :tips,
       parameters: [:name, :type, :required, :description],
-      examples: [:name, :description, :code, :app, :imageUrl, :appDisplayType, :appEmbedHeight]
+      examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height]
     )
     transformed_params
   end

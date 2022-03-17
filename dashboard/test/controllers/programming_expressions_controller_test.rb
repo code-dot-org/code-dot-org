@@ -50,7 +50,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       returnValue: 'none',
       tips: 'some tips on how to use this block',
       parameters: [{name: "id", type: "string", required: true, description: "description"}, {name: "text"}],
-      examples: [{name: 'example 1', appEmbedHeight: '300px'}]
+      examples: [{name: 'example 1', embed_app_with_code_height: '300px'}]
     }
     assert_response :ok
     programming_expression.reload
@@ -67,7 +67,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal 'none', programming_expression.return_value
     assert_equal 'some tips on how to use this block', programming_expression.tips
     assert_equal [{name: 'id', type: 'string', required: 'true', description: 'description'}, {name: 'text'}].to_json, programming_expression.palette_params.to_json
-    assert_equal [{name: 'example 1', appEmbedHeight: '300px'}].to_json, programming_expression.examples.to_json
+    assert_equal [{name: 'example 1', embed_app_with_code_height: '300px'}].to_json, programming_expression.examples.to_json
   end
 
   test 'data is passed down to edit page' do
@@ -86,19 +86,24 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'data is passed down to show page when using id path' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: category
 
     get :show, params: {id: programming_expression.id}
     assert_response :ok
 
     show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
     assert_equal programming_expression.summarize_for_show.to_json, show_data
+
+    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
+    assert_equal 1, JSON.parse(nav_data).length
   end
 
   test 'data is passed down to show page when using environment and expression path' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: category
 
     get :show_by_keys, params: {
       programming_environment_name: @programming_environment.name,
@@ -108,6 +113,76 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
     assert_equal programming_expression.summarize_for_show.to_json, show_data
+
+    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
+    assert_equal 1, JSON.parse(nav_data).length
+  end
+
+  test 'can destroy programming expression' do
+    sign_in @levelbuilder
+    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+
+    File.expects(:exist?).returns(true).once
+    File.expects(:delete).once
+
+    delete :destroy, params: {
+      id: programming_expression.id
+    }
+    assert_response :ok
+
+    assert_nil ProgrammingExpression.find_by_key('test-expression')
+  end
+
+  test 'destroying a programming expressions fails if File cannot be deleted' do
+    sign_in @levelbuilder
+    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+
+    File.expects(:exist?).returns(true).once
+    File.expects(:delete).throws(StandardError).once
+
+    delete :destroy, params: {
+      id: programming_expression.id
+    }
+    assert_response :not_acceptable
+
+    refute_nil ProgrammingExpression.find_by_key('test-expression')
+  end
+
+  test 'can clone programming expression' do
+    sign_in @levelbuilder
+    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+    destination_programming_environment = create :programming_environment
+
+    assert_creates(ProgrammingExpression) do
+      post :clone, params: {
+        id: programming_expression.id,
+        destinationProgrammingEnvironmentName: destination_programming_environment.name
+      }
+    end
+    assert_response :ok
+
+    new_exp = destination_programming_environment.programming_expressions.find_by_key('test-expression')
+    refute_nil new_exp
+  end
+
+  test 'can clone programming expression into a category' do
+    sign_in @levelbuilder
+    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+    destination_programming_environment = create :programming_environment
+    destination_category = create :programming_environment_category, programming_environment: destination_programming_environment
+
+    assert_creates(ProgrammingExpression) do
+      post :clone, params: {
+        id: programming_expression.id,
+        destinationProgrammingEnvironmentName: destination_programming_environment.name,
+        destinationCategoryKey: destination_category.key
+      }
+    end
+    assert_response :ok
+
+    new_exp = destination_programming_environment.programming_expressions.find_by_key('test-expression')
+    refute_nil new_exp
+    assert_equal destination_category.id, new_exp.programming_environment_category_id
   end
 
   class AccessTests < ActionController::TestCase
@@ -117,6 +192,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       @programming_expression = create :programming_expression, programming_environment: programming_environment
 
       @update_params = {id: @programming_expression.id, name: 'new name'}
+      destination_programming_environment = create :programming_environment
+      @clone_params = {id: @programming_expression.id, destinationProgrammingEnvironmentName: destination_programming_environment.name}
     end
 
     test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
@@ -134,10 +211,25 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     test_user_gets_response_for :edit, params: -> {{id: @programming_expression.id}}, user: :teacher, response: :forbidden
     test_user_gets_response_for :edit, params: -> {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :clone, params: -> {@clone_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :student, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: nil, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :student, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :teacher, response: :success
+    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :levelbuilder, response: :success
 
     test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: nil, response: :success
     test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: :student, response: :success

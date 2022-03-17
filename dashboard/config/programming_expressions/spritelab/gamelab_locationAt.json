@@ -1,8 +1,0 @@
-{
-  "key": "gamelab_locationAt",
-  "name": "locationAt",
-  "category": "Location",
-  "category_key": "location",
-  "block_name": "gamelab_locationAt",
-  "syntax": "locationAt"
-}

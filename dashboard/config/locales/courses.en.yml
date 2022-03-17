@@ -197,3 +197,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        vpl-csd-summer-pilot-2022:
+          title: 'CS Discoveries Virtual Summer Workshop '
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-async-2022:
+          title: Getting Started Modules CSA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'22"

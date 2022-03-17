@@ -24,7 +24,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   NULL_STREAM = File.open File::NULL, 'w'
 
   def run(*_args, &_block)
-    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) {super}
+    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) do
+      DASHBOARD_DB.transaction(rollback: :always, auto_savepoint: true) do
+        super
+      end
+    end
   end
 
   setup do
@@ -1973,31 +1977,31 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'with_storage_id_for owns id if it does not exist' do
     student = create :student
 
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
 
     with_storage_id_for student do |storage_id|
-      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
+      assert_equal storage_id, storage_id_for_user_id(student.id)
     end
 
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
   end
 
   test 'with_storage_id_for does not own id if it does exist' do
     student = create :student
-    assert_empty user_storage_ids.where(user_id: student.id)
+    assert_nil storage_id_for_user_id(student.id)
 
-    user_storage_ids.insert(user_id: student.id)
+    create_storage_id_for_user(student.id)
 
-    refute_empty user_storage_ids.where(user_id: student.id)
+    refute_nil storage_id_for_user_id(student.id)
 
     with_storage_id_for student do |storage_id|
-      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
+      assert_equal storage_id, storage_id_for_user_id(student.id)
     end
 
-    refute_empty user_storage_ids.where(user_id: student.id)
+    refute_nil storage_id_for_user_id(student.id)
 
-    user_storage_ids.where(user_id: student.id).delete
-    assert_empty user_storage_ids.where(user_id: student.id)
+    delete_storage_id_for_user(student.id)
+    assert_nil storage_id_for_user_id(student.id)
   end
 
   #

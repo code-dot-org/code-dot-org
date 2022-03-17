@@ -21,7 +21,8 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
-import DCDO from '@cdo/apps/dcdo';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -102,7 +103,8 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
-    replayVideoUnavailable: false
+    replayVideoUnavailable: false,
+    hasBeenCopied: false
   };
 
   componentDidMount() {
@@ -123,6 +125,7 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
+      this.setState({hasBeenCopied: false});
     }
   }
 
@@ -172,6 +175,13 @@ class ShareAllowedDialog extends React.Component {
     this.props.onUnpublish(this.props.channelId);
   };
 
+  // Copy to clipboard.
+  copy = () => {
+    copyToClipboard(this.props.shareUrl, () =>
+      this.setState({hasBeenCopied: true})
+    );
+  };
+
   render() {
     let image;
     let modalClass = 'modal-content';
@@ -199,8 +209,7 @@ class ShareAllowedDialog extends React.Component {
       ? `Check out the dance I made featuring @${artistTwitterHandle} on @codeorg!`
       : 'Check out what I made on @codeorg!';
     const hashtags =
-      artistTwitterHandle === 'Coldplay' &&
-      !!DCDO.get('higher-power-promotion', false)
+      artistTwitterHandle === 'Coldplay'
         ? ['codeplay', 'HourOfCode']
         : ['HourOfCode'];
     const comma = '%2C';
@@ -295,8 +304,20 @@ class ShareAllowedDialog extends React.Component {
                       onClick={select}
                       readOnly
                       value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 500}}
+                      style={{cursor: 'copy', width: 450}}
                     />
+                    <button
+                      type="button"
+                      id="share-dialog-copy-button"
+                      style={{
+                        ...styles.button,
+                        ...styles.copyButton,
+                        ...(this.state.hasBeenCopied && styles.copyButtonLight)
+                      }}
+                      onClick={wrapShareClick(this.copy, 'copy')}
+                    >
+                      <FontAwesome icon="clipboard" style={{fontSize: 14}} />
+                    </button>
                   </div>
                 </div>
                 <div className="social-buttons">
@@ -304,11 +325,11 @@ class ShareAllowedDialog extends React.Component {
                     id="sharing-phone"
                     href=""
                     onClick={wrapShareClick(
-                      this.showSendToPhone.bind(this),
+                      this.showSendToPhone,
                       'send-to-phone'
                     )}
                   >
-                    <i className="fa fa-mobile-phone" style={{fontSize: 36}} />
+                    <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
                     <span>{i18n.sendToPhone()}</span>
                   </a>
                   {canPublish && !isPublished && (
@@ -318,10 +339,7 @@ class ShareAllowedDialog extends React.Component {
                       style={
                         hasThumbnail ? styles.button : styles.buttonDisabled
                       }
-                      onClick={wrapShareClick(
-                        this.publish.bind(this),
-                        'publish'
-                      )}
+                      onClick={wrapShareClick(this.publish, 'publish')}
                       disabled={!hasThumbnail}
                       className="no-mc"
                     >
@@ -344,11 +362,8 @@ class ShareAllowedDialog extends React.Component {
                     onError={this.replayVideoNotFound}
                   />
                   {canPrint && hasThumbnail && (
-                    <a
-                      href="#"
-                      onClick={wrapShareClick(this.print.bind(this), 'print')}
-                    >
-                      <i className="fa fa-print" style={{fontSize: 26}} />
+                    <a href="#" onClick={wrapShareClick(this.print, 'print')}>
+                      <FontAwesome icon="print" style={{fontSize: 26}} />
                       <span>{i18n.print()}</span>
                     </a>
                   )}
@@ -365,7 +380,7 @@ class ShareAllowedDialog extends React.Component {
                             'facebook'
                           )}
                         >
-                          <i className="fa fa-facebook" />
+                          <FontAwesome icon="facebook" />
                         </a>
                       )}
                       {this.state.isTwitterAvailable && (
@@ -378,7 +393,7 @@ class ShareAllowedDialog extends React.Component {
                             'twitter'
                           )}
                         >
-                          <i className="fa fa-twitter" />
+                          <FontAwesome icon="twitter" />
                         </a>
                       )}
                     </span>
@@ -492,6 +507,15 @@ const styles = {
     marginLeft: 0,
     marginRight: 8,
     verticalAlign: 'top'
+  },
+  copyButton: {
+    paddingTop: 5,
+    marginLeft: 8,
+    width: 30,
+    height: 30
+  },
+  copyButtonLight: {
+    backgroundColor: color.light_purple
   },
   thumbnail: {
     float: 'left',

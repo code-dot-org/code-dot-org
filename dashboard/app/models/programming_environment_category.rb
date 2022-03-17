@@ -9,6 +9,7 @@
 #  color                      :string(255)
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null
+#  position                   :integer
 #
 # Indexes
 #
@@ -17,7 +18,7 @@
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
   belongs_to :programming_environment
-  has_many :programming_expressions, dependent: :restrict_with_error
+  has_many :programming_expressions
 
   KEY_CHAR_RE = /[a-z_]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -31,7 +32,8 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     {
       key: key,
       name: name,
-      color: color
+      color: color,
+      position: position
     }
   end
 

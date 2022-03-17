@@ -1,8 +1,0 @@
-{
-  "key": "gamelab_removeAllBehaviors",
-  "name": "removeAllBehaviors",
-  "category": "Behaviors",
-  "category_key": "behaviors",
-  "block_name": "gamelab_removeAllBehaviors",
-  "syntax": "removeAllBehaviors"
-}

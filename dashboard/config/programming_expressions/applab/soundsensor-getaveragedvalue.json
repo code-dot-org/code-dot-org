@@ -8,5 +8,6 @@
       "name": "ms"
     }
   ],
+  "short_description": "soundSensor.getAveragedValue()",
   "syntax": "soundSensor.getAveragedValue(ms)"
 }

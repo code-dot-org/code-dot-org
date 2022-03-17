@@ -252,6 +252,8 @@ export const fakeProgressTableReduxInitialState = (
     students
   );
 
+  const sectionId = randomNumberUpTo100();
+
   return {
     progress: {
       lessonGroups: [],
@@ -260,7 +262,8 @@ export const fakeProgressTableReduxInitialState = (
       professionalLearningCourse: false
     },
     teacherSections: {
-      selectedSectionId: randomNumberUpTo100(),
+      sections: [{id: sectionId}],
+      selectedSectionId: sectionId,
       selectedStudents: students
     },
     sectionProgress: {

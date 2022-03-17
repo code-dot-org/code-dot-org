@@ -27,6 +27,7 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
   include Curriculum::CourseTypes
+  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
 
   # Some Courses will have an associated Plc::Course, most will not
@@ -389,6 +390,7 @@ class UnitGroup < ApplicationRecord
       versions: summarize_versions(user),
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
+      course_offering_id: course_version&.course_offering&.id,
       course_version_id: course_version&.id,
       course_path: link,
       course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
@@ -533,15 +535,17 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user = nil)
+    return false unless Ability.new(user).can?(:read, self)
+
     latest_course_version = UnitGroup.latest_stable_version(family_name)
     is_latest = latest_course_version == self
 
     # All users can see the latest course version.
     return true if is_latest
 
-    # Restrictions only apply to students and logged out users.
+    # Restrictions only apply to participants and logged out users.
     return false if user.nil?
-    return true unless user.student?
+    return true if can_be_instructor?(user)
 
     # A student can view the course version if they are assigned to it or they have progress in it.
     user.section_courses.include?(self) || has_progress?(user)

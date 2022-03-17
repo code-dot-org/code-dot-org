@@ -14,9 +14,12 @@ describe('ProgrammingEnvironmentEditor', () => {
       initialProgrammingEnvironment: {
         name: 'spritelab',
         title: 'Spritelab',
+        published: true,
         imageUrl: 'images.code.org/spritelab',
+        projectUrl: '/p/spritelab',
         description: 'A description of spritelab',
         editorType: 'blockly',
+        blockPoolName: 'GamelabJr',
         categories: [{id: 1, key: 'sprites', name: 'Sprites', color: '#00FF00'}]
       }
     };
@@ -37,16 +40,25 @@ describe('ProgrammingEnvironmentEditor', () => {
     expect(nameInput.props().value).to.equal('spritelab');
     expect(nameInput.props().readOnly).to.be.true;
 
+    const publishedCheckbox = wrapper.find('input').at(2);
+    expect(publishedCheckbox.props().checked).to.be.true;
+
+    const editorTypeSelect = wrapper.find('select').at(0);
+    expect(editorTypeSelect.props().value).to.equal('blockly');
+    expect(editorTypeSelect.find('option').length).to.equal(3);
+
+    const blockPoolInput = wrapper.find('input').at(3);
+    expect(blockPoolInput.props().value).to.equal('GamelabJr');
+
+    const projectUrlInput = wrapper.find('input').at(4);
+    expect(projectUrlInput.props().value).to.equal('/p/spritelab');
+
     const descriptionMarkdownInput = wrapper
       .find('TextareaWithMarkdownPreview')
       .at(0);
     expect(descriptionMarkdownInput.props().markdown).to.equal(
       'A description of spritelab'
     );
-
-    const editorTypeSelect = wrapper.find('select').at(0);
-    expect(editorTypeSelect.props().value).to.equal('blockly');
-    expect(editorTypeSelect.find('option').length).to.equal(3);
 
     const categoriesSection = wrapper.find('CollapsibleEditorSection');
     expect(
@@ -70,7 +82,14 @@ describe('ProgrammingEnvironmentEditor', () => {
       </Provider>
     );
 
-    fetchSpy.returns(Promise.resolve({ok: true}));
+    fetchSpy.returns(
+      Promise.resolve({
+        ok: true,
+        json: () => {
+          return {};
+        }
+      })
+    );
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(2);
@@ -82,11 +101,22 @@ describe('ProgrammingEnvironmentEditor', () => {
     expect(fetchCall.args[0]).to.equal('/programming_environments/spritelab');
     const fetchCallBody = JSON.parse(fetchCall.args[1].body);
     expect(Object.keys(fetchCallBody).sort()).to.eql(
-      ['title', 'description', 'editorType', 'imageUrl', 'categories'].sort()
+      [
+        'title',
+        'published',
+        'description',
+        'editorType',
+        'blockPoolName',
+        'projectUrl',
+        'imageUrl',
+        'categories'
+      ].sort()
     );
     expect(fetchCallBody.title).to.equal('Spritelab');
+    expect(fetchCallBody.published).to.be.true;
     expect(fetchCallBody.description).to.equal('A description of spritelab');
     expect(fetchCallBody.editorType).to.equal('blockly');
+    expect(fetchCallBody.projectUrl).to.equal('/p/spritelab');
     expect(fetchCallBody.imageUrl).to.equal('images.code.org/spritelab');
   });
 });

@@ -1,7 +1,0 @@
-{
-  "key": "callMyFunction_n",
-  "name": "callMyFunction_n",
-  "category": "Functions",
-  "category_key": "functions",
-  "syntax": "myFunction(n)"
-}

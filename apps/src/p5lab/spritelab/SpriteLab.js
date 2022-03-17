@@ -7,6 +7,8 @@ import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../redux/textConsole';
 import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
+import React from 'react';
+import {singleton as studioApp} from '../../StudioApp';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -87,6 +89,27 @@ export default class SpriteLab extends P5Lab {
       this.library.startPause(current);
       Sounds.getSingleton().pauseSounds();
     }
+  }
+
+  /**
+   * If there is an executionError, create a WorkspaceAlert.
+   * We do this because Sprite Lab has no user-facing console.
+   */
+  reactToExecutionError(msg) {
+    if (!msg) {
+      return;
+    }
+    studioApp().displayWorkspaceAlert(
+      'error',
+      React.createElement(
+        'div',
+        {},
+        this.getMsg().workspaceAlertError({
+          error: msg || ''
+        })
+      ),
+      true /* bottom */
+    );
   }
 
   onPromptAnswer(variableName, value) {
