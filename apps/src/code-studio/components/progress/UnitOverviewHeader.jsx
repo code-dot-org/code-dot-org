@@ -20,8 +20,6 @@ import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {queryParams} from '../../utils';
-import * as utils from '../../../utils';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -69,9 +67,8 @@ class UnitOverviewHeader extends Component {
   onChangeVersion = versionId => {
     const version = this.props.versions[versionId];
     if (versionId !== this.props.courseVersionId && version) {
-      const sectionId = queryParams('section_id');
-      const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`${version.path}${queryString}`);
+      const queryParams = window.location.search || '';
+      window.location.href = `${version.path}${queryParams}`;
     }
   };
 
