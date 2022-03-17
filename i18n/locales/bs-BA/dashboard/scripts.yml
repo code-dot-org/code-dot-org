@@ -3468,3 +3468,27 @@ bs:
               display_name: Digitalno Državljanstvo
             lessonGroup-8:
               display_name: Varijable
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Varijable
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Petlje
+              key: Petlje
+            Events:
+              name: Događaji
+              key: Događaji
+            Conditionals:
+              name: Uvjeti
+              key: Uvjeti
+            Functions:
+              name: Funkcije
+              key: Funkcije
+            Variables:
+              name: Varijable
+              key: Varijable
+            For Loops:
+              name: Od-Do-Za Petlje
+              key: Od-Do-Za Petlje

@@ -39,6 +39,6 @@
     }
   ],
   "short_description": "Apps in App Lab are composed of HTML elements, such as buttons. While these elements can be styled to some extent using the Design Tab, more advanced styling (or any styling of programmatically created elements) can be achieved by using CSS. This advanced function allows assigning CSS styles to HTML design elements in an app.",
-  "syntax": "setStyle",
+  "syntax": "setStyle(id, css)",
   "tips": "* Calling setStyle multiple times on the same element won't overwrite its style, but will append new styles on top of existing ones."
 }

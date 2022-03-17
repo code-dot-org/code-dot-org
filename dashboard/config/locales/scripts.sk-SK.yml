@@ -4109,18 +4109,22 @@ sk:
             programovania alebo textu. Ak máš už nejaké programovanie s blokmi za
             sebou, posuň svoje zručnosti na ďalšiu úroveň.
           lessons:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Úvod do App Labu – Interaktívny príbeh
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Úvod do App Labu – Interaktívny príbeh 2
             Intro to App Lab:
               name: Úvod do App Labu
               description_student: 'Na konci kurzu budeš môcť svoj rozpracovaný projekt
-                rozšíriť na niektorú z týchto aplikácií: „Vyberte si svoje dobrodružstvo“,
-                „Pohľadnice“, alebo „Osobnostný kvíz“. Tiež môžeš pokračovať vo vytváraní
-                ďalších projektov dostupných na stránke code.org/applab.'
+                rozšíriť na niektorú z týchto aplikácií: „Interaktívny príbeh“, „Pohľadnice“,
+                alebo „Osobnostný kvíz“. Tiež môžeš pokračovať vo vytváraní ďalších
+                projektov dostupných na stránke code.org/applab.'
               description_teacher: |-
-                Tento výukový kurz je navrhnutý ako rýchly úvod do programovania v programovacom prostredí App Lab, čo je výkonný nástroj na vytváranie a zdieľanie aplikácií. Vo výukovom kurze ako takom sa študenti naučia vytvárať a ovládať tlačidlá, text, obrázky, zvuky a obrazovky v jazyku JavaScript pomocou blokov alebo textu. Na konci kurzu dostanú čas na to, aby rozpracovaný projekt rozšírili na niektorú z týchto aplikácií: „Vyberte si svoje dobrodružstvo“, „Pohľadnice“, alebo „Osobnostný kvíz“. Môžu tiež pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.
+                Tento výukový kurz je navrhnutý ako rýchly úvod do programovania v programovacom prostredí App Lab, čo je výkonný nástroj na vytváranie a zdieľanie aplikácií. Vo výukovom kurze ako takom sa žiaci naučia vytvárať a ovládať tlačidlá, text, obrázky, zvuky a obrazovky v jazyku JavaScript pomocou blokov alebo textu. Na konci kurzu dostanú čas na to, aby rozpracovaný projekt rozšírili na niektorú z týchto aplikácií: „Interaktívny príbeh“, „Pohľadnica“ alebo „Osobnostný kvíz“. Môžu tiež pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.
 
-                Dôležité je, aby sa pri Hodine kóde s App Lab dobre zabavili!
+                Hlavné je, aby sa pri Hodine kódu s App Labom dobre zabavili!
 
-                **Vhodnosť pre vekovú kategóriu:** Tento výukový kurz je navrhnutý pre žiakov nad 13 rokov. Pretože im umožňuje nahrávať vlastné zvuky a obrázky, mladší žiaci by ho nemali používať bez dohľadu dospelých. Kvôli ochrane súkromia žiakov nebudú môcť žiaci mladší ako 13 rokov tento kurz používať, pokiaľ im najprv nevytvoríte účty vo vami spravovanej sekcii.
+                **Vhodnosť pre vekovú kategóriu:** Tento výukový kurz je navrhnutý pre žiakov nad 13 rokov. Keďže im umožňuje používať vlastné zvuky a obrázky, mladší žiaci by ho nemali používať bez dohľadu dospelých. Kvôli ochrane súkromia žiakov nebudú môcť žiaci mladší ako 13 rokov tento kurz používať, pokiaľ im najprv nevytvoríte účty vo vami spravovanej sekcii.
           student_description: Vytvor si svoju vlastnú aplikáciu v JavaScripte pomocou
             blokového programovania alebo textu. Ak máš už nejaké programovanie s
             blokmi za sebou, posuň svoje zručnosti na ďalšiu úroveň.
@@ -4495,6 +4499,10 @@ sk:
             Prejdi sa po Minecrafte s kódom.
         applab-intro-staging:
           lessons:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Úvod do App Labu – Interaktívny príbeh
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Úvod do App Labu – Interaktívny príbeh 2
             Intro to App Lab:
               name: Úvod do App Labu
         csp-explore-2017:
@@ -16637,3 +16645,41 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Premenné
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Začíname
+              key: Začíname
+            Sequencing:
+              name: Postupnosť
+              key: Postupnosť
+            Loops:
+              name: Cykly
+              key: Cykly
+            Events:
+              name: Udalosti
+              key: Udalosti
+            Conditionals:
+              name: Podmienky
+              key: Podmienky
+            Functions:
+              name: Funkcie
+              key: Funkcie
+            Variables:
+              name: Premenné
+              key: Premenné
+            For Loops:
+              name: Cykly "Pre"
+              key: Cykly "Pre"
+            End of Course projects:
+              name: Záverečné projekty
+              key: Záverečné projekty
+            Lesson Planning:
+              key: Plánovanie hodín

@@ -10366,3 +10366,32 @@ th:
           lesson_groups:
             lessonGroup-5:
               display_name: แซนด์บ็อกซ์
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: ตัวแปร
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: การจัดลำดับ
+              key: การจัดลำดับ
+            Loops:
+              name: ลูป
+              key: ลูป
+            Events:
+              name: เหตุการณ์
+              key: เหตุการณ์
+            Conditionals:
+              name: เงื่อนไข
+              key: เงื่อนไข
+            Functions:
+              name: ฟังก์ชัน
+              key: ฟังก์ชัน
+            Variables:
+              name: ตัวแปร
+              key: ตัวแปร
+            For Loops:
+              name: การวนรอบ
+              key: การวนรอบ
+            Lesson Planning:
+              key: การวางแผนการเรียนการสอน

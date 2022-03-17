@@ -215,12 +215,14 @@ module ProjectsList
 
     def fetch_featured_projects_by_type(project_type)
       storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
-      user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
+
+      user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
+
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
         select(*project_and_featured_project_and_user_fields).
         join(storage_apps, id: :storage_app_id).
-        join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
-        join(:users, id: Sequel[:user_storage_ids][:user_id]).
+        join(user_project_storage_ids, id: Sequel[:storage_apps][:storage_id]).
+        join(:users, id: Sequel[user_project_storage_ids][:user_id]).
         where(
           unfeatured_at: nil,
           project_type: project_type.to_s,
@@ -317,12 +319,15 @@ module ProjectsList
 
     def fetch_published_project_types(project_groups, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
+
+      user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
+
       {}.tap do |projects|
         project_groups.map do |project_group|
           project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
           projects[project_group] = PEGASUS_DB[:storage_apps].
             select(*project_and_user_fields).
-            join(:user_storage_ids, id: :storage_id).
+            join(user_project_storage_ids, id: :storage_id).
             join(users, id: :user_id).
             where(state: 'active', project_type: project_types).
             where {published_before.nil? || published_at < DateTime.parse(published_before)}.

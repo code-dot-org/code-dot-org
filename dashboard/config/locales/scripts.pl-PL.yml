@@ -36378,6 +36378,7 @@ pl:
           description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze
             czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
           description_audience: W wieku 5-8
+          name: courseb-2022
         coursec-2022:
           lessons:
             Putting a STOP to Online Meanness:
@@ -37033,6 +37034,7 @@ pl:
           description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną
             grafikę, gry, a nawet potańcówkę.
           description_audience: W wieku 7-11
+          name: coursed-2022
         coursee-2022:
           lessons:
             Follow the Algorithm:
@@ -37869,6 +37871,24 @@ pl:
               name: Jednostka 2 Sprawdzian
             lesson-6:
               name: Zmienne
+            lesson-7:
+              name: Operatory i wyrażenia
+            lesson-8:
+              name: Atrybuty
+            lesson-9:
+              name: Konstruktory
+            lesson-10:
+              name: Dane użytkownika
+            lesson-11:
+              name: Hierarchie klas
+            lesson-12:
+              name: Metody akcesorów
+            lesson-13:
+              name: Metody mutatorów
+            lesson-14:
+              name: Drukowanie obiektów
+            lesson-15:
+              name: Zakres
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -38083,6 +38103,22 @@ pl:
               name: Witaj na Code.org
           name: self-paced-pl-csa1-2022
           title: 'Jednostka 1 - Moduł 1: Powitanie'
+        self-paced-pl-csa2-2022:
+          lessons:
+            lesson-3:
+              description_student: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+              description_teacher: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+          name: self-paced-pl-csa2-2022
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
@@ -38739,10 +38775,13 @@ pl:
               display_name: Pokaż, co wiesz
             lessonGroup-5:
               display_name: Piaskownica
+          name: csa8-pilot-extra
         csa-backpack-2022:
           lessons:
             lesson-1:
               name: Malarz Plus
+            lesson-2:
+              name: Projekt Mercury Ciastka Food Truck
           name: csa-backpack-2022
           title: Wersje CSA w plecakach [22-23]
           description: Wersje zajęć, które uczniowie mają w swoich **Plecakach** przez
@@ -39537,3 +39576,161 @@ pl:
               display_name: Pokaż, co wiesz
             lessonGroup-5:
               display_name: Piaskownica
+        csa-preview:
+          lessons:
+            lesson-2:
+              name: Korzystanie z poleceń
+          name: csa-preview
+          title: Przegląd programu i narzędzi CSA
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Witaj
+            lesson-2:
+              name: Równość w informatyce
+              description_student: To pojawia się dla uczestników / uczniów
+              description_teacher: To pojawia się dla nauczycieli / facylitatorów
+            lesson-3:
+              name: Model Lekcja 1 - Jednostka 1 Lekcja 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: vpl-csd1-summer-pilot-2022
+          title: 'Moduł 1: Wprowadzenie do Odkryć Informatyki'
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Witamy
+            lesson-2:
+              name: TLO 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: vpl-csd2-summer-pilot-2022
+          title: 'Moduł 2: Narzędzia i strategie instruktażowe'
+        vpl-csd3-summer-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: vpl-csd3-summer-pilot-2022
+          title: 'Moduł 3: Kontekst i kultura w klasie'
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: "[TEMPLATE] Wprowadzenie do..."
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Analizowanie programu nauczania
+          name: vpl-csd4-summer-pilot-2022
+          title: 'Moduł 4: Zaspokajanie potrzeb uczniów'
+        vpl-csd5-summer-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+          name: vpl-csd5-summer-pilot-2022
+          title: 'Moduł 5: Przygotowanie do nauczania odkryć informatyki'
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Zmienne
+            lesson-2:
+              name: Operatory i wyrażenia
+            lesson-3:
+              name: Atrybuty
+            lesson-4:
+              name: Konstruktory
+            lesson-5:
+              name: Dane użytkownika
+            lesson-6:
+              name: Hierarchie klas
+            lesson-7:
+              name: Metody akcesorów
+            lesson-8:
+              name: Metody mutatorów
+            lesson-9:
+              name: Drukowanie obiektów
+            lesson-10:
+              name: Zakres i to
+            lesson-11:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+            lesson-12:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+            lesson-13:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
+            lesson-14:
+              name: Praktyka FRQ
+            lesson-15:
+              name: Jednostka 2 Sprawdzian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          name: csa2-2022-exemplars
+          title: Jednostka 2 - Struktura i projektowanie klas [Exemplars]
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Pierwsze kroki
+              key: Pierwsze kroki
+            Sequencing:
+              name: Sekwencjonowanie
+              key: Sekwencjonowanie
+            Loops:
+              name: Pętle
+              key: Pętle
+            Events:
+              name: Zdarzenia
+              key: Zdarzenia
+            Conditionals:
+              name: Zdania z warunkami
+              key: Zdania z warunkami
+            Functions:
+              name: Funkcje
+              key: Funkcje
+            Variables:
+              name: Zmienne
+              key: Zmienne
+            For Loops:
+              name: Pętle dla (for)
+              key: Pętle dla (for)
+            End of Course projects:
+              name: Projekty na koniec kursu
+              key: Projekty na koniec kursu
+            Reviewing your reflections:
+              name: Przeglądanie Twoich refleksji
+              key: Przeglądanie Twoich refleksji
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Witamy na "Podstawach Nauczania Informatyki"
+            Lesson Planning:
+              key: Planowanie lekcji
+            Next steps:
+              key: Następne kroki

@@ -609,8 +609,8 @@
           "definition": "El arte de crear un programa"
         },
         "frustrated/coursed/2021": {
-          "word": "Frustrado",
-          "definition": "sentirse molesto o enojado porque algo no sale como uno quiere."
+          "word": "Frustración",
+          "definition": "Sentirse molesto o enojado porque algo no funciona como quieres."
         },
         "persistence/coursed/2021": {
           "word": "Perseverancia",
@@ -629,14 +629,14 @@
         },
         "command/coursed/2021": {
           "word": "Comando",
-          "definition": "una instrucción para la computadora. Muchos comandos juntos componen algoritmos y programas de computadora. "
+          "definition": "Una instrucción para un computador. Muchos comandos juntos forman algoritmos y programas."
         },
         "conditionals/coursed/2021": {
           "word": "Condicionales",
           "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
         },
         "pseudocode/coursed/2021": {
-          "word": "pseudocódigo",
+          "word": "seudocódigo",
           "definition": "Descripción en lenguaje sencillo de los pasos de un algoritmo"
         },
         "condition/coursed/2021": {
@@ -644,12 +644,12 @@
           "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
         },
         "while_loop/coursed/2021": {
-          "word": "Bucles mientras",
-          "definition": "un bucle que se sigue repitiendo mientras una condición es verdadera."
+          "word": "Bucle mientras",
+          "definition": "Un bucle que se repite mientras se cumpla una condición."
         },
         "until/coursed/2021": {
           "word": "Hasta",
-          "definition": "Un comando que te dice que hagas algo solo hasta el punto de que algo se haga realidad."
+          "definition": "Un comando que establece realizar una acción sólo hasta que algo sea verdadero."
         },
         "algorithm/express/2021": {
           "word": "Algoritmo",
@@ -700,7 +700,7 @@
         },
         "command/express/2021": {
           "word": "Comando",
-          "definition": "una instrucción para la computadora. Muchos comandos juntos componen algoritmos y programas de computadora. "
+          "definition": "Una instrucción para un computador. Muchos comandos juntos forman algoritmos y programas."
         },
         "condition/express/2021": {
           "word": "Condición",
@@ -711,12 +711,12 @@
           "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
         },
         "while_loop/express/2021": {
-          "word": "Bucles mientras",
-          "definition": "un bucle que se sigue repitiendo mientras una condición es verdadera."
+          "word": "Bucle mientras",
+          "definition": "Un bucle que se repite mientras se cumpla una condición."
         },
         "until/express/2021": {
           "word": "Hasta",
-          "definition": "Un comando que te dice que hagas algo solo hasta el punto de que algo se haga realidad."
+          "definition": "Un comando que establece realizar una acción sólo hasta que algo sea verdadero."
         },
         "function/express/2021": {
           "word": "Función",
@@ -843,8 +843,8 @@
           "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
         },
         "while_loop/coursee/2021": {
-          "word": "Bucles mientras",
-          "definition": "un bucle que se sigue repitiendo mientras una condición es verdadera."
+          "word": "Bucle mientras",
+          "definition": "Un bucle que se repite mientras se cumpla una condición."
         },
         "define/coursee/2021": {
           "word": "Definir",
@@ -873,33 +873,60 @@
           "word": "Pantalla de Usuario"
         },
         "bug/csd/2021": {
-          "word": "Bug (error)",
-          "definition": "parte de un programa que no funciona correctamente."
+          "word": "Bug",
+          "definition": "Una parte de un programa que no funciona correctamente."
+        },
+        "analog/csd/2021": {
+          "word": "Analógico",
+          "definition": "Cualquier señal que cambia continuamente y que no está restringida a un conjunto finito de valores. Por ejemplo, las formas de onda de las palabras cuando hablamos son una señal analógica."
+        },
+        "digital/csd/2021": {
+          "word": "Digital",
+          "definition": "Datos o señales representados por un número finito de valores. Las señales analógicas (que pueden tener infinitos valores) deben ser convertidas a digitales para poder ser computadas."
         },
         "for_loop/csd/2021": {
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
         },
+        "parameter/csd/2021": {
+          "word": "Parámetro",
+          "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
+        },
         "debugging/csd/2021": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+          "word": "Depurar",
+          "definition": "Encontrar y reparar los problemas de un programa o algoritmo."
         },
         "program/csd/2021": {
           "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+          "definition": "Un algoritmo codificado que puede ser ejecutado por una máquina."
         },
         "variable/csd/2021": {
           "word": "Variable",
           "definition": "un marcador de posición para una información que puede cambiar."
         },
+        "property/csd/2021": {
+          "word": "Propiedades",
+          "definition": "Una etiqueta para una característica de una sprite, como su ubicación y su apariencia"
+        },
         "sprite/csd/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia. "
+        },
+        "dot_notation/csd/2021": {
+          "word": "Dot notation (Notación de puntos)",
+          "definition": "La forma en la que las propiedades de las sprites se utilizan en el Game Lab. Conectando a la sprite y a sus propiedades mediante un punto."
         },
         "condition/csd/2021": {
-          "word": "Condición"
+          "word": "Condición",
+          "definition": "Algo que un programa debe revisar para comprobar si es verdadero antes de decidir una acción."
         },
         "conditionals/csd/2021": {
-          "word": "Condicionales"
+          "word": "Condicionales",
+          "definition": "Sentencias que solo se ejecutan cuando ciertas condiciones son verdaderas."
+        },
+        "boolean_expression/csd/2021": {
+          "word": "Expresión booleana",
+          "definition": "En programación, una expresión evalúa verdadero o falso."
         },
         "abstraction/csd/2021": {
           "word": "Abstracción"
@@ -955,9 +982,33 @@
           "word": "Huella digital",
           "definition": "La información recopilada sobre una persona en varios sitios web de Internet."
         },
+        "css/csd/2021": {
+          "word": "CSS",
+          "definition": "Cascading Style Sheets (en español hojas de estilo en cascada): Un lenguaje usado para describir el estilo de los elementos HTML"
+        },
+        "css_selector/csd/2021": {
+          "word": "Selector CSS",
+          "definition": "La parte de un set de reglas de CSS que indica a qué elementos del HTML deben aplicarse un estilo."
+        },
         "copyright/csd/2021": {
           "word": "Derechos de autor",
           "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+        },
+        "relevant/csd/2021": {
+          "word": "Relevante",
+          "definition": "relacionado con un tema"
+        },
+        "trustworthy/csd/2021": {
+          "word": "Confiable",
+          "definition": "fiable, honesto, verdadero "
+        },
+        "search_engine/csd/2021": {
+          "word": "Motor de búsqueda",
+          "definition": "Un programa que busca elementos en la red informática mundial (World wide web)."
+        },
+        "css_class/csd/2021": {
+          "word": "Clase CSS",
+          "definition": "Un identificador que permite que múltiples elementos en un documento HTML tengan el mismo estilo."
         }
       }
     }

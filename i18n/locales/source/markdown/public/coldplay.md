@@ -12,7 +12,7 @@ Coldplay and Code.org believe in the power of computer science education for eve
 
 Join the party by using Code.org's Dance Party activity to code your own choreography to Coldplay's "Higher Power." Get creative with classic moves, and have fun with new album-inspired visuals and dancer formations!
 
-Post or submit your creations for Coldplay and Code.org to see, and we'll share the best ones on social media. Plus, you'll get a chance to win tickets to see Coldplay on tour, or a chance for your classroom to video chat with the band.
+Post your creations for Coldplay and Code.org to see, and we'll share the best ones on social media. Plus, you'll get a chance to win tickets to see Coldplay on tour, or a chance for your classroom to video chat with the band.
 
 We can't wait to see and share what you create! 
 
@@ -26,8 +26,7 @@ We can't wait to see and share what you create!
 1. Start [Dance Party](https://code.org/dance)
 2. Learn to code your own dance in a short 10-step tutorial
 3. On the final level, code an awesome dance to Coldplay's song, "Higher Power." (Don't forget to try out the special "Higher Power" background effect!)
-4. Click "Finish" to get a share link to your project.
-5. For extra fun, make a video of yourself dancing along with your code!
+4. Click "Finish" to get a share link to your project. Now you can share it with the world! (For extra fun, make a video of yourself dancing along with your code!)
 
 [center]
 
@@ -68,7 +67,7 @@ We'd love to see what classrooms and students create - whether it's dance moves 
 
 1. Tell us your concert city. [See list of tour cities here.](https://www.coldplay.com/tour/) Available tickets are for the first night of each city.
 2. Tag Code.org and use #codeplay
-3. Show us your "Higher Power" Dance Party creation!
+3. Show us a video of your "Higher Power" Dance Party creation!
 
 [/bold-text]
 

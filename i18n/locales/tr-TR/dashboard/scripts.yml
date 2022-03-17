@@ -20942,3 +20942,54 @@ tr:
               display_name: İçerik
             lessonGroup-5:
               display_name: Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Hoşgeldiniz
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Değişkenler
+            lesson-15:
+              name: Ünite 2 Değerlendirme
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: İlk adım
+              key: İlk adım
+            Sequencing:
+              name: Sıralama
+              key: Sıralama
+            Loops:
+              name: Döngüler
+              key: Döngüler
+            Events:
+              name: Olaylar
+              key: Olaylar
+            Conditionals:
+              name: Koşullar
+              key: Koşullar
+            Functions:
+              name: Fonksiyonlar
+              key: Fonksiyonlar
+            Variables:
+              name: Değişkenler
+              key: Değişkenler
+            For Loops:
+              name: For Döngüleri
+              key: For Döngüleri
+            End of Course projects:
+              name: Kurs Sonu projeleri
+              key: Kurs Sonu projeleri
+            Reviewing your reflections:
+              name: Yansımalarınızı Gözden Geçirme
+              key: Yansımalarınızı Gözden Geçirme
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: '"Bilgisayar Bilimi Temelleri Öğretimine" Hoşgeldiniz'
+            Lesson Planning:
+              key: Ders Planlanması
+            Next steps:
+              key: Sonraki adımlar

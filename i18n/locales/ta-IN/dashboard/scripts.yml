@@ -6657,3 +6657,30 @@ ta:
           lesson_groups:
             lessonGroup-5:
               display_name: சாண்ட்பாக்ஸ்
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: மாறிலிகள்
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: வரிசைப்படுத்துதல்
+              key: வரிசைப்படுத்துதல்
+            Loops:
+              name: சுழற்சிகள்
+              key: சுழற்சிகள்
+            Events:
+              name: நிகழ்வுகள்
+              key: நிகழ்வுகள்
+            Conditionals:
+              name: நிபந்தனைகள்
+              key: நிபந்தனைகள்
+            Functions:
+              name: செயல்பாடுகள்
+              key: செயல்பாடுகள்
+            Variables:
+              name: மாறிலிகள்
+              key: மாறிலிகள்
+            End of Course projects:
+              name: பாடத்திட்டத்தின் முடிவு
+              key: பாடத்திட்டத்தின் முடிவு

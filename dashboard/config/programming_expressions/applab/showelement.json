@@ -32,7 +32,10 @@
       "description": "The ID of the UI element to which this event handler applies. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _."
     }
   ],
+  "parameters": [
+    "id"
+  ],
   "short_description": "Shows the element with the provided id.",
-  "syntax": "showElement(id)",
+  "syntax": "showElement(id);",
   "tips": "- `hideElement()` is often used with `showElement()`.\n"
 }

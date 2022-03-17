@@ -2769,3 +2769,27 @@ ca:
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
             i creeu el vostre propi art, històries i jocs.
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Bucles
+              key: Bucles
+            Events:
+              name: Esdeveniments
+              key: Esdeveniments
+            Conditionals:
+              name: Condicionals
+              key: Condicionals
+            Functions:
+              name: Funcions
+              key: Funcions
+            Variables:
+              name: Variables
+              key: Variables
+            For Loops:
+              name: Per bucles
+              key: Per bucles

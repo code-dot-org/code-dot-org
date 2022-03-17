@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:07:22 UTC",
+    "serialized_at": "2022-03-09 20:39:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

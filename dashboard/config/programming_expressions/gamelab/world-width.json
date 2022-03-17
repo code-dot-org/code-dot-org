@@ -1,8 +1,8 @@
 {
   "key": "World.width",
   "name": "World.width",
-  "category": "World",
-  "category_key": "world",
+  "category": "Game Lab",
+  "category_key": "game_lab",
   "content": "Returns the width of the World in pixels.\r\n\r\nThis is a read only property of the World. It cannot be changed.",
   "examples": [
     {

@@ -96,6 +96,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'membership'
         get 'valid_scripts'
+        get 'valid_course_offerings'
         get 'require_captcha'
       end
     end
@@ -280,6 +281,8 @@ Dashboard::Application.routes.draw do
 
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+  # this route uses course_course_name to match generated routes below that are nested within courses
+  get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all'
 
   resources :courses, param: 'course_name' do
     member do
@@ -324,13 +327,16 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [:new, :create, :edit, :update, :show] do
+  resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
     end
+    member do
+      post :clone
+    end
   end
 
-  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show], param: 'name' do
+  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show, :destroy], param: 'name' do
     resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'

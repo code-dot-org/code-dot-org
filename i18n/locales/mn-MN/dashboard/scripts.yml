@@ -17978,3 +17978,51 @@ mn:
               display_name: Хувьсагчууд
           description_audience: 9-13 насныхан
           description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Мэндчилгээ
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Хувьсагчууд
+            lesson-15:
+              name: Нэгж 2 Үнэлгээ
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Эхлүүлэх
+              key: Эхлүүлэх
+            Sequencing:
+              name: Дараалуулах
+              key: Дараалуулах
+            Loops:
+              name: Гогцоонууд
+              key: Гогцоонууд
+            Events:
+              name: Үйл явдлууд
+              key: Үйл явдлууд
+            Conditionals:
+              name: Нөхцлүүд
+              key: Нөхцлүүд
+            Functions:
+              name: Функцүүд
+              key: Функцүүд
+            Variables:
+              name: Хувьсагчууд
+              key: Хувьсагчууд
+            For Loops:
+              name: Гогцоонд зориулав
+              key: Гогцоонд зориулав
+            End of Course projects:
+              name: Хичээлийн төслийн төгсгөл
+              key: Хичээлийн төслийн төгсгөл
+            Reviewing your reflections:
+              name: Таны ойлголтыг шалгах
+              key: Таны ойлголтыг шалгах
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: '"Компьютерийн шинжлэх ухааны суурийг заах арга зүй" -д тавтай морилно уу'
+            Lesson Planning:
+              key: Хичээлийн төлөвлөгөө
+            Next steps:
+              key: Дараагийн алхамууд

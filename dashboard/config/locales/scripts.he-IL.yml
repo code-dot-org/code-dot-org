@@ -4344,3 +4344,27 @@ he:
               display_name: דמויות
             lessonGroup-8:
               display_name: משתנים
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: משתנים
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: חזרות
+              key: חזרות
+            Events:
+              name: אירועים
+              key: אירועים
+            Conditionals:
+              name: תנאים
+              key: תנאים
+            Functions:
+              name: פונקציות
+              key: פונקציות
+            Variables:
+              name: משתנים
+              key: משתנים
+            For Loops:
+              name: בשביל לולאות
+              key: בשביל לולאות

@@ -4788,3 +4788,30 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Променливи
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Повторения
+              key: Повторения
+            Events:
+              name: Събития
+              key: Събития
+            Conditionals:
+              name: Условия
+              key: Условия
+            Functions:
+              name: Функции
+              key: Функции
+            Variables:
+              name: Променливи
+              key: Променливи
+            For Loops:
+              name: За циклите
+              key: За циклите
