@@ -1,7 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 
 const registerDeletable = function() {
-  /** @type {!GoogleBlockly.ContextMenuRegistry.RegistryItem} */
+  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const deletableOption = {
     displayText: function(scope) {
       // isDeletale is a built in Blockly function that checks whether the block
@@ -18,7 +18,7 @@ const registerDeletable = function() {
       return 'hidden';
     },
     callback: function(
-      /** @type {!GoogleBlockly.ContextMenuRegistry.Scope} */
+      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
       scope
     ) {
       scope.block.setDeletable(!scope.block.isDeletable());
@@ -31,7 +31,7 @@ const registerDeletable = function() {
 };
 
 const registerMovable = function() {
-  /** @type {!GoogleBlockly.ContextMenuRegistry.RegistryItem} */
+  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const movableOption = {
     displayText: function(scope) {
       // isMovable is a built in Blockly function that checks whether the block
@@ -48,7 +48,7 @@ const registerMovable = function() {
       return 'hidden';
     },
     callback: function(
-      /** @type {!GoogleBlockly.ContextMenuRegistry.Scope} */
+      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
       scope
     ) {
       scope.block.setMovable(!scope.block.isMovable());
@@ -61,7 +61,7 @@ const registerMovable = function() {
 };
 
 const registerEditable = function() {
-  /** @type {!GoogleBlockly.ContextMenuRegistry.RegistryItem} */
+  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const editableOption = {
     displayText: function(scope) {
       // isEditable is a built in Blockly function that checks whether the block
@@ -78,7 +78,7 @@ const registerEditable = function() {
       return 'hidden';
     },
     callback: function(
-      /** @type {!GoogleBlockly.ContextMenuRegistry.Scope} */
+      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
       scope
     ) {
       scope.block.setEditable(!scope.block.isEditable());
@@ -91,12 +91,9 @@ const registerEditable = function() {
 };
 
 const registerShadow = function() {
-  /** @type {!GoogleBlockly.ContextMenuRegistry.RegistryItem} */
+  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const shadowOption = {
-    displayText: function() {
-      const displayText = 'Make Shadow';
-      return displayText;
-    },
+    displayText: () => 'Make Shadow',
     preconditionFn: function(scope) {
       if (Blockly.isStartMode && canBeShadow(scope.block)) {
         // isShadow is a built in Blockly function that checks whether the block
@@ -106,7 +103,7 @@ const registerShadow = function() {
       return 'hidden';
     },
     callback: function(
-      /** @type {!GoogleBlockly.ContextMenuRegistry.Scope} */
+      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
       scope
     ) {
       scope.block.setShadow(true);
@@ -118,7 +115,7 @@ const registerShadow = function() {
   GoogleBlockly.ContextMenuRegistry.registry.register(shadowOption);
 };
 const registerUnshadow = function() {
-  /** @type {!GoogleBlockly.ContextMenuRegistry.RegistryItem} */
+  /** @type {GoogleBlockly.ContextMenuRegistry.RegistryItem} */
   const unshadowOption = {
     // If there's 1 child, text should be 'Make Child Block Non-Shadow'
     // If there's n children, text should be `Make ${n} Child Blocks Non-Shadow`
@@ -139,7 +136,7 @@ const registerUnshadow = function() {
       return 'hidden';
     },
     callback: function(
-      /** @type {!GoogleBlockly.ContextMenuRegistry.Scope} */
+      /** @type {GoogleBlockly.ContextMenuRegistry.Scope} */
       scope
     ) {
       scope.block.getChildren().forEach(child => child.setShadow(false));
@@ -159,11 +156,6 @@ const registerAllContextMenuItems = function() {
   registerUnshadow();
 };
 
-/** A block can be made into a shadow if:
- * -It has a surrounding parent block.
- * -It does not contain a variable field.
- * -It does not have any non-shadow children.
- */
 function canBeShadow(block) {
   return (
     block.getSurroundParent() &&
