@@ -216,8 +216,7 @@ module ProjectsList
     def fetch_featured_projects_by_type(project_type)
       storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
 
-      storage_id_table_name = DCDO.get('user_storage_ids_in_dashboard', false) ? "#{CDO.dashboard_db_name}__user_project_storage_ids" : "#{CDO.pegasus_db_name}__user_storage_ids"
-      user_project_storage_ids = storage_id_table_name.to_sym
+      user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
         select(*project_and_featured_project_and_user_fields).
@@ -321,8 +320,7 @@ module ProjectsList
     def fetch_published_project_types(project_groups, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
 
-      storage_id_table_name = DCDO.get('user_storage_ids_in_dashboard', false) ? "#{CDO.dashboard_db_name}__user_project_storage_ids" : "#{CDO.pegasus_db_name}__user_storage_ids"
-      user_project_storage_ids = storage_id_table_name.to_sym
+      user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
       {}.tap do |projects|
         project_groups.map do |project_group|

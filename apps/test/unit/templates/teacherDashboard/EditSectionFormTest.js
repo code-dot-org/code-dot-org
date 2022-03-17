@@ -3,6 +3,7 @@ import {mount} from 'enzyme';
 import {assert} from '../../../util/reconfiguredChai';
 import {UnconnectedEditSectionForm as EditSectionForm} from '@cdo/apps/templates/teacherDashboard/EditSectionForm';
 import {
+  courseOfferings,
   assignmentFamilies,
   validAssignments,
   testSection,
@@ -18,6 +19,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -55,6 +57,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -92,6 +95,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -129,6 +133,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -166,6 +171,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -191,6 +197,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -216,6 +223,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -238,6 +246,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -263,6 +272,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -285,6 +295,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -309,7 +320,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -334,7 +345,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -358,7 +369,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}
@@ -382,7 +393,7 @@ describe('EditSectionForm', () => {
         handleSave={() => {}}
         handleClose={() => {}}
         editSectionProperties={() => {}}
-        validGrades={['K', '1', '2', '3']}
+        courseOfferings={courseOfferings}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
         sections={{}}

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-07 15:28:30 UTC",
+    "serialized_at": "2022-03-15 04:44:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -83,6 +83,51 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Model Lesson 3 - Unit 2 Lesson 3",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "TLO 1 - Unit 3 Lesson 3",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "TLO 2 - Unit 3 Lesson 4",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-summer-pilot-2022"
       }

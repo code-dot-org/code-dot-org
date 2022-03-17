@@ -13347,3 +13347,34 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Začínáme
+              key: Začínáme
+            Sequencing:
+              name: Sekvence
+              key: Sekvence
+            Loops:
+              name: Cykly
+              key: Cykly
+            Events:
+              name: Události
+              key: Události
+            Conditionals:
+              name: Podmínky
+              key: Podmínky
+            Functions:
+              name: Funkce
+              key: Funkce
+            Variables:
+              name: Proměnné
+              key: Proměnné
+            For Loops:
+              name: Cykly "For"
+              key: Cykly "For"
+            End of Course projects:
+              name: Projekty k ukončení kurzu
+              key: Projekty k ukončení kurzu
+            Lesson Planning:
+              key: Plánování hodiny
