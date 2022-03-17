@@ -21,9 +21,6 @@ Parameters:
   TableName:
     Type: String
     Default: access_logs
-  ShardCount:
-    Type: Number
-    Default: 1
   LogFields:
     Type: CommaDelimitedList
     # From https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields
@@ -146,10 +143,11 @@ Resources:
   AccessLogStream:
     Type: AWS::Kinesis::Stream
     Properties:
-      ShardCount: !Ref ShardCount
       StreamEncryption:
         EncryptionType: KMS
         KeyId: alias/aws/kinesis
+      StreamModeDetails:
+        StreamMode: ON_DEMAND
   AccessLogDeliveryStream:
     Type: AWS::KinesisFirehose::DeliveryStream
     Properties:
