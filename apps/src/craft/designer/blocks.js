@@ -174,7 +174,7 @@ export const install = (blockly, blockInstallOptions) => {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -206,7 +206,7 @@ export const install = (blockly, blockInstallOptions) => {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(
           blockly.Blocks.craft_entityTurn.ENTITY_DIRECTIONS
@@ -241,7 +241,7 @@ export const install = (blockly, blockInstallOptions) => {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(
           blockly.Blocks.craft_entityTurnLR.ENTITY_DIRECTIONS
@@ -424,7 +424,7 @@ export const install = (blockly, blockInstallOptions) => {
     blockly.Blocks[`craft_${functionName}`] = {
       helpUrl: '',
       init: function() {
-        this.setHSV(140, 1.0, 0.74);
+        Blockly.setHSV(this, 140, 1.0, 0.74);
         this.appendDummyInput().appendTitle(text);
         this.appendStatementInput('DO');
         this.setPreviousStatement(false);
@@ -471,7 +471,7 @@ export const install = (blockly, blockInstallOptions) => {
           dropdownOptions = _.sortBy(dropdownOptions, 0);
         }
 
-        this.setHSV(184, 1.0, 0.74);
+        Blockly.setHSV(this, 184, 1.0, 0.74);
         this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(blockText))
           .appendTitle(dropdown, 'TYPE');
@@ -492,7 +492,7 @@ export const install = (blockly, blockInstallOptions) => {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
       helpUrl: '',
       init: function() {
-        this.setHSV(184, 1.0, 0.74);
+        Blockly.setHSV(this, 184, 1.0, 0.74);
         this.appendDummyInput().appendTitle(new blockly.FieldLabel(blockText));
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -519,7 +519,7 @@ export const install = (blockly, blockInstallOptions) => {
         const dropdown = new blockly.FieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
 
-        this.setHSV(184, 1.0, 0.74);
+        Blockly.setHSV(this, 184, 1.0, 0.74);
         this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(blockText))
           .appendTitle(dropdown, 'TYPE');
@@ -576,7 +576,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_forever = {
     helpUrl: '',
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendTitle(i18n.forever());
       this.appendStatementInput('DO').appendTitle(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -593,7 +593,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_repeatTimes = {
     helpUrl: '',
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
         .appendTitle(i18n.blockActionRepeat())
         .appendTitle(
@@ -620,7 +620,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_repeatRandom = {
     helpUrl: '',
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendTitle(i18n.blockActionRepeatRandom());
       this.appendStatementInput('DO').appendTitle(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -645,7 +645,7 @@ export const install = (blockly, blockInstallOptions) => {
       const dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
         .appendTitle(i18n.blockActionRepeat())
         .appendTitle(dropdown, 'TIMES');
@@ -683,7 +683,7 @@ export const install = (blockly, blockInstallOptions) => {
       const locationDropdown = new blockly.FieldDropdown(locationOptions);
       locationDropdown.setValue(locationOptions[0][1]);
 
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockActionSpawn()))
         .appendTitle(entityTypeDropdown, 'TYPE')
@@ -711,7 +711,7 @@ export const install = (blockly, blockInstallOptions) => {
       );
       entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
 
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel('spawn'))
         .appendTitle(entityTypeDropdown, 'TYPE');
@@ -728,7 +728,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_moveEntityNorth = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(new blockly.FieldLabel('move north'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -742,7 +742,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_moveEntitySouth = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(new blockly.FieldLabel('move south'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -756,7 +756,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_moveEntityEast = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(new blockly.FieldLabel('move east'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -770,7 +770,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_moveEntityWest = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(new blockly.FieldLabel('move west'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -801,7 +801,7 @@ export const install = (blockly, blockInstallOptions) => {
       );
       dropdown.setValue(dropdownOptions[0][1]);
 
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput()
         .appendTitle(i18n.blockActionPlaySound())
         .appendTitle(dropdown, 'TYPE');
@@ -826,7 +826,7 @@ export const install = (blockly, blockInstallOptions) => {
       const dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput()
         .appendTitle(i18n.blockActionAdd())
         .appendTitle(dropdown, 'SCORE')
