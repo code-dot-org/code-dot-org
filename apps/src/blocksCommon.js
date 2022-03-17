@@ -32,7 +32,7 @@ function installControlsRepeatSimplified(blockly, skin) {
     // Repeat n times (internal number) with simplified UI
     init: function() {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
         .appendTitle(blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT)
         .appendTitle(
@@ -55,7 +55,7 @@ function installControlsRepeatSimplified(blockly, skin) {
     // Repeat n times (internal number) with simplified UI
     init: function() {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
         .appendTitle(blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT)
         .appendTitle(new blockly.FieldDropdown(), 'TIMES');
@@ -77,7 +77,7 @@ function installControlsRepeatDropdown(blockly) {
     // Repeat n times (internal number) with a customizable dropdown of # choices.
     init: function() {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
         .appendTitle(blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT)
         .appendTitle(new blockly.FieldDropdown(), 'TIMES')
@@ -99,7 +99,7 @@ function installNumberDropdown(blockly) {
     // Numeric value with a customizable dropdown.
     init: function() {
       this.setHelpUrl(blockly.Msg.MATH_NUMBER_HELPURL);
-      this.setHSV(258, 0.35, 0.62);
+      Blockly.setHSV(this, 258, 0.35, 0.62);
       this.appendDummyInput().appendTitle(new blockly.FieldDropdown(), 'NUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
@@ -113,7 +113,7 @@ function installPickOne(blockly) {
   blockly.Blocks.pick_one = {
     // Repeat n times (internal number).
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
 
       // Not localized as this is only used by level builders
       this.appendDummyInput().appendTitle(
@@ -133,7 +133,7 @@ function installCategory(blockly) {
   blockly.Blocks.category = {
     // Repeat n times (internal number).
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.setInputsInline(true);
 
       // Not localized as this is only used by level builders
@@ -152,7 +152,7 @@ function installCategory(blockly) {
   blockly.Blocks.custom_category = {
     // Repeat n times (internal number).
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.setHSV(this, 322, 0.9, 0.95);
       this.setInputsInline(true);
 
       var customDropdown = new blockly.FieldDropdown([
@@ -180,7 +180,7 @@ function installWhenRun(blockly, skin, isK1) {
     // Block to handle event where mouse is clicked
     helpUrl: '',
     init: function() {
-      this.setHSV(39, 1.0, 0.99);
+      blockly.setHSV(this, 39, 1.0, 0.99);
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.whenRun())
@@ -308,7 +308,7 @@ function installJoinBlock(blockly) {
 function installCommentBlock(blockly) {
   blockly.Blocks.comment = {
     init: function() {
-      this.setHSV(0, 0, 0.6);
+      Blockly.setHSV(this, 0, 0, 0.6);
       this.appendDummyInput()
         .appendTitle(commonMsg.commentPrefix())
         .appendTitle(new Blockly.FieldTextInput(''), 'TEXT');
