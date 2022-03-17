@@ -5,27 +5,25 @@ import 'whatwg-fetch';
  * caching html, javascript, images, etc so that they can be used when students don't have an
  * internet connection.
  */
+
+// cacheVersion should be updated anytime we want users to start over with a new cache.
 const cacheVersion = 2;
 const cacheName = `code-org-pwa-express-2021-lessons-1-v${cacheVersion}`;
 
+/**
+ * Runs when the service worker is updated or registered for the first time.
+ */
 self.addEventListener('install', e => {
   console.log('[Service Worker] installing offline service worker!');
   // TODO - Add retry logic if cache.addAll fails for one of the assets.
+  // TODO - Add ability to clear the cache and/or reinstall.
   e.waitUntil(caches.open(cacheName).then(cache => cacheFiles(cache)));
 });
 
-async function cacheFiles(cache) {
-  return getCachedFilesList().then(filepaths =>
-    Promise.all(
-      filepaths.map(async filepath =>
-        cache
-          .add(filepath)
-          .catch(err => console.log(`Failed to cache ${filepath}`, err))
-      )
-    )
-  );
-}
-
+/**
+ * Intercepts HTTP requests and returns the cached response if it is available. Otherwise it
+ * requests over the internet.
+ */
 self.addEventListener('fetch', event => {
   //Strip the query string parameters
   const url = event.request.url.split('?')[0];
@@ -40,7 +38,29 @@ self.addEventListener('fetch', event => {
   );
 });
 
-async function getCachedFilesList() {
+/**
+ * Queries the list of files needed for levels to work offline and then caches them.
+ * @param cache Where the files should be stored.
+ * @returns {Promise<unknown[]>}
+ */
+async function cacheFiles(cache) {
+  return getOfflineFilesList().then(filepaths =>
+    Promise.all(
+      filepaths.map(async filepath =>
+        cache
+          .add(filepath)
+          .catch(err => console.log(`Failed to cache ${filepath}`, err))
+      )
+    )
+  );
+}
+
+/**
+ * Gets the list of files which need to be cached so the levels work offline.
+ * See offline_controller.rb for the generation of this list.
+ * @returns {Promise<*>}
+ */
+async function getOfflineFilesList() {
   // Request the manifest of all the files which should be cached.
   const response = await fetch('/offline-files.json', {
     method: 'GET',
