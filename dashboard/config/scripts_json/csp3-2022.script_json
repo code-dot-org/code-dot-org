@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-06 20:02:51 UTC",
+    "serialized_at": "2022-03-15 06:03:45 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1954,6 +1954,17 @@
       }
     },
     {
+      "key": "bb62cd1e-3124-4e56-bed5-3839f7976b00",
+      "position": 5,
+      "properties": {
+        "progression_name": "Choice Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb62cd1e-3124-4e56-bed5-3839f7976b00",
+        "lesson_activity.key": "a2cec81c-3203-4eae-b38f-489d269d9c6f"
+      }
+    },
+    {
       "key": "6845518d-f8bd-499d-ab53-955acc4e2ef6",
       "position": 1,
       "properties": {
@@ -2492,6 +2503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App2022"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2514,6 +2528,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App2022"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2536,6 +2553,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App2022"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2558,6 +2578,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App2022"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2580,6 +2603,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App2022"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2602,6 +2628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Computers Work part 1 CSP2022"
+        ],
         "progression": "How Computers Work"
       },
       "bonus": false,
@@ -2624,6 +2653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App Investigate2022"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2646,6 +2678,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App Investigation2022"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2668,6 +2703,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App Investigation2022"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2690,6 +2728,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App Investigation2022"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2712,6 +2753,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App Investigation2022"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2734,6 +2778,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L1 Input Output Matching2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2756,6 +2803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township Design Mode2022"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2778,6 +2828,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Themes2022"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2800,6 +2853,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Colors2022"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2822,6 +2878,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Images2022"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2844,6 +2903,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Icons2022"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2866,6 +2928,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode ids2022"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2888,6 +2953,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Copy an App2022"
+        ],
         "progression": "Copy an App"
       },
       "bonus": false,
@@ -2910,6 +2978,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L2 CSP CFU ID names2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2932,6 +3003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz Storyboard2022"
+        ],
         "progression": "Sample Prototype"
       },
       "bonus": false,
@@ -2954,6 +3028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Design Screens2022"
+        ],
         "progression": "Build Your Screens"
       },
       "bonus": false,
@@ -2976,6 +3053,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU natural language2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2998,6 +3078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 12022"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3020,6 +3103,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 22022"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3042,6 +3128,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 12022"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3064,6 +3153,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 22022"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3086,6 +3178,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 32022"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3108,6 +3203,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Sequential vs Event Driven2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3130,6 +3228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 12022"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3152,6 +3253,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 22022"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3174,28 +3278,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U3 Program Practice Pt 32022"
+        "level_keys": [
+          "U3 Program Practice Pt 42022"
         ],
-        "lesson.key": "Debugging",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2022",
-        "activity_section.key": "a185d8cf-598a-4e6e-92da-cfcd3b604c35"
-      },
-      "level_keys": [
-        "U3 Program Practice Pt 32022"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3213,33 +3298,14 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U3 Program Practice Pt 52022"
+        "level_keys": [
+          "U3 Program Practice Pt 62022"
         ],
-        "lesson.key": "Debugging",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2022",
-        "activity_section.key": "a185d8cf-598a-4e6e-92da-cfcd3b604c35"
-      },
-      "level_keys": [
-        "U3 Program Practice Pt 52022"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3257,33 +3323,36 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Debugging"
+        "progression": "Choice Level"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U3 Program Practice Pt 82022"
+          "CSP U3L7 Choice"
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2022",
-        "activity_section.key": "a185d8cf-598a-4e6e-92da-cfcd3b604c35"
+        "activity_section.key": "bb62cd1e-3124-4e56-bed5-3839f7976b00"
       },
       "level_keys": [
-        "U3 Program Practice Pt 82022"
+        "CSP U3L7 Choice"
       ]
     },
     {
-      "chapter": 37,
-      "position": 8,
+      "chapter": 35,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L7 CSP CFU What was confusing2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3301,11 +3370,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 L08 Pair Programming Video2022"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -3323,11 +3395,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Add Code2022"
+        ],
         "progression": "Add Code"
       },
       "bonus": false,
@@ -3345,11 +3420,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L9 Add More Code2022"
+        ],
         "progression": "Add More Code"
       },
       "bonus": false,
@@ -3367,11 +3445,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L10 Submit App2022"
+        ],
         "progression": "Submit your app"
       },
       "bonus": false,
@@ -3389,11 +3470,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 MC Assessment 2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3785,33 +3869,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U3 Program Practice Pt 32022",
-        "script_level.level_keys": [
-          "U3 Program Practice Pt 32022"
-        ],
-        "lesson.key": "Debugging",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2022",
-        "activity_section.key": "a185d8cf-598a-4e6e-92da-cfcd3b604c35"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "U3 Program Practice Pt 42022",
         "script_level.level_keys": [
           "U3 Program Practice Pt 42022"
-        ],
-        "lesson.key": "Debugging",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2022",
-        "activity_section.key": "a185d8cf-598a-4e6e-92da-cfcd3b604c35"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U3 Program Practice Pt 52022",
-        "script_level.level_keys": [
-          "U3 Program Practice Pt 52022"
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
@@ -3833,14 +3893,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "U3 Program Practice Pt 82022",
+        "level.key": "CSP U3L7 Choice",
         "script_level.level_keys": [
-          "U3 Program Practice Pt 82022"
+          "CSP U3L7 Choice"
         ],
         "lesson.key": "Debugging",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2022",
-        "activity_section.key": "a185d8cf-598a-4e6e-92da-cfcd3b604c35"
+        "activity_section.key": "bb62cd1e-3124-4e56-bed5-3839f7976b00"
       }
     },
     {

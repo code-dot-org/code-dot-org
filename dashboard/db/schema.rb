@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_220633) do
+ActiveRecord::Schema.define(version: 2022_03_11_000924) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1979,6 +1979,12 @@ ActiveRecord::Schema.define(version: 2022_03_01_220633) do
     t.integer "conditionals_d5_count", default: 0
     t.datetime "basic_proficiency_at"
     t.index ["user_id"], name: "index_user_proficiencies_on_user_id", unique: true
+  end
+
+  create_table "user_project_storage_ids", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.index ["user_id"], name: "user_id", unique: true
+    t.index ["user_id"], name: "user_storage_ids_user_id_index"
   end
 
   create_table "user_school_infos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

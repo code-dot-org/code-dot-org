@@ -44,7 +44,12 @@
       "description": "The value to store in the object under the key provided."
     }
   ],
+  "parameters": [
+    "object",
+    "\"key\"",
+    "\"value\""
+  ],
   "return_value": "None",
   "short_description": "An object is a way to collect data and assign a unique label to each item. One example of a real-life object is a dictionary - every word has a corresponding definition. Here's how a dictionary would look as an App Lab object:",
-  "syntax": "addPair(object, \"key\", \"value\")"
+  "syntax": "addPair(object, key, value)"
 }

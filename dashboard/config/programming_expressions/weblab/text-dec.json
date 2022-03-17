@@ -1,6 +1,6 @@
 {
   "key": "Text-Dec",
-  "name": "Text-Dec",
+  "name": "Text Decoration",
   "category": "CSS Properties",
   "category_key": "css_properties",
   "content": "# Text Decoration\n\nThe `text-decoration` property specifies the appearance of decorative lines on text. The most common text-decoration are:\n\n* `text-decoration-line` -  Sets the kind of text decoration to use such as, underline, overline, line-through. \n* `text-decoration-color` -  Sets the color of the text decoration.\n* `text-decoration-style` -  Sets the style of the text decoration such as `solid`, `wavy`, `dotted`, `dashed`, or `double`.\n",

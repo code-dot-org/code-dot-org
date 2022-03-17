@@ -31,6 +31,7 @@ describe('LessonToken', () => {
         dragging: false,
         draggedLessonPos: false,
         delta: 0,
+        allowMajorCurriculumChanges: true,
         handleDragStart,
         cloneLesson,
         removeLesson,
@@ -54,11 +55,34 @@ describe('LessonToken', () => {
         scale: 0,
         shadow: 0,
         draggedLessonPos: false,
+        allowMajorCurriculumChanges: true,
         handleDragStart,
         cloneLesson,
         removeLesson,
         lesson: defaultLesson
       };
+    });
+
+    it('hides movement and deleting buttons when not allowed to make major curriculum changes', () => {
+      const wrapper = shallow(
+        <LessonTokenContents
+          {...defaultProps}
+          allowMajorCurriculumChanges={false}
+        />
+      );
+      expect(wrapper.find('.fa-arrows-v').length).to.equal(0);
+      expect(wrapper.find('.fa-times').length).to.equal(0);
+    });
+
+    it('show movement and deleting buttons when allowed to make major curriculum changes', () => {
+      const wrapper = shallow(
+        <LessonTokenContents
+          {...defaultProps}
+          allowMajorCurriculumChanges={true}
+        />
+      );
+      expect(wrapper.find('.fa-arrows-v').length).to.equal(1);
+      expect(wrapper.find('.fa-times').length).to.equal(1);
     });
 
     it('renders existing lesson with edit and clone buttons', () => {
