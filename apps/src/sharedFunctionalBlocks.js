@@ -292,9 +292,9 @@ function installBoolean(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.BOOLEAN]
       );
       var values = blockly.Blocks.functional_boolean.VALUES;
       this.appendDummyInput()
@@ -322,9 +322,9 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]
       );
       this.appendDummyInput()
         .appendField(
@@ -350,9 +350,9 @@ function installMathNumber(blockly, generator, gensym) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]
       );
       this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown(), 'NUM')
@@ -371,9 +371,9 @@ function installString(blockly, generator) {
         headerHeight: 0,
         rowBuffer: 3
       });
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.STRING]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.STRING]
       );
       this.appendDummyInput()
         .appendField(new Blockly.FieldLabel('"'))
@@ -489,8 +489,7 @@ function installCondForType(blockly, generator, type) {
       var options = {
         fixedSize: {height: 35}
       };
-
-      this.setHSV.apply(this, Blockly.FunctionalTypeColors[type]);
+      Blockly.cdoUtils.setHSV(this, ...Blockly.FunctionalTypeColors[type]);
 
       var plusField = new Blockly.FieldIcon('+');
       Blockly.bindEvent_(
