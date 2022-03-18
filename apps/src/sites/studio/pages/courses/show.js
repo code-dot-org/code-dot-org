@@ -14,8 +14,7 @@ import {
   pageTypes,
   selectSection,
   setPageType,
-  setSections,
-  setCourseOfferings
+  setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {registerReducers} from '@cdo/apps/redux';
 import {setUserSignedIn} from '@cdo/apps/templates/currentUserRedux';
@@ -32,7 +31,6 @@ function showCourseOverview() {
   const script = document.querySelector('script[data-courses-show]');
   const scriptData = JSON.parse(script.dataset.coursesShow);
   const courseSummary = scriptData.course_summary;
-  const validCourseOfferings = scriptData.valid_course_offerings;
   const isTeacher = scriptData.is_teacher;
   const userId = scriptData.user_id;
 
@@ -49,7 +47,6 @@ function showCourseOverview() {
   }
 
   store.dispatch(setPageType(pageTypes.courseOverview));
-  store.dispatch(setCourseOfferings(validCourseOfferings));
 
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 

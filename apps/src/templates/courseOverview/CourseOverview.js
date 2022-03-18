@@ -195,7 +195,7 @@ class CourseOverview extends Component {
               onChangeVersion={this.onChangeVersion}
               courseVersions={versions}
               rightJustifiedPopupMenu={true}
-              selectedCourseVersionId={this.props.id}
+              selectedCourseVersionId={this.props.courseVersionId}
             />
           )}
         </div>
@@ -276,8 +276,9 @@ export const UnconnectedCourseOverview = CourseOverview;
 export default connect((state, ownProps) => ({
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
+    ownProps.courseOfferingId,
+    ownProps.courseVersionId,
     null,
-    ownProps.id,
     true
   ),
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,

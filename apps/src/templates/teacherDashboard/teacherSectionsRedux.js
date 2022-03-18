@@ -796,50 +796,10 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    const lessonExtraSettings = {};
-    const ttsAutoplayEnabledSettings = {};
-    if (
-      action.props.unitId ||
-      action.props.courseVersionId ||
-      action.props.courseOfferingId
-    ) {
-      const courseOfferingId =
-        action.props.courseOfferingId ||
-        state.sectionBeingEdited.courseOfferingId;
-      const courseVersionId =
-        action.props.courseVersionId ||
-        state.sectionBeingEdited.courseVersionId;
-      const unitId = action.props.unitId || state.sectionBeingEdited.unitId;
-
-      if (courseOfferingId && courseVersionId) {
-        const courseVersion =
-          state.courseOfferings[courseOfferingId].course_versions[
-            courseVersionId
-          ];
-
-        if (courseVersion) {
-          if (courseVersion.type === 'Script') {
-            lessonExtraSettings.lessonExtras = Object.values(
-              courseVersion.units
-            )[0].lesson_extras_available;
-          } else if (unitId) {
-            lessonExtraSettings.lessonExtras =
-              courseVersion.units[unitId].lesson_extras_available;
-          } else {
-            lessonExtraSettings.lessonExtras = false;
-          }
-        }
-      } else {
-        lessonExtraSettings.lessonExtras = false;
-      }
-    }
-
     return {
       ...state,
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
-        ...lessonExtraSettings,
-        ...ttsAutoplayEnabledSettings,
         ...action.props
       }
     };
@@ -1311,12 +1271,20 @@ export function sectionsNameAndId(state) {
 /**
  * @param {object} state - state.teacherSections in redux tree
  */
-export function sectionsForDropdown(state, unitId, courseId, onCourseOverview) {
+export function sectionsForDropdown(
+  state,
+  courseOfferingId,
+  courseVersionId,
+  unitId
+) {
   return sortedSectionsList(state.sections).map(section => ({
     ...section,
     isAssigned:
       (unitId !== null && section.unitId === unitId) ||
-      (courseId !== null && section.courseId === courseId && onCourseOverview)
+      (courseOfferingId !== null &&
+        section.courseOfferingId === courseOfferingId &&
+        (courseVersionId !== null &&
+          section.courseVersionId === courseVersionId))
   }));
 }
 

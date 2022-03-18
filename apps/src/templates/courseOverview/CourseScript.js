@@ -200,8 +200,9 @@ export default connect(
     selectedSectionId: state.teacherSections.selectedSectionId,
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
-      ownProps.id,
-      ownProps.courseId,
+      ownProps.courseOfferingId,
+      ownProps.courseVersionId,
+      null,
       true
     ),
     hiddenLessonState: state.hiddenLesson,
