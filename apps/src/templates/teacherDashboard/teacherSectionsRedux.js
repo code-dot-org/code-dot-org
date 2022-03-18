@@ -204,7 +204,14 @@ function removeNullValues(key, val) {
  * @param {number} courseId
  * @param {number} unitId
  */
-export const assignToSection = (sectionId, courseId, unitId, pageType) => {
+export const assignToSection = (
+  sectionId,
+  courseId,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  pageType
+) => {
   firehoseClient.putRecord(
     {
       study: 'assignment',
@@ -226,6 +233,8 @@ export const assignToSection = (sectionId, courseId, unitId, pageType) => {
     dispatch(
       editSectionProperties({
         courseId: courseId,
+        courseOfferingId: courseOfferingId,
+        courseVersionId: courseVersionId,
         unitId: unitId
       })
     );
@@ -770,9 +779,11 @@ export default function teacherSections(state = initialState, action) {
 
     const lessonExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
-
-    //From the assignment selector
-    if (action.props.courseVersionId && action.props.courseOfferingId) {
+    if (
+      action.props.unitId ||
+      action.props.courseVersionId ||
+      action.props.courseOfferingId
+    ) {
       const courseOfferingId =
         action.props.courseOfferingId ||
         state.sectionBeingEdited.courseOfferingId;
@@ -802,9 +813,6 @@ export default function teacherSections(state = initialState, action) {
       } else {
         lessonExtraSettings.lessonExtras = false;
       }
-    } else if (action.props.courseId || action.props.unitId) {
-      action.props.courseVersionId = null;
-      action.props.courseOfferingId = null;
     }
 
     return {
@@ -833,7 +841,6 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_SUCCESS) {
-    console.log('SUCCESS');
     const section = sectionFromServerSection(action.serverSection);
     const oldSectionId = action.sectionId;
     const newSection = section.id !== oldSectionId;

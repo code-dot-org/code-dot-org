@@ -253,16 +253,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         return head :bad_request unless @unit
         return head :forbidden unless @unit.course_assignable?(current_user)
       end
-    elsif params[:course_id]
-      @course = UnitGroup.get_from_cache(params[:course_id])
-      return head :bad_request unless @course
-      return head :forbidden unless @course.course_assignable?(current_user)
-      @unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
-      return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-    elsif params[:unit_id]
-      @unit = Script.get_from_cache(params[:unit_id])
-      return head :bad_request unless @unit
-      return head :forbidden unless @unit.course_assignable?(current_user)
     else
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]
