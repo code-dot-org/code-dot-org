@@ -23,8 +23,7 @@ import {
   selectSection,
   setSections,
   setPageType,
-  pageTypes,
-  setCourseOfferings
+  pageTypes
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import progress from '@cdo/apps/code-studio/progress';
@@ -89,7 +88,6 @@ function initPage() {
   initializeStoreWithSections(store, scriptData.sections, scriptData.section);
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
-  store.dispatch(setCourseOfferings(scriptData.validCourseOfferings));
 
   progress.initCourseProgress(scriptData);
 
