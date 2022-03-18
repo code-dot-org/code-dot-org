@@ -3175,9 +3175,9 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setFunctional(true, {
         headerHeight: 30
       });
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]
       );
 
       var options = {
@@ -3379,9 +3379,9 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
       );
 
       this.VALUES = skin.spriteChoices;
@@ -3412,9 +3412,9 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
       );
 
       this.VALUES = skin.backgroundChoicesK1;
