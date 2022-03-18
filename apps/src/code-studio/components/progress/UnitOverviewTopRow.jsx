@@ -40,8 +40,6 @@ class UnitOverviewTopRow extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
-    courseOfferingId: PropTypes.number,
-    courseVersionId: PropTypes.number,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -120,9 +118,7 @@ class UnitOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes,
       isMigrated,
       unitCompleted,
-      hasPerLevelResults,
-      courseOfferingId,
-      courseVersionId
+      hasPerLevelResults
     } = this.props;
 
     const useMigratedTeacherResources = isMigrated && !teacherResources.length;
@@ -221,8 +217,6 @@ class UnitOverviewTopRow extends React.Component {
             assignmentName={unitTitle}
             showAssignButton={showAssignButton}
             courseId={currentCourseId}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
             scriptId={scriptId}
             forceReload={true}
             buttonLocationAnalytics={'unit-overview-top'}
