@@ -196,6 +196,7 @@ module LevelsHelper
         (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
+    level_requires_channel = false if @edit_exemplar
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching

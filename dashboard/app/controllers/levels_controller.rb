@@ -226,6 +226,7 @@ class LevelsController < ApplicationController
   # GET /levels/:id/edit_exemplar
   def edit_exemplar
     @game = @level.game
+    @edit_exemplar = true
 
     # replace with actual exemplar code
     level_view_options(@level.id, edit_exemplar: true)
