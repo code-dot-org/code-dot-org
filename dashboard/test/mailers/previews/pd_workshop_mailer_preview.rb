@@ -248,7 +248,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def teacher_enrollment_reminder__counselor
-    mail :teacher_enrollment_reminder, PPd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
   def teacher_enrollment_receipt__facilitator
