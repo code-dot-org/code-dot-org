@@ -8,6 +8,8 @@ const SET_PROJECT_UPDATED_STATUS = 'header/SET_PROJECT_UPDATED_STATUS';
 const SET_PROJECT_UPDATED_AT = 'header/SET_PROJECT_UPDATED_AT';
 const ENABLE_LEVEL_BUILDER_SAVE_BUTTON =
   'header/ENABLE_LEVEL_BUILDER_SAVE_BUTTON';
+const ENABLE_LEVEL_BUILDER_SAVE_EXEMPLAR_BUTTON =
+  'header/ENABLE_LEVEL_BUILDER_SAVE_EXEMPLAR_BUTTON';
 const REFRESH_PROJECT_NAME = 'header/REFRESH_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'header/SHOW_TRY_AGAIN_DIALOG';
 const SET_NAME_FAILURE = 'header/SET_NAME_FAILURE';
@@ -26,7 +28,8 @@ export const possibleHeaders = {
   project: 'project',
   minimalProject: 'minimalProject',
   projectBacked: 'projectBacked',
-  levelBuilderSave: 'levelBuilderSave'
+  levelBuilderSave: 'levelBuilderSave',
+  levelBuilderSaveExemplar: 'levelBuilderSaveExemplar'
 };
 
 const initialState = {
@@ -68,6 +71,15 @@ export default (state = initialState, action) => {
     return {
       ...state,
       currentHeader: possibleHeaders.levelBuilderSave,
+      getLevelBuilderChanges: action.getChanges
+    };
+  } else if (
+    action.type === ENABLE_LEVEL_BUILDER_SAVE_EXEMPLAR_BUTTON &&
+    action.getChanges
+  ) {
+    return {
+      ...state,
+      currentHeader: possibleHeaders.levelBuilderSaveExemplar,
       getLevelBuilderChanges: action.getChanges
     };
   }
@@ -155,6 +167,11 @@ export const showProjectBackedHeader = showExport => ({
 
 export const showLevelBuilderSaveButton = getChanges => ({
   type: ENABLE_LEVEL_BUILDER_SAVE_BUTTON,
+  getChanges
+});
+
+export const showLevelBuilderSaveExemplarButton = getChanges => ({
+  type: ENABLE_LEVEL_BUILDER_SAVE_EXEMPLAR_BUTTON,
   getChanges
 });
 

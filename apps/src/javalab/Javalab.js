@@ -25,7 +25,10 @@ import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
-import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
+import {
+  showLevelBuilderSaveButton,
+  showLevelBuilderSaveExemplarButton
+} from '@cdo/apps/code-studio/header';
 import Neighborhood from './neighborhood/Neighborhood';
 import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
@@ -84,7 +87,7 @@ Javalab.prototype.init = function(config) {
   this.level = config.level;
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
-  this.isStartMode = !!config.level.editBlocks;
+  this.isStartMode = config.level.editBlocks === 'start_sources';
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -196,15 +199,19 @@ Javalab.prototype.init = function(config) {
     isSubmitted: !!config.level.submitted
   });
 
+  console.log(config.level);
   registerReducers({javalab, playground});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
-  if (config.level.editBlocks) {
+  if (config.level.editBlocks === 'start_sources') {
     config.level.lastAttempt = '';
     showLevelBuilderSaveButton(() => ({
       start_sources: getSources(getStore().getState()),
       validation: getValidation(getStore().getState())
     }));
+  }
+  if (config.level.editExemplar) {
+    showLevelBuilderSaveExemplarButton(() => ({test: 123}));
   }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
@@ -215,7 +222,7 @@ Javalab.prototype.init = function(config) {
     typeof startSources === 'object' &&
     Object.keys(startSources).length > 0
   ) {
-    if (config.level.editBlocks) {
+    if (config.level.editBlocks === 'start_sources') {
       Object.keys(startSources).forEach(key => {
         startSources[key].isValidation = false;
       });
@@ -227,7 +234,7 @@ Javalab.prototype.init = function(config) {
         setAllSources({
           ...startSources,
           // If we're editing start sources, validation is part of the source
-          ...(config.level.editBlocks && validation)
+          ...(config.level.editBlocks === 'start_sources' && validation)
         })
       );
     } else {
