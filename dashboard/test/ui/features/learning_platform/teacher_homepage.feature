@@ -155,7 +155,7 @@ Feature: Using the teacher homepage sections feature
     When I click selector ".ui-test-section-dropdown"
     And I click selector ".edit-section-details-link"
     And I wait until element "#assignment-version-year" is visible
-    And element "#assignment-version-year" contains text "2017"
+    And element "#assignment-version-year" has value "2017"
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains(2019)" once I see it
     And I press the first ".uitest-saveButton" element
