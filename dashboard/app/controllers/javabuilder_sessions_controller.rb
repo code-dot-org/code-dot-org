@@ -13,10 +13,7 @@ class JavabuilderSessionsController < ApplicationController
 
   # GET /javabuilder/access_token
   def get_access_token
-    begin
-      require_default_params
-      params.require(:channelId)
-    rescue ActionController::ParameterMissing
+    unless has_required_params?([:channelId])
       return render status: :bad_request, json: {}
     end
     channel_id = params[:channelId]
@@ -49,10 +46,7 @@ class JavabuilderSessionsController < ApplicationController
 
   # GET /javabuilder/access_token_with_override_sources
   def get_access_token_with_override_sources
-    begin
-      require_default_params
-      params.require(:overrideSources)
-    rescue ActionController::ParameterMissing
+    unless has_required_params?([:overrideSources])
       return render status: :bad_request, json: {}
     end
     override_sources = params[:overrideSources]
@@ -143,7 +137,15 @@ class JavabuilderSessionsController < ApplicationController
     )
   end
 
-  def require_default_params
-    params.require([:projectVersion, :projectUrl, :executionType, :miniAppType])
+  def has_required_params?(additional_params)
+    default_params = [:projectVersion, :projectUrl, :executionType, :miniAppType]
+
+    begin
+      params.require(default_params.concat(additional_params))
+    rescue ActionController::ParameterMissing
+      return false
+    end
+
+    true
   end
 end
