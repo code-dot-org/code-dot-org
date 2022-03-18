@@ -8,7 +8,10 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import AgeDialog, {signedOutOver13, songFilterOn} from '../templates/AgeDialog';
+import AgeDialog, {
+  signedOutUnder13 as signedOutAgeCheck,
+  songFilterOn
+} from '../templates/AgeDialog';
 
 const SongSelector = Radium(
   class extends React.Component {
@@ -17,7 +20,7 @@ const SongSelector = Radium(
       setSong: PropTypes.func.isRequired,
       selectedSong: PropTypes.string,
       songData: PropTypes.objectOf(PropTypes.object).isRequired,
-      filterOff: PropTypes.bool.isRequired
+      filterOn: PropTypes.bool.isRequired
     };
 
     changeSong = event => {
@@ -40,7 +43,8 @@ const SongSelector = Radium(
           >
             {Object.keys(this.props.songData).map(
               (option, i) =>
-                (this.props.filterOff || !this.props.songData[option].pg13) && (
+                // Song should be displayed if it is not pg13 or if the filter is off.
+                (!this.props.filterOn || !this.props.songData[option].pg13) && (
                   <option key={i} value={option}>
                     {this.props.songData[option].title}
                   </option>
@@ -67,33 +71,36 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   state = {
-    filterOff: this.setFilterStatus()
+    filterOn: this.initializeFilterStatus()
   };
 
   /*
     Turn the song filter off
   */
   turnFilterOff = () => {
-    this.setState({filterOff: true});
+    this.setState({filterOn: false});
   };
 
   /*
     The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
    */
-  setFilterStatus() {
+  initializeFilterStatus() {
+    const {userType, under13} = this.props;
+
+    // Check if song filter override is triggered and initialize song filter to true.
+    const songFilter = songFilterOn();
+    if (songFilter) {
+      return true;
+    }
+
     // userType - 'teacher', 'student', 'unknown' - signed out users.
     // under13 - boolean for signed in user representing age category. Teacher assumed > 13.
-    const signedInOver13 =
-      this.props.userType === 'teacher' ||
-      (this.props.userType === 'student' && !this.props.under13);
-    const signedOutOverAge = signedOutOver13();
-    const songFilter = songFilterOn();
-    // Override filter is on
-    if (songFilter) {
-      return false;
-    }
-    // Check whether user is > 13
-    return signedInOver13 || signedOutOverAge;
+    const signedInUnder13 = userType === 'student' && under13;
+    const signedOutUnder13 = signedOutAgeCheck();
+
+    // Return true (filter on) if user is under 13, whether they are signed in or out.
+    // Return false if the user is over 13, signed in or out.
+    return signedInUnder13 || signedOutUnder13;
   }
 
   render() {
@@ -118,7 +125,7 @@ class DanceVisualizationColumn extends React.Component {
               setSong={this.props.setSong}
               selectedSong={this.props.selectedSong}
               songData={this.props.songData}
-              filterOff={this.state.filterOff}
+              filterOn={this.state.filterOn}
             />
           )}
           <ProtectedVisualizationDiv>
