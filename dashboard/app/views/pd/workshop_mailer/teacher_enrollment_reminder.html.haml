@@ -57,14 +57,11 @@
 
 - if @workshop.subject == Pd::Workshop::SUBJECT_CSF_201
   = render partial: 'csf_deepdive_reminder'
-
   %h3
     Pre-workshop survey
-
   %p
     Don’t forget to fill out
     = link_to 'this survey', @pre_workshop_survey_url
-
     at least 24 hours before the workshop so that your facilitator can make this workshop as effective and useful for you as possible!
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
