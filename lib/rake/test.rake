@@ -234,9 +234,9 @@ namespace :test do
   end
 
   task ci: [
+    :dashboard_ci,
     :shared_ci,
     :pegasus_ci,
-    :dashboard_ci,
     :lib_ci,
     :bin_i18n_ci,
     :ui_live
