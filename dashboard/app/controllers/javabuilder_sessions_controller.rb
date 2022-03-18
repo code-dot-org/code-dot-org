@@ -19,7 +19,7 @@ class JavabuilderSessionsController < ApplicationController
     channel_id = params[:channelId]
 
     session_id = SecureRandom.uuid
-    encoded_payload = get_encoded_payload({session_id: session_id, channel_id: channel_id})
+    encoded_payload = get_encoded_payload({sid: session_id, channel_id: channel_id})
 
     level_id = params[:levelId].to_i
     project_files = JavalabFilesHelper.get_project_files(channel_id, level_id)
@@ -34,7 +34,7 @@ class JavabuilderSessionsController < ApplicationController
     override_sources = params[:overrideSources]
 
     session_id = SecureRandom.uuid
-    encoded_payload = get_encoded_payload({session_id: session_id})
+    encoded_payload = get_encoded_payload({sid: session_id})
 
     level_id = params[:levelId].to_i
     project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id)
@@ -70,7 +70,6 @@ class JavabuilderSessionsController < ApplicationController
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
       exp: expiration_time,
-      sid: session_id,
       uid: current_user.id,
       project_version: project_version,
       project_url: project_url,
