@@ -87,7 +87,8 @@ Javalab.prototype.init = function(config) {
   this.level = config.level;
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
-  this.isStartMode = config.level.editBlocks === 'start_sources';
+  this.isStartMode = config.level.editBlocks;
+  this.isEditingExemplar = config.level.editExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -199,11 +200,10 @@ Javalab.prototype.init = function(config) {
     isSubmitted: !!config.level.submitted
   });
 
-  console.log(config.level);
   registerReducers({javalab, playground});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
-  if (config.level.editBlocks === 'start_sources') {
+  if (config.level.editBlocks) {
     config.level.lastAttempt = '';
     showLevelBuilderSaveButton(() => ({
       start_sources: getSources(getStore().getState()),
@@ -222,7 +222,7 @@ Javalab.prototype.init = function(config) {
     typeof startSources === 'object' &&
     Object.keys(startSources).length > 0
   ) {
-    if (config.level.editBlocks === 'start_sources') {
+    if (config.level.editBlocks) {
       Object.keys(startSources).forEach(key => {
         startSources[key].isValidation = false;
       });
@@ -234,7 +234,7 @@ Javalab.prototype.init = function(config) {
         setAllSources({
           ...startSources,
           // If we're editing start sources, validation is part of the source
-          ...(config.level.editBlocks === 'start_sources' && validation)
+          ...(config.level.editBlocks && validation)
         })
       );
     } else {
@@ -242,7 +242,7 @@ Javalab.prototype.init = function(config) {
     }
   }
 
-  if (config.level.exemplarSources) {
+  if (config.level.editExemplar) {
     getStore().dispatch(setAllSources(config.level.exemplarSources));
   }
 
@@ -349,6 +349,13 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     options.useNeighborhood = true;
   }
+
+  let overrideSources;
+  if (this.isEditingExemplar) {
+    overrideSources = getSources(getStore().getState());
+  }
+
+  console.log(overrideSources);
   this.javabuilderConnection = new JavabuilderConnection(
     this.level.javabuilderUrl,
     this.onOutputMessage,
@@ -359,7 +366,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.setIsRunning,
     this.setIsTesting,
     executionType,
-    this.level.csaViewMode
+    this.level.csaViewMode,
+    overrideSources
   );
   project.autosave(() => {
     this.javabuilderConnection.connectJavabuilder();
