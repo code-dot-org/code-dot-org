@@ -67,7 +67,7 @@ module Pd::Application
 
     # An application either has an "incomplete" or "unreviewed" state when created.
     # The applied_at field gets set when the status becomes 'unreviewed' for the first time
-    before_save :set_applied_date, if: -> {status_changed? && ActiveRecord::Base.connection.column_exists?(:pd_applications, :applied_at)}
+    before_save :set_applied_date, if: :status_changed?
     # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
     before_save :update_accepted_date, if: :status_changed?
 
@@ -338,9 +338,9 @@ module Pd::Application
     end
 
     # displays the iso8601 date (yyyy-mm-dd)
+    # [MEG] TODO: Update this method to use applied_at date
     def date_applied
-      created_at.to_date.iso8601 unless ActiveRecord::Base.connection.column_exists?(:pd_applications, :applied_at)
-      applied_at&.to_date&.iso8601 if ActiveRecord::Base.connection.column_exists?(:pd_applications, :applied_at)
+      created_at.to_date.iso8601
     end
 
     # Convert responses cores to a hash of underscore_cased symbols
