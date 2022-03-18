@@ -18,30 +18,12 @@ class JavabuilderSessionsController < ApplicationController
     end
     channel_id = params[:channelId]
 
-    begin
-      storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      return render status: :bad_request, json: {}
-    end
-
     session_id = SecureRandom.uuid
-    payload = get_shared_payload(session_id)
-    channel_specific_payload = {
-      channel_id: channel_id,
-      storage_id: storage_id,
-      storage_app_id: storage_app_id
-    }
-    payload.merge! channel_specific_payload
-
-    log_token_creation(payload)
-    encoded_payload = create_encoded_payload(payload)
+    encoded_payload = get_encoded_payload({session_id: session_id, channel_id: channel_id})
 
     level_id = params[:levelId].to_i
     project_files = JavalabFilesHelper.get_project_files(channel_id, level_id)
-    success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
-    return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
-
-    render json: {token: encoded_payload, session_id: session_id}
+    upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
   # GET /javabuilder/access_token_with_override_sources
@@ -52,39 +34,23 @@ class JavabuilderSessionsController < ApplicationController
     override_sources = params[:overrideSources]
 
     session_id = SecureRandom.uuid
-    payload = get_shared_payload(session_id)
-
-    log_token_creation(payload)
-    encoded_payload = create_encoded_payload(payload)
+    encoded_payload = get_encoded_payload({session_id: session_id})
 
     level_id = params[:levelId].to_i
     project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id)
-    success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
-    return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
-
-    render json: {token: encoded_payload, session_id: session_id}
+    upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
   private
 
-  def get_teacher_list
-    if current_user.permission?(UserPermission::LEVELBUILDER) ||
-        current_user.verified_teacher? ||
-        current_user.has_pilot_experiment?(CSA_PILOT) ||
-        current_user.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
-      return [current_user.id]
-    end
-    teachers = []
-    current_user.teachers.each do |teacher|
-      next unless teacher.verified_teacher? ||
-          teacher.has_pilot_experiment?(CSA_PILOT) ||
-          teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
-      teachers << teacher.id
-    end
-    teachers
+  def upload_project_files_and_render(session_id, project_files, encoded_payload)
+    success = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
+    success ?
+      render(json: {token: encoded_payload, session_id: session_id}) :
+      render(status: :internal_server_error, json: {error: "Error uploading sources."})
   end
 
-  def get_shared_payload(session_id)
+  def get_encoded_payload(additional_payload)
     teacher_list = get_teacher_list.join(',')
     project_version = params[:projectVersion]
     # TODO: remove project_url after javabuilder is deployed with update to no longer need it
@@ -100,7 +66,7 @@ class JavabuilderSessionsController < ApplicationController
     # expire token in 15 minutes
     expiration_time = (Time.now + 15.minutes).to_i
 
-    {
+    payload = {
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
       exp: expiration_time,
@@ -114,7 +80,27 @@ class JavabuilderSessionsController < ApplicationController
       use_dashboard_sources: use_dashboard_sources,
       options: options,
       verified_teachers: teacher_list
-    }
+    }.merge(additional_payload)
+
+    log_token_creation(payload)
+    create_encoded_payload(payload)
+  end
+
+  def get_teacher_list
+    if current_user.permission?(UserPermission::LEVELBUILDER) ||
+      current_user.verified_teacher? ||
+      current_user.has_pilot_experiment?(CSA_PILOT) ||
+      current_user.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
+      return [current_user.id]
+    end
+    teachers = []
+    current_user.teachers.each do |teacher|
+      next unless teacher.verified_teacher? ||
+        teacher.has_pilot_experiment?(CSA_PILOT) ||
+        teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
+      teachers << teacher.id
+    end
+    teachers
   end
 
   def log_token_creation(payload)
