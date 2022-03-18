@@ -245,6 +245,10 @@ ArtistAPI.prototype.showTurtle = function(id) {
   this.log.push(['ST', id]);
 };
 
+ArtistAPI.prototype.drawGeometrySticker = function(sticker, size, id) {
+  this.log.push(['geometry_sticker', sticker, size, id]);
+};
+
 ArtistAPI.prototype.drawSticker = function(sticker, size, id) {
   this.log.push(['sticker', sticker, size, id]);
 };
