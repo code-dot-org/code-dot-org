@@ -195,7 +195,7 @@ class CourseOverview extends Component {
               onChangeVersion={this.onChangeVersion}
               courseVersions={versions}
               rightJustifiedPopupMenu={true}
-              selectedCourseVersionId={this.props.id}
+              selectedCourseVersionId={this.props.courseVersionId}
             />
           )}
         </div>
