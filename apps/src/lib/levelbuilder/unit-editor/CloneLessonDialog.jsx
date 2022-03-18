@@ -154,6 +154,7 @@ export default class CloneLessonDialog extends Component {
               text={'Clone'}
               color={'orange'}
               disabled={this.state.saving || !savable}
+              id="clone-lesson-button"
             />
           )}
         </DialogFooter>

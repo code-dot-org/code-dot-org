@@ -76,4 +76,46 @@ describe('CloneLessonDialog', () => {
         expect(errorMessage.text().includes('Error message.')).to.be.true;
       });
   });
+
+  it('disables clone button initially', () => {
+    const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
+    const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
+    expect(cloneButton.prop('disabled')).to.be.true;
+  });
+
+  it('enables clone button with unit name and level name suffix', () => {
+    const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
+    const unitNameInput = wrapper.find('input').first();
+    unitNameInput.simulate('change', {target: {value: 'my-script'}});
+    const suffixInput = wrapper.find('input').last();
+    suffixInput.simulate('change', {target: {value: '2099'}});
+    const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
+    expect(cloneButton.prop('disabled')).to.be.false;
+  });
+
+  it('enables clone button with unit name and shallow copy', () => {
+    const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
+    const unitNameInput = wrapper.find('input').first();
+    unitNameInput.simulate('change', {target: {value: 'my-script'}});
+    const cloneTypeSelector = wrapper.find('select').first();
+    cloneTypeSelector.simulate('change', {target: {value: 'shallowCopy'}});
+    const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
+    expect(cloneButton.prop('disabled')).to.be.false;
+  });
+
+  it('disables clone button without unit name', () => {
+    const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
+    const cloneTypeSelector = wrapper.find('select').first();
+    cloneTypeSelector.simulate('change', {target: {value: 'shallowCopy'}});
+    const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
+    expect(cloneButton.prop('disabled')).to.be.true;
+  });
+
+  it('disables clone button without level name suffix', () => {
+    const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
+    const unitNameInput = wrapper.find('input').first();
+    unitNameInput.simulate('change', {target: {value: 'my-script'}});
+    const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
+    expect(cloneButton.prop('disabled')).to.be.true;
+  });
 });
