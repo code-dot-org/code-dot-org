@@ -4,6 +4,11 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
+const LevelCopyText = {
+  deepCopy: 'deep copy: create a new copy of each level in the lesson',
+  shallowCopy: 'shallow copy: share existing levels with the original lesson'
+};
+
 export default class CloneLessonDialog extends Component {
   static propTypes = {
     lessonId: PropTypes.number,
@@ -13,6 +18,8 @@ export default class CloneLessonDialog extends Component {
 
   defaultState = {
     destinationUnit: '',
+    levelCopyType: 'deepCopy',
+    newLevelSuffix: '',
     saving: false,
     cloneFailed: false,
     cloneSucceeded: false,
@@ -28,11 +35,14 @@ export default class CloneLessonDialog extends Component {
     this.setState({saving: true});
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
     let success = false;
+    const newLevelSuffix =
+      this.state.levelCopyType === 'deepCopy' && this.state.newLevelSuffix;
 
     return fetch(`/lessons/${this.props.lessonId}/clone`, {
       method: 'POST',
       body: JSON.stringify({
-        destinationUnitName: this.state.destinationUnit
+        destinationUnitName: this.state.destinationUnit,
+        newLevelSuffix
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -60,6 +70,9 @@ export default class CloneLessonDialog extends Component {
   };
 
   render() {
+    const savable =
+      this.state.destinationUnit &&
+      (this.state.levelCopyType === 'shallowCopy' || this.state.newLevelSuffix);
     return (
       <BaseDialog
         cancelText="Cancel"
@@ -103,6 +116,33 @@ export default class CloneLessonDialog extends Component {
                 onChange={e => this.setState({destinationUnit: e.target.value})}
               />
             </label>
+            <label>
+              Level copy type:{' '}
+              <select
+                className="levelCopySelector"
+                value={this.state.levelCopyType}
+                style={styles.dropdown}
+                onChange={e => this.setState({levelCopyType: e.target.value})}
+              >
+                {Object.keys(LevelCopyText).map(type => (
+                  <option key={type} value={type}>
+                    {LevelCopyText[type]}
+                  </option>
+                ))}
+              </select>
+            </label>
+            {this.state.levelCopyType === 'deepCopy' && (
+              <label>
+                Suffix to add when copying levels:{' '}
+                <input
+                  type="text"
+                  value={this.state.newLevelSuffix}
+                  onChange={e =>
+                    this.setState({newLevelSuffix: e.target.value})
+                  }
+                />
+              </label>
+            )}
             {this.state.saving && <i className="fa fa-spinner fa-spin" />}
           </div>
         )}
@@ -113,7 +153,7 @@ export default class CloneLessonDialog extends Component {
               onClick={this.onCloneClick}
               text={'Clone'}
               color={'orange'}
-              disabled={this.state.saving}
+              disabled={this.state.saving || !savable}
             />
           )}
         </DialogFooter>
@@ -121,3 +161,9 @@ export default class CloneLessonDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dropdown: {
+    width: 350
+  }
+};
