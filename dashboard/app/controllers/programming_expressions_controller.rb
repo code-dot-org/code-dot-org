@@ -1,7 +1,23 @@
 class ProgrammingExpressionsController < ApplicationController
+  include Rails.application.routes.url_helpers
+
   load_and_authorize_resource
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
+
+  # GET /programming_expressions/get_filtered_expressions
+  def get_filtered_expressions
+    @programming_expressions = ProgrammingExpression.all
+    @programming_expressions = @programming_expressions.where(programming_environment_id: params[:programmingEnvironmentId]) if params[:programmingEnvironmentId]
+    @programming_expressions = @programming_expressions.where(programming_environment_category_id: params[:categoryId]) if params[:categoryId]
+
+    results_per_page = 20
+    total_expressions = @programming_expressions.length
+    num_pages = params[:page].blank? ? 1 : (total_expressions / results_per_page.to_f).ceil
+
+    @programming_expressions = @programming_expressions.page(params[:page]).per(results_per_page) if params[:page]
+    render json: {numPages: num_pages, expressions: @programming_expressions.map(&:summarize_for_all_code_docs)}
+  end
 
   # GET /programming_expressions/search
   def search
@@ -91,10 +107,10 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
-  # POST /programming_expressions/:id/clone
+  # POST /programming_expression/:id/clone
   def clone
     return render :not_found unless @programming_expression
-    return render :not_acceptable unless params[:destinationProgrammingEnvironmentName]
+    return render(status: not_acceptable, plain: 'Must provide destination programming environment') if params[:destinationProgrammingEnvironmentName].blank?
     begin
       new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
       render(status: 200, json: {editUrl: edit_programming_expression_path(new_exp)})
