@@ -14,6 +14,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'lessonExtras',
   'pairingAllowed',
+  'audience',
   'ttsAutoplayEnabled',
   'courseId',
   'courseOfferingId',
@@ -47,6 +48,8 @@ const importUrlByProvider = {
 // Action keys
 //
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
+const SET_CAN_ASSIGN_PL_OFFERINGS =
+  'teacherDashboard/SET_CAN_ASSIGN_PL_OFFERINGS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -121,6 +124,11 @@ export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
   courseOfferings
 });
+export const setCanAssignPLOfferings = canAssignPLOfferings => ({
+  type: SET_CAN_ASSIGN_PL_OFFERINGS,
+  canAssignPLOfferings
+});
+
 export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
   sectionId: sectionId,
@@ -397,6 +405,7 @@ export const asyncLoadSectionData = id => dispatch => {
   return Promise.all(apis.map(fetchJSON))
     .then(([sections, validCourseOfferings, students]) => {
       dispatch(setCourseOfferings(validCourseOfferings));
+      dispatch(setCanAssignPLOfferings(false));
       dispatch(setSections(sections));
       if (id) {
         dispatch(setStudentsForCurrentSection(id, students));
@@ -527,6 +536,8 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
   courseOfferings: {},
+  // If a instructor can assign pl course offerings
+  canAssignPLOfferings: false,
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited (see studentShape PropType)
@@ -573,6 +584,7 @@ function newSectionData(id, loginType) {
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
+    audience: null,
     code: '',
     courseId: null,
     courseOfferingId: null,
@@ -616,6 +628,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings
+    };
+  }
+
+  if (action.type === SET_CAN_ASSIGN_PL_OFFERINGS) {
+    return {
+      ...state,
+      canAssignPLOfferings: action.canAssignPLOfferings
     };
   }
 
@@ -1168,6 +1187,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionId: serverSection.course_version_id,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
+  audience: serverSection.audience,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
@@ -1211,6 +1231,7 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
+    audience: section.audience,
     restrict_section: section.restrictSection
   };
 }

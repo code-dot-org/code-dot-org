@@ -137,6 +137,10 @@ class Section < ApplicationRecord
     LOGIN_TYPES.include? type
   end
 
+  def self.valid_participant_type?(type)
+    SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.include? type
+  end
+
   def self.valid_grade?(grade)
     SharedConstants::STUDENT_GRADE_LEVELS.include? grade
   end
@@ -339,6 +343,7 @@ class Section < ApplicationRecord
       course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
       unit_id: unit_group ? script_id : nil,
       course_id: course_id,
+      audience: participant_type,
       script: {
         id: script_id,
         name: script.try(:name),

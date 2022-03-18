@@ -52,12 +52,14 @@ class EditSectionForm extends Component {
     assignedUnitName: PropTypes.string.isRequired,
     assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
+    canAssignPLOfferings: PropTypes.bool.isRequired,
     localeCode: PropTypes.string,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
 
   state = {
-    showHiddenUnitWarning: false
+    showHiddenUnitWarning: false,
+    isPLSection: false
   };
 
   onSaveClick = () => {
@@ -130,6 +132,16 @@ class EditSectionForm extends Component {
     );
   };
 
+  ifPLSectionChange = event => {
+    const answer = event.target.value;
+
+    if (answer === 'Yes') {
+      this.setState({isPLSection: true});
+    } else {
+      this.props.editSectionProperties({audience: 'student'});
+    }
+  };
+
   render() {
     const {
       section,
@@ -143,6 +155,7 @@ class EditSectionForm extends Component {
       assignedUnitName,
       localeCode,
       isNewSection,
+      canAssignPLOfferings,
       showLockSectionField // DCDO Flag - show/hide Lock Section field
     } = this.props;
 
@@ -183,6 +196,7 @@ class EditSectionForm extends Component {
     if (!section) {
       return null;
     }
+
     return (
       <div style={style.root}>
         <Heading1>{title}</Heading1>
@@ -192,60 +206,84 @@ class EditSectionForm extends Component {
             onChange={name => editSectionProperties({name})}
             disabled={isSaveInProgress}
           />
-          <GradeField
-            value={section.grade || ''}
-            onChange={grade => editSectionProperties({grade})}
-            disabled={isSaveInProgress}
-          />
-          {showLoginTypeField && (
-            <LoginTypeField
-              value={section.loginType}
-              onChange={loginType => editSectionProperties({loginType})}
-              validLoginTypes={validLoginTypes}
-              disabled={isSaveInProgress}
-            />
+          {canAssignPLOfferings && (
+            <div>
+              <ProfessionalLearningField
+                value={this.state.isPLSection}
+                onChange={event => this.ifPLSectionChange(event)}
+                disabled={isSaveInProgress}
+              />
+              {this.state.isPLSection && (
+                <ProfessionalLearningParticipantField
+                  value={section.audience || ''}
+                  onChange={audience => editSectionProperties({audience})}
+                  disabled={isSaveInProgress}
+                />
+              )}
+            </div>
           )}
-          <AssignmentField
-            section={section}
-            onChange={ids => editSectionProperties(ids)}
-            courseOfferings={courseOfferings}
-            disabled={isSaveInProgress}
-            localeCode={localeCode}
-            isNewSection={isNewSection}
-          />
-          {assignedUnitLessonExtrasAvailable && (
-            <LessonExtrasField
-              value={section.lessonExtras}
-              onChange={lessonExtras => editSectionProperties({lessonExtras})}
-              disabled={isSaveInProgress}
-            />
-          )}
-          <PairProgrammingField
-            value={section.pairingAllowed}
-            onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
-            disabled={isSaveInProgress}
-          />
-          {assignedUnitTextToSpeechEnabled && (
-            <TtsAutoplayField
-              isEnglish={localeCode.startsWith('en')}
-              value={section.ttsAutoplayEnabled}
-              onChange={ttsAutoplayEnabled => {
-                editSectionProperties({ttsAutoplayEnabled});
-                this.recordAutoplayToggleEvent(ttsAutoplayEnabled);
-              }}
-              disabled={isSaveInProgress}
-            />
-          )}
-          {showLockSectionField && (
-            <RestrictAccessField
-              value={section.restrictSection}
-              onChange={restrictSection => {
-                editSectionProperties({restrictSection});
-                this.recordRestrictSectionEvent(restrictSection);
-              }}
-              disabled={isSaveInProgress}
-              loginType={this.props.section.loginType}
-            />
+          {section.audience && (
+            <div>
+              <GradeField
+                value={section.grade || ''}
+                onChange={grade => editSectionProperties({grade})}
+                disabled={isSaveInProgress}
+              />
+              {showLoginTypeField && (
+                <LoginTypeField
+                  value={section.loginType}
+                  onChange={loginType => editSectionProperties({loginType})}
+                  validLoginTypes={validLoginTypes}
+                  disabled={isSaveInProgress}
+                />
+              )}
+              <AssignmentField
+                section={section}
+                onChange={ids => editSectionProperties(ids)}
+                courseOfferings={courseOfferings}
+                disabled={isSaveInProgress}
+                localeCode={localeCode}
+                isNewSection={isNewSection}
+              />
+              {assignedUnitLessonExtrasAvailable && (
+                <LessonExtrasField
+                  value={section.lessonExtras}
+                  onChange={lessonExtras =>
+                    editSectionProperties({lessonExtras})
+                  }
+                  disabled={isSaveInProgress}
+                />
+              )}
+              <PairProgrammingField
+                value={section.pairingAllowed}
+                onChange={pairingAllowed =>
+                  editSectionProperties({pairingAllowed})
+                }
+                disabled={isSaveInProgress}
+              />
+              {assignedUnitTextToSpeechEnabled && (
+                <TtsAutoplayField
+                  isEnglish={localeCode.startsWith('en')}
+                  value={section.ttsAutoplayEnabled}
+                  onChange={ttsAutoplayEnabled => {
+                    editSectionProperties({ttsAutoplayEnabled});
+                    this.recordAutoplayToggleEvent(ttsAutoplayEnabled);
+                  }}
+                  disabled={isSaveInProgress}
+                />
+              )}
+              {showLockSectionField && (
+                <RestrictAccessField
+                  value={section.restrictSection}
+                  onChange={restrictSection => {
+                    editSectionProperties({restrictSection});
+                    this.recordRestrictSectionEvent(restrictSection);
+                  }}
+                  disabled={isSaveInProgress}
+                  loginType={this.props.section.loginType}
+                />
+              )}
+            </div>
           )}
         </div>
         <DialogFooter>
@@ -301,6 +339,48 @@ const SectionNameField = ({value, onChange, disabled}) => (
   </div>
 );
 SectionNameField.propTypes = FieldProps;
+
+const ProfessionalLearningField = ({value, onChange, disabled}) => {
+  const dropdownOptions = ['', 'Yes', 'No'];
+  return (
+    <div>
+      <FieldName>{i18n.professionalLearningSectionQuestion()}</FieldName>
+      <Dropdown
+        value={value}
+        onChange={event => onChange(event.target.value)}
+        disabled={disabled}
+      >
+        {dropdownOptions.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
+      </Dropdown>
+    </div>
+  );
+};
+ProfessionalLearningField.propTypes = FieldProps;
+
+const ProfessionalLearningParticipantField = ({value, onChange, disabled}) => {
+  const dropdownOptions = ['', 'Teacher', 'Facilitator'];
+  return (
+    <div>
+      <FieldName>{i18n.professionalLearningParticipantQuestion()}</FieldName>
+      <Dropdown
+        value={value}
+        onChange={event => onChange(event.target.value)}
+        disabled={disabled}
+      >
+        {dropdownOptions.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
+      </Dropdown>
+    </div>
+  );
+};
+ProfessionalLearningParticipantField.propTypes = FieldProps;
 
 const GradeField = ({value, onChange, disabled}) => {
   const gradeOptions = [''].concat(StudentGradeLevels).map(grade => ({
@@ -544,6 +624,7 @@ let defaultPropsFromState = state => ({
   assignedUnitName: assignedUnitName(state),
   assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
+  canAssignPLOfferings: state.teacherSections.canAssignPLOfferings,
 
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: state.teacherSections.showLockSectionField
