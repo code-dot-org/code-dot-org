@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "minecraft",
-    "serialized_at": "2022-03-17 22:38:16 UTC",
+    "serialized_at": "2022-03-18 18:42:03 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -36,7 +36,7 @@
   "lessons": [
     {
       "key": "Minecraft Hour of Code Designer",
-      "name": "Minecraft: Designer",
+      "name": "Minecraft Hour of Code Designer",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,

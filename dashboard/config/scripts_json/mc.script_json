@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "mc",
-    "serialized_at": "2022-03-17 22:36:33 UTC",
+    "serialized_at": "2022-03-18 18:41:15 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -36,7 +36,7 @@
   "lessons": [
     {
       "key": "Hour of Code 2015",
-      "name": "Minecraft: Adventurer",
+      "name": "Minecraft Hour of Code",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
