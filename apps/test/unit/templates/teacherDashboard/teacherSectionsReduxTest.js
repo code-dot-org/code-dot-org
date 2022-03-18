@@ -632,7 +632,7 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseOfferingId: undefined,
           courseVersionId: undefined,
-          unitId: null,
+          unitId: undefined,
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
@@ -952,20 +952,6 @@ describe('teacherSectionsRedux', () => {
         section.post_milestone_disabled,
         serverSection.postMilestoneDisabled
       );
-    });
-
-    it('maps from a script object to a script_id', () => {
-      const sectionWithoutScript = sectionFromServerSection(serverSection);
-      assert.strictEqual(sectionWithoutScript.unitId, null);
-
-      const sectionWithScript = sectionFromServerSection({
-        ...serverSection,
-        script: {
-          id: 1,
-          name: 'Accelerated Course'
-        }
-      });
-      assert.strictEqual(sectionWithScript.unitId, 1);
     });
 
     it('sets student count', () => {
