@@ -57,22 +57,6 @@ module JavalabFilesHelper
     all_files
   end
 
-  def self.generate_asset_url(filename, channel_id)
-    prefix = get_dashboard_url_prefix
-    prefix + "/v3/assets/" + channel_id + "/" + filename
-  end
-
-  def self.generate_starter_asset_url(filename, level)
-    prefix = get_dashboard_url_prefix
-    prefix + "/level_starter_assets/" + URI.encode(level.name) + "/" + filename
-  end
-
-  def self.get_dashboard_url_prefix
-    rack_env?(:development) ?
-      "http://" + CDO.dashboard_hostname + ":3000" :
-      "https://" + CDO.dashboard_hostname
-  end
-
   # Get all files that can be derived from the level where a project was built (ie, files that are not user-specific).
   # The hash is in the format below. All values are strings.
   # Note that this hash does **not** include a "main.json" entry in under "sources", which is required for Javabuilder.
@@ -108,5 +92,21 @@ module JavalabFilesHelper
     end
 
     all_level_files
+  end
+
+  def self.generate_asset_url(filename, channel_id)
+    prefix = get_dashboard_url_prefix
+    prefix + "/v3/assets/" + channel_id + "/" + filename
+  end
+
+  def self.generate_starter_asset_url(filename, level)
+    prefix = get_dashboard_url_prefix
+    prefix + "/level_starter_assets/" + URI.encode(level.name) + "/" + filename
+  end
+
+  def self.get_dashboard_url_prefix
+    rack_env?(:development) ?
+      "http://" + CDO.dashboard_hostname + ":3000" :
+      "https://" + CDO.dashboard_hostname
   end
 end
