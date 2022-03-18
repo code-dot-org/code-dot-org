@@ -10,14 +10,8 @@
 
 = render partial: 'workshop_logistics'
 
-- unless @workshop.virtual? || !@is_reminder
-  = render partial: 'supply_list'
-
 - if @workshop.virtual?
   = render partial: 'virtual_tips'
-
-- unless @workshop.virtual? || !@is_reminder
-  = render partial: 'covid_19'
 
 - if @is_reminder && @workshop.course == Pd::Workshop::COURSE_CSD && @workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
   %h3
