@@ -111,6 +111,8 @@ function initPage() {
       <UnitOverview
         id={scriptData.id}
         courseId={scriptData.course_id}
+        courseOfferingId={scriptData.courseOfferingId}
+        courseVersionId={scriptData.courseVersionId}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
         excludeCsfColumnInLegend={!scriptData.csf}
