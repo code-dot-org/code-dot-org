@@ -62,7 +62,8 @@ class JavabuilderSessionsController < ApplicationController
     mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
 
-    issued_at_time = Time.now.to_i
+    # Set the IAT a little in the past to account for time drift between environments
+    issued_at_time = (Time.now - 5.seconds).to_i
     # expire token in 15 minutes
     expiration_time = (Time.now + 15.minutes).to_i
 
