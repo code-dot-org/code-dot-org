@@ -94,8 +94,26 @@ namespace :test do
     RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
   end
 
+  # This task is a temporary workaround while project data is partially in the
+  # pegasus database and partially in the dashboard database. The VCR tests in
+  # /shared truncate data in pegasus_unittest and dashboard_test. This task will
+  # also truncate data in pegasus_test to match the changes to dashboard_test.
+  task :truncate_storage_apps do
+    # Do this only in test where the database configuration and sequence of
+    # tests requires this workaround.
+    next unless rack_env?(:test)
+
+    db = URI.parse(CDO.pegasus_db_writer)
+    opts = MysqlConsoleHelper.options(db)
+
+    db_name = db.path[1..-1]
+    truncate_statement = "TRUNCATE TABLE #{db_name}.storage_apps;"
+    RakeUtils.system_stream_output "echo '#{truncate_statement}' | mysql #{opts}"
+  end
+
   task ui_live: [
     :wait_for_test_server,
+    :truncate_storage_apps,
     :ui_all
   ]
 
