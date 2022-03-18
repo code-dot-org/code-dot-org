@@ -24,8 +24,6 @@ class CourseScript extends Component {
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
     courseId: PropTypes.number,
-    courseOfferingId: PropTypes.number,
-    courseVersionId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
@@ -68,8 +66,6 @@ class CourseScript extends Component {
       hasNoSections,
       assignedSectionId,
       courseId,
-      courseOfferingId,
-      courseVersionId,
       sectionsForDropdown,
       showAssignButton
     } = this.props;
@@ -135,8 +131,6 @@ class CourseScript extends Component {
                   sectionId={selectedSection.id}
                   scriptId={id}
                   courseId={courseId}
-                  courseOfferingId={courseOfferingId}
-                  courseVersionId={courseVersionId}
                   assignmentName={title}
                   sectionName={selectedSection.name}
                 />
