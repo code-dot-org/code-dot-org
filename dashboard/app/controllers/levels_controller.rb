@@ -223,6 +223,17 @@ class LevelsController < ApplicationController
     render :show
   end
 
+  # GET /levels/:id/edit_exemplar
+  def edit_exemplar
+    @game = @level.game
+
+    # replace with actual exemplar code
+    level_view_options(@level.id, edit_exemplar: true)
+
+    show
+    render :show
+  end
+
   # POST /levels/:id/update_blocks/:type
   # Change a blockset in the level configuration
   def update_blocks

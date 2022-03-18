@@ -60,11 +60,13 @@ module ViewOptionsHelper
     @view_options = nil
   end
 
+  # maybe should be :edit_exemplar
   LevelViewOptions = Struct.new(
     :success_condition,
     :start_blocks,
     :toolbox_blocks,
     :edit_blocks,
+    :edit_exemplar,
     :skip_instructions_popup,
     :embed,
     :share,
