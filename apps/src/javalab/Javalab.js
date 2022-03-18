@@ -242,6 +242,10 @@ Javalab.prototype.init = function(config) {
     }
   }
 
+  if (config.level.exemplarSources) {
+    getStore().dispatch(setAllSources(config.level.exemplarSources));
+  }
+
   // If we aren't editing start sources but we have validation code, we need to
   // store it in redux to check for naming conflicts
   if (

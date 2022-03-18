@@ -469,6 +469,15 @@ module LevelsHelper
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
 
+    # Support template level exemplars? Each level will have their own exemplar,
+    # but maybe put put exemplar code from template if it exists?
+    # Gate access only to levelbuilders -- looks like edit_blocks route is only available to levelbuilders, but we might run this at each page load
+    if params[:type] == 'exemplar_mode'
+      # level_options['exemplarSources'] = @level.try(:exemplar_sources) || @level.try(:start_sources)
+      level_options['exemplarSources'] = @level.try(:exemplar_sources)
+      # what shape should this be if we have neither start sources nor exemplar?
+    end
+
     set_tts_options(level_options, app_options)
 
     # Process level view options
