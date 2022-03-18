@@ -18,7 +18,6 @@ const cacheName = `${cacheVersionName}-${lessonName}`;
  */
 self.addEventListener('install', e => {
   console.log('[Service Worker] installing offline service worker!');
-  // TODO - Add retry logic if cache.addAll fails for one of the assets.
   // TODO - Add ability to clear the cache and/or reinstall.
   e.waitUntil(
     deleteOldCaches()
