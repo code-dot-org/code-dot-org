@@ -39,8 +39,6 @@ class CourseOverview extends Component {
     title: PropTypes.string.isRequired,
     assignmentFamilyTitle: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
-    courseOfferingId: PropTypes.number,
-    courseVersionId: PropTypes.number,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
     sectionsInfo: PropTypes.arrayOf(
@@ -118,8 +116,6 @@ class CourseOverview extends Component {
       title,
       assignmentFamilyTitle,
       id,
-      courseOfferingId,
-      courseVersionId,
       descriptionStudent,
       descriptionTeacher,
       sectionsInfo,
@@ -212,8 +208,6 @@ class CourseOverview extends Component {
           <CourseOverviewTopRow
             sectionsInfo={sectionsInfo}
             sectionsForDropdown={sectionsForDropdown}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
             id={id}
             title={title}
             teacherResources={teacherResources}
