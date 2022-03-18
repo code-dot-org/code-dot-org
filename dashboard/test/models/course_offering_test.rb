@@ -21,7 +21,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     @beta_unit = create(:script, name: 'beta-unit', family_name: 'beta', version_year: '1991', is_course: true, published_state: 'beta')
     CourseOffering.add_course_offering(@beta_unit)
 
-    @in_development_unit = create(:script, name: 'in-development-unit', family_name: 'development', version_year: '1991', is_course: true, published_state: 'in_development')
+    @in_development_unit = create(:script, name: 'in-development-unit2', family_name: 'development', version_year: '1991', is_course: true, published_state: 'in_development')
     CourseOffering.add_course_offering(@in_development_unit)
   end
 
