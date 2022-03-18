@@ -16,10 +16,6 @@
 - if @workshop.virtual?
   = render partial: 'virtual_tips'
 
-= render partial: 'workshop_notes'
-
-= render partial: 'workshop_details'
-
 - unless @workshop.virtual? || !@is_reminder
   = render partial: 'covid_19'
 
