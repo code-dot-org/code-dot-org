@@ -6,7 +6,7 @@ Consider the following code segment.
 
 ```
 String originalTitle = "Once Upon a Time";
-String newTitle = original.substring(0, 2) + original.substring(3, 5) + original.substring(12);
+String newTitle = originalTitle.substring(0, 2) + originalTitle.substring(3, 5) + originalTitle.substring(12);
 System.out.println(newTitle);
 ```
 

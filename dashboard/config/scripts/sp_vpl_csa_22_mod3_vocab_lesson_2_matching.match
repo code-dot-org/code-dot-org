@@ -1,7 +1,7 @@
 name 'SP-VPL-CSA-22-mod3-Vocab-lesson-2-matching'
 title 'Check for understanding'
 description 'Match the vocabulary word with the definition'
-height'85'
+height'100'
 question 'A container that stores a value in memory'
 answer 'Variable'
 

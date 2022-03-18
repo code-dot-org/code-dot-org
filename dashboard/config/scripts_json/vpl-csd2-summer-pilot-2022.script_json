@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-15 04:44:54 UTC",
+    "serialized_at": "2022-03-17 19:26:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -166,13 +166,29 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Day 2 - CSD 2022 PILOT PL Summer Agenda ",
+      "url": "https://docs.google.com/document/d/1BdISpJ2xTaw30cPXExV5CAKG9zXKfiwLS_nmRm6dHsg/edit?usp=sharing",
+      "key": "day_2_-_csd_2022_pilot_pl_summer_agenda",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "day_2_-_csd_2022_pilot_pl_summer_agenda"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "day_2_-_csd_2022_pilot_pl_summer_agenda",
+        "script.name": "vpl-csd2-summer-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 
