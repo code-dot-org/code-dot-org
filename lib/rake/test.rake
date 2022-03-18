@@ -200,6 +200,7 @@ namespace :test do
   task :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'  # use dashboard_test1 DB
     TestRunUtils.run_shared_tests
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
@@ -207,6 +208,7 @@ namespace :test do
   task :pegasus_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'  # use dashboard_test1 DB
     TestRunUtils.run_pegasus_tests
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
@@ -214,6 +216,7 @@ namespace :test do
   task :lib_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'  # use dashboard_test1 DB
     TestRunUtils.run_lib_tests
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
@@ -221,6 +224,7 @@ namespace :test do
   task :bin_i18n_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'  # use dashboard_test1 DB
     TestRunUtils.run_bin_i18n_tests
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
