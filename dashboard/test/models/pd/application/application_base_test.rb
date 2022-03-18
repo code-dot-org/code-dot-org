@@ -213,9 +213,7 @@ module Pd::Application
       assert_equal '2018-03-09', application.date_accepted
     end
 
-    # [MEG] TODO: Remove the skip once migration is complete
     test 'applied_at is populated with the first unreviewed status' do
-      skip 'applied_at field does not exist' unless ActiveRecord::Base.connection.column_exists?(:pd_applications, :applied_at)
       application = create :pd_teacher_application, status: 'incomplete'
       assert_nil application.applied_at
 
