@@ -2144,7 +2144,7 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: 'Minecraft: Adventurer'
+              name: Minecraft Hour of Code
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
@@ -2157,7 +2157,7 @@ en:
           lesson_groups: {}
           lessons:
             Oceans:
-              name: Oceans
+              name: AI for Oceans
               description_student: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. First, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
           student_description: Learn how AI and machine learning can be used to address world problems.
@@ -4503,7 +4503,7 @@ en:
           lesson_groups: {}
           lessons:
             Minecraft Hour of Code Designer:
-              name: 'Minecraft: Designer'
+              name: Minecraft Hour of Code Designer
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Program animals and other Minecraft creatures in your own version of Minecraft.
@@ -15314,7 +15314,7 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party:
-              name: Dance Party
+              name: Dance Party (2019)
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
@@ -15438,7 +15438,7 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party - Go Further:
-              name: Keep on Dancing
+              name: Keep on Dancing (2019)
               description_student: 'Learners of all ages continue an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
@@ -31576,7 +31576,7 @@ en:
 
                 Students have learned to obtain information about an object using its accessor methods. In this lesson, students discover the need for an easier way to get the state of an object. Students revisit the `Object` class and learn how to override its `toString()` method to display object information to the console. Students also learn to format output using escape sequences and concatenating instance variables and `String`s.
             lesson-15:
-              name: Scope
+              name: Scope and this
               description_student: |-
                 **How does the scope of a variable impact its accessibility and use?**
 
@@ -32029,6 +32029,8 @@ en:
               description_teacher: 
             lesson-3:
               name: If statements in Java
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
           title: Support for text-based programming

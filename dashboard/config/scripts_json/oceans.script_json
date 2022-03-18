@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2022-03-17 22:31:34 UTC",
+    "serialized_at": "2022-03-18 18:40:07 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -36,7 +36,7 @@
   "lessons": [
     {
       "key": "Oceans",
-      "name": "Oceans",
+      "name": "AI for Oceans",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
