@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-15 17:13:59 UTC",
+    "serialized_at": "2022-03-16 19:01:23 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -57,6 +57,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "If statements in Java",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022"
       }
@@ -248,6 +263,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-java-lab-intro-video"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -346,6 +364,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video"
+        ],
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "a7c2664d-a765-4a02-87f8-1456fae10dbf"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSAPL3-1-SyntaxDebugging1"
         ],
         "progression": "Debugging"
@@ -365,9 +408,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 2,
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -390,9 +433,9 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 3,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -412,28 +455,6 @@
       },
       "level_keys": [
         "CSAPL3-1-SyntaxDebugging3"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Debugging"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "a7c2664d-a765-4a02-87f8-1456fae10dbf"
-      },
-      "level_keys": [
-        "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video"
       ]
     },
     {
@@ -818,31 +839,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-CSA-22-mod3-compound-assignment-practice-1"
-        ],
-        "progression": "Compound assignment operators"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-compound-assignment-practice-1"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
-      },
-      "level_keys": [
-        "SP-VPL-CSA-22-mod3-compound-assignment-practice-1"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 14,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "SP-VPL-CSA-22-mod3-increment-op-map"
         ],
         "progression": "Compound assignment operators"
@@ -862,9 +858,9 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 15,
-      "activity_section_position": 5,
+      "chapter": 26,
+      "position": 14,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -887,9 +883,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 16,
-      "activity_section_position": 6,
+      "chapter": 27,
+      "position": 15,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -912,8 +908,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 17,
+      "chapter": 28,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1000,6 +996,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "a7c2664d-a765-4a02-87f8-1456fae10dbf"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSAPL3-1-SyntaxDebugging1",
         "script_level.level_keys": [
           "CSAPL3-1-SyntaxDebugging1"
@@ -1027,18 +1035,6 @@
         "level.key": "CSAPL3-1-SyntaxDebugging3",
         "script_level.level_keys": [
           "CSAPL3-1-SyntaxDebugging3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "a7c2664d-a765-4a02-87f8-1456fae10dbf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video",
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-how-to-debug-using-the-console-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1219,18 +1215,6 @@
         "level.key": "SP-VPL-CSA-22-mod3-compound-assignment-mc",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-mod3-compound-assignment-mc"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "d5ff868a-c2e0-486a-a73c-c84d5d42e881"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-compound-assignment-practice-1",
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-compound-assignment-practice-1"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-14 16:40:05 UTC",
+    "serialized_at": "2022-03-17 15:53:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2097,7 +2097,7 @@
       "key": "2a767291-56b3-4711-b377-b4d3b978e31a",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to write instructions that a GPS could use to direct a pizza driver to move from 1st Street and 1st Avenue to the customer located at 5th Street and 5th Avenue.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to write instructions that a GPS could use to direct a delivery driver to move from 1st Street and 1st Avenue to the customer located at 5th Street and 5th Avenue.",
         "tips": [
           {
             "type": "teachingTip",
@@ -7070,6 +7070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7091,6 +7094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -7113,6 +7119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
