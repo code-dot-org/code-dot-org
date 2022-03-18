@@ -242,6 +242,40 @@ Artist.prototype.preloadAllStickerImages = function() {
 };
 
 /**
+ * Initializes all geometry sticker images as defined in this.skin.stickers,
+ * if any, storing the created images in this.geometryStickers.
+ *
+ * NOTE: initializes this.geometryStickers as a side effect
+ *
+ * @return {Promise} that resolves once all images have finished loading,
+ *         whether they did so successfully or not (or that resolves instantly
+ *         if there are no images to load).
+ */
+Artist.prototype.preloadAllGeometryStickerImages = function() {
+  this.geometryStickers = {};
+
+  const loadGeometrySticker = name =>
+    new Promise(resolve => {
+      const img = new Image();
+
+      img.onload = () => resolve();
+      img.onerror = () => resolve();
+
+      img.src = this.skin.geometryStickers[name];
+      this.geometryStickers[name] = img;
+    });
+
+  const geometryStickers = (this.skin && this.skin.geometryStickers) || {};
+  const geometryStickerNames = Object.keys(geometryStickers);
+
+  if (geometryStickerNames.length) {
+    return Promise.all(geometryStickerNames.map(loadGeometrySticker));
+  } else {
+    return Promise.resolve();
+  }
+};
+
+/**
  * Initializes all pattern images as defined in
  * this.skin.lineStylePatternOptions, if any, storing the created images in
  * this.loadedPathPatterns.
@@ -369,6 +403,7 @@ Artist.prototype.init = function(config) {
 
   return Promise.all([
     this.preloadAllStickerImages(),
+    this.preloadAllGeometryStickerImages(),
     this.preloadAllPatternImages()
   ]).then(() => {
     ReactDOM.render(
@@ -1100,6 +1135,10 @@ Artist.prototype.step = function(command, values, options) {
   var result;
   var distance;
   var heading;
+  var img;
+  var dimensions;
+  var width;
+  var height;
 
   switch (command) {
     case 'FD': // Forward
@@ -1192,6 +1231,50 @@ Artist.prototype.step = function(command, values, options) {
     case 'ST': // Show Turtle
       this.visualization.avatar.visible = true;
       break;
+    case 'geometry_sticker': {
+      let size = MAX_STICKER_SIZE;
+
+      if (typeof values[1] === 'number') {
+        size = values[1];
+      }
+
+      if (this.visualization.shouldDrawNormalized_) {
+        values = Object.keys(this.geometryStickers);
+      }
+
+      img = this.geometryStickers[values[0]];
+
+      dimensions = scaleToBoundingBox(size, img.width, img.height);
+      width = dimensions.width;
+      height = dimensions.height;
+
+      // Rotate the image such the the turtle is at the center of the bottom of
+      // the image and the image is pointing (from bottom to top) in the same
+      // direction as the turtle.
+      this.visualization.ctxScratch.save();
+      this.visualization.ctxScratch.translate(
+        this.visualization.x,
+        this.visualization.y
+      );
+      this.visualization.ctxScratch.rotate(
+        this.visualization.degreesToRadians_(this.visualization.heading)
+      );
+      this.visualization.ctxScratch.drawImage(
+        img,
+        0,
+        0,
+        img.width,
+        img.height,
+        -width / 2,
+        -height,
+        width,
+        height
+      );
+
+      this.visualization.ctxScratch.restore();
+
+      break;
+    }
     case 'sticker': {
       let size = MAX_STICKER_SIZE;
 
@@ -1203,11 +1286,11 @@ Artist.prototype.step = function(command, values, options) {
         values = Object.keys(this.stickers);
       }
 
-      var img = this.stickers[values[0]];
+      img = this.stickers[values[0]];
 
-      var dimensions = scaleToBoundingBox(size, img.width, img.height);
-      var width = dimensions.width;
-      var height = dimensions.height;
+      dimensions = scaleToBoundingBox(size, img.width, img.height);
+      width = dimensions.width;
+      height = dimensions.height;
 
       // Rotate the image such the the turtle is at the center of the bottom of
       // the image and the image is pointing (from bottom to top) in the same

@@ -1550,6 +1550,94 @@ exports.install = function(blockly, blockInstallOptions) {
         'block_id_${this.id}');\n`;
   };
 
+  function createDrawGeometryStickerBlock(blockName) {
+    return {
+      helpUrl: '',
+      init: function() {
+        this.setHSV(184, 1.0, 0.74);
+        var dropdown;
+        var input = this.appendDummyInput();
+        input.appendTitle(msg.drawGeometrySticker());
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+
+        // Generates a list of pairs of the form [[url, name]]
+        var values = [];
+        for (var name in skin.geometryStickers) {
+          var url = skin.geometryStickers[name];
+          values.push([url, name]);
+        }
+        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+
+        input.appendTitle(dropdown, 'VALUE');
+
+        appendToDrawGeometryStickerBlock(blockName, this);
+      }
+    };
+  }
+
+  // Add size input to the draw geometry_sticker block (text input & socket)
+  function appendToDrawGeometryStickerBlock(blockName, block) {
+    if (blockName === 'turtle_geometry_sticker_with_size') {
+      block.appendDummyInput().appendTitle(msg.withSize());
+      block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
+      block.appendDummyInput().appendTitle(msg.pixels());
+      block.setTooltip(msg.drawGeometryStickerWithSize());
+    } else if (blockName === 'turtle_geometry_sticker_with_size_non_param') {
+      block.appendDummyInput().appendTitle(msg.withSize());
+      block
+        .appendDummyInput()
+        .appendTitle(
+          new blockly.FieldTextInput(
+            '0',
+            blockly.FieldTextInput.numberValidator
+          ),
+          'SIZE'
+        )
+        .appendTitle(msg.pixels());
+      block.setTooltip(msg.drawGeometryStickerWithSize());
+    } else {
+      block.setTooltip(msg.drawGeometrySticker());
+    }
+  }
+
+  blockly.Blocks.geometry_sticker = createDrawGeometryStickerBlock();
+
+  generator.geometry_sticker = function() {
+    return (
+      'Turtle.drawGeometrySticker("' +
+      this.getTitleValue('VALUE') +
+      '", null, \'block_id_' +
+      this.id +
+      "');\n"
+    );
+  };
+
+  blockly.Blocks.turtle_geometry_sticker_with_size = createDrawGeometryStickerBlock(
+    'turtle_geometry_sticker_with_size'
+  );
+
+  generator.turtle_geometry_sticker_with_size = function() {
+    let size = generator.valueToCode(
+      this,
+      'SIZE',
+      Blockly.JavaScript.ORDER_NONE
+    );
+    return `Turtle.drawGeometrySticker('${this.getTitleValue('VALUE')}',${size},
+        'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.turtle_geometry_sticker_with_size_non_param = createDrawGeometryStickerBlock(
+    'turtle_geometry_sticker_with_size_non_param'
+  );
+
+  generator.turtle_geometry_sticker_with_size_non_param = function() {
+    let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
+    return `Turtle.drawGeometrySticker('${this.getTitleValue('VALUE')}',${size},
+        'block_id_${this.id}');\n`;
+  };
+
   blockly.Blocks.turtle_setArtist = {
     helpUrl: '',
     init: function() {

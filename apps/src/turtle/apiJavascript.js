@@ -124,6 +124,10 @@ exports.showTurtle = function(id) {
   ArtistApi.log.push(['ST', null]);
 };
 
+exports.drawGeometrySticker = function(sticker) {
+  ArtistApi.log.push(['geometry_sticker', sticker, null]);
+};
+
 exports.drawSticker = function(sticker) {
   ArtistApi.log.push(['sticker', sticker, null]);
 };

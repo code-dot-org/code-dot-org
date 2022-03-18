@@ -38,6 +38,8 @@
   "drawATriangle": "draw a triangle",
   "drawUpperWave": "draw upper wave",
   "drawLowerWave": "draw lower wave",
+  "drawGeometrySticker": "draw pattern block",
+  "drawGeometryStickerWithSize": "draw pattern block with size",
   "drawSticker": "draw sticker",
   "drawStickerWithSize": "draw sticker with size",
   "forward": "forward",
