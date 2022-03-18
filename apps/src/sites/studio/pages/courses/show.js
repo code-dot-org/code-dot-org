@@ -94,8 +94,6 @@ function showCourseOverview() {
         title={courseSummary.title}
         assignmentFamilyTitle={courseSummary.assignment_family_title}
         id={courseSummary.id}
-        courseOfferingId={courseSummary.course_offering_id}
-        courseVersionId={courseSummary.course_version_id}
         descriptionStudent={courseSummary.description_student}
         descriptionTeacher={courseSummary.description_teacher}
         sectionsInfo={scriptData.sections}

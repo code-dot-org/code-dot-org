@@ -30,8 +30,6 @@ import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 class UnitOverview extends React.Component {
   static propTypes = {
     id: PropTypes.number,
-    courseOfferingId: PropTypes.number,
-    courseVersionId: PropTypes.number,
     courseId: PropTypes.number,
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
@@ -110,9 +108,7 @@ class UnitOverview extends React.Component {
       scriptResourcesPdfUrl,
       showUnversionedRedirectWarning,
       isCsdOrCsp,
-      completedLessonNumber,
-      courseOfferingId,
-      courseVersionId
+      completedLessonNumber
     } = this.props;
 
     const displayRedirectDialog =
@@ -181,8 +177,6 @@ class UnitOverview extends React.Component {
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
           />
         </div>
         <ProgressTable minimal={false} />
