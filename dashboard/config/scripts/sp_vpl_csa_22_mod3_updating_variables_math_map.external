@@ -30,6 +30,8 @@ We can also use **mathematical operators** to update `ints` and `doubles` stored
 
 
 <br><br>
+
+## Example
 Let's look at an example:
 
 ```
@@ -40,7 +42,7 @@ Let's look at an example:
 5. numberOfPets = numberOfPets + 2;
 ```
 
-In the example above, `numberOfPets` holds the value `3` when it is initialized.  On line, 5 we get the value of `numberOfPets` and add `2` to the value stored in `numberOfPets`.  We then store the new value of `5` now in `numberOfPets`.
+**Explanation:** In the example above, `numberOfPets` holds the value `3` when it is initialized.  On line, 5 we get the value of `numberOfPets` and add `2` to the value stored in `numberOfPets`.  We then store the new value of `5` now in `numberOfPets`.
 
 ## Additional resources
 Looking for more practice and resource understanding variables in Java? Consider using the following resources:
