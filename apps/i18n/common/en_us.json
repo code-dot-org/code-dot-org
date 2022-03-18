@@ -762,6 +762,7 @@
   "editSectionLoginTypePicDesc": "Students sign in with a secret picture that was selected for them by Code.org.",
   "editSectionLoginTypeWordDesc": "Students sign in with two secret words that were selected for them by Code.org.",
   "editable": "Editable",
+  "editorManage": "Manage editor",
   "eligibilityExplanation": "In order to be eligible to receive a code for a subsidized Circuit Playground kit, you must meet the following requirements:",
   "eligibilityReqPD": "You attended a 5-day summer workshop for CS Discoveries in 2019 or are participating in the 2019-20 Facilitator Development Program as a new CS Discoveries facilitator.",
   "eligibilityReqStudentCount": "Ten students in one of your sections have completed the first three units of CS Discoveries.",

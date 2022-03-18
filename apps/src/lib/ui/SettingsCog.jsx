@@ -12,6 +12,7 @@ import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
+import EditorManagerDialog from '@cdo/apps/code-studio/components/EditorManagerDialog';
 import {getStore} from '../../redux';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 
@@ -27,7 +28,8 @@ class SettingsCog extends Component {
     open: false,
     confirmingEnableMaker: false,
     managingLibraries: false,
-    managingModels: false
+    managingModels: false,
+    managingEditor: false
   };
 
   targetPoint = {top: 0, left: 0};
@@ -48,6 +50,11 @@ class SettingsCog extends Component {
   manageModels = () => {
     this.close();
     this.setState({managingModels: true});
+  };
+
+  manageEditor = () => {
+    this.close();
+    this.setState({managingEditor: true});
   };
 
   toggleMakerToolkit = () => {
@@ -71,6 +78,7 @@ class SettingsCog extends Component {
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
   closeLibraryManager = () => this.setState({managingLibraries: false});
   closeModelManager = () => this.setState({managingModels: false});
+  closeEditorManager = () => this.setState({managingEditor: false})
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -88,6 +96,11 @@ class SettingsCog extends Component {
   areLibrariesEnabled() {
     let pageConstants = getStore().getState().pageConstants;
     return pageConstants && pageConstants.librariesEnabled;
+  }
+
+  isEditorEnabled() {
+    let pageConstants = getStore().getState().pageConstants;
+    return pageConstants && pageConstants.editorEnabled;
   }
 
   areAIToolsEnabled() {
@@ -140,6 +153,9 @@ class SettingsCog extends Component {
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
+          {this.isEditorEnabled() && (
+            <ManageEditor onClick={this.manageEditor} />
+          )}
         </PopUpMenu>
         {this.areAIToolsEnabled() && (
           <ModelManagerDialog
@@ -157,6 +173,10 @@ class SettingsCog extends Component {
         <LibraryManagerDialog
           isOpen={this.state.managingLibraries}
           onClose={this.closeLibraryManager}
+        />
+        <EditorManagerDialog 
+          isOpen={this.state.managingEditor}
+          onclose={this.closeEditorManager}
         />
       </span>
     );
