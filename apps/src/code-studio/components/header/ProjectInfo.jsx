@@ -5,6 +5,7 @@ import ProjectHeader from './ProjectHeader';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
+import LevelBuilderSaveExemplarButton from './LevelBuilderSaveExemplarButton';
 import {possibleHeaders} from '../../headerRedux';
 import headerVignetteStyles from './HeaderVignette';
 import $ from 'jquery';
@@ -13,9 +14,11 @@ const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,
   [possibleHeaders.minimalProject]: MinimalProjectHeader,
   [possibleHeaders.projectBacked]: ProjectBackedHeader,
-  [possibleHeaders.levelBuilderSave]: LevelBuilderSaveButton
+  [possibleHeaders.levelBuilderSave]: LevelBuilderSaveButton,
+  [possibleHeaders.levelBuilderSaveExemplar]: LevelBuilderSaveExemplarButton
 };
 
+// Maybe we can add an headerProps argument prop here
 class ProjectInfo extends React.Component {
   static propTypes = {
     currentHeader: PropTypes.oneOf(Object.values(possibleHeaders)),
