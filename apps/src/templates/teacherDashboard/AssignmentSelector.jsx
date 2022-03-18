@@ -86,19 +86,26 @@ export default class AssignmentSelector extends Component {
       if (this.state.selectedCourseOfferingId !== courseOfferingId) {
         const courseVersions = this.props.courseOfferings[courseOfferingId]
           ?.course_versions;
-        const recommendedCourseVersionId = Object.values(courseVersions)?.find(
-          versions => versions.is_recommended
-        )?.id;
 
-        const units = recommendedCourseVersionId
-          ? Object.values(courseVersions[recommendedCourseVersionId].units)
+        let courseVersionId;
+
+        if (Object.keys(courseVersions).length === 1) {
+          courseVersionId = Object.values(courseVersions)[0].id;
+        } else {
+          courseVersionId = Object.values(courseVersions)?.find(
+            versions => versions.is_recommended
+          )?.id;
+        }
+
+        const units = courseVersionId
+          ? Object.values(courseVersions[courseVersionId].units)
           : null;
         const firstUnitId = units?.length > 1 ? units[0].id : noAssignment;
 
         this.setState(
           {
             selectedCourseOfferingId: courseOfferingId,
-            selectedCourseVersionId: recommendedCourseVersionId,
+            selectedCourseVersionId: courseVersionId,
             selectedUnitId: firstUnitId
           },
           this.reportChange
