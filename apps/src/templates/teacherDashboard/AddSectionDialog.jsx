@@ -14,6 +14,7 @@ import {
   editSectionProperties,
   cancelEditingSection
 } from './teacherSectionsRedux';
+import AudienceTypePicker from './AudienceTypePicker';
 
 /**
  * UI for a teacher to add a new class section.  For editing a section see
@@ -27,6 +28,7 @@ class AddSectionDialog extends Component {
     beginImportRosterFlow: PropTypes.func.isRequired,
     setRosterProvider: PropTypes.func.isRequired,
     setLoginType: PropTypes.func.isRequired,
+    setParticipantType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired
   };
 
@@ -37,9 +39,10 @@ class AddSectionDialog extends Component {
       beginImportRosterFlow,
       setRosterProvider,
       setLoginType,
+      setParticipantType,
       handleCancel
     } = this.props;
-    const {loginType} = section || {};
+    const {loginType, audience} = section || {};
     const title = i18n.newSectionUpdated();
     return (
       <BaseDialog
@@ -59,7 +62,16 @@ class AddSectionDialog extends Component {
               handleCancel={handleCancel}
             />
           )}
-          {loginType && <EditSectionForm title={title} isNewSection={true} />}
+          {loginType && !audience && (
+            <AudienceTypePicker
+              title={title}
+              setParticipantType={setParticipantType}
+              handleCancel={handleCancel}
+            />
+          )}
+          {loginType && audience && (
+            <EditSectionForm title={title} isNewSection={true} />
+          )}
         </PadAndCenter>
       </BaseDialog>
     );
@@ -75,6 +87,7 @@ export default connect(
     beginImportRosterFlow: () => dispatch(beginImportRosterFlow()),
     setRosterProvider: provider => dispatch(setRosterProvider(provider)),
     setLoginType: loginType => dispatch(editSectionProperties({loginType})),
+    setParticipantType: audience => dispatch(editSectionProperties({audience})),
     handleCancel: () => dispatch(cancelEditingSection())
   })
 )(AddSectionDialog);
