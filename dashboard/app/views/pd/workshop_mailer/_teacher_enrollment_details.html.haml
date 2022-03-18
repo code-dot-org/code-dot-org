@@ -29,12 +29,7 @@
     so we encourage you to start this process soon.
 
 - if @workshop.local_summer? && @is_reminder
-  - if @workshop.course == Pd::Workshop::COURSE_CSD
-    = render partial: 'csd_pre_course_reading'
-  - elsif @workshop.course == Pd::Workshop::COURSE_CSP
-    = render partial: 'csp_pre_course_reading'
-  - elsif @workshop.course == Pd::Workshop::COURSE_CSA
-    = render partial: 'csa_pre_course_material'
+  = render partial: 'pre_course_material'
 
 = render partial: 'accessibility'
 
