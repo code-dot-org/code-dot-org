@@ -291,7 +291,7 @@ namespace :seed do
   end
 
   timed_task course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-versioned-script ui-test-csa-family-script).each do |course_offering_name|
+    %w(ui-test-course ui-test-csa-family-script).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
