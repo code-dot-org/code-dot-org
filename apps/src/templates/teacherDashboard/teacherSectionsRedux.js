@@ -568,7 +568,7 @@ function newSectionData(id, loginType) {
     loginType: loginType,
     grade: '',
     providerManaged: false,
-    lessonExtras: false,
+    lessonExtras: true,
     pairingAllowed: true,
     ttsAutoplayEnabled: false,
     sharingDisabled: false,

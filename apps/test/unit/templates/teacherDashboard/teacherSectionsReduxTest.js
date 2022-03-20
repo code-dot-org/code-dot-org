@@ -308,7 +308,7 @@ describe('teacherSectionsRedux', () => {
         loginType: undefined,
         grade: '',
         providerManaged: false,
-        lessonExtras: false,
+        lessonExtras: true,
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
@@ -416,32 +416,6 @@ describe('teacherSectionsRedux', () => {
           })
         )
       ).to.throw();
-    });
-
-    it('switching script assignment updates lesson extras value from script', () => {
-      let state = reducer(
-        editingNewSectionState,
-        setCourseOfferings(courseOfferings)
-      );
-      state = reducer(
-        state,
-        editSectionProperties({
-          courseOfferingId: 1,
-          courseVersionId: 1,
-          unitId: 1
-        })
-      );
-      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
-
-      state = reducer(
-        state,
-        editSectionProperties({
-          courseOfferingId: 2,
-          courseVersionId: 3,
-          unitId: 3
-        })
-      );
-      expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
@@ -624,7 +598,7 @@ describe('teacherSectionsRedux', () => {
           loginType: 'picture',
           grade: '3',
           providerManaged: false,
-          lessonExtras: false,
+          lessonExtras: true,
           ttsAutoplayEnabled: false,
           pairingAllowed: true,
           sharingDisabled: undefined,
