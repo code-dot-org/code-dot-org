@@ -1663,7 +1663,7 @@ class Script < ApplicationRecord
   def summarize_versions(user = nil, locale_code = nil)
     return {} if unit_group
 
-    course_version&.course_offering&.course_versions&.select {|cv| cv.course_assignable?(user)}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    course_version&.course_offering&.course_versions&.select {|cv| cv.can_view_version?(user, locale: locale_code)}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def self.clear_cache
