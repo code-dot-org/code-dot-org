@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-03-16 21:55:06 UTC",
+    "serialized_at": "2022-03-18 16:36:11 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -715,7 +715,7 @@
       "key": "0a90718a-ced0-4294-b9da-36d33df1702c",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
