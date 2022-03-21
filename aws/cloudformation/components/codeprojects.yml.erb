@@ -44,7 +44,7 @@
 <%- end -%>
 
 <%- envs.each do |env, config| -%>
-<%- if rack_env == env -%>
+<%- if rack_env?(env) -%>
 
   # <%= env %> Resources
   Codeprojects<%= env.capitalize %>Certificate:
