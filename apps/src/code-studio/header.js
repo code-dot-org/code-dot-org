@@ -6,7 +6,6 @@ import {
   showMinimalProjectHeader,
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
-  showLevelBuilderSaveExemplarButton,
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   showProjectUpdatedAt,
@@ -213,12 +212,18 @@ header.showMinimalProjectHeader = function() {
   getStore().dispatch(showMinimalProjectHeader());
 };
 
-header.showLevelBuilderSaveButton = function(getChanges) {
-  getStore().dispatch(showLevelBuilderSaveButton(getChanges));
-};
-
-header.showLevelBuilderSaveExemplarButton = function(getChanges) {
-  getStore().dispatch(showLevelBuilderSaveExemplarButton(getChanges));
+header.showLevelBuilderSaveButton = function(
+  getChanges,
+  overrideHeaderText,
+  overrideOnSaveURL
+) {
+  getStore().dispatch(
+    showLevelBuilderSaveButton(
+      getChanges,
+      overrideHeaderText,
+      overrideOnSaveURL
+    )
+  );
 };
 
 /**

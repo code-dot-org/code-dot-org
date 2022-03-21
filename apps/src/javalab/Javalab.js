@@ -25,10 +25,7 @@ import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
-import {
-  showLevelBuilderSaveButton,
-  showLevelBuilderSaveExemplarButton
-} from '@cdo/apps/code-studio/header';
+import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import Neighborhood from './neighborhood/Neighborhood';
 import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
@@ -190,6 +187,7 @@ Javalab.prototype.init = function(config) {
   };
 
   // Push initial level properties into the Redux store
+  // i think iseditingstartsources is a string
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
@@ -211,7 +209,13 @@ Javalab.prototype.init = function(config) {
     }));
   }
   if (config.level.editExemplar) {
-    showLevelBuilderSaveExemplarButton(() => ({test: 123}));
+    showLevelBuilderSaveButton(
+      () => ({
+        exemplar_sources: getSources(getStore().getState())
+      }),
+      'Levelbuilder: edit exemplar',
+      './update_exemplar_code'
+    );
   }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
