@@ -1497,7 +1497,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           lessons:
-            Code.org Equity PD:
+            Codeorg Equity PD:
               name: Code.org Equity PD
             Necessary Background:
               name: Necessary Background
@@ -18920,8 +18920,6 @@ en:
               name: USE Programs (AppLab Only)
             MODIFY Programs:
               name: MODIFY Programs (AppLab -> Widget -> AppLab)
-            Does Code.org Like Your Dog?:
-              name: Does Code.org Like Your Dog?
             dog:
               name: Does Code.org Like Your Dog?
             AI for Oceans:
@@ -23463,7 +23461,7 @@ en:
               name: Module 1
             Getting Started:
               name: Getting Started
-            What is Code.org:
+            What is Codeorg:
               name: What is Code.org?
             Addressing Implementation Approaches and Barriers:
               name: Implementation Approaches and Barriers
@@ -25847,7 +25845,7 @@ en:
           student_description: ''
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
+            Navigating the Codeorg learning platform:
               name: " Navigating Code.org learning platform"
               description_student: 
               description_teacher: |-
@@ -29150,7 +29148,7 @@ en:
               description_student: Use loops and patterns to finish the images.
               description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.
               key: Ocean Scene with Loops
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Move and shout when your teachers presses buttons on a giant remote.
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
@@ -29976,7 +29974,7 @@ en:
               description_student: Sketch your own smartphone app.
               description_teacher: In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.
               key: The Right App
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Move or shout when your teacher presses buttons on a giant remote.
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
@@ -30073,7 +30071,7 @@ en:
 
                 The internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.
               key: Putting a STOP to Online Meanness
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: My Robotic Friends Jr.
               description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
               description_teacher: In this **context-setting** lessons, students will use a set of symbols to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.
@@ -30094,7 +30092,7 @@ en:
               name: Creating Art with Code
               description_student: Create beautiful images by programming the Artist.
               description_teacher: In this **skill-building** lesson, students will take control of the Artist to complete drawings on the screen.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: My Loopy Robotic Friends Jr.
               description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
               description_teacher: 'This **context-setting** lesson builds on the initial "My Robotic Friends" activity, featuring larger and more complicated designs. '
