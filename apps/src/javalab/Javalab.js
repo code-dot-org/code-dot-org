@@ -85,7 +85,7 @@ Javalab.prototype.init = function(config) {
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = config.level.editBlocks;
-  this.isEditingExemplar = config.level.editExemplar;
+  this.isEditingExemplar = config.level.isEditingExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -208,7 +208,7 @@ Javalab.prototype.init = function(config) {
       validation: getValidation(getStore().getState())
     }));
   }
-  if (config.level.editExemplar) {
+  if (this.isEditingExemplar) {
     showLevelBuilderSaveButton(
       () => ({
         exemplar_sources: getSources(getStore().getState())
@@ -246,7 +246,9 @@ Javalab.prototype.init = function(config) {
     }
   }
 
-  if (config.level.editExemplar) {
+  // If we don't have any existing exemplar for this level and a levelbuilder is editing the exemplar,
+  // we'll start with the default blank project.
+  if (this.isEditingExemplar && config.level.exemplarSources) {
     getStore().dispatch(setAllSources(config.level.exemplarSources));
   }
 
