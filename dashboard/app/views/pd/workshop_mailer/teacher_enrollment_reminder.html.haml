@@ -35,9 +35,10 @@
   %p
     Don’t forget to fill out
     = link_to 'this survey', @pre_workshop_survey_url
-    at least 24 hours before the workshop so that your facilitator can make this workshop as effective and useful for you as possible!
+    at least 24 hours before the workshop so that your facilitator can make this workshop
+    as effective and useful for you as possible!
 - elsif @workshop.pre_survey?
-  = render partial 'pre-survey'
+  = render partial: 'pre_survey'
 - elsif @workshop.subject != Pd::Workshop::COURSE_FACILITATOR
   %p
     - if @workshop.course == Pd::Workshop::COURSE_CSF

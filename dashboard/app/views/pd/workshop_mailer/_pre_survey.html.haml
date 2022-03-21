@@ -1,5 +1,5 @@
-- survey_type = @workshop.summer? ? 'pre-course' : 'pre-workshop'
-  %p
+%p
+  - survey_type = @workshop.summer? ? 'pre-course' : 'pre-workshop'
   - if @is_first_pre_survey_email
     Please take a moment to complete the
     = survey_type
@@ -11,8 +11,7 @@
   -elsif !Pd::PreWorkshopSurvey.where(pd_enrollment: @enrollment).exists?
     If you have not already done so, please complete the
     = link_to "#{survey_type} survey", @pre_workshop_survey_url, target: "_blank", rel: "noopener noreferrer"
-    and review the
-    following logistical details about your workshop. If you have any questions about
+    and review the following logistical details about your workshop. If you have any questions about
     your workshop, reach out to your workshop organizer directly:
     = "#{@organizer.name} at "
     = mail_to @organizer.email, "#{@organizer.email}."
