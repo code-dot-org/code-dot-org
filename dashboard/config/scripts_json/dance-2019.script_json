@@ -8,12 +8,11 @@
       "is_course": true,
       "is_migrated": true,
       "tts": true,
-      "use_legacy_lesson_plans": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "dance-2019",
-    "serialized_at": "2022-03-11 12:07:55 UTC",
+    "serialized_at": "2022-03-18 18:37:54 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -38,7 +37,7 @@
   "lessons": [
     {
       "key": "Dance Party",
-      "name": "Dance Party",
+      "name": "Dance Party (2019)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -46,7 +45,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.",
-        "preparation": "### One Week Before Your Hour of Code\r\n\r\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \r\n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\r\n- Review and complete the online tutorial yourself: [Dance Party](https://studio.code.org/s/dance-2019) \r\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\r\n- Review the supplementary lesson plan, [\"The Big Dance Party\"](https://curriculum.code.org/hoc/unplugged/4/) to determine whether or not you'd like to lead this lesson in advance of your Hour of Code.\r\n\r\n### One Day Before Your Hour of Code\r\n\r\n- Each student who completes the activity should receive a certificate. [Print one](http://code.org/certificates) for everyone in advance to make this easier at the end of your Hour of Code.\r\n- (optional) Encourage students to bring in headphones to use during the activity.\r\n",
+        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n- Review and complete the online tutorial yourself: [Dance Party](https://studio.code.org/s/dance-2019) \n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n- Review the supplementary lesson plan, [\"Dance Party: Unplugged\"](https://studio.code.org/s/dance-unplugged/lessons/1) to determine whether or not you'd like to lead this lesson in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Each student who completes the activity should receive a certificate. [Print one](http://code.org/certificates) for everyone in advance to make this easier at the end of your Hour of Code.\n- (optional) Encourage students to bring in headphones to use during the activity.\n",
         "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks).",
         "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music."
       },
@@ -76,7 +75,8 @@
       "key": "82dec89b-f375-4238-a251-ffae17c2dfd1",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "82dec89b-f375-4238-a251-ffae17c2dfd1",
@@ -129,7 +129,8 @@
       "key": "7afb9d6e-2c07-44d2-8504-90df0cecc778",
       "position": 6,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 2,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "7afb9d6e-2c07-44d2-8504-90df0cecc778",
