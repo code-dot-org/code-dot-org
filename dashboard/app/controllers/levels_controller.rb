@@ -174,6 +174,8 @@ class LevelsController < ApplicationController
   # GET /levels/:id/edit_blocks/:type
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
+  # Javalab also uses this route to edit starter code, and sets the type param
+  # to 'start_sources'
   def edit_blocks
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
@@ -229,6 +231,7 @@ class LevelsController < ApplicationController
     @edit_exemplar = true
 
     # replace with actual exemplar code
+    # can we just add exemplar sources here?
     level_view_options(@level.id, edit_exemplar: true)
 
     show
@@ -298,6 +301,20 @@ class LevelsController < ApplicationController
       @level.validation = changes["validation"]
     end
     return update_properties(ignored_keys: ["validation"])
+  end
+
+  # POST /levels/:id/update_exemplar_code
+  def update_exemplar_code
+    changes = JSON.parse(request.body.read)
+    if @level.respond_to?(:exemplar_sources)
+      @level.exemplar_sources = changes["exemplar_sources"]
+    end
+
+    @level.log_changes(current_user)
+    @level.save!
+
+    # redirect is weird?
+    render json: {redirect: level_url(@level)}
   end
 
   # POST /levels

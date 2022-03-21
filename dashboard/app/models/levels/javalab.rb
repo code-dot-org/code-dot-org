@@ -26,9 +26,10 @@
 
 class Javalab < Level
   # needs to be encrypted
+  # exemplar_sources
   serialized_attrs %w(
     start_sources
-    exemplar_sources
+    encrypted_exemplar_sources
     encrypted_validation
     hide_share_and_remix
     is_project_level

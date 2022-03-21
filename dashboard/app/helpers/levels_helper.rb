@@ -472,10 +472,10 @@ module LevelsHelper
     # Support template level exemplars? Each level will have their own exemplar,
     # but maybe put put exemplar code from template if it exists?
     # Gate access only to levelbuilders -- looks like edit_blocks route is only available to levelbuilders, but we might run this at each page load
-    if params[:type] == 'exemplar_mode'
-      # level_options['exemplarSources'] = @level.try(:exemplar_sources) || @level.try(:start_sources)
-      level_options['exemplarSources'] = @level.try(:exemplar_sources)
+    # Figure out how to gate this.
+    if true
       # what shape should this be if we have neither start sources nor exemplar?
+      level_options['exemplarSources'] = @level.try(:exemplar_sources) || @level.try(:start_sources)
     end
 
     set_tts_options(level_options, app_options)
