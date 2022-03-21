@@ -16,7 +16,6 @@ const headerComponents = {
   [possibleHeaders.levelBuilderSave]: LevelBuilderSaveButton
 };
 
-// Maybe we can add an headerProps argument prop here
 class ProjectInfo extends React.Component {
   static propTypes = {
     currentHeader: PropTypes.oneOf(Object.values(possibleHeaders)),

@@ -55,10 +55,9 @@ export default class JavabuilderConnection {
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
     this.onNewlineMessage();
 
-    // put back a real projectVersion!
     const payload = {
       projectUrl: project.getProjectSourcesUrl(),
-      projectVersion: 'xyz',
+      projectVersion: 'unused',
       levelId: this.levelId,
       options: this.options,
       executionType: this.executionType,

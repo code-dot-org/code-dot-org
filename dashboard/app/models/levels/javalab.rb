@@ -25,8 +25,6 @@
 #
 
 class Javalab < Level
-  # needs to be encrypted
-  # exemplar_sources
   serialized_attrs %w(
     start_sources
     encrypted_exemplar_sources
