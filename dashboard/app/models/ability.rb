@@ -92,7 +92,9 @@ class Ability
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
-      can :destroy, Follower, student_user_id: user.id
+      can :destroy, Follower do |follower|
+        follower.student_user_id == user.id && !user.student?
+      end
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
