@@ -14,13 +14,15 @@ describe('ProgrammingEnvironmentIndex', () => {
             name: 'spritelab',
             title: 'Sprite Lab',
             description: 'description of spritelab',
-            imageUrl: 'code.org/spritelab'
+            imageUrl: 'code.org/spritelab',
+            showPath: '/docs/spritelab'
           },
           {
             name: 'gamelab',
             title: 'Game Lab',
             description: 'description of gamelab',
-            imageUrl: 'code.org/gamelab'
+            imageUrl: 'code.org/gamelab',
+            showPath: '/docs/gamelab'
           }
         ]}
       />
@@ -37,7 +39,8 @@ describe('ProgrammingEnvironmentCard', () => {
           name: 'spritelab',
           title: 'Sprite Lab',
           description: 'description of spritelab',
-          imageUrl: 'code.org/spritelab'
+          imageUrl: 'code.org/spritelab',
+          showPath: '/docs/spritelab'
         }}
       />
     );
@@ -47,6 +50,7 @@ describe('ProgrammingEnvironmentCard', () => {
       'description of spritelab'
     );
     expect(wrapper.find('img').props().src).to.equal('code.org/spritelab');
+    expect(wrapper.find('Button').props().href).to.equal('/docs/spritelab');
   });
 
   it('doesnt render description and image for each IDE if there arent ones', () => {
@@ -54,7 +58,8 @@ describe('ProgrammingEnvironmentCard', () => {
       <ProgrammingEnvironmentCard
         programmingEnvironment={{
           name: 'spritelab',
-          title: 'Sprite Lab'
+          title: 'Sprite Lab',
+          showPath: '/docs/spritelab'
         }}
       />
     );
@@ -62,6 +67,7 @@ describe('ProgrammingEnvironmentCard', () => {
     expect(wrapper.text().includes('Sprite Lab'));
     expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(0);
     expect(wrapper.find('img').length).to.equal(0);
+    expect(wrapper.find('Button').props().href).to.equal('/docs/spritelab');
   });
 
   it('doesnt render title if there isnt one', () => {
@@ -70,7 +76,8 @@ describe('ProgrammingEnvironmentCard', () => {
         programmingEnvironment={{
           name: 'spritelab',
           description: 'description of spritelab',
-          imageUrl: 'code.org/spritelab'
+          imageUrl: 'code.org/spritelab',
+          showPath: '/docs/spritelab'
         }}
       />
     );
@@ -79,5 +86,6 @@ describe('ProgrammingEnvironmentCard', () => {
       'description of spritelab'
     );
     expect(wrapper.find('img').props().src).to.equal('code.org/spritelab');
+    expect(wrapper.find('Button').props().href).to.equal('/docs/spritelab');
   });
 });

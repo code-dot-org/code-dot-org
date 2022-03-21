@@ -27,6 +27,8 @@ class ProgrammingEnvironment < ApplicationRecord
   has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
+  after_destroy :remove_serialization
+
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
     editor_type
@@ -62,16 +64,25 @@ class ProgrammingEnvironment < ApplicationRecord
     environment.name
   end
 
+  def file_path
+    Rails.root.join("config/programming_environments/#{name.parameterize}.json")
+  end
+
   def serialize
-    env_hash = {name: name}.merge(properties.sort.to_h)
+    env_hash = {name: name, published: published}.merge(properties.sort.to_h)
     env_hash.merge(categories: programming_environment_categories.map(&:serialize))
   end
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
 
-    file_path = Rails.root.join("config/programming_environments/#{name.parameterize}.json")
     File.write(file_path, JSON.pretty_generate(serialize))
+  end
+
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+
+    File.delete(file_path) if File.exist?(file_path)
   end
 
   def summarize_for_lesson_edit
@@ -82,10 +93,12 @@ class ProgrammingEnvironment < ApplicationRecord
     {
       name: name,
       title: title,
+      published: published,
       imageUrl: image_url,
       projectUrl: project_url,
       description: description,
       editorType: editor_type,
+      blockPoolName: block_pool_name,
       categories: categories.map(&:serialize_for_edit),
       showPath: programming_environment_path(name)
     }
@@ -105,7 +118,8 @@ class ProgrammingEnvironment < ApplicationRecord
       name: name,
       title: title,
       imageUrl: image_url,
-      description: description
+      description: description,
+      showPath: programming_environment_path(name)
     }
   end
 end

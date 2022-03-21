@@ -32,6 +32,8 @@ class ProgrammingExpression < ApplicationRecord
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format
 
+  after_destroy :remove_serialization
+
   serialized_attrs %w(
     color
     syntax
@@ -242,6 +244,10 @@ class ProgrammingExpression < ApplicationRecord
     end
   end
 
+  def file_path
+    Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
+  end
+
   def serialize
     {
       key: key,
@@ -253,9 +259,15 @@ class ProgrammingExpression < ApplicationRecord
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    file_path = Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
     object_to_serialize = serialize
+    directory_name = File.dirname(file_path)
+    Dir.mkdir(directory_name) unless File.exist?(directory_name)
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
+  end
+
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    File.delete(file_path) if File.exist?(file_path)
   end
 
   def clone_to_programming_environment(environment_name, new_category_key = nil)
@@ -272,8 +284,8 @@ class ProgrammingExpression < ApplicationRecord
     if new_category_key
       new_category = new_env.categories.find_by_key(new_category_key)
     else
-      new_category ||= new_env.categories.find_by_key(programming_environment_category.key)
-      new_category ||= new_env.categories.find_by_name(programming_environment_category.name)
+      new_category ||= new_env.categories.find_by_key(programming_environment_category&.key)
+      new_category ||= new_env.categories.find_by_name(programming_environment_category&.name)
     end
 
     new_exp = dup

@@ -42,6 +42,14 @@ class TestController < ApplicationController
     )
   end
 
+  def create_section_assigned_to_script
+    return unless (user = current_user)
+    script = Script.find_by_name(params.require(:script_name))
+
+    Section.create!(name: "New Section", user: user, script: script)
+    head :ok
+  end
+
   def assign_script_as_student
     return unless (user = current_user)
     script = Script.find_by_name(params.require(:script_name))

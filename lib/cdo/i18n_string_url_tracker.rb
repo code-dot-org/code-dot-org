@@ -70,6 +70,11 @@ class I18nStringUrlTracker
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
     return unless string_key && url && source
 
+    # We got a bad string_key if there is no English source string
+    source_string = I18n.t(string_key, locale: I18n.default_locale, tracking: false)
+    return if !source_string ||
+      (source_string.is_a?(String) && source_string.start_with?("translation missing"))
+
     # Skip URLs we are not interested in.
     return unless allowed(url)
     url = normalize_url(url)

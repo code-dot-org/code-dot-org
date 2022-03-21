@@ -40,5 +40,5 @@
   ],
   "return_value": "A number representing x to the power of y.",
   "short_description": "\nTakes x to the power of y.",
-  "syntax": "Math.pow(__, __)"
+  "syntax": "Math.pow(x,y);"
 }

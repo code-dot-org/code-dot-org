@@ -20,6 +20,16 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     @another_student_follower = create :follower, student_user: @another_student, section: @section
   end
 
+  # Some of the factory created objects above (eg, followers)
+  # could also be stubbed out.
+  setup do
+    User.any_instance.stubs(:code_review_groups).returns([build(:code_review_group)])
+  end
+
+  teardown do
+    User.unstub(:code_review_groups)
+  end
+
   test 'signed out cannot create ReviewableProject' do
     post :create
     assert_redirected_to_sign_in
@@ -183,45 +193,8 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'student in section with project available for review gets list of peers' do
-    # This is default behavior so stub is unnecessary, but adding this
-    # so when can search for the DCDO string to clean up
-    # we remember to delete this test at that time.
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(false)
-
-    create :reviewable_project,
-      user_id: @project_owner.id,
-      level_id: @project_level_id,
-      script_id: @project_script_id
-
-    sign_in @another_student
-    get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
-
-    assert_equal [{'id' => @project_owner.id, 'name' => @project_owner.name}], JSON.parse(response.body)
-  end
-
-  test 'student does not get projects available for review if project available but not in same section' do
-    # This is default behavior so stub is unnecessary, but adding this
-    # so when can search for the DCDO string to clean up
-    # we remember to delete this test at that time.
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(false)
-
-    student = create :student
-
-    create :reviewable_project,
-      user_id: @project_owner.id,
-      level_id: @project_level_id,
-      script_id: @project_script_id
-
-    sign_in student
-    get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
-
-    assert_equal [], JSON.parse(response.body)
-  end
-
   test 'student in code review group with project available for review gets list of peers' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
+    User.any_instance.unstub(:code_review_groups)
     code_review_group = create :code_review_group, section: @section
     create :code_review_group_member, follower: @another_student_follower, code_review_group: code_review_group
     create :code_review_group_member, follower:  @project_owner_follower, code_review_group: code_review_group
@@ -238,8 +211,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'student in code review group with only own project available for review gets empty list of peers' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
+    User.any_instance.unstub(:code_review_groups)
     code_review_group = create :code_review_group, section: @section
     create :code_review_group_member, follower: @project_owner_follower, code_review_group: code_review_group
 
@@ -255,8 +227,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'student not in code review group gets empty list of peers' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
+    User.any_instance.unstub(:code_review_groups)
     create :reviewable_project,
       user_id: @project_owner.id,
       level_id: @project_level_id,
