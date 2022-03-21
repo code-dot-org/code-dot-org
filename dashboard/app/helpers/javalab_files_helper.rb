@@ -57,7 +57,9 @@ module JavalabFilesHelper
 
     # get validation code
     if level.respond_to?(:validation) && level.validation
-      all_files["validation"] = level.validation.to_json
+      validation = {}
+      validation["source"] = level.validation
+      all_files["validation"] = validation.to_json
     end
 
     return all_files
