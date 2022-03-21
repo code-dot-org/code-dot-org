@@ -7,9 +7,6 @@ Scenario: Basic Sprite Lab level
   And I start a new Sprite Lab project
   And I wait until I don't see selector "#p5_loading"
 
-  Then I reset the puzzle to the starting version
-  And I wait until I don't see selector "#p5_loading"
-
   Then I see no difference for "initial load"
   And I've initialized the workspace for the sample Sprite Lab project
   Then I see no difference for "preview"
