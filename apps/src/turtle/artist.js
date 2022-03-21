@@ -242,7 +242,7 @@ Artist.prototype.preloadAllStickerImages = function() {
 };
 
 /**
- * Initializes all geometry sticker images as defined in this.skin.stickers,
+ * Initializes all geometry sticker images as defined in this.skin.geometryStickers,
  * if any, storing the created images in this.geometryStickers.
  *
  * NOTE: initializes this.geometryStickers as a side effect
