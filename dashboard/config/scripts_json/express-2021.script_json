@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-03-21 20:53:13 UTC",
+    "serialized_at": "2022-03-21 20:59:30 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9452,6 +9452,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Underground Iron_2021"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9526,6 +9529,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Powered Minecart_2021"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
