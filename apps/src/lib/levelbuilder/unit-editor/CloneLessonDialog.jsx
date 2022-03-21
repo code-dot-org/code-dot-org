@@ -5,8 +5,8 @@ import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 const LevelCopyText = {
-  deepCopy: 'deep copy: create a new copy of each level in the lesson',
-  shallowCopy: 'shallow copy: share existing levels with the original lesson'
+  deepCopy: 'Deep Copy',
+  shallowCopy: 'Shallow Copy'
 };
 
 export default class CloneLessonDialog extends Component {
@@ -131,6 +131,24 @@ export default class CloneLessonDialog extends Component {
                 ))}
               </select>
             </label>
+            <table style={styles.table}>
+              <tbody>
+                <tr>
+                  <td style={styles.tableCell}>Deep Copy (recommended)</td>
+                  <td style={styles.tableCell}>
+                    Create a new copy of each level within the lesson.
+                  </td>
+                </tr>
+                <tr>
+                  <td style={styles.tableCell}>Shallow Copy</td>
+                  <td style={styles.tableCell}>
+                    Share existing levels with the original lesson. This can
+                    lead to problems later, so be sure you want this before
+                    proceeding with this option.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
             {this.state.levelCopyType === 'deepCopy' && (
               <label>
                 Suffix to add when copying levels:{' '}
@@ -165,6 +183,14 @@ export default class CloneLessonDialog extends Component {
 
 const styles = {
   dropdown: {
-    width: 350
+    width: 200
+  },
+  table: {
+    border: 'none',
+    marginBottom: 10
+  },
+  tableCell: {
+    border: '1px solid black',
+    padding: 3
   }
 };
