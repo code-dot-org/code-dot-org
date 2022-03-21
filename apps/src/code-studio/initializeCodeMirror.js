@@ -135,7 +135,7 @@ function initializeCodeMirror(target, mode, options = {}) {
       allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
       progressText: '![Uploading file...]()',
       urlText: '![]({filename})', // `{filename}` tag gets replaced with URL
-      errorText: 'Error uploading file; images must be no larger than 1MB',
+      errorText: 'Error uploading file; images must be no larger than 2MB',
       extraHeaders: {
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       }

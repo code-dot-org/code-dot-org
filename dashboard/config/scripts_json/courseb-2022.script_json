@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-03-15 15:50:25 UTC",
+    "serialized_at": "2022-03-18 19:28:50 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6847,12 +6847,11 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://youtu.be/u0WV9shCoak",
+      "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
       "key": "the_big_event",
       "properties": {
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4",
-        "type": "Unplugged Video"
+        "download_url": "https://s3.amazonaws.com/videos.code.org/csf/the-big-event.mp4"
       },
       "seeding_key": {
         "resource.key": "the_big_event"
