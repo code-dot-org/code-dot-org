@@ -73,7 +73,7 @@ class CourseOffering < ApplicationRecord
   end
 
   # All course versions in a course offering should have the same instructor audience
-  def can_be_instructor?(user)
+  def any_version_can_be_instructor?(user)
     course_versions.any? {|cv| cv.can_be_instructor?(user)}
   end
 
@@ -123,7 +123,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def assignable?(user)
-    return false unless can_be_instructor?(user)
+    return false unless any_version_can_be_instructor?(user)
     return true if any_versions_launched?
     return true if any_version_is_assignable_pilot?(user)
     return true if any_version_is_assignable_editor_experiment?(user)
