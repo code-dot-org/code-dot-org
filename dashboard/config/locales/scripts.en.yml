@@ -30036,6 +30036,10 @@ en:
               name: End of Course Project
               description_student: Create your own story or game.
               description_teacher: In this **project** lesson, students apply what they have learned about sequencing and events in an open-ended project with Play Lab.
+            The Big Event Jr:
+              name: The Big Event Jr.
+              description_student: Move or shout when your teacher presses buttons on a giant remote.
+              description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -32024,11 +32028,19 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Using variables in Java
+              name: Variables in Java
               description_student: 
               description_teacher: 
             lesson-3:
               name: If statements in Java
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Loops in Java
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Arrays in Java
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -33086,6 +33098,10 @@ en:
               name: "[TEMPLATE] Introduction to..."
               description_student: 
               description_teacher: 
+            lesson-2:
+              name: "[TEMPLATE] Unit Wrap Up"
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -33318,7 +33334,27 @@ en:
           description: ''
           student_description: ''
         vpl-csd2-ci-pilot-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to Web Design
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Build a website with HTML
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Style a website with CSS
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Consider real-world implications
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Unit wrap up
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: vpl-csd2-ci-pilot-2022
           title: 'Module 2: Preparing to Teach Web Design'
@@ -33367,6 +33403,17 @@ en:
           lesson_groups: {}
           name: vpl-csd7-ci-pilot-2022
           title: 'Module 7: Preparing to Teach AI and Machine Learning'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Hello World CSC
+          lesson_groups: {}
+          name: hello-world-csc
+          title: Hello World
           description_audience: ''
           description_short: ''
           description: ''
