@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
@@ -47,7 +47,7 @@ export default function CodeReviewGroupsDialog({
     setGroups(groups);
   };
 
-  useEffect(() => getInitialGroups(), [isDialogOpen]);
+  useEffect(() => getInitialGroups(), [getInitialGroups]);
 
   const renderModalBody = () => {
     switch (loadingStatus) {
@@ -102,7 +102,7 @@ export default function CodeReviewGroupsDialog({
     );
   };
 
-  const getInitialGroups = () => {
+  const getInitialGroups = useCallback(() => {
     setLoadingStatus(LOADING_STATES.LOADING);
     setSubmitStatus(SUBMIT_STATES.DEFAULT);
     setGroupsHaveChanged(false);
@@ -113,7 +113,8 @@ export default function CodeReviewGroupsDialog({
         setLoadingStatus(LOADING_STATES.LOADED);
       })
       .fail(() => setLoadingStatus(LOADING_STATES.ERROR));
-  };
+  }, []);
+
   const submitNewGroups = () => {
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
     dataApi
@@ -132,6 +133,7 @@ export default function CodeReviewGroupsDialog({
       {/* use div instead of button HTML element via __useDeprecatedTag
           for consistent spacing with other "buttons" in ManageStudentsTable header */}
       <Button
+        id="uitest-code-review-groups-button"
         __useDeprecatedTag
         onClick={openDialog}
         color={Button.ButtonColor.gray}

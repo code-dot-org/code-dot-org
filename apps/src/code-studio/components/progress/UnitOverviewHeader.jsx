@@ -49,6 +49,7 @@ class UnitOverviewHeader extends Component {
       courseViewPath: PropTypes.string.isRequired
     }),
     announcements: PropTypes.arrayOf(announcementShape),
+    courseVersionId: PropTypes.number.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     unitTitle: PropTypes.string.isRequired,
@@ -261,6 +262,7 @@ export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
   announcements: state.announcements || [],
+  courseVersionId: state.progress.courseVersionId,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   unitTitle: state.progress.unitTitle,

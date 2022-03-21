@@ -21135,6 +21135,8 @@ ko:
           lessons:
             lesson-5:
               name: 단원 2 평가
+            lesson-6:
+              name: 변수
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -21269,3 +21271,203 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 샌드박스
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: 말의 힘
+              description_student: 괴롭힘은 어떤 경우에도 괜찮지 않습니다. 이 레슨은 온라인에서 말해도 괜찮은 것과 그렇지 않은 것에 대해 말해 줍니다.
+              key: 말의 힘
+            Introducing Sprite Lab:
+              name: 스프라이트 랩 소개
+              key: 스프라이트 랩 소개
+            Making Sprites:
+              name: 스프라이트 만들기
+              key: 스프라이트 만들기
+            Sprites in Action:
+              name: 스프라이트 인 액션
+              key: 스프라이트 인 액션
+            'Mini-Project: Virtual Pet':
+              name: '미니 프로젝트: 가상 애완동물'
+              description_student: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다. 학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지 배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+              description_teacher: 이 레슨에서 학생들은 그들이 원하는 모습과 행동을 하는 인터랙티브 가상 펫을 만들 것입니다. 학생들은 스프라이트 랩의 "의상" 툴을 사용하여 펫의 외형을 원하는 대로 꾸밉니다. 그 다음, 이벤트와 행동, 지금까지 배우 기타 개념을 사용해 펫에게 그들 자신의 생활을 갖게 해줍니다.
+              key: '미니 프로젝트: 가상 애완동물'
+            Text and Prompts:
+              name: 텍스트 저장 및 검색
+              key: 텍스트 저장 및 검색
+            'Mini-Project: User Input Programs':
+              name: 챗봇 만들기
+              key: 챗봇 만들기
+            Simulating Experiments:
+              name: 실험 시뮬레이션
+              description_student: 컴퓨터에서 시뮬레이션을 실행하고 변수를 변경하여 실험하세요.
+              description_teacher: 스프라이트 랩에서 간단한 시뮬레이션을 실행함으로써 학생들은 트렌드 또는 패턴을 식별하는 데이터를 수집할 때 컴퓨팅을 어떻게 사용하는지 경험할 것입니다. 시뮬레이션을 여러 번 실행한 후, 학생들은 시뮬레이션 내 변수에 변화를 주면 결과물에 어떤 영향이 미치는지 예측하고 그 가설을 테스트할 기회를 갖게 될 것입니다.
+              key: 실험 시뮬레이션
+            AI For Oceans:
+              name: 바다를 위한 AI
+              description_student: '튜토리얼 요약: 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 "물고기" 또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.'
+              description_teacher: |-
+                **튜토리얼 요약:** 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 "물고기" 또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.\\r
+                \\r
+                \\r
+                **정확성 확인:** 이 튜토리얼은 학생들에게 그들이 레벨을 맞게 완료했는지 말하지 않습니다. 활동 중 어려운 부분은 빠르게 건너 뛸 수 있습니다. 학생들에게 동영상을 시청하고 설명서를 읽으며 어려운 일은 시도해 보라고 장려합니다. 그들은 언제든 교사 또는 학급원과 그들이 발견한 내용을 공유할 수 있습니다.\\r
+              key: 바다를 위한 AI
+            The Internet:
+              name: 인터넷
+              description_student: 정보가 인터넷 상에 어떻게 이동하는지 궁금해 해본적이 있어요? 이 레슨은 인터넷 작동방식의 기초를 가르쳐 줄 것입니다.
+              description_teacher: 많은 사람들이 매일 인터넷을 사용하지만, 그 많은 이들이 인터넷의 작동방식에 대해서는 모릅니다. 이 레슨에서는 학생들이 자신들이 인터넷 안에서 여기 저기로 흘러 가는 것처럼 여기며 연결부와 URL, IP 주소,  DNS에 관해 배웁니다.
+              key: 인터넷
+            End of Course Project:
+              name: 과정말 프로젝트
+              description_student: 이 정도의 큰 프로젝트는 시간과 많은 계획을 들여야 합니다. 영감을 찾고, 계획을 발전시키며, 창의성을 맘껏 발휘해야 합니다!
+              description_teacher: 이 머릿돌 레슨은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 쇼케이스하는 프로세스를 익히게 합니다.
+              key: 과정말 프로젝트
+          lesson_groups:
+            lessonGroup-7:
+              display_name: 디지털 시민의식
+            ramp_up:
+              display_name: 스프라이트
+            lessonGroup-8:
+              display_name: 변수
+            end_of_course_project:
+              display_name: 과정말 프로젝트
+          description_audience: '나이: 9-13'
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: 코스를 진행하며 개발하신 프로젝트가 커뮤니티 내 수많은 창의적 활동에 영감이 되었습니다! 창의적인 이야기와 스크립트, 노래 가사, 편지, 시가 소개될 네이버후드 릿 페스트가 열릴 예정입니다. 릿 페스트 프로젝트는 단원 내내 작업할 대형 프로젝트이므로 프로젝트 관리 전략들이 작업을 준비하고 구성하는 데 도움이 됩니다. 다른 소프트웨어 엔지니어들이 Java 도구를 쉽게 이해하고 활용하며 프로그램 문서를 제작할 수 있도록 코드 작성 및 구조화 전략을 살펴봅니다.
+              description_teacher: 학생들에게 네이버후드 릿 페스트를 소개하고 질문과 핵심 기능 식별을 위한 예시와 요건을 평가합니다. 학생들은 프로젝트 작업을 시작하기 전에 모범 사례를 식별하고 Javadoc를 사용해 프로그램 문서를 생성하는 방법을 살펴보며 프로그램 구조와 주석에 대한 이해를 확장합니다.
+            Exploring Integer and Double Objects:
+              description_student: "‘Integer’ 객체와 ‘Double’ 객체를 생성하여 ‘int’와 ‘double’ 기본 값을 참조 값으로 나타냅니다. ‘Integer’ 클래스와 ‘Double’ 클래스의 메소드를 사용해 이 객체들이 저장하는 값들을 기본 값으로 반환합니다. 또, 네이버후드 릿 페스트 프로젝트 완성에 필요한 작업을 계획하기 전에 오버플로 오류를 방지하기 위한 정수의 최댓값과 최솟값을 살펴봅니다."
+              description_teacher: 학생들은 ‘Integer’ 객체와 ‘Double’ 객체를 생성하여 ‘int’와 ‘double’ 기본 값을 참조 값으로 나타냅니다. ‘Integer’ 클래스와 ‘Double’ 클래스의 메소드를 사용해 이 객체들이 저장하는 값들을 기본 값으로 반환합니다. 또, 네이버후드 릿 페스트 프로젝트 완성에 필요한 작업을 계획하기 전에 오버플로 오류를 방지하기 위한 정수의 최댓값과 최솟값을 살펴봅니다.
+            Using ArrayLists to Store Data:
+              description_student: 배열 및 목록 작업을 하다 보면 요소의 개수를 알 수 없거나 목록의 크기가 계속해서 변하는 문제가 생길 때가 있습니다. 이 수업에서는 ‘ArrayList’에 대해 알아보고 데이터 구조가 더 적합한 시나리오를 식별해봅니다.
+              description_teacher: 학생들은 ‘int’ 값과 ‘double’ 값을 저장할 ‘ArrayList’를 생성합니다. ‘ArrayList’와 일차원 배열에 구분을 두어 어떤 데이터 구조가 시나리오에 가장 적합한지를 결정합니다. 그리고 저장된 데이터로 작업하는 동안 ‘ArrayList’에 요소를 추가하며 어떻게 기본 값과 래퍼 클래스 사이에서 오토박싱이 전환되는지 배워봅니다.
+            Working with ArrayList Data:
+              description_student: "`ArrayList` 메소드 `get()`과 `set()`를 사용해 요소를 검색하고 수정하며 ‘String’ 객체의 문자 개수를 계산하는 ‘String’ 메소드 ‘length()’에 대해 알아봅니다. 1D 배열과 2D 배열로 개발한 표준 알고리즘을 적용해 ‘ArrayList’의 요소를 수정합니다. ‘ArrayList’에 저장된 데이터로 작업하는 동안 어떻게 기본 값과 래퍼 클래스 사이에서 언박싱이 전환되는지 배워봅니다."
+              description_teacher: 학생들은 `get()`과 `set()` 메소드를 사용해 ‘ArrayList’의 요소를 검색하고 수정하며 ‘String’ 객체의 문자 개수를 반환하는 ‘String’ 메소드 ‘length()’에 대해 알아봅니다. 1D 배열과 2D 배열로 개발한 표준 알고리즘을 적용해 ‘ArrayList’의 요소를 수정합니다. ‘ArrayList’에 저장된 데이터로 작업하는 동안 어떻게 기본 값과 래퍼 클래스 사이에서 언박싱이 전환되는지 배워봅니다.
+            Storing Objects in an ArrayList:
+              description_student: 지금까지 ‘Integer’와 ‘Double’, ‘String’을 저장하기 위한 ‘ArrayList’를 생성해보았습니다. 1D 배열, 2D 배열과 마찬가지로 ‘ArrayList’에 생성한 객체를 저장할 수도 있습니다. 이 수업에서는 객체의 ‘ArrayList’를 생성해 이 목록에 저장된 데이터로 작업하기 위해 일 년 동안 사용해본 표준 알고리즘을 적용해봅니다.
+              description_teacher: 학생들은 객체를 저장하기 위한 ‘Arraylist’를 생성하고 Java의 제네릭 형식을 배워봅니다. 일차원 배열로 학습한 알고리즘을 ‘ArrayList’에 적용하여 최솟값과 최댓값을 찾거나 총합과 평균을 계산하거나 특정 기준을 충족하는 요소를 찾습니다.
+            Removing Data from an ArrayList:
+              description_student: "‘ArrayList’ 클래스 ‘remove()’ 메소드의 기능을 살펴보고 목록을 트래버스하면서 항목을 제거하려고 할 때 나타날 수 있는 잠재적 오류를 식별해봅니다. 이 과정 중에 ‘ArrayList’가 시나리오나 문제에 가장 적합한 때를 알게 됩니다."
+              description_teacher: 학생들은 ‘ArrayList’ 클래스 ‘remove()’ 메소드의 기능을 살펴보고 목록을 트래버스하면서 항목을 제거하려고 할 때 나타날 수 있는 잠재적 오류를 식별해봅니다. 이 과정 중에 ‘ArrayList’가 시나리오나 문제에 가장 적합한 때를 알게 됩니다.
+            Using String Methods:
+              description_student: "‘String’의 구조를 살펴보며 ‘String’이 객체임을 떠올려봅니다. ‘indexOf()’ 메소드와 ‘substring()’ 메소드를 사용해 ‘String’ 안의 ‘하위 문자열을 검색하고 기존 ‘String’에서 새로운 ‘String’ 객체를 생성합니다."
+              description_teacher: 학생들은 ‘String’의 구조를 살펴보며 ‘String’이 객체임을 떠올려봅니다. ‘indexOf()’ 메소드와 ‘substring()’ 메소드를 사용해 ‘String’ 안의 ‘하위 문자열을 검색하고 기존 ‘String’에서 새로운 ‘String’ 객체를 생성합니다.
+            Comparing Strings:
+              description_student: "‘compareTo()’를 사용해 ‘String’이 알파벳순으로 되어 있는지 확인하는 방법을 살펴봅니다. 그런 다음 프로젝트 계획 보드에 있는 작업에 특히 중점을 두고 네이버후드 릿 페스트 프로젝트를 진행합니다."
+              description_teacher: 학생들은 ‘compareTo()’를 사용해 ‘String’이 알파벳순으로 되어 있는지 확인하는 방법을 살펴봅니다. 그런 다음 프로젝트 계획 보드에 있는 작업에 특히 중점을 두고 네이버후드 릿 페스트 프로젝트를 진행합니다.
+            Solving Problems with Strings:
+              description_student: 표준 알고리즘과 ‘String’에 대한 지식을 조합해 ‘String’이 회문인지 확인합니다. 그런 다음 동료 평가 세션에 참여해 네이버후드 릿 페스트 프로젝트의 진행 상황을 숙고해봅니다.
+              description_teacher: 학생들은 표준 알고리즘과 ‘String’에 대한 지식을 조합해 ‘String’이 회문인지 확인합니다. 그런 다음 동료 평가 세션에 참여해 네이버후드 릿 페스트 프로젝트의 진행 상황을 숙고해봅니다.
+            Solving Problems with ArrayLists:
+              description_student: 1D 배열과 2D 배열을 위해 작성한 표준 알고리즘을 ‘ArrayList’에 적용합니다. 새 표준 알고리즘을 구현해 정수로부터 각각의 숫자를 취하고 난 다음 이전 알고리즘을 수정하고 적용해 요소를 교환하거나 중복을 제거하거나 네이버후드 릿 페스트 프로젝트의 특정 기준을 만족하는 요소를 찾아냅니다.
+              description_teacher: 학생들은 1D 배열과 2D 배열을 위해 작성한 표준 알고리즘을 ‘ArrayList’에 적용합니다. 새 표준 알고리즘을 구현해 정수로부터 각각의 숫자를 취하고 난 다음 이전 알고리즘을 수정하고 적용해 요소를 교환하거나 중복을 제거하거나 네이버후드 릿 페스트 프로젝트의 특정 기준을 만족하는 요소를 찾아냅니다.
+            Neighborhood Lit Fest Project - Day 1:
+              name: 네이버후드 릿 페스트 프로젝트 - 1일 차
+              description_student: 계속해서 네이버후드 릿 페스트 프로젝트를 개발하며 좋아하는 작가나 예술가의 작품을 분석한 내용을 바탕으로 이야기나 시, 노래, 그 외 다른 형태의 문학을 만들어봅니다. 먼저 프로젝트 요건을 완수해가는 과정을 평가하기 위해 스스로 작업을 평가해보고, 동료가 테스트할 프로젝트의 기능에 대한 허용 기준을 작성합니다. 자기 평가와 동료 평가를 이용해 남은 작업의 우선순위를 매기고 프로젝트 개발을 이어 나갑니다.
+              description_teacher: 학생들은 계속해서 네이버후드 릿 페스트 프로젝트를 개발하며 좋아하는 작가나 예술가의 작품을 분석한 내용을 바탕으로 이야기나 시, 노래, 그 외 다른 형태의 문학을 만들어봅니다. 먼저 프로젝트 요건을 완수해가는 과정을 평가하기 위해 스스로 작업을 평가해보고, 동료가 테스트할 프로젝트의 기능에 대한 허용 기준을 작성합니다. 자기 평가와 동료 평가를 이용해 남은 작업의 우선순위를 매기고 프로젝트 개발을 이어 나갑니다.
+              key: 네이버후드 릿 페스트 프로젝트 - 1일 차
+            Neighborhood Lit Fest Project - Day 2:
+              name: 네이버후드 릿 페스트 프로젝트 - 2일 차
+              description_student: 이전 수업에서는 자기 평가를 실시하고 프로젝트를 위한 허용 기준을 작성해보았습니다. 이번 수업에서는 동료 평가를 받아 완료해야 하는 남은 작업을 식별하고 네이버후드 릿 페스트 프로젝트 개발을 계속 이어 가봅니다.
+              description_teacher: 학생들은 이전 수업에서는 자기 평가를 실시하고 프로젝트를 위한 허용 기준을 작성해보았습니다. 이번 수업에서는 동료 평가를 받아 완료해야 하는 남은 작업을 식별하고 네이버후드 릿 페스트 프로젝트 개발을 계속 이어 가봅니다.
+              key: 네이버후드 릿 페스트 프로젝트 - 2일 차
+            Neighborhood Lit Fest Project - Day 3:
+              name: 네이버후드 릿 페스트 프로젝트 - 3일 차
+              description_student: 코드 검토와 프로젝트 계획 보드를 바탕으로 최종 수정과 업데이트를 진행합니다. 네이버후드 릿 페스트 프로젝트를 동료들과 공유합니다. 이후, 성공을 축하하고 마지막으로 개발 과정을 숙고하며 마무리합니다.
+              description_teacher: 학생들은 코드 검토와 프로젝트 계획 보드를 바탕으로 최종 수정과 업데이트를 진행합니다. 네이버후드 릿 페스트 프로젝트를 동료들과 공유합니다. 이후, 성공을 축하하고 마지막으로 개발 과정을 숙고하며 마무리합니다.
+              key: 네이버후드 릿 페스트 프로젝트 - 3일 차
+            Assessment Day:
+              name: 평가일
+              description_student: 이 단원에서는 ‘ArrayList’를 활용해 프로그램 데이터를 저장하거나 1D 배열과 2D 배열, ‘ArrayList’를 사용하는 때를 구분해보았습니다. ‘ArrayList’를 사용해 숫자 데이터와 객체 데이터 등의 문제를 해결하며 그 이점과 기능을 살펴보았습니다. ‘String’ 클래스의 메소드를 활용해 사용자와 파일 입력에서 획득한 텍스트를 분석하고 처리해보았습니다. 단원을 진행하는 내내 API 생성을 위해 한 줄 주석, 여러 줄 주석, Javadoc 주석을 사용하여 프로그램 문서를 작성해보았습니다. 그 과정에서 객체와 메소드의 전제 조건과 사후 조건을 식별하고 문서화해보았습니다. 이제는 선다형 평가를 통해 단원 학습 목표 달성 여부와 능력을 평가할 것입니다.
+              description_teacher: 이 단원에서 학생들은 ‘ArrayList’를 활용해 프로그램 데이터를 저장하거나 1D 배열과 2D 배열, ‘ArrayList’를 사용하는 때를 구분해보았습니다. ‘ArrayList’를 사용해 숫자 데이터와 객체 데이터 등의 문제를 해결하며 그 이점과 기능을 살펴보았습니다. ‘String’ 클래스의 메소드를 활용해 사용자와 파일 입력에서 획득한 텍스트를 분석하고 처리해보았습니다. 단원을 진행하는 내내 API 생성을 위해 한 줄 주석, 여러 줄 주석, Javadoc 주석을 사용하여 프로그램 문서를 작성해보았습니다. 그 과정에서 객체와 메소드의 전제 조건과 사후 조건을 식별하고 문서화해보았습니다. 이제는 선다형 평가를 통해 단원 학습 목표 달성 여부와 능력을 평가할 것입니다.
+              key: 평가일
+            Java Lab:
+              name: Java 연구소
+              key: Java 연구소
+            lesson-1:
+              key: 레슨-1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
+        csa7-2022:
+          lessons:
+            Assessment Day:
+              name: 평가일
+              key: 평가일
+            Java Lab:
+              name: Java 연구소
+              key: Java 연구소
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
+        csa8-2022:
+          lessons:
+            Assessment Day:
+              name: 평가일
+              key: 평가일
+            Java Lab:
+              name: Java 연구소
+              key: Java 연구소
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 환영합니다
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: 변수
+            lesson-15:
+              name: 단원 2 평가
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: 시작하기
+              key: 시작하기
+            Sequencing:
+              name: 시퀸싱
+              key: 시퀸싱
+            Loops:
+              name: 반복
+              key: 반복
+            Events:
+              name: 이벤트
+              key: 이벤트
+            Conditionals:
+              name: 조건
+              key: 조건
+            Functions:
+              name: 함수
+              key: 함수
+            Variables:
+              name: 변수
+              key: 변수
+            For Loops:
+              name: 반복을 위한
+              key: 반복을 위한
+            End of Course projects:
+              name: 과정말 프로젝트
+              key: 과정말 프로젝트
+            Reviewing your reflections:
+              name: 성찰 검토
+              key: 성찰 검토
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: '"컴퓨터 과학 기초"에 오신 걸 환영합니다'
+            Lesson Planning:
+              key: 레슨 계획
+            Next steps:
+              key: 다음 단계

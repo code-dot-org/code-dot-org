@@ -96,6 +96,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'membership'
         get 'valid_scripts'
+        get 'valid_course_offerings'
         get 'require_captcha'
       end
     end
@@ -280,6 +281,8 @@ Dashboard::Application.routes.draw do
 
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+  # this route uses course_course_name to match generated routes below that are nested within courses
+  get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all'
 
   resources :courses, param: 'course_name' do
     member do
@@ -288,6 +291,9 @@ Dashboard::Application.routes.draw do
       get 'code'
       get 'standards'
       get 'get_rollup_resources'
+    end
+
+    resources :reference_guides, only: [:show], param: 'key', path: 'guides' do
     end
   end
 
@@ -321,13 +327,16 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [:new, :create, :edit, :update, :show] do
+  resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
     end
+    member do
+      post :clone
+    end
   end
 
-  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show], param: 'name' do
+  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show, :destroy], param: 'name' do
     resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'
@@ -878,6 +887,7 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
+  get '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#get_access_token_with_override_sources'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do

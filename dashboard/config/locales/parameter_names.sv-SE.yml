@@ -2,6 +2,7 @@
 sv:
   data:
     parameter_names:
+      "???": "???"
       actor: aktör
       color: färg
       counter: räknare
@@ -11,6 +12,8 @@ sv:
       length: längd
       min: min
       points: poäng
+      radius: radie
+      sides: sidor
       size: storlek
       speed: hastighet
       width: bredd

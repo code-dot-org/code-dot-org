@@ -1203,6 +1203,7 @@ el:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
+            new Behavior(driving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
             draggable(): είναι συρόμενο
       gamelab_pointInDirection:
         text: στρίψε το {SPRITE} {DIRECTION}
@@ -1719,10 +1720,14 @@ el:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            '"growing"': αυξάνεται
+            '"shrinking"': συρρικνώνεται
             '"swimming_left_and_right"': κολύμβηση
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            '"growing"': αυξάνεται
+            '"shrinking"': συρρικνώνεται
             '"swimming_left_and_right"': κολύμβηση
       Poetry_whenLineShows:
         options:

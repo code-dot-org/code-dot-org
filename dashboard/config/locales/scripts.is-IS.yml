@@ -8566,6 +8566,9 @@ is:
             csf_events:
               display_name: Atvik
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Breytur
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -8607,3 +8610,90 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Afl orða
+              key: Afl orða
+            Introducing Sprite Lab:
+              name: Kynning á Kvikasmiðjunni
+              key: Kynning á Kvikasmiðjunni
+            Sprites in Action:
+              name: Kvikar í verki
+              key: Kvikar í verki
+            'Mini-Project: Virtual Pet':
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+            The Internet:
+              name: Internetið
+              key: Internetið
+            End of Course Project:
+              name: Lokaverkefni námskeiðs
+              key: Lokaverkefni námskeiðs
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Stafrænn borgari
+            ramp_up:
+              display_name: Kvikar
+            lessonGroup-8:
+              display_name: Breytur
+            end_of_course_project:
+              display_name: Lokaverkefni námskeiðs
+          description_audience: 'Aldur: 9-13'
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu
+            til eigin myndir, sögur og leiki.
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Breytur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+              key: Fyrstu skrefin
+            Sequencing:
+              name: Skipanaröð
+              key: Skipanaröð
+            Loops:
+              name: Lykkjur
+              key: Lykkjur
+            Events:
+              name: Atvik
+              key: Atvik
+            Conditionals:
+              name: Skilyrði
+              key: Skilyrði
+            Functions:
+              name: Föll
+              key: Föll
+            Variables:
+              name: Breytur
+              key: Breytur
+            For Loops:
+              name: Frá lykkjur
+              key: Frá lykkjur
+            Lesson Planning:
+              key: Gerð kennsluáætlana

@@ -23,7 +23,8 @@ class Api::V1::UsersController < Api::V1::JsonApiController
         user_type: current_user.user_type,
         is_signed_in: true,
         short_name: current_user.short_name,
-        is_verified_instructor: current_user.verified_instructor?
+        is_verified_instructor: current_user.verified_instructor?,
+        under_13: current_user.under_13?
       }
     else
       render json: {

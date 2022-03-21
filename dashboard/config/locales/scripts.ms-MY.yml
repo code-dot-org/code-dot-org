@@ -11867,6 +11867,10 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Pembolehubah
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -11967,3 +11971,369 @@ ms:
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Kuasa Perkataan
+              description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran
+                ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk
+                dikatakan dalam talian.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Oleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.
+              key: Kuasa Perkataan
+            Introducing Sprite Lab:
+              description_student: Anda akan membincangkan peranan komputer dan teknologi
+                dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi
+                dan alatan memberikan pengguna pilihan tentang cara menggunakannya.
+            Making Sprites:
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya
+                dengan tugas “permainan bebas” terbuka apabila mereka dapat membina
+                apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari
+                tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+            Sprites in Action:
+              description_student: Anda akan berusaha melalui tahap pengaturcaraan
+                dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila
+                anda dapat membina apa sahaja yang anda suka.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya
+                dengan tugas “permainan bebas” terbuka apabila mereka dapat membina
+                apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak
+                balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
+            'Mini-Project: Virtual Pet':
+              description_student: Cipta Haiwan Peliharaan Maya berinteraktif yang
+                mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan
+                haiwan peliharaan anda kehidupannya sendiri!
+              description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta
+                Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan
+                seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum"
+                Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka.
+                Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep
+                lain yang telah mereka pelajari untuk merealisasikan projek mereka.
+            Blank Space Stories:
+              name: Cerita Ruang Kosong
+              description_student: 'Dalam aktiviti ini, anda akan menggunakan cerita
+                isi tempat kosong (serupa dengan Mad Libs®) untuk bersiap sedia memahami
+                cara komputer mengambil dan menyimpan input daripada pengguna, kemudian
+                menggunakannya nanti semasa atur cara dijalankan. '
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar
+                akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®)
+                sebagai konteks untuk memahami cara komputer mengambil dan menyimpan
+                input daripada pengguna, kemudian menggunakannya nanti semasa atur
+                cara dijalankan.
+              key: Cerita Ruang Kosong
+            Text and Prompts:
+              name: Teks dan Prom
+              description_student: Dalam pelajaran ini anda akan berlatih dengan pemboleh
+                ubah di dalam Makmal Peperi.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
+              key: Teks dan Prom
+            'Mini-Project: User Input Programs':
+              description_student: Gunakan kemahiran baharu anda dengan pemboleh ubah
+                kepada satu daripada tiga projek terbuka.
+              description_teacher: Pelajar akan menggunakan kemahiran baharu mereka
+                dengan pemboleh ubah kepada satu daripada tiga **projek mini** terbuka.
+                Pelajar akan meneroka atur cara sampel, mencipta rancangan untuk projek
+                mereka sendiri dan mengatur caranya tanpa apa-apa asas.
+            Simulating Experiments:
+              name: Mensimulasikan Eksperimen
+              description_student: Jalankan simulasi pada komputer dan eksperimen
+                dengan menukar pemboleh ubah.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar
+                akan menjalankan dan mengumpulkan data daripada simulasi ringkas di
+                Makmal Peperi. Selepas menjalankan simulasi beberapa kali, pelajar
+                akan mempunyai peluang membuat ramalan tentang sejauh mana dengan
+                menukar pemboleh ubah dalam simulasi mungkin memberikan kesan kepada
+                hasilnya dan kemudian uji hipotesis tersebut.
+              key: Mensimulasikan Eksperimen
+            Outbreak:
+              name: Wabak
+              key: Wabak
+            AI For Oceans:
+              name: Kecerdasan Buatan (AI) Untuk Lautan
+              key: Kecerdasan Buatan (AI) Untuk Lautan
+            The Internet:
+              name: Internet
+              description_student: Adakah anda pernah terfikir cara maklumat bergerak
+                merentasi Internet? Ini bukan silap mata! Pelajaran ini akan mengajar
+                anda asas-asas cara internet berfungsi.
+              key: Internet
+            End of Course Project:
+              name: Akhir Projek Kursus
+              description_student: Projek sebesar ini memerlukan masa dan perancangan
+                yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan
+                kreativiti anda!
+              description_teacher: Pelajaran **projek** ini membawa pelajar melalui
+                proses mereka bentuk, membangunkan dan mempamerkan projek baharu!
+              key: Akhir Projek Kursus
+          lesson_groups:
+            ramp_up:
+              display_name: Jin
+            lessonGroup-8:
+              display_name: Pembolehubah
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 9-13 tahun'
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta
+            seni, cerita atau permainan anda sendiri.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: Projek yang telah anda bangunkan sepanjang kursus
+                ini telah memberikan inspirasi kepada banyak kreativiti dalam komuniti!
+                Pesta Cahaya Kejiranan akan diadakan untuk mempamerkan cerita, skrip,
+                lirik lagu, surat dan sajak kreatif. Projek Pesta Cahaya Kejiranan
+                ialah projek besar yang anda usahakan di seluruh unit dan strategi
+                pengurusan projek membantu mengatur dan menstruktur kerja anda. Anda
+                meneroka strategi untuk menulis dan menstruktur kod supaya jurutera
+                perisian lain boleh memahami dengan mudah dan menggunakan alat Java
+                untuk mencipta dokumentasi atur cara.
+              description_teacher: Pelajar diperkenalkan kepada Projek Pesta Cahaya
+                Kejiranan dan menilai keperluan, serta contoh untuk mengenal pasti
+                soalan dan ciri utama. Sebelum memulakan kerja ke atas projek, pelajar
+                mengembangkan pemahaman mereka mengenai struktur atur cara dan memberi
+                komen dengan mengenal pasti amalan terbaik dan meneroka penggunaan
+                Javadocs untuk menjana dokumentasi atur cara.
+            Exploring Integer and Double Objects:
+              description_student: Anda membina objek `Integer` dan `Ganda Dua` untuk
+                mewakili nilai primitif `int` dan `ganda dua` sebagai nilai rujukan.
+                Dengan menggunakan kaedah dalam kelas `Integer` dan `Ganda Dua`, anda
+                mengembalikan nilai yang disimpan oleh objek ini sebagai nilai primitif.
+                Anda juga meneroka nilai minimum dan maksimum untuk integer bagi mengelakkan
+                ralat limpah atas sebelum merancang tugas yang perlu anda selesaikan
+                untuk Projek Pesta Cahaya Kejiranan anda.
+              description_teacher: Pelajar membina objek `Integer` dan `Ganda Dua`
+                untuk mewakili nilai primitif `int` dan `ganda dua` sebagai nilai
+                rujukan. Dengan menggunakan kaedah dalam kelas `Integer` dan `Ganda
+                Dua`, pelajar mengembalikan nilai yang disimpan oleh objek ini sebagai
+                nilai primitif. Pelajar juga meneroka nilai minimum dan maksimum untuk
+                integer bagi mengelakkan ralat limpah atas sebelum merancang tugas
+                yang perlu mereka selesaikan untuk Projek Pesta Cahaya Kejiranan mereka.
+            Using ArrayLists to Store Data:
+              description_student: Apabila melakukan kerja dengan menggunakan tatasusunan
+                dan senarai, kadang-kadang kita menghadapi masalah apabila bilangan
+                elemen tidak diketahui atau saiz senarai sentiasa berubah. Dalam pelajaran
+                ini, anda mempelajari tentang `Senarai Tatasusunan` dan mengenal pasti
+                senario bahawa struktur data ini lebih sesuai.
+              description_teacher: Pelajar mencipta `Senarai Tatasusunan` bertujuan
+                menyimpan nilai `integer` dan `ganda dua`. Pelajar membezakan antara
+                `Senarai Tatasusunan` dan tatasusunan satu dimensi bagi menentukan
+                struktur data yang paling sesuai untuk sesuatu senario. Pelajar menambah
+                elemen kepada `Senarai Tatasusunan` dan mempelajari cara pengotakan
+                automatik menukar antara nilai primitif dan kelas pelindung semasa
+                ia melakukan kerja dengan data yang disimpan.
+            Working with ArrayList Data:
+              description_student: Anda menggunakan kaedah `Senarai Tatasusunan`,
+                `dapatkan()` dan `tetapkan()` untuk mendapatkan semula dan mengubah
+                suai elemen dan mempelajari tentang kaedah `Rentetan` `panjang()`
+                untuk mengira bilangan aksara dalam objek `Rentetan`. Anda menggunakan
+                algoritma standard yang anda bangunkan dengan tatasusunan 1D dan 2D
+                untuk mengubah suai elemen dalam `Senarai Tatasusunan`. Anda mempelajari
+                cara penyahkotakan melakukan penukaran antara nilai primitif dan kelas
+                pelindung semasa ia melakukan kerja dengan data yang disimpan dalam
+                `Senarai Tatasusunan`.
+              description_teacher: Pelajar melakukan kerja dengan kaedah `dapatkan()`
+                dan `tetapkan()` untuk mendapatkan semula dan mengubah suai elemen
+                dalam `Senarai Tatasusunan` dan mempelajari tentang kaedah `Rentetan`,
+                `panjang()` untuk mengira bilangan aksara dalam objek `Rentetan`.
+                Mereka menggunakan algoritma standard yang mereka bangunkan dengan
+                tatasusunan 1D dan 2D untuk mengubah suai elemen dalam `Senarai Tatasusunan`.
+                Pelajar mempelajari cara penyahkotakan melakukan penukaran antara
+                nilai primitif dan kelas pelindung semasa ia melakukan kerja dengan
+                data yang disimpan dalam `Senarai Tatasusunan`.
+            Storing Objects in an ArrayList:
+              description_student: Setakat ini, anda telah mencipta `Senarai Tatasusunan`
+                untuk menyimpan `Integer`, `Ganda Dua` dan `Rentetan`. Seperti tatasusunan
+                1D dan 2D, anda juga boleh menyimpan objek yang anda cipta dalam `Senarai
+                Tatasusunan`. Dalam pelajaran ini, anda mencipta `Senarai Tatasusunan`
+                objek untuk menggunakan algoritma standard yang telah anda gunakan
+                sepanjang tahun melakukan kerja dengan data yang disimpan dalam senarai
+                ini.
+              description_teacher: Pelajar mencipta `Senarai Tatasusunan` untuk menyimpan
+                objek dan mempelajari tentang jenis generik dalam Java. Pelajar menggunakan
+                algoritma yang mereka pelajari dengan tatasusunan satu dimensi kepada
+                `Senarai Tatasusunan` untuk mencari nilai minimum dan maksimum, mengira
+                jumlah dan purata atau mencari elemen yang memenuhi kriteria khusus.
+            Removing Data from an ArrayList:
+              description_student: Anda meneroka kefungsian kaedah `alih keluar()`
+                dalam kelas `Senarai Tatasusunan` dan mengenal pasti ralat yang berpotensi
+                apabila cuba mengalih keluar item semasa merentasi senarai. Dalam
+                proses itu, anda menyedari masa `Senarai Tatasusunan` ialah yang terbaik
+                untuk senario atau masalah.
+              description_teacher: Pelajar meneroka kefungsian kaedah `alih keluar()`
+                dalam kelas `Senarai Tatasusunan` dan mengenal pasti ralat yang berpotensi
+                apabila cuba mengalih keluar item semasa merentasi senarai. Pelajar
+                kemudiannya menyedari masa `Senarai Tatasusunan` ialah yang terbaik
+                untuk senario atau masalah.
+            Using String Methods:
+              description_student: Anda meneroka struktur `Rentetan` dan mengingati
+                semula bahawa `Rentetan` ialah objek. Anda menggunakan kaedah `indeks
+                Daripada()` dan `subrentetan()` untuk mencari subrentetan dalam `Rentetan`
+                dan mencipta objek `Rentetan` baharu daripada `Rentetan` sedia ada.
+              description_teacher: Pelajar meneroka struktur `Rentetan` dan mengingati
+                semula bahawa `Rentetan` ialah objek. Pelajar menggunakan kaedah `indeks
+                Daripada()` dan `subrentetan()` untuk mencari subrentetan dalam `Rentetan`
+                dan mencipta objek `Rentetan` baharu daripada `Rentetan` sedia ada.
+            Comparing Strings:
+              description_student: Anda meneroka dengan menggunakan `bandingkan Dengan()`
+                untuk menyemak jika `Rentetan` mengikut urutan abjad. Anda kemudiannya
+                melakukan kerja ke atas Projek Pesta Cahaya Kejiranan anda, memberikan
+                tumpuan secara khusus kepada tugasan yang ditetapkan kepada anda seperti
+                yang tertera pada Papan Perancangan Projek anda.
+              description_teacher: Pelajar meneroka dengan menggunakan `bandingkan
+                Dengan()` untuk menyemak jika `Rentetan` mengikut urutan abjad. Pelajar
+                kemudiannya melakukan kerja ke atas Projek Pesta Cahaya Kejiranan
+                mereka, memberikan tumpuan secara khusus kepada tugasan yang ditetapkan
+                kepada mereka seperti yang tertera pada Papan Perancangan Projek mereka.
+            Solving Problems with Strings:
+              description_student: Anda menggabungkan pengetahuan algoritma standard
+                anda dan `Rentetan` perlu disemak jika `Rentetan` berkenaan ialah
+                palindrom. Anda kemudiannya menyertai sesi maklum balas rakan sebaya
+                dan merenung kemajuan anda ke atas Projek Pesta Cahaya Kejiranan anda.
+              description_teacher: Pelajar menggabungkan pengetahuan algoritma standard
+                mereka dan `Rentetan` perlu disemak jika `Rentetan` berkenaan ialah
+                palindrom. Pelajar kemudiannya menyertai sesi maklum balas rakan sebaya
+                dan merenung kemajuan mereka ke atas Projek Pesta Cahaya Kejiranan
+                mereka.
+            Solving Problems with ArrayLists:
+              description_student: Anda menggunakan algoritma standard yang anda tulis
+                untuk tatasusunan 1D dan 2D kepada `Senarai Tatasusunan`. Anda melaksanakan
+                algoritma standard baharu untuk mendapatkan digit individu daripada
+                integer sebelum mengubah suai dan menggunakan algoritma terdahulu
+                bertujuan menukar elemen, mengalih keluar duplikasi, atau mencari
+                elemen yang memenuhi kriteria khusus dalam Projek Pesta Cahaya Kejiranan
+                anda.
+              description_teacher: Pelajar menggunakan algoritma standard yang mereka
+                tulis untuk tatasusunan 1D dan 2D kepada `Senarai Tatasusunan`. Pelajar
+                melaksanakan algoritma standard baharu untuk mendapatkan digit individu
+                daripada integer sebelum mengubah suai dan menggunakan algoritma terdahulu
+                bertujuan menukar elemen, mengalih keluar duplikasi, atau mencari
+                elemen yang memenuhi kriteria khusus dalam Projek Pesta Cahaya Kejiranan
+                mereka.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Projek Pesta Cahaya Kejiranan - Hari 1
+              description_student: Anda terus membangunkan Projek Pesta Cahaya Kejiranan
+                anda untuk mencipta cerita, puisi, lagu, atau bentuk sastera lain
+                berdasarkan analisis karya daripada pengarang atau artis kegemaran
+                anda. Terlebih dahulu, anda menilai sendiri kerja anda untuk menaksir
+                kemajuan anda dalam melengkapkan keperluan projek, kemudian tulis
+                kriteria penerimaan untuk ciri dalam projek anda yang akan diuji oleh
+                rakan sebaya. Anda menggunakan penilaian sendiri dan maklum balas
+                rakan sebaya untuk mengutamakan tugasan anda yang masih tinggal dan
+                terus membangunkan projek anda.
+              description_teacher: Pelajar terus membangunkan Projek Pesta Cahaya
+                Kejiranan mereka untuk mencipta cerita, puisi, lagu, atau bentuk sastera
+                lain berdasarkan analisis karya daripada pengarang atau artis kegemaran
+                mereka. Terlebih dahulu, mereka menilai sendiri kerja mereka untuk
+                menaksir kemajuan mereka dalam melengkapkan keperluan projek, kemudian
+                menulis kriteria penerimaan untuk ciri dalam projek mereka yang akan
+                diuji oleh rakan sebaya. Pelajar menggunakan penilaian sendiri dan
+                maklum balas rakan sebaya untuk mengutamakan tugasan mereka yang masih
+                tinggal dan terus membangunkan projek mereka.
+              key: Projek Pesta Cahaya Kejiranan - Hari 1
+            Neighborhood Lit Fest Project - Day 2:
+              name: Projek Pesta Cahaya Kejiranan - Hari 2
+              description_student: Dalam pelajaran terdahulu, anda mengendalikan penilaian
+                sendiri dan menulis kriteria penerimaan untuk projek anda. Dalam pelajaran
+                ini, anda mendapatkan maklum balas rakan sebaya untuk mengenal pasti
+                tugasan yang masih tinggal dan perlu diselesaikan, serta terus membangunkan
+                Projek Pesta Cahaya Kejiranan anda.
+              description_teacher: Dalam pelajaran terdahulu, pelajar mengendalikan
+                penilaian sendiri dan menulis kriteria penerimaan untuk projek mereka.
+                Pelajar mendapat maklum balas rakan sebaya dalam pelajaran ini untuk
+                mengenal pasti tugasan yang masih tinggal dan perlu diselesaikan,
+                serta terus membangunkan Projek Pesta Cahaya Kejiranan mereka.
+              key: Projek Pesta Cahaya Kejiranan - Hari 2
+            Neighborhood Lit Fest Project - Day 3:
+              name: Projek Pesta Cahaya Kejiranan - Hari 3
+              description_student: Anda membuat penyemakan dan kemas kini terakhir
+                berdasarkan semakan kod anda dan Papan Perancangan Projek. Anda berkongsi
+                Projek Pesta Cahaya Kejiranan bersama rakan sebaya anda. Kemudiannya,
+                anda meraikan kejayaan tersebut dan melengkapkan renungan terakhir
+                proses pembangunan.
+              description_teacher: Pelajar membuat penyemakan dan kemas kini terakhir
+                berdasarkan semakan kod mereka dan Papan Perancangan Projek. Pelajar
+                berkongsi Projek Pesta Cahaya Kejiranan bersama rakan sebaya mereka.
+                Kemudiannya, pelajar meraikan kejayaan tersebut dan melengkapkan renungan
+                terakhir proses pembangunan.
+              key: Projek Pesta Cahaya Kejiranan - Hari 3
+            Assessment Day:
+              description_student: Dalam unit ini, anda menggunakan `Senarai Tatasusunan`
+                untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan
+                tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Anda meneroka manfaat
+                dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk
+                menyelesaikan masalah yang melibatkan data berangka dan objek. Anda
+                menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses
+                teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit,
+                anda menulis dokumentasi atur cara dengan menggunakan komen satu baris,
+                komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi
+                API. Dalam proses itu, anda mengenal pasti dan mendokumenkan prasyarat
+                dan pascasyarat objek dan kaedah. Kini, anda menaksir pencapaian objektif
+                dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai
+                pilihan.
+              description_teacher: Dalam unit ini, pelajar menggunakan `Senarai Tatasusunan`
+                untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan
+                tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Pelajar meneroka
+                manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini
+                untuk menyelesaikan masalah yang melibatkan data berangka dan objek.
+                Pelajar menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis
+                dan memproses teks yang diperoleh daripada input pengguna dan fail.
+                Sepanjang unit, pelajar menulis dokumentasi atur cara dengan menggunakan
+                komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta
+                dokumentasi API. Dalam proses itu, pelajar mengenal pasti dan mendokumenkan
+                prasyarat dan pascasyarat objek dan kaedah. Kini, pelajar menaksir
+                pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan
+                penilaian pelbagai pilihan.
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: pelajaran-1
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        csa7-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Pembolehubah
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: Penjujukan
+              key: Penjujukan
+            Loops:
+              name: Gelung
+              key: Gelung
+            Events:
+              name: Acara-acara
+              key: Acara-acara
+            Conditionals:
+              name: Bersyarat
+              key: Bersyarat
+            Functions:
+              name: Fungsi
+              key: Fungsi
+            Variables:
+              name: Pembolehubah
+              key: Pembolehubah

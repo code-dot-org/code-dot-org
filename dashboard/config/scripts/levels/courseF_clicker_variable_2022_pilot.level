@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:47.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -64,11 +60,16 @@
     "hint_prompt_attempts_threshold": "1",
     "project_template_level_name": "courseF_clicker_template_2022_pilot",
     "validation_code": "// This level requires the variableLog Helper Library\r\n\r\nif (World.frameCount == 1) {\r\n  varLog = buildVariableLog();\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function(){\r\n    return Object.keys(varLog).length >0;\r\n  }, 'createVariable');\r\n  addCriteria(function(){\r\n    return !varLabelStartsWithUnderscore();\r\n  }, 'renameVariable');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'spriteNotClicked');\r\n  addCriteria(function(){\r\n    return spriteRemoved()&&clickEventFound();\r\n  }, 'removeSpriteWhenClicked');\r\n  addCriteria(function() {\r\n    return onlyEventSpriteRemoved();\r\n  }, 'removeOnlyClickedSprite');\r\n  addCriteria(function(){\r\n    return detectVariableLogChange();\r\n  }, 'changeVariableBlock');\r\n}\r\n\r\ndelayEndInActiveApp();\r\ncheck();\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "qXmsidzvsZpb40wzdtZnvdfWyqu2AZ7YHRDhcHQYIjAqavMeOo/4sFaWUUPo\nO75Keg6PfkCLR3SYFSMsTSPANw==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:47.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:47.595+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_variable\\\"\"],\"cloned_from\":\"courseF_clicker_variable\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:47.595+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_variable\\\"\"],\"cloned_from\":\"courseF_clicker_variable\"},{\"changed_at\":\"2022-03-02 04:35:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-03-02 04:42:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

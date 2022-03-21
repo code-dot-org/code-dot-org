@@ -2814,6 +2814,10 @@ fa:
               display_name: حلقه‌ها
             csf_events:
               display_name: رویدادها
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: متغیرها
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2826,3 +2830,37 @@ fa:
           lessons:
             lesson-9:
               name: حلقه‌ها
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: اینترنت
+              key: اینترنت
+          lesson_groups:
+            lessonGroup-7:
+              display_name: شهروندی دیجیتالی
+            lessonGroup-8:
+              display_name: متغیرها
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: متغیرها
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: حلقه‌ها
+              key: حلقه‌ها
+            Events:
+              name: رویدادها
+              key: رویدادها
+            Conditionals:
+              name: شرطی ها
+              key: شرطی ها
+            Functions:
+              name: توابع
+              key: توابع
+            Variables:
+              name: متغیرها
+              key: متغیرها
+            For Loops:
+              name: حلقه های "برای"
+              key: حلقه های "برای"

@@ -238,13 +238,16 @@
           "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
@@ -405,7 +408,8 @@
           "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"

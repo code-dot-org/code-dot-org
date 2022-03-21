@@ -19,6 +19,9 @@ class Ability
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
+      ProgrammingEnvironment, # see override below
+      ProgrammingExpression, # see override below
+      ReferenceGuide, # see override below
       :reports,
       User,
       UserPermission,
@@ -74,8 +77,12 @@ class Ability
       can? :update, level
     end
 
-    can [:show_by_keys], ProgrammingExpression do |expression|
-      can? :read, expression
+    can [:read], ProgrammingEnvironment do |environment|
+      environment.published || user.permission?(UserPermission::LEVELBUILDER)
+    end
+
+    can [:read, :show_by_keys], ProgrammingExpression do |expression|
+      can? :read, expression.programming_environment
     end
 
     if user.persisted?
@@ -212,15 +219,12 @@ class Ability
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
         if user.regional_partners.any?
-          # regional partners by default have read, quick_view, and update
-          # permissions
+          # regional partners by default have read, quick_view, and update permissions
           can [:read, :quick_view, :cohort_view, :update, :search, :destroy], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
 
-          # G3 regional partners should have full management permission
-          group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
-          unless group_3_partner_ids.empty?
-            can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
-          end
+          # regional partners cannot see or update incomplete teacher applications
+          cannot [:show, :update, :destroy], Pd::Application::TeacherApplication, &:incomplete?
+
           can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
       end
@@ -310,6 +314,11 @@ class Ability
       can?(:read, script)
     end
 
+    can :read, ReferenceGuide do |guide|
+      course_or_unit = guide.course_version.content_root
+      can?(:read, course_or_unit)
+    end
+
     # Handle standalone projects as a special case.
     # They don't necessarily have a model, permissions and redirects are run
     # through ProjectsController and their view/edit requirements are defined
@@ -348,6 +357,7 @@ class Ability
         Lesson,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        ReferenceGuide,
         CourseOffering,
         UnitGroup,
         Resource,
@@ -399,6 +409,11 @@ class Ability
       end
     end
 
+    # This action allows levelbuilders to work on exemplars in levelbuilder
+    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+      can :get_access_token_with_override_sources, :javabuilder_session
+    end
+
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
@@ -419,6 +434,7 @@ class Ability
         CourseOffering,
         Script,
         Lesson,
+        ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,

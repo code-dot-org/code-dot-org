@@ -10926,19 +10926,8 @@ ro:
           lessons:
             lesson-2:
               name: Laboratorul Java
-            lesson-3: {}
-            lesson-5: {}
-            lesson-6: {}
-            lesson-7: {}
-            lesson-8: {}
             lesson-9:
               name: Bucle
-            lesson-10: {}
-            lesson-11: {}
-            lesson-12: {}
-            lesson-13: {}
-            lesson-14: {}
-            lesson-15: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -10985,6 +10974,9 @@ ro:
             csf_events:
               display_name: Evenimente
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variabile
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11031,16 +11023,37 @@ ro:
         tess-test-csa: {}
         csa1-2022-exemplars:
           lessons:
+            lesson-1: {}
             lesson-2:
               name: Laboratorul Java
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
             lesson-9:
               name: Bucle
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
+            lesson-20: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         pltess: {}
         self-paced-pl-csa1-2022: {}
-        self-paced-pl-csa3-2022: {}
+        self-paced-pl-csa2-2022: {}
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-1: {}
         csa7-pilot-extra:
           lessons:
             Unit 7 Pilot Survey: {}
@@ -11136,3 +11149,225 @@ ro:
         csa-backpack-2022:
           lessons:
             lesson-1: {}
+            lesson-2: {}
+        csd6-projects:
+          lessons:
+            'Project: Human Device Interaction': {}
+            lesson-4: {}
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Puterea cuvintelor
+              description_student: Hărțuirea („bullying”) nu este niciodată acceptabilă. În această lecție vei învăța ce poți spune și ce nu poți spune online.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)Această lecție a fost concepută inițial de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).Pe măsură ce copiii cresc, aceștia vor începe, în mod firesc, să comunice mai mult online. Dar o parte din ceea ce văd online îi poate face să se simtă răniți, triști, furioși sau chiar să îi sperie. Ajutați-vă elevii să dea dovadă de empatie în relațiile cu cei din jur și să învețe strategii pe care trebuie să le utilizeze atunci când se confruntă cu fenomenul „cyberbullying”."
+              key: Puterea cuvintelor
+            Introducing Sprite Lab:
+              name: Prezentând Laboratorul de Desen
+              key: Prezentând Laboratorul de Desen
+            Sprites in Action:
+              name: Spiriduși în acțiune
+              key: Spiriduși în acțiune
+            'Mini-Project: Virtual Pet':
+              description_teacher: În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!
+            Simulating Experiments:
+              name: Simularea de experimente
+              description_student: Rulează simulări pe computer și experimentează, schimbând variabilele.
+              description_teacher: Prin rularea unei simple simulări în Laboratorul cu sprites, studenții vor vedea cum se poate utiliza computerul pentru a colecta date care identifică tendințe sau modele. După ce rulează simularea de mai multe ori, elevii vor avea ocazia să facă o predicție cu privire la modul în care schimbarea unei variabile din simulare poate afecta rezultatul, iar apoi să testeze ipoteza respectivă.
+              key: Simularea de experimente
+            Outbreak:
+              name: Epidemie
+              key: Epidemie
+            AI For Oceans:
+              name: IA pentru Oceane
+              key: IA pentru Oceane
+            The Internet:
+              name: Internetul
+              description_teacher: Chiar dacă mulți oameni folosesc Internetul zilnic, sunt puțini cei care știu cum funcționează. În această lecție, elevii vor pretinde că pot circula în interiorul Internetului în timp ce învață despre conexiuni, adrese URL, adrese IP și DNS.
+              key: Internetul
+            End of Course Project:
+              name: Proiect de final de curs
+              description_student: Pentru proiectele mari este nevoie de timp și de planificare. Găsește-ți sursa de inspirație, pregătește un plan și pune-ți creativitatea la treabă!
+              description_teacher: În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate!
+              key: Proiect de final de curs
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Cetățenia Digitală
+            ramp_up:
+              display_name: Spiriduși
+            lessonGroup-8:
+              display_name: Variabile
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          description_audience: 'Vârsta: 9-13 ani'
+          description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: Proiectele pe care le-ați dezvoltat în timpul acestui curs au condus la o creștere a creativității în comunitate! Se va organiza un Festival de literatură din cartier pentru a se prezenta povești creative, scenarii, versuri de cântece, scrisori și poezii. Proiectul Festivalul de literatură din cartier este un proiect de amploare la care veți lucra pe parcursul acestei unități, iar strategiile de management de proiect vă vor ajuta să vă organizați și să vă structurați activitatea. Explorați strategii de scriere și structurare a codului astfel încât și alți ingineri software să îl poată înțelege cu ușurință și utilizați un instrument Java pentru a crea documentația programului.
+              description_teacher: Elevii se familiarizează cu proiectul Festivalul de literatură din cartier și evaluează cerințele și exemplele pentru a identifica întrebările și caracteristicile-cheie. Înainte de a începe să lucreze la proiect, elevii vor înțelege structura programelor și adăugarea de comentarii la acestea prin identificarea celor mai bune practici și prin explorarea Javadocs, pentru generarea documentației programului.
+            Exploring Integer and Double Objects:
+              description_student: Veți elabora obiecte `Integer` și `Double` pentru a reprezenta valorile primitive `int` și `double` ca valori de referință. Utilizând metodele detaliate în orele cu privire la `Integer` și `Double`, veți obține valorile pe care aceste obiecte le stochează ca valori primitive. De asemenea, veți explora valorile minime și maxime ale numerelor întregi pentru a evita erorile de depășire a limitei înainte de a planifica sarcinile pe care trebuie să le îndepliniți pentru proiectul Festivalul de literatură din cartier.
+              description_teacher: Elevii elaborează obiecte `Integer` și `Double` pentru a reprezenta valorile primitive `int` și `double` ca valori de referință. Utilizând metodele detaliate în orele cu privire la `Integer` și `Double`, elevii obțin valorile pe care aceste obiecte le stochează ca valori primitive. De asemenea, aceștia explorează valorile minime și maxime ale numerelor întregi pentru a evita erorile de depășire a limitei înainte de a planifica sarcinile pe care trebuie să le îndeplinească pentru proiectul Festivalul de literatură din cartier.
+            Using ArrayLists to Store Data:
+              description_student: Atunci când lucrăm cu matrice și liste, uneori ne confruntăm cu probleme în care numărul de elemente este necunoscut sau dimensiunea listei se modifică în mod constant. În această lecție, veți învăța despre `liste de matrice` și veți identifica scenariile pentru care este mai potrivită această structură de date.
+              description_teacher: Elevii creează `liste de matrice` pentru a stoca valori `int` și `double`. Elevii fac diferența între `liste de matrice` și matricele unidimensionale pentru a stabili care dintre structurile de date este cea mai potrivită pentru un anumit scenariu. Elevii adaugă elemente la o `listă de matrice` și învață cum se efectuează conversia automată între valorile primitive și clasele de wrapper pe măsură ce lucrează cu datele stocate.
+            Working with ArrayList Data:
+              description_student: Veți utiliza metodele `listă de matrice` de tip `get()` și `set()` pentru a recupera și modifica elemente și veți învăța despre metoda `String` `length()` pentru a afla care este numărul de caractere dintr-un obiect `String`. Aplicați algoritmii standard pe care i-ați dezvoltat cu matricea 1D și 2D pentru a modifica elementele dintr-o `listă de matrice`. De asemenea, veți învăța cum funcția unboxing efectuează conversiile între valorile primitive și clasele de wrapper, pe măsură ce lucrează cu datele stocate într-o `listă de matrice`.
+              description_teacher: Elevii utilizează metodele de tip `get()` și `set()` pentru a recupera și modifica elemente și învață despre metoda `String` `length()` pentru a afla care este numărul de caractere dintr-un obiect `String`. Aceștia aplică algoritmii standard pe care i-au dezvoltat cu matricea 1D și 2D pentru a modifica elementele dintr-o `listă de matrice`. De asemenea, elevii vor învăța cum funcția unboxing efectuează conversiile între valorile primitive și clasele de wrapper, pe măsură ce lucrează cu datele stocate într-o `listă de matrice`.
+            Storing Objects in an ArrayList:
+              description_student: Până acum, ați creat `liste de matrice` pentru a stoca elemente de tip `Integer`, `Double` și `String`. La fel ca în cazul matricelor 1D și 2D, puteți stoca și obiecte pe care le creați într-o `listă de matrice`. În această lecție, veți crea o `listă de matrice` cu obiecte pentru a aplica algoritmii standard pe care i-ați folosit pe parcursul anului pentru a lucra cu datele stocate în această listă.
+              description_teacher: Elevii creează `liste de matrice` pentru a stoca obiecte și învață despre tipuri generice în Java. Elevii aplică algoritmii pe care i-au asimilat pentru matrice unidimensionale la `listele de matrice` pentru a găsi valorile minime și maxime, pentru a calcula sume și medii sau pentru a găsi elemente care îndeplinesc anumite criterii.
+            Removing Data from an ArrayList:
+              description_student: Explorați funcționalitatea metodei `remove()` din clasa `listelor de matrice` și identificați erorile potențiale atunci când încercați să eliminați elemente, în timp ce parcurgeți lista. În acest proces, veți înțelege când se potrivește cel mai bine o `listă de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
+              description_teacher: Elevii explorează funcționalitatea metodei `remove()` din clasa `listelor de matrice` și identifică erorile potențiale atunci când încearcă să elimine elemente, în timp ce parcurg lista. În acest proces, elevii vor înțelege când se potrivește cel mai bine o `listă de matrice` pentru un anumit scenariu sau pentru o anumită problemă.
+            Using String Methods:
+              description_student: Explorați structura unui `String` și rețineți că `String` sunt obiecte. Utilizați metodele `indexOf()` și `substring()` pentru a căuta subșiruri în cadrul unui `Ștring` și pentru a crea noi obiecte `String` plecând de la un `String` existent.
+              description_teacher: Elevii explorează structura unui `String` și rețin faptul că `String` sunt obiecte. Aceștia utilizează metodele `indexOf()` și `substring()` pentru a căuta subșiruri în cadrul unui `String` și pentru a crea noi obiecte `String` plecând de la un `String` existent.
+            Comparing Strings:
+              description_student: Explorați utilizarea funcției `compareTo()` pentru a verifica dacă `String` sunt în ordine alfabetică. Apoi lucrați la proiectul Festivalul de literatură din cartier, concentrându-vă în mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
+              description_teacher: Elevii explorează utilizarea funcției `compareTo()` pentru a verifica dacă `String` sunt în ordine alfabetică. Apoi aceștia lucrează la proiectul Festivalul de literatură din cartier, concentrându-se în mod special asupra sarcinilor de pe Panoul de planificare a proiectului.
+            Solving Problems with Strings:
+              description_student: Combinați cunoștințele pe care le-ați asimilat cu privire la algoritmii standard și la `String` pentru a verifica dacă un `String` este un palindrom. Apoi, participați la o sesiune de feedback cu colegii și reflectați asupra progreselor înregistrate în cadrul proiectului „Festivalul de literatură din cartier”.
+              description_teacher: Elevii combină cunoștințele pe care le-au asimilat cu privire la algoritmii standard și la `String` pentru a verifica dacă un `String` este un palindrom. Apoi, aceștia participă la o sesiune de feedback cu colegii și reflectează asupra progreselor înregistrate în cadrul proiectului „Festivalul de literatură din cartier”.
+            Solving Problems with ArrayLists:
+              description_student: Aplicați algoritmii standard pe care i-ați scris pentru matricele 1D și 2D la `listele de matrice`. Implementați un nou algoritm standard pentru a obține cifre individuale dintr-un număr întreg înainte de a modifica și aplica algoritmi anteriori pentru a schimba elemente între ele, a elimina dublurile sau a găsi elemente care îndeplinesc anumite criterii în cadrul proiectului Festivalul de literatură din cartier.
+              description_teacher: Elevii aplică algoritmii standard pe care i-au scris pentru matricele 1D și 2D la `listele de matrice`. Aceștia implementează un nou algoritm standard pentru a obține cifre individuale dintr-un număr întreg înainte de a modifica și aplica algoritmi anteriori pentru a schimba elemente între ele, a elimina dublurile sau a găsi elemente care îndeplinesc anumite criterii în cadrul proiectului Festivalul de literatură din cartier.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 1
+              description_student: Continuați să dezvoltați proiectul „Festivalul de literatură din cartier” pentru a crea o poveste, o poezie, un cântec sau o altă operă literară bazată pe analiza operei autorului sau artistului preferat. Trebuie mai întâi să vă autoevaluați activitatea, pentru a măsura progresele înregistrate în legătură cu îndeplinirea cerințelor proiectului, apoi stabiliți criteriile de acceptare pentru o funcție a proiectului, care va fi testată de un coleg. Folosiți autoevaluarea și feedback-ul furnizat de colegi pentru a stabili prioritățile pentru sarcinile rămase și pentru a continua dezvoltarea proiectului.
+              description_teacher: Elevii continuă să dezvolte proiectul „Festivalul de literatură din cartier” pentru a crea o poveste, o poezie, un cântec sau o altă operă literară bazată pe analiza operei autorului sau artistului preferat. Aceștia trebuie mai întâi să își autoevalueze activitatea, pentru a măsura progresele înregistrate în legătură cu îndeplinirea cerințelor proiectului, apoi să stabilească criteriile de acceptare pentru o funcție a proiectului, care va fi testată de un coleg. Elevii folosesc autoevaluarea și feedback-ul furnizat de colegi pentru a stabili prioritățile pentru sarcinile rămase și pentru a continua dezvoltarea proiectului.
+              key: Proiectul Festivalul de literatură din cartier - Ziua 1
+            Neighborhood Lit Fest Project - Day 2:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 2
+              description_student: În lecția anterioară, ați efectuat o autoevaluare și ați stabilit criteriile de acceptare pentru proiect. În această lecție veți obțineți feedback de la colegi pentru a identifica sarcinile care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea proiectului Festivalul de literatură din cartier.
+              description_teacher: În lecția anterioară, elevii au efectuat o autoevaluare și au stabilit criteriile de acceptare pentru proiect. În această lecție vor obțineți feedback de la colegi pentru a identifica sarcinile care mai trebuie să fie îndeplinite și pentru a continua dezvoltarea proiectului Festivalul de literatură din cartier.
+              key: Proiectul Festivalul de literatură din cartier - Ziua 2
+            Neighborhood Lit Fest Project - Day 3:
+              name: Proiectul Festivalul de literatură din cartier - Ziua 3
+              description_student: Acum efectuați revizuirile și actualizările finale, pe baza analizei codului și a Panoului de planificare a proiectului. Comunicați detaliile proiectului Festivalul de literatură din cartier colegilor. Apoi sărbătoriți succesul și reflectați asupra procesului de dezvoltare.
+              description_teacher: Elevii efectuează revizuirile și actualizările finale, pe baza analizei codului și a Panoului de planificare a proiectului. Aceștia comunică detaliile proiectului Festivalul de literatură din cartier colegilor. Apoi elevii sărbătoresc succesul și reflectează asupra procesului de dezvoltare.
+              key: Proiectul Festivalul de literatură din cartier - Ziua 3
+            Assessment Day:
+              description_student: În această unitate, ați folosit `liste de matrice` pentru a stoca date ale programului și ați făcut diferența între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De asemenea, ați analizat avantajele și funcționalitatea unei `liste de matrice`, folosindu-le pentru a rezolva probleme cu date numerice și date obiect. Ați utilizat metode în cadrul clasei `String` pentru a analiza și procesa textul obținut din datele introduse de utilizator și din fișiere. Pe parcursul unității, ați scris documentația programului folosind comentarii pe un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc pentru a crea documentația API. În cadrul acestui proces, ați identificat și documentat precondițiile și postcondițiile pentru obiecte și metode. Acum urmează să evaluați atingerea obiectivelor de învățare și dobândirea competențelor specifice unității, printr-o evaluare cu întrebări cu variante multiple de răspuns.
+              description_teacher: În această unitate, elevii au folosit `liste de matrice` pentru a stoca date ale programului și au făcut diferența între utilizarea matricelor 1D și 2D și a `listelor de matrice`. De asemenea, aceștia au analizat avantajele și funcționalitatea unei `liste de matrice`, folosindu-le pentru a rezolva probleme cu date numerice și date obiect. Elevii au utilizat metode în cadrul clasei `String` pentru a analiza și procesa textul obținut din datele introduse de utilizator și din fișiere. Pe parcursul unității, aceștia au scris documentația programului folosind comentarii pe un singur rând, comentarii pe mai multe rânduri și comentarii Javadoc pentru a crea documentația API. În cadrul acestui proces, aceștia au identificat și documentat precondițiile și postcondițiile pentru obiecte și metode. Acum elevii urmează să evalueze atingerea obiectivelor de învățare și dobândirea competențelor specifice unității, printr-o evaluare cu întrebări cu variante multiple de răspuns.
+            Unit 6 Pilot Survey: {}
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1:
+              key: lecția-1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        csa7-2022:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        csa8-2022:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        ui-test-csa-family-script: {}
+        csa-preview:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-3: {}
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        vpl-csd3-summer-pilot-2022: {}
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-1: {}
+        vpl-csd5-summer-pilot-2022: {}
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variabile
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        k5-onlinepd-2022:
+          lessons:
+            Welcome and Introduction: {}
+            Getting Started: {}
+            Teaching Practices and Strategies: {}
+            Teaching a Lesson: {}
+            Addressing Barriers: {}
+            Part II Overview: {}
+            Sequencing:
+              name: Secvențiere
+              key: Secvențiere
+            Sequencing with Sprites: {}
+            Loops:
+              name: Bucle
+              key: Bucle
+            Events:
+              name: Evenimente
+              key: Evenimente
+            Conditionals:
+              name: Condiţionale
+              key: Condiţionale
+            Functions:
+              name: Funcţii
+              key: Funcţii
+            Variables:
+              name: Variabile
+              key: Variabile
+            For Loops:
+              name: Bucle Pentru
+              key: Bucle Pentru
+            End of Course projects: {}
+            Reviewing your reflections: {}
+            Taking next steps: {}
+            Welcome to "Teaching Computer Science Fundamentals": {}
+            CS Teaching and Student Practices: {}
+            Lesson Planning:
+              key: Planificare lecție
+            Implementation Approaches and Barriers: {}
+            Next steps: {}

@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U2 Store Management Project PBT_2022",
+    "long_instructions": "##Store Management Project\r\nWrite your superclass and subclass for your business. Your classes should have:\r\n\r\n* a no-argument constructor\r\n\r\n* a parameterized constructor\r\n\r\n* accessor methods\r\n\r\n* mutator methods\r\n\r\n* a `toString()`(#e7e8ea) method",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "encrypted_examples": "FbsCZrMxC5FHjbOSeeJoXvAtSWe1qbZ2J2eStIapXaCtjVIJW7NjFUFcmqvs\nIbvb8PX50CvDVnNadbA+Z032bHOZJVM/ePQceuVEc8dMtuo=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-07T00:34:15.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-07 00:34:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:10:39 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

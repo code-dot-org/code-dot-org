@@ -512,15 +512,9 @@ class ScriptLevelsController < ApplicationController
       )
     end
 
-    @code_review_enabled_for_level = if DCDO.get('code_review_groups_enabled', false)
-                                       @level.is_a?(Javalab) &&
-                                        current_user.present? &&
-                                        (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
-                                     else
-                                       @level.is_a?(Javalab) &&
-                                         current_user.present? &&
-                                         (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
-                                     end
+    @code_review_enabled_for_level = @level.is_a?(Javalab) &&
+      current_user.present? &&
+      (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
     view_options(
       full_width: true,

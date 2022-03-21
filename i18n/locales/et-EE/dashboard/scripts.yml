@@ -3656,6 +3656,9 @@ et:
             csf_events:
               display_name: Sündmused
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Muutujad
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
@@ -3694,3 +3697,52 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internet
+              key: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-8:
+              display_name: Muutujad
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Muutujad
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Tsüklid
+              key: Tsüklid
+            Events:
+              name: Sündmused
+              key: Sündmused
+            Conditionals:
+              name: Tingimuslaused
+              key: Tingimuslaused
+            Functions:
+              name: Funktsioonid
+              key: Funktsioonid
+            Variables:
+              name: Muutujad
+              key: Muutujad
+            For Loops:
+              name: For tsükkel
+              key: For tsükkel
