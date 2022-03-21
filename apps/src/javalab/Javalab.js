@@ -359,7 +359,6 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     overrideSources = getSources(getStore().getState());
   }
 
-  console.log(overrideSources);
   this.javabuilderConnection = new JavabuilderConnection(
     this.level.javabuilderUrl,
     this.onOutputMessage,

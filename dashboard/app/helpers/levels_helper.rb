@@ -190,8 +190,7 @@ module LevelsHelper
     # - In edit_blocks mode, the source code is saved as a level property and
     #   is not written to the channel.
     #
-    # Note that Javalab requires a channel to _execute_ the code on Javabuilder
-    # so it always needs a channel, regardless of whether it will be written to.
+    # Note that Javalab requires a channel if Javabuilder needs to access assets.
     level_requires_channel = @level.is_a?(Javalab) ||
         (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
@@ -470,9 +469,7 @@ module LevelsHelper
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
 
     # Support template level exemplars? Each level will have their own exemplar,
-    # but maybe put put exemplar code from template if it exists?
-    # Gate access only to levelbuilders -- looks like edit_blocks route is only available to levelbuilders, but we might run this at each page load
-    # Figure out how to gate this.
+    # but maybe use exemplar code from template if it exists?
     if true
       # what shape should this be if we have neither start sources nor exemplar?
       level_options['exemplarSources'] = @level.try(:exemplar_sources) || @level.try(:start_sources)

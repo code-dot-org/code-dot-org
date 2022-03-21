@@ -60,8 +60,6 @@ module ViewOptionsHelper
     @view_options = nil
   end
 
-  # maybe should be :edit_exemplar
-  # might belong in view options, rather than level view options?
   LevelViewOptions = Struct.new(
     :success_condition,
     :start_blocks,
