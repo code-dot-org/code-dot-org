@@ -32,6 +32,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   setup do
+    skip
+
     # Skip security logging to Slack in test
     ChatClient.stubs(:message)
 
