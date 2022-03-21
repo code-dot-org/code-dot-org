@@ -48,6 +48,16 @@ class I18nSync
       sync_out(true) if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
       return_to_staging_branch
+    elsif @options[:slack] && @options[:command]
+      # For testing nicer slack integration
+      case @options[:command]
+      when 'in'
+        puts "Pulling all updated source strings into i18n/locales/sources"
+        sync_in(true)
+        if @options[:with_pull_request] && should_i("create the in & up PR")
+          CreateI18nPullRequests.in_and_up
+        end
+      end
     elsif @options[:command]
       case @options[:command]
       when 'in'
@@ -105,6 +115,10 @@ class I18nSync
 
       opts.on("-y", "--yes", "Run without confirmation") do
         options[:yes] = true
+      end
+
+      opts.on("-s", "--slack", "Send log output to infra-i18n slack channel") do
+        options[:slack] = true
       end
     end
     opt_parser.parse!(args)

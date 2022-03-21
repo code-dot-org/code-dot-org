@@ -1,5 +1,6 @@
 require 'uri'
 require 'net/http'
+require 'rest-client'
 require 'retryable'
 require 'json'
 require 'cdo/honeybadger'
@@ -28,7 +29,8 @@ class Slack
     'infra-production' => 'C03CK8FGX',
     'infra-honeybadger' => 'C55JZ1BPZ',
     'levelbuilder' => 'C0T10H2HY',
-    'server-operations' => 'C0CCSS3PX'
+    'server-operations' => 'C0CCSS3PX',
+    'infra-i18n' => 'C99KAHFK9'
   }.freeze
 
   SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
@@ -151,6 +153,15 @@ class Slack
     end
   end
 
+  # Post a message to slack. This function behaves differently from self.message above:
+  # - It uses the Slack Bot token rather than an incoming webhook to authenticate.
+  # - It only accepts 1 options param. Message text, channel ID, attachments, blocks, etc
+  #   should be passed exactly as the Slack API outlines.
+  # - It returns the entire response payload from Slack, rather than just a success/fail boolean
+  def self.message2(options)
+    post_to_slack("https://slack.com/api/chat.postMessage", options)
+  end
+
   # Bot tokens are unable to post to reminders.add or chat.command, so we will mimic the functionality of a slack reminder
   #  by scheduling a DM to the user at a specific time.
   # @param recipient_id [String] Slack ID of user to message.
@@ -168,6 +179,52 @@ class Slack
     channel = CHANNEL_MAP[room] || room
     result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.escape(text)}")
     return !!result
+  end
+
+  # Upload a file to one or more Slack channels
+  # @param rooms [String] Comma-separated list of channels to post the file
+  # @param path [String] Path to the file to be uploaded
+  # @param params (optional) [Hash] Any additional Slack API params, such as filename
+  def self.upload_file(rooms, path, params={})
+    request = RestClient::Request.new(
+      :method => :post,
+      :url => "https://slack.com/api/files.upload",
+      :headers => {
+        "Content-type" => "multipart/form-data",
+        "Authorization" => "Bearer #{SLACK_BOT_TOKEN}"
+      },
+      :payload => {
+        "multipart" => true,
+        "file" => File.new(path, "r"),
+        "channels" => rooms,
+      }.merge(params)
+    )
+
+    begin
+      res = request.execute
+      response = JSON.parse(res.to_str)
+
+      unless response['ok']
+        opts = {
+          error_class: "Slack integration [error]",
+          error_message: parsed_res['error'],
+          context: {url: url, payload: payload, response: parsed_res}
+        }
+        Honeybadger.notify_cronjob_error opts
+        puts opts
+        response = false
+      end
+    rescue Exception => error
+      opts = {
+        error_class: "Slack integration [error]",
+        error_message: error,
+        context: {url: url, payload: payload}
+      }
+      Honeybadger.notify_cronjob_error opts
+      puts opts
+      response = false
+    end
+    response
   end
 
   # @param name [String] Name of the Slack channel to join.
