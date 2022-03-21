@@ -1,14 +1,19 @@
 ko:
   data:
     parameter_names:
+      "???": "???"
       actor: 캐릭터
       color: 색깔
       counter: counter
+      dir: 방향
+      direction: 방향
       height: '높이:'
       honey: 꿀
       left: 왼쪽으로
       length: length
       min: 최소
+      nectar units: 꽃꿀 유닛
+      nectars: 꽃꿀
       points: 점수
       size: 크기
       speed: 스피드
