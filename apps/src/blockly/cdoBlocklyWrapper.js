@@ -264,7 +264,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     getAllUsedBlocks: function(workspace) {
       return workspace.getAllBlocks().filter(block => !block.disabled);
-    }
+    },
+
+    isWorkspaceReadOnly: () => false
   };
 
   return blocklyWrapper;
