@@ -109,6 +109,7 @@ module Pd::Application
       assert_equal Pd::Application::TeacherApplication::REVIEWING_INCOMPLETE, teacher_application.meets_criteria
     end
 
+    # [MEG] TODO: Move and refactor this test once the date_applied method is only in application_base
     test 'date_applied finds date of first unreviewed status' do
       tomorrow = Date.tomorrow.to_time
       next_day = tomorrow + 1.day
