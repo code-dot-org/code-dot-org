@@ -94,7 +94,7 @@ export default function ProgrammingExpressionsTable({
     }).then(response => {
       if (response.ok) {
         setItemToDelete(null);
-        fetchExpressions();
+        fetchExpressions(selectedEnvironment, selectedCategory, currentPage);
       } else {
         setError(response.statusText);
       }
@@ -163,11 +163,15 @@ export default function ProgrammingExpressionsTable({
   }
   return (
     <>
-      <select onChange={onEnvironmentSelect} value={selectedEnvironment}>
+      <select
+        onChange={onEnvironmentSelect}
+        value={selectedEnvironment}
+        style={{marginRight: 7}}
+      >
         <option value={DEFAULT_VALUE}>All IDEs</option>
         {programmingEnvironmentsForSelect.map(env => (
           <option key={env.id} value={env.id}>
-            {env.title}
+            {env.title || env.name}
           </option>
         ))}
       </select>
@@ -204,7 +208,11 @@ export default function ProgrammingExpressionsTable({
               `/programming_expressions/${itemToDelete.id}`,
               () => {
                 setItemToDelete(null);
-                fetchExpressions();
+                fetchExpressions(
+                  selectedEnvironment,
+                  selectedCategory,
+                  currentPage
+                );
               }
             );
           }}
