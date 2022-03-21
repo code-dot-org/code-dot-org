@@ -4019,6 +4019,11 @@
           "garden square": {
             "name": "مربع الحديقة"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "إعادة اللعبة"
+          }
         }
       }
     }
