@@ -1658,12 +1658,12 @@ class Script < ApplicationRecord
     data
   end
 
-  # Returns an array of objects showing the name and version year for all units
-  # sharing the family_name of this course, including this one.
+  # Returns summary object of all the course versions that an instructor can
+  # assign or all the launched versions a participant can view
   def summarize_versions(user = nil, locale_code = nil)
     return {} if unit_group
 
-    course_version&.course_offering&.course_versions&.select {|cv| cv.can_view_version?(user, locale: locale_code)}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    course_version&.course_offering&.course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def self.clear_cache
