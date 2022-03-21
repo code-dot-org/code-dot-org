@@ -18,7 +18,7 @@
       "name": "Shrink and Grow",
       "description": "Grow an image on mouseover, back to normal size on mouseout.",
       "code": "```\n// Grow an image on mouseover,\r\n// back to normal size on mouseout.\r\n\r\nimage(\"logo\", \"https://code.org/images/logo.png\");\r\nsetPosition(\"logo\", 160, 240, 32, 32);\r\n\r\nonEvent(\"logo\", \"mouseover\", function(event){\r\n  setSize(\"logo\", 48, 48);\r\n});\r\n\r\nonEvent(\"logo\", \"mouseout\", function(event){\r\n  setSize(\"logo\", 32, 32);\r\n});\n```",
-      "app": "https://studio.code.org/projects/applab/1b8adMcaLlyk1IyeD9jXow/view",
+      "app": "https://studio.code.org/projects/applab/1b8adMcaLlyk1IyeD9jXow",
       "image": null,
       "app_display_type": "codeFromCodeField",
       "embed_app_with_code_height": 310
@@ -80,8 +80,13 @@
       "description": "The callback function executed in response to an event for the matching UI element *id* of the matching *type*. The function can be inline, or separately defined in your app and called from onEvent()."
     }
   ],
+  "parameters": [
+    "id",
+    "type",
+    "callback"
+  ],
   "return_value": "No return value, callback function executed.",
   "short_description": "Interactive apps need both UI elements button, textInput, textLabel, dropdown, checkbox, radioButton, image, and event handlers for those UI elements and each type of user interaction needed. The UI element, with unique id, must exist before the onEvent function can be used.",
-  "syntax": "onEvent(id, type, callback)",
+  "syntax": "onEvent(id, type, function(event)){ ... }",
   "tips": "- The UI element must be defined in your code before the matching `onEvent()` event handler.\r\n- The callback function receives an event object as its parameter, which can be used to gain more information about the event. You can ignore the App Lab warning *event is defined but not called in your program*.\r\n- The preferred placement in your code is screen elements at the top, event handlers in middle, other code/functions at end."
 }
