@@ -26,6 +26,7 @@ import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
+import {registerAllContextMenuItems} from './addons/contextMenu';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -191,7 +192,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRenderer,
     true /* opt_allowOverrides */
   );
-
+  registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
