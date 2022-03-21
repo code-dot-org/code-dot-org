@@ -29,6 +29,23 @@ class CourseOffering < ApplicationRecord
     with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
 
+  # The set of models which may be touched by ScriptSeed
+  scope :with_summary_models, -> do
+    includes(
+      [
+        {
+          course_versions: [
+            content_root: [
+              unit_group: [
+                :script
+              ]
+            ]
+          ]
+        },
+      ]
+    )
+  end
+
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
   #
@@ -74,7 +91,7 @@ class CourseOffering < ApplicationRecord
   end
 
   # All course versions in a course offering should have the same instructor audience
-  def can_be_instructor?(user)
+  def any_version_can_be_instructor?(user)
     course_versions.any? {|cv| cv.can_be_instructor?(user)}
   end
 
@@ -95,7 +112,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.assignable_course_offerings(user)
-    CourseOffering.all.select {|co| co.can_be_assigned?(user)}
+    CourseOffering.all_course_offerings.select {|co| co.can_be_assigned?(user)}
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
@@ -184,5 +201,9 @@ class CourseOffering < ApplicationRecord
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
     course_offering.key
+  end
+
+  def self.all_course_offerings
+    @@all_course_offerings ||= all
   end
 end
