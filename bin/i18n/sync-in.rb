@@ -14,9 +14,29 @@ require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative '../animation_assets/manifest_builder'
+require_relative 'slack_i18n'
 
-def sync_in
-  puts "Sync in starting"
+$to_slack = false
+$starting_message = nil
+
+# Writes a message to stdout.
+# If slack messages are turned on (via the $to_slack variable, set by a parameter to the sync_in function),
+# it will also determine whether to send the message to slack.
+# If the slack parameter is false or omitted, it will not send to slack (in the case of many messages that
+# quickly print inside of a loop, for example).
+# If a thread_ts is specified in options, it will send the message as a threaded response to the parent
+# message identified by that timestamp.
+def sync_write(text, slack=false, options={})
+  puts text
+  if $to_slack && slack
+    SlackI18n.message(text, options)
+  end
+end
+
+def sync_in(slack=false)
+  $to_slack = slack
+  starting = sync_write("Sync in starting", true)
+  $starting_message = starting["ts"] if $to_slack
   Services::I18n::CurriculumSyncUtils.sync_in
   HocSyncUtils.sync_in
   localize_level_and_project_content
@@ -24,16 +44,18 @@ def sync_in
   localize_animation_library
   localize_shared_functions
   localize_course_offerings
-  puts "Copying source files"
+  sync_write("Copying source files", true, {"thread_ts" => $starting_message})
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
   redact_script_and_course_content
   localize_markdown_content
-  puts "Sync in completed successfully"
+  sync_write("Sync in completed successfully", true, {"emoji_prefix" => "success"})
 rescue => e
-  puts "Sync in failed from the error: #{e}"
+  sync_write("Sync in failed from the error: #{e}", true, {"emoji_prefix" => "fail"})
   raise e
+ensure
+  SlackI18n.post_log("sync_in.log")
 end
 
 def localize_level_and_project_content
@@ -215,7 +237,7 @@ def get_placeholder_texts(document, block_type, title_names)
 end
 
 def localize_project_content(variable_strings, parameter_strings)
-  puts "Preparing project content"
+  sync_write("Preparing project content", true, {"thread_ts" => $starting_message})
   project_content_file = "../#{I18N_SOURCE_DIR}/course_content/projects.json"
   project_strings = {}
 
@@ -246,7 +268,7 @@ def localize_project_content(variable_strings, parameter_strings)
 end
 
 def localize_level_content(variable_strings, parameter_strings)
-  puts "Preparing level content"
+  sync_write("Preparing level content", true, {"thread_ts" => $starting_message})
 
   block_category_strings = {}
   progression_strings = {}
@@ -330,7 +352,7 @@ end
 # Pull in various fields for custom blocks from .json files and save them to
 # blocks.en.yml.
 def localize_block_content
-  puts "Preparing block content"
+  sync_write("Preparing block content", true, {"thread_ts" => $starting_message})
 
   blocks = {}
 
@@ -370,7 +392,7 @@ def localize_animation_library
 end
 
 def localize_shared_functions
-  puts "Preparing shared functions"
+  sync_write("Preparing shared functions", true, {"thread_ts" => $starting_message})
 
   shared_functions = SharedBlocklyFunction.where(level_type: 'GamelabJr').pluck(:name)
   hash = {}
@@ -385,7 +407,7 @@ end
 # Aggregate every CourseOffering record's `key` as the translation key, and
 # each record's `display_name` as the translation string.
 def localize_course_offerings
-  puts "Preparing course offerings"
+  sync_write("Preparing course offerings", true, {"thread_ts" => $starting_message})
 
   hash = {}
   CourseOffering.all.sort.each do |co|
@@ -444,7 +466,7 @@ def redact_level_file(source_path)
 end
 
 def redact_level_content
-  puts "Redacting level content"
+  sync_write("Redacting level content", true, {"thread_ts" => $starting_message})
 
   Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
     redact_level_file(source_path)
@@ -452,7 +474,7 @@ def redact_level_content
 end
 
 def redact_block_content
-  puts "Redacting block content"
+  sync_write("Redacting block content", true, {"thread_ts" => $starting_message})
 
   source = File.join(I18N_SOURCE_DIR, "dashboard/blocks.yml")
   backup = source.sub("source", "original")
@@ -466,7 +488,7 @@ def redact_script_and_course_content
   fields = %w(description student_description description_student description_teacher)
 
   %w(script course).each do |type|
-    puts "Redacting #{type} content"
+    sync_write("Redacting #{type} content", true, {"thread_ts" => $starting_message})
     source = File.join(I18N_SOURCE_DIR, "dashboard/#{type}s.yml")
 
     # Save the original data, for restoration
@@ -515,7 +537,7 @@ def localize_markdown_content
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)
     original_path_exists = File.exist?(original_path)
-    puts "#{original_path} does not exist" unless original_path_exists
+    sync_write("#{original_path} does not exist", true, {"emoji_prefix" => "fail", "thread_ts" => $starting_message}) unless original_path_exists
     next unless original_path_exists
     # Remove the .partial if it exists
     source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
