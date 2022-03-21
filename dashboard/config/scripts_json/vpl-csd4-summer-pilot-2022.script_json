@@ -2,13 +2,17 @@
   "script": {
     "name": "vpl-csd4-summer-pilot-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-04 19:42:49 UTC",
+    "serialized_at": "2022-03-21 03:00:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,12 +77,27 @@
       "name": "[TEMPLATE] Introduction to...",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "[TEMPLATE] Unit Wrap Up",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "vpl-csd4-summer-pilot-2022"
       }
@@ -96,6 +115,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "vpl-csd4-summer-pilot-2022"
       }
+    },
+    {
+      "key": "f0769ce4-8713-4014-9828-22a892208d32",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0769ce4-8713-4014-9828-22a892208d32",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -109,6 +140,39 @@
         "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0",
         "lesson_activity.key": "e1d8ae05-67dd-4d45-bf0a-68aa8d752e7a"
       }
+    },
+    {
+      "key": "7a2ab6df-52ea-4bd5-ae92-c1735363b752",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a2ab6df-52ea-4bd5-ae92-c1735363b752",
+        "lesson_activity.key": "f0769ce4-8713-4014-9828-22a892208d32"
+      }
+    },
+    {
+      "key": "d5e365b4-f1e6-451e-aa32-17d651cf1458",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5e365b4-f1e6-451e-aa32-17d651cf1458",
+        "lesson_activity.key": "f0769ce4-8713-4014-9828-22a892208d32"
+      }
+    },
+    {
+      "key": "25951c27-24ac-45aa-9414-6701fff1f77c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Make a plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "25951c27-24ac-45aa-9414-6701fff1f77c",
+        "lesson_activity.key": "f0769ce4-8713-4014-9828-22a892208d32"
+      }
     }
   ],
   "script_levels": [
@@ -118,6 +182,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -133,6 +200,116 @@
       "level_keys": [
         "VPL-CSD-pilot-S22-CI-Unit_Overview"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-sample"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-sample"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-sample"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-vocab-c4u-sample"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Sample"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "7a2ab6df-52ea-4bd5-ae92-c1735363b752"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Sample"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-sample"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "d5e365b4-f1e6-451e-aa32-17d651cf1458"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-sample"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make a plan"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-MakeAPlan-sample"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "25951c27-24ac-45aa-9414-6701fff1f77c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-MakeAPlan-sample"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -147,16 +324,122 @@
         "script.name": "vpl-csd4-summer-pilot-2022",
         "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-sample"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-sample"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "b5270ec6-e436-42c8-9f4f-084e01023ac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Sample"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "7a2ab6df-52ea-4bd5-ae92-c1735363b752"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-sample"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "d5e365b4-f1e6-451e-aa32-17d651cf1458"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-MakeAPlan-sample",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-MakeAPlan-sample"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "25951c27-24ac-45aa-9414-6701fff1f77c"
+      }
     }
   ],
   "resources": [
-
+    {
+      "name": "Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing",
+      "key": "curriculum_guide_4",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide_4"
+      }
+    },
+    {
+      "name": "Day 4 - CSD 2022 PILOT Slides ",
+      "url": "https://docs.google.com/presentation/d/19X4cNY4rTkCVla_s6tIOKqIpkWKehvSKhm8JYQELGG0/edit#slide=id.g8159f286a5_1_0",
+      "key": "day_4_-_csd_2022_pilot_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "day_4_-_csd_2022_pilot_slides"
+      }
+    },
+    {
+      "name": "Day 4 - CSD PILOT Agenda",
+      "url": "https://docs.google.com/document/d/1Wdxdfr12wWwprbEvYmbfggU-hb18XXg-63leKmVBcuE/edit",
+      "key": "day_4_-_csd_pilot_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "day_4_-_csd_pilot_agenda"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_4",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_4_-_csd_2022_pilot_slides",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_4_-_csd_pilot_agenda",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 

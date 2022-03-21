@@ -777,7 +777,8 @@ class Lesson < ApplicationRecord
     raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil?
 
     copied_lesson = dup
-    copied_lesson.key = copied_lesson.name
+    # scripts.en.yml cannot handle the '.' character in key names
+    copied_lesson.key = copied_lesson.name.delete('.')
     copied_lesson.script_id = destination_unit.id
 
     destination_lesson_group = destination_unit.lesson_groups.last
