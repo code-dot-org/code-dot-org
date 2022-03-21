@@ -1,6 +1,6 @@
 {
   "key": "A",
-  "name": "A",
+  "name": "Hyperlink",
   "category": "HTML Tags",
   "category_key": "html_tags",
   "content": "# Hyperlink\r\n\r\nThis tag is used to  add hyperlinks to your web page.The link tag `<a>`  is used both for linking to external web pages and for linking to  individual HTML documents  on the same website. This link requires one attribute:\r\n* `href` -  Tells where the browser should navigate to.\r\n",

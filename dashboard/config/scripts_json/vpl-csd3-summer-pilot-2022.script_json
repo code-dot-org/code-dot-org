@@ -1,0 +1,165 @@
+{
+  "script": {
+    "name": "vpl-csd3-summer-pilot-2022",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2022-03-19 00:59:23 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csd3-summer-pilot-2022"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd3-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022"
+      }
+    }
+  ],
+  "lessons": [
+
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+    {
+      "name": "Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing",
+      "key": "curriculum_guide_3",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide_3"
+      }
+    },
+    {
+      "name": "Day 3 - CSD PILOT Agenda",
+      "url": "https://docs.google.com/document/d/1SPuREh-jXIYHi3nNaGX2APrt-r1ejzKJ7Aiq6O9ctyA/edit",
+      "key": "day_3_-_csd_2022_pilot_pl_summer_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "day_3_-_csd_2022_pilot_pl_summer_agenda"
+      }
+    },
+    {
+      "name": "Day 3 - CSD PILOT Slides",
+      "url": "https://docs.google.com/presentation/d/1RcDUETnqjRhz8pZ14mViWv1W_O-SfDbuNQ30rFpAGkA/edit#slide=id.g8159f286a5_1_0",
+      "key": "day_3_-_csd_pilot_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "day_3_-_csd_pilot_slides"
+      }
+    }
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_3",
+        "script.name": "vpl-csd3-summer-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_3_-_csd_2022_pilot_pl_summer_agenda",
+        "script.name": "vpl-csd3-summer-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_3_-_csd_pilot_slides",
+        "script.name": "vpl-csd3-summer-pilot-2022"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

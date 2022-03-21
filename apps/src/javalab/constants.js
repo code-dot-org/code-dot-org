@@ -19,7 +19,8 @@ export const WebSocketMessageType = {
   EXCEPTION: 'EXCEPTION',
   DEBUG: 'DEBUG',
   STATUS: 'STATUS',
-  TEST_RESULT: 'TEST_RESULT'
+  TEST_RESULT: 'TEST_RESULT',
+  AUTHORIZER: 'AUTHORIZER'
 };
 
 export const JavabuilderExceptionType = {
@@ -195,4 +196,11 @@ export const TestStatus = {
   SUCCESSFUL: 'SUCCESSFUL',
   FAILED: 'FAILED',
   ABORTED: 'ABORTED'
+};
+
+export const AuthorizerSignalType = {
+  TOKEN_USED: 'TOKEN_USED',
+  NEAR_LIMIT: 'NEAR_LIMIT',
+  USER_BLOCKED: 'USER_BLOCKED',
+  CLASSROOM_BLOCKED: 'CLASSROOM_BLOCKED'
 };

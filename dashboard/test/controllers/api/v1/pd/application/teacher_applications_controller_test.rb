@@ -33,10 +33,20 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
-    # [MEG] TODO: Add different kinds of users, teachers can't access an application they don't own
     test_redirect_to_sign_in_for :update, params: -> {{id: @application.id}}
     test_user_gets_response_for :update, user: :student, params: -> {{id: @application.id}}, response: :forbidden
-    test_user_gets_response_for :update, user: :teacher, params: -> {{id: @application.id}}, response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a teacher cannot update an application they do not own',
+      user: :teacher,
+      params: -> {{id: @application.id}},
+      response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a teacher can update an application they own',
+      user:  -> {User.find_by(id: @application.user_id)},
+      params: -> {{id: @application.id}},
+      response: :success
 
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
@@ -96,7 +106,23 @@ module Api::V1::Pd::Application
       assert_no_difference "#{TEACHER_APPLICATION_CLASS.name}.count" do
         put :create, params: {form_data: @test_params}
       end
-      assert_response :success
+    end
+
+    test 'creating an application on an existing form renders conflict' do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      post :create, params:  {
+        id: application.id
+      }
+      assert_response :conflict
+    end
+
+    test 'updating an application with an error renders bad_request' do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      put :update, params: {id: application.id, form_data: @test_params, application_year: nil}
+
+      assert_response :bad_request
     end
 
     test 'updates user school info on successful create' do
@@ -152,14 +178,6 @@ module Api::V1::Pd::Application
       assert_nil application.form_data_hash[:cs_total_course_hours]
       assert_equal original_school_info, @applicant.school_info
       assert_response :ok
-    end
-
-    test 'updating an application with an error renders bad_request' do
-      sign_in @applicant
-      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
-      put :update, params: {id: application.id, form_data: @test_params, application_year: nil}
-
-      assert_response :bad_request
     end
 
     test 'send_principal_approval queues up an email if none exist' do

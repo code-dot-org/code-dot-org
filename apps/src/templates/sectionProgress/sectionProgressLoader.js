@@ -18,6 +18,7 @@ import {
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {getStore} from '@cdo/apps/redux';
 import _ from 'lodash';
+import logToCloud from '@cdo/apps/logToCloud';
 
 const NUM_STUDENTS_PER_PAGE = 50;
 
@@ -40,6 +41,10 @@ export function loadScriptProgress(scriptId, sectionId) {
     getStore().dispatch(startRefreshingProgress());
   } else {
     getStore().dispatch(startLoadingProgress());
+    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
+      sectionId,
+      scriptId
+    });
   }
 
   let sectionProgress = {
@@ -97,6 +102,11 @@ export function loadScriptProgress(scriptId, sectionId) {
   // Combine and transform the data
   requests.push(scriptRequest);
   Promise.all(requests).then(() => {
+    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
+      sectionId,
+      scriptId
+    });
+
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
       [scriptId]: lessonProgressForSection(

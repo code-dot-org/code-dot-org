@@ -107,7 +107,14 @@ export const sortRows = (data, columnIndexList, orderList) => {
   }
   addRows = orderBy(addRows, columnIndexList, orderList);
   newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
-  studentRows = orderBy(studentRows, columnIndexList, orderList);
+  // Sort students primarily alphabetically, secondarily by account creation
+  // date which aligns with id # (so that older accounts come first)
+  studentRows.sort(function(a, b) {
+    if (a.name === b.name) {
+      return a.id - b.id;
+    }
+    return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
+  });
   return addRows.concat(newStudentRows).concat(studentRows);
 };
 

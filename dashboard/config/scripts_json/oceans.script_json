@@ -7,13 +7,12 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2021-11-22 19:57:09 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-03-18 18:40:07 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -37,7 +36,7 @@
   "lessons": [
     {
       "key": "Oceans",
-      "name": "Oceans",
+      "name": "AI for Oceans",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -175,7 +174,8 @@
       "key": "5d09fa3e-63ce-4142-ac59-d893889ce78d",
       "position": 2,
       "properties": {
-        "description": "####Levels 2-4 - Train AI to Clean the Ocean\n\nStudents can work through levels 2-4 on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects."
+        "description": "####Levels 2-4 - Train AI to Clean the Ocean\n\nStudents can work through levels 2-4 on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "progression_name": "Train an AI to Clean the Ocean"
       },
       "seeding_key": {
         "activity_section.key": "5d09fa3e-63ce-4142-ac59-d893889ce78d",
@@ -383,7 +383,8 @@
       "properties": {
         "level_keys": [
           "Oceans_FishVTrash"
-        ]
+        ],
+        "progression": "Train an AI to Clean the Ocean"
       },
       "bonus": false,
       "seeding_key": {
@@ -407,7 +408,8 @@
       "properties": {
         "level_keys": [
           "Oceans_CreaturesVTrashDemo"
-        ]
+        ],
+        "progression": "Train an AI to Clean the Ocean"
       },
       "bonus": false,
       "seeding_key": {
@@ -431,7 +433,8 @@
       "properties": {
         "level_keys": [
           "Oceans_CreaturesVTrash"
-        ]
+        ],
+        "progression": "Train an AI to Clean the Ocean"
       },
       "bonus": false,
       "seeding_key": {

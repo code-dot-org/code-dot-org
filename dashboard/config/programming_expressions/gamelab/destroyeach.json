@@ -17,5 +17,5 @@
   ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Removes all the sprites in a group from the animation.",
-  "syntax": "destroyEach"
+  "syntax": "group.destroyEach()"
 }

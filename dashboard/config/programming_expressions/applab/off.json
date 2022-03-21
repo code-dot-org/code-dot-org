@@ -34,5 +34,5 @@
     }
   ],
   "short_description": "Turns the specified colorLED off.",
-  "syntax": "off"
+  "syntax": "colorLeds[index].off()"
 }

@@ -23,7 +23,10 @@
       "description": "A string representing a web safe font."
     }
   ],
+  "parameters": [
+    "font"
+  ],
   "return_value": "No return value. Changes future text output to the display only.",
   "short_description": "Sets the current font.",
-  "syntax": "textFont(font)"
+  "syntax": "textFont(font);"
 }

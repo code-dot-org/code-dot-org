@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-09 18:44:22 UTC",
+    "serialized_at": "2022-03-15 21:04:56 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -4318,15 +4318,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 42022"
-        ],
         "progression": "Putting it Together"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L03 Variables operator practice 42022"
+          "CSP U4L3 Choice"
         ],
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
@@ -4334,7 +4331,7 @@
         "activity_section.key": "697cdbc1-a1ed-460a-9226-3286d84f9655"
       },
       "level_keys": [
-        "U4 L03 Variables operator practice 42022"
+        "CSP U4L3 Choice"
       ]
     },
     {
@@ -4718,6 +4715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Checking Multiple Conditions with If-elseif2022"
+        ],
         "progression": "Patterns: If-else-if"
       },
       "bonus": false,
@@ -4740,6 +4740,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L06 CYU Exit Ticket2022"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6063,9 +6066,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L03 Variables operator practice 42022",
+        "level.key": "CSP U4L3 Choice",
         "script_level.level_keys": [
-          "U4 L03 Variables operator practice 42022"
+          "CSP U4L3 Choice"
         ],
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
@@ -7608,7 +7611,27 @@
 
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "declareNoAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "mathRound"
+      }
+    }
   ],
   "objectives": [
     {
