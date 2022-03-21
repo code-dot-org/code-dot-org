@@ -265,6 +265,7 @@ Dashboard::Application.routes.draw do
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
       post 'update_start_code'
+      post 'update_exemplar_code'
     end
   end
 
