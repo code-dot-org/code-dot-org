@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_220633) do
+ActiveRecord::Schema.define(version: 2022_03_16_125751) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -846,6 +846,7 @@ ActiveRecord::Schema.define(version: 2022_03_01_220633) do
     t.text "properties"
     t.datetime "deleted_at"
     t.text "status_timestamp_change_log"
+    t.datetime "applied_at"
     t.index ["application_guid"], name: "index_pd_applications_on_application_guid"
     t.index ["application_type"], name: "index_pd_applications_on_application_type"
     t.index ["application_year"], name: "index_pd_applications_on_application_year"

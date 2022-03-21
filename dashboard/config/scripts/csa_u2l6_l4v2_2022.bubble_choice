@@ -1,6 +1,6 @@
 name 'CSA U2L6-L4v2_2022'
 display_name 'Refactoring Desserts'
-description 'level description here'
+description 'Request a code review from your peers.'
 
 sublevels
 level 'CSA U2L6-L4a CR_2022'

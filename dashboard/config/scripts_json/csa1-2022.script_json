@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 23:27:14 UTC",
+    "serialized_at": "2022-03-17 15:53:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,6 +46,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2022"
       }
     }
@@ -183,7 +195,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How do software engineers obtain feedback from peers?**\n\nSoftware engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. Students identify the importance of commenting and program structure to improve readability. Students learn about code reviews and practice giving and receiving feedback.",
-        "preparation": "* Create code review groups as indicated on the Code Reviews resource\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up",
+        "preparation": "* Create code review groups as indicated on the Code Reviews resource\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the student version of the Code Reviews resource (one for each student)",
         "student_overview": "**How do software engineers obtain feedback from peers?**\n\nSoftware engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you identify the importance of commenting and program structure to improve readability. You learn about code reviews and practice giving and receiving feedback."
       },
       "seeding_key": {
@@ -406,6 +418,36 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Console",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "lesson-22",
+      "name": "The Neighborhood",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2022"
       }
     }
@@ -1247,6 +1289,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-2022"
       }
+    },
+    {
+      "key": "a99045a6-d56f-4884-8771-1c65da156a4c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a99045a6-d56f-4884-8771-1c65da156a4c",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "66cd95f7-a191-4d34-bc2e-f5614c8e5bee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66cd95f7-a191-4d34-bc2e-f5614c8e5bee",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -2031,7 +2097,7 @@
       "key": "2a767291-56b3-4711-b377-b4d3b978e31a",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to write instructions that a GPS could use to direct a pizza driver to move from 1st Street and 1st Avenue to the customer located at 5th Street and 5th Avenue.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to write instructions that a GPS could use to direct a delivery driver to move from 1st Street and 1st Avenue to the customer located at 5th Street and 5th Avenue.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2991,7 +3057,7 @@
       "key": "81c18623-6e33-440c-8471-0b2527170d21",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Code Reviews*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain examples and guidelines for good feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What would be some examples of bad feedback?*\n\n**Discussion Goal:** Students share examples of bad feedback and connect to scenarios where they received bad feedback. Students identify things that make feedback bad, such as not being specific or helpful to resolve a problem.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Code Reviews*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Code Reviews resource.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain examples and guidelines for good feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What would be some examples of bad feedback?*\n\n**Discussion Goal:** Students share examples of bad feedback and connect to scenarios where they received bad feedback. Students identify things that make feedback bad, such as not being specific or helpful to resolve a problem.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5288,6 +5354,38 @@
         "activity_section.key": "61afab2c-670e-4f6f-b721-dc462d410fdc",
         "lesson_activity.key": "ee08eb3d-0f3d-4428-879c-294390696263"
       }
+    },
+    {
+      "key": "6b1e14d0-8b5a-4f96-8479-223eeca8fd2a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6b1e14d0-8b5a-4f96-8479-223eeca8fd2a",
+        "lesson_activity.key": "a99045a6-d56f-4884-8771-1c65da156a4c"
+      }
+    },
+    {
+      "key": "57b05d0c-b0a1-496c-9d68-a2ef1b2894c2",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "57b05d0c-b0a1-496c-9d68-a2ef1b2894c2",
+        "lesson_activity.key": "66cd95f7-a191-4d34-bc2e-f5614c8e5bee"
+      }
+    },
+    {
+      "key": "df9e3fb5-08e2-4fe2-a8a9-bc60db67f531",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "df9e3fb5-08e2-4fe2-a8a9-bc60db67f531",
+        "lesson_activity.key": "66cd95f7-a191-4d34-bc2e-f5614c8e5bee"
+      }
     }
   ],
   "script_levels": [
@@ -6965,6 +7063,80 @@
       "level_keys": [
         "CSA U1L18-L1_2022"
       ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "6b1e14d0-8b5a-4f96-8479-223eeca8fd2a"
+      },
+      "level_keys": [
+        "CSA 2022 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "57b05d0c-b0a1-496c-9d68-a2ef1b2894c2"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "df9e3fb5-08e2-4fe2-a8a9-bc60db67f531"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood - No Bucket Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7771,6 +7943,42 @@
         "script.name": "csa1-2022",
         "activity_section.key": "fbd0faea-b438-43c9-a3c3-808b94d8275a"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "6b1e14d0-8b5a-4f96-8479-223eeca8fd2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "57b05d0c-b0a1-496c-9d68-a2ef1b2894c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "df9e3fb5-08e2-4fe2-a8a9-bc60db67f531"
+      }
     }
   ],
   "resources": [
@@ -7859,6 +8067,30 @@
       }
     },
     {
+      "name": "[KEY] U1L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1vb8fcJPZtdNGt93TJhkDrutAOU1HXRooXIinJaBh91I/edit?usp=sharing",
+      "key": "_key_u1l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l10_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L12 Extra Practice",
+      "url": "https://docs.google.com/document/d/1G5xuV66OHBxGTSE_V7CbzZZ1T6xpOd75W6TIO2zx4YQ/edit?usp=sharing",
+      "key": "_key_u1l12_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U1L2 Extra Practice",
       "url": "https://docs.google.com/document/d/17cKJRb_9zs7zQdLny6kX9ZXE9wGpGLhSNZ31d_bXu2s/edit?usp=sharing",
       "key": "_key_u1l2_extra_practice",
@@ -7940,6 +8172,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1gAYJgL4sUN5G7494N885WAKkb-fCau_wirZfTv1CWJg/edit?usp=sharing",
+      "key": "_key_u1l9_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l9_extra_practice"
       }
     },
     {
@@ -8033,6 +8277,18 @@
       },
       "seeding_key": {
         "resource.key": "code_reviews"
+      }
+    },
+    {
+      "name": "Code Reviews",
+      "url": "https://docs.google.com/document/d/172jHHGFO0pQf5NhqvbcfBm9jotyVplaAZznPF1F_PXk/edit?usp=sharing",
+      "key": "code_reviews_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_reviews_1"
       }
     },
     {
@@ -8156,6 +8412,30 @@
       }
     },
     {
+      "name": "U1L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/12VbvABWVpOukT1ARRcTmdd2tz-ZfRc9CAeMF9Uy0E6U/edit?usp=sharing",
+      "key": "u1l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "name": "U1L12 Extra Practice",
+      "url": "https://docs.google.com/document/d/1AKIygL1eVqQk1i-nFF90V019bFnMbuqIDJ2u4Ag0rLg/edit?usp=sharing",
+      "key": "u1l12_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l12_extra_practice"
+      }
+    },
+    {
       "name": "U1L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1kp8khWZfLWvVhBanZnFHa3XstT8XrE8J-ODMvI4QWPA/edit?usp=sharing",
       "key": "u1l2_extra_practice",
@@ -8237,6 +8517,18 @@
       },
       "seeding_key": {
         "resource.key": "u1l8_extra_practice_1"
+      }
+    },
+    {
+      "name": "U1L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1rigveLGXH-ojMOeKNsczsZYBQ9ZH-MzFrPHHE20jhTc/edit?usp=sharing",
+      "key": "u1l9_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l9_extra_practice"
       }
     },
     {
@@ -8352,6 +8644,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "_key_u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "unit_1_presentation"
       }
     },
@@ -8376,7 +8680,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "decomposition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "u1l12_extra_practice"
       }
     },
     {
@@ -8652,6 +8968,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "code_reviews_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "cs_bingo_cards"
       }
     },
@@ -8676,7 +8998,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "_key_u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "_key_writing_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u1l9_extra_practice"
       }
     },
     {
@@ -8719,12 +9053,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_guide",
-        "script.name": "csa1-2022"
-      }
-    }
+
   ],
   "vocabularies": [
     {
