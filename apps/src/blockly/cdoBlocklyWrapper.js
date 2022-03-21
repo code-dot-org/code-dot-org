@@ -260,6 +260,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     setHSV: function(block, h, s, v) {
       block.setHSV(h, s, v);
+    },
+
+    getAllUsedBlocks: function(workspace) {
+      return workspace.getAllBlocks().filter(block => !block.disabled);
     }
   };
 
