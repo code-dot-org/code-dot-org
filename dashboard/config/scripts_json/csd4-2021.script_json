@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:08:13 UTC",
+    "serialized_at": "2022-03-16 19:40:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4781,7 +4781,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Video Review:** The second half of the video from yesterday is a good guide for what students will be completing today. You may decide to re-watch just the second half where Caley creates a new screen and adds an event to the screen, since this is what students will be completing today.\r\n\r\n"
+            "markdown": "**Video Review:** The second half of the video from Lesson 14 is a good guide for what students will be completing today. You may decide to re-watch just the second half where Caley creates a new screen and adds an event to the screen, since this is what students will be completing today.\n\n"
           }
         ]
       },

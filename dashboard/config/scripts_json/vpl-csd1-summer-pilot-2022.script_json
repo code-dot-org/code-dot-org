@@ -2,7 +2,7 @@
   "script": {
     "name": "vpl-csd1-summer-pilot-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-16 01:51:53 UTC",
+    "serialized_at": "2022-03-19 00:53:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -128,8 +128,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Participants will:**\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 30 minutes",
-        "student_overview": "**You will:**\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 30 minutes"
+        "overview": "**Participants will:**\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 40 minutes",
+        "student_overview": "**You will:**\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 40 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -145,8 +145,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**Participants will:**\n* Consider their role as the teacher in a CS Discoveries classroom.\n\n**Suggested time:** 10 minutes",
-        "student_overview": "**You will:**\n* Consider your role as the teacher in a CS Discoveries classroom.\n\n**Suggested time:** 10 minutes"
+        "overview": "**Participants will:**\n* Consider their role as the teacher in a CS Discoveries classroom.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n* Consider your role as the teacher in a CS Discoveries classroom.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -360,8 +360,19 @@
       }
     },
     {
-      "key": "2e41a039-c511-4e1f-a9aa-03e74e7d3610",
+      "key": "f57dfe9c-fd87-4297-ba34-b56c7313ac25",
       "position": 3,
+      "properties": {
+        "progression_name": "Overview of learning tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "f57dfe9c-fd87-4297-ba34-b56c7313ac25",
+        "lesson_activity.key": "89b5b355-f3c6-4de0-b937-8bc2c86a5242"
+      }
+    },
+    {
+      "key": "2e41a039-c511-4e1f-a9aa-03e74e7d3610",
+      "position": 4,
       "properties": {
         "progression_name": "The problem solving process "
       },
@@ -400,6 +411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CV-Equity"
+        ],
         "progression": "Course overview"
       },
       "bonus": false,
@@ -422,6 +436,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSD-vid"
+        ],
         "progression": "Course overview"
       },
       "bonus": false,
@@ -444,6 +461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod3-Units"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -466,6 +486,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod3-Chapters"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -488,6 +511,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSD-TeacherVoices-CSDOverview"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -510,6 +536,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-LessonTypes"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -532,6 +561,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Task-LessonTypes"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -554,6 +586,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-LevelTypes"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -576,6 +611,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "SP-VPL-21-CSD-mod3-LevelType-practice-lc"
+        ],
         "progression": "Course design"
       },
       "bonus": false,
@@ -598,6 +637,53 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Overview of learning tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-LearningTools"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f57dfe9c-fd87-4297-ba34-b56c7313ac25"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-LearningTools"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of learning tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-Tools-c4u"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f57dfe9c-fd87-4297-ba34-b56c7313ac25"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-Tools-c4u"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP-cont"
+        ],
         "progression": "The problem solving process "
       },
       "bonus": false,
@@ -615,11 +701,14 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP"
+        ],
         "progression": "The problem solving process "
       },
       "bonus": false,
@@ -637,11 +726,14 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP-vid"
+        ],
         "progression": "The problem solving process "
       },
       "bonus": false,
@@ -659,11 +751,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner"
+        ],
         "progression": "Lead learner"
       },
       "bonus": false,
@@ -681,11 +776,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid"
+        ],
         "progression": "Lead learner"
       },
       "bonus": false,
@@ -703,11 +801,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid"
+        ],
         "progression": "Advice to new teachers"
       },
       "bonus": false,
@@ -836,6 +937,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-LearningTools",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-LearningTools"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f57dfe9c-fd87-4297-ba34-b56c7313ac25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-Tools-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-Tools-c4u"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f57dfe9c-fd87-4297-ba34-b56c7313ac25"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SP-VPL-21-mod3-PSP-cont",
         "script_level.level_keys": [
           "SP-VPL-21-mod3-PSP-cont"
@@ -909,6 +1034,36 @@
   ],
   "resources": [
     {
+      "name": "Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing",
+      "key": "curriculum_guide_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide_2"
+      }
+    },
+    {
+      "name": "Day 1 - CSD 2022 PILOT Agenda ",
+      "url": "https://docs.google.com/document/d/1hmyoOIkDczzqBaE5NsmeomRoFwOHSk8uUVqkJnk8fcg/edit",
+      "key": "day_1_-_csd_2022_pilot_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "day_1_-_csd_2022_pilot_agenda"
+      }
+    },
+    {
+      "name": "Day 1 - CSD 2022 PILOT Slides",
+      "url": "https://docs.google.com/presentation/d/1Vzc4rO2OnS9gce0ygVgCjiyzos6-IdNWMOaRnMbnbL8/edit#slide=id.g8159f286a5_1_0",
+      "key": "day_1_-_csd_2022_pilot_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "day_1_-_csd_2022_pilot_slides"
+      }
+    },
+    {
       "name": "Fake Equity Video",
       "url": "https://www.youtube.com/watch?v=uhcA6K8rWp0",
       "key": "fake_equity_video",
@@ -930,7 +1085,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_1_-_csd_2022_pilot_agenda",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_1_-_csd_2022_pilot_slides",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 

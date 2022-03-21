@@ -1,12 +1,17 @@
 name 'CSA U1L14-L5_2022'
 title 'Check for Understanding'
+question 'Which of the following class headers sets up the most appropriate inheritance relationship?'
+right 'public class Taco extends Food'
+wrong 'public class Door extends House'
+wrong 'public class Animal extends Monkey'
+wrong 'public class Flower extends Stem'
+wrong 'public class Quadrilateral extends Triangle'
 
-wrong 'wrong answer'
-right 'right answer'
-wrong 'wrong answer'
-wrong 'wrong answer'
-wrong 'wrong answer'
 
 markdown <<MARKDOWN
-Consider the following superclass and subclass. Which of the following would NOT be an appropriate new subclass to add to the hierarchy?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Here we want to choose an option that correctly sets up the "is-a" relationship between subclass and superclass.  
+A Taco "is-a" type of Food.
 MARKDOWN

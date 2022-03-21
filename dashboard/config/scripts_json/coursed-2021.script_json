@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-14 20:47:05 UTC",
+    "serialized_at": "2022-03-17 21:00:22 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9436,7 +9436,7 @@
     },
     {
       "name": "Dance Party: Unplugged",
-      "url": "https://curriculum.code.org/hoc/unplugged/4/",
+      "url": "https://studio.code.org/s/dance-unplugged/lessons/1",
       "key": "dance_party_unplugged",
       "properties": {
         "audience": "Student",
