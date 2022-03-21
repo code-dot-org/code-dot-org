@@ -187,7 +187,7 @@ module LevelsHelper
     # - For levels with contained levels, the outer level is read-only and does
     #   not write to the channel. (We currently do not support inner levels that
     #   are channel-backed.)
-    # - In edit_blocks mode, the source code is saved as a level property and
+    # - In edit_blocks and edit_exemplar mode, the source code is saved as a level property and
     #   is not written to the channel.
     #
     # Note that Javalab requires a channel if Javabuilder needs to access assets.
@@ -195,7 +195,7 @@ module LevelsHelper
         (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
-    level_requires_channel = false if @edit_exemplar
+    level_requires_channel = false if @is_editing_exemplar
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
@@ -467,13 +467,6 @@ module LevelsHelper
 
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
-
-    # Support template level exemplars? Each level will have their own exemplar,
-    # but maybe use exemplar code from template if it exists?
-    if true
-      # what shape should this be if we have neither start sources nor exemplar?
-      level_options['exemplarSources'] = @level.try(:exemplar_sources) || @level.try(:start_sources)
-    end
 
     set_tts_options(level_options, app_options)
 

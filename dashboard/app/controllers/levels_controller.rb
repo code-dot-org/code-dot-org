@@ -228,11 +228,13 @@ class LevelsController < ApplicationController
   # GET /levels/:id/edit_exemplar
   def edit_exemplar
     @game = @level.game
-    @edit_exemplar = true
+    @is_editing_exemplar = true
 
-    # replace with actual exemplar code
-    # can we just add exemplar sources here?
-    level_view_options(@level.id, edit_exemplar: true)
+    # Support template level exemplars? Each level will have their own exemplar,
+    # but maybe use exemplar code from template if it exists?
+    # what shape should this be if we have neither start sources nor exemplar?
+    exemplar_sources = @level.try(:exemplar_sources) || @level.try(:start_sources)
+    level_view_options(@level.id, {is_editing_exemplar: true, exemplar_sources: exemplar_sources})
 
     show
     render :show
