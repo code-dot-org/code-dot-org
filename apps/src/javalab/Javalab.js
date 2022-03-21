@@ -82,9 +82,10 @@ Javalab.prototype.init = function(config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  console.log(this.level);
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
-  this.isStartMode = config.level.editBlocks;
+  this.isStartMode = !!config.level.editBlocks;
   this.isEditingExemplar = config.level.isEditingExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -187,7 +188,6 @@ Javalab.prototype.init = function(config) {
   };
 
   // Push initial level properties into the Redux store
-  // i think iseditingstartsources is a string
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
@@ -214,7 +214,9 @@ Javalab.prototype.init = function(config) {
         exemplar_sources: getSources(getStore().getState())
       }),
       'Levelbuilder: edit exemplar',
-      './update_exemplar_code'
+      `/levels/${
+        getStore().getState().pageConstants.serverLevelId
+      }/update_exemplar_code`
     );
   }
 
