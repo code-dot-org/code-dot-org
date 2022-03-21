@@ -406,11 +406,12 @@ class UnitGroup < ApplicationRecord
     }
   end
 
-  # Returns an array summarizing all the course versions in the same course offering as this script
+  # Returns summary object of all the course versions that an instructor can
+  # assign or all the launched versions a participant can view
   def summarize_versions(user = nil, locale_code = nil)
     return {} unless user
 
-    course_version&.course_offering&.course_versions&.select {|cv| cv.can_view_version?(user)}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    course_version&.course_offering&.course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   # If a user has no experiments enabled, return the default set of units.
