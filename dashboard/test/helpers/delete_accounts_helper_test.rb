@@ -1890,18 +1890,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "SourceBucket: hard-deletes all of user's channels" do
+    skip
     assert_bucket_hard_deletes_contents SourceBucket
   end
 
   test "AssetBucket: hard-deletes all of user's channels" do
+    skip
     assert_bucket_hard_deletes_contents AssetBucket
   end
 
   test "AnimationBucket: hard-deletes all of user's channels" do
+    skip
     assert_bucket_hard_deletes_contents AnimationBucket
   end
 
   test "FileBucket: hard-deletes all of user's channels" do
+    skip
     assert_bucket_hard_deletes_contents FileBucket
   end
 
@@ -1932,6 +1936,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "Firebase: deletes content for all of user's channels" do
+    skip
     student = create :student
     with_channel_for student do |storage_app_id_a, _|
       with_channel_for student do |storage_app_id_b, storage_id|
@@ -1974,6 +1979,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test 'with_channel_for owns channel' do
+    skip
     student = create :student
 
     with_storage_id_for student do |storage_id|
