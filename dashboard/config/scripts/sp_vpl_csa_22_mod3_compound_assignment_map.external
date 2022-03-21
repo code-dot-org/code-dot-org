@@ -34,12 +34,12 @@ While each of these above examples will work as expected, in each of these cases
 You can use the compound assignment operator whenever you want to apply a mathematical operation to the value stored inside the variable.  Consider the example code:
 
 ```
-double cupsOfFlour = 1.5;  			// declare and initialize the value of cupsOfFlour
-cupsOfFlour *= 2;					// use the compound assignment operator to double the value stored in cupsOfFlour
-System.out.println(cupsOfFlour); 	// print the value stored in cupsOfFlour
+1. double cupsOfFlour = 1.5;  			// declare and initialize the value of cupsOfFlour
+2. cupsOfFlour *= 2;					// use the compound assignment operator to double the value stored in cupsOfFlour
+3. System.out.println(cupsOfFlour); 	// print the value stored in cupsOfFlour
 ```
 
-After running this code, `3` will print to the console.
+**Explanation:** After running this code, `3` will print to the console.  The value of `cupsOfFlour` is updated on line 2 using the compound assignment operator `*=`.  This doubles the value stored in `cupsOfFour`.  On line 3, the new value stored in `cupsOfFlour` is printed to the screen. 
 
 ## Additional resources
 *  <a href="https://runestone.academy/ns/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" target="_blank">CS Awesome’s chapter on compound assignment operators</a>

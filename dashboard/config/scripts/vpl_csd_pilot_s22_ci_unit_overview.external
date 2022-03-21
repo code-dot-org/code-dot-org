@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<a href="https://levelbuilder-studio.code.org/s/self-paced-pl-csd5-2021/lessons/1/levels/4" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
+### <a href="https://levelbuilder-studio.code.org/s/self-paced-pl-csd5-2021/lessons/1/levels/4" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
 
 # Unit Overview
 

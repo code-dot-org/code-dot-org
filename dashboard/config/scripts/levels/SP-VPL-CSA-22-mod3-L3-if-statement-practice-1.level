@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Do this:**\r\n\r\n1. Inside your `main` method, declare a variable of type double called `price`.\r\n2. Initialize the value of `price` to be 15.0.\r\n3. Write an if statement that updates the price to be reduced by 25% IF the value of `price` is greater than 10.0.\r\n4. Print the new value of `price` to the console. \r\n5. Run and debug your program.\r\n6. Try changing the initial value of `price` to different values to test your code.\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Sale.java": {
+        "text": "public class Sale{\n\n  public static void main(String[] args){\n    \n\n    // TO DO: Inside your main method, declare a variable of type double called price\n    \n    // TO DO: Initialize the value of price to be 15.0\n    \n    // TO DO: Write an if statement that updates the price to be reduced by 25% IF the value of price is greater than 10.0.\n    \n    // TO DO: Print the new value of price to the console. \n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-19T00:30:27.000Z",
+  "level_num": "custom",
+  "user_id": 977,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-19T00:30:27.908+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-variables-practice-2\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-variables-practice-2\"},{\"changed_at\":\"2022-03-19 00:37:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-19 00:39:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+}]]></config>
+</Javalab>

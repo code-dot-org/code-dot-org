@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-16 19:01:23 UTC",
+    "serialized_at": "2022-03-21 03:14:09 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -48,7 +48,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Using variables in Java",
+      "name": "Variables in Java",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -72,6 +72,36 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Loops in Java",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Arrays in Java",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022"
       }
@@ -100,6 +130,42 @@
       "seeding_key": {
         "lesson_activity.key": "1d68583a-a0fa-4418-9c77-cf5d4fa059d8",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022"
+      }
+    },
+    {
+      "key": "9bd56120-4df1-4279-8217-0036f1264c81",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9bd56120-4df1-4279-8217-0036f1264c81",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022"
+      }
+    },
+    {
+      "key": "31ebfcb1-6e59-4e64-843d-98278f8f94d9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31ebfcb1-6e59-4e64-843d-98278f8f94d9",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022"
+      }
+    },
+    {
+      "key": "0180195d-d482-49a8-b6fd-e79c2fdd00ac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0180195d-d482-49a8-b6fd-e79c2fdd00ac",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022"
       }
@@ -228,6 +294,105 @@
       "seeding_key": {
         "activity_section.key": "cc0cadbc-62a6-4b43-8145-9e1dca19c99b",
         "lesson_activity.key": "1d68583a-a0fa-4418-9c77-cf5d4fa059d8"
+      }
+    },
+    {
+      "key": "9e3759a0-58c3-40bc-a6c5-2c5e32eeacac",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e3759a0-58c3-40bc-a6c5-2c5e32eeacac",
+        "lesson_activity.key": "9bd56120-4df1-4279-8217-0036f1264c81"
+      }
+    },
+    {
+      "key": "b13fc815-652b-49f9-987d-4727aee9a712",
+      "position": 2,
+      "properties": {
+        "progression_name": "Boolean expressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "b13fc815-652b-49f9-987d-4727aee9a712",
+        "lesson_activity.key": "9bd56120-4df1-4279-8217-0036f1264c81"
+      }
+    },
+    {
+      "key": "83df7d0f-54de-4120-94bb-e0a772b047e1",
+      "position": 3,
+      "properties": {
+        "progression_name": "If statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1",
+        "lesson_activity.key": "9bd56120-4df1-4279-8217-0036f1264c81"
+      }
+    },
+    {
+      "key": "dea33104-7634-4da4-a1a5-a126c4bc8729",
+      "position": 4,
+      "properties": {
+        "progression_name": "If-else statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729",
+        "lesson_activity.key": "9bd56120-4df1-4279-8217-0036f1264c81"
+      }
+    },
+    {
+      "key": "16212805-d859-474f-9bb4-29da3e436611",
+      "position": 5,
+      "properties": {
+        "progression_name": "Else-if statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611",
+        "lesson_activity.key": "9bd56120-4df1-4279-8217-0036f1264c81"
+      }
+    },
+    {
+      "key": "d4a47593-8bb5-4409-9226-3bf453e20916",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4a47593-8bb5-4409-9226-3bf453e20916",
+        "lesson_activity.key": "31ebfcb1-6e59-4e64-843d-98278f8f94d9"
+      }
+    },
+    {
+      "key": "e6fe363f-b0f6-4220-8414-e752e8811553",
+      "position": 2,
+      "properties": {
+        "progression_name": "For loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553",
+        "lesson_activity.key": "31ebfcb1-6e59-4e64-843d-98278f8f94d9"
+      }
+    },
+    {
+      "key": "a28309d4-dab1-42a0-ac61-99ba27fbd6ad",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a28309d4-dab1-42a0-ac61-99ba27fbd6ad",
+        "lesson_activity.key": "0180195d-d482-49a8-b6fd-e79c2fdd00ac"
+      }
+    },
+    {
+      "key": "7271dab8-84e6-45ad-b954-248fa86846ea",
+      "position": 2,
+      "properties": {
+        "progression_name": "Declaring and initializing arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea",
+        "lesson_activity.key": "0180195d-d482-49a8-b6fd-e79c2fdd00ac"
       }
     }
   ],
@@ -931,6 +1096,622 @@
       "level_keys": [
         "SP-VPL-CSA-22-mod3-Vocab-lesson-2-matching"
       ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-Overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "9e3759a0-58c3-40bc-a6c5-2c5e32eeacac"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-Overview"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-boolean-expressions-map"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "b13fc815-652b-49f9-987d-4727aee9a712"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-boolean-expressions-map"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-boolean-matching"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "b13fc815-652b-49f9-987d-4727aee9a712"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-boolean-matching"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-if-statements-video"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statement-practice-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-if-statement-practice-1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-other-languages"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-if-statements-other-languages"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-variables-predict-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-variables-predict-1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-variables-practice-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-variables-practice-2"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-mc"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-if-statements-mc"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "If-else statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-statements-video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-if-else-statements-video"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "If-else statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-practice-.5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-if-else-practice-.5"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "If-else statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-practice-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-if-else-practice-1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "If-else statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-statements-mc"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-if-else-statements-mc"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Else-if statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-statements-video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-else-if-statements-video"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Else-if statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-practice-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-else-if-practice-1"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Else-if statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-practice-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-else-if-practice-2"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Else-if statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-matching"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L3-matching"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-Overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d4a47593-8bb5-4409-9226-3bf453e20916"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L4-Overview"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L4-for-loops-video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-L4-for-loops-video"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L4-for-loops-matching"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-L4-for-loops-matching"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L4-for-loop-practice-1"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L4-for-loop-practice-2"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L4-for-loop-practice-3"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L4-for-loop-practice-4"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L4-for-loop-practice-5"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L4-for-loop-practice-6"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-Overview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "a28309d4-dab1-42a0-ac61-99ba27fbd6ad"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L5-Overview"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-L5-array-video-1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1268,6 +2049,342 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
         "activity_section.key": "cc0cadbc-62a6-4b43-8145-9e1dca19c99b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-Overview",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-Overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "9e3759a0-58c3-40bc-a6c5-2c5e32eeacac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-boolean-expressions-map",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-boolean-expressions-map"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "b13fc815-652b-49f9-987d-4727aee9a712"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-boolean-matching",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-boolean-matching"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "b13fc815-652b-49f9-987d-4727aee9a712"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-if-statements-video",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-if-statement-practice-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statement-practice-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-if-statements-other-languages",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-other-languages"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-variables-predict-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-variables-predict-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-variables-practice-2",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-variables-practice-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-if-statements-mc",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-statements-mc"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "83df7d0f-54de-4120-94bb-e0a772b047e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-if-else-statements-video",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-statements-video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-if-else-practice-.5",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-practice-.5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-if-else-practice-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-practice-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-if-else-statements-mc",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-if-else-statements-mc"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "dea33104-7634-4da4-a1a5-a126c4bc8729"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-else-if-statements-video",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-statements-video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-else-if-practice-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-practice-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-else-if-practice-2",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-else-if-practice-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L3-matching",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-matching"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "16212805-d859-474f-9bb4-29da3e436611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L4-Overview",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-Overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "d4a47593-8bb5-4409-9226-3bf453e20916"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-L4-for-loops-video",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L4-for-loops-video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-L4-for-loops-matching",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L4-for-loops-matching"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L4-for-loop-practice-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L4-for-loop-practice-2",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L4-for-loop-practice-3",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L4-for-loop-practice-4",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L4-for-loop-practice-5",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L4-for-loop-practice-6",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L4-for-loop-practice-6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "e6fe363f-b0f6-4220-8414-e752e8811553"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L5-Overview",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-Overview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "a28309d4-dab1-42a0-ac61-99ba27fbd6ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-L5-array-video-1",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
       }
     }
   ],
