@@ -22035,3 +22035,54 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 沙盒
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 歡迎
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: 變數
+            lesson-15:
+              name: 單元 2 評估
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: 新手上路
+              key: 新手上路
+            Sequencing:
+              name: 序列
+              key: 序列
+            Loops:
+              name: 迴圈
+              key: 迴圈
+            Events:
+              name: 事件
+              key: 事件
+            Conditionals:
+              name: 條件判斷（Conditionals）
+              key: 條件判斷（Conditionals）
+            Functions:
+              name: 函式
+              key: 函式
+            Variables:
+              name: 變數
+              key: 變數
+            For Loops:
+              name: 計次迴圈（For Loops）
+              key: 計次迴圈（For Loops）
+            End of Course projects:
+              name: 課程結束專案
+              key: 課程結束專案
+            Reviewing your reflections:
+              name: 檢閱你的反思
+              key: 檢閱你的反思
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: 歡迎來到「教授計算機科學基礎」
+            Lesson Planning:
+              key: 教學計畫
+            Next steps:
+              key: 下一步

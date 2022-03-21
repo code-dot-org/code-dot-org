@@ -101,4 +101,13 @@ class ReferenceGuide < ApplicationRecord
       content: content
     }
   end
+
+  def summarize_for_index
+    {
+      key: key,
+      parent_reference_guide_key: parent_reference_guide_key,
+      display_name: display_name,
+      position: position
+    }
+  end
 end

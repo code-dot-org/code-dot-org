@@ -2035,27 +2035,37 @@
         },
         "board_events/csd/2021": {
           "name": "Eventos de la Placa",
+          "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
           "type": "Recurso"
         },
         "physical_input/csd/2021": {
           "name": "Entrada física",
+          "url": "https://drive.google.com/file/d/1TNz91ENBLt-SG1L0459YR9X5yLjQNuSc/view?usp=sharing",
           "type": "Recurso"
         },
         "physical_output/csd/2021": {
+          "name": "Salidas Físicas",
+          "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
           "type": "Recurso"
         },
         "taking_input_with_getproperty/csd/2021": {
+          "name": "Obteniendo Entradas con getProperty",
+          "url": "https://drive.google.com/file/d/14JROXSF8nsce64Y1EjrbmzuANtCln1md/view?usp=sharing",
           "type": "Recurso"
         },
         "analog-digital-video/csd/2021": {
+          "name": "Diferencia entre señales analógicas y digitales",
+          "url": "https://www.youtube.com/watch?v=RQc_frX50BA",
           "type": "Vídeo"
         },
         "analog_sensors/csd/2021": {
           "name": "Sensores análogos",
+          "url": "https://drive.google.com/file/d/11XwNv2922DAvixhreVXgfxnTS9SHa8ds/view?usp=sharing",
           "type": "Recurso"
         },
         "changing_sensor_scale/csd/2021": {
           "name": "Cambiar la escala del sensor",
+          "url": "https://drive.google.com/file/d/1jGo7RH3_BiZwBBXNaOCVco-okqRRkSdC/view?usp=sharing",
           "type": "Recurso"
         },
         "date_and_change_events/csd/2021": {
@@ -2099,6 +2109,7 @@
           "type": "Recurso"
         },
         "producing_output/csd/2021": {
+          "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
           "type": "Recurso"
         },
         "loops_in_app_lab/csd/2021": {

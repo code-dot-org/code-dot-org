@@ -61,29 +61,29 @@
           <next>
             <block type="gamelab_setPromptWithChoices" deletable="false">
               <value name="QUESTION">
-                <block type="text" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="text" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">Enter a food:</title>
-                </block>
+                </shadow>
               </value>
               <value name="VAR">
-                <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
+                <block type="variables_get" movable="false" deletable="false">
                   <title name="VAR">food</title>
                 </block>
               </value>
               <value name="A">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">sandwich</title>
-                </block>
+                </shadow>
               </value>
               <value name="B">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">salad</title>
-                </block>
+                </shadow>
               </value>
               <value name="C">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">cupcake</title>
-                </block>
+                </shadow>
               </value>
             </block>
           </next>
@@ -92,6 +92,9 @@
           <next>
             <block type="Poetry_setTitle" deletable="false">
               <value name="TITLE">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
                 <block type="gamelab_textJoin" deletable="false">
                   <title name="TEXT1">An Ode to Food</title>
                 </block>
@@ -99,6 +102,9 @@
               <next>
                 <block type="Poetry_addLine" deletable="false">
                   <value name="LINE">
+                    <shadow type="text">
+                      <title name="TEXT"/>
+                    </shadow>
                     <block type="gamelab_textJoin" deletable="false">
                       <title name="TEXT1">Life is too short</title>
                     </block>
@@ -106,6 +112,9 @@
                   <next>
                     <block type="Poetry_addLine" deletable="false">
                       <value name="LINE">
+                        <shadow type="text">
+                          <title name="TEXT"/>
+                        </shadow>
                         <block type="gamelab_textJoin" deletable="false">
                           <title name="TEXT1">to eat a bad </title>
                           <value name="TEXT2">
@@ -138,9 +147,9 @@
             <block type="gamelab_ifVarEquals" deletable="false">
               <title name="NUM">food</title>
               <value name="VAL">
-                <block type="Poetry_stringValue" deletable="false">
+                <shadow type="Poetry_stringValue" deletable="false">
                   <title name="TEXT">sandwich</title>
-                </block>
+                </shadow>
               </value>
               <statement name="STATEMENT">
                 <block type="Poetry_makeBurst" deletable="false">
@@ -153,9 +162,9 @@
                 <block type="gamelab_ifVarEquals" deletable="false">
                   <title name="NUM">food</title>
                   <value name="VAL">
-                    <block type="Poetry_stringValue" deletable="false">
+                    <shadow type="Poetry_stringValue" deletable="false">
                       <title name="TEXT">salad</title>
-                    </block>
+                    </shadow>
                   </value>
                   <statement name="STATEMENT">
                     <block type="Poetry_makeBurst" deletable="false">
@@ -168,9 +177,9 @@
                     <block type="gamelab_ifVarEquals" deletable="false">
                       <title name="NUM">food</title>
                       <value name="VAL">
-                        <block type="Poetry_stringValue" deletable="false">
+                        <shadow type="Poetry_stringValue" deletable="false">
                           <title name="TEXT">cupcake</title>
-                        </block>
+                        </shadow>
                       </value>
                       <statement name="STATEMENT">
                         <block type="Poetry_makeBurst" deletable="false">

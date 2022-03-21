@@ -8662,3 +8662,38 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Breytur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Fyrstu skrefin
+              key: Fyrstu skrefin
+            Sequencing:
+              name: Skipanaröð
+              key: Skipanaröð
+            Loops:
+              name: Lykkjur
+              key: Lykkjur
+            Events:
+              name: Atvik
+              key: Atvik
+            Conditionals:
+              name: Skilyrði
+              key: Skilyrði
+            Functions:
+              name: Föll
+              key: Föll
+            Variables:
+              name: Breytur
+              key: Breytur
+            For Loops:
+              name: Frá lykkjur
+              key: Frá lykkjur
+            Lesson Planning:
+              key: Gerð kennsluáætlana

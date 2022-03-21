@@ -24,7 +24,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   NULL_STREAM = File.open File::NULL, 'w'
 
   def run(*_args, &_block)
-    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) {super}
+    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) do
+      DASHBOARD_DB.transaction(rollback: :always, auto_savepoint: true) do
+        super
+      end
+    end
   end
 
   setup do

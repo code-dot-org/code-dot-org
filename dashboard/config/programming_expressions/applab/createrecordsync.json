@@ -1,7 +1,7 @@
 {
   "key": "createRecordSync",
   "name": "createRecordSync",
-  "category": null,
+  "category": "Data",
   "category_key": "data",
   "content": "Adding permanent data storage to your apps is the last step to making them real-world. The apps you use everyday are driven by data \"in the cloud\".\r\n\r\n**First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/docs/concepts/tableDataStorage/).\r\n\r\nThe *record* parameter must be a javascript object variable or a javascript object defined using curly brace and colon notation (see examples below). The object cannot have an \"id\" property. The record created in the table is then returned as a parameter to the callback function. Data is only accessible to the app that created the table. To View your app's table data, click 'View data' in App Lab and click the table name you want to view.",
   "examples": [
@@ -30,5 +30,6 @@
     }
   ],
   "short_description": "Adding permanent data storage to your apps is the last step to making them real-world. The apps you use everyday are driven by data \"in the cloud\".",
+  "syntax": "createRecordSync(table, record)",
   "tips": "### Tips\r\n\r\n- The javascript object properties must match the App Lab table column names. Both are case sensitive.\r\n- Duplicate records are allowed in a table but will have different id values assigned automatically.\r\n- Use with [readRecords()](/docs/applab/readRecords/), [deleteRecord()](/docs/applab/deleteRecord/), and [updateRecord()](/docs/applab/updateRecord/) records to view, delete, and update records in a table."
 }

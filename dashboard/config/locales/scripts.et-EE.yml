@@ -3813,3 +3813,30 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Muutujad
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Tsüklid
+              key: Tsüklid
+            Events:
+              name: Sündmused
+              key: Sündmused
+            Conditionals:
+              name: Tingimuslaused
+              key: Tingimuslaused
+            Functions:
+              name: Funktsioonid
+              key: Funktsioonid
+            Variables:
+              name: Muutujad
+              key: Muutujad
+            For Loops:
+              name: For tsükkel
+              key: For tsükkel

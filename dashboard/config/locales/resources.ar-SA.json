@@ -6,16 +6,23 @@
           "name": "Spotify Playlist (كل الأعمار)"
         },
         "list_of_poems/poem-art/2021": {
+          "name": "",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
           "type": "شرائح"
         },
         "poem_art_celebration/poem-art/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "poem_art_events/poem-art/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "poem_art_imagery/poem-art/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -25,13 +32,17 @@
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "تقديم الفنان",
+          "url": "",
           "type": "فيديو الطالب"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "لفات وزوايا"
+          "name": "لفات وزوايا",
+          "url": "",
+          "type": ""
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "لفات وزوايا",
+          "url": "",
           "type": "فيديو الطالب"
         },
         "dance-party-playlist/dance/unversioned": {
@@ -68,21 +79,27 @@
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "التعريف بمشروع Sprite Lab (مختبر سبرايت)",
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview",
           "type": "شرائح"
         },
         "exploring_apps/coursef/2021": {
           "name": "استكشاف التطبيقات",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
           "type": "مصدر"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "التعريف بمشروع Sprite Lab (مختبر سبرايت)",
+          "url": "https://youtu.be/yd-9xZ275dM",
           "type": "فيديو"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "استكشاف التطبيقات",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
           "type": "الحل النموذجي"
         },
         "making_sprites/coursef/2021": {
+          "name": "تحضير الكائنات",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
           "type": "شرائح"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -91,6 +108,7 @@
         },
         "sprites_in_action/coursef/2021": {
           "name": "الرسوم المتحركة في العمل",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "شرائح"
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
@@ -251,7 +269,8 @@
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
           "name": "المسارات الرقمية: اتبع المسار الرقمي",
-          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
+          "type": "فيديو الدرس"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "المسارات الرقمية: مربعات المسار الرقمي",
@@ -263,7 +282,8 @@
         },
         "mimi-activity/courseb/2021": {
           "name": "حرّكها، حرّكها",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "نشاط الخريطة"
         },
         "mimi-debugging/courseb/2021": {
           "name": "حرّكها، حرّكها",
@@ -366,7 +386,8 @@
         },
         "csf-lesson-recommend/courseb/2021": {
           "name": "نصائح النشاط الرئيسي في أساسيات علوم الكمبيوتر",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "توصيات الدرس"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت",
@@ -394,7 +415,8 @@
         },
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "الحدث الكبير (الدورتان \"أ\" و\"ب\")",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "type": "الصورة المتحكمة"
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "دليل تخطيط مشروع مختبر الألعاب",
@@ -457,19 +479,23 @@
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: شرائح عرض الدرس",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": ""
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: عالمي الافتراضي",
-          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
+          "type": "فيديو الدرس"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: الأمان، إنه يحكم!",
-          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "type": "ملصق الشعر"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: لحظة \"توقف وفكر\"!",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": ""
         },
         "pair-programming-vid/coursea/2021": {
           "name": "البرمجة الزوجية",
@@ -613,7 +639,8 @@
         },
         "the_big_event_courses_a_b_/coursea/2021": {
           "name": "الحدث الكبير (الدورتان \"أ\" و\"ب\")",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "type": "الصورة المتحكمة"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "صورة مشاعر الوجوه",
@@ -666,14 +693,17 @@
         },
         "implementation_guide/coursea/2021": {
           "name": "دليل التنفيذ",
+          "url": "",
           "type": "مصدر"
         },
         "lesson_type_guide/coursea/2021": {
           "name": "دليل نوع الدرس",
+          "url": "",
           "type": "مصدر"
         },
         "debugging_guide/coursea/2021": {
           "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": "",
           "type": "مصدر"
         },
         "curriculum_guide_1/coursea/2021": {
@@ -683,10 +713,12 @@
         },
         "2021_change_log/coursea/2021": {
           "name": "سجل التغيير ٢٠٢١",
+          "url": "",
           "type": "مصدر"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "منتدى المعلم",
+          "url": "",
           "type": "مصدر"
         },
         "virtual_lesson_modifications/coursea/2021": {
@@ -704,11 +736,13 @@
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "أصدقائي من الروبوت",
-          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
+          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
+          "type": "المسافة بين الأكواب"
         },
         "csf-mrf-symbol-key/coursec/2021": {
           "name": "أصدقائي من الروبوت",
-          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
+          "type": "مفتاح الرمز"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
           "name": "أصدقائي من الروبوت",
@@ -717,11 +751,13 @@
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
           "name": "أصدقائي من الروبوت",
-          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
+          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
+          "type": "أفكار تكديس الأكواب"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "أصدقائي من الروبوت",
-          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
+          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
+          "type": "نموذج شبه المنحرف الورقي"
         },
         "c2-maze-bridge/coursec/2021": {
           "name": "صفحة توصيل المتاهة",
@@ -739,7 +775,8 @@
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "نصائح النشاط الرئيسي في أساسيات علوم الكمبيوتر",
-          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "توصيات الدرس"
         },
         "debugging_guide/coursec/2021": {
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
@@ -783,7 +820,8 @@
         },
         "the_big_event_course_c_/coursec/2021": {
           "name": "الحدث الكبير (الدورة \"ج\")",
-          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit"
+          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
+          "type": "جهاز التحكم في الأحداث"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت",
@@ -837,7 +875,8 @@
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
           "name": "دليل تخطيط مشروع مختبر الألعاب (نموذج)",
-          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
+          "type": "مصادر الدرس"
         },
         "play-lab-project-guide/coursec/2021": {
           "name": "دليل تخطيط مشروع مختبر الألعاب",
@@ -1074,6 +1113,7 @@
           "type": "الحل النموذجي للتقييم"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "مبادئ علوم الكمبيوتر \"الدورة التدريبية د\" - دليل مشروع نهاية الدورة التدريبية",
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
         },
         "csta_standards_mapping/coursed/2021": {
@@ -1127,12 +1167,16 @@
         },
         "unplugged_maze_blocks/express/2021": {
           "name": "قوالب المتاهة غير المتصلة",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
           "type": "مصدر"
         },
         "pair_programming/express/2021": {
           "name": "البرمجة الزوجية",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "فيديو"
+        },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "قطع غير برمجية (الدورات ج - و)"
         },
         "artist_introduction/express/2021": {
           "name": "تقديم الفنان",
@@ -1148,6 +1192,7 @@
           "type": "نشرة"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
+          "name": "صندوق زدوات المعلم - السمكة السبّاحة",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
@@ -1155,6 +1200,7 @@
           "type": "مصدر"
         },
         "making_sprites/express/2021": {
+          "name": "تحضير الكائنات",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
           "type": "شرائح"
         },
@@ -1164,6 +1210,7 @@
         },
         "sprites_in_action/express/2021": {
           "name": "الرسوم المتحركة في العمل",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "شرائح"
         },
         "pause_and_think_online/express/2021": {
@@ -1188,6 +1235,15 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "فيديو"
         },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "قطع غير برمجية (الدورات ج - و)"
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "قطع غير برمجية (الدورات ج - و)"
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "قطع غير برمجية (الدورات ج - و)"
+        },
         "unplugged_blocks_courses_c-f__4/express/2021": {
           "name": "قوالب غير متصلة (الدورات ج - و)"
         },
@@ -1199,20 +1255,29 @@
         },
         "variables_video/express/2021": {
           "name": "المتغيرات",
+          "url": "https://youtu.be/DI7DprN4FtE",
           "type": "فيديو الطالب"
+        },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
         },
         "csta_standards_mapping/express/2021": {
+          "url": "https://studio.code.org/s/express-2021/standards",
           "type": "مصدر"
         },
         "course_vocabulary_1/express/2021": {
+          "url": "https://studio.code.org/s/express-2021/vocab",
           "type": "مصدر"
         },
         "teacher_forum_1/express/2021": {
           "name": "منتدى المعلم",
           "type": "مصدر"
+        },
+        "debugging_guide/express/2021": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "البرمجة الزوجية",
@@ -1259,29 +1324,50 @@
           "type": "مصدر"
         },
         "debugging_guide/pre-express/2021": {
-          "name": "دليل إيجاد وتصحيح الخلل البرمجي"
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "شرائح"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
-          "url": "https://studio.code.org/levels/18623"
+          "name": "صندوق زدوات المعلم - السمكة السبّاحة",
+          "url": "https://studio.code.org/levels/18623",
+          "type": "مرحلة البرمجة"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "وثائق مختبر الرسوم المتحركة",
           "type": "مصدر"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "كن مواطناً رقمياً خارقاً: شرائح الدرس",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "كن مواطناً رقمياً خارقاً: مواطن رقمي خارق",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "المعلومات الخاصة والشخصية: شرائح الدرس",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "المعلومات الخاصة والشخصية: المعلومات الخاصة والشخصية:",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
           "type": "فيديو الطالب"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "المعلومات الخاصة والشخصية: تذكرة الخروج",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "المعلومات الخاصة والشخصية: اختبار قصير",
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "نموذج"
+        },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "المعلومات الخاصة والشخصية: اختبار قصير",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
           "type": "الحل النموذجي"
         },
@@ -1291,6 +1377,7 @@
           "type": "فيديو"
         },
         "about_me_planning_guide/coursee/2021": {
+          "name": "دليل التخطيط: معلومات عني",
           "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview",
           "type": "نشرة"
         },
@@ -1343,12 +1430,17 @@
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "التصميم من أجل الوصول",
+          "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
           "type": "شرائح"
         },
         "types_of_disabilities/coursee/2021": {
+          "name": "أنواع الإعاقات",
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
           "type": "مصدر"
         },
         "end-of-course-project-guide/coursee/2021": {
+          "name": "دليل مشروع نهاية الدورة التدريبية.",
+          "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit",
           "type": "ورقة عمل"
         },
         "rubric-csf-final-projects/coursee/2021": {
@@ -1360,18 +1452,26 @@
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
           "name": "72 طريقة إبداعية يمكن لطلابك استخدامها لإظهار ما يعرفونه",
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/",
           "type": "مصدر"
         },
         "csta_standards_mapping/coursee/2021": {
+          "name": "مطابقة معايير رابطة معلمي علم الكمبيوتر",
+          "url": "https://studio.code.org/s/coursee-2021/standards",
           "type": "مصدر"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "الأساسيات المشتركة وتوجيهات معايير جيل العلوم الحديث",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
           "type": "مصدر"
         },
         "cross-curricular_extension_activities/coursee/2021": {
+          "name": "نشاط إضافي عبر المناهج",
           "type": "مصدر"
         },
         "course_vocabulary/coursee/2021": {
+          "name": "مفردات الدورة التدريبية",
+          "url": "https://studio.code.org/s/coursee-2021/vocab",
           "type": "مصدر"
         },
         "implementation_guide/coursee/2021": {
@@ -1379,9 +1479,11 @@
           "type": "مصدر"
         },
         "lesson_type_guide/coursee/2021": {
+          "name": "دليل نوع الدرس",
           "type": "مصدر"
         },
         "debugging_guide/coursee/2021": {
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
           "type": "مصدر"
         },
         "curriculum_guide_1/coursee/2021": {
@@ -1390,6 +1492,7 @@
           "type": "مصدر"
         },
         "2021_change_log/coursee/2021": {
+          "name": "سجل التغيير ٢٠٢١",
           "type": "مصدر"
         },
         "teacher_forum_1/coursee/2021": {
@@ -1570,10 +1673,14 @@
           "type": "مصدر"
         },
         "csd_curriculum_guide/csd/2021": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "",
+          "url": ""
         },
         "csd_implementation_guide/csd/2021": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "",
+          "url": ""
         },
         "unit-4-the-design-process/csd/2021": {
           "type": "شرائح"
@@ -1591,7 +1698,9 @@
           "type": "مصدر"
         },
         "computer-science-practices/csd/2021": {
-          "type": "تأملات"
+          "type": "تأملات",
+          "name": "",
+          "url": ""
         },
         "paper-prototypes/csd/2021": {
           "name": "النماذج الورقية الأولية"
@@ -1645,7 +1754,8 @@
           "name": "عرض التطبيق"
         },
         "teacher_forum/csd/2021": {
-          "name": "منتدى المعلم"
+          "name": "منتدى المعلم",
+          "url": ""
         },
         "designing_screens_with_code/csd/2021": {
           "name": "تصميم الشاشات باستخدام الكود",
@@ -1751,103 +1861,306 @@
           "type": "مصدر"
         },
         "unit-5-data-society/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "شرائح"
         },
         "representing-information-1/csd/2021": {
-          "name": "تمثيل المعلومات"
+          "name": "تمثيل المعلومات",
+          "url": "",
+          "type": ""
+        },
+        "representing-information-exemplar-2019/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "animal-shapes/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "representing_information_2/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "ascii-exemplar-2019/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "ascii-text/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
+        "ascii-challenges/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "ascii_challenges/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "الحل النموذجي"
         },
         "how-computers-work-data-and-binary/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
+        "representing-numbers-2021/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "number-cards-1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "representing-numbers-exemplar-2019/csd/2021": {
-          "name": "تمثيل الأرقام"
+          "name": "تمثيل الأرقام",
+          "url": "",
+          "type": ""
+        },
+        "number-cards/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "pet-records-exemplar-2019/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "activity-guide-pet-records/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "ascii-to-binary-table/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "الحفاظ على سرية البيانات"
+          "name": "الحفاظ على سرية البيانات",
+          "url": "",
+          "type": ""
+        },
+        "keeping-data-secret/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "unit_5_data_society/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "شرائح"
         },
+        "secret_messages_2021/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "medical_records/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "الحل النموذجي"
         },
         "create-a-representation-exemplar-2019/csd/2021": {
-          "name": "المشروع - إنشاء تمثيل"
+          "name": "المشروع - إنشاء تمثيل",
+          "url": "",
+          "type": ""
         },
         "encode-a-thing/csd/2021": {
-          "name": "المشروع - إنشاء تمثيل"
+          "name": "المشروع - إنشاء تمثيل",
+          "url": ""
         },
         "unit_5_data_society_1/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "شرائح"
         },
         "create_a_representation/csd/2021": {
-          "name": "المشروع - إنشاء تمثيل"
+          "name": "المشروع - إنشاء تمثيل",
+          "url": "",
+          "type": ""
+        },
+        "create_a_representation_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "create_a_representation_marked_rubrics/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "problem-solving-with-data-exemplar-2019/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "problem-solving-with-data/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "structuring-data-2021/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "structuring_data/csd/2021": {
-          "name": "هيكلة البيانات"
+          "name": "هيكلة البيانات",
+          "url": "",
+          "type": ""
         },
         "interpreting-data-exemplar-2019/csd/2021": {
-          "name": "تفسير البيانات"
+          "name": "تفسير البيانات",
+          "url": "",
+          "type": ""
         },
         "interpreting-data/csd/2021": {
-          "name": "تفسير البيانات"
+          "name": "تفسير البيانات",
+          "url": "",
+          "type": ""
         },
         "interpreting-data-1/csd/2021": {
           "name": "تفسير البيانات",
+          "url": "",
           "type": "مصدر"
         },
+        "making-decisions-with-data-exemplar-2019/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "making-decisions-with-data/csd/2021": {
-          "name": "اتخاذ القرارات باستخدام البيانات"
+          "name": "اتخاذ القرارات باستخدام البيانات",
+          "url": "",
+          "type": ""
         },
         "problem-solving-process-with-data/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
         "automating-data-decisions-exemplar-2019/csd/2021": {
-          "name": "أتمتة قرارات البيانات"
+          "name": "أتمتة قرارات البيانات",
+          "url": "",
+          "type": ""
         },
         "data-decisions-resource/csd/2021": {
           "name": "أتمتة قرارات البيانات",
+          "url": "",
           "type": "مصدر"
         },
         "automating-data-decisions-1/csd/2021": {
-          "name": "أتمتة قرارات البيانات"
+          "name": "أتمتة قرارات البيانات",
+          "url": "",
+          "type": ""
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "data-in-the-real-world-exemplar-2019/csd/2021": {
-          "name": "البيانات في العالم الحقيقي"
+          "name": "البيانات في العالم الحقيقي",
+          "url": "",
+          "type": ""
         },
         "data-in-the-real-world/csd/2021": {
-          "name": "البيانات في العالم الحقيقي"
+          "name": "البيانات في العالم الحقيقي",
+          "url": "",
+          "type": ""
         },
         "video_impact_on_society/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "video_machine_learning/csd/2021": {
           "name": "فيديو: التعلم الآلي",
+          "url": "",
           "type": "فيديو"
         },
         "video_training_data_and_bias/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "استعراض النظراء"
         },
+        "make-a-recommendation-1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "solve-a-data-problem/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "project_guide_exemplar/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer_review_exemplar_1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer_review_exemplar_2/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "unit_5_data_society_2/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "شرائح"
+        },
+        "make_a_recommendation_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "sample_marked_rubrics_3/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "all_resources_5/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_standards_5/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_vocabulary_5/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "csd_guide_to_using_resources/csd/2021": {
+          "name": "",
+          "url": ""
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "type": "شرائح"
@@ -1973,42 +2286,193 @@
         "teacher_forum_1/csd/2021": {
           "name": "منتدى المعلم"
         },
+        "aluminum-boats-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "aluminum-boats-activity-guide-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "how-to-videos/csd/2021": {
+          "name": "",
+          "url": ""
+        },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "شرائح"
         },
         "solving-problems-exemplar-2020/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "الحل النموذجي"
         },
+        "solving-problems-activity-guide-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "what-is-a-computer-2020/csd/2021": {
-          "name": "ما هو الكمبيوتر؟"
+          "name": "ما هو الكمبيوتر؟",
+          "url": "",
+          "type": ""
         },
         "what-is-a-computer-1-2-3/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
+        },
+        "what-is-a-computer-version-b/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "what-is-a-computer-version-a/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "input-and-output-2020/csd/2021": {
-          "name": "الإدخال والإخراج"
+          "name": "الإدخال والإخراج",
+          "url": "",
+          "type": ""
         },
         "input-and-output-1/csd/2021": {
-          "name": "الإدخال والإخراج"
+          "name": "الإدخال والإخراج",
+          "url": "",
+          "type": ""
+        },
+        "processing-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "apps-with-processing/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "what-do-computers-do/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "فيديو"
         },
+        "storage-1/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "storage/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "project-propose-an-app-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "app-proposal-project/csd/2021": {
-          "name": "التطبيقات وحل المشكلات"
+          "name": "التطبيقات وحل المشكلات",
+          "url": ""
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "name": "التطبيقات وحل المشكلات",
+          "url": "",
           "type": "استعراض النظراء"
         },
+        "apps-and-problem-solving-marked-rubrics/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "peer_review_exemplar/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "apps_and_problem_solving/csd/2021": {
-          "name": "التطبيقات وحل المشكلات"
+          "name": "التطبيقات وحل المشكلات",
+          "url": "",
+          "type": ""
         },
         "apps_and_problem_solving_-_student_checklist/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
         },
+        "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "build-a-newspaper-table/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "spaghetti-bridge-activity-guide/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "intro-to-problem-solving-paper-tower-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "paper-planes/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "plane-how-to-videos/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "exploring-problem-solving-animal-theme-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "solving-problems-tangrams-2020/csd/2021": {
+          "name": "",
+          "url": "",
           "type": "مصدر"
+        },
+        "solving-problems-activity-guide-animal-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "exploring-problem-solving-games-theme-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "solving-problems-activity-guide-game-2020/csd/2021": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
+        "all_resources/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_standards/csd/2021": {
+          "name": "",
+          "url": ""
+        },
+        "all_vocabulary/csd/2021": {
+          "name": "",
+          "url": ""
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "type": "شرائح"

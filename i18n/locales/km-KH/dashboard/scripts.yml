@@ -3004,3 +3004,24 @@ km:
             lessonGroup-8:
               display_name: អ​ថេរ
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: អ​ថេរ
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: រង្វិល​ជុំ
+              key: រង្វិល​ជុំ
+            Events:
+              name: ព្រឹត្តិការណ៍
+              key: ព្រឹត្តិការណ៍
+            Conditionals:
+              name: លក្ខខណ្ឌ
+              key: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+              key: អនុ​គមន៍
+            Variables:
+              name: អ​ថេរ
+              key: អ​ថេរ

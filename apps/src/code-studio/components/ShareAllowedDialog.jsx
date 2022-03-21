@@ -21,7 +21,6 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
-import DCDO from '@cdo/apps/dcdo';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
@@ -210,8 +209,7 @@ class ShareAllowedDialog extends React.Component {
       ? `Check out the dance I made featuring @${artistTwitterHandle} on @codeorg!`
       : 'Check out what I made on @codeorg!';
     const hashtags =
-      artistTwitterHandle === 'Coldplay' &&
-      !!DCDO.get('higher-power-promotion', false)
+      artistTwitterHandle === 'Coldplay'
         ? ['codeplay', 'HourOfCode']
         : ['HourOfCode'];
     const comma = '%2C';

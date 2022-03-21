@@ -65,7 +65,7 @@ describe('Example', () => {
       description: 'An example',
       code: '```This is some example code```',
       app_display_type: 'codeFromCodeField',
-      imageUrl: '/image.png'
+      image: '/image.png'
     };
 
     const wrapper = shallow(

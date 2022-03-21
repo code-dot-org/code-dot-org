@@ -13429,3 +13429,40 @@ vi:
               display_name: Nội dung
             lessonGroup-5:
               display_name: Hộp cát
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Chào mừng bạn
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Các biến
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Bắt đầu
+              key: Bắt đầu
+            Sequencing:
+              name: Chuỗi tuần tự
+              key: Chuỗi tuần tự
+            Loops:
+              name: Vòng lặp
+              key: Vòng lặp
+            Events:
+              name: Các sự kiện
+              key: Các sự kiện
+            Conditionals:
+              name: Điều kiện
+              key: Điều kiện
+            Functions:
+              name: Các hàm
+              key: Các hàm
+            Variables:
+              name: Các biến
+              key: Các biến
+            For Loops:
+              name: Cho vòng lặp
+              key: Cho vòng lặp

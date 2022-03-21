@@ -16071,6 +16071,8 @@ ar:
               name: التعريف بمشروع Sprite Lab (مختبر سبرايت)
             Virus Simulation for Code Bytes:
               name: برمجة محاكاة
+            Making Sprites:
+              name: تحضير الكائنات
             Sprites in Action:
               name: الرسوم المتحركة في العمل
           lesson_groups:
@@ -17570,6 +17572,8 @@ ar:
               description_teacher: في هذا الدرس، سيتعرف الطلاب على إمكانية الوصول وقيمة تقمص الشخصية من خلال العصف الذهني وتصميم حلول يمكن الوصول إليها في تطبيقات افتراضية.
             lesson-6:
               name: التعريف بمشروع Sprite Lab (مختبر سبرايت)
+            lesson-7:
+              name: تحضير الكائنات
             lesson-8:
               name: الرسوم المتحركة في العمل
             lesson-2:
@@ -17742,6 +17746,8 @@ ar:
               name: حفلة الرقص
               description_student: وقت الاحتفال! في هذا الدرس، ستبرمج نسختك الخاصة من حفلة الرقص التفاعلية.
               description_teacher: في هذا الدرس، سيقوم الطلاب ببرمجة حفلة الرقص التفاعلية الخاصة بهم. يتطلب هذا النشاط صوتًا حيث تم تصميم الأداة للاستجابة للموسيقى.
+            lesson-2:
+              name: تحضير الكائنات
             lesson-3:
               name: الرسوم المتحركة في العمل
           lesson_groups:
@@ -17836,6 +17842,8 @@ ar:
               name: برمجة محاكاة
             Course F Introduction:
               name: التعريف بمشروع Sprite Lab (مختبر سبرايت)
+            Making Sprites:
+              name: تحضير الكائنات
             Sprites in Action:
               name: الرسوم المتحركة في العمل
             introducing-spritelab:
@@ -19383,6 +19391,8 @@ ar:
           lessons:
             Introducing Sprite Lab:
               name: التعريف بمشروع Sprite Lab (مختبر سبرايت)
+            Making Sprites:
+              name: تحضير الكائنات
             Sprites in Action:
               name: الرسوم المتحركة في العمل
             'Mini-Project: Virtual Pet':
@@ -19658,6 +19668,8 @@ ar:
               description_student: تعلم كيفية إنشاء النقوش المتحركة وتعديلها.
               description_teacher: 'في هذا الدرس، سيتعرف الطلاب على المفهومين الذين يمثلان صميم مختبر النقوش المتحركة: النقوش المتحركة والسلوكيات. النقوش المتحركة شخصيات أو أشياء على الشاشة يمكن للطلاب تحريكها وتغييرها والتلاعب بها. أما السلوكيات فهي الأفعال التي ستنفذها النقوش المتحركة بشكل مستمر حتى إيقافها.'
               key: السمكة السبّاحة في مختبر الرسوم المتحركة
+            Making Sprites:
+              name: تحضير الكائنات
             Sprites in Action:
               name: الرسوم المتحركة في العمل
             Virtual Pet with Sprite Lab:
@@ -19761,6 +19773,7 @@ ar:
               description_teacher: تصحيح الأخطاء عنصر أساسي في تعلم البرمجة. في هذا الدرس، سيواجه الطلاب ألغازًا تم حلها بشكل غير صحيح. سيحتاجون إلى مراجعة التعليمات البرمجية الموجودة لتحديد الأخطاء، بما في ذلك الحلقات غير الصحيحة والقطع الناقصة والزائدة والقطع الخارجة عن الترتيب الصحيح.
             lesson-2:
               key: الدرس 2
+              name: تحضير الكائنات
             lesson-3:
               key: الدرس 3
               name: الرسوم المتحركة في العمل
@@ -20833,6 +20846,8 @@ ar:
           lessons:
             Introducing Sprite Lab:
               name: التعريف بمشروع Sprite Lab (مختبر سبرايت)
+            Making Sprites:
+              name: تحضير الكائنات
             Sprites in Action:
               name: الرسوم المتحركة في العمل
             'Mini-Project: Virtual Pet':
@@ -20891,6 +20906,7 @@ ar:
               key: الدرس 6
             lesson-7:
               key: الدرس 7
+              name: تحضير الكائنات
             lesson-8:
               key: الدرس 8
               name: الرسوم المتحركة في العمل
@@ -21162,6 +21178,9 @@ ar:
             Introducing Sprite Lab:
               name: التعريف بمشروع Sprite Lab (مختبر سبرايت)
               key: التعريف بمشروع Sprite Lab (مختبر سبرايت)
+            Making Sprites:
+              name: تحضير الكائنات
+              key: تحضير الكائنات
             Sprites in Action:
               name: الرسوم المتحركة في العمل
               key: الرسوم المتحركة في العمل
@@ -21284,3 +21303,55 @@ ar:
               display_name: محتوى
             lessonGroup-5:
               display_name: صندوق الاختبارات
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: مرحبًا
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: المتغيرات
+            lesson-15:
+              name: الوحدة 2 التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: البدء
+              key: البدء
+            Sequencing:
+              name: التجزيء
+              key: التجزيء
+            Loops:
+              name: الحلقات
+              key: الحلقات
+            Events:
+              name: الأحداث
+              key: الأحداث
+            Conditionals:
+              name: الجمل الشرطية
+              key: الجمل الشرطية
+            Functions:
+              name: دوال
+              key: دوال
+            Variables:
+              name: المتغيرات
+              key: المتغيرات
+            For Loops:
+              name: للحلقات
+              key: للحلقات
+            End of Course projects:
+              name: مشاريع نهاية الدورة
+              key: مشاريع نهاية الدورة
+            Reviewing your reflections:
+              name: مراجعة تأملاتك
+              key: مراجعة تأملاتك
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: مرحبًا بك في "تدريس أساسيات علم الحاسوب"
+            Lesson Planning:
+              key: تخطيط الدرس
+            Next steps:
+              key: الخطوات التالية
+          student_description: تعرف على كيفية تدريس علم الحاسوب باستخدام أساسيات علم الحاسوب في Code.org من خلال هذه الدورة التدريبية المجانية عبر الإنترنت!

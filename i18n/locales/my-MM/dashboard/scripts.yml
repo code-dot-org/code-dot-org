@@ -479,3 +479,15 @@ my:
           lesson_groups:
             lessonGroup-8:
               display_name: Variables
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Loops
+              key: Loops
+            Variables:
+              name: Variables
+              key: Variables

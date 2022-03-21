@@ -98,6 +98,9 @@
           },
           "draw a car": {
             "name": "Rita en bil"
+          },
+          "draw triangle": {
+            "name": "rita triangel"
           }
         },
         "Course 4 Bee Params 8": {
@@ -231,6 +234,31 @@
           },
           "draw a house": {
             "name": "rita ett hus"
+          },
+          "draw a door": {
+            "name": "rita en dörr"
+          },
+          "draw grass": {
+            "name": "rita gräs"
+          },
+          "draw windows": {
+            "name": "rita fönster"
+          },
+          "rectangle": {
+            "name": "rektangel",
+            "description": "lol"
+          },
+          "sun": {
+            "name": "sol"
+          },
+          "window": {
+            "name": "fönster"
+          },
+          "triangle": {
+            "name": "triangel"
+          },
+          "square": {
+            "description": "lol"
           }
         },
         "Geometric Sun_2018": {
@@ -239,18 +267,46 @@
           },
           "draw a house": {
             "name": "rita ett hus"
+          },
+          "draw a door": {
+            "name": "rita en dörr"
+          },
+          "draw grass": {
+            "name": "rita gräs"
+          },
+          "draw windows": {
+            "name": "rita fönster"
+          },
+          "rectangle": {
+            "name": "rektangel",
+            "description": "lol"
+          },
+          "sun": {
+            "name": "sol"
+          },
+          "window": {
+            "name": "fönster"
+          },
+          "triangle": {
+            "name": "triangel"
+          },
+          "square": {
+            "description": "lol"
           }
         },
         "InspirationalArtwork": {
           "n-sided shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a loop": {
             "parameters": {
-              "length": "längd"
-            }
+              "length": "längd",
+              "sides": "sidor"
+            },
+            "name": "rita en loop"
           },
           "draw spiral circle": {
             "parameters": {
@@ -261,8 +317,10 @@
         "InspirationalArtwork_2018": {
           "draw a loop": {
             "parameters": {
-              "length": "längd"
-            }
+              "length": "längd",
+              "sides": "sidor"
+            },
+            "name": "rita en loop"
           },
           "draw spiral circle": {
             "parameters": {
@@ -317,41 +375,47 @@
         "NEW Course 4 Artist Params 11": {
           "draw a polygon": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "do something": {
             "name": "gör någonting",
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
         "NEW Course 4 Artist Params 12": {
           "draw a polygon": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
         "NEW Course 4 Artist Params 12a": {
           "draw a polygon": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
         "NEW Course 4 Artist Params 13": {
           "draw a polygon": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
@@ -364,12 +428,16 @@
             }
           },
           "draw a circle": {
-            "name": "rita en circel"
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "längd",
-              "repeat": "upprepa"
+              "repeat": "upprepa",
+              "sides": "sidor"
             }
           },
           "draw a triangle": {
@@ -380,7 +448,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a house": {
@@ -392,7 +461,8 @@
           "draw a square": {
             "name": "rita en kvadrat",
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
@@ -478,7 +548,8 @@
         "NEW Course 4 Artist Params inspire": {
           "draw a polygon": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
@@ -506,12 +577,16 @@
             }
           },
           "draw a circle": {
-            "name": "rita en circel"
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "längd",
-              "repeat": "upprepa"
+              "repeat": "upprepa",
+              "sides": "sidor"
             }
           },
           "draw a triangle": {
@@ -522,7 +597,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a house": {
@@ -566,11 +642,17 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "course3_bee_functions_challenge1": {
@@ -586,6 +668,9 @@
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "course4_artist_fwp_challenge1": {
@@ -596,6 +681,11 @@
           },
           "do something": {
             "name": "gör någonting"
+          },
+          "draw a polygon": {
+            "parameters": {
+              "sides": "sidor"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -616,28 +706,44 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "rita låga"
+          },
+          "draw fire": {
+            "name": "rita eld"
           }
         },
         "courseC_artist_prog3_2018": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "rita låga"
+          },
+          "draw fire": {
+            "name": "rita eld"
           }
         },
         "courseC_artist_prog3_2019": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "rita låga"
+          },
+          "draw fire": {
+            "name": "rita eld"
           }
         },
         "courseC_artist_prog3_2020": {
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "rita låga"
+          },
+          "draw fire": {
+            "name": "rita eld"
           }
         },
         "courseC_data wizard": {
@@ -781,16 +887,25 @@
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "rita ett hus"
+          },
+          "draw a window": {
+            "name": "rita ett fönster"
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "rita ett hus"
+          },
+          "draw a window": {
+            "name": "rita ett fönster"
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "rita ett hus"
+          },
+          "draw a window": {
+            "name": "rita ett fönster"
           }
         },
         "courseE_artist_functions8": {
@@ -900,61 +1015,97 @@
         "courseE_artist_functions9": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw triangle": {
+            "name": "rita triangel"
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw triangle": {
+            "name": "rita triangel"
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw triangle": {
+            "name": "rita triangel"
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw triangle": {
+            "name": "rita triangel"
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_predict1": {
@@ -985,21 +1136,33 @@
         "courseE_artist_functions_predict2": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw polygon": {
+            "name": "rita polygon"
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw polygon": {
+            "name": "rita polygon"
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw polygon": {
+            "name": "rita polygon"
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw polygon": {
+            "name": "rita polygon"
           }
         },
         "courseE_bee_functions1": {
@@ -1138,21 +1301,24 @@
         "courseF_artist_fwp4": {
           "draw a polygon": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
         "courseF_artist_fwp5": {
           "draw a polygon": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           }
         },
@@ -1160,7 +1326,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "längd",
-              "min": "min"
+              "min": "min",
+              "sides": "sidor"
             }
           }
         },
@@ -1168,7 +1335,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "längd",
-              "min": "min"
+              "min": "min",
+              "sides": "sidor"
             }
           }
         },
@@ -1181,12 +1349,16 @@
             }
           },
           "draw a circle": {
-            "name": "rita en circel"
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "längd",
-              "repeat": "upprepa"
+              "repeat": "upprepa",
+              "sides": "sidor"
             }
           },
           "draw a triangle": {
@@ -1197,7 +1369,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a house": {
@@ -1215,7 +1388,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "längd",
-              "min": "min"
+              "min": "min",
+              "sides": "sidor"
             }
           }
         },
@@ -1227,6 +1401,11 @@
           },
           "do something": {
             "name": "gör någonting"
+          },
+          "draw a polygon": {
+            "parameters": {
+              "sides": "sidor"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1339,12 +1518,16 @@
             }
           },
           "draw a circle": {
-            "name": "rita en circel"
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "längd",
-              "repeat": "upprepa"
+              "repeat": "upprepa",
+              "sides": "sidor"
             }
           },
           "draw a triangle": {
@@ -1355,7 +1538,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a house": {
@@ -1385,12 +1569,16 @@
             }
           },
           "draw a circle": {
-            "name": "rita en circel"
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "längd",
-              "repeat": "upprepa"
+              "repeat": "upprepa",
+              "sides": "sidor"
             }
           },
           "draw a triangle": {
@@ -1401,7 +1589,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a house": {
@@ -1413,8 +1602,12 @@
           "draw a square": {
             "name": "rita en kvadrat",
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
+          },
+          "small flower": {
+            "name": "liten blomma"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -1426,12 +1619,16 @@
             }
           },
           "draw a circle": {
-            "name": "rita en circel"
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "längd",
-              "repeat": "upprepa"
+              "repeat": "upprepa",
+              "sides": "sidor"
             }
           },
           "draw a triangle": {
@@ -1442,7 +1639,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a house": {
@@ -1467,12 +1665,16 @@
             }
           },
           "draw a circle": {
-            "name": "rita en circel"
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "längd",
-              "repeat": "upprepa"
+              "repeat": "upprepa",
+              "sides": "sidor"
             }
           },
           "draw a triangle": {
@@ -1483,7 +1685,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a house": {
@@ -1508,12 +1711,16 @@
             }
           },
           "draw a circle": {
-            "name": "rita en circel"
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "längd",
-              "repeat": "upprepa"
+              "repeat": "upprepa",
+              "sides": "sidor"
             }
           },
           "draw a triangle": {
@@ -1524,7 +1731,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "längd"
+              "length": "längd",
+              "sides": "sidor"
             }
           },
           "draw a house": {
@@ -1544,7 +1752,11 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "rita låga"
+          },
+          "draw fire": {
+            "name": "rita eld"
           }
         },
         "courseC_data wizard_2021": {
@@ -1622,16 +1834,25 @@
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw triangle": {
+            "name": "rita triangel"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -1647,6 +1868,9 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw polygon": {
+            "name": "rita polygon"
           }
         },
         "courseF_apps_collector": {
@@ -1658,406 +1882,464 @@
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary 2": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary 3": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary 4": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary 5": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary 6": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary 7": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "Course 4 Artist Binary pre1": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "course4_artist_binary_challenge1": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "course4_artist_binary_challenge2": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary1": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary1_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary1_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary1_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary2": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary2_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary2_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary2_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary3": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary3_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary3_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary3_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary4": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary4_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary4_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary4_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary5": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary5_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary5_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary5_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary6": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary6_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary6_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary6_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary7": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary7_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary7_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary7_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary8": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary8_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary8_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary8_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
             "parameters": {
               "binary": "binära"
-            }
+            },
+            "name": "rita"
           }
         },
         "2-3 Artist 12": {
@@ -2079,7 +2361,10 @@
             "name": "rita höger ben"
           },
           "draw body and arms": {
-            "name": "rita kropp och armar"
+            "name": "rita kropp och armar",
+            "parameters": {
+              "armlength": "armlängd"
+            }
           },
           "draw a head": {
             "name": "rita ett huvud"
@@ -2223,11 +2508,17 @@
         "Robot Doodle": {
           "draw head": {
             "name": "rita ett huvud"
+          },
+          "draw eye": {
+            "name": "rita öga"
           }
         },
         "Robot Doodle_2018": {
           "draw head": {
             "name": "rita ett huvud"
+          },
+          "draw eye": {
+            "name": "rita öga"
           }
         },
         "courseE_artist_functionsProj_2018": {
@@ -2248,6 +2539,95 @@
         "courseE_artist_functionsProj_2021": {
           "draw square": {
             "name": "rita en kvadrat"
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "rita cirkel"
+          },
+          "draw goal": {
+            "name": "rita mål"
+          }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": "rita tak"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "funktion 1"
+          },
+          "function 2": {
+            "name": "funktion 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "funktion 1"
+          },
+          "function 2": {
+            "name": "funktion 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "funktion 1"
+          },
+          "function 2": {
+            "name": "funktion 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funktion 1"
+          },
+          "function 2": {
+            "name": "funktion 2"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "funktion 1"
+          },
+          "function 2": {
+            "name": "funktion 2"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "win game": {
+            "name": "vinn spel"
+          },
+          "keep playing": {
+            "name": "fortsätt spela"
+          }
+        },
+        "courseE_Dogger_2": {
+          "lose": {
+            "name": "förlora"
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": "rita ett fönster"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "rita ett fönster"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "find pumpkin": {
+            "name": "hitta pumpa"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "win game": {
+            "name": "vinn spel"
+          },
+          "keep playing": {
+            "name": "fortsätt spela"
           }
         }
       }

@@ -590,6 +590,10 @@
         "conditionals/coursed/2021": {
           "word": "الجمل الشرطية"
         },
+        "pseudocode/coursed/2021": {
+          "word": "الكود الخوارزمي",
+          "definition": "وصف بلغة واضحة للخطوات في الخوارزمية"
+        },
         "condition/coursed/2021": {
           "word": "الشرط",
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
@@ -599,7 +603,8 @@
           "definition": "حلقة تستمر في التكرار طالما كان الشرط صحيحًا."
         },
         "until/coursed/2021": {
-          "word": "حتى"
+          "word": "حتى",
+          "definition": "أمر يخبرك بفعل شيء ما فقط حتى يصبح صحيحاً."
         },
         "algorithm/express/2021": {
           "word": "الخوارزمية",
@@ -635,6 +640,9 @@
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
+        "code/express/2021": {
+          "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
+        },
         "loop/express/2021": {
           "word": "الحلقة",
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
@@ -659,7 +667,8 @@
           "definition": "حلقة تستمر في التكرار طالما كان الشرط صحيحًا."
         },
         "until/express/2021": {
-          "word": "حتى"
+          "word": "حتى",
+          "definition": "أمر يخبرك بفعل شيء ما فقط حتى يصبح صحيحاً."
         },
         "function/express/2021": {
           "word": "وظيفة ",
@@ -756,7 +765,8 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "copyright/coursee/2021": {
-          "word": "حقوق النسخ"
+          "word": "حقوق النسخ",
+          "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح الآخرين بفعل نفس الشيء."
         },
         "loop/coursee/2021": {
           "word": "الحلقة",
@@ -809,6 +819,38 @@
           "word": "حلقة \"For\"",
           "definition": "حلقات لها بداية ونهاية ومقدار زيادة محدد سلفًا (مقدار الخطوة)."
         },
+        "decode/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "encode/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "binary_system/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ascii/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bit/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "pixel/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "decrypt/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "encrypt/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/csd/2021": {
           "word": "تصحيح الأخطاء",
           "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
@@ -836,17 +878,32 @@
         "function/csd/2021": {
           "word": "وظيفة "
         },
+        "computer/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
         "input/csd/2021": {
-          "word": "الإدخال"
+          "word": "الإدخال",
+          "definition": ""
+        },
+        "output/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "processing/csd/2021": {
-          "word": "المعالجة"
+          "word": "المعالجة",
+          "definition": ""
+        },
+        "storage/csd/2021": {
+          "word": "",
+          "definition": ""
         },
         "digital_footprint/csd/2021": {
           "word": "البصمة الرقمية"
         },
         "copyright/csd/2021": {
-          "word": "حقوق النسخ"
+          "word": "حقوق النسخ",
+          "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح الآخرين بفعل نفس الشيء."
         }
       }
     }
