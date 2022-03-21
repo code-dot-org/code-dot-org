@@ -199,6 +199,8 @@ export default class AssignmentSelector extends Component {
     const selectedCourseVersion =
       selectedCourseOffering?.course_versions[selectedCourseVersionId];
 
+    const orderedUnits = _.orderBy(selectedCourseVersion?.units, 'position');
+
     return (
       <div>
         <span style={styles.family}>
@@ -245,8 +247,8 @@ export default class AssignmentSelector extends Component {
             />
           )}
         {selectedCourseVersionId !== 0 &&
-          selectedCourseVersion?.units &&
-          Object.entries(selectedCourseVersion?.units).length > 1 && (
+          orderedUnits &&
+          Object.entries(orderedUnits).length > 1 && (
             <div style={styles.secondary}>
               <div style={styles.dropdownLabel}>
                 {i18n.assignmentSelectorUnit()}
@@ -258,7 +260,7 @@ export default class AssignmentSelector extends Component {
                 style={dropdownStyle}
                 disabled={disabled}
               >
-                {Object.values(selectedCourseVersion?.units).map(unit => (
+                {Object.values(orderedUnits).map(unit => (
                   <option key={unit.id} value={unit.id}>
                     {unit.name}
                   </option>
