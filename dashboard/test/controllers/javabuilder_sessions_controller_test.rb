@@ -10,6 +10,10 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     @rsa_key_test = OpenSSL::PKey::RSA.new(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@rsa_key_test)
     @fake_channel_id = storage_encrypt_channel_id(1, 1)
+
+    JavalabFilesHelper.stubs(:get_project_files).returns({})
+    JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
+    JavalabFilesHelper.stubs(:upload_project_files).returns(true)
   end
 
   test_user_gets_response_for :get_access_token,
@@ -17,6 +21,17 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :forbidden
   test_user_gets_response_for :get_access_token,
     params: {channelId: storage_encrypt_channel_id(1, 1), projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'},
+    user: :levelbuilder,
+    response: :success
+
+  test_user_gets_response_for :get_access_token_with_override_sources,
+    user: :student,
+    response: :forbidden
+  test_user_gets_response_for :get_access_token_with_override_sources,
+    user: :teacher,
+    response: :forbidden
+  test_user_gets_response_for :get_access_token_with_override_sources,
+    params: {overrideSources: "{'source': {}}", projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
 
@@ -103,6 +118,13 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test 'param for override sources is required when using override sources route' do
+    levelbuilder = create :levelbuilder
+    sign_in(levelbuilder)
+    get :get_access_token_with_override_sources, params: {projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    assert_response :bad_request
+  end
+
   test 'param for project version is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
@@ -131,11 +153,11 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'returns error if upload fails when not using dashboard sources' do
+  test 'returns error if upload fails' do
     JavalabFilesHelper.stubs(:upload_project_files).returns(false)
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {useDashboardSources: "false", channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
     assert_response :internal_server_error
   end
 
