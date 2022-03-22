@@ -57,13 +57,13 @@
     "skip_autosave": true,
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-02-02T17:58:57.000Z",
-  "user_id": 833,
   "published": true,
+  "created_at": "2022-02-02T17:58:57.000Z",
+  "level_num": "custom",
+  "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-02T17:58:57.339+00:00\",\"changed\":[\"cloned from \\\"liz_fishpond\\\"\"],\"cloned_from\":\"liz_fishpond\"},{\"changed_at\":\"2022-03-16 21:40:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-16 21:44:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"short_instructions\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-17 00:33:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-02T17:58:57.339+00:00\",\"changed\":[\"cloned from \\\"liz_fishpond\\\"\"],\"cloned_from\":\"liz_fishpond\"},{\"changed_at\":\"2022-03-16 21:40:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-16 21:44:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"short_instructions\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-17 00:33:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-18 20:12:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-18 20:17:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-18 20:21:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-18 20:22:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-18 20:34:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-03-18 20:40:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1698,7 +1698,7 @@
       <xml>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs">
-            <field name="IMG">"hw_sky_background_1"</field>
+            <field name="IMG">"background_underwater_07_1"</field>
           </block>
           <block type="gamelab_setBackground">
             <value name="COLOR">
@@ -1738,7 +1738,7 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+            <field name="ANIMATION_NAME">"fish_cooked_1"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
                 <field name="LOCATION">{"x":200,"y":200}</field>
@@ -1746,7 +1746,7 @@
             </value>
           </block>
           <block type="gamelab_makeNumSprites">
-            <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+            <field name="ANIMATION_NAME">"fish_cooked_1"</field>
             <value name="NUM">
               <block type="math_number">
                 <field name="NUM">3</field>
@@ -1755,7 +1755,7 @@
           </block>
           <block type="gamelab_makeBurst">
             <field name="EFFECT">"burst"</field>
-            <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+            <field name="ANIMATION_NAME">"fish_cooked_1"</field>
             <value name="NUM">
               <block type="math_number">
                 <field name="NUM">10</field>
@@ -1766,14 +1766,14 @@
             <field name="SPEECH">Hello, world!</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteSayTime">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="TEXT1">
@@ -1791,7 +1791,7 @@
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="VAL">
@@ -1804,7 +1804,7 @@
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="VAL">
@@ -1814,17 +1814,17 @@
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <field name="ANIMATION">"cuteanimals_jellyfish"</field>
+            <field name="ANIMATION">"fish_cooked_1"</field>
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_jumpTo">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="LOCATION">
@@ -1834,7 +1834,7 @@
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="COLOR">
@@ -1846,7 +1846,7 @@
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="COLOR">
@@ -1856,7 +1856,7 @@
           <block type="gamelab_removeTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
@@ -1864,14 +1864,14 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_destroy">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
@@ -1879,7 +1879,7 @@
             <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -1892,7 +1892,7 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="N">
@@ -1904,7 +1904,7 @@
           <block type="gamelab_moveForward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -1937,7 +1937,7 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
@@ -1945,12 +1945,12 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_jellyfish"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
@@ -1971,21 +1971,21 @@
           <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeAllBehaviors">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <field name="ANIMATION">"cuteanimals_bear"</field>
+                <field name="ANIMATION">"fish_cooked_1"</field>
               </block>
             </value>
           </block>

@@ -15,7 +15,6 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "vpl-csd-summer-pilot-ci",
-    "has_numbered_units": true,
     "version_year": "2022"
   },
   "resources": [
