@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Learning Tools
 
-##Web Lab
+## Web Lab
 
 ##### Web Lab is a browser-based editor for building web pages in HTML and CSS. It features a text editor with many helpful tools for creating an debugging HTML and CSS code, iincluding a live preview of the web page that updates in real time and the ability to publish the complete web page to its own unique URL. 
 
