@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-21 02:56:47 UTC",
+    "serialized_at": "2022-03-21 20:54:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -36,12 +36,14 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Introduction to Web Design",
+      "name": "Introduction to Web Development",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -102,6 +104,8 @@
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
+        "overview": "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -177,10 +181,32 @@
       "key": "fd2815b1-c48c-4470-b6d6-0449e703b212",
       "position": 1,
       "properties": {
-        "progression_name": "Unit Overview"
+        "progression_name": "Unit overview"
       },
       "seeding_key": {
         "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212",
+        "lesson_activity.key": "d88d176b-1fa1-4102-9da1-7a0971b322c1"
+      }
+    },
+    {
+      "key": "2b24e742-56ad-4922-a17b-9788b9efe888",
+      "position": 2,
+      "properties": {
+        "progression_name": "Learning tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888",
+        "lesson_activity.key": "d88d176b-1fa1-4102-9da1-7a0971b322c1"
+      }
+    },
+    {
+      "key": "41cfd821-b738-41c2-9479-e360d20571e8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore the first week of curriculum"
+      },
+      "seeding_key": {
+        "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8",
         "lesson_activity.key": "d88d176b-1fa1-4102-9da1-7a0971b322c1"
       }
     },
@@ -279,7 +305,35 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Unit Overview"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2"
+        ],
+        "progression": "Unit overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview-mod2"
+        ],
+        "progression": "Unit overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -296,12 +350,15 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Unit Overview"
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-mod2"
+        ],
+        "progression": "Learning tools"
       },
       "bonus": false,
       "seeding_key": {
@@ -311,19 +368,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+        "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888"
       },
       "level_keys": [
         "VPL-CSD-pilot-S22-CI-Unit_tools-mod2"
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Unit Overview"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 1_2021"
+        ],
+        "progression": "Learning tools"
       },
       "bonus": false,
       "seeding_key": {
@@ -333,19 +393,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+        "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888"
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 1_2021"
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Unit Overview"
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-mod2"
+        ],
+        "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
       "seeding_key": {
@@ -355,19 +418,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+        "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8"
       },
       "level_keys": [
         "VPL-CSD-pilot-S22-2-week1-mod2"
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": true,
       "properties": {
-        "progression": "Unit Overview"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod2"
+        ],
+        "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
       "seeding_key": {
@@ -377,19 +443,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+        "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8"
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod2"
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_2021"
+        ],
         "progression": "Explore Web Lab"
       },
       "bonus": false,
@@ -407,12 +476,15 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 Inspector Warm Up_2021"
+        ],
         "progression": "Explore Web Lab"
       },
       "bonus": false,
@@ -430,11 +502,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 2_2021"
+        ],
         "progression": "Add structure using HTML"
       },
       "bonus": false,
@@ -452,12 +527,15 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 HTML Adding Paragraphs_2021"
+        ],
         "progression": "Add structure using HTML"
       },
       "bonus": false,
@@ -475,11 +553,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-HTML-overview"
+        ],
         "progression": "Add structure using HTML"
       },
       "bonus": false,
@@ -497,12 +578,15 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 Heading Demo_2021"
+        ],
         "progression": "Add structure using HTML"
       },
       "bonus": false,
@@ -520,11 +604,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_2021"
+        ],
         "progression": "Add structure using HTML"
       },
       "bonus": false,
@@ -542,11 +629,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS_2021"
+        ],
         "progression": "Style text with CSS"
       },
       "bonus": false,
@@ -564,12 +654,15 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 text style h1_2021"
+        ],
         "progression": "Style text with CSS"
       },
       "bonus": false,
@@ -587,12 +680,15 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 text style h3_2021"
+        ],
         "progression": "Style text with CSS"
       },
       "bonus": false,
@@ -610,12 +706,15 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 text style size_2021"
+        ],
         "progression": "Style text with CSS"
       },
       "bonus": false,
@@ -633,11 +732,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_2021"
+        ],
         "progression": "Style text with CSS"
       },
       "bonus": false,
@@ -655,12 +757,15 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 add file_2021"
+        ],
         "progression": "Style text with CSS"
       },
       "bonus": false,
@@ -678,11 +783,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2021"
+        ],
         "progression": "Style elements with CSS"
       },
       "bonus": false,
@@ -700,11 +808,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Mod2"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -722,11 +833,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-mod2"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -744,11 +858,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -764,31 +881,21 @@
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2"
       ]
-    },
-    {
-      "chapter": 23,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Make a Plan"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-MakeAPlan-mod2"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "b11276e9-8b3e-4af9-a726-42dbc0c23578"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-MakeAPlan-mod2"
-      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview-mod2",
@@ -810,7 +917,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+        "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888"
       }
     },
     {
@@ -822,7 +929,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+        "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888"
       }
     },
     {
@@ -834,7 +941,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+        "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8"
       }
     },
     {
@@ -846,7 +953,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+        "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8"
       }
     },
     {
@@ -1051,18 +1158,6 @@
         "lesson_group.key": "",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "8e2610dd-aee3-4d75-8857-dcfeb71aebdf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-MakeAPlan-mod2",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-MakeAPlan-mod2"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd2-ci-pilot-2022",
-        "activity_section.key": "b11276e9-8b3e-4af9-a726-42dbc0c23578"
       }
     }
   ],
