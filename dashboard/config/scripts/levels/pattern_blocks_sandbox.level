@@ -76,7 +76,7 @@
                     <block type="comment">
                       <field name="TEXT">Row 1</field>
                       <next>
-                        <block type="turtle_geometry_sticker_with_size">
+                        <block type="turtle_pattern_block_with_size">
                           <field name="VALUE">smallRhombus2</field>
                           <value name="SIZE">
                             <block type="variables_get">
@@ -93,7 +93,7 @@
                                     <block type="procedures_callnoreturn">
                                       <mutation name="rowTwo"/>
                                       <next>
-                                        <block type="turtle_geometry_sticker_with_size">
+                                        <block type="turtle_pattern_block_with_size">
                                           <field name="VALUE">smallRhombus3</field>
                                           <value name="SIZE">
                                             <block type="variables_get">
@@ -104,7 +104,7 @@
                                             <block type="procedures_callnoreturn">
                                               <mutation name="findPosition"/>
                                               <next>
-                                                <block type="turtle_geometry_sticker_with_size">
+                                                <block type="turtle_pattern_block_with_size">
                                                   <field name="VALUE">smallRhombus4</field>
                                                   <value name="SIZE">
                                                     <block type="variables_get">
@@ -121,7 +121,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="rowThree"/>
                                                             <next>
-                                                            <block type="turtle_geometry_sticker_with_size">
+                                                            <block type="turtle_pattern_block_with_size">
                                                             <field name="VALUE">smallRhombus5</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -132,7 +132,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_geometry_sticker_with_size">
+                                                            <block type="turtle_pattern_block_with_size">
                                                             <field name="VALUE">smallRhombus6</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -143,7 +143,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_geometry_sticker_with_size">
+                                                            <block type="turtle_pattern_block_with_size">
                                                             <field name="VALUE">smallRhombus7</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -163,7 +163,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_geometry_sticker_with_size">
+                                                            <block type="turtle_pattern_block_with_size">
                                                             <field name="VALUE">smallRhombus8</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -174,7 +174,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_geometry_sticker_with_size">
+                                                            <block type="turtle_pattern_block_with_size">
                                                             <field name="VALUE">smallRhombus9</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -191,7 +191,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="rowFive"/>
                                                             <next>
-                                                            <block type="turtle_geometry_sticker_with_size">
+                                                            <block type="turtle_pattern_block_with_size">
                                                             <field name="VALUE">smallRhombus10</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -835,7 +835,7 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="geometry_sticker">
+          <block type="pattern_block">
             <field name="VALUE">blue-60</field>
           </block>
           <block type="draw_turn">

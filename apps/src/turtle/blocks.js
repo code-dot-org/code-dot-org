@@ -1550,41 +1550,40 @@ exports.install = function(blockly, blockInstallOptions) {
         'block_id_${this.id}');\n`;
   };
 
-  function createDrawGeometryStickerBlock(blockName) {
+  function createDrawPatternBlockBlock(blockName) {
     return {
       helpUrl: '',
       init: function() {
         this.setHSV(184, 1.0, 0.74);
         var dropdown;
         var input = this.appendDummyInput();
-        input.appendTitle(msg.drawGeometrySticker());
+        input.appendTitle(msg.drawPatternBlock());
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
 
         // Generates a list of pairs of the form [[url, name]]
         var values = [];
-        for (var name in skin.geometryStickers) {
-          var url = skin.geometryStickers[name];
+        for (var name in skin.patternBlocks) {
+          var url = skin.patternBlocks[name];
           values.push([url, name]);
         }
         dropdown = new blockly.FieldImageDropdown(values, 40, 40);
 
         input.appendTitle(dropdown, 'VALUE');
 
-        appendToDrawGeometryStickerBlock(blockName, this);
+        appendToDrawPatternBlockBlock(blockName, this);
       }
     };
   }
 
-  // Add size input to the draw geometry_sticker block (text input & socket)
-  function appendToDrawGeometryStickerBlock(blockName, block) {
-    if (blockName === 'turtle_geometry_sticker_with_size') {
+  // Add size input to the draw pattern_block block (text input & socket)
+  function appendToDrawPatternBlockBlock(blockName, block) {
+    if (blockName === 'turtle_pattern_block_with_size') {
       block.appendDummyInput().appendTitle(msg.withSize());
       block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
-      block.appendDummyInput().appendTitle(msg.pixels());
-      block.setTooltip(msg.drawGeometryStickerWithSize());
-    } else if (blockName === 'turtle_geometry_sticker_with_size_non_param') {
+      block.setTooltip(msg.drawPatternBlockWithSize());
+    } else if (blockName === 'turtle_pattern_block_with_size_non_param') {
       block.appendDummyInput().appendTitle(msg.withSize());
       block
         .appendDummyInput()
@@ -1594,19 +1593,18 @@ exports.install = function(blockly, blockInstallOptions) {
             blockly.FieldTextInput.numberValidator
           ),
           'SIZE'
-        )
-        .appendTitle(msg.pixels());
-      block.setTooltip(msg.drawGeometryStickerWithSize());
+        );
+      block.setTooltip(msg.drawPatternBlockWithSize());
     } else {
-      block.setTooltip(msg.drawGeometrySticker());
+      block.setTooltip(msg.drawPatternBlock());
     }
   }
 
-  blockly.Blocks.geometry_sticker = createDrawGeometryStickerBlock();
+  blockly.Blocks.pattern_block = createDrawPatternBlockBlock();
 
-  generator.geometry_sticker = function() {
+  generator.pattern_block = function() {
     return (
-      'Turtle.drawGeometrySticker("' +
+      'Turtle.drawPatternBlock("' +
       this.getTitleValue('VALUE') +
       '", null, \'block_id_' +
       this.id +
@@ -1614,27 +1612,27 @@ exports.install = function(blockly, blockInstallOptions) {
     );
   };
 
-  blockly.Blocks.turtle_geometry_sticker_with_size = createDrawGeometryStickerBlock(
-    'turtle_geometry_sticker_with_size'
+  blockly.Blocks.turtle_pattern_block_with_size = createDrawPatternBlockBlock(
+    'turtle_pattern_block_with_size'
   );
 
-  generator.turtle_geometry_sticker_with_size = function() {
+  generator.turtle_pattern_block_with_size = function() {
     let size = generator.valueToCode(
       this,
       'SIZE',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `Turtle.drawGeometrySticker('${this.getTitleValue('VALUE')}',${size},
+    return `Turtle.drawPatternBlock('${this.getTitleValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
-  blockly.Blocks.turtle_geometry_sticker_with_size_non_param = createDrawGeometryStickerBlock(
-    'turtle_geometry_sticker_with_size_non_param'
+  blockly.Blocks.turtle_pattern_block_with_size_non_param = createDrawPatternBlockBlock(
+    'turtle_pattern_block_with_size_non_param'
   );
 
-  generator.turtle_geometry_sticker_with_size_non_param = function() {
+  generator.turtle_pattern_block_with_size_non_param = function() {
     let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
-    return `Turtle.drawGeometrySticker('${this.getTitleValue('VALUE')}',${size},
+    return `Turtle.drawPatternBlock('${this.getTitleValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 

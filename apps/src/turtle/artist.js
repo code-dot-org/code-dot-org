@@ -242,34 +242,34 @@ Artist.prototype.preloadAllStickerImages = function() {
 };
 
 /**
- * Initializes all geometry sticker images as defined in this.skin.geometryStickers,
- * if any, storing the created images in this.geometryStickers.
+ * Initializes all geometry sticker images as defined in this.skin.patternBlocks,
+ * if any, storing the created images in this.patternBlocks.
  *
- * NOTE: initializes this.geometryStickers as a side effect
+ * NOTE: initializes this.patternBlocks as a side effect
  *
  * @return {Promise} that resolves once all images have finished loading,
  *         whether they did so successfully or not (or that resolves instantly
  *         if there are no images to load).
  */
-Artist.prototype.preloadAllGeometryStickerImages = function() {
-  this.geometryStickers = {};
+Artist.prototype.preloadAllPatternBlockImages = function() {
+  this.patternBlocks = {};
 
-  const loadGeometrySticker = name =>
+  const loadPatternBlock = name =>
     new Promise(resolve => {
       const img = new Image();
 
       img.onload = () => resolve();
       img.onerror = () => resolve();
 
-      img.src = this.skin.geometryStickers[name];
-      this.geometryStickers[name] = img;
+      img.src = this.skin.patternBlocks[name];
+      this.patternBlocks[name] = img;
     });
 
-  const geometryStickers = (this.skin && this.skin.geometryStickers) || {};
-  const geometryStickerNames = Object.keys(geometryStickers);
+  const patternBlocks = (this.skin && this.skin.patternBlocks) || {};
+  const patternBlockNames = Object.keys(patternBlocks);
 
-  if (geometryStickerNames.length) {
-    return Promise.all(geometryStickerNames.map(loadGeometrySticker));
+  if (patternBlockNames.length) {
+    return Promise.all(patternBlockNames.map(loadPatternBlock));
   } else {
     return Promise.resolve();
   }
@@ -403,7 +403,7 @@ Artist.prototype.init = function(config) {
 
   return Promise.all([
     this.preloadAllStickerImages(),
-    this.preloadAllGeometryStickerImages(),
+    this.preloadAllPatternBlockImages(),
     this.preloadAllPatternImages()
   ]).then(() => {
     ReactDOM.render(
@@ -1231,7 +1231,7 @@ Artist.prototype.step = function(command, values, options) {
     case 'ST': // Show Turtle
       this.visualization.avatar.visible = true;
       break;
-    case 'geometry_sticker': {
+    case 'pattern_block': {
       let size = MAX_STICKER_SIZE;
 
       if (typeof values[1] === 'number') {
@@ -1239,10 +1239,10 @@ Artist.prototype.step = function(command, values, options) {
       }
 
       if (this.visualization.shouldDrawNormalized_) {
-        values = Object.keys(this.geometryStickers);
+        values = Object.keys(this.patternBlocks);
       }
 
-      img = this.geometryStickers[values[0]];
+      img = this.patternBlocks[values[0]];
 
       dimensions = scaleToBoundingBox(size, img.width, img.height);
       width = dimensions.width;

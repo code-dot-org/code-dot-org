@@ -170,7 +170,7 @@ exports.load = function(assetUrl, id) {
    *
    * @return the mapping of names to urls
    */
-  var geometryStickers = function() {
+  var patternBlocks = function() {
     // Pattern Blocks
     var patternBlocks = [
       'smallRhombus1',
@@ -199,7 +199,7 @@ exports.load = function(assetUrl, id) {
   };
 
   skin.stickers = stickers();
-  skin.geometryStickers = geometryStickers();
+  skin.patternBlocks = patternBlocks();
 
   var config = CONFIGS[skin.id];
 
