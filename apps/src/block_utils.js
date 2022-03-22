@@ -176,7 +176,7 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
     helpUrl: helpUrl,
     init: function() {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var input = this.appendDummyInput();
       if (title) {
         input.appendTitle(title);
@@ -1051,9 +1051,9 @@ exports.createJsWrapperBlockCreator = function(
       helpUrl: '',
       init: function() {
         if (color) {
-          this.setHSV(...color);
+          Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          this.setHSV(...DEFAULT_COLOR);
+          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
         }
 
         if (returnType) {

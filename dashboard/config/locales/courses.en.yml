@@ -209,3 +209,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'22"
+        vpl-csd-summer-pilot-ci-2022:
+          title: CS Discoveries Curriculum Investigation
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'21-'22"
+        self-paced-pl-csa-2022:
+          title: self-paced-pl-csa-2022
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
