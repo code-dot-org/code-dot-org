@@ -188,6 +188,7 @@ export default class AssignmentSelector extends Component {
       selectedUnitId
     } = this.state;
 
+    // this needs to be equal to or lower
     const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
       return offering.participant_audience === this.props.audience;
     });
