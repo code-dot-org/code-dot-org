@@ -30321,3 +30321,44 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Xush kelibsiz
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: O‘zgaruvchilar
+            lesson-15:
+              name: Unit 2 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Boshlash
+              key: Boshlash
+            Sequencing:
+              name: Sequencing
+              key: Sequencing
+            Loops:
+              name: Sikllar
+              key: Sikllar
+            Events:
+              name: Hodisalar
+              key: Hodisalar
+            Conditionals:
+              name: Shartli bayonotlar
+              key: Shartli bayonotlar
+            Functions:
+              name: Funksiyalar
+              key: Funksiyalar
+            Variables:
+              name: O‘zgaruvchilar
+              key: O‘zgaruvchilar
+            For Loops:
+              name: For sikllari
+              key: For sikllari
+            Lesson Planning:
+              key: Darsni rejalashtirish

@@ -30784,3 +30784,54 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Área restrita
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Bem-vindo
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variáveis
+            lesson-15:
+              name: Unidade 2 Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Iniciando
+              key: Iniciando
+            Sequencing:
+              name: Sequenciamento
+              key: Sequenciamento
+            Loops:
+              name: Ciclos
+              key: Ciclos
+            Events:
+              name: Eventos
+              key: Eventos
+            Conditionals:
+              name: Condicionais
+              key: Condicionais
+            Functions:
+              name: Funções
+              key: Funções
+            Variables:
+              name: Variáveis
+              key: Variáveis
+            For Loops:
+              name: Ciclos "for"
+              key: Ciclos "for"
+            End of Course projects:
+              name: Projetos de fim de curso
+              key: Projetos de fim de curso
+            Reviewing your reflections:
+              name: Revendo suas reflexões
+              key: Revendo suas reflexões
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Bem-vindo ao "Ensinando os Fundamentos da Ciência da Computação"
+            Lesson Planning:
+              key: Planejamento de aula
+            Next steps:
+              key: Próximos passos

@@ -5208,3 +5208,33 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variablar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: Sekvensiering
+              key: Sekvensiering
+            Loops:
+              name: Løkker
+              key: Løkker
+            Events:
+              name: Hendingar
+              key: Hendingar
+            Conditionals:
+              name: Betingelser
+              key: Betingelser
+            Functions:
+              name: Funksjonar
+              key: Funksjonar
+            Variables:
+              name: Variablar
+              key: Variablar
+            For Loops:
+              name: For-løkker
+              key: For-løkker

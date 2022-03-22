@@ -17,7 +17,7 @@ class Api::V1::Pd::FormsController < ::ApplicationController
 
     # Check for idempotence
     existing_form = form.check_idempotency
-    return render json: {id: existing_form.id}, status: :ok if existing_form
+    return render json: {id: existing_form.id}, status: :conflict if existing_form
 
     if form.save
       render json: {id: form.id}, status: :created

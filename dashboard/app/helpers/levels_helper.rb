@@ -46,7 +46,7 @@ module LevelsHelper
   end
 
   def url_from_path(path)
-    "#{root_url.chomp('/')}#{path}"
+    CDO.studio_url(path)
   end
 
   def readonly_view_options
@@ -363,6 +363,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:muteMusic] = !!current_user.mute_music
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end

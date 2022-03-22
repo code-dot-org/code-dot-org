@@ -34,5 +34,5 @@
     }
   ],
   "short_description": "Alternates from turning the red LED on and  off",
-  "syntax": "led.toggle"
+  "syntax": "led.toggle()"
 }

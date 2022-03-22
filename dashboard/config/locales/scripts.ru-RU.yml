@@ -11253,3 +11253,42 @@ ru:
               display_name: Содержимое
             lessonGroup-5:
               display_name: Песочница
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Добро пожаловать
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Переменные
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Приступить к работе
+              key: Приступить к работе
+            Sequencing:
+              name: Последовательность действий
+              key: Последовательность действий
+            Loops:
+              name: Циклы
+              key: Циклы
+            Events:
+              name: События
+              key: События
+            Conditionals:
+              name: Условные команды
+              key: Условные команды
+            Functions:
+              name: функции
+              key: функции
+            Variables:
+              name: Переменные
+              key: Переменные
+            For Loops:
+              name: Циклы с параметром
+              key: Циклы с параметром
+            Lesson Planning:
+              key: Планирование урока

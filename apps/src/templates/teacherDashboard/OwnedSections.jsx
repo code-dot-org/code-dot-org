@@ -7,11 +7,7 @@ import _ from 'lodash';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
-import {
-  hiddenSectionIds,
-  beginEditingNewSection,
-  beginEditingSection
-} from './teacherSectionsRedux';
+import {hiddenSectionIds, beginEditingSection} from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -29,7 +25,6 @@ class OwnedSections extends React.Component {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
-    beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired
   };
 
@@ -63,7 +58,7 @@ class OwnedSections extends React.Component {
   }
 
   // Wrapped to avoid passing event args
-  beginEditingNewSection = () => this.props.beginEditingNewSection();
+  beginEditingSection = () => this.props.beginEditingSection();
 
   toggleViewHidden = () => {
     this.setState({
@@ -168,7 +163,6 @@ export default connect(
     asyncLoadComplete: state.teacherSections.asyncLoadComplete
   }),
   {
-    beginEditingNewSection,
     beginEditingSection
   }
 )(OwnedSections);

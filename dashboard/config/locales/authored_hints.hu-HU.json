@@ -4045,6 +4045,104 @@
         },
         "courseF_bee_functionsPre7": {
           "courseF_bee_functions7_a": "Ha a feladat nehéznek tűnik elsőre, próbáld a függvényedet apránként felépíteni!\n\nAdj hozzá néhány blokkot, és próbáld ki. Adj hozzá továbbiakat, és tégy újra próbát. Idővel rátalálsz a tökéletes megoldásra!"
+        },
+        "Course 4 Artist For Loops 11": {
+          "Course_4_Artist_For_Loops_11_a": "Az elfordulás szöge is változik minden alakzatnál!\n\nHasználj egy matematikai blokkot: 360-at annyival kell elosztanod, ahány oldalú a sokszög - így megkapod az elfordulás szögét."
+        },
+        "Course 4 Artist For Loops 11a": {
+          "Course_4_Artist_For_Loops_11a_a": "360-at el kell osztanod a sokszög oldalainak a számával, így megkapod, hogy hány fokot kell fordulni a szabályos sokszög megrajzolásához.",
+          "Course_4_Artist_For_Loops_11a_b": "Az oldalak hossza mindig a 10-szerese az oldalak számának."
+        },
+        "Course 4 Artist For Loops 3": {
+          "Course_4_Artist_For_Loops_3_a": "A `számold` ciklus most úgy segít, ha a `counter` változót használod az előrelépésnél."
+        },
+        "Course 4 Artist For Loops 4": {
+          "Course_4_Artist_For_Loops_4_a": "**Melyik a legkisebb szám, amire szükséged lesz?\\\nMelyik a legnagyobb szám?\\\nMekkora a lépésköz?**\n\nEzekre a kérdésekre tudnod kell a választ, és ezután kell kitöltened a `számold` ciklust."
+        },
+        "Course 4 Artist For Loops Challenge": {
+          "Course_4_Artist_For_Loops_Challenge_a": "A legnagyobb sokszögnek 19 oldala van. A legkisebbnek csak kettő.",
+          "Course_4_Artist_For_Loops_Challenge_b": "A `számold` ciklus 2-es lépésközzel kell, hogy számoljon."
+        },
+        "Course 4 Artist For Loops inspire": {
+          "Course_4_Artist_For_Loops_inspire_a": "Ez a kódnak az előző kihívás megoldásához hasonló... persze néhány változtatással. ",
+          "Course_4_Artist_For_Loops_inspire_b": "Próbáld a `számold` ciklust a feladat megoldásához, ami 3-tól 10-ig számol, 1-es lépésközzel.",
+          "Course_4_Artist_For_Loops_inspire_c": "Ugyanazon ismétlési ciklus két változata van a `számold` cikluson belül, de a második ismétlés épp az ellenkező irányba fordul.",
+          "Course_4_Artist_For_Loops_inspire_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "Course 4 Play Lab Vars 2": {
+          "Course_4_Play_Lab_Vars_2_a": "Biztos, hogy a `dog_speed` értékét nagyobb állítottad, mint a `cat_speed`?"
+        },
+        "Course 4 Play Labs For Loops 2": {
+          "Course_4_Play_Labs_For_Loops_2_a": "A páratlan számok esetén `számold` ciklus lépésközének kettőnek kell lennie."
+        },
+        "Course 4 Playlab For Loops 4b": {
+          "Course_4_Playlab_For_Loops_4b_a": "A zászlók körülbelül 330 képpontra vannak a karakterektől.",
+          "Course_4_Playlab_For_Loops_4b_b": "Hogyan érheti el mindkét karakter a 330 képpontra lévő zászlót azonos számú lépésből, ha a kezdő értékek és a végső pozíciót jelző számok különböznek?",
+          "Course_4_Playlab_For_Loops_4b_c": "Nem számít, hogy a karakter az utolsó lépésénél túlhalad-e a zászlón. A lényeg, hogy mindkét karakter ugyanannyit lépjen!"
+        },
+        "Course 4 Playlab For Loops 5b": {
+          "Course_4_Playlab_For_Loops_5b_a": "A karakterek körülbelül 175 képpontra vannak a középponttól.",
+          "Course_4_Playlab_For_Loops_5b_b": "Emlékezz rá, hogy a karakterek következő lépése mindig nagyobb lesz ez előzőnél, mivel a számláló értéke folyamatosan növekszik."
+        },
+        "NEW Course 4 Bee For Loops 10a": {
+          "NEW_Course_4_Bee_For_Loops_10a_a": "Találsz valamilyen összefüggést a lépések száma és a virág nektárjainak száma között?",
+          "NEW_Course_4_Bee_For_Loops_10a_b": "Két ismétlést kell használnod, és az egyikbe tegyél egy matematikai blokkot is!"
+        },
+        "NEW Course 4 Bee For Loops 7": {
+          "NEW_Course_4_Bee_For_Loops_7_a": "A matematikai műveletek fognak most segíteni.\n\nMit kell csinálnod a counter értékével minden virágnál, hogy épp annyi nektárt gyűjts, amennyit kell? Szorozni? Osztani? "
+        },
+        "NEW Course 4 Bee For Loops 8": {
+          "NEW_Course_4_Bee_For_Loops_8_a": "Ha a ciklus felfelé számol, a lépésköz mindig hozzáadódik a counter előző értékéhez. \n\nHa megfigyeled, hármasával változnak a virágokhoz tartozó számok, vagyis a lépésköznek is háromnak kell lennie!"
+        },
+        "courseF_artist_for4": {
+          "courseF_artist_for4_a": "**Melyik a legkisebb szám, amire szükséged lesz?\\\nMelyik a legnagyobb szám?\\\nMekkora a lépésköz?**\n\nEzekre a kérdésekre tudnod kell a választ, és ezután kell kitöltened a `számold` ciklust."
+        },
+        "courseF_artist_for4_2018": {
+          "courseF_artist_for4_a": "**Melyik a legkisebb szám, amire szükséged lesz?\\\nMelyik a legnagyobb szám?\\\nMekkora a lépésköz?**\n\nEzekre a kérdésekre tudnod kell a választ, és ezután kell kitöltened a `számold` ciklust."
+        },
+        "courseF_artist_for4_2019": {
+          "courseF_artist_for4_a": "**Melyik a legkisebb szám, amire szükséged lesz?\\\nMelyik a legnagyobb szám?\\\nMekkora a lépésköz?**\n\nEzekre a kérdésekre tudnod kell a választ, és ezután kell kitöltened a `számold` ciklust."
+        },
+        "courseF_artist_for4_2020": {
+          "courseF_artist_for4_a": "**Melyik a legkisebb szám, amire szükséged lesz?\\\nMelyik a legnagyobb szám?\\\nMekkora a lépésköz?**\n\nEzekre a kérdésekre tudnod kell a választ, és ezután kell kitöltened a `számold` ciklust."
+        },
+        "courseF_bee_for10": {
+          "courseF_bee_for10_a": "Találsz valamilyen összefüggést a lépések száma és a virág nektárjainak száma között?",
+          "courseF_bee_for10_d": "Két ismétlést kell használnod, és az egyikbe tegyél egy matematikai blokkot is!"
+        },
+        "courseF_bee_for10_2018": {
+          "courseF_bee_for10_a": "Találsz valamilyen összefüggést a lépések száma és a virág nektárjainak száma között?",
+          "courseF_bee_for10_d": "Két ismétlést kell használnod, és az egyikbe tegyél egy matematikai blokkot is!"
+        },
+        "courseF_bee_for10_2019": {
+          "courseF_bee_for10_a": "Találsz valamilyen összefüggést a lépések száma és a virág nektárjainak száma között?",
+          "courseF_bee_for10_d": "Két ismétlést kell használnod, és az egyikbe tegyél egy matematikai blokkot is!"
+        },
+        "courseF_bee_for10_2020": {
+          "courseF_bee_for10_a": "Találsz valamilyen összefüggést a lépések száma és a virág nektárjainak száma között?",
+          "courseF_bee_for10_d": "Két ismétlést kell használnod, és az egyikbe tegyél egy matematikai blokkot is!"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "Találsz valamilyen összefüggést a lépések száma és a virág nektárjainak száma között?",
+          "courseF_bee_for10_d": "Két ismétlést kell használnod, és az egyikbe tegyél egy matematikai blokkot is!"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_a": "A matematikai műveletek fognak most segíteni.\n\nMit kell csinálnod a counter értékével minden virágnál, hogy épp annyi nektárt gyűjts, amennyit kell? Szorozni? Osztani? "
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_a": "A matematikai műveletek fognak most segíteni.\n\nMit kell csinálnod a counter értékével minden virágnál, hogy épp annyi nektárt gyűjts, amennyit kell? Szorozni? Osztani? "
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_a": "A matematikai műveletek fognak most segíteni.\n\nMit kell csinálnod a counter értékével minden virágnál, hogy épp annyi nektárt gyűjts, amennyit kell? Szorozni? Osztani? "
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_a": "A matematikai műveletek fognak most segíteni.\n\nMit kell csinálnod a counter értékével minden virágnál, hogy épp annyi nektárt gyűjts, amennyit kell? Szorozni? Osztani? "
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "A matematikai műveletek fognak most segíteni.\n\nMit kell csinálnod a counter értékével minden virágnál, hogy épp annyi nektárt gyűjts, amennyit kell? Szorozni? Osztani? "
+        },
+        "4-5 Artist 4": {
+          "4-5_Artist_4_a": "A teljes körben 360 fok van! \nPontosan ennyiszer kell ismételned ezt a kódot (mindig 1 fokot fordulsz), hogy egy kört készíts!"
         }
       }
     }
