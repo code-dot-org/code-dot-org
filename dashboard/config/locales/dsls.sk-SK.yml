@@ -1427,11 +1427,11 @@ sk-SK:
           Predtým, ako budeš pokračovať, pozri sa na Sprievodcu projektom. Počkaj tiež na inštrukcie od svojho učiteľa.
       Dance_Party_extras_intro:
         markdown: |-
-          # Pokračuj v tancovaní!
+          # Neprestávaj tancovať!
 
-          V časti 2 si vytvoríte vlastný projekt. Nie sú tu žiadne úlohy - namiesto toho tu je veľa projektov, ktoré ukazujú rôzne spôsoby  ako vytvoriť zložitejšie tanečné párty.
+          V druhej časti si vytvoríš vlastný projekt. Nie sú tu žiadne úlohy – namiesto toho tu je zopár ukážkových projektov, kde nájdeš rôzne spôsoby, ako vytvárať zložitejšie tanečné párty.
 
-          Tieto úrovne môžete vykonávať _v akomkoľvek poradí_. Pohľadaj naokolo, ako si niečo vyriešil/a v predchádzajúcich úlohách, alebo skombinuj koncepty medzi projektmi. Vyskúšaj ich všetky, vyber si svoj obľúbený a pracuj na pridávaní do tohto projektu, aby si si ho vytvoril/a sám/a.
+          Tieto úrovne môžeš spraviť v _hocijakom poradí_. Pokojne sa poobzeraj, ako sa veci robili v predchádzajúcich úrovniach, a neboj sa kombinovať princípy z rôznych úrovní. Všetky si ich vyskúšaj a vyber si, čo sa ti páči najviac. Potom sa povenuj tvorbe vlastného projektu, aby bol presne podľa tvojich predstáv.
 
           <a class="btn btn-large btn-primary next-stage submitButton pull-right">Pokračovať</a>
 
@@ -1440,7 +1440,7 @@ sk-SK:
           <div style="float: left; margin: 10px">
           <a href="2">
           <h2>
-          Vytvoriť formáciu
+          Všetci do formácie!
           </h2>
 
           <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
@@ -1450,7 +1450,7 @@ sk-SK:
           <div style="float: left; margin: 10px">
           <a href="3">
           <h2>
-          Kam odišli?
+          Kam sa podeli?
           </h2>
 
           <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
@@ -1460,7 +1460,7 @@ sk-SK:
           <div style="float: left; margin: 10px">
           <a href="4">
           <h2>
-          Tanečné súbory
+          Tanečné skupiny
           </h2>
 
           <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
@@ -1490,7 +1490,7 @@ sk-SK:
           <div style="float: left; margin: 10px">
           <a href="7">
           <h2>
-          Zrýchli to, Spomaľ to
+          Zrýchli, spomaľ
           </h2>
 
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
@@ -1498,9 +1498,9 @@ sk-SK:
         markdown: |-
           # Neprestávaj tancovať!
 
-          V druhej časti si vytvoríš svoj vlastný projekt. Nie sú tu žiadne úlohy - namiesto toho tu je zopár projektov, ktoré  ukazujú rozdielne spôsoby ako vytvoriť komplikovanejšie tanečné párty.
+          V druhej časti si vytvoríš vlastný projekt. Nie sú tu žiadne úlohy – namiesto toho tu je zopár ukážkových projektov, kde nájdeš rôzne spôsoby, ako vytvárať zložitejšie tanečné párty.
 
-          Tieto levely môžeš spraviť v _hocijakom poradí_. Poobezerať sa aj ako bolo niečo spravené v predchádzajúcich leveloch, alebo skombinovať koncepty medzi projektami. Vyskúšaj to všetko a vyber si čo sa ti najviac páči, potom stráv čas na budovaní projektu, aby si si ho spravil/a po svojom.
+          Tieto úrovne môžeš spraviť v _hocijakom poradí_. Pokojne sa poobzeraj, ako sa veci robili v predchádzajúcich úrovniach, a neboj sa kombinovať princípy z rôznych úrovní. Všetky si ich vyskúšaj a vyber si, čo sa ti páči najviac. Potom sa povenuj tvorbe vlastného projektu, aby bol presne podľa tvojich predstáv.
 
           <a class="btn btn-large btn-primary next-stage submitButton pull-right">Pokračovať</a>
 
@@ -1529,7 +1529,7 @@ sk-SK:
           <div style="float: left; margin: 10px">
           <a href="4">
           <h2>
-          Dať sa do formácie
+          Všetci do formácie!
           </h2>
 
           <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
@@ -1569,7 +1569,7 @@ sk-SK:
           <div style="float: left; margin: 10px">
           <a href="8">
           <h2>
-          Basy, Stredy, Výšky
+          Basy, stredy, výšky
           </h2>
 
           <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
@@ -1579,7 +1579,7 @@ sk-SK:
           <div style="float: left; margin: 10px">
           <a href="9">
           <h2>
-          Zrýchliť, Spomaliť
+          Zrýchli, spomaľ
           </h2>
 
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>

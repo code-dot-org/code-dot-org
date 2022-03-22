@@ -3814,6 +3814,7 @@ pl:
               name: Rozdział 1 Jednostka 4 - Sprawdzian
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonimowa ankieta dla ucznia: Przystępowanie do egzaminu AP'
+          name: csp-pre-survey
         csd1-2017:
           title: CSD Jednostka 1 - Rozwiązywanie problemów ('17- '18)
           description_short: Dowiedz się, w jaki sposób ludzie pracują na komputerach,
@@ -7043,6 +7044,7 @@ pl:
             wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org,
             umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i
             zaangażowanie.
+          name: csp-post-survey
         public-key-cryptography:
           title: Widgety kryptografii klucza publicznego
           lessons:
@@ -13374,6 +13376,7 @@ pl:
             wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org,
             umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i
             zaangażowanie.
+          name: csd-post-survey
         csd-novice-18:
           title: Odkrycia Informatyki Przemyślenia Nowicjusza 2018-2019
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia
@@ -15369,6 +15372,7 @@ pl:
             w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie
             kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie
             kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
+          name: csp-mid-survey
         gamelab:
           title: Laboratorium Gier (Game Lab)
           description: Samouczki z nauczycielem do opracowania w  Game Lab.  Te samouczki
@@ -18412,6 +18416,7 @@ pl:
             klasy. Takie wyniki mają kluczowe znaczenie dla Twojego nauczyciela oraz
             dla Code.org, umożliwiając rozwijanie i doskonalenie kursu. Dziękujemy
             Ci za poświęcony czas i zaangażowanie."
+          name: csd-post-survey-2018
         csp-post-survey-2018:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           description_audience: Uczniowie CSP
@@ -18435,6 +18440,7 @@ pl:
             wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org,
             umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i
             zaangażowanie.
+          name: csp-post-survey-2018
         csp5-pilot:
           title: 'CSP Jednostka 5 Pilotaż: Listy, pętle i przejścia'
           lesson_groups:
@@ -39576,6 +39582,8 @@ pl:
               display_name: Pokaż, co wiesz
             lessonGroup-5:
               display_name: Piaskownica
+        ui-test-csa-family-script:
+          name: ui-test-csa-family-script
         csa-preview:
           lessons:
             lesson-2:
