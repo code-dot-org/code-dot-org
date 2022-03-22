@@ -3,7 +3,8 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
@@ -23,16 +24,23 @@
           "type": "Video"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "Predstavenie Umelca"
+          "name": "Predstavenie Umelca",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video pre žiakov"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "Podklady pre žiakov"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video pre žiakov"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Video"
@@ -42,16 +50,20 @@
           "type": "Video"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "Udalosti v Bounce – Ako fungujú? "
+          "name": "Udalosti v Bounce – Ako fungujú? ",
+          "type": "Prezentácia"
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "Udalosti v Bounce – Ako fungujú? "
+          "name": "Udalosti v Bounce – Ako fungujú? ",
+          "type": "Prezentácia"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
           "type": "Video"
@@ -281,7 +293,8 @@
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "Digitálne stopy: prezentácia k lekcii",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
+          "type": "Prezentácia"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
           "name": "Digitálne stopy: Sleduj digitálnu stopu",
@@ -289,11 +302,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Digitálne stopy: štvorce digitálnych stôp",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Podklady pre žiakov"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Digitálne stopy: Stopy zvieratiek",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Podklady pre žiakov"
         },
         "mimi-activity/courseb/2021": {
           "name": "Pohni sa, pohni sa",
@@ -333,7 +348,8 @@
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video pre žiakov"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Keď sú žiaci neposední – GoNoodle",
@@ -393,7 +409,8 @@
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Vhodná aplikácia – situácie",
-          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
+          "type": "Prezentácia"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Veľká udalosť",
@@ -466,7 +483,8 @@
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Prezentácia z lekcie",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": "Prezentácia"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Moja online štvrť",
@@ -478,11 +496,13 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Chvíľa na zamyslenie",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Podklady pre žiakov"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video pre žiakov"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "Pravidlo 20/20/20",
@@ -673,11 +693,13 @@
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "STOP zákernosti na internete: Prezentácia k lekcii",
-          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
+          "type": "Prezentácia"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "STOP zákernosti na internete: STOP zákernosti na internete",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Podklady pre žiakov"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Moji robotickí kamaráti",
@@ -725,14 +747,19 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Predstavenie Umelca"
+          "name": "Predstavenie Umelca",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video pre žiakov"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video pre žiakov"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Otočky a uhly",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Otáčanie a uhly",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Podklady pre žiakov"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
@@ -774,7 +801,8 @@
         },
         "csf-bit-byte-video/coursec/2021": {
           "name": "Bity a bajty",
-          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
+          "type": "Video pre žiakov"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Binárne náramky",
@@ -904,7 +932,8 @@
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video pre žiakov"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Štafetové programovanie",
@@ -956,7 +985,8 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "Tanečná párty: bez počítača",
@@ -1063,14 +1093,16 @@
         },
         "artist_introduction/express/2021": {
           "name": "Predstavenie Umelca",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
           "type": "Video"
         },
         "turns_angles/express/2021": {
-          "name": "Otočky a uhly",
+          "name": "Otáčanie a uhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
           "type": "Video"
         },
         "turns_angles_1/express/2021": {
-          "name": "Otočky a uhly",
+          "name": "Otáčanie a uhly",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
@@ -1101,7 +1133,8 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Úrovne na otvorené programovanie",
@@ -1138,7 +1171,8 @@
         },
         "variables_video/express/2021": {
           "name": "Premenné",
-          "url": "https://youtu.be/DI7DprN4FtE"
+          "url": "https://youtu.be/DI7DprN4FtE",
+          "type": "Video pre žiakov"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Základy informatiky: expresný kurz – Sprievodca plánovaním záverečného projektu v expresnom kurze",
@@ -1166,7 +1200,8 @@
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video pre žiakov"
         },
         "class-section-video/pre-express/2021": {
           "name": "Ako na Code.org vytvoriť triedu",
@@ -1228,15 +1263,18 @@
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
           "name": "Súkromné a osobné informácie: prezentácia k lekcii",
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
+          "type": "Prezentácia"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
           "name": "Súkromné a osobné informácie: Súkromné a osobné informácie",
-          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
+          "type": "Video pre žiakov"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "Súkromné a osobné informácie: výstupný test",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "name": "Súkromné a osobné informácie: výstupný lístok",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Podklady pre žiakov"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Súkromné a osobné informácie: kvíz pre lekciu",
@@ -1265,11 +1303,14 @@
           "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "Otočky a uhly",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Otáčanie a uhly",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Podklady pre žiakov"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video pre žiakov"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Písanie pesničiek s funkciami",
@@ -1400,6 +1441,9 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "Video"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Podklady pre žiakov"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Video"
         },
@@ -1433,6 +1477,9 @@
         },
         "design_mode_elements_1/csd/2021": {
           "name": "Prvky dizajnového módu"
+        },
+        "app-presentation-template/csd/2021": {
+          "type": "Prezentácia"
         },
         "teacher_forum/csd/2021": {
           "name": "Fórum učiteľov"
