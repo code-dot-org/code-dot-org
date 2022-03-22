@@ -35,7 +35,7 @@
   LocalhostCodeprojectsRecord:
     Type: AWS::Route53::RecordSet
     Properties:
-      HostedZoneId: <%=domain%>
+      HostedZoneId: <%=hosted_zone_id%>
       Name: <%="localhost.#{domain}"%>
       Type: A
       TTL: 3600
