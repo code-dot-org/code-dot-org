@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 13:59:51 UTC",
+    "serialized_at": "2022-03-22 14:48:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -107,7 +107,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How do I decide what attributes an object should have?**\n\nIn the previous unit, students created subclasses of the `Painter` class and objects of different types. Students revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. Students define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access.",
-        "preparation": "* Print copies of the Classes and Objects Manipulatives (one set for each student)",
+        "preparation": "* Print copies of the Classes and Objects Manipulatives (one set for each student)\n* (Optional) Cut out the manipulatives on pages 2-5 on the Classes and Objects Manipulatives\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
         "student_overview": "**How do I decide what attributes an object should have?**\n\nIn the previous unit, you created subclasses of the `Painter` class and objects of different types. You revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. You define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access."
       },
       "seeding_key": {
