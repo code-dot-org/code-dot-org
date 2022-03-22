@@ -17,6 +17,9 @@ const USER_EDITABLE_SECTION_PROPS = [
   'ttsAutoplayEnabled',
   'courseId',
   'scriptId',
+  'courseOfferingId',
+  'courseVersionId',
+  'unitId',
   'grade',
   'hidden',
   'restrictSection',
@@ -44,12 +47,8 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
+const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_LESSON_EXTRAS_UNIT_IDS =
-  'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
-const SET_TEXT_TO_SPEECH_UNIT_IDS =
-  'teacherDashboard/SET_TEXT_TO_SPEECH_UNIT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -112,15 +111,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
-export const setLessonExtrasUnitIds = ids => ({
-  type: SET_LESSON_EXTRAS_UNIT_IDS,
-  ids
-});
-export const setTextToSpeechUnitIds = ids => ({
-  type: SET_TEXT_TO_SPEECH_UNIT_IDS,
-  ids
-});
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
   providers
@@ -133,6 +123,10 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
   validCourses,
   validScripts
+});
+export const setCourseOfferings = courseOfferings => ({
+  type: SET_COURSE_OFFERINGS,
+  courseOfferings
 });
 export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
@@ -217,7 +211,14 @@ function removeNullValues(key, val) {
  * @param {number} courseId
  * @param {number} scriptId
  */
-export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+export const assignToSection = (
+  sectionId,
+  courseId,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  pageType
+) => {
   firehoseClient.putRecord(
     {
       study: 'assignment',
@@ -225,7 +226,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
       data_json: JSON.stringify(
         {
           sectionId,
-          scriptId,
+          unitId,
           courseId,
           date: new Date()
         },
@@ -239,7 +240,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
     dispatch(
       editSectionProperties({
         courseId: courseId,
-        scriptId: scriptId
+        scriptId: unitId
       })
     );
     return dispatch(finishEditingSection(pageType));
@@ -279,21 +280,13 @@ export const unassignSection = (sectionId, location) => (
 };
 
 /**
- * Opens the UI for adding a new section.
- */
-export const beginEditingNewSection = (courseId, scriptId) => ({
-  type: EDIT_SECTION_BEGIN,
-  courseId,
-  scriptId
-});
-
-/**
  * Opens the UI for editing the specified section.
- * @param {number} sectionId
+ * @param {number} sectionId - Optional param for the id of the section to edit. If blank means
+ * new section
  * @param {bool} [silent] - Optional param for when we want to begin editing the
  *   section without launching our dialog
  */
-export const beginEditingSection = (sectionId, silent = false) => ({
+export const beginEditingSection = (sectionId = null, silent = false) => ({
   type: EDIT_SECTION_BEGIN,
   sectionId,
   silent
@@ -394,20 +387,30 @@ export const asyncLoadSectionData = id => dispatch => {
   let apis = [
     '/dashboardapi/sections',
     `/dashboardapi/courses`,
-    '/dashboardapi/sections/valid_scripts'
+    '/dashboardapi/sections/valid_scripts',
+    '/dashboardapi/sections/valid_course_offerings'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
 
   return Promise.all(apis.map(fetchJSON))
-    .then(([sections, validCourses, validScripts, students]) => {
-      dispatch(setValidAssignments(validCourses, validScripts));
-      dispatch(setSections(sections));
-      if (id) {
-        dispatch(setStudentsForCurrentSection(id, students));
+    .then(
+      ([
+        sections,
+        validCourses,
+        validScripts,
+        validCourseOfferings,
+        students
+      ]) => {
+        dispatch(setValidAssignments(validCourses, validScripts));
+        dispatch(setCourseOfferings(validCourseOfferings));
+        dispatch(setSections(sections));
+        if (id) {
+          dispatch(setStudentsForCurrentSection(id, students));
+        }
       }
-    })
+    )
     .catch(err => {
       console.error(err.message);
     })
@@ -527,7 +530,6 @@ const initialState = {
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
   // for consistency and ease of comparison).
   providers: [],
-  validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
   // A map from assignmentId to assignment (see assignmentShape PropType).
@@ -536,6 +538,10 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentFamilyShape PropType.
   assignmentFamilies: [],
+  // Object of assignable course offerings to populate the assignment dropdown
+  // with options like "CSD", "Course A", or "Frozen". See the
+  // assignmentCourseOfferingShape PropType.
+  courseOfferings: {},
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited (see studentShape PropType)
@@ -547,8 +553,6 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
-  lessonExtrasUnitIds: [],
-  textToSpeechUnitIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -569,12 +573,10 @@ const initialState = {
 /**
  * Generate shape for new section
  * @param id
- * @param courseId
- * @param scriptId
  * @param loginType
  * @returns {sectionShape}
  */
-function newSectionData(id, courseId, scriptId, loginType) {
+function newSectionData(id, loginType) {
   return {
     id: id,
     name: '',
@@ -587,8 +589,8 @@ function newSectionData(id, courseId, scriptId, loginType) {
     sharingDisabled: false,
     studentCount: 0,
     code: '',
-    courseId: courseId || null,
-    scriptId: scriptId || null,
+    courseId: null,
+    scriptId: null,
     hidden: false,
     isAssigned: undefined,
     restrictSection: false
@@ -627,31 +629,17 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_LESSON_EXTRAS_UNIT_IDS) {
-    return {
-      ...state,
-      lessonExtrasUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_TEXT_TO_SPEECH_UNIT_IDS) {
-    return {
-      ...state,
-      textToSpeechUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_VALID_GRADES) {
-    return {
-      ...state,
-      validGrades: action.grades
-    };
-  }
-
   if (action.type === SET_PAGE_TYPE) {
     return {
       ...state,
       pageType: action.pageType
+    };
+  }
+
+  if (action.type === SET_COURSE_OFFERINGS) {
+    return {
+      ...state,
+      courseOfferings: action.courseOfferings
     };
   }
 
@@ -861,12 +849,7 @@ export default function teacherSections(state = initialState, action) {
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId
       ? {...state.sections[action.sectionId]}
-      : newSectionData(
-          PENDING_NEW_SECTION_ID,
-          action.courseId,
-          action.scriptId,
-          undefined
-        );
+      : newSectionData(PENDING_NEW_SECTION_ID, undefined);
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
@@ -1155,14 +1138,38 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedUnitName(state) {
+export function assignedUnit(state) {
   const {sectionBeingEdited, validAssignments} = getRoot(state);
+
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  return validAssignments[assignId];
+}
+
+export function assignedUnitName(state) {
+  const {sectionBeingEdited} = getRoot(state);
   if (!sectionBeingEdited) {
     return '';
   }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+  const assignment = assignedUnit(state);
   return assignment ? assignment.name : '';
+}
+
+export function assignedUnitLessonExtrasAvailable(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.lesson_extras_available : false;
+}
+
+export function assignedUnitTextToSpeechEnabled(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.text_to_speech_enabled : false;
 }
 
 export function getVisibleSections(state) {
@@ -1214,6 +1221,9 @@ export const sectionFromServerSection = serverSection => ({
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
+  courseOfferingId: serverSection.course_offering_id,
+  courseVersionId: serverSection.course_version_id,
+  unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   scriptId: serverSection.script
     ? serverSection.script.id
@@ -1257,6 +1267,9 @@ export function serverSectionFromSection(section) {
     pairing_allowed: section.pairingAllowed,
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
+    course_offering_id: section.courseOfferingId,
+    course_version_id: section.courseVersionId,
+    unit_id: section.unitId,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined,
     restrict_section: section.restrictSection
@@ -1299,14 +1312,6 @@ export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   return assignments.map(assignment => (assignment ? assignment.path : ''));
 };
-
-/**
- * Is the given unit ID a CSF course? `script.rb` owns the list.
- * @param state
- * @param id
- */
-export const lessonExtrasAvailable = (state, id) =>
-  state.teacherSections.lessonExtrasUnitIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using

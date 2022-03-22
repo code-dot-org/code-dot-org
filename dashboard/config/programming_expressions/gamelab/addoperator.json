@@ -31,6 +31,6 @@
   ],
   "return_value": "The sum of two numbers or concatenation of two strings",
   "short_description": "All programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers. The addition operator is also used to add, or concatentate, two strings together.",
-  "syntax": "__ + __",
+  "syntax": "value1 + value2;",
   "tips": "- Operator precedence is the same as standard arithmetic - Expressions within a parentheses have the highest precedence, then multiplcation and division, then addition and subtraction.\r\n- If either one of the operands are a string it treats the addition as string concatentation.\r\n"
 }

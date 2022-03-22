@@ -60,9 +60,9 @@
           <next>
             <block type="gamelab_setPrompt" deletable="false">
               <value name="QUESTION">
-                <block type="Poetry_stringValue" deletable="false">
+                <shadow type="Poetry_stringValue" deletable="false">
                   <title name="TEXT">Enter a word:</title>
-                </block>
+                </shadow>
               </value>
               <value name="VAR">
                 <block type="variables_get" deletable="false">
@@ -76,6 +76,9 @@
           <next>
             <block type="Poetry_addLine" deletable="false">
               <value name="LINE">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
                 <block type="gamelab_textJoin" deletable="false">
                   <title name="TEXT1">Sometimes</title>
                 </block>
@@ -83,6 +86,9 @@
               <next>
                 <block type="Poetry_addLine" deletable="false">
                   <value name="LINE">
+                    <shadow type="text">
+                      <title name="TEXT"/>
+                    </shadow>
                     <block type="gamelab_textJoin" deletable="false">
                       <title name="TEXT1">the short poems</title>
                     </block>
@@ -90,6 +96,9 @@
                   <next>
                     <block type="Poetry_addLine" deletable="false">
                       <value name="LINE">
+                        <shadow type="text">
+                          <title name="TEXT"/>
+                        </shadow>
                         <block type="gamelab_textJoin" deletable="false">
                           <title name="TEXT1">are the hardest to write</title>
                         </block>
@@ -97,6 +106,9 @@
                       <next>
                         <block type="Poetry_addLine" deletable="false">
                           <value name="LINE">
+                            <shadow type="text">
+                              <title name="TEXT"/>
+                            </shadow>
                             <block type="gamelab_textJoin" deletable="false">
                               <title name="TEXT1">change one word</title>
                             </block>
@@ -104,6 +116,9 @@
                           <next>
                             <block type="Poetry_addLine" deletable="false">
                               <value name="LINE">
+                                <shadow type="text">
+                                  <title name="TEXT"/>
+                                </shadow>
                                 <block type="gamelab_textJoin" deletable="false">
                                   <title name="TEXT1">and the whole poem</title>
                                 </block>

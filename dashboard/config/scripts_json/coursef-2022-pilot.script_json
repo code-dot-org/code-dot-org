@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-02-28 16:44:22 UTC",
+    "serialized_at": "2022-03-21 18:56:37 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -284,6 +284,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**",
+        "preparation": "Play through the levels and review the **lesson slides**.\n",
         "purpose": "In previous lessons, students learn to use variables to store data that can be retrieved later. In this lesson, students will begin learning to modify the data stored in a variable. This key understanding of how variables work will also enable them to create more advanced projects.",
         "student_overview": "You will learn to use variables to make a counter or keep track of a score in a game."
       },
@@ -302,6 +303,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "In this **mini-project** lesson, students will create a customized \"collector game\", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**",
+        "preparation": "Play through the levels and review the **lesson slides**.\n\n",
         "purpose": "This project is designed to allow students to apply their new knowledge of variables in a fun way. By understanding how to modify the value stored in a variable, students can create a game that automatically keeps the score based on the player's actions.",
         "student_overview": "Collect all the sprites! In this project, you will create a game that others can play."
       },
@@ -1012,6 +1014,7 @@
       "key": "2892e2fb-77aa-41c7-8065-406a04177b67",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -1025,6 +1028,7 @@
       "key": "acbe1d00-925b-435f-aaaf-fd491ff37b50",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1616,7 +1620,9 @@
       "key": "a846f1f0-1c07-498c-9a65-6b01ea0e0534",
       "position": 3,
       "properties": {
-        "description": "####Skill Building and Practice (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 3-7 - Skill Building” slide\n\n**Transition:** Have students move to their computer and sign in. \n\nThese activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 3-7 - Skill Building” slide\n\n**Transition:** Have students move to their computer and sign in. \n\nThese activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "duration": "20",
+        "name": "Skill Building and Practice",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -2069,8 +2075,7 @@
       "key": "8f7c6adb-ca6c-40d9-aefe-95ac180e45a4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unplugged Variables in Envelopes” video\n",
-        "name": "Create Your Own Story (20 mins)"
+        "description": "####Create Your Own Story (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unplugged Variables in Envelopes” video\n"
       },
       "seeding_key": {
         "activity_section.key": "8f7c6adb-ca6c-40d9-aefe-95ac180e45a4",
@@ -9012,6 +9017,16 @@
       }
     },
     {
+      "key": "0b615a08-8846-45e1-901b-f61a37d740d0",
+      "properties": {
+        "description": "Create their own collector game in Sprite Lab using multiple sprites which are controlled individually and variables to track the player’s score"
+      },
+      "seeding_key": {
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "objective.key": "0b615a08-8846-45e1-901b-f61a37d740d0"
+      }
+    },
+    {
       "key": "0ed7de67-461b-4c36-b669-3ad5f2677103",
       "properties": {
         "description": "Use variables in conjunction with prompts."
@@ -9119,6 +9134,16 @@
       "seeding_key": {
         "lesson.key": "[New] Lots of Sprites",
         "objective.key": "6e7d1de7-5889-41d5-af64-8c62e2ba1c79"
+      }
+    },
+    {
+      "key": "8842af37-25e2-4c98-a78d-8175223431e0",
+      "properties": {
+        "description": "Create a variable that stores information and changes over time"
+      },
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "objective.key": "8842af37-25e2-4c98-a78d-8175223431e0"
       }
     },
     {
@@ -9249,6 +9274,16 @@
       "seeding_key": {
         "lesson.key": "The Internet",
         "objective.key": "c7820630-05c2-4136-b4be-86a6d4fa15da"
+      }
+    },
+    {
+      "key": "c8735c53-fde5-4eed-adec-3a7a43c77f36",
+      "properties": {
+        "description": "Create a clicker game in Sprite Lab where sprites can be removed to score points"
+      },
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "objective.key": "c8735c53-fde5-4eed-adec-3a7a43c77f36"
       }
     },
     {

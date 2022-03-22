@@ -53,8 +53,11 @@
       "description": "The clockwise rotation in degrees of the collider with respect to the sprite. The default is 0."
     }
   ],
+  "parameters": [
+    "type"
+  ],
   "return_value": "No return value. Determines sprite collisions and sprite-mouse interactions.",
   "short_description": "Sets the collider for a sprite.",
-  "syntax": "setCollider(type)",
+  "syntax": "setCollider(type, xOffset, yOffset, width/radius, height, rotationOffset)",
   "tips": "- When your games have complex interactions between sprites or the mouse set `sprite.debug` to true so the sprite is shown with the outline of the collider, the depth, and center.\r\n- If `setCollider()` is called for a sprite before it is scaled, the collider is not scaled. But if a sprite is first scaled and then the collider set, the scale is also applied to the collider."
 }
