@@ -171,7 +171,6 @@ describe('Javalab', () => {
         },
         isEditingExemplar: true
       };
-
       javalab.init(config);
 
       expect(getStore().dispatch).to.have.been.calledWith(
