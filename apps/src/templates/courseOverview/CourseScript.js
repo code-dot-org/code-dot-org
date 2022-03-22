@@ -202,8 +202,7 @@ export default connect(
       state.teacherSections,
       ownProps.courseOfferingId,
       ownProps.courseVersionId,
-      null,
-      true
+      ownProps.id
     ),
     hiddenLessonState: state.hiddenLesson,
     hasNoSections:
