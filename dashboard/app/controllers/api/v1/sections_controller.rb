@@ -176,6 +176,15 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: course_offerings
   end
 
+  # GET /api/v1/sections/available_participant_types
+  def available_participant_types
+    return head :forbidden unless current_user
+
+    # update to figure out what participant types are available
+
+    render json: {availableParticipantTypes: ['student', 'teacher', 'facilitator']}
+  end
+
   # GET /api/v1/sections/require_captcha
   # Get the recaptcha site key for frontend and whether current user requires captcha verification
   def require_captcha

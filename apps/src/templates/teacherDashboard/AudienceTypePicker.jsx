@@ -23,43 +23,12 @@ export default class AudienceTypePicker extends Component {
     handleImportOpen: PropTypes.func,
     setParticipantType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
     const {title, setParticipantType, handleCancel, disabled} = this.props;
-
-    const style = {
-      container: {
-        width: styleConstants['content-width'],
-        height: '360px',
-        left: '20px',
-        right: '20px'
-      },
-      scroll: {
-        overflowX: 'hidden',
-        overflowY: 'auto',
-        height: 'calc(80vh - 200px)'
-      },
-      thirdPartyProviderUpsell: {
-        marginBottom: '10px'
-      },
-      footer: {
-        position: 'absolute',
-        width: styleConstants['content-width'],
-        height: '100px',
-        left: 0,
-        bottom: '-65px',
-        padding: '0px 20px 20px 20px',
-        backgroundColor: '#fff',
-        borderRadius: '5px'
-      },
-      emailPolicyNote: {
-        marginBottom: '20px',
-        paddingTop: '20px',
-        borderTop: '1px solid #000'
-      }
-    };
 
     return (
       <div style={style.container}>
@@ -67,9 +36,13 @@ export default class AudienceTypePicker extends Component {
         <Heading2>{i18n.professionalLearningParticipantQuestion()}</Heading2>
         <div style={style.scroll}>
           <CardContainer>
-            <StudentCard onClick={setParticipantType} />
-            <TeacherCard onClick={setParticipantType} />
-            <FacilitatorCard onClick={setParticipantType} />
+            {this.props.availableParticipantTypes.map((type, index) => (
+              <ParticipantTypeCard
+                onClick={setParticipantType}
+                key={index}
+                title={type}
+              />
+            ))}
           </CardContainer>
         </div>
         <div style={style.footer}>
@@ -87,41 +60,48 @@ export default class AudienceTypePicker extends Component {
   }
 }
 
-const StudentCard = props => (
+const ParticipantTypeCard = props => (
   <LoginTypeCard
-    className="uitest-student-type"
-    title={'Student'}
-    description={'Section for students'}
-    onClick={() => props.onClick('student')}
+    className={`uitest-${props.title}-type`}
+    title={props.title}
+    description={`Section for ${props.title}`}
+    onClick={() => props.onClick(props.title)}
   />
 );
-StudentCard.propTypes = {
+ParticipantTypeCard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  title: PropTypes.string
 };
 
-const TeacherCard = props => (
-  <LoginTypeCard
-    className="uitest-teacher-type"
-    title={'Teacher'}
-    description={'Section for teachers'}
-    onClick={() => props.onClick('teacher')}
-  />
-);
-TeacherCard.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
-};
-
-const FacilitatorCard = props => (
-  <LoginTypeCard
-    className="uitest-facilitator-type"
-    title={'Facilitator'}
-    description={'Section for facilitators'}
-    onClick={() => props.onClick('facilitator')}
-  />
-);
-FacilitatorCard.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
+const style = {
+  container: {
+    width: styleConstants['content-width'],
+    height: '360px',
+    left: '20px',
+    right: '20px'
+  },
+  scroll: {
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    height: 'calc(80vh - 200px)'
+  },
+  thirdPartyProviderUpsell: {
+    marginBottom: '10px'
+  },
+  footer: {
+    position: 'absolute',
+    width: styleConstants['content-width'],
+    height: '100px',
+    left: 0,
+    bottom: '-65px',
+    padding: '0px 20px 20px 20px',
+    backgroundColor: '#fff',
+    borderRadius: '5px'
+  },
+  emailPolicyNote: {
+    marginBottom: '20px',
+    paddingTop: '20px',
+    borderTop: '1px solid #000'
+  }
 };

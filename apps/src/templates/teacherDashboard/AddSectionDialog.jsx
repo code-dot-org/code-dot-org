@@ -29,7 +29,8 @@ class AddSectionDialog extends Component {
     setRosterProvider: PropTypes.func.isRequired,
     setLoginType: PropTypes.func.isRequired,
     setParticipantType: PropTypes.func.isRequired,
-    handleCancel: PropTypes.func.isRequired
+    handleCancel: PropTypes.func.isRequired,
+    availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
@@ -40,7 +41,8 @@ class AddSectionDialog extends Component {
       setRosterProvider,
       setLoginType,
       setParticipantType,
-      handleCancel
+      handleCancel,
+      availableParticipantTypes
     } = this.props;
     const {loginType, audience} = section || {};
     const title = i18n.newSectionUpdated();
@@ -67,6 +69,7 @@ class AddSectionDialog extends Component {
               title={title}
               setParticipantType={setParticipantType}
               handleCancel={handleCancel}
+              availableParticipantTypes={availableParticipantTypes}
             />
           )}
           {loginType && audience && (
@@ -85,7 +88,8 @@ class AddSectionDialog extends Component {
 export default connect(
   state => ({
     isOpen: isAddingSection(state.teacherSections),
-    section: state.teacherSections.sectionBeingEdited
+    section: state.teacherSections.sectionBeingEdited,
+    availableParticipantTypes: state.teacherSections.availableParticipantTypes
   }),
   dispatch => ({
     beginImportRosterFlow: () => dispatch(beginImportRosterFlow()),

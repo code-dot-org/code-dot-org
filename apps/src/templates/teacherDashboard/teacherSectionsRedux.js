@@ -48,6 +48,8 @@ const importUrlByProvider = {
 // Action keys
 //
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
+const SET_AVAILABLE_PARTICIPANT_TYPES =
+  'teacherDashboard/SET_AVAILABLE_PARTICIPANT_TYPES';
 const SET_CAN_ASSIGN_PL_OFFERINGS =
   'teacherDashboard/SET_CAN_ASSIGN_PL_OFFERINGS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
@@ -123,6 +125,10 @@ export const setRosterProvider = rosterProvider => ({
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
   courseOfferings
+});
+export const setAvailableParticipantTypes = availableParticipantTypes => ({
+  type: SET_AVAILABLE_PARTICIPANT_TYPES,
+  availableParticipantTypes
 });
 export const setCanAssignPLOfferings = canAssignPLOfferings => ({
   type: SET_CAN_ASSIGN_PL_OFFERINGS,
@@ -396,21 +402,34 @@ export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-    '/dashboardapi/sections/valid_course_offerings'
+    '/dashboardapi/sections/valid_course_offerings',
+    '/dashboardapi/sections/available_participant_types'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
 
   return Promise.all(apis.map(fetchJSON))
-    .then(([sections, validCourseOfferings, students]) => {
-      dispatch(setCourseOfferings(validCourseOfferings));
-      dispatch(setCanAssignPLOfferings(false));
-      dispatch(setSections(sections));
-      if (id) {
-        dispatch(setStudentsForCurrentSection(id, students));
+    .then(
+      ([
+        sections,
+        validCourseOfferings,
+        availableParticipantTypes,
+        students
+      ]) => {
+        dispatch(setCourseOfferings(validCourseOfferings));
+        dispatch(
+          setAvailableParticipantTypes(
+            availableParticipantTypes.availableParticipantTypes
+          )
+        );
+        dispatch(setCanAssignPLOfferings(false));
+        dispatch(setSections(sections));
+        if (id) {
+          dispatch(setStudentsForCurrentSection(id, students));
+        }
       }
-    })
+    )
     .catch(err => {
       console.error(err.message);
     })
@@ -536,6 +555,8 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
   courseOfferings: {},
+  // The participant types the user can create sections for
+  availableParticipantTypes: [],
   // If a instructor can assign pl course offerings
   canAssignPLOfferings: false,
   // Mapping from sectionId to section object
@@ -628,6 +649,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings
+    };
+  }
+
+  if (action.type === SET_AVAILABLE_PARTICIPANT_TYPES) {
+    return {
+      ...state,
+      availableParticipantTypes: action.availableParticipantTypes
     };
   }
 
