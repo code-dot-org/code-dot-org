@@ -161,5 +161,22 @@ describe('Javalab', () => {
         config.level.startSources
       );
     });
+
+    it('with exemplarSources if there are any and we are editing an exemplar', () => {
+      config.level = {
+        exemplarSources: {
+          'File.java': {
+            text: 'Some exemplar code'
+          }
+        },
+        isEditingExemplar: true
+      };
+
+      javalab.init(config);
+
+      expect(getStore().dispatch).to.have.been.calledWith(
+        setAllSources(config.level.exemplarSources)
+      );
+    });
   });
 });
