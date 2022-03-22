@@ -326,15 +326,11 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert unit1.course_version.course_offering.assignable?(@levelbuilder)
   end
 
-  test 'get assignable teacher course offerings for teacher should return no offerings' do
-    assert_equal CourseOffering.assignable_course_offerings('teacher', @teacher).length, 0
-  end
-
   test 'get assignable course offerings for student should return no offerings' do
-    assert_equal CourseOffering.assignable_course_offerings('student', @student).length, 0
+    assert_equal CourseOffering.assignable_course_offerings(@student).length, 0
   end
 
-  test 'get assignable course offerings for levelbuilder for facilitator section should return all offerings' do
+  test 'get assignable course offerings for levelbuilder should return all offerings' do
     expected_course_offering_info = [
       @unit_group.course_version.course_offering.id,
       @unit_teacher_to_students.course_version.course_offering.id,
@@ -346,35 +342,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info('facilitator', @levelbuilder).keys.sort, expected_course_offering_info
-  end
-
-  test 'get assignable course offerings for levelbuilder for teacher section should return all offerings' do
-    expected_course_offering_info = [
-      @unit_group.course_version.course_offering.id,
-      @unit_teacher_to_students.course_version.course_offering.id,
-      @pilot_unit.course_version.course_offering.id,
-      @partner_unit.course_version.course_offering.id,
-      @pilot_pl_unit.course_version.course_offering.id,
-      @in_development_unit.course_version.course_offering.id,
-      @beta_unit.course_version.course_offering.id,
-      @unit_facilitator_to_teacher.course_version.course_offering.id
-    ].sort
-
-    assert_equal CourseOffering.assignable_course_offerings_info('teacher', @levelbuilder).keys.sort, expected_course_offering_info
-  end
-
-  test 'get assignable course offerings for levelbuilder for student section should return all offerings' do
-    expected_course_offering_info = [
-      @unit_group.course_version.course_offering.id,
-      @unit_teacher_to_students.course_version.course_offering.id,
-      @pilot_unit.course_version.course_offering.id,
-      @partner_unit.course_version.course_offering.id,
-      @in_development_unit.course_version.course_offering.id,
-      @beta_unit.course_version.course_offering.id,
-    ].sort
-
-    assert_equal CourseOffering.assignable_course_offerings_info('student', @levelbuilder).keys.sort, expected_course_offering_info
+    assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).keys.sort, expected_course_offering_info
   end
 
   test 'get assignable course offerings for pilot teacher should return offerings where pilot teacher can be instructor' do
@@ -384,7 +352,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @pilot_unit.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info('student', @pilot_teacher).keys.sort, expected_course_offering_info
+    assert_equal CourseOffering.assignable_course_offerings_info(@pilot_teacher).keys.sort, expected_course_offering_info
   end
 
   test 'get assignable course offerings for partner should return offerings where partner can be instructor and partners courses' do
@@ -394,7 +362,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @partner_unit.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info('student', @partner).keys.sort, expected_course_offering_info
+    assert_equal CourseOffering.assignable_course_offerings_info(@partner).keys.sort, expected_course_offering_info
   end
 
   test 'get assignable course offerings for pl pilot instructor should return offerings where pl pilot instructor can be instructor' do
@@ -405,7 +373,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info('teacher', @pilot_instructor).keys.sort, expected_course_offering_info
+    assert_equal CourseOffering.assignable_course_offerings_info(@pilot_instructor).keys.sort, expected_course_offering_info
   end
 
   test 'get assignable course offerings for teacher should return offerings where teacher can be instructor' do
@@ -414,26 +382,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_teacher_to_students.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info('student', @teacher).keys.sort, expected_course_offering_info
-  end
-
-  test 'get assignable teacher course offerings for facilitator should return pl offerings where facilitator can be instructor' do
-    expected_course_offering_info = [
-      @unit_group.course_version.course_offering.id,
-      @unit_teacher_to_students.course_version.course_offering.id,
-      @unit_facilitator_to_teacher.course_version.course_offering.id
-    ].sort
-
-    assert_equal CourseOffering.assignable_course_offerings_info('teacher', @facilitator).keys.sort, expected_course_offering_info
-  end
-
-  test 'get assignable student course offerings for facilitator should return only student facing offerings' do
-    expected_course_offering_info = [
-      @unit_group.course_version.course_offering.id,
-      @unit_teacher_to_students.course_version.course_offering.id
-    ].sort
-
-    assert_equal CourseOffering.assignable_course_offerings_info('student', @facilitator).keys.sort, expected_course_offering_info
+    assert_equal CourseOffering.assignable_course_offerings_info(@teacher).keys.sort, expected_course_offering_info
   end
 
   test 'get assignable course offerings for facilitator should return all offerings, versions, amd units where facilitator can be instructor' do
@@ -443,7 +392,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.id
     ].sort
 
-    assignable_course_offerings = CourseOffering.assignable_course_offerings_info('teacher', @facilitator)
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@facilitator)
 
     assert_equal assignable_course_offerings.keys.sort, expected_course_offering_info
 

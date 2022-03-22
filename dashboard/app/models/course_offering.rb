@@ -107,12 +107,12 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.content_root.is_a?(Script) && cv.has_editor_experiment?(user)}
   end
 
-  def self.assignable_course_offerings(participant_type, user)
-    CourseOffering.all.select {|co| co.assignable?(user) && co.can_assign_to_section_participants?(participant_type)}
+  def self.assignable_course_offerings(user)
+    CourseOffering.all.select {|co| co.assignable?(user)}
   end
 
-  def self.assignable_course_offerings_info(participant_type, user, locale_code = 'en-us')
-    assignable_course_offerings(participant_type, user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  def self.assignable_course_offerings_info(user, locale_code = 'en-us')
+    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def assignable?(user)
