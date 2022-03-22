@@ -172,7 +172,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(params[:participant_type], current_user)
+    course_offerings = CourseOffering.assignable_course_offerings_info('student', current_user)
     render json: course_offerings
   end
 
