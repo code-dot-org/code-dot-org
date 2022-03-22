@@ -16,8 +16,8 @@ class LevelBuilderSaveButton extends React.Component {
     setProjectUpdatedError: PropTypes.func.isRequired,
     setProjectUpdatedSaving: PropTypes.func.isRequired,
     setProjectUpdatedSaved: PropTypes.func.isRequired,
-    headerText: PropTypes.string,
-    onSaveURL: PropTypes.string
+    overrideHeaderText: PropTypes.string,
+    overrideOnSaveURL: PropTypes.string
   };
 
   onSave = () => {
@@ -25,7 +25,7 @@ class LevelBuilderSaveButton extends React.Component {
 
     $.ajax({
       type: 'POST',
-      url: this.props.onSaveURL || '../update_start_code',
+      url: this.props.overrideOnSaveURL || '../update_start_code',
       data: JSON.stringify(this.props.getChanges()),
       dataType: 'json',
       error: this.props.setProjectUpdatedError,
@@ -39,7 +39,7 @@ class LevelBuilderSaveButton extends React.Component {
       <div style={{display: 'flex'}}>
         <div className="project_name_wrapper header_text">
           <div className="project_name header_text">
-            {this.props.headerText || 'Levelbuilder: edit start code'}
+            {this.props.overrideHeaderText || 'Levelbuilder: edit start code'}
           </div>
           <ProjectUpdatedAt />
         </div>
@@ -54,8 +54,8 @@ class LevelBuilderSaveButton extends React.Component {
 export default connect(
   state => ({
     getChanges: state.header.getLevelBuilderChanges,
-    headerText: state.header.headerText,
-    onSaveURL: state.header.headerClickOnSave
+    overrideHeaderText: state.header.overrideHeaderText,
+    overrideOnSaveURL: state.header.overrideOnSaveURL
   }),
   {
     setProjectUpdatedError,
