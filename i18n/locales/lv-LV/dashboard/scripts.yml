@@ -2557,3 +2557,23 @@ lv:
           lessons:
             lesson-1:
               name: Mainīgie
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Cikli
+              key: Cikli
+            Events:
+              name: Pasākumi
+              key: Pasākumi
+            Conditionals:
+              name: Sazarojumi
+              key: Sazarojumi
+            Functions:
+              name: Funkcijas
+              key: Funkcijas
+            Variables:
+              name: Mainīgie
+              key: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+              key: '"par" cikli'

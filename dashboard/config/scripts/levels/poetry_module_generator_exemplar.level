@@ -60,36 +60,36 @@
           <next>
             <block type="gamelab_setPrompt" deletable="false">
               <value name="QUESTION">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">Enter an adjective: </title>
-                </block>
+                </shadow>
               </value>
               <value name="VAR">
-                <block type="variables_get" deletable="false">
+                <block type="variables_get" movable="false" deletable="false">
                   <title name="VAR">adjective1</title>
                 </block>
               </value>
               <next>
                 <block type="gamelab_setPrompt" deletable="false">
                   <value name="QUESTION">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">Enter a present tense verb:</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="VAR">
-                    <block type="variables_get" deletable="false">
+                    <block type="variables_get" movable="false" deletable="false">
                       <title name="VAR">verb</title>
                     </block>
                   </value>
                   <next>
                     <block type="gamelab_setPrompt" deletable="false">
                       <value name="QUESTION">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">Enter another adjective: </title>
-                        </block>
+                        </shadow>
                       </value>
                       <value name="VAR">
-                        <block type="variables_get" deletable="false">
+                        <block type="variables_get" movable="false" deletable="false">
                           <title name="VAR">adjective2</title>
                         </block>
                       </value>
@@ -110,6 +110,9 @@
           <next>
             <block type="Poetry_setTitle" deletable="false">
               <value name="TITLE">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
                 <block type="gamelab_textJoin" deletable="false">
                   <title name="TEXT1">Sweet Bird</title>
                 </block>
@@ -117,6 +120,9 @@
               <next>
                 <block type="Poetry_setAuthor" deletable="false">
                   <value name="AUTHOR">
+                    <shadow type="text">
+                      <title name="TEXT"/>
+                    </shadow>
                     <block type="gamelab_textJoin" deletable="false">
                       <title name="TEXT1">Eva</title>
                     </block>
@@ -124,6 +130,9 @@
                   <next>
                     <block type="Poetry_addLine" deletable="false">
                       <value name="LINE">
+                        <shadow type="text">
+                          <title name="TEXT"/>
+                        </shadow>
                         <block type="gamelab_textJoin" deletable="false">
                           <title name="TEXT1">The </title>
                           <value name="TEXT2">
@@ -146,6 +155,9 @@
                       <next>
                         <block type="Poetry_addLine" deletable="false">
                           <value name="LINE">
+                            <shadow type="text">
+                              <title name="TEXT"/>
+                            </shadow>
                             <block type="gamelab_textJoin" deletable="false">
                               <title name="TEXT1">Louder than the </title>
                               <value name="TEXT2">
@@ -163,6 +175,9 @@
                           <next>
                             <block type="Poetry_addLine" deletable="false">
                               <value name="LINE">
+                                <shadow type="text">
+                                  <title name="TEXT"/>
+                                </shadow>
                                 <block type="gamelab_textJoin" deletable="false">
                                   <title name="TEXT1">It will be all right</title>
                                 </block>

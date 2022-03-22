@@ -1819,6 +1819,12 @@
         },
         "courseF_sprites_properties": {
           "sprites_category2": "ابحث عن قطعة برمجية جديدة هنا."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "قطع برمجية جديدة!"
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "إن هذه القطعة البرمجية في الترتيب الخاطئ."
         }
       }
     }

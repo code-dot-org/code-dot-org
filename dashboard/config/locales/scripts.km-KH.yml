@@ -3807,3 +3807,20 @@ km:
           lessons:
             lesson-1:
               name: អ​ថេរ
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: រង្វិល​ជុំ
+              key: រង្វិល​ជុំ
+            Events:
+              name: ព្រឹត្តិការណ៍
+              key: ព្រឹត្តិការណ៍
+            Conditionals:
+              name: លក្ខខណ្ឌ
+              key: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+              key: អនុ​គមន៍
+            Variables:
+              name: អ​ថេរ
+              key: អ​ថេរ

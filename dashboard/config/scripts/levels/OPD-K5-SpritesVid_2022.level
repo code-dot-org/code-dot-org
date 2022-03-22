@@ -1,0 +1,24 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2022-03-09T19:20:28.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSF_Spritelab_MakeSprite_v2",
+    "instructions_important": "false",
+    "display_name": "How to Make a Sprite",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 26915,
+    "name_suffix": "_2022",
+    "encrypted": "false",
+    "long_instructions": "**Watch this video from Course E - Lesson 2, Level 6:  Swimming Fish with Sprite Lab.**"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-03-09T19:20:28.928+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-SpritesVid-2021\\\"\"],\"cloned_from\":\"OPD-K5-SpritesVid-2021\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

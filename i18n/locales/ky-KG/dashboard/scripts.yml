@@ -2046,3 +2046,20 @@ ky:
           lessons:
             lesson-1:
               name: Өзгөрмөлөр
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Циклдер
+              key: Циклдер
+            Events:
+              name: Окуялар
+              key: Окуялар
+            Conditionals:
+              name: Шартуулар
+              key: Шартуулар
+            Functions:
+              name: Функциялар
+              key: Функциялар
+            Variables:
+              name: Өзгөрмөлөр
+              key: Өзгөрмөлөр

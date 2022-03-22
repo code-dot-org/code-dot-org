@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -126,6 +127,14 @@ module Pd::Application
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       application_year
+    end
+
+    # Since teacher applications may be created on save before they are submitted, we cannot rely
+    # on the created_at field. When applications are submitted, they have status 'unreviewed'
+    # [MEG] TODO: Delete this method once applied_at column exists, i.e.
+    # ActiveRecord::Base.connection.column_exists?(:pd_applications, :applied_at) is true
+    def date_applied
+      status_log.find {|status_entry| status_entry["status"] == "unreviewed"}&.[]("at")&.to_date&.iso8601
     end
 
     def self.next_year(year)

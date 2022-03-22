@@ -7053,3 +7053,26 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Első lépések
+              key: Első lépések
+            Loops:
+              name: hurkok
+              key: hurkok
+            Events:
+              name: Események
+              key: Események
+            Conditionals:
+              name: Feltételek
+              key: Feltételek
+            Functions:
+              name: funkciók
+              key: funkciók
+            Variables:
+              name: változók
+              key: változók
+            For Loops:
+              name: Számláló ciklusok
+              key: Számláló ciklusok

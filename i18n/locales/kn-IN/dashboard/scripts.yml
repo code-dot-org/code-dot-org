@@ -3867,3 +3867,20 @@ kn:
           lessons:
             lesson-1:
               name: ವೇರಿಯಬಲ್‌ಗಳು
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: ಲೂಪ್‌ಗಳು
+              key: ಲೂಪ್‌ಗಳು
+            Events:
+              name: ಈವೆಂಟ್‌ಗಳು
+              key: ಈವೆಂಟ್‌ಗಳು
+            Conditionals:
+              name: ಕಂಡೀಷನಲ್ಸ್‌
+              key: ಕಂಡೀಷನಲ್ಸ್‌
+            Variables:
+              name: ವೇರಿಯಬಲ್‌ಗಳು
+              key: ವೇರಿಯಬಲ್‌ಗಳು
+            End of Course projects:
+              name: ಕೋರ್ಸ್‌ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳ ಮುಕ್ತಾಯ
+              key: ಕೋರ್ಸ್‌ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳ ಮುಕ್ತಾಯ

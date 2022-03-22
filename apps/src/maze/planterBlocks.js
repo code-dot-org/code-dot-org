@@ -20,7 +20,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.planter_ifAtSoil = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(
         [msg.ifCode(), msg.at(), msg.soil()].join(' ')
       );
@@ -41,7 +41,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.planter_ifAtSprout = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(
         [msg.ifCode(), msg.at(), msg.sprout()].join(' ')
       );

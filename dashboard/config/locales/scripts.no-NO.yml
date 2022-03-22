@@ -4121,3 +4121,23 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Løkker
+              key: Løkker
+            Events:
+              name: Hendelser
+              key: Hendelser
+            Conditionals:
+              name: Betingelser
+              key: Betingelser
+            Functions:
+              name: Funksjoner
+              key: Funksjoner
+            Variables:
+              name: Variabler
+              key: Variabler
+            For Loops:
+              name: For-løkker
+              key: For-løkker

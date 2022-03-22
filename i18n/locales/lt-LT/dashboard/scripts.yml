@@ -3237,3 +3237,23 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Kartojimas
+              key: Kartojimas
+            Events:
+              name: Įvykiai
+              key: Įvykiai
+            Conditionals:
+              name: Sąlyginiai sakiniai
+              key: Sąlyginiai sakiniai
+            Functions:
+              name: Komandų kūrimas
+              key: Komandų kūrimas
+            Variables:
+              name: Kintamieji
+              key: Kintamieji
+            For Loops:
+              name: Kartojimas
+              key: Kartojimas

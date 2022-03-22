@@ -12,6 +12,8 @@ class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     showAssignButton: PropTypes.bool,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
@@ -30,6 +32,8 @@ class SectionAssigner extends Component {
     const {
       sections,
       showAssignButton,
+      courseOfferingId,
+      courseVersionId,
       courseId,
       scriptId,
       selectedSectionId,
@@ -65,6 +69,8 @@ class SectionAssigner extends Component {
             showAssignButton && (
               <AssignButton
                 sectionId={selectedSection.id}
+                courseOfferingId={courseOfferingId}
+                courseVersionId={courseVersionId}
                 courseId={courseId}
                 scriptId={scriptId}
                 assignmentName={assignmentName}

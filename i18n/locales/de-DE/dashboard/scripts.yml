@@ -20860,9 +20860,6 @@ de:
               display_name: Ereignisse
         csa2-2022:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
             lesson-5:
               name: Lerneinheit 2 Bewertung
             lesson-6:
@@ -20953,6 +20950,7 @@ de:
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1: {}
+            lesson-2: {}
         csa7-pilot-extra:
           lessons:
             Assessment Day:
@@ -21213,6 +21211,7 @@ de:
               display_name: Inhalt
             lessonGroup-5:
               display_name: Sandbox
+        ui-test-csa-family-script: {}
         csa-preview:
           lessons:
             lesson-1: {}
@@ -21236,9 +21235,68 @@ de:
           lessons:
             lesson-1:
               name: Variablen
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
             lesson-14: {}
             lesson-15:
               name: Lerneinheit 2 Bewertung
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+        k5-onlinepd-2022:
+          lessons:
+            Welcome and Introduction: {}
+            Getting Started:
+              name: Erste Schritte
+              key: Erste Schritte
+            Teaching Practices and Strategies: {}
+            Teaching a Lesson: {}
+            Addressing Barriers: {}
+            Part II Overview: {}
+            Sequencing:
+              name: Sequencing
+              key: Sequencing
+            Sequencing with Sprites: {}
+            Loops:
+              name: Schleifen
+              key: Schleifen
+            Events:
+              name: Ereignisse
+              key: Ereignisse
+            Conditionals:
+              name: Bedingungen
+              key: Bedingungen
+            Functions:
+              name: Funktionen
+              key: Funktionen
+            Variables:
+              name: Variablen
+              key: Variablen
+            For Loops:
+              name: Schleifen mit dem Wiederhol-Block
+              key: Schleifen mit dem Wiederhol-Block
+            End of Course projects:
+              name: Projekte am Ende des Kurses
+              key: Projekte am Ende des Kurses
+            Reviewing your reflections:
+              name: Überprüfung Ihrer Reflexionen
+              key: Überprüfung Ihrer Reflexionen
+            Taking next steps: {}
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Willkommen bei "Grundlagen der Informatik unterrichten"
+            CS Teaching and Student Practices: {}
+            Lesson Planning:
+              key: Unterrichtsplanung
+            Implementation Approaches and Barriers: {}
+            Next steps:
+              key: Nächste Schritte

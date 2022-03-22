@@ -101,6 +101,7 @@ class User < ApplicationRecord
     ops_gender
     using_text_mode
     display_theme
+    mute_music
     last_seen_school_info_interstitial
     has_seen_standards_report_info_dialog
     oauth_refresh_token
@@ -210,7 +211,7 @@ class User < ApplicationRecord
   has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
 
   has_many :sign_ins
-  has_many :user_geos, -> {order 'updated_at desc'}
+  has_many :user_geos, -> {order(updated_at: :desc)}
 
   before_validation :normalize_parent_email
   validate :validate_parent_email
@@ -416,7 +417,7 @@ class User < ApplicationRecord
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
-  has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
+  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
@@ -437,7 +438,9 @@ class User < ApplicationRecord
   before_create :update_default_share_setting
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
-  has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
+  # This SQL string is not at risk for injection vulnerabilites because it's
+  # just a hardcoded string, so it's safe to wrap in Arel.sql
+  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
@@ -1081,10 +1084,22 @@ class User < ApplicationRecord
     )
   end
 
+  # There is a bug (fix: https://codedotorg.atlassian.net/browse/INF-571) where some users have
+  # duplicate user levels for the same level. To ensure that we return the relevant user level for
+  # each level and not one of the duplicates, the list is first sorted so that the
+  # most relevant user levels are at the end. The list is then indexed by level ID, which will
+  # pick up the last matching user level in the list.
+  def self.index_user_levels_by_level_id(user_levels)
+    # Sorts by updated_at asc then id desc
+    # the correct user level is the one most recently updated or the first created
+    relevant_user_levels_last = user_levels.sort {|a, b| [a.updated_at, b.id] <=> [b.updated_at, a.id]}
+    relevant_user_levels_last.index_by(&:level_id)
+  end
+
   def user_levels_by_level(script)
-    user_levels.
-      where(script_id: script.id).
-      index_by(&:level_id)
+    user_levels_for_script = user_levels.
+      where(script_id: script.id)
+    User.index_user_levels_by_level_id(user_levels_for_script)
   end
 
   # Retrieves all user_level objects for the given users, script, and levels.
@@ -1131,7 +1146,7 @@ class User < ApplicationRecord
     ).
       group_by(&:user_id).
       inject(initial_hash) do |memo, (user_id, user_levels)|
-        memo[user_id] = user_levels.index_by(&:level_id)
+        memo[user_id] = User.index_user_levels_by_level_id(user_levels)
         memo
       end
   end
@@ -1255,7 +1270,7 @@ class User < ApplicationRecord
   def last_attempt(level, script = nil)
     query = UserLevel.where(user_id: id, level_id: level.id)
     query = query.where(script_id: script.id) unless script.nil?
-    query.order('updated_at DESC').first
+    query.order(updated_at: :desc).first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -1268,7 +1283,7 @@ class User < ApplicationRecord
     }
     conditions[:script_id] = script_id unless script_id.nil?
     UserLevel.where(conditions).
-      order('updated_at DESC').
+      order(updated_at: :desc).
       first
   end
 

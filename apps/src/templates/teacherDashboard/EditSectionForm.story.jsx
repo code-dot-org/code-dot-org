@@ -5,7 +5,8 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {
   assignmentFamilies,
   validAssignments,
-  testSection
+  testSection,
+  courseOfferings
 } from './teacherDashboardTestHelpers';
 
 export default storybook => {
@@ -20,6 +21,7 @@ export default storybook => {
         editSectionProperties={action('editSectionProperties')}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
         section={{
           ...testSection,
@@ -41,6 +43,7 @@ export default storybook => {
         editSectionProperties={action('editSectionProperties')}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
         section={{
           ...testSection,
@@ -62,6 +65,7 @@ export default storybook => {
         editSectionProperties={action('editSectionProperties')}
         validAssignments={validAssignments}
         assignmentFamilies={assignmentFamilies}
+        courseOfferings={courseOfferings}
         sections={{}}
         section={testSection}
         isSaveInProgress={true}

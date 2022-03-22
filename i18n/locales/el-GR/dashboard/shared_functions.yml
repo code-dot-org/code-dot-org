@@ -1,4 +1,7 @@
 el:
   data:
     shared_functions:
+      driving with arrow keys: μετακίνηση με τα πλήκτρα βέλους
+      growing: αυξάνεται
       moving with arrow keys: μετακίνηση με τα πλήκτρα βέλους
+      shrinking: συρρικνώνεται
