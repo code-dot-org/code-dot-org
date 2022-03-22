@@ -74,7 +74,7 @@ export default class AssignmentSelector extends Component {
     ) {
       this.setState(
         {
-          selectedCourseOfferingId: noAssignment,
+          selectedCourseOfferingId: event.target.value,
           selectedCourseVersionId: noAssignment,
           selectedUnitId: noAssignment
         },
