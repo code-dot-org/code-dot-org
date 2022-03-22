@@ -3820,6 +3820,15 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "Tìm khối này và nhấp chuột vào `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nĐiều gì xảy ra khi con số là `25`?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "Course 4 Play Lab Vars 2": {
+          "Course_4_Play_Lab_Vars_2_a": "Hãy đảm bảo rằng bạn thiết lập giá trị của biến `dog_speed` lớn hơn `cat_speed`"
+        },
+        "course4_playlab_variables_challenge1": {
+          "courseF_playlab_variables_challenge1_a": "Bạn sẽ cần thêm một vài khối nữa từ hộp công cụ để làm cho diễn viên nói."
+        },
+        "courseF_playlab_variables_challenge1": {
+          "courseF_playlab_variables_challenge1_a": "Bạn sẽ cần thêm một vài khối nữa từ hộp công cụ để làm cho diễn viên nói."
         }
       }
     }

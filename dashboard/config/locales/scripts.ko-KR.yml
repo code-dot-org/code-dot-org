@@ -4808,6 +4808,8 @@ ko:
               name: 소개
             Sprites:
               name: 스프라이트
+            Input:
+              name: 입력
             'Project: Interactive Card':
               name: 프로젝트 - 인터랙티브 카드
         csd5-draft:

@@ -327,7 +327,18 @@
         "CSD games text freeplay_2021": "اللعب الحر",
         "CSD web classes freeplay_2021": "اللعب الحر",
         "Oceans_Video_Machine_Learning_2021": "فيديو: التعلم الآلي",
-        "Oceans_Video_Training_Data_2021": "فيديو: بيانات التدريب"
+        "Oceans_Video_Training_Data_2021": "فيديو: بيانات التدريب",
+        "CourseF_app_computer": "اصنع جهاز كمبيوتر",
+        "courseF_events_choice_conflict": "قم بدحرجة البرميل",
+        "courseF_events_freeplay_animals": "الحيوانات اللطيفة",
+        "courseF_events_freeplay_blank": "فارغ",
+        "courseF_events_freeplay_food": "الطعام السعيد",
+        "courseF_events_freeplay_space": "بين المجرات",
+        "courseF_events_ship": "الانفجار!",
+        "courseF_sprites_freeplay_animals": "الحيوانات اللطيفة",
+        "courseF_sprites_freeplay_blank": "فارغ",
+        "courseF_sprites_freeplay_food": "الطعام السعيد",
+        "courseF_sprites_freeplay_space": "بين المجرات"
       }
     }
   }

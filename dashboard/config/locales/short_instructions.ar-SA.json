@@ -3099,7 +3099,7 @@
         "CourseF_outbreak5": "قم بتغيير عدد وحجم الرسوم المتحركة للوحوش في المحاكاة الخاصة بك.",
         "international_outbreak_freeplay": "قم بإجراء أي تغييرات أو تحسينات ترغب فيها على مشروعك.",
         "Dance Party 3_2021": "إصنع نقش متحرك جديد لفضائي مختلف , و إجعله يقوم بأي فعل تريد عند الضغط على زر التشغيل.",
-        "Dance Party 6_2021": "أكتب حدث برمجي يجعل الفضائيين يتوقفون عن التحرك بعد 3 ثلاثة ثواني.",
+        "Dance Party 6_2021": "اكتب حدثاً برمجياً يجعل الفضائيين يتوقفون عن الحركة بعد ٥ ثوانٍ.",
         "helloworld_animals_backgrounds": "لنتعلم كيفية تغيير الخلفية.",
         "helloworld_animals_behaviors": "لنتعلم كيفية تحريك الكائنات باستخدام السلوكيات.",
         "helloworld_animals_click": "ما الذي يجعل هذه الكائنات تتحدث؟",
@@ -3181,7 +3181,17 @@
         "courseF_sprites_moreSprites": "حضِّر ٤ كائنات.",
         "courseF_sprites_positioning": "اختر موقعاً جديداً لكائنك على الشاشة.",
         "courseF_sprites_properties": "استخدم القطعة البرمجية الجديدة في فئة \"الكائنات\" لتغيير حجم الكائن الثاني.",
-        "courseF_sprites_ship": "حضّر كائناً للسفينة واجعله يبحر عبر الماء."
+        "courseF_sprites_ship": "حضّر كائناً للسفينة واجعله يبحر عبر الماء.",
+        "courseF_events_conflict": "اجعل الكائن يدور في اتجاه ثم في اتجاه آخر.",
+        "courseF_events_practice_reorder": "قم بتغيير ترتيب الكود الموجود في الأسفل \"عند ثانيتين\" بحيث يتوقف الكائن عن السلوكيات القديمة فقط.",
+        "courseF_events_ship": "استخدم حدثًا لجعل السفينة تبدأ في التحرك للأمام بعد ٨ ثوانٍ.",
+        "courseF_events_stops": "اجعل الكائن يتحرك في اتجاه ثم في اتجاه آخر.",
+        "courseF_sprites_freeplay_air": "حان الوقت لإنشاء ما تريد!",
+        "courseF_sprites_freeplay_animals": "حان الوقت لإنشاء ما تريد!",
+        "courseF_sprites_freeplay_aquatic": "حان الوقت لإنشاء ما تريد!",
+        "courseF_sprites_freeplay_blank": "حان الوقت لإنشاء ما تريد!",
+        "courseF_sprites_freeplay_food": "حان الوقت لإنشاء ما تريد!",
+        "courseF_sprites_freeplay_space": "حان دورك لإنشاء ما تريد!"
       }
     }
   }

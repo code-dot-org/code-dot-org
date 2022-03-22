@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-17 22:26:05 UTC",
+    "serialized_at": "2022-03-18 15:32:59 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3276,10 +3276,22 @@
       }
     },
     {
-      "key": "e3c7f2af-1680-47d8-abac-407bcf97f905",
+      "key": "8ae849bd-292d-44e8-9ccd-9d9bfc86c592",
       "position": 1,
       "properties": {
-        "description": "Pull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the \"if at flower / else block\". Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should \"get nectar\" if there is a flower and \"make honey\" if there is a honeycomb.\n\nFill in the rest of the code and press \"Run\". Discuss with the class why this worked.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nReview the \"Conditionals with Cards\" activity with your students.\n\n- _What is a conditional statement?_\n- _When is it useful for you to use a conditional in your program?_",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ae849bd-292d-44e8-9ccd-9d9bfc86c592",
+        "lesson_activity.key": "1253667e-4b6d-4ef3-9274-070f711e4b3d"
+      }
+    },
+    {
+      "key": "e3c7f2af-1680-47d8-abac-407bcf97f905",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preview - If/Else with Bee” slide\n\n**Say:** *Now we're going to use conditionals with the Code.org bee to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.*\n\nPull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the \"if at flower / else block\". Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should \"get nectar\" if there is a flower and \"make honey\" if there is a honeycomb.\n\nFill in the rest of the code and press \"Run\". Discuss with the class why this worked.",
         "name": "Preview of Online Puzzles \r"
       },
       "seeding_key": {
@@ -3289,10 +3301,9 @@
     },
     {
       "key": "fcce1098-1ef9-42cd-a0a6-9a2a759e894c",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nReview the \"Conditionals with Cards\" activity with your students.\n\n- _What is a conditional statement?_\n- _When is it useful for you to use a conditional in your program?_\n\nWhat are some of the conditions you used in the last activity?\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preview - If/Else with Bee” slide\n\n**Say:** *Now we're going to use conditionals with the Code.org bee to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.*\n\n###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n\n\n**Conditionals** - Statements that only run under certain conditions.\n",
-        "name": "Introduction\r"
+        "description": "###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Conditionals** - Statements that only run under certain conditions.\n"
       },
       "seeding_key": {
         "activity_section.key": "fcce1098-1ef9-42cd-a0a6-9a2a759e894c",
@@ -3717,8 +3728,20 @@
       }
     },
     {
-      "key": "9c905d42-483f-425e-b23f-6049994cc2d8",
+      "key": "4ebb7582-e4f3-4765-b03c-b08a688ad90f",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ebb7582-e4f3-4765-b03c-b08a688ad90f",
+        "lesson_activity.key": "3b9be320-5f6b-4422-989d-d749bac1a55f"
+      }
+    },
+    {
+      "key": "9c905d42-483f-425e-b23f-6049994cc2d8",
+      "position": 2,
       "properties": {
         "description": "\n\nThere are endless possibilities of coding when using conditions. \n\nNow think about how you would use statements with “while” and “until” in your real life.\n",
         "remarks": true
@@ -3730,7 +3753,7 @@
     },
     {
       "key": "3f2558c3-0eb6-492f-b17b-0eeb7f5f393a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** - *What's the difference between an \"until\" loop and a \"while\" loop?*",
         "name": "Reflection"

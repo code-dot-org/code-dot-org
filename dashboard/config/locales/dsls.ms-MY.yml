@@ -2209,7 +2209,7 @@ ms-MY:
           rawak, jadi anda tidak tahu sekiranya virus itu akan tersebar dengan cepat
           atau lambat. Setiap kali anda menukar kod anda, pastikan untuk menjalankan
           simulasi anda lebih dari sekali. Perkara tidak akan berlaku dengan cara
-          yang sama dua kali!\n\n## Mengumpul Data\nCuba tuliskan pemerhatian anda
+          yang sama dua kali!\n\n## Mengumpul Data\nCuba menulis pemerhatian anda
           semasa menjalankan simulasi anda. Anda boleh mengira bilangan raksasa yang
           jatuh sakit atau menggunakan pemasa untuk melihat seberapa cepat perkara
           itu berlaku. Contohnya, berapa lama biasanya semua raksasa jatuh sakit jika
@@ -2235,6 +2235,8 @@ ms-MY:
         content1: penerangan di sini
       courseAB_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
+          dicipta.
       courseB_EOC_2021:
         display_name: Akhir Projek Kursus
       courseC_multi_artist_prog6_predict1_2021:
@@ -2258,25 +2260,38 @@ ms-MY:
         - {}
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-          feedback: Betul! Mula-mula, Scrat membelok ke arah yang salah, kemudian
+        - text: Scrat akan sampai kepada buah oak. Tiada pepijat dalam kod.
+          feedback: Tidak betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
             Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
-        - correct: true
-          feedback: Betul! Mula-mula, Scrat membelok ke arah yang salah, kemudian
+        - text: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke arah
+            yang salah.
+          correct: true
+          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
             Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
-        - {}
+        - text: Scrat tidak akan sampai kepada buah oak kerana blok `bergerak ke hadapan`
+            tidak mencukupi.
+          correct: true
+          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - feedback: Terdapat dua pepijat dalam kod. Mula-mula, Scrat berpusing ke
+            arah yang salah, kemudian Scrat tidak sempat bergerak ke hadapan untuk
+            mencapai buah oak itu.
         questions:
-        - {}
+        - text: Cari pepijat dalam kod ini. Adakah Scrat akan mencapai buah oak atau
+            terdapat masalah?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Burung itu akan ketinggalan selangkah berbanding khinzir.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
           feedback: Betul!
-        - {}
-        - {}
+        - text: Burung itu akan terserempak dengan TNT.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
         questions:
-        - {}
+        - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict1_2021:
         answers:
         - {}
@@ -2290,8 +2305,8 @@ ms-MY:
       courseC_multi_starWars_predict2_2021:
         answers:
         - {}
-        - text: BB-8 tidak akan berjalan cukup jauh dalam gelung pertama untuk mendapatkan
-            semua logam sekerap.
+        - text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
+            mendapatkan semua logam sekerap.
           correct: true
           feedback: Betul!
         - {}
@@ -2395,9 +2410,10 @@ ms-MY:
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - {}
-        - correct: true
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
           feedback: Betul!
-        - {}
+        - text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
         - {}
         questions:
         - {}
@@ -2492,7 +2508,7 @@ ms-MY:
           feedback: Betul!
         - text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
             3 piksel.
-          feedback: Salah. Pemboleh ubah `panjang` perlu berada dalam gelung `berulang`
+          feedback: Salah. Pemboleh ubah `panjang` perlu berada di dalam gelung `berulang`
             untuk perkara tersebut berlaku.
         - text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
           feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
@@ -2501,7 +2517,7 @@ ms-MY:
             dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
             segi tiga dengan sisi yang terdiri daripada 50 piksel.
         questions:
-        - text: Kami telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+        - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
             akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_bee_for3_predict1_2021:
         answers:
@@ -2561,13 +2577,21 @@ ms-MY:
           dicipta.
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel akan mengumpulkan 4 harta karun dengan menggunakan kod ini.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - text: Laurel akan cuba mengumpulkan harta karun tetapi tiada apa-apa ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          correct: true
           feedback: Betul!
-        - {}
-        - {}
+        - text: Laurel akan mengumpulkan semua harta karun itu.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
         questions:
-        - {}
+        - text: Lihat pada kod ini dengan teliti. Pada pendapat anda, apakah yang
+            akan berlaku apabila atur cara ini dijalankan?
       CourseF_outbreak_story:
         markdown: "# Wabak: Kod Simulasi Anda Yang Tersendiri\n\n## Selamat datang
           ke Bandar Raksasa!\nBandar Raksasa dulunya tempat yang gembira dan sihat.
@@ -3123,6 +3147,17 @@ ms-MY:
         content1: penerangan di sini
       csf_putting_a_stop_to_online_meanness_2021:
         content1: penerangan di sini
+        markdown: |
+          # HENTIKAN Kezaliman
+
+          ## Apakah yang perlu anda lakukan jika seseorang bertindak zalim kepada anda dalam talian?
+
+          * **S**tep away - Jauhkan diri.
+          * **T**ell a trusted adult - Beritahu orang dewasa yang dipercayai.
+          * **O**K sites first - Layari laman web yang OK terlebih dahulu.
+          * **P**ause and think online - Berhenti sementara dan berfikir dalam talian.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       courseF_intro_apps:
         description: Selamat datang ke Asas CS! Semua projek ini telah dicipta dengan
           Makmal Peperi. Cuba projek ini sekarang untuk melihat perkara yang boleh
@@ -3249,3 +3284,13 @@ ms-MY:
           # Kejiranan Dalam Talian Saya
 
           ## Bagaimanakah anda pergi ke tempat dengan selamat secara dalam talian?
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Rakan Robotik Bergelung Saya
+
+          Buatkan atur cara anda lebih pendek dengan menggunakan gelung!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Rakan Robotik Saya
+
+          Belajar mengatur cara dengan menulis kod untuk rakan anda!
