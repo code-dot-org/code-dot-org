@@ -67,7 +67,7 @@ class TestController < ApplicationController
     }
     fake_user = User.create!(attributes)
 
-    section = Section.create(name: "New Section", user: fake_user, script: script, course: course)
+    section = Section.create(name: "New Section", user: fake_user, script: script, unit_group: course)
     section.students << user
     section.save!
     head :ok
