@@ -82,7 +82,6 @@ Javalab.prototype.init = function(config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  console.log(this.level);
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
@@ -248,8 +247,8 @@ Javalab.prototype.init = function(config) {
     }
   }
 
-  // If we don't have any existing exemplar for this level and a levelbuilder is editing the exemplar,
-  // we'll start with the default blank project.
+  // If we're editing an exemplar, override initial sources
+  // with the exemplar code saved to the level definition.
   if (this.isEditingExemplar && config.level.exemplarSources) {
     getStore().dispatch(setAllSources(config.level.exemplarSources));
   }
