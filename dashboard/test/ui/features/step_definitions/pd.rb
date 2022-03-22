@@ -158,13 +158,12 @@ And(/^I create some fake applications of each type and status$/) do
 
   %w(csd csp).each do |course|
     (Pd::Application::TeacherApplication.statuses).each do |status|
-      teacher_name = "teacher_#{course}#{status}"
-      teacher_email = "#{teacher_name}@code.org"
+      teacher_email = "#{course}_#{status}@code.org"
       teacher = User.find_or_create_teacher(
-        {name: teacher_name, email: teacher_email}, nil, nil
+        {name: "#{course} #{status}", email: teacher_email}, nil, nil
       )
       next if Pd::Application::TeacherApplication.find_by(user_id: teacher.id)
-      form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, course.to_sym, first_name: teacher_name)
+      form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, course.to_sym, first_name: course, last_name: status)
       if status == 'incomplete'
         FactoryGirl.create(
           :pd_teacher_application,

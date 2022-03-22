@@ -11,8 +11,10 @@ Feature: Teacher Application Dashboard
     And I see no difference for "Admin Summary View"
 
     Then I click selector "table#summary-csd-teachers ~ .btn:contains(View all applications)"
-    Then I wait until element "h2:contains('CS Discoveries Teacher Applications')" is visible
-    Then I wait until element "table#quick-view" is visible
+    Then I wait until element "#status-filter" is visible
+    And I press keys "Withdrawn" for element "#status-filter"
+    And I press the first ".Select-option" element
+    Then I wait until element "span:contains('Withdrawn')" is visible
     And I see no difference for "Admin Course View"
 
     # Access the Detail View by navigating to the first row's "view application" button href
