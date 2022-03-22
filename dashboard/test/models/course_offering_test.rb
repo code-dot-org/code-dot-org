@@ -431,6 +431,14 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal facilitator_to_teacher_course_versions[@unit_facilitator_to_teacher.course_version.id][:units].keys, [@unit_facilitator_to_teacher.id]
   end
 
+  test 'query count for assignable_course_offerings' do
+    CourseOffering.assignable_course_offerings_info(@facilitator)
+
+    assert_queries(0) do
+      CourseOffering.assignable_course_offerings_info(@facilitator)
+    end
+  end
+
   test "can serialize and seed course offerings" do
     course_offering = create :course_offering, key: 'course-offering-1'
     serialization = course_offering.serialize
