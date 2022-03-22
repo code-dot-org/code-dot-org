@@ -7,6 +7,7 @@ import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   name: 'csp',
@@ -168,52 +169,10 @@ describe('CourseOverview', () => {
     });
 
     it('appears when two versions are present and viewable', () => {
-      const versions = {
-        1: {
-          id: 1,
-          key: '2017',
-          version_year: '2017',
-          content_root_id: 10,
-          name: 'Course A',
-          path: '/s/coursea-2017',
-          type: 'Script',
-          is_stable: true,
-          is_recommended: false,
-          locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
-          units: {
-            1: {
-              id: 1,
-              name: 'Course A',
-              path: '/s/coursea-2017',
-              lesson_extras_available: true
-            }
-          }
-        },
-        2: {
-          id: 2,
-          key: '2018',
-          version_year: '2018',
-          content_root_id: 11,
-          name: 'Course A',
-          path: '/s/coursea-2018',
-          type: 'Script',
-          is_stable: true,
-          is_recommended: true,
-          locales: ['English', 'Italiano', 'Slovenčina'],
-          units: {
-            2: {
-              id: 2,
-              name: 'Course A (2018)',
-              path: '/s/coursea-2018',
-              lesson_extras_available: true
-            }
-          }
-        }
-      };
       const wrapper = shallow(
         <CourseOverview
           {...defaultProps}
-          versions={versions}
+          versions={courseOfferings['2'].course_versions}
           isInstructor={true}
         />
       );
@@ -225,32 +184,10 @@ describe('CourseOverview', () => {
     });
 
     it('does not appear when only one version is viewable', () => {
-      const versions = {
-        1: {
-          id: 1,
-          key: '2017',
-          version_year: '2017',
-          content_root_id: 10,
-          name: 'Course A',
-          path: '/s/coursea-2017',
-          type: 'Script',
-          is_stable: true,
-          is_recommended: false,
-          locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
-          units: {
-            1: {
-              id: 1,
-              name: 'Course A',
-              path: '/s/coursea-2017',
-              lesson_extras_available: true
-            }
-          }
-        }
-      };
       const wrapper = shallow(
         <CourseOverview
           {...defaultProps}
-          versions={versions}
+          versions={courseOfferings['3'].course_versions}
           isInstructor={true}
         />
       );
