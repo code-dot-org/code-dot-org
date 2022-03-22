@@ -6,9 +6,9 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Upcoming Panel: Overcoming Imposter Syndrome -- Building Confidence & Belonging",
-          "details": "Join us Wed, March 23 at 8pm EDT as college women share their experiences as computer science majors.  Gain valuable strategies for building support networks, connections, and confidence to help you overcome the challenge of feeling like you don’t belong (imposter syndrome).  ",
-          "link": "https://bit.ly/rewritethecode3LB2022",
+          "notice": "Upcoming panel for high school students: Overcoming Imposter Syndrome -- Building Confidence & Belonging",
+          "details": "Join us Wed, March 23 at 8pm EDT as college women majoring in CS discuss their experiences with and strategies for overcoming imposter syndrome.",
+          "link": "https://bit.ly/rtc3LB2022",
           "type": "bullhorn",
           "visibility": "Teacher and student"
         }
@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-15 18:23:31 UTC",
+    "serialized_at": "2022-03-22 04:05:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1726,7 +1726,7 @@
       "key": "00cc763f-3f70-4e51-b63c-0af2b7c57e86",
       "position": 2,
       "properties": {
-        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think the benefits outweigh the privacy concerns?*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on location data, take notes on the following:\n\n* What kind of data is being collected and shared?\n* Who is the “third party” in this situation? \n* Why is this a tradeoff between privacy and security?",
         "duration": "10",
         "name": "Security vs Privacy - Should the Government Need a Warrant?"
       },
@@ -1739,7 +1739,7 @@
       "key": "0b65878c-bbdf-470d-a515-6a5af4322bce",
       "position": 3,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about location data.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question *\"Do you agree with the Supreme Court’s ruling? Do you think it should apply to other kinds of data?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this discussion to build off the theme's discussed after the previous video about facial recognition. Push students to think of other types of data that third-parties collect about them and how they think that data should be handled by those parties and the government."
       },
       "seeding_key": {
         "activity_section.key": "0b65878c-bbdf-470d-a515-6a5af4322bce",

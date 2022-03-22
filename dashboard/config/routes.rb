@@ -779,8 +779,10 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       post 'users/:user_id/display_theme', to: 'users#update_display_theme'
+      post 'users/:user_id/mute_music', to: 'users#post_mute_music'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/display_theme', to: 'users#get_display_theme'
+      get 'users/:user_id/mute_music', to: 'users#get_mute_music'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
@@ -889,6 +891,7 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
+  get '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#get_access_token_with_override_sources'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do
