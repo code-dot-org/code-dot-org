@@ -91,7 +91,7 @@ class CourseOffering < ApplicationRecord
   end
 
   # All course versions in a course offering should have the same instructor audience
-  def any_version_can_be_instructor?(user)
+  def can_be_instructor?(user)
     course_versions.any? {|cv| cv.can_be_instructor?(user)}
   end
 
