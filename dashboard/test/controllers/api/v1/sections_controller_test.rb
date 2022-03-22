@@ -203,7 +203,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "leave with valid joined section code" do
-    sign_in @student
+    sign_in @teacher
     post :leave, params: {id: @section.code}
     assert_response :success
   end
