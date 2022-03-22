@@ -230,10 +230,7 @@ class LevelsController < ApplicationController
     @game = @level.game
     @is_editing_exemplar = true
 
-    # Support template level exemplars? Each level will have their own exemplar,
-    # but maybe use exemplar code from template if it exists?
-    # what shape should this be if we have neither start sources nor exemplar?
-    exemplar_sources = @level.try(:exemplar_sources) || @level.try(:start_sources)
+    exemplar_sources = @level.try(:exemplar_sources)
     level_view_options(@level.id, {is_editing_exemplar: true, exemplar_sources: exemplar_sources})
 
     show
@@ -315,7 +312,8 @@ class LevelsController < ApplicationController
     @level.log_changes(current_user)
     @level.save!
 
-    # redirect is weird?
+    # We tend to respond with a redirect URL in this controller,
+    # but it is not used in this case.
     render json: {redirect: level_url(@level)}
   end
 

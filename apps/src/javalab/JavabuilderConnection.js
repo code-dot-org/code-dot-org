@@ -56,8 +56,12 @@ export default class JavabuilderConnection {
     this.onNewlineMessage();
 
     const payload = {
-      projectUrl: project.getProjectSourcesUrl(),
-      projectVersion: 'unused',
+      projectUrl: this.overrideSources
+        ? 'override'
+        : project.getProjectSourcesUrl(),
+      projectVersion: this.overrideSources
+        ? 'override'
+        : project.getCurrentSourceVersionId(),
       levelId: this.levelId,
       options: this.options,
       executionType: this.executionType,
