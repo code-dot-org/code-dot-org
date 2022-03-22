@@ -14,6 +14,12 @@ const noAssignment = '__noAssignment__';
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
+const participantTypesByAudience = {
+  student: ['student'],
+  teacher: ['student', 'teacher'],
+  facilitator: ['student', 'teacher', 'facilitator']
+};
+
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
@@ -181,7 +187,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {dropdownStyle, disabled, courseOfferings} = this.props;
+    const {dropdownStyle, disabled, courseOfferings, audience} = this.props;
     const {
       selectedCourseOfferingId,
       selectedCourseVersionId,
@@ -190,7 +196,9 @@ export default class AssignmentSelector extends Component {
 
     // this needs to be equal to or lower
     const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
-      return offering.participant_audience === this.props.audience;
+      return participantTypesByAudience[audience].includes(
+        offering.participant_audience
+      );
     });
     let orderedCourseOfferings = _.orderBy(
       filterCourseOfferings,

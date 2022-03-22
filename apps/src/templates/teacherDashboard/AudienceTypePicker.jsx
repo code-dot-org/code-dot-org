@@ -91,7 +91,6 @@ const StudentCard = props => (
   <LoginTypeCard
     className="uitest-student-type"
     title={'Student'}
-    subtitle={''}
     description={'Section for students'}
     onClick={() => props.onClick('student')}
   />
@@ -103,9 +102,8 @@ StudentCard.propTypes = {
 
 const TeacherCard = props => (
   <LoginTypeCard
-    className="uitest-student-type"
+    className="uitest-teacher-type"
     title={'Teacher'}
-    subtitle={''}
     description={'Section for teachers'}
     onClick={() => props.onClick('teacher')}
   />
@@ -117,9 +115,8 @@ TeacherCard.propTypes = {
 
 const FacilitatorCard = props => (
   <LoginTypeCard
-    className="uitest-student-type"
+    className="uitest-facilitator-type"
     title={'Facilitator'}
-    subtitle={''}
     description={'Section for facilitators'}
     onClick={() => props.onClick('facilitator')}
   />
