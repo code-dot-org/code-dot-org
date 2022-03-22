@@ -66,7 +66,8 @@ Dashboard::Application.routes.draw do
   get 'docs/concepts/*path', to: 'curriculum_proxy#get_doc'
   get 'docs/', to: 'programming_environments#docs_index'
   get 'docs/:name', to: 'programming_environments#docs_show'
-  get 'docs/:programming_environment_name/:programming_expression_key', to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
   # User-facing section routes
