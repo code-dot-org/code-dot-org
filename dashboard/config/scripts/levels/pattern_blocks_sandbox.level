@@ -49,7 +49,7 @@
   "user_id": 16,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-18T15:44:13.524-04:00\",\"changed\":[\"cloned from \\\"New Artist Project\\\"\"],\"cloned_from\":\"New Artist Project\"},{\"changed_at\":\"2022-03-18 15:44:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:11:55 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:19:22 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:49:21 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:52:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 17:01:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-18T15:44:13.524-04:00\",\"changed\":[\"cloned from \\\"New Artist Project\\\"\"],\"cloned_from\":\"New Artist Project\"},{\"changed_at\":\"2022-03-18 15:44:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:11:55 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:19:22 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:49:21 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:52:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 17:01:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:08 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:21 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:31 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:05 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:20 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:16:19 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -69,7 +69,7 @@
                   <field name="VAR">length</field>
                   <value name="VALUE">
                     <block type="math_number">
-                      <field name="NUM">100</field>
+                      <field name="NUM">35</field>
                     </block>
                   </value>
                   <next>
@@ -282,8 +282,33 @@
                 <block type="jump">
                   <field name="DIR">jumpForward</field>
                   <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">86.6025403784</field>
+                    <block type="math_arithmetic">
+                      <field name="OP">MULTIPLY</field>
+                      <value name="A">
+                        <block type="math_arithmetic">
+                          <field name="OP">MULTIPLY</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">length</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_single">
+                              <field name="OP">ROOT</field>
+                              <value name="NUM">
+                                <block type="math_number">
+                                  <field name="NUM">3</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">2</field>
+                        </block>
+                      </value>
                     </block>
                   </value>
                 </block>
@@ -306,8 +331,8 @@
                 <block type="jump">
                   <field name="DIR">jumpForward</field>
                   <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">25</field>
+                    <block type="variables_get">
+                      <field name="VAR">length</field>
                     </block>
                   </value>
                   <next>
@@ -340,8 +365,18 @@
                 <block type="jump">
                   <field name="DIR">jumpForward</field>
                   <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">50</field>
+                    <block type="math_arithmetic">
+                      <field name="OP">MULTIPLY</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">length</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">2</field>
+                        </block>
+                      </value>
                     </block>
                   </value>
                   <next>
@@ -377,8 +412,18 @@
                     <block type="jump">
                       <field name="DIR">jumpForward</field>
                       <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">75</field>
+                        <block type="math_arithmetic">
+                          <field name="OP">MULTIPLY</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">length</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <field name="NUM">3</field>
+                            </block>
+                          </value>
                         </block>
                       </value>
                       <next>
@@ -413,8 +458,18 @@
                 <block type="jump">
                   <field name="DIR">jumpBackward</field>
                   <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">50</field>
+                    <block type="math_arithmetic">
+                      <field name="OP">MULTIPLY</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">length</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">2</field>
+                        </block>
+                      </value>
                     </block>
                   </value>
                   <next>
@@ -429,8 +484,18 @@
                         <block type="jump">
                           <field name="DIR">jumpForward</field>
                           <value name="VALUE">
-                            <block type="math_number">
-                              <field name="NUM">50</field>
+                            <block type="math_arithmetic">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <field name="VAR">length</field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <field name="NUM">2</field>
+                                </block>
+                              </value>
                             </block>
                           </value>
                           <next>
@@ -441,293 +506,6 @@
                                   <field name="NUM">15</field>
                                 </block>
                               </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation>
-            <arg name="color"/>
-          </mutation>
-          <field name="NAME" id="background">background</field>
-          <statement name="STACK">
-            <block type="draw_colour" id="draw-color">
-              <value name="COLOUR">
-                <block type="parameters_get">
-                  <field name="VAR">color</field>
-                </block>
-              </value>
-              <next>
-                <block type="draw_width">
-                  <value name="WIDTH">
-                    <block type="math_number">
-                      <field name="NUM">1000</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_move">
-                      <field name="DIR">moveForward</field>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">1</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="draw_width">
-                          <value name="WIDTH">
-                            <block type="math_number">
-                              <field name="NUM">5</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_colour" id="draw-color">
-                              <value name="COLOUR">
-                                <block type="colour_picker">
-                                  <field name="COLOUR">#000000</field>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-            <arg name="length"/>
-            <arg name="angle"/>
-          </mutation>
-          <field name="NAME">rhombus</field>
-          <statement name="STACK">
-            <block type="draw_turn">
-              <field name="DIR">turnLeft</field>
-              <value name="VALUE">
-                <block type="math_arithmetic">
-                  <field name="OP">DIVIDE</field>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <field name="VAR">angle</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <field name="NUM">2</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="controls_repeat_ext">
-                  <value name="TIMES">
-                    <block type="math_number">
-                      <field name="NUM">2</field>
-                    </block>
-                  </value>
-                  <statement name="DO">
-                    <block type="draw_move">
-                      <field name="DIR">moveForward</field>
-                      <value name="VALUE">
-                        <block type="variables_get">
-                          <field name="VAR">length</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="draw_turn">
-                          <field name="DIR">turnRight</field>
-                          <value name="VALUE">
-                            <block type="parameters_get">
-                              <field name="VAR">angle</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_move">
-                              <field name="DIR">moveForward</field>
-                              <value name="VALUE">
-                                <block type="parameters_get">
-                                  <field name="VAR">length</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="draw_turn">
-                                  <field name="DIR">turnRight</field>
-                                  <value name="VALUE">
-                                    <block type="math_arithmetic">
-                                      <field name="OP">MINUS</field>
-                                      <value name="A">
-                                        <block type="math_number">
-                                          <field name="NUM">180</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="parameters_get">
-                                          <field name="VAR">angle</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="controls_repeat_ext">
-                      <value name="TIMES">
-                        <block type="math_arithmetic">
-                          <field name="OP">DIVIDE</field>
-                          <value name="A">
-                            <block type="parameters_get">
-                              <field name="VAR">length</field>
-                            </block>
-                          </value>
-                          <value name="B">
-                            <block type="math_number">
-                              <field name="NUM">2</field>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <statement name="DO">
-                        <block type="draw_move">
-                          <field name="DIR">moveForward</field>
-                          <value name="VALUE">
-                            <block type="parameters_get">
-                              <field name="VAR">length</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn">
-                              <field name="DIR">turnRight</field>
-                              <value name="VALUE">
-                                <block type="parameters_get">
-                                  <field name="VAR">angle</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="draw_move">
-                                  <field name="DIR">moveForward</field>
-                                  <value name="VALUE">
-                                    <block type="math_number">
-                                      <field name="NUM">2</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="draw_turn">
-                                      <field name="DIR">turnRight</field>
-                                      <value name="VALUE">
-                                        <block type="math_arithmetic">
-                                          <field name="OP">MINUS</field>
-                                          <value name="A">
-                                            <block type="math_number">
-                                              <field name="NUM">180</field>
-                                            </block>
-                                          </value>
-                                          <value name="B">
-                                            <block type="parameters_get">
-                                              <field name="VAR">angle</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="draw_move">
-                                          <field name="DIR">moveForward</field>
-                                          <value name="VALUE">
-                                            <block type="parameters_get">
-                                              <field name="VAR">length</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="draw_turn">
-                                              <field name="DIR">turnRight</field>
-                                              <value name="VALUE">
-                                                <block type="math_number">
-                                                  <field name="NUM">180</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="draw_turn">
-                          <field name="DIR">turnLeft</field>
-                          <value name="VALUE">
-                            <block type="math_arithmetic">
-                              <field name="OP">MINUS</field>
-                              <value name="A">
-                                <block type="math_number">
-                                  <field name="NUM">180</field>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="parameters_get">
-                                  <field name="VAR">angle</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_move">
-                              <field name="DIR">moveForward</field>
-                              <value name="VALUE">
-                                <block type="parameters_get">
-                                  <field name="VAR">length</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="draw_turn">
-                                  <field name="DIR">turnRight</field>
-                                  <value name="VALUE">
-                                    <block type="math_arithmetic">
-                                      <field name="OP">MINUS</field>
-                                      <value name="A">
-                                        <block type="math_number">
-                                          <field name="NUM">180</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="math_arithmetic">
-                                          <field name="OP">MULTIPLY</field>
-                                          <value name="A">
-                                            <block type="parameters_get">
-                                              <field name="VAR">angle</field>
-                                            </block>
-                                          </value>
-                                          <value name="B">
-                                            <block type="math_number">
-                                              <field name="NUM">0.5</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
                             </block>
                           </next>
                         </block>

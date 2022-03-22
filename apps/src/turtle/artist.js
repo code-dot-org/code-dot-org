@@ -1235,7 +1235,9 @@ Artist.prototype.step = function(command, values, options) {
       let size = MAX_STICKER_SIZE;
 
       if (typeof values[1] === 'number') {
-        size = values[1];
+        // Pattern blocks are scaled up 4 times. The student is specifying the
+        // length of one side of the image, not the size of the entire image.
+        size = values[1] * 4;
       }
 
       if (this.visualization.shouldDrawNormalized_) {
