@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 02:38:00 UTC",
+    "serialized_at": "2022-03-22 13:59:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1844,6 +1844,28 @@
     {
       "chapter": 58,
       "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-length-of-array-mc"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L5-length-of-array-mc"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1864,8 +1886,8 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 5,
+      "chapter": 60,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1886,8 +1908,8 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 6,
+      "chapter": 61,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1908,8 +1930,8 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 7,
+      "chapter": 62,
+      "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1930,8 +1952,8 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 8,
+      "chapter": 63,
+      "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1952,8 +1974,8 @@
       ]
     },
     {
-      "chapter": 63,
-      "position": 9,
+      "chapter": 64,
+      "position": 10,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -1974,8 +1996,8 @@
       ]
     },
     {
-      "chapter": 64,
-      "position": 10,
+      "chapter": 65,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1996,8 +2018,8 @@
       ]
     },
     {
-      "chapter": 65,
-      "position": 11,
+      "chapter": 66,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2006,7 +2028,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-length-of-array-mc"
+          "SP-VPL-CSA-22-mod3-L5-traversing-mc"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -2014,12 +2036,12 @@
         "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
       },
       "level_keys": [
-        "SP-VPL-CSA-22-mod3-L5-length-of-array-mc"
+        "SP-VPL-CSA-22-mod3-L5-traversing-mc"
       ]
     },
     {
-      "chapter": 66,
-      "position": 12,
+      "chapter": 67,
+      "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -2040,31 +2062,9 @@
       ]
     },
     {
-      "chapter": 67,
-      "position": 13,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Traversing arrays"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-L5-traverse-practice-2"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
-      },
-      "level_keys": [
-        "SP-VPL-CSA-22-L5-traverse-practice-2"
-      ]
-    },
-    {
       "chapter": 68,
       "position": 14,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Traversing arrays"
@@ -2086,6 +2086,28 @@
     {
       "chapter": 69,
       "position": 15,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Traversing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L5-traverse-practice-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-L5-traverse-practice-2"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 16,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -2103,28 +2125,6 @@
       },
       "level_keys": [
         "SP-VPL-CSA-22-L5-traverse-practice-4"
-      ]
-    },
-    {
-      "chapter": 70,
-      "position": 16,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Traversing arrays"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-traversing-mc"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
-      },
-      "level_keys": [
-        "SP-VPL-CSA-22-mod3-L5-traversing-mc"
       ]
     }
   ],
@@ -2815,6 +2815,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L5-length-of-array-mc",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-length-of-array-mc"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SP-VPL-CSA-22-mod3-L5-indices-map",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-mod3-L5-indices-map"
@@ -2899,9 +2911,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-L5-length-of-array-mc",
+        "level.key": "SP-VPL-CSA-22-mod3-L5-traversing-mc",
         "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-length-of-array-mc"
+          "SP-VPL-CSA-22-mod3-L5-traversing-mc"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -2923,18 +2935,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-L5-traverse-practice-2",
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-L5-traverse-practice-2"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "SP-VPL-CSA-22-L5-traverse-practice-3",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-L5-traverse-practice-3"
@@ -2947,9 +2947,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-L5-traverse-practice-4",
+        "level.key": "SP-VPL-CSA-22-L5-traverse-practice-2",
         "script_level.level_keys": [
-          "SP-VPL-CSA-22-L5-traverse-practice-4"
+          "SP-VPL-CSA-22-L5-traverse-practice-2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -2959,9 +2959,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-L5-traversing-mc",
+        "level.key": "SP-VPL-CSA-22-L5-traverse-practice-4",
         "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-traversing-mc"
+          "SP-VPL-CSA-22-L5-traverse-practice-4"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
