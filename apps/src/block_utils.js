@@ -176,7 +176,7 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
     helpUrl: helpUrl,
     init: function() {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var input = this.appendDummyInput();
       if (title) {
         input.appendTitle(title);
@@ -378,9 +378,9 @@ exports.functionalDefinitionXml = function(
   return (
     '<block type="functional_definition" inline="false">' +
     mutation +
-    '<title name="NAME">' +
+    '<field name="NAME">' +
     name +
-    '</title>' +
+    '</field>' +
     '<functional_input name="STACK">' +
     blockXml +
     '</functional_input>' +
@@ -447,7 +447,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       ? startBlocksDom.ownerDocument
       : document;
     const node = ownerDocument.evaluate(
-      'title[@name="NAME"]',
+      'field[@name="NAME"]',
       func,
       null,
       XPathResult.FIRST_ORDERED_NODE_TYPE,
@@ -463,7 +463,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/title[@id="${name}"]`,
+        `//block[@type="${type}"]/field[@id="${name}"]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -1051,9 +1051,9 @@ exports.createJsWrapperBlockCreator = function(
       helpUrl: '',
       init: function() {
         if (color) {
-          this.setHSV(...color);
+          Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          this.setHSV(...DEFAULT_COLOR);
+          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
         }
 
         if (returnType) {

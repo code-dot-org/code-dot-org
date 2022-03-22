@@ -136,8 +136,7 @@ module Cdo
       if rack_env?(:development)
         'http://localhost:8080/javabuilderfiles/seedsources'
       else
-        # TODO: Update this URL once the API Gateway endpoint has been set up.
-        ''
+        'https://javabuilderbeta-http.code.org/seedsources/sources.json'
       end
     end
 

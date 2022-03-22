@@ -5,7 +5,12 @@ import {Heading1, h3Style} from '../../lib/ui/Headings';
 import * as styleConstants from '@cdo/apps/styleConstants';
 import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
-import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
+import {
+  sectionShape,
+  assignmentShape,
+  assignmentFamilyShape,
+  assignmentCourseOfferingShape
+} from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
@@ -42,6 +47,8 @@ class EditSectionForm extends Component {
     initialCourseId: PropTypes.number,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
+    courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
+      .isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,
@@ -136,6 +143,7 @@ class EditSectionForm extends Component {
       title,
       validAssignments,
       assignmentFamilies,
+      courseOfferings,
       isSaveInProgress,
       editSectionProperties,
       handleClose,
@@ -211,6 +219,7 @@ class EditSectionForm extends Component {
             onChange={ids => editSectionProperties(ids)}
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
+            courseOfferings={courseOfferings}
             disabled={isSaveInProgress}
             localeCode={localeCode}
             isNewSection={isNewSection}
@@ -372,6 +381,7 @@ const AssignmentField = ({
   onChange,
   validAssignments,
   assignmentFamilies,
+  courseOfferings,
   disabled,
   localeCode,
   isNewSection
@@ -384,6 +394,7 @@ const AssignmentField = ({
       onChange={ids => onChange(ids)}
       assignments={validAssignments}
       assignmentFamilies={assignmentFamilies}
+      courseOfferings={courseOfferings}
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
@@ -397,6 +408,7 @@ AssignmentField.propTypes = {
   onChange: PropTypes.func.isRequired,
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
+  courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape).isRequired,
   disabled: PropTypes.bool,
   localeCode: PropTypes.string,
   isNewSection: PropTypes.bool
@@ -543,6 +555,7 @@ let defaultPropsFromState = state => ({
   initialUnitId: state.teacherSections.initialUnitId,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
+  courseOfferings: state.teacherSections.courseOfferings,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   assignedUnitLessonExtrasAvailable: assignedUnitLessonExtrasAvailable(state),

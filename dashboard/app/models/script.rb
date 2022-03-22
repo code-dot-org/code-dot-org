@@ -42,6 +42,7 @@ class Script < ApplicationRecord
   include SharedCourseConstants
   include SharedConstants
   include Curriculum::CourseTypes
+  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
 
   include Seeded
@@ -593,7 +594,9 @@ class Script < ApplicationRecord
   end
 
   def self.get_family_without_cache(family_name)
-    Script.where(family_name: family_name).order("properties -> '$.version_year' DESC")
+    # This SQL string is not at risk for injection vulnerabilites because it's
+    # just a hardcoded string, so it's safe to wrap in Arel.sql
+    Script.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
   end
 
   # Returns all units within a family from the Rails cache.
@@ -618,7 +621,7 @@ class Script < ApplicationRecord
 
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    return nil unless family_units.last.can_be_instructor?(user) || family_units.last.can_be_participant?(user)
+    return nil unless family_units&.last&.can_be_instructor?(user) || family_units&.last&.can_be_participant?(user)
 
     # Only signed in participants should be redirected based on unit progress and/or section assignments.
     if user && family_units.last.can_be_participant?(user)
@@ -779,7 +782,9 @@ class Script < ApplicationRecord
       # select only units in the same family.
       where(family_name: family_name).
       # order by version year descending.
-      order("properties -> '$.version_year' DESC")&.
+      # This SQL string is not at risk for injection vulnerabilites because
+      # it's just a hardcoded string, so it's safe to wrap in Arel.sql
+      order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
   end
 
@@ -1532,6 +1537,7 @@ class Script < ApplicationRecord
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
       courseVersionId: get_course_version&.id,
+      courseOfferingId: get_course_version&.course_offering&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       updated_at: updated_at.to_s
@@ -1574,7 +1580,7 @@ class Script < ApplicationRecord
 
   def summarize_for_lesson_edit
     {
-      isLaunched: launched?,
+      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
@@ -1864,6 +1870,20 @@ class Script < ApplicationRecord
       return alternate_ugu.script if ugu != alternate_ugu
     end
     nil
+  end
+
+  def summarize_for_assignment_dropdown
+    [
+      id,
+      {
+        id: id,
+        name: launched? ? localized_title : localized_title + " *",
+        path: link,
+        lesson_extras_available: lesson_extras_available?,
+        text_to_speech_enabled: text_to_speech_enabled?,
+        position: unit_group_units&.first&.position
+      }
+    ]
   end
 
   # @return {AssignableInfo} with strings translated

@@ -1,7 +1,5 @@
 @eyes
 @no_mobile
-@no_ie
-@skip
 Feature: Code Review Eyes
 
   @no_circle
@@ -15,6 +13,10 @@ Feature: Code Review Eyes
     And I save the section id from row 0 of the section table
     Given I create a student named "Hermione"
     And I join the section
+    # Observed flakiness trying to navigate to teacher dashboard while still signed in as Hermione.
+    # Explicitly wait for sign out to occur to avoid this.
+    And I wait to see ".alert-success"
+    And I sign out using jquery
     # Create a code review group with a student in it.
     # Save the group, and enable code review for the section.
     Given I sign in as "Dumbledore" and go home
