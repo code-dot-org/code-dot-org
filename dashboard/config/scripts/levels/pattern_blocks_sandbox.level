@@ -49,7 +49,7 @@
   "user_id": 16,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-18T15:44:13.524-04:00\",\"changed\":[\"cloned from \\\"New Artist Project\\\"\"],\"cloned_from\":\"New Artist Project\"},{\"changed_at\":\"2022-03-18 15:44:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:11:55 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:19:22 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:49:21 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:52:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 17:01:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:08 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:21 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:31 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:05 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:20 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:16:19 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-18T15:44:13.524-04:00\",\"changed\":[\"cloned from \\\"New Artist Project\\\"\"],\"cloned_from\":\"New Artist Project\"},{\"changed_at\":\"2022-03-18 15:44:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:11:55 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:19:22 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:49:21 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:52:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 17:01:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:08 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:21 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:31 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:05 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:20 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:16:19 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:18:39 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:20:38 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -614,7 +614,7 @@
       <xml>
         <category name="Actions">
           <block type="pattern_block">
-            <field name="VALUE">blue-60</field>
+            <field name="VALUE">smallRhombus1</field>
           </block>
           <block type="draw_turn">
             <field name="DIR">turnRight</field>
@@ -641,11 +641,19 @@
             </value>
           </block>
           <block type="jump_to">
-            <field name="VALUE">7</field>
+            <field name="VALUE">13</field>
           </block>
           <block type="jump_to_xy">
-            <field name="XPOS">0</field>
-            <field name="YPOS">0</field>
+            <field name="XPOS">200</field>
+            <field name="YPOS">200</field>
+          </block>
+          <block type="draw_move">
+            <field name="DIR">moveForward</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
           </block>
           <block type="point_to_param">
             <value name="VALUE">
@@ -693,12 +701,18 @@
               </block>
             </value>
           </block>
-        </category>
-        <category name="Comments">
-          <block type="comment">
-            <field name="TEXT"/>
+          <block type="math_single">
+            <field name="OP">ROOT</field>
+          </block>
+          <block type="math_trig">
+            <field name="OP">SIN</field>
+          </block>
+          <block type="math_modulo"/>
+          <block type="math_constant">
+            <field name="CONSTANT">PI</field>
           </block>
         </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
