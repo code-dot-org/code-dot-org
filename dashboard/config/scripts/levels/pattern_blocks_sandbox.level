@@ -49,7 +49,7 @@
   "user_id": 16,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-18T15:44:13.524-04:00\",\"changed\":[\"cloned from \\\"New Artist Project\\\"\"],\"cloned_from\":\"New Artist Project\"},{\"changed_at\":\"2022-03-18 15:44:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:11:55 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:19:22 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:49:21 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:52:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 17:01:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:08 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:21 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:31 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:05 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:20 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:16:19 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:18:39 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:20:38 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-18T15:44:13.524-04:00\",\"changed\":[\"cloned from \\\"New Artist Project\\\"\"],\"cloned_from\":\"New Artist Project\"},{\"changed_at\":\"2022-03-18 15:44:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"use_modal_function_editor\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:11:55 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:19:22 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:49:21 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 16:52:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-18 17:01:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:08 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:21 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:12:31 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:05 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:20 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:15:45 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:16:19 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:18:39 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:20:38 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:27:23 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:33:40 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:34:00 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:35:52 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:37:13 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:39:17 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:40:50 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:40:54 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:42:23 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:44:18 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:45:46 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 10:46:26 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-22 11:04:35 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -76,7 +76,7 @@
                     <block type="comment">
                       <field name="TEXT">Row 1</field>
                       <next>
-                        <block type="turtle_pattern_block_with_size">
+                        <block type="turtle_pattern_block_with_side_length">
                           <field name="VALUE">smallRhombus2</field>
                           <value name="SIZE">
                             <block type="variables_get">
@@ -93,7 +93,7 @@
                                     <block type="procedures_callnoreturn">
                                       <mutation name="rowTwo"/>
                                       <next>
-                                        <block type="turtle_pattern_block_with_size">
+                                        <block type="turtle_pattern_block_with_side_length">
                                           <field name="VALUE">smallRhombus3</field>
                                           <value name="SIZE">
                                             <block type="variables_get">
@@ -104,7 +104,7 @@
                                             <block type="procedures_callnoreturn">
                                               <mutation name="findPosition"/>
                                               <next>
-                                                <block type="turtle_pattern_block_with_size">
+                                                <block type="turtle_pattern_block_with_side_length">
                                                   <field name="VALUE">smallRhombus4</field>
                                                   <value name="SIZE">
                                                     <block type="variables_get">
@@ -121,7 +121,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="rowThree"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_size">
+                                                            <block type="turtle_pattern_block_with_side_length">
                                                             <field name="VALUE">smallRhombus5</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -132,7 +132,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_size">
+                                                            <block type="turtle_pattern_block_with_side_length">
                                                             <field name="VALUE">smallRhombus6</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -143,7 +143,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_size">
+                                                            <block type="turtle_pattern_block_with_side_length">
                                                             <field name="VALUE">smallRhombus7</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -163,7 +163,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_size">
+                                                            <block type="turtle_pattern_block_with_side_length">
                                                             <field name="VALUE">smallRhombus8</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -174,7 +174,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_size">
+                                                            <block type="turtle_pattern_block_with_side_length">
                                                             <field name="VALUE">smallRhombus9</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -191,7 +191,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="rowFive"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_size">
+                                                            <block type="turtle_pattern_block_with_side_length">
                                                             <field name="VALUE">smallRhombus10</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -320,13 +320,9 @@
           <mutation/>
           <field name="NAME" id="rowTwo">rowTwo</field>
           <statement name="STACK">
-            <block type="draw_turn">
+            <block type="draw_turn_by_constant_dropdown">
               <field name="DIR">turnRight</field>
-              <value name="VALUE">
-                <block type="math_number">
-                  <field name="NUM">30</field>
-                </block>
-              </value>
+              <field name="VALUE" config="30,60,90,120,180">30</field>
               <next>
                 <block type="jump">
                   <field name="DIR">jumpForward</field>
@@ -336,13 +332,9 @@
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn">
+                    <block type="draw_turn_by_constant_dropdown">
                       <field name="DIR">turnLeft</field>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">30</field>
-                        </block>
-                      </value>
+                      <field name="VALUE" config="30,60,90,120,180">30</field>
                     </block>
                   </next>
                 </block>
@@ -354,13 +346,9 @@
           <mutation/>
           <field name="NAME" id="rowThree">rowThree</field>
           <statement name="STACK">
-            <block type="draw_turn">
-              <field name="DIR">turnLeft</field>
-              <value name="VALUE">
-                <block type="math_number">
-                  <field name="NUM">330</field>
-                </block>
-              </value>
+            <block type="draw_turn_by_constant_dropdown">
+              <field name="DIR">turnRight</field>
+              <field name="VALUE" config="30,60,90,120,180">30</field>
               <next>
                 <block type="jump">
                   <field name="DIR">jumpForward</field>
@@ -380,13 +368,9 @@
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn">
+                    <block type="draw_turn_by_constant_dropdown">
                       <field name="DIR">turnLeft</field>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">30</field>
-                        </block>
-                      </value>
+                      <field name="VALUE" config="30,60,90,120,180">30</field>
                     </block>
                   </next>
                 </block>
@@ -401,13 +385,9 @@
             <block type="jump_to">
               <field name="VALUE">13</field>
               <next>
-                <block type="draw_turn">
+                <block type="draw_turn_by_constant_dropdown">
                   <field name="DIR">turnRight</field>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">30</field>
-                    </block>
-                  </value>
+                  <field name="VALUE" config="30,60,90,120,180">30</field>
                   <next>
                     <block type="jump">
                       <field name="DIR">jumpForward</field>
@@ -427,13 +407,9 @@
                         </block>
                       </value>
                       <next>
-                        <block type="draw_turn">
+                        <block type="draw_turn_by_constant_dropdown">
                           <field name="DIR">turnLeft</field>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <field name="NUM">30</field>
-                            </block>
-                          </value>
+                          <field name="VALUE" config="30,60,90,120,180">30</field>
                         </block>
                       </next>
                     </block>
@@ -447,160 +423,21 @@
           <mutation/>
           <field name="NAME" id="findPosition">findPosition</field>
           <statement name="STACK">
-            <block type="draw_turn">
-              <field name="DIR">turnRight</field>
-              <value name="VALUE">
-                <block type="math_number">
-                  <field name="NUM">15</field>
-                </block>
-              </value>
-              <next>
-                <block type="jump">
-                  <field name="DIR">jumpBackward</field>
-                  <value name="VALUE">
-                    <block type="math_arithmetic">
-                      <field name="OP">MULTIPLY</field>
-                      <value name="A">
-                        <block type="variables_get">
-                          <field name="VAR">length</field>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="math_number">
-                          <field name="NUM">2</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn">
-                      <field name="DIR">turnLeft</field>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <field name="NUM">30</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="jump">
-                          <field name="DIR">jumpForward</field>
-                          <value name="VALUE">
-                            <block type="math_arithmetic">
-                              <field name="OP">MULTIPLY</field>
-                              <value name="A">
-                                <block type="variables_get">
-                                  <field name="VAR">length</field>
-                                </block>
-                              </value>
-                              <value name="B">
-                                <block type="math_number">
-                                  <field name="NUM">2</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn">
-                              <field name="DIR">turnRight</field>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <field name="NUM">15</field>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="finalPointPosition">finalPointPosition</field>
-          <statement name="STACK">
-            <block type="procedures_callnoreturn">
-              <mutation name="findPosition"/>
-              <next>
-                <block type="procedures_callnoreturn">
-                  <mutation name="findPosition"/>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation>
-            <arg name="angle "/>
-            <arg name="length"/>
-          </mutation>
-          <field name="NAME" id="moveRight">moveRight</field>
-          <statement name="STACK">
-            <block type="draw_turn">
+            <block type="draw_turn_by_constant_dropdown">
               <field name="DIR">turnLeft</field>
-              <value name="VALUE">
-                <block type="math_arithmetic">
-                  <field name="OP">DIVIDE</field>
-                  <value name="A">
-                    <block type="parameters_get">
-                      <field name="VAR">angle </field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <field name="NUM">2</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
+              <field name="VALUE" config="30,60,90,120,180">90</field>
               <next>
                 <block type="jump">
-                  <field name="DIR">jumpBackward</field>
+                  <field name="DIR">jumpForward</field>
                   <value name="VALUE">
-                    <block type="parameters_get">
+                    <block type="variables_get">
                       <field name="VAR">length</field>
                     </block>
                   </value>
                   <next>
-                    <block type="draw_turn">
+                    <block type="draw_turn_by_constant_dropdown">
                       <field name="DIR">turnRight</field>
-                      <value name="VALUE">
-                        <block type="parameters_get">
-                          <field name="VAR">angle </field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="jump">
-                          <field name="DIR">jumpForward</field>
-                          <value name="VALUE">
-                            <block type="parameters_get">
-                              <field name="VAR">length</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn">
-                              <field name="DIR">turnLeft</field>
-                              <value name="VALUE">
-                                <block type="math_arithmetic">
-                                  <field name="OP">DIVIDE</field>
-                                  <value name="A">
-                                    <block type="parameters_get">
-                                      <field name="VAR">angle </field>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="math_number">
-                                      <field name="NUM">2</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
+                      <field name="VALUE" config="30,60,90,120,180">90</field>
                     </block>
                   </next>
                 </block>
@@ -612,25 +449,46 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Actions">
+        <category name="Stickers">
           <block type="pattern_block">
             <field name="VALUE">smallRhombus1</field>
           </block>
-          <block type="draw_turn">
-            <field name="DIR">turnRight</field>
-            <value name="VALUE">
+          <block type="turtle_pattern_block_with_side_length_non_param" editable="false">
+            <field name="VALUE">smallRhombus1</field>
+            <field name="SIZE">25</field>
+          </block>
+          <block type="turtle_pattern_block_with_side_length" editable="false">
+            <field name="VALUE">smallRhombus1</field>
+            <value name="SIZE">
               <block type="math_number">
-                <field name="NUM">???</field>
+                <field name="NUM">25</field>
               </block>
             </value>
           </block>
-          <block type="draw_turn">
-            <field name="DIR">turnLeft</field>
-            <value name="VALUE">
+          <block type="sticker">
+            <field name="VALUE">Alien</field>
+          </block>
+          <block type="turtle_sticker_with_size_non_param">
+            <field name="VALUE">Alien</field>
+            <field name="SIZE">25</field>
+          </block>
+          <block type="turtle_sticker_with_size">
+            <field name="VALUE">Alien</field>
+            <value name="SIZE">
               <block type="math_number">
-                <field name="NUM">???</field>
+                <field name="NUM">25</field>
               </block>
             </value>
+          </block>
+        </category>
+        <category name="Actions">
+          <block type="draw_turn_by_constant_dropdown">
+            <field name="DIR">turnRight</field>
+            <field name="VALUE" config="30,60,90,120,180">???</field>
+          </block>
+          <block type="draw_turn_by_constant_dropdown">
+            <field name="DIR">turnLeft</field>
+            <field name="VALUE" config="30,60,90,120,180">???</field>
           </block>
           <block type="jump">
             <field name="DIR">jumpForward</field>
@@ -655,10 +513,13 @@
               </block>
             </value>
           </block>
-          <block type="point_to_param">
-            <value name="VALUE">
-              <block type="math_number">
-                <field name="NUM">???</field>
+          <block type="point_to_by_constant_restricted">
+            <field name="VALUE" config="0,30,60,90,120,180,210,240,270,300,330,360">???</field>
+          </block>
+          <block type="draw_colour" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
               </block>
             </value>
           </block>
@@ -713,6 +574,7 @@
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
+        <category name="Variables" custom="VARIABLE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

@@ -1579,13 +1579,15 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // Add size input to the draw pattern_block block (text input & socket)
   function appendToDrawPatternBlockBlock(blockName, block) {
-    if (blockName === 'turtle_pattern_block_with_size') {
+    if (blockName === 'turtle_pattern_block_with_side_length') {
       block.appendDummyInput().appendTitle(msg.withSideLength());
       block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
       block.appendDummyInput().appendTitle(msg.pixels());
-      block.setTooltip(msg.drawPatternBlockWithSize());
-    } else if (blockName === 'turtle_pattern_block_with_size_non_param') {
-      block.appendDummyInput().appendTitle(msg.withSize());
+      block.setTooltip(msg.drawPatternBlockWithSideLength());
+    } else if (
+      blockName === 'turtle_pattern_block_with_side_length_non_param'
+    ) {
+      block.appendDummyInput().appendTitle(msg.withSideLength());
       block
         .appendDummyInput()
         .appendTitle(
@@ -1596,7 +1598,7 @@ exports.install = function(blockly, blockInstallOptions) {
           'SIZE'
         )
         .appendTitle(msg.pixels());
-      block.setTooltip(msg.drawPatternBlockWithSize());
+      block.setTooltip(msg.drawPatternBlockWithSideLength());
     } else {
       block.setTooltip(msg.drawPatternBlock());
     }
@@ -1614,11 +1616,11 @@ exports.install = function(blockly, blockInstallOptions) {
     );
   };
 
-  blockly.Blocks.turtle_pattern_block_with_size = createDrawPatternBlockBlock(
-    'turtle_pattern_block_with_size'
+  blockly.Blocks.turtle_pattern_block_with_side_length = createDrawPatternBlockBlock(
+    'turtle_pattern_block_with_side_length'
   );
 
-  generator.turtle_pattern_block_with_size = function() {
+  generator.turtle_pattern_block_with_side_length = function() {
     let size = generator.valueToCode(
       this,
       'SIZE',
@@ -1628,11 +1630,11 @@ exports.install = function(blockly, blockInstallOptions) {
         'block_id_${this.id}');\n`;
   };
 
-  blockly.Blocks.turtle_pattern_block_with_size_non_param = createDrawPatternBlockBlock(
-    'turtle_pattern_block_with_size_non_param'
+  blockly.Blocks.turtle_pattern_block_with_side_length_non_param = createDrawPatternBlockBlock(
+    'turtle_pattern_block_with_side_length_non_param'
   );
 
-  generator.turtle_pattern_block_with_size_non_param = function() {
+  generator.turtle_pattern_block_with_side_length_non_param = function() {
     let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
     return `Turtle.drawPatternBlock('${this.getTitleValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
