@@ -77,7 +77,8 @@ export const assignmentUnitShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   lesson_extras_available: PropTypes.bool.isRequired,
-  text_to_speech_enabled: PropTypes.bool.isRequired
+  text_to_speech_enabled: PropTypes.bool.isRequired,
+  position: PropTypes.number
 });
 
 export const assignmentCourseVersionShape = PropTypes.shape({
