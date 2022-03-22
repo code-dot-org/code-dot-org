@@ -282,8 +282,7 @@ export default connect((state, ownProps) => ({
     state.teacherSections,
     ownProps.courseOfferingId,
     ownProps.courseVersionId,
-    state.progress.scriptId,
-    false
+    state.progress.scriptId
   ),
   professionalLearningCourse: state.progress.professionalLearningCourse,
   hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
