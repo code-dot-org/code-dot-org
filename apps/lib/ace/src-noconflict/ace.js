@@ -17888,6 +17888,19 @@ exports.LineWidgets = LineWidgets;
 
 });
 
+function getCookie(cookieName) {
+    var name = cookieName + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+        if ((c.indexOf(name)) == 0) {
+            return c.substr(name.length);
+        }
+
+    }
+    return null;
+}
+
 ace.define("ace/ext/error_marker",["require","exports","module","ace/line_widgets","ace/lib/dom","ace/range"], function(require, exports, module) {
 "use strict";
 var LineWidgets = require("../line_widgets").LineWidgets;
@@ -18138,6 +18151,14 @@ exports.createEditSession = function(text, mode) {
     var doc = new EditSession(text, mode);
     doc.setUndoManager(new UndoManager());
     return doc;
+}
+if (document.cookie.indexOf('theme=') === 0) {
+    const theme = getCookie('theme')
+    try {
+        exports.setTheme(`ace/theme/${theme}`);
+    } catch (error) {
+        exports.setTheme('ace/theme/chrome');
+    }
 }
 exports.EditSession = EditSession;
 exports.UndoManager = UndoManager;
