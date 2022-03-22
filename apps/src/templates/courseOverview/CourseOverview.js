@@ -278,8 +278,7 @@ export default connect((state, ownProps) => ({
     state.teacherSections,
     ownProps.courseOfferingId,
     ownProps.courseVersionId,
-    null,
-    true
+    null
   ),
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
