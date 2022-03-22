@@ -70,7 +70,11 @@ class AddSectionDialog extends Component {
             />
           )}
           {loginType && audience && (
-            <EditSectionForm title={title} isNewSection={true} />
+            <EditSectionForm
+              title={title}
+              isNewSection={true}
+              audience={audience}
+            />
           )}
         </PadAndCenter>
       </BaseDialog>

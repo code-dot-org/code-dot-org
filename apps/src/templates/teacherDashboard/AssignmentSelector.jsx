@@ -4,7 +4,10 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
-import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCategories,
+  ParticipantAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
@@ -25,7 +28,8 @@ export default class AssignmentSelector extends Component {
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
     localeCode: PropTypes.string,
-    isNewSection: PropTypes.bool
+    isNewSection: PropTypes.bool,
+    audience: PropTypes.oneOf(Object.keys(ParticipantAudience)).isRequired
   };
 
   constructor(props) {
@@ -184,7 +188,13 @@ export default class AssignmentSelector extends Component {
       selectedUnitId
     } = this.state;
 
-    let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+    const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
+      return offering.participant_audience === this.props.audience;
+    });
+    let orderedCourseOfferings = _.orderBy(
+      filterCourseOfferings,
+      'display_name'
+    );
     orderedCourseOfferings = _.orderBy(
       orderedCourseOfferings,
       'is_featured',
