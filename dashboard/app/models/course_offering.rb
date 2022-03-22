@@ -35,11 +35,7 @@ class CourseOffering < ApplicationRecord
       [
         {
           course_versions: [
-            content_root: [
-              unit_group: [
-                :script
-              ]
-            ]
+            :content_root
           ]
         },
       ]
@@ -204,6 +200,6 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.all_course_offerings
-    @@all_course_offerings ||= all
+    @@all_course_offerings ||= CourseOffering.with_summary_models.all
   end
 end

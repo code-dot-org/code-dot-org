@@ -42,7 +42,11 @@ class CourseVersion < ApplicationRecord
   UNVERSIONED = 'unversioned'.freeze
 
   def units
-    content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
+    content_root_type == 'UnitGroup' ? content_root_from_cache.default_units : [content_root_from_cache]
+  end
+
+  def content_root_from_cache
+    content_root_type == 'UnitGroup' ? UnitGroup.get_from_cache(content_root_id) : Script.get_from_cache(content_root_id)
   end
 
   # "Interface" for content_root:
