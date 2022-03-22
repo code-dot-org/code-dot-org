@@ -2,7 +2,7 @@
   "script": {
     "name": "vpl-csd1-summer-pilot-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-16 15:24:37 UTC",
+    "serialized_at": "2022-03-19 00:53:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1034,6 +1034,36 @@
   ],
   "resources": [
     {
+      "name": "Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing",
+      "key": "curriculum_guide_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide_2"
+      }
+    },
+    {
+      "name": "Day 1 - CSD 2022 PILOT Agenda ",
+      "url": "https://docs.google.com/document/d/1hmyoOIkDczzqBaE5NsmeomRoFwOHSk8uUVqkJnk8fcg/edit",
+      "key": "day_1_-_csd_2022_pilot_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "day_1_-_csd_2022_pilot_agenda"
+      }
+    },
+    {
+      "name": "Day 1 - CSD 2022 PILOT Slides",
+      "url": "https://docs.google.com/presentation/d/1Vzc4rO2OnS9gce0ygVgCjiyzos6-IdNWMOaRnMbnbL8/edit#slide=id.g8159f286a5_1_0",
+      "key": "day_1_-_csd_2022_pilot_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "day_1_-_csd_2022_pilot_slides"
+      }
+    },
+    {
       "name": "Fake Equity Video",
       "url": "https://www.youtube.com/watch?v=uhcA6K8rWp0",
       "key": "fake_equity_video",
@@ -1055,7 +1085,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_2",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_1_-_csd_2022_pilot_agenda",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "day_1_-_csd_2022_pilot_slides",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 
