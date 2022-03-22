@@ -77,9 +77,18 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.can_be_instructor?(user)}
   end
 
-  # All course versions in a course offering should have the same participant audience
-  def pl_course?
-    course_versions.any?(&:pl_course?)
+  def can_assign_to_section_participants?(participant_type)
+    participant_audience = course_versions.first.content_root.participant_audience
+
+    if participant_type == 'facilitator'
+      return ['facilitator', 'teacher', 'student'].include? participant_audience
+    elsif participant_type == 'teacher'
+      return ['teacher', 'student'].include? participant_audience
+    elsif participant_type == 'student'
+      return 'student' == participant_audience
+    end
+
+    false
   end
 
   def any_versions_launched?
@@ -98,28 +107,12 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.content_root.is_a?(Script) && cv.has_editor_experiment?(user)}
   end
 
-  def self.assignable_course_offerings(user)
-    CourseOffering.all.select {|co| co.assignable?(user)}
+  def self.assignable_course_offerings(participant_type, user)
+    CourseOffering.all.select {|co| co.assignable?(user) && co.can_assign_to_section_participants?(participant_type)}
   end
 
-  def self.assignable_course_offerings_info(user, locale_code = 'en-us')
-    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
-  end
-
-  def self.assignable_student_course_offerings(user)
-    assignable_course_offerings(user).select {|aco| !aco.pl_course?}
-  end
-
-  def self.assignable_student_course_offerings_info(user, locale_code = 'en-us')
-    assignable_student_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
-  end
-
-  def self.assignable_pl_course_offerings(user)
-    assignable_course_offerings(user).select(&:pl_course?)
-  end
-
-  def self.assignable_pl_course_offerings_info(user, locale_code = 'en-us')
-    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  def self.assignable_course_offerings_info(participant_type, user, locale_code = 'en-us')
+    assignable_course_offerings(participant_type, user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def assignable?(user)
