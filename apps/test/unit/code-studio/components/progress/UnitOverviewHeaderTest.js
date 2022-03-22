@@ -108,57 +108,10 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
   });
 
-  it('passes properly-formatted versions to AssignmentVersionSelector', () => {
-    const versions = {
-      1: {
-        id: 1,
-        key: '2017',
-        version_year: '2017',
-        content_root_id: 10,
-        name: 'Course A',
-        path: '/s/coursea-2017',
-        type: 'Script',
-        is_stable: true,
-        is_recommended: false,
-        locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
-        units: {
-          1: {
-            id: 1,
-            name: 'Course A',
-            path: '/s/coursea-2017',
-            lesson_extras_available: true
-          }
-        }
-      },
-      2: {
-        id: 2,
-        key: '2018',
-        version_year: '2018',
-        content_root_id: 11,
-        name: 'Course A',
-        path: '/s/coursea-2018',
-        type: 'Script',
-        is_stable: true,
-        is_recommended: true,
-        locales: ['English', 'Italiano', 'Slovenčina'],
-        units: {
-          2: {
-            id: 2,
-            name: 'Course A (2018)',
-            path: '/s/coursea-2018',
-            lesson_extras_available: true
-          }
-        }
-      }
-    };
-    const wrapper = shallow(
-      <UnitOverviewHeader
-        {...defaultProps}
-        courseVersionId={2}
-        versions={versions}
-      />,
-      {disableLifecycleMethods: true}
-    );
+  it('passes versions to AssignmentVersionSelector', () => {
+    const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
+      disableLifecycleMethods: true
+    });
 
     const versionSelector = wrapper.find('AssignmentVersionSelector');
     assert.equal(1, versionSelector.length);
