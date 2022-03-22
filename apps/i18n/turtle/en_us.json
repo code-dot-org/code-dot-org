@@ -105,5 +105,6 @@
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "Changes the width of the pencil.",
   "withSize": "with size",
+  "withSideLength": "with side length",
   "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
 }

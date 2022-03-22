@@ -1580,8 +1580,9 @@ exports.install = function(blockly, blockInstallOptions) {
   // Add size input to the draw pattern_block block (text input & socket)
   function appendToDrawPatternBlockBlock(blockName, block) {
     if (blockName === 'turtle_pattern_block_with_size') {
-      block.appendDummyInput().appendTitle(msg.withSize());
+      block.appendDummyInput().appendTitle(msg.withSideLength());
       block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
+      block.appendDummyInput().appendTitle(msg.pixels());
       block.setTooltip(msg.drawPatternBlockWithSize());
     } else if (blockName === 'turtle_pattern_block_with_size_non_param') {
       block.appendDummyInput().appendTitle(msg.withSize());
@@ -1593,7 +1594,8 @@ exports.install = function(blockly, blockInstallOptions) {
             blockly.FieldTextInput.numberValidator
           ),
           'SIZE'
-        );
+        )
+        .appendTitle(msg.pixels());
       block.setTooltip(msg.drawPatternBlockWithSize());
     } else {
       block.setTooltip(msg.drawPatternBlock());
