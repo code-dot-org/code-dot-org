@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A teacher has listed scores in the array `testScores` for their students’ scores on a test. They want to curve the scores by adding 3 to each score.  Each test is out of 20 points total.\r\n\r\n**Do this:**\r\n\r\n1. Traverse the `testScores` array and add 3 to each element. \r\n2. Declare and initialize an array `testPercentages` of type `double` with the same length as `testScores`.\r\n3. Assuming the test is worth 20 points, update the value of each element in   `testPercentages` so that the value in each element corresponds to the percentage grade for each element in `testScore`\r\n4. Print each element stored in `testPercentages` to the console.\r\n5. Run and debug your program frequently while writing your code.\r\n\r\nIf you did this correctly, `{100.0, 95.0, 60.0, 55.0, 80.0}` should be stored in `testPercentages` after running your code.\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "CurvedTest.java": {
+        "text": "public class CurvedTest{    \n  public static void main(String[] args){\n\n    double[] testScores = {17, 16, 9, 8, 13};\n\n    // TO DO: Traverse the testScores array and add 3 to each element in testScores. \n    \n    // TO DO: Declare and initialize an array `testPercentages` of type `double` with the same length as `testScores`.\n    \n    // TO DO: Update the value of each element in testPercentages so that the value \n    // in each element corresponds to the percentage grade for each element in `testScore`\n\n    \n    // TO DO: Print each element stored in `testPercentages` to the console.\n\n  } \n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-21T20:36:57.000Z",
+  "level_num": "custom",
+  "user_id": 977,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-22 02:52:29 +0000\",\"changed\":[\"published\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 02:55:48 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 02:56:04 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 03:06:25 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+}]]></config>
+</Javalab>
