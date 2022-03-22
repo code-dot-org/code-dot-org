@@ -30,7 +30,7 @@ class CourseOffering < ApplicationRecord
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
 
   # The set of models which may be touched by ScriptSeed
-  scope :with_summary_models, -> do
+  scope :with_versions, -> do
     includes(
       [
         {
@@ -200,6 +200,6 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.all_course_offerings
-    @@all_course_offerings ||= CourseOffering.with_summary_models.all
+    @@all_course_offerings ||= CourseOffering.with_versions.all
   end
 end
