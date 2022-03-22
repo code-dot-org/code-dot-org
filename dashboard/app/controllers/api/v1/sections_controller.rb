@@ -182,7 +182,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     participant_types =
       if user.permission?(UserPermission::PLC_REVIEWER) || user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
-        SharedCourseConstants::PARTICIPANT_AUDIENCE.keys
+        ['student', 'teacher', 'facilitator']
       elsif user.permission?(UserPermission::FACILITATOR)
         ['student', 'teacher']
       else
