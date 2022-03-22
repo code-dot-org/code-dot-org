@@ -214,12 +214,11 @@ Resources:
                 SAML:aud: https://signin.aws.amazon.com/saml
       ManagedPolicyArns:
         - !Ref DataAnalystPolicy
-        # TODO: compare what we are giving this role below against these two AWS policies recommended by the docs. Specifically the redshift:*
-        - AmazonRedshiftQueryEditor
-        - AmazonRedshiftQueryEditorV2FullAccess
-    Tags:
-      - Key: sqlworkbench-team
-        Value: red-team
+        - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor
+        - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
+      Tags:
+        - Key: sqlworkbench-team
+          Value: red-team
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
