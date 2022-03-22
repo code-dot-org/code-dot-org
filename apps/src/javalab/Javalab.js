@@ -85,7 +85,7 @@ Javalab.prototype.init = function(config) {
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
-  this.isEditingExemplar = config.level.isEditingExemplar;
+  this.isEditingExemplar = !!config.level.isEditingExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -221,12 +221,17 @@ Javalab.prototype.init = function(config) {
 
   const startSources = config.level.lastAttempt || config.level.startSources;
   const validation = config.level.validation || {};
-  // if startSources exists and contains at least one key, use startSources
-  if (
+  if (this.isEditingExemplar && config.level.exemplarSources) {
+    // If we're editing an exemplar, set initial sources
+    // with the exemplar code saved to the level definition.
+    getStore().dispatch(setAllSources(config.level.exemplarSources));
+  } else if (
     startSources &&
     typeof startSources === 'object' &&
     Object.keys(startSources).length > 0
   ) {
+    // Otherwise, if startSources exists and contains at least one key, use startSources.
+
     if (config.level.editBlocks) {
       Object.keys(startSources).forEach(key => {
         startSources[key].isValidation = false;
@@ -245,12 +250,6 @@ Javalab.prototype.init = function(config) {
     } else {
       getStore().dispatch(setAllSources(startSources));
     }
-  }
-
-  // If we're editing an exemplar, override initial sources
-  // with the exemplar code saved to the level definition.
-  if (this.isEditingExemplar && config.level.exemplarSources) {
-    getStore().dispatch(setAllSources(config.level.exemplarSources));
   }
 
   // If we aren't editing start sources but we have validation code, we need to
