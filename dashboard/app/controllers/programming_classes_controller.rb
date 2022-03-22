@@ -31,7 +31,7 @@ class ProgrammingClassesController < ApplicationController
     end
     @programming_class.assign_attributes(programming_class_params.except(:category_key))
     programming_environment_category = @programming_class.programming_environment.categories.find_by_key(programming_class_params[:category_key])
-    @programming_class.programming_category_id = programming_environment_category&.id
+    @programming_class.programming_environment_category_id = programming_environment_category&.id
     begin
       @programming_class.save! if @programming_class.changed?
       render json: @programming_class.summarize_for_edit.to_json
@@ -53,6 +53,7 @@ class ProgrammingClassesController < ApplicationController
       :tips,
       examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height]
     )
+    transformed_params[:examples] = transformed_params[:examples].to_json if transformed_params[:examples]
     transformed_params
   end
 end
