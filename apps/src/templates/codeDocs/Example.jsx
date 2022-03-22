@@ -19,15 +19,17 @@ export default function Example({example, programmingEnvironmentName}) {
         : example.app + '/embed';
       return (
         <div style={styles.example}>
-          <div style={{width: '50%'}}>{content}</div>
-          <iframe
-            src={embedUrl}
-            style={{
-              ...styles.embeddedApp,
-              ...embeddedIdeStyles[programmingEnvironmentName]
-            }}
-          />
-          {example.image && <img src={example.image} />}
+          <div style={{flexGrow: 1}}>{content}</div>
+          <div style={embeddedIdeContainerStyles[programmingEnvironmentName]}>
+            <iframe
+              src={embedUrl}
+              style={{
+                ...styles.embeddedApp,
+                ...embeddedIdeStyles[programmingEnvironmentName]
+              }}
+            />
+            {example.image && <img src={example.image} />}
+          </div>
         </div>
       );
     } else {
@@ -68,7 +70,7 @@ Example.propTypes = {
 const styles = {
   example: {
     display: 'flex',
-    gap: 10
+    gap: 20
   },
   embeddedApp: {
     border: 0,
@@ -86,5 +88,18 @@ const embeddedIdeStyles = {
     width: 450,
     height: 781,
     transform: 'scale(0.5)'
+  }
+};
+
+const embeddedIdeContainerStyles = {
+  applab: {
+    width: '280px',
+    height: '450px',
+    paddingTop: '10px'
+  },
+  gamelab: {
+    width: '240px',
+    height: '400px',
+    paddingTop: '20px'
   }
 };

@@ -2606,3 +2606,23 @@ gl:
           lessons:
             lesson-1:
               name: Variables
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Bucles
+              key: Bucles
+            Events:
+              name: Eventos
+              key: Eventos
+            Conditionals:
+              name: Condicionais
+              key: Condicionais
+            Functions:
+              name: Funcións
+              key: Funcións
+            Variables:
+              name: Variables
+              key: Variables
+            For Loops:
+              name: Bucles "Para" (For)
+              key: Bucles "Para" (For)

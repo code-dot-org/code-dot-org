@@ -67,7 +67,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_moveForward = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldLabel(i18n.blockMoveForward())
       );
@@ -83,7 +83,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_moveBackward = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldLabel(i18n.blockMoveBackward())
       );
@@ -100,7 +100,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -125,7 +125,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_destroyBlock = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldLabel(i18n.blockDestroyBlock())
       );
@@ -146,7 +146,7 @@ exports.install = function(blockly, blockInstallOptions) {
       );
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput()
         .appendTitle(i18n.blockIf())
         .appendTitle(dropdown, 'TYPE')
@@ -174,7 +174,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.craft_ifLavaAhead = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(i18n.blockIfLavaAhead());
       this.appendStatementInput('DO').appendTitle(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -202,7 +202,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput()
         .appendTitle(i18n.blockPlaceXPlace())
         .appendTitle(dropdown, 'TYPE');
@@ -232,7 +232,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput()
         .appendTitle(i18n.blockPlaceXPlace())
         .appendTitle(dropdown, 'TYPE')

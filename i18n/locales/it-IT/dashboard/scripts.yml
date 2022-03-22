@@ -11236,3 +11236,41 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Per cominciare
+              key: Per cominciare
+            Sequencing:
+              name: Sequenze di istruzioni
+              key: Sequenze di istruzioni
+            Loops:
+              name: Cicli
+              key: Cicli
+            Events:
+              name: Eventi
+              key: Eventi
+            Conditionals:
+              name: Istruzioni condizionali
+              key: Istruzioni condizionali
+            Functions:
+              name: Funzioni
+              key: Funzioni
+            Variables:
+              name: Variabili
+              key: Variabili
+            For Loops:
+              name: Cicli con contatore
+              key: Cicli con contatore
+            End of Course projects:
+              name: Progetti di fine corso
+              key: Progetti di fine corso
+            Reviewing your reflections:
+              name: Analizza le tue riflessioni
+              key: Analizza le tue riflessioni
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Benvenuti in "Fondamenti di Informatica - Corso per insegnanti"
+            Lesson Planning:
+              key: Pianificazione Lezione
+            Next steps:
+              key: Passi successivi

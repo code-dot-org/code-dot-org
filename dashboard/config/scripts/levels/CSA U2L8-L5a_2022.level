@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `Customer`(#e7e8ea) class represents a customer of Project Mercury Pastries Food Truck. It has an instance variable called `customerDessert`(#e7e8ea) for the customer's dessert.\r\n\r\n##In Customer.java:\r\n1. Write the method `modifyDessert()`(#e7e8ea) in the `Customer`(#e7e8ea) class to use the `Scanner`(#e7e8ea) class to modify the dessert flavor or price.\r\n\r\n**Note:** Stuck? Look at the pseudocode in the **Show Me How** to help you!\r\n\r\n##In MyConsole.java:\r\n2. Test your `enterOrders()`(#e7e8ea) method.\r\n\r\n![](https://images.code.org/cb8ae141373b8d1c5d2f44d69937aed3-image-1647391421522.gif)\r\n\r\n::: details [**Show Me How**]\r\nUse the pseudocode below to write the `modifyDessert()`(#e7e8ea) method:\r\n\r\n```\r\ncreate Scanner object\r\nset quantity to 0\r\nset choice to 0\r\n\r\nwhile choice >= 0\r\n   prompt the user to choose 1 for flavor, 2 for price, or -1 to quit\r\n   get the user's choice\r\n   \r\n   if choice is 1\r\n      prompt the user for the flavor\r\n      get the user's input\r\n      set the new flavor for customerDessert\r\n   \r\n   if choice is 2\r\n      prompt the user for the price\r\n      get the user's input\r\n      set the new price for customerDessert\r\n      \r\nclose Scanner\r\n```\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA U2L8 PBT_2022",
+    "display_name": "Modify Customer Dessert",
+    "bubble_choice_description": "Use the Scanner class and a sentinel value to modify the dessert flavor or price.",
+    "thumbnail_url": "https://images.code.org/cb8ae141373b8d1c5d2f44d69937aed3-image-1647391421522.gif"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-12T13:20:55.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-12T13:20:55.147+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L2v2 Placeholder_2022\\\"\"],\"cloned_from\":\"CSA U2L8-L2v2 Placeholder_2022\"},{\"changed_at\":\"2022-03-12 13:20:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 17:07:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 17:07:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 17:56:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 17:57:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 18:07:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 18:08:34 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 23:52:19 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 23:55:26 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 23:57:35 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-16 00:42:23 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-16 00:44:35 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -9698,3 +9698,26 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: დაწყება
+              key: დაწყება
+            Loops:
+              name: ციკლები
+              key: ციკლები
+            Events:
+              name: მოვლენები
+              key: მოვლენები
+            Conditionals:
+              name: პირობითი ბრძანებები
+              key: პირობითი ბრძანებები
+            Functions:
+              name: ფუნქციები
+              key: ფუნქციები
+            Variables:
+              name: ცვლადები
+              key: ცვლადები
+            For Loops:
+              name: '"მიზნისთვის" ციკლები'
+              key: '"მიზნისთვის" ციკლები'

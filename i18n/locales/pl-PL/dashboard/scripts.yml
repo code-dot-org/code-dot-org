@@ -3285,6 +3285,7 @@ pl:
               name: Rozdział 1 Jednostka 4 - Sprawdzian
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonimowa ankieta dla ucznia: Przystępowanie do egzaminu AP'
+          name: csp-pre-survey
         csd1-2017:
           title: CSD Jednostka 1 - Rozwiązywanie problemów ('17- '18)
           description_short: Dowiedz się, w jaki sposób ludzie pracują na komputerach, aby rozwiązać problemy.
@@ -5059,6 +5060,7 @@ pl:
             CSP post-course survey:
               name: CSP Ankieta po zakończeniu kursu
           student_description: Witamy w ankiecie po ukończeniu kursu poświęconego "Zasadom informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
+          name: csp-post-survey
         public-key-cryptography:
           title: Widgety kryptografii klucza publicznego
           lessons:
@@ -8935,6 +8937,7 @@ pl:
             CSD post-course survey:
               name: CSD Ankieta po zakończeniu kursu
           student_description: Witamy w ankiecie po ukończeniu kursu poświęconego "Odkryciom informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
+          name: csd-post-survey
         csd-novice-18:
           title: Odkrycia Informatyki Przemyślenia Nowicjusza 2018-2019
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia 2019 [CS Discoveries Facilitators in Training 2019]
@@ -10123,6 +10126,7 @@ pl:
             CSP Mid-year survey:
               name: CSP Ankieta w trakcie roku
           student_description: Witamy w ankiecie w trakcie roku poświęconej "Zasadom informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
+          name: csp-mid-survey
         gamelab:
           title: Laboratorium Gier (Game Lab)
           description: Samouczki z nauczycielem do opracowania w  Game Lab.  Te samouczki wychodzą poza zakres koncepcji ujętych w CSD.
@@ -11985,6 +11989,7 @@ pl:
             CSD post-course survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           student_description: "Ankieta po kursie Odkrycia informatyki stanowi ważne narzędzie, którego używamy do uzyskania od Ciebie informacji zwrotnej oraz wprowadzenia udoskonaleń do kursu. \nAnkieta ma charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko zbiorczy wyniki dla całej klasy. Takie wyniki mają kluczowe znaczenie dla Twojego nauczyciela oraz dla Code.org, umożliwiając rozwijanie i doskonalenie kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie."
+          name: csd-post-survey-2018
         csp-post-survey-2018:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           description_audience: Uczniowie CSP
@@ -11997,6 +12002,7 @@ pl:
             CSP post-course survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           student_description: Witamy w ankiecie po ukończeniu kursu poświęconego "Zasadom informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
+          name: csp-post-survey-2018
         csp5-pilot:
           title: 'CSP Jednostka 5 Pilotaż: Listy, pętle i przejścia'
           lesson_groups:
@@ -23948,6 +23954,20 @@ pl:
           name: self-paced-pl-csa1-2022
           title: 'Jednostka 1 - Moduł 1: Powitanie'
         self-paced-pl-csa2-2022:
+          lessons:
+            lesson-3:
+              description_student: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
+              description_teacher: |-
+                **Będziesz:**
+
+                -   Uzyskaj wsparcie podczas nauczania zasad informatyki.
+
+                **Sugerowany czas:** 15 minut
           name: self-paced-pl-csa2-2022
         self-paced-pl-csa3-2022:
           lessons:
@@ -24605,6 +24625,8 @@ pl:
               display_name: Pokaż, co wiesz
             lessonGroup-5:
               display_name: Piaskownica
+        ui-test-csa-family-script:
+          name: ui-test-csa-family-script
         csa-preview:
           lessons:
             lesson-2:
@@ -24725,3 +24747,41 @@ pl:
               display_name: Pokaż, co wiesz
           name: csa2-2022-exemplars
           title: Jednostka 2 - Struktura i projektowanie klas [Exemplars]
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Pierwsze kroki
+              key: Pierwsze kroki
+            Sequencing:
+              name: Sekwencjonowanie
+              key: Sekwencjonowanie
+            Loops:
+              name: Pętle
+              key: Pętle
+            Events:
+              name: Zdarzenia
+              key: Zdarzenia
+            Conditionals:
+              name: Zdania z warunkami
+              key: Zdania z warunkami
+            Functions:
+              name: Funkcje
+              key: Funkcje
+            Variables:
+              name: Zmienne
+              key: Zmienne
+            For Loops:
+              name: Pętle dla (for)
+              key: Pętle dla (for)
+            End of Course projects:
+              name: Projekty na koniec kursu
+              key: Projekty na koniec kursu
+            Reviewing your reflections:
+              name: Przeglądanie Twoich refleksji
+              key: Przeglądanie Twoich refleksji
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Witamy na "Podstawach Nauczania Informatyki"
+            Lesson Planning:
+              key: Planowanie lekcji
+            Next steps:
+              key: Następne kroki

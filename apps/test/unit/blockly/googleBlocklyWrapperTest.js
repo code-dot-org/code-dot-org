@@ -7,13 +7,21 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
+  // Reset context menu registry.
+  const registry = JSON.parse(
+    JSON.stringify(GoogleBlockly.ContextMenuRegistry.registry.registry_)
+  );
   beforeEach(() => {
     GoogleBlockly.JavaScript = sinon.spy();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
   });
   afterEach(() => {
-    // reset Blockly for other tests
+    // Reset Blockly for other tests.
     Blockly = cdoBlockly; // eslint-disable-line no-global-assign
+    // Reset content menu for other tests.
+    GoogleBlockly.ContextMenuRegistry.registry.registry_ = JSON.parse(
+      JSON.stringify(registry)
+    );
   });
 
   it('readOnly properties cannot be set', () => {

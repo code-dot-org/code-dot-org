@@ -1,29 +1,22 @@
 name 'Java Lab Video'
 title 'title'
 description 'description here'
+video_key 'csp_cs_is_changing_everything'
 
 markdown <<MARKDOWN
 ## HOLDER SPACE for VIDEO
 
+Script: https://docs.google.com/document/d/1xuCFy2T5tjRFZCvk51ZcbQzau2lKkS4W43xmEYnbRLw/edit
 
-**What programming do I need to prior to the workshop?**
-We expect that participants in our CSA workshop know how to independently write and debug an error-free function (or procedure) with one or more parameters and that uses conditional logic, loops, and an array (or list).  This can be in any language!
+**Vocabulary:**
 
-**How will this material help me prepare for my workshop?**
-In this series of lessons, we will cover how to use conditional logic, loops, and arrays in Java.  If you are well versed in a block-programming language, you have a lot of computational thinking skills already!  This series of lessons will help your transfer that knowledge to the Java programming language.  We expect that doing these lessons will help teachers who are new to Java pick up the new concepts in the workshop faster.
-
-**Is this how students will learn Java?**
-Your students will use Java Lab in class, but the activities are teacher lead and much more hands-on, interactive, and creative.  This is more of a “crash course” for adult learners and intended to be done without a teacher. 
-
-**What will I learn in this lesson?**
-In this lesson you will learn:
-
-* How to create a new file in the JavaLab IDE
-* Customs for naming files 
-* The basics of Java syntax
-* How to use comments in a Java program
-* How to print information to the console
-
-Let’s get started!
+* **Class header** - consists of the class keyword and the name of the class
+* **Integrated development environment (IDE)** - a software application for writing, compiling, testing, and debugging program code
+* **Syntax** - the rules for how a programmer must write code for a computer to understand
+* **Syntax error** - a mistake in the code that does not follow a programming language's syntax
+* **Camel case** - a naming convention in which the first letter of the first word is either uppercase or lowercase, and the first letter of each additional word is uppercase
+* **Case-sensitive** - differentiating between lower and uppercase letters
+* **Bug** - an error in the code
+* **Debugging** - finding and fixing problems in an algorithm or program
 
 MARKDOWN

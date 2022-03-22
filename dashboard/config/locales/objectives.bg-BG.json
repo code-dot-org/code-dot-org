@@ -2,6 +2,9 @@
   "bg-BG": {
     "data": {
       "objectives": {
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "Продължете да правите проекти в целия App Lab, използвайки ресурсите на code.org/applab"
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Декларира променлива"
         }

@@ -32,7 +32,7 @@ class UnitGroup < ApplicationRecord
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
-  has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_unit_group_units, -> {where(experiment_name: nil).order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_units, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
@@ -390,6 +390,7 @@ class UnitGroup < ApplicationRecord
       versions: summarize_versions(user),
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
+      course_offering_id: course_version&.course_offering&.id,
       course_version_id: course_version&.id,
       course_path: link,
       course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil

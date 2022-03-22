@@ -2612,3 +2612,20 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Zanke
+              key: Zanke
+            Events:
+              name: Dogodki
+              key: Dogodki
+            Conditionals:
+              name: Pogoji
+              key: Pogoji
+            Functions:
+              name: Funkcije
+              key: Funkcije
+            Variables:
+              name: Spremenljivke
+              key: Spremenljivke

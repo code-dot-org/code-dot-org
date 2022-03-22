@@ -309,24 +309,17 @@
           "definition": "(الشعر) - قسم منشق من القصيدة وهو منظم في صف ينتهي في هامش اليد اليمنى."
         },
         "sprite/coursef/2021": {
-          "word": "شبح",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "شبح"
         },
         "behavior/coursef/2021": {
-          "word": "السلوك",
-          "definition": ""
+          "word": "السلوك"
         },
         "program/coursef/2021": {
           "word": "البرنامج",
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "algorithm/coursef/2021": {
-          "word": "الخوارزمية",
-          "definition": ""
+          "word": "الخوارزمية"
         },
         "event/coursef/2021": {
           "word": "الحدث",
@@ -336,13 +329,8 @@
           "word": "متغير",
           "definition": "عنصر نائب عن قطعة من المعلومات التي يمكن أن تتغير."
         },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "input/coursef/2021": {
-          "word": "الإدخال",
-          "definition": ""
+          "word": "الإدخال"
         },
         "loop/coursef/2021": {
           "word": "الحلقة",
@@ -355,10 +343,6 @@
         "for_loop/coursef/2021": {
           "word": "حلقة \"For\"",
           "definition": "حلقات لها بداية ونهاية ومقدار زيادة محدد سلفًا (مقدار الخطوة)."
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "التعلم الآلي",
@@ -593,7 +577,6 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/coursed/2021": {
-          "word": "",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "repeat/coursed/2021": {
@@ -605,8 +588,7 @@
           "definition": "تعليمات للكمبيوتر. توضع العديد من الأوامر معًا لتشكيل خوارزميات وبرامج كمبيوتر."
         },
         "conditionals/coursed/2021": {
-          "word": "الجمل الشرطية",
-          "definition": ""
+          "word": "الجمل الشرطية"
         },
         "pseudocode/coursed/2021": {
           "word": "الكود الخوارزمي",
@@ -657,6 +639,9 @@
         "event/express/2021": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "code/express/2021": {
+          "definition": "لكتابة الكود، أو لكتابة التعليمات للكمبيوتر"
         },
         "loop/express/2021": {
           "word": "الحلقة",
@@ -766,16 +751,14 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "behavior/coursee/2021": {
-          "word": "السلوك",
-          "definition": ""
+          "word": "السلوك"
         },
         "algorithm/coursee/2021": {
           "word": "الخوارزمية",
           "definition": "قائمة الخطوات اللازمة لإنجاز مهمة."
         },
         "sprite/coursee/2021": {
-          "word": "شبح",
-          "definition": ""
+          "word": "شبح"
         },
         "event/coursee/2021": {
           "word": "الحدث",
@@ -783,7 +766,7 @@
         },
         "copyright/coursee/2021": {
           "word": "حقوق النسخ",
-          "definition": ""
+          "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح الآخرين بفعل نفس الشيء."
         },
         "loop/coursee/2021": {
           "word": "الحلقة",
@@ -802,8 +785,7 @@
           "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
         },
         "conditionals/coursee/2021": {
-          "word": "الجمل الشرطية",
-          "definition": ""
+          "word": "الجمل الشرطية"
         },
         "while_loop/coursee/2021": {
           "word": "حلقة \"While\"",
@@ -829,49 +811,13 @@
           "word": "التعلم الآلي",
           "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
         },
-        "usability/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "prototype/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user_interface/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
         "bug/csd/2021": {
           "word": "خطأ",
           "definition": "جزء من برنامج لا يعمل بصورة صحيحة."
         },
-        "feature/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "analog/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "digital/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "array/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
         "for_loop/csd/2021": {
           "word": "حلقة \"For\"",
           "definition": "حلقات لها بداية ونهاية ومقدار زيادة محدد سلفًا (مقدار الخطوة)."
-        },
-        "parameter/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "circuit/csd/2021": {
-          "word": "",
-          "definition": ""
         },
         "decode/csd/2021": {
           "word": "",
@@ -952,61 +898,12 @@
           "word": "",
           "definition": ""
         },
-        "html/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "html_element/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "html_tag/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "website_content/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "website_structure/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "heading/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
         "digital_footprint/csd/2021": {
-          "word": "البصمة الرقمية",
-          "definition": ""
-        },
-        "css/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "css_selector/csd/2021": {
-          "word": "",
-          "definition": ""
+          "word": "البصمة الرقمية"
         },
         "copyright/csd/2021": {
           "word": "حقوق النسخ",
-          "definition": ""
-        },
-        "relevant/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "trustworthy/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "search_engine/csd/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "css_class/csd/2021": {
-          "word": "",
-          "definition": ""
+          "definition": "الحق القانوني الحصري في طباعة أو نشر أو أداء أو تصوير فيلم أو تسجيل مادة أدبية أو فنية أو موسيقية، والسماح الآخرين بفعل نفس الشيء."
         }
       }
     }
