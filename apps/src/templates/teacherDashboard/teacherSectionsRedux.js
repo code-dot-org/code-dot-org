@@ -50,8 +50,6 @@ const importUrlByProvider = {
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
 const SET_AVAILABLE_PARTICIPANT_TYPES =
   'teacherDashboard/SET_AVAILABLE_PARTICIPANT_TYPES';
-const SET_CAN_ASSIGN_PL_OFFERINGS =
-  'teacherDashboard/SET_CAN_ASSIGN_PL_OFFERINGS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -552,8 +550,6 @@ const initialState = {
   courseOfferings: {},
   // The participant types the user can create sections for
   availableParticipantTypes: [],
-  // If a instructor can assign pl course offerings
-  canAssignPLOfferings: false,
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited (see studentShape PropType)
@@ -651,13 +647,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       availableParticipantTypes: action.availableParticipantTypes
-    };
-  }
-
-  if (action.type === SET_CAN_ASSIGN_PL_OFFERINGS) {
-    return {
-      ...state,
-      canAssignPLOfferings: action.canAssignPLOfferings
     };
   }
 
