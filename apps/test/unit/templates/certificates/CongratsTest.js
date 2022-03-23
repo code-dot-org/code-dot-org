@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
 import StudentsBeyondHoc from '@cdo/apps/templates/certificates/StudentsBeyondHoc';
