@@ -11,34 +11,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-19/unit2/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp2"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csp-19/unit2/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-19/unit2/standards/"
-        ],
-        [
-          "professionalLearning",
-          "https://code.org/educate/professional-learning/middle-high"
-        ]
-      ],
       "use_legacy_lesson_plans": true,
       "version_year": "2019"
     },
     "new_name": null,
     "family_name": "csp2",
-    "serialized_at": "2022-03-11 12:07:52 UTC",
+    "serialized_at": "2022-03-22 21:16:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1884,13 +1862,96 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp-19/unit2/",
+      "key": "lesson_plans_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_3"
+      }
+    },
+    {
+      "name": "Professional Learning",
+      "url": "https://code.org/educate/professional-learning/middle-high",
+      "key": "professional_learning",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "professional_learning"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp-19/unit2/standards/",
+      "key": "standard_mappings_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_3"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp2",
+      "key": "teacher_forum_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_2"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csp-19/unit2/vocab/",
+      "key": "vocabulary_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_1"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_3",
+        "script.name": "csp2-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "professional_learning",
+        "script.name": "csp2-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_3",
+        "script.name": "csp2-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_2",
+        "script.name": "csp2-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_1",
+        "script.name": "csp2-2019"
+      }
+    }
   ],
   "scripts_student_resources": [
 
