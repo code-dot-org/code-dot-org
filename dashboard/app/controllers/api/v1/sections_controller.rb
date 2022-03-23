@@ -68,7 +68,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.find(params[:id])
     authorize! :manage, section
 
-    return head :bad_request unless Section.valid_participant_type? params[:audience]
+    # Can't update participant_type once it is set
+    return head :bad_request if params[:audience]
 
     # Unhide unit for this section before assigning
     section.toggle_hidden_script @unit, false if @unit
@@ -79,7 +80,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:script_id] = @unit&.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
-    fields[:participant_type] = params[:audience]
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
     fields[:lesson_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
@@ -181,9 +181,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     return head :forbidden unless current_user && !current_user.student?
 
     participant_types =
-      if user.permission?(UserPermission::PLC_REVIEWER) || user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
+      if current_user.permission?(UserPermission::PLC_REVIEWER) || current_user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || current_user.permission?(UserPermission::LEVELBUILDER)
         ['student', 'teacher', 'facilitator']
-      elsif user.permission?(UserPermission::FACILITATOR)
+      elsif current_user.permission?(UserPermission::FACILITATOR)
         ['student', 'teacher']
       else
         ['student']

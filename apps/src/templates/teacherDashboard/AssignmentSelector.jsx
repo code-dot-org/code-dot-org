@@ -225,6 +225,15 @@ export default class AssignmentSelector extends Component {
 
     const orderedUnits = _.orderBy(selectedCourseVersion?.units, 'position');
 
+    Object.keys(CourseOfferingCategories);
+
+    const filteredCategories = _.filter(
+      Object.keys(CourseOfferingCategories),
+      function(category) {
+        return courseOfferingsByCategories[category];
+      }
+    );
+
     return (
       <div>
         <span style={styles.family}>
@@ -244,7 +253,7 @@ export default class AssignmentSelector extends Component {
                 {i18n.decideLater()}
               </option>
             )}
-            {Object.keys(CourseOfferingCategories).map(category => (
+            {filteredCategories.map(category => (
               <optgroup
                 key={category}
                 label={CourseOfferingCategories[category]}
