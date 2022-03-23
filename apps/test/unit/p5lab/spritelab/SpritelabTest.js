@@ -147,10 +147,10 @@ describe('SpriteLab', () => {
       it('does not modify the list if there is an animation that matches a background', () => {
         instance.isBlockly = true;
         const initialAnimationList = {
-          orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
+          orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
-            '44c5937d-c5c0-4676-bd0c-f7a86e99dd98': {
-              name: 'bee'
+            '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
+              name: 'cave'
             }
           }
         };
