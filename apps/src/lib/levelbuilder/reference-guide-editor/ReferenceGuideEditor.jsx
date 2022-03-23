@@ -77,7 +77,7 @@ export default function ReferenceGuideEditor(props) {
         Parent Reference Guide
         <HelpTip>
           <p>
-            This change the reference guide to be nested within a different
+            This will move the reference guide to be nested within a different
             reference guide. All guides nested within this guide will follow it.
           </p>
         </HelpTip>

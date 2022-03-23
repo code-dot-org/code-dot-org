@@ -12,6 +12,46 @@ import Dialog, {
   Body as DialogBody
 } from '@cdo/apps/templates/Dialog';
 
+const DeleteWarningDialog = ({
+  pendingDeleteKey,
+  pendingDeleteAffectedKeys,
+  setShowDeleteWarningDialog,
+  deleteGuide
+}) => (
+  <Dialog
+    body={
+      <>
+        <DialogTitle>{`Are you sure you want to permanently delete reference guide ${pendingDeleteKey}?
+          `}</DialogTitle>
+        <DialogBody>
+          <p>
+            This will also delete any child reference guides. The following
+            child reference guides will be deleted:
+          </p>
+          <ul>
+            {pendingDeleteAffectedKeys.map(guideKey => (
+              <li key={guideKey}>{guideKey}</li>
+            ))}
+          </ul>
+        </DialogBody>
+      </>
+    }
+    cancelText="Cancel"
+    confirmText="Delete"
+    confirmType="danger"
+    isOpen={true}
+    handleClose={() => setShowDeleteWarningDialog(false)}
+    onCancel={() => setShowDeleteWarningDialog(false)}
+    onConfirm={() => deleteGuide()}
+  />
+);
+DeleteWarningDialog.propTypes = {
+  pendingDeleteKey: PropTypes.string,
+  pendingDeleteAffectedKeys: PropTypes.arrayOf(PropTypes.string),
+  setShowDeleteWarningDialog: PropTypes.func,
+  deleteGuide: PropTypes.func
+};
+
 const MiniIconButton = ({icon, alt, func, href}) => (
   <TextLink
     onClick={func}
@@ -140,31 +180,11 @@ export default function ReferenceGuideEditAll(props) {
       </div>
 
       {showDeleteWarningDialog && (
-        <Dialog
-          body={
-            <>
-              <DialogTitle>{`Are you sure you want to permanently delete reference guide ${pendingDeleteKey}?
-          `}</DialogTitle>
-              <DialogBody>
-                <p>
-                  This will also delete any child reference guides. List of
-                  guides affected:
-                </p>
-                <ul>
-                  {pendingDeleteAffectedKeys.map(guideKey => (
-                    <li key={guideKey}>{guideKey}</li>
-                  ))}
-                </ul>
-              </DialogBody>
-            </>
-          }
-          cancelText="Cancel"
-          confirmText="Delete"
-          confirmType="danger"
-          isOpen={true}
-          handleClose={() => setShowDeleteWarningDialog(false)}
-          onCancel={() => setShowDeleteWarningDialog(false)}
-          onConfirm={() => deleteGuide()}
+        <DeleteWarningDialog
+          pendingDeleteKey={pendingDeleteKey}
+          pendingDeleteAffectedKeys={pendingDeleteAffectedKeys}
+          setShowDeleteWarningDialog={setShowDeleteWarningDialog}
+          deleteGuide={deleteGuide}
         />
       )}
 
