@@ -1,4 +1,5 @@
-<%# Note this file must be indented one level, as it is a child of 'Resources'. %>
+<%- # Note this file must be indented one level, as it is a child of 'Resources'. %>
+<%- unless rack_env?(:adhoc) -%>
 # -----------------------------------------------
 # Begin codeprojects.org resources
 # 
@@ -12,7 +13,7 @@
 LocalhostCodeprojectsRecord:
   Type: AWS::Route53::RecordSet
   Properties:
-    HostedZoneId: <%= codeprojects_hostedzone_id %>
+    HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
     Name: <%="localhost.#{domain}"%>
     Type: A
     TTL: 3600
@@ -23,20 +24,21 @@ LocalhostCodeprojectsRecord:
 CodeprojectsCertificate:
   Type: AWS::CertificateManager::Certificate
   Properties:
-    DomainName: <%= codeprojects_hostname %>
+    DomainName: <%= CDO.codeprojects_hostname %>
     <%- if rack_env?(:production) -%>
     SubjectAlternativeNames:
-      - www.<%= codeprojects_hostname %>
+      - www.<%= CDO.codeprojects_hostname %>
     <%- end -%>
     ValidationMethod: DNS
     DomainValidationOptions:
-      - DomainName: <%= codeprojects_hostname %>
-        HostedZoneId: <%= codeprojects_hostedzone_id %>
+      - DomainName: <%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
       <%- if rack_env?(:production) -%>
-      - DomainName: www.<%= codeprojects_hostname %>
-        HostedZoneId: <%= codeprojects_hostedzone_id %>
+      - DomainName: www.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
       <%- end -%>
 
 # -----------------------------------------------
 # End codeprojects.org resources
 # -----------------------------------------------
+<%- end -%>
