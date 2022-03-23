@@ -20,7 +20,7 @@ const cardInfoByAudience = {
     title: i18n.participantTypeTeacherTitle(),
     description: i18n.participantTypeTeacherDescription()
   },
-  facilitaor: {
+  facilitator: {
     title: i18n.participantTypeFacilitatorTitle(),
     description: i18n.participantTypeFacilitatorDescription()
   }
@@ -33,15 +33,13 @@ const cardInfoByAudience = {
 export default class AudienceTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    handleImportOpen: PropTypes.func,
     setParticipantType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
-    disabled: PropTypes.bool,
     availableParticipantTypes: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   render() {
-    const {title, setParticipantType, handleCancel, disabled} = this.props;
+    const {title, setParticipantType, handleCancel} = this.props;
 
     return (
       <div style={style.container}>
@@ -65,7 +63,6 @@ export default class AudienceTypePicker extends Component {
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.gray}
-            disabled={disabled}
           />
         </div>
       </div>
@@ -83,7 +80,6 @@ const ParticipantTypeCard = props => (
 );
 ParticipantTypeCard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
   type: PropTypes.string
 };
 
