@@ -779,8 +779,10 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       post 'users/:user_id/display_theme', to: 'users#update_display_theme'
+      post 'users/:user_id/mute_music', to: 'users#post_mute_music'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/display_theme', to: 'users#get_display_theme'
+      get 'users/:user_id/mute_music', to: 'users#get_mute_music'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
@@ -946,7 +948,8 @@ Dashboard::Application.routes.draw do
   # offline-service-worker*.js needs to be loaded the the root level of the
   # domain('studio.code.org/').
   # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
-  get '/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
+  get '/s/express-2021/lessons/1/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
   # Adds the experiment cookie in the User's browser which allows them to experience offline features
   get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
+  get '/offline-files.json', action: :offline_files, controller: :offline
 end

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-18 13:54:09 UTC",
+    "serialized_at": "2022-03-22 16:51:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -107,7 +107,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**How do I decide what attributes an object should have?**\n\nIn the previous unit, students created subclasses of the `Painter` class and objects of different types. Students revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. Students define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access.",
-        "preparation": "* Print copies of the Classes and Objects Manipulatives (one set for each student)",
+        "preparation": "* Print copies of the Classes and Objects Manipulatives (one set for each student)\n* (Optional) Cut out the manipulatives on pages 2-5 on the Classes and Objects Manipulatives\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
         "student_overview": "**How do I decide what attributes an object should have?**\n\nIn the previous unit, you created subclasses of the `Painter` class and objects of different types. You revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. You define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access."
       },
       "seeding_key": {
@@ -125,7 +125,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I create objects with specific values?**\n\nStudents revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, students differentiate between actual and formal parameters and explore how constructor calls function in programs.",
-        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson",
+        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
         "student_overview": "**How can I create objects with specific values?**\n\nIn the previous unit, you wrote constructors in your `Painter` subclasses that instantiated an object using the `Painter` class constructor. In this lesson, you revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, you learn the difference between actual and formal parameters and explore how constructor calls function in programs."
       },
       "seeding_key": {
@@ -178,7 +178,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents discover the need for accessor methods to obtain the values stored in the instance variables of a class. Students review the components of a method signature and how methods return values. Students practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions.",
-        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)",
+        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have learned that `private` instance variables cannot be directly accessed from outside the class. In this lesson, you discover the need for accessor methods to obtain the values stored in the instance variables of a class. You review the components of a method signature and how methods return values. You practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions."
       },
       "seeding_key": {
@@ -224,7 +224,7 @@
     },
     {
       "key": "lesson-15",
-      "name": "Scope",
+      "name": "Scope and this",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1336,7 +1336,7 @@
       "key": "47f35057-9a75-471d-8ef2-236f4f985a23",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *compound expression* and explain the order of operations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *compound assignment operator* and demonstrate the examples."
+        "description": "**Do This:** Explain the order of operations:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the order of operations\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Respond to the self-check question\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *compound assignment operator* and demonstrate the examples."
       },
       "seeding_key": {
         "activity_section.key": "47f35057-9a75-471d-8ef2-236f4f985a23",
@@ -1597,16 +1597,31 @@
       "key": "775cc692-ef1d-45f3-9dcd-acd92f1f313b",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate designing a class and creating its UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate creating objects from the class.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n**Do This:** Click through the animated slides to demonstrate designing a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Identify the attributes and behaviors that are needed\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the class name and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> List the instance variables\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Briefly introduce `private` methods",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Gather the Classes and Objects Manipulatives to reuse in upcoming lessons."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Students learn about `private` methods in a later unit. Introduce that methods can be `private` but do not spend time explaining what that means or how it works."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "775cc692-ef1d-45f3-9dcd-acd92f1f313b",
+        "lesson_activity.key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15"
+      }
+    },
+    {
+      "key": "d065e464-f228-458e-8f92-905c3d1d800d",
+      "position": 13,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes."
+      },
+      "seeding_key": {
+        "activity_section.key": "d065e464-f228-458e-8f92-905c3d1d800d",
         "lesson_activity.key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15"
       }
     },
@@ -1783,7 +1798,7 @@
       "key": "c524dcfe-bef6-4131-a786-f700cddf3fd0",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student the set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Four on a Pencil strategy to discuss the prompts.\n* *What would a no-argument constructor look like for the class you designed?*\n* *What would a parameterized constructor look like for the class you designed?*\n\n**Discussion Goal:** Students share ideas about the default values they would set in the no-argument constructor for their objects. Students identify the parameters for the parameterized constructor they would need to define.",
+        "description": "**Group:** Place students in groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Four on a Pencil strategy to discuss the prompts.\n* *What would a no-argument constructor look like for the class you designed?*\n* *What would a parameterized constructor look like for the class you designed?*\n\n**Discussion Goal:** Students share ideas about the default values they would set in the no-argument constructor for their objects. Students identify the parameters for the parameterized constructor they would need to define.",
         "name": "Designing Your Object",
         "tips": [
           {
@@ -2304,7 +2319,7 @@
       "key": "4f3d0d90-f95b-4936-94cb-2709b2d46b7a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair the set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling an accessor method using the Classes and Objects Manipulatives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2698,7 +2713,7 @@
       "key": "6066c686-1809-4ff9-bc1f-65ea7816009c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the output of this program?*\n* *What do you wonder about the output of this program?*\n\n**Discussion Goal:** Students notice that printing an object displays random letters and numbers to the console instead of the values stored in its instance variables. Students may wonder what the letters and numbers mean and why the values are not printed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The toString() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain why printing an object that doesn't have a `toString()` method in its class does not print the values stored in its instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the `Object` class and introduce its `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *If we could write our own version of the `toString()` method in our `Dessert` class, what information would we want it to include?*\n\n**Discussion Goal:** Students suggest including the instance variables in the `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and demonstrate overriding the `toString()` method and printing an object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Is this information useful? Why or why not?*\n\n**Discussion Goal:** Students note that the output contains the information about the object, but it is not in a user-friendly format.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the output of this program?*\n* *What do you wonder about the output of this program?*\n\n**Discussion Goal:** Students notice that printing an object displays random letters and numbers to the console instead of the values stored in its instance variables. Students may wonder what the letters and numbers mean and why the values are not printed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The toString() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain why printing an object that doesn't have a `toString()` method in its class does not print the values stored in its instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and introduce its `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *If we could write our own version of the `toString()` method in our `Dessert` class, what information would we want it to include?*\n\n**Discussion Goal:** Students suggest including the instance variables in the `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and demonstrate overriding the `toString()` method and printing an object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Is this information useful? Why or why not?*\n\n**Discussion Goal:** Students note that the output contains the information about the object, but it is not in a user-friendly format.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2715,7 +2730,7 @@
       "key": "41b31194-9c81-4212-97ca-23634fa14156",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate each escape sequence.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a quotation mark ( `\\\"` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a new line ( `\\n` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a backslash ( `\\\\` )"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `super` keyword can be used to call the superclass method.\n\n**<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This:** Introduce escape sequences, and have students determine the output for each example:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a quotation mark ( `\\\"` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a new line ( `\\n` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Printing a backslash ( `\\\\` )"
       },
       "seeding_key": {
         "activity_section.key": "41b31194-9c81-4212-97ca-23634fa14156",
@@ -2867,7 +2882,7 @@
       "key": "edc06f93-d91d-421d-bad0-80424ee235db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *scope* and demonstrate the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *global variable* and demonstrate the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Diagramming Scope handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Diagramming Scope handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the solution."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *scope* and demonstrate the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Diagramming Scope handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Diagramming Scope handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the solution."
       },
       "seeding_key": {
         "activity_section.key": "edc06f93-d91d-421d-bad0-80424ee235db",
@@ -2890,7 +2905,7 @@
       "key": "32412d99-f975-4f70-b7a9-5328d5dbfeae",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `this` keyword and demonstrate how it can be used in a constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how the `this` keyword can be used in a method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Think about the objects you have designed in this unit. What are some scenarios where the `this` keyword might be useful?*\n\n**Discussion Goal:** Students suggest various uses for the `this` keyword in the Project Mercury Pastries Food Truck scenario, such as in the constructor to refer to the current object's instance variables, to specify using the current object's version of a method, or to call a parameterized constructor in the same class with specified values. Students may also suggest passing the current object as a parameter to a method or constructor call.",
+        "description": "**Do This:** Click through the animated slides to demonstrate using the `this` keyword in a constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> To specify the object's instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> To call another constructor in the class\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how the `this` keyword can be used in a method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Think about the objects you have designed in this unit. What are some scenarios where the `this` keyword might be useful?*\n\n**Discussion Goal:** Students suggest various uses for the `this` keyword in the Project Mercury Pastries Food Truck scenario, such as in the constructor to refer to the current object's instance variables, to specify using the current object's version of a method, or to call a parameterized constructor in the same class with specified values. Students may also suggest passing the current object as a parameter to a method or constructor call.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5598,6 +5613,102 @@
       }
     },
     {
+      "name": "[KEY] U2L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1n6xEhE4ajp_vcU1cC6tyzzZmiukRFJ5vtHeVcgunlaU/edit?usp=sharing",
+      "key": "_key_u2l1_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Ooka_EsCAcfa6rc6HQPRZMbACUjiW2CkHJQQ_0m1Uzg/edit?usp=sharing",
+      "key": "_key_u2l2_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1dOFPIaHAgKxIT8aDUgwlhSMluS7t6ZfjbW2n-9VJJBw/edit?usp=sharing",
+      "key": "_key_u2l3_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1jYMuXx9utXClR9rdYz2IDbfuvjL5FobGAfiLWaynnCA/edit?usp=sharing",
+      "key": "_key_u2l4_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1H9x4KXzebFK_4bEiLbIvrff8qNxT48p1B-H4WYmQ69A/edit?usp=sharing",
+      "key": "_key_u2l5_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1CxwGZXBtOl9pDkEb_y-lNb3LI-gFlTIi49JlxNxejk4/edit?usp=sharing",
+      "key": "_key_u2l6_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l6_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1JiXqnyfb0utp3hQu6KR0xUt8-EPGmrkTVdaGvTJk3KY/edit?usp=sharing",
+      "key": "_key_u2l7_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1zASndSk5oIckBdCajS0LNKBezMxpeJXljcfeE0ATDZI/edit?usp=sharing",
+      "key": "_key_u2l8_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa2-2022/resources",
       "key": "all_resources_4",
@@ -5739,6 +5850,102 @@
       }
     },
     {
+      "name": "U2L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1e_iaBTTV0srizdsC0oNzjgECyKMl9aLILm9TW6Qbobs/edit?usp=sharing",
+      "key": "u2l1_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "U2L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1HBSM_QFJVx8krzl6YAUOt-H-x8Jpxcn1kvIClCPBK-I/edit?usp=sharing",
+      "key": "u2l2_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l2_extra_practice"
+      }
+    },
+    {
+      "name": "U2L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1vIxRV6Bz1gOcYBEV3awI2k3vSP4_ddRkQLLQ7XJaY3Y/edit?usp=sharing",
+      "key": "u2l3_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "U2L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1u5jg_ra-1DBrAAJE5vJKI5f-UG9Smomfzb85BbHp084/edit?usp=sharing",
+      "key": "u2l4_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l4_extra_practice"
+      }
+    },
+    {
+      "name": "U2L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1cbVbyZYlPdn7LT0etlrXklRBU6ngKYpct0xm11J-E4w/edit?usp=sharing",
+      "key": "u2l5_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l5_extra_practice"
+      }
+    },
+    {
+      "name": "U2L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Hn0IfIEIpZo1vqkyVq6OZh9KRmygfCFQQ2pjuZIK8HM/edit?usp=sharing",
+      "key": "u2l6_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "name": "U2L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1MtNdTfZR4TU3qFjGt2A22-_gdNmu1o22geovyp40dTM/edit?usp=sharing",
+      "key": "u2l7_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l7_extra_practice"
+      }
+    },
+    {
+      "name": "U2L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1c6A3aHC15YpLu8taRWj1xWJtuhYWAehtkv-ANxdWkwI/edit?usp=sharing",
+      "key": "u2l8_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l8_extra_practice"
+      }
+    },
+    {
       "name": "Unit 2 Guide",
       "url": "https://docs.google.com/document/d/1FjdUqh94hmb2mAFRwLxYK-no8brQ3ze77y37hDJThTA/edit?usp=sharing",
       "key": "unit_2_guide",
@@ -5809,7 +6016,31 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "u2l6_extra_practice"
       }
     },
     {
@@ -5821,7 +6052,31 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "resource.key": "_key_u2l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "u2l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "u2l8_extra_practice"
       }
     },
     {
@@ -5935,6 +6190,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "unit_2_guide"
       }
     },
@@ -5947,7 +6214,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "_key_u2l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u2l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u2l3_extra_practice"
       }
     },
     {
@@ -5959,7 +6244,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u2l4_extra_practice"
       }
     },
     {
@@ -6217,16 +6520,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "formal_parameter"
-      }
-    },
-    {
-      "key": "global_variable",
-      "word": "global variable",
-      "definition": "a variable that is accessible throughout the entire program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "global_variable"
       }
     },
     {
@@ -6541,12 +6834,6 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "vocabulary.key": "_this_keyword"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-15",
-        "vocabulary.key": "global_variable"
       }
     },
     {

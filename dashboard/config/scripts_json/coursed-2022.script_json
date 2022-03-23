@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-17 22:26:05 UTC",
+    "serialized_at": "2022-03-22 22:21:35 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2247,7 +2247,7 @@
       "key": "ea99adc6-d611-4d13-9da7-04fcb43c6df3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** What is your favorite (classroom appropriate) video game? What is your favorite part of the game?\n\n\nMost of the time, students will respond with some kind of event. When you recognize a student response that describes an event, ask the student to describe it further.\n\nOnce the student is done describing their fun, take a minute to relate it back to the definition of an **event**.\n\n&nbsp\n\n\n###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n\n - **Event**: An action that causes something to happen.\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pair-Share” slide\n\n\nAsk the students to try and relate some of their favorite parts of video games and how they can be described as events. Have them pair-share and discuss the differences between their events and their partner's.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** What is your favorite (classroom appropriate) video game? What is your favorite part of the game?\n\n\nMost of the time, students will respond with some kind of event. When you recognize a student response that describes an event, ask the student to describe it further.\n\nOnce the student is done describing their game, take a minute to relate it back to the definition of an **event**.\n\n&nbsp\n\n\n###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n\n - **Event**: An action that causes something to happen.\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pair-Share” slide\n\n\nAsk the students to try and relate some of their favorite parts of video games and how they can be described as events. Have them pair-share and discuss the differences between their events and their partner's.",
         "name": "Introduction",
         "tips": [
           {
@@ -2552,8 +2552,7 @@
       "key": "92a12478-0870-4331-a034-b5f1ed4164af",
       "position": 13,
       "properties": {
-        "description": "&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 16-17 - Lesson Extras” slide",
-        "progression_name": "Lesson Extras"
+        "description": "&nbsp\n####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
       },
       "seeding_key": {
         "activity_section.key": "92a12478-0870-4331-a034-b5f1ed4164af",
@@ -2705,8 +2704,19 @@
       }
     },
     {
-      "key": "31073c5d-beaf-420a-af98-4aa468a7b9d4",
+      "key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4",
       "position": 7,
+      "properties": {
+        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4",
+        "lesson_activity.key": "bd41d9a1-3212-4e4a-928e-ad0e05bbdfee"
+      }
+    },
+    {
+      "key": "31073c5d-beaf-420a-af98-4aa468a7b9d4",
+      "position": 8,
       "properties": {
         "tips": [
           {
@@ -2722,7 +2732,7 @@
     },
     {
       "key": "426a591c-ec85-48bf-9864-5f909eafa458",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pause and Think Online** Video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
@@ -2778,10 +2788,21 @@
       }
     },
     {
-      "key": "bc19ceeb-4c22-40a1-9794-7b0e998b5e78",
+      "key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
       "position": 1,
       "properties": {
-        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrand” video",
+        "description": "####Online Puzzles\n\nSome students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper as they program online."
+      },
+      "seeding_key": {
+        "activity_section.key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
+        "lesson_activity.key": "911da8c1-6cda-4fe7-a888-af2af8b70994"
+      }
+    },
+    {
+      "key": "bc19ceeb-4c22-40a1-9794-7b0e998b5e78",
+      "position": 2,
+      "properties": {
+        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Artist Intro with JR Hildebrand” video",
         "name": "Drawing Shapes with Loops",
         "progression_name": "Video: Artist Intro with JR Hildebrand"
       },
@@ -2792,7 +2813,7 @@
     },
     {
       "key": "61fa4607-bb88-4573-8bea-10a12e88181a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide",
         "progression_name": "Skill Building"
@@ -2804,7 +2825,7 @@
     },
     {
       "key": "5f35a867-9366-4759-b0e8-be48c34c09c5",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Loops with the Artist” video\n",
         "progression_name": "Video: Loops with the Artist"
@@ -2816,7 +2837,7 @@
     },
     {
       "key": "f52282b3-cfad-49a9-a004-5297a4ca7bbc",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-9 - Skill Building” slide\n",
         "progression_name": "Skill Building"
@@ -2828,7 +2849,7 @@
     },
     {
       "key": "f83fde9f-a2d7-4f99-94fb-ac2fc9b79352",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Challenge” slide\n",
         "progression_name": "Challenge"
@@ -2840,7 +2861,7 @@
     },
     {
       "key": "3f3774e2-c8fa-4318-9e6e-d58f6983e746",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Practice” slide\n",
         "progression_name": "Practice"
@@ -2851,13 +2872,13 @@
       }
     },
     {
-      "key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
-      "position": 7,
+      "key": "3315af90-e8ff-4568-813e-2b743e90bf30",
+      "position": 8,
       "properties": {
-        "description": "####Online Puzzles\n\nSome students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper as they program online."
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
       },
       "seeding_key": {
-        "activity_section.key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
+        "activity_section.key": "3315af90-e8ff-4568-813e-2b743e90bf30",
         "lesson_activity.key": "911da8c1-6cda-4fe7-a888-af2af8b70994"
       }
     },
@@ -2996,8 +3017,7 @@
       "key": "791b5b99-593d-4287-ab93-a9970d63744e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Lesson Extras” slide",
-        "progression_name": "Lesson Extras"
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Lesson Extras” slide"
       },
       "seeding_key": {
         "activity_section.key": "791b5b99-593d-4287-ab93-a9970d63744e",
@@ -3066,7 +3086,7 @@
       "key": "dda904ae-113f-4561-8a61-e9ed43297a47",
       "position": 1,
       "properties": {
-        "name": "Reflection",
+        "description": "&nbsp\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide",
         "tips": [
           {
             "type": "teachingTip",
@@ -3083,7 +3103,7 @@
       "key": "0634eee0-ab96-4581-adc1-8bda642fdf93",
       "position": 2,
       "properties": {
-        "description": "\n&nbsp\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide\n\n\nThe two bolded questions below are the ones featured in the slides. Feel free to ask your students to answer the other Flash Chat questions as well.\n- If you were going to code this up in Blocky, what would you need to add around your conditionals to let the code run more than one time? (A loop)\n- What other things do you do during the day under certain conditions?\n- **If you are supposed to do something when the value of a card is more than 5, and you draw a 5, do you meet that condition?**\n- Notice that conditions are either \"True\" or \"False.\" There is no assessment of a condition that evaluates to \"Banana.\"\n- **When you need to meet several combinations of conditions, we can use something called \"nested conditionals.\"**\n\t- **What do you think that means?**\n\t- **Can you give an example of where we saw that during the game?**\n- What part of that game did you like the best?"
+        "description": "\nThe two bolded questions below are the ones featured in the slides. Feel free to ask your students to answer the other Flash Chat questions as well.\n- If you were going to code this up in Blocky, what would you need to add around your conditionals to let the code run more than one time? (A loop)\n- What other things do you do during the day under certain conditions?\n- **If you are supposed to do something when the value of a card is more than 5, and you draw a 5, do you meet that condition?**\n- Notice that conditions are either \"True\" or \"False.\" There is no assessment of a condition that evaluates to \"Banana.\"\n- **When you need to meet several combinations of conditions, we can use something called \"nested conditionals.\"**\n\t- **What do you think that means?**\n\t- **Can you give an example of where we saw that during the game?**\n- What part of that game did you like the best?"
       },
       "seeding_key": {
         "activity_section.key": "0634eee0-ab96-4581-adc1-8bda642fdf93",
@@ -3253,6 +3273,17 @@
       }
     },
     {
+      "key": "3ea15706-caac-499b-aef5-a7210f291bfc",
+      "position": 10,
+      "properties": {
+        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ea15706-caac-499b-aef5-a7210f291bfc",
+        "lesson_activity.key": "818d6302-7244-4a90-934f-31dc3381836a"
+      }
+    },
+    {
       "key": "d9a92c19-1b83-49fa-bc9c-de8298122305",
       "position": 1,
       "properties": {
@@ -3276,10 +3307,22 @@
       }
     },
     {
-      "key": "e3c7f2af-1680-47d8-abac-407bcf97f905",
+      "key": "8ae849bd-292d-44e8-9ccd-9d9bfc86c592",
       "position": 1,
       "properties": {
-        "description": "Pull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the \"if at flower / else block\". Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should \"get nectar\" if there is a flower and \"make honey\" if there is a honeycomb.\n\nFill in the rest of the code and press \"Run\". Discuss with the class why this worked.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nReview the \"Conditionals with Cards\" activity with your students.\n\n- _What is a conditional statement?_\n- _When is it useful for you to use a conditional in your program?_",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ae849bd-292d-44e8-9ccd-9d9bfc86c592",
+        "lesson_activity.key": "1253667e-4b6d-4ef3-9274-070f711e4b3d"
+      }
+    },
+    {
+      "key": "e3c7f2af-1680-47d8-abac-407bcf97f905",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preview - If/Else with Bee” slide\n\n**Say:** *Now we're going to use conditionals with the Code.org bee to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.*\n\nPull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the \"if at flower / else block\". Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should \"get nectar\" if there is a flower and \"make honey\" if there is a honeycomb.\n\nFill in the rest of the code and press \"Run\". Discuss with the class why this worked.",
         "name": "Preview of Online Puzzles \r"
       },
       "seeding_key": {
@@ -3289,10 +3332,9 @@
     },
     {
       "key": "fcce1098-1ef9-42cd-a0a6-9a2a759e894c",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nReview the \"Conditionals with Cards\" activity with your students.\n\n- _What is a conditional statement?_\n- _When is it useful for you to use a conditional in your program?_\n\nWhat are some of the conditions you used in the last activity?\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preview - If/Else with Bee” slide\n\n**Say:** *Now we're going to use conditionals with the Code.org bee to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.*\n\n###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n\n\n**Conditionals** - Statements that only run under certain conditions.\n",
-        "name": "Introduction\r"
+        "description": "###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Conditionals** - Statements that only run under certain conditions.\n"
       },
       "seeding_key": {
         "activity_section.key": "fcce1098-1ef9-42cd-a0a6-9a2a759e894c",
@@ -3416,6 +3458,17 @@
       },
       "seeding_key": {
         "activity_section.key": "8c1a0c94-5769-44d7-90a2-af9b521835d7",
+        "lesson_activity.key": "c381e292-d281-4325-a307-4c4358dba746"
+      }
+    },
+    {
+      "key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d",
+      "position": 11,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d",
         "lesson_activity.key": "c381e292-d281-4325-a307-4c4358dba746"
       }
     },
@@ -3586,6 +3639,17 @@
       }
     },
     {
+      "key": "3694bab1-5f1b-411a-8170-601003b9d32c",
+      "position": 10,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3694bab1-5f1b-411a-8170-601003b9d32c",
+        "lesson_activity.key": "3c7c2254-c6ec-4f6d-89a4-81633cc72170"
+      }
+    },
+    {
       "key": "44daf4e4-d94e-4ba5-9364-8e3a93dc267e",
       "position": 1,
       "properties": {
@@ -3717,8 +3781,31 @@
       }
     },
     {
-      "key": "9c905d42-483f-425e-b23f-6049994cc2d8",
+      "key": "baf8f43c-6977-4f51-a3c6-3b571a735941",
+      "position": 8,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "baf8f43c-6977-4f51-a3c6-3b571a735941",
+        "lesson_activity.key": "5450558e-b0ec-4668-a5c0-599b76edb64f"
+      }
+    },
+    {
+      "key": "4ebb7582-e4f3-4765-b03c-b08a688ad90f",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ebb7582-e4f3-4765-b03c-b08a688ad90f",
+        "lesson_activity.key": "3b9be320-5f6b-4422-989d-d749bac1a55f"
+      }
+    },
+    {
+      "key": "9c905d42-483f-425e-b23f-6049994cc2d8",
+      "position": 2,
       "properties": {
         "description": "\n\nThere are endless possibilities of coding when using conditions. \n\nNow think about how you would use statements with “while” and “until” in your real life.\n",
         "remarks": true
@@ -3730,7 +3817,7 @@
     },
     {
       "key": "3f2558c3-0eb6-492f-b17b-0eeb7f5f393a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** - *What's the difference between an \"until\" loop and a \"while\" loop?*",
         "name": "Reflection"
@@ -4391,6 +4478,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging8a2022"
+        ],
         "progression": "Challenge/Practice"
       },
       "bonus": false,
@@ -4413,6 +4503,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging9a2022"
+        ],
         "progression": "Challenge/Practice"
       },
       "bonus": false,
@@ -5260,12 +5353,8 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_bonus12022"
-        ],
-        "progression": "Lesson Extras"
       },
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_2020_bonus12022"
@@ -5285,12 +5374,8 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseD_Dance_2020_bonus32022"
-        ],
-        "progression": "Lesson Extras"
       },
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_2020_bonus32022"
@@ -6215,8 +6300,7 @@
       "properties": {
         "level_keys": [
           "courseD_harvester_nested_loops_challenge12022"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -6240,8 +6324,7 @@
       "properties": {
         "level_keys": [
           "courseD_collector_nested_loops_challenge22022"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -6288,6 +6371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_intro"
+        ],
         "progression": "Video: Learn the Basics of Computer Science"
       },
       "bonus": false,
@@ -6310,6 +6396,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Move to Sheep2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6331,6 +6420,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Chop Tree2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6352,6 +6444,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Shear Sheep2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6373,6 +6468,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Chop Trees2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6394,6 +6492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_repeat_loops"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6565,6 +6666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_if_statements"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6688,6 +6792,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Free Play 20x202022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -10396,6 +10503,12 @@
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-06 20:16:01 UTC",
+    "serialized_at": "2022-03-22 16:51:34 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1666,7 +1666,7 @@
       "key": "26062424-0add-455f-898c-a352b3abd7b5",
       "position": 1,
       "properties": {
-        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient/fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the benefits/convenience?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "duration": "10",
         "name": "Convenience vs Privacy - Facial Recognition "
       },
@@ -1679,7 +1679,7 @@
       "key": "b9effef5-f7fe-464c-97ab-4fb35ca1f8f4",
       "position": 2,
       "properties": {
-        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think the benefits outweigh the privacy concerns?*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on location data, take notes on the following:\n\n* What kind of data is being collected and shared?\n* Who is the “third party” in this situation? \n* Why is this a tradeoff between privacy and security?",
         "duration": "10",
         "name": "Security vs Privacy - Should the Government Need a Warrant?"
       },
@@ -1692,7 +1692,7 @@
       "key": "93f07ea0-e30d-4226-a1d6-39e8da3b56c5",
       "position": 3,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about location data.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question *\"Do you agree with the Supreme Court’s ruling? Do you think it should apply to other kinds of data?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this discussion to build off the theme's discussed after the previous video about facial recognition. Push students to think of other types of data that third-parties collect about them and how they think that data should be handled by those parties and the government."
       },
       "seeding_key": {
         "activity_section.key": "93f07ea0-e30d-4226-a1d6-39e8da3b56c5",
@@ -2985,6 +2985,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L01 CFU innovations2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3007,6 +3010,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L02 CFU innovations part 22022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3029,6 +3035,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L3 CFU Why Collect PII2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3051,6 +3060,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Keylogging2022"
+        ],
         "progression": "Keylogging"
       },
       "bonus": false,
@@ -3073,6 +3085,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Phishing2022"
+        ],
         "progression": "Phishing"
       },
       "bonus": false,
@@ -3095,6 +3110,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Rogue Access Points2022"
+        ],
         "progression": "Malware"
       },
       "bonus": false,
@@ -3117,6 +3135,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L07 CFU security risks2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3139,6 +3160,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L08 CFU security risks2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3161,6 +3185,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher2022"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -3183,6 +3210,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution2022"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -3205,6 +3235,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L9 CFU public key2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3227,6 +3260,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L10 CFU MFA2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3249,6 +3285,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Unit 10 Assessment2022"
+        ],
         "progression": "Unit 10 Exam"
       },
       "bonus": false,

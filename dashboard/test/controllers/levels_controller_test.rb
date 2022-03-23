@@ -155,6 +155,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "levelbuilder can update exemplar" do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     exemplar_sources = {"File.java" => "System.out.println()"}
     javalab_level = create(:javalab)
     assert_nil javalab_level.exemplar_sources
