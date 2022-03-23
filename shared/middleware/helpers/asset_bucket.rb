@@ -4,6 +4,7 @@ require 'mini_magick'
 # AssetBucket
 #
 class AssetBucket < BucketHelper
+  # Don't attempt to resize images larger than 20 MB
   def max_resize_size
     20_000_000 # 20 MB
   end
