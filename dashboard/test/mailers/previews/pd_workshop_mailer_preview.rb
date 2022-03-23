@@ -30,6 +30,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
   end
 
+  def teacher_enrollment_receipt__csa_summer_workshop
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP
+  end
+
   def teacher_enrollment_receipt__csd_summer_workshop_virtual
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
       workshop_params: {
@@ -41,6 +45,15 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def teacher_enrollment_receipt__csp_summer_workshop_virtual
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      workshop_params: {
+        virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_receipt__csa_summer_workshop_virtual
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
       workshop_params: {
         virtual: true,
         location_name: 'zoom_link',
@@ -131,6 +144,16 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def teacher_enrollment_reminder__csp_summer_workshop_3_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 3}
+  end
+
+  def teacher_enrollment_reminder__csa_summer_workshop_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csa_summer_workshop_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
       options: {days_before: 3}
   end
 
