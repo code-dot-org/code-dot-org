@@ -211,7 +211,7 @@ class User < ApplicationRecord
   has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
 
   has_many :sign_ins
-  has_many :user_geos, -> {order 'updated_at desc'}
+  has_many :user_geos, -> {order(updated_at: :desc)}
 
   before_validation :normalize_parent_email
   validate :validate_parent_email
@@ -417,7 +417,7 @@ class User < ApplicationRecord
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
-  has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
+  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
@@ -438,7 +438,9 @@ class User < ApplicationRecord
   before_create :update_default_share_setting
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
-  has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
+  # This SQL string is not at risk for injection vulnerabilites because it's
+  # just a hardcoded string, so it's safe to wrap in Arel.sql
+  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
@@ -1268,7 +1270,7 @@ class User < ApplicationRecord
   def last_attempt(level, script = nil)
     query = UserLevel.where(user_id: id, level_id: level.id)
     query = query.where(script_id: script.id) unless script.nil?
-    query.order('updated_at DESC').first
+    query.order(updated_at: :desc).first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -1281,7 +1283,7 @@ class User < ApplicationRecord
     }
     conditions[:script_id] = script_id unless script_id.nil?
     UserLevel.where(conditions).
-      order('updated_at DESC').
+      order(updated_at: :desc).
       first
   end
 
