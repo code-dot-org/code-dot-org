@@ -3,7 +3,7 @@ Sequel.migration do
     pegasus_user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
     dashboard_user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
-    unless [:production].include?(rack_env) || ENV['CI']
+    unless [:production].include?(rack_env)
 
       begin
         # Rename the table to move it from the Pegasus schema to Dashboard
