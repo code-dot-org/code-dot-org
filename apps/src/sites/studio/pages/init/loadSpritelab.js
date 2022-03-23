@@ -7,7 +7,7 @@ import levels from '@cdo/apps/p5lab/levels';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import getCurrentId from '@cdo/apps/code-studio/initApp/project';
+import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
 
 export default function loadSpritelab(options) {
   options.skinsModule = skins;
@@ -29,7 +29,7 @@ export default function loadSpritelab(options) {
         project_id: getCurrentId()
       });
 
-      return initializeOptionsAndSpritelab(spritelab);
+      return initializeOptionsAndSpritelab(spritelab, options);
     });
 }
 
