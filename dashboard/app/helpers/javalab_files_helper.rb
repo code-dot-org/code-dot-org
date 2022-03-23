@@ -73,7 +73,7 @@ module JavalabFilesHelper
     unless all_files["validation"]
       all_files["validation"] = {}
     end
-    all_files["validation"]["source"] = validation
+    all_files["validation"] = {source: validation}.to_json
     all_files
   end
 
