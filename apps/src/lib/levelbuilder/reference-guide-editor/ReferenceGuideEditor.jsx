@@ -92,7 +92,8 @@ export default function ReferenceGuideEditor(props) {
           }
         >
           {referenceGuides
-            .sort((a, b) => a.key.localeCompare(b.key))
+            .filter(guide => guide.key !== referenceGuide.key) // don't let a guide parent to itself
+            .sort((a, b) => a.key.localeCompare(b.key)) // sort alphabetically
             .map(guide => (
               <option key={guide.key}>{guide.key}</option>
             ))}
