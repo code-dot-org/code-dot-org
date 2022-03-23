@@ -341,7 +341,7 @@ module Pd::Application
     # displays the iso8601 date (yyyy-mm-dd)
     # The applied_at date is null if an application has been started, saved, and not submitted
     def date_applied
-      applied_at&.to_date.&iso8601
+      applied_at&.to_date&.iso8601
     end
 
     # Convert responses cores to a hash of underscore_cased symbols
