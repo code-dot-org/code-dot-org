@@ -13,6 +13,21 @@ import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import styleConstants from '../../styleConstants';
 
+const cardInfoByAudience = {
+  student: {
+    title: i18n.participantTypeStudentTitle(),
+    description: i18n.participantTypeStudentDescription()
+  },
+  teacher: {
+    title: i18n.participantTypeTeacherTitle(),
+    description: i18n.participantTypeTeacherDescription()
+  },
+  facilitaor: {
+    title: i18n.participantTypeFacilitatorTitle(),
+    description: i18n.participantTypeFacilitatorDescription()
+  }
+};
+
 /**
  * UI for selecting the login type of a class section:
  * Word, picture, or email logins, or one of several third-party integrations.
@@ -40,7 +55,7 @@ export default class AudienceTypePicker extends Component {
               <ParticipantTypeCard
                 onClick={setParticipantType}
                 key={index}
-                title={type}
+                type={type}
               />
             ))}
           </CardContainer>
@@ -62,16 +77,16 @@ export default class AudienceTypePicker extends Component {
 
 const ParticipantTypeCard = props => (
   <LoginTypeCard
-    className={`uitest-${props.title}-type`}
-    title={props.title}
-    description={`Section for ${props.title}`}
-    onClick={() => props.onClick(props.title)}
+    className={`uitest-${props.type}-type`}
+    title={cardInfoByAudience[props.type].title}
+    description={cardInfoByAudience[props.type].description}
+    onClick={() => props.onClick(props.type)}
   />
 );
 ParticipantTypeCard.propTypes = {
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  title: PropTypes.string
+  type: PropTypes.string
 };
 
 const style = {
