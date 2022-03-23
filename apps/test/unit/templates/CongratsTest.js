@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/reconfiguredChai';
-import Congrats from '@cdo/apps/templates/Congrats';
-import Certificate from '@cdo/apps/templates/Certificate';
-import StudentsBeyondHoc from '@cdo/apps/templates/StudentsBeyondHoc';
-import TeachersBeyondHoc from '@cdo/apps/templates/TeachersBeyondHoc';
+import Congrats from '@cdo/apps/templates/certificates/Congrats';
+import Certificate from '@cdo/apps/templates/certificates/Certificate';
+import StudentsBeyondHoc from '@cdo/apps/templates/certificates/StudentsBeyondHoc';
+import TeachersBeyondHoc from '@cdo/apps/templates/certificates/TeachersBeyondHoc';
 
 describe('Congrats', () => {
   it('renders a Certificate component', () => {
