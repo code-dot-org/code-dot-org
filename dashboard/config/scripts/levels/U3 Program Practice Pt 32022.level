@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:02:31.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -52,11 +48,18 @@
     "name_suffix": "2022",
     "video_key": "csd_debugging",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "display_name": "Farm Sounds",
+    "bubble_choice_description": "Debug this program to use the correct sound and text when the user clicks each animal",
+    "thumbnail_url": "https://images.code.org/74fcc9b00d2379075795548412708b17-image-1647323646701.52.05 PM.png"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:02:31.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:31.626+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 3_2021\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 3_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:31.626+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 3_2021\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 3_2021\"},{\"changed_at\":\"2022-03-15 05:55:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

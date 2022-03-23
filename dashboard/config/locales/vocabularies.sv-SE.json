@@ -2,11 +2,23 @@
   "sv-SE": {
     "data": {
       "vocabularies": {
+        "program/dance-extras/unversioned": {
+          "word": "Program"
+        },
         "debugging/minecraft/unversioned": {
           "word": "Felsökning"
         },
+        "program/minecraft/unversioned": {
+          "word": "Program"
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Loop"
+        },
         "debugging/hero/unversioned": {
           "word": "Felsökning"
+        },
+        "program/hero/unversioned": {
+          "word": "Program"
         },
         "function/hero/unversioned": {
           "word": "Funktion"
@@ -24,19 +36,32 @@
           "definition": "uttrycket av en känsla, atmosfär eller sinnesrörelse i konst eller skrift."
         },
         "program/poem-art/2021": {
+          "word": "Program",
           "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
         },
         "debugging/flappy/unversioned": {
           "word": "Felsökning"
         },
+        "program/flappy/unversioned": {
+          "word": "Program"
+        },
         "debugging/hourofcode/unversioned": {
           "word": "Felsökning"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Program"
         },
         "debugging/frozen/unversioned": {
           "word": "Felsökning"
         },
+        "program/frozen/unversioned": {
+          "word": "Program"
+        },
         "debugging/iceage/unversioned": {
           "word": "Felsökning"
+        },
+        "program/iceage/unversioned": {
+          "word": "Program"
         },
         "code/artist/unversioned": {
           "word": "Kod"
@@ -44,11 +69,23 @@
         "debugging/artist/unversioned": {
           "word": "Felsökning"
         },
+        "program/artist/unversioned": {
+          "word": "Program"
+        },
         "debugging/gumball/unversioned": {
           "word": "Felsökning"
         },
+        "program/gumball/unversioned": {
+          "word": "Program"
+        },
+        "program/dance/unversioned": {
+          "word": "Program"
+        },
         "debugging/aquatic/unversioned": {
           "word": "Felsökning"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program"
         },
         "conditionals/aquatic/unversioned": {
           "word": "Villkor"
@@ -56,17 +93,32 @@
         "loops/aquatic/unversioned": {
           "word": "loopar"
         },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Kryptering"
+        },
         "debugging/starwars/unversioned": {
           "word": "Felsökning"
+        },
+        "program/starwars/unversioned": {
+          "word": "Program"
         },
         "debugging/mc/unversioned": {
           "word": "Felsökning"
         },
+        "program/mc/unversioned": {
+          "word": "Program"
+        },
         "debugging/playlab/unversioned": {
           "word": "Felsökning"
         },
+        "program/playlab/unversioned": {
+          "word": "Program"
+        },
         "debugging/starwarsblocks/unversioned": {
           "word": "Felsökning"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Program"
         },
         "code/sports/unversioned": {
           "word": "Kod"
@@ -74,17 +126,33 @@
         "debugging/sports/unversioned": {
           "word": "Felsökning"
         },
+        "program/sports/unversioned": {
+          "word": "Program"
+        },
         "debugging/infinity/unversioned": {
           "word": "Felsökning"
         },
+        "program/infinity/unversioned": {
+          "word": "Program"
+        },
         "debugging/basketball/unversioned": {
           "word": "Felsökning"
+        },
+        "program/basketball/unversioned": {
+          "word": "Program"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Program"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Program"
         },
         "code/poem-art/unversioned": {
           "word": "Kod",
           "definition": "(v) att skriva instruktioner för en dator."
         },
         "program/poem-art/unversioned": {
+          "word": "Program",
           "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
         },
         "mood/poem-art/unversioned": {
@@ -95,50 +163,155 @@
           "word": "Rad",
           "definition": "(poesi) – en underavdelning av en dikt ordnad i en rad som slutar i högermarginalen."
         },
+        "user/coursef/2021": {
+          "word": "Användare"
+        },
         "behavior/coursef/2021": {
           "word": "Beteende"
+        },
+        "program/coursef/2021": {
+          "word": "Program"
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algoritm"
         },
         "variable/coursef/2021": {
           "word": "Variabel"
         },
+        "loop/coursef/2021": {
+          "word": "Loop"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
+        },
+        "servers/coursef/2021": {
+          "word": "Servrar"
         },
         "url/coursef/2021": {
           "word": "URL"
         },
+        "ip_address/coursef/2021": {
+          "word": "IP-adress"
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi"
+        },
         "define/coursef/2021": {
           "word": "Definiera"
+        },
+        "try/coursef/2021": {
+          "word": "Prova"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Algoritm"
+        },
+        "bug/courseb/2021": {
+          "word": "Bugg"
         },
         "debugging/courseb/2021": {
           "word": "Felsökning"
         },
+        "click/courseb/2021": {
+          "word": "Klick"
+        },
         "drop/courseb/2021": {
           "word": "Släpp"
+        },
+        "double_click/courseb/2021": {
+          "word": "Dubbelklicka"
+        },
+        "program/courseb/2021": {
+          "word": "Program"
+        },
+        "loop/courseb/2021": {
+          "word": "Loop"
+        },
+        "algorithm/coursea/2021": {
+          "word": "Algoritm"
         },
         "debugging/coursea/2021": {
           "word": "Felsökning"
         },
+        "program/coursea/2021": {
+          "word": "Program"
+        },
+        "click/coursea/2021": {
+          "word": "Klick"
+        },
         "drop/coursea/2021": {
           "word": "Släpp"
+        },
+        "double_click/coursea/2021": {
+          "word": "Dubbelklicka"
+        },
+        "bug/coursea/2021": {
+          "word": "Bugg"
+        },
+        "loop/coursea/2021": {
+          "word": "Loop"
+        },
+        "algorithm/coursec/2021": {
+          "word": "Algoritm"
+        },
+        "bug/coursec/2021": {
+          "word": "Bugg"
         },
         "debugging/coursec/2021": {
           "word": "Felsökning"
         },
+        "program/coursec/2021": {
+          "word": "Program"
+        },
+        "loop/coursec/2021": {
+          "word": "Loop"
+        },
         "binary/coursec/2021": {
           "word": "Binära"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Algoritm"
+        },
+        "program/coursed/2021": {
+          "word": "Program"
+        },
+        "bug/coursed/2021": {
+          "word": "Bugg"
         },
         "debugging/coursed/2021": {
           "word": "Felsökning"
         },
+        "loop/coursed/2021": {
+          "word": "Loop"
+        },
+        "frustrated/coursed/2021": {
+          "word": "Frustrerad"
+        },
         "conditionals/coursed/2021": {
           "word": "Villkor"
+        },
+        "pseudocode/coursed/2021": {
+          "word": "pseudokod"
+        },
+        "algorithm/express/2021": {
+          "word": "Algoritm"
+        },
+        "bug/express/2021": {
+          "word": "Bugg"
         },
         "debugging/express/2021": {
           "word": "Felsökning"
         },
+        "program/express/2021": {
+          "word": "Program"
+        },
         "behavior/express/2021": {
           "word": "Beteende"
+        },
+        "loop/express/2021": {
+          "word": "Loop"
         },
         "conditionals/express/2021": {
           "word": "Villkor"
@@ -152,17 +325,44 @@
         "define/express/2021": {
           "word": "Definiera"
         },
+        "try/express/2021": {
+          "word": "Prova"
+        },
+        "click/pre-express/2021": {
+          "word": "Klick"
+        },
         "drop/pre-express/2021": {
           "word": "Släpp"
+        },
+        "double_click/pre-express/2021": {
+          "word": "Dubbelklicka"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algoritm"
+        },
+        "bug/pre-express/2021": {
+          "word": "Bugg"
         },
         "debugging/pre-express/2021": {
           "word": "Felsökning"
         },
+        "program/pre-express/2021": {
+          "word": "Program"
+        },
+        "loop/pre-express/2021": {
+          "word": "Loop"
+        },
         "behavior/coursee/2021": {
           "word": "Beteende"
         },
+        "algorithm/coursee/2021": {
+          "word": "algoritm"
+        },
         "copyright/coursee/2021": {
           "word": "Copyright"
+        },
+        "loop/coursee/2021": {
+          "word": "Loop"
         },
         "function/coursee/2021": {
           "word": "Funktion"
@@ -173,11 +373,62 @@
         "define/coursee/2021": {
           "word": "Definiera"
         },
+        "try/coursee/2021": {
+          "word": "Prova"
+        },
+        "features/csd/2021": {
+          "word": "Funktioner"
+        },
+        "label/csd/2021": {
+          "word": "Etikett"
+        },
+        "model/csd/2021": {
+          "word": "Modell"
+        },
+        "training/csd/2021": {
+          "word": "Träning"
+        },
+        "ethics/csd/2021": {
+          "word": "Etik"
+        },
+        "prototype/csd/2021": {
+          "word": "Prototyp"
+        },
+        "bug/csd/2021": {
+          "word": "Bugg"
+        },
+        "feature/csd/2021": {
+          "word": "Funktion"
+        },
+        "analog/csd/2021": {
+          "word": "Analog"
+        },
+        "digital/csd/2021": {
+          "word": "Digital"
+        },
+        "parameter/csd/2021": {
+          "word": "Parameter"
+        },
+        "circuit/csd/2021": {
+          "word": "Krets"
+        },
+        "ascii/csd/2021": {
+          "word": "ASCII"
+        },
+        "pixel/csd/2021": {
+          "word": "Pixel"
+        },
         "debugging/csd/2021": {
           "word": "Felsökning"
         },
+        "program/csd/2021": {
+          "word": "Program"
+        },
         "variable/csd/2021": {
           "word": "Variabel"
+        },
+        "property/csd/2021": {
+          "word": "Egenskap"
         },
         "conditionals/csd/2021": {
           "word": "Villkor"
@@ -187,6 +438,18 @@
         },
         "function/csd/2021": {
           "word": "Funktion"
+        },
+        "computer/csd/2021": {
+          "word": "Dator"
+        },
+        "processing/csd/2021": {
+          "word": "Bearbetar"
+        },
+        "html/csd/2021": {
+          "word": "HTML"
+        },
+        "css/csd/2021": {
+          "word": "CSS"
         },
         "copyright/csd/2021": {
           "word": "Copyright"

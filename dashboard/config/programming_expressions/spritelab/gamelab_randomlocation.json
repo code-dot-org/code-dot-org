@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "The bunny will appear at a random location each time the project is run.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/FBW78_RnfOa_uGuWP75KNmnFmq6UfDZIxFmu671HTiw",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Every time the ghost is clicked, it will jump to a random location.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/ju6-mmhqGgBZ5PDwaVz3n6TRqtUea3tPh3vG2RBNBoM",
       "image": null,
       "app_display_type": "embedAppWithCode",

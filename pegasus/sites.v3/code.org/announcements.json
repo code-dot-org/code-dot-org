@@ -2,10 +2,17 @@
   "pages": {
     "/projects": "coldplay",
     "/home": "superhero",
-    "/certificates": "congrats-certificate-share"
-  },
-
+    "/certificates": "hoc-more"
+  },  
   "banners": {
+    "hoc-more": {
+      "image": "/images/marketing/certificates-promo.png",
+      "title": "Keep learning!",
+      "body": "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners.",
+      "buttonText": "View activities",
+      "buttonUrl": "https://hourofcode.com/learn",
+      "buttonId": "hoc-more-details"
+    },
     "superhero": {
       "image": "/images/marketing/superhero_teacherdash.png",
       "title": "Help your students become superheroes!",

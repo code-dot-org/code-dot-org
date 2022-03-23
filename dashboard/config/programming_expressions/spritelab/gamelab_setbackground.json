@@ -9,7 +9,6 @@
     {
       "name": "Example 2",
       "description": "When more than one background is used together in a sequence, the last background set will be the one that is used. In this example, the background will not switch from red to blue; when it is run, the background will go straight to blue.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/l6IlcspCiPBcgJ2IUeMgqoLiw7s8eekw5Rm_PnEKGos",
       "image": null,
       "app_display_type": "embedAppWithCode",

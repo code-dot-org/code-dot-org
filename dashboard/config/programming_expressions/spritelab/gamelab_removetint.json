@@ -9,7 +9,6 @@
     {
       "name": "",
       "description": "",
-      "code": "```\n\n```",
       "app": "",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 1",
       "description": "The ghost changes colors when it touches the paint, but the color is removed when it touches the soap.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/zwQ1w4i6LKWcID01J4fopzMC9TPeC49fIULxcA3zSEA",
       "image": null,
       "app_display_type": "embedAppWithCode",

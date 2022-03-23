@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "The color of a sprite can be changed several times in a project.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/TXtrCtSi1V0G02g4YxEhEGcFfrBHHwsAULbGKaZyKR0",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Change color can be used to make sprites wearing the same costume look unique and more colorful.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/ce9cGvSDaQjtmzqA0raUyZUNG67UOZUsYHg6oGg3UBM",
       "image": null,
       "app_display_type": "embedAppWithCode",

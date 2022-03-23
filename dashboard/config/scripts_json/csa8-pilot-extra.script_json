@@ -8,13 +8,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csa-pilot-extra",
       "show_calendar": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-15 17:56:17 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-02-25 18:51:20 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -3433,6 +3434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L1"
+        ],
         "progression": "Google Breakout"
       },
       "bonus": false,
@@ -3455,6 +3459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L2"
+        ],
         "progression": "Inclusive Playground Project Exemplars"
       },
       "bonus": false,
@@ -3477,6 +3484,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3499,6 +3509,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3521,6 +3534,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L1"
+        ],
         "progression": "Binary Search"
       },
       "bonus": false,
@@ -3543,6 +3559,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L2"
+        ],
         "progression": "Binary Search"
       },
       "bonus": false,
@@ -3565,6 +3584,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3587,6 +3609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L1"
+        ],
         "progression": "Predict: Recursive Binary Search"
       },
       "bonus": false,
@@ -3609,6 +3634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L2"
+        ],
         "progression": "Recursive Binary Search"
       },
       "bonus": false,
@@ -3631,6 +3659,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3653,6 +3684,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3675,6 +3709,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3697,6 +3734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L1"
+        ],
         "progression": "Predict: Merge Sort"
       },
       "bonus": false,
@@ -3719,6 +3759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L2"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -3741,6 +3784,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3763,6 +3809,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L1"
+        ],
         "progression": "Algorithms in Games"
       },
       "bonus": false,
@@ -3785,6 +3834,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L2"
+        ],
         "progression": "Algorithms in Games"
       },
       "bonus": false,
@@ -3807,6 +3859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L3"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -3829,6 +3884,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3851,6 +3909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L1"
+        ],
         "progression": "Predict: Multiple Lists"
       },
       "bonus": false,
@@ -3873,6 +3934,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L2"
+        ],
         "progression": "Multiple Lists in Games"
       },
       "bonus": false,
@@ -3895,6 +3959,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L3"
+        ],
         "progression": "Multiple Lists in Games"
       },
       "bonus": false,
@@ -3917,6 +3984,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3939,6 +4009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L10-L1"
+        ],
         "progression": "Secure Coding Practices"
       },
       "bonus": false,
@@ -3961,6 +4034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L10-L2"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -3983,6 +4059,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L10-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4005,6 +4084,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L11-L1"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -4027,6 +4109,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L12-L1"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -4049,6 +4134,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L13-L1"
+        ],
         "progression": "Inclusive Playground Project"
       },
       "bonus": false,
@@ -4071,6 +4159,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 8 Pilot Assessment 2021"
+        ],
         "progression": "Unit 8 Assessment"
       },
       "bonus": false,
@@ -4093,6 +4184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 8"
+        ],
         "progression": "Unit 8 Pilot Survey"
       },
       "bonus": false,
@@ -4115,6 +4209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -4137,6 +4234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -4159,6 +4259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -4181,6 +4284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox"
+        ],
         "progression": "The Playground"
       },
       "bonus": false,

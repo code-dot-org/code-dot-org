@@ -58,6 +58,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
       title: 'title',
       description: 'description',
       editorType: 'blockly',
+      blockPoolName: 'GamelabJr',
       projectUrl: '/p/project'
     }
     assert_response :ok
@@ -66,6 +67,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_equal 'title', programming_environment.title
     assert_equal 'description', programming_environment.description
     assert_equal 'blockly', programming_environment.editor_type
+    assert_equal 'GamelabJr', programming_environment.block_pool_name
     assert_equal '/p/project', programming_environment.project_url
   end
 
@@ -73,21 +75,23 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     programming_environment = create :programming_environment
-    category_to_keep = create :programming_environment_category, programming_environment: programming_environment
-    category_to_destroy = create :programming_environment_category, programming_environment: programming_environment
+    category_to_keep = create :programming_environment_category, programming_environment: programming_environment, position: 0
+    category_to_destroy = create :programming_environment_category, programming_environment: programming_environment, position: 1
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_environment.name}.json"}.once
-    post :update, params: {
-      name: programming_environment.name,
-      title: 'title',
-      editorType: 'blockly',
-      categories: [{id: category_to_keep.id, name: category_to_keep.name, color: category_to_keep.color}, {name: 'brand new category', color: '#00FFFF'}]
-    }
+    post :update, params:
+      {
+        name: programming_environment.name,
+        title: 'title',
+        editorType: 'blockly',
+        categories: [{id: nil, name: 'brand new category', color: '#00FFFF'}, {id: category_to_keep.id, name: category_to_keep.name, color: category_to_keep.color}]
+      }
     assert_response :ok
 
     programming_environment.reload
     assert programming_environment.categories.include?(category_to_keep)
     refute programming_environment.categories.include?(category_to_destroy)
     assert_equal 2, programming_environment.categories.count
+    assert_equal ['brand new category', category_to_keep.name], programming_environment.categories.map(&:name)
   end
 
   test 'returns not_found if updating a non-existant programming environment' do
@@ -120,12 +124,41 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_response :not_acceptable
   end
 
+  test 'can destroy a programming environment' do
+    sign_in @levelbuilder
+
+    programming_environment = create :programming_environment, name: 'test-environment'
+
+    File.expects(:exist?).returns(true).once
+    File.expects(:delete).once
+    delete :destroy, params: {
+      name: programming_environment.name
+    }
+    assert_response :ok
+    assert_nil ProgrammingEnvironment.find_by_name('test-environment')
+  end
+
+  test 'destroying a programming environment fails if File cannot be deleted' do
+    sign_in @levelbuilder
+
+    programming_environment = create :programming_environment, name: 'test-environment'
+
+    File.expects(:exist?).returns(true).once
+    File.expects(:delete).throws(StandardError).once
+    delete :destroy, params: {
+      name: programming_environment.name
+    }
+    assert_response :not_acceptable
+    refute_nil ProgrammingEnvironment.find_by_name('test-environment')
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
-      @programming_environment = create :programming_environment
+      @published_programming_environment = create :programming_environment, published: true
+      @unpublished_programming_environment = create :programming_environment, published: false
 
-      @update_params = {name: @programming_environment.name, title: 'new title'}
+      @update_params = {name: @published_programming_environment.name, title: 'new title'}
     end
 
     test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
@@ -133,14 +166,34 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     test_user_gets_response_for :new, user: :teacher, response: :forbidden
     test_user_gets_response_for :new, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :student, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{name: @programming_environment.name}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :edit, params: -> {{name: @published_programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :edit, params: -> {{name: @published_programming_environment.name}}, user: :student, response: :forbidden
+    test_user_gets_response_for :edit, params: -> {{name: @published_programming_environment.name}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :edit, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {{name: @programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: nil, response: :success, name: 'signed out user can view published programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :student, response: :success, name: 'student can view published programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :teacher, response: :success, name: 'teacher can view published programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view published programming environment'
+
+    test_user_gets_response_for :show, params: -> {{name: @unpublished_programming_environment.name}}, user: nil, response: :forbidden, name: 'signed out user cannot view unpublished programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @unpublished_programming_environment.name}}, user: :student, response: :forbidden, name: 'student cannot view unpublished programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @unpublished_programming_environment.name}}, user: :teacher, response: :forbidden, name: 'teacher cannot view unpublished programming environment'
+    test_user_gets_response_for :show, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view unpublished programming environment'
+
+    test_user_gets_response_for :destroy, params: -> {{name: @published_programming_environment.name}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :destroy, params: -> {{name: @published_programming_environment.name}}, user: :student, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{name: @published_programming_environment.name}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :destroy, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :index, user: nil, response: :success
+    test_user_gets_response_for :index, user: :student, response: :success
+    test_user_gets_response_for :index, user: :teacher, response: :success
+    test_user_gets_response_for :index, user: :levelbuilder, response: :success
   end
 end

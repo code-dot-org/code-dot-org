@@ -104,6 +104,7 @@ export default function reducer(state = initialState, action) {
       unitDescription: action.unitDescription,
       unitStudentDescription: action.unitStudentDescription,
       courseId: action.courseId,
+      courseVersionId: action.courseVersionId,
       currentLessonId: currentLessonId,
       hasFullProgress: action.isFullProgress,
       isLessonExtras: action.isLessonExtras,
@@ -398,6 +399,7 @@ export const initProgress = ({
   unitDescription,
   unitStudentDescription,
   courseId,
+  courseVersionId,
   isFullProgress,
   isLessonExtras,
   currentPageNumber
@@ -415,6 +417,7 @@ export const initProgress = ({
   unitDescription,
   unitStudentDescription,
   courseId,
+  courseVersionId,
   isFullProgress,
   isLessonExtras,
   currentPageNumber

@@ -679,6 +679,8 @@ export default class P5Lab {
    */
   onPause() {}
 
+  reactToExecutionError(msg) {}
+
   onIsRunningChange() {
     this.setCrosshairCursorForPlaySpace();
   }
@@ -1191,7 +1193,6 @@ export default class P5Lab {
     if (this.JSInterpreter) {
       if (this.interpreterStarted) {
         this.JSInterpreter.executeInterpreter();
-
         if (this.p5Wrapper.stepSpeed < 1) {
           this.p5Wrapper.drawDebugSpriteColliders();
         }
@@ -1474,6 +1475,8 @@ export default class P5Lab {
         this.eventHandlers.draw.apply(null);
       }
     }
+
+    this.reactToExecutionError(this.JSInterpreter.executionError?.message);
     this.completeRedrawIfDrawComplete();
   }
 

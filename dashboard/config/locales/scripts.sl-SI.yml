@@ -2542,6 +2542,9 @@ sl:
             csf_events:
               display_name: Dogodki
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Spremenljivke
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
@@ -2580,3 +2583,49 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internet
+              key: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno državljanstvo
+            lessonGroup-8:
+              display_name: Spremenljivke
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Spremenljivke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Zanke
+              key: Zanke
+            Events:
+              name: Dogodki
+              key: Dogodki
+            Conditionals:
+              name: Pogoji
+              key: Pogoji
+            Functions:
+              name: Funkcije
+              key: Funkcije
+            Variables:
+              name: Spremenljivke
+              key: Spremenljivke
