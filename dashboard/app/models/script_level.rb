@@ -675,7 +675,10 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    if level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
+    # if level.is_a?(Javalab) && level.try(:exemplar_sources).present? && current_user&.verified_instructor?
+    if level.is_a?(Javalab) && current_user&.verified_instructor?
+      level_example_links = [build_script_level_url(self, {exemplar: true})]
+    elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
         # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.

@@ -516,6 +516,15 @@ class ScriptLevelsController < ApplicationController
       current_user.present? &&
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
+    # javalab specfiic
+    # check for exemplar as URL param
+    if params[:exemplar]
+      exemplar_sources = @level.try(:exemplar_sources)
+      level_view_options(@level.id, {exemplar_sources: exemplar_sources})
+      # add some cancan check that only verified teachers can view this
+      # readonly?
+    end
+
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
