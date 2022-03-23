@@ -105,7 +105,8 @@ function showCourseOverview() {
         scripts={courseSummary.scripts}
         versions={versions}
         showVersionWarning={
-          !!scriptData.show_version_warning && versions.length > 1
+          !!scriptData.show_version_warning &&
+          Object.values(versions).length > 1
         }
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectToCourseUrl={scriptData.redirect_to_course_url}
