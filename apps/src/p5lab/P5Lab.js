@@ -235,8 +235,6 @@ export default class P5Lab {
 
     this.level.softButtons = this.level.softButtons || [];
 
-    this.startAnimations = null;
-
     if (this.level.useDefaultSprites) {
       this.startAnimations = this.defaultAnimations;
     } else if (
