@@ -14,9 +14,17 @@ $(() => {
   const store = getStore();
 
   const referenceGuide = getScriptData('referenceGuide');
+  const referenceGuides = getScriptData('referenceGuides');
+  const updateUrl = getScriptData('updateUrl');
+  const editAllUrl = getScriptData('editAllUrl');
   ReactDOM.render(
     <Provider store={store}>
-      <ReferenceGuideEditor referenceGuide={referenceGuide} />
+      <ReferenceGuideEditor
+        referenceGuide={referenceGuide}
+        referenceGuides={referenceGuides}
+        updateUrl={updateUrl}
+        editAllUrl={editAllUrl}
+      />
     </Provider>,
     document.getElementById('show-container')
   );

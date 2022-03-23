@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 import $ from 'jquery';
 import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {flatten} from 'lodash';
-
-// editAll url without the /edit
-const BASE_URL = window.location.href
-  .split('/')
-  .slice(0, -1)
-  .join('/');
+import {
+  getGuideChildren,
+  organizeReferenceGuides
+} from './referenceGuideHelpers';
 
 const MiniIconButton = ({icon, alt, func, href}) => (
   <TextLink
@@ -25,24 +22,11 @@ MiniIconButton.propTypes = {
   href: PropTypes.string
 };
 
-const getGuideChildren = (key, guides) =>
-  guides
-    .filter(guide => guide.parent_reference_guide_key === key)
-    .sort((a, b) => a.position - b.position);
-
-// take a list of reference guides and build a tree data structure and then flatten it
-const organizeReferenceGuides = (referenceGuides, parent = null, level = 0) => {
-  const organizedGuides = getGuideChildren(parent, referenceGuides).map(
-    guide => [
-      {...guide, level}, // add the depth of this guide so we can render the indentation
-      ...organizeReferenceGuides(referenceGuides, guide.key, level + 1) // put the children right after the parent
-    ]
-  );
-  return flatten(organizedGuides);
-};
-
 export default function ReferenceGuideEditAll(props) {
-  const [referenceGuides, setReferenceGuides] = useState(props.referenceGuides);
+  const {baseUrl, referenceGuides: initialReferenceGuides} = props;
+  const [referenceGuides, setReferenceGuides] = useState(
+    initialReferenceGuides
+  );
   // useMemo here so that we only do the organizing once
   const organizedGuides = useMemo(
     () => organizeReferenceGuides(referenceGuides),
@@ -54,7 +38,7 @@ export default function ReferenceGuideEditAll(props) {
       setReferenceGuides([
         ...referenceGuides.filter(guide => guide.key !== guideKey)
       ]);
-      fetch(`${BASE_URL}/${guideKey}`, {
+      fetch(`${baseUrl}/${guideKey}`, {
         method: 'DELETE',
         headers: {
           'content-type': 'application/json',
@@ -62,7 +46,7 @@ export default function ReferenceGuideEditAll(props) {
         }
       });
     },
-    [referenceGuides]
+    [referenceGuides, baseUrl]
   );
 
   // To move guides, we will swap the positions of guides in the direction we want to move.
@@ -97,7 +81,7 @@ export default function ReferenceGuideEditAll(props) {
       setReferenceGuides([...referenceGuides]);
 
       // update the db (using the updated positions)
-      const targetUpdate = fetch(`${BASE_URL}/${targetGuide.key}`, {
+      const targetUpdate = fetch(`${baseUrl}/${targetGuide.key}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',
@@ -107,7 +91,7 @@ export default function ReferenceGuideEditAll(props) {
           position: targetGuide.position
         })
       });
-      const swapUpdate = fetch(`${BASE_URL}/${swapGuide.key}`, {
+      const swapUpdate = fetch(`${baseUrl}/${swapGuide.key}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',
@@ -119,7 +103,7 @@ export default function ReferenceGuideEditAll(props) {
       });
       return Promise.all([targetUpdate, swapUpdate]);
     },
-    [referenceGuides]
+    [referenceGuides, baseUrl]
   );
 
   return (
@@ -143,7 +127,7 @@ export default function ReferenceGuideEditAll(props) {
               <MiniIconButton
                 icon="pencil-square-o"
                 alt="edit"
-                href={`${BASE_URL}/${guide.key}/edit`}
+                href={`${baseUrl}/${guide.key}/edit`}
               />
               <MiniIconButton
                 icon="trash"
@@ -183,5 +167,6 @@ const referenceGuideShape = PropTypes.shape({
 });
 
 ReferenceGuideEditAll.propTypes = {
-  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired
+  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired,
+  baseUrl: PropTypes.string.isRequired
 };

@@ -1,18 +1,17 @@
 class ReferenceGuidesController < ApplicationController
   include CurriculumHelper
   before_action :find_reference_guide, only: [:show, :update, :edit, :destroy]
-  before_action :find_reference_guides, only: [:edit_all]
+  before_action :find_reference_guides, only: [:edit, :edit_all]
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   authorize_resource id_param: :key
 
   # GET /courses/:course_name/guides/edit
   def edit_all
-    render :not_found unless params[:course_course_name]
+    @base_url = "/courses/#{params[:course_course_name]}/guides/"
   end
 
   # GET /courses/:course_name/guides/:key
   def show
-    render :not_found unless params[:course_course_name] && params[:key]
   end
 
   # PATCH /courses/:course_name/guides/:key
@@ -29,7 +28,8 @@ class ReferenceGuidesController < ApplicationController
 
   # GET /courses/:course_name/guides/:key/edit
   def edit
-    render :not_found unless params[:course_course_name] && params[:key]
+    @update_url = course_reference_guide_url(params[:course_course_name], params[:key])
+    @edit_all_url = "/courses/#{params[:course_course_name]}/guides/edit"
   end
 
   private
