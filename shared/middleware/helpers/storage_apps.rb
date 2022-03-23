@@ -127,7 +127,18 @@ class StorageApps
     StorageApps.table.where(storage_id: @storage_id, state: 'active')
   end
 
+  def get_projects_with_state(state: 'active', order: nil)
+    query = StorageApps.table.where(storage_id: @storage_id, state: state)
+
+    if order.present?
+      query.order(order)
+    end
+
+    query
+  end
+
   # Returns an array of all ids for storage apps with storage id = @storage_id
+  # Maureen the name of this method is very confusing - fix
   def get_all_storage_ids
     StorageApps.table.
       where(storage_id: @storage_id).
