@@ -38,4 +38,20 @@ export default class UserPreferences extends Record({userId: 'me'}) {
       response => response.display_theme
     );
   }
+
+  /**
+   * Save the background music user preference
+   * @param {boolean} muteMusic: True if background music muted
+   */
+  setMuteMusic(muteMusic) {
+    return $.post(`/api/v1/users/${this.userId}/mute_music`, {
+      mute_music: muteMusic
+    });
+  }
+
+  getMuteMusic() {
+    return $.getJSON(`/api/v1/users/${this.userId}/mute_music`).then(
+      response => response.mute_music
+    );
+  }
 }

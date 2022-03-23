@@ -59,7 +59,7 @@ sk:
             '"saturation"': sýtosť
             '"brightness"': jas
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} urobte {MOVE} \n{DIR} nekonečne krát"
+        text: "{GROUP} robte {MOVE} \n{DIR} donekonečna"
         options:
           GROUP:
             sprites: všetky
@@ -91,7 +91,7 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Dancelab_changeMoveLR:
-        text: "{SPRITE} urob {MOVE} \n{DIR} nekonečne krát"
+        text: "{SPRITE} rob {MOVE} \n{DIR} donekonečna"
         options:
           MOVE:
             '"next"': "(Ďalší)"
