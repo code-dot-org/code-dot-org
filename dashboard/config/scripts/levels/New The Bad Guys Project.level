@@ -57,20 +57,19 @@
       "upButton",
       "downButton"
     ],
-    "mini_toolbox": "true",
+    "mini_toolbox": "false",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "short_instructions": "This is the \"New The Bad Guys Project\".",
-    "start_animations": "{\"orderedKeys\":[\"e09f413f-6a51-41b9-ae89-af0ad09d76e3\",\"e213977c-d30d-4374-b401-07b4a0bb6e09\"],\"propsByKey\":{\"e213977c-d30d-4374-b401-07b4a0bb6e09\":{\"name\":\"underwater\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:16 UTC\",\"pngLastModified\":\"2021-01-19 23:53:17 UTC\",\"version\":\"N6hAaLpD2XfNOPQVk4Noa7.0mYvp5z08\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/N6hAaLpD2XfNOPQVk4Noa7.0mYvp5z08/category_backgrounds/background_underwater.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e09f413f-6a51-41b9-ae89-af0ad09d76e3\":{\"name\":\"shark\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":397,\"y\":185},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:44:57 UTC\",\"pngLastModified\":\"2021-01-19 23:44:57 UTC\",\"version\":\"xCviHEh_mf4AvODEY_xFeI008j9L3HR5\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xCviHEh_mf4AvODEY_xFeI008j9L3HR5/category_animals/shark.png\",\"sourceSize\":{\"x\":397,\"y\":185}}}}",
+    "start_animations": "{\r\n   \"orderedKeys\":[\r\n      \"tarantula\",\r\n      \"wolf\",\r\n      \"snake\",\r\n      \"shark\",\r\n      \"pirahna\",\r\n      \"car_group\",\r\n      \"tarantula_sunglasses\",\r\n      \"wolf_sunglasses\",\r\n      \"snake_sunglasses\",\r\n      \"shark_sunglasses\",\r\n      \"piranha_sunglasses\",\r\n      \"background\"\r\n   ],\r\n   \"propsByKey\":{\r\n      \"background\":{\r\n         \"name\":\"background\",\r\n         \"categories\":[\r\n            \"backgrounds\"\r\n         ],\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         },\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\".NWp1RQPGtRTBhG07c6kz1Sz1HmroWQP\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/.NWp1RQPGtRTBhG07c6kz1Sz1HmroWQP/thebadguys_background.png\",\r\n         \"sourceSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         }\r\n      },\r\n      \"tarantula\":{\r\n         \"name\":\"tarantula\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":400,\"y\":309},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"VIUVapEVJ2UHJRmvBYt4Y1HEbL_Uz3Tr\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/VIUVapEVJ2UHJRmvBYt4Y1HEbL_Uz3Tr/thebadguys_tarantula.png\",\r\n         \"sourceSize\":{\"x\":400,\"y\":309}\r\n      },\r\n      \"tarantula_sunglasses\":{\r\n         \"name\":\"tarantula_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":400,\"y\":309},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"a6A7za6N68UpVY7_6jH08FqOPOzUnmPA\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/a6A7za6N68UpVY7_6jH08FqOPOzUnmPA/thebadguys_tarantula_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":400,\"y\":309}\r\n      },\r\n      \"wolf\":{\r\n         \"name\":\"wolf\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":188,\"y\":550},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"5KReYAkLJWaRp7h86klokv5iD3gKo.ze\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/5KReYAkLJWaRp7h86klokv5iD3gKo.ze/thebadguys_wolf.png\",\r\n         \"sourceSize\":{\"x\":188,\"y\":550}\r\n      },\r\n      \"wolf_sunglasses\":{\r\n         \"name\":\"wolf_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":188,\"y\":550},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"QxmkhpFCUe8oaJZb2UtMGlEgcjyjUnin\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/QxmkhpFCUe8oaJZb2UtMGlEgcjyjUnin/thebadguys_wolf_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":188,\"y\":550}\r\n      },\r\n      \"snake\":{\r\n         \"name\":\"snake\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":267,\"y\":400},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"6YSpapx5lsjbLvTzhvB7jhuFgaBZYTeZ\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/6YSpapx5lsjbLvTzhvB7jhuFgaBZYTeZ/thebadguys_snake.png\",\r\n         \"sourceSize\":{\"x\":267,\"y\":400}\r\n      },\r\n      \"snake_sunglasses\":{\r\n         \"name\":\"snake_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":267,\"y\":400},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"IeU1ICLEPBvWgZV1Dn37sCULXg10yDLT\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/IeU1ICLEPBvWgZV1Dn37sCULXg10yDLT/thebadguys_snake_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":267,\"y\":400}\r\n      },\r\n      \"shark\":{\r\n         \"name\":\"shark\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":259,\"y\":350},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"IBCWkq9Ho4GwW5LBSNOKqDly3C0ZsInb\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/IBCWkq9Ho4GwW5LBSNOKqDly3C0ZsInb/thebadguys_shark.png\",\r\n         \"sourceSize\":{\"x\":259,\"y\":350}\r\n      },\r\n      \"shark_sunglasses\":{\r\n         \"name\":\"shark_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":259,\"y\":350},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"QbGNAYyROJ8b54sVVQycbL95Q9oAlzpV\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/QbGNAYyROJ8b54sVVQycbL95Q9oAlzpV/thebadguys_shark_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":259,\"y\":350}\r\n      },\r\n      \"pirahna\":{\r\n         \"name\":\"pirahna\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":345,\"y\":400},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"5FEXaHVYwT.z_.tB9Pdc8wLYcS6pYGjI\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/5FEXaHVYwT.z_.tB9Pdc8wLYcS6pYGjI/thebadguys_pirahna.png\",\r\n         \"sourceSize\":{\"x\":345,\"y\":400}\r\n      },\r\n      \"piranha_sunglasses\":{\r\n         \"name\":\"piranha_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":345,\"y\":400},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"Tr98JLLtz3Uu5fuaJnOO.bRFuoWMgboS\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/Tr98JLLtz3Uu5fuaJnOO.bRFuoWMgboS/thebadguys_piranha_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":345,\"y\":400}\r\n      },\r\n      \"car_group\":{\r\n         \"name\":\"car_group\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":269,\"y\":275},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"kDvn7JokDQqhoR5QCseAUhdcv_u6DhwS\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/kDvn7JokDQqhoR5QCseAUhdcv_u6DhwS/thebadguys_car_group.png\",\r\n         \"sourceSize\":{\"x\":269,\"y\":275}\r\n      }\r\n   }\r\n}",
     "preload_asset_list": null
   },
   "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-03-23T11:38:24.000Z",
+  "created_at": "2022-03-23T16:28:23.000Z",
   "user_id": 9,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-23T11:38:24.847+00:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2022-03-23 11:55:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"soft_buttons\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:10:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:14:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-23T11:38:24.847+00:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2022-03-23 11:55:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"soft_buttons\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:10:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:14:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 09:33:18 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 09:54:36 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:00:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:02:57 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:13:40 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:14:25 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:19:02 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:21:49 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:22:51 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -80,225 +79,35 @@
         <block type="when_run">
           <next>
             <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"underwater"</field>
+              <field name="IMG">"background"</field>
               <next>
-                <block type="variables_set">
-                  <field name="VAR">scale</field>
-                  <value name="VALUE">
-                    <block type="math_arithmetic">
-                      <field name="OP">DIVIDE</field>
-                      <value name="A">
-                        <block type="math_number">
-                          <field name="NUM">8</field>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="math_number">
-                          <field name="NUM">7</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
+                <block type="gamelab_makeNewScaledSprite">
+                  <field name="ANIMATION_NAME">"shark"</field>
+                  <field name="LOCATION">{"x":264,"y":257}</field>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"shark"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":200,"y":200}</field>
-                        </block>
-                      </value>
+                    <block type="gamelab_makeNewScaledSprite">
+                      <field name="ANIMATION_NAME">"snake"</field>
+                      <field name="LOCATION">{"x":105,"y":295}</field>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"shark"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":246,"y":265}</field>
-                            </block>
-                          </value>
+                        <block type="gamelab_makeNewScaledSprite">
+                          <field name="ANIMATION_NAME">"wolf"</field>
+                          <field name="LOCATION">{"x":173,"y":263}</field>
                           <next>
-                            <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"shark"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":157,"y":278}</field>
-                                </block>
-                              </value>
+                            <block type="gamelab_makeNewScaledSprite">
+                              <field name="ANIMATION_NAME">"pirahna"</field>
+                              <field name="LOCATION">{"x":353,"y":327}</field>
                               <next>
-                                <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"shark"</field>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":94,"y":314}</field>
-                                    </block>
-                                  </value>
+                                <block type="gamelab_makeNewScaledSprite">
+                                  <field name="ANIMATION_NAME">"tarantula"</field>
+                                  <field name="LOCATION">{"x":38,"y":352}</field>
                                   <next>
-                                    <block type="gamelab_makeNewSpriteAnon">
-                                      <field name="ANIMATION_NAME">"shark"</field>
-                                      <value name="LOCATION">
-                                        <block type="gamelab_location_picker">
-                                          <field name="LOCATION">{"x":341,"y":340}</field>
+                                    <block type="gamelab_spriteSay">
+                                      <field name="SPEECH">We're the bad guys, and this is the crew!</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"wolf"</field>
                                         </block>
                                       </value>
-                                      <next>
-                                        <block type="gamelab_makeNewSpriteAnon">
-                                          <field name="ANIMATION_NAME">"shark"</field>
-                                          <value name="LOCATION">
-                                            <block type="gamelab_location_picker">
-                                              <field name="LOCATION">{"x":28,"y":372}</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_setProp">
-                                              <field name="PROPERTY">"scale"</field>
-                                              <value name="SPRITE">
-                                                <block type="gamelab_allSpritesWithAnimation">
-                                                  <field name="ANIMATION">"shark"</field>
-                                                </block>
-                                              </value>
-                                              <value name="VAL">
-                                                <block type="math_number">
-                                                  <field name="NUM">400</field>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="gamelab_setProp">
-                                                  <field name="PROPERTY">"scale"</field>
-                                                  <value name="SPRITE">
-                                                    <block type="gamelab_allSpritesWithAnimation">
-                                                      <field name="ANIMATION">"shark"</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="VAL">
-                                                    <block type="math_arithmetic">
-                                                      <field name="OP">MULTIPLY</field>
-                                                      <value name="A">
-                                                        <block type="math_number">
-                                                          <field name="NUM">220</field>
-                                                        </block>
-                                                      </value>
-                                                      <value name="B">
-                                                        <block type="variables_get">
-                                                          <field name="VAR">scale</field>
-                                                        </block>
-                                                      </value>
-                                                    </block>
-                                                  </value>
-                                                  <next>
-                                                    <block type="gamelab_setProp">
-                                                      <field name="PROPERTY">"scale"</field>
-                                                      <value name="SPRITE">
-                                                        <block type="gamelab_allSpritesWithAnimation">
-                                                          <field name="ANIMATION">"shark"</field>
-                                                        </block>
-                                                      </value>
-                                                      <value name="VAL">
-                                                        <block type="math_arithmetic">
-                                                          <field name="OP">MULTIPLY</field>
-                                                          <value name="A">
-                                                            <block type="math_number">
-                                                            <field name="NUM">208</field>
-                                                            </block>
-                                                          </value>
-                                                          <value name="B">
-                                                            <block type="variables_get">
-                                                            <field name="VAR">scale</field>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </value>
-                                                      <next>
-                                                        <block type="gamelab_setProp">
-                                                          <field name="PROPERTY">"scale"</field>
-                                                          <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"shark"</field>
-                                                            </block>
-                                                          </value>
-                                                          <value name="VAL">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">MULTIPLY</field>
-                                                            <value name="A">
-                                                            <block type="math_number">
-                                                            <field name="NUM">141</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="variables_get">
-                                                            <field name="VAR">scale</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                          </value>
-                                                          <next>
-                                                            <block type="gamelab_setProp">
-                                                            <field name="PROPERTY">"scale"</field>
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"shark"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="VAL">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">MULTIPLY</field>
-                                                            <value name="A">
-                                                            <block type="math_number">
-                                                            <field name="NUM">71</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="variables_get">
-                                                            <field name="VAR">scale</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_setProp">
-                                                            <field name="PROPERTY">"scale"</field>
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"shark"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="VAL">
-                                                            <block type="math_arithmetic">
-                                                            <field name="OP">MULTIPLY</field>
-                                                            <value name="A">
-                                                            <block type="math_number">
-                                                            <field name="NUM">29</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="B">
-                                                            <block type="variables_get">
-                                                            <field name="VAR">scale</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </value>
-                                                            <next>
-                                                            <block type="gamelab_spriteSay">
-                                                            <field name="SPEECH">We're the bad guys, and this is the crew!</field>
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"shark"</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
                                     </block>
                                   </next>
                                 </block>
@@ -318,7 +127,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"shark"</field>
+              <field name="ANIMATION">"tarantula"</field>
             </block>
           </value>
           <next>
@@ -326,7 +135,7 @@
               <field name="SPEECH">I'm Ms. Tarantula, the crew's in-house tech wizard!</field>
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"shark"</field>
+                  <field name="ANIMATION">"tarantula"</field>
                 </block>
               </value>
             </block>
@@ -336,7 +145,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"shark"</field>
+              <field name="ANIMATION">"snake"</field>
             </block>
           </value>
           <next>
@@ -344,7 +153,7 @@
               <field name="SPEECH">I'm Mr. Snake, the serpentine, safe-cracking machine!</field>
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"shark"</field>
+                  <field name="ANIMATION">"snake"</field>
                 </block>
               </value>
             </block>
@@ -354,7 +163,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"shark"</field>
+              <field name="ANIMATION">"wolf"</field>
             </block>
           </value>
           <next>
@@ -362,7 +171,7 @@
               <field name="SPEECH">Rounding out the crew is me, the big, bad wolf!</field>
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"shark"</field>
+                  <field name="ANIMATION">"wolf"</field>
                 </block>
               </value>
             </block>
@@ -390,7 +199,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"shark"</field>
+              <field name="ANIMATION">"pirahna"</field>
             </block>
           </value>
           <next>
@@ -398,7 +207,7 @@
               <field name="SPEECH">I'm the brave and crazy Mr. Piranha!</field>
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"shark"</field>
+                  <field name="ANIMATION">"pirahna"</field>
                 </block>
               </value>
             </block>
@@ -1724,7 +1533,7 @@
       <xml>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs">
-            <field name="IMG">"cave"</field>
+            <field name="IMG">"background"</field>
           </block>
           <block type="gamelab_setBackground">
             <value name="COLOR">
@@ -1806,38 +1615,14 @@
           <block type="gamelab_locationMouse"/>
         </category>
         <category name="Sprites">
-          <block type="gamelab_makeNewSpriteAnon">
-            <field name="ANIMATION_NAME">"purple bunny"</field>
-            <value name="LOCATION">
-              <block type="gamelab_location_picker">
-                <field name="LOCATION">{"x":200,"y":200}</field>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_makeNumSprites">
-            <field name="ANIMATION_NAME">"purple bunny"</field>
-            <value name="NUM">
-              <block type="math_number">
-                <field name="NUM">3</field>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_makeBurst">
-            <field name="EFFECT">"burst"</field>
-            <field name="ANIMATION_NAME">"purple bunny"</field>
-            <value name="NUM">
-              <block type="math_number">
-                <field name="NUM">10</field>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_allSpritesWithAnimation">
-            <field name="ANIMATION">"purple bunny"</field>
+          <block type="gamelab_makeNewScaledSprite">
+            <field name="ANIMATION_NAME">"tarantula"</field>
+            <field name="LOCATION">{"x":200,"y":200}</field>
           </block>
           <block type="gamelab_destroy">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
@@ -1845,7 +1630,7 @@
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="VAL">
@@ -1858,7 +1643,7 @@
             <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="VAL">
@@ -1871,7 +1656,7 @@
             <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -1884,7 +1669,7 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="N">
@@ -1894,22 +1679,22 @@
             </value>
           </block>
           <block type="gamelab_spriteSay">
-            <field name="SPEECH">Hello, world!</field>
+            <field name="SPEECH">We're the Bad Guys!</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteSayTime">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="TEXT1">
               <block type="text">
-                <field name="TEXT">Hello, world!</field>
+                <field name="TEXT">We're the Bad Guys!</field>
               </block>
             </value>
             <value name="NUM">
@@ -1922,14 +1707,14 @@
             <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_jumpTo">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="LOCATION">
@@ -1939,7 +1724,7 @@
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="COLOR">
@@ -1951,14 +1736,14 @@
           <block type="gamelab_removeTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_moveForward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -1970,7 +1755,7 @@
           <block type="gamelab_moveToward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="DISTANCE">
@@ -1985,54 +1770,39 @@
           <block type="gamelab_edgesDisplace">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_bounceOff">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="TARGET">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"carrot"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <field name="ANIMATION">"brown bunny"</field>
+            <field name="ANIMATION">"tarantula"</field>
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
-          <block type="gamelab_costumeImage">
-            <field name="COSTUME">"carrot"</field>
-          </block>
-          <block type="gamelab_createNewSprite">
-            <field name="NAME">mySprite</field>
-            <field name="COSTUME">"bear"</field>
-            <value name="LOCATION">
-              <block type="gamelab_location_picker">
-                <field name="LOCATION">{"x":200,"y":200}</field>
-              </block>
-            </value>
-          </block>
-          <block type="sprite_variables_get">
-            <field name="VAR">mySprite</field>
-          </block>
-          <block type="gamelab_getThisSprite">
-            <field name="CHOICE">"this"</field>
+          <block type="gamelab_allSpritesWithAnimation">
+            <field name="ANIMATION">"tarantula"</field>
           </block>
           <block type="gamelab_getAllSprites"/>
           <block type="gamelab_getProp">
             <field name="PROPERTY">"scale"</field>
           </block>
           <block type="gamelab_isCostumeEqual">
-            <field name="COSTUME">"purple bunny"</field>
+            <field name="COSTUME">"tarantula"</field>
           </block>
           <block type="gamelab_isTouchingEdges"/>
           <block type="gamelab_isTouchingSprite"/>
@@ -2054,13 +1824,7 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_locationOf">
-            <value name="SPRITE">
-              <block type="sprite_variables_get">
-                <field name="VAR">mySprite</field>
-              </block>
-            </value>
-          </block>
+          <block type="gamelab_locationOf"/>
           <block type="gamelab_locationMouse"/>
           <block type="gamelab_locationModifier">
             <field name="DISTANCE">100</field>
@@ -2076,7 +1840,7 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
@@ -2084,12 +1848,12 @@
             <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"carrot"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
@@ -2112,7 +1876,7 @@
           <block type="gamelab_whenSpriteCreated">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"carrot"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
@@ -2121,21 +1885,21 @@
           <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeAllBehaviors">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
@@ -2213,7 +1977,7 @@
           <block type="gamelab_countByAnimation">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
@@ -2256,13 +2020,7 @@
             <field name="BOOL">TRUE</field>
           </block>
           <block type="logic_negate"/>
-          <block type="gamelab_isTouchingEdges">
-            <value name="SPRITE">
-              <block type="sprite_variables_get">
-                <field name="VAR">mySprite</field>
-              </block>
-            </value>
-          </block>
+          <block type="gamelab_isTouchingEdges"/>
           <block type="math_number_property">
             <mutation divisor_input="false"/>
             <field name="PROPERTY">EVEN</field>
@@ -2303,31 +2061,6 @@
             </value>
           </block>
           <block type="gamelab_hideTitleScreen"/>
-          <block type="gamelab_spriteSay">
-            <field name="SPEECH">Hello, world!</field>
-            <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_spriteSayTime">
-            <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
-              </block>
-            </value>
-            <value name="TEXT1">
-              <block type="text">
-                <field name="TEXT">Hello, world!</field>
-              </block>
-            </value>
-            <value name="NUM">
-              <block type="math_number">
-                <field name="NUM">4</field>
-              </block>
-            </value>
-          </block>
         </category>
         <category name="Comments">
           <block type="gamelab_comment">
