@@ -124,8 +124,8 @@ exports.showTurtle = function(id) {
   ArtistApi.log.push(['ST', null]);
 };
 
-exports.drawPatternBlock = function(sticker) {
-  ArtistApi.log.push(['pattern_block', sticker, null]);
+exports.drawShape = function(sticker) {
+  ArtistApi.log.push(['shape', sticker, null]);
 };
 
 exports.drawSticker = function(sticker) {

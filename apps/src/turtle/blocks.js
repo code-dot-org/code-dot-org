@@ -1550,43 +1550,41 @@ exports.install = function(blockly, blockInstallOptions) {
         'block_id_${this.id}');\n`;
   };
 
-  function createDrawPatternBlockBlock(blockName) {
+  function createDrawShapeBlock(blockName) {
     return {
       helpUrl: '',
       init: function() {
         this.setHSV(184, 1.0, 0.74);
         var dropdown;
         var input = this.appendDummyInput();
-        input.appendTitle(msg.drawPatternBlock());
+        input.appendTitle(msg.drawShape());
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
 
         // Generates a list of pairs of the form [[url, name]]
         var values = [];
-        for (var name in skin.patternBlocks) {
-          var url = skin.patternBlocks[name];
+        for (var name in skin.shapes) {
+          var url = skin.shapes[name];
           values.push([url, name]);
         }
         dropdown = new blockly.FieldImageDropdown(values, 40, 40);
 
         input.appendTitle(dropdown, 'VALUE');
 
-        appendToDrawPatternBlockBlock(blockName, this);
+        appendToDrawShapeBlock(blockName, this);
       }
     };
   }
 
-  // Add size input to the draw pattern_block block (text input & socket)
-  function appendToDrawPatternBlockBlock(blockName, block) {
-    if (blockName === 'turtle_pattern_block_with_side_length') {
+  // Add size input to the draw shape block (text input & socket)
+  function appendToDrawShapeBlock(blockName, block) {
+    if (blockName === 'turtle_shape_with_side_length') {
       block.appendDummyInput().appendTitle(msg.withSideLength());
       block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
       block.appendDummyInput().appendTitle(msg.pixels());
-      block.setTooltip(msg.drawPatternBlockWithSideLength());
-    } else if (
-      blockName === 'turtle_pattern_block_with_side_length_non_param'
-    ) {
+      block.setTooltip(msg.drawShapeWithSideLength());
+    } else if (blockName === 'turtle_shape_with_side_length_non_param') {
       block.appendDummyInput().appendTitle(msg.withSideLength());
       block
         .appendDummyInput()
@@ -1598,17 +1596,17 @@ exports.install = function(blockly, blockInstallOptions) {
           'SIZE'
         )
         .appendTitle(msg.pixels());
-      block.setTooltip(msg.drawPatternBlockWithSideLength());
+      block.setTooltip(msg.drawShapeWithSideLength());
     } else {
-      block.setTooltip(msg.drawPatternBlock());
+      block.setTooltip(msg.drawShape());
     }
   }
 
-  blockly.Blocks.pattern_block = createDrawPatternBlockBlock();
+  blockly.Blocks.shape = createDrawShapeBlock();
 
-  generator.pattern_block = function() {
+  generator.shape = function() {
     return (
-      'Turtle.drawPatternBlock("' +
+      'Turtle.drawShape("' +
       this.getTitleValue('VALUE') +
       '", null, \'block_id_' +
       this.id +
@@ -1616,27 +1614,27 @@ exports.install = function(blockly, blockInstallOptions) {
     );
   };
 
-  blockly.Blocks.turtle_pattern_block_with_side_length = createDrawPatternBlockBlock(
-    'turtle_pattern_block_with_side_length'
+  blockly.Blocks.turtle_shape_with_side_length = createDrawShapeBlock(
+    'turtle_shape_with_side_length'
   );
 
-  generator.turtle_pattern_block_with_side_length = function() {
+  generator.turtle_shape_with_side_length = function() {
     let size = generator.valueToCode(
       this,
       'SIZE',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `Turtle.drawPatternBlock('${this.getTitleValue('VALUE')}',${size},
+    return `Turtle.drawShape('${this.getTitleValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
-  blockly.Blocks.turtle_pattern_block_with_side_length_non_param = createDrawPatternBlockBlock(
-    'turtle_pattern_block_with_side_length_non_param'
+  blockly.Blocks.turtle_shape_with_side_length_non_param = createDrawShapeBlock(
+    'turtle_shape_with_side_length_non_param'
   );
 
-  generator.turtle_pattern_block_with_side_length_non_param = function() {
+  generator.turtle_shape_with_side_length_non_param = function() {
     let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
-    return `Turtle.drawPatternBlock('${this.getTitleValue('VALUE')}',${size},
+    return `Turtle.drawShape('${this.getTitleValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
