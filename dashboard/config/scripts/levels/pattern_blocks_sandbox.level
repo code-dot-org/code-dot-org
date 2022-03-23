@@ -76,7 +76,7 @@
                     <block type="comment">
                       <field name="TEXT">Row 1</field>
                       <next>
-                        <block type="turtle_pattern_block_with_side_length">
+                        <block type="turtle_shape_with_side_length">
                           <field name="VALUE">smallRhombusRed</field>
                           <value name="SIZE">
                             <block type="variables_get">
@@ -93,7 +93,7 @@
                                     <block type="procedures_callnoreturn">
                                       <mutation name="rowTwo"/>
                                       <next>
-                                        <block type="turtle_pattern_block_with_side_length">
+                                        <block type="turtle_shape_with_side_length">
                                           <field name="VALUE">smallRhombusOrange</field>
                                           <value name="SIZE">
                                             <block type="variables_get">
@@ -104,7 +104,7 @@
                                             <block type="procedures_callnoreturn">
                                               <mutation name="findPosition"/>
                                               <next>
-                                                <block type="turtle_pattern_block_with_side_length">
+                                                <block type="turtle_shape_with_side_length">
                                                   <field name="VALUE">smallRhombusYellow</field>
                                                   <value name="SIZE">
                                                     <block type="variables_get">
@@ -121,7 +121,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="rowThree"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_side_length">
+                                                            <block type="turtle_shape_with_side_length">
                                                             <field name="VALUE">smallRhombusGreen</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -132,7 +132,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_side_length">
+                                                            <block type="turtle_shape_with_side_length">
                                                             <field name="VALUE">smallRhombusCyan</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -143,7 +143,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_side_length">
+                                                            <block type="turtle_shape_with_side_length">
                                                             <field name="VALUE">smallRhombusLightBlue</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -163,7 +163,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_side_length">
+                                                            <block type="turtle_shape_with_side_length">
                                                             <field name="VALUE">smallRhombusBlue</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -174,7 +174,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="findPosition"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_side_length">
+                                                            <block type="turtle_shape_with_side_length">
                                                             <field name="VALUE">smallRhombusPurple</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -191,7 +191,7 @@
                                                             <block type="procedures_callnoreturn">
                                                             <mutation name="rowFive"/>
                                                             <next>
-                                                            <block type="turtle_pattern_block_with_side_length">
+                                                            <block type="turtle_shape_with_side_length">
                                                             <field name="VALUE">smallRhombusMagenta</field>
                                                             <value name="SIZE">
                                                             <block type="variables_get">
@@ -450,14 +450,14 @@
     <toolbox_blocks>
       <xml>
         <category name="Stickers">
-          <block type="pattern_block">
+          <block type="shape">
             <field name="VALUE">smallRhombusMaroon</field>
           </block>
-          <block type="turtle_pattern_block_with_side_length_non_param">
+          <block type="turtle_shape_with_side_length_non_param">
             <field name="VALUE">smallRhombusMaroon</field>
             <field name="SIZE">25</field>
           </block>
-          <block type="turtle_pattern_block_with_side_length">
+          <block type="turtle_shape_with_side_length">
             <field name="VALUE">smallRhombusMaroon</field>
             <value name="SIZE">
               <block type="math_number">

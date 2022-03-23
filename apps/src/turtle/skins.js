@@ -170,9 +170,9 @@ exports.load = function(assetUrl, id) {
    *
    * @return the mapping of names to urls
    */
-  var patternBlocks = function() {
+  var shapes = function() {
     // Pattern Blocks
-    var patternBlocks = [
+    var shapes = [
       'smallRhombusMaroon',
       'smallRhombusRed',
       'smallRhombusOrange',
@@ -188,10 +188,10 @@ exports.load = function(assetUrl, id) {
     var mapping = {};
     var name;
 
-    for (var i = 0; i < patternBlocks.length; i++) {
-      name = patternBlocks[i];
+    for (var i = 0; i < shapes.length; i++) {
+      name = shapes[i];
       mapping[name] = assetUrl(
-        'media/common_images/pattern_blocks/' + name.toLowerCase() + '.png'
+        'media/common_images/shapes/' + name.toLowerCase() + '.png'
       );
     }
 
@@ -199,7 +199,7 @@ exports.load = function(assetUrl, id) {
   };
 
   skin.stickers = stickers();
-  skin.patternBlocks = patternBlocks();
+  skin.shapes = shapes();
 
   var config = CONFIGS[skin.id];
 

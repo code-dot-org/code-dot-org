@@ -243,34 +243,34 @@ Artist.prototype.preloadAllStickerImages = function() {
 };
 
 /**
- * Initializes all geometry sticker images as defined in this.skin.patternBlocks,
- * if any, storing the created images in this.patternBlocks.
+ * Initializes all geometry sticker images as defined in this.skin.shapes,
+ * if any, storing the created images in this.shapes.
  *
- * NOTE: initializes this.patternBlocks as a side effect
+ * NOTE: initializes this.shapes as a side effect
  *
  * @return {Promise} that resolves once all images have finished loading,
  *         whether they did so successfully or not (or that resolves instantly
  *         if there are no images to load).
  */
-Artist.prototype.preloadAllPatternBlockImages = function() {
-  this.patternBlocks = {};
+Artist.prototype.preloadAllShapeImages = function() {
+  this.shapes = {};
 
-  const loadPatternBlock = name =>
+  const loadShape = name =>
     new Promise(resolve => {
       const img = new Image();
 
       img.onload = () => resolve();
       img.onerror = () => resolve();
 
-      img.src = this.skin.patternBlocks[name];
-      this.patternBlocks[name] = img;
+      img.src = this.skin.shapes[name];
+      this.shapes[name] = img;
     });
 
-  const patternBlocks = (this.skin && this.skin.patternBlocks) || {};
-  const patternBlockNames = Object.keys(patternBlocks);
+  const shapes = (this.skin && this.skin.shapes) || {};
+  const shapeNames = Object.keys(shapes);
 
-  if (patternBlockNames.length) {
-    return Promise.all(patternBlockNames.map(loadPatternBlock));
+  if (shapeNames.length) {
+    return Promise.all(shapeNames.map(loadShape));
   } else {
     return Promise.resolve();
   }
@@ -404,7 +404,7 @@ Artist.prototype.init = function(config) {
 
   return Promise.all([
     this.preloadAllStickerImages(),
-    this.preloadAllPatternBlockImages(),
+    this.preloadAllShapeImages(),
     this.preloadAllPatternImages()
   ]).then(() => {
     ReactDOM.render(
@@ -1232,20 +1232,20 @@ Artist.prototype.step = function(command, values, options) {
     case 'ST': // Show Turtle
       this.visualization.avatar.visible = true;
       break;
-    case 'pattern_block': {
+    case 'shape': {
       let size = MAX_PATTERN_BLOCK_SIZE;
 
       if (typeof values[1] === 'number') {
-        // Pattern blocks are scaled up 4 times. The student is specifying the
+        // Shapes are scaled up 4 times. The student is specifying the
         // length of one side of the image, not the size of the entire image.
         size = values[1] * 4;
       }
 
       if (this.visualization.shouldDrawNormalized_) {
-        values = Object.keys(this.patternBlocks);
+        values = Object.keys(this.shapes);
       }
 
-      img = this.patternBlocks[values[0]];
+      img = this.shapes[values[0]];
 
       dimensions = scaleToBoundingBox(size, img.width, img.height);
       width = dimensions.width;
