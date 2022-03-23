@@ -12,6 +12,7 @@ import AgeDialog, {
   signedOutUnder13 as signedOutAgeCheck,
   songFilterOn
 } from '../templates/AgeDialog';
+import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
 
 const SongSelector = Radium(
   class extends React.Component {
@@ -36,11 +37,7 @@ const SongSelector = Radium(
         filterOn
       } = this.props;
 
-      let songKeys = Object.keys(songData);
-      if (filterOn) {
-        // Filter is on, only include songs that are not pg13
-        songKeys = songKeys.filter(key => !songData[key].pg13);
-      }
+      let songKeys = getFilteredSongKeys(songData, filterOn);
 
       return (
         <div id="song-selector-wrapper">
