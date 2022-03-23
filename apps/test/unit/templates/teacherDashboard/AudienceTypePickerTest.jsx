@@ -12,8 +12,8 @@ describe('AudienceTypePicker', () => {
     handleCancel = sinon.spy();
     defaultProps = {
       title: 'Create a new section',
-      setParticipantType: setParticipantType,
-      handleCancel: handleCancel,
+      setParticipantType,
+      handleCancel,
       availableParticipantTypes: ['student']
     };
   });

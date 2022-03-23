@@ -90,6 +90,8 @@ class AddSectionDialog extends Component {
   }
 }
 
+export const UnconnectedAddSectionDialog = AddSectionDialog;
+
 export default connect(
   state => ({
     isOpen: isAddingSection(state.teacherSections),
