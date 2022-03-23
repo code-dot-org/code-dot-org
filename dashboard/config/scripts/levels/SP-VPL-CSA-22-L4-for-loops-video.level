@@ -16,7 +16,7 @@
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-21T01:21:56.915+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-statements-video\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-statements-video\"},{\"changed_at\":\"2022-03-21 02:15:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 02:16:41 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 03:02:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-21T01:21:56.915+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-statements-video\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-statements-video\"},{\"changed_at\":\"2022-03-21 02:15:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 02:16:41 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 03:02:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 22:18:54 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

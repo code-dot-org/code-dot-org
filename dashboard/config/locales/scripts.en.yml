@@ -28429,7 +28429,7 @@ en:
             lesson-2:
               name: 'Project: Human Device Interaction'
               description_student: 
-              description_teacher: 
+              description_teacher: 'In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. '
             lesson-3:
               name: 'Mini-Project: Interactive Art'
               description_student: Create a piece of interactive artwork using a Circuit Playground and physical materials
@@ -30036,10 +30036,6 @@ en:
               name: End of Course Project
               description_student: Create your own story or game.
               description_teacher: In this **project** lesson, students apply what they have learned about sequencing and events in an open-ended project with Play Lab.
-            The Big Event Jr:
-              name: The Big Event Jr.
-              description_student: Move or shout when your teacher presses buttons on a giant remote.
-              description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -31944,14 +31940,14 @@ en:
             lesson-1:
               name: Welcome to Code.org
               description_student: |-
-                You will:
+                **You will:**
 
                 * Get an introduction to Code.org.
                 * Learn how to engage in these professional learning modules.
 
                 **Estimated time:** 20 minutes
               description_teacher: |
-                You will:
+                **You will:**
 
                 * Get an introduction to Code.org.
                 * Learn how to engage in these professional learning modules.
@@ -31959,15 +31955,33 @@ en:
                 **Estimated time:** 20 minutes
             lesson-2:
               name: Get to know Computer Science A
-              description_student: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
-              description_teacher: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+              description_student: "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+              description_teacher: "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
           lesson_groups: {}
           name: self-paced-pl-csa1-2022
-          title: 'Unit 1 - Module 1: Welcome'
+          title: 'Module 1: Welcome'
           description_audience: ''
           description_short: ''
-          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
-          student_description: ''
+          description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          student_description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
         self-paced-pl-csa2-2022:
           lessons:
             lesson-1:
@@ -31978,14 +31992,14 @@ en:
                 * Navigate the Code.org website and teacher tools.
                 * Set up a classroom section.
 
-                **Suggested time:** 30 minutes
+                **Estimated time:** 30 minutes
               description_teacher: |-
                 **You will:**
 
                 * Navigate the Code.org website and teacher tools.
                 * Set up a classroom section.
 
-                **Suggested time:** 30 minutes
+                **Estimated time:** 30 minutes
             lesson-2:
               name: Navigating lesson plans and resources
               description_student: |-
@@ -31993,13 +32007,13 @@ en:
 
                 * Locate and use course lesson plans and teacher resources.
 
-                **Suggested time:** 25 minutes
+                **Estimated time:** 25 minutes
               description_teacher: |-
                 **You will:**
 
                 * Locate and use course lesson plans and teacher resources.
 
-                **Suggested time:** 25 minutes
+                **Estimated time:** 25 minutes
             lesson-3:
               name: Navigating Support
               description_student: |-
@@ -32007,49 +32021,152 @@ en:
 
                 * Learn how to access support while teaching the course.
 
-                **Suggested time:** 15 minutes
+                **Estimated time:** 15 minutes
               description_teacher: |-
                 **You will:**
 
                 * Learn how to access support while teaching the course.
 
-                **Suggested time:** 15 minutes
+                **Estimated time:** 15 minutes
           lesson_groups: {}
           name: self-paced-pl-csa2-2022
-          title: ''
+          title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Estimated Time:** 70 minutes\n"
+          student_description: |-
+            This module is intended for teachers who are new to Code.org and the Code.org platform.
+
+            **You will:**
+            * Navigate the Code.org website and teacher tools.
+            * Set up a classroom section.
+            * Locate and use course lesson plans and teacher resources.
+            * Learn how to access support while teaching the course.
+
+            **Estimated Time:** 70 minutes
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
               name: Introduction to JavaLab
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Create a new file in the Java Lab IDE
+                * Name Java files using conventions for naming
+                * Learn the basics of Java syntax
+                * Print information to the console
+
+                **Estimated time:** 60 minutes
             lesson-2:
               name: Variables in Java
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Describe the different primitive data types covered in the AP subset
+                * Declare and initialize variables
+                * Use the assignment operator and compound assignment operators
+                * Use variables in arithmetic operations
+                * Print variables and text to the console
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Describe the different primitive data types covered in the AP subset
+                * Declare and initialize variables
+                * Use the assignment operator and compound assignment operators
+                * Use variables in arithmetic operations
+                * Print variables and text to the console
+
+                **Estimated time:** 90 minutes
             lesson-3:
               name: If statements in Java
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Evaluate boolean expressions
+                * Write and read if, if-else, if-else-if-else statements
+                * Describe the difference between the assignment operator and the comparison operator
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Evaluate boolean expressions
+                * Write and read if, if-else, if-else-if-else statements
+                * Describe the difference between the assignment operator and the comparison operator
+
+                **Estimated time:** 90 minutes
             lesson-4:
               name: Loops in Java
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Read, write, and debug for loops in Java
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Read, write, and debug for loops in Java
+
+                **Estimated time:** 90 minutes
             lesson-5:
               name: Arrays in Java
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Declare and initialize a 1D array of primitive data types
+                * Access and modify elements in an array
+                * Traverse an array
+
+                **Estimated time:** 120 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Declare and initialize a 1D array of primitive data types
+                * Access and modify elements in an array
+                * Traverse an array
+
+                **Estimated time:** 120 minutes
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
-          title: Support for text-based programming
+          title: 'Module 3: Support for text-based programming'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          student_description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
         csa7-pilot-extra:
           lessons:
             Writing Methods to Satisfy Conditions:
@@ -33096,12 +33213,38 @@ en:
           lessons:
             lesson-1:
               name: "[TEMPLATE] Introduction to..."
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's ___________ unit.
+                * Get a preview of the first week of the ________ unit content.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's ___________ unit.
+                * Get a preview of the first week of the ________ unit content.
+
+                **Suggested time:** 15 minutes
             lesson-2:
               name: "[TEMPLATE] Unit Wrap Up"
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+              description_teacher: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+            lesson-3:
+              name: "[TEMPLATE] Content lessons"
+              description_student: |-
+                **You will:**
+
+                * Insert lesson objectives.
+
+                **Suggested time:** ____ minutes
+              description_teacher: |-
+                **You will:**
+
+                * Insert lesson objectives.
+
+                **Suggested time:** ____ minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -33336,9 +33479,21 @@ en:
         vpl-csd2-ci-pilot-2022:
           lessons:
             lesson-1:
-              name: Introduction to Web Design
-              description_student: 
-              description_teacher: 
+              name: Introduction to Web Development
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's Web Development unit.
+                * Get a preview of the first week of the Web Development unit content.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's Web Development unit.
+                * Get a preview of the first week of the Web Development unit content.
+
+                **Suggested time:** 15 minutes
             lesson-2:
               name: Build a website with HTML
               description_student: 
@@ -33350,14 +33505,21 @@ en:
             lesson-4:
               name: Consider real-world implications
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Consider real-world implications of web development.
+
+                **Suggested time:** 20 minutes
             lesson-5:
               name: Unit wrap up
-              description_student: 
-              description_teacher: 
-          lesson_groups: {}
+              description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+              description_teacher: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Web Development
           name: vpl-csd2-ci-pilot-2022
-          title: 'Module 2: Preparing to Teach Web Design'
+          title: 'Module 2: Preparing to Teach Web Development'
           description_audience: ''
           description_short: ''
           description: ''
@@ -33417,4 +33579,17 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Level Updates
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csd-playground
+          title: CSD Playground
+          description_audience: Curriculum Writers
+          description_short: For staging updates to lessons or levels between curriculum versions
+          description: For staging updates to lessons or levels between curriculum versions
           student_description: ''

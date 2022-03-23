@@ -243,8 +243,8 @@ module Services
         lesson.lesson_activities.first.update!(name: 'Updated Activity Name')
         lesson.lesson_activities.create(
           name: 'New Activity Name',
-          position: 2,
-          key: "#{lesson.name}-activity-2"
+          position: 3,
+          key: "#{lesson.name}-activity-3"
         )
       end
 
@@ -267,8 +267,8 @@ module Services
         activity.activity_sections.first.update!(name: 'Updated Section Name')
         activity.activity_sections.create(
           name: 'New Section Name',
-          position: 2,
-          key: "#{activity.key}-section-2"
+          position: 3,
+          key: "#{activity.key}-section-3"
         )
       end
 

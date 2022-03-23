@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-17 15:53:24 UTC",
+    "serialized_at": "2022-03-22 14:09:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8079,6 +8079,18 @@
       }
     },
     {
+      "name": "[KEY] U1L11 Extra Practice",
+      "url": "https://docs.google.com/document/d/1elO59wpZpxd1IQwnUAmKwYf6hRIWot7O-4QXnf7JLLg/edit?usp=sharing",
+      "key": "_key_u1l11_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U1L12 Extra Practice",
       "url": "https://docs.google.com/document/d/1G5xuV66OHBxGTSE_V7CbzZZ1T6xpOd75W6TIO2zx4YQ/edit?usp=sharing",
       "key": "_key_u1l12_extra_practice",
@@ -8088,6 +8100,42 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L13 Extra Practice",
+      "url": "https://docs.google.com/document/d/14ce6HV3pfbTXJnAQS51abaVDSSI-7ExoUTpGeaHPnZQ/edit?usp=sharing",
+      "key": "_key_u1l13_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L14 Extra Practice",
+      "url": "https://docs.google.com/document/d/10TZ998uQyT3bry_M2_BBYJIhQ3RrhME2bJhq8WJE2fE/edit?usp=sharing",
+      "key": "_key_u1l14_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l14_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L15 Extra Practice",
+      "url": "https://docs.google.com/document/d/15E4K3lZo5OJ7DYmH0GKkeYaf8-Uze9HBnWlrMznK_P0/edit?usp=sharing",
+      "key": "_key_u1l15_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l15_extra_practice"
       }
     },
     {
@@ -8424,6 +8472,18 @@
       }
     },
     {
+      "name": "U1L11 Extra Practice",
+      "url": "https://docs.google.com/document/d/1a9SiT2Ri_WVUG9_bD4T4dJfnXG1R57crXfZ3IRGver0/edit?usp=sharing",
+      "key": "u1l11_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
       "name": "U1L12 Extra Practice",
       "url": "https://docs.google.com/document/d/1AKIygL1eVqQk1i-nFF90V019bFnMbuqIDJ2u4Ag0rLg/edit?usp=sharing",
       "key": "u1l12_extra_practice",
@@ -8433,6 +8493,42 @@
       },
       "seeding_key": {
         "resource.key": "u1l12_extra_practice"
+      }
+    },
+    {
+      "name": "U1L13 Extra Practice",
+      "url": "https://docs.google.com/document/d/1x8WvkmttCNJQ4aOR-6GxFsw2hOzQLOlptz9m-5CdjSY/edit?usp=sharing",
+      "key": "u1l13_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "U1L14 Extra Practice",
+      "url": "https://docs.google.com/document/d/1pr1zyW-uEaozbndMp-YuZCzQG27yjbFfymUeS_v2EHc/edit?usp=sharing",
+      "key": "u1l14_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l14_extra_practice"
+      }
+    },
+    {
+      "name": "U1L15 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Km1AgjUcEHav0eIM8B84T3zixrl7eSp8zSntT2TK3Es/edit?usp=sharing",
+      "key": "u1l15_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l15_extra_practice"
       }
     },
     {
@@ -8668,6 +8764,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
+        "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
         "resource.key": "unit_1_presentation"
       }
     },
@@ -8710,7 +8818,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-13",
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
         "resource.key": "patternpainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "u1l13_extra_practice"
       }
     },
     {
@@ -8728,7 +8848,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "_key_u1l14_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "backgroundpainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "u1l14_extra_practice"
       }
     },
     {
@@ -8746,7 +8878,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
+        "resource.key": "_key_u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
         "resource.key": "exploring_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u1l15_extra_practice"
       }
     },
     {
