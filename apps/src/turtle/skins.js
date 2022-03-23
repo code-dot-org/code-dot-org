@@ -190,9 +190,7 @@ exports.load = function(assetUrl, id) {
 
     for (var i = 0; i < shapes.length; i++) {
       name = shapes[i];
-      mapping[name] = assetUrl(
-        'media/common_images/shapes/' + name.toLowerCase() + '.png'
-      );
+      mapping[name] = assetUrl('media/common_images/shapes/' + name + '.png');
     }
 
     return mapping;
