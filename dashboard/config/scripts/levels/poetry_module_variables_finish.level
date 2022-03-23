@@ -60,24 +60,24 @@
           <next>
             <block type="gamelab_setPrompt">
               <value name="QUESTION">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
                   <title name="TEXT">Name an animal:</title>
-                </block>
+                </shadow>
               </value>
               <value name="VAR">
-                <block type="variables_get">
+                <block type="variables_get" movable="false">
                   <title name="VAR">animal1</title>
                 </block>
               </value>
               <next>
                 <block type="gamelab_setPrompt">
                   <value name="QUESTION">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
                       <title name="TEXT">Name another animal:</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="VAR">
-                    <block type="variables_get">
+                    <block type="variables_get" movable="false">
                       <title name="VAR">animal2</title>
                     </block>
                   </value>
@@ -90,6 +90,9 @@
           <next>
             <block type="Poetry_setTitle">
               <value name="TITLE">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
                 <block type="gamelab_textJoin">
                   <title name="TEXT1">The </title>
                   <value name="TEXT2">
@@ -112,9 +115,9 @@
               <next>
                 <block type="Poetry_setAuthor">
                   <value name="AUTHOR">
-                    <block type="Poetry_stringValue">
+                    <shadow type="Poetry_stringValue">
                       <title name="TEXT">--Your Name--</title>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="Poetry_addLine"/>
@@ -138,6 +141,9 @@
         <category name="Text">
           <block type="Poetry_setTitle">
             <value name="TITLE">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
               <block type="gamelab_textJoin">
                 <title name="TEXT1"/>
               </block>
@@ -145,6 +151,9 @@
           </block>
           <block type="Poetry_setAuthor">
             <value name="AUTHOR">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
               <block type="gamelab_textJoin">
                 <title name="TEXT1"/>
               </block>
@@ -152,6 +161,9 @@
           </block>
           <block type="Poetry_addLine">
             <value name="LINE">
+              <shadow type="text">
+                <title name="TEXT"/>
+              </shadow>
               <block type="gamelab_textJoin">
                 <title name="TEXT1"/>
               </block>
@@ -165,12 +177,12 @@
         <category name="Variables">
           <block type="gamelab_setPrompt">
             <value name="QUESTION">
-              <block type="text" can_disconnect_from_parent="false">
+              <shadow type="text" can_disconnect_from_parent="false">
                 <title name="TEXT"/>
-              </block>
+              </shadow>
             </value>
             <value name="VAR">
-              <block type="variables_get" can_disconnect_from_parent="false">
+              <block type="variables_get" movable="false">
                 <title name="VAR">???</title>
               </block>
             </value>
@@ -185,9 +197,9 @@
           </block>
           <block type="Poetry_setFontColor">
             <value name="FILL">
-              <block type="colour_picker">
+              <shadow type="colour_picker">
                 <title name="COLOUR">#99ff99</title>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_setTextEffect">
@@ -195,9 +207,9 @@
           </block>
           <block type="Poetry_addTextHighlight">
             <value name="COLOR">
-              <block type="colour_picker" can_disconnect_from_parent="false">
+              <shadow type="colour_picker" can_disconnect_from_parent="false">
                 <title name="COLOUR">#99ff99</title>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_playSound">
@@ -214,9 +226,9 @@
           </block>
           <block type="Poetry_setBackground">
             <value name="COLOR">
-              <block type="colour_picker">
+              <shadow type="colour_picker">
                 <title name="COLOUR">#cc0000</title>
-              </block>
+              </shadow>
             </value>
           </block>
           <block type="Poetry_setBackgroundImageAs">

@@ -31,6 +31,9 @@ FactoryGirl.define do
     sequence(:family_name) {|n| "bogus-course-#{n}"}
     version_year "1991"
     published_state "beta"
+    instruction_type "teacher_led"
+    participant_audience "student"
+    instructor_audience "teacher"
   end
 
   factory :experiment do
@@ -758,6 +761,12 @@ FactoryGirl.define do
     participant_audience "student"
     instructor_audience "teacher"
 
+    trait :is_course do
+      sequence(:version_year) {|n| "bogus-version-year-#{n}"}
+      sequence(:family_name) {|n| "bogus-family-name-#{n}"}
+      is_course true
+    end
+
     trait :with_lessons do
       transient do
         lessons_count 2
@@ -971,6 +980,7 @@ FactoryGirl.define do
 
   factory :programming_environment do
     sequence(:name) {|n| "programming-environment-#{n}"}
+    published true
   end
 
   factory :programming_environment_category do

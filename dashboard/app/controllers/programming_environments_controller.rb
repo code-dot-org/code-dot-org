@@ -1,10 +1,10 @@
 class ProgrammingEnvironmentsController < ApplicationController
-  load_and_authorize_resource
-
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show]
+  before_action :set_programming_environment, except: [:index, :new, :create]
+  authorize_resource
 
   def index
-    @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
+    @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
   end
 
   def new
@@ -35,14 +35,15 @@ class ProgrammingEnvironmentsController < ApplicationController
     begin
       if programming_environment_params[:categories]
         programming_environment.categories =
-          programming_environment_params[:categories].map do |category|
-            if category['id']
+          programming_environment_params[:categories].each_with_index.map do |category, i|
+            if category['id'].blank?
+              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id, position: i))
+            else
               existing_category = programming_environment.categories.find(category['id'])
               existing_category.assign_attributes(category.except('id'))
+              existing_category.position = i
               existing_category.save! if existing_category.changed?
               existing_category
-            else
-              ProgrammingEnvironmentCategory.create!(category.merge(programming_environment_id: programming_environment.id))
             end
           end
       end
@@ -55,9 +56,19 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def show
-    @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
     return render :not_found unless @programming_environment
+    return head :forbidden unless can?(:read, @programming_environment)
     @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+  end
+
+  def destroy
+    return render :not_found unless @programming_environment
+    begin
+      @programming_environment.destroy!
+      render(status: 200, plain: "Destroyed #{@programming_environment.name}")
+    rescue => e
+      render(status: :not_acceptable, plain: e.message)
+    end
   end
 
   private
@@ -66,12 +77,18 @@ class ProgrammingEnvironmentsController < ApplicationController
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :title,
+      :published,
       :description,
       :editor_type,
+      :block_pool_name,
       :image_url,
       :project_url,
       categories: [:id, :name, :color]
     )
     transformed_params
+  end
+
+  def set_programming_environment
+    @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
   end
 end

@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Make a carrot appear whenever a purple bunny sprite is clicked.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/wtBH6tieviQLkoOT1xgnAWMW1EXM0jlWOOwhfnJtmfA",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Create five wandering purple bunnies.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/VnW0KcCZW0FagPqT6YW9LUFNlxz1NbDmM4suBczWLw8",
       "image": null,
       "app_display_type": "embedAppWithCode",

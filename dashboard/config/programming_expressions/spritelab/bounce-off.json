@@ -9,7 +9,6 @@
     {
       "name": "Example 2",
       "description": "Sprites that are wandering can bounce off of each other.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/2eIrhiV9sL-E5Go-xWW234oo8vfoevrllBpus961-SU",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 1",
       "description": "Sprites that are moving left and right using the `swimming left and right` block can bounce off of each other.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/EYPy9gVzbivcaqdRx0CStNo4HuKqoS8kb4h_jjjSiFQ",
       "image": null,
       "app_display_type": "embedAppWithCode",

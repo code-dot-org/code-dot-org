@@ -13,7 +13,6 @@ const defaultProps = {
   sectionIds: [11, 12, 13],
   hiddenSectionIds: [],
   asyncLoadComplete: true,
-  beginEditingNewSection: () => {},
   beginEditingSection: () => {},
   beginImportRosterFlow: () => {}
 };
@@ -117,7 +116,7 @@ describe('OwnedSections', () => {
       <OwnedSections
         {...defaultProps}
         sectionIds={[1, 2, 3]}
-        beginEditingNewSection={spy}
+        beginEditingSection={spy}
       />
     );
     expect(spy).not.to.have.been.called;

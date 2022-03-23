@@ -71,9 +71,9 @@
         </block>
         <block type="Poetry_setFontColor" id="4">
           <value name="FILL">
-            <block type="colour_picker" id="5">
+            <shadow type="colour_picker" id="5">
               <title name="COLOUR">#000099</title>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="Poetry_setTextEffect" id="6">
@@ -81,9 +81,9 @@
         </block>
         <block type="Poetry_setBackground" id="9">
           <value name="COLOR">
-            <block type="colour_picker" id="10">
+            <shadow type="colour_picker" id="10">
               <title name="COLOUR">#ccffff</title>
-            </block>
+            </shadow>
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs" id="11">

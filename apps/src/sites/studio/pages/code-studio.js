@@ -16,6 +16,7 @@ import initResponsive from '@cdo/apps/code-studio/responsive';
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import Cookie from 'js-cookie';
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());
@@ -125,7 +126,24 @@ window.CDOSounds = Sounds.getSingleton();
 const userType = document.querySelector(`script[data-usertype]`)
   ? getScriptData('usertype')
   : null;
+const under13 = document.querySelector(`script[data-under13]`)
+  ? getScriptData('under13')
+  : null;
 checkForUnsupportedBrowsersOnLoad();
 initHamburger();
-initSigninState(userType);
+initSigninState(userType, under13);
 initResponsive();
+
+try {
+  // Gate the Offline Pilot features using the offline_pilot experiment cookie.
+  const offlinePilotCookie = Cookie.get('offline_pilot');
+  const offlinePilot = offlinePilotCookie && JSON.parse(offlinePilotCookie);
+  if (offlinePilot) {
+    // Register the offline service worker.
+    if ('serviceWorker' in navigator && window.OFFLINE_SERVICE_WORKER_PATH) {
+      navigator.serviceWorker.register(window.OFFLINE_SERVICE_WORKER_PATH);
+    }
+  }
+} catch (e) {
+  console.error('Unable to setup the offline pilot experiment', e);
+}

@@ -67,12 +67,12 @@
       <xml>
         <block type="gamelab_setPrompt">
           <value name="QUESTION">
-            <block type="text" can_disconnect_from_parent="false">
+            <shadow type="text" can_disconnect_from_parent="false">
               <title name="TEXT"/>
-            </block>
+            </shadow>
           </value>
           <value name="VAR">
-            <block type="variables_get" can_disconnect_from_parent="false">
+            <block type="variables_get" movable="false">
               <title name="VAR">???</title>
             </block>
           </value>

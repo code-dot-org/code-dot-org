@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-23 14:20:29 UTC",
+    "serialized_at": "2022-03-22 14:09:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,6 +46,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2022"
       }
     }
@@ -183,7 +195,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How do software engineers obtain feedback from peers?**\n\nSoftware engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. Students identify the importance of commenting and program structure to improve readability. Students learn about code reviews and practice giving and receiving feedback.",
-        "preparation": "* Create code review groups as indicated on the Code Reviews resource\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up",
+        "preparation": "* Create code review groups as indicated on the Code Reviews resource\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the student version of the Code Reviews resource (one for each student)",
         "student_overview": "**How do software engineers obtain feedback from peers?**\n\nSoftware engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you identify the importance of commenting and program structure to improve readability. You learn about code reviews and practice giving and receiving feedback."
       },
       "seeding_key": {
@@ -289,7 +301,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "**How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**\n\nStudents write an additional new subclass and practice using decomposition o develop algorithms. Students translate algorithms to write methods in their new subclass and create multiple objects in their program.",
+        "overview": "**How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**\n\nStudents write an additional new subclass and practice using decomposition to develop algorithms. Students translate algorithms to write methods in their new subclass and create multiple objects in their program.",
         "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the BackgroundPainter handout (one for each student)\n* Gather several sticky notes for each student",
         "student_overview": "**How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**\n\nIn Java, a superclass can have multiple subclasses. In this lesson, you write an additional new subclass that extends `PainterPlus` and practice using decomposition to develop algorithms. You translate algorithms to write methods in your new subclass and create multiple objects in your program."
       },
@@ -362,7 +374,7 @@
       "relative_position": 18,
       "properties": {
         "assessment": true,
-        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback at this as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
         "preparation": "* Gather several sticky notes for each student",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
       },
@@ -406,6 +418,36 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Console",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "lesson-22",
+      "name": "The Neighborhood",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2022"
       }
     }
@@ -485,6 +527,7 @@
       "key": "d11f3015-34bb-4b5f-934a-c9685d13c2c4",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1246,6 +1289,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-2022"
       }
+    },
+    {
+      "key": "a99045a6-d56f-4884-8771-1c65da156a4c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a99045a6-d56f-4884-8771-1c65da156a4c",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "66cd95f7-a191-4d34-bc2e-f5614c8e5bee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66cd95f7-a191-4d34-bc2e-f5614c8e5bee",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -1385,7 +1452,7 @@
       "key": "a4e79239-1f3f-42c7-9eb4-fd7be4295d09",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term – software engineer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term – *software engineer*."
       },
       "seeding_key": {
         "activity_section.key": "a4e79239-1f3f-42c7-9eb4-fd7be4295d09",
@@ -1485,7 +1552,7 @@
       "key": "974352dc-2541-4b67-b54b-5046331b160d",
       "position": 1,
       "properties": {
-        "description": "Computing and programming used to have different meanings than they have today. Before electronic computers were invented, a computer was a person who performed mathematical calculations. From the late nineteenth century onwards, women would perform long, tedious calculations.",
+        "description": "Computing and programming used to have different meanings than they have today. Before electronic computers were invented, a computer was a person who performed mathematical calculations. From the late nineteenth century onwards, people had to perform long, tedious calculations. It was common for women to do this job.",
         "name": "Human Computers",
         "remarks": true
       },
@@ -1569,7 +1636,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The unit guide provides students with lesson objectives, guided notes, and vocabulary for new concepts introduced in each lesson. You can choose to have students complete the guided notes during the lesson, or you can choose to incorporate the unit guide differently according to the needs of your classroom and students."
+            "markdown": "The unit guide provides students with guided notes, syntax, and vocabulary for new concepts introduced in each lesson. You provide the entire unit guide, or you can distribute each section at the start of each lesson. You can choose to have students complete the guided notes during the lesson, or you can choose to incorporate the unit guide differently according to the needs of your classroom and students."
           }
         ]
       },
@@ -1579,10 +1646,33 @@
       }
     },
     {
-      "key": "b73866c4-57d5-43fb-9296-7c199f0bb034",
+      "key": "4995868c-0a8d-47d7-a79a-1f5ef2bf015e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *software* and *integrated development environment (IDE)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through 4 on Code Studio. Students use Levels 1 and 2 to complete the Java Lab Scavenger Hunt on the Unit 1 Guide. On Level 3, students complete a Check for Understanding to identify the error in the program. On Level 4, students write the class header and `main` method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *software* and *integrated development environment (IDE)*."
+      },
+      "seeding_key": {
+        "activity_section.key": "4995868c-0a8d-47d7-a79a-1f5ef2bf015e",
+        "lesson_activity.key": "1ad725fe-8e78-4cb3-84a2-d0a8116deb61"
+      }
+    },
+    {
+      "key": "cff97a1e-3ae1-45fb-9b71-93ae65b785ba",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java Lab is the IDE we will use in this class. With it, we can write our source code, which will contain our programming commands.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cff97a1e-3ae1-45fb-9b71-93ae65b785ba",
+        "lesson_activity.key": "1ad725fe-8e78-4cb3-84a2-d0a8116deb61"
+      }
+    },
+    {
+      "key": "b73866c4-57d5-43fb-9296-7c199f0bb034",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through 4 on Code Studio. Students use Levels 1 and 2 to complete the Java Lab Scavenger Hunt on the Unit 1 Guide. On Level 3, students complete a Check for Understanding to identify the error in the program. On Level 4, students write the class header and `main` method.",
         "progression_name": "Java Basics",
         "tips": [
           {
@@ -1598,7 +1688,7 @@
     },
     {
       "key": "9bfd6dd4-e654-4244-a406-1f59ec310080",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "Now that you have had a chance to get comfortable with Java Lab and look at a Java file, let's review the key components and features you found.",
         "remarks": true
@@ -1610,9 +1700,9 @@
     },
     {
       "key": "daffe131-0f3a-43a0-9b07-bb7c86e52163",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Java Lab Features*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Java Lab Features*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the Java syntax rules.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the components of a class."
       },
       "seeding_key": {
         "activity_section.key": "daffe131-0f3a-43a0-9b07-bb7c86e52163",
@@ -1621,7 +1711,7 @@
     },
     {
       "key": "6e75aeb5-4bc8-4908-a44c-36bbf982903a",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "On Level 3, you used your new knowledge of Java syntax to find the error in the program. Software engineers spend a lot of time finding and fixing errors in programs. The error that you encountered is called a syntax error.",
         "remarks": true
@@ -1633,7 +1723,7 @@
     },
     {
       "key": "b2340d99-3906-4646-8902-75981e1c752b",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Now that you have learned about syntax, what do you think it means to have a syntax error?*\n\n**Discussion Goal:** Students make predictions about the definition of syntax error based on what they know about syntax. Students may share examples that might cause a syntax error, such as forgetting a semicolon or writing the main method incorrectly.",
         "tips": [
@@ -1650,7 +1740,7 @@
     },
     {
       "key": "fa18965b-c9cf-4d51-b2c0-a5ce0f3ddd21",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *syntax error*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify example syntax errors.",
         "tips": [
@@ -1777,7 +1867,7 @@
       "key": "ae75ce69-603e-4bd7-9175-ba169d7b27e4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Object-Oriented Programming*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define package."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Object-Oriented Programming*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *package*."
       },
       "seeding_key": {
         "activity_section.key": "ae75ce69-603e-4bd7-9175-ba169d7b27e4",
@@ -1823,7 +1913,7 @@
       "key": "d7f32109-c4a7-44b1-a02b-7b3a0091ef2d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define UML diagram. Have students label the UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define attribute and behavior. Have students label the UML diagram on the Unit 1 Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *UML diagram*. Have students label the UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *attribute* and *behavior*. Have students label the UML diagram on the Unit 1 Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1888,7 +1978,7 @@
       "key": "0ed956fe-34c3-4807-b2c7-87fdd75a5099",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define bug.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the possible errors and potential console messages that can occur if an object is not instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define debugging.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *bug*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the possible errors and potential console messages that can occur if an object is not instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *debugging*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2007,7 +2097,7 @@
       "key": "2a767291-56b3-4711-b377-b4d3b978e31a",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to write instructions that a GPS could use to direct a pizza driver to move from 1st Street and 1st Avenue to the customer located at 5th Street and 5th Avenue.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to write instructions that a GPS could use to direct a delivery driver to move from 1st Street and 1st Avenue to the customer located at 5th Street and 5th Avenue.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2109,8 +2199,48 @@
       }
     },
     {
-      "key": "32de7f8f-5764-488e-888d-908b6f7f4abb",
+      "key": "9c165695-9043-48de-ba53-2126681b666a",
       "position": 7,
+      "properties": {
+        "description": "These void methods can modify the state of a `Painter` object. Let's take a look at the code for the `takePaint()` method. A lot of this code may look unfamiliar to you right now, and that's ok! We will be learning more about these statements throughout this course.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c165695-9043-48de-ba53-2126681b666a",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "335702e6-967f-424c-9668-b4e8372b4992",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the code for the `takePaint()` method.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Focus on the code that is highlighted on the slide rather than discussing the unfamiliar components of the code segment. Students learn about the purpose and functionality of these code segments in later lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "335702e6-967f-424c-9668-b4e8372b4992",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to call a method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the `paint()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "17da768e-fb81-40a2-a5e2-03769b2768d2",
+        "lesson_activity.key": "988dfce3-4d3c-40fb-a00c-1f1557b26f42"
+      }
+    },
+    {
+      "key": "32de7f8f-5764-488e-888d-908b6f7f4abb",
+      "position": 10,
       "properties": {
         "description": "Let's practice calling these methods to move around and paint The Neighborhood! As you work, use the guiding questions and debugging checklist on your Unit 1 Guide to help you write and debug code.",
         "duration": "15",
@@ -2124,7 +2254,7 @@
     },
     {
       "key": "f453b0d5-c881-42b3-a6f4-f18f212ed238",
-      "position": 8,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5 using the Unit 1 Guide. Students debug the program on Level 2, then continue to complete Level 3. Students complete a choice level on Level 4. Students debug the program on Level 5.",
         "progression_name": "Moving and Painting"
@@ -2331,7 +2461,7 @@
       "key": "9e75f437-a4fe-44d6-96fd-5a71195d06ec",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define logic error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain examples of logic errors and strategies to identify the causes."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *logic error*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain examples of logic errors and strategies to identify the causes."
       },
       "seeding_key": {
         "activity_section.key": "9e75f437-a4fe-44d6-96fd-5a71195d06ec",
@@ -2927,7 +3057,7 @@
       "key": "81c18623-6e33-440c-8471-0b2527170d21",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Code Reviews*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain examples and guidelines for good feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What would be some examples of bad feedback?*\n\n**Discussion Goal:** Students share examples of bad feedback and connect to scenarios where they received bad feedback. Students identify things that make feedback bad, such as not being specific or helpful to resolve a problem.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Code Reviews*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Code Reviews resource.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain examples and guidelines for good feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What would be some examples of bad feedback?*\n\n**Discussion Goal:** Students share examples of bad feedback and connect to scenarios where they received bad feedback. Students identify things that make feedback bad, such as not being specific or helpful to resolve a problem.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3135,7 +3265,7 @@
       "key": "544009bf-76d3-4267-8321-31e6f2ab1781",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt. Click through the animated slide to define infinite loop.\n* *What is causing this outcome?*\n\n**Discussion Goal:** Students realize that the condition never becomes `false`, resulting in an infinite loop."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt. Click through the animated slide to define *infinite loop*.\n* *What is causing this outcome?*\n\n**Discussion Goal:** Students realize that the condition never becomes `false`, resulting in an infinite loop."
       },
       "seeding_key": {
         "activity_section.key": "544009bf-76d3-4267-8321-31e6f2ab1781",
@@ -3160,7 +3290,7 @@
       "key": "85ae7d08-f221-404d-af64-557293dfa08f",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for the methods and add them to the `PainterPlus` UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to complete Levels 3 and 4 to implement their algorithms in the `PainterPlus` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *pseudocode*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for the methods and add them to the `PainterPlus` UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to complete Levels 3 and 4 to implement their algorithms in the `PainterPlus` class.",
         "progression_name": "Using Loops and Boolean Methods"
       },
       "seeding_key": {
@@ -3766,7 +3896,7 @@
       "key": "15dab1df-7176-4280-8a6f-45f1efc1b1a1",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Decomposition handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Decomposition handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students use Levels 1 and 2 and the Decomposition handout to explore the Java implementation of the problem and answer the provided questions.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Decomposition handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students use Levels 1 and 2 and the Decomposition handout to explore the Java implementation of the problem and answer the provided questions.",
         "progression_name": "Exploring Decomposition"
       },
       "seeding_key": {
@@ -3977,7 +4107,7 @@
       "key": "d0676065-93ad-4ab2-8153-5eb6f5c53760",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define inheritance hierarchy.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the PatternPainter handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *inheritance hierarchy*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the PatternPainter handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4580,7 +4710,7 @@
       "key": "491090ee-8831-4b32-9663-303aaf184761",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a new subclass that extends PainterPlus with a new method. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 16, 17, and 18 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Asphalt Art Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1FMk0zXXkBms6SdWuVQUnrsxrSAxKN6OT3N92JD1XbAM/edit?usp=sharing), which includes a one-day version of the [**Asphalt Art Project Planning Guide**](https://docs.google.com/document/d/1ZCM53HkkeLt3xFW3Mc4hc4TrV2dqq1Fy9rN-EA7q_jU/edit?usp=sharing). Direct students to develop their program on Lesson 18 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a new subclass that extends `PainterPlus` with a new method. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 16, 17, and 18 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Asphalt Art Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1FMk0zXXkBms6SdWuVQUnrsxrSAxKN6OT3N92JD1XbAM/edit?usp=sharing), which includes a one-day version of the [**Asphalt Art Project Planning Guide**](https://docs.google.com/document/d/1ZCM53HkkeLt3xFW3Mc4hc4TrV2dqq1Fy9rN-EA7q_jU/edit?usp=sharing). Direct students to develop their program on Lesson 18 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "491090ee-8831-4b32-9663-303aaf184761",
@@ -4672,13 +4802,7 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
         "duration": "15",
         "name": "Development",
-        "progression_name": "Asphalt Art Project",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize to students that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new class."
-          }
-        ]
+        "progression_name": "Asphalt Art Project"
       },
       "seeding_key": {
         "activity_section.key": "d9fefed9-efeb-4ddd-8a88-f717b3c55fd9",
@@ -4911,7 +5035,7 @@
       "key": "8f56723f-a67f-4747-9f0d-44aeaecff2ec",
       "position": 4,
       "properties": {
-        "description": "**Asphalt Art Project:** You can use the Day 2 Reflection as an optional completion assessment.",
+        "description": "**Asphalt Art Project Planning Guide:** You can use the Day 2 Reflection as an optional completion assessment.",
         "name": "Assessment (Optional)"
       },
       "seeding_key": {
@@ -5050,7 +5174,7 @@
       "key": "9087616e-70a5-407d-adb7-2fff64717d79",
       "position": 3,
       "properties": {
-        "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
+        "description": "**Asphalt Art Project Planning Guide:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
@@ -5158,7 +5282,7 @@
       "key": "0bed0534-8403-4547-b912-b6688c3b08b5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -5181,7 +5305,7 @@
       "key": "a0d6b210-10db-42f4-bade-74ea16ed26f7",
       "position": 3,
       "properties": {
-        "description": "**SpiralPainter FRQ:** The SpiralPainter FRQ handout can be used as a formative assessment to check that students can identify characteristics of a software engineer and relate them to their own personal skills and identity.",
+        "description": "**SpiralPainter FRQ:** The SpiralPainter FRQ handout can be used as an optional formative assessment.",
         "name": "Assessment (Optional)"
       },
       "seeding_key": {
@@ -5229,6 +5353,38 @@
       "seeding_key": {
         "activity_section.key": "61afab2c-670e-4f6f-b721-dc462d410fdc",
         "lesson_activity.key": "ee08eb3d-0f3d-4428-879c-294390696263"
+      }
+    },
+    {
+      "key": "6b1e14d0-8b5a-4f96-8479-223eeca8fd2a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6b1e14d0-8b5a-4f96-8479-223eeca8fd2a",
+        "lesson_activity.key": "a99045a6-d56f-4884-8771-1c65da156a4c"
+      }
+    },
+    {
+      "key": "57b05d0c-b0a1-496c-9d68-a2ef1b2894c2",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "57b05d0c-b0a1-496c-9d68-a2ef1b2894c2",
+        "lesson_activity.key": "66cd95f7-a191-4d34-bc2e-f5614c8e5bee"
+      }
+    },
+    {
+      "key": "df9e3fb5-08e2-4fe2-a8a9-bc60db67f531",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "df9e3fb5-08e2-4fe2-a8a9-bc60db67f531",
+        "lesson_activity.key": "66cd95f7-a191-4d34-bc2e-f5614c8e5bee"
       }
     }
   ],
@@ -6064,6 +6220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3v2_2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6086,6 +6245,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4v2_2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6108,6 +6270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5 CR_2022"
+        ],
         "progression": "Code Review: New PainterPlus Methods"
       },
       "bonus": false,
@@ -6130,6 +6295,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6202,6 +6370,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3v2_2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6224,6 +6395,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4v2_2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6246,6 +6420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L5 CR_2022"
+        ],
         "progression": "Code Review: New PainterPlus Methods"
       },
       "bonus": false,
@@ -6268,6 +6445,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6882,6 +7062,80 @@
       },
       "level_keys": [
         "CSA U1L18-L1_2022"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "6b1e14d0-8b5a-4f96-8479-223eeca8fd2a"
+      },
+      "level_keys": [
+        "CSA 2022 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "57b05d0c-b0a1-496c-9d68-a2ef1b2894c2"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "df9e3fb5-08e2-4fe2-a8a9-bc60db67f531"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood - No Bucket Sandbox"
       ]
     }
   ],
@@ -7689,11 +7943,47 @@
         "script.name": "csa1-2022",
         "activity_section.key": "fbd0faea-b438-43c9-a3c3-808b94d8275a"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "6b1e14d0-8b5a-4f96-8479-223eeca8fd2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "57b05d0c-b0a1-496c-9d68-a2ef1b2894c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2022",
+        "activity_section.key": "df9e3fb5-08e2-4fe2-a8a9-bc60db67f531"
+      }
     }
   ],
   "resources": [
     {
-      "name": "[KEY] Asphalt Art Project Planning Guide",
+      "name": "[EXEMPLAR] Asphalt Art Project Planning Guide",
       "url": "https://docs.google.com/document/d/1e9XAv0seL-f_PJrVkA98Bf43dU4LQL1uT-zuA7ceQxA/edit?usp=sharing",
       "key": "_key_asphalt_art_project_planning_guide",
       "properties": {
@@ -7774,6 +8064,174 @@
       },
       "seeding_key": {
         "resource.key": "_key_two-way_selection_and_not"
+      }
+    },
+    {
+      "name": "[KEY] U1L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1vb8fcJPZtdNGt93TJhkDrutAOU1HXRooXIinJaBh91I/edit?usp=sharing",
+      "key": "_key_u1l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l10_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L11 Extra Practice",
+      "url": "https://docs.google.com/document/d/1elO59wpZpxd1IQwnUAmKwYf6hRIWot7O-4QXnf7JLLg/edit?usp=sharing",
+      "key": "_key_u1l11_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L12 Extra Practice",
+      "url": "https://docs.google.com/document/d/1G5xuV66OHBxGTSE_V7CbzZZ1T6xpOd75W6TIO2zx4YQ/edit?usp=sharing",
+      "key": "_key_u1l12_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L13 Extra Practice",
+      "url": "https://docs.google.com/document/d/14ce6HV3pfbTXJnAQS51abaVDSSI-7ExoUTpGeaHPnZQ/edit?usp=sharing",
+      "key": "_key_u1l13_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L14 Extra Practice",
+      "url": "https://docs.google.com/document/d/10TZ998uQyT3bry_M2_BBYJIhQ3RrhME2bJhq8WJE2fE/edit?usp=sharing",
+      "key": "_key_u1l14_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l14_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L15 Extra Practice",
+      "url": "https://docs.google.com/document/d/15E4K3lZo5OJ7DYmH0GKkeYaf8-Uze9HBnWlrMznK_P0/edit?usp=sharing",
+      "key": "_key_u1l15_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l15_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/17cKJRb_9zs7zQdLny6kX9ZXE9wGpGLhSNZ31d_bXu2s/edit?usp=sharing",
+      "key": "_key_u1l2_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/11QZKOmqpHm68sfiZDhA2LESYXIfFyLE7qWpcW8XWKCo/edit?usp=sharing",
+      "key": "_key_u1l3_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1wYKLguwmUSoy-yhmDurorjSnHhY7IT6R3DDX8xh8E8Q/edit?usp=sharing",
+      "key": "_key_u1l4_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/14hDM_fH3WY4-p5YXZlbtGFE2VBjLgvJ49iSWGupCzzg/edit?usp=sharing",
+      "key": "_key_u1l5_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1C0HdAd_EUkaAUZ5Wt_XWacQ7Eysj5XYagS039mJcCUc/edit?usp=sharing",
+      "key": "_key_u1l6_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l6_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1UIxoNfSScU9c39OeV72b22hFCirZsNo4Ahro5y-kuYk/edit?usp=sharing",
+      "key": "_key_u1l7_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Qua7LWspXF6DdMYuiht1p7vkwsWgGnxlTL0qkCb7Sek/edit?usp=sharing",
+      "key": "_key_u1l8_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1gAYJgL4sUN5G7494N885WAKkb-fCau_wirZfTv1CWJg/edit?usp=sharing",
+      "key": "_key_u1l9_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l9_extra_practice"
       }
     },
     {
@@ -7867,6 +8325,18 @@
       },
       "seeding_key": {
         "resource.key": "code_reviews"
+      }
+    },
+    {
+      "name": "Code Reviews",
+      "url": "https://docs.google.com/document/d/172jHHGFO0pQf5NhqvbcfBm9jotyVplaAZznPF1F_PXk/edit?usp=sharing",
+      "key": "code_reviews_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_reviews_1"
       }
     },
     {
@@ -7990,6 +8460,174 @@
       }
     },
     {
+      "name": "U1L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/12VbvABWVpOukT1ARRcTmdd2tz-ZfRc9CAeMF9Uy0E6U/edit?usp=sharing",
+      "key": "u1l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "name": "U1L11 Extra Practice",
+      "url": "https://docs.google.com/document/d/1a9SiT2Ri_WVUG9_bD4T4dJfnXG1R57crXfZ3IRGver0/edit?usp=sharing",
+      "key": "u1l11_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "name": "U1L12 Extra Practice",
+      "url": "https://docs.google.com/document/d/1AKIygL1eVqQk1i-nFF90V019bFnMbuqIDJ2u4Ag0rLg/edit?usp=sharing",
+      "key": "u1l12_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l12_extra_practice"
+      }
+    },
+    {
+      "name": "U1L13 Extra Practice",
+      "url": "https://docs.google.com/document/d/1x8WvkmttCNJQ4aOR-6GxFsw2hOzQLOlptz9m-5CdjSY/edit?usp=sharing",
+      "key": "u1l13_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "U1L14 Extra Practice",
+      "url": "https://docs.google.com/document/d/1pr1zyW-uEaozbndMp-YuZCzQG27yjbFfymUeS_v2EHc/edit?usp=sharing",
+      "key": "u1l14_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l14_extra_practice"
+      }
+    },
+    {
+      "name": "U1L15 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Km1AgjUcEHav0eIM8B84T3zixrl7eSp8zSntT2TK3Es/edit?usp=sharing",
+      "key": "u1l15_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l15_extra_practice"
+      }
+    },
+    {
+      "name": "U1L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1kp8khWZfLWvVhBanZnFHa3XstT8XrE8J-ODMvI4QWPA/edit?usp=sharing",
+      "key": "u1l2_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l2_extra_practice"
+      }
+    },
+    {
+      "name": "U1L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1jHGzcg0R5FbynRs9OEmxngl2SLdrylS0dqMlzAGaB7A/edit?usp=sharing",
+      "key": "u1l3_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l3_extra_practice"
+      }
+    },
+    {
+      "name": "U1L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1-NJP62l0OtER50YGS4KBsjgSsm1LgVd3ryJBEEeT85A/edit?usp=sharing",
+      "key": "u1l4_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l4_extra_practice"
+      }
+    },
+    {
+      "name": "U1L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/187Qw-_XB5AnA1G7aXEldB70brQFTLD5blLo9EHsbHIc/edit?usp=sharing",
+      "key": "u1l5_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "name": "U1L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1KdbJKu-Kqdk3AIM4StW9n98caWo0BDSrczqfebAPsFI/edit?usp=sharing",
+      "key": "u1l6_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l6_extra_practice"
+      }
+    },
+    {
+      "name": "U1L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1FryxLH2YT2z55Pbon7zL9Vf55eTF7_IGZ_6QqJnqdw0/edit?usp=sharing",
+      "key": "u1l8_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l8_extra_practice"
+      }
+    },
+    {
+      "name": "U1L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/19eA21QwEWCTwKf2uQ77KyBT75c0x4KL6jn579VHr42g/edit?usp=sharing",
+      "key": "u1l8_extra_practice_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l8_extra_practice_1"
+      }
+    },
+    {
+      "name": "U1L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1rigveLGXH-ojMOeKNsczsZYBQ9ZH-MzFrPHHE20jhTc/edit?usp=sharing",
+      "key": "u1l9_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
       "name": "Unit 1 Guide",
       "url": "https://docs.google.com/document/d/1RXR4gnijmgGJVVhbiXjrnbPYSVVqatCiJ9viBbCvO18/edit?usp=sharing",
       "key": "unit_1_guide",
@@ -8102,6 +8740,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "_key_u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "unit_1_presentation"
       }
     },
@@ -8109,6 +8759,18 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "using_two-way_selection_and_not"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "u1l11_extra_practice"
       }
     },
     {
@@ -8126,7 +8788,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "decomposition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "u1l12_extra_practice"
       }
     },
     {
@@ -8144,7 +8818,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-13",
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
         "resource.key": "patternpainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "u1l13_extra_practice"
       }
     },
     {
@@ -8162,7 +8848,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "_key_u1l14_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "backgroundpainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "u1l14_extra_practice"
       }
     },
     {
@@ -8180,7 +8878,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
+        "resource.key": "_key_u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
         "resource.key": "exploring_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u1l15_extra_practice"
       }
     },
     {
@@ -8252,7 +8962,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "_key_u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "code_studio_setup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u1l2_extra_practice"
       }
     },
     {
@@ -8282,7 +9004,31 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_key_u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "unit_1_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u1l4_extra_practice"
       }
     },
     {
@@ -8294,7 +9040,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "setting_up_the_debugging_wall"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u1l5_extra_practice"
       }
     },
     {
@@ -8306,7 +9064,31 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "_key_u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "unit_1_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u1l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u1l8_extra_practice"
       }
     },
     {
@@ -8318,7 +9100,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "_key_u1l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "code_reviews"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "code_reviews_1"
       }
     },
     {
@@ -8336,13 +9130,31 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "u1l8_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "unit_1_presentation"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "_key_u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "_key_writing_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u1l9_extra_practice"
       }
     },
     {
@@ -8385,12 +9197,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_guide",
-        "script.name": "csa1-2022"
-      }
-    }
+
   ],
   "vocabularies": [
     {
@@ -8421,16 +9228,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "_if_statement"
-      }
-    },
-    {
-      "key": "_new_keyword",
-      "word": "`new` keyword",
-      "definition": "a Java keyword used to create an instance of a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "_new_keyword"
       }
     },
     {
@@ -8514,26 +9311,6 @@
       }
     },
     {
-      "key": "camel_case",
-      "word": "camel case",
-      "definition": "a naming convention in which the first letter of the first word is either uppercase or lowercase, and the first letter of each additional word is uppercase",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "camel_case"
-      }
-    },
-    {
-      "key": "case_sensitive",
-      "word": "case-sensitive",
-      "definition": "differentiating between lower and uppercase letters",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "case_sensitive"
-      }
-    },
-    {
       "key": "class",
       "word": "class",
       "definition": "a programmer-defined blueprint from which objects are created",
@@ -8571,16 +9348,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "comment"
-      }
-    },
-    {
-      "key": "compile",
-      "word": "compile",
-      "definition": "to translate human-readable source code into computer-executable machine code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "compile"
       }
     },
     {
@@ -8651,16 +9418,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "decomposition",
-      "word": "decomposition",
-      "definition": "the process of breaking a problem down into smaller parts",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "decomposition"
       }
     },
     {
@@ -8794,6 +9551,16 @@
       }
     },
     {
+      "key": "method_decomposition",
+      "word": "Method Decomposition",
+      "definition": "the process of breaking a problem down into smaller parts to write methods for each part",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method_decomposition"
+      }
+    },
+    {
       "key": "method_signature",
       "word": "method signature",
       "definition": "consists of a name and parameter list",
@@ -8894,16 +9661,6 @@
       }
     },
     {
-      "key": "reference_variable",
-      "word": "reference variable",
-      "definition": "a variable that points to an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "reference_variable"
-      }
-    },
-    {
       "key": "return",
       "word": "return",
       "definition": "to exit a method and go back to the point in the program that called it with the requested value or information",
@@ -8954,26 +9711,6 @@
       }
     },
     {
-      "key": "statement",
-      "word": "statement",
-      "definition": "a one-line instruction that tells Java what to do",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "statement"
-      }
-    },
-    {
-      "key": "string_literal",
-      "word": "string literal",
-      "definition": "a sequence of characters",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "string_literal"
-      }
-    },
-    {
       "key": "subclass",
       "word": "subclass",
       "definition": "a class that extends a superclass and inherits its attributes and behaviors",
@@ -9011,16 +9748,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "syntax_error"
-      }
-    },
-    {
-      "key": "tester_class",
-      "word": "tester class",
-      "definition": "a class that contains the main method and is where a program starts running",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "tester_class"
       }
     },
     {
@@ -9068,13 +9795,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "vocabulary.key": "decomposition"
+        "vocabulary.key": "edge_case"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "vocabulary.key": "edge_case"
+        "vocabulary.key": "method_decomposition"
       }
     },
     {
@@ -9098,25 +9825,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "camel_case"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "case_sensitive"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
         "vocabulary.key": "class_header"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "compile"
       }
     },
     {
@@ -9140,12 +9849,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
         "vocabulary.key": "syntax"
       }
     },
@@ -9153,18 +9856,6 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "vocabulary.key": "syntax_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "tester_class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "vocabulary.key": "_new_keyword"
       }
     },
     {
@@ -9230,12 +9921,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "vocabulary.key": "reference_variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
         "vocabulary.key": "state"
       }
     },
@@ -9273,12 +9958,6 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "vocabulary.key": "string_literal"
       }
     },
     {
@@ -9986,6 +10665,13 @@
         "lesson.key": "lesson-11",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.4"
       }
     },
     {

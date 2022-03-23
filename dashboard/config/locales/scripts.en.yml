@@ -186,6 +186,7 @@ en:
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Play Lab!
+          name: playlab
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -197,6 +198,8 @@ en:
               description_student: Create beautiful images by programming the Artist.
               description_teacher: In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using programming blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.
           student_description: Draw cool pictures and designs with the Artist!
+          name: artist
+          description_audience: ''
         hourofcode:
           title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
@@ -209,6 +212,7 @@ en:
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for young learners, ages 4-10, but can be adapted for older learners using the differentiation suggestions provided.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for young learners, ages 4-10, but can be adapted for older learners using the differentiation suggestions provided.
           student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          name: hourofcode
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -220,6 +224,8 @@ en:
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          name: frozen
+          description_audience: ''
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
@@ -375,6 +381,8 @@ en:
               description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          name: infinity
+          description_audience: ''
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
@@ -566,6 +574,7 @@ en:
               description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          name: flappy
         jigsaw:
           title: Jigsaw
           description: Try our Jigsaw tutorial.
@@ -578,6 +587,7 @@ en:
               description_student: Click and drag to finish the puzzles.
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
           student_description: Try our Jigsaw tutorial.
+          name: jigsaw
         step:
           title: Step
           description: Step tutorial
@@ -722,6 +732,7 @@ en:
               description_student: 'At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must compress the data.  '
               description_teacher: "At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must **compress** the data. In this lesson, students will use the Text Compression Widget to compress segments of English text by looking for patterns and substituting symbols for larger patterns of text.\r\n"
           student_description: Compress text by identifying repeated patterns.
+          name: text-compression
         CSPPD:
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
@@ -1486,7 +1497,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           lessons:
-            Code.org Equity PD:
+            Codeorg Equity PD:
               name: Code.org Equity PD
             Necessary Background:
               name: Necessary Background
@@ -2005,6 +2016,7 @@ en:
               description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Create a story or make a game with Ice Age Play Lab!
+          name: iceage
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -2091,6 +2103,7 @@ en:
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Gumball Play Lab!
+          name: gumball
         starwars:
           title: 'Star Wars: Building a Galaxy With Code (Javascript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -2106,6 +2119,7 @@ en:
 
                 A [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          name: starwars
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code (Blockly)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -2121,6 +2135,7 @@ en:
 
                 A [JavaScript](s/starwars) version is also available. For older students on computers, learning JavaScript can be fun and provide an additional challenge. Note that JavaScript syntax is not translated and for the first Hour of Code, the translated blocks found here provide a better introduction. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          name: starwarsblocks
         mc:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
@@ -2129,10 +2144,11 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: 'Minecraft: Adventurer'
+              name: Minecraft Hour of Code
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+          name: mc
         oceans:
           title: AI for Oceans
           description: Learn how AI and machine learning can be used to address world problems.
@@ -2141,10 +2157,11 @@ en:
           lesson_groups: {}
           lessons:
             Oceans:
-              name: Oceans
+              name: AI for Oceans
               description_student: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. First, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
           student_description: Learn how AI and machine learning can be used to address world problems.
+          name: oceans
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -3994,6 +4011,7 @@ en:
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
           student_description: ''
+          name: csp-pre-survey
         csd1-2017:
           title: CSD Unit 1 - Problem Solving ('17-'18)
           description_short: "  Learn how humans work with computers to solve problems."
@@ -4201,6 +4219,7 @@ en:
               description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Choose your team and make a basketball game
+          name: basketball
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4217,6 +4236,7 @@ en:
               description_student: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet, and that making good encryption is not trivial.  Students will get their feet wet with understanding the considerations that must go into making strong encryption in the face of powerful computational tools that can be used to crack it. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.
               description_teacher: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet, and that making good encryption is not trivial.  Students will get their feet wet with understanding the considerations that must go into making strong encryption in the face of powerful computational tools that can be used to crack it. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.
           student_description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
+          name: hoc-encryption
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
           description_audience: ''
@@ -4483,10 +4503,11 @@ en:
           lesson_groups: {}
           lessons:
             Minecraft Hour of Code Designer:
-              name: 'Minecraft: Designer'
+              name: Minecraft Hour of Code Designer
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          name: minecraft
         flappy-impact-study:
           title: Flappy Code with Survey
           description_audience: ''
@@ -4827,6 +4848,7 @@ en:
               description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Mix and match across sports
+          name: sports
         2016_sciencePD-phase2b:
           title: ''
           description_audience: ''
@@ -5988,6 +6010,7 @@ en:
             CSP post-course survey:
               name: CSP Student Post-Course Survey ('17-'18)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-post-survey
         public-key-cryptography:
           title: Public Key Cryptography Widgets
           description_audience: ''
@@ -7186,6 +7209,7 @@ en:
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
           student_description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          name: applab-intro
         e-f-ramp:
           title: Course E & F Ramp
           description_audience: ''
@@ -7881,6 +7905,7 @@ en:
               description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
+          name: hero
         applab-intro-staging:
           title: Intro to App Lab Staging
           description_audience: ''
@@ -10553,6 +10578,7 @@ en:
             CSD post-course survey:
               name: CSD Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csd-post-survey
         csd-novice-18:
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
@@ -10900,6 +10926,7 @@ en:
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
+          name: dance
         frozen-2018-test-b:
           title: New Frozen Script
           description: ''
@@ -10924,6 +10951,7 @@ en:
               description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
+          name: aquatic
         sconyers:
           title: Tracey's Playground
           description_audience: ''
@@ -11040,6 +11068,7 @@ en:
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
+          name: dance-extras
         coursef-2019:
           title: Course F (2019)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -11988,6 +12017,7 @@ en:
             CSP Mid-year survey:
               name: CSP Student Mid-year Survey
           student_description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-mid-survey
         gamelab:
           title: Game Lab
           description_audience: ''
@@ -14222,6 +14252,7 @@ en:
             CSD post-course survey:
               name: CSD Student Post-Course Survey ('18-'19)
           student_description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \r\n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
+          name: csd-post-survey-2018
         csp-post-survey-2018:
           title: CSP Student Post-Course Survey ('18-'19)
           description_audience: CSP Students
@@ -14234,6 +14265,7 @@ en:
             CSP post-course survey:
               name: CSP Student Post-Course Survey ('18-'19)
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          name: csp-post-survey-2018
         csp5-pilot:
           title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
@@ -15282,10 +15314,11 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party:
-              name: Dance Party
+              name: Dance Party (2019)
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
+          name: dance-2019
         k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals (2019)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
@@ -15405,10 +15438,11 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party - Go Further:
-              name: Keep on Dancing
+              name: Keep on Dancing (2019)
               description_student: 'Learners of all ages continue an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
+          name: dance-extras-2019
         csp10-pilot:
           title: Cybersecurity and Global Impacts
           description_audience: ''
@@ -18886,8 +18920,6 @@ en:
               name: USE Programs (AppLab Only)
             MODIFY Programs:
               name: MODIFY Programs (AppLab -> Widget -> AppLab)
-            Does Code.org Like Your Dog?:
-              name: Does Code.org Like Your Dog?
             dog:
               name: Does Code.org Like Your Dog?
             AI for Oceans:
@@ -19010,7 +19042,7 @@ en:
             Outbreak:
               name: Coding a Simulation
               description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
-              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
+              description_teacher: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation
@@ -20853,8 +20885,8 @@ en:
             Learning From Data:
               key: Learning From Data
               name: Learning from Data
-              description_student: Explore the Google Trends tool in order to tell a "data story".
-              description_teacher: 'In this lesson students explore the Google Trends tool in order to tell a "data story" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab. '
+              description_student: In this lesson, you will explore the “What’s Going on in this Graph?” site in order to tell a "data story" which explains both what the data shows and why that might be. Following this, you will learn about the concept of metadata and look for the metadata of datasets on App Lab.
+              description_teacher: In this lesson students explore the “What’s Going on in this Graph?” site in order to tell a "data story" which explains both what the data shows and why that might be. Following this, students are introduced to the concept of metadata and look for the metadata of datasets on App Lab.
             Exploring One Column:
               key: Exploring One Column
               name: Exploring One Column
@@ -23408,8 +23440,8 @@ en:
             For Loops:
               key: For Loops
               name: For Loops
-              description_student: ''
-              description_teacher: ''
+              description_student: 
+              description_teacher: 
             Sprite Lab:
               key: Sprite Lab
               name: Sequencing with Sprites
@@ -23429,7 +23461,7 @@ en:
               name: Module 1
             Getting Started:
               name: Getting Started
-            What is Code.org:
+            What is Codeorg:
               name: What is Code.org?
             Addressing Implementation Approaches and Barriers:
               name: Implementation Approaches and Barriers
@@ -25813,7 +25845,7 @@ en:
           student_description: ''
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
+            Navigating the Codeorg learning platform:
               name: " Navigating Code.org learning platform"
               description_student: 
               description_teacher: |-
@@ -27190,7 +27222,7 @@ en:
             lesson-1:
               name: 'Dance Party: Unplugged'
               description_student: 'Have a class dance party to learn about events. '
-              description_teacher: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with computer science in a safe, supportive, and unplugged environment. This lesson has been designed for learners of all ages. Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           lesson_groups: {}
           name: dance-unplugged
           title: Hour of Code - Dance Party - Unplugged
@@ -28397,7 +28429,7 @@ en:
             lesson-2:
               name: 'Project: Human Device Interaction'
               description_student: 
-              description_teacher: 
+              description_teacher: 'In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. '
             lesson-3:
               name: 'Mini-Project: Interactive Art'
               description_student: Create a piece of interactive artwork using a Circuit Playground and physical materials
@@ -28412,7 +28444,7 @@ en:
 
 '
               description_teacher: |-
-                To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+                In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
 
                 **Question of the Day:** What is a computing innovation?
             Designing Screens with Code:
@@ -28433,7 +28465,7 @@ en:
               name: Board Events
               description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
               description_teacher: |-
-                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.
 
                 **Question of the Day:** How can the user interact with the circuit playground for input?
             Arrays and Color LEDs:
@@ -29116,7 +29148,7 @@ en:
               description_student: Use loops and patterns to finish the images.
               description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.
               key: Ocean Scene with Loops
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Move and shout when your teachers presses buttons on a giant remote.
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
@@ -29179,7 +29211,7 @@ en:
               display_name: Events
             lessonGroup-5:
               display_name: End of Course Project
-          title: Course A (2021)
+          title: Course A (2022)
           description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
@@ -29942,7 +29974,7 @@ en:
               description_student: Sketch your own smartphone app.
               description_teacher: In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.
               key: The Right App
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Move or shout when your teacher presses buttons on a giant remote.
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
@@ -30017,11 +30049,12 @@ en:
               display_name: Events
             lessonGroup-6:
               display_name: End of Course Project
-          title: Course B (2021)
+          title: Course B (2022)
           description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
+          name: courseb-2022
         coursec-2022:
           lessons:
             Putting a STOP to Online Meanness:
@@ -30034,7 +30067,7 @@ en:
 
                 The internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.
               key: Putting a STOP to Online Meanness
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: My Robotic Friends Jr.
               description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
               description_teacher: In this **context-setting** lessons, students will use a set of symbols to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.
@@ -30055,7 +30088,7 @@ en:
               name: Creating Art with Code
               description_student: Create beautiful images by programming the Artist.
               description_teacher: In this **skill-building** lesson, students will take control of the Artist to complete drawings on the screen.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: My Loopy Robotic Friends Jr.
               description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
               description_teacher: 'This **context-setting** lesson builds on the initial "My Robotic Friends" activity, featuring larger and more complicated designs. '
@@ -30166,7 +30199,7 @@ en:
               display_name: Data
             end_of_course_project:
               display_name: End of Course Project
-          title: Course C (2021)
+          title: Course C (2022)
           description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
@@ -30684,11 +30717,12 @@ en:
               display_name: Conditionals
             end_of_course_project:
               display_name: End of Course Project
-          title: Course D (2021)
+          title: Course D (2022)
           description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
           student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
+          name: coursed-2022
         coursee-2022:
           lessons:
             Follow the Algorithm:
@@ -31259,7 +31293,7 @@ en:
               description_teacher: |-
                 **How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**
 
-                Students write an additional new subclass and practice using decomposition o develop algorithms. Students translate algorithms to write methods in their new subclass and create multiple objects in their program.
+                Students write an additional new subclass and practice using decomposition to develop algorithms. Students translate algorithms to write methods in their new subclass and create multiple objects in their program.
             lesson-15:
               name: Open Source Code
               description_student: |-
@@ -31299,7 +31333,7 @@ en:
               description_teacher: |-
                 **How is my growth as a software engineer reflected in my project?**
 
-                Students participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback at this as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
+                Students participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
             lesson-19:
               name: FRQ Practice
               description_student: |-
@@ -31314,11 +31348,21 @@ en:
               name: Unit 1 Assessment
               description_student: Congratulations, you completed your first unit! Assess your progress through the Unit 1 Assessment.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            lesson-21:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-22:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
           description_audience: ''
@@ -31398,43 +31442,233 @@ en:
         csa2-2022:
           lessons:
             lesson-1:
-              name: Neighborhood Store Management Project – Day 1
+              name: Store Management Project – Day 1
+              description_student: |-
+                **What business or service do I want to manage using a program?**
+
+                For this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system.
+              description_teacher: |-
+                **What business or service do I want to manage using a program?**
+
+                For this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.
             lesson-2:
-              name: Neighborhood Store Management Project – Day 2
+              name: Store Management Project – Day 2
+              description_student: |-
+                **How will I implement my plans to create my program?**
+
+                You have now designed classes to represent objects in a business of your choice to create a store management program. In this lesson, you decide how users interact with your program and use the Scanner class to receive user input. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program.
+              description_teacher: |-
+                **How will I implement my plans to create my program?**
+
+                Students designed classes to represent objects in a business of their choice to create a store management program. Students decide how users interact with their program and use the Scanner class to receive user input. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.
             lesson-3:
-              name: Neighborhood Store Management Project – Day 3
+              name: Store Management Project – Day 3
+              description_student: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                You participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success.
+              description_teacher: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
             lesson-4:
               name: FRQ Practice
+              description_student: |-
+                **How will I use what I know about classes and objects to answer a Free Response Question?**
+
+                You practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines.
+              description_teacher: |-
+                **How will I use what I know about classes and objects to answer a Free Response Question?**
+
+                Students practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.
             lesson-5:
               name: Unit 2 Assessment
+              description_student: Assess your progress through the Unit 2 Assessment.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            lesson-6:
+              name: Variables
+              description_student: |-
+                **How can I store values so I can reuse them?**
+
+                You learned about the `boolean` data type to represent a `true` or `false` value in the previous unit. In this lesson, you expand your knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. You explore how variables are declared, initialized, and used as you write and modify code segments and identify the current value stored in a variable.
+              description_teacher: |-
+                **How can I store values so I can reuse them?**
+
+                Students expand their knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. Students explore how variables are declared, initialized, and used as they write and modify code segments and identify the current value stored in a variable.
+            lesson-7:
+              name: Operators and Expressions
+              description_student: |-
+                **How can I use variables to perform calculations?**
+
+                You learned about primitive and reference variables and how to store values and pointers to objects in these variables. In this lesson, you discover how arithmetic and compound assignment operators function in Java when used with different data types. You practice evaluating expressions and explore scenarios that result in errors or unexpected results.
+              description_teacher: |-
+                **How can I use variables to perform calculations?**
+
+                Students discover how arithmetic and compound assignment operators function in Java with different data types. Students practice evaluating expressions and explore scenarios that result in errors or unexpected results.
+            lesson-8:
+              name: Attributes
+              description_student: |-
+                **How do I decide what attributes an object should have?**
+
+                In the previous unit, you created subclasses of the `Painter` class and objects of different types. You revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. You define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access.
+              description_teacher: |-
+                **How do I decide what attributes an object should have?**
+
+                In the previous unit, students created subclasses of the `Painter` class and objects of different types. Students revisit classes and objects to learn how to design classes and identify appropriate attributes for these classes. Students define instance variables to represent these attributes while exploring encapsulation and learn the difference between `public` and `private` access.
+            lesson-9:
+              name: Constructors
+              description_student: |-
+                **How can I create objects with specific values?**
+
+                In the previous unit, you wrote constructors in your `Painter` subclasses that instantiated an object using the `Painter` class constructor. In this lesson, you revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, you learn the difference between actual and formal parameters and explore how constructor calls function in programs.
+              description_teacher: |-
+                **How can I create objects with specific values?**
+
+                Students revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, students differentiate between actual and formal parameters and explore how constructor calls function in programs.
+            lesson-10:
+              name: User Input
+              description_student: |-
+                **How do I get input from the user?**
+
+                In this lesson, you learn to obtain user input using the `Scanner` class. You also discover the `NullPointerException`, its cause, and strategies for debugging this error.
+              description_teacher: |-
+                **How do I get input from the user?**
+
+                Students learn how to obtain user input using the `Scanner` class. Additionally, they discover the `NullPointerException`, its cause, and strategies for debugging this error.
+            lesson-11:
+              name: Class Hierarchies
+              description_student: |-
+                **How can I create hierarchies of classes to simplify program code?**
+
+                You learned about inheritance in the previous unit to create subclasses of the `Painter` class. In this lesson, you revisit inheritance to learn about using the DRY principle to refactor redundant code. You also learn about the `Object` class and deepen your understanding of inheritance.
+              description_teacher: |-
+                **How can I create hierarchies of classes to simplify program code?**
+
+                Students learned about inheritance in the previous unit to create subclasses of the `Painter` class. In this lesson, students revisit inheritance to learn about using the DRY principle to refactor redundant code. Students also learn about the `Object` class and deepen their understanding of inheritance.
+            lesson-12:
+              name: Accessor Methods
+              description_student: |-
+                **How can I access the values of an object's instance variables?**
+
+                You have learned that `private` instance variables cannot be directly accessed from outside the class. In this lesson, you discover the need for accessor methods to obtain the values stored in the instance variables of a class. You review the components of a method signature and how methods return values. You practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions.
+              description_teacher: |-
+                **How can I access the values of an object's instance variables?**
+
+                Students discover the need for accessor methods to obtain the values stored in the instance variables of a class. Students review the components of a method signature and how methods return values. Students practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions.
+            lesson-13:
+              name: Mutator Methods
+              description_student: |-
+                **How can I change the values of an object's instance variables after the object has been created?**
+
+                Your programs currently cannot directly change the values stored in the instance variables of a class. In this lesson, you discover the need for mutator methods to change these values. You also revisit the `void` keyword and recall edge cases. You practice writing and calling mutator methods for your classes.
+              description_teacher: |-
+                **How can I change the values of an object's instance variables after the object has been created?**
+
+                Students discover the need for mutator methods to change the values stored in the instance variables of a class. Students also revisit the `void` keyword and recall edge cases. Students practice writing and calling mutator methods for their classes.
+            lesson-14:
+              name: Printing Objects
+              description_student: |-
+                **How can I easily display information about an object?**
+
+                You have learned to obtain information about an object using its accessor methods. In this lesson, you discover the need for an easier way to get the state of an object. You revisit the `Object` class and learn how to override its `toString()` method to display object information to the console. You also learn to format output using escape sequences and concatenating instance variables and `String`s.
+              description_teacher: |-
+                **How can I easily display information about an object?**
+
+                Students have learned to obtain information about an object using its accessor methods. In this lesson, students discover the need for an easier way to get the state of an object. Students revisit the `Object` class and learn how to override its `toString()` method to display object information to the console. Students also learn to format output using escape sequences and concatenating instance variables and `String`s.
+            lesson-15:
+              name: Scope and this
+              description_student: |-
+                **How does the scope of a variable impact its accessibility and use?**
+
+                You learned about local variables that are used by a constructor or a method. In this lesson, you explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. You learn to use the `this` keyword to refer to the current object in constructors and methods.
+              description_teacher: |-
+                **How does the scope of a variable impact its accessibility and use?**
+
+                Students explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. Students learn to use the `this` keyword to refer to the current object in constructors and methods.
+            lesson-16:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-17:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa2-2022
           title: Class Structure and Design ('22-'23)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to work with variables and user input as they develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As students work with the `Dessert` class, they build on their knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, students learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, students continue to develop software engineering skills as they learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
+          student_description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
         csa3-2022:
           lessons:
             lesson-1:
               name: FRQ Practice
             lesson-2:
               name: Unit 3 Assessment
+            lesson-3:
+              name: One-Dimensional (1D) Arrays
+            lesson-4:
+              name: Array Elements
+            lesson-5:
+              name: For Loops
+            lesson-6:
+              name: Array Algorithms
+            lesson-7:
+              name: Enhanced For Loops
+            lesson-8:
+              name: Static Variables and Constants
+            lesson-9:
+              name: Polymorphism
+            lesson-10:
+              name: Finding Pairs
+            lesson-11:
+              name: Reversing Arrays
+            lesson-12:
+              name: Finding Duplicates
+            lesson-13:
+              name: Data for Social Good Project – Day 1
+            lesson-14:
+              name: Data for Social Good Project – Day 2
+            lesson-15:
+              name: Data for Social Good Project – Day 3
+            lesson-16:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-17:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa3-2022
           title: Arrays and Algorithms ('22-'23)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to represent lists of data while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, students identify the preconditions and postconditions that an algorithm must satisfy. Additionally, students learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 4
+            * Personal Progress Check 6
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
+          student_description: This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to represent lists of data while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, you identify the preconditions and postconditions that an algorithm must satisfy. Additionally, you learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
         tessplayground:
           lessons:
             Conditionals and Debugging:
@@ -31594,44 +31828,84 @@ en:
           lessons:
             lesson-1:
               name: Welcome to CSA
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: The Neighborhood
+              description_student: 
+              description_teacher: 
             lesson-4:
               name: Navigating and Painting
+              description_student: 
+              description_teacher: 
             lesson-5:
               name: One-Way Selection Statements
+              description_student: 
+              description_teacher: 
             lesson-6:
               name: PainterPlus
+              description_student: 
+              description_teacher: 
             lesson-7:
               name: Writing Methods
+              description_student: 
+              description_teacher: 
             lesson-8:
               name: Code Reviews
+              description_student: 
+              description_teacher: 
             lesson-9:
               name: Loops
+              description_student: 
+              description_teacher: 
             lesson-10:
               name: Two-Way Selection Statements
+              description_student: 
+              description_teacher: 
             lesson-11:
               name: Debugging Strategies
+              description_student: 
+              description_teacher: 
             lesson-12:
               name: Decomposition and Design
+              description_student: 
+              description_teacher: 
             lesson-13:
               name: PatternPainter
+              description_student: 
+              description_teacher: 
             lesson-14:
               name: BackgroundPainter
+              description_student: 
+              description_teacher: 
             lesson-15:
               name: Open Source Code
+              description_student: 
+              description_teacher: 
             lesson-16:
               name: Asphalt Art Project — Day 1
+              description_student: 
+              description_teacher: 
             lesson-17:
               name: Asphalt Art Project — Day 2
+              description_student: 
+              description_teacher: 
             lesson-18:
               name: Asphalt Art Project — Day 3
+              description_student: 
+              description_teacher: 
             lesson-19:
               name: FRQ Practice
+              description_student: 
+              description_teacher: 
             lesson-20:
               name: Unit 1 Assessment
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -31644,10 +31918,14 @@ en:
           description: ''
           student_description: ''
         pltess:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Tess lesson 2
+            lesson-2:
+              name: lesson 3
           lesson_groups:
             lessonGroup-2:
-              display_name: course
+              display_name: Tess lesson
           name: pltess
           title: ''
           description_audience: ''
@@ -31661,31 +31939,234 @@ en:
           lessons:
             lesson-1:
               name: Welcome to Code.org
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to Code.org.
+                * Learn how to engage in these professional learning modules.
+
+                **Estimated time:** 20 minutes
+              description_teacher: |
+                **You will:**
+
+                * Get an introduction to Code.org.
+                * Learn how to engage in these professional learning modules.
+
+                **Estimated time:** 20 minutes
             lesson-2:
-              name: Welcome to "Teaching CSA"
+              name: Get to know Computer Science A
+              description_student: "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+              description_teacher: "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
           lesson_groups: {}
           name: self-paced-pl-csa1-2022
-          title: 'Unit 1 - Module 1: Welcome'
+          title: 'Module 1: Welcome'
           description_audience: ''
           description_short: ''
-          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
-          student_description: ''
+          description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          student_description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
         self-paced-pl-csa2-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Navigating the Code.org learning platform
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Estimated time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Estimated time:** 30 minutes
+            lesson-2:
+              name: Navigating lesson plans and resources
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Estimated time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Estimated time:** 25 minutes
+            lesson-3:
+              name: Navigating Support
+              description_student: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Estimated time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Learn how to access support while teaching the course.
+
+                **Estimated time:** 15 minutes
           lesson_groups: {}
+          name: self-paced-pl-csa2-2022
+          title: 'Module 2: Navigating Code.org'
+          description_audience: ''
+          description_short: ''
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Estimated Time:** 70 minutes\n"
+          student_description: |-
+            This module is intended for teachers who are new to Code.org and the Code.org platform.
+
+            **You will:**
+            * Navigate the Code.org website and teacher tools.
+            * Set up a classroom section.
+            * Locate and use course lesson plans and teacher resources.
+            * Learn how to access support while teaching the course.
+
+            **Estimated Time:** 70 minutes
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
               name: Introduction to JavaLab
+              description_student: 
+              description_teacher: |-
+                **You will:**
+
+                * Create a new file in the Java Lab IDE
+                * Name Java files using conventions for naming
+                * Learn the basics of Java syntax
+                * Print information to the console
+
+                **Estimated time:** 60 minutes
             lesson-2:
-              name: Using variables in Java
+              name: Variables in Java
+              description_student: |-
+                **You will:**
+
+                * Describe the different primitive data types covered in the AP subset
+                * Declare and initialize variables
+                * Use the assignment operator and compound assignment operators
+                * Use variables in arithmetic operations
+                * Print variables and text to the console
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Describe the different primitive data types covered in the AP subset
+                * Declare and initialize variables
+                * Use the assignment operator and compound assignment operators
+                * Use variables in arithmetic operations
+                * Print variables and text to the console
+
+                **Estimated time:** 90 minutes
+            lesson-3:
+              name: If statements in Java
+              description_student: |-
+                **You will:**
+
+                * Evaluate boolean expressions
+                * Write and read if, if-else, if-else-if-else statements
+                * Describe the difference between the assignment operator and the comparison operator
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Evaluate boolean expressions
+                * Write and read if, if-else, if-else-if-else statements
+                * Describe the difference between the assignment operator and the comparison operator
+
+                **Estimated time:** 90 minutes
+            lesson-4:
+              name: Loops in Java
+              description_student: |-
+                **You will:**
+
+                * Read, write, and debug for loops in Java
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Read, write, and debug for loops in Java
+
+                **Estimated time:** 90 minutes
+            lesson-5:
+              name: Arrays in Java
+              description_student: |-
+                **You will:**
+
+                * Declare and initialize a 1D array of primitive data types
+                * Access and modify elements in an array
+                * Traverse an array
+
+                **Estimated time:** 120 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Declare and initialize a 1D array of primitive data types
+                * Access and modify elements in an array
+                * Traverse an array
+
+                **Estimated time:** 120 minutes
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
-          title: Support for text-based programming
+          title: 'Module 3: Support for text-based programming'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          student_description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
         csa7-pilot-extra:
           lessons:
             Writing Methods to Satisfy Conditions:
@@ -31861,7 +32342,7 @@ en:
               display_name: Pilot Survey
             lessonGroup-5:
               display_name: Sandbox
-          title: Expanding Software Design
+          title: 'Expanding Software Design '
           description: In this unit, students practice software design and development using the skills and programming constructs they have learned to develop a title sequence for their favorite content creator. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. Students explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.
           student_description: In this unit, you practice software design and development using the skills and programming constructs you have learned to develop a title sequence for your favorite content creator. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your projects meet specified requirements. You explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
           description_short: ''
@@ -32047,10 +32528,15 @@ en:
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
+          name: csa8-pilot-extra
         csa-backpack-2022:
           lessons:
             lesson-1:
               name: PainterPlus
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Project Mercury Pastries Food Truck
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -32210,3 +32696,900 @@ en:
 
             We have also added a full slide deck covering all lessons in Course F. We welcome your [feedback](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) on the lesson slides as well!
           student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              name: Documenting Program Code
+              description_student: The projects you have developed throughout the course have inspired a lot of creativity in the community! A Neighborhood Lit Fest will be held to showcase creative stories, scripts, song lyrics, letters, and poems. The Neighborhood Lit Fest Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
+              description_teacher: Students are introduced to the Neighborhood Lit Fest Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and commenting by identifying best practices and exploring the use of Javadocs to generate program documentation.
+              key: Documenting Program Code
+            Exploring Integer and Double Objects:
+              name: Exploring Integer and Double Objects
+              description_student: You construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, you return the values these objects store as primitive values. You also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks you need to complete for your Neighborhood Lit Fest Project.
+              description_teacher: Students construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, students return the values these objects store as primitive values. Students also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks they need to complete for their Neighborhood Lit Fest Project.
+              key: Exploring Integer and Double Objects
+            Using ArrayLists to Store Data:
+              name: Using ArrayLists to Store Data
+              description_student: When working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the list's size constantly changes. In this lesson, you learn about `ArrayList`s and identify scenarios where this data structure is more suitable.
+              description_teacher: Students create `ArrayList`s to store `int` and `double` values. Students differentiate between `ArrayList` and one-dimensional arrays to determine which data structure is best suited for a scenario. Students add elements to an `ArrayList` and learn how autoboxing converts between primitive values and wrapper classes as they work with the data stored.
+              key: Using ArrayLists to Store Data
+            Working with ArrayList Data:
+              name: Working with ArrayList Data
+              description_student: You use the `ArrayList` methods `get()` and `set()` to retrieve and modify elements and learn about the `String` method `length()` to count the number of characters in a `String` object. You apply the standard algorithms you developed with 1D and 2D arrays to modify elements in an `ArrayList`. You learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`.
+              description_teacher: 'Students work with the `get()` and `set()` methods to retrieve and modify elements in an `ArrayList` and learn about the `String` method `length()` to return the number of characters in a `String` object. They apply the standard algorithms they developed with 1D and 2D arrays to modify elements in an `ArrayList`. Students learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`. '
+              key: Working with ArrayList Data
+            Storing Objects in an ArrayList:
+              name: Storing Objects in an ArrayList
+              description_student: So far, you have created `ArrayList`s to store `Integer`s, `Double`s, and `String`s. Like with 1D and 2D arrays, you can also store objects that you create in an `ArrayList`. In this lesson, you create an `ArrayList` of objects to apply the standard algorithms you have used throughout the year to work with the data stored in this list.
+              description_teacher: Students create `ArrayList`s to store objects and learn about generic types in Java. Students apply the algorithms they learned with one-dimensional arrays to `ArrayList`s to find the minimum and maximum values, calculate sums and averages, or find elements that meet specific criteria.
+              key: Storing Objects in an ArrayList
+            Removing Data from an ArrayList:
+              name: Removing Data from an ArrayList
+              description_student: You explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. In the process, you realize when an `ArrayList` is best for a scenario or problem.
+              description_teacher: Students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Students then realize when an `ArrayList` is best for a scenario or problem.
+              key: Removing Data from an ArrayList
+            Using String Methods:
+              name: Using String Methods
+              description_student: You explore the structure of a `String` and recall that `String`s are objects. You use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+              description_teacher: Students explore the structure of a `String` and recall that `String`s are objects. Students use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+              key: Using String Methods
+            Comparing Strings:
+              name: Comparing Strings
+              description_student: You explore using `compareTo()` to check if `String`s are in alphabetical order. You then work on your Neighborhood Lit Fest Project, focusing specifically on the tasks you have on your Project Planning Board.
+              description_teacher: Students explore using `compareTo()` to check if `String`s are in alphabetical order. Students then work on their Neighborhood Lit Fest Project, focusing specifically on the tasks they have on their Project Planning Board.
+              key: Comparing Strings
+            Solving Problems with Strings:
+              name: Solving Problems with Strings
+              description_student: 'You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. '
+              description_teacher: Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.
+              key: Solving Problems with Strings
+            Solving Problems with ArrayLists:
+              name: Solving Problems with ArrayLists
+              description_student: You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project.
+              description_teacher: Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.
+              key: Solving Problems with ArrayLists
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: You continue to develop your Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from your favorite author or artist. You first self-assess your work to evaluate your progress in completing project requirements, then write acceptance criteria for a feature in your project that a peer will test. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from their favorite author or artist. Students first self-assess their work to evaluate their progress in completing project requirements, then write acceptance criteria for a feature in their project that a peer will test. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+              key: Neighborhood Lit Fest Project - Day 1
+            Neighborhood Lit Fest Project - Day 2:
+              name: Neighborhood Lit Fest Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Neighborhood Lit Fest Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Neighborhood Lit Fest Projects.
+              key: Neighborhood Lit Fest Project - Day 2
+            Neighborhood Lit Fest Project - Day 3:
+              name: Neighborhood Lit Fest Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Neighborhood Lit Fest Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Neighborhood Lit Fest Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+              key: Neighborhood Lit Fest Project - Day 3
+            FRQ Day:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+              key: FRQ Day
+            Assessment Day:
+              name: Assessment Day
+              description_student: In this unit, you used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identified and documented preconditions and postconditions of objects and methods. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identified and documented preconditions and postconditions of objects and methods. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              key: Assessment Day
+            Unit 6 Pilot Survey:
+              name: Unit 6 Pilot Survey
+              description_student: 
+              description_teacher: 
+            Java Lab:
+              name: Java Lab
+              description_student: ''
+              description_teacher: ''
+              key: Java Lab
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: ''
+              description_teacher: ''
+              key: The Neighborhood
+            The Theater:
+              name: The Theater
+              description_student: ''
+              description_teacher: ''
+              key: The Theater
+            The Playground:
+              name: The Playground
+              description_student: ''
+              description_teacher: ''
+              key: The Playground
+            lesson-1:
+              key: lesson-1
+              name: Unit 6 Pilot Survey
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
+          title: Expanding Program Capabilities
+          description: |-
+            In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 2
+            * Personal Progress Check 7
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
+          student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
+          description_short: ''
+          description_audience: ''
+          name: csa6-2022
+        csa7-2022:
+          lessons:
+            Writing Methods to Satisfy Conditions:
+              name: Exploring Method Components and Functionality
+              description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
+              description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
+              key: Writing Methods to Satisfy Conditions
+            Exploring Method Components and Functionality:
+              name: Using Object References as Parameters
+              description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+              description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+              key: Exploring Method Components and Functionality
+            Using Object References as Parameters:
+              name: Overloading Methods
+              description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
+              description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
+              key: Using Object References as Parameters
+            Overloading Methods:
+              name: Accessing Object Behavior
+              description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+              description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+              key: Overloading Methods
+            Accessing Object Behavior:
+              name: Writing Methods to Satisfy Conditions
+              description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
+              description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
+              key: Accessing Object Behavior
+            Overriding Methods:
+              name: Overriding Methods
+              description_student: You have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. You explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve your ability to work with user input in your programs.
+              description_teacher: Students have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. Students explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve their ability to work with user input in their programs.
+              key: Overriding Methods
+            Exploring Recursive Methods:
+              name: Exploring Recursive Methods
+              description_student: You explore recursive methods through an unplugged activity of your choosing and practice tracing code with recursive methods. You then work through the tasks on your Project Planning Board to continue development on your Title Sequence Project.
+              description_teacher: Students explore recursive methods through an unplugged activity of their choosing and practice tracing code with recursive methods. Students then work through the tasks on their Project Planning Board to continue development on their Title Sequence Project.
+              key: Exploring Recursive Methods
+            Comparing Recursive and Iterative Solutions:
+              name: Comparing Recursive and Iterative Solutions
+              description_student: Sometimes it's easier to write a method iteratively, and other times a recursive method is best! You examine problems and algorithms to identify their base cases and recursive cases. You differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+              description_teacher: Students examine problems and algorithms to identify their base cases and recursive cases. Students differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+              key: Comparing Recursive and Iterative Solutions
+            Writing Recursive Methods:
+              name: Writing Recursive Methods
+              description_student: You compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. You then participate in a peer review to give and receive feedback on your Title Sequence Project progress.
+              description_teacher: Students compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. Students then participate in a peer review to give and receive feedback on their Title Sequence Project progress.
+              key: Writing Recursive Methods
+            Maximizing System Reliability:
+              name: Maximizing System Reliability
+              description_student: You explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. You identify strategies to test system reliability and recognize your role as a software engineer in developing and maintaining functioning software.
+              description_teacher: Students explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. Students identify strategies to test system reliability and recognize their role as software engineers in developing and maintaining functioning software.
+              key: Maximizing System Reliability
+            Title Sequence Project - Day 1:
+              name: Title Sequence Project - Day 1
+              description_student: You continue to develop your Title Sequence Project to create a title sequence for a show to promote your favorite content creator using images and drawings to create animations and effects. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Title Sequence Project to create a title sequence for a show to promote their favorite content creator using images and drawings to create animations and effects. Students first self-assess their work to evaluate their progress in completing project requirements, then conduct acceptance testing to determine which of their user stories are complete. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+              key: Title Sequence Project - Day 1
+            Title Sequence Project - Day 2:
+              name: Title Sequence Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Title Sequence Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Title Sequence Projects.
+              key: Title Sequence Project - Day 2
+            Title Sequence Project - Day 3:
+              name: Title Sequence Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Title Sequence Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Title Sequence Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+              key: Title Sequence Project - Day 3
+            FRQ Day:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You are responsible for pacing yourself and applying the three-step process of annotating the question, writing pseudocode, then writing your Java code. You then complete a post-FRQ to identify any areas where you could use more practice.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students then complete a post-FRQ survey to debrief on their testing experience and identify any gaps in their knowledge.
+              key: FRQ Day
+            Assessment Day:
+              name: Assessment Day
+              description_student: In this unit, you practiced software design and development using the skills and programming constructs you have learned throughout the course to develop a title sequence for your favorite content creator. You used decomposition strategies and object-oriented programming principles to plan and implement your ideas while ensuring your project met specific requirements. You explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, you considered the need for maximizing system reliability as you analyzed open-source code. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students practiced software design and development using the skills and programming constructs they have learned throughout the course to develop a title sequence for their favorite content creator. Students used decomposition strategies and object-oriented programming principles to plan and implement their ideas while ensuring their projects met specific requirements. Students explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, students considered the need for maximizing system reliability as they analyzed open-source code. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              key: Assessment Day
+            Unit 7 Pilot Survey:
+              name: Unit 7 Pilot Survey
+              description_student: ''
+              description_teacher: ''
+              key: Unit 7 Pilot Survey
+            Java Lab:
+              name: Java Lab
+              description_student: ''
+              description_teacher: ''
+              key: Java Lab
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: ''
+              description_teacher: ''
+              key: The Neighborhood
+            The Theater:
+              name: The Theater
+              description_student: ''
+              description_teacher: ''
+              key: The Theater
+            The Playground:
+              name: The Playground
+              description_student: ''
+              description_teacher: ''
+              key: The Playground
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
+          title: Expanding Software Design
+          description: In this unit, students practice software design and development using the skills and programming constructs they have learned to develop a title sequence for their favorite content creator. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. Students explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.
+          student_description: In this unit, you practice software design and development using the skills and programming constructs you have learned to develop a title sequence for your favorite content creator. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your projects meet specified requirements. You explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
+          description_short: ''
+          description_audience: ''
+        csa8-2022:
+          lessons:
+            Planning a Project:
+              name: Planning a Project
+              description_student: You have been asked to design and develop a game for everyone in your community to play. The Inclusive Playground Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
+              description_teacher: Students explore game design and learn about principles game designers use to create inclusive games. Students are introduced to the Inclusive Playground Project and evaluate requirements and examples to identify questions and key features.
+              key: Planning a Project
+            Searching for Data:
+              name: Searching for Data
+              description_student: You have used searching in standard algorithms to find a target element in a list. In this lesson, you explore the linear search algorithm's best, average, and worst cases using execution counts.
+              description_teacher: Students have used searching in standard algorithms to find a target element in a list. In this lesson, students explore the linear search algorithm's best, average, and worst cases using execution counts.
+              key: Searching for Data
+            Implementing the Binary Search:
+              name: Implementing the Binary Search
+              description_student: You discover a better searching algorithm that can perform more efficiently if the list is already sorted. You trace code for a binary search to evaluate its efficiency and compare it to the linear search. You apply the binary search algorithm to solve problems in a variety of scenarios.
+              description_teacher: Students discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students trace code for a binary search to evaluate its efficiency and compare it to the linear search. Students apply the binary search algorithm to solve problems in a variety of scenarios.
+              key: Implementing the Binary Search
+            Implementing a Recursive Binary Search:
+              name: Implementing a Recursive Binary Search
+              description_student: Like many of the algorithms you have written, binary search can be implemented recursively. In this lesson, you explore implementing the binary search recursively and apply it to solve different problems.
+              description_teacher: Students review the binary search algorithm and explore implementing the algorithm recursively. Students apply the recursive binary search algorithm to solve problems that contain different data types, data structures, and problem constraints.
+              key: Implementing a Recursive Binary Search
+            Implementing the Selection Sort:
+              name: Implementing the Selection Sort
+              description_student: You explore the selection sort algorithm to organize elements in a list correctly. You trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+              description_teacher: Students explore the selection sort algorithm to organize elements in a list correctly. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+              key: Implementing the Selection Sort
+            Implementing the Insertion Sort:
+              name: Implementing the Insertion Sort
+              description_student: You explore the selection sort algorithm to organize elements in a list correctly. You trace the algorithm to understand its functionality and determine its efficiency using execution counts. You differentiate between the selection sort and insertion sort algorithms by comparing their efficiencies.
+              description_teacher: Students explore the insertion sort algorithm to organize elements in a list correctly. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts. Students differentiate between the selection sort and insertion sort algorithms by comparing their efficiencies.
+              key: Implementing the Insertion Sort
+            Implementing the Merge Sort:
+              name: Implementing the Merge Sort
+              description_student: You explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach. You identify the components of the algorithm and learn about helper functions. You trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+              description_teacher: Students explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach. Students identify the components of the algorithm and learn about helper functions. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+              key: Implementing the Merge Sort
+            Expanding Standard Algorithms:
+              name: Expanding Standard Algorithms
+              description_student: The algorithms you have learned about in the course can also be implemented in games to control bots, game functionality, and interact with the user. You implement standard, searching, and sorting algorithms in games and consider how you might incorporate these algorithms in your Inclusive Playground project.
+              description_teacher: Students discover that the algorithms they have learned about in the course can also be implemented in games to control bots, game functionality, and to interact with the user. Students implement standard, searching, and sorting algorithms in games and consider how they might incorporate these algorithms in their Inclusive Playground project.
+              key: Expanding Standard Algorithms
+            Traversing Multiple Lists:
+              name: Traversing Multiple Lists
+              description_student: You explore traversing multiple lists simultaneously by creating algorithms and tracing code involving multiple lists. You identify scenarios where multiple lists might be needed and consider how multiple lists might be used and traversed in games.
+              description_teacher: Students explore traversing multiple lists at the same time by creating algorithms and tracing code involving multiple lists. Students identify scenarios where multiple lists might be needed and consider how multiple lists might be used and traversed in games.
+              key: Traversing Multiple Lists
+            Defending Privacy and Security:
+              name: Defending Privacy and Security
+              description_student: You explore privacy and security issues and consider your role as a software engineer as you identify strategies for protecting personal privacy and security when developing programs. You apply these strategies to secure an open-source program.
+              description_teacher: Students explore privacy and security issues and consider their role as software engineers as they identify strategies for protecting personal privacy and security when developing programs. Students apply these strategies to secure an open-source program.
+              key: Defending Privacy and Security
+            Inclusive Playground Project - Day 1:
+              name: Inclusive Playground Project - Day 1
+              description_student: You continue to develop your Inclusive Playground Project to create a game for your community that incorporates object-oriented design principles. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Inclusive Playground Project to create a game for their community that incorporates object-oriented design principles. Students first self-assess their work to evaluate their progress in completing project requirements, then conduct acceptance testing to determine which of their user stories are complete. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+              key: Inclusive Playground Project - Day 1
+            Inclusive Playground Project - Day 2:
+              name: Inclusive Playground Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Inclusive Playground Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Inclusive Playground Projects.
+              key: Inclusive Playground Project - Day 2
+            Inclusive Playground Project - Day 3:
+              name: Inclusive Playground Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Inclusive Playground Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Inclusive Playground Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+              key: Inclusive Playground Project - Day 3
+            FRQ Day:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+              key: FRQ Day
+            Assessment Day:
+              name: Assessment Day
+              description_student: In this unit, you implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. You analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you applied your knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. You wrapped up the unit and course considering the privacy and security of their programs and users. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. Students analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students applied their knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. Students wrapped up the unit and course considering the privacy and security of their programs and users. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              key: Assessment Day
+            Unit 8 Pilot Survey:
+              name: Unit 8 Pilot Survey
+              description_student: ''
+              description_teacher: ''
+              key: Unit 8 Pilot Survey
+            Java Lab:
+              name: Java Lab
+              description_student: ''
+              description_teacher: ''
+              key: Java Lab
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: ''
+              description_teacher: ''
+              key: The Neighborhood
+            The Theater:
+              name: The Theater
+              description_student: ''
+              description_teacher: ''
+              key: The Theater
+            The Playground:
+              name: The Playground
+              description_student: ''
+              description_teacher: ''
+              key: The Playground
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
+          title: Giving Objects Life
+          description: |-
+            In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa8-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 10
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
+          student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
+          description_short: ''
+          description_audience: ''
+        ui-test-csa-family-script:
+          lessons:
+            lesson-1:
+              name: UI Test CSA Family Lesson
+          lesson_groups: {}
+          name: ui-test-csa-family-script
+          title: UI Test CSA Family Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-preview:
+          lessons:
+            lesson-1:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: The Playground
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-preview
+          title: CSA Curriculum and Tools Preview
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Welcome
+              description_student: "**You will:**\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n"
+              description_teacher: "**Overview:**\nThis session serves as both a welcome to the workshop experience and an opportunity to begin getting to know the workshop cohort. \n\n**Participants will:**\n\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n**Suggested time:** 30 minutes"
+            lesson-2:
+              name: Equity in CS
+              description_student: This appears for participants / students
+              description_teacher: This appears for teachers / facilitators
+            lesson-3:
+              name: Model Lesson 1 - Unit 1 Lesson 2
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Overview of CS Discoveries
+              description_student: |-
+                **You will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 40 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 40 minutes
+            lesson-5:
+              name: Asynchronous Debrief
+            lesson-6:
+              name: Model Lesson 2 - Unit 2 Lesson 2
+            lesson-7:
+              name: Identity
+            lesson-8:
+              name: Lesson Assignment
+            lesson-9:
+              name: Lesson Planning
+            lesson-10:
+              name: The role of the teacher
+              description_student: |-
+                **You will:**
+                * Consider your role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Consider their role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 20 minutes
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd1-summer-pilot-2022
+          title: 'Module 1: Introduction to CS Discoveries '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Welome
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Model Lesson 3 - Unit 2 Lesson 3
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: TLO 1 - Unit 3 Lesson 3
+            lesson-4:
+              name: TLO 2 - Unit 3 Lesson 4
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd2-summer-pilot-2022
+          title: 'Module 2: Tools and Instructional Strategies'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd3-summer-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: vpl-csd3-summer-pilot-2022
+          title: 'Module 3: Classroom Context and Culture'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: "[TEMPLATE] Introduction to..."
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's ___________ unit.
+                * Get a preview of the first week of the ________ unit content.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's ___________ unit.
+                * Get a preview of the first week of the ________ unit content.
+
+                **Suggested time:** 15 minutes
+            lesson-2:
+              name: "[TEMPLATE] Unit Wrap Up"
+              description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+              description_teacher: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+            lesson-3:
+              name: "[TEMPLATE] Content lessons"
+              description_student: |-
+                **You will:**
+
+                * Insert lesson objectives.
+
+                **Suggested time:** ____ minutes
+              description_teacher: |-
+                **You will:**
+
+                * Insert lesson objectives.
+
+                **Suggested time:** ____ minutes
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Curriculum Investigation
+          name: vpl-csd4-summer-pilot-2022
+          title: 'Module 4: Addressing Student Needs'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd5-summer-pilot-2022:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+          name: vpl-csd5-summer-pilot-2022
+          title: 'Module 5: Preparing to Teach CS Discoveries'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Operators and Expressions
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Attributes
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Constructors
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: User Input
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Class Hierarchies
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Accessor Methods
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Mutator Methods
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Printing Objects
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Scope and this
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: Store Management Project – Day 1
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: Store Management Project – Day 2
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: Store Management Project – Day 3
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: FRQ Practice
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Unit 2 Assessment
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa2-2022-exemplars
+          title: Unit 2 - Class Structure and Design [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        k5-onlinepd-2022:
+          lessons:
+            Welcome and Introduction:
+              name: Welcome and Introduction
+              description_student: 
+              description_teacher: 
+            Getting Started:
+              name: Getting Started
+              description_student: ''
+              description_teacher: ''
+              key: Getting Started
+            Teaching Practices and Strategies:
+              name: Teaching Practices and Strategies
+              description_student: 
+              description_teacher: 
+            Teaching a Lesson:
+              name: Teaching a Lesson
+              description_student: 
+              description_teacher: 
+            Addressing Barriers:
+              name: Addressing Barriers
+              description_student: 
+              description_teacher: 
+            Part II Overview:
+              name: Part II Overview
+              description_student: ''
+              description_teacher: ''
+              key: Part II Overview
+            Sequencing:
+              name: Sequencing
+              description_student: ''
+              description_teacher: ''
+              key: Sequencing
+            Sequencing with Sprites:
+              name: Sequencing with Sprites
+              description_student: ''
+              description_teacher: ''
+              key: Sequencing with Sprites
+            Loops:
+              name: Loops
+              description_student: ''
+              description_teacher: ''
+              key: Loops
+            Events:
+              name: Events
+              description_student: ''
+              description_teacher: ''
+              key: Events
+            Conditionals:
+              name: Conditionals
+              description_student: ''
+              description_teacher: ''
+              key: Conditionals
+            Functions:
+              name: Functions
+              description_student: ''
+              description_teacher: ''
+              key: Functions
+            Variables:
+              name: Variables
+              description_student: ''
+              description_teacher: ''
+              key: Variables
+            For Loops:
+              name: For Loops
+              description_student: ''
+              description_teacher: ''
+              key: For Loops
+            End of Course projects:
+              name: End of Course projects
+              description_student: ''
+              description_teacher: ''
+              key: End of Course projects
+            Reviewing your reflections:
+              name: Reviewing your reflections
+              description_student: ''
+              description_teacher: ''
+              key: Reviewing your reflections
+            Taking next steps:
+              name: Taking next steps
+              description_student: 
+              description_teacher: 
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Welcome to "Teaching Computer Science Fundamentals"
+              name: Welcome and Introduction
+              description_student: ''
+              description_teacher: ''
+            CS Teaching and Student Practices:
+              key: CS Teaching and Student Practices
+              name: Teaching Practices and Strategies
+              description_student: ''
+              description_teacher: ''
+            Lesson Planning:
+              key: Lesson Planning
+              name: Teaching a Lesson
+              description_student: ''
+              description_teacher: ''
+            Implementation Approaches and Barriers:
+              key: Implementation Approaches and Barriers
+              name: Addressing Barriers
+              description_student: ''
+              description_teacher: ''
+            Next steps:
+              key: Next steps
+              name: Taking next steps
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            Implementing and Teaching CS:
+              display_name: 'Part I:  Teaching and Implementing Computer Science'
+            k5_basic_concepts_1:
+              display_name: 'Part II:  Concepts in Courses A - F'
+            k5_next_steps_1:
+              display_name: 'Part III:  Next Steps'
+          title: Teaching Computer Science Fundamentals ('21-'22)
+          description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
+          student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+        vpl-csd1-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd1-ci-pilot-2022
+          title: 'Module 1: Preparing to Teach Problem Solving and Computing'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Introduction to Web Development
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's Web Development unit.
+                * Get a preview of the first week of the Web Development unit content.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's Web Development unit.
+                * Get a preview of the first week of the Web Development unit content.
+
+                **Suggested time:** 15 minutes
+            lesson-2:
+              name: Build a website with HTML
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Style a website with CSS
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Consider real-world implications
+              description_student: 
+              description_teacher: |-
+                **You will:**
+
+                * Consider real-world implications of web development.
+
+                **Suggested time:** 20 minutes
+            lesson-5:
+              name: Unit wrap up
+              description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+              description_teacher: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Web Development
+          name: vpl-csd2-ci-pilot-2022
+          title: 'Module 2: Preparing to Teach Web Development'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd3-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd3-ci-pilot-2022
+          title: 'Module 3: Preparing to Teach Interactive Animations and Games '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd4-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd4-ci-pilot-2022
+          title: " Module 4: Preparing to Teach The Design Process"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd5-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd5-ci-pilot-2022
+          title: 'Module 5: Preparing to Teach Data and Society'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd6-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd6-ci-pilot-2022
+          title: 'Module 6: Preparing to Teach Physical Computing'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd7-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd7-ci-pilot-2022
+          title: 'Module 7: Preparing to Teach AI and Machine Learning'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Hello World CSC
+          lesson_groups: {}
+          name: hello-world-csc
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Level Updates
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csd-playground
+          title: CSD Playground
+          description_audience: Curriculum Writers
+          description_short: For staging updates to lessons or levels between curriculum versions
+          description: For staging updates to lessons or levels between curriculum versions
+          student_description: ''

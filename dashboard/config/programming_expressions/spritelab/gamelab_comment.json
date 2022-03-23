@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Comments can describe what happens when the code is run or an event happens.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/VGpIMgy5COu5DkDffqj1neGqq8lrL_iY3A4e5j8wHc4",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Comments can help you track variables and change sprite properties.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/ge12vpygs6dn3uFU2wxS_s3UHbUVq6nhsdQ_61-ZGrk",
       "image": null,
       "app_display_type": "embedAppWithCode",

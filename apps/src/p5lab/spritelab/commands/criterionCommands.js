@@ -27,42 +27,79 @@ export const commands = {
   // Return true if any sprite began speaking.
   anySpriteSpeaks() {
     const spriteIds = this.getSpriteIdsInUse();
-    let result = false;
-    for (let i = 0; i < spriteIds.length; i++) {
-      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
-        result = true;
-      }
-    }
-    return result;
+    return (
+      spriteIds.filter(id =>
+        commands.spriteSpeechRenderedThisFrame.call(this, id)
+      ).length > 0
+    );
+  },
+
+  // Return true if the specified sprite began speaking
+  // and the text is not an empty string.
+  strictSpriteSpeechRenderedThisFrame(spriteId) {
+    return (
+      this.getLastSpeechBubbleForSpriteId(spriteId)?.renderFrame ===
+        this.currentFrame() &&
+      this.getLastSpeechBubbleForSpriteId(spriteId)?.text
+    );
+  },
+
+  // Return true if any sprite began speaking
+  // and the text is not an empty string.
+  strictAnySpriteSpeaks() {
+    const spriteIds = this.getSpriteIdsInUse();
+    return (
+      spriteIds.filter(id =>
+        commands.strictSpriteSpeechRenderedThisFrame.call(this, id)
+      ).length > 0
+    );
   },
 
   // Return true if any sprite was speaking.
   anySpriteSpeaking() {
     const spriteIds = this.getSpriteIdsInUse();
-    let result = false;
-    for (let i = 0; i < spriteIds.length; i++) {
-      if (this.getLastSpeechBubbleForSpriteId(spriteIds[i])) {
-        result = true;
-      }
-    }
-    return result;
+    return (
+      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length > 0
+    );
   },
 
-  // Return true if any sprite's speech include values from a given object.
-  anySpeechIncludesValues(object) {
+  // Return true if any sprite was speaking
+  // and the text is not an empty string.
+  strictAnySpriteSpeaking() {
+    const spriteIds = this.getSpriteIdsInUse();
+    return (
+      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)?.text)
+        .length > 0
+    );
+  },
+
+  // Return true if any sprite's speech include values from the given object(s).
+  // The second parameter is optional, but exists in case the levelbuilder would
+  // like to give students the flexibility of using the value from either the
+  // current or previous frame.
+  anySpeechIncludesValues(currentVariables, previousVariables) {
     const spriteIds = this.getSpriteIdsInUse();
     let result = false;
+    const values = previousVariables
+      ? Object.values(currentVariables).concat(Object.values(previousVariables))
+      : Object.values(currentVariables);
     for (let i = 0; i < spriteIds.length; i++) {
-      Object.values(object).forEach(value => {
+      values.forEach(value => {
         let speechText = this.getLastSpeechBubbleForSpriteId(spriteIds[i])
           ?.text;
         let type = typeof speechText;
+        // We only want to set result to true here, so that any positive test
+        // allows the overall criterion to pass.
         switch (type) {
           case 'string':
-            result = speechText.includes(value);
+            if (speechText.includes(value)) {
+              result = true;
+            }
             break;
           case 'number':
-            result = speechText === value;
+            if (speechText === value) {
+              result = true;
+            }
             break;
           default:
             break;
@@ -78,7 +115,7 @@ export const commands = {
     let result = false;
     let count = 0;
     for (let i = 0; i < spriteIds.length; i++) {
-      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, spriteIds[i])) {
         count++;
       }
     }

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-02-18 19:23:35 UTC",
+    "serialized_at": "2022-03-22 16:08:36 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -63,8 +63,8 @@
       "properties": {
         "assessment_opportunities": "1. **Identify computing innovations within a given field**\r\n\r\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\r\n\r\n2. **For a given device, articulate the likely inputs and outputs**\r\n\r\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\r\n\r\n3. **Suggest improvements to help a device better solve a specific problem**\r\n\r\n\tActivity Guide, page 2: The suggested improvements should relate to the purpose of the device and how it is used.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
-        "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
+        "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
+        "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student",
         "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
         "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
       },
@@ -124,7 +124,7 @@
       "properties": {
         "assessment_opportunities": "1. **Use a board event handler to control buttons on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use a board event handler to control the toggle switch on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
+        "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
         "preparation": "- Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
       },
@@ -239,6 +239,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. ",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)"
       },
       "seeding_key": {
@@ -715,7 +716,7 @@
       "key": "0a90718a-ced0-4294-b9da-36d33df1702c",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1474,7 +1475,7 @@
       "key": "75b71dff-12ec-4b40-b895-a54dccf5a325",
       "position": 2,
       "properties": {
-        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be) as a class.",
+        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.",
         "name": "Get Inspired\r"
       },
       "seeding_key": {
@@ -1515,7 +1516,7 @@
       "key": "bf3677c4-60d0-44ee-afb4-80e0d85a9c66",
       "position": 3,
       "properties": {
-        "description": "#### Computing Innovations\r\n\r\nDuring this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depths and report back to the class about.\r\n\r\n#### Innovation Research\r\n\r\n* **Introduce the topics**: Make sure that students understand the scope of each of the potential topics.\r\n\t* Wearable Technology (eg. clothing, jewelry, or accessories with built-in computers)\r\n\t* Health and Safety (eg. devices that treat disease, track your health, or protect users from danger)\r\n\t* Agriculture (eg. technology to improve the effectiveness, sustainability, or efficiency of farming)\r\n\t* Manufacturing (eg. advancements in rapid prototyping, industrial robotics, and the production of goods)\r\n\t* Art and Design (eg. interactive art or public installations)\r\n\t* Smart Home (eg. devices that allow you to interact with your thermostat, locks, or lights using computers)\r\n* **Explain the research task**: The goal of this research is twofold:\r\n\t* First, develop a deeper understanding of your chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\r\n    * Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that demonstrate unique or novel _form factors_. That is to say, computers that don't _look_ like computers.\r\n* **Send to Code Studio for resource links**: On Code Studio we have compiled more detailed descriptions of the topics as well as couple of recommended sites to learn more about each topic. Use this as a jumping off point for student research."
+        "description": "#### Computing Innovations\n\nDuring this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depth and report back to the class about.\n\n#### Innovation Research\n\n* **Introduce the topics**: Make sure that students understand the scope of each of the potential topics.\n\t* Wearable Technology (eg. clothing, jewelry, or accessories with built-in computers)\n\t* Health and Safety (eg. devices that treat disease, track your health, or protect users from danger)\n\t* Agriculture (eg. technology to improve the effectiveness, sustainability, or efficiency of farming)\n\t* Manufacturing (eg. advancements in rapid prototyping, industrial robotics, and the production of goods)\n\t* Art and Design (eg. interactive art or public installations)\n\t* Smart Home (eg. devices that allow you to interact with your thermostat, locks, or lights using computers)\n* **Explain the research task**: The goal of this research is twofold:\n\t* First, develop a deeper understanding of your chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\n    * Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that demonstrate unique or novel _form factors_. That is to say, computers that don't _look_ like computers.\n* **Send to Code Studio**: On Code Studio we have compiled more detailed descriptions of the topics. Students can use this as a jumping off point for keywords to search for with student research. You can also use the teaching tip below as a guide for how to provide your own starting point for student research."
       },
       "seeding_key": {
         "activity_section.key": "bf3677c4-60d0-44ee-afb4-80e0d85a9c66",
@@ -1530,7 +1531,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Here are some recommended sites for students to start their research.  Although these sites are generally appropriate for school, the content within them changes frequently, so **we strongly suggest you check each site for inappropriate content before sharing it with students**.\n\n### Wearable Technology\n\n* [Warable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](https://www.industryweek.com/technology-and-iiot)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n"
+            "markdown": "Below are several websites that students can use to start their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy innovation may not be middle-school appropriate. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students**.\n\nUsing the list below as a starting point, we recommend providing a digital list of research websites to students. It can include the websites below, and any additional resources you may find in your own research.\n\n### Wearable Technology\n\n* [Wareable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](https://www.industryweek.com/technology-and-iiot)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n"
           }
         ]
       },
@@ -1566,7 +1567,7 @@
       "key": "8e72be07-16bc-463b-a4c2-b9dab170f0f0",
       "position": 1,
       "properties": {
-        "description": "Ask groups to create a poster that shares the innovate device that they researched. Posters should include:\r\n\r\n* Who invented the device\r\n* What problem they were trying to solve\r\n* Why it is unique or innovative\r\n* How users interact with it (specifically, what Inputs does it take and how does it provide Output)\r\n\r\nKeep these posters up throughout the unit for students to refer back to as they start to develop physical computing devices of their own.",
+        "description": "Ask groups to create a poster that shares the innovation device that they researched. Posters should include:\n\n* Who invented the device\n* What problem they were trying to solve\n* Why it is unique or innovative\n* How users interact with it (specifically, what Inputs does it take and how does it provide Output)\n\nKeep these posters up throughout the unit for students to refer back to as they start to develop physical computing devices of their own.",
         "name": "Innovation Posters\r"
       },
       "seeding_key": {
@@ -1578,7 +1579,7 @@
       "key": "22ad3178-538f-43eb-b458-0114f3fcbdc0",
       "position": 2,
       "properties": {
-        "description": "Instead of (or in addition to) you posters, have students develop websites in Web Lab that include the same required content. Make sure that students include links to their source websites.",
+        "description": "Instead of (or in addition to) your posters, have students develop websites in Web Lab that include the same required content. Make sure that students include links to their source websites.",
         "name": "Innovation Websites\r"
       },
       "seeding_key": {
@@ -1687,7 +1688,13 @@
       "key": "e7630405-12a6-4f82-970d-5250ed2bd855",
       "position": 4,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Here are a few strategies for facilitating these levels:\n\n_Think-Pair-Share First:_ Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n_Full-Class First:_ Consider presenting the predict level to the entire class and asking the class to share what they think will happen. Keep track of their predictions at the front of the room, then run the code and compare the result to their predictions. After discussing and clarifying misconceptions, invite students to return to the Predict level on their own and enter in their new understanding of what the level will do.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e7630405-12a6-4f82-970d-5250ed2bd855",
@@ -1941,7 +1948,7 @@
       "key": "7cc52ce6-a194-42f6-a5ba-9a2183c70399",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.\n",
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {
@@ -7718,6 +7725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB1_2022"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -9834,11 +9844,10 @@
     },
     {
       "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
+      "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
       "key": "computer_science_is_changing_everything",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -10119,6 +10128,31 @@
       },
       "seeding_key": {
         "resource.key": "on-the-go_app"
+      }
+    },
+    {
+      "name": "Peer Review - Human Device Interaction",
+      "url": "https://docs.google.com/document/d/1lfEr8muFsAGldj7DHMxl8jVsUA_7Pb4LIaFNMWWvNaw/view",
+      "key": "peer_review_-_human_device_interaction",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_-_human_device_interaction"
+      }
+    },
+    {
+      "name": "Peer Review - Prototype an Innovation",
+      "url": "https://docs.google.com/document/d/1g9mDgXX5iaf2rhvR7nCLAmgMzKNNXRlIbExlBym3ILM/view",
+      "key": "peer_review_-_prototype_an_innovation",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_-_prototype_an_innovation"
       }
     },
     {
@@ -10716,6 +10750,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "peer_review_-_prototype_an_innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
         "resource.key": "peer_review_1"
       }
     },
@@ -10836,6 +10876,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "peer_review_-_human_device_interaction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "project_guide_-_human_device_interaction"
       }
     },
@@ -10950,7 +10996,7 @@
     {
       "key": "innovation",
       "word": "Innovation",
-      "definition": "A new or improved idea, device, product, etc, or the development thereof",
+      "definition": "A new or improved idea, device, product, etc. or the development thereof",
       "properties": {
       },
       "seeding_key": {
