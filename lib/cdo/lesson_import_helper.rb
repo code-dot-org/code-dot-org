@@ -21,13 +21,14 @@ module LessonImportHelper
   # @param [Hash] cb_lesson_data - Lesson and activity data to import.
   def self.update_lesson(lesson, models_to_import = [], cb_lesson_data = {})
     raise unless [:development, :adhoc, :levelbuilder].include? rack_env
-    raise unless lesson.script.hidden
 
-    # course version id should always be present for CSF/CSD/CSP 2020 courses.
-    course_version_id = lesson.script&.get_course_version&.id
-    raise "Script must have course version" unless course_version_id
+    # course version id should always be present for CSF/CSD/CSP 2020 courses and hoc courses.
+    if (['Vocabulary', 'Resource'] & models_to_import).any?
+      course_version_id = lesson.script&.get_course_version&.id
+      raise "Script must have course version" unless course_version_id
+    end
 
-    lesson_levels = lesson.script_levels.reject {|l| l.levels[0].type == 'CurriculumReference'}
+    lesson_levels = lesson.script_levels.to_a
     # Lockable lessons need to be handled as a separate case
     if cb_lesson_data.empty?
       if models_to_import.include?('Lesson')
@@ -36,7 +37,6 @@ module LessonImportHelper
       end
     else
       if models_to_import.include?('Lesson')
-        lesson.name = cb_lesson_data['title']
         lesson.overview = cb_lesson_data['teacher_desc']
         lesson.student_overview = cb_lesson_data['student_desc']
         lesson.purpose = cb_lesson_data['cs_content']
@@ -259,7 +259,7 @@ module LessonImportHelper
         position += 1
         lesson_activity.save!
         lesson_activity.reload
-        lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
+        lesson_activity.activity_sections = create_activity_sections(a['content'].strip_utf8mb4, lesson_activity.id, levels)
         lesson_activity
       end
     end.compact
@@ -333,7 +333,19 @@ module LessonImportHelper
     activity_section.position = 0
     activity_section.lesson_activity_id = lesson_activity_id
     activity_section.save!
-    sl_data = script_levels.map.with_index(1) {|l, pos| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: pos}.to_json)}
+    sl_data = script_levels.map.with_index(1) do |l, pos|
+      JSON.parse(
+        {
+          id: l.id,
+          assessment: l.assessment,
+          bonus: l.bonus,
+          challenge: l.challenge,
+          levels: l.levels,
+          variants: l.variants,
+          activitySectionPosition: pos
+        }.to_json
+      )
+    end
     activity_section.update_script_levels(sl_data) unless sl_data.blank?
     activity_section
   end
@@ -394,6 +406,7 @@ module LessonImportHelper
   end
 
   def self.create_tip(type, key, markdown)
+    key.downcase!
     tip_map = {
       "tip" => "teachingTip",
       "content" => "contentCorner",

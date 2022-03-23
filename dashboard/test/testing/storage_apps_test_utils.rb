@@ -1,4 +1,5 @@
 require_relative '../../../shared/middleware/helpers/storage_apps'
+require_relative '../../../shared/middleware/helpers/storage_id'
 
 # Tools that help test storage apps
 # To be included in any dashboard test that needs them.
@@ -19,15 +20,15 @@ module StorageAppsTestUtils
     owns_storage_id = false
     user_id = user&.id
 
-    storage_id = user_storage_ids.where(user_id: user_id).first&.[](:id)
+    storage_id = storage_id_for_user_id(user_id)
     unless storage_id
-      storage_id = user_storage_ids.insert(user_id: user_id)
+      storage_id = create_storage_id_for_user(user_id)
       owns_storage_id = true
     end
 
     yield storage_id
   ensure
-    user_storage_ids.where(id: storage_id).delete if owns_storage_id
+    delete_storage_id_for_user(user_id) if owns_storage_id
   end
 
   def with_anonymous_channel(&block)
@@ -36,9 +37,5 @@ module StorageAppsTestUtils
 
   def storage_apps
     PEGASUS_DB[:storage_apps]
-  end
-
-  def user_storage_ids
-    PEGASUS_DB[:user_storage_ids]
   end
 end

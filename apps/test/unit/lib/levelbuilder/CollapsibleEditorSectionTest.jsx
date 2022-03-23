@@ -20,8 +20,9 @@ describe('CollapsibleEditorSection', () => {
     expect(wrapper.contains('Section Title')).to.be.true;
     expect(wrapper.contains('Child')).to.be.true;
     expect(wrapper.find('span').length).to.equal(1);
-    expect(wrapper.find('FontAwesome').length).to.equal(1);
-    expect(wrapper.state().collapsed).to.equal(false);
+    let icon = wrapper.find('FontAwesome');
+    expect(icon.length).to.equal(1);
+    expect(icon.props().icon).to.include('compress');
 
     const editorsWrapper = wrapper.children().last();
     expect(editorsWrapper.props().style.width).to.equal(970);
@@ -45,12 +46,10 @@ describe('CollapsibleEditorSection', () => {
     );
 
     let icon = wrapper.find('FontAwesome');
-    expect(wrapper.state().collapsed).to.equal(false);
     expect(icon.props().icon).to.include('compress');
 
     wrapper.find('h2').simulate('click');
 
-    expect(wrapper.state().collapsed).to.equal(true);
     expect(wrapper.find('FontAwesome').props().icon).to.include('expand');
   });
 });

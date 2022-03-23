@@ -739,6 +739,8 @@ fil-PH:
     ibabahagi kailan man, ngunit kami ay magpapadala sa iyo ng mga kahilingan mula
     sa mga guro.
   volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_field_email_preference_privacy: "(Tingnan ang aming
+    patakaran sa pagkapribado)"
   volunteer_engineer_submission_field_email_preference_yes: Oo
   volunteer_engineer_submission_field_email_preference_no: Hindi
   volunteer_engineer_submission_final_paragraph: Ikaw ay ililista sa isang mapa para
@@ -1388,6 +1390,12 @@ fil-PH:
   coursed-2020_gradelevel: Baitang 8+
   coursee-2020_gradelevel: Baitang 9+
   coursef-2020_gradelevel: Baitang 10+
+  coursea-2021_gradelevel: Baitang 5+
+  courseb-2021_gradelevel: Baitang 6+
+  coursec-2021_gradelevel: Baitang 7+
+  coursed-2021_gradelevel: Baitang 8+
+  coursee-2021_gradelevel: Baitang 9+
+  coursef-2021_gradelevel: Baitang 10+
   accelerated_gradelevel: Mga edad na 10-18
   codeorg_platformtext: Makabagong mga browser, smartphone, at mga tablet
   codeintl_platformtext: Makabagong mga browser, smartphone, at mga tablet
@@ -2386,6 +2394,7 @@ fil-PH:
     aming bisyon at misyon na matiyak na ang bawat bata ay may pagkakataon na matuto
     ng computer science at sa mga skill para magtagumpay sa ika-21 siglo.  "
   footer_powered_by_aws: Pinagana sa pamamagitan ng Amazon Web Services
+  codebytes_skinny_banner_english_only: Ingles lamang
   footer_privacy_policy: Patakaran sa Pagkapribado
   footer_about: Tungkol sa
   footer_partners: Mga Partner
@@ -2398,3 +2407,4 @@ fil-PH:
     science at sa mga skill para magtagumpay sa ika-21 siglo.  "
   ai_activity: Aktibidad
   ai_description: Deskripsyon
+  outbreak_tile_title: Pagsiklab

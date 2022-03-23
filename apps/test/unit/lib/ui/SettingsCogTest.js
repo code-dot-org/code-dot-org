@@ -3,7 +3,7 @@ import {Portal} from 'react-portal';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import msg from '@cdo/locale';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import SettingsCog, {ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';

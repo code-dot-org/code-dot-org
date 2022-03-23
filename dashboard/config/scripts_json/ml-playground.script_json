@@ -4,11 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 21:32:05 UTC",
+    "serialized_at": "2021-11-22 19:57:21 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ml-playground"
     }
@@ -419,16 +424,1179 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "6f064e29-32e2-4f9e-862b-72cad2180f0b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f064e29-32e2-4f9e-862b-72cad2180f0b",
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "88504fe6-bad0-4b22-a95f-5099f9130f68",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88504fe6-bad0-4b22-a95f-5099f9130f68",
+        "lesson.key": "lesson2",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "c7bdfe5d-c422-4334-85b4-b6bde2a7a4dc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7bdfe5d-c422-4334-85b4-b6bde2a7a4dc",
+        "lesson.key": "lesson3",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "9112550a-2cd9-49f7-ae03-bfbf8aa393eb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9112550a-2cd9-49f7-ae03-bfbf8aa393eb",
+        "lesson.key": "lesson4",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "4bd2977c-dfb7-45e7-8f2d-1bc31ebcc154",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4bd2977c-dfb7-45e7-8f2d-1bc31ebcc154",
+        "lesson.key": "lesson5",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "88d5ebad-ed6e-46c4-9128-71d653959be0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88d5ebad-ed6e-46c4-9128-71d653959be0",
+        "lesson.key": "lesson6",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "ded5da1e-d29e-4b40-9c78-b71f98f660cf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ded5da1e-d29e-4b40-9c78-b71f98f660cf",
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "89b9d884-91df-4120-8492-f47e7b78e8e4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89b9d884-91df-4120-8492-f47e7b78e8e4",
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "7804e527-0a01-4baf-ac14-363791e69a69",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7804e527-0a01-4baf-ac14-363791e69a69",
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "b7934f76-0711-40b8-b41e-ae7ee6ffdb58",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b7934f76-0711-40b8-b41e-ae7ee6ffdb58",
+        "lesson.key": "lesson10",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "0c72ec05-eafb-4662-8fa8-0f62afd5f4a1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0c72ec05-eafb-4662-8fa8-0f62afd5f4a1",
+        "lesson.key": "lesson11",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "95c6e647-6215-48fb-9758-4927759b17a7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95c6e647-6215-48fb-9758-4927759b17a7",
+        "lesson.key": "lesson12",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "04b130c3-df46-4d95-aa05-ba4da43116cc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04b130c3-df46-4d95-aa05-ba4da43116cc",
+        "lesson.key": "lesson13",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "ec3c6cf1-45d6-4ed9-a54a-ca1b9304c2d6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec3c6cf1-45d6-4ed9-a54a-ca1b9304c2d6",
+        "lesson.key": "lesson14",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "62addb1b-b576-4c59-bffd-f6c4830d32b1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62addb1b-b576-4c59-bffd-f6c4830d32b1",
+        "lesson.key": "lesson15",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "285a1c70-2fdf-44b9-b93e-2a846d89f4ff",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "285a1c70-2fdf-44b9-b93e-2a846d89f4ff",
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "d669c86d-7323-4d81-ae6c-c197e39173ea",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d669c86d-7323-4d81-ae6c-c197e39173ea",
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "71c1ec1a-5d32-4070-8141-d981801ec9f8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71c1ec1a-5d32-4070-8141-d981801ec9f8",
+        "lesson.key": "bug-bash",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "d5d5835d-781a-4e43-b0f1-01f9b10de133",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5d5835d-781a-4e43-b0f1-01f9b10de133",
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "1d957dfc-7b2f-4c8f-9c88-578036203b17",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d957dfc-7b2f-4c8f-9c88-578036203b17",
+        "lesson.key": "exemplars",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "b451c28d-3778-47e2-8fcc-12f501db2bbf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf",
+        "lesson.key": "temp",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "0e07ad7b-676a-43f1-9a3a-58fb0c27f5a9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e07ad7b-676a-43f1-9a3a-58fb0c27f5a9",
+        "lesson.key": "USE Programs",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "55239781-9786-4c6f-83fa-5efffe53ac1e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "55239781-9786-4c6f-83fa-5efffe53ac1e",
+        "lesson.key": "MODIFY Programs",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "2926c1d4-203f-4054-a378-08a3b913e60b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2926c1d4-203f-4054-a378-08a3b913e60b",
+        "lesson.key": "dog",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "ae1d4123-fb11-469b-81a1-131dff66f3f0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae1d4123-fb11-469b-81a1-131dff66f3f0",
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "9ff3ded9-df70-493e-959d-1228072f0a7c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ff3ded9-df70-493e-959d-1228072f0a7c",
+        "lesson.key": "CSP Tester",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "c00dcc01-0f88-4f0a-9cb6-eca6da4624a3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c00dcc01-0f88-4f0a-9cb6-eca6da4624a3",
+        "lesson_activity.key": "6f064e29-32e2-4f9e-862b-72cad2180f0b"
+      }
+    },
+    {
+      "key": "218decfd-5237-469f-942b-66b8ae22b788",
+      "position": 2,
+      "properties": {
+        "progression_name": "Recognizing Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "218decfd-5237-469f-942b-66b8ae22b788",
+        "lesson_activity.key": "6f064e29-32e2-4f9e-862b-72cad2180f0b"
+      }
+    },
+    {
+      "key": "389e1c04-58b6-4445-9c5b-4452e711ce63",
+      "position": 3,
+      "properties": {
+        "progression_name": "Recognizing Fish Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "389e1c04-58b6-4445-9c5b-4452e711ce63",
+        "lesson_activity.key": "6f064e29-32e2-4f9e-862b-72cad2180f0b"
+      }
+    },
+    {
+      "key": "7e81bbcc-63dd-4658-ac59-5dd2afb0659f",
+      "position": 4,
+      "properties": {
+        "name": "Recognizing Expressions",
+        "progression_name": "Recognizing Expressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e81bbcc-63dd-4658-ac59-5dd2afb0659f",
+        "lesson_activity.key": "6f064e29-32e2-4f9e-862b-72cad2180f0b"
+      }
+    },
+    {
+      "key": "28547860-d06f-46ab-8ccb-1d96fa1054ec",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "28547860-d06f-46ab-8ccb-1d96fa1054ec",
+        "lesson_activity.key": "88504fe6-bad0-4b22-a95f-5099f9130f68"
+      }
+    },
+    {
+      "key": "33034025-d6a7-42c0-bdee-8d15361622dc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Looking for Patterns"
+      },
+      "seeding_key": {
+        "activity_section.key": "33034025-d6a7-42c0-bdee-8d15361622dc",
+        "lesson_activity.key": "88504fe6-bad0-4b22-a95f-5099f9130f68"
+      }
+    },
+    {
+      "key": "ba63ac96-c341-4b3a-9750-5a045e157034",
+      "position": 3,
+      "properties": {
+        "name": "Green Glass Door",
+        "progression_name": "Green Glass Door"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba63ac96-c341-4b3a-9750-5a045e157034",
+        "lesson_activity.key": "88504fe6-bad0-4b22-a95f-5099f9130f68"
+      }
+    },
+    {
+      "key": "100e2b08-2bd5-4bd0-b1e8-48d8e70e6069",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "100e2b08-2bd5-4bd0-b1e8-48d8e70e6069",
+        "lesson_activity.key": "c7bdfe5d-c422-4334-85b4-b6bde2a7a4dc"
+      }
+    },
+    {
+      "key": "96c5f9a3-9e6a-434d-ac65-e92fe50d58fb",
+      "position": 2,
+      "properties": {
+        "progression_name": "Shoe Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "96c5f9a3-9e6a-434d-ac65-e92fe50d58fb",
+        "lesson_activity.key": "c7bdfe5d-c422-4334-85b4-b6bde2a7a4dc"
+      }
+    },
+    {
+      "key": "a6864790-512f-4fae-af72-40b0494aa923",
+      "position": 3,
+      "properties": {
+        "progression_name": "Improved Shoe Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6864790-512f-4fae-af72-40b0494aa923",
+        "lesson_activity.key": "c7bdfe5d-c422-4334-85b4-b6bde2a7a4dc"
+      }
+    },
+    {
+      "key": "594194e8-f882-4d98-a5aa-909df3ac7d56",
+      "position": 4,
+      "properties": {
+        "name": "Ultimate Shoe Recommender",
+        "progression_name": "Ultimate Shoe Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "594194e8-f882-4d98-a5aa-909df3ac7d56",
+        "lesson_activity.key": "c7bdfe5d-c422-4334-85b4-b6bde2a7a4dc"
+      }
+    },
+    {
+      "key": "fdb07631-ddc6-4de8-a67d-638ea1a879ec",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "fdb07631-ddc6-4de8-a67d-638ea1a879ec",
+        "lesson_activity.key": "9112550a-2cd9-49f7-ae03-bfbf8aa393eb"
+      }
+    },
+    {
+      "key": "e9d2828a-f05b-48a8-a023-db1f5b29dea2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9d2828a-f05b-48a8-a023-db1f5b29dea2",
+        "lesson_activity.key": "4bd2977c-dfb7-45e7-8f2d-1bc31ebcc154"
+      }
+    },
+    {
+      "key": "4fd160b2-a1c3-48f5-ad70-5d2dde4a7816",
+      "position": 2,
+      "properties": {
+        "progression_name": "Dataset #1: Tacos"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fd160b2-a1c3-48f5-ad70-5d2dde4a7816",
+        "lesson_activity.key": "4bd2977c-dfb7-45e7-8f2d-1bc31ebcc154"
+      }
+    },
+    {
+      "key": "5fe0aed2-54e9-4609-b2fd-364bcddb8757",
+      "position": 3,
+      "properties": {
+        "progression_name": "Dataset #2: Ice Cream"
+      },
+      "seeding_key": {
+        "activity_section.key": "5fe0aed2-54e9-4609-b2fd-364bcddb8757",
+        "lesson_activity.key": "4bd2977c-dfb7-45e7-8f2d-1bc31ebcc154"
+      }
+    },
+    {
+      "key": "9ecf60cd-8bf7-40a7-911e-f4ed7a22d690",
+      "position": 4,
+      "properties": {
+        "progression_name": "Dataset #3: Pizza"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ecf60cd-8bf7-40a7-911e-f4ed7a22d690",
+        "lesson_activity.key": "4bd2977c-dfb7-45e7-8f2d-1bc31ebcc154"
+      }
+    },
+    {
+      "key": "fe6f685a-0e56-45c5-82e3-199feed48e49",
+      "position": 5,
+      "properties": {
+        "name": "You Choose: Restaurant Recommendations",
+        "progression_name": "You Choose: Restaurant Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe6f685a-0e56-45c5-82e3-199feed48e49",
+        "lesson_activity.key": "4bd2977c-dfb7-45e7-8f2d-1bc31ebcc154"
+      }
+    },
+    {
+      "key": "582c84b5-6120-4316-a0a2-d78ecf544a08",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "582c84b5-6120-4316-a0a2-d78ecf544a08",
+        "lesson_activity.key": "88d5ebad-ed6e-46c4-9128-71d653959be0"
+      }
+    },
+    {
+      "key": "eaea3e7b-c73a-400a-9f5b-6d5d72dbc4a2",
+      "position": 2,
+      "properties": {
+        "progression_name": "(Enable AI Models)"
+      },
+      "seeding_key": {
+        "activity_section.key": "eaea3e7b-c73a-400a-9f5b-6d5d72dbc4a2",
+        "lesson_activity.key": "88d5ebad-ed6e-46c4-9128-71d653959be0"
+      }
+    },
+    {
+      "key": "1d2a60ae-310f-4a34-b660-10c6297a3b08",
+      "position": 3,
+      "properties": {
+        "progression_name": "What is your Ideal Vacation?"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d2a60ae-310f-4a34-b660-10c6297a3b08",
+        "lesson_activity.key": "88d5ebad-ed6e-46c4-9128-71d653959be0"
+      }
+    },
+    {
+      "key": "df2f98d6-2749-42b2-af01-13afbac75748",
+      "position": 4,
+      "properties": {
+        "progression_name": "Import Your Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "df2f98d6-2749-42b2-af01-13afbac75748",
+        "lesson_activity.key": "88d5ebad-ed6e-46c4-9128-71d653959be0"
+      }
+    },
+    {
+      "key": "70ea0869-ef46-436e-b0ea-f8859f28a77c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Changing Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "70ea0869-ef46-436e-b0ea-f8859f28a77c",
+        "lesson_activity.key": "88d5ebad-ed6e-46c4-9128-71d653959be0"
+      }
+    },
+    {
+      "key": "494a89bf-9ed0-4e96-a781-5703f9451df8",
+      "position": 6,
+      "properties": {
+        "name": "You Choose: Quiz Apps",
+        "progression_name": "You Choose: Quiz Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "494a89bf-9ed0-4e96-a781-5703f9451df8",
+        "lesson_activity.key": "88d5ebad-ed6e-46c4-9128-71d653959be0"
+      }
+    },
+    {
+      "key": "5706a3a3-a9d0-423a-bb7a-4c002b5304cb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5706a3a3-a9d0-423a-bb7a-4c002b5304cb",
+        "lesson_activity.key": "ded5da1e-d29e-4b40-9c78-b71f98f660cf"
+      }
+    },
+    {
+      "key": "3ee4160a-929e-4a68-933d-01db50bb0e2f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Medical Priority App"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ee4160a-929e-4a68-933d-01db50bb0e2f",
+        "lesson_activity.key": "ded5da1e-d29e-4b40-9c78-b71f98f660cf"
+      }
+    },
+    {
+      "key": "a4e77347-18ae-43c8-9c4e-d022ec821a14",
+      "position": 3,
+      "properties": {
+        "name": "Medical Dataset Model Cards",
+        "progression_name": "Medical Dataset Model Cards"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4e77347-18ae-43c8-9c4e-d022ec821a14",
+        "lesson_activity.key": "ded5da1e-d29e-4b40-9c78-b71f98f660cf"
+      }
+    },
+    {
+      "key": "2eee6159-6924-45b9-9e5f-ad48e727ec34",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2eee6159-6924-45b9-9e5f-ad48e727ec34",
+        "lesson_activity.key": "89b9d884-91df-4120-8492-f47e7b78e8e4"
+      }
+    },
+    {
+      "key": "58daf74d-577e-4865-9e63-6dc352d0be61",
+      "position": 2,
+      "properties": {
+        "name": "Safari Planner",
+        "progression_name": "Safari Planner"
+      },
+      "seeding_key": {
+        "activity_section.key": "58daf74d-577e-4865-9e63-6dc352d0be61",
+        "lesson_activity.key": "89b9d884-91df-4120-8492-f47e7b78e8e4"
+      }
+    },
+    {
+      "key": "2af63fa7-9f31-4d13-99d0-b185d8aa63a4",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2af63fa7-9f31-4d13-99d0-b185d8aa63a4",
+        "lesson_activity.key": "7804e527-0a01-4baf-ac14-363791e69a69"
+      }
+    },
+    {
+      "key": "7fbee5dd-d7de-400d-bf1a-80230b4d43d0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7fbee5dd-d7de-400d-bf1a-80230b4d43d0",
+        "lesson_activity.key": "b7934f76-0711-40b8-b41e-ae7ee6ffdb58"
+      }
+    },
+    {
+      "key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pet Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37",
+        "lesson_activity.key": "b7934f76-0711-40b8-b41e-ae7ee6ffdb58"
+      }
+    },
+    {
+      "key": "ede2e27c-dfbb-4af4-aaaf-5f47163c60f9",
+      "position": 3,
+      "properties": {
+        "name": "You Choose: Improve Your App",
+        "progression_name": "You Choose: Improve Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "ede2e27c-dfbb-4af4-aaaf-5f47163c60f9",
+        "lesson_activity.key": "b7934f76-0711-40b8-b41e-ae7ee6ffdb58"
+      }
+    },
+    {
+      "key": "e6146f4b-b430-4884-9ea7-37b7a9d47526",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6146f4b-b430-4884-9ea7-37b7a9d47526",
+        "lesson_activity.key": "0c72ec05-eafb-4662-8fa8-0f62afd5f4a1"
+      }
+    },
+    {
+      "key": "ab23e9e9-f94f-4131-8368-04b17b2163cd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Raspado Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab23e9e9-f94f-4131-8368-04b17b2163cd",
+        "lesson_activity.key": "0c72ec05-eafb-4662-8fa8-0f62afd5f4a1"
+      }
+    },
+    {
+      "key": "9519cd1c-827b-431e-a804-36d55e72cdba",
+      "position": 3,
+      "properties": {
+        "progression_name": "Driver Alert System"
+      },
+      "seeding_key": {
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba",
+        "lesson_activity.key": "0c72ec05-eafb-4662-8fa8-0f62afd5f4a1"
+      }
+    },
+    {
+      "key": "4c57ece4-0906-46ee-9382-8d48783b1371",
+      "position": 4,
+      "properties": {
+        "name": "You Choose: Improve Your App",
+        "progression_name": "You Choose: Improve Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c57ece4-0906-46ee-9382-8d48783b1371",
+        "lesson_activity.key": "0c72ec05-eafb-4662-8fa8-0f62afd5f4a1"
+      }
+    },
+    {
+      "key": "c60752b9-1161-4cce-951c-403f48a67c6d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c60752b9-1161-4cce-951c-403f48a67c6d",
+        "lesson_activity.key": "95c6e647-6215-48fb-9758-4927759b17a7"
+      }
+    },
+    {
+      "key": "57468cd0-f9df-46aa-b709-51cda14d7d68",
+      "position": 2,
+      "properties": {
+        "progression_name": "Zoo Predictions"
+      },
+      "seeding_key": {
+        "activity_section.key": "57468cd0-f9df-46aa-b709-51cda14d7d68",
+        "lesson_activity.key": "95c6e647-6215-48fb-9758-4927759b17a7"
+      }
+    },
+    {
+      "key": "df243b2e-e68e-46a9-a120-e38e9b8dac10",
+      "position": 3,
+      "properties": {
+        "progression_name": "Importing Your Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "df243b2e-e68e-46a9-a120-e38e9b8dac10",
+        "lesson_activity.key": "95c6e647-6215-48fb-9758-4927759b17a7"
+      }
+    },
+    {
+      "key": "611d8062-00bf-4b38-8c29-5cc6622d46f2",
+      "position": 4,
+      "properties": {
+        "name": "Customizing Your App",
+        "progression_name": "Customizing Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "611d8062-00bf-4b38-8c29-5cc6622d46f2",
+        "lesson_activity.key": "95c6e647-6215-48fb-9758-4927759b17a7"
+      }
+    },
+    {
+      "key": "2b2afd62-46b3-453b-a5f9-c21dee628edc",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b2afd62-46b3-453b-a5f9-c21dee628edc",
+        "lesson_activity.key": "04b130c3-df46-4d95-aa05-ba4da43116cc"
+      }
+    },
+    {
+      "key": "7dbf4935-7f68-4657-af6a-6688fd2d1991",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7dbf4935-7f68-4657-af6a-6688fd2d1991",
+        "lesson_activity.key": "ec3c6cf1-45d6-4ed9-a54a-ca1b9304c2d6"
+      }
+    },
+    {
+      "key": "4d8fac6b-3bfb-4676-9831-817c5e5b2845",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d8fac6b-3bfb-4676-9831-817c5e5b2845",
+        "lesson_activity.key": "62addb1b-b576-4c59-bffd-f6c4830d32b1"
+      }
+    },
+    {
+      "key": "aca2c663-0e44-404c-8937-392dfc337f5e",
+      "position": 2,
+      "properties": {
+        "name": "Planning Your App - AI Lab",
+        "progression_name": "Planning Your App - AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "aca2c663-0e44-404c-8937-392dfc337f5e",
+        "lesson_activity.key": "62addb1b-b576-4c59-bffd-f6c4830d32b1"
+      }
+    },
+    {
+      "key": "8ac35e69-2a03-4b6d-b5a1-3dbb2bcc92bd",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ac35e69-2a03-4b6d-b5a1-3dbb2bcc92bd",
+        "lesson_activity.key": "285a1c70-2fdf-44b9-b93e-2a846d89f4ff"
+      }
+    },
+    {
+      "key": "478d8a4d-ea7a-4395-89a1-b4e40a08f904",
+      "position": 2,
+      "properties": {
+        "progression_name": "App with Real-World Data - AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "478d8a4d-ea7a-4395-89a1-b4e40a08f904",
+        "lesson_activity.key": "285a1c70-2fdf-44b9-b93e-2a846d89f4ff"
+      }
+    },
+    {
+      "key": "3899f877-baa7-4008-a0af-beddc7b9f2ff",
+      "position": 3,
+      "properties": {
+        "name": "App with Real-World Data - App Lab",
+        "progression_name": "App with Real-World Data - App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "3899f877-baa7-4008-a0af-beddc7b9f2ff",
+        "lesson_activity.key": "285a1c70-2fdf-44b9-b93e-2a846d89f4ff"
+      }
+    },
+    {
+      "key": "9f6e1df3-ffe4-4377-8146-ba29395b6976",
+      "position": 1,
+      "properties": {
+        "progression_name": "Importing A Model + If Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f6e1df3-ffe4-4377-8146-ba29395b6976",
+        "lesson_activity.key": "d669c86d-7323-4d81-ae6c-c197e39173ea"
+      }
+    },
+    {
+      "key": "1dd0dc34-f847-4273-88ed-47d9640f6ee7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Custome Design Elts + Edit Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "1dd0dc34-f847-4273-88ed-47d9640f6ee7",
+        "lesson_activity.key": "d669c86d-7323-4d81-ae6c-c197e39173ea"
+      }
+    },
+    {
+      "key": "7d29ec41-0544-416a-9789-35c15077214e",
+      "position": 3,
+      "properties": {
+        "name": "Introduction to AI Lab",
+        "progression_name": "Introduction to AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d29ec41-0544-416a-9789-35c15077214e",
+        "lesson_activity.key": "d669c86d-7323-4d81-ae6c-c197e39173ea"
+      }
+    },
+    {
+      "key": "358ffdf3-d326-4d5a-9f8d-6ff616a1f8f5",
+      "position": 1,
+      "properties": {
+        "progression_name": "AI Lab Bash"
+      },
+      "seeding_key": {
+        "activity_section.key": "358ffdf3-d326-4d5a-9f8d-6ff616a1f8f5",
+        "lesson_activity.key": "71c1ec1a-5d32-4070-8141-d981801ec9f8"
+      }
+    },
+    {
+      "key": "fd6dee5c-74ae-48c9-905e-bbebf6bf8986",
+      "position": 2,
+      "properties": {
+        "name": "App Lab Import Bash",
+        "progression_name": "App Lab Import Bash"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd6dee5c-74ae-48c9-905e-bbebf6bf8986",
+        "lesson_activity.key": "71c1ec1a-5d32-4070-8141-d981801ec9f8"
+      }
+    },
+    {
+      "key": "e58ce4b8-8393-432f-b564-019f745bde6b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Model Card Template"
+      },
+      "seeding_key": {
+        "activity_section.key": "e58ce4b8-8393-432f-b564-019f745bde6b",
+        "lesson_activity.key": "d5d5835d-781a-4e43-b0f1-01f9b10de133"
+      }
+    },
+    {
+      "key": "a5a88773-81e4-47fd-822a-9e325472ed93",
+      "position": 2,
+      "properties": {
+        "name": "Medical Dataset Model Cards",
+        "progression_name": "Medical Dataset Model Cards"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93",
+        "lesson_activity.key": "d5d5835d-781a-4e43-b0f1-01f9b10de133"
+      }
+    },
+    {
+      "key": "2a29a41d-b3eb-4b72-b4ac-ac0529a588d7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pet Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a29a41d-b3eb-4b72-b4ac-ac0529a588d7",
+        "lesson_activity.key": "1d957dfc-7b2f-4c8f-9c88-578036203b17"
+      }
+    },
+    {
+      "key": "12a7ecef-1276-4199-9000-1f9e542acf27",
+      "position": 2,
+      "properties": {
+        "name": "Book Recommender Exemplar",
+        "progression_name": "Book Recommender Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "12a7ecef-1276-4199-9000-1f9e542acf27",
+        "lesson_activity.key": "1d957dfc-7b2f-4c8f-9c88-578036203b17"
+      }
+    },
+    {
+      "key": "66f8723d-22b1-4c59-bd97-f6b44b4c6f72",
+      "position": 1,
+      "properties": {
+        "progression_name": "Medical Priority App (external app)"
+      },
+      "seeding_key": {
+        "activity_section.key": "66f8723d-22b1-4c59-bd97-f6b44b4c6f72",
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf"
+      }
+    },
+    {
+      "key": "23cadc80-2bf7-4dbe-951f-8dcc3d6d59fa",
+      "position": 2,
+      "properties": {
+        "progression_name": "Which Pixar Character Are You?"
+      },
+      "seeding_key": {
+        "activity_section.key": "23cadc80-2bf7-4dbe-951f-8dcc3d6d59fa",
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf"
+      }
+    },
+    {
+      "key": "15489ba2-d880-434a-8ad5-7eaaa3b2c339",
+      "position": 3,
+      "properties": {
+        "progression_name": "Recognizing Ocean Animals"
+      },
+      "seeding_key": {
+        "activity_section.key": "15489ba2-d880-434a-8ad5-7eaaa3b2c339",
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf"
+      }
+    },
+    {
+      "key": "8765fd26-5e6e-4964-beb7-13dcd6f985e6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Medical Dataset Model Cards"
+      },
+      "seeding_key": {
+        "activity_section.key": "8765fd26-5e6e-4964-beb7-13dcd6f985e6",
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf"
+      }
+    },
+    {
+      "key": "aad8737b-fa58-42c5-a907-7b2c1f97d75f",
+      "position": 5,
+      "properties": {
+        "progression_name": "(Slides) Bias in Machine Learning Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "aad8737b-fa58-42c5-a907-7b2c1f97d75f",
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf"
+      }
+    },
+    {
+      "key": "4f735d31-5724-4823-9d27-6758919bb74e",
+      "position": 6,
+      "properties": {
+        "progression_name": "How Much Will Insurance Cost?"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e",
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf"
+      }
+    },
+    {
+      "key": "e138bc29-c7c3-4ccc-821a-4202b1207122",
+      "position": 7,
+      "properties": {
+        "progression_name": "Supervised Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "e138bc29-c7c3-4ccc-821a-4202b1207122",
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf"
+      }
+    },
+    {
+      "key": "28a0782f-3b13-444e-a442-ead44c219b64",
+      "position": 8,
+      "properties": {
+        "name": "Video: Introduction to AI Lab",
+        "progression_name": "Video: Introduction to AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "28a0782f-3b13-444e-a442-ead44c219b64",
+        "lesson_activity.key": "b451c28d-3778-47e2-8fcc-12f501db2bbf"
+      }
+    },
+    {
+      "key": "09271984-6643-4911-a93d-d4354c1df4b0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Movie Recommendations (AppLab Only)"
+      },
+      "seeding_key": {
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0",
+        "lesson_activity.key": "0e07ad7b-676a-43f1-9a3a-58fb0c27f5a9"
+      }
+    },
+    {
+      "key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749",
+      "position": 2,
+      "properties": {
+        "name": "School Acceptance (AppLab Only)",
+        "progression_name": "School Acceptance (AppLab Only)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749",
+        "lesson_activity.key": "0e07ad7b-676a-43f1-9a3a-58fb0c27f5a9"
+      }
+    },
+    {
+      "key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00",
+      "position": 1,
+      "properties": {
+        "progression_name": "Dog Predictor"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00",
+        "lesson_activity.key": "55239781-9786-4c6f-83fa-5efffe53ac1e"
+      }
+    },
+    {
+      "key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58",
+      "position": 2,
+      "properties": {
+        "name": "Candy Predictor",
+        "progression_name": "Candy Predictor"
+      },
+      "seeding_key": {
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58",
+        "lesson_activity.key": "55239781-9786-4c6f-83fa-5efffe53ac1e"
+      }
+    },
+    {
+      "key": "3b107fab-508a-4061-a6ea-310f11bc820b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3b107fab-508a-4061-a6ea-310f11bc820b",
+        "lesson_activity.key": "2926c1d4-203f-4054-a378-08a3b913e60b"
+      }
+    },
+    {
+      "key": "32c72638-5b7f-4bb9-8b11-677e67738878",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "32c72638-5b7f-4bb9-8b11-677e67738878",
+        "lesson_activity.key": "ae1d4123-fb11-469b-81a1-131dff66f3f0"
+      }
+    },
+    {
+      "key": "3973f623-6c0b-4141-bd34-1b83bfb5e7f7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "3973f623-6c0b-4141-bd34-1b83bfb5e7f7",
+        "lesson_activity.key": "ae1d4123-fb11-469b-81a1-131dff66f3f0"
+      }
+    },
+    {
+      "key": "7cc285c4-9e07-4412-969e-777b4055f568",
+      "position": 3,
+      "properties": {
+        "name": "Importing into App Lab",
+        "progression_name": "Importing into App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "7cc285c4-9e07-4412-969e-777b4055f568",
+        "lesson_activity.key": "ae1d4123-fb11-469b-81a1-131dff66f3f0"
+      }
+    },
+    {
+      "key": "5dc3dec0-504e-4fb4-b0b2-f9a12ae3ed13",
+      "position": 1,
+      "properties": {
+        "name": "Parameters and Returns",
+        "progression_name": "Parameters and Returns"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dc3dec0-504e-4fb4-b0b2-f9a12ae3ed13",
+        "lesson_activity.key": "9ff3ded9-df70-493e-959d-1228072f0a7c"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -443,7 +1611,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c00dcc01-0f88-4f0a-9cb6-eca6da4624a3"
       },
       "level_keys": [
         "CSD AIL01 autoSFLP_pilot-2021"
@@ -452,7 +1621,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -467,7 +1636,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "218decfd-5237-469f-942b-66b8ae22b788"
       },
       "level_keys": [
         "Oceans_FishVTrash"
@@ -476,7 +1646,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -491,7 +1661,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "389e1c04-58b6-4445-9c5b-4452e711ce63"
       },
       "level_keys": [
         "Oceans_Short"
@@ -500,7 +1671,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -515,7 +1686,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7e81bbcc-63dd-4658-ac59-5dd2afb0659f"
       },
       "level_keys": [
         "Oceans_Long"
@@ -524,7 +1696,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -539,7 +1711,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "28547860-d06f-46ab-8ccb-1d96fa1054ec"
       },
       "level_keys": [
         "CSD AIL02 autoSFLP_pilot-2021"
@@ -548,7 +1721,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -563,7 +1736,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "33034025-d6a7-42c0-bdee-8d15361622dc"
       },
       "level_keys": [
         "ml-L2 unsupervised - 1"
@@ -572,7 +1746,7 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -587,7 +1761,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "ba63ac96-c341-4b3a-9750-5a045e157034"
       },
       "level_keys": [
         "ml-L2 supervised - green glass door"
@@ -596,7 +1771,7 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -611,7 +1786,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "100e2b08-2bd5-4bd0-b1e8-48d8e70e6069"
       },
       "level_keys": [
         "CSD AIL03 autoSFLP_pilot-2021"
@@ -620,7 +1796,7 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -635,7 +1811,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "96c5f9a3-9e6a-434d-ac65-e92fe50d58fb"
       },
       "level_keys": [
         "ml-models-shoes random"
@@ -644,7 +1821,7 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -659,7 +1836,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a6864790-512f-4fae-af72-40b0494aa923"
       },
       "level_keys": [
         "ml-models-shoes decision tree"
@@ -668,7 +1846,7 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -683,7 +1861,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "594194e8-f882-4d98-a5aa-909df3ac7d56"
       },
       "level_keys": [
         "ml-models-shoes data"
@@ -692,7 +1871,7 @@
     {
       "chapter": 12,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -707,7 +1886,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "594194e8-f882-4d98-a5aa-909df3ac7d56"
       },
       "level_keys": [
         "ml-models-shoes points"
@@ -716,7 +1896,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -731,7 +1911,8 @@
         ],
         "lesson.key": "lesson4",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "fdb07631-ddc6-4de8-a67d-638ea1a879ec"
       },
       "level_keys": [
         "CSD AIL04 autoSFLP_pilot-2021"
@@ -740,7 +1921,7 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -755,7 +1936,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e9d2828a-f05b-48a8-a023-db1f5b29dea2"
       },
       "level_keys": [
         "CSD AIL05 autoSFLP_pilot-2021"
@@ -764,7 +1946,7 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -779,7 +1961,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4fd160b2-a1c3-48f5-ad70-5d2dde4a7816"
       },
       "level_keys": [
         "ml-intro categorical-tacos"
@@ -788,7 +1971,7 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -803,7 +1986,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "5fe0aed2-54e9-4609-b2fd-364bcddb8757"
       },
       "level_keys": [
         "ml-intro categorical-ice cream"
@@ -812,7 +1996,7 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -827,7 +2011,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9ecf60cd-8bf7-40a7-911e-f4ed7a22d690"
       },
       "level_keys": [
         "ml-intro categorical-pizza"
@@ -836,7 +2021,7 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -851,7 +2036,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "fe6f685a-0e56-45c5-82e3-199feed48e49"
       },
       "level_keys": [
         "ml-intro categorical-food choices"
@@ -860,7 +2046,7 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -875,7 +2061,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "582c84b5-6120-4316-a0a2-d78ecf544a08"
       },
       "level_keys": [
         "CSD AIL06 autoSFLP_pilot-2021"
@@ -884,7 +2071,7 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -899,7 +2086,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "eaea3e7b-c73a-400a-9f5b-6d5d72dbc4a2"
       },
       "level_keys": [
         "Full Year Pilot Experiments Dashboard - AI Models"
@@ -908,7 +2096,7 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -923,7 +2111,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "1d2a60ae-310f-4a34-b660-10c6297a3b08"
       },
       "level_keys": [
         "ml-models in applab-vacation example"
@@ -932,7 +2121,7 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -947,7 +2136,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "df2f98d6-2749-42b2-af01-13afbac75748"
       },
       "level_keys": [
         "ml-models in applab-import 1"
@@ -956,7 +2146,7 @@
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -971,7 +2161,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "70ea0869-ef46-436e-b0ea-f8859f28a77c"
       },
       "level_keys": [
         "ml-models in applab-screens-2"
@@ -980,7 +2171,7 @@
     {
       "chapter": 24,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -995,7 +2186,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "70ea0869-ef46-436e-b0ea-f8859f28a77c"
       },
       "level_keys": [
         "ml-models in applab-screens-1"
@@ -1004,7 +2196,7 @@
     {
       "chapter": 25,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1019,7 +2211,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "70ea0869-ef46-436e-b0ea-f8859f28a77c"
       },
       "level_keys": [
         "ml-models in applab-screens-3"
@@ -1028,7 +2221,7 @@
     {
       "chapter": 26,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1043,7 +2236,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "494a89bf-9ed0-4e96-a781-5703f9451df8"
       },
       "level_keys": [
         "ml-models in applab-practice choice"
@@ -1052,7 +2246,7 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1067,7 +2261,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "5706a3a3-a9d0-423a-bb7a-4c002b5304cb"
       },
       "level_keys": [
         "CSD AIL07 autoSFLP_pilot-2021"
@@ -1076,7 +2271,7 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1091,7 +2286,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3ee4160a-929e-4a68-933d-01db50bb0e2f"
       },
       "level_keys": [
         "ml-model card-medical app v2"
@@ -1100,7 +2296,7 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1115,7 +2311,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a4e77347-18ae-43c8-9c4e-d022ec821a14"
       },
       "level_keys": [
         "ml-model card-medical-1"
@@ -1124,7 +2321,7 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1139,7 +2336,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a4e77347-18ae-43c8-9c4e-d022ec821a14"
       },
       "level_keys": [
         "ml-model card-medical-2"
@@ -1148,7 +2346,7 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1163,7 +2361,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a4e77347-18ae-43c8-9c4e-d022ec821a14"
       },
       "level_keys": [
         "ml-model card-medical-3"
@@ -1172,7 +2371,7 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1187,7 +2386,8 @@
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "2eee6159-6924-45b9-9e5f-ad48e727ec34"
       },
       "level_keys": [
         "CSD AIL08 autoSFLP_pilot-2021"
@@ -1196,7 +2396,7 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1211,7 +2411,8 @@
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "58daf74d-577e-4865-9e63-6dc352d0be61"
       },
       "level_keys": [
         "ml-numerical ai lab-safari 1"
@@ -1220,7 +2421,7 @@
     {
       "chapter": 34,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1235,7 +2436,8 @@
         ],
         "lesson.key": "lesson9",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "2af63fa7-9f31-4d13-99d0-b185d8aa63a4"
       },
       "level_keys": [
         "CSD AIL09 autoSFLP_pilot-2021"
@@ -1244,7 +2446,7 @@
     {
       "chapter": 35,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1259,7 +2461,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7fbee5dd-d7de-400d-bf1a-80230b4d43d0"
       },
       "level_keys": [
         "CSD AIL10 autoSFLP_pilot-2021"
@@ -1268,7 +2471,7 @@
     {
       "chapter": 36,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1283,7 +2486,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       },
       "level_keys": [
         "ml-use model card-example1A"
@@ -1292,7 +2496,7 @@
     {
       "chapter": 37,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1307,7 +2511,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       },
       "level_keys": [
         "ml-use model card-pet model card"
@@ -1316,7 +2521,7 @@
     {
       "chapter": 38,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1331,7 +2536,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       },
       "level_keys": [
         "ml-use model card-example1B"
@@ -1340,7 +2546,7 @@
     {
       "chapter": 39,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1355,7 +2561,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       },
       "level_keys": [
         "ml-use model card-example1C"
@@ -1364,7 +2571,7 @@
     {
       "chapter": 40,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1379,7 +2586,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       },
       "level_keys": [
         "ml-use model card-example1D"
@@ -1388,7 +2596,7 @@
     {
       "chapter": 41,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1403,7 +2611,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       },
       "level_keys": [
         "ml-use model card-example1E"
@@ -1412,7 +2621,7 @@
     {
       "chapter": 42,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1427,7 +2636,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "ede2e27c-dfbb-4af4-aaaf-5f47163c60f9"
       },
       "level_keys": [
         "ml-use models applab-practice choice"
@@ -1436,7 +2646,7 @@
     {
       "chapter": 43,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1451,7 +2661,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e6146f4b-b430-4884-9ea7-37b7a9d47526"
       },
       "level_keys": [
         "CSD AIL11 autoSFLP_pilot-2021"
@@ -1460,7 +2671,7 @@
     {
       "chapter": 44,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1475,7 +2686,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "ab23e9e9-f94f-4131-8368-04b17b2163cd"
       },
       "level_keys": [
         "ml-customize-raspado"
@@ -1484,7 +2696,7 @@
     {
       "chapter": 45,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1499,7 +2711,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       },
       "level_keys": [
         "ml-use model card-example3A"
@@ -1508,7 +2721,7 @@
     {
       "chapter": 46,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1523,7 +2736,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       },
       "level_keys": [
         "ml-use model card-example3_EditA"
@@ -1532,7 +2746,7 @@
     {
       "chapter": 47,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1547,7 +2761,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       },
       "level_keys": [
         "ml-use model card-example3_EditB"
@@ -1556,7 +2771,7 @@
     {
       "chapter": 48,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1571,7 +2786,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       },
       "level_keys": [
         "ml-use model card-example3_EditC"
@@ -1580,7 +2796,7 @@
     {
       "chapter": 49,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1595,7 +2811,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       },
       "level_keys": [
         "ml-use model card-example3C"
@@ -1604,7 +2821,7 @@
     {
       "chapter": 50,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1619,7 +2836,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       },
       "level_keys": [
         "ml-use model card-example3D"
@@ -1628,7 +2846,7 @@
     {
       "chapter": 51,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1643,7 +2861,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       },
       "level_keys": [
         "ml-use model card-example3E"
@@ -1652,7 +2871,7 @@
     {
       "chapter": 52,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1667,7 +2886,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4c57ece4-0906-46ee-9382-8d48783b1371"
       },
       "level_keys": [
         "ml-customize apps-practice choice"
@@ -1676,7 +2896,7 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1691,7 +2911,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c60752b9-1161-4cce-951c-403f48a67c6d"
       },
       "level_keys": [
         "CSD AIL12 autoSFLP_pilot-2021"
@@ -1700,7 +2921,7 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1715,7 +2936,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "57468cd0-f9df-46aa-b709-51cda14d7d68"
       },
       "level_keys": [
         "ml-data decisions-zoo1"
@@ -1724,7 +2946,7 @@
     {
       "chapter": 55,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1739,7 +2961,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "df243b2e-e68e-46a9-a120-e38e9b8dac10"
       },
       "level_keys": [
         "ml-data decisions- import app"
@@ -1748,7 +2971,7 @@
     {
       "chapter": 56,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1763,7 +2986,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "611d8062-00bf-4b38-8c29-5cc6622d46f2"
       },
       "level_keys": [
         "ml-data decisions- customize app"
@@ -1772,7 +2996,7 @@
     {
       "chapter": 57,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1787,7 +3011,8 @@
         ],
         "lesson.key": "lesson13",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "2b2afd62-46b3-453b-a5f9-c21dee628edc"
       },
       "level_keys": [
         "CSD AIL13 autoSFLP_pilot-2021"
@@ -1796,7 +3021,7 @@
     {
       "chapter": 58,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1811,7 +3036,8 @@
         ],
         "lesson.key": "lesson14",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7dbf4935-7f68-4657-af6a-6688fd2d1991"
       },
       "level_keys": [
         "CSD AIL14 autoSFLP_pilot-2021"
@@ -1820,7 +3046,7 @@
     {
       "chapter": 59,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1835,7 +3061,8 @@
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4d8fac6b-3bfb-4676-9831-817c5e5b2845"
       },
       "level_keys": [
         "CSD AIL15 autoSFLP_pilot-2021"
@@ -1844,7 +3071,7 @@
     {
       "chapter": 60,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1859,7 +3086,8 @@
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "aca2c663-0e44-404c-8937-392dfc337f5e"
       },
       "level_keys": [
         "ml-planning app-ai lab"
@@ -1868,7 +3096,7 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1883,7 +3111,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "8ac35e69-2a03-4b6d-b5a1-3dbb2bcc92bd"
       },
       "level_keys": [
         "CSD AIL16 autoSFLP_pilot-2021"
@@ -1892,7 +3121,7 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1907,7 +3136,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "478d8a4d-ea7a-4395-89a1-b4e40a08f904"
       },
       "level_keys": [
         "ml-final project-ai lab"
@@ -1916,7 +3146,7 @@
     {
       "chapter": 63,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1931,7 +3161,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3899f877-baa7-4008-a0af-beddc7b9f2ff"
       },
       "level_keys": [
         "ml-final project-app lab"
@@ -1940,7 +3171,7 @@
     {
       "chapter": 64,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1955,7 +3186,8 @@
         ],
         "lesson.key": "videoLevels",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9f6e1df3-ffe4-4377-8146-ba29395b6976"
       },
       "level_keys": [
         "ml-video recording-import app 1"
@@ -1964,7 +3196,7 @@
     {
       "chapter": 65,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1979,7 +3211,8 @@
         ],
         "lesson.key": "videoLevels",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "1dd0dc34-f847-4273-88ed-47d9640f6ee7"
       },
       "level_keys": [
         "ml-video recording-custom design elts"
@@ -1988,7 +3221,7 @@
     {
       "chapter": 66,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2003,7 +3236,8 @@
         ],
         "lesson.key": "videoLevels",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7d29ec41-0544-416a-9789-35c15077214e"
       },
       "level_keys": [
         "ml-videos-intro ai lab shoes"
@@ -2012,7 +3246,7 @@
     {
       "chapter": 67,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2027,7 +3261,8 @@
         ],
         "lesson.key": "bug-bash",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "358ffdf3-d326-4d5a-9f8d-6ff616a1f8f5"
       },
       "level_keys": [
         "ml-ai lab template"
@@ -2036,7 +3271,7 @@
     {
       "chapter": 68,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2051,7 +3286,8 @@
         ],
         "lesson.key": "bug-bash",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "fd6dee5c-74ae-48c9-905e-bbebf6bf8986"
       },
       "level_keys": [
         "ml-app lab template"
@@ -2060,7 +3296,7 @@
     {
       "chapter": 69,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2075,7 +3311,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e58ce4b8-8393-432f-b564-019f745bde6b"
       },
       "level_keys": [
         "ml-model card-template"
@@ -2084,7 +3321,7 @@
     {
       "chapter": 70,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2099,7 +3336,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93"
       },
       "level_keys": [
         "ml-model card-medical-1"
@@ -2108,7 +3346,7 @@
     {
       "chapter": 71,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2123,7 +3361,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93"
       },
       "level_keys": [
         "ml-model card-medical-2"
@@ -2132,7 +3371,7 @@
     {
       "chapter": 72,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2147,7 +3386,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93"
       },
       "level_keys": [
         "ml-model card-medical-3"
@@ -2156,7 +3396,7 @@
     {
       "chapter": 73,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2171,7 +3411,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93"
       },
       "level_keys": [
         "ml-model card-medical-4"
@@ -2180,7 +3421,7 @@
     {
       "chapter": 74,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2195,7 +3436,8 @@
         ],
         "lesson.key": "exemplars",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "2a29a41d-b3eb-4b72-b4ac-ac0529a588d7"
       },
       "level_keys": [
         "ml-pet exemplar"
@@ -2204,7 +3446,7 @@
     {
       "chapter": 75,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2219,7 +3461,8 @@
         ],
         "lesson.key": "exemplars",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "12a7ecef-1276-4199-9000-1f9e542acf27"
       },
       "level_keys": [
         "ml-intro app lab-book recommender exemplar"
@@ -2228,7 +3471,7 @@
     {
       "chapter": 76,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2243,7 +3486,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "66f8723d-22b1-4c59-bd97-f6b44b4c6f72"
       },
       "level_keys": [
         "ml-model cards-medical app"
@@ -2252,7 +3496,7 @@
     {
       "chapter": 77,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2267,7 +3511,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "23cadc80-2bf7-4dbe-951f-8dcc3d6d59fa"
       },
       "level_keys": [
         "ml-import ai-pixar placeholder"
@@ -2276,7 +3521,7 @@
     {
       "chapter": 78,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2291,7 +3536,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "15489ba2-d880-434a-8ad5-7eaaa3b2c339"
       },
       "level_keys": [
         "Oceans_CreaturesVTrash"
@@ -2300,7 +3546,7 @@
     {
       "chapter": 79,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2315,7 +3561,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "8765fd26-5e6e-4964-beb7-13dcd6f985e6"
       },
       "level_keys": [
         "ml-model card-medical-4"
@@ -2324,7 +3571,7 @@
     {
       "chapter": 80,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2339,7 +3586,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "aad8737b-fa58-42c5-a907-7b2c1f97d75f"
       },
       "level_keys": [
         "Oceans_Video_Training_Data"
@@ -2348,7 +3596,7 @@
     {
       "chapter": 81,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2363,7 +3611,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       },
       "level_keys": [
         "ml-use model card-example2A"
@@ -2372,7 +3621,7 @@
     {
       "chapter": 82,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2387,7 +3636,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       },
       "level_keys": [
         "ml-use model card-example2B"
@@ -2396,7 +3646,7 @@
     {
       "chapter": 83,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2411,7 +3661,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       },
       "level_keys": [
         "ml-use model card-example2C"
@@ -2420,7 +3671,7 @@
     {
       "chapter": 84,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2435,7 +3686,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       },
       "level_keys": [
         "ml-use model card-example2D"
@@ -2444,7 +3696,7 @@
     {
       "chapter": 85,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2459,7 +3711,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       },
       "level_keys": [
         "ml-use model card-example2E"
@@ -2468,7 +3721,7 @@
     {
       "chapter": 86,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2483,7 +3736,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e138bc29-c7c3-4ccc-821a-4202b1207122"
       },
       "level_keys": [
         "ml-L2 supervised - 1"
@@ -2492,7 +3746,7 @@
     {
       "chapter": 87,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2507,7 +3761,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "28a0782f-3b13-444e-a442-ead44c219b64"
       },
       "level_keys": [
         "ml-intro ai lab-intro video"
@@ -2516,7 +3771,7 @@
     {
       "chapter": 88,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2531,7 +3786,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       },
       "level_keys": [
         "ml-netflix use-1"
@@ -2540,7 +3796,7 @@
     {
       "chapter": 89,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2555,7 +3811,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       },
       "level_keys": [
         "ml-netflix use-2"
@@ -2564,7 +3821,7 @@
     {
       "chapter": 90,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2579,7 +3836,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       },
       "level_keys": [
         "ml-netflix use-3"
@@ -2588,7 +3846,7 @@
     {
       "chapter": 91,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2603,7 +3861,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       },
       "level_keys": [
         "ml-netflix use-4"
@@ -2612,7 +3871,7 @@
     {
       "chapter": 92,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2627,7 +3886,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       },
       "level_keys": [
         "ml-netflix use-5"
@@ -2636,7 +3896,7 @@
     {
       "chapter": 93,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2651,7 +3911,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       },
       "level_keys": [
         "ml-school accept use-1"
@@ -2660,7 +3921,7 @@
     {
       "chapter": 94,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2675,7 +3936,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       },
       "level_keys": [
         "ml-school accept use-2"
@@ -2684,7 +3946,7 @@
     {
       "chapter": 95,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2699,7 +3961,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       },
       "level_keys": [
         "ml-school accept use-3"
@@ -2708,7 +3971,7 @@
     {
       "chapter": 96,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2723,7 +3986,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       },
       "level_keys": [
         "ml-school accept use-4"
@@ -2732,7 +3996,7 @@
     {
       "chapter": 97,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2747,7 +4011,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       },
       "level_keys": [
         "ml-school accept use-5"
@@ -2756,7 +4021,7 @@
     {
       "chapter": 98,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2771,7 +4036,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       },
       "level_keys": [
         "ml-dog modify-1"
@@ -2780,7 +4046,7 @@
     {
       "chapter": 99,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2795,7 +4061,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       },
       "level_keys": [
         "ml-dog modify-2"
@@ -2804,7 +4071,7 @@
     {
       "chapter": 100,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2819,7 +4086,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       },
       "level_keys": [
         "ml-dog modify-3"
@@ -2828,7 +4096,7 @@
     {
       "chapter": 101,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2843,7 +4111,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       },
       "level_keys": [
         "ml-dog modify-4"
@@ -2852,7 +4121,7 @@
     {
       "chapter": 102,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2867,7 +4136,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       },
       "level_keys": [
         "ml-dog modify-5"
@@ -2876,7 +4146,7 @@
     {
       "chapter": 103,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2891,7 +4161,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       },
       "level_keys": [
         "ml-dog modify-6"
@@ -2900,7 +4171,7 @@
     {
       "chapter": 104,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2915,7 +4186,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       },
       "level_keys": [
         "ml-dog modify-7"
@@ -2924,7 +4196,7 @@
     {
       "chapter": 105,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2939,7 +4211,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       },
       "level_keys": [
         "ml-candy modify-1"
@@ -2948,7 +4221,7 @@
     {
       "chapter": 106,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2963,7 +4236,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       },
       "level_keys": [
         "ml-candy modify-2"
@@ -2972,7 +4246,7 @@
     {
       "chapter": 107,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2987,7 +4261,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       },
       "level_keys": [
         "ml-candy modify-3"
@@ -2996,7 +4271,7 @@
     {
       "chapter": 108,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3011,7 +4286,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       },
       "level_keys": [
         "ml-candy modify-4"
@@ -3020,7 +4296,7 @@
     {
       "chapter": 109,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3035,7 +4311,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       },
       "level_keys": [
         "ml-candy modify-5"
@@ -3044,7 +4321,7 @@
     {
       "chapter": 110,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3059,7 +4336,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       },
       "level_keys": [
         "ml-candy modify-6"
@@ -3068,7 +4346,7 @@
     {
       "chapter": 111,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3082,7 +4360,8 @@
         ],
         "lesson.key": "dog",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3b107fab-508a-4061-a6ea-310f11bc820b"
       },
       "level_keys": [
         "ml-code dog-1"
@@ -3091,7 +4370,7 @@
     {
       "chapter": 112,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3105,7 +4384,8 @@
         ],
         "lesson.key": "dog",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3b107fab-508a-4061-a6ea-310f11bc820b"
       },
       "level_keys": [
         "AIlab-test-1"
@@ -3114,7 +4394,7 @@
     {
       "chapter": 113,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3128,7 +4408,8 @@
         ],
         "lesson.key": "dog",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3b107fab-508a-4061-a6ea-310f11bc820b"
       },
       "level_keys": [
         "ml-code dog-export"
@@ -3137,7 +4418,7 @@
     {
       "chapter": 114,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3152,7 +4433,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "32c72638-5b7f-4bb9-8b11-677e67738878"
       },
       "level_keys": [
         "ml-classroom vocab-1"
@@ -3161,7 +4443,7 @@
     {
       "chapter": 115,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3176,7 +4458,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3973f623-6c0b-4141-bd34-1b83bfb5e7f7"
       },
       "level_keys": [
         "ml-class test-ai lab 1"
@@ -3185,7 +4468,7 @@
     {
       "chapter": 116,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3200,7 +4483,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3973f623-6c0b-4141-bd34-1b83bfb5e7f7"
       },
       "level_keys": [
         "ml-class test-ai lab 2"
@@ -3209,7 +4493,7 @@
     {
       "chapter": 117,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3224,7 +4508,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7cc285c4-9e07-4412-969e-777b4055f568"
       },
       "level_keys": [
         "ml-class test-app lab 1"
@@ -3233,7 +4518,7 @@
     {
       "chapter": 118,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3248,7 +4533,8 @@
         ],
         "lesson.key": "CSP Tester",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "5dc3dec0-504e-4fb4-b0b2-f9a12ae3ed13"
       },
       "level_keys": [
         "CSP U7 Param Practice App_3_ExemplarIssue"
@@ -3264,7 +4550,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c00dcc01-0f88-4f0a-9cb6-eca6da4624a3"
       }
     },
     {
@@ -3275,7 +4562,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "218decfd-5237-469f-942b-66b8ae22b788"
       }
     },
     {
@@ -3286,7 +4574,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "389e1c04-58b6-4445-9c5b-4452e711ce63"
       }
     },
     {
@@ -3297,7 +4586,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7e81bbcc-63dd-4658-ac59-5dd2afb0659f"
       }
     },
     {
@@ -3308,7 +4598,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "28547860-d06f-46ab-8ccb-1d96fa1054ec"
       }
     },
     {
@@ -3319,7 +4610,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "33034025-d6a7-42c0-bdee-8d15361622dc"
       }
     },
     {
@@ -3330,7 +4622,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "ba63ac96-c341-4b3a-9750-5a045e157034"
       }
     },
     {
@@ -3341,7 +4634,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "100e2b08-2bd5-4bd0-b1e8-48d8e70e6069"
       }
     },
     {
@@ -3352,7 +4646,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "96c5f9a3-9e6a-434d-ac65-e92fe50d58fb"
       }
     },
     {
@@ -3363,7 +4658,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a6864790-512f-4fae-af72-40b0494aa923"
       }
     },
     {
@@ -3374,7 +4670,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "594194e8-f882-4d98-a5aa-909df3ac7d56"
       }
     },
     {
@@ -3385,7 +4682,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "594194e8-f882-4d98-a5aa-909df3ac7d56"
       }
     },
     {
@@ -3396,7 +4694,8 @@
         ],
         "lesson.key": "lesson4",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "fdb07631-ddc6-4de8-a67d-638ea1a879ec"
       }
     },
     {
@@ -3407,7 +4706,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e9d2828a-f05b-48a8-a023-db1f5b29dea2"
       }
     },
     {
@@ -3418,7 +4718,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4fd160b2-a1c3-48f5-ad70-5d2dde4a7816"
       }
     },
     {
@@ -3429,7 +4730,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "5fe0aed2-54e9-4609-b2fd-364bcddb8757"
       }
     },
     {
@@ -3440,7 +4742,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9ecf60cd-8bf7-40a7-911e-f4ed7a22d690"
       }
     },
     {
@@ -3451,7 +4754,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "fe6f685a-0e56-45c5-82e3-199feed48e49"
       }
     },
     {
@@ -3462,7 +4766,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "582c84b5-6120-4316-a0a2-d78ecf544a08"
       }
     },
     {
@@ -3473,7 +4778,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "eaea3e7b-c73a-400a-9f5b-6d5d72dbc4a2"
       }
     },
     {
@@ -3484,7 +4790,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "1d2a60ae-310f-4a34-b660-10c6297a3b08"
       }
     },
     {
@@ -3495,7 +4802,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "df2f98d6-2749-42b2-af01-13afbac75748"
       }
     },
     {
@@ -3506,7 +4814,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "70ea0869-ef46-436e-b0ea-f8859f28a77c"
       }
     },
     {
@@ -3517,7 +4826,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "70ea0869-ef46-436e-b0ea-f8859f28a77c"
       }
     },
     {
@@ -3528,7 +4838,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "70ea0869-ef46-436e-b0ea-f8859f28a77c"
       }
     },
     {
@@ -3539,7 +4850,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "494a89bf-9ed0-4e96-a781-5703f9451df8"
       }
     },
     {
@@ -3550,7 +4862,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "5706a3a3-a9d0-423a-bb7a-4c002b5304cb"
       }
     },
     {
@@ -3561,7 +4874,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3ee4160a-929e-4a68-933d-01db50bb0e2f"
       }
     },
     {
@@ -3572,7 +4886,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a4e77347-18ae-43c8-9c4e-d022ec821a14"
       }
     },
     {
@@ -3583,7 +4898,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a4e77347-18ae-43c8-9c4e-d022ec821a14"
       }
     },
     {
@@ -3594,7 +4910,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a4e77347-18ae-43c8-9c4e-d022ec821a14"
       }
     },
     {
@@ -3605,7 +4922,8 @@
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "2eee6159-6924-45b9-9e5f-ad48e727ec34"
       }
     },
     {
@@ -3616,7 +4934,8 @@
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "58daf74d-577e-4865-9e63-6dc352d0be61"
       }
     },
     {
@@ -3627,7 +4946,8 @@
         ],
         "lesson.key": "lesson9",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "2af63fa7-9f31-4d13-99d0-b185d8aa63a4"
       }
     },
     {
@@ -3638,7 +4958,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7fbee5dd-d7de-400d-bf1a-80230b4d43d0"
       }
     },
     {
@@ -3649,7 +4970,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       }
     },
     {
@@ -3660,7 +4982,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       }
     },
     {
@@ -3671,7 +4994,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       }
     },
     {
@@ -3682,7 +5006,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       }
     },
     {
@@ -3693,7 +5018,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       }
     },
     {
@@ -3704,7 +5030,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "37d1a0b1-1adf-445e-a0eb-f2432cb29c37"
       }
     },
     {
@@ -3715,7 +5042,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "ede2e27c-dfbb-4af4-aaaf-5f47163c60f9"
       }
     },
     {
@@ -3726,7 +5054,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e6146f4b-b430-4884-9ea7-37b7a9d47526"
       }
     },
     {
@@ -3737,7 +5066,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "ab23e9e9-f94f-4131-8368-04b17b2163cd"
       }
     },
     {
@@ -3748,7 +5078,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       }
     },
     {
@@ -3759,7 +5090,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       }
     },
     {
@@ -3770,7 +5102,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       }
     },
     {
@@ -3781,7 +5114,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       }
     },
     {
@@ -3792,7 +5126,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       }
     },
     {
@@ -3803,7 +5138,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       }
     },
     {
@@ -3814,7 +5150,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9519cd1c-827b-431e-a804-36d55e72cdba"
       }
     },
     {
@@ -3825,7 +5162,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4c57ece4-0906-46ee-9382-8d48783b1371"
       }
     },
     {
@@ -3836,7 +5174,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c60752b9-1161-4cce-951c-403f48a67c6d"
       }
     },
     {
@@ -3847,7 +5186,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "57468cd0-f9df-46aa-b709-51cda14d7d68"
       }
     },
     {
@@ -3858,7 +5198,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "df243b2e-e68e-46a9-a120-e38e9b8dac10"
       }
     },
     {
@@ -3869,7 +5210,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "611d8062-00bf-4b38-8c29-5cc6622d46f2"
       }
     },
     {
@@ -3880,7 +5222,8 @@
         ],
         "lesson.key": "lesson13",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "2b2afd62-46b3-453b-a5f9-c21dee628edc"
       }
     },
     {
@@ -3891,7 +5234,8 @@
         ],
         "lesson.key": "lesson14",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7dbf4935-7f68-4657-af6a-6688fd2d1991"
       }
     },
     {
@@ -3902,7 +5246,8 @@
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4d8fac6b-3bfb-4676-9831-817c5e5b2845"
       }
     },
     {
@@ -3913,7 +5258,8 @@
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "aca2c663-0e44-404c-8937-392dfc337f5e"
       }
     },
     {
@@ -3924,7 +5270,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "8ac35e69-2a03-4b6d-b5a1-3dbb2bcc92bd"
       }
     },
     {
@@ -3935,7 +5282,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "478d8a4d-ea7a-4395-89a1-b4e40a08f904"
       }
     },
     {
@@ -3946,7 +5294,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3899f877-baa7-4008-a0af-beddc7b9f2ff"
       }
     },
     {
@@ -3957,7 +5306,8 @@
         ],
         "lesson.key": "videoLevels",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "9f6e1df3-ffe4-4377-8146-ba29395b6976"
       }
     },
     {
@@ -3968,7 +5318,8 @@
         ],
         "lesson.key": "videoLevels",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "1dd0dc34-f847-4273-88ed-47d9640f6ee7"
       }
     },
     {
@@ -3979,7 +5330,8 @@
         ],
         "lesson.key": "videoLevels",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7d29ec41-0544-416a-9789-35c15077214e"
       }
     },
     {
@@ -3990,7 +5342,8 @@
         ],
         "lesson.key": "bug-bash",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "358ffdf3-d326-4d5a-9f8d-6ff616a1f8f5"
       }
     },
     {
@@ -4001,7 +5354,8 @@
         ],
         "lesson.key": "bug-bash",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "fd6dee5c-74ae-48c9-905e-bbebf6bf8986"
       }
     },
     {
@@ -4012,7 +5366,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e58ce4b8-8393-432f-b564-019f745bde6b"
       }
     },
     {
@@ -4023,7 +5378,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93"
       }
     },
     {
@@ -4034,7 +5390,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93"
       }
     },
     {
@@ -4045,7 +5402,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93"
       }
     },
     {
@@ -4056,7 +5414,8 @@
         ],
         "lesson.key": "model-cards",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "a5a88773-81e4-47fd-822a-9e325472ed93"
       }
     },
     {
@@ -4067,7 +5426,8 @@
         ],
         "lesson.key": "exemplars",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "2a29a41d-b3eb-4b72-b4ac-ac0529a588d7"
       }
     },
     {
@@ -4078,7 +5438,8 @@
         ],
         "lesson.key": "exemplars",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "12a7ecef-1276-4199-9000-1f9e542acf27"
       }
     },
     {
@@ -4089,7 +5450,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "66f8723d-22b1-4c59-bd97-f6b44b4c6f72"
       }
     },
     {
@@ -4100,7 +5462,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "23cadc80-2bf7-4dbe-951f-8dcc3d6d59fa"
       }
     },
     {
@@ -4111,7 +5474,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "15489ba2-d880-434a-8ad5-7eaaa3b2c339"
       }
     },
     {
@@ -4122,7 +5486,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "8765fd26-5e6e-4964-beb7-13dcd6f985e6"
       }
     },
     {
@@ -4133,7 +5498,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "aad8737b-fa58-42c5-a907-7b2c1f97d75f"
       }
     },
     {
@@ -4144,7 +5510,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       }
     },
     {
@@ -4155,7 +5522,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       }
     },
     {
@@ -4166,7 +5534,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       }
     },
     {
@@ -4177,7 +5546,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       }
     },
     {
@@ -4188,7 +5558,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "4f735d31-5724-4823-9d27-6758919bb74e"
       }
     },
     {
@@ -4199,7 +5570,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e138bc29-c7c3-4ccc-821a-4202b1207122"
       }
     },
     {
@@ -4210,7 +5582,8 @@
         ],
         "lesson.key": "temp",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "28a0782f-3b13-444e-a442-ead44c219b64"
       }
     },
     {
@@ -4221,7 +5594,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       }
     },
     {
@@ -4232,7 +5606,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       }
     },
     {
@@ -4243,7 +5618,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       }
     },
     {
@@ -4254,7 +5630,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       }
     },
     {
@@ -4265,7 +5642,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "09271984-6643-4911-a93d-d4354c1df4b0"
       }
     },
     {
@@ -4276,7 +5654,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       }
     },
     {
@@ -4287,7 +5666,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       }
     },
     {
@@ -4298,7 +5678,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       }
     },
     {
@@ -4309,7 +5690,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       }
     },
     {
@@ -4320,7 +5702,8 @@
         ],
         "lesson.key": "USE Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "c19df5f8-6ba4-4dee-9e57-d408f7b99749"
       }
     },
     {
@@ -4331,7 +5714,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       }
     },
     {
@@ -4342,7 +5726,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       }
     },
     {
@@ -4353,7 +5738,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       }
     },
     {
@@ -4364,7 +5750,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       }
     },
     {
@@ -4375,7 +5762,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       }
     },
     {
@@ -4386,7 +5774,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       }
     },
     {
@@ -4397,7 +5786,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "e3e7cc66-3ccb-45b0-a73d-0e3afccacc00"
       }
     },
     {
@@ -4408,7 +5798,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       }
     },
     {
@@ -4419,7 +5810,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       }
     },
     {
@@ -4430,7 +5822,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       }
     },
     {
@@ -4441,7 +5834,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       }
     },
     {
@@ -4452,7 +5846,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       }
     },
     {
@@ -4463,7 +5858,8 @@
         ],
         "lesson.key": "MODIFY Programs",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "b09fa988-bb78-4775-b0f6-c664bbfd7f58"
       }
     },
     {
@@ -4474,7 +5870,8 @@
         ],
         "lesson.key": "dog",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3b107fab-508a-4061-a6ea-310f11bc820b"
       }
     },
     {
@@ -4485,7 +5882,8 @@
         ],
         "lesson.key": "dog",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3b107fab-508a-4061-a6ea-310f11bc820b"
       }
     },
     {
@@ -4496,7 +5894,8 @@
         ],
         "lesson.key": "dog",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3b107fab-508a-4061-a6ea-310f11bc820b"
       }
     },
     {
@@ -4507,7 +5906,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "32c72638-5b7f-4bb9-8b11-677e67738878"
       }
     },
     {
@@ -4518,7 +5918,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3973f623-6c0b-4141-bd34-1b83bfb5e7f7"
       }
     },
     {
@@ -4529,7 +5930,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "3973f623-6c0b-4141-bd34-1b83bfb5e7f7"
       }
     },
     {
@@ -4540,7 +5942,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "7cc285c4-9e07-4412-969e-777b4055f568"
       }
     },
     {
@@ -4551,7 +5954,8 @@
         ],
         "lesson.key": "CSP Tester",
         "lesson_group.key": "",
-        "script.name": "ml-playground"
+        "script.name": "ml-playground",
+        "activity_section.key": "5dc3dec0-504e-4fb4-b0b2-f9a12ae3ed13"
       }
     }
   ],

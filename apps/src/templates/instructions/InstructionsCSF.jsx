@@ -114,7 +114,7 @@ class InstructionsCSF extends React.Component {
    * the window to be super small.  If we then resize it to be larger
    * again, we want to increase height.
    */
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const minHeight = this.getMinHeight(nextProps.collapsed);
     const newHeight = Math.min(nextProps.maxHeight, minHeight);
 
@@ -127,7 +127,7 @@ class InstructionsCSF extends React.Component {
     }
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     const gotNewFeedback = !this.props.feedback && nextProps.feedback;
     if (gotNewFeedback) {
       this.setState({

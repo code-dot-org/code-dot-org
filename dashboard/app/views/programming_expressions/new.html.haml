@@ -1,0 +1,6 @@
+%h1= t('crud.new_model', model: ProgrammingExpression.model_name.human)
+%h2 This feature is in development. Please continue to use curriculum builder to create code documentation.
+%script{src: webpack_asset_path('js/programming_expressions/new.js'),
+        data: {programmingEnvironmentsForSelect: @programming_environments_for_select.to_json}}
+#form
+

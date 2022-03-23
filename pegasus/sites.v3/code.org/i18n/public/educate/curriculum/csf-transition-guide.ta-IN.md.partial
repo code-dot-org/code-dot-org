@@ -20,125 +20,125 @@ style_min: true
 <a id="overview"></a>
 
 ## மேற்பார்வை
-அசல் கணினி அறிவியல் அடிப்படைகள் படிப்புகளை உருவாக்கியதில் இருந்து கணினி அறிவியல் கல்வியின் நிலப்பரப்பு மிகவும் மாறிவிட்டது. ஆரம்பத்தில், 1-4 பாடநெறிகள் அடிப்படைகளைப் பெறுவதற்கான தொடக்க புள்ளியாக வடிவமைக்கப்பட்டவை, மாணவரின் வயது என்னவாக இருந்தாலும் சரி.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+அசல் கணினி அறிவியல் அடிப்படைகள் படிப்புகளை உருவாக்கியதில் இருந்து கணினி அறிவியல் கல்வியின் நிலப்பரப்பு மிகவும் மாறிவிட்டது. ஆரம்பத்தில், 1-4 பாடநெறிகள் அடிப்படைகளைப் பெறுவதற்கான தொடக்க புள்ளியாக வடிவமைக்கப்பட்டவை, மாணவரின் வயது என்னவாக இருந்தாலும் சரி.  இப்போது மழலையர் பள்ளியில் தொடங்கி அதிகமான மாவட்டங்கள், நகரங்கள் மற்றும் மாநிலங்கள் கணினி அறிவியல் படிப்புகளை நடைமுறைப்படுத்தியுள்ளன, ஆசிரியர்கள் நடுநிலைப்பள்ளி / ஜூனியர் உயர்நிலை வரை மாணவர்களைப் பார்க்க அதிக உள்ளடக்கத்தைக் கேட்கிறார்கள்.
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+கணினி அறிவியல் அடிப்படை பாடநெறிகள் A-F, அந்த சிக்கலுக்கான எங்கள் பதில்.  ஒரு கிரேடு-பை-கிரேடு பாடத்திட்டத்தை உருவாக்குவது, நாங்கள் பின்வாங்குவதற்கும், நாங்கள் பொருள் வழங்கும் முறையை மறுபரிசீலனை செய்வதற்கும் அனுமதித்தது.  இந்த பணியில் எங்களுக்கு ஆதரவளித்த அர்ப்பணிப்புள்ள ஆசிரியர் சமூகத்தின் கருத்துக்களை முழு மனதுடன் இணைத்துக்கொள்வதற்கான வாய்ப்பையும் இது அனுமதித்தது. நாடெங்கிலும் உள்ள சில சிறந்த தொடக்கப்பள்ளி CS கல்வி நிபுணர்களின் உதவியுடன் வடிவமைக்கப்பட்ட பாடநெறிகள் A-F கூடுதல் தொழில்முறை வளர்ச்சியின்றி இயங்குவதற்கு போதுமான பழக்கத்தை உணர வேண்டும், ஆனால் கடந்த காலங்களில் எங்கள் பாடங்களைச் செய்த மாணவர்களுக்கு வழங்குவதற்குப் புதியது.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* பாடநெறி A: மழலையர் பள்ளி
+* பாடநெறி பி: 1 ஆம் வகுப்பு
+* பாடநெறி சி: 2 ஆம் வகுப்பு
+* பாடநெறி டி: 3 ஆம் வகுப்பு
+* பாடநெறி இ: 4 ஆம் வகுப்பு
+* பாடநெறி எஃப்: 5 ஆம் வகுப்பு
+* முன் வாசகர் எக்ஸ்பிரஸ் பாடநெறி: மழலையர் பள்ளி - 1 ஆம் வகுப்பு
+* முன் வாசகர் எக்ஸ்பிரஸ் பாடநெறி: மழலையர் பள்ளி - 1 ஆம் வகுப்பு
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+CS அடிப்படைகளுக்கான மிகப்பெரிய புதுப்பிப்பு என்னவென்றால், உள்ளடக்கம் நான்கு படிப்புகள் (பாடநெறிகள் 1-4) இலிருந்து ஒவ்வொரு K -5 தர மட்டத்திற்கும் (பாடநெறிகள் K-5 சீரமைக்கப்பட்ட ஆறு படிப்புகளுக்கு நகரும்.  அவ்வாறு செய்யும்போது, படிப்பினைகள் வாசிப்பு, கணிதம் மற்றும் ஒட்டுமொத்த அறிவாற்றல் வளர்ச்சிக்கான பொருத்தமான நிலைகளுக்கு ஏற்றவாறு பாடங்கள் மாறிவிட்டன.  இரண்டு வெவ்வேறு “எக்ஸ்பிரஸ்” படிப்புகளைச் சேர்ப்பதைக் கவனியுங்கள், ஒன்று முன் வாசகர்களுக்கும் மற்றொன்று மற்ற தரங்களுக்கும்.  இவை முந்தைய தொகுப்பின் “துரிதப்படுத்தப்பட்ட” பதிப்பைப் போன்றவை.
 
 <a id="newcourses"></a>
 
 ## புதிய படிப்புகளை கற்பித்தல்
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+முன்பு குறிப்பிட்டபடி, படிப்புகள் தெரிந்திருக்க வேண்டும், ஆனால் வித்தியாசமாக இருக்க வேண்டும்.  நீங்கள் ஒரு Code.org தொழில்முறை மேம்பாட்டு பட்டறைக்கு வந்திருந்தால், புதிய படிப்புகளை கற்பிக்க நீங்கள் தயாராக உள்ளீர்கள். சிறிய எண்ணிக்கையிலான மாற்றங்கள் உள்ளன, ஆனால் ஒட்டுமொத்த தளம், பாடத்திட்டம் மற்றும் கற்பித்தல் தத்துவம் மாறாது. நீங்கள் இதுவரை இல்லையென்றால், பாடத்திட்டத்தை எவ்வாறு புரிந்துகொள்வது, Code.org தளத்திற்கு செல்லவும், மற்றும் பிரிக்கப்படாத பாடங்களை கற்பிக்கவும் கற்றுக்கொள்வதற்கு Code.org 1 நாள் பட்டறைகளை எந்த செலவுமின்றி வழங்குகிறது.
 
-The main updates to the courses are:
+படிப்புகளுக்கான முக்கிய புதுப்பிப்புகள்:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* இளைய கற்போருக்கான வட்ட நேரக் கதைகள்
+* சாரக்கட்டு மற்றும் நடைமுறைகளை / கருத்துக்களைப் பயன்படுத்துவதற்கான புதிய அணுகுமுறை
+* பிரிக்கப்படாத பாடங்களிலிருந்து செருகப்பட்ட பாடங்களுக்கான மாற்றத்தை மேம்படுத்துவதற்கான செயல்பாடுகளை மேம்படுத்துதல்
+* பழைய மாணவர்களுக்கான நிச்சயமாக திட்டங்களின் முடிவு
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+இந்த வழிகாட்டியின் மீதமுள்ள ஒவ்வொரு யோசனையையும் இன்னும் விரிவாக முன்வைத்து, உங்கள் வகுப்பறையில் மாற்றங்களைச் செயல்படுத்த உதவிக்குறிப்புகள் மற்றும் தந்திரங்களை வழங்கும்.
 
 <a id="circletime"></a>
 
 ## வட்ட நேரக் கதைகள் (பாடநெறிகள் A மற்றும் B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+சில கருத்துக்கள் நடவடிக்கைகள் மற்றும் புதிர்கள் மூலம் மட்டும் கற்பிப்பது கடினம், குறிப்பாக இளம் மாணவர்களுக்கு.  இதனால்தான் மழலையர் பள்ளி மற்றும் முதல் தர பாடத்திட்டங்களில் குறைந்த எண்ணிக்கையிலான வட்ட நேரக் கதைகளை அறிமுகப்படுத்தியுள்ளோம். பிழைத்திருத்தம், விடாமுயற்சி மற்றும் விரக்தி போன்ற விமர்சனக் கருத்துக்களைப் பற்றி விவாதிக்க இந்த கதைகள் ஆசிரியரால் முழு வகுப்பிற்கும் படிக்கப்பட வேண்டும்.  இந்த கடினமான கருத்துக்களை கதை கதாபாத்திரங்கள் வழியாக அனுபவிக்க மாணவர்களை அனுமதிப்பது எதிர்கால பாடங்களில் எழும்போது அதே கருத்துக்களை அடையாளம் காண அவர்களுக்கு உதவும் என்பது எங்கள் நம்பிக்கை.
 
-Here is how the circle-time stories are intended to be used:
+வட்ட-நேரக் கதைகள் எவ்வாறு பயன்படுத்தப்பட வேண்டும் என்பது இங்கே:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### உங்கள் வகுப்பிற்கு பொருத்தமான கதையைப் படியுங்கள்
+  - செயலின் போது பயனுள்ள தருணங்களில் கேள்விகள் மற்றும் கருத்துகளுடன் புரிந்துகொள்வதை சரிபார்க்கவும்.
+  - கதைகளைப் பற்றி விவாதிக்கவும். உங்கள் மாணவர்கள் என்ன கேட்டார்கள்? அவர்களிடம் சிக்கிய ஏதேனும் யோசனைகள் உள்ளதா?
+  - கதாபாத்திரங்களுடன் மாணவர்களை அடையாளம் காண முயற்சிக்கவும்.  கதையில் வரும் ஒரு கதாபாத்திரத்தை நினைவுபடுத்தும் வகையில் அவர்கள் வாழ்க்கையில் ஏதாவது செய்கிறார்களா?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### அடுத்த செயல்பாட்டைத் தொடங்குவதற்கு முன்பு மாணவர்களுக்கு கதையைப் பற்றி அவர்களுக்கு நினைவூட்டுங்கள்.
+  - நாங்கள் விவாதித்த முக்கிய யோசனைகள் உங்களுக்கு நினைவிருக்கிறதா?
+  - இன்று அந்த யோசனையைப் பார்த்தால் உங்களுக்கு எப்படித் தெரியும்?
+  - அந்த யோசனையை கையாள பாத்திரம் என்ன செய்தது? நீங்கள் என்ன செய்வீர்கள்?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### ஒரு செயல்பாட்டின் போது கதை வெட்டும் போது மாணவனுடைய சூழ்நிலைகளுக்கும் இடையிலான ஒற்றுமையை சுட்டிக்காட்டவும்.
+  - ஒரு மாணவருக்கு அவர்கள் இருக்கும் நிலை புத்தகத்திலிருந்து ஒரு சூழ்நிலையை எவ்வாறு ஒத்திருக்கிறது என்பதை விவரிக்கவும்.
+  - கதாபாத்திரங்களைப் பற்றி சிந்திக்க ஒரு மாணவரிடம் கேளுங்கள், அவர்கள் என்ன செய்யக்கூடும் என்பதைக் கண்டுபிடிக்கவும்.  இது அடுத்த கட்டத்தைக் கண்டுபிடிக்க மாணவருக்கு உதவுமா?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+உங்களது முழு வகுப்பையும் ஒன்றாகச் சேகரிக்க முடியாவிட்டால், கோட்.ஆர்ஜ் பொருத்தமான பாடத்தின் தொடக்கத்தில் வீடியோ விருப்பத்தை வழங்கியுள்ளது, இது கதைகளை வரையறுக்கப்பட்ட அனிமேஷன்களுடன் வழங்குகிறது. இந்த வீடியோக்கள் ஒரே மாதிரியான அனுபவத்தை வழங்கவில்லை என்றாலும், மீதமுள்ள பாடத்திட்டங்களைத் தொடர்வதற்கு முன்பு மாணவர்கள் கருத்துக்கள் மற்றும் கதாபாத்திரங்களை வெளிப்படுத்த அனுமதிக்கும்.
 
 <a id="scaffolding"></a>
 
 ## பாடம் சாரக்கட்டு & சவால் புதிர்கள் (எல்லா வயதினரும்)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+எங்கள் முந்தைய படிப்புகளை விட A_F படிப்புகள் ஒட்டுமொத்தமாக குறைவான சாரக்கட்டுடன் உள்ளன.  அதாவது, பிழைத்திருத்தத்தைக் குறிப்பாகக் கற்றுக் கொள்ளாவிட்டால், ஆரம்பத்தில் இருந்தே மாணவர்கள் தங்கள் குறியீட்டை ஆரம்பத்தில் இருந்தே உருவாக்க முயற்சிக்கிறோம்.  இந்த வடிவமைப்பின் ஒரு பகுதியாக, எங்கள் ஆன்லைன் பாடங்கள் பெரும்பாலானவை பாடத்தைத் தொடங்க ஒரு எளிய புதிரை முன்வைக்கும் ஒரு போக்கைப் பின்பற்றுகின்றன, பின்னர் மாணவர்களுக்கு அடியில் உள்ள யோசனையைப் புரிந்துகொள்ளும் வாய்ப்பு கிடைக்கும் வரை மெதுவாக ஒரு புதிய கருத்துடன் முன்னேறவும்.  அடுத்து, நாங்கள் அவர்களை ஒரு சவால் புதிருடன் முன்வைக்கிறோம், இது மாணவர்கள் புதிய மற்றும் சிக்கலான வழியில் கருத்தைப் பற்றி சிந்திக்க வைக்கும் நோக்கம் கொண்டது.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+A-F பாடநெறிகளில் சவால் புதிர்கள் புதியவை.  சவால் புதிர்களின் நோக்கம், மாணவர்கள் விடாமுயற்சியையும் சுயாதீனமான சிந்தனையையும் கடைப்பிடிக்கக்கூடிய உயர் பட்டியில் வெளிப்படுத்துவதாகும்.  சவால் புதிர்கள் வேண்டுமென்றே கடினமானது மற்றும் வடிவமைக்கப்பட்டுள்ளன, இதனால் கருத்தை உண்மையிலேயே புரிந்துகொள்ளும் மாணவர்கள் மட்டுமே நியாயமான காலக்கெடுவிற்குள் கடந்து செல்வார்கள்.  இதன் பொருள் என்னவென்றால், நல்ல எண்ணிக்கையிலான மாணவர்கள் தங்கள் முதல் முறையாக சவால்களில் வெற்றிபெற மாட்டார்கள். இதற்கு மாணவர் மற்றும் ஆசிரியர் இருவரிடமிருந்தும் ஒரு குறிப்பிட்ட அணுகுமுறை தேவைப்படுகிறது.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. மாணவர்கள் இந்த சவால்களை மனப்பூர்வமாக முயற்சி செய்ய வேண்டும், பின்னர் அவற்றை ஒதுக்கி வைத்துவிட்டு தொடர வேண்டும்.  அந்த நடைமுறை இரண்டு மிக முக்கியமான விஷயங்களை நடக்க அனுமதிக்கிறது:
+2. மாணவர்கள் எப்போது, ஏன் படிக்க வேண்டும் என்ற கருத்தை நன்கு புரிந்துகொள்கிறார்கள். பின்வரும் புதிர்கள் சவாலுக்குப் பிறகு எளிதாக உணர்கின்றன, அவை தீவிரமான புதிர்களாக இருந்தாலும் கூட.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+மாணவர்கள் எந்த நேரத்திலும் பாடங்கள் மூலம் செல்லலாம் மற்றும் முழுமையற்ற புதிர்களை மீண்டும் முயற்சிக்க முடியும் என்பதை நினைவில் கொள்ளுங்கள்.  சில நேரங்களில் கடினமான சிக்கலை மறுபரிசீலனை செய்வதற்கு முன் ஒரு நல்ல இரவு தூக்கத்தைப் பெற இது மிகவும் உதவியாக இருக்கும்.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+மாணவர்கள் சவாலைத் தாண்டியவுடன், அவர்கள் காத்திருக்கும் ஒரு சில பயிற்சிகளைக் காண்பார்கள், அவை மேடையின் முதல் பாதியில் அவர்கள் அனுபவித்ததைப் போன்றது. இந்த புதிர்கள் படிக்கும் விஷயத்தில் ஒரு மாணவரின் தெளிவை சோதிக்க வேண்டுமென்றே வைக்கப்பட்டன.  முன்பே அனுபவித்த புதிர்களைக் கொண்டு அவை மிகவும் எளிதானதாகத் தோன்றலாம், ஆனால் அவை தொடர்புடைய கட்டத்திலிருந்து விரும்பிய சரியான திறனை நிரூபிக்க உருவாக்கப்பட்டன.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+சில நிகழ்வுகளில், எங்கள் பாடங்களை இலவச-விளையாட்டு பாணி நிலைகளுடன் முடிக்கிறோம்.  இந்த நிலைகளுக்கு "தவறான" பதில் இல்லை, அல்லது அவற்றின் முக்கிய சிக்கலை தீர்க்க பல்வேறு வழிகளை அவர்கள் அனுமதிக்கலாம்.  தயவுசெய்து மாணவர்களுக்கு அவர்களின் சிறந்த காட்சியை வழங்க ஊக்குவிக்கவும், அவர்களால் முடிந்தாலும் “தொடரவும்” என்பதைக் கிளிக் செய்ய வேண்டாம்.
 
-Some final notes for this area:
+இந்த பகுதிக்கான சில இறுதி குறிப்புகள்:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* மாணவர்களை விடாமுயற்சியுடன் நினைவூட்டுங்கள் மற்றும் கடினமானதாக இருக்கும் சிக்கல்களில் பிழைத்திருத்த திறன்களைப் பயன்படுத்துங்கள்.
+* வீடியோக்கள் பெரும்பாலும் உதவியாக இருக்கும்.  மாணவர்கள் சிக்கிக்கொள்ளும்போது, வீடியோவை இரண்டாவது, மூன்றாவது அல்லது நான்காவது முறையாக மீண்டும் பார்க்க வேண்டும்.
+* வழிமுறைகளைப் படிக்க மாணவர்கள் தேவை.  அவர்கள் சிரமப்படுகிறார்களானால், அவர்கள் ஒரு வகுப்பு தோழருக்கு சத்தமாக வாசிப்பார்கள்.
+* குறிப்புகளைப் பயன்படுத்துவது பரவாயில்லை!  மாணவர்கள் தங்களுக்குத் தேவையான பல குறிப்புகளைப் பயன்படுத்த வேண்டும், ஆனால் ஒவ்வொரு புதிய பிரசாதத்திற்கும் இடையில் புதிரையாவது புதிரை மீண்டும் தீர்க்க முயற்சி செய்யுங்கள்.
 
 <a id="unplugged"></a>
 
 ## பிரிக்கப்படாத பாடங்களுக்கான பிரிட்ஜிங் செயல்பாடுகள் (எல்லா வயதினரும்)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+தங்களது அன்றாட வாழ்க்கையில் முக்கியமான CS கருத்துக்களை அவர்கள் ஏற்கனவே எவ்வாறு பயன்படுத்துகிறார்கள் என்பதை சுட்டிக்காட்டும் வகையில், பிரிக்கப்படாத செயல்பாடுகள் மாணவர்களை அவர்கள் இருக்கும் இடத்தில் சந்திக்கின்றன.  சுழல்கள் மற்றும் நிபந்தனைகள் போன்ற அடிப்படைக் கருத்துக்களை மாணவர்கள் அடையாளம் கண்டவுடன், ஆன்லைனில் முதல் முறையாக நிரலாக்கத்தைப் பயன்படுத்த முயற்சிக்கும்போது ஏற்படக்கூடிய மனத் தொகுதிகளை அவர்கள் பெறுகிறார்கள்.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+பிரிக்கப்படாத அனுபவங்கள் மிகவும் முக்கியத்துவம் வாய்ந்தவை, அவற்றை ஒரு படி மேலே கொண்டு செல்லவும், அவிழ்க்கப்படாத பாடங்களை அவர்களின் ஆன்லைன் சகாக்களுக்குக் கட்டுப்படுத்தும் செயல்களில் சுடவும் நாங்கள் தேர்வுசெய்தோம்.  பாடநெறிகள் A-F இல், ஆஃப்லைன் பயிற்சிகளை எவ்வாறு எடுத்துக்கொள்வது மற்றும் பின்வரும் ஆன்லைன் புதிர்களின் தொகுப்பிற்கு பாடங்களை எவ்வாறு மொழிபெயர்க்கலாம் என்பதற்கான எடுத்துக்காட்டுகளை பாடத் திட்டங்கள் வழங்குகின்றன என்பதை இப்போது நீங்கள் காண்பீர்கள்.  பொருத்தமாக, இந்த "Bridging Activities" என்று அழைக்கிறோம்
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+பிரிக்கப்படாத உடற்பயிற்சியின் பொருளை எடுத்துக்கொண்டு, அதை பிளாக்லி பிளாக்ஸுடன் செயல்படுத்துவதன் மூலமாகவோ அல்லது ஒரு ஆன்லைன் புதிரை எடுத்து, பிரிக்கப்படாத உடற்பயிற்சியில் இருந்து மொழியைப் பயன்படுத்தி அதைத் தீர்ப்பதன் மூலமாகவோ, பாலம் அமைக்கும் நடவடிக்கைகள் உருவாக்கப்படலாம்.  சில சந்தர்ப்பங்களில், வேறுபட்ட உறவு அறிமுகப்படுத்தப்பட்டுள்ளது, ஆனால் எடுத்துக்காட்டுகள் அனைத்தும் ஆஃப்லைன் அனுபவங்களை மிகவும் சுருக்கமாக அல்லது தொடர்பில்லாததாக உணர வைப்பதற்காகவே உள்ளன.
 
 <a id="endofcourse"></a>
 
 ## பாடநெறி திட்டங்களின் முடிவு (பாடநெறிகள் E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+பழைய மாணவர்களுக்கு, பாடநெறிகளின் கணிசமான முடிவை பாடநெறிகளில் அறிமுகப்படுத்தியுள்ளோம் E &; F. Code.org "திட்டங்களை" உருவாக்கும் திறனை சிறிது காலத்திற்கு வழங்கியிருந்தாலும், மாணவர்கள் தங்கள் திட்டங்களை முறையான சூழலில் திட்டமிடவும் செயல்படுத்தவும் இது மிகவும் தேவையான முன்னோக்கைச் சேர்க்கும் என்று நாங்கள் உணர்ந்தோம்.
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+நிச்சயமாக திட்டங்களின் முடிவு ஒப்பீட்டளவில் நேரடியானது.  நான்கு முதல் ஐந்து வார காலப்பகுதியில் மாணவர்கள் திட்ட யோசனைகளை மதிப்பாய்வு செய்வார்கள், அவர்களின் விண்ணப்பத்தைத் திட்டமிடுவார்கள், அவர்களின் திட்டத்தை குறியீடாக்குவார்கள், பின்னூட்டத்தின் அடிப்படையில் திருத்தம் செய்வார்கள் (5 ஆம் வகுப்பு), பின்னர் அவர்கள் முடித்த பணிகளை முன்வைப்பார்கள்.  இந்த படிகள் ஒவ்வொன்றும் ஒரு பயனுள்ள கையேடு மற்றும் பெரிய படத்தை முன்னிலைப்படுத்தும் ஆசிரியர் பாடம் திட்டத்தால் வழிநடத்தப்படுகின்றன.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**Review:**இது வரை அவர்கள் கற்றுக்கொண்ட திறன்களால் செய்யக்கூடிய ஆச்சரியமான விஷயங்களை வெளிப்படுத்தும் வகையில் கட்டப்பட்ட ஒரு சில அபிலாஷை திட்டங்களை மாணவர்கள் பார்ப்பார்கள்.  இந்த திட்டங்கள் பிளே லேப் அல்லது ஆர்ட்டிஸ்டில் கட்டப்பட்டுள்ளன, ஆனால் ஆசிரியர் பொருத்தமாக இருப்பதைக் கண்டால் மாணவர்கள் டிங்கர், கீறல் அல்லது உரை அடிப்படையிலான மொழிகளிலிருந்து திட்டங்களை மதிப்பாய்வு செய்ய இலவசம்.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**Plan:**இங்குள்ள நோக்கம் மாணவர்கள் திரும்பி உட்கார்ந்து உண்மையில் சாத்தியமானதைப் பற்றி சிந்திக்க வேண்டும்.  அவர்கள் பார்த்த விளையாட்டுகள் மற்றும் அவற்றைத் திருத்தும்போது அவர்கள் சந்தித்த வரம்புகள் பற்றி அவர்கள் சிந்திக்க வேண்டும்.  பின்னர், அவர்கள் தனித்துவமான ஒன்றை உருவாக்கும் திட்டத்தை வரைவார்கள்.  மாணவர்கள் தத்ரூபமாக இருக்க நினைவூட்டப்பட வேண்டியிருக்கலாம், ஏனெனில் அவர்களின் தரிசனங்களை வாழ்க்கையில் கொண்டு வரும்போது அவர்களுக்கு குறைந்த நேரமும் வளமும் இருக்கும்.  இங்குள்ள பொருட்கள் ஆர்ட்டிஸ்ட் அல்லது ப்ளே லேபின் பயன்பாட்டைக் கருதுகின்றன, ஆனால் ஒவ்வொரு குறிப்பிட்ட வகுப்பறைக்கும் எந்த மேடையில் வேலை செய்தாலும் திட்டங்களை நகர்த்த முடியும்.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**Build:**காகிதத்தில் தீட்டப்பட்ட ஒரு திட்டத்தை செயல்படுத்த ஒரு நாள் முழு நேரமல்ல.  மாணவர்கள் ஒரு தடையில் ஒன்றன் பின் ஒன்றாக இயங்கும்போது விஷயங்களைச் செயல்படுத்த முயற்சிக்கும்போது மாணவர்கள் கடுமையான தேர்வுகளை எதிர்கொள்வார்கள்.  பிழைகள் மற்றும் நிரல் வரம்புகள் தடைசெய்யப்பட்ட காலக்கெடுவில் வசதியாக என்ன செய்ய முடியும் என்பது குறித்த அவர்களின் கருத்துக்களை மாற்றுவதால் அவர்கள் திருத்தவும் மாற்றியமைக்கவும் கற்றுக்கொள்வார்கள்.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**Revise**பழைய மாணவர்களுக்கு, வகுப்பு தோழர்களின் பின்னூட்டத்தின் அடிப்படையில் அவர்களின் திட்டங்களைத் திருத்துவதற்கான ஒரு நாள் அவர்களின் இறுதி தயாரிப்பை மேம்படுத்த அவர்களுக்கு உதவக்கூடும், மேலும் அவர்கள் அடைந்த விஷயங்களை மற்றவர்களுக்கு ஊக்கப்படுத்த உதவுகிறது.  மாணவர்கள் ஆக்கபூர்வமான விமர்சனங்களையும், குழு மூளைச்சலவை மற்றும் விடாமுயற்சியையும் கடைப்பிடிப்பார்கள்.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**Present:**தயாரிப்பில் கிட்டத்தட்ட ஒரு மாதம், மாணவர்கள் எழுந்து நிற்கவும், அவர்கள் எவ்வளவு தூரம் வந்தார்கள் என்பதில் பெருமிதம் கொள்ளவும் இது ஒரு வாய்ப்பு.  எங்கள் பாடம் திட்டம் வாய்வழி விளக்கக்காட்சியைக் கருதுகிறது, ஆனால் ஆசிரியர்கள் அதற்கு பதிலாக எழுதப்பட்ட அல்லது மல்டிமீடியா விளக்கக்காட்சிகளை பரிந்துரைக்கும் வாய்ப்பைக் கொண்டுள்ளனர்.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+மாணவர்கள் தங்கள் திட்டங்களில் எவ்வளவு முழுமையாக உட்பொதித்திருந்தாலும், கணினி அறிவியலில் படைப்பாற்றல் மற்றும் சிக்கல் தீர்க்கும் செயல்முறைகள் குறித்து பயனுள்ள ஒன்றைக் கற்றுக்கொள்வது உறுதி.
 
 <a id="conclusion"></a>
 
 ## முடிவுரை
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+நீங்கள் பார்க்க முடியும் என, கணினி அறிவியல் அடிப்படைகளில் A-F படிப்புகள் அற்புதமான மேம்பாடுகளைக் கொண்டுள்ளன, இது மிகப்பெரிய சிஎஸ் அடிப்படை ஆசிரியரின் பின்னூட்டத்தால் பாதிக்கப்படுகிறது & &; எளிதாக்குபவர் சமூகங்கள்.
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+இந்த கண்ணோட்டம் நுண்ணறிவுடையது என்று நாங்கள் நம்புகிறோம்.  இந்த மாற்றம் குறித்து உங்களுக்கு ஏதேனும் கேள்விகள் அல்லது கருத்துகள் இருந்தால், தயவுசெய்து http://forum.code.org/c/csf ஐப் பார்வையிட்டு அவற்றை எங்கள் மன்றத்தில் இடுங்கள்.  உங்கள் கேள்விகளுக்கு கூடிய விரைவில் பதிலளிப்போம்.  அதுவரை, படிப்புகள் A-F பற்றி அடிக்கடி கேட்கப்படும் சில கேள்விகள் இங்கே.
 
 <a id="faq"></a>
 
 ## அடிக்கடி கேட்கப்படும் கேள்விகள்
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| கேள்வி                                                                                                                                                                                       | பதில்                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **நீங்கள் ஒரு புதிய படிப்புகளைத் தொடங்குகிறீர்கள் - அதாவது 1-4 படிப்புகள் விலகிச் செல்கின்றன என்று அர்த்தமா?**                                                                               | இல்லை. எங்கள் அசல் 20-மணிநேர பாடநெறி இன்னும் எங்கள் இணையதளத்தில் கிடைப்பது போலவும், பயன்பாட்டில் இருப்பதைப் போலவும், தங்கள் மாணவர்கள் / குழந்தைகளுக்குத் தேவையான அனுபவத்தை சிறப்பாக பிரதிபலிக்கிறது என்று நினைப்பவர்களுக்கு பாடநெறிகளை 1-4 வரை வைக்க திட்டமிட்டுள்ளோம்.                                                                                                                                                                                                                                                                   |
+| **படிப்புகளை A-F ஐப் பயன்படுத்த எப்போது தொடங்கலாம்?**                                                                                                                                        | A-F படிப்புகள் இப்போது கிடைக்கின்றன!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **எனக்கு பிடித்த சில பாடங்கள் / புதிர்கள் பாடநெறிகள் A-F இல் இல்லை!**                                                                                                                        | பயப்படாதே! பாடநெறிகள் 1-4 அல்லது துரிதப்படுத்தப்பட்ட 20-மணிநேர பாடநெறியில் நீங்கள் அவர்களை விட்டுச்சென்ற இடத்தில் அவை இன்னும் உள்ளன.                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **இந்த புதிர்கள் மிகவும் கடினமாகத் தெரிகிறது.  என் குழந்தைகளுக்கு அவை மிகவும் கடினம் என்று நான் கவலைப்படுகிறேன்.**                                                                           | இந்த புதிய படிப்புகளின் முதுகெலும்பாக மாணவர்கள் சிந்திக்கவும், சிக்கலைத் தீர்க்கவும், விடாமுயற்சியுடன் பழகவும் வேண்டும்.  புதிர்கள் முடிக்க மிகவும் எளிதாக இருக்கும்போது இந்த விஷயங்கள் எதுவும் தேவையில்லை.  இந்த காரணத்திற்காக, நாங்கள் புதிர்களை மிகவும் கடினமாக்க வேண்டியிருந்தது.  இந்த திறன்களை வளர்ப்பதில் உங்கள் வகுப்பை வழிநடத்துவதற்கான உதவிக்கு ஆசிரியர் வழிகாட்டியைப் பார்க்கவும்.  எப்போதும் போல, ஆன்லைன் புதிர்களுடன் குதிக்கும் முன் பிரிக்கப்படாத பாடங்களைப் பயன்படுத்துவதன் முக்கியத்துவத்தை குறைத்து மதிப்பிடாதீர்கள்.   |
+| **சில புதிர்கள் குறிப்பிட்ட எண்ணிக்கையிலான தொகுதிகளை மட்டுமே அனுமதிக்கின்றன.  எனது மாணவர்கள் சுழல்களைக் கண்டுபிடிப்பதற்கு முன்பு எதையாவது நீண்ட வழியில் குறியிட விரும்பினால் என்ன செய்வது?** | குறிப்பிட்ட தொகுதிகளை கட்டுப்படுத்தும் சில புதிர்கள் உள்ளன. சாரக்கட்டுக்கான எங்கள் புதிய பழக்கவழக்கங்களில் இதுவும் ஒன்றாகும்.  இது பணியிடத்திலுள்ள துண்டுகளை சாரக்கட்டு செய்யாமல், திசையை வழங்குவதற்கான ஒரு வழியாகும்.  புதிர்களைக் குறைக்க விரும்பும் மாணவர்களுக்கு நீண்ட நேரம் (மற்றும், உண்மையில் எல்லா மாணவர்களுக்கும், எல்லா நேரத்திலும்) விசைப்பலகைக்கு அருகில் ஒரு பத்திரிகை அல்லது கீறல் காகிதத்தை வைத்திருப்பது பயனுள்ளதாக இருக்கும், அங்கு அவர்கள் எந்த வகையிலும் வழிமுறையைக் கண்டுபிடிக்க முடியும் மிகவும் இயற்கையாக வருகிறது. |
 

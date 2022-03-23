@@ -1,0 +1,47 @@
+---
+title: موارد المعلم - Star Wars
+nav: hoc_teacher_resources_nav
+theme: responsive
+style_min: true
+video_player: true
+---
+
+# Star Wars: ابنِ مجرة بالكود
+
+{{ hoc_starwars_video }}
+
+[col-50]
+
+## Teacher Resources
+
+### Lesson Plans:
+
+- [Star Wars: ابنِ مجرة بالكود]({{ hoc_starwars_cb_url }})
+- [ورقة الإجابة ونصائح للمعلم](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
+
+### أنشطة الامتداد:
+
+- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
+
+### موارد أخرى للمُعلِّم:
+
+- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+
+[/col-50]
+
+[col-50]
+
+## نظرة عامة
+
+تعلم كيفية جعل البرنامج روبوتًا وانشئ لعبة Star Wars الخاصة بك في مجرة بعيدة الأمد.
+
+**الفئة العمرية الموصى بها** 6+
+
+**متطلبات التكنولوجيا:** متصفحات حديثة + هواتف لوحية
+
+<a href="/starwars"><button>جرِّب الدورة التعليمية</button></a>
+
+[/col-50]

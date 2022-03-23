@@ -51,9 +51,8 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test "code_org_url" do
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('teacher-dashboard')
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
-    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
+    assert_equal '//test.code.org/about/team', CDO.code_org_url('/about/team')
+    assert_equal '//test.code.org/about/team', CDO.code_org_url('about/team')
   end
 
   test "windows phone 8.1 supported" do
@@ -80,21 +79,6 @@ class ApplicationHelperTest < ActionView::TestCase
     end
     assert(browser.chrome?)
     assert(browser.version.to_s.to_i == 34)
-  end
-
-  test 'script_certificate_image_url helper encodes correct information' do
-    user = create :user
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_2013_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::FROZEN_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::FLAPPY_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::PLAYLAB_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::STARWARS_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE1_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE2_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE3_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE4_NAME)
-    assert_certificate_url_encodes user, Script.get_from_cache(Script::ARTIST_NAME)
   end
 
   test 'client state level progress' do
@@ -173,18 +157,18 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'meta_image_url for level' do
-    assert_equal '/sharing_drawing.png', meta_image_url(level: Artist.first)
-    assert_equal '/studio_sharing_drawing.png', meta_image_url(level: Studio.first)
-    assert_equal '/bounce_sharing_drawing.png', meta_image_url(level: Game.find_by_app('Bounce').levels.first)
+    assert_equal '/sharing_drawing.png', meta_image_url(level: create(:artist))
+    assert_equal '/studio_sharing_drawing.png', meta_image_url(level: create(:playlab))
+    assert_equal '/bounce_sharing_drawing.png', meta_image_url(level: create(:bounce))
     level = create :level, game: Game.find_by_app('Flappy')
     level_source = create(:level_source, level: level)
     assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
 
   test 'meta_image_url for level_source without image' do
-    assert_equal '/sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Artist.first))
-    assert_equal '/studio_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Studio.first))
-    assert_equal '/bounce_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: Game.find_by_app('Bounce').levels.first))
+    assert_equal '/sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:artist)))
+    assert_equal '/studio_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:playlab)))
+    assert_equal '/bounce_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:bounce)))
     level = create :level, game: Game.find_by_app('Flappy')
     level_source = create(:level_source, level: level)
     assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
@@ -195,7 +179,7 @@ class ApplicationHelperTest < ActionView::TestCase
 
     assert_match(/cloudfront.net.*png/, meta_image_url(level_source: create(:level_source_image).level_source))
 
-    artist_level_source = create(:level_source, level: Artist.first)
+    artist_level_source = create(:level_source, level: create(:artist))
     create(:level_source_image, level_source: artist_level_source)
     assert_match(/cloudfront.net.*framed.*png/, meta_image_url(level_source: artist_level_source.reload))
   end
@@ -244,18 +228,5 @@ class ApplicationHelperTest < ActionView::TestCase
 
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
-  end
-
-  def assert_certificate_url_encodes(user, script)
-    url = script_certificate_image_url(user, script)
-    uri = URI.parse(url)
-    filename = uri.path
-    extname = File.extname(filename)
-    encoded = File.basename(filename, extname)
-    data = JSON.parse(Base64.urlsafe_decode64(encoded))
-
-    assert_equal user.name, data['name']
-    assert_equal script.name, data['course']
-    assert_equal data_t_suffix('script.name', script.name, 'title'), data['course_title']
   end
 end

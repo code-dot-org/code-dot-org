@@ -47,7 +47,7 @@ class FilesApi < Sinatra::Base
 
     # teachers can see abusive assets of their students
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     teaches_student?(owner_user_id)
   end
@@ -59,7 +59,7 @@ class FilesApi < Sinatra::Base
     # no active project exists, which is handled below.
     StorageApps.new(owner_storage_id).get(encrypted_channel_id)
 
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
     !get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
@@ -104,7 +104,7 @@ class FilesApi < Sinatra::Base
     return unless CDO.newrelic_logging
 
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
     event_details = {
       quota_type: quota_type,
       encrypted_channel_id: encrypted_channel_id,
@@ -388,7 +388,11 @@ class FilesApi < Sinatra::Base
     end
 
     # Block libraries with PII/profanity from being published.
-    if endpoint == 'libraries'
+    #
+    # Javalab's "backpack" feature uses libraries to allow students to share code
+    # between their own projects -- skip this check for .java files, since in this use case
+    # the files are only being used by a single user.
+    if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue OpenURI::HTTPError => e
@@ -398,6 +402,19 @@ class FilesApi < Sinatra::Base
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
       return bad_request if share_failure && share_failure[:type] != "address"
+    end
+
+    # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).
+    if 'sources' == endpoint
+      body_json = JSON.parse(body)
+      source = body_json["source"]
+      html = body_json["html"]
+
+      source_is_valid = source && has_valid_encoding?(source)
+      # HTML only exists for AppLab projects
+      html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true
+
+      return bad_request unless source_is_valid && html_is_valid
     end
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
@@ -424,6 +441,26 @@ class FilesApi < Sinatra::Base
       versionId: response.version_id,
       timestamp: Time.now # for logging purposes
     }.to_json
+  end
+
+  def has_valid_encoding?(source)
+    if source.is_a?(String)
+      return source.force_encoding("UTF-8").valid_encoding?
+    end
+
+    # Handle Multi-file Projects, like Java Lab
+    if source.is_a?(Hash)
+      # Iterate over each file
+      source.each_key do |key|
+        # Multi-file source structure:
+        # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
+        return false unless source[key]["text"] && source[key]["text"].force_encoding("UTF-8").valid_encoding?
+      end
+      return true
+    end
+
+    # If source is an unexpected type, return false to trigger a bad_request response
+    return false
   end
 
   #

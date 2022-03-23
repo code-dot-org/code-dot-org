@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import ReactDOM from 'react-dom';
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import initPage from '@cdo/apps/sites/studio/pages/scripts/edit';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
@@ -21,7 +21,10 @@ describe('the level builder page init script', () => {
         lessons: [],
         is_migrated: false,
         scriptPath: '/s/test-script',
-        publishedState: 'beta'
+        publishedState: 'beta',
+        instructionType: 'teacher_led',
+        instructorAudience: 'teacher',
+        participantAudience: 'student'
       },
       i18n: {
         lessonDescriptions: [],
@@ -32,8 +35,7 @@ describe('the level builder page init script', () => {
       },
       locales: [['English', 'en-US'], ['French', 'fr-FR']],
       script_families: ['coursea', 'csd1'],
-      version_year_options: ['2017', '2018'],
-      levelKeyList: {}
+      version_year_options: ['2017', '2018']
     });
   });
 

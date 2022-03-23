@@ -16,6 +16,10 @@ Given(/^I am a workshop administrator$/) do
   }
 end
 
+And(/^I get facilitator access$/) do
+  browser_request(url: '/api/test/facilitator_access', method: 'POST')
+end
+
 Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ do |facilitator_name, partner_name|
   require_rails_env
 

@@ -118,6 +118,7 @@ describe('FindProgrammingExpressionDialog', () => {
     expect(searchStub.callCount).to.equal(2);
     wrapper.instance().setCurrentPage(2);
     expect(searchStub.callCount).to.equal(3);
+    searchStub.restore();
   });
 
   it('searches the programming_expressions endpoint', () => {

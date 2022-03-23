@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:35 UTC",
+    "serialized_at": "2021-11-22 19:55:35 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "2018hoc-ab"
     }
@@ -44,16 +48,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0461aebf-ff2f-4724-9d91-fb6d143e9b19",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0461aebf-ff2f-4724-9d91-fb6d143e9b19",
+        "lesson.key": "Labyrinth",
+        "lesson_group.key": "",
+        "script.name": "2018hoc-ab"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "e848561b-0fa9-4434-912a-ddcc81c7f8c4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e848561b-0fa9-4434-912a-ddcc81c7f8c4",
+        "lesson_activity.key": "0461aebf-ff2f-4724-9d91-fb6d143e9b19"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -67,7 +92,8 @@
         ],
         "lesson.key": "Labyrinth",
         "lesson_group.key": "",
-        "script.name": "2018hoc-ab"
+        "script.name": "2018hoc-ab",
+        "activity_section.key": "e848561b-0fa9-4434-912a-ddcc81c7f8c4"
       },
       "level_keys": [
         "HoCAB_labyrinth1"
@@ -76,7 +102,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -90,7 +116,8 @@
         ],
         "lesson.key": "Labyrinth",
         "lesson_group.key": "",
-        "script.name": "2018hoc-ab"
+        "script.name": "2018hoc-ab",
+        "activity_section.key": "e848561b-0fa9-4434-912a-ddcc81c7f8c4"
       },
       "level_keys": [
         "HoCAB_labyrinth2"
@@ -106,7 +133,8 @@
         ],
         "lesson.key": "Labyrinth",
         "lesson_group.key": "",
-        "script.name": "2018hoc-ab"
+        "script.name": "2018hoc-ab",
+        "activity_section.key": "e848561b-0fa9-4434-912a-ddcc81c7f8c4"
       }
     },
     {
@@ -117,7 +145,8 @@
         ],
         "lesson.key": "Labyrinth",
         "lesson_group.key": "",
-        "script.name": "2018hoc-ab"
+        "script.name": "2018hoc-ab",
+        "activity_section.key": "e848561b-0fa9-4434-912a-ddcc81c7f8c4"
       }
     }
   ],

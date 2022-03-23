@@ -96,7 +96,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.17.19'
+  gem 'eyes_selenium', '3.18.4'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
@@ -174,10 +174,7 @@ gem 'omniauth-rails_csrf_protection', '~> 0.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
-# Ref: https://github.com/haml/haml/issues/940
-# https://github.com/haml/haml/issues/982
-# https://github.com/haml/haml/issues/985
-gem 'haml', github: 'wjordan/haml', ref: 'cdo'
+gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 

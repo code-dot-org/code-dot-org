@@ -1,0 +1,30 @@
+{
+  "name": "csp-2022",
+  "script_names": [
+    "csp1-2022",
+    "csp2-2022",
+    "csp3-2022",
+    "csp4-2022",
+    "csp5-2022",
+    "csp6-2022",
+    "csp7-2022",
+    "csp8-2022",
+    "csp9-2022",
+    "csp10-2022"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csp",
+    "has_numbered_units": true,
+    "version_year": "2022"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

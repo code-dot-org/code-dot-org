@@ -4,7 +4,7 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-# Tying it all together
+# Tying it All Together
 
 At the end of the unit, students engage in the entire Data Analysis Process by telling their own “data story”.  Using a <a href="https://docs.google.com/document/d/1my-xp5mA5le05dcPp7kVawrK0-68flRifUZcqCRjltA/view" target="blank" rel="noopener noreferrer">Project Guide</a> to support and document their work, students will pick their own dataset and determine what new information can be determined using a visualization.
 

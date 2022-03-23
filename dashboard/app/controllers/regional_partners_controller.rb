@@ -147,38 +147,38 @@ class RegionalPartnersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def regional_partner_params
-    permitted_params = %i(
-      name
-      group
-      urban
-      cohort_capacity_csd
-      cohort_capacity_csp
-      apps_open_date_teacher
-      apps_close_date_teacher
-      apps_open_date_csd_facilitator
-      apps_open_date_csp_facilitator
-      apps_close_date_csd_facilitator
-      apps_close_date_csp_facilitator
-      apps_priority_deadline_date
-      applications_principal_approval
-      applications_decision_emails
-      link_to_partner_application
-      csd_cost
-      csp_cost
-      cost_scholarship_information
-      additional_program_information
-      contact_name
-      contact_email
-      attention
-      street
-      apartment_or_suite
-      city
-      state
-      zip_code
-      phone_number
-      notes
+    params.require(:regional_partner).permit(
+      :name,
+      :group,
+      :urban,
+      :cohort_capacity_csd,
+      :cohort_capacity_csp,
+      :apps_open_date_teacher,
+      :apps_close_date_teacher,
+      :apps_open_date_csd_facilitator,
+      :apps_open_date_csp_facilitator,
+      :apps_close_date_csd_facilitator,
+      :apps_close_date_csp_facilitator,
+      :apps_priority_deadline_date,
+      :applications_principal_approval,
+      :applications_decision_emails,
+      :link_to_partner_application,
+      :csd_cost,
+      :csp_cost,
+      :cost_scholarship_information,
+      :additional_program_information,
+      :contact_name,
+      :contact_email,
+      :attention,
+      :street,
+      :apartment_or_suite,
+      :city,
+      :state,
+      :zip_code,
+      :phone_number,
+      :notes,
+      pl_programs_offered: []
     )
-    params.require(:regional_partner).permit(permitted_params)
   end
 
   def restricted_users

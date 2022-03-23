@@ -6,22 +6,22 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Как организовать мероприятие Час кода
 
-### Get your entire school or community involved in an Hour of Code!
+### Привлеките всю школу или сообщество к участию в Часе кода!
 
 * * *
 
 ## 1. Подготовьтесь к своему мероприятию
 
 - Определитесь с местом, датой и временем.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Отправьте [письмо](https://hourofcode.com/promote/resources#sample-emails) вашему местному мэру, члену конгресса, губернатору или влиятельному бизнесмену, чтобы предложить им выступить с речью. Подробную информацию см. в [руководстве]({{ localized_files/elected_official }}) по приглашению избранного официального лица в Часе кода.
+- Пригласите СМИ, например местное новостное агентство, газету, блогеров, пишущих об образовании и технологиях. Смотрите наш [пресс-пакет]({{ promote/press_kit_url }}).
 
 ## 2. Во время вашего мероприятия
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Начните ваше мероприятие с одного из наших [вдохновляющих видео]({{ promote/videos }}).
+- Сделайте вступительную обзорную речь о важности компьютерной науки, используя эту [статистику и инфографику]({{ promote/stats_url }}).   
       
     
 - ** Другие идеи проведения мероприятий **: 
@@ -33,35 +33,35 @@ nav: how_to_nav
 
 ## 3. Поделитесь тем как прошло ваше мероприятие
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+Публикуйте фотографии с вашего мероприятия на Facebook и в Twitter с хэштегом **#ЧасКода**.
 
 * * *
 
 ## Проведите Семейный Вечер Кода с Часом Кода и пригласите родителей принять участие
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Проведите вечернее мероприятие для начальных классов и предложите родителям участвовать в часе информатики вместе с детьми. Это отличный способ привлечь большую группу людей и вдохновить родителей на поддержку компьютерных наук в вашей школе. Наши партнеры из Семейного Вечера Кода создали всеобъемлющий набор инструкций для проведения мероприятия, в него входят: список того, что нужно запланировать, сценарий для ведущего, пригласительные письма, постеры, презентации и многое другое. [Нажмите сюда, чтобы скачать набор для проведения события](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
-## Example plan for a school assembly or event
+## Пример плана для школьного собрания или мероприятия
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Событие:** Стартовое собрание Недели Обучения Компьютерным Наукам для всей школы
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (начало недели обучения информатике)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Время:** Во время учебного дня. Предпочтительно в середине утра. Примерно 1 час.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Местоположение:** Зал собраний школы (например актовый зал, спортзал, кафетерий)
 
 ## Запуск шоу
 
-| Время         | Действие                                                                                                                              |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
-| 10:15 - 10:30 | Специальный гость расскажет о своем опыте и как технологии и компьютерные науки играют большую роль в их повседневной жизни.          |
-| 10:30 - 10:40 | Ученики демонстрируют Час Кода школе. Веселый поворот: пусть они обучат директора, политика или других учеников!                      |
-| 10:40 - 11:00 | Ученики демонстрируют уроки не требующие компьютеров и как компьютерной науке можно научить без компьютеров.                          |
-| 11:00 - 11:05 | Учитель, который помогал организовать мероприятие, говорит заключительную речь.                                                       |
+| Время         | Действие                                                                                                                                  |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Начните с одного из наших [вдохновляющих видео]({{ promote/videos }}).                                                                    |
+| 10:05 - 10:15 | Директор дает вступительную речь, обозревающую важность информатики. Используйте эту [статистику и инфографику]({{ promote/stats_url }}). |
+| 10:15 - 10:30 | Специальный гость расскажет о своем опыте и как технологии и компьютерные науки играют большую роль в их повседневной жизни.              |
+| 10:30 - 10:40 | Ученики демонстрируют Час Кода школе. Веселый поворот: пусть они обучат директора, политика или других учеников!                          |
+| 10:40 - 11:00 | Ученики демонстрируют уроки не требующие компьютеров и как компьютерной науке можно научить без компьютеров.                              |
+| 11:00 - 11:05 | Учитель, который помогал организовать мероприятие, говорит заключительную речь.                                                           |
 
 {{ signup_button }}

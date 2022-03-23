@@ -9,7 +9,8 @@ module Crowdin
 
   class Utils
     attr_reader :project
-    attr_reader :changes_json
+    attr_reader :files_to_download_json
+    attr_reader :files_to_sync_out_json
     attr_reader :etags_json
     attr_reader :locales_dir
     attr_reader :locale_subdir
@@ -17,34 +18,33 @@ module Crowdin
 
     # @param project [Crowdin::Project]
     # @param options [Hash, nil]
-    # @param options.changes_json [String, nil] path to file where files with
-    #  changes will be written out in JSON format
-    # @param options.etags_json [String, nil] path to file where etags will be
+    # @options options [String, nil] :files_to_download_json path to file where files
+    #  should be downloaded will be written out in JSON format
+    # @options options [String, nil] :files_to_sync_out_json path to file where files
+    #  should be synced-out will be written out in JSON format
+    # @options options [String, nil] :etags_json path to file where etags will be
     #  written out in JSON format
-    # @param options.locales_dir [String, nil] path to directory where changed
+    # @options options [String, nil] :locales_dir path to directory where changed
     #  files should be downloaded
-    # @param options.locale_subdir [String, nil] name of directory within
+    # @options options [String, nil] :locale_subdir name of directory within
     #  locale-specific directory to which files should be downloaded
-    # @param options.logger [Logger, nil]
+    # @options options [Logger, nil] :logger
     def initialize(project, options={})
       @project = project
-      @changes_json = options.fetch(:changes_json, "/tmp/#{project.id}_changes.json")
       @etags_json = options.fetch(:etags_json, "/tmp/#{project.id}_etags.json")
+      @files_to_download_json = options.fetch(:files_to_download_json, "/tmp/#{project.id}_files_to_download.json")
+      @files_to_sync_out_json = options.fetch(:files_to_sync_out_json, "/tmp/#{project.id}_files_to_sync_out.json")
       @locales_dir = options.fetch(:locales_dir, "/tmp/locales")
       @locale_subdir = options.fetch(:locale_subdir, nil)
       @logger = options.fetch(:logger, Logger.new(STDOUT))
     end
 
-    # Fetch from Crowdin a list of files changed since the last sync. Uses
+    # Fetch from Crowdin a list of files changed since the last download. Uses
     # etags sourced from the @etags_json file to define what we mean by "since
-    # the last sync," and writes the results out to @changes_json.
+    # the last download," and writes the results out to @files_to_download_json.
     def fetch_changes
       etags = File.exist?(@etags_json) ? JSON.parse(File.read(@etags_json)) : {}
-
-      # Clear out existing changes json if it exists
-      File.write(@changes_json, '{}')
-      changes = {}
-
+      files_to_download = {}
       languages = @project.languages
       num_languages = languages.length
       languages.each_with_index do |language, i|
@@ -69,23 +69,31 @@ module Crowdin
         end.compact
 
         next if changed_files.empty?
-
-        changes[language_code] = changed_files.to_h
-        etags[language_code].merge!(changes[language_code])
-        File.write(@etags_json, JSON.pretty_generate(etags))
-        File.write(@changes_json, JSON.pretty_generate(changes))
+        files_to_download[language_code] ||= {}
+        files_to_download[language_code].merge! changed_files.to_h
       end
+
+      File.write @files_to_download_json, JSON.pretty_generate(files_to_download)
     end
 
-    # Downloads all files referenced in @changes_json to @locales_dir
+    # Downloads all files referenced in @files_to_download_json to @locales_dir
+    # Merge the list of successfully downloaded files to @files_to_sync_out_json
+    # to signal the sync-out step to process them.
     def download_changed_files
-      raise "No existing changes json at #{@changes_json}; please run fetch_changes first" unless File.exist?(@changes_json)
-      changes = JSON.parse(File.read(@changes_json))
-      @logger.info("#{changes.keys.length} languages have changes")
+      raise "File not found #{@files_to_download_json}; please run fetch_changes first" unless File.exist?(@files_to_download_json)
+      files_to_download = JSON.parse File.read(@files_to_download_json)
+      @logger.info("#{files_to_download.keys.length} languages have changes")
+
+      etags = File.exist?(@etags_json) ? JSON.parse(File.read(@etags_json)) : {}
+      # Initialize @files_to_sync_out file if it doesn't exist yet.
+      # It could already exist if multiple sync-down's occurred since the last sync-out.
+      File.write @files_to_sync_out_json, JSON.pretty_generate({}) unless File.exist?(@files_to_sync_out_json)
+      files_to_sync_out = JSON.parse(File.read(@files_to_sync_out_json))
+
       @project.languages.each do |language|
         code = language["code"]
         name = language["name"]
-        files = changes.fetch(code, nil)
+        files = files_to_download.fetch(code, nil)
         next unless files.present?
         filenames = files.keys
 
@@ -93,7 +101,7 @@ module Crowdin
         locale_dir = File.join([@locales_dir, language["name"], @locale_subdir].compact)
 
         @logger.debug("#{name} (#{code}): #{filenames.length} files have changes")
-        Parallel.each(filenames, in_threads: MAX_THREADS) do |file|
+        downloaded_files = Parallel.map(filenames, in_threads: MAX_THREADS) do |file|
           response = @project.export_file(file, code)
           dest = File.join(locale_dir, file)
           FileUtils.mkdir_p(File.dirname(dest))
@@ -102,7 +110,25 @@ module Crowdin
           File.open(dest, "w:#{response.body.encoding}") do |destfile|
             destfile.write(response.body)
           end
-        end
+          [file, response.headers["etag"]]
+        end.to_h
+
+        # Save incremental progress so we don't have to re-download everything
+        # if the current run fails for any reason.
+        # The order of saving progress is important for recovery purpose.
+        # Since @files_to_sync_out_json depends on @files_to_download_json,
+        # which in turn depends on @etags_json, @etags_json should be updated last.
+        files_to_sync_out[code] ||= {}
+        files_to_sync_out[code].merge! downloaded_files
+        File.write @files_to_sync_out_json, JSON.pretty_generate(files_to_sync_out)
+
+        files_to_download[code].delete_if {|file, _etag| downloaded_files.key? file}
+        files_to_download.delete code if files_to_download[code].empty?
+        File.write @files_to_download_json, JSON.pretty_generate(files_to_download)
+
+        etags[code] ||= {}
+        etags[code].merge! downloaded_files
+        File.write @etags_json, JSON.pretty_generate(etags)
       end
     end
   end

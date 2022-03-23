@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:58 UTC",
+    "serialized_at": "2021-11-22 19:56:43 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "cspunit1-support-test"
     }
@@ -44,16 +48,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a078175a-8be1-489b-ae92-4ca7a5b6b078",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a078175a-8be1-489b-ae92-4ca7a5b6b078",
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-support-test"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a1f7d6f4-8ccb-4b30-91f9-c2f9cfeb4c13",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a1f7d6f4-8ccb-4b30-91f9-c2f9cfeb4c13",
+        "lesson_activity.key": "a078175a-8be1-489b-ae92-4ca7a5b6b078"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -67,7 +92,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "",
-        "script.name": "cspunit1-support-test"
+        "script.name": "cspunit1-support-test",
+        "activity_section.key": "a1f7d6f4-8ccb-4b30-91f9-c2f9cfeb4c13"
       },
       "level_keys": [
         "plc csp1 introduction to unit"
@@ -76,7 +102,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -90,7 +116,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "",
-        "script.name": "cspunit1-support-test"
+        "script.name": "cspunit1-support-test",
+        "activity_section.key": "a1f7d6f4-8ccb-4b30-91f9-c2f9cfeb4c13"
       },
       "level_keys": [
         "plc csp1 chapter overviews"
@@ -99,7 +126,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -113,7 +140,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "",
-        "script.name": "cspunit1-support-test"
+        "script.name": "cspunit1-support-test",
+        "activity_section.key": "a1f7d6f4-8ccb-4b30-91f9-c2f9cfeb4c13"
       },
       "level_keys": [
         "plc csp1 philosophy and commentary"
@@ -129,7 +157,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "",
-        "script.name": "cspunit1-support-test"
+        "script.name": "cspunit1-support-test",
+        "activity_section.key": "a1f7d6f4-8ccb-4b30-91f9-c2f9cfeb4c13"
       }
     },
     {
@@ -140,7 +169,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "",
-        "script.name": "cspunit1-support-test"
+        "script.name": "cspunit1-support-test",
+        "activity_section.key": "a1f7d6f4-8ccb-4b30-91f9-c2f9cfeb4c13"
       }
     },
     {
@@ -151,7 +181,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "",
-        "script.name": "cspunit1-support-test"
+        "script.name": "cspunit1-support-test",
+        "activity_section.key": "a1f7d6f4-8ccb-4b30-91f9-c2f9cfeb4c13"
       }
     }
   ],

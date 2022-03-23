@@ -16,6 +16,7 @@ module ProjectsList
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
+    poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab']
   }.freeze
 
@@ -40,6 +41,28 @@ module ProjectsList
       personal_projects_list
     end
 
+    # Look up every project associated with the provided user_id, and project state, excluding those that are hidden.
+    # Return a set of metadata which can be used to display a table of personal projects in the admin UI.
+    # @param user_id
+    # @param state [String]
+    # @return [Array<Hash>] An array with each entry representing a project.
+    def fetch_personal_projects_for_admin(user_id, state)
+      personal_projects_list = []
+      storage_id = storage_id_for_user_id(user_id)
+
+      storage_apps_query = PEGASUS_DB[:storage_apps].
+        where(storage_id: storage_id, state: state).
+        order(Sequel.desc(:updated_at))
+
+      storage_apps_query.each do |project|
+        channel_id = storage_encrypt_channel_id(storage_id, project[:id])
+        project_data = get_project_row_data(project, channel_id, nil, true)
+        personal_projects_list << project_data if project_data
+      end
+
+      personal_projects_list
+    end
+
     # Look up every project of every student in the section, excluding those that are hidden.
     # Return a set of metadata which can be used to display a list of projects, excluding hidden or deleted in the UI.
     # @param section [Section]
@@ -47,9 +70,7 @@ module ProjectsList
     def fetch_section_projects(section)
       section_students = section.students
       [].tap do |projects_list_data|
-        student_storage_ids = PEGASUS_DB[:user_storage_ids].
-          where(user_id: section_students.pluck(:id)).
-          select_hash(:user_id, :id)
+        student_storage_ids = get_storage_ids_by_user_ids(section_students.pluck(:id))
         section_students.each do |student|
           next unless student_storage_id = student_storage_ids[student.id]
           PEGASUS_DB[:storage_apps].where(storage_id: student_storage_id, state: 'active').each do |project|
@@ -126,9 +147,7 @@ module ProjectsList
       section_users = section.students + [section.user]
 
       [].tap do |projects_list_data|
-        user_storage_ids = PEGASUS_DB[:user_storage_ids].
-          where(user_id: section_users.pluck(:id)).
-          select_hash(:id, :user_id)
+        user_storage_ids = get_user_ids_by_storage_ids(section_users.pluck(:id))
         user_storage_id_list = user_storage_ids.keys
         PEGASUS_DB[:storage_apps].
           where(storage_id: user_storage_id_list, state: 'active').
@@ -196,12 +215,14 @@ module ProjectsList
 
     def fetch_featured_projects_by_type(project_type)
       storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
-      user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
+
+      user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
+
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
         select(*project_and_featured_project_and_user_fields).
         join(storage_apps, id: :storage_app_id).
-        join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
-        join(:users, id: Sequel[:user_storage_ids][:user_id]).
+        join(user_project_storage_ids, id: Sequel[:storage_apps][:storage_id]).
+        join(:users, id: Sequel[user_project_storage_ids][:user_id]).
         where(
           unfeatured_at: nil,
           project_type: project_type.to_s,
@@ -298,12 +319,15 @@ module ProjectsList
 
     def fetch_published_project_types(project_groups, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
+
+      user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
+
       {}.tap do |projects|
         project_groups.map do |project_group|
           project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
           projects[project_group] = PEGASUS_DB[:storage_apps].
             select(*project_and_user_fields).
-            join(:user_storage_ids, id: :storage_id).
+            join(user_project_storage_ids, id: :storage_id).
             join(users, id: :user_id).
             where(state: 'active', project_type: project_types).
             where {published_before.nil? || published_at < DateTime.parse(published_before)}.

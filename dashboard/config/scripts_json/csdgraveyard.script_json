@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:05 UTC",
+    "serialized_at": "2021-11-22 19:56:28 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csdgraveyard"
     }
@@ -59,16 +63,93 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "fcbd0984-f69a-4f51-945f-4ad2a82e1572",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fcbd0984-f69a-4f51-945f-4ad2a82e1572",
+        "lesson.key": "Introduction to Styling with CSS",
+        "lesson_group.key": "",
+        "script.name": "csdgraveyard"
+      }
+    },
+    {
+      "key": "f65f6238-8db2-4cd4-8f92-a083244ce498",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f65f6238-8db2-4cd4-8f92-a083244ce498",
+        "lesson.key": "External Style Sheets",
+        "lesson_group.key": "",
+        "script.name": "csdgraveyard"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "0c53c90b-a454-4c00-957d-9b347ab1dec4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c53c90b-a454-4c00-957d-9b347ab1dec4",
+        "lesson_activity.key": "fcbd0984-f69a-4f51-945f-4ad2a82e1572"
+      }
+    },
+    {
+      "key": "382bf258-b0cc-40ba-8fa4-295b8485c89b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Stop: Intro to CSS"
+      },
+      "seeding_key": {
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b",
+        "lesson_activity.key": "fcbd0984-f69a-4f51-945f-4ad2a82e1572"
+      }
+    },
+    {
+      "key": "b57a529b-2441-46c4-a7e9-c83635aa3302",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b57a529b-2441-46c4-a7e9-c83635aa3302",
+        "lesson_activity.key": "fcbd0984-f69a-4f51-945f-4ad2a82e1572"
+      }
+    },
+    {
+      "key": "f6152ea4-fb63-430a-a827-f234b8a49775",
+      "position": 1,
+      "properties": {
+        "progression_name": "Brand Book Example"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6152ea4-fb63-430a-a827-f234b8a49775",
+        "lesson_activity.key": "f65f6238-8db2-4cd4-8f92-a083244ce498"
+      }
+    },
+    {
+      "key": "546b9523-eb83-4b26-b907-c28fa18f16bb",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb",
+        "lesson_activity.key": "f65f6238-8db2-4cd4-8f92-a083244ce498"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -83,7 +164,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "0c53c90b-a454-4c00-957d-9b347ab1dec4"
       },
       "level_keys": [
         "Unit 2 Lesson 7 Overview"
@@ -92,12 +174,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - Intro to CSS"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -106,7 +189,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - Intro to CSS"
@@ -115,12 +199,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - Selector and Property"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -129,7 +214,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - Selector and Property"
@@ -138,12 +224,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - p tags"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -152,7 +239,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - p tags"
@@ -161,12 +249,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - head body"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -175,7 +264,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - head body"
@@ -184,12 +274,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - title element in head"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -198,7 +289,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - title element in head"
@@ -207,12 +299,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - body tags"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -221,7 +314,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - body tags"
@@ -230,12 +324,13 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - text properties"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -244,7 +339,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - text properties"
@@ -253,12 +349,13 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - font properties"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -267,7 +364,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - font properties"
@@ -276,12 +374,13 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU2 - image properties"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
       "seeding_key": {
@@ -290,7 +389,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "CSDU2 - image properties"
@@ -299,7 +399,7 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -314,7 +414,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       },
       "level_keys": [
         "Stop: Intro to CSS"
@@ -323,7 +424,7 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -337,7 +438,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "b57a529b-2441-46c4-a7e9-c83635aa3302"
       },
       "level_keys": [
         "CSDU2 - About Me Page Styling"
@@ -346,7 +448,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -361,7 +463,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "f6152ea4-fb63-430a-a827-f234b8a49775"
       },
       "level_keys": [
         "Brand Book Example"
@@ -370,7 +473,7 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -384,7 +487,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 Pick Your Fonts"
@@ -393,7 +497,7 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -407,7 +511,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 Pick Your Colors"
@@ -416,7 +521,7 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -430,7 +535,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - External Style Sheets"
@@ -439,7 +545,7 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -453,7 +559,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - Link Tag"
@@ -462,7 +569,7 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -476,7 +583,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - Using Your Font"
@@ -485,7 +593,7 @@
     {
       "chapter": 19,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -499,7 +607,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - Developing Brand Style"
@@ -508,7 +617,7 @@
     {
       "chapter": 20,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -522,7 +631,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - Separate Content and Style"
@@ -531,7 +641,7 @@
     {
       "chapter": 21,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -545,7 +655,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - PW - Divs to break up the page"
@@ -554,7 +665,7 @@
     {
       "chapter": 22,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -568,7 +679,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - PW - External Style Sheets"
@@ -577,7 +689,7 @@
     {
       "chapter": 23,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -591,7 +703,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - PW - Consistent Personal Site Style"
@@ -600,7 +713,7 @@
     {
       "chapter": 24,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -614,7 +727,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 Make Your Logo"
@@ -623,7 +737,7 @@
     {
       "chapter": 25,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -637,7 +751,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - PW - Image as A Link"
@@ -646,7 +761,7 @@
     {
       "chapter": 26,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -660,7 +775,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - PW - Favicon"
@@ -669,7 +785,7 @@
     {
       "chapter": 27,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -683,7 +799,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       },
       "level_keys": [
         "CSDU2 - PW - ESS Final touches"
@@ -699,7 +816,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "0c53c90b-a454-4c00-957d-9b347ab1dec4"
       }
     },
     {
@@ -710,7 +828,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -721,7 +840,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -732,7 +852,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -743,7 +864,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -754,7 +876,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -765,7 +888,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -776,7 +900,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -787,7 +912,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -798,7 +924,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -809,7 +936,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "382bf258-b0cc-40ba-8fa4-295b8485c89b"
       }
     },
     {
@@ -820,7 +948,8 @@
         ],
         "lesson.key": "Introduction to Styling with CSS",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "b57a529b-2441-46c4-a7e9-c83635aa3302"
       }
     },
     {
@@ -831,7 +960,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "f6152ea4-fb63-430a-a827-f234b8a49775"
       }
     },
     {
@@ -842,7 +972,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -853,7 +984,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -864,7 +996,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -875,7 +1008,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -886,7 +1020,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -897,7 +1032,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -908,7 +1044,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -919,7 +1056,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -930,7 +1068,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -941,7 +1080,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -952,7 +1092,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -963,7 +1104,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -974,7 +1116,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     },
     {
@@ -985,7 +1128,8 @@
         ],
         "lesson.key": "External Style Sheets",
         "lesson_group.key": "",
-        "script.name": "csdgraveyard"
+        "script.name": "csdgraveyard",
+        "activity_section.key": "546b9523-eb83-4b26-b907-c28fa18f16bb"
       }
     }
   ],

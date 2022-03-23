@@ -44,11 +44,18 @@ export default class ValidationStep extends Component {
     children: PropTypes.node,
     stepName: PropTypes.string.isRequired,
     stepStatus: PropTypes.oneOf(Object.values(Status)).isRequired,
-    alwaysShowChildren: PropTypes.bool
+    alwaysShowChildren: PropTypes.bool,
+    hideWaitingSteps: PropTypes.bool
   };
 
   render() {
-    const {stepName, stepStatus, alwaysShowChildren, children} = this.props;
+    const {
+      stepName,
+      stepStatus,
+      alwaysShowChildren,
+      children,
+      hideWaitingSteps
+    } = this.props;
     // By default, we only show the children if the step failed or alerted.
     // If alwaysShowChildren is set, show them regardless
     let showChildren =
@@ -56,13 +63,21 @@ export default class ValidationStep extends Component {
       stepStatus === Status.FAILED ||
       stepStatus === Status.ALERT;
 
+    if (hideWaitingSteps && stepStatus === Status.WAITING) {
+      return null;
+    }
+
     return (
       <div style={style.root}>
         <div style={{...style.header, ...styleFor(stepStatus)}}>
           <div style={style.icon}>{iconFor(stepStatus)}</div>
           <div style={style.headerText}>{stepName}</div>
         </div>
-        {showChildren && <div style={style.body}>{children}</div>}
+        {showChildren && (
+          <div style={style.body} className="validation-children">
+            {children}
+          </div>
+        )}
       </div>
     );
   }

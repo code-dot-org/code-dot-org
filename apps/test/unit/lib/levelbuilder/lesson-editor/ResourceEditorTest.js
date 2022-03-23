@@ -122,5 +122,6 @@ describe('ResourcesEditor', () => {
       .calledOnce;
     expect(addResource.withArgs(defaultResourceContext, vocabRollup)).to.be
       .calledOnce;
+    server.restore();
   });
 });

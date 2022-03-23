@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -33,6 +33,8 @@ class BubbleChoice < DSLDefined
     display_name
     description
   )
+
+  ALPHABET = ('a'..'z').to_a
 
   def dsl_default
     <<~ruby
@@ -122,15 +124,13 @@ class BubbleChoice < DSLDefined
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
 
-      alphabet = ('a'..'z').to_a
-
       level_info.merge!(
         {
           id: level.id.to_s,
           description: level.try(:bubble_choice_description),
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
-          letter: alphabet[index],
+          letter: ALPHABET[index],
           icon: level.try(:icon)
         }
       )
@@ -143,19 +143,17 @@ class BubbleChoice < DSLDefined
         level_url(level.id)
 
       if user_id
-        level_info[:perfect] = UserLevel.find_by(
+        user_level = UserLevel.find_by(
           level: level,
           script: script_level.try(:script),
           user_id: user_id
-          )&.perfect?
-        level_info[:status] = if level_info[:perfect]
-                                SharedConstants::LEVEL_STATUS.perfect
-                              else
-                                SharedConstants::LEVEL_STATUS.not_tried
-                              end
+          )
+        level_info[:perfect] = user_level&.perfect?
+        level_info[:status] = activity_css_class(user_level)
 
         level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
         level_info[:teacher_feedback_review_state] = level_feedback&.review_state
+        level_info[:exampleSolutions] = script_level.get_example_solutions(level, User.find_by(id: user_id)) if script_level
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.

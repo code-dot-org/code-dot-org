@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {
   WorkshopApplicationStates,
-  WorkshopSearchErrors
+  WorkshopSearchErrors,
+  ActiveCourseWorkshops
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import Notification from '@cdo/apps/templates/Notification';
@@ -54,13 +55,26 @@ class RegionalPartnerSearch extends Component {
       loading = true;
     }
 
+    // Get the flag that indicates whether applications are closed site-wide
+    // (versus the regional partner's own application close date)
+    $.ajax({
+      method: 'GET',
+      url: `/dashboardapi/v1/pd/application/applications_closed`,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        applicationsClosed: data
+      });
+    });
+
     this.state = {
       showZip: showZip,
       partnerInfo: undefined,
       zipValue: zipValue,
       error: error,
       loading: loading,
-      nominated: nominated
+      nominated: nominated,
+      applicationsClosed: undefined
     };
   }
 
@@ -114,24 +128,36 @@ class RegionalPartnerSearch extends Component {
       .fail(this.partnerZipFail);
   };
 
+  shouldDisplayApplicationLink() {
+    return this.state.applicationsClosed === false;
+  }
+
   render() {
     const partnerInfo = this.state.partnerInfo;
 
     let workshopCollections = [
       {
-        heading: 'CS Discoveries Workshops',
+        heading: `${ActiveCourseWorkshops.CSD} Workshops`,
         workshops:
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === 'CS Discoveries'
+            workshop => workshop.course === ActiveCourseWorkshops.CSD
           )
       },
       {
-        heading: 'CS Principles Workshops',
+        heading: `${ActiveCourseWorkshops.CSP} Workshops`,
         workshops:
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === 'CS Principles'
+            workshop => workshop.course === ActiveCourseWorkshops.CSP
+          )
+      },
+      {
+        heading: `${ActiveCourseWorkshops.CSA} Workshops`,
+        workshops:
+          partnerInfo &&
+          partnerInfo.summer_workshops.filter(
+            workshop => workshop.course === ActiveCourseWorkshops.CSA
           )
       }
     ];
@@ -167,13 +193,17 @@ class RegionalPartnerSearch extends Component {
           <div>
             <br />
             <div>
-              We are unable to find this ZIP code. You can still apply directly:
+              We are unable to find this ZIP code.
+              {this.shouldDisplayApplicationLink() &&
+                ' You can still apply directly:'}
             </div>
-            <StartApplicationButton
-              buttonOnly={true}
-              nominated={this.state.nominated}
-              priorityDeadlineDate={appsPriorityDeadlineDate}
-            />
+            {this.shouldDisplayApplicationLink() && (
+              <StartApplicationButton
+                buttonOnly={true}
+                nominated={this.state.nominated}
+                priorityDeadlineDate={appsPriorityDeadlineDate}
+              />
+            )}
           </div>
         )}
 
@@ -189,9 +219,11 @@ class RegionalPartnerSearch extends Component {
               <p>
                 We do not have a Regional Partner in your area. However, we have
                 a number of partners in nearby states or regions who may have
-                space available in their program. If you are willing to travel,
-                please fill out the application. We'll let you know if we can
-                find you a nearby spot in the program!
+                space available in their program.
+                {this.shouldDisplayApplicationLink() &&
+                  ` If you are willing to travel, please fill out the application. `}
+                We'll let you know if we can find you a nearby spot in the
+                program!
               </p>
               <p>
                 If we find a spot, we'll let you know the workshop dates and
@@ -224,11 +256,13 @@ class RegionalPartnerSearch extends Component {
                 </a>{' '}
                 for other Professional Development options in your area.
               </p>
-              <StartApplicationButton
-                buttonOnly={true}
-                nominated={this.state.nominated}
-                priorityDeadlineDate={appsPriorityDeadlineDate}
-              />
+              {this.shouldDisplayApplicationLink() && (
+                <StartApplicationButton
+                  buttonOnly={true}
+                  nominated={this.state.nominated}
+                  priorityDeadlineDate={appsPriorityDeadlineDate}
+                />
+              )}
             </div>
           </div>
         )}
@@ -238,7 +272,8 @@ class RegionalPartnerSearch extends Component {
             <hr style={styles.hr} />
 
             <div style={styles.action}>
-              {appState === WorkshopApplicationStates.currently_open &&
+              {this.shouldDisplayApplicationLink() &&
+                appState === WorkshopApplicationStates.currently_open &&
                 !partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
@@ -248,7 +283,8 @@ class RegionalPartnerSearch extends Component {
                   />
                 )}
 
-              {appState === WorkshopApplicationStates.currently_open &&
+              {this.shouldDisplayApplicationLink() &&
+                appState === WorkshopApplicationStates.currently_open &&
                 partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
@@ -264,32 +300,59 @@ class RegionalPartnerSearch extends Component {
             {appState !== WorkshopApplicationStates.now_closed && (
               <div>
                 <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
-                {workshopCollections[0].workshops.length === 0 &&
-                  workshopCollections[1].workshops.length === 0 && (
-                    <div>Workshop details coming soon!</div>
-                  )}
+                {workshopCollections.every(
+                  collection => collection.workshops.length === 0
+                ) && <div>Workshop details coming soon!</div>}
 
-                {workshopCollections.map(
-                  (collection, collectionIndex) =>
-                    collection.workshops.length > 0 && (
-                      <div
-                        key={collectionIndex}
-                        style={{
-                          ...styles.workshopCollection,
-                          ...workshopCollectionStyle
-                        }}
-                      >
-                        <h4>{collection.heading}</h4>
-                        {collection.workshops.map((workshop, index) => (
-                          <div key={index} style={styles.workshop}>
-                            <div>{workshop.workshop_date_range_string}</div>
-                            <div>{workshop.location_name}</div>
-                            <div>{workshop.location_address}</div>
+                {!workshopCollections.every(
+                  collection => collection.workshops.length === 0
+                ) &&
+                  workshopCollections.map((collection, collectionIndex) => {
+                    // If the partner is not offering CSA workshops, we display a different message
+                    if (
+                      collection.workshops.length === 0 &&
+                      collection.heading ===
+                        `${ActiveCourseWorkshops.CSA} Workshops`
+                    ) {
+                      return (
+                        <div
+                          key={collectionIndex}
+                          style={{
+                            ...styles.workshopCollection,
+                            ...workshopCollectionStyle
+                          }}
+                        >
+                          <h4>{collection.heading}</h4>
+                          <div>
+                            This Regional Partner is not offering CSA workshops
+                            at this time, but Code.org has a solution for you!
+                            Please complete the professional learning
+                            application, and a Code.org staff member will be in
+                            touch.
                           </div>
-                        ))}
-                      </div>
-                    )
-                )}
+                        </div>
+                      );
+                    } else if (collection.workshops.length > 0) {
+                      return (
+                        <div
+                          key={collectionIndex}
+                          style={{
+                            ...styles.workshopCollection,
+                            ...workshopCollectionStyle
+                          }}
+                        >
+                          <h4>{collection.heading}</h4>
+                          {collection.workshops.map((workshop, index) => (
+                            <div key={index} style={styles.workshop}>
+                              <div>{workshop.workshop_date_range_string}</div>
+                              <div>{workshop.location_name}</div>
+                              <div>{workshop.location_address}</div>
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    }
+                  })}
               </div>
             )}
 
@@ -377,7 +440,8 @@ class RegionalPartnerSearch extends Component {
             </div>
 
             {/* These two links duplicate the buttons that appear above. */}
-            {appState === WorkshopApplicationStates.currently_open &&
+            {this.shouldDisplayApplicationLink() &&
+              appState === WorkshopApplicationStates.currently_open &&
               !partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
@@ -387,7 +451,8 @@ class RegionalPartnerSearch extends Component {
                 />
               )}
 
-            {appState === WorkshopApplicationStates.currently_open &&
+            {this.shouldDisplayApplicationLink() &&
+              appState === WorkshopApplicationStates.currently_open &&
               partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
@@ -546,6 +611,8 @@ StartApplicationButton.propTypes = {
   nominated: PropTypes.bool,
   priorityDeadlineDate: PropTypes.string
 };
+
+export const UnconnectedRegionalPartnerSearch = RegionalPartnerSearch;
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

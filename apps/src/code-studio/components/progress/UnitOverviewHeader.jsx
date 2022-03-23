@@ -49,15 +49,15 @@ class UnitOverviewHeader extends Component {
       courseViewPath: PropTypes.string.isRequired
     }),
     announcements: PropTypes.arrayOf(announcementShape),
+    courseVersionId: PropTypes.number.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     unitTitle: PropTypes.string.isRequired,
     unitDescription: PropTypes.string.isRequired,
     unitStudentDescription: PropTypes.string.isRequired,
-    betaTitle: PropTypes.string,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
-    isVerifiedTeacher: PropTypes.bool.isRequired,
+    isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
     localeCode: PropTypes.string
   };
@@ -98,7 +98,6 @@ class UnitOverviewHeader extends Component {
       unitTitle,
       unitDescription,
       unitStudentDescription,
-      betaTitle,
       viewAs,
       isSignedIn,
       showCourseUnitVersionWarning,
@@ -108,12 +107,14 @@ class UnitOverviewHeader extends Component {
       showHiddenUnitWarning,
       courseName,
       userId,
-      isVerifiedTeacher,
+      isVerifiedInstructor,
       hasVerifiedResources
     } = this.props;
 
     const displayVerifiedResources =
-      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
+      viewAs === ViewType.Instructor &&
+      !isVerifiedInstructor &&
+      hasVerifiedResources;
 
     const displayVersionWarning =
       showRedirectWarning &&
@@ -195,8 +196,7 @@ class UnitOverviewHeader extends Component {
           <div id="heading" style={styles.heading}>
             <div style={styles.titleWrapper}>
               <h1 style={styles.title} id="script-title">
-                {unitTitle}{' '}
-                {betaTitle && <span className="betatext">{betaTitle}</span>}
+                {unitTitle}
               </h1>
               {filteredVersions.length > 1 && (
                 <AssignmentVersionSelector
@@ -206,14 +206,14 @@ class UnitOverviewHeader extends Component {
                 />
               )}
             </div>
-            {viewAs === ViewType.Teacher && (
+            {viewAs === ViewType.Instructor && (
               <SafeMarkdown
                 style={styles.description}
                 openExternalLinksInNewTab={true}
                 markdown={unitDescription}
               />
             )}
-            {viewAs === ViewType.Student && (
+            {viewAs === ViewType.Participant && (
               <SafeMarkdown
                 style={styles.description}
                 openExternalLinksInNewTab={true}
@@ -262,15 +262,15 @@ export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
   announcements: state.announcements || [],
+  courseVersionId: state.progress.courseVersionId,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   unitTitle: state.progress.unitTitle,
   unitDescription: state.progress.unitDescription,
   unitStudentDescription: state.progress.unitStudentDescription,
-  betaTitle: state.progress.betaTitle,
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
-  isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
   localeCode: state.locales.localeCode
 }))(UnitOverviewHeader);

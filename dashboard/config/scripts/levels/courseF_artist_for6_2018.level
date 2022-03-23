@@ -124,7 +124,6 @@
         </category>
         <category name="Loops" id="callMe">
           <block type="controls_for_counter" inline="true" editable="false">
-            <mutation counter="counter"/>
             <value name="FROM">
               <block type="math_number">
                 <title name="NUM">1</title>
@@ -183,7 +182,6 @@
               </value>
               <next>
                 <block type="controls_for_counter">
-                  <mutation counter="counter"/>
                   <value name="FROM">
                     <block type="math_number">
                       <title name="NUM">15</title>

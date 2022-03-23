@@ -20,6 +20,8 @@ class MakerControllerTest < ActionController::TestCase
     @csd6_2018 = ensure_script Script::CSD6_2018_NAME, '2018'
     @csd6_2019 = ensure_script Script::CSD6_2019_NAME, '2019'
     @csd6_2020_unstable = ensure_script 'csd6-2020-unstable', '2020', false
+
+    Script.clear_cache
   end
 
   test_redirect_to_sign_in_for :home
@@ -62,6 +64,36 @@ class MakerControllerTest < ActionController::TestCase
     assert_includes @student.scripts, @csd6_2019
 
     assert_equal @csd6_2019, MakerController.maker_script(@student)
+  end
+
+  test "shows pilot script if student is enrolled" do
+    @pilot_script = create(:script, name: 'csd-pilot-test', family_name: 'csd6', version_year: '2022', is_maker_unit: true, pilot_experiment: 'my-experiment').tap do |script|
+      lesson_group = create :lesson_group, script: script
+      lesson = create :lesson, script: script, lesson_group: lesson_group
+      create :script_level, script: script, lesson: lesson
+    end
+
+    @pilot_student = create :student
+    experiment = create :single_user_experiment, min_user_id: @pilot_student.id, name: 'my-experiment'
+    create :user_script, user: @pilot_student, script: @pilot_script, assigned_at: Time.now
+    assert_includes @pilot_student.scripts, @pilot_script
+
+    assert_equal @pilot_script, MakerController.maker_script(@pilot_student)
+    experiment.destroy
+  end
+
+  test "does not show pilot script if student is not in experiment" do
+    @pilot_script = create(:script, name: 'csd-pilot-test', family_name: 'csd6', version_year: '2022', is_maker_unit: true, pilot_experiment: 'my-experiment').tap do |script|
+      lesson_group = create :lesson_group, script: script
+      lesson = create :lesson, script: script, lesson_group: lesson_group
+      create :script_level, script: script, lesson: lesson
+    end
+
+    ## Even creating the user_script is not sufficient: the student must be enrolled in the pilot for it to show up
+    @pilot_student = create :student
+    create :user_script, user: @pilot_student, script: @pilot_script, assigned_at: Time.now
+
+    assert_equal @csd6_2019, MakerController.maker_script(@pilot_student)
   end
 
   test "shows CSD6-2018 if CSD6-2018 is assigned" do
@@ -501,7 +533,7 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_script(script_name, version_year, is_stable=true)
     Script.find_by_name(script_name) ||
-      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_maker_unit: true, published_state: is_stable ? SharedConstants::PUBLISHED_STATE.stable : SharedConstants::PUBLISHED_STATE.preview).tap do |script|
+      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_maker_unit: true, published_state: is_stable ? SharedCourseConstants::PUBLISHED_STATE.stable : SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script
         lesson = create :lesson, script: script, lesson_group: lesson_group
         create :script_level, script: script, lesson: lesson
@@ -510,6 +542,6 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_course(course_name, version_year)
     UnitGroup.find_by_name(course_name) ||
-      create(:unit_group, name: course_name, version_year: version_year, family_name: 'csd', published_state: SharedConstants::PUBLISHED_STATE.stable)
+      create(:unit_group, name: course_name, version_year: version_year, family_name: 'csd', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
   end
 end

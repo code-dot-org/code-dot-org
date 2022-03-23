@@ -11,6 +11,9 @@ describe('CapacitiveTouchSensor', function() {
     boardClient = new MicrobitStubBoard();
     sensor = new CapacitiveTouchSensor({mb: boardClient, pin: testPin});
   });
+  afterEach(() => {
+    sinon.restore();
+  });
 
   it(`attributes are readonly`, () => {
     let isPressedDescriptor = Object.getOwnPropertyDescriptor(

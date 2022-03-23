@@ -1,0 +1,517 @@
+{
+  "script": {
+    "name": "csa3-2022",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2022-03-16 13:00:23 UTC",
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csa3-2022"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-3",
+      "name": "One-Dimensional (1D) Arrays",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Array Elements",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "For Loops",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Array Algorithms",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Enhanced For Loops",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Static Variables and Constants",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Polymorphism",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Finding Pairs",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Reversing Arrays",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Finding Duplicates",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Data for Social Good Project – Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Data for Social Good Project – Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Data for Social Good Project – Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "FRQ Practice",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Unit 3 Assessment",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "83bf5fa1-4513-4e1e-931e-2d53d4be8037",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "83bf5fa1-4513-4e1e-931e-2d53d4be8037",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022"
+      }
+    },
+    {
+      "key": "e302ee72-3326-412e-b36a-8939133cfd0e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e302ee72-3326-412e-b36a-8939133cfd0e",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "c02630dd-f335-47aa-8b86-adf13a4341c4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c02630dd-f335-47aa-8b86-adf13a4341c4",
+        "lesson_activity.key": "83bf5fa1-4513-4e1e-931e-2d53d4be8037"
+      }
+    },
+    {
+      "key": "5590cfed-888d-4dfd-b4e2-c95e742b4bec",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "5590cfed-888d-4dfd-b4e2-c95e742b4bec",
+        "lesson_activity.key": "e302ee72-3326-412e-b36a-8939133cfd0e"
+      }
+    },
+    {
+      "key": "e46ed9f4-2d85-4ddc-8df7-ba35a9fe22c4",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "e46ed9f4-2d85-4ddc-8df7-ba35a9fe22c4",
+        "lesson_activity.key": "e302ee72-3326-412e-b36a-8939133cfd0e"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022",
+        "activity_section.key": "c02630dd-f335-47aa-8b86-adf13a4341c4"
+      },
+      "level_keys": [
+        "CSA 2022 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022",
+        "activity_section.key": "5590cfed-888d-4dfd-b4e2-c95e742b4bec"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022",
+        "activity_section.key": "e46ed9f4-2d85-4ddc-8df7-ba35a9fe22c4"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood - No Bucket Sandbox"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022",
+        "activity_section.key": "c02630dd-f335-47aa-8b86-adf13a4341c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022",
+        "activity_section.key": "5590cfed-888d-4dfd-b4e2-c95e742b4bec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2022",
+        "activity_section.key": "e46ed9f4-2d85-4ddc-8df7-ba35a9fe22c4"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

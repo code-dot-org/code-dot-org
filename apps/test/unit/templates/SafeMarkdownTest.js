@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 describe('SafeMarkdown', () => {
@@ -141,19 +141,11 @@ describe('SafeMarkdown', () => {
     );
 
     expect(
-      inlineXml.equals(
-        <div>
-          <p>
-            Text with{' '}
-            <xml>
-              <block type="xml" />
-            </xml>{' '}
-            inline
-          </p>
-        </div>
-      ),
+      inlineXml.html(),
       'inline xml blocks render within their containing paragraph'
-    ).to.equal(true);
+    ).to.equal(
+      '<div><p>Text with <xml is="xml"><block is="block" type="xml"></block></xml> inline</p></div>'
+    );
 
     // Need to use markdown={} rather than markdown="" here so React doesn't
     // escape the newlines
@@ -171,7 +163,7 @@ describe('SafeMarkdown', () => {
       blockXml.html(),
       'block xml blocks render as top-level elements (siblings to paragraphs)'
     ).to.equal(
-      '<div><p>Text with</p>\n<xml><block type="xml"></block></xml>\n<p>in its own block</p></div>'
+      '<div><p>Text with</p>\n<xml is="xml"><block is="block" type="xml"></block></xml>\n<p>in its own block</p></div>'
     );
   });
 
@@ -280,15 +272,9 @@ describe('SafeMarkdown', () => {
     const xmlJSInjection = shallow(
       <SafeMarkdown markdown='<xml onload="alert(&#x22;foxtrot&#x22;)"><block/></xml>' />
     );
-    expect(
-      xmlJSInjection.equals(
-        <div>
-          <xml>
-            <block />
-          </xml>
-        </div>
-      ),
-      'JS events in XML are ignored'
-    ).to.equal(true);
+
+    expect(xmlJSInjection.html(), 'JS events in XML are ignored').to.equal(
+      '<div><xml is="xml"><block is="block"></block></xml></div>'
+    );
   });
 });

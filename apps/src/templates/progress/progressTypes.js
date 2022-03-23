@@ -48,7 +48,9 @@ const levelShape = {
   /** sublevels: PropTypes.array */ // See below
 };
 // Avoid recursive definition
-levelShape.sublevels = PropTypes.arrayOf(PropTypes.shape(levelShape));
+levelShape.sublevels = PropTypes.arrayOf(
+  PropTypes.shape(levelWithProgressType)
+);
 
 export const levelType = PropTypes.shape(levelShape);
 
@@ -67,6 +69,7 @@ export const levelType = PropTypes.shape(levelShape);
 export const levelWithProgressType = PropTypes.shape({
   ...levelShape,
   status: PropTypes.string.isRequired,
+  paired: PropTypes.bool,
   isLocked: PropTypes.bool,
   isCurrentLevel: PropTypes.bool
 });

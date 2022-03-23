@@ -1,4 +1,5 @@
 default['cdo-varnish'] = {
+  enabled: false,
   'backends' => {
     'localhost' => '127.0.0.1',
   },

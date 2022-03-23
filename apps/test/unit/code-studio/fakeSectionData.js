@@ -3,6 +3,7 @@
 const section1Id = 42;
 const section2Id = 43;
 const lesson1Id = 12;
+export const scriptId = 3000;
 
 const fakeSectionData = {
   [section1Id]: {
@@ -17,7 +18,7 @@ const fakeSectionData = {
           user_level_data: {
             user_id: 1001,
             level_id: 2000,
-            script_id: 3000
+            script_id: scriptId
           },
           readonly_answers: false
         },
@@ -28,7 +29,7 @@ const fakeSectionData = {
           user_level_data: {
             user_id: 1002,
             level_id: 2000,
-            script_id: 3000
+            script_id: scriptId
           },
           readonly_answers: false
         },
@@ -39,7 +40,7 @@ const fakeSectionData = {
           user_level_data: {
             user_id: 1003,
             level_id: 2000,
-            script_id: 3000
+            script_id: scriptId
           },
           readonly_answers: true
         }
@@ -57,7 +58,7 @@ const fakeSectionData = {
           user_level_data: {
             user_id: 1004,
             level_id: 2000,
-            script_id: 3000
+            script_id: scriptId
           },
           readonly_answers: false
         }

@@ -76,6 +76,27 @@ For example, I can include [the testimonials template](https://github.com/code-d
 
 <%= view :testimonials %>
 
+## Partials with parameters
+
+The above concept can be extended with the use of parameters.  A template that accepts parameters must be implemented in HTML, with a `.html` file extension, and must contain strings like `%parameter_name%` which will be replaced with the parameter values.
+
+For example, the following can be placed in an `.md.partial` file, and will include [this template](https://github.com/code-dot-org/code-dot-org/blob/cc99e4a86f5f2ebaa443339f3c93244f63a50b35/pegasus/sites.v3/code.org/views/featured_project.html):
+
+### Code:
+
+```
+{{ featured_project, title: "Afternoon", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects" }}
+```
+
+### Result:
+
+<!--
+  As above, this is using the ERB view syntax, but in this case to include a
+  template that in turn uses a partial with parameters.
+-->
+
+<%= view :editing_concepts_partial_example %>
+
 ## Advanced Partials
 
 If the view you want to include requires arguments, you can simply create an intermediary view. For example, to use the `about_people` view (which requires a `people` argument) you can create a view `about_team.erb`:

@@ -38,6 +38,8 @@ export const BOARD_EVENT_ALIASES = {
   doubleTap: 'tap:double'
 };
 
+export const SONG_SINGLE_NOTE = ['G3'];
+
 // For use with Piezo.play()
 // Preferred tempo: 104
 export const SONG_CHARGE = [
@@ -49,8 +51,6 @@ export const SONG_CHARGE = [
   ['E4', 3 / 16],
   ['G4', 1]
 ];
-
-export const SONG_1D = ['B4', null, 'B4', null, 'G#4', 'F#4', 'E4', null, 'E4'];
 
 // Preferred tempo: 80
 export const SONG_LEVEL_COMPLETE = [

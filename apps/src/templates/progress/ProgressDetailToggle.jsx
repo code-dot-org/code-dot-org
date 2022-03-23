@@ -14,6 +14,7 @@ import groupSummaryActive from './images/groupToggleSummaryActive.png';
 import groupSummaryInactive from './images/groupToggleSummaryInactive.png';
 import groupDetailActive from './images/groupToggleDetailActive.png';
 import groupDetailInactive from './images/groupToggleDetailInactive.png';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const imageSets = {
   teal: {
@@ -38,6 +39,7 @@ class ProgressDetailToggle extends React.Component {
   static propTypes = {
     activeColor: PropTypes.string,
     whiteBorder: PropTypes.bool,
+    toggleStudyGroup: PropTypes.string,
 
     // redux backed
     isPlc: PropTypes.bool.isRequired,
@@ -47,7 +49,20 @@ class ProgressDetailToggle extends React.Component {
   };
 
   onChange = () => {
-    this.props.setIsSummaryView(!this.props.isSummaryView);
+    const isSummaryView = !this.props.isSummaryView;
+    this.recordEvent(isSummaryView);
+    this.props.setIsSummaryView(isSummaryView);
+  };
+
+  recordEvent = isSummary => {
+    firehoseClient.putRecord(
+      {
+        study: 'progress-detail-toggle',
+        study_group: this.props.toggleStudyGroup,
+        event: isSummary ? 'see-summary' : 'see-detail'
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {

@@ -134,16 +134,16 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
   end
 
   test 'clone_child_levels clones child levels' do
-    parent = create :level, level_num: 'custom'
-    child = create :level, level_num: 'custom', name: 'child_level'
+    parent = create :level
+    child = create :level, name: 'child_level'
     ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
     Level.clone_child_levels(parent, '_test_clone')
     assert_equal 'child_level_test_clone', parent.reload.child_levels.first.name
   end
 
   test 'clone_child_levels returns update params' do
-    parent = create :level, level_num: 'custom'
-    child = create :level, level_num: 'custom', name: 'child_level'
+    parent = create :level
+    child = create :level, name: 'child_level'
     ParentLevelsChildLevel.create(
       parent_level: parent,
       child_level: child,
@@ -167,5 +167,14 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     real_level1.save!
 
     assert_equal template_level, real_level1.project_template_level
+  end
+
+  test 'can unset project template level' do
+    template_level = create(:level)
+    real_level = create(:level, project_template_level_name: template_level.name)
+    assert_equal template_level, real_level.project_template_level
+
+    real_level.update!(project_template_level_name: nil)
+    assert_nil real_level.project_template_level
   end
 end

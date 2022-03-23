@@ -84,7 +84,12 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function() {
       this.setInputsInline(true);
-      this.setHSV(mathBlockColor.h, mathBlockColor.s, mathBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        mathBlockColor.h,
+        mathBlockColor.s,
+        mathBlockColor.v
+      );
       this.appendValueInput('X')
         .setCheck('Number')
         .appendTitle(new blockly.FieldLabel('X:'));
@@ -124,7 +129,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_move = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockMove()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -141,7 +151,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_turn = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockTurn()))
         .appendTitle(new blockly.FieldDropdown(rotateDirections), 'DIR');
@@ -158,7 +173,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_place = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockPlace()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -183,7 +203,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_till = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockTill()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -200,7 +225,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_attack = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockActionAttack()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -217,7 +247,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_destroy = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockDestroyBlock()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -234,7 +269,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_collectall = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput().appendTitle(
         new blockly.FieldLabel(i18n.blockActionCollectAll())
       );
@@ -250,7 +290,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_collect = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
         .appendTitle(new blockly.FieldLabel(i18n.blockActionCollect()));
@@ -271,7 +316,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_drop = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockActionDrop()))
         .appendTitle(new blockly.FieldDropdown(fourDirections), 'DIR');
@@ -304,7 +354,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_dropall = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockActionDropAll()))
         .appendTitle(new blockly.FieldDropdown(fourDirections), 'DIR');
@@ -321,7 +376,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_detect = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockActionDetect()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -340,7 +400,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_inspect = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockActionInspect()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -359,7 +424,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_inspectdata = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockActionInspectData()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -378,7 +448,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_detectredstone = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.blockActionDetectRedstone()))
         .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
@@ -397,7 +472,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_getitemdetail = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendValueInput('SLOTNUM')
         .setCheck('Number')
         .appendTitle(
@@ -422,7 +502,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_getitemspace = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendValueInput('SLOTNUM')
         .setCheck('Number')
         .appendTitle(
@@ -447,7 +532,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_getitemcount = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendValueInput('SLOTNUM')
         .setCheck('Number')
         .appendTitle(
@@ -472,7 +562,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_transfer = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput().appendTitle(
         new blockly.FieldLabel(i18n.blockActionTransfer())
       );
@@ -514,7 +609,12 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_tptoplayer = {
     helpUrl: '',
     init: function() {
-      this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        agentBlockColor.h,
+        agentBlockColor.s,
+        agentBlockColor.v
+      );
       this.appendDummyInput().appendTitle(
         new blockly.FieldLabel(i18n.blockActionTeleportToPlayer())
       );
@@ -530,7 +630,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_wait = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         customControlColor.h,
         customControlColor.s,
         customControlColor.v
@@ -558,7 +659,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_executeasother = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -596,7 +698,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_timesetbyname = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -617,7 +720,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_timesetbynumber = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -645,7 +749,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_weather = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -666,7 +771,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_tptotarget = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -692,7 +798,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_tptopos = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -726,7 +833,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_fill = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -784,7 +892,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_give = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -823,7 +932,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_kill = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -845,7 +955,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_setblock = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -893,7 +1004,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_summon = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -929,7 +1041,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_testforblock = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -974,7 +1087,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_testforblocks = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -1041,7 +1155,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_clone = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -1110,7 +1225,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_clonefiltered = {
     helpUrl: '',
     init: function() {
-      this.setHSV(
+      Blockly.cdoUtils.setHSV(
+        this,
         nonAgentBlockColor.h,
         nonAgentBlockColor.s,
         nonAgentBlockColor.v
@@ -1182,7 +1298,12 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_createblock = {
     init: function() {
-      this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        itemBlockColor.h,
+        itemBlockColor.s,
+        itemBlockColor.v
+      );
       this.appendValueInput('BLOCKTYPE')
         .setCheck(Blockly.JavaScript.STRING)
         .appendTitle(new blockly.FieldLabel(i18n.blockType()));
@@ -1212,7 +1333,12 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_block = {
     init: function() {
-      this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        itemBlockColor.h,
+        itemBlockColor.s,
+        itemBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.itemTypeBlock()))
         .appendTitle(
@@ -1233,7 +1359,12 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_miscellaneous = {
     init: function() {
-      this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        itemBlockColor.h,
+        itemBlockColor.s,
+        itemBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.itemTypeMiscellaneous()))
         .appendTitle(
@@ -1254,7 +1385,12 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_decoration = {
     init: function() {
-      this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        itemBlockColor.h,
+        itemBlockColor.s,
+        itemBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.itemTypeDecoration()))
         .appendTitle(
@@ -1275,7 +1411,12 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_tool = {
     init: function() {
-      this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        itemBlockColor.h,
+        itemBlockColor.s,
+        itemBlockColor.v
+      );
       this.appendDummyInput()
         .appendTitle(new blockly.FieldLabel(i18n.itemTypeTool()))
         .appendTitle(
@@ -1296,7 +1437,12 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_getnameof = {
     init: function() {
-      this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        itemBlockColor.h,
+        itemBlockColor.s,
+        itemBlockColor.v
+      );
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
         .appendTitle(new blockly.FieldLabel(i18n.getnameof()));
@@ -1315,7 +1461,12 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Blocks.craft_getdataof = {
     init: function() {
-      this.setHSV(itemBlockColor.h, itemBlockColor.s, itemBlockColor.v);
+      Blockly.cdoUtils.setHSV(
+        this,
+        itemBlockColor.h,
+        itemBlockColor.s,
+        itemBlockColor.v
+      );
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
         .appendTitle(new blockly.FieldLabel(i18n.getdataof()));

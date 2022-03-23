@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -39,6 +40,7 @@ require 'state_abbr'
 module Pd::Application
   class Facilitator1819Application < FacilitatorApplicationBase
     include Pd::Facilitator1819ApplicationConstants
+    include Pd::SharedApplicationConstants
 
     has_one :pd_fit_weekend1819_registration,
       class_name: 'Pd::FitWeekend1819Registration',

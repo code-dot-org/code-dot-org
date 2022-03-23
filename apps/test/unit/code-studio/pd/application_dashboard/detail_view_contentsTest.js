@@ -10,13 +10,29 @@ import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();
 
   // We aren't testing any of the responses of the workshop selector control, so just
   // have a fake server to handle calls and suppress warnings
-  sinon.fakeServer.create();
+  let server;
+  before(() => {
+    server = sinon.fakeServer.create();
+    experiments.setEnabled(
+      experiments.TEACHER_APPLICATION_SAVING_REOPENING,
+      true
+    );
+  });
+
+  after(() => {
+    server.restore();
+    experiments.setEnabled(
+      experiments.TEACHER_APPLICATION_SAVING_REOPENING,
+      false
+    );
+  });
 
   let context;
 
@@ -65,6 +81,10 @@ describe('DetailViewContents', () => {
     school_stats: {}
   };
 
+  // Nobody is able to set an application status to incomplete from detail view
+  const getApplicationStatusesWithoutIncomplete = (type, addAutoEmail = true) =>
+    _.omit(getApplicationStatuses(type, addAutoEmail), ['incomplete']);
+
   const mountDetailView = (applicationType, overrides = {}) => {
     const defaultApplicationData = {
       ...DEFAULT_APPLICATION_DATA,
@@ -74,7 +94,7 @@ describe('DetailViewContents', () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'facilitator',
+      viewType: defaultApplicationData.application_type.toLowerCase(),
       isWorkshopAdmin: false
     };
 
@@ -130,7 +150,7 @@ describe('DetailViewContents', () => {
       // lock button is disabled for all statuses except "finalized"
       // statuses in the constant are an object {value: label}
       Object.keys(
-        getApplicationStatuses(applicationType.toLowerCase())
+        getApplicationStatusesWithoutIncomplete(applicationType.toLowerCase())
       ).forEach(status => {
         const statusIsFinal = ApplicationFinalStatuses.includes(status);
         detailView
@@ -338,12 +358,39 @@ describe('DetailViewContents', () => {
         expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
         expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
       });
+
+      it(`cannot make status incomplete from dropdown in ${applicationType}`, () => {
+        const detailView = mountDetailView(applicationType);
+        expect(
+          detailView
+            .find('#DetailViewHeader select')
+            .find('option')
+            .find('[value="incomplete"]')
+        ).to.have.lengthOf(0);
+      });
+
+      it(`incomplete status is in dropdown if ${applicationType} application is incomplete`, () => {
+        const detailView = mountDetailView('Teacher', {
+          applicationData: {
+            ...DEFAULT_APPLICATION_DATA,
+            status: 'incomplete',
+            scholarship_status: null,
+            update_emails_sent_by_system: false
+          }
+        });
+        expect(
+          detailView
+            .find('#DetailViewHeader select')
+            .find('option')
+            .find('[value="incomplete"]')
+        ).to.have.lengthOf(1);
+      });
     });
   }
 
   describe('Regional Partner View', () => {
     it('has delete button', () => {
-      const detailView = mountDetailView(applicationType, {
+      const detailView = mountDetailView('Teacher', {
         isWorkshopAdmin: false
       });
       const deleteButton = detailView.find('button#delete');
@@ -377,6 +424,7 @@ describe('DetailViewContents', () => {
         .simulate('click');
 
       // Dropdown is enabled
+      // note: this is the scholarship dropdown which is always disabled when scholarships are locked.
       expect(
         getLastRow()
           .find('Select')
@@ -437,13 +485,10 @@ describe('DetailViewContents', () => {
       });
     }
 
-    for (const applicationStatus of [
-      'unreviewed',
-      'pending',
-      'waitlisted',
-      'declined',
-      'withdrawn'
-    ]) {
+    for (const applicationStatus of _.difference(
+      Object.keys(getApplicationStatusesWithoutIncomplete('teacher')),
+      ScholarshipStatusRequiredStatuses
+    )) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
         detailView = mountDetailView('Teacher', {
           applicationData: {
@@ -474,7 +519,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getApplicationStatuses('teacher', true)
+        getApplicationStatusesWithoutIncomplete('teacher', true)
       );
       var i = 0;
       options.forEach(option => {
@@ -483,7 +528,7 @@ describe('DetailViewContents', () => {
       });
     });
 
-    it('does not appends auto email text if set to false', () => {
+    it('does not append auto email text if set to false', () => {
       detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
@@ -495,7 +540,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getApplicationStatuses('teacher', false)
+        getApplicationStatusesWithoutIncomplete('teacher', false)
       );
       var i = 0;
       options.forEach(option => {

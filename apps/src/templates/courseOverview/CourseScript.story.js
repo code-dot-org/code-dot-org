@@ -26,7 +26,7 @@ const defaultProps = {
     'transfer it between people and computational devices. The unit then ' +
     'explores the structure and design of the internet and the implications of ' +
     'those design decisions.',
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Instructor,
   selectedSectionId: 11,
   hiddenLessonState: unhiddenState,
   hasNoSections: true,

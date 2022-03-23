@@ -1,6 +1,6 @@
 %link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
 %script{src: webpack_asset_path('js/lessons/edit.js'),
-        data: {lesson: @lesson_data.to_json, relatedLessons: @related_lessons.to_json, searchOptions: @search_options.to_json}}
+        data: {unitForLesson: @lesson.script.summarize_for_lesson_edit.to_json, lesson: @lesson_data.to_json, relatedLessons: @related_lessons.to_json, levelSearchingInfo: {searchOptions: @search_options, programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit)}.to_json}}
 
-= form_for @lesson, {url: script_lesson_path(@lesson.script, @lesson)} do |f|
+= form_for @lesson, {url: @lesson.get_uncached_show_path} do |f|
   #edit-container

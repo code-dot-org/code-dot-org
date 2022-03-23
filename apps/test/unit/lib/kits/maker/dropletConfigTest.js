@@ -1,5 +1,5 @@
 /** @file Test maker droplet config behavior */
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import dropletConfig, {
   configMicrobit
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
@@ -140,9 +140,7 @@ describe('maker/dropletConfig.js', () => {
           ['B2', 1 / 4],
           ['C3', 1 / 2]
         ])
-      ).to.equal(
-        '[\n' + '  ["A1",0.25],\n' + '  ["B2",0.25],\n' + '  ["C3",0.5]\n' + ']'
-      );
+      ).to.equal('[' + '["A1",0.25], ' + '["B2",0.25], ' + '["C3",0.5]' + ']');
     });
   });
 

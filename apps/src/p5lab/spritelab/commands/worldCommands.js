@@ -4,6 +4,7 @@ import {
   addTextPrompt,
   addMultipleChoicePrompt
 } from '../../redux/spritelabInput';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 export const commands = {
   comment(text) {
@@ -23,15 +24,33 @@ export const commands = {
 
   getTime(unit) {
     if (unit === 'seconds') {
-      return this.getAdjustedWorldTime() || 0;
+      return this.getUnpausedWorldTime() - this.timerResetTime.seconds || 0;
     } else if (unit === 'frames') {
-      return this.p5.World.frameCount || 0;
+      return this.p5.World.frameCount - this.timerResetTime.frames || 0;
     }
     return 0;
   },
 
+  resetTimer() {
+    this.timerResetTime.seconds = this.getUnpausedWorldTime();
+    this.timerResetTime.frames = this.currentFrame();
+  },
+
   hideTitleScreen() {
     this.screenText = {};
+  },
+
+  playSound(url) {
+    this.soundLog.push(url);
+    audioCommands.playSound({url, loop: false});
+  },
+
+  playSpeech(speech) {
+    audioCommands.playSpeech({
+      text: speech,
+      gender: 'female',
+      language: 'English'
+    });
   },
 
   printText(text) {
@@ -44,19 +63,24 @@ export const commands = {
   },
 
   // Deprecated. The new background block is setBackgroundImageAs
-  setBackgroundImage(img) {
-    if (this.p5._preloadedBackgrounds && this.p5._preloadedBackgrounds[img]) {
-      let backgroundImage = this.p5._preloadedBackgrounds[img];
+  setBackgroundImage(imageName) {
+    if (
+      this.p5._preloadedBackgrounds &&
+      this.p5._preloadedBackgrounds[imageName]
+    ) {
+      let backgroundImage = this.p5._preloadedBackgrounds[imageName];
+      backgroundImage.name = imageName;
       this.setBackground(backgroundImage);
     }
   },
 
-  setBackgroundImageAs(img) {
+  setBackgroundImageAs(imageName) {
     if (
       this.p5._predefinedSpriteAnimations &&
-      this.p5._predefinedSpriteAnimations[img]
+      this.p5._predefinedSpriteAnimations[imageName]
     ) {
-      let backgroundImage = this.p5._predefinedSpriteAnimations[img];
+      let backgroundImage = this.p5._predefinedSpriteAnimations[imageName];
+      backgroundImage.name = imageName;
       this.setBackground(backgroundImage);
     }
   },

@@ -85,14 +85,14 @@ class AccountPurgerTest < ActiveSupport::TestCase
     test_name = 'Boaty McBoatface'
 
     refute_equal test_name, @student.name
-    assert_empty PEGASUS_DB[:user_storage_ids].where user_id: @student.id
+    assert_nil storage_id_for_user_id(@student.id)
 
     # Perform Dashboard (Activerecord) and Pegasus DB operations as
     # a side effect, then raise, and prove the changes weren't saved
     stub_code_ran = false
     DeleteAccountsHelper.any_instance.stubs(:purge_user).with do |user|
       user.update(name: test_name)
-      PEGASUS_DB[:user_storage_ids].insert(user_id: user.id)
+      create_storage_id_for_user(user.id)
       stub_code_ran = true
       raise 'Intentional failure during transaction'
     end
@@ -104,7 +104,7 @@ class AccountPurgerTest < ActiveSupport::TestCase
     @student.reload
 
     assert stub_code_ran
-    assert_empty PEGASUS_DB[:user_storage_ids].where(user_id: @student.id)
+    assert_nil storage_id_for_user_id(@student.id)
     refute_equal test_name, @student.name
   end
 end

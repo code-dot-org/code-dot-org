@@ -101,7 +101,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">shrinking</title>
+          <title name="NAME" id="shrinking">shrinking</title>
           <statement name="STACK">
             <block type="gamelab_changeProp" inline="true">
               <title name="PROPERTY">"scale"</title>
@@ -122,7 +122,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if" inline="false">
               <value name="IF0">
@@ -240,7 +240,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">growing</title>
+          <title name="NAME" id="growing">growing</title>
           <statement name="STACK">
             <block type="gamelab_changeProp" inline="true">
               <title name="PROPERTY">"scale"</title>
@@ -261,7 +261,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">jittering</title>
+          <title name="NAME" id="jittering">jittering</title>
           <statement name="STACK">
             <block type="gamelab_changeProp" inline="true">
               <title name="PROPERTY">"scale"</title>
@@ -291,7 +291,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">patrolling</title>
+          <title name="NAME" id="patrolling">patrolling</title>
           <statement name="STACK">
             <block type="gamelab_moveForward" inline="true">
               <value name="SPRITE">

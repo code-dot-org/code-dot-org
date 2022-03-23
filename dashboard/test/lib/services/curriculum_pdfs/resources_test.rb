@@ -17,6 +17,12 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     @fake_google_drive_file.stubs(:id).returns("google-drive-file-id")
     Services::CurriculumPdfs.stubs(:google_drive_file_by_url).returns(@fake_google_drive_file)
 
+    # We have some custom logic in the title page generation which aggressively
+    # checks for the actual existence of the file on the filesystem and raises
+    # an exception if it doesn't find it; we don't actually want to create any
+    # files on the filesystem as part of our test, so we stub that method
+    Services::CurriculumPdfs.stubs(:generate_lesson_resources_title_page)
+
     # mock some file operations for the 'download PDF from url' case
     IO.stubs(:copy_stream)
     URI.stubs(:open).returns(StringIO.new)

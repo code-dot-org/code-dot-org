@@ -1,8 +1,6 @@
 name 'CSA U1 Assessment q2'
 height 'auto'
 
-question ‘What will be printed when the following code segment is run? ’
-
 right ‘The Painter is blocked from moving north’
 wrong ‘The Painter is blocked from moving south’
 wrong ‘The Painter is blocked from moving east’

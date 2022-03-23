@@ -1,6 +1,0 @@
-{
-  "func": "camera.position.y",
-  "category": "World",
-  "type": "property",
-  "noAutocomplete": true
-}

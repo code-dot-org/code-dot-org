@@ -1,13 +1,15 @@
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
-import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress, {
   addDataByUnit,
-  setLessonOfInterest,
-  setShowSectionProgressDetails
+  setLessonOfInterest
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection, {
   setValidScripts
 } from '@cdo/apps/redux/unitSelectionRedux';
+import teacherSections, {
+  setSections,
+  selectSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
@@ -48,19 +50,19 @@ export function createStore(numStudents, numLessons) {
   try {
     registerReducers({
       sectionProgress,
-      sectionData,
+      teacherSections,
       unitSelection,
       locales
     });
   } catch {}
   const store = createStoreWithReducers();
-  store.dispatch(setSection(section));
+  store.dispatch(setSections([section]));
+  store.dispatch(selectSection(section.id));
   store.dispatch(setValidScripts([scriptData], [scriptData.id], [], section));
   store.dispatch(
     addDataByUnit(buildSectionProgress(section.students, scriptData))
   );
   store.dispatch(setLessonOfInterest(0));
-  store.dispatch(setShowSectionProgressDetails(true));
   return store;
 }
 

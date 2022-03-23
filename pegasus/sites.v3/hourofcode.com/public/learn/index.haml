@@ -8,6 +8,9 @@ social:
   og:image:height: '630'
 ---
 
+:ruby
+  hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
 -# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
 :css
   @media (min-width: 992px)
@@ -55,40 +58,58 @@ social:
     padding-right: 3px;
     vertical-align: top;
   }
-  @media screen and (min-width: 992px) {
-    #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
-      background-position: 70% 70%;
+
+- unless ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
+  :css
+    @media screen and (min-width: 992px) {
+      #fullwidth {
+        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
+        background-position: 70% 70%;
+      }
     }
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
-      background-position: 67% 50%;
-      padding-bottom: 200px;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      #fullwidth {
+        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
+        background-position: 67% 50%;
+        padding-bottom: 200px;
+      }
     }
-  }
-  /* Use the narrow image for narrower screens */
-  @media screen and (max-width: 767px) {
-    #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
-      background-position: 50% 80%;
-      padding-bottom: 160px;
+    /* Use the narrow image for narrower screens */
+    @media screen and (max-width: 767px) {
+      #fullwidth {
+        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
+        background-position: 50% 80%;
+        padding-bottom: 160px;
+      }
     }
-  }
 
 #fullwidth
   = view :header
 
-  .banner.container{style: "color: black"}
-    .col-sm-12.col-md-6{style: "text-align: center"}
-      .bannerHeading= hoc_s(:learn_banner_heading)
-      = hoc_s(:learn_banner_blurb)
-      .bannerBeyond
-        != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
-      .bannerTeachers
-        %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
-        != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
+
+  - if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
+    .banner.container{style: "color: black; display: flex"}
+      .col-sm-4.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 50%; background-size: contain; background-repeat: no-repeat"}
+      .col-sm-4.col-xs-12{style: "text-align: center"}
+        .bannerHeading= hoc_s(:learn_banner_heading)
+        = hoc_s(:learn_banner_blurb)
+        .bannerBeyond
+          != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
+        .bannerTeachers
+          %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
+          != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
+      .col-sm-4.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 0% 50%; background-size: contain; background-repeat: no-repeat"}
+
+  - else
+    .banner.container{style: "color: black"}
+      .col-sm-12.col-md-6{style: "text-align: center"}
+        .bannerHeading= hoc_s(:learn_banner_heading)
+        = hoc_s(:learn_banner_blurb)
+        .bannerBeyond
+          != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
+        .bannerTeachers
+          %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
+          != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - locale_code = hoc_get_locale_code
@@ -107,7 +128,7 @@ social:
   - tutorial[:name]                                 = hoc_s(prefix + "name")
   - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
   - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
-  - tutorial[:language]                             = hoc_s(prefix + "language")
+  - tutorial[:language]                             = hoc_language(tutorial[:languages_supported])
   - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")

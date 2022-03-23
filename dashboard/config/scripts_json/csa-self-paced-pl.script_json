@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "is_course": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csa-self-paced-pl",
-    "serialized_at": "2021-08-13 16:08:36 UTC",
+    "serialized_at": "2021-11-22 19:57:41 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csa-self-paced-pl"
     }
@@ -33,7 +36,7 @@
   ],
   "lessons": [
     {
-      "key": "Navigating the Code.org learning platform",
+      "key": "Navigating the Codeorg learning platform",
       "name": " Navigating Code.org learning platform",
       "absolute_position": 1,
       "lockable": false,
@@ -43,7 +46,7 @@
         "overview": "**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl"
       }
@@ -73,7 +76,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "70338c30-3b21-44fe-809c-9982e355a15f",
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl"
       }
@@ -187,7 +190,7 @@
         "script_level.level_keys": [
           "CSA-SP-VPL-21-mod2-Overview-WebsiteNavigation"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "a1386539-882d-47be-a7f4-5cc9bc659a5d"
@@ -212,7 +215,7 @@
         "script_level.level_keys": [
           "CSA-SP-VPL-21-mod2-tour-vid"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "72fc070f-b25d-4e7d-9e0c-d37137ca99ea"
@@ -237,7 +240,7 @@
         "script_level.level_keys": [
           "CSA-SP-VPL-21-mod2-Task-VerifiedTeacher"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "72fc070f-b25d-4e7d-9e0c-d37137ca99ea"
@@ -262,7 +265,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-StudentExperience-vid"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "eec016db-857b-4f77-9725-98af1395a7d0"
@@ -287,7 +290,7 @@
         "script_level.level_keys": [
           "CSA-SP-VPL-21-mod2-Task-StudentView"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "eec016db-857b-4f77-9725-98af1395a7d0"
@@ -312,7 +315,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-ClassSection-vid"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "20d49572-26e9-4d70-ae88-9e8dc1b7900a"
@@ -337,7 +340,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-Task-ClassSection"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "20d49572-26e9-4d70-ae88-9e8dc1b7900a"
@@ -362,7 +365,7 @@
         "script_level.level_keys": [
           "SP-VPL_21-mod2-MakeAPlan-StudentLogIn"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "20d49572-26e9-4d70-ae88-9e8dc1b7900a"
@@ -387,7 +390,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-ProgessAndFeedback-vid"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "5cb3f843-9a00-4398-becc-03992d8c2169"
@@ -412,7 +415,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-progress-c4u"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "5cb3f843-9a00-4398-becc-03992d8c2169"
@@ -579,7 +582,7 @@
         "script_level.level_keys": [
           "CSA-SP-VPL-21-mod2-Overview-WebsiteNavigation"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "a1386539-882d-47be-a7f4-5cc9bc659a5d"
@@ -591,7 +594,7 @@
         "script_level.level_keys": [
           "CSA-SP-VPL-21-mod2-tour-vid"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "72fc070f-b25d-4e7d-9e0c-d37137ca99ea"
@@ -603,7 +606,7 @@
         "script_level.level_keys": [
           "CSA-SP-VPL-21-mod2-Task-VerifiedTeacher"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "72fc070f-b25d-4e7d-9e0c-d37137ca99ea"
@@ -615,7 +618,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-StudentExperience-vid"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "eec016db-857b-4f77-9725-98af1395a7d0"
@@ -627,7 +630,7 @@
         "script_level.level_keys": [
           "CSA-SP-VPL-21-mod2-Task-StudentView"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "eec016db-857b-4f77-9725-98af1395a7d0"
@@ -639,7 +642,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-ClassSection-vid"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "20d49572-26e9-4d70-ae88-9e8dc1b7900a"
@@ -651,7 +654,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-Task-ClassSection"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "20d49572-26e9-4d70-ae88-9e8dc1b7900a"
@@ -663,7 +666,7 @@
         "script_level.level_keys": [
           "SP-VPL_21-mod2-MakeAPlan-StudentLogIn"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "20d49572-26e9-4d70-ae88-9e8dc1b7900a"
@@ -675,7 +678,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-ProgessAndFeedback-vid"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "5cb3f843-9a00-4398-becc-03992d8c2169"
@@ -687,7 +690,7 @@
         "script_level.level_keys": [
           "SP-VPL-21-mod2-progress-c4u"
         ],
-        "lesson.key": "Navigating the Code.org learning platform",
+        "lesson.key": "Navigating the Codeorg learning platform",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-self-paced-pl",
         "activity_section.key": "5cb3f843-9a00-4398-becc-03992d8c2169"

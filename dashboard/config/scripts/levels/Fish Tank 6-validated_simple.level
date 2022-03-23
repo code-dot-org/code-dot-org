@@ -107,7 +107,7 @@
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR">swimming</title>
+            <title name="VAR" id="swimming">swimming</title>
           </block>
         </category>
         <category name="Comments">

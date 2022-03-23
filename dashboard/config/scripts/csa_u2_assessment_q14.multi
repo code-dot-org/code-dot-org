@@ -1,13 +1,13 @@
 name 'CSA U2 Assessment q14'
 height 'auto'
 
-wrong ‘`System.out.println(You say \“ goodbye \”, \n I say \“ hello \” .);`’
-wrong ‘`System.out.println(“You say “goodbye”,\nI say “hello”.”);`’
-right ‘`System.out.println(“You say \“goodbye\”,\nI say \“hello\”.”);`’
-wrong ‘`System.out.print(“You say \“goodbye\”,”);
-   System.out.print(“I say \“hello\”.”);`’
-wrong ‘`System.out.println(“You say “goodbye”,”);
-  System.out.println(“\nI say \“hello\”.”);`’
+wrong ‘`System.out.println("You say \" goodbye \", \n I say \" hello \" .);`’
+wrong ‘`System.out.println("You say "goodbye",\nI say "hello".");`’
+right ‘`System.out.println("You say \"goodbye\",\nI say \"hello\".");`’
+wrong ‘`System.out.print("You say \"goodbye\",");
+   System.out.print("I say \"hello\".");`’
+wrong ‘`System.out.println("You say "goodbye",");
+  System.out.println("\nI say \"hello\".");`’
 
 
 
@@ -20,10 +20,10 @@ MARKDOWN
 markdown <<MARKDOWN
 Which of the following correctly prints the output:
 
-You say “goodbye”,
-
-I say “hello”.
-
+```
+You say "goodbye",
+I say "hello".
+```
 
 
 MARKDOWN

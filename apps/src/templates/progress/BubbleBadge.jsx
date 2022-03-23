@@ -8,15 +8,18 @@ import {BubbleSize, BubbleShape} from './BubbleFactory';
 export const BadgeType = makeEnum('assessment', 'keepWorking');
 
 export default function BubbleBadge({badgeType, bubbleSize, bubbleShape}) {
-  const badge = getBadge(badgeType);
-  if (!badge || bubbleSize !== BubbleSize.full) {
+  const canHaveBadge = [BubbleSize.full, BubbleSize.letter];
+  if (!canHaveBadge.includes(bubbleSize)) {
     return null;
   }
-  return (
-    <BubbleBadgeWrapper isDiamond={bubbleShape === BubbleShape.diamond}>
-      {badge}
-    </BubbleBadgeWrapper>
-  );
+
+  if (badgeType === BadgeType.assessment) {
+    return AssessmentBubbleBadge(bubbleShape);
+  } else if (badgeType === BadgeType.keepWorking) {
+    return KeepWorkingBubbleBadge(bubbleSize);
+  }
+
+  return null;
 }
 BubbleBadge.propTypes = {
   badgeType: PropTypes.oneOf(Object.values(BadgeType)).isRequired,
@@ -24,80 +27,72 @@ BubbleBadge.propTypes = {
   bubbleShape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired
 };
 
-function getBadge(badgeType) {
-  switch (badgeType) {
-    case BadgeType.assessment:
-      return <AssessmentBadge />;
-    case BadgeType.keepWorking:
-      return <KeepWorkingBadge />;
-    default:
-      return null;
-  }
-}
-function BubbleBadgeWrapper({isDiamond, children}) {
-  const bubblePositioning = isDiamond
-    ? styles.diamondBubblePosition
-    : styles.bubblePosition;
+function AssessmentBubbleBadge(bubbleShape) {
+  const bubblePositioning =
+    bubbleShape === BubbleShape.diamond
+      ? styles.diamondBubblePosition
+      : styles.bubblePosition;
 
-  return <div style={bubblePositioning}>{children}</div>;
+  return (
+    <div style={bubblePositioning}>
+      <AssessmentBadge />
+    </div>
+  );
 }
-BubbleBadgeWrapper.propTypes = {
-  isDiamond: PropTypes.bool,
-  children: PropTypes.node
+AssessmentBubbleBadge.propTypes = {
+  bubbleShape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired
 };
 
-export function KeepWorkingBadge({hasWhiteBorder = true, style}) {
+function KeepWorkingBubbleBadge(bubbleSize) {
+  const isSmall = bubbleSize === BubbleSize.letter;
+
+  const bubblePositioning = isSmall
+    ? styles.keepWorkingSmallBadgePosition
+    : styles.keepWorkingBadgePosition;
+
   return (
-    <BaseBadge
-      icon="exclamation"
-      color={color.red}
-      hasWhiteBorder={hasWhiteBorder}
-      style={style}
-    />
+    <div style={bubblePositioning}>
+      <KeepWorkingBadge isSmall={isSmall} />
+    </div>
   );
+}
+KeepWorkingBubbleBadge.propTypes = {
+  bubbleSize: PropTypes.oneOf(Object.values(BubbleSize)).isRequired
+};
+
+// KeepWorkingBadge is exported because it is also used independently of
+// the progress bubble
+export function KeepWorkingBadge({isSmall, style}) {
+  const badgeSize = isSmall
+    ? styles.keepWorkingBadgeSmallSize
+    : styles.keepWorkingBadgeFullSize;
+
+  return <div style={{...styles.keepWorkingBadge, ...badgeSize, ...style}} />;
 }
 KeepWorkingBadge.propTypes = {
-  hasWhiteBorder: PropTypes.bool,
+  isSmall: PropTypes.bool,
   style: PropTypes.object
 };
 
-export function AssessmentBadge({hasWhiteBorder = true, style}) {
+// AssessmentBadge is exported for tests
+export function AssessmentBadge() {
   return (
-    <BaseBadge
-      icon="check"
-      color={color.purple}
-      hasWhiteBorder={hasWhiteBorder}
-      style={style}
-    />
-  );
-}
-AssessmentBadge.propTypes = {
-  hasWhiteBorder: PropTypes.bool,
-  style: PropTypes.object
-};
-
-function BaseBadge({icon, color, hasWhiteBorder, style}) {
-  return (
-    <span className="fa-stack" style={{...styles.container, ...style}}>
-      <FontAwesome icon="circle" className="fa-stack-2x" style={{color}} />
-      {hasWhiteBorder && (
-        <FontAwesome
-          icon="circle-thin"
-          className="fa-stack-2x"
-          style={styles.border}
-        />
-      )}
+    <span className="fa-stack" style={styles.container}>
       <FontAwesome
-        icon={icon}
-        className="fa-stack-1x"
-        style={styles.centerIcon}
+        icon="circle"
+        className="fa-stack-2x"
+        style={styles.purple}
       />
+      <FontAwesome
+        icon="circle-thin"
+        className="fa-stack-2x"
+        style={styles.white}
+      />
+      <FontAwesome icon="check" className="fa-stack-1x" style={styles.white} />
     </span>
   );
 }
-BaseBadge.propTypes = {
-  icon: PropTypes.string,
-  color: PropTypes.string,
+AssessmentBadge.propTypes = {
   hasWhiteBorder: PropTypes.bool,
   style: PropTypes.object
 };
@@ -116,10 +111,32 @@ const styles = {
     top: -13,
     right: -17
   },
-  border: {
+  purple: {
+    color: color.purple
+  },
+  white: {
     color: color.white
   },
-  centerIcon: {
-    color: color.white
+  keepWorkingSmallBadgePosition: {
+    position: 'absolute',
+    top: -2,
+    right: -2
+  },
+  keepWorkingBadgePosition: {
+    position: 'absolute',
+    top: 0,
+    right: -2
+  },
+  keepWorkingBadge: {
+    borderRadius: '50%',
+    backgroundColor: color.red
+  },
+  keepWorkingBadgeFullSize: {
+    width: 10,
+    height: 10
+  },
+  keepWorkingBadgeSmallSize: {
+    width: 7,
+    height: 7
   }
 };

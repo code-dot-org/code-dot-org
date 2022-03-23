@@ -1,0 +1,51 @@
+---
+title: موارد المُعلِّم - MINECRAFT
+nav: hoc_teacher_resources_nav
+video_player: true
+theme: responsive
+style_min: true
+---
+
+# MINECRAFT Hour of Code
+
+{{ hoc_mc_video }}
+
+[col-50]
+
+## Teacher Resources
+
+### Lesson Plans:
+
+- [خطة درس MINECRAFT](/files/minecraft-lp.pdf)
+- [ورقة الإجابة ونصائح للمعلم لـMineCraft Hour of Code Voyabe Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
+- [ورقة الإجابة ونصائح للمعلم لـMinecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
+- [ورقة الإجابة ونصائح للمعلم لـMinecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
+- [تحديات إضافية](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+
+### أنشطة الامتداد:
+
+- [ما وراء Hour of Code](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
+
+### موارد أخرى للمُعلِّم:
+
+- [Hour of Code: كيفية الإرشاد للمعلمين](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يثب مباشرةً[دليل المعلم لـHour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [موارد لمساعدتك على التخطيط لحدث وإدارته](https://docs.com/hourofcode2016)
+
+[/col-50]
+
+[col-50]
+
+## نظرة عامة
+
+استخدم كتل الكود لأخذ Steve أو Alex في مغامرة من خلال عالم Minecraft.
+
+**الفئة العمرية الموصى بها** 6+
+
+**متطلبات التكنولوجيا:** متصفحات حديثة + هواتف لوحية
+
+<a href="/mc"><button>جرِّب الدورة التعليمية</button></a>
+
+[/col-50]

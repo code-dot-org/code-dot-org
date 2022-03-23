@@ -6,11 +6,11 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Get your community involved in the Hour of Code
+# अपने समुदाय को ऑवर ऑफ़ कोड में शामिल कीजिये. 
 
-## 1. Spread the word
+## 1. इस का प्रचार करें
 
-Tell your friends about the **#HourOfCode**!
+आप के मित्र परिवार को इसके बारे में जरूर बताईयेगा **#HourOfCode**!
 
 {{ promote/share_buttons }}
 

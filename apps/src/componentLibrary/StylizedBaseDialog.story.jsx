@@ -15,8 +15,17 @@ export default storybook => {
     .storiesOf('Dialogs/StylizedBaseDialog', module)
     .addStoryTable([
       {
-        name: 'Default',
+        name: 'Default dialog',
         story: () => <StylizedBaseDialog {...DEFAULT_PROPS} />
+      },
+      {
+        name: "'Simple' dialog",
+        description: 'Does not display <hr>',
+        story: () => <StylizedBaseDialog {...DEFAULT_PROPS} type="simple" />
+      },
+      {
+        name: 'Dialog without a title',
+        story: () => <StylizedBaseDialog {...DEFAULT_PROPS} title={null} />
       },
       {
         name: 'Left-justified footer buttons',

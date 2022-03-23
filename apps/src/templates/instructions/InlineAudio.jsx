@@ -100,7 +100,7 @@ class InlineAudio extends React.Component {
     }
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     const audioTargetWillChange =
       this.props.src !== nextProps.src ||
       this.props.message !== nextProps.message;
@@ -366,6 +366,6 @@ export default connect(function propsFromStore(state) {
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
-    ttsAutoplayEnabled: state.sectionData.section.ttsAutoplayEnabled
+    ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForLevel
   };
 })(StatelessInlineAudio);

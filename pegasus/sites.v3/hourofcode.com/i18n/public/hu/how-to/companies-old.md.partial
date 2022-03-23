@@ -7,7 +7,7 @@ nav: how_to_nav
 {{ signup_button }}
 
 # Hogyan hozd el a "Hour of Code" rendezvényt, az intézményedhez?
-### Találd meg, hogy hogyan tudod te és a munkatársaid inspirálni a diákokat, hogy kipróbálják a számítástudományt!
+### Ismerje meg, hogyan inspirálhatja Ön és alkalmazottai a diákokat arra, hogy kipróbálják az informatikát!
 
 ***
 
@@ -48,7 +48,7 @@ A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számí
 
 **Plan Ahead!** Do the following before your event starts:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+- Test activities on computers or devices. Győződj meg arról, hogy megfelelően működnek a böngészőben, a videókkal és hangokkal egyetemben.
 - Biztosíts fejhallgatót, vagy kérd meg a résztvevőket, hogy hozzanak magukkal sajátot, ha úgy döntesz, hogy hanganyag használatával szeretnéd a gyakorlatokat még jobbá tenni.
 - **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ha a részvevők összedolgoznak, akkor tudnak egymásnak segíteni és kevésbé támaszkodnak a tanárra. Megláthatják azt, hogy az informatika közösségépítő hatású, és együttműködésre sarkall.
 - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
@@ -71,7 +71,7 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 - Győzz meg programozókat a vállalatodtól, hogy mondják el miért lettek programozók és jelenleg milyen projekteken dolgoznak épp.
 - [Itt]({{ urls/girls }}) találhatsz tippeket, hogy lányokat is inspirálj a számítástechnikára.
 
-## 6. Code!
+## 6. Kódolj!
 **Közvetlen részvétel**
 
 - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.

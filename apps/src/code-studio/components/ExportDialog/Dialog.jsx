@@ -312,7 +312,11 @@ class ExportDialog extends React.Component {
     }
     // TODO: use new URL format once snack-web has been updated for this flow
     // TODO: pass iconUri and splashImageUri to expo.io
-    window.open(`https://snack.expo.io/${expoSnackId}`, '_blank');
+    window.open(
+      `https://snack.expo.io/${expoSnackId}`,
+      '_blank',
+      'noopener,noreferrer'
+    );
   }
 
   checkForApkBuild(apkBuildId, expoSnackId) {

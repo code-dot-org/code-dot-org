@@ -4,15 +4,20 @@ class Api::V1::Pd::FormsController < ::ApplicationController
   end
 
   def create
-    form_data_hash = params.try(:[], :form_data) || {}
-    form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
-
     form = new_form
+
+    form_data_hash = params[:form_data]
+    form_data_json = form_data_hash ? form_data_hash.to_unsafe_h.to_json.strip_utf8mb4 : {}.to_json
     form.form_data_hash = JSON.parse(form_data_json)
+
+    status = params[:status]
+    if status
+      @application.status = status
+    end
 
     # Check for idempotence
     existing_form = form.check_idempotency
-    return render json: {id: existing_form.id}, status: :ok if existing_form
+    return render json: {id: existing_form.id}, status: :conflict if existing_form
 
     if form.save
       render json: {id: form.id}, status: :created

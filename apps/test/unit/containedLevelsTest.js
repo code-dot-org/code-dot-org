@@ -147,7 +147,6 @@ describe('getContainedLevelResultInfo', () => {
     codeStudioLevels.hasValidContainedLevelResult.returns(false);
     initializeContainedLevel();
     const runButton = $('#runButton');
-    const runButtonWrapper = $('#runButtonWrapper');
     const gameButtons = $('#gameButtons');
     assert.isTrue(callouts.addCallouts.calledOnce);
     assert.isTrue(runButton.prop('disabled'));
@@ -155,7 +154,7 @@ describe('getContainedLevelResultInfo', () => {
     gameButtons.click();
     assert.isFalse(attemptedRunButtonClickListener.called);
 
-    runButtonWrapper.click();
+    runButton.click();
     assert.isTrue(attemptedRunButtonClickListener.calledOnce);
 
     // Change answer to valid, should re-enable run button and unbind click listener.
@@ -164,7 +163,7 @@ describe('getContainedLevelResultInfo', () => {
     assert.isFalse(runButton.prop('disabled'));
 
     attemptedRunButtonClickListener.resetHistory();
-    runButtonWrapper.click();
+    runButton.click();
     assert.isFalse(attemptedRunButtonClickListener.called);
   });
 });

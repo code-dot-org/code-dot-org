@@ -147,18 +147,8 @@ Reporting:
 
 # System variables for the Aurora DB cluster.
 AuroraCluster: &aurora
-  # When using row-based logging, the primary database writes events to the binary log that indicate how individual table rows are changed.
-  # Replication of the primary database to a replica works by copying the events representing the changes to the table rows to the replica.
-  # ROW required for DMS Change Data Capture:
-  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-  # ROW also required to use gh-ost to carry out online schema changes on large tables:
-  # https://github.com/github/gh-ost/blob/master/doc/requirements-and-limitations.md
-  binlog_format: ROW
-  # When enabled, this variable causes the primary database to write a checksum for each event in the binary log.
-  # When disabled (value NONE), write and check the event length (rather than a checksum) for each event.
-  # NONE required for DMS Change Data Capture:
-  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-  binlog_checksum: NONE
+  # Disable binary logging to improve write performance.
+  binlog_format: 'OFF'
 
   # Enable GTIDs: https://aws.amazon.com/blogs/database/amazon-aurora-for-mysql-compatibility-now-supports-global-transaction-identifiers-gtids-replication/
   gtid-mode: ON_PERMISSIVE
@@ -172,9 +162,10 @@ AuroraCluster: &aurora
   # Improve insert/update concurrency for autoincrement tables.
   innodb_autoinc_lock_mode: 2 # not dynamic
 
-  # Favor durability over transaction write performance.
+  # For Hour of Code 2021, temporarily favor write performance over durability. In the event of a database server crash
+  # we could lose roughly 1 second of transactions.
   # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-  innodb_flush_log_at_trx_commit: 1
+  innodb_flush_log_at_trx_commit: 0
 
   # IAM role ARN used to select data into AWS S3.
   aurora_select_into_s3_role: {'Fn::GetAtt': [AuroraS3Role, Arn]}

@@ -1,5 +1,0 @@
-published_state 'stable'
-
-lesson_group 'lg_1', display_name: 'Content'
-lesson 'Lesson', display_name: 'Lesson'
-level 'U1L1 Student Lesson Introduction'

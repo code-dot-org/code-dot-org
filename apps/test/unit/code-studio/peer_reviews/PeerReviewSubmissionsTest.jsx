@@ -106,7 +106,7 @@ describe('PeerReviewSubmissions', () => {
   });
 
   it('Changing the course makes a new call and enables the button when a course is selected', () => {
-    server = sinon.fakeServer.create();
+    server.reset();
 
     peerReviewSubmissions
       .find('select#PlcCourseSelect')
@@ -162,7 +162,7 @@ describe('PeerReviewSubmissions', () => {
   });
 
   it('Changing the email filter triggers a new call with email filter applied', () => {
-    server = sinon.fakeServer.create();
+    server.reset();
 
     peerReviewSubmissions
       .find('input#NameEmailFilter')

@@ -362,19 +362,19 @@ level 'level7_copy'"
   level 'level1'
   "
 
-    level_group_copy1_dsl = "name 'level_group_test assessment copy1'
+    level_group_copy1_dsl = "name 'level_group_test assessment_copy1'
 title 'Assessment'
 
 page
-text 'external1 copy1'
-level 'level1 copy1'"
+text 'external1_copy1'
+level 'level1_copy1'"
 
-    level_group_copy2_dsl = "name 'level_group_test assessment copy2'
+    level_group_copy2_dsl = "name 'level_group_test assessment_copy2'
 title 'Assessment'
 
 page
-text 'external1 copy2'
-level 'level1 copy2'"
+text 'external1_copy2'
+level 'level1_copy2'"
 
     # Create the multi level
     multi_dsl = get_multi_dsl(1)
@@ -391,19 +391,19 @@ level 'level1 copy2'"
     level_group.stubs(:dsl_text).returns(level_group_input_dsl)
 
     # Copy the level group and all its sub levels.
-    level_group_copy1 = level_group.clone_with_suffix(' copy1')
+    level_group_copy1 = level_group.clone_with_suffix('copy1')
     assert_equal level_group_copy1_dsl, level_group_copy1.dsl_text
-    assert_equal 'level_group_test assessment copy1', level_group_copy1.name
-    assert_equal 'level1 copy1', level_group_copy1.pages.first.levels.first.name
-    assert_equal 'external1 copy1', level_group_copy1.pages.first.texts.first.name
+    assert_equal 'level_group_test assessment_copy1', level_group_copy1.name
+    assert_equal 'level1_copy1', level_group_copy1.pages.first.levels.first.name
+    assert_equal 'external1_copy1', level_group_copy1.pages.first.texts.first.name
 
     # Copy the level group again. copy2 suffix replaces copy1 suffix throughout,
     # rather than being concatenated, due to name_suffix field.
-    level_group_copy2 = level_group.clone_with_suffix(' copy2')
+    level_group_copy2 = level_group.clone_with_suffix('_copy2')
     assert_equal level_group_copy2_dsl, level_group_copy2.dsl_text
-    assert_equal 'level_group_test assessment copy2', level_group_copy2.name
-    assert_equal 'level1 copy2', level_group_copy2.pages.first.levels.first.name
-    assert_equal 'external1 copy2', level_group_copy2.pages.first.texts.first.name
+    assert_equal 'level_group_test assessment_copy2', level_group_copy2.name
+    assert_equal 'level1_copy2', level_group_copy2.pages.first.levels.first.name
+    assert_equal 'external1_copy2', level_group_copy2.pages.first.texts.first.name
 
     # clean up
     File.delete(level_group_copy1.filename)

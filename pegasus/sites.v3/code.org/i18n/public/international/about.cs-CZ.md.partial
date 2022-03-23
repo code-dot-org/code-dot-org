@@ -1,20 +1,20 @@
 ---
-title: About
+title: O nás
 theme: responsive
 video_player: true
 ---
 
-# About Us
+# O nás
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+  Code.org® je nezisková organizace, která se věnuje rozšiřování přístupu  k počítačovým vědám ve školách a ke zvyšování účasti mladých žen a studentů z nedostatečně zastoupených skupin. Naší vizí je, aby měl každý student v každé škole příležitost učit se počítačovou vědu právě tak, jako biologii, chemii, nebo algebru. Poskytujeme nejrozšířenější osnovy výuky počítačových věd na základních a středních školách a navíc organizujeme každoroční kampaň <a href="https://hourofcode.com">Hodina programování</a>, která zaujala 10% všech studentů světa. Code.org podporují štědří dárci jako Amazon, Facebook, Google, nadace Infosys Foundation, Microsoft a <a href="/about/donors">mnoho dalších</a>.
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+  <font size="4" color="#FFFFFF"><b>Kurzy Code.org využívají desítky milionů studentů a jeden milion učitelů na celém světě.</b></font>
  
 </div>
 
@@ -22,33 +22,33 @@ video_player: true
 
 <div style="clear:both"></div>
 
-## History
+## Historie
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+V roce 2013 spustila dvojčata Hadi a Ali Partovi projekt Code.org [videem propagujícím informatiku](https://www.youtube.com/watch?v=nKIu9yen5nc). Toto video se stalo na celý den videem č. 1 na YouTube a 15000 škol se na nás obrátilo s žádostí o pomoc. Od té doby jsme se rozšířili z původní organizace s přetíženým personálem dobrovolníků na plnohodnotnou organizaci podporující celosvětové hnutí. Věříme, že kvalitní vzdělávání v oboru počítačových věd by mělo být dostupné všem dětem, ne jen několika málo šťastlivcům.
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## What We Do
+## Co děláme
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
+Pracujeme na celém spektru vzdělávání: navrhujeme si [své vlastní kurzy](https://studio.code.org/courses) nebo uzavíráme partnerství s ostatními, školíme učitele, uzavíráme partnerství s velkými školními okrsky, pomáháme změnit vládní politiku, rozšiřujeme se do zahraničí formou partnerství a marketingu, abychom prolamovali stereotypy. Naše práce je postavena na mnoha desetiletích úsilí bezpočtu organizací a jednotlivců, kteří pomáhali založit, financovat a šířit vzdělávání v oboru počítačových věd. Jsme vděčni za neúnavnou práci širšího společenství pro vzdělávání v počítačových vědách a děkujeme všem partnerům a jednotlivcům, kteří v průběhu let rozšiřovali náš vliv.
 
-## Code.org's International Reach
+## Mezinárodní působnost Code.org
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+Přes 40 % provozu na našich webových stránkách pochází z prostoru mimo Spojené státy americké a toto číslo se stále zvyšuje. Abychom rozšířili přístup globální veřejnosti k počítačové vědě, naše týmy těsně spolupracují s [více než 100 mezinárodních partnerů](/about/partners) a pomáhají jim propagovat hodinu programování, obhajovat změnu politiky a školit učitele. Svým partnerstvím s ministerstvy školství na celém světě a spoluprací s mezinárodními organizacemi, jako jsou Organizace pro hospodářskou spolupráci a rozvoj a Vzdělávací, vědecká a kulturní organizace při Organizaci spojených národů zajišťujeme, aby se počítačová věda stala součástí mezinárodní diskuse o vzdělávání.
 
-<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
+<img alt="Mezinárodní partneři Code.org" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation
+## Překlad
 
-Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
+Chcete mít přímý vliv na studenty ve své zemi? Pomozte nám zpřístupnit obsah Code.org v jejich rodném jazyce! Jestliže budete dobrovolně pracovat na překládání našich výukových kurzů a lekcí, přidáte se do společenství více než 7000 překladatelů, kteří pomáhají přinášet vzdělávání v oboru počítačových věd ke studentům z celého světa. Podívejte se do našeho [průvodce překlady,](/translate) kde najdete další informace.
 
-## Our commitment to free curriculum and open source technology
+## Jsme oddáni volným osnovám a technice založené na otevřeném zdrojovém kódu
 
-All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+Všechny prostředky osnov a výukové kurzy, které vytváříme, budou navždy bezplatně použitelné a otevřeně licencované v rámci licence [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/), která umožňuje ostatním vytvářet odvozené vzdělávací prostředky k nekomerčním účelům. Jestliže máte zájem o licencování našich materiálů ke komerčním účelům, [kontaktujte nás](/contact). Naše kurzy jsou překládány k používání na celém světě nebo pro mluvčí mnoha jazyků. Naše technologie je vyvíjena jako  [projekt s otevřeným zdrojovým kódem](https://github.com/code-dot-org/code-dot-org).
 
-<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
+<img alt="Studenti s notebookem" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## Sledujte nás
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[Přihlaste se k odběru aktualizací stavu](/about/hear-from-us) o pokroku v hnutí pro počítačovou vědu na stupni K-12 a o práci Code.org. Nebo sledujte Code.org na sociálních sítích:
 
 {{ social_media_codeorg }}

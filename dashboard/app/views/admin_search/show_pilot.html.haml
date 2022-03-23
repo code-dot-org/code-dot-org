@@ -1,5 +1,9 @@
 %h1
   = @pilot_name
+
+- if @join_url
+  %h2 URL to join:
+  %a{href: @join_url}=@join_url
 %h2 Enter a single email address, or several!
 %p Separate emails by line. For example:
 %p teacher@school.org<br>teacher2@school.org<br>teacher3@school.org
@@ -12,7 +16,14 @@
   %tr
     %th
       %span Current Pilot Participants
+    %th
+      %span Actions
   - @emails.each do |email|
-    %tr
-      %td
+    %tr{style: 'border-bottom: 2px solid #5b6770;'}
+      %td.email
         %span= email
+      %td.actions
+        = form_tag({controller: 'admin_search', action: 'remove_from_pilot', method: "post"}, style: 'margin: 5px;')do
+          = hidden_field_tag 'email', email
+          = hidden_field_tag 'pilot_name', @pilot_name
+          = submit_tag "Remove", class: 'btn-primary', data:{confirm: "You are about to remove " + email + " from this pilot.  Once you do this all progress this participant has made will be lost.  Are you sure?"}

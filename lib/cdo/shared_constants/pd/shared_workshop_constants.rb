@@ -1,16 +1,23 @@
 module Pd
   module SharedWorkshopConstants
-    COURSES = [
+    ACTIVE_COURSES = [
       COURSE_CSF = 'CS Fundamentals'.freeze,
       COURSE_CSP = 'CS Principles'.freeze,
+      COURSE_CSD = 'CS Discoveries'.freeze,
+      COURSE_CSA = 'Computer Science A'.freeze,
+      COURSE_FACILITATOR = 'Facilitator'.freeze,
+      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
+    ].freeze
+
+    ARCHIVED_COURSES = [
       COURSE_ECS = 'Exploring Computer Science'.freeze,
       COURSE_CS_IN_A = 'CS in Algebra'.freeze,
       COURSE_CS_IN_S = 'CS in Science'.freeze,
-      COURSE_CSD = 'CS Discoveries'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
-      COURSE_ADMIN = 'Admin'.freeze,
-      COURSE_FACILITATOR = 'Facilitator'.freeze
+      COURSE_ADMIN = 'Admin'.freeze
     ].freeze
+
+    COURSES = ACTIVE_COURSES + ARCHIVED_COURSES
 
     STATES = [
       STATE_NOT_STARTED = 'Not Started'.freeze,
@@ -38,7 +45,13 @@ module Pd
       SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
       SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
-      SUBJECT_CSP_FOR_RETURNING_TEACHERS: SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze
+      SUBJECT_CSP_FOR_RETURNING_TEACHERS: SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_WELCOME: SUBJECT_ADMIN_COUNSELOR_WELCOME = 'Welcome'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO: SUBJECT_ADMIN_COUNSELOR_SLP_INTRO = 'SLP Intro'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1: SUBJECT_ADMIN_COUNSELOR_SLP_CALL1 = 'SLP Quarterly Call 1'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2: SUBJECT_ADMIN_COUNSELOR_SLP_CALL2 = 'SLP Quarterly Call 2'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3: SUBJECT_ADMIN_COUNSELOR_SLP_CALL3 = 'SLP Quarterly Call 3'.freeze,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4: SUBJECT_ADMIN_COUNSELOR_SLP_CALL4 = 'SLP Quarterly Call 4'.freeze
     }
 
     SUBJECTS = {
@@ -72,6 +85,17 @@ module Pd
         SUBJECT_CSP_FIT = SUBJECT_FIT,
         SUBJECT_CSP_FOR_RETURNING_TEACHERS,
       ],
+      COURSE_CSA => [
+        SUBJECT_CSA_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
+        SUBJECT_CSA_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
+        SUBJECT_CSA_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
+        SUBJECT_CSA_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
+        SUBJECT_CSA_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
+        SUBJECT_CSA_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
+        SUBJECT_CSA_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
+        SUBJECT_CSA_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
+        SUBJECT_CSA_FIT = SUBJECT_FIT,
+      ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
         SUBJECT_CSD_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
@@ -88,6 +112,14 @@ module Pd
         SUBJECT_CSF_101,
         SUBJECT_CSF_201,
         SUBJECT_CSF_FIT = SUBJECT_FIT
+      ],
+      COURSE_ADMIN_COUNSELOR => [
+        SUBJECT_ADMIN_COUNSELOR_WELCOME,
+        SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
+        SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
+        SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
+        SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
+        SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
       ]
     }.freeze
 
@@ -95,8 +127,16 @@ module Pd
       SUBJECT_VIRTUAL_KICKOFF
     ].freeze
 
-    # Used to suppress post-workshop emails and in create/edit workshop UI
-    MUST_SUPPRESS_EMAIL_SUBJECTS = ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
+    NOT_FUNDED_SUBJECTS = [
+      SUBJECT_ADMIN_COUNSELOR_WELCOME,
+      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
+    ].freeze
+
+    ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
       SUBJECT_VIRTUAL_KICKOFF,
       SUBJECT_WORKSHOP_1,
       SUBJECT_WORKSHOP_2,
@@ -104,6 +144,23 @@ module Pd
       SUBJECT_WORKSHOP_4,
       SUBJECT_WORKSHOP_1_2,
       SUBJECT_WORKSHOP_3_4
+    ].freeze
+
+    # Used to suppress post-workshop emails and in create/edit workshop UI
+    MUST_SUPPRESS_EMAIL_SUBJECTS = [
+      SUBJECT_VIRTUAL_KICKOFF,
+      SUBJECT_WORKSHOP_1,
+      SUBJECT_WORKSHOP_2,
+      SUBJECT_WORKSHOP_3,
+      SUBJECT_WORKSHOP_4,
+      SUBJECT_WORKSHOP_1_2,
+      SUBJECT_WORKSHOP_3_4,
+      SUBJECT_ADMIN_COUNSELOR_WELCOME,
+      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
     ].freeze
 
     LEGACY_SUBJECTS = {
@@ -170,6 +227,12 @@ module Pd
       unknown: "unknown"
     }.freeze
 
+    ACTIVE_COURSE_WORKSHOPS = {
+      CSD: 'CS Discoveries',
+      CSP: 'CS Principles',
+      CSA: 'Computer Science A'
+    }.freeze
+
     WORKSHOP_TYPES = {
       teachercon: SUBJECT_TEACHER_CON,
       local_summer: SUBJECT_SUMMER_WORKSHOP,
@@ -179,7 +242,14 @@ module Pd
     COURSE_KEY_MAP = {
       COURSE_CSF => 'csf',
       COURSE_CSD => 'csd',
-      COURSE_CSP => 'csp'
+      COURSE_CSP => 'csp',
+      COURSE_CSA => 'csa'
     }
+
+    OFFERED_PROGRAMS = [
+      'CSD',
+      'CSP',
+      'CSA'
+    ]
   end
 end

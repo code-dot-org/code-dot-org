@@ -10,29 +10,33 @@ export default class CourseOverviewTopRow extends Component {
   static propTypes = {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     id: PropTypes.number.isRequired,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     studentResources: PropTypes.arrayOf(migratedResourceShape),
     showAssignButton: PropTypes.bool,
     useMigratedResources: PropTypes.bool.isRequired,
-    isTeacher: PropTypes.bool
+    isInstructor: PropTypes.bool
   };
 
   render() {
     const {
       id,
+      courseOfferingId,
+      courseVersionId,
       teacherResources,
       migratedTeacherResources,
       studentResources,
       showAssignButton,
       sectionsForDropdown,
       useMigratedResources,
-      isTeacher
+      isInstructor
     } = this.props;
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {isTeacher &&
+        {isInstructor &&
           ((useMigratedResources && migratedTeacherResources.length > 0) ||
             (!useMigratedResources && teacherResources.length > 0)) && (
             <ResourcesDropdown
@@ -42,14 +46,17 @@ export default class CourseOverviewTopRow extends Component {
               useMigratedResources={useMigratedResources}
             />
           )}
-        {isTeacher && (
+        {isInstructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
             showAssignButton={showAssignButton}
             courseId={id}
+            buttonLocationAnalytics={'course-overview-top'}
+            courseOfferingId={courseOfferingId}
+            courseVersionId={courseVersionId}
           />
         )}
-        {!isTeacher && studentResources && studentResources.length > 0 && (
+        {!isInstructor && studentResources && studentResources.length > 0 && (
           <ResourcesDropdown
             migratedResources={studentResources}
             unitGroupId={id}

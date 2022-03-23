@@ -11,6 +11,14 @@ module MysqlCheckIndexUsed
 
   # Copy/extend logic in AbstractMySQLAdapter#execute, and AbstractAdapter#log.
   def execute(sql, name = nil)
+    # Rails 6 added both the materialize_transactions method and a call to it
+    # right here, so to preserve compatibility between 5 and 6 we call the
+    # method if and only if it exists. The if clause can be removed once we've
+    # fully upgraded to Rails 6.
+    #
+    # See https://github.com/rails/rails/pull/32647/files#diff-868f1dccfcbed26a288bf9f3fd8a39c863a4413ab0075e12b6805d9798f556d1
+    materialize_transactions if respond_to?(:materialize_transactions)
+
     options = {
       sql:               sql,
       name:              name,
@@ -32,7 +40,21 @@ module MysqlCheckIndexUsed
       end
     end
   rescue => e
-    raise translate_exception_class(e, sql)
+    # Support both Rails 5 and Rails 6 versions of this method signature until
+    # we are fully migrated off of Rails 5.
+    #
+    # See https://github.com/rails/rails/pull/34468
+    exception =
+      case method(:translate_exception_class).arity
+      when 2
+        translate_exception_class(e, sql)
+      when 3
+        translate_exception_class(e, sql, [])
+      else
+        raise "Do not know how to invoke `translate_exception_class` method"
+      end
+
+    raise exception
   end
 end
 

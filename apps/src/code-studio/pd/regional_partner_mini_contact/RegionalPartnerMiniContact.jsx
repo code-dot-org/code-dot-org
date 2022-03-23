@@ -7,6 +7,7 @@ import {SelectStyleProps} from '../constants';
 import FieldGroup from '../form_components/FieldGroup';
 import ButtonList from '../form_components/ButtonList';
 import color from '@cdo/apps/util/color';
+import $ from 'jquery';
 
 const ROLES = [
   'Teacher',
@@ -236,7 +237,7 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
           options: {
             user_name: results.user_name,
             email: results.email,
-            zip: this.props.zip || results.zip,
+            zip: `${this.props.zip || results.zip}`,
             notes: this.props.notes || results.notes
           }
         });

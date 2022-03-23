@@ -57,10 +57,11 @@ const SILENCED = [
   'jigsaw',
   'maze',
   'netsim',
+  'poetry',
+  'spritelab',
   'studio',
   'turtle',
   'weblab',
-  'spritelab',
 
   // referenced from exported projects
   'applab-api',

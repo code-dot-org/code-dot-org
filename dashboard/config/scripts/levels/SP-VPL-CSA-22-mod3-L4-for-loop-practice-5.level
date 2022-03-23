@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Do this:**\r\n\r\nWrite a for loop add up the integers between 1 and 15.  Print the final value to the console. \r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "TotalSum.java": {
+        "text": "public class TotalSum{    \n  public static void main(String[] args){\n\n    // TO DO: Write a for loop add up the integers between 1 and 15. \n    \n    // TO DO: Print the final value to the console.\n\n\n    \n  } \n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-21T00:56:31.000Z",
+  "level_num": "custom",
+  "user_id": 977,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-21T00:56:31.225+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 01:44:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:45:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 02:01:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 02:01:47 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+}]]></config>
+</Javalab>

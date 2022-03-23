@@ -1,7 +1,7 @@
 class Pd::ProfessionalLearningLandingController < ApplicationController
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:applications_closed]
 
   def index
     if Pd::Enrollment.for_user(current_user).empty? && Plc::UserCourseEnrollment.where(user: current_user).empty?
@@ -24,5 +24,11 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
       summarized_plc_enrollments: summarized_plc_enrollments
     }.compact
+  end
+
+  def applications_closed
+    # true when teacher applications are closed site-wide
+    closed = Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_teacher_application')
+    render json: closed
   end
 end

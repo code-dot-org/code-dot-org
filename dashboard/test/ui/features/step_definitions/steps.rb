@@ -154,6 +154,15 @@ When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
 end
 
+And /^I add another version to the project$/ do
+  steps <<-STEPS
+    And I add code "// comment A" to ace editor
+    And I wait until element "#resetButton" is visible
+    And I press "resetButton"
+    And I click selector "#runButton" once I see it
+  STEPS
+end
+
 When /^I reset the puzzle to the starting version$/ do
   steps <<-STEPS
     Then I click selector "#versions-header"
@@ -196,6 +205,10 @@ end
 
 When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
+end
+
+When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, negation|
+  wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
 end
 
 def jquery_is_element_visible(selector)
@@ -359,6 +372,10 @@ end
 
 When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, element_id, load|
   select_dropdown(@browser.find_element(:id, element_id), option_text, load)
+end
+
+When /^I select the "([^"]*)" option in dropdown with class "([^"]*)"( to load a new page)?$/ do |option_text, class_name, load|
+  select_dropdown(@browser.find_element(:css, ".#{class_name}"), option_text, load)
 end
 
 When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new page)?$/ do |option_text, element_name, load|
@@ -531,6 +548,10 @@ end
 
 Then /^I should see title "([^"]*)"$/ do |title|
   expect(@browser.title).to eq(title)
+end
+
+Then /^I should see title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include(title)
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
@@ -794,6 +815,7 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")}
 end
 
@@ -1016,10 +1038,6 @@ And(/^I submit this level$/) do
     And I wait to see ".modal"
     And I press "confirm-button" to load a new page
   }
-end
-
-And(/^I get hidden script access$/) do
-  browser_request(url: '/api/test/hidden_script_access', method: 'POST')
 end
 
 And(/^I wait until I am on the join page$/) do

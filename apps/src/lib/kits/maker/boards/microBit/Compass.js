@@ -1,5 +1,5 @@
 import {EventEmitter} from 'events';
-import {SENSOR_CHANNELS, roundToHundredth} from './MicroBitConstants';
+import {SENSOR_CHANNELS} from './MicroBitConstants';
 
 export default class Compass extends EventEmitter {
   constructor(board) {
@@ -27,9 +27,7 @@ export default class Compass extends EventEmitter {
         get: function() {
           let rawX = this.board.mb.analogChannel[SENSOR_CHANNELS.magX];
           let rawY = this.board.mb.analogChannel[SENSOR_CHANNELS.magY];
-          let heading = roundToHundredth(
-            Math.atan2(rawY, rawX) * (180 / Math.PI)
-          );
+          let heading = Math.round(Math.atan2(rawY, rawX) * (180 / Math.PI));
           if (heading > 360) {
             return heading - 360;
           } else if (heading < 0) {

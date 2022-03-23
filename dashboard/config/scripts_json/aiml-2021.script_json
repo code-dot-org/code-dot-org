@@ -4,21 +4,25 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "show_calendar": true,
-      "is_migrated": true,
+      "has_verified_resources": true,
       "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "weekly_instructional_minutes": 225,
-      "project_sharing": true,
       "include_student_lesson_plans": true,
-      "version_year": "2021",
       "is_course": true,
-      "has_verified_resources": true
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "tts": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-08-11 19:07:20 UTC",
+    "serialized_at": "2022-03-11 12:08:34 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -74,6 +78,15 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1. **Apply the Problem Solving Process to train a computer to solve a problem**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
@@ -94,6 +107,15 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1) **Describe the differences between supervised and unsupervised learning.**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called \"Green Glass Door\" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.\n\n**Question of the Day:** What are different types of machine learning?",
@@ -115,6 +137,15 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1) **Describe how Artificial Intelligence is having an impact on society**\n\n\tSee the activity guide for this lesson as a way to measure each step of the problem solving process.",
         "overview": "In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.",
         "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. ",
@@ -491,8 +522,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "d6d98034-d4c5-4129-a4d7-8ceeba498315",
+      "key": "5d7ab15c-3d43-4bad-a695-b59e5ce10096",
       "position": 1,
+      "properties": {
+        "name": "Before the Unit"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5d7ab15c-3d43-4bad-a695-b59e5ce10096",
+        "lesson.key": "lesson1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "d6d98034-d4c5-4129-a4d7-8ceeba498315",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -506,7 +550,7 @@
     },
     {
       "key": "ca6b2396-2a91-4e84-baa0-42c0d5911bda",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -520,7 +564,7 @@
     },
     {
       "key": "cb3d02a5-589b-47d7-b836-ad217f5438fe",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -534,7 +578,7 @@
     },
     {
       "key": "7b3124c8-73f3-4937-bb93-82679c593008",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Lesson Feedback"
       },
@@ -1698,6 +1742,17 @@
   ],
   "activity_sections": [
     {
+      "key": "454a6b3f-b4e9-4e36-88dc-7537a9ebc17f",
+      "position": 1,
+      "properties": {
+        "description": "This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries or the App Lab Hour of Code tutorial. Students will use App Lab for the first time in Lesson 7. \n\nIf you have students who have not worked in App Lab and Design Mode before, you may consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. [Click here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to read our recommendations for how to do this."
+      },
+      "seeding_key": {
+        "activity_section.key": "454a6b3f-b4e9-4e36-88dc-7537a9ebc17f",
+        "lesson_activity.key": "5d7ab15c-3d43-4bad-a695-b59e5ce10096"
+      }
+    },
+    {
       "key": "cef2f44d-57b8-428f-a2f2-13f3bceddc0e",
       "position": 1,
       "properties": {
@@ -2170,7 +2225,7 @@
       "key": "7dc90175-bf56-4c0e-8138-285606169bf6",
       "position": 5,
       "properties": {
-        "description": "We’re going to simulate how a computer might create it's first model to learn someting new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
+        "description": "We’re going to simulate how a computer might create it's first model to learn something new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
         "remarks": true
       },
       "seeding_key": {
@@ -3723,7 +3778,7 @@
       "key": "e9b87449-8870-4236-aaf5-3e4c843915d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how human's can influence the machine learning process?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how humans can influence the machine learning process?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -3757,7 +3812,7 @@
       "key": "1a026b1e-478a-454c-8f02-b42840e0dbc0",
       "position": 1,
       "properties": {
-        "description": "Students will be interacting with a survey as part of this lesson. Before class, you can create your own copy of the survey here: [click to make a copy](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Once you make a copy, you can have students take this version of the survey rather than the generic one in the lesson plan. Interacting with this version of the survey can be more personalized, since students can see data from other students within the class.",
+        "description": "**Student Survey:** Students will be interacting with a survey as part of this lesson. Before class, you can create your own copy of the survey here: [click to make a copy](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Once you make a copy, you can have students take this version of the survey rather than the generic one in the lesson plan. Interacting with this version of the survey can be more personalized, since students can see data from other students within the class.\n\n**App Lab Experience:** This is the first lesson where students will use App Lab. If students have not seen App Lab before, you might consider postponing this lesson and instead spending a few extra class periods introducing students to App Lab and Design Mode. [Click here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to read more about our recommendations for how to introduce students to App Lab.",
         "name": "Pre-Work"
       },
       "seeding_key": {
@@ -3840,24 +3895,8 @@
       }
     },
     {
-      "key": "5f5a7e7c-86a2-4088-97b5-d1e2bc1abf70",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**App Lab Experience:** This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries. If you have students who have not seen these elements before, consider postponing this lesson and instead spending a few extra class periods introducing students to App Lab and design mode with these two lessons:\n\n- [Unit 4 Lesson 14 - Design Mode in App Lab](https://studio.code.org/s/csd4-2021/lessons/14)\n- [Unit 4 Lesson 16- Events in App Lab](https://studio.code.org/s/csd4-2021/lessons/16)\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5f5a7e7c-86a2-4088-97b5-d1e2bc1abf70",
-        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
-      }
-    },
-    {
       "key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first contains a working version of the app that students will create today. Have students run the program a few times.",
         "duration": "15",
@@ -3871,7 +3910,7 @@
     },
     {
       "key": "652fe87c-8a35-45bc-a770-741ecb0a626c",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "What is your Ideal Vacation?"
       },
@@ -3882,7 +3921,7 @@
     },
     {
       "key": "eb424716-5003-4a67-a2f6-be31b9285373",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _What design elements did you see in this app?_\n\nHave students brainstorm on their own or record a list in their journals, then invite them to share as a full class.\n\n **Discussion Goal:** Students will probably notice that buttons, images, and text labels are used extensively. Be sure to remind students that each screen is an element as well. If students are missing any elements, use this as an opportunity to remind students of design mode in App Lab.",
         "tips": [
@@ -3899,7 +3938,7 @@
     },
     {
       "key": "8ad0e6f5-c08b-4cfe-a3d0-93247ad5cc4e",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What coding commands would you expect to see in this app?_\n\nHave students brainstorm on their own or record a list in their journals, then invite them to share as a full class. \n\n**Discussion Goal:** Students should predict that onEvent is being used for each button, and that setScreen is used to switch between screens. If students have been through Unit 3 of CS Discoveries, they may also predict that if-statements are used to generate the final answer, but it is okay if this isn’t discussed.",
         "tips": [
@@ -3916,7 +3955,7 @@
     },
     {
       "key": "8791b5cc-e0ff-4543-ac99-80e091cd40d7",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _The app is missing two questions from the survey:_\n- _Which type of sandwich is your favorite?_\n- _What kind of day do you like?_\n\n_Why do you think those questions didn't make it into the model?_\n\n**Discussion Goal:** Guide students towards the conclusion that these questions probably didn't have strong relationships in the data or lead to an accurate model. Students may hypothesize that this is because the questions didn't seem to be related to books, but we'll never know for sure without seeing the actual data. "
       },
@@ -3927,7 +3966,7 @@
     },
     {
       "key": "195a6e0b-ed01-4fcb-a11f-8311d23c9930",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _This class considered asking about gender on the survey to help recommend a book, but decided against it._\n\n_Do you think there is any harm in including a question about gender in the survey? Why or why not?_\n\n**Discussion Goal:** This is an opportunity to explore how demographic features, like gender or race or age, should or shouldn't be used in machine learning models. Some students may think it's harmless to include gender in the survey, since it may have a strong relation to certain types of books. Other students may bring up how about gender can lead to stereotypes, or how there may not be enough data to be gender inclusive in the survey especially for non-binary students.\n\nGuide students to consider whether or not it feels like the best type of question to ask considering that the class is trying to predict a book recommendation. Have the class consider whether gender feels like a necessary question, or if other questions will also lead to accurate recommendations. In this way, asking about gender is similar to the previous two questions about which sandwich you like or the type of day you're having: the other questions are probably better predictors of what type of book you may read.",
         "tips": [
@@ -3944,7 +3983,7 @@
     },
     {
       "key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. Here they will import a model into their app and test that it works correctly. Have them follow the instructions on the screen to import their first model.",
         "duration": "20",
@@ -3964,7 +4003,7 @@
     },
     {
       "key": "0fc4769c-7b1e-4427-aac2-99dd3813744b",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _Can you identify the line where the button press happens?_\n- _Can you identify where all of our data is collected into a variable?_\n- _Can you identify the line where our prediction happens?_\n\nHave students talk with a partner first before having a full-class discussion. Students will likely be unsure about some of their answers - encourage them to think of these as predictions rather than definite answers."
       },
@@ -3975,7 +4014,7 @@
     },
     {
       "key": "5b736490-fd93-4fdb-b2d1-4a0804d757b4",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": " **Discussion Goal:** Help students identify the following information:\n\n- The button press happens on line 2 with the yellow [`onEvent`(#fff176)](/docs/applab/onEvent/) block\n- The data is collected on lines 3 through 6 with the [`addPair`(#BB77C7)](/docs/applab/addPair/) blocks and the yellow [`getText`(#fff176)](/docs/applab/getText/) blocks\n- The prediction happens on line 8 with the green [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block"
       },
@@ -3986,7 +4025,7 @@
     },
     {
       "key": "6712ead7-42d3-4d1f-ad8c-5334555b6826",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n"
       },
@@ -3997,7 +4036,7 @@
     },
     {
       "key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61",
-      "position": 12,
+      "position": 11,
       "properties": {
         "progression_name": "Customize Your App"
       },
@@ -4008,7 +4047,7 @@
     },
     {
       "key": "0a56918e-1c87-4a73-a20f-c70392c253a3",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "**Circulate:** As students complete these levels, they will continue automatically to keep customizing their apps. Here are some tips for how to support students in each level:\n\n- **Level 3:** Students will update the text on their app so it is easier for a user to understand. Instead of the one or two word description from the pre-generated design elements, students will use the same questions they saw in the survey.\n- **Level 4:** Students will choose a theme to update the design of their app. For now, just have them choose a theme. Later on, they can continue to customize their app with Design Mode\n- **Level 5:** Students add a home screen to their app. The instructions for this level may be difficult to keep track of - encourage students to “check off” each step as they complete it. They can also use the animated example on the level as a guide for how to complete this task.\n- **Level 6:** Students add a button from the home screen to the predict screen, and add an event to connect the two screens together. Support students in reading through the instructions and “checking off” each piece as they go along. They can also click the “Show Me How” lines in the instructions for screenshots of what each step can look like.",
         "tips": [
@@ -4025,7 +4064,7 @@
     },
     {
       "key": "9a1eafc2-dbaa-45ed-a881-acf22b64df3f",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "**Choice Levels:** Once students have created their Book Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Book Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app.",
         "progression_name": "Choice Levels: Customize Your App",
@@ -5849,7 +5888,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Repeated Levels:** The choices in this level are identical to the choices in the last lesson. This is intentional, so students have multiple opportunities to learn the new design tricks or code blocks, or continue to practice the new blcoks they learned last lesson. Encourage students to choose a new challenge for today’s app that’s different from the ones they chose yesterday.\r\n"
+            "markdown": "**Repeated Levels:** The choices in this level are identical to the choices in the last lesson. This is intentional, so students have multiple opportunities to learn the new design tricks or code blocks, or continue to practice the new blocks they learned last lesson. Encourage students to choose a new challenge for today’s app that’s different from the ones they chose yesterday.\n"
           }
         ]
       },
@@ -6244,7 +6283,7 @@
       "key": "7e193cf9-3052-42b0-9e27-e72c6e548a80",
       "position": 1,
       "properties": {
-        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](../21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
+        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](./21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
       },
       "seeding_key": {
         "activity_section.key": "7e193cf9-3052-42b0-9e27-e72c6e548a80",
@@ -10843,8 +10882,8 @@
       "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
       "key": "_key_-_numerical_data_in_ai_lab",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_-_numerical_data_in_ai_lab"
@@ -10855,8 +10894,8 @@
       "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
       "key": "_key_numerical_accuracy",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_numerical_accuracy"
@@ -10867,8 +10906,8 @@
       "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
       "key": "_key_training_a_model_in_ai_lab",
       "properties": {
-        "type": "Activity Guide",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "_key_training_a_model_in_ai_lab"
@@ -10879,8 +10918,8 @@
       "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/edit#",
       "key": "_key_zoo_models",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_zoo_models"
@@ -10891,8 +10930,8 @@
       "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
       "key": "_template_5_why_s",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "_template_5_why_s"
@@ -10903,8 +10942,8 @@
       "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
       "key": "accuracy_in_ai_lab",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "accuracy_in_ai_lab"
@@ -10915,8 +10954,8 @@
       "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
       "key": "ai-and-machine-learning-lesson-14-ai-code-of-ethics",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "ai-and-machine-learning-lesson-14-ai-code-of-ethics"
@@ -10939,9 +10978,9 @@
       "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
       "key": "ai-ethics-research-reflection",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "ai-ethics-research-reflection"
@@ -10952,21 +10991,32 @@
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "ai-training",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-training"
       }
     },
     {
+      "name": "AI and Machine Learning Implementation Options",
+      "url": "https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview",
+      "key": "ai_and_machine_learning_implementation_options",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_machine_learning_implementation_options"
+      }
+    },
+    {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/copy",
       "key": "ai_lab_numerical_data",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "ai_lab_numerical_data"
@@ -10977,8 +11027,8 @@
       "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
       "key": "ai_lab_select_label",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "ai_lab_select_label"
@@ -10989,9 +11039,9 @@
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai_what_is_machine_learning_",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai_what_is_machine_learning_"
@@ -11046,8 +11096,8 @@
       "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
       "key": "app_lab_if-statements",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "app_lab_if-statements"
@@ -11058,8 +11108,8 @@
       "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
       "key": "app_lab_import",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "app_lab_import"
@@ -11070,8 +11120,8 @@
       "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy",
       "key": "app_lab_new_design_elts",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "app_lab_new_design_elts"
@@ -11082,9 +11132,9 @@
       "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
       "key": "classification-with-machine-learning",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "classification-with-machine-learning"
@@ -11095,9 +11145,9 @@
       "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
       "key": "classifying-fish",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "classifying-fish"
@@ -11108,8 +11158,8 @@
       "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
       "key": "cleaning_survey_data",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "cleaning_survey_data"
@@ -11120,11 +11170,23 @@
       "url": "https://www.youtube.com/watch?v=ZdakHQ-HIXk",
       "key": "create_a_survey_using_google_forms",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "create_a_survey_using_google_forms"
+      }
+    },
+    {
+      "name": "Create an ML App",
+      "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+      "key": "create_an_ml_app",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "create_an_ml_app"
       }
     },
     {
@@ -11144,8 +11206,8 @@
       "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
       "key": "creating_a_survey",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "creating_a_survey"
@@ -11156,8 +11218,8 @@
       "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/copy",
       "key": "crosstabs_and_models",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "crosstabs_and_models"
@@ -11168,8 +11230,8 @@
       "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
       "key": "design_an_ai_app",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "design_an_ai_app"
@@ -11188,12 +11250,24 @@
       }
     },
     {
+      "name": "Design an AI App",
+      "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+      "key": "design_an_ai_app_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "design_an_ai_app_1"
+      }
+    },
+    {
       "name": "Ethics & AI: Equal Access and Algorithmic Bias",
       "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
       "key": "ethics_ai_equal_access_and_algorithmic_bias",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
@@ -11237,8 +11311,8 @@
       "url": "https://www.youtube.com/watch?v=yTsspi6AQag",
       "key": "finding_patterns_in_data",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "finding_patterns_in_data"
@@ -11249,9 +11323,9 @@
       "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
       "key": "fruit-veggie-cards",
       "properties": {
-        "type": "Resource",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "fruit-veggie-cards"
@@ -11262,8 +11336,8 @@
       "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
       "key": "if-statements_in_app_lab",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "if-statements_in_app_lab"
@@ -11274,8 +11348,8 @@
       "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
       "key": "importing_a_model_in_app_lab",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "importing_a_model_in_app_lab"
@@ -11283,11 +11357,11 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/copy",
       "key": "innovations_in_ai",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "innovations_in_ai"
@@ -11321,8 +11395,8 @@
       "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
       "key": "intro_ai_lab",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "intro_ai_lab"
@@ -11333,8 +11407,8 @@
       "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
       "key": "intro_to_ml",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "intro_to_ml"
@@ -11345,8 +11419,8 @@
       "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
       "key": "introduction_to_ai_lab",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_ai_lab"
@@ -11368,8 +11442,8 @@
       "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
       "key": "key-classification-with-machine-learning",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "key-classification-with-machine-learning"
@@ -11392,8 +11466,8 @@
       "key": "knn_accuracy_-_activity_guide",
       "properties": {
         "audience": "Student",
-        "type": "Activity Guide",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "knn_accuracy_-_activity_guide"
@@ -11404,8 +11478,8 @@
       "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
       "key": "make_club_app",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "make_club_app"
@@ -11416,8 +11490,8 @@
       "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
       "key": "medical_model_card",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "medical_model_card"
@@ -11428,8 +11502,8 @@
       "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy",
       "key": "mini-project_create_an_ml_app",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "mini-project_create_an_ml_app"
@@ -11440,8 +11514,8 @@
       "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
       "key": "model-card-digital-template",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "model-card-digital-template"
@@ -11452,8 +11526,8 @@
       "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
       "key": "model-card-printable-template",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "model-card-printable-template"
@@ -11464,9 +11538,9 @@
       "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
       "key": "model_cards",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "model_cards"
@@ -11477,8 +11551,8 @@
       "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
       "key": "model_cards_in_ai_lab",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "model_cards_in_ai_lab"
@@ -11489,9 +11563,9 @@
       "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
       "key": "numerical_data_in_ai_lab",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "numerical_data_in_ai_lab"
@@ -11502,8 +11576,8 @@
       "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
       "key": "numerical_data_in_ai_lab_1",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "numerical_data_in_ai_lab_1"
@@ -11514,8 +11588,8 @@
       "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
       "key": "our-ai-code-of-ethics-template-slides",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "our-ai-code-of-ethics-template-slides"
@@ -11526,9 +11600,9 @@
       "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view",
       "key": "patterns_in_data",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "patterns_in_data"
@@ -11539,8 +11613,8 @@
       "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
       "key": "patterns_in_data_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "patterns_in_data_1"
@@ -11551,8 +11625,8 @@
       "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
       "key": "planning_an_ml_project",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "planning_an_ml_project"
@@ -11575,8 +11649,8 @@
       "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
       "key": "questions_form_day",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "questions_form_day"
@@ -11587,8 +11661,8 @@
       "url": "https://www.youtube.com/watch?v=DybczED-GKE",
       "key": "seeing_ai",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "seeing_ai"
@@ -11599,8 +11673,8 @@
       "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
       "key": "selecting_a_label",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "selecting_a_label"
@@ -11611,8 +11685,8 @@
       "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
       "key": "selecting_features",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "selecting_features"
@@ -11623,8 +11697,8 @@
       "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
       "key": "shoe_survey",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "shoe_survey"
@@ -11635,8 +11709,8 @@
       "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy",
       "key": "supervised_unsupervised",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "supervised_unsupervised"
@@ -11670,8 +11744,8 @@
       "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
       "key": "svm_unplugged",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "svm_unplugged"
@@ -11682,8 +11756,8 @@
       "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
       "key": "train_model_good_data",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "train_model_good_data"
@@ -11694,9 +11768,9 @@
       "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
       "key": "training-a-model-with-features",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "training-a-model-with-features"
@@ -11707,8 +11781,8 @@
       "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
       "key": "training_and_testing_in_ai_lab",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "training_and_testing_in_ai_lab"
@@ -11719,8 +11793,8 @@
       "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
       "key": "troubleshoot_models",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "troubleshoot_models"
@@ -11731,9 +11805,9 @@
       "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
       "key": "types_of_machine_learning",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "types_of_machine_learning"
@@ -11744,8 +11818,8 @@
       "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
       "key": "types_of_machine_learning_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "types_of_machine_learning_1"
@@ -11753,11 +11827,11 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/copy",
       "key": "unplugged_knn",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "unplugged_knn"
@@ -11769,8 +11843,8 @@
       "key": "unplugged_knn_-_activity_guide",
       "properties": {
         "audience": "Student",
-        "type": "Activity Guide",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "unplugged_knn_-_activity_guide"
@@ -11793,8 +11867,8 @@
       "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
       "key": "using_data_with_categorical_features",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "using_data_with_categorical_features"
@@ -11805,8 +11879,8 @@
       "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
       "key": "using_data_with_numerical_features",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "using_data_with_numerical_features"
@@ -11817,8 +11891,8 @@
       "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
       "key": "view_and_download_survey_data",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "view_and_download_survey_data"
@@ -11829,9 +11903,9 @@
       "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
       "key": "zoo_models",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "zoo_models"
@@ -11861,6 +11935,12 @@
       "seeding_key": {
         "lesson.key": "lesson-17",
         "resource.key": "seeing_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "create_an_ml_app"
       }
     },
     {
@@ -12083,6 +12163,12 @@
       "seeding_key": {
         "lesson.key": "lesson16",
         "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "design_an_ai_app_1"
       }
     },
     {
@@ -12335,6 +12421,12 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "ai_and_machine_learning_implementation_options",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "all_code",
         "script.name": "aiml-2021"
       }
@@ -12357,13 +12449,43 @@
   ],
   "vocabularies": [
     {
-      "key": "machine_learning",
-      "word": "Machine Learning",
-      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "key": "bias",
+      "word": "Bias",
+      "definition": "When a decision favors some things and de-prioritizes or excludes others",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "machine_learning"
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "categorical_data",
+      "word": "Categorical Data",
+      "definition": "data that can be separated into groups",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "categorical_data"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "Classification",
+      "definition": "predicting a category based on other features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "ethics",
+      "word": "Ethics",
+      "definition": "guidelines for good behavior.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ethics"
       }
     },
     {
@@ -12387,6 +12509,16 @@
       }
     },
     {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
       "key": "model",
       "word": "Model",
       "definition": "a computer program designed to make a decision",
@@ -12394,6 +12526,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "model"
+      }
+    },
+    {
+      "key": "numerical_data",
+      "word": "Numerical Data",
+      "definition": "data that can be counted or measured",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "numerical_data"
       }
     },
     {
@@ -12425,56 +12567,6 @@
       "seeding_key": {
         "vocabulary.key": "unsupervised_learning"
       }
-    },
-    {
-      "key": "categorical_data",
-      "word": "Categorical Data",
-      "definition": "data that can be separated into groups",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "categorical_data"
-      }
-    },
-    {
-      "key": "classification",
-      "word": "Classification",
-      "definition": "predicting a category based on other features",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "classification"
-      }
-    },
-    {
-      "key": "bias",
-      "word": "Bias",
-      "definition": "When a decision favors some things and de-prioritizes or excludes others",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bias"
-      }
-    },
-    {
-      "key": "numerical_data",
-      "word": "Numerical Data",
-      "definition": "data that can be counted or measured",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "numerical_data"
-      }
-    },
-    {
-      "key": "ethics",
-      "word": "Ethics",
-      "definition": "guidelines for good behavior.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ethics"
-      }
     }
   ],
   "lessons_vocabularies": [
@@ -12482,6 +12574,12 @@
       "seeding_key": {
         "lesson.key": "lesson1",
         "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "vocabulary.key": "ethics"
       }
     },
     {
@@ -12543,34 +12641,21 @@
         "lesson.key": "lesson8",
         "vocabulary.key": "numerical_data"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "vocabulary.key": "ethics"
-      }
     }
   ],
   "lessons_programming_expressions": [
     {
       "seeding_key": {
-        "lesson.key": "lesson6",
+        "lesson.key": "lesson10",
         "programming_environment.name": "applab",
-        "programming_expression.key": "getText"
+        "programming_expression.key": "ifBlock"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson6",
         "programming_environment.name": "applab",
-        "programming_expression.key": "onEvent"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson6",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "setText"
+        "programming_expression.key": "addPair"
       }
     },
     {
@@ -12591,18 +12676,35 @@
       "seeding_key": {
         "lesson.key": "lesson6",
         "programming_environment.name": "applab",
-        "programming_expression.key": "addPair"
+        "programming_expression.key": "getText"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson10",
+        "lesson.key": "lesson6",
         "programming_environment.name": "applab",
-        "programming_expression.key": "ifBlock"
+        "programming_expression.key": "onEvent"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson6",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "setText"
       }
     }
   ],
   "objectives": [
+    {
+      "key": "01197b97-b1b0-40bf-a8bf-82b8f4750144",
+      "properties": {
+        "description": "Use a template to create a Google Form survey"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "objective.key": "01197b97-b1b0-40bf-a8bf-82b8f4750144"
+      }
+    },
     {
       "key": "0472a4e9-2de2-43a9-8a0a-59a42fce5f83",
       "properties": {
@@ -12611,86 +12713,6 @@
       "seeding_key": {
         "lesson.key": "lesson1",
         "objective.key": "0472a4e9-2de2-43a9-8a0a-59a42fce5f83"
-      }
-    },
-    {
-      "key": "316092e7-641f-433f-837c-db12e34accfd",
-      "properties": {
-        "description": "Describe the differences between supervised and unsupervised learning."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson2",
-        "objective.key": "316092e7-641f-433f-837c-db12e34accfd"
-      }
-    },
-    {
-      "key": "7c64c6be-1473-4799-9eb7-883b11e82748",
-      "properties": {
-        "description": "Describe how Artificial Intelligence is having an impact on society"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-17",
-        "objective.key": "7c64c6be-1473-4799-9eb7-883b11e82748"
-      }
-    },
-    {
-      "key": "4330671a-5a3d-48ee-8045-e7886512bfca",
-      "properties": {
-        "description": "Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson3",
-        "objective.key": "4330671a-5a3d-48ee-8045-e7886512bfca"
-      }
-    },
-    {
-      "key": "b91b7aab-34be-466e-bea0-b2e5cd78c900",
-      "properties": {
-        "description": "Look for patterns in data to help make a decision"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson3",
-        "objective.key": "b91b7aab-34be-466e-bea0-b2e5cd78c900"
-      }
-    },
-    {
-      "key": "e688a468-4c7c-49b5-a3ef-0ab537b2eeee",
-      "properties": {
-        "description": "Explain how computers can separate data to make a decision"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson4",
-        "objective.key": "e688a468-4c7c-49b5-a3ef-0ab537b2eeee"
-      }
-    },
-    {
-      "key": "702a7551-9aff-42b9-808d-a234e7b8b9ba",
-      "properties": {
-        "description": "Use AI Lab to select features to train a model"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson5",
-        "objective.key": "702a7551-9aff-42b9-808d-a234e7b8b9ba"
-      }
-    },
-    {
-      "key": "c88b121e-9982-4f48-8c6b-11bd70450fd5",
-      "properties": {
-        "description": "Use data visualization tools to decide which features to include when training a model"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson5",
-        "objective.key": "c88b121e-9982-4f48-8c6b-11bd70450fd5"
-      }
-    },
-    {
-      "key": "f258977a-6df0-4dcb-b5d7-2eef5db3290b",
-      "properties": {
-        "description": "Create an app that uses machine learning"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson6",
-        "objective.key": "f258977a-6df0-4dcb-b5d7-2eef5db3290b"
       }
     },
     {
@@ -12704,176 +12726,6 @@
       }
     },
     {
-      "key": "5df796b5-f2a1-4fd2-8143-4d5baf32dd0a",
-      "properties": {
-        "description": "Read a model card and use it to evaluate a model"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson7",
-        "objective.key": "5df796b5-f2a1-4fd2-8143-4d5baf32dd0a"
-      }
-    },
-    {
-      "key": "959c5bac-cd23-431b-9c7c-96de722fcab5",
-      "properties": {
-        "description": "Use data visualizations and feature iteration to train machine learning models"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "objective.key": "959c5bac-cd23-431b-9c7c-96de722fcab5"
-      }
-    },
-    {
-      "key": "36d633e6-2700-4df8-b434-75a785de2544",
-      "properties": {
-        "description": "Create model cards in AI Lab to save machine learning models"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "objective.key": "36d633e6-2700-4df8-b434-75a785de2544"
-      }
-    },
-    {
-      "key": "87215a32-fe94-4878-9d84-fbfc1cb056e9",
-      "properties": {
-        "description": "Use a model card to update the user interface of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson10",
-        "objective.key": "87215a32-fe94-4878-9d84-fbfc1cb056e9"
-      }
-    },
-    {
-      "key": "27dfb962-593c-46d2-b9aa-66ebc12ac01f",
-      "properties": {
-        "description": "Use if-statements to change the behavior of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson10",
-        "objective.key": "27dfb962-593c-46d2-b9aa-66ebc12ac01f"
-      }
-    },
-    {
-      "key": "9dd5b6eb-e1cd-4dae-8bf6-77fb08ba9d59",
-      "properties": {
-        "description": "Explain how computers can make decisions by comparing similarities in data"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "objective.key": "9dd5b6eb-e1cd-4dae-8bf6-77fb08ba9d59"
-      }
-    },
-    {
-      "key": "7f314d96-e2e3-4008-a842-b63d8fcf8ed2",
-      "properties": {
-        "description": "Explain how accuracy calculation for numerical data is different from categorical data"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "objective.key": "7f314d96-e2e3-4008-a842-b63d8fcf8ed2"
-      }
-    },
-    {
-      "key": "59cae484-9805-4974-80b3-346f4e774ebe",
-      "properties": {
-        "description": "Use data visualizations to find patterns in numerical data"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson8",
-        "objective.key": "59cae484-9805-4974-80b3-346f4e774ebe"
-      }
-    },
-    {
-      "key": "6744ba33-c6f7-446a-a4d2-93ba725bfd8b",
-      "properties": {
-        "description": "Compare and contrast categorical data versus numerical data"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson8",
-        "objective.key": "6744ba33-c6f7-446a-a4d2-93ba725bfd8b"
-      }
-    },
-    {
-      "key": "e3b01cd1-f14c-43c9-9162-8b74b8564db2",
-      "properties": {
-        "description": "Use the Model Card to create new input elements for a machine learning app"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson11",
-        "objective.key": "e3b01cd1-f14c-43c9-9162-8b74b8564db2"
-      }
-    },
-    {
-      "key": "6206d31c-6cb6-4f3e-a2f8-110f5613bfca",
-      "properties": {
-        "description": "Update the default model code to use new inputs in a machine learning app"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson11",
-        "objective.key": "6206d31c-6cb6-4f3e-a2f8-110f5613bfca"
-      }
-    },
-    {
-      "key": "2ac5ab5e-8129-478e-bd40-a262315692c8",
-      "properties": {
-        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "objective.key": "2ac5ab5e-8129-478e-bd40-a262315692c8"
-      }
-    },
-    {
-      "key": "d17f9e8e-6694-4adb-8be6-ebfc519446ec",
-      "properties": {
-        "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "objective.key": "d17f9e8e-6694-4adb-8be6-ebfc519446ec"
-      }
-    },
-    {
-      "key": "1e99636b-02ab-4a68-869b-f8c5c4c761ee",
-      "properties": {
-        "description": "Create at least one guiding principle that addresses an AI ethics issue."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "objective.key": "1e99636b-02ab-4a68-869b-f8c5c4c761ee"
-      }
-    },
-    {
-      "key": "d546dc96-c717-4567-80d9-10bd4516962e",
-      "properties": {
-        "description": "Develop a problem observation into a core issue using brainstorming strategies"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "objective.key": "d546dc96-c717-4567-80d9-10bd4516962e"
-      }
-    },
-    {
-      "key": "ff72406f-e29d-490d-ba5b-c5647b914a5b",
-      "properties": {
-        "description": "Develop survey questions that can be used to create a machine learning app"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "objective.key": "ff72406f-e29d-490d-ba5b-c5647b914a5b"
-      }
-    },
-    {
-      "key": "01197b97-b1b0-40bf-a8bf-82b8f4750144",
-      "properties": {
-        "description": "Use a template to create a Google Form survey"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "objective.key": "01197b97-b1b0-40bf-a8bf-82b8f4750144"
-      }
-    },
-    {
       "key": "1b5e14ed-a66c-4687-8696-6d82c1267b7a",
       "properties": {
         "description": "Download a csv file from Google Sheets"
@@ -12881,26 +12733,6 @@
       "seeding_key": {
         "lesson.key": "lesson-23",
         "objective.key": "1b5e14ed-a66c-4687-8696-6d82c1267b7a"
-      }
-    },
-    {
-      "key": "c7a2634f-45b5-4a97-af18-b4e2f2c2022c",
-      "properties": {
-        "description": "Upload a csv file to AI Lab"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "objective.key": "c7a2634f-45b5-4a97-af18-b4e2f2c2022c"
-      }
-    },
-    {
-      "key": "e7f1ae8b-3dfc-4790-98fa-743c7f8e8662",
-      "properties": {
-        "description": "Analyze and clean data in Google Sheets"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "objective.key": "e7f1ae8b-3dfc-4790-98fa-743c7f8e8662"
       }
     },
     {
@@ -12914,13 +12746,13 @@
       }
     },
     {
-      "key": "65e5473e-80be-4673-a97c-13b42a791e7c",
+      "key": "1e99636b-02ab-4a68-869b-f8c5c4c761ee",
       "properties": {
-        "description": "Create an app that uses machine learning"
+        "description": "Create at least one guiding principle that addresses an AI ethics issue."
       },
       "seeding_key": {
-        "lesson.key": "lesson-20",
-        "objective.key": "65e5473e-80be-4673-a97c-13b42a791e7c"
+        "lesson.key": "lesson14",
+        "objective.key": "1e99636b-02ab-4a68-869b-f8c5c4c761ee"
       }
     },
     {
@@ -12932,9 +12764,493 @@
         "lesson.key": "lesson16",
         "objective.key": "26a18e15-9fff-4543-b7fe-b2c6df50d52d"
       }
+    },
+    {
+      "key": "27dfb962-593c-46d2-b9aa-66ebc12ac01f",
+      "properties": {
+        "description": "Use if-statements to change the behavior of an app"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "objective.key": "27dfb962-593c-46d2-b9aa-66ebc12ac01f"
+      }
+    },
+    {
+      "key": "2ac5ab5e-8129-478e-bd40-a262315692c8",
+      "properties": {
+        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "objective.key": "2ac5ab5e-8129-478e-bd40-a262315692c8"
+      }
+    },
+    {
+      "key": "316092e7-641f-433f-837c-db12e34accfd",
+      "properties": {
+        "description": "Describe the differences between supervised and unsupervised learning."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson2",
+        "objective.key": "316092e7-641f-433f-837c-db12e34accfd"
+      }
+    },
+    {
+      "key": "36d633e6-2700-4df8-b434-75a785de2544",
+      "properties": {
+        "description": "Create model cards in AI Lab to save machine learning models"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "objective.key": "36d633e6-2700-4df8-b434-75a785de2544"
+      }
+    },
+    {
+      "key": "4330671a-5a3d-48ee-8045-e7886512bfca",
+      "properties": {
+        "description": "Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson3",
+        "objective.key": "4330671a-5a3d-48ee-8045-e7886512bfca"
+      }
+    },
+    {
+      "key": "59cae484-9805-4974-80b3-346f4e774ebe",
+      "properties": {
+        "description": "Use data visualizations to find patterns in numerical data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson8",
+        "objective.key": "59cae484-9805-4974-80b3-346f4e774ebe"
+      }
+    },
+    {
+      "key": "5df796b5-f2a1-4fd2-8143-4d5baf32dd0a",
+      "properties": {
+        "description": "Read a model card and use it to evaluate a model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson7",
+        "objective.key": "5df796b5-f2a1-4fd2-8143-4d5baf32dd0a"
+      }
+    },
+    {
+      "key": "6206d31c-6cb6-4f3e-a2f8-110f5613bfca",
+      "properties": {
+        "description": "Update the default model code to use new inputs in a machine learning app"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson11",
+        "objective.key": "6206d31c-6cb6-4f3e-a2f8-110f5613bfca"
+      }
+    },
+    {
+      "key": "65e5473e-80be-4673-a97c-13b42a791e7c",
+      "properties": {
+        "description": "Create an app that uses machine learning"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "objective.key": "65e5473e-80be-4673-a97c-13b42a791e7c"
+      }
+    },
+    {
+      "key": "6744ba33-c6f7-446a-a4d2-93ba725bfd8b",
+      "properties": {
+        "description": "Compare and contrast categorical data versus numerical data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson8",
+        "objective.key": "6744ba33-c6f7-446a-a4d2-93ba725bfd8b"
+      }
+    },
+    {
+      "key": "702a7551-9aff-42b9-808d-a234e7b8b9ba",
+      "properties": {
+        "description": "Use AI Lab to select features to train a model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "objective.key": "702a7551-9aff-42b9-808d-a234e7b8b9ba"
+      }
+    },
+    {
+      "key": "7c64c6be-1473-4799-9eb7-883b11e82748",
+      "properties": {
+        "description": "Describe how Artificial Intelligence is having an impact on society"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "objective.key": "7c64c6be-1473-4799-9eb7-883b11e82748"
+      }
+    },
+    {
+      "key": "7f314d96-e2e3-4008-a842-b63d8fcf8ed2",
+      "properties": {
+        "description": "Explain how accuracy calculation for numerical data is different from categorical data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson9",
+        "objective.key": "7f314d96-e2e3-4008-a842-b63d8fcf8ed2"
+      }
+    },
+    {
+      "key": "87215a32-fe94-4878-9d84-fbfc1cb056e9",
+      "properties": {
+        "description": "Use a model card to update the user interface of an app"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "objective.key": "87215a32-fe94-4878-9d84-fbfc1cb056e9"
+      }
+    },
+    {
+      "key": "959c5bac-cd23-431b-9c7c-96de722fcab5",
+      "properties": {
+        "description": "Use data visualizations and feature iteration to train machine learning models"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "objective.key": "959c5bac-cd23-431b-9c7c-96de722fcab5"
+      }
+    },
+    {
+      "key": "9dd5b6eb-e1cd-4dae-8bf6-77fb08ba9d59",
+      "properties": {
+        "description": "Explain how computers can make decisions by comparing similarities in data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson9",
+        "objective.key": "9dd5b6eb-e1cd-4dae-8bf6-77fb08ba9d59"
+      }
+    },
+    {
+      "key": "b91b7aab-34be-466e-bea0-b2e5cd78c900",
+      "properties": {
+        "description": "Look for patterns in data to help make a decision"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson3",
+        "objective.key": "b91b7aab-34be-466e-bea0-b2e5cd78c900"
+      }
+    },
+    {
+      "key": "c7a2634f-45b5-4a97-af18-b4e2f2c2022c",
+      "properties": {
+        "description": "Upload a csv file to AI Lab"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "objective.key": "c7a2634f-45b5-4a97-af18-b4e2f2c2022c"
+      }
+    },
+    {
+      "key": "c88b121e-9982-4f48-8c6b-11bd70450fd5",
+      "properties": {
+        "description": "Use data visualization tools to decide which features to include when training a model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "objective.key": "c88b121e-9982-4f48-8c6b-11bd70450fd5"
+      }
+    },
+    {
+      "key": "d17f9e8e-6694-4adb-8be6-ebfc519446ec",
+      "properties": {
+        "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "objective.key": "d17f9e8e-6694-4adb-8be6-ebfc519446ec"
+      }
+    },
+    {
+      "key": "d546dc96-c717-4567-80d9-10bd4516962e",
+      "properties": {
+        "description": "Develop a problem observation into a core issue using brainstorming strategies"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "objective.key": "d546dc96-c717-4567-80d9-10bd4516962e"
+      }
+    },
+    {
+      "key": "e3b01cd1-f14c-43c9-9162-8b74b8564db2",
+      "properties": {
+        "description": "Use the Model Card to create new input elements for a machine learning app"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson11",
+        "objective.key": "e3b01cd1-f14c-43c9-9162-8b74b8564db2"
+      }
+    },
+    {
+      "key": "e688a468-4c7c-49b5-a3ef-0ab537b2eeee",
+      "properties": {
+        "description": "Explain how computers can separate data to make a decision"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson4",
+        "objective.key": "e688a468-4c7c-49b5-a3ef-0ab537b2eeee"
+      }
+    },
+    {
+      "key": "e7f1ae8b-3dfc-4790-98fa-743c7f8e8662",
+      "properties": {
+        "description": "Analyze and clean data in Google Sheets"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "objective.key": "e7f1ae8b-3dfc-4790-98fa-743c7f8e8662"
+      }
+    },
+    {
+      "key": "f258977a-6df0-4dcb-b5d7-2eef5db3290b",
+      "properties": {
+        "description": "Create an app that uses machine learning"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson6",
+        "objective.key": "f258977a-6df0-4dcb-b5d7-2eef5db3290b"
+      }
+    },
+    {
+      "key": "ff72406f-e29d-490d-ba5b-c5647b914a5b",
+      "properties": {
+        "description": "Develop survey questions that can be used to create a machine learning app"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "objective.key": "ff72406f-e29d-490d-ba5b-c5647b914a5b"
+      }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.K-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson1",
@@ -12965,6 +13281,202 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson2",
         "framework.shortcode": "ai4k12-2021",
         "standard.shortcode": "3-A-i.6-8"
@@ -12975,13 +13487,6 @@
         "lesson.key": "lesson2",
         "framework.shortcode": "ai4k12-2021",
         "standard.shortcode": "3-A-i.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-17",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-20"
       }
     },
     {
@@ -13086,14 +13591,14 @@
       "seeding_key": {
         "lesson.key": "lesson6",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
+        "standard.shortcode": "2-IC-21"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson6",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
+        "standard.shortcode": "3A-AP-16"
       }
     },
     {
@@ -13140,97 +13645,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson12",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson10",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson10",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson10",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson10",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-ii.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson8",
         "framework.shortcode": "ai4k12-2021",
         "standard.shortcode": "3-A-iii.6-8"
@@ -13259,345 +13673,23 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson11",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson11",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson11",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
+        "lesson.key": "lesson9",
         "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-ii.9-12"
+        "standard.shortcode": "3-A-ii.3-5"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-18",
+        "lesson.key": "lesson9",
         "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.6-8"
+        "standard.shortcode": "3-A-iii.3-5"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-18",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
+        "lesson.key": "lesson9",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.K-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-DA-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-iii.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-ii.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-DA-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
       }
     }
   ],

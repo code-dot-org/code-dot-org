@@ -7,9 +7,12 @@
     "self-paced-pl-csd4-2021"
   ],
   "published_state": "beta",
+  "instruction_type": "self_paced",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
   "properties": {
-    "version_year": "2021",
-    "has_verified_resources": true
+    "has_verified_resources": true,
+    "version_year": "2021"
   },
   "resources": [
 

@@ -3,11 +3,11 @@ require 'test_helper'
 class ProjectsListTest < ActionController::TestCase
   setup do
     @student = create :student
-    @storage_id = storage_id_for_user_id(@student.id)
-    @channel_id = storage_encrypt_channel_id(@storage_id, 123)
+    @storage_id = fake_storage_id_for_user_id(@student.id)
+    stub_storage_id_for_user_id(@student.id)
 
     @teacher = create :teacher
-    @teacher_storage_id = storage_id_for_user_id(@teacher.id)
+    stub_storage_id_for_user_id(@teacher.id)
 
     student_project_value = {
       name: 'Bobs App',
@@ -256,6 +256,7 @@ class ProjectsListTest < ActionController::TestCase
       k1: [],
       spritelab: [],
       dance: [],
+      poetry: [],
       library: []
     }
     fake_recent_projects = {
@@ -272,6 +273,7 @@ class ProjectsListTest < ActionController::TestCase
       k1: [],
       spritelab: [],
       dance: [],
+      poetry: [],
       library: []
     }
     ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
@@ -322,7 +324,8 @@ class ProjectsListTest < ActionController::TestCase
     Section = Struct.new(:students, :user, :id, :name, :user_id)
     section = Section.new([student], teacher, 321, 'sectionName', teacher.id)
 
-    PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
+    ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
+    PEGASUS_DB.stubs(:[]).returns(library_db_result(stub_projects))
 
     StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)
@@ -359,7 +362,8 @@ class ProjectsListTest < ActionController::TestCase
     Section = Struct.new(:students, :user, :id, :name, :user_id)
     section = Section.new([section_participant], section_owner, 321, 'sectionName', section_owner.id)
 
-    PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
+    ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
+    PEGASUS_DB.stubs(:[]).returns(library_db_result(stub_projects))
 
     StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)
@@ -404,7 +408,8 @@ class ProjectsListTest < ActionController::TestCase
     Section = Struct.new(:students, :user, :id, :name, :user_id)
     section = Section.new([], teacher, 321, 'sectionName', teacher.id)
 
-    PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
+    ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
+    PEGASUS_DB.stubs(:[]).returns(library_db_result(stub_projects))
 
     StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)

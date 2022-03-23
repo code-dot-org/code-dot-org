@@ -54,7 +54,7 @@ namespace :test do
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
       failed_browser_count = RakeUtils.system_with_chat_logging(
         'bundle', 'exec', './runner.rb',
-        '-c', 'Chrome,iPhone,IE11',
+        '-c', 'Chrome,iPhone',
         '-d', CDO.site_host('studio.code.org'),
         '-p', CDO.site_host('code.org'),
         '--db', # Ensure features that require database access are run even if the server name isn't "test"
@@ -85,7 +85,7 @@ namespace :test do
   # Run the eyes tests and ui test suites in parallel. If one of these suites
   # raises, allow the other suite to complete, then make sure this task raises.
   task :ui_all do
-    Parallel.each([:eyes_ui, :regular_ui, :lighthouse], in_threads: 3) do |target|
+    Parallel.each([:eyes_ui, :regular_ui], in_threads: 3) do |target|
       Rake::Task["test:#{target}"].invoke
     end
   end
@@ -200,28 +200,36 @@ namespace :test do
   task :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_shared_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :pegasus_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_pegasus_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :lib_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_lib_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :bin_i18n_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_bin_i18n_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 

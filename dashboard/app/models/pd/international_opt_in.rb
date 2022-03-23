@@ -30,6 +30,12 @@ class Pd::InternationalOptIn < ApplicationRecord
     )
   ).freeze
 
+  UZBEKISTAN_SCHOOL_DATA = JSON.parse(
+    File.read(
+      File.join(Rails.root, 'config', 'uzbekistanSchoolData.json')
+    )
+  ).freeze
+
   belongs_to :user
 
   validates_presence_of :user_id, :form_data
@@ -40,7 +46,6 @@ class Pd::InternationalOptIn < ApplicationRecord
       :last_name,
       :gender,
       :school_name,
-      :school_city,
       :school_country,
       :ages,
       :subjects,
@@ -98,9 +103,11 @@ class Pd::InternationalOptIn < ApplicationRecord
     # apps/src/code-studio/pd/form_components/utils.js
     entries = Hash[entry_keys.map do |key, values|
       [key, values.map do |value|
+        # Capitalize country values to be consistent with other country strings in our database
+        answer = key.to_s == 'schoolCountry' ? value.titleize : value
         {
           answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
-          answerValue: value
+          answerValue: answer
         }
       end]
     end]
@@ -110,8 +117,29 @@ class Pd::InternationalOptIn < ApplicationRecord
 
     entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
     entries[:chileanSchoolData] = CHILEAN_SCHOOL_DATA
+    entries[:uzbekistanSchoolData] = UZBEKISTAN_SCHOOL_DATA
 
     super.merge(entries)
+  end
+
+  # @override
+  def dynamic_required_fields(hash)
+    [].tap do |required|
+      if hash[:school_country] == "Colombia"
+        required << :school_department
+        required << :school_municipality
+        required << :school_city
+      elsif hash[:school_country] == "Chile"
+        required << :school_department
+        required << :school_commune
+        required << :school_id
+      elsif hash[:school_country] == "Uzbekistan"
+        required << :school_department
+        required << :school_municipality
+      else
+        required << :school_city
+      end
+    end
   end
 
   def self.labels
@@ -122,8 +150,11 @@ class Pd::InternationalOptIn < ApplicationRecord
       email
       emailAlternate
       gender
+      school
       schoolCity
+      schoolCityDistrict
       schoolCountry
+      schoolDepartmentRegion
       schoolName
       ages
       subjects

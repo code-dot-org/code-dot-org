@@ -20,7 +20,6 @@ class Vocabulary < ApplicationRecord
   include SerializedProperties
 
   has_and_belongs_to_many :lessons, join_table: :lessons_vocabularies
-  has_many :lessons_vocabularies
   belongs_to :course_version
 
   KEY_CHAR_RE = /[a-z_]/
@@ -123,6 +122,17 @@ class Vocabulary < ApplicationRecord
   def serialize_scripts
     if Rails.application.config.levelbuilder_mode
       lessons.map(&:script).uniq.each(&:write_script_json)
+    end
+  end
+
+  def copy_to_course_version(destination_course_version)
+    return self if course_version == destination_course_version
+    persisted_vocab = Vocabulary.where(word: word, course_version_id: destination_course_version.id).first
+    if persisted_vocab && !!persisted_vocab.common_sense_media == !!common_sense_media
+      persisted_vocab
+    else
+      copied_vocab = Vocabulary.create!(word: word, definition: definition, common_sense_media: common_sense_media, course_version_id: destination_course_version.id)
+      copied_vocab
     end
   end
 

@@ -1,6 +1,7 @@
 module Api::V1::Pd
   class ApplicationsController < ::ApplicationController
     load_and_authorize_resource class: 'Pd::Application::ApplicationBase'
+    authorize_resource Pd::Application::TeacherApplication if @application.is_a? Pd::Application::TeacherApplication
 
     include Pd::Application::ActiveApplicationModels
 
@@ -31,7 +32,7 @@ module Api::V1::Pd
         end
 
         apps.group(:status).each do |group|
-          application_data[role][group.status] = if ['csd_teachers', 'csp_teachers'].include? role
+          application_data[role][group.status] = if TEACHER_ROLES.include? role
                                                    {total: group.total}
                                                  else
                                                    {total: group.total, locked: group.locked}
@@ -194,11 +195,14 @@ module Api::V1::Pd
     def search
       email = params[:email]
       user = User.find_by_email email
+
+      # only workshop admins can see incomplete applications
       filtered_applications = @applications.where(
         application_year: APPLICATION_CURRENT_YEAR,
         application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
         user: user
       )
+      filtered_applications = filtered_applications.where.not(status: 'incomplete') unless current_user.workshop_admin?
 
       render json: filtered_applications, each_serializer: ApplicationSearchSerializer
     end
@@ -206,7 +210,9 @@ module Api::V1::Pd
     private
 
     def get_applications_by_role(role, include_associations: true)
+      # hide incomplete applications for people who are not workshop admins
       applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
+      applications_of_type = applications_of_type.where.not(status: 'incomplete') unless current_user.workshop_admin?
       applications_of_type = applications_of_type.includes(:user, :regional_partner) if include_associations
 
       case role
@@ -220,6 +226,8 @@ module Api::V1::Pd
         return applications_of_type.csd.where(application_year: APPLICATION_CURRENT_YEAR)
       when :csp_teachers
         return applications_of_type.csp.where(application_year: APPLICATION_CURRENT_YEAR)
+      when :csa_teachers
+        return applications_of_type.csa.where(application_year: APPLICATION_CURRENT_YEAR)
       else
         raise ActiveRecord::RecordNotFound
       end
@@ -262,9 +270,11 @@ module Api::V1::Pd
       csd_facilitators: FACILITATOR_APPLICATION_CLASS,
       csp_facilitators: FACILITATOR_APPLICATION_CLASS,
       csd_teachers: TEACHER_APPLICATION_CLASS,
-      csp_teachers: TEACHER_APPLICATION_CLASS
+      csp_teachers: TEACHER_APPLICATION_CLASS,
+      csa_teachers: TEACHER_APPLICATION_CLASS
     }
     ROLES = TYPES_BY_ROLE.keys
+    TEACHER_ROLES = ROLES.select {|role| role.to_s.include?('teachers')}
 
     def empty_application_data
       {}.tap do |app_data|

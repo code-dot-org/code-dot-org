@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import queryString from 'query-string';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(function() {
   const store = getStore();
@@ -17,6 +18,7 @@ $(document).ready(function() {
   const language = congratsData.language;
   const under13 = congratsData.under_13;
   const randomDonorTwitter = congratsData.random_donor_twitter;
+  const randomDonorName = congratsData.random_donor_name;
   // Allows us to conditionally hide the promotional card for the Dance Party
   // Extras tutorial if we have problems during Hour of Code.
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
@@ -30,7 +32,9 @@ $(document).ready(function() {
   } catch (e) {}
 
   const mcShareLink = tryGetLocalStorage('craftHeroShareLink', '');
-
+  const showStudioCertificate = experiments.isEnabled(
+    experiments.STUDIO_CERTIFICATE
+  );
   ReactDOM.render(
     <Provider store={store}>
       <Congrats
@@ -41,7 +45,9 @@ $(document).ready(function() {
         language={language}
         MCShareLink={mcShareLink}
         randomDonorTwitter={randomDonorTwitter}
+        randomDonorName={randomDonorName}
         hideDancePartyFollowUp={hideDancePartyFollowUp}
+        showStudioCertificate={showStudioCertificate}
       />
     </Provider>,
     document.getElementById('congrats-container')

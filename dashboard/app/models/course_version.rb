@@ -11,6 +11,7 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  course_offering_id :integer
+#  published_state    :string(255)      default("in_development")
 #
 # Indexes
 #
@@ -25,6 +26,10 @@ class CourseVersion < ApplicationRecord
   belongs_to :course_offering
   has_many :resources
   has_many :vocabularies
+  has_many :reference_guides
+
+  attr_readonly :content_root_type
+  attr_readonly :content_root_id
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -53,7 +58,16 @@ class CourseVersion < ApplicationRecord
   # accessing them via course version. In the future, these fields will be moved
   # into the course version itself.
 
-  delegate :name, to: :content_root
+  delegate :name, to: :content_root, allow_nil: true
+  delegate :pl_course?, to: :content_root, allow_nil: true
+  delegate :stable?, to: :content_root, allow_nil: true
+  delegate :launched?, to: :content_root, allow_nil: true
+  delegate :in_development?, to: :content_root, allow_nil: true
+  delegate :pilot?, to: :content_root, allow_nil: true
+  delegate :has_pilot_experiment?, to: :content_root, allow_nil: true
+  delegate :has_editor_experiment?, to: :content_root, allow_nil: true
+  delegate :can_be_instructor?, to: :content_root, allow_nil: true
+  delegate :course_assignable?, to: :content_root, allow_nil: true
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -76,13 +90,19 @@ class CourseVersion < ApplicationRecord
         display_name: content_root.version_year,
         content_root: content_root,
       )
-      if content_root.prevent_course_version_change? && content_root.course_version != course_version
-        raise "cannot change course version of #{content_root.name}"
-      end
-      course_version.save!
+      course_version.published_state = content_root.published_state
     else
       course_version = nil
     end
+
+    # Check if we should prevent saving the new course version:
+    # - We can always add a course version if the content_root didn't previously have one
+    # - If the content root's previous course version equals the new one, then there's no change
+    # - If the content_root doesn't prevent a course version change, we can safely change it
+    if content_root.course_version && content_root.course_version != course_version && content_root.prevent_course_version_change?
+      raise "cannot change course version of #{content_root.name}"
+    end
+    course_version.save! if course_version
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed
@@ -118,5 +138,34 @@ class CourseVersion < ApplicationRecord
     Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
       CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
     end
+  end
+
+  def recommended?(locale_code = 'en-us')
+    return false unless stable?
+    return true if course_offering.course_versions.length == 1
+
+    family_name = course_offering.key
+    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale_code)
+
+    latest_stable_version == content_root
+  end
+
+  def summarize_for_assignment_dropdown(user, locale_code)
+    [
+      id,
+      {
+        id: id,
+        key: key,
+        version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
+        content_root_id: content_root.id,
+        name: content_root.localized_title,
+        path: content_root.link,
+        type: content_root_type,
+        is_stable: stable?,
+        is_recommended: recommended?(locale_code),
+        locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
+        units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
+      }
+    ]
   end
 end

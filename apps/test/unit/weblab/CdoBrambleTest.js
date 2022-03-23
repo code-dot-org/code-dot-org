@@ -72,8 +72,7 @@ describe('CdoBramble', () => {
   });
 
   afterEach(() => {
-    console.error.restore();
-    console.warn.restore();
+    sinon.restore();
   });
 
   describe('initProject', () => {
@@ -85,6 +84,9 @@ describe('CdoBramble', () => {
         sinon
           .stub(cdoBramble.api, 'getCurrentFilesVersionId')
           .returns('a1b2c3');
+      });
+      afterEach(() => {
+        sinon.restore();
       });
 
       it('syncs files after creating root directory', () => {
@@ -131,6 +133,9 @@ describe('CdoBramble', () => {
 
         cdoBramble.syncFiles([{name: 'index.html'}], projectVersion, () => {});
       });
+      afterEach(() => {
+        sinon.restore();
+      });
 
       it('resets version and local changes', () => {
         expect(cdoBramble.lastSyncedVersionId).to.equal(projectVersion);
@@ -148,6 +153,9 @@ describe('CdoBramble', () => {
         cdoBramble.lastSyncedVersionId = 'd4e5f6';
         cdoBramble.recentChanges = [{operation: 'change', file: 'index.html'}];
         sinon.stub(cdoBramble, 'overwriteProject');
+      });
+      afterEach(() => {
+        sinon.restore();
       });
 
       it('warns that changes will be overwritten if there are any', () => {
@@ -221,6 +229,9 @@ describe('CdoBramble', () => {
     beforeEach(() => {
       cdoBramble.disallowedHtmlTags = DISALLOWED_HTML_TAGS;
     });
+    afterEach(() => {
+      sinon.restore();
+    });
 
     it('no-ops if reading file errored', () => {
       const error = new Error('oh no');
@@ -266,6 +277,9 @@ describe('CdoBramble', () => {
   });
 
   describe('preprocessHtml', () => {
+    afterEach(() => {
+      sinon.restore();
+    });
     it('no-ops if detecting disallowed content errored', () => {
       sinon
         .stub(cdoBramble, 'detectDisallowedHtml')
@@ -560,6 +574,9 @@ describe('CdoBramble', () => {
         .stub(cdoBramble, 'writeFileData')
         .callsFake((path, data, callback) => callback(null));
     });
+    afterEach(() => {
+      sinon.restore();
+    });
 
     it('downloads file data and writes it to bramble', done => {
       const files = [
@@ -639,6 +656,9 @@ describe('CdoBramble', () => {
         .stub(cdoBramble, 'writeFileData')
         .callsFake((path, data, callback) => callback(null));
     });
+    afterEach(() => {
+      sinon.restore();
+    });
 
     it('invokes the callback if there are no source files', done => {
       cdoBramble.recursivelyWriteSourceFiles([], 0, () => {
@@ -711,6 +731,9 @@ describe('CdoBramble', () => {
     beforeEach(() => {
       const startSources = {files: [{name: 'index.html', data: '<div></div>'}]};
       sinon.stub(cdoBramble.api, 'getStartSources').returns(startSources);
+    });
+    afterEach(() => {
+      sinon.restore();
     });
 
     it('is true if source files and user files have different lengths', done => {

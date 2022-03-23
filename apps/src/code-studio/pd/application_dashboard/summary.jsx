@@ -7,6 +7,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import SummaryTable from './summary_table';
 import {Row, Col} from 'react-bootstrap';
+import {mapValues, omit} from 'lodash';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType
 } from '../components/regional_partner_dropdown';
@@ -14,6 +15,9 @@ import ApplicantSearch from './applicant_search';
 import AdminNavigationButtons from './admin_navigation_buttons';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
+
+export const removeIncompleteApplications = data =>
+  mapValues(data, data_by_status => omit(data_by_status, ['incomplete']));
 
 export class Summary extends React.Component {
   static propTypes = {
@@ -31,13 +35,13 @@ export class Summary extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
       this.load(nextProps.regionalPartnerFilter);
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.load(this.props.regionalPartnerFilter);
   }
 
@@ -69,7 +73,9 @@ export class Summary extends React.Component {
     }).done(data => {
       this.setState({
         loading: false,
-        applications: data
+        applications: this.props.isWorkshopAdmin
+          ? data
+          : removeIncompleteApplications(data)
       });
     });
   }
@@ -100,6 +106,15 @@ export class Summary extends React.Component {
               caption="CS Principles Teachers"
               data={this.state.applications['csp_teachers']}
               path="csp_teachers"
+              applicationType="teacher"
+            />
+          </Col>
+          <Col sm={6}>
+            <SummaryTable
+              id="summary-csa-teachers"
+              caption="Computer Science A Teachers"
+              data={this.state.applications['csa_teachers']}
+              path="csa_teachers"
               applicationType="teacher"
             />
           </Col>

@@ -81,7 +81,7 @@ export default connect(
       getConnectionError(state) instanceof UnsupportedBrowserError,
     hasConnectionError: hasConnectionError(state),
     handleOpenSetupPage: () => {
-      window.open('/maker/setup', '_blank');
+      window.open('/maker/setup', '_blank', 'noopener,noreferrer');
     }
   }),
   {

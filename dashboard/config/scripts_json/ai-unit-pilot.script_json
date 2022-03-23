@@ -4,6 +4,10 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "pilot_experiment": "ai-unit-pilot",
       "teacher_resources": [
         [
           "lessonPlans",
@@ -18,15 +22,15 @@
           "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"
         ]
       ],
-      "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
-      "has_lesson_plan": true,
-      "pilot_experiment": "ai-unit-pilot",
-      "hideable_lessons": true
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:03 UTC",
+    "serialized_at": "2021-11-22 19:57:33 UTC",
     "published_state": "pilot",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -287,16 +291,755 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "49fbbaf2-cdf9-4be3-8522-d11a830c3d03",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "49fbbaf2-cdf9-4be3-8522-d11a830c3d03",
+        "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "76d64608-1905-4410-bb45-46f689ca3488",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76d64608-1905-4410-bb45-46f689ca3488",
+        "lesson.key": "lesson2",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "09b24e3d-4938-4e9e-a90b-86701537d2ba",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09b24e3d-4938-4e9e-a90b-86701537d2ba",
+        "lesson.key": "lesson3",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "7e65e19b-6209-4856-ba75-9cc9622e7e19",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e65e19b-6209-4856-ba75-9cc9622e7e19",
+        "lesson.key": "lesson4",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "b5c4c0b2-af1b-4d80-aa0e-f2336713e798",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5c4c0b2-af1b-4d80-aa0e-f2336713e798",
+        "lesson.key": "lesson5",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "dbeaef76-c0e1-4254-a172-2e9dab318f7f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dbeaef76-c0e1-4254-a172-2e9dab318f7f",
+        "lesson.key": "lesson6",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "c3b44e6e-3300-4e6d-b3d3-3484c78fcc92",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3b44e6e-3300-4e6d-b3d3-3484c78fcc92",
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "c159f20b-5d61-4996-b316-d6592c00da02",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c159f20b-5d61-4996-b316-d6592c00da02",
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "82cd04d6-5af6-410a-800e-e07f328635af",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82cd04d6-5af6-410a-800e-e07f328635af",
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "246b7c35-430f-457c-8405-b60cdaca9d71",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "246b7c35-430f-457c-8405-b60cdaca9d71",
+        "lesson.key": "lesson10",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "9ce0da0f-491a-430a-87ee-5ed41cd4e870",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ce0da0f-491a-430a-87ee-5ed41cd4e870",
+        "lesson.key": "lesson11",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "72a7f9d0-2049-414a-9e2e-54e1b3267b4e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "72a7f9d0-2049-414a-9e2e-54e1b3267b4e",
+        "lesson.key": "lesson12",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "d2782946-e287-4ff7-a239-563a9ce9e90d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d2782946-e287-4ff7-a239-563a9ce9e90d",
+        "lesson.key": "lesson13",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "abafd280-ddfb-4272-bbde-e90ba89e6a81",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "abafd280-ddfb-4272-bbde-e90ba89e6a81",
+        "lesson.key": "lesson14",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "ca5884c7-394c-4b15-8c58-89e41fe186ec",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ca5884c7-394c-4b15-8c58-89e41fe186ec",
+        "lesson.key": "lesson15",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "key": "dd32668d-af9b-4e7f-9c5d-5e5231a3cc30",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd32668d-af9b-4e7f-9c5d-5e5231a3cc30",
+        "lesson.key": "lesson16",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "41ca5d98-82aa-48ed-8658-161eebc2816c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "41ca5d98-82aa-48ed-8658-161eebc2816c",
+        "lesson_activity.key": "49fbbaf2-cdf9-4be3-8522-d11a830c3d03"
+      }
+    },
+    {
+      "key": "400fab09-f9fc-4ef4-8d0c-434e92d401e7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Recognizing Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "400fab09-f9fc-4ef4-8d0c-434e92d401e7",
+        "lesson_activity.key": "49fbbaf2-cdf9-4be3-8522-d11a830c3d03"
+      }
+    },
+    {
+      "key": "529e5a61-7506-4fc0-9753-5ef63e9f617e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Recognizing Fish Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "529e5a61-7506-4fc0-9753-5ef63e9f617e",
+        "lesson_activity.key": "49fbbaf2-cdf9-4be3-8522-d11a830c3d03"
+      }
+    },
+    {
+      "key": "d3ce4991-5153-4cdf-a5a9-e1fe3b57f24d",
+      "position": 4,
+      "properties": {
+        "name": "Recognizing Expressions",
+        "progression_name": "Recognizing Expressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3ce4991-5153-4cdf-a5a9-e1fe3b57f24d",
+        "lesson_activity.key": "49fbbaf2-cdf9-4be3-8522-d11a830c3d03"
+      }
+    },
+    {
+      "key": "8f35036b-9e1f-436f-be3e-f95d4cf2f0eb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f35036b-9e1f-436f-be3e-f95d4cf2f0eb",
+        "lesson_activity.key": "76d64608-1905-4410-bb45-46f689ca3488"
+      }
+    },
+    {
+      "key": "3c85285b-5139-4b18-9ef8-4d08c911bc86",
+      "position": 2,
+      "properties": {
+        "progression_name": "Looking for Patterns"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c85285b-5139-4b18-9ef8-4d08c911bc86",
+        "lesson_activity.key": "76d64608-1905-4410-bb45-46f689ca3488"
+      }
+    },
+    {
+      "key": "aa3bb68b-36c1-4c27-b82b-0978a9b72f74",
+      "position": 3,
+      "properties": {
+        "name": "Green Glass Door",
+        "progression_name": "Green Glass Door"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa3bb68b-36c1-4c27-b82b-0978a9b72f74",
+        "lesson_activity.key": "76d64608-1905-4410-bb45-46f689ca3488"
+      }
+    },
+    {
+      "key": "5321702f-2148-44ce-b631-d2353936b984",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5321702f-2148-44ce-b631-d2353936b984",
+        "lesson_activity.key": "09b24e3d-4938-4e9e-a90b-86701537d2ba"
+      }
+    },
+    {
+      "key": "890e8e18-3e65-4169-938f-86c477a72375",
+      "position": 2,
+      "properties": {
+        "progression_name": "Shoe Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "890e8e18-3e65-4169-938f-86c477a72375",
+        "lesson_activity.key": "09b24e3d-4938-4e9e-a90b-86701537d2ba"
+      }
+    },
+    {
+      "key": "ecbc69a0-bc52-46bd-b717-221a091b1b03",
+      "position": 3,
+      "properties": {
+        "progression_name": "Improved Shoe Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecbc69a0-bc52-46bd-b717-221a091b1b03",
+        "lesson_activity.key": "09b24e3d-4938-4e9e-a90b-86701537d2ba"
+      }
+    },
+    {
+      "key": "2edb2b13-0bdd-440d-86da-cd1eebc4f421",
+      "position": 4,
+      "properties": {
+        "name": "Ultimate Shoe Recommender",
+        "progression_name": "Ultimate Shoe Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "2edb2b13-0bdd-440d-86da-cd1eebc4f421",
+        "lesson_activity.key": "09b24e3d-4938-4e9e-a90b-86701537d2ba"
+      }
+    },
+    {
+      "key": "a0600070-e6d2-4e96-a37c-0e9646e79239",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0600070-e6d2-4e96-a37c-0e9646e79239",
+        "lesson_activity.key": "7e65e19b-6209-4856-ba75-9cc9622e7e19"
+      }
+    },
+    {
+      "key": "e90c6c2f-ee82-4d4b-910f-80de481b2198",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e90c6c2f-ee82-4d4b-910f-80de481b2198",
+        "lesson_activity.key": "b5c4c0b2-af1b-4d80-aa0e-f2336713e798"
+      }
+    },
+    {
+      "key": "24e3bd86-2de1-4a74-acdf-94624d56da1d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Dataset #1: Tacos"
+      },
+      "seeding_key": {
+        "activity_section.key": "24e3bd86-2de1-4a74-acdf-94624d56da1d",
+        "lesson_activity.key": "b5c4c0b2-af1b-4d80-aa0e-f2336713e798"
+      }
+    },
+    {
+      "key": "48580a78-4935-41ee-a419-9e1b5bb709dc",
+      "position": 3,
+      "properties": {
+        "progression_name": "Dataset #2: Ice Cream"
+      },
+      "seeding_key": {
+        "activity_section.key": "48580a78-4935-41ee-a419-9e1b5bb709dc",
+        "lesson_activity.key": "b5c4c0b2-af1b-4d80-aa0e-f2336713e798"
+      }
+    },
+    {
+      "key": "124e2bf8-b59f-4ec8-9bfd-ddb417d8bf41",
+      "position": 4,
+      "properties": {
+        "progression_name": "Dataset #3: Pizza"
+      },
+      "seeding_key": {
+        "activity_section.key": "124e2bf8-b59f-4ec8-9bfd-ddb417d8bf41",
+        "lesson_activity.key": "b5c4c0b2-af1b-4d80-aa0e-f2336713e798"
+      }
+    },
+    {
+      "key": "9a716f5b-ae26-430f-926d-a6d729fdac85",
+      "position": 5,
+      "properties": {
+        "name": "You Choose: Restaurant Recommendations",
+        "progression_name": "You Choose: Restaurant Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a716f5b-ae26-430f-926d-a6d729fdac85",
+        "lesson_activity.key": "b5c4c0b2-af1b-4d80-aa0e-f2336713e798"
+      }
+    },
+    {
+      "key": "745e029d-1edb-4ebf-a028-a18f9e4446c7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "745e029d-1edb-4ebf-a028-a18f9e4446c7",
+        "lesson_activity.key": "dbeaef76-c0e1-4254-a172-2e9dab318f7f"
+      }
+    },
+    {
+      "key": "0169c797-5c22-4e8c-afaa-06e9f8e10779",
+      "position": 2,
+      "properties": {
+        "progression_name": "(Enable AI Models)"
+      },
+      "seeding_key": {
+        "activity_section.key": "0169c797-5c22-4e8c-afaa-06e9f8e10779",
+        "lesson_activity.key": "dbeaef76-c0e1-4254-a172-2e9dab318f7f"
+      }
+    },
+    {
+      "key": "d6405a4d-abde-4369-8ce7-c96c2be22f78",
+      "position": 3,
+      "properties": {
+        "progression_name": "What is your Ideal Vacation?"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6405a4d-abde-4369-8ce7-c96c2be22f78",
+        "lesson_activity.key": "dbeaef76-c0e1-4254-a172-2e9dab318f7f"
+      }
+    },
+    {
+      "key": "a04c952c-d5d7-47ca-a8bf-fc07eaff0235",
+      "position": 4,
+      "properties": {
+        "progression_name": "Import Your Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "a04c952c-d5d7-47ca-a8bf-fc07eaff0235",
+        "lesson_activity.key": "dbeaef76-c0e1-4254-a172-2e9dab318f7f"
+      }
+    },
+    {
+      "key": "30c8aa1f-a7cf-474e-b2c5-fbdd7b14a54c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Changing Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "30c8aa1f-a7cf-474e-b2c5-fbdd7b14a54c",
+        "lesson_activity.key": "dbeaef76-c0e1-4254-a172-2e9dab318f7f"
+      }
+    },
+    {
+      "key": "f3d508fe-8698-497e-92ba-be5a0d30d670",
+      "position": 6,
+      "properties": {
+        "name": "You Choose: Quiz Apps",
+        "progression_name": "You Choose: Quiz Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3d508fe-8698-497e-92ba-be5a0d30d670",
+        "lesson_activity.key": "dbeaef76-c0e1-4254-a172-2e9dab318f7f"
+      }
+    },
+    {
+      "key": "e28a19a5-23ee-4df0-afeb-43cf8b0bdbb1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e28a19a5-23ee-4df0-afeb-43cf8b0bdbb1",
+        "lesson_activity.key": "c3b44e6e-3300-4e6d-b3d3-3484c78fcc92"
+      }
+    },
+    {
+      "key": "6ebb5372-34b7-4a01-8517-8e69c878e925",
+      "position": 2,
+      "properties": {
+        "progression_name": "Medical Priority App"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ebb5372-34b7-4a01-8517-8e69c878e925",
+        "lesson_activity.key": "c3b44e6e-3300-4e6d-b3d3-3484c78fcc92"
+      }
+    },
+    {
+      "key": "15a1f14e-7dcc-431c-8b47-4c3e6b55c4ca",
+      "position": 3,
+      "properties": {
+        "name": "Medical Dataset Model Cards",
+        "progression_name": "Medical Dataset Model Cards"
+      },
+      "seeding_key": {
+        "activity_section.key": "15a1f14e-7dcc-431c-8b47-4c3e6b55c4ca",
+        "lesson_activity.key": "c3b44e6e-3300-4e6d-b3d3-3484c78fcc92"
+      }
+    },
+    {
+      "key": "acc0e0ba-9677-4b67-88e2-fd467bdbdf96",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "acc0e0ba-9677-4b67-88e2-fd467bdbdf96",
+        "lesson_activity.key": "c159f20b-5d61-4996-b316-d6592c00da02"
+      }
+    },
+    {
+      "key": "f7d26b17-2aee-469f-a87f-cccb9f8bfce2",
+      "position": 2,
+      "properties": {
+        "name": "Safari Planner",
+        "progression_name": "Safari Planner"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7d26b17-2aee-469f-a87f-cccb9f8bfce2",
+        "lesson_activity.key": "c159f20b-5d61-4996-b316-d6592c00da02"
+      }
+    },
+    {
+      "key": "eeba1b6d-d8a0-43b8-b48d-26c6d23fc580",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "eeba1b6d-d8a0-43b8-b48d-26c6d23fc580",
+        "lesson_activity.key": "82cd04d6-5af6-410a-800e-e07f328635af"
+      }
+    },
+    {
+      "key": "a5a736dc-fb5c-4c81-b3ce-d0fbefe24e8b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5a736dc-fb5c-4c81-b3ce-d0fbefe24e8b",
+        "lesson_activity.key": "246b7c35-430f-457c-8405-b60cdaca9d71"
+      }
+    },
+    {
+      "key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pet Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee",
+        "lesson_activity.key": "246b7c35-430f-457c-8405-b60cdaca9d71"
+      }
+    },
+    {
+      "key": "63fa07e0-4035-48a9-95ab-75e6fe21b374",
+      "position": 3,
+      "properties": {
+        "name": "You Choose: Improve Your App",
+        "progression_name": "You Choose: Improve Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "63fa07e0-4035-48a9-95ab-75e6fe21b374",
+        "lesson_activity.key": "246b7c35-430f-457c-8405-b60cdaca9d71"
+      }
+    },
+    {
+      "key": "45ccb437-e896-40de-b026-949731874499",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "45ccb437-e896-40de-b026-949731874499",
+        "lesson_activity.key": "9ce0da0f-491a-430a-87ee-5ed41cd4e870"
+      }
+    },
+    {
+      "key": "46114d44-1e95-49b0-81ba-13a3b6149017",
+      "position": 2,
+      "properties": {
+        "progression_name": "Raspado Recommender"
+      },
+      "seeding_key": {
+        "activity_section.key": "46114d44-1e95-49b0-81ba-13a3b6149017",
+        "lesson_activity.key": "9ce0da0f-491a-430a-87ee-5ed41cd4e870"
+      }
+    },
+    {
+      "key": "58426b35-6d0c-490c-a13d-071220221ffd",
+      "position": 3,
+      "properties": {
+        "progression_name": "Driver Alert System"
+      },
+      "seeding_key": {
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd",
+        "lesson_activity.key": "9ce0da0f-491a-430a-87ee-5ed41cd4e870"
+      }
+    },
+    {
+      "key": "f95bffeb-cee1-49f0-9151-9a76bb4028db",
+      "position": 4,
+      "properties": {
+        "name": "You Choose: Improve Your App",
+        "progression_name": "You Choose: Improve Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "f95bffeb-cee1-49f0-9151-9a76bb4028db",
+        "lesson_activity.key": "9ce0da0f-491a-430a-87ee-5ed41cd4e870"
+      }
+    },
+    {
+      "key": "9add99e0-1a6c-46a5-8f7d-b8c713744aa5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9add99e0-1a6c-46a5-8f7d-b8c713744aa5",
+        "lesson_activity.key": "72a7f9d0-2049-414a-9e2e-54e1b3267b4e"
+      }
+    },
+    {
+      "key": "ac3fdd5d-4128-4ebe-a992-e4fd416c745c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Zoo Predictions"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac3fdd5d-4128-4ebe-a992-e4fd416c745c",
+        "lesson_activity.key": "72a7f9d0-2049-414a-9e2e-54e1b3267b4e"
+      }
+    },
+    {
+      "key": "ff293b3b-1036-4f6e-bf3e-4534c7e3ea87",
+      "position": 3,
+      "properties": {
+        "progression_name": "Importing Your Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff293b3b-1036-4f6e-bf3e-4534c7e3ea87",
+        "lesson_activity.key": "72a7f9d0-2049-414a-9e2e-54e1b3267b4e"
+      }
+    },
+    {
+      "key": "049db8bd-eb4f-4629-8bda-68c739ac9151",
+      "position": 4,
+      "properties": {
+        "name": "Customizing Your App",
+        "progression_name": "Customizing Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "049db8bd-eb4f-4629-8bda-68c739ac9151",
+        "lesson_activity.key": "72a7f9d0-2049-414a-9e2e-54e1b3267b4e"
+      }
+    },
+    {
+      "key": "c53e0091-167f-48bb-9837-64ee2f5a59bc",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c53e0091-167f-48bb-9837-64ee2f5a59bc",
+        "lesson_activity.key": "d2782946-e287-4ff7-a239-563a9ce9e90d"
+      }
+    },
+    {
+      "key": "82e1f6b4-6957-48f3-b77b-96a66fb1f21e",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "82e1f6b4-6957-48f3-b77b-96a66fb1f21e",
+        "lesson_activity.key": "abafd280-ddfb-4272-bbde-e90ba89e6a81"
+      }
+    },
+    {
+      "key": "5d995821-fd1c-4115-905e-f8a1212cc132",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d995821-fd1c-4115-905e-f8a1212cc132",
+        "lesson_activity.key": "ca5884c7-394c-4b15-8c58-89e41fe186ec"
+      }
+    },
+    {
+      "key": "751c0528-3358-4a46-8fbc-4a6681418f6c",
+      "position": 2,
+      "properties": {
+        "name": "Planning Your App - AI Lab",
+        "progression_name": "Planning Your App - AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "751c0528-3358-4a46-8fbc-4a6681418f6c",
+        "lesson_activity.key": "ca5884c7-394c-4b15-8c58-89e41fe186ec"
+      }
+    },
+    {
+      "key": "03df8802-a002-4420-a2cc-7338504d1748",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "03df8802-a002-4420-a2cc-7338504d1748",
+        "lesson_activity.key": "dd32668d-af9b-4e7f-9c5d-5e5231a3cc30"
+      }
+    },
+    {
+      "key": "0a222e40-e0e3-4220-b74b-23164d9c1da1",
+      "position": 2,
+      "properties": {
+        "progression_name": "App with Real-World Data - AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a222e40-e0e3-4220-b74b-23164d9c1da1",
+        "lesson_activity.key": "dd32668d-af9b-4e7f-9c5d-5e5231a3cc30"
+      }
+    },
+    {
+      "key": "e89672a1-cc0b-4c1b-bc22-835225f65c3f",
+      "position": 3,
+      "properties": {
+        "name": "App with Real-World Data - App Lab",
+        "progression_name": "App with Real-World Data - App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "e89672a1-cc0b-4c1b-bc22-835225f65c3f",
+        "lesson_activity.key": "dd32668d-af9b-4e7f-9c5d-5e5231a3cc30"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -311,7 +1054,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "41ca5d98-82aa-48ed-8658-161eebc2816c"
       },
       "level_keys": [
         "CSD AIL01 autoSFLP_pilot-2021"
@@ -320,7 +1064,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -335,7 +1079,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "400fab09-f9fc-4ef4-8d0c-434e92d401e7"
       },
       "level_keys": [
         "Oceans_FishVTrash"
@@ -344,7 +1089,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -359,7 +1104,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "529e5a61-7506-4fc0-9753-5ef63e9f617e"
       },
       "level_keys": [
         "Oceans_Short"
@@ -368,7 +1114,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -383,7 +1129,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d3ce4991-5153-4cdf-a5a9-e1fe3b57f24d"
       },
       "level_keys": [
         "Oceans_Long"
@@ -392,7 +1139,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -407,7 +1154,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "8f35036b-9e1f-436f-be3e-f95d4cf2f0eb"
       },
       "level_keys": [
         "CSD AIL02 autoSFLP_pilot-2021"
@@ -416,7 +1164,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -431,7 +1179,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "3c85285b-5139-4b18-9ef8-4d08c911bc86"
       },
       "level_keys": [
         "ml-L2 unsupervised - 1"
@@ -440,7 +1189,7 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -455,7 +1204,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "aa3bb68b-36c1-4c27-b82b-0978a9b72f74"
       },
       "level_keys": [
         "ml-L2 supervised - green glass door"
@@ -464,7 +1214,7 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -479,7 +1229,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "5321702f-2148-44ce-b631-d2353936b984"
       },
       "level_keys": [
         "CSD AIL03 autoSFLP_pilot-2021"
@@ -488,7 +1239,7 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -503,7 +1254,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "890e8e18-3e65-4169-938f-86c477a72375"
       },
       "level_keys": [
         "ml-models-shoes random"
@@ -512,7 +1264,7 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -527,7 +1279,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "ecbc69a0-bc52-46bd-b717-221a091b1b03"
       },
       "level_keys": [
         "ml-models-shoes decision tree"
@@ -536,7 +1289,7 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -551,7 +1304,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "2edb2b13-0bdd-440d-86da-cd1eebc4f421"
       },
       "level_keys": [
         "ml-models-shoes data"
@@ -560,7 +1314,7 @@
     {
       "chapter": 12,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -575,7 +1329,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "2edb2b13-0bdd-440d-86da-cd1eebc4f421"
       },
       "level_keys": [
         "ml-models-shoes points"
@@ -584,7 +1339,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -599,7 +1354,8 @@
         ],
         "lesson.key": "lesson4",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "a0600070-e6d2-4e96-a37c-0e9646e79239"
       },
       "level_keys": [
         "CSD AIL04 autoSFLP_pilot-2021"
@@ -608,7 +1364,7 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -623,7 +1379,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "e90c6c2f-ee82-4d4b-910f-80de481b2198"
       },
       "level_keys": [
         "CSD AIL05 autoSFLP_pilot-2021"
@@ -632,7 +1389,7 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -647,7 +1404,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "24e3bd86-2de1-4a74-acdf-94624d56da1d"
       },
       "level_keys": [
         "ml-intro categorical-tacos"
@@ -656,7 +1414,7 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -671,7 +1429,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "48580a78-4935-41ee-a419-9e1b5bb709dc"
       },
       "level_keys": [
         "ml-intro categorical-ice cream"
@@ -680,7 +1439,7 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -695,7 +1454,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "124e2bf8-b59f-4ec8-9bfd-ddb417d8bf41"
       },
       "level_keys": [
         "ml-intro categorical-pizza"
@@ -704,7 +1464,7 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -719,7 +1479,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "9a716f5b-ae26-430f-926d-a6d729fdac85"
       },
       "level_keys": [
         "ml-intro categorical-food choices"
@@ -728,7 +1489,7 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -743,7 +1504,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "745e029d-1edb-4ebf-a028-a18f9e4446c7"
       },
       "level_keys": [
         "CSD AIL06 autoSFLP_pilot-2021"
@@ -752,7 +1514,7 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -767,7 +1529,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "0169c797-5c22-4e8c-afaa-06e9f8e10779"
       },
       "level_keys": [
         "Full Year Pilot Experiments Dashboard - AI Models"
@@ -776,7 +1539,7 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -791,7 +1554,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d6405a4d-abde-4369-8ce7-c96c2be22f78"
       },
       "level_keys": [
         "ml-models in applab-vacation example"
@@ -800,7 +1564,7 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -815,7 +1579,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "a04c952c-d5d7-47ca-a8bf-fc07eaff0235"
       },
       "level_keys": [
         "ml-models in applab-import 1"
@@ -824,7 +1589,7 @@
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -839,7 +1604,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "30c8aa1f-a7cf-474e-b2c5-fbdd7b14a54c"
       },
       "level_keys": [
         "ml-models in applab-screens-2"
@@ -848,7 +1614,7 @@
     {
       "chapter": 24,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -863,7 +1629,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "30c8aa1f-a7cf-474e-b2c5-fbdd7b14a54c"
       },
       "level_keys": [
         "ml-models in applab-screens-1"
@@ -872,7 +1639,7 @@
     {
       "chapter": 25,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -887,7 +1654,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "30c8aa1f-a7cf-474e-b2c5-fbdd7b14a54c"
       },
       "level_keys": [
         "ml-models in applab-screens-3"
@@ -896,7 +1664,7 @@
     {
       "chapter": 26,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -911,7 +1679,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "f3d508fe-8698-497e-92ba-be5a0d30d670"
       },
       "level_keys": [
         "ml-models in applab-practice choice"
@@ -920,7 +1689,7 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -935,7 +1704,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "e28a19a5-23ee-4df0-afeb-43cf8b0bdbb1"
       },
       "level_keys": [
         "CSD AIL07 autoSFLP_pilot-2021"
@@ -944,7 +1714,7 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -959,7 +1729,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "6ebb5372-34b7-4a01-8517-8e69c878e925"
       },
       "level_keys": [
         "ml-model card-medical app v2"
@@ -968,7 +1739,7 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -983,7 +1754,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "15a1f14e-7dcc-431c-8b47-4c3e6b55c4ca"
       },
       "level_keys": [
         "ml-model card-medical-1"
@@ -992,7 +1764,7 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1007,7 +1779,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "15a1f14e-7dcc-431c-8b47-4c3e6b55c4ca"
       },
       "level_keys": [
         "ml-model card-medical-2"
@@ -1016,7 +1789,7 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1031,7 +1804,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "15a1f14e-7dcc-431c-8b47-4c3e6b55c4ca"
       },
       "level_keys": [
         "ml-model card-medical-3"
@@ -1040,7 +1814,7 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1055,7 +1829,8 @@
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "acc0e0ba-9677-4b67-88e2-fd467bdbdf96"
       },
       "level_keys": [
         "CSD AIL08 autoSFLP_pilot-2021"
@@ -1064,7 +1839,7 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1079,7 +1854,8 @@
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "f7d26b17-2aee-469f-a87f-cccb9f8bfce2"
       },
       "level_keys": [
         "ml-numerical ai lab-safari 1"
@@ -1088,7 +1864,7 @@
     {
       "chapter": 34,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1103,7 +1879,8 @@
         ],
         "lesson.key": "lesson9",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "eeba1b6d-d8a0-43b8-b48d-26c6d23fc580"
       },
       "level_keys": [
         "CSD AIL09 autoSFLP_pilot-2021"
@@ -1112,7 +1889,7 @@
     {
       "chapter": 35,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1127,7 +1904,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "a5a736dc-fb5c-4c81-b3ce-d0fbefe24e8b"
       },
       "level_keys": [
         "CSD AIL10 autoSFLP_pilot-2021"
@@ -1136,7 +1914,7 @@
     {
       "chapter": 36,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1151,7 +1929,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       },
       "level_keys": [
         "ml-use model card-example1A"
@@ -1160,7 +1939,7 @@
     {
       "chapter": 37,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1175,7 +1954,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       },
       "level_keys": [
         "ml-use model card-pet model card"
@@ -1184,7 +1964,7 @@
     {
       "chapter": 38,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1199,7 +1979,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       },
       "level_keys": [
         "ml-use model card-example1B"
@@ -1208,7 +1989,7 @@
     {
       "chapter": 39,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1223,7 +2004,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       },
       "level_keys": [
         "ml-use model card-example1C"
@@ -1232,7 +2014,7 @@
     {
       "chapter": 40,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1247,7 +2029,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       },
       "level_keys": [
         "ml-use model card-example1D"
@@ -1256,7 +2039,7 @@
     {
       "chapter": 41,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1271,7 +2054,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       },
       "level_keys": [
         "ml-use model card-example1E"
@@ -1280,7 +2064,7 @@
     {
       "chapter": 42,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1295,7 +2079,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "63fa07e0-4035-48a9-95ab-75e6fe21b374"
       },
       "level_keys": [
         "ml-use models applab-practice choice"
@@ -1304,7 +2089,7 @@
     {
       "chapter": 43,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1319,7 +2104,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "45ccb437-e896-40de-b026-949731874499"
       },
       "level_keys": [
         "CSD AIL11 autoSFLP_pilot-2021"
@@ -1328,7 +2114,7 @@
     {
       "chapter": 44,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1343,7 +2129,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "46114d44-1e95-49b0-81ba-13a3b6149017"
       },
       "level_keys": [
         "ml-customize-raspado"
@@ -1352,7 +2139,7 @@
     {
       "chapter": 45,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1367,7 +2154,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       },
       "level_keys": [
         "ml-use model card-example3A"
@@ -1376,7 +2164,7 @@
     {
       "chapter": 46,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1391,7 +2179,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       },
       "level_keys": [
         "ml-use model card-example3_EditA"
@@ -1400,7 +2189,7 @@
     {
       "chapter": 47,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1415,7 +2204,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       },
       "level_keys": [
         "ml-use model card-example3_EditB"
@@ -1424,7 +2214,7 @@
     {
       "chapter": 48,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1439,7 +2229,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       },
       "level_keys": [
         "ml-use model card-example3_EditC"
@@ -1448,7 +2239,7 @@
     {
       "chapter": 49,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1463,7 +2254,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       },
       "level_keys": [
         "ml-use model card-example3C"
@@ -1472,7 +2264,7 @@
     {
       "chapter": 50,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1487,7 +2279,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       },
       "level_keys": [
         "ml-use model card-example3D"
@@ -1496,7 +2289,7 @@
     {
       "chapter": 51,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1511,7 +2304,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       },
       "level_keys": [
         "ml-use model card-example3E"
@@ -1520,7 +2314,7 @@
     {
       "chapter": 52,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1535,7 +2329,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "f95bffeb-cee1-49f0-9151-9a76bb4028db"
       },
       "level_keys": [
         "ml-customize apps-practice choice"
@@ -1544,7 +2339,7 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1559,7 +2354,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "9add99e0-1a6c-46a5-8f7d-b8c713744aa5"
       },
       "level_keys": [
         "CSD AIL12 autoSFLP_pilot-2021"
@@ -1568,7 +2364,7 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1583,7 +2379,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "ac3fdd5d-4128-4ebe-a992-e4fd416c745c"
       },
       "level_keys": [
         "ml-data decisions-zoo1"
@@ -1592,7 +2389,7 @@
     {
       "chapter": 55,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1607,7 +2404,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "ff293b3b-1036-4f6e-bf3e-4534c7e3ea87"
       },
       "level_keys": [
         "ml-data decisions- import app"
@@ -1616,7 +2414,7 @@
     {
       "chapter": 56,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1631,7 +2429,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "049db8bd-eb4f-4629-8bda-68c739ac9151"
       },
       "level_keys": [
         "ml-data decisions- customize app"
@@ -1640,7 +2439,7 @@
     {
       "chapter": 57,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1655,7 +2454,8 @@
         ],
         "lesson.key": "lesson13",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "c53e0091-167f-48bb-9837-64ee2f5a59bc"
       },
       "level_keys": [
         "CSD AIL13 autoSFLP_pilot-2021"
@@ -1664,7 +2464,7 @@
     {
       "chapter": 58,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1679,7 +2479,8 @@
         ],
         "lesson.key": "lesson14",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "82e1f6b4-6957-48f3-b77b-96a66fb1f21e"
       },
       "level_keys": [
         "CSD AIL14 autoSFLP_pilot-2021"
@@ -1688,7 +2489,7 @@
     {
       "chapter": 59,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1703,7 +2504,8 @@
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "5d995821-fd1c-4115-905e-f8a1212cc132"
       },
       "level_keys": [
         "CSD AIL15 autoSFLP_pilot-2021"
@@ -1712,7 +2514,7 @@
     {
       "chapter": 60,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1727,7 +2529,8 @@
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "751c0528-3358-4a46-8fbc-4a6681418f6c"
       },
       "level_keys": [
         "ml-planning app-ai lab"
@@ -1736,7 +2539,7 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1751,7 +2554,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "03df8802-a002-4420-a2cc-7338504d1748"
       },
       "level_keys": [
         "CSD AIL16 autoSFLP_pilot-2021"
@@ -1760,7 +2564,7 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1775,7 +2579,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "0a222e40-e0e3-4220-b74b-23164d9c1da1"
       },
       "level_keys": [
         "ml-final project-ai lab"
@@ -1784,7 +2589,7 @@
     {
       "chapter": 63,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1799,7 +2604,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "e89672a1-cc0b-4c1b-bc22-835225f65c3f"
       },
       "level_keys": [
         "ml-final project-app lab"
@@ -1815,7 +2621,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "41ca5d98-82aa-48ed-8658-161eebc2816c"
       }
     },
     {
@@ -1826,7 +2633,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "400fab09-f9fc-4ef4-8d0c-434e92d401e7"
       }
     },
     {
@@ -1837,7 +2645,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "529e5a61-7506-4fc0-9753-5ef63e9f617e"
       }
     },
     {
@@ -1848,7 +2657,8 @@
         ],
         "lesson.key": "lesson1",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d3ce4991-5153-4cdf-a5a9-e1fe3b57f24d"
       }
     },
     {
@@ -1859,7 +2669,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "8f35036b-9e1f-436f-be3e-f95d4cf2f0eb"
       }
     },
     {
@@ -1870,7 +2681,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "3c85285b-5139-4b18-9ef8-4d08c911bc86"
       }
     },
     {
@@ -1881,7 +2693,8 @@
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "aa3bb68b-36c1-4c27-b82b-0978a9b72f74"
       }
     },
     {
@@ -1892,7 +2705,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "5321702f-2148-44ce-b631-d2353936b984"
       }
     },
     {
@@ -1903,7 +2717,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "890e8e18-3e65-4169-938f-86c477a72375"
       }
     },
     {
@@ -1914,7 +2729,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "ecbc69a0-bc52-46bd-b717-221a091b1b03"
       }
     },
     {
@@ -1925,7 +2741,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "2edb2b13-0bdd-440d-86da-cd1eebc4f421"
       }
     },
     {
@@ -1936,7 +2753,8 @@
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "2edb2b13-0bdd-440d-86da-cd1eebc4f421"
       }
     },
     {
@@ -1947,7 +2765,8 @@
         ],
         "lesson.key": "lesson4",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "a0600070-e6d2-4e96-a37c-0e9646e79239"
       }
     },
     {
@@ -1958,7 +2777,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "e90c6c2f-ee82-4d4b-910f-80de481b2198"
       }
     },
     {
@@ -1969,7 +2789,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "24e3bd86-2de1-4a74-acdf-94624d56da1d"
       }
     },
     {
@@ -1980,7 +2801,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "48580a78-4935-41ee-a419-9e1b5bb709dc"
       }
     },
     {
@@ -1991,7 +2813,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "124e2bf8-b59f-4ec8-9bfd-ddb417d8bf41"
       }
     },
     {
@@ -2002,7 +2825,8 @@
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "9a716f5b-ae26-430f-926d-a6d729fdac85"
       }
     },
     {
@@ -2013,7 +2837,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "745e029d-1edb-4ebf-a028-a18f9e4446c7"
       }
     },
     {
@@ -2024,7 +2849,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "0169c797-5c22-4e8c-afaa-06e9f8e10779"
       }
     },
     {
@@ -2035,7 +2861,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d6405a4d-abde-4369-8ce7-c96c2be22f78"
       }
     },
     {
@@ -2046,7 +2873,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "a04c952c-d5d7-47ca-a8bf-fc07eaff0235"
       }
     },
     {
@@ -2057,7 +2885,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "30c8aa1f-a7cf-474e-b2c5-fbdd7b14a54c"
       }
     },
     {
@@ -2068,7 +2897,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "30c8aa1f-a7cf-474e-b2c5-fbdd7b14a54c"
       }
     },
     {
@@ -2079,7 +2909,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "30c8aa1f-a7cf-474e-b2c5-fbdd7b14a54c"
       }
     },
     {
@@ -2090,7 +2921,8 @@
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "f3d508fe-8698-497e-92ba-be5a0d30d670"
       }
     },
     {
@@ -2101,7 +2933,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "e28a19a5-23ee-4df0-afeb-43cf8b0bdbb1"
       }
     },
     {
@@ -2112,7 +2945,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "6ebb5372-34b7-4a01-8517-8e69c878e925"
       }
     },
     {
@@ -2123,7 +2957,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "15a1f14e-7dcc-431c-8b47-4c3e6b55c4ca"
       }
     },
     {
@@ -2134,7 +2969,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "15a1f14e-7dcc-431c-8b47-4c3e6b55c4ca"
       }
     },
     {
@@ -2145,7 +2981,8 @@
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "15a1f14e-7dcc-431c-8b47-4c3e6b55c4ca"
       }
     },
     {
@@ -2156,7 +2993,8 @@
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "acc0e0ba-9677-4b67-88e2-fd467bdbdf96"
       }
     },
     {
@@ -2167,7 +3005,8 @@
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "f7d26b17-2aee-469f-a87f-cccb9f8bfce2"
       }
     },
     {
@@ -2178,7 +3017,8 @@
         ],
         "lesson.key": "lesson9",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "eeba1b6d-d8a0-43b8-b48d-26c6d23fc580"
       }
     },
     {
@@ -2189,7 +3029,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "a5a736dc-fb5c-4c81-b3ce-d0fbefe24e8b"
       }
     },
     {
@@ -2200,7 +3041,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       }
     },
     {
@@ -2211,7 +3053,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       }
     },
     {
@@ -2222,7 +3065,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       }
     },
     {
@@ -2233,7 +3077,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       }
     },
     {
@@ -2244,7 +3089,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       }
     },
     {
@@ -2255,7 +3101,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "d93e10cd-6eec-4b30-930b-98c2dfbceeee"
       }
     },
     {
@@ -2266,7 +3113,8 @@
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "63fa07e0-4035-48a9-95ab-75e6fe21b374"
       }
     },
     {
@@ -2277,7 +3125,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "45ccb437-e896-40de-b026-949731874499"
       }
     },
     {
@@ -2288,7 +3137,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "46114d44-1e95-49b0-81ba-13a3b6149017"
       }
     },
     {
@@ -2299,7 +3149,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       }
     },
     {
@@ -2310,7 +3161,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       }
     },
     {
@@ -2321,7 +3173,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       }
     },
     {
@@ -2332,7 +3185,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       }
     },
     {
@@ -2343,7 +3197,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       }
     },
     {
@@ -2354,7 +3209,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       }
     },
     {
@@ -2365,7 +3221,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "58426b35-6d0c-490c-a13d-071220221ffd"
       }
     },
     {
@@ -2376,7 +3233,8 @@
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "f95bffeb-cee1-49f0-9151-9a76bb4028db"
       }
     },
     {
@@ -2387,7 +3245,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "9add99e0-1a6c-46a5-8f7d-b8c713744aa5"
       }
     },
     {
@@ -2398,7 +3257,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "ac3fdd5d-4128-4ebe-a992-e4fd416c745c"
       }
     },
     {
@@ -2409,7 +3269,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "ff293b3b-1036-4f6e-bf3e-4534c7e3ea87"
       }
     },
     {
@@ -2420,7 +3281,8 @@
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "049db8bd-eb4f-4629-8bda-68c739ac9151"
       }
     },
     {
@@ -2431,7 +3293,8 @@
         ],
         "lesson.key": "lesson13",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "c53e0091-167f-48bb-9837-64ee2f5a59bc"
       }
     },
     {
@@ -2442,7 +3305,8 @@
         ],
         "lesson.key": "lesson14",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "82e1f6b4-6957-48f3-b77b-96a66fb1f21e"
       }
     },
     {
@@ -2453,7 +3317,8 @@
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "5d995821-fd1c-4115-905e-f8a1212cc132"
       }
     },
     {
@@ -2464,7 +3329,8 @@
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "751c0528-3358-4a46-8fbc-4a6681418f6c"
       }
     },
     {
@@ -2475,7 +3341,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "03df8802-a002-4420-a2cc-7338504d1748"
       }
     },
     {
@@ -2486,7 +3353,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "0a222e40-e0e3-4220-b74b-23164d9c1da1"
       }
     },
     {
@@ -2497,7 +3365,8 @@
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
+        "script.name": "ai-unit-pilot",
+        "activity_section.key": "e89672a1-cc0b-4c1b-bc22-835225f65c3f"
       }
     }
   ],

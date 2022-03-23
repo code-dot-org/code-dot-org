@@ -6,6 +6,7 @@ import {
   TabType
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -20,7 +21,7 @@ const DEFAULT_PROPS = {
   setInstructionsHeight: () => {},
   setInstructionsRenderedHeight: () => {},
   setInstructionsMaxHeightNeeded: () => {},
-  viewAs: 'Teacher',
+  viewAs: ViewType.Instructor,
   readOnlyWorkspace: false,
   serverLevelId: 123,
   user: 5,
@@ -31,10 +32,36 @@ const DEFAULT_PROPS = {
   isMinecraft: false,
   isBlockly: false,
   isRtl: false,
-  displayReviewTab: false
+  displayReviewTab: false,
+  exampleSolutions: [],
+  isViewingAsInstructorInTraining: false
 };
 
 describe('TopInstructions', () => {
+  it('shows contained level answers in teacher only tab if instructor in training level', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        hasContainedLevels={true}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+    expect(wrapper.find('ContainedLevelAnswer')).to.have.lengthOf(1);
+  });
+
+  it('shows teacher only markdown in teacher only tab if instructor in training level', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        teacherMarkdown={'Some teacher markdown'}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+    expect(wrapper.find('TeacherOnlyMarkdown')).to.have.lengthOf(1);
+  });
+
   it('uses the editor-column class if not in standalone mode', () => {
     const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
     expect(wrapper.hasClass('editor-column')).to.be.true;
@@ -74,9 +101,53 @@ describe('TopInstructions', () => {
     expect(wrapper.state().tabSelected).to.equal(TabType.REVIEW);
   });
 
+  it('does not display any buttons when there are no example solutions', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
+    expect(wrapper.find('Button')).to.have.lengthOf(0);
+  });
+
+  it('displays example solutions as buttons in teacher only tab when available', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+        exampleSolutions={['link/1', 'link/2']}
+      />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
+    expect(wrapper.find('Button')).to.have.lengthOf(2);
+    expect(
+      wrapper
+        .find('Button')
+        .at(0)
+        .props().text
+    ).to.equal('Example Solution 1');
+  });
+
+  it('does not display example solutions buttons in other tabs when available', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        initialSelectedTab={TabType.INSTRUCTIONS}
+        exampleSolutions={['link/1', 'link/2']}
+      />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.INSTRUCTIONS);
+    expect(wrapper.find('Button')).to.have.lengthOf(0);
+  });
+
   describe('viewing the Feedback Tab', () => {
-    describe('as a teacher', () => {
-      it('passes displayFeedback = false to TopInstructionsHeader on a level with no rubric where the teacher is not giving feedback', () => {
+    describe('as a instructor', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level with no rubric where the instructor is not giving feedback', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -93,7 +164,7 @@ describe('TopInstructions', () => {
           .be.false;
       });
 
-      it('passes displayFeedback = true to TopInstructionsHeader on a level with a rubric where the teacher is not giving feedback', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level with a rubric where the instructor is not giving feedback', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -129,10 +200,10 @@ describe('TopInstructions', () => {
       });
     });
 
-    describe('as a student', () => {
-      it('passes displayFeedback = true to TopInstructionsHeader on a level where the teacher has given feedback', () => {
+    describe('as a participant', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level where the instructor has given feedback', () => {
         const wrapper = shallow(
-          <TopInstructions {...DEFAULT_PROPS} viewAs={'Student'} />
+          <TopInstructions {...DEFAULT_PROPS} viewAs={ViewType.Participant} />
         );
 
         wrapper.setState({
@@ -164,9 +235,9 @@ describe('TopInstructions', () => {
           .be.true;
       });
 
-      it('passes displayFeedback = false to TopInstructionsHeader on a level where the teacher has not given feedback and there is no rubric', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level where the instructor has not given feedback and there is no rubric', () => {
         const wrapper = shallow(
-          <TopInstructions {...DEFAULT_PROPS} viewAs={'Student'} />
+          <TopInstructions {...DEFAULT_PROPS} viewAs={ViewType.Participant} />
         );
 
         wrapper.setState({

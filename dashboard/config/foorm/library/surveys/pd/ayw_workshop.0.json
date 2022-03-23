@@ -1,0 +1,297 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "panel",
+          "name": "ayw_workshop_1_2_panel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "better_prepared_unit3_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'or {workshop_course}='CS Principles' ",
+              "title": "I feel better prepared to teach Unit 3 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit4_0",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles' ",
+              "title": "I feel better prepared to teach Unit 4 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit5_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel prepared to teach Unit 5 (I feel prepared to teach concepts such as lists, loops and traversals). ",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit6_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel prepared to teach Unit 6 (I feel prepared to teach concepts such as algorithms, their efficiency, and the characteristics and uses of different types of algorithms).",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "opportunities_discuss_peers_0",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles' ",
+              "title": "I had opportunities to discuss teaching strategies with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "find_resources_unit4_csp_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I know where to find resources to help me teach the units covered in this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "teacher_role_understand_differences_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "As a result of this workshop it is clear to me how the role of the teacher changes during the the debugging process, formative assessments, and summative assessments.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "html",
+              "name": "role_of_teacher_header_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "html": "<br/><br>This workshop gave me a thorough understanding of what the <strong> role of the teacher</strong> is..."
+            },
+            {
+              "type": "rating",
+              "name": "role_of_teacher_debugging_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "indent": 3,
+              "title": "...during the debugging process.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "role_of_teacher_formative_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "indent": 3,
+              "title": "...when conducting formative assessments.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "role_of_teacher_summative_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "indent": 3,
+              "title": "...when conducting summative assessments.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "prepared_to_formative_asess_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "As a result of this workshop, I am better prepared to incorporate formative assessments to support learning.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "strategies_ensure_inclusion_0",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles' ",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "beliefs_influence_teaching_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I can provide examples of how my identity, experience, and beliefs about who belongs in CS influence the teaching choices I make.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "adjust_role_for_eipm_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop prepared me to adjust my role in the classroom according to the EIPM sequence.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "understand_purpose_mental_models_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop helped me understand the purpose of shared mental models in the Explore lessons of the EIPM sequence.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "believe_mental_models_equitible_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I believe shared mental models contribute to equitable learning experiences.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "html",
+              "name": "use_data_header_0",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "html": "<br/><br>The following two questions refer to <strong> using data to address barriers and opportunities to promote equity in your CS classroom:</strong>"
+            },
+            {
+              "type": "rating",
+              "name": "understand_how_to_use_data_0",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "indent": 3,
+              "title": "I understand HOW TO use data to address barriers and opportunities to promote equity in CS in my classroom.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "motivated_to_use_data_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'  or {workshop_course}='CS Principles'",
+              "indent": 3,
+              "title": "I am MOTIVATED TO use data to address barriers and opportunities to promote equity in CS in my classroom",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "html",
+              "name": "workshop_prepared_header_csd_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "html": "<br/><br>After attending this workshop I feel prepared to...</strong>"
+            },
+            {
+              "type": "rating",
+              "name": "promote_active_participation_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "indent": 3,
+              "title": "Promote students’ active participation in the classroom through learning by doing and exploration.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "promote_communitication_skills_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "indent": 3,
+              "title": "Promote students’ communications skills through active contribution to group work.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "support_early_finish_fall_behind_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "indent": 3,
+              "title": "Support students who finish early and also those who fall behind during projects.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "support_problem_solving_processs_0",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "indent": 3,
+              "title": "Support students using the Problem Solving Process for Design to solve complex problems.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "html",
+              "name": "workshop_prepared_header_csp_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "html": "<br/><br>After attending this workshop I feel prepared to...</strong>"
+            },
+            {
+              "type": "rating",
+              "name": "influence_academic_status_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "indent": 3,
+              "title": "use strategies to influence a student’s academic status in the classroom.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "foster_different_ways_contribute_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "indent": 3,
+              "title": "foster different ways in which students can contribute in the classroom.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "engage_different_math_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "indent": 3,
+              "title": "engage students with different math backgrounds.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "understand_role_of_asssessment_0",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I understand the role of assessments as opportunities to provide feedback to promote continuous growth.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

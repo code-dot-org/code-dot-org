@@ -1,4 +1,4 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
@@ -68,5 +68,6 @@ describe('PrintCertificates', () => {
       .find('div')
       .last()
       .simulate('click');
+    sinon.restore();
   });
 });

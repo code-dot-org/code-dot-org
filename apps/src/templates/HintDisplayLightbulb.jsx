@@ -14,7 +14,7 @@ class HintDisplayLightbulb extends React.Component {
     shouldAnimate: false
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const receivingNewHints = nextProps.unseenHints.length > this.getCount();
     this.setState({
       shouldAnimate: receivingNewHints

@@ -10,7 +10,13 @@ const refute = p => assert.isNotOk(p);
 
 describe('Enroll Form', () => {
   // We aren't testing server responses, but have a fake server to handle calls and suppress warnings
-  sinon.fakeServer.create();
+  let server;
+  before(() => {
+    server = sinon.fakeServer.create();
+  });
+  after(() => {
+    server.restore();
+  });
 
   const props = {
     workshop_id: 1,

@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import PropTypes from 'prop-types';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -16,16 +17,20 @@ const USER_EDITABLE_SECTION_PROPS = [
   'ttsAutoplayEnabled',
   'courseId',
   'scriptId',
+  'courseOfferingId',
+  'courseVersionId',
+  'unitId',
   'grade',
   'hidden',
-  'restrictSection'
+  'restrictSection',
+  'codeReviewExpiresAt'
 ];
 
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
 
-/** @const {string} Empty string used to indicate no section selected */
-export const NO_SECTION = '';
+/** @const {null} null used to indicate no section selected */
+export const NO_SECTION = null;
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
@@ -42,13 +47,8 @@ const importUrlByProvider = {
 //
 // Action keys
 //
-const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
+const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_LESSON_EXTRAS_UNIT_IDS =
-  'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
-const SET_TEXT_TO_SPEECH_UNIT_IDS =
-  'teacherDashboard/SET_TEXT_TO_SPEECH_UNIT_IDS';
-const SET_PREREADER_UNIT_IDS = 'teacherDashboard/SET_PREREADER_UNIT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -74,6 +74,9 @@ const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
 const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
+/** Sets section codeReviewExpiresAt after it's been updated */
+const SET_SECTION_CODE_REVIEW_EXPIRES_AT =
+  'teacherSections/SET_SECTION_CODE_REVIEW_EXPIRES_AT';
 
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
@@ -108,19 +111,6 @@ export const __testInterface__ = {
 //
 // Action Creators
 //
-export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
-export const setLessonExtrasUnitIds = ids => ({
-  type: SET_LESSON_EXTRAS_UNIT_IDS,
-  ids
-});
-export const setTextToSpeechUnitIds = ids => ({
-  type: SET_TEXT_TO_SPEECH_UNIT_IDS,
-  ids
-});
-export const setPreReaderUnitIds = ids => ({
-  type: SET_PREREADER_UNIT_IDS,
-  ids
-});
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
   providers
@@ -134,6 +124,10 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   validCourses,
   validScripts
 });
+export const setCourseOfferings = courseOfferings => ({
+  type: SET_COURSE_OFFERINGS,
+  courseOfferings
+});
 export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
   sectionId: sectionId,
@@ -146,6 +140,16 @@ export const setShowLockSectionField = showLockSectionField => {
   return {
     type: SET_SHOW_LOCK_SECTION_FIELD,
     showLockSectionField
+  };
+};
+export const setSectionCodeReviewExpiresAt = (
+  sectionId,
+  codeReviewExpiresAt
+) => {
+  return {
+    type: SET_SECTION_CODE_REVIEW_EXPIRES_AT,
+    sectionId,
+    codeReviewExpiresAt
   };
 };
 
@@ -177,6 +181,16 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
   const state = getState();
   const currentlyHidden = getRoot(state).sections[sectionId].hidden;
   dispatch(editSectionProperties({hidden: !currentlyHidden}));
+
+  // Track archive/restore section action
+  firehoseClient.putRecord({
+    study: 'teacher_dashboard_actions',
+    study_group: 'toggleSectionHidden',
+    event: currentlyHidden ? 'restoreSection' : 'archiveSection',
+    data_json: JSON.stringify({
+      section_id: sectionId
+    })
+  });
   return dispatch(finishEditingSection());
 };
 
@@ -197,7 +211,14 @@ function removeNullValues(key, val) {
  * @param {number} courseId
  * @param {number} scriptId
  */
-export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+export const assignToSection = (
+  sectionId,
+  courseId,
+  courseOfferingId,
+  courseVersionId,
+  unitId,
+  pageType
+) => {
   firehoseClient.putRecord(
     {
       study: 'assignment',
@@ -205,7 +226,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
       data_json: JSON.stringify(
         {
           sectionId,
-          scriptId,
+          unitId,
           courseId,
           date: new Date()
         },
@@ -219,7 +240,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
     dispatch(
       editSectionProperties({
         courseId: courseId,
-        scriptId: scriptId
+        scriptId: unitId
       })
     );
     return dispatch(finishEditingSection(pageType));
@@ -231,7 +252,10 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
  * the server
  * @param {number} sectionId
  */
-export const unassignSection = sectionId => (dispatch, getState) => {
+export const unassignSection = (sectionId, location) => (
+  dispatch,
+  getState
+) => {
   dispatch(beginEditingSection(sectionId, true));
   const {initialCourseId, initialUnitId} = getState().teacherSections;
   dispatch(editSectionProperties({courseId: '', scriptId: ''}));
@@ -244,6 +268,7 @@ export const unassignSection = sectionId => (dispatch, getState) => {
           sectionId,
           scriptId: initialUnitId,
           courseId: initialCourseId,
+          location: location,
           date: new Date()
         },
         removeNullValues
@@ -255,21 +280,13 @@ export const unassignSection = sectionId => (dispatch, getState) => {
 };
 
 /**
- * Opens the UI for adding a new section.
- */
-export const beginEditingNewSection = (courseId, scriptId) => ({
-  type: EDIT_SECTION_BEGIN,
-  courseId,
-  scriptId
-});
-
-/**
  * Opens the UI for editing the specified section.
- * @param {number} sectionId
+ * @param {number} sectionId - Optional param for the id of the section to edit. If blank means
+ * new section
  * @param {bool} [silent] - Optional param for when we want to begin editing the
  *   section without launching our dialog
  */
-export const beginEditingSection = (sectionId, silent = false) => ({
+export const beginEditingSection = (sectionId = null, silent = false) => ({
   type: EDIT_SECTION_BEGIN,
   sectionId,
   silent
@@ -370,20 +387,30 @@ export const asyncLoadSectionData = id => dispatch => {
   let apis = [
     '/dashboardapi/sections',
     `/dashboardapi/courses`,
-    '/dashboardapi/sections/valid_scripts'
+    '/dashboardapi/sections/valid_scripts',
+    '/dashboardapi/sections/valid_course_offerings'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
 
   return Promise.all(apis.map(fetchJSON))
-    .then(([sections, validCourses, validScripts, students]) => {
-      dispatch(setValidAssignments(validCourses, validScripts));
-      dispatch(setSections(sections));
-      if (id) {
-        dispatch(setStudentsForCurrentSection(id, students));
+    .then(
+      ([
+        sections,
+        validCourses,
+        validScripts,
+        validCourseOfferings,
+        students
+      ]) => {
+        dispatch(setValidAssignments(validCourses, validScripts));
+        dispatch(setCourseOfferings(validCourseOfferings));
+        dispatch(setSections(sections));
+        if (id) {
+          dispatch(setStudentsForCurrentSection(id, students));
+        }
       }
-    })
+    )
     .catch(err => {
       console.error(err.message);
     })
@@ -503,7 +530,6 @@ const initialState = {
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
   // for consistency and ease of comparison).
   providers: [],
-  validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
   // A map from assignmentId to assignment (see assignmentShape PropType).
@@ -512,9 +538,13 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentFamilyShape PropType.
   assignmentFamilies: [],
+  // Object of assignable course offerings to populate the assignment dropdown
+  // with options like "CSD", "Course A", or "Frozen". See the
+  // assignmentCourseOfferingShape PropType.
+  courseOfferings: {},
   // Mapping from sectionId to section object
   sections: {},
-  // List of students in section currently being edited
+  // List of students in section currently being edited (see studentShape PropType)
   selectedStudents: [],
   sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
@@ -523,9 +553,6 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
-  lessonExtrasUnitIds: [],
-  textToSpeechUnitIds: [],
-  preReaderUnitIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -539,7 +566,6 @@ const initialState = {
   loadError: null,
   // The page where the action is occurring
   pageType: '',
-
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null
 };
@@ -547,12 +573,10 @@ const initialState = {
 /**
  * Generate shape for new section
  * @param id
- * @param courseId
- * @param scriptId
  * @param loginType
  * @returns {sectionShape}
  */
-function newSectionData(id, courseId, scriptId, loginType) {
+function newSectionData(id, loginType) {
   return {
     id: id,
     name: '',
@@ -565,8 +589,8 @@ function newSectionData(id, courseId, scriptId, loginType) {
     sharingDisabled: false,
     studentCount: 0,
     code: '',
-    courseId: courseId || null,
-    scriptId: scriptId || null,
+    courseId: null,
+    scriptId: null,
     hidden: false,
     isAssigned: undefined,
     restrictSection: false
@@ -605,38 +629,17 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_LESSON_EXTRAS_UNIT_IDS) {
-    return {
-      ...state,
-      lessonExtrasUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_TEXT_TO_SPEECH_UNIT_IDS) {
-    return {
-      ...state,
-      textToSpeechUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_PREREADER_UNIT_IDS) {
-    return {
-      ...state,
-      preReaderUnitIds: action.ids
-    };
-  }
-
-  if (action.type === SET_VALID_GRADES) {
-    return {
-      ...state,
-      validGrades: action.grades
-    };
-  }
-
   if (action.type === SET_PAGE_TYPE) {
     return {
       ...state,
       pageType: action.pageType
+    };
+  }
+
+  if (action.type === SET_COURSE_OFFERINGS) {
+    return {
+      ...state,
+      courseOfferings: action.courseOfferings
     };
   }
 
@@ -716,12 +719,13 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SET_STUDENT_SECTION) {
-    const students = action.students.map(student =>
+    const students = action.students || [];
+    const selectedStudents = students.map(student =>
       studentFromServerStudent(student, action.sectionId)
     );
     return {
       ...state,
-      selectedStudents: students
+      selectedStudents
     };
   }
 
@@ -733,7 +737,7 @@ export default function teacherSections(state = initialState, action) {
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
     if (Object.keys(action.sections).length === 1) {
-      selectedSectionId = action.sections[0].id.toString();
+      selectedSectionId = action.sections[0].id;
     }
 
     sections.forEach(section => {
@@ -769,13 +773,20 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SELECT_SECTION) {
-    let sectionId = action.sectionId;
+    let sectionId;
+    if (action.sectionId) {
+      sectionId = parseInt(action.sectionId);
+    } else {
+      sectionId = NO_SECTION;
+    }
+
     if (
       sectionId !== NO_SECTION &&
       !state.sectionIds.includes(parseInt(sectionId, 10))
     ) {
       sectionId = NO_SECTION;
     }
+
     return {
       ...state,
       selectedSectionId: sectionId
@@ -814,15 +825,31 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_SECTION_CODE_REVIEW_EXPIRES_AT) {
+    const {sectionId, codeReviewExpiresAt} = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          codeReviewExpiresAt: codeReviewExpiresAt
+            ? Date.parse(codeReviewExpiresAt)
+            : null
+        }
+      }
+    };
+  }
+
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId
       ? {...state.sections[action.sectionId]}
-      : newSectionData(
-          PENDING_NEW_SECTION_ID,
-          action.courseId,
-          action.scriptId,
-          undefined
-        );
+      : newSectionData(PENDING_NEW_SECTION_ID, undefined);
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
@@ -850,10 +877,6 @@ export default function teacherSections(state = initialState, action) {
     const lessonExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
-      // TODO: enable autoplay by default if unit is a pre-reader unit
-      // and teacher is on IE, Edge or Chrome after initial release
-      // ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
-      //   state.preReaderUnitIds.indexOf(action.props.scriptId) > -1;
       const unit =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (unit) {
@@ -1091,6 +1114,15 @@ export function sectionName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).name;
 }
 
+export function selectedSection(state) {
+  const selectedSectionId = getRoot(state).selectedSectionId;
+  if (selectedSectionId) {
+    return getRoot(state).sections[selectedSectionId];
+  } else {
+    return null;
+  }
+}
+
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
     return rosterProvider(state);
@@ -1106,14 +1138,38 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedUnitName(state) {
+export function assignedUnit(state) {
   const {sectionBeingEdited, validAssignments} = getRoot(state);
+
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  return validAssignments[assignId];
+}
+
+export function assignedUnitName(state) {
+  const {sectionBeingEdited} = getRoot(state);
   if (!sectionBeingEdited) {
     return '';
   }
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
-  const assignment = validAssignments[assignId];
+  const assignment = assignedUnit(state);
   return assignment ? assignment.name : '';
+}
+
+export function assignedUnitLessonExtrasAvailable(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.lesson_extras_available : false;
+}
+
+export function assignedUnitTextToSpeechEnabled(state) {
+  const {sectionBeingEdited} = getRoot(state);
+  if (!sectionBeingEdited) {
+    return false;
+  }
+  const assignment = assignedUnit(state);
+  return assignment ? assignment.text_to_speech_enabled : false;
 }
 
 export function getVisibleSections(state) {
@@ -1165,13 +1221,21 @@ export const sectionFromServerSection = serverSection => ({
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
+  courseOfferingId: serverSection.course_offering_id,
+  courseVersionId: serverSection.course_version_id,
+  unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   scriptId: serverSection.script
     ? serverSection.script.id
     : serverSection.script_id || null,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
-  restrictSection: serverSection.restrict_section
+  restrictSection: serverSection.restrict_section,
+  postMilestoneDisabled: serverSection.post_milestone_disabled,
+  codeReviewExpiresAt: serverSection.code_review_expires_at
+    ? Date.parse(serverSection.code_review_expires_at)
+    : null,
+  isAssignedCSA: serverSection.is_assigned_csa
 });
 
 /**
@@ -1182,7 +1246,10 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   sectionId: sectionId,
   id: serverStudent.id,
   name: serverStudent.name,
-  sharingDisabled: serverStudent.sharing_disabled
+  sharingDisabled: serverStudent.sharing_disabled,
+  totalLines: serverStudent.total_lines,
+  secretPicturePath: serverStudent.secret_picture_path,
+  secretWords: serverStudent.secret_words
 });
 
 /**
@@ -1200,6 +1267,9 @@ export function serverSectionFromSection(section) {
     pairing_allowed: section.pairingAllowed,
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
+    course_offering_id: section.courseOfferingId,
+    course_version_id: section.courseVersionId,
+    unit_id: section.unitId,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined,
     restrict_section: section.restrictSection
@@ -1242,14 +1312,6 @@ export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   return assignments.map(assignment => (assignment ? assignment.path : ''));
 };
-
-/**
- * Is the given unit ID a CSF course? `script.rb` owns the list.
- * @param state
- * @param id
- */
-export const lessonExtrasAvailable = (state, id) =>
-  state.teacherSections.lessonExtrasUnitIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using
@@ -1329,3 +1391,13 @@ export function hiddenSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(id => state.sections[id].hidden);
 }
+
+export const studentShape = PropTypes.shape({
+  sectionId: PropTypes.number,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  sharingDisabled: PropTypes.bool,
+  totalLines: PropTypes.number,
+  secretPicturePath: PropTypes.string,
+  secretWords: PropTypes.string
+});

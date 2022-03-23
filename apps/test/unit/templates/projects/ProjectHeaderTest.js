@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
