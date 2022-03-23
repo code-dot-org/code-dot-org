@@ -14,12 +14,12 @@ export default function loadSpritelab(options) {
   options.blocksModule = blocks;
   return getDefaultListMetadata()
     .then(defaultSpritesList => {
-      var spritelab = new SpriteLab(defaultSpritesList);
+      let spritelab = new SpriteLab(defaultSpritesList);
       return initializeOptionsAndSpritelab(spritelab, options);
     })
     .catch(() => {
       // If the S3 request for defaultSpriteList fails, use a backup list of just two sprites.
-      var spritelab = new SpriteLab(defaultSprites);
+      let spritelab = new SpriteLab(defaultSprites);
 
       // Log data that we're using the backup default sprites.
       firehoseClient.putRecord({
