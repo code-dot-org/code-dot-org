@@ -1,7 +1,7 @@
 name 'VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_2021'
 editor_experiment ''
 display_name 'Check for understanding'
-title 'Headings Quick Check'
+title 'Check for understanding'
 description 'Look at the code below and predict how the headings will be displayed. Choose from one of the options on the right.'
 height '125'
 
