@@ -45,7 +45,7 @@ Then /^I do not see "([^"]*)" in the Game Lab console$/ do |message|
 end
 
 Then /^I see (\d+) animations in the animation column$/ do |num_animations|
-  expect(@browser.execute_script('return $(".animationList>div>div").not(".newListItem").length')).to eq num_animations.to_i
+  expect(@browser.execute_script('return $(".animationList>div>button").not(".newListItem").length')).to eq num_animations.to_i
 end
 
 Then /^I open the animation picker$/ do
@@ -53,7 +53,7 @@ Then /^I open the animation picker$/ do
 end
 
 Then /^I select a blank animation$/ do
-  @browser.execute_script("$(\".uitest-animation-picker-item\")[0].click();")
+  @browser.execute_script("$(\".uitest-animation-picker-list>div>div>div>button\")[0].click();")
 end
 
 Then /^I select the animal category of the animation library$/ do
@@ -64,6 +64,10 @@ end
 Then /^I select the bear animal head animation from the animal category$/ do
   wait_until {@browser.execute_script("return $(\"img[src*='/category_animals/animalhead_bear.png']\").length != 0;")}
   @browser.execute_script("$(\"img[src*='/category_animals/animalhead_bear.png']\")[0].click();")
+end
+
+Then /^I select the animation picker 'done' button$/ do
+  steps 'Then I click selector ".ui-test-selector-done-button" once I see it'
 end
 
 Then /^I add a new, blank animation$/ do
@@ -78,6 +82,7 @@ Then /^I add the bear animal head animation from the library$/ do
     And I open the animation picker
     And I select the animal category of the animation library
     And I select the bear animal head animation from the animal category
+    And I select the animation picker 'done' button
   STEPS
 end
 

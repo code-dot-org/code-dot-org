@@ -1,5 +1,0 @@
-{
-  "func": "World.frameCount",
-  "category": "World",
-  "type": "readonlyproperty"
-}

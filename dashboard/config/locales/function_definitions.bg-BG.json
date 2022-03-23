@@ -307,6 +307,12 @@
           },
           "draw a house": {
             "name": "рисува къща"
+          },
+          "sun": {
+            "name": "слънце"
+          },
+          "square": {
+            "name": "квадрат"
           }
         },
         "Geometric Sun_2018": {
@@ -315,6 +321,12 @@
           },
           "draw a house": {
             "name": "рисува къща"
+          },
+          "sun": {
+            "name": "слънце"
+          },
+          "square": {
+            "name": "квадрат"
           }
         },
         "InspirationalArtwork": {

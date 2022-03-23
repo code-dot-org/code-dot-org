@@ -40,6 +40,39 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, !!@user.using_text_mode
   end
 
+  test 'a get request to mute_music returns mute_music attribute of user object' do
+    sign_in(@user)
+    get :get_mute_music, params: {user_id: 'me'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal false, response["mute_music"]
+  end
+
+  test_user_gets_response_for(
+    :post_mute_music,
+    user: nil,
+    params: {user_id: 'me', mute_music: 'true'},
+    response: :forbidden
+  )
+
+  test 'a post request to mute_music updates mute_music' do
+    sign_in(@user)
+    assert !@user.mute_music
+    post :post_mute_music, params: {user_id: 'me', mute_music: 'true'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert response["mute_music"]
+    @user.reload
+    assert @user.mute_music
+
+    post :post_mute_music, params: {user_id: 'me', mute_music: 'false'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal false, response["mute_music"]
+    @user.reload
+    assert_equal false, !!@user.mute_music
+  end
+
   test 'a get request to display_theme returns display_theme attribute of user object' do
     sign_in(@user)
     get :get_display_theme, params: {user_id: 'me'}
@@ -163,6 +196,29 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response :success
     test_user.reload
     assert_equal true, test_user.has_seen_standards_report_info_dialog
+  end
+
+  test "a get request to get current returns signed out user info" do
+    get :current
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+    response = JSON.parse(@response.body)
+    assert_equal false, response["is_signed_in"]
+  end
+
+  test "a get request to get current returns signed in user info" do
+    teacher = create :teacher
+    sign_in(teacher)
+    get :current
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+    response = JSON.parse(@response.body)
+    assert_equal true, response["is_signed_in"]
+    assert_equal teacher.id, response["id"]
+    assert_equal teacher.username, response["username"]
+    assert_equal "teacher", response["user_type"]
+    assert_equal teacher.short_name, response["short_name"]
+    assert_equal false, response["is_verified_instructor"]
   end
 
   test "a get request to get school_name returns school object" do

@@ -122,6 +122,10 @@ class RemixTest < ActionDispatch::IntegrationTest
     assert_only_remixes_sources 'eval'
   end
 
+  test 'javalab only remixes Sources and Assets buckets, and starter assets' do
+    assert_only_remixes_sources_assets_starter_assets 'javalab'
+  end
+
   def assert_only_remixes_sources(project_type)
     stub_project_level project_type
     original_channel_id = create_a_new_project project_type
@@ -129,6 +133,7 @@ class RemixTest < ActionDispatch::IntegrationTest
     SourceBucket.any_instance.expects(:remix_source)
 
     AssetBucket.any_instance.expects(:copy_files).never
+    AssetBucket.any_instance.expects(:copy_level_starter_assets).never
     AnimationBucket.any_instance.expects(:copy_files).never
     FileBucket.any_instance.expects(:copy_files).never
 
@@ -143,6 +148,7 @@ class RemixTest < ActionDispatch::IntegrationTest
     SourceBucket.any_instance.expects(:remix_source)
     AssetBucket.any_instance.expects(:copy_files)
 
+    AssetBucket.any_instance.expects(:copy_level_starter_assets).never
     AnimationBucket.any_instance.expects(:copy_files).never
     FileBucket.any_instance.expects(:copy_files).never
 
@@ -158,6 +164,7 @@ class RemixTest < ActionDispatch::IntegrationTest
     AssetBucket.any_instance.expects(:copy_files)
     AnimationBucket.any_instance.expects(:copy_files).returns([])
 
+    AssetBucket.any_instance.expects(:copy_level_starter_assets).never
     FileBucket.any_instance.expects(:copy_files).never
 
     new_channel_id = remix_a_project project_type, original_channel_id
@@ -172,7 +179,23 @@ class RemixTest < ActionDispatch::IntegrationTest
     FileBucket.any_instance.expects(:copy_files)
 
     AssetBucket.any_instance.expects(:copy_files).never
+    AssetBucket.any_instance.expects(:copy_level_starter_assets).never
     AnimationBucket.any_instance.expects(:copy_files).never
+
+    new_channel_id = remix_a_project project_type, original_channel_id
+    refute_equal original_channel_id, new_channel_id
+  end
+
+  def assert_only_remixes_sources_assets_starter_assets(project_type)
+    stub_project_level project_type
+    original_channel_id = create_a_new_project project_type
+
+    SourceBucket.any_instance.expects(:remix_source)
+    AssetBucket.any_instance.expects(:copy_files)
+    AssetBucket.any_instance.expects(:copy_level_starter_assets)
+
+    AnimationBucket.any_instance.expects(:copy_files).never
+    FileBucket.any_instance.expects(:copy_files).never
 
     new_channel_id = remix_a_project project_type, original_channel_id
     refute_equal original_channel_id, new_channel_id

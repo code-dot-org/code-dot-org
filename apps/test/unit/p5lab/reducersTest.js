@@ -5,7 +5,7 @@ var {
 } = require('@cdo/apps/p5lab/redux/textConsole');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 var _ = require('lodash');
 var P5LabInterfaceMode = require('@cdo/apps/p5lab/constants')
   .P5LabInterfaceMode;

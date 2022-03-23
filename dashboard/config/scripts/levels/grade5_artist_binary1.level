@@ -455,7 +455,6 @@
           </statement>
         </block>
         <block type="controls_for_counter" inline="true" disabled="true">
-          <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
               <title name="NUM">0</title>

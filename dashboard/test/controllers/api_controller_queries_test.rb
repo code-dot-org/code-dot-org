@@ -9,7 +9,11 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
     section = create(:section)
     students = (1..50).map {create :student}
     students.each {|s| section.students << s}
-    script = Script.find_by_name('algebra')
+
+    script = create(:script)
+    create(:lesson_group, lessons: [create(:script_level, script: script).lesson], script: script)
+
+    refute_empty script.script_levels
     script.script_levels.each do |script_level|
       students.each do |student|
         create :user_level, user: student, level: script_level.level, script: script

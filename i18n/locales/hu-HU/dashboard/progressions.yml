@@ -1,10 +1,15 @@
 hu:
   data:
     progressions:
+      AI Machine Learning - Video: Mesterséges intelligencia gépi tanulás - videó
+      'AI: Impact on Society - Video': 'Mesterséges intelligencia: a társadalomra gyakorolt hatás - videó'
+      'AI: Training Data & Bias - Video': 'Mesterséges intelligencia: adatok és előítéletek - videó'
       Alien Defender: Földönkívüli támadás
       Analog Sensors: Analóg szenzorok
+      App Lab Intro - Video: Bevezetés az App Lab világába - videó
       Artist Project: Művész-projekt
       'Artist: Variables': 'Művész: változók'
+      Assessment: Értékelés
       Back and Forth: Előre és hátra
       Bass, Mid, and Treble: Basszus, közép- és magashangok
       Bunny Jumper: Ugró nyuszi
@@ -29,6 +34,7 @@ hu:
       Editing Images: Képek szerkesztése
       End of Course Projects: Tanfolyam végi projektek
       Events: Események
+      Example: Példa
       'Exploration: Adding Style': 'Felfedezés: stílus hozzáadása'
       Explore HTML: Fedezd fel a HTML-t
       For Loops: Számláló ciklusok
@@ -40,6 +46,7 @@ hu:
       Get In Formation: Alakzatba állás
       HTML Tags: HTML-címkék
       Headings in HTML: HTML címsorok
+      Hello World: Helló világ
       How to Make a Sprite: Hogyan készítsünk sprite-ot
       Hyperlinks: Hiperhivatkozások
       If Statements: Ha nyilatkozatok
@@ -50,9 +57,11 @@ hu:
       Introduction to Game Lab: Bevezetés a játéklaborba
       Lesson Extras: Lecke Extrák
       Lesson Overview: Lecke áttekintése
+      Levels: Szintek
       Lists: Listák
       Lists in HTML: HTML listák
       Measures: Ütem
+      'Minecraft: Hero''s Journey': 'Minecraft: Hős utazás'
       More Buttons: Több gomb
       Overview: Összefoglaló
       Pair Programming: Páros programozás
@@ -75,6 +84,8 @@ hu:
       Sprite Properties: Sprite tulajdonságok
       Sprite Scenes: Sprite helyzetek
       Sprite Velocity: Sprite sebesség
+      Teach AI a New Word: Mesterséges intelligencia tanítása egy új világnak
+      Text Compression: Szöveg tömörítése
       Variables: változók
       Video: Videó
       'Video: Conditionals': 'Video: feltételes utasítások'

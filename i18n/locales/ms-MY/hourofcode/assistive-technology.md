@@ -2,20 +2,47 @@
 title: Melengkapkan Jam Kod dengan Teknologi Bantu
 ---
 
-# Melengkapkan Jam Kod dengan Teknologi Bantu
+<h1>Melengkapkan Jam Kod dengan Teknologi Bantu</h1>
 
-Sesiapa sahaja boleh mencuba Jam Kod semasa Minggu Pendidikan Sains Komputer.
+<p>Sesiapa sahaja boleh mencuba Jam Kod semasa Minggu Pendidikan Sains Komputer.</p>
 
-## Menggunakan Pembaca Skrin
+<h2>Menggunakan Pembaca Skrin</h2>
 
-Jika anda menggunakan pembaca skrin, [tutorial Quorum untuk mereka yang baru bermula](https://quorumlanguage.com/hourofcode/astro1.html) atau [tutorial Quorum untuk pelajar yang selesa](https://quorumlanguage.com/hourofcode/part1.html) ialah tempat yang amat baik untuk memulakan Jam Kod. Quorum bermula sebagai bahasa tertafsir yang pada asalnya direka bentuk untuk diakses melalui pembaca skrin. Quorum telah menjadi bahasa pengaturcaraan serbaguna yang direka bentuk untuk mana-mana pengguna. Dan, jika anda ingin menjangkaui Jam Kod, pasukan di Quorum mempunyai alatan dan kurikulum tambahan.
+<p>The Hour of Code activities page now includes a <a href="https://hourofcode.com/us/learn?platform=screenreader" target="_blank">filter for activities compatible with screen readers</a>.</p>
 
-[![Tutorial untuk mereka yang baru bermula](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial untuk pelajar yang selesa](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+<p>If you use a screen reader, the <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">Quorum tutorial for beginners</a> or the <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">Quorum tutorial for comfortable students</a> are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. Dan, jika anda ingin menjangkaui Jam Kod, pasukan di Quorum mempunyai alatan dan kurikulum tambahan.</p>
 
-## Tutorial Code.org Tanpa Audio
+<p>If you use a screen reader and are interested in robotics, try the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">Dash Joins a Dance Circle activity</a> (for grades K-5) or the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">Dash Joins a Dance Circle with Functions activity</a> (for grades 6-8) from Lauren Milne.</p>
 
-[Tutorial Code.org](https://studio.code.org/courses) kesemuanya boleh digunakan dengan atau tanpa bunyi. Semua video mempunyai kapsyen.
+<br />
 
-## Pengaturcaraan Berpasangan
+<div class="row">
+    <div class="col-xs-4">
+        <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225/tutorials/hoc2017/quorum_astronomy.jpg" alt="Tutorial for beginners">
+        </a>
+    </div>
+    <div class="col-xs-4">
+        <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225/quorum.jpg" alt="Tutorial for comfortable students">
+        </a>
+    </div>
+    <div class="col-xs-4">
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225//tutorials/hoc2021/milne_dash.jpg" alt="Robotics tutorial for beginners">
+        </a>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">For grades K-5</a>
+        <br>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">For grades 6-8</a>
+    </div>
+</div>
 
-Pengaturcaraan berpasangan ialah alat yang digunakan oleh saintis komputer untuk menyelesaikan masalah sebagai pasangan atau pasukan. Cuba berusaha mengatasi cabaran Jam Kod dengan rakan atau kawan sekelas. Jangan lupa [menonton video ini](https://www.youtube.com/watch?v=vgkahOzFH2Q) bertujuan mempelajari teknik terbaik untuk pengaturcaraan berpasangan.
+<div style="clear: both"></div>
+
+<h2>Tutorial Code.org Tanpa Audio</h2>
+
+<p>The <a href="https://studio.code.org/courses" target="_blank">Code.org tutorials</a> can all be used with or without sound. All the videos have captions.</p>
+
+<h2>Pengaturcaraan Berpasangan</h2>
+
+<p>Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="_blank">check out this video</a> to learn the best techniques for pair programming.</p>

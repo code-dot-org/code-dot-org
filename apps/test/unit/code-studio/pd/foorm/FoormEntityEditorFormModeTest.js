@@ -62,6 +62,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
   afterEach(() => {
     restoreRedux();
+    server.restore();
   });
 
   const createWrapper = overrideProps => {

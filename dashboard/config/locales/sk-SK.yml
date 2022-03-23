@@ -221,6 +221,13 @@ sk:
     email_preference_yes: Áno
     email_preference_no: Nie
     email_preference_required: Musíte zadať emailové preferencie.
+    share_teacher_email_reg_partner_question: Chceli by ste, aby sme zdieľali vaše
+      kontaktné údaje s partnerom [Code.org regional partner](%{cdo_regional_partner_desc})
+      vo vašom štáte, aby vás mohol informovať o miestnych príležitostiach, akciách
+      a zdrojoch profesijného rozvoja?
+    share_teacher_email_reg_partner_preference_yes: Áno
+    share_teacher_email_reg_partner_preference_no: Nie
+    share_teacher_email_reg_partner_preference_required: Musíte zadať emailové preferencie.
     parent_account_checkbox: Som rodič/právny zástupca, ktorý sa prihlasuje v mene
       svojho dieťaťa.
     parent_account_email_progress_permission: Môžeme vám poslať e-mail s príležitostnými
@@ -446,19 +453,22 @@ sk:
       iceage: Doba ľadová
       infinity: nekonečne
       makerlab: Výrobcovo náradie
-      minecraft_adventurer: Minecraft Objavovateľ
+      minecraft_adventurer: 'Minecraft: Dobrodruh'
       minecraft_aquatic: Minecraft Aquatic
       minecraft_codebuilder: 'Minecraft: Prepájanie kódu'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft hrdina
       playlab: Play Lab
       playlab_k1: Play Lab (predškolský vek)
+      poetry: Poézia
+      poetry_hoc: Básnické umenie
       scratch: Scratch
       sports: Športy
       spritelab: Sprite Lab
       starwars: Star Wars
       starwarsblocks: Star Wars (Bloky)
       starwarsblocks_hour: Star Wars (Bloky)
+      loading: Načítavanie...
       weblab: Web Lab
       view_all: Zobraziť všetky projekty...
     popup:
@@ -474,6 +484,7 @@ sk:
       prizes_link: viac info
   teacher:
     answer: Odpoveď
+    dashboard: Nástenka učiteľa
     for_teachers_only: Iba pre učiteľov
     title:
       one: 'Tvoj učiteľ:'
@@ -741,7 +752,7 @@ sk:
   share_code:
     title: Klikni na 'Spustiť' pre zobrazenie tvojho kódu v akcii
     bounce_og_title: Pozri si moju hru Bounce
-    flappy_og_title: Pozri si moju Flappy hru
+    flappy_og_title: Pozri si moju hru v štýle Flappy Bird
     studio_og_title: Pozri si moju Play Lab appku
     check_out_what_i_made: Pozrite, čo som vytvoril/a
     og_description: Tento kód som napísal/a sama s Code.org
@@ -845,7 +856,7 @@ sk:
         samostatné kurzy alebo doplnkové hodiny v iných kurzoch informatiky.
       body_short: Ak nemáte počítač, vyskúšajte s triedou tieto Lekcie bez počítača.
     unplugged_conditionals:
-      title: Podmienky
+      title: Podmienené príkazy
       body: Nauč sa viac o algoritmoch a podmienkach pomocou balíčka kariet. Počítač
         nepotrebuješ!
     widgets:
@@ -1212,8 +1223,10 @@ sk:
       email: Email
       email_alternate: Ďaľšia emailová adresa
       gender: Rodová identita
+      school: Škola
       school_name: Názov školy
       school_city: Mesto
+      school_city_district: Mesto / školský obvod
       school_country: Krajina
       colombian_school_city: Mesto
       colombian_school_municipality: Okres školy
@@ -1265,7 +1278,7 @@ sk:
       subjects:
         cs: Informatika
         ict: IT
-        math: Matematické
+        math: Matematika
         science: Veda
         history: História / Sociálne vedy
         la: Jazyky
@@ -1369,3 +1382,4 @@ sk:
     this_sprite: tento objekt
   unit_prefix: Jednotka %{n}
   code_org_logo_alt: Code.org Domov
+  teacher_feedback: Spätná väzba od učiteľa

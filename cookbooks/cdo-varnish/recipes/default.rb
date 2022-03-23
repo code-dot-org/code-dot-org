@@ -83,5 +83,9 @@ end
 
 service "varnish" do
   supports restart: true, reload: true, status: true
-  action [:enable, :start]
+  if node['cdo-varnish']['enabled']
+    action [:enable, :start]
+  else
+    action [:disable, :stop]
+  end
 end

@@ -177,6 +177,9 @@ uz:
     email_preference_yes: "Ha"
     email_preference_no: "yo‘q"
     email_preference_required: "Siz elektron pochta parametrlarini belgilashingiz kerak."
+    share_teacher_email_reg_partner_preference_yes: "Ha"
+    share_teacher_email_reg_partner_preference_no: "yo‘q"
+    share_teacher_email_reg_partner_preference_required: "Siz elektron pochta parametrlarini belgilashingiz kerak."
     parent_account_checkbox: "Men farzandim nomidan ro'yxatdan o'tgan ota-ona/vasiyiman"
     parent_account_email_progress_permission: "Biz sizga elektron pochta orqali bolangizning taraqqiyoti va loyihalari to‘g‘risida, ularning kursi va kompyuter fanlari haqidagi yangiliklarni vaqti-vaqti bilan yuborib tursak bo‘ladimi?  [(Maxfiylik siyosatimizga qarang)](%{privacy_policy_url})"
     parent_account_email_label: "Ota-ona/Vasiy emaili"
@@ -402,6 +405,7 @@ uz:
       starwars: 'Yulduzlar urushi'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      loading: 'Yuklanyapti...'
       weblab: 'Web Lab'
       view_all: 'Barcha loyihalarni ko‘rish...'
     popup:
@@ -417,6 +421,7 @@ uz:
       prizes_link: 'Batafsil'
   teacher:
     answer: Javob
+    dashboard: 'Teacher Dashboard'
     for_teachers_only: Faqat o'qituvchilar uchun
     title:
       one: 'Oʻqituvchingiz:'
@@ -976,6 +981,7 @@ uz:
       email: 'E-mail'
       email_alternate: 'Alternativ Email'
       gender: 'Jinsiy identifikatsiya'
+      school: 'Maktab'
       school_name: 'Maktab nomi'
       school_city: 'Maktab shahri'
       school_country: 'Maktab davlati'
@@ -1096,3 +1102,4 @@ uz:
   behaviors:
     this_sprite: "bu sprayt"
   unit_prefix: "Bo'lim %{n}"
+  teacher_feedback: "O‘qituvchilarning fikri"

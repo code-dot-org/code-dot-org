@@ -1,5 +1,5 @@
 var testUtils = require('../util/testUtils');
-import {assert, expect} from '../util/deprecatedChai';
+import {assert, expect} from '../util/reconfiguredChai';
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');
 

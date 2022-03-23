@@ -2667,3 +2667,166 @@ en:
       7:
         image: 'notes/hoc_dance_congrats_7.png'
         text: "At the end of the tutorial you can share a link to your creation with your friends. Stretch your imagination and just have fun!"
+    poemart_intro:
+      1:
+        image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+        text: "My name is Caia and I'm a poet and a computer science student. I’ve learned so much from coding that's made me a better poet, and so much about my poetry has made me better at coding, just because you have to really think about the words that you choose and what you're going to create once it all comes together."
+      2:
+        image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+        text: "Over the next hour, you're going to learn about computer science and poetry by creating an animated poem. In essence poetry is making art with words. I create poetry to express myself; I try to stir the audience's imagination and emotions when I write by using my unique style and rhythm."
+      3:
+        image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+        text: "Just like art, poems can be interpreted in many different ways. The same poem might mean very different things to different people, and each poem has its own mood. Mood is the feeling you get from a poem. Sometimes people associate certain colors and imagery with different moods."
+      4:
+        image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+        text: "For instance, the color yellow makes me feel cheerful. And when I think about a mood like fear, I sometimes picture a dark and stormy night in my head. In this activity you'll have the opportunity to illustrate and animate the mood of a poem based on how it makes you feel."
+      5:
+        image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+        text: "Let's take a look at how you'll do this using code. You'll see that your screen is split into three main parts. On the left is the play space. This is where your animated poem will show up. Each poem has a title and an author."
+      6:
+        image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
+        text: "This middle area is the toolbox. New blocks of code will become available in this space as you go through the lesson."
+      7:
+        image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+        text: "The space on the right is the workspace. You can drag blocks out of the toolbox and into the workspace to build your program."
+      8:
+        image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+        text: "The instructions for each level will be up here at the top of the screen. If you want a hint, click on the light bulb."
+      9:
+        image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+        text: "First, select a poem you like. There are all kinds of poems and you can choose a new one on every level."
+      10:
+        image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+        text: "Next, you'll drag blocks from the toolbox into your workspace to animate your poem. You can choose a background color or effect that matches the mood of your poem, then click \"Run\" to see your poem in action."
+      11:
+        image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+        text: "Spend some time reading the different poems and find one that sparks an emotion in you. Think about how you feel, and how you can communicate that feeling through imagery and code."
+    poemart_events:
+      1:
+        image: 'notes/hoc_poem_art_2021_events_01.jpg'
+        text: "Sometimes a poem's mood shifts part way through the poem. What might start out as a happy-sounding poem turns sad, or perhaps darkness turns to light."
+      2:
+        image: 'notes/hoc_poem_art_2021_events_02.jpg'
+        text: "In this activity you'll be working with events. You can use this event block to change the course of your program when a specific line in your poem shows up. Notice that event blocks don't snap into your main program. Instead, they create little programs of their own."
+      3:
+        image: 'notes/hoc_poem_art_2021_events_03.jpg'
+        text: "Read through your poem and find a moment where the mood shifts. Count what line that happens on: one, two, three. In your event block, enter the number of the line."
+      4:
+        image: 'notes/hoc_poem_art_2021_events_04.jpg'
+        text: "Then program in something to reflect the shift in mood when that line shows up on the screen. When you press \"Run\" you can see what you coded."
+    poemart_imagery:
+      1:
+        image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+        text: "In poetry, authors use imagery to paint a picture in the reader's mind. When we see the word crocodile, we automatically imagine a green crocodile in our minds. To get an image like this into an animation we'll use sprites."
+      2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "This make a new sprite block that lets you make a sprite and choose a costume for it. Choose a costume for the sprite that you think goes with the poem."
+      3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "To change the sprite's location, you can click the pin icon in the location block, and then click where you want it to go in the play space."
+      4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "In the next few levels you'll see some new blocks. This block allows you to change the size of your sprite. This block allows you to animate your sprite with the behavior."
+      5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "If a poem mentions wandering clouds, first make the cloud sprite, then select this behavior block, drag it out, and choose wandering."
+      6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "Make sure your sprite costumes match. When you press run you'll read and see a wandering cloud."
+      7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "Now you can add literal images to illustrate the words in the poem. Have fun!"
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "Congratulations! You just learned the basics of computer science and how to find the mood of a poem. Now you can create your own animated poem to share with your friends."
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "Will you carefully choose a simple scene for the whole poem?"
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+        text: "Or will you use lots of events to create a new scene for every line of your poem?"
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+        text: "At the end of the tutorial you can share a link to your creation with your friends."
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "Stretch your imagination and have fun!"
+    hello_world_intro:
+      1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "Hi! My name is Erin, and I'm a software engineer here at Code.org. I'm so excited, because I got to work on the tutorial that you're about to do! We call it \"Hello World.\""
+      2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "\"Hello World\" is a famous phrase in computer science, and displaying that phrase is a common first step in learning computer science. Over the next hour, you're going to get started with computer science by programming in Sprite Lab."
+      3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "Sprite Lab is a tool you can use to  build imaginative and fun projects. You'll see that your screen is split into three main parts.  On the left is the play space. This is where your sprites will show up."
+      4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "Sprites are objects on the screen that you can interact with, like a character or item in a story or game."
+      5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
+        text: "This middle area is the toolbox. New blocks of code will become available in this space as you go through the lesson."
+      6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "The space on the right is the workspace. You can drag blocks out of the toolbox, and into the workspace to build your program."
+      7:
+        image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
+        text: "The instructions for each level will be up here at the top of the screen. If you want a hint, click on the light bulb."
+      8:
+        image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "To start off, let's make a sprite! This block lets you give your sprite a costume and a location. Costume is the word we use to describe a sprite's appearance. To change the sprite's location, you can click the pin icon in the location block, and then click where you want it to go."
+      9:
+        image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "Now let's have the sprite introduce itself! To make the sprite say something, use this \"Say\"  block, and add it to your program. Make sure that the costume selected in your \"Say\" block matches the costume in your sprite."
+      10:
+        image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "When you press \"Run\", the sprite will say whatever text you tell it to. Now it's time to get started with Sprite Lab, and see where your imagination leads you!"
+    hello_world_events:
+      1:
+        image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "Now that you've learned how to use Sprite Lab, you're going to want to make your program react when someone plays with it. To do that, you're going to use events. An event tells your program to listen for something to happen, and then react right away."
+      2:
+        image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen. Blocks like \"when clicked\" are called event blocks. The code connected to an event block runs when the appropriate action is detected."
+      3:
+        image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "For example, if I attach this \"say\" block to the \"when clicked\" event, my sprite will say  something when the user clicks or taps on it. Notice that event blocks don't snap into your main program. Instead, they create little programs of their own."
+      4:
+        image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "If you have multiple sprites, you can use additional events to tell an interactive story."
+      5:
+        image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "You'll soon be learning how to do even more in Sprite Lab, including changing the size or appearance of a sprite, setting different backgrounds, playing sounds, and more. What do you want your sprites to do when someone interacts with them? It's up to you!"
+    hello_world_congrats:
+      1:
+        image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'
+        text: "Congratulations! You've just learned the basics of computer science. Now you can use Sprite Lab to create whatever you want."
+      2:
+        image: 'notes/hoc_hello_world_2021_freeplay_02.jpg'
+        text: "You'll see a button that says Costumes. When you click on it, you can choose new sprite costumes from a library."
+      3:
+        image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+        text: "You can also draw your own! Once you have a costume you like, go back to your code."
+      4:
+        image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
+        text: "Now, select that costume for your sprite."
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "If you look in the toolbox, you'll find some brand new blocks that you haven't seen before. For example, there are lots of behavior blocks that will allow you to get your sprite moving in fun and interesting ways."
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "You can use the \"when touches\" event block to control what happens when two sprites bump into each other."
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "Look for the \"create effect\" block. This powerful block can be used to make a whole bunch of sprites that burst, or pop, or rain on command."
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Have a look around, and try experimenting with these new blocks and features. At the end of the tutorial, click the \"Share\" button to share a link to your creation with your friends."
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "You have all the powerful skills you need to start developing apps, games and other new programs in Sprite Lab! Use your new powers for good. Be kind and respectful, just like you would if you were creating something on paper, or talking with a friend."
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "So what will you create? You could tell a story about yourself... or make one up with your own special characters. Maybe you'll even use your new computer science skills for your next school project! Stretch your imagination and have fun!"

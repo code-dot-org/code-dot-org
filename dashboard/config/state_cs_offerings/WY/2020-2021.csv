@@ -1,0 +1,106 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Laramie High School,,560073000001,10011,Computer Science Principles,9,0,0,1,0,0,1,2,0
+Rocky Mountain High School,,560142000046,10011,Computer Science Principles,10,3,0,1,0,0,2,2,0
+Greybull High School,,560317000174,10011,Computer Science Principles,8,1,0,1,0,0,1,2,1
+Rawlins High School,,560103000026,10011,Computer Science Principles,44,17,1,17,1,0,7,2,0
+Glenrock Jr/Sr High School,,560215000137,10011,Computer Science Principles,1,0,0,0,0,0,0,0,0
+Wind River High School,,560283000544,10011,Computer Science Principles,6,3,0,0,1,0,1,1,0
+Hot Springs County High School,,560331000180,10011,Computer Science Principles,3,1,0,0,0,0,0,2,0
+Burns Jr & Sr High School,,560412000209,10011,Computer Science Principles,16,5,0,2,0,0,2,1,0
+Pine Bluffs Jr & Sr High School,,560412000210,10011,Computer Science Principles,16,8,0,3,1,0,3,1,1
+Kelly Walsh High School,,560451000229,10011,Computer Science Principles,17,8,0,1,0,0,1,1,0
+Natrona County High School,,560451000231,10011,Computer Science Principles,8,4,1,1,0,0,2,2,0
+Powell High School,,560516000278,10011,Computer Science Principles,1,0,0,0,0,0,1,0,0
+Cody High School,,560207000121,10011,Computer Science Principles,8,0,0,4,0,0,3,2,0
+John C. Schiffer Collaborative School,,560569500189,10011,Computer Science Principles,3,1,0,0,0,0,0,0,0
+Sheridan High School,,560569500360,10011,Computer Science Principles,58,14,0,4,0,0,14,5,0
+Big Piney High School,,560126000041,10011,Computer Science Principles,24,11,0,5,0,0,8,4,0
+Horizon Alternative School,,560276000376,10011,Computer Science Principles,6,2,1,1,1,0,5,1,0
+Ten Sleep K-12,,560582000393,10011,Computer Science Principles,3,0,0,0,0,0,1,0,0
+Newcastle High School,,560483000263,10011,Computer Science Principles,21,0,0,0,0,0,4,0,0
+Upton High School,,560609000401,10011,Computer Science Principles,6,2,0,0,0,0,0,2,0
+Ft. Washakie High School,,560282000552,10012,Exploring Computer Science,16,9,0,0,16,0,16,3,0
+Star Valley High School,,560406000202,10012,Exploring Computer Science,32,13,0,1,0,0,4,3,0
+Natrona County High School,,560451000231,10012,Exploring Computer Science,87,9,0,16,0,0,26,9,2
+Guernsey-Sunrise High School,,560318000379,10012,Exploring Computer Science,12,3,0,2,0,0,4,2,0
+Big Horn Elementary,,560569000395,10012,Exploring Computer Science,3,1,0,0,0,0,0,0,0
+Slack Elementary,,560569000472,10012,Exploring Computer Science,3,1,0,0,0,0,1,0,0
+Big Horn Middle School,,560569000446,10012,Exploring Computer Science,9,4,0,0,0,0,0,1,0
+Tongue River Middle School,,560569000447,10012,Exploring Computer Science,14,2,0,0,0,0,1,2,0
+Big Horn High School,,560569000311,10012,Exploring Computer Science,2,0,0,0,0,0,1,1,0
+John C. Schiffer Collaborative School,,560569500189,10012,Exploring Computer Science,12,9,0,1,1,0,4,2,0
+Sheridan High School,,560569500360,10012,Exploring Computer Science,32,6,1,2,0,0,8,2,1
+Evanston High School,,560276000152,10012,Exploring Computer Science,95,28,4,21,0,0,44,9,6
+Worland Middle School,,560624000344,10012,Exploring Computer Science,218,111,0,57,2,1,82,36,5
+Ten Sleep K-12,,560582000393,10012,Exploring Computer Science,10,4,0,1,0,0,2,1,0
+Upton Middle School,,560609000342,10012,Exploring Computer Science,10,3,1,0,0,0,2,1,0
+Rawlins High School,,560103000026,10013,PLTW Computer Science Essentials,30,7,0,9,0,0,6,3,1
+Buffalo High School,,560377000187,10013,PLTW Computer Science Essentials,17,3,0,0,0,0,4,3,0
+Rawlins High School,,560103000026,10015,PLTW Computer Science Principles,10,1,0,1,0,0,1,2,0
+Buffalo High School,,560377000187,10019,AP Computer Science Principles,5,0,0,0,0,0,0,0,0
+Tongue River High School,,560569000312,10019,AP Computer Science Principles,8,2,0,0,0,0,1,0,0
+Sheridan High School,,560569500360,10019,AP Computer Science Principles,8,1,0,2,0,0,0,1,0
+Jackson Hole High School,,560583000335,10019,AP Computer Science Principles,41,11,1,4,0,0,1,1,1
+Evanston High School,,560276000152,10019,AP Computer Science Principles,6,1,0,0,0,0,3,2,0
+Platte River School,,,10152,Computer Programming,1,0,0,1,0,0,1,0,0
+Torrington High School,,560299000168,10152,Computer Programming,5,0,0,2,0,0,1,0,0
+Hot Springs County High School,,560331000180,10152,Computer Programming,4,1,0,0,0,0,1,0,0
+Buffalo High School,,560377000187,10152,Computer Programming,5,0,0,0,0,0,1,2,0
+PODER Academy Secondary School,,560198000574,10152,Computer Programming,4,3,0,2,0,0,2,2,0
+Central High School,,560198000090,10152,Computer Programming,2,0,0,0,0,0,0,0,0
+East High School,,560198000091,10152,Computer Programming,16,0,0,1,1,0,0,0,0
+South High School,,560198000448,10152,Computer Programming,2,0,0,1,0,0,1,2,0
+New Frontier High School,,560403000358,10152,Computer Programming,1,0,0,0,0,0,0,0,0
+Kemmerer Junior Senior High School,,560403000557,10152,Computer Programming,25,11,0,3,1,0,0,0,1
+Kelly Walsh High School,,560451000229,10152,Computer Programming,35,7,0,2,0,0,6,1,0
+Niobrara County High School,,560423000214,10152,Computer Programming,2,1,0,0,0,0,0,3,0
+Powell Middle School,,560516000279,10152,Computer Programming,6,1,0,0,0,0,2,2,0
+Powell High School,,560516000278,10152,Computer Programming,30,7,0,0,0,0,12,0,0
+Cody High School,,560207000121,10152,Computer Programming,16,6,0,0,0,0,3,0,0
+Big Piney High School,,560126000041,10152,Computer Programming,6,2,0,0,0,0,0,0,0
+Evanston High School,,560276000152,10152,Computer Programming,10,1,0,3,0,0,2,1,0
+Mountain View High School,,560450000227,10152,Computer Programming,17,1,0,0,0,0,1,0,0
+Central High School,,560198000090,10153,Visual Basic (VB) Programming,37,9,1,5,2,0,3,0,0
+East High School,,560198000091,10153,Visual Basic (VB) Programming,23,3,0,1,0,0,9,4,0
+South High School,,560198000448,10153,Visual Basic (VB) Programming,27,6,1,4,1,0,10,5,1
+Kelly Walsh High School,,560451000229,10154,C++ Programming,19,2,0,1,0,0,4,0,0
+Rocky Mountain High School,,560142000046,10155,Java Programming,10,4,0,2,0,0,2,0,2
+Glenrock Jr/Sr High School,,560215000137,10155,Java Programming,19,5,0,3,0,0,6,1,0
+Wyoming Indian High School,,560445000441,10155,Java Programming,25,6,0,0,25,0,25,1,2
+Niobrara County High School,,560423000214,10155,Java Programming,4,2,0,0,0,0,0,0,0
+Cody High School,,560207000121,10155,Java Programming,1,0,0,0,0,0,0,0,0
+Kelly Walsh High School,,560451000229,10156,Computer Programming - Other Language,5,1,0,0,0,0,1,2,0
+Platte River School,,,10157,AP Computer Science A,2,1,0,0,0,0,2,4,0
+Torrington High School,,560299000168,10157,AP Computer Science A,3,2,1,0,0,0,1,3,0
+Kaycee School,,560377000449,10157,AP Computer Science A,7,6,0,0,0,0,1,1,0
+Buffalo High School,,560377000187,10157,AP Computer Science A,3,0,0,0,0,0,0,1,0
+Kelly Walsh High School,,560451000229,10157,AP Computer Science A,10,2,0,1,0,0,3,5,0
+Powell High School,,560516000278,10157,AP Computer Science A,7,1,0,0,0,0,2,1,0
+Tongue River High School,,560569000312,10157,AP Computer Science A,1,1,0,0,0,0,0,2,0
+Sheridan High School,,560569500360,10157,AP Computer Science A,3,1,0,0,0,0,0,0,0
+East High School,,560198000091,10159,IB Computer Science,3,0,0,0,0,0,1,0,0
+Wyoming Indian High School,,560445000441,10160,Particular Topics in Computer Programming,33,21,0,0,33,0,33,0,2
+Ft. Washakie High School,,560282000552,10160,Particular Topics in Computer Programming,16,9,0,0,16,0,16,1,0
+Big Horn High School,,560569000311,10160,Particular Topics in Computer Programming,8,2,0,0,1,0,0,1,0
+Tongue River High School,,560569000312,10160,Particular Topics in Computer Programming,10,4,0,0,1,0,2,1,0
+Evanston High School,,560276000152,10197,Computer Programming - Independent Study,5,0,0,0,0,0,3,0,0
+Central High School,,560198000090,10198,Computer Programming - Workplace Experience,2,0,0,0,1,0,1,1,0
+Powell High School,,560516000278,10198,Computer Programming - Workplace Experience,1,0,0,0,0,0,0,0,0
+Star Valley High School,,560406000202,10199,Computer Programming - Other,35,15,0,3,0,0,8,0,1
+Midwest School,,560451000133,10199,Computer Programming - Other,2,0,0,0,0,0,2,0,0
+Evanston High School,,560276000152,10199,Computer Programming - Other,6,4,0,0,0,0,3,1,0
+Riverton High School,,560522000286,10205,Computer Gaming and Design,41,1,0,5,7,0,12,0,1
+Natrona County High School,,560451000231,10206,Mobile Applications,8,0,0,1,0,0,0,1,0
+Rawlins High School,,560103000026,21009,Robotics,1,0,0,0,0,0,0,5,0
+Wind River High School,,560283000544,21009,Robotics,24,4,0,2,4,0,3,0,0
+Kaycee School,,560377000449,21009,Robotics,4,2,0,0,0,0,1,0,0
+Buffalo High School,,560377000187,21009,Robotics,9,1,0,2,0,0,3,4,0
+Kemmerer Junior Senior High School,,560403000557,21009,Robotics,7,3,0,1,0,0,0,3,0
+Midwest School,,560451000133,21009,Robotics,8,2,0,0,0,0,6,1,0
+Dean Morgan Middle School,,560451000233,21009,Robotics,93,21,1,16,3,0,49,4,0
+Kelly Walsh High School,,560451000229,21009,Robotics,48,6,1,6,0,0,15,5,2
+Natrona County High School,,560451000231,21009,Robotics,36,5,0,2,0,0,15,0,0
+Powell High School,,560516000278,21009,Robotics,56,8,0,4,0,0,19,0,1
+Cody High School,,560207000121,21009,Robotics,11,1,0,1,0,0,2,0,0
+Rock Springs High School,,560530200294,21009,Robotics,16,0,0,7,0,0,4,4,2
+Upton High School,,560609000401,21009,Robotics,14,4,0,0,0,0,8,2,0

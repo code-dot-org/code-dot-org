@@ -7,11 +7,7 @@ import _ from 'lodash';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
-import {
-  hiddenSectionIds,
-  beginEditingNewSection,
-  beginEditingSection
-} from './teacherSectionsRedux';
+import {hiddenSectionIds, beginEditingSection} from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -29,7 +25,6 @@ class OwnedSections extends React.Component {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
-    beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired
   };
 
@@ -63,7 +58,7 @@ class OwnedSections extends React.Component {
   }
 
   // Wrapped to avoid passing event args
-  beginEditingNewSection = () => this.props.beginEditingNewSection();
+  beginEditingSection = () => this.props.beginEditingSection();
 
   toggleViewHidden = () => {
     this.setState({
@@ -114,6 +109,9 @@ class OwnedSections extends React.Component {
                 <div style={styles.hiddenSectionLabel}>
                   {i18n.archivedSections()}
                 </div>
+                <div style={styles.hiddenSectionDesc}>
+                  {i18n.archivedSectionsTeacherDescription()}
+                </div>
                 <OwnedSectionsTable
                   sectionIds={hiddenSectionIds}
                   onEdit={this.onEditSection}
@@ -142,8 +140,14 @@ const styles = {
     paddingBottom: 10
   },
   hiddenSectionLabel: {
+    fontSize: 18,
+    paddingBottom: 10,
+    color: color.charcoal
+  },
+  hiddenSectionDesc: {
     fontSize: 14,
-    paddingBottom: 5,
+    lineHeight: '22px',
+    paddingBottom: 10,
     color: color.charcoal
   },
   spinner: {
@@ -159,7 +163,6 @@ export default connect(
     asyncLoadComplete: state.teacherSections.asyncLoadComplete
   }),
   {
-    beginEditingNewSection,
     beginEditingSection
   }
 )(OwnedSections);

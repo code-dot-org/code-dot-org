@@ -1,52 +1,52 @@
 ---
-title: Blurbs and useful stats
+title: अस्पष्टता और जरूरी आँकड़े
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# अस्पष्टता और जरूरी आँकड़े
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### यदि आप अपने न्यूज़लेटर्स और कम्युनिकेशन में ऑवर ऑफ़ कोड को बढ़ावा देने के तरीकों की तलाश कर रहे हैं तो इन संदेशों का इस्तेमाल करें।
 
 * * *
 
-## Use this short blurb in newsletters
+## न्यूज़लेटर्स में इस संक्षिप्त विवरण का इस्तेमाल करें
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### कंप्यूटर साइंस को अपने स्कूल में लाएं। ऑवर ऑफ़ कोड से शुरू करें! 
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But fewer than half of all schools teach computer science! Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+टेक्नोलॉजी के साथ पृथ्वी पर हर इंडस्ट्री में बदलाव आ रहा है, कंप्यूटिंग की जानकारी एक व्यापक स्किल सेट का हिस्सा बन गई है। But just half of all schools offer computer science! अच्छी खबर यह है कि हम इसे बदलने की राह पर हैं। यदि आपने पहले ऑवर ऑफ कोड के बारे में सुना है, तो आप जान सकते हैं कि इसने इतिहास रच दिया। 10 करोड़ छात्रों ने अब सिर्फ एक घंटे का कोड करके यह पता लगा लिया है कि कंप्यूटर साइंस कितना आसान और मनोरंजक हो सकता है।
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+द ऑवर ऑफ कोड कंप्यूटर साइंस के लिए एक घंटे का परिचय है, जिसे कोड की जानकारी को आसान बनाने और यह दिखाने के लिए डिज़ाइन किया गया है कि कोई भी मूल बातें सीख सकता है। [http://HourOfCode.com](http://HourofCode.com) पर अधिक जानें, स्वयं एक घंटे का प्रयास करें, या दूसरों को कंप्यूटिंग की दुनिया से परिचित कराने के लिए ऑवर ऑफ़ कोड कार्यक्रम आयोजित करें!
 
-## Messaging for frequently asked questions
+## अक्सर पूछे जाने वाले प्रश्नों के लिए मैसेजिंग
 
-#### Why is your school doing an Hour of Code?
+#### आपका स्कूल ऑवर ऑफ़ कोड क्यों कर रहा है?
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+जबकि हम सभी जानते हैं कि छात्रों के लिए आज की टेक्नोलॉजी से लिप्त दुनिया में नेविगेट करना सीखना महत्वपूर्ण है, कई शिक्षक कंप्यूटर साइंस में अनुभवी नहीं हैं और यह नहीं जानते कि कहां से शुरू करें। यह इवेंट हम सभी के लिए यह देखने का मौका है कि कंप्यूटर साइंस क्या है।
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
+हमें उम्मीद है कि यह छात्रों में सीखने के लिए रुचि जगाएगा। शोध से यह भी पता चलता है कि बच्चे पढ़ना और लिखना सीखने से पहले प्रोग्रामिंग अवधारणाओं को सीख सकते हैं। रिसर्च से यह भी पता चलता है कि बच्चे पढ़ना और लिखना सीखने से पहले प्रोग्रामिंग के अवधारणाओं को सीख सकते हैं। <br /> <br />
 
-#### Why is this important?
+#### यह क्यों महत्वपूर्ण है?
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 53 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
+टेक्नोलॉजी दुनिया के सभी उद्योगों में तेजी से बदलाव ला रही है. 2015 में, यू.एस. में 7 मिलियन नौकरियां ऐसे व्यवसायों में थीं - जिसमें कला और डिजाइन शामिल थे - जो कि कोडिंग स्किल को महत्व देते थे। But 49 percent of schools in the U.S. don't offer computer science. यह हमारे लिए 21वीं सदी तक पहुंचने का समय है। हम जानते हैं कि हमारे छात्र बड़े होने पर चाहे कुछ भी करें, चाहे वे चिकित्सा, व्यवसाय, राजनीति या कला में जाएं, प्रौद्योगिकी का निर्माण करने का तरीका जानने से उन्हें आत्मविश्वास और प्रतिस्पर्धा में बढ़त मिलेगी। <br /> <br />
 
-#### A quote you can use in materials
+#### एक कथन जिसका आप कॉन्टेंट में इस्तेमाल कर सकते हैं
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+Code.org के संस्थापक और मुख्य कार्यकारी अधिकारी हादी पार्टोवी ने कहा, "द ऑवर ऑफ कोड को कोड को आसान करने और यह दिखाने के लिए डिज़ाइन किया गया है कि कंप्यूटर साइंस रॉकेट साइंस नहीं है - कोई भी मूल बातें सीख सकता है।" 100 मिलियन से भी ज्यादा छात्रों ने ऑवर ऑफ़ कोड को आजमाया है प्रासंगिक 21वीं सदी की कंप्यूटर साइंस एजुकेशन की मांग सभी सीमाओं को पार करती है और इसकी कोई सीमा नहीं है।" <br /> <br />
 
-#### About Code.org
+#### Code.org के बारे में
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org एक 501c3 सार्वजनिक गैर-लाभकारी संस्था है जो कंप्यूटर साइंस में भागीदारी बढ़ाने और अन्य कम प्रतिनिधित्व वाले समूहों की युवा महिलाओं और छात्रों की भागीदारी बढ़ाने के लिए समर्पित है। इसका विजन है कि हर स्कूल के हर छात्र को कंप्यूटर प्रोग्रामिंग सीखने का मौका मिले। 2013 में लॉन्च होने के बाद, Code.org ने ऑवर ऑफ कोड अभियान का आयोजन किया - जिसने अब तक 100 मिलियन से अधिक छात्रों को कंप्यूटर विज्ञान से परिचित कराया है - और कंप्यूटर विज्ञान कार्यक्रमों का विस्तार करने के लिए देश भर में 70 पब्लिक स्कूल जिलों के साथ भागीदारी की है। Code.org को Microsoft, Facebook, Infosys Foundation USA, Amazon, और अन्य सहित निगमों, फाउंडेशनों और उदार व्यक्तियों के परोपकारी दान द्वारा सपोर्टेड है। अधिक जानकारी के लिए कृपया [code.org](https://code.org) पर जाएँ।
 
-## Share these on social media and in emails
+## इन्हें सोशल मीडिया और ईमेल के जरिये शेयर करें
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![इमेज](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![इमेज](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![इमेज](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infographics
+## इन्फोग्रफिक्स
 
 {{ stats_carousel }}
 

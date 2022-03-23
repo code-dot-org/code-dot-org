@@ -1,6 +1,0 @@
-{
-  "func": "declareAssign_str_hello_world",
-  "block": "var str = \"Hello World\";",
-  "category": "Variables",
-  "noAutocomplete": true
-}

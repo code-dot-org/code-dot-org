@@ -34,7 +34,6 @@ import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
-import DialogButtons from '../templates/DialogButtons';
 import executionLog from '../executionLog';
 import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
@@ -1481,62 +1480,6 @@ function onDataViewChange(view, oldTableName, newTableName) {
       return;
   }
 }
-
-/**
- * Show a modal dialog with a title, text, and OK and Cancel buttons
- * @param {title}
- * @param {text}
- * @param {callback} [onConfirm] what to do when the user clicks OK
- * @param {string} [filterSelector] Optional selector to filter for.
- */
-
-Applab.showConfirmationDialog = function(config) {
-  config.text = config.text || '';
-  config.title = config.title || '';
-
-  var contentDiv = document.createElement('div');
-  contentDiv.innerHTML =
-    '<p class="dialog-title">' +
-    config.title +
-    '</p>' +
-    '<p>' +
-    config.text +
-    '</p>';
-
-  var buttons = document.createElement('div');
-  ReactDOM.render(
-    React.createElement(DialogButtons, {
-      confirmText: commonMsg.dialogOK(),
-      cancelText: commonMsg.dialogCancel()
-    }),
-    buttons
-  );
-  contentDiv.appendChild(buttons);
-
-  var dialog = studioApp().createModalDialog({
-    contentDiv: contentDiv,
-    defaultBtnSelector: '#confirm-button'
-  });
-
-  var cancelButton = buttons.querySelector('#again-button');
-  if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function() {
-      dialog.hide();
-    });
-  }
-
-  var confirmButton = buttons.querySelector('#confirm-button');
-  if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function() {
-      if (config.onConfirm) {
-        config.onConfirm();
-      }
-      dialog.hide();
-    });
-  }
-
-  dialog.show();
-};
 
 Applab.onPuzzleFinish = function() {
   Applab.onPuzzleComplete(false); // complete without submitting

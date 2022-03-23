@@ -1727,6 +1727,23 @@ ka-GE:
         - {}
       courseD_project_exemplars_2020_2021:
         content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+        markdown: |+
+          # პროექტის მაგალითები
+
+          მალე თქვენს საბოლოო პროექტს დაიწყებთ. სანამ ამას იზამთ, დაათვალიერეთ პროექტების ნიმუშები.
+
+
+          | შემთხვევითი სიჩქარე ასხლეტისას (კალათბურთი) | შტორმტრუპერების გამრავლება (ვარსკვლავური ომები) |
+          |---|---|
+          | [![შემთხვევითი სიჩქარე ასხლეტისას (კალათბურთი)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "შემთხვევითი სიჩქარე ასხლეტისას (კალათბურთი)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![შტორმტრუპერების გამრავლება (ვარსკვლავური ომები)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "შტორმტრუპერების გამრავლება (ვარსკვლავური ომები)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | ბურთი სიჩქარეს იცვლის როცა აისხლიტება! | თავი მოარიდეთ შტორმტრუპერებს, თორემ გამრავლდებიან!  |
+
+
+          | პანიკა! დისკოთეკაზე (საცეკვაო წვეულება) | პლაჟის სურათი (მხატვარი) |
+          |---|---|
+          | [![ნიმუში (მხატვარი)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "ნიმუში (მხატვარი)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![თოვლის ფიფქის ყვავილები (გაყინული)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "თოვლის ფიფქის ყვავილები (გაყინული)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | თქვენი დამხმარე მოცეკვავეები სულ ცვლიან თავიან მოძრაობებს! | დაუმატეთ ფერები და ფონი ამ სურათს! |
+
       courseE_multi_bee_functions_predict1:
         answers:
         - {}
@@ -2345,6 +2362,120 @@ ka-GE:
       csf_putting_a_stop_to_online_meanness_2021:
         content1: მიუთითეთ აღწერა
       grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_EOC_examples_2021:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
+      courseF_EOC_samples_2021:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
+      express_EOC_examples_2021:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 CSS practice_pilot_2021:
+        display_name: ტექსტის გასტილვა CSS-ით
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: მიუთითეთ აღწერა
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: დასახელება
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: მიუთითეთ აღწერა
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: მიუთითეთ აღწერა
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: მიუთითეთ აღწერა
+      CSD U6 LED create intro_2021:
+        content1: მიუთითეთ აღწერა
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: მიუთითეთ აღწერა
+      CSD U6 setProperty predict multi_2021:
         answers:
         - {}
         - {}

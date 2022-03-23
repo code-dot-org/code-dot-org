@@ -8,23 +8,16 @@ import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {
-  beginEditingNewSection,
   pageTypes,
   setAuthProviders,
   setPageType,
-  setLessonExtrasUnitIds,
-  setTextToSpeechUnitIds,
-  setPreReaderUnitIds,
-  setValidGrades,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser, {
-  setCurrentUserId
-} from '@cdo/apps/templates/currentUserRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(showHomepage);
 
@@ -38,15 +31,10 @@ function showHomepage() {
   const query = queryString.parse(window.location.search);
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
-  store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setLessonExtrasUnitIds(homepageData.lessonExtrasUnitIds));
-  store.dispatch(setTextToSpeechUnitIds(homepageData.textToSpeechUnitIds));
-  store.dispatch(setPreReaderUnitIds(homepageData.preReaderUnitIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleCode(homepageData.localeCode));
-  store.dispatch(setCurrentUserId(homepageData.currentUserId));
 
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
@@ -55,23 +43,11 @@ function showHomepage() {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
   }
 
-  let courseId;
-  let scriptId;
-  if (query.courseId) {
-    courseId = parseInt(query.courseId, 10);
-    // remove courseId/scriptId params so that if we navigate back we don't get
-    // this dialog again
-    updateQueryParam('courseId', undefined, true);
-  }
-  if (query.scriptId) {
-    scriptId = parseInt(query.scriptId, 10);
-    updateQueryParam('scriptId', undefined, true);
-  }
-  if (courseId || scriptId) {
-    store.dispatch(beginEditingNewSection(courseId, scriptId));
-  }
-
   const announcement = getTeacherAnnouncement(announcementOverride);
+
+  const allowTeacherAppReopening = experiments.isEnabled(
+    experiments.TEACHER_APPLICATION_SAVING_REOPENING
+  );
 
   ReactDOM.render(
     <Provider store={store}>
@@ -81,8 +57,10 @@ function showHomepage() {
             announcement={announcement}
             hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
+            plCourses={homepageData.plCourses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
+            topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             isEnglish={isEnglish}
@@ -90,6 +68,14 @@ function showHomepage() {
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}
+            showFinishTeacherApplication={
+              allowTeacherAppReopening &&
+              homepageData.showFinishTeacherApplication
+            }
+            showReturnToReopenedTeacherApplication={
+              allowTeacherAppReopening &&
+              homepageData.showReturnToReopenedTeacherApplication
+            }
             donorBannerName={homepageData.donorBannerName}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
@@ -107,6 +93,9 @@ function showHomepage() {
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
             isEnglish={isEnglish}
+            showVerifiedTeacherWarning={
+              homepageData.showStudentAsVerifiedTeacherWarning
+            }
           />
         )}
       </div>

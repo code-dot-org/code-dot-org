@@ -228,7 +228,8 @@
           "a1a2a07348784279a1e7a6f46dc7e353": "Co přidáte?",
           "0d3e73168beb875063ea0f0302fe32bd": "Kterou rybu?",
           "caaf8264ca397dba2d35ef902bbbd953": "Kterého tvora?",
-          "78574118d153534fd0925a2f5ca25e79": "Kterou věc?"
+          "78574118d153534fd0925a2f5ca25e79": "Kterou věc?",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "tvor"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Vyhrál jsi!",
@@ -259,11 +260,16 @@
           "df8312187449c70820d7c58229a6b17e": "Vesmírný robot odstrašuje ostatní tvory.",
           "c084e152431f9116b9fdb3f7d465f13d": "Neila chce vesmírnému robotovi pomoci naučit se být hodný.",
           "b2f02bf648ce32c4362afe1578d41f70": "Zabralo to! Neila ukázala vesmírnému robotovi moc vlídnosti.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Ostatní tvorové už se nebojí!"
+          "2a28483f9f4f9ee44cec653a445d4c82": "Ostatní tvorové už se nebojí!",
+          "5cec903c4d41c49412a70a94d54999ee": "Můžete něco napsat.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text sem"
         },
         "courseE_aboutme_1_2021": {
           "8e985f60f328934accd78e7649584840": "Zmrzlina je můj oblíbený pamlsek!",
-          "31ba97bb501bb1f5b448221be09bad32": "To je moje korgi jménem Lízátko! Měla bych ji naučit programovat!"
+          "31ba97bb501bb1f5b448221be09bad32": "To je moje korgi jménem Lízátko! Měla bych ji naučit programovat!",
+          "b63151482630edd1589a9ac24d107c49": "To jsem já, Rikki! Ráda píšu kód, podnikám něco s Thuy a jím zmrzlinu!",
+          "810896b14fc6615f0c76628b9b6a727e": "Tohle je moje nejlepší kamarádka Thuy. Je hodně dobrá ve sportu.",
+          "6f97975a0bda0c9219915161149cbb26": "Tohle je můj počítač. POŘÁD na něm píšu nějaký kód."
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Ahoj světe!"
@@ -272,7 +278,8 @@
           "ed076287532e86365e841e92bfc50d8c": "Ahoj světe!"
         },
         "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Ahoj světe!"
+          "ed076287532e86365e841e92bfc50d8c": "Ahoj světe!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Ahoj!"
         },
         "courseF_apps_card": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kdo má narozeniny?",
@@ -286,7 +293,9 @@
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": " roků, také!",
           "605f302ebc9f7fbacba60b15f551a633": "Jaká je Vaše oblíbená barva?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Zadejte svou oblíbenou barvu:",
-          "1f258d88a70309efc1435ef5daa277a0": "Děkuji Vám, že jste si se mnou dnes povídali!"
+          "1f258d88a70309efc1435ef5daa277a0": "Děkuji Vám, že jste si se mnou dnes povídali!",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Kolik je ti let?",
+          "ae096fbf24d913754b01a1601672bf62": " také!"
         },
         "courseF_apps_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Večírkové hry",
@@ -312,7 +321,9 @@
           "605f302ebc9f7fbacba60b15f551a633": "Jaká je Vaše oblíbená barva?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Zadejte svou oblíbenou barvu:",
           "1f258d88a70309efc1435ef5daa277a0": "Děkuji Vám, že jste si se mnou dnes povídali!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Kolik je ti let?",
+          "ae096fbf24d913754b01a1601672bf62": " také!"
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Večírkové hry",
@@ -367,19 +378,76 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "co chceš k narozeninám?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Konec",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Díky za pokec!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka",
+          "50d489a15105b987ec6d4410900c95dd": "Zadej slovo akce:"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Můžete něco napsat.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text sem"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Můžete něco napsat.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text sem"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Můžete něco napsat.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text sem"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Pes!",
+          "336ad881e37e713ba0325500a8fa1f00": "psi!",
+          "27944770529dd15319a983bee8951560": "Kočka!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "kočky!",
+          "1c64ef29c853587fbe94f69f05272b79": "Pták!",
+          "5b402e6ea05e847a076e03ad74420c45": "ptáci!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Drak!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "draci!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Spočítejte všechna zvířata!",
+          "f62038e77820419cd978f7b722da560a": "Kolik se jich zobrazí?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Spočítejte domácí zvířata"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Jak se jmenuješ?"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "zde zadej text",
+          "30fcc1693fa8402931d13ac3a5f396fd": "zde napiš název"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "volba 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "volba 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "volba 3"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Klikni na sprajty a nasaď jim roušky.",
+          "968c8b54671ab303d48320f86937c40b": "Roušky pomáhají zpomalit šíření virů."
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ahoj světe!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ahoj světe!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ahoj světe!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Ahoj světe!"
         }
       }
     }

@@ -5,7 +5,9 @@ ar:
       jittering: الاهتزاز
       moving east: التحرك ناحية الشرق
       moving north: التحرك ناحية الشمال
+      moving north and looping: تحريك إلى الشمال والدوران
       moving south: التحرك ناحية الجنوب
+      moving south and looping: تحريك إلى الجنوب والدوران
       moving west: التحرك ناحية الغرب
       moving with arrow keys: التحرك من خلال الأسهم
       patrolling: التجوُّل

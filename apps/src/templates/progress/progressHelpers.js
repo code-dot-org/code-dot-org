@@ -8,7 +8,6 @@ import {
   resultFromStatus
 } from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -17,7 +16,7 @@ import experiments from '@cdo/apps/util/experiments';
  * @param {number} lesson - the lesson we're querying
  * @param {object} state - State of our entire redux store
  * @param {ViewType} viewAs - Are we interested in whether the lesson is viewable
- *   for students or teachers
+ *   for participants or instructors
  * @returns {boolean} True if the provided lesson is visible
  */
 export function lessonIsVisible(lesson, state, viewAs) {
@@ -33,18 +32,18 @@ export function lessonIsVisible(lesson, state, viewAs) {
     sectionId,
     lesson.id
   );
-  return !isHidden || viewAs === ViewType.Teacher;
+  return !isHidden || viewAs === ViewType.Instructor;
 }
 
 /**
  * Treat the lesson as locked if either
  * (a) it is locked for this user (in the case of a student)
- * (b) non-verified teacher
+ * (b) non-verified instructor
  * (c) signed out user
  * @param {number} lesson - the lesson we're querying
  * @param {object} state - State of our entire redux store
  * @param {ViewType} viewAs - Are we interested in whether the lesson is viewable
- *   for students or teachers
+ *   for participants or instructors
  * @returns {boolean} True if the provided lesson is visible
  */
 export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
@@ -55,9 +54,9 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
   if (!state.currentUser.userId) {
     // Signed out user
     return true;
-  } else if (viewAs === ViewType.Teacher) {
+  } else if (viewAs === ViewType.Instructor) {
     return !state.lessonLock.lockableAuthorized;
-  } else if (viewAs === ViewType.Student) {
+  } else if (viewAs === ViewType.Participant) {
     return lessonLocked(levels);
   }
   return true;
@@ -159,18 +158,10 @@ export function lessonHasLevels(lesson) {
 
 /**
  * Determines if we should show "Keep working" and "Needs review" states for
- * progress in a unit. User must be enrolled in the relevant pilot and unit
- * must be either CSF or CSD.
+ * progress in a unit. Unit must be either CSD or CSP.
  */
 export function shouldShowReviewStates(unit) {
-  return (
-    experiments.isEnabled(experiments.KEEP_WORKING) &&
-    (unit.csf || isUnitCsd(unit))
-  );
-}
-
-function isUnitCsd(unit) {
-  return unit.name?.startsWith('csd');
+  return unit.isCsd || unit.isCsp;
 }
 
 /**

@@ -30,9 +30,13 @@ class PauseButton extends React.Component {
   render() {
     const buttonStyle = {
       ...styles.button,
-      ...(this.props.isRunning && styles.runningColor),
-      ...(this.props.isPaused && styles.pausedColor),
       ...(this.props.marginRight && {marginRight: this.props.marginRight})
+    };
+    const iconStyle = {
+      ...styles.icon,
+      ...(this.props.isAttached && styles.inactiveColor),
+      ...(this.props.isRunning && styles.runningColor),
+      ...(this.props.isPaused && styles.pausedColor)
     };
 
     return (
@@ -42,12 +46,15 @@ class PauseButton extends React.Component {
         style={buttonStyle}
         disabled={!this.props.isRunning}
         className="no-focus-outline"
+        id="pauseButton"
       >
         <div style={styles.container}>
           <i
-            style={styles.icon}
+            style={iconStyle}
             className={
-              this.props.isPaused ? 'fa fa-fw fa-play' : 'fa fa-fw fa-pause'
+              this.props.isPaused
+                ? 'fa fa-fw fa-play-circle'
+                : 'fa fa-fw fa-pause-circle'
             }
           />
         </div>
@@ -59,28 +66,29 @@ class PauseButton extends React.Component {
 const styles = {
   icon: {
     lineHeight: 'inherit',
-    color: color.white
+    fontSize: 48
   },
   container: {
     width: 40,
     height: 40,
     lineHeight: '40px',
-    textAlign: 'center',
-    verticalAlign: 'middle',
-    display: 'inline-block'
+    display: 'flex',
+    justifyContent: 'center'
   },
   button: {
     minWidth: 0,
     padding: 0,
-    borderRadius: '100%'
+    borderRadius: '100%',
+    backgroundColor: color.white
+  },
+  inactiveColor: {
+    color: '#C7C7C7'
   },
   runningColor: {
-    backgroundColor: color.cyan,
-    borderColor: color.cyan
+    color: color.cyan
   },
   pausedColor: {
-    backgroundColor: color.orange,
-    borderColor: color.orange
+    color: color.orange
   }
 };
 

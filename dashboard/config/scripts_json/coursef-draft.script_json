@@ -4,12 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:04 UTC",
+    "serialized_at": "2021-11-22 19:56:18 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursef-draft"
     }
@@ -332,16 +336,527 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "63f38e3f-ec5a-4201-9590-26a2406028fb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63f38e3f-ec5a-4201-9590-26a2406028fb",
+        "lesson.key": "Algorithms: Tangrams",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "77d437fd-2154-4518-95f1-a718eac848aa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77d437fd-2154-4518-95f1-a718eac848aa",
+        "lesson.key": "Introduction",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "e3e17015-c321-461b-8230-89b02efbf97d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3e17015-c321-461b-8230-89b02efbf97d",
+        "lesson.key": "The Power of Words",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "ecdda608-18f6-4491-96ae-eb82571f43d8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ecdda608-18f6-4491-96ae-eb82571f43d8",
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "8cfb99fd-471f-4616-89c3-caa84cf2fb16",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8cfb99fd-471f-4616-89c3-caa84cf2fb16",
+        "lesson.key": "Envelope Variables",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "6dcbf2a4-193f-471a-a566-94c3333fe1e5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6dcbf2a4-193f-471a-a566-94c3333fe1e5",
+        "lesson.key": "Variables in Artist",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "10a5a5ee-ce1a-4046-862d-80e64b626c2f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10a5a5ee-ce1a-4046-862d-80e64b626c2f",
+        "lesson.key": "Variables in Play Lab",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "cfc84c42-21f9-4dfb-b524-cd6ff7216451",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cfc84c42-21f9-4dfb-b524-cd6ff7216451",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "4d46e01c-6c43-4bc4-9e9a-b6856e709e13",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d46e01c-6c43-4bc4-9e9a-b6856e709e13",
+        "lesson.key": "For Loops in Bee",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "733fcc7e-98b8-415d-89cc-1704f654a84f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "733fcc7e-98b8-415d-89cc-1704f654a84f",
+        "lesson.key": "For Loops in Artist",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "259b110f-9221-42e6-a86c-46ef76f63554",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "259b110f-9221-42e6-a86c-46ef76f63554",
+        "lesson.key": "Songwriting with Parameters",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "437e1980-d901-474e-b8c4-e99a7ebddfd1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "437e1980-d901-474e-b8c4-e99a7ebddfd1",
+        "lesson.key": "Conditionals and Functions in Bee",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "98aa2feb-9af1-4394-b63a-e10cb45a76cc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98aa2feb-9af1-4394-b63a-e10cb45a76cc",
+        "lesson.key": "Functions with Parameters in Artist",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "094ef3c6-8789-4797-be8d-7595f70eb3e9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "094ef3c6-8789-4797-be8d-7595f70eb3e9",
+        "lesson.key": "Functions with Parameters in Bee",
+        "lesson_group.key": "content",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "4eeb9d56-ac43-407a-ab1e-2209fa38121e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4eeb9d56-ac43-407a-ab1e-2209fa38121e",
+        "lesson.key": "Explore Project Ideas",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "d76a94bc-f723-4e27-aa60-02cab6f85ea5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d76a94bc-f723-4e27-aa60-02cab6f85ea5",
+        "lesson.key": "The Design Process",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "19d0185a-0abf-4ac8-ab8f-a3391a6638dc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19d0185a-0abf-4ac8-ab8f-a3391a6638dc",
+        "lesson.key": "Build Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "2f0d2913-effb-43e5-96ea-5c80e40f5a2a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2f0d2913-effb-43e5-96ea-5c80e40f5a2a",
+        "lesson.key": "Revise Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursef-draft"
+      }
+    },
+    {
+      "key": "b9ab8131-1865-42f2-866f-19784a9f5515",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9ab8131-1865-42f2-866f-19784a9f5515",
+        "lesson.key": "Presentation Your Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursef-draft"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "84d04ce8-02e4-4611-9df4-3b2772a9c154",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "84d04ce8-02e4-4611-9df4-3b2772a9c154",
+        "lesson_activity.key": "63f38e3f-ec5a-4201-9590-26a2406028fb"
+      }
+    },
+    {
+      "key": "b26d6242-0069-4a0e-a019-89aedcc922c0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0",
+        "lesson_activity.key": "77d437fd-2154-4518-95f1-a718eac848aa"
+      }
+    },
+    {
+      "key": "9d2fa55c-e4c7-4d36-a156-170d80ccfa22",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d2fa55c-e4c7-4d36-a156-170d80ccfa22",
+        "lesson_activity.key": "e3e17015-c321-461b-8230-89b02efbf97d"
+      }
+    },
+    {
+      "key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4",
+        "lesson_activity.key": "ecdda608-18f6-4491-96ae-eb82571f43d8"
+      }
+    },
+    {
+      "key": "cd9add40-6d21-4920-a0b9-058cc1e6bc9e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cd9add40-6d21-4920-a0b9-058cc1e6bc9e",
+        "lesson_activity.key": "8cfb99fd-471f-4616-89c3-caa84cf2fb16"
+      }
+    },
+    {
+      "key": "2b71a95d-af27-4db0-9686-89babd144bd5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5",
+        "lesson_activity.key": "6dcbf2a4-193f-471a-a566-94c3333fe1e5"
+      }
+    },
+    {
+      "key": "76381f63-1d72-40ba-87f8-57b1eeabfc52",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52",
+        "lesson_activity.key": "10a5a5ee-ce1a-4046-862d-80e64b626c2f"
+      }
+    },
+    {
+      "key": "07ef436a-b584-4b3e-9fa1-f74bb7b35bb6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "07ef436a-b584-4b3e-9fa1-f74bb7b35bb6",
+        "lesson_activity.key": "cfc84c42-21f9-4dfb-b524-cd6ff7216451"
+      }
+    },
+    {
+      "key": "a4bada95-3580-4b6d-9b10-a1398ca326f5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5",
+        "lesson_activity.key": "4d46e01c-6c43-4bc4-9e9a-b6856e709e13"
+      }
+    },
+    {
+      "key": "da4021fa-6a5c-407c-80da-6edde34e8946",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946",
+        "lesson_activity.key": "733fcc7e-98b8-415d-89cc-1704f654a84f"
+      }
+    },
+    {
+      "key": "921ff92a-8c35-43d4-b88c-d5577d352f57",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "921ff92a-8c35-43d4-b88c-d5577d352f57",
+        "lesson_activity.key": "259b110f-9221-42e6-a86c-46ef76f63554"
+      }
+    },
+    {
+      "key": "0ecd648d-802d-4564-a74d-7a56049cbd1e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e",
+        "lesson_activity.key": "437e1980-d901-474e-b8c4-e99a7ebddfd1"
+      }
+    },
+    {
+      "key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf",
+        "lesson_activity.key": "98aa2feb-9af1-4394-b63a-e10cb45a76cc"
+      }
+    },
+    {
+      "key": "56d5d217-1104-46c5-a5ee-548e69cecefa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa",
+        "lesson_activity.key": "094ef3c6-8789-4797-be8d-7595f70eb3e9"
+      }
+    },
+    {
+      "key": "16e8e780-2bc5-4e98-89b3-9bf74eef8053",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Course Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "16e8e780-2bc5-4e98-89b3-9bf74eef8053",
+        "lesson_activity.key": "4eeb9d56-ac43-407a-ab1e-2209fa38121e"
+      }
+    },
+    {
+      "key": "1e7d2c1c-c359-437e-868d-13117d29c09d",
+      "position": 2,
+      "properties": {
+        "progression_name": "InspirationalArtwork"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e7d2c1c-c359-437e-868d-13117d29c09d",
+        "lesson_activity.key": "4eeb9d56-ac43-407a-ab1e-2209fa38121e"
+      }
+    },
+    {
+      "key": "2c7bb29e-7bec-49f5-ba89-735a6c1eede5",
+      "position": 3,
+      "properties": {
+        "progression_name": "FoodFight"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c7bb29e-7bec-49f5-ba89-735a6c1eede5",
+        "lesson_activity.key": "4eeb9d56-ac43-407a-ab1e-2209fa38121e"
+      }
+    },
+    {
+      "key": "e7b3707d-b203-410a-b93f-dbdbadffcfdc",
+      "position": 4,
+      "properties": {
+        "progression_name": "Guess The Number"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7b3707d-b203-410a-b93f-dbdbadffcfdc",
+        "lesson_activity.key": "4eeb9d56-ac43-407a-ab1e-2209fa38121e"
+      }
+    },
+    {
+      "key": "e89a1fe8-494f-4070-9816-f9aa678f5152",
+      "position": 5,
+      "properties": {
+        "name": "Choose Your Own Adventure",
+        "progression_name": "Choose Your Own Adventure"
+      },
+      "seeding_key": {
+        "activity_section.key": "e89a1fe8-494f-4070-9816-f9aa678f5152",
+        "lesson_activity.key": "4eeb9d56-ac43-407a-ab1e-2209fa38121e"
+      }
+    },
+    {
+      "key": "0da1d7c7-c2c1-4980-acdf-e731596929d5",
+      "position": 1,
+      "properties": {
+        "name": "Begin planning your project",
+        "progression_name": "Begin planning your project"
+      },
+      "seeding_key": {
+        "activity_section.key": "0da1d7c7-c2c1-4980-acdf-e731596929d5",
+        "lesson_activity.key": "d76a94bc-f723-4e27-aa60-02cab6f85ea5"
+      }
+    },
+    {
+      "key": "5d135d2a-27f1-4b82-a4f1-6241859701b7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course F: Artist Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d135d2a-27f1-4b82-a4f1-6241859701b7",
+        "lesson_activity.key": "19d0185a-0abf-4ac8-ab8f-a3391a6638dc"
+      }
+    },
+    {
+      "key": "9a89e579-434f-4468-a633-f334e1af8b05",
+      "position": 2,
+      "properties": {
+        "name": "Course F: Play Lab Project",
+        "progression_name": "Course F: Play Lab Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a89e579-434f-4468-a633-f334e1af8b05",
+        "lesson_activity.key": "19d0185a-0abf-4ac8-ab8f-a3391a6638dc"
+      }
+    },
+    {
+      "key": "d3e65963-e0a3-4873-a687-cb4039d9b4a1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course F: Artist Project - Revise"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3e65963-e0a3-4873-a687-cb4039d9b4a1",
+        "lesson_activity.key": "2f0d2913-effb-43e5-96ea-5c80e40f5a2a"
+      }
+    },
+    {
+      "key": "bf45d6c2-2133-40f0-8775-0c571f80ef24",
+      "position": 2,
+      "properties": {
+        "name": "Course F: Play Lab Project - Revise",
+        "progression_name": "Course F: Play Lab Project - Revise"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf45d6c2-2133-40f0-8775-0c571f80ef24",
+        "lesson_activity.key": "2f0d2913-effb-43e5-96ea-5c80e40f5a2a"
+      }
+    },
+    {
+      "key": "5ce322c2-961c-42d3-b478-b7f4e6cce43b",
+      "position": 1,
+      "properties": {
+        "name": "Prepare for your presentation",
+        "progression_name": "Prepare for your presentation"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ce322c2-961c-42d3-b478-b7f4e6cce43b",
+        "lesson_activity.key": "b9ab8131-1865-42f2-866f-19784a9f5515"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -355,7 +870,8 @@
         ],
         "lesson.key": "Algorithms: Tangrams",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "84d04ce8-02e4-4611-9df4-3b2772a9c154"
       },
       "level_keys": [
         "TangramAlgorithms"
@@ -364,7 +880,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -378,7 +894,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseE_video_ramp1"
@@ -387,7 +904,7 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -401,7 +918,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_maze_ramp1"
@@ -410,7 +928,7 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -424,7 +942,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_maze_ramp2"
@@ -433,7 +952,7 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -447,7 +966,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "coursef_maze_ramp3"
@@ -456,7 +976,7 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -470,7 +990,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_maze_ramp4"
@@ -479,7 +1000,7 @@
     {
       "chapter": 7,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -493,7 +1014,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_maze_ramp5"
@@ -502,7 +1024,7 @@
     {
       "chapter": 8,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -516,7 +1038,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_maze_ramp6"
@@ -525,7 +1048,7 @@
     {
       "chapter": 9,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -539,7 +1062,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_artist_ramp8"
@@ -548,7 +1072,7 @@
     {
       "chapter": 10,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -562,7 +1086,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseC_video_angles"
@@ -571,7 +1096,7 @@
     {
       "chapter": 11,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -585,7 +1110,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_artist_ramp9"
@@ -594,7 +1120,7 @@
     {
       "chapter": 12,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -608,7 +1134,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_artist_predict1"
@@ -617,7 +1144,7 @@
     {
       "chapter": 13,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -631,7 +1158,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseD_video_nestedLoopsArtist"
@@ -640,7 +1168,7 @@
     {
       "chapter": 14,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -654,7 +1182,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_artist_ramp10"
@@ -663,7 +1192,7 @@
     {
       "chapter": 15,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -677,7 +1206,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_farmer_ramp11"
@@ -686,7 +1216,7 @@
     {
       "chapter": 16,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -700,7 +1230,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_maze_ramp13"
@@ -709,7 +1240,7 @@
     {
       "chapter": 17,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -723,7 +1254,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_maze_ramp7"
@@ -732,7 +1264,7 @@
     {
       "chapter": 18,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -746,7 +1278,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       },
       "level_keys": [
         "courseF_external_ramp14"
@@ -755,7 +1288,7 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -769,7 +1302,8 @@
         ],
         "lesson.key": "The Power of Words",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "9d2fa55c-e4c7-4d36-a156-170d80ccfa22"
       },
       "level_keys": [
         "coursef_powerofwords"
@@ -778,7 +1312,7 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -792,7 +1326,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_hello1"
@@ -801,7 +1336,7 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -815,7 +1350,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_hello2"
@@ -824,7 +1360,7 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -838,7 +1374,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_move_to_flag"
@@ -847,7 +1384,7 @@
     {
       "chapter": 23,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -861,7 +1398,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_move_to_actor"
@@ -870,7 +1408,7 @@
     {
       "chapter": 24,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -884,7 +1422,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_repeat"
@@ -893,7 +1432,7 @@
     {
       "chapter": 25,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -907,7 +1446,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_click_hello"
@@ -916,7 +1456,7 @@
     {
       "chapter": 26,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -930,7 +1470,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_move_events"
@@ -939,7 +1480,7 @@
     {
       "chapter": 27,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -953,7 +1494,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_sound_and_points"
@@ -962,7 +1504,7 @@
     {
       "chapter": 28,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -976,7 +1518,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_warn_ice_age"
@@ -985,7 +1528,7 @@
     {
       "chapter": 29,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -999,7 +1542,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_throw_hearts"
@@ -1008,7 +1552,7 @@
     {
       "chapter": 30,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1022,7 +1566,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       },
       "level_keys": [
         "iceage_free_play"
@@ -1031,7 +1576,7 @@
     {
       "chapter": 31,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1045,7 +1590,8 @@
         ],
         "lesson.key": "Envelope Variables",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "cd9add40-6d21-4920-a0b9-058cc1e6bc9e"
       },
       "level_keys": [
         "EnvelopeVariables"
@@ -1054,7 +1600,7 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1068,7 +1614,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "grade5_artist_variables_triangles1"
@@ -1077,7 +1624,7 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1091,7 +1638,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables2"
@@ -1100,7 +1648,7 @@
     {
       "chapter": 34,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1114,7 +1662,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_video_artistVariables"
@@ -1123,7 +1672,7 @@
     {
       "chapter": 35,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1137,7 +1686,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables3a_predict1"
@@ -1146,7 +1696,7 @@
     {
       "chapter": 36,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1160,7 +1710,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables3"
@@ -1169,7 +1720,7 @@
     {
       "chapter": 37,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1183,7 +1734,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables4"
@@ -1192,7 +1744,7 @@
     {
       "chapter": 38,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1206,7 +1758,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables5"
@@ -1215,7 +1768,7 @@
     {
       "chapter": 39,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1229,7 +1782,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables6"
@@ -1238,7 +1792,7 @@
     {
       "chapter": 40,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1252,7 +1806,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables6a"
@@ -1261,7 +1816,7 @@
     {
       "chapter": 41,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1275,7 +1830,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_external_variableConstant"
@@ -1284,7 +1840,7 @@
     {
       "chapter": 42,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1298,7 +1854,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables7"
@@ -1307,7 +1864,7 @@
     {
       "chapter": 43,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1321,7 +1878,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables8"
@@ -1330,7 +1888,7 @@
     {
       "chapter": 44,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1344,7 +1902,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables9"
@@ -1353,7 +1912,7 @@
     {
       "chapter": 45,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1367,7 +1926,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variables10"
@@ -1376,7 +1936,7 @@
     {
       "chapter": 46,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1390,7 +1950,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       },
       "level_keys": [
         "courseF_artist_variablesFP"
@@ -1399,7 +1960,7 @@
     {
       "chapter": 47,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1413,7 +1974,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       },
       "level_keys": [
         "courseF_playlab_variables1a"
@@ -1422,7 +1984,7 @@
     {
       "chapter": 48,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1436,7 +1998,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       },
       "level_keys": [
         "courseF_playlab_variables2b"
@@ -1445,7 +2008,7 @@
     {
       "chapter": 49,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1459,7 +2022,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       },
       "level_keys": [
         "courseF_playlab_variables3b_josh"
@@ -1468,7 +2032,7 @@
     {
       "chapter": 50,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1482,7 +2046,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       },
       "level_keys": [
         "courseF_playlab_variables4c_predictive1"
@@ -1491,7 +2056,7 @@
     {
       "chapter": 51,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1505,7 +2070,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       },
       "level_keys": [
         "courseF_playlab_variables4b"
@@ -1514,7 +2080,7 @@
     {
       "chapter": 52,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1528,7 +2094,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       },
       "level_keys": [
         "courseF_playlab_variables5b"
@@ -1537,7 +2104,7 @@
     {
       "chapter": 53,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1551,7 +2118,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       },
       "level_keys": [
         "courseF_playlab_variables6b"
@@ -1560,7 +2128,7 @@
     {
       "chapter": 54,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1574,7 +2142,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       },
       "level_keys": [
         "courseF_playlab_variables7b"
@@ -1583,7 +2152,7 @@
     {
       "chapter": 55,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1597,7 +2166,8 @@
         ],
         "lesson.key": "For Loop Fun",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "07ef436a-b584-4b3e-9fa1-f74bb7b35bb6"
       },
       "level_keys": [
         "ForLoopFun"
@@ -1606,7 +2176,7 @@
     {
       "chapter": 56,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1620,7 +2190,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for1"
@@ -1629,7 +2200,7 @@
     {
       "chapter": 57,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1643,7 +2214,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for2"
@@ -1652,7 +2224,7 @@
     {
       "chapter": 58,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1666,7 +2238,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_video_forBee"
@@ -1675,7 +2248,7 @@
     {
       "chapter": 59,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1689,7 +2262,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for3_predict1"
@@ -1698,7 +2272,7 @@
     {
       "chapter": 60,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1712,7 +2286,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for4"
@@ -1721,7 +2296,7 @@
     {
       "chapter": 61,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1735,7 +2310,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for6"
@@ -1744,7 +2320,7 @@
     {
       "chapter": 62,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1758,7 +2334,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for7"
@@ -1767,7 +2344,7 @@
     {
       "chapter": 63,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1781,7 +2358,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for8"
@@ -1790,7 +2368,7 @@
     {
       "chapter": 64,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1804,7 +2382,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for5"
@@ -1813,7 +2392,7 @@
     {
       "chapter": 65,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1827,7 +2406,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for9"
@@ -1836,7 +2416,7 @@
     {
       "chapter": 66,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -1851,7 +2431,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for10"
@@ -1860,7 +2441,7 @@
     {
       "chapter": 67,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1874,7 +2455,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       },
       "level_keys": [
         "courseF_bee_for11"
@@ -1883,7 +2465,7 @@
     {
       "chapter": 68,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1897,7 +2479,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_video_forArtist"
@@ -1906,7 +2489,7 @@
     {
       "chapter": 69,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1920,7 +2503,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for1"
@@ -1929,7 +2513,7 @@
     {
       "chapter": 70,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1943,7 +2527,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for2"
@@ -1952,7 +2537,7 @@
     {
       "chapter": 71,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1966,7 +2551,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for3"
@@ -1975,7 +2561,7 @@
     {
       "chapter": 72,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1989,7 +2575,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for4"
@@ -1998,7 +2585,7 @@
     {
       "chapter": 73,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2012,7 +2599,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for5"
@@ -2021,7 +2609,7 @@
     {
       "chapter": 74,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2035,7 +2623,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for6"
@@ -2044,7 +2633,7 @@
     {
       "chapter": 75,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2058,7 +2647,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for7"
@@ -2067,7 +2657,7 @@
     {
       "chapter": 76,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2081,7 +2671,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for8"
@@ -2090,7 +2681,7 @@
     {
       "chapter": 77,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2104,7 +2695,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for9"
@@ -2113,7 +2705,7 @@
     {
       "chapter": 78,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2127,7 +2719,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for10_predict1"
@@ -2136,7 +2729,7 @@
     {
       "chapter": 79,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2150,7 +2743,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       },
       "level_keys": [
         "courseF_artist_for10"
@@ -2159,7 +2753,7 @@
     {
       "chapter": 80,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2173,7 +2767,8 @@
         ],
         "lesson.key": "Songwriting with Parameters",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "921ff92a-8c35-43d4-b88c-d5577d352f57"
       },
       "level_keys": [
         "SongwritingWithParameters"
@@ -2182,7 +2777,7 @@
     {
       "chapter": 81,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2196,7 +2791,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseD_bee_conditionalsVid1"
@@ -2205,7 +2801,7 @@
     {
       "chapter": 82,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2219,7 +2815,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_conditionals1_predict1"
@@ -2228,7 +2825,7 @@
     {
       "chapter": 83,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2242,7 +2839,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_conditionals2"
@@ -2251,7 +2849,7 @@
     {
       "chapter": 84,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2265,7 +2863,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_conditionals3"
@@ -2274,7 +2873,7 @@
     {
       "chapter": 85,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2288,7 +2887,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_conditionals4"
@@ -2297,7 +2897,7 @@
     {
       "chapter": 86,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2311,7 +2911,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_conditionals5"
@@ -2320,7 +2921,7 @@
     {
       "chapter": 87,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2334,7 +2935,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseD_bee_conditionalsVidIfElse"
@@ -2343,7 +2945,7 @@
     {
       "chapter": 88,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2357,7 +2959,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_conditionals7_predict2"
@@ -2366,7 +2969,7 @@
     {
       "chapter": 89,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2380,7 +2983,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_conditionals8"
@@ -2389,7 +2993,7 @@
     {
       "chapter": 90,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2403,7 +3007,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_conditionals10"
@@ -2412,7 +3017,7 @@
     {
       "chapter": 91,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2426,7 +3031,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseE_video_functionsBee"
@@ -2435,7 +3041,7 @@
     {
       "chapter": 92,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2449,7 +3055,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_functions2"
@@ -2458,7 +3065,7 @@
     {
       "chapter": 93,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2472,7 +3079,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_functions3"
@@ -2481,7 +3089,7 @@
     {
       "chapter": 94,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2495,7 +3103,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_functions3a"
@@ -2504,7 +3113,7 @@
     {
       "chapter": 95,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2518,7 +3127,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_functions4"
@@ -2527,7 +3137,7 @@
     {
       "chapter": 96,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2541,7 +3151,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_functions5a"
@@ -2550,7 +3161,7 @@
     {
       "chapter": 97,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2564,7 +3175,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_video_createFunctions"
@@ -2573,7 +3185,7 @@
     {
       "chapter": 98,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2587,7 +3199,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_functions6"
@@ -2596,7 +3209,7 @@
     {
       "chapter": 99,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 19,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2610,7 +3223,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_functions7"
@@ -2619,7 +3233,7 @@
     {
       "chapter": 100,
       "position": 20,
-      "activity_section_position": null,
+      "activity_section_position": 20,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2633,7 +3247,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       },
       "level_keys": [
         "courseF_bee_functions8a"
@@ -2642,7 +3257,7 @@
     {
       "chapter": 101,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2656,7 +3271,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_video_artistFunctions"
@@ -2665,7 +3281,7 @@
     {
       "chapter": 102,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2679,7 +3295,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp1"
@@ -2688,7 +3305,7 @@
     {
       "chapter": 103,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2702,7 +3319,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "gradeF_video_artistParameters"
@@ -2711,7 +3329,7 @@
     {
       "chapter": 104,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2725,7 +3343,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp2_predict1"
@@ -2734,7 +3353,7 @@
     {
       "chapter": 105,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2748,7 +3367,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp2"
@@ -2757,7 +3377,7 @@
     {
       "chapter": 106,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2771,7 +3391,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_video_createFunctionArtist"
@@ -2780,7 +3401,7 @@
     {
       "chapter": 107,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2794,7 +3415,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp3"
@@ -2803,7 +3425,7 @@
     {
       "chapter": 108,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2817,7 +3439,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp4"
@@ -2826,7 +3449,7 @@
     {
       "chapter": 109,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2840,7 +3463,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp5"
@@ -2849,7 +3473,7 @@
     {
       "chapter": 110,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -2864,7 +3488,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp6"
@@ -2873,7 +3498,7 @@
     {
       "chapter": 111,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2887,7 +3512,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp7"
@@ -2896,7 +3522,7 @@
     {
       "chapter": 112,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2910,7 +3536,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp8"
@@ -2919,7 +3546,7 @@
     {
       "chapter": 113,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2933,7 +3560,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       },
       "level_keys": [
         "courseF_artist_fwp9"
@@ -2942,7 +3570,7 @@
     {
       "chapter": 114,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2956,7 +3584,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp1"
@@ -2965,7 +3594,7 @@
     {
       "chapter": 115,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2979,7 +3608,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp2"
@@ -2988,7 +3618,7 @@
     {
       "chapter": 116,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3002,7 +3632,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp3"
@@ -3011,7 +3642,7 @@
     {
       "chapter": 117,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3025,7 +3656,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp4"
@@ -3034,7 +3666,7 @@
     {
       "chapter": 118,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3048,7 +3680,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp5"
@@ -3057,7 +3690,7 @@
     {
       "chapter": 119,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3071,7 +3704,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp6"
@@ -3080,7 +3714,7 @@
     {
       "chapter": 120,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -3095,7 +3729,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp7"
@@ -3104,7 +3739,7 @@
     {
       "chapter": 121,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3118,7 +3753,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp8"
@@ -3127,7 +3763,7 @@
     {
       "chapter": 122,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -3141,7 +3777,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       },
       "level_keys": [
         "courseF_bee_fwp9_predict1"
@@ -3150,7 +3787,7 @@
     {
       "chapter": 123,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3165,7 +3802,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "16e8e780-2bc5-4e98-89b3-9bf74eef8053"
       },
       "level_keys": [
         "courseF_video_csMatters"
@@ -3174,7 +3812,7 @@
     {
       "chapter": 124,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3189,7 +3827,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "1e7d2c1c-c359-437e-868d-13117d29c09d"
       },
       "level_keys": [
         "InspirationalArtwork"
@@ -3198,7 +3837,7 @@
     {
       "chapter": 125,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3213,7 +3852,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2c7bb29e-7bec-49f5-ba89-735a6c1eede5"
       },
       "level_keys": [
         "FoodFight"
@@ -3222,7 +3862,7 @@
     {
       "chapter": 126,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3237,7 +3877,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "e7b3707d-b203-410a-b93f-dbdbadffcfdc"
       },
       "level_keys": [
         "Guess The Number"
@@ -3246,7 +3887,7 @@
     {
       "chapter": 127,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3261,7 +3902,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "e89a1fe8-494f-4070-9816-f9aa678f5152"
       },
       "level_keys": [
         "Choose Your Own Adventure"
@@ -3270,7 +3912,7 @@
     {
       "chapter": 128,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3285,7 +3927,8 @@
         ],
         "lesson.key": "The Design Process",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0da1d7c7-c2c1-4980-acdf-e731596929d5"
       },
       "level_keys": [
         "Begin planning your project"
@@ -3294,7 +3937,7 @@
     {
       "chapter": 129,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3309,7 +3952,8 @@
         ],
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "5d135d2a-27f1-4b82-a4f1-6241859701b7"
       },
       "level_keys": [
         "Course F: Artist Project"
@@ -3318,7 +3962,7 @@
     {
       "chapter": 130,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3333,7 +3977,8 @@
         ],
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "9a89e579-434f-4468-a633-f334e1af8b05"
       },
       "level_keys": [
         "Course F: Play Lab Project"
@@ -3342,7 +3987,7 @@
     {
       "chapter": 131,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3357,7 +4002,8 @@
         ],
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d3e65963-e0a3-4873-a687-cb4039d9b4a1"
       },
       "level_keys": [
         "Course F: Artist Project - Revise"
@@ -3366,7 +4012,7 @@
     {
       "chapter": 132,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3381,7 +4027,8 @@
         ],
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "bf45d6c2-2133-40f0-8775-0c571f80ef24"
       },
       "level_keys": [
         "Course F: Play Lab Project - Revise"
@@ -3390,7 +4037,7 @@
     {
       "chapter": 133,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3405,7 +4052,8 @@
         ],
         "lesson.key": "Presentation Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "5ce322c2-961c-42d3-b478-b7f4e6cce43b"
       },
       "level_keys": [
         "Prepare for your presentation"
@@ -3421,7 +4069,8 @@
         ],
         "lesson.key": "Algorithms: Tangrams",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "84d04ce8-02e4-4611-9df4-3b2772a9c154"
       }
     },
     {
@@ -3432,7 +4081,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3443,7 +4093,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3454,7 +4105,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3465,7 +4117,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3476,7 +4129,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3487,7 +4141,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3498,7 +4153,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3509,7 +4165,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3520,7 +4177,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3531,7 +4189,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3542,7 +4201,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3553,7 +4213,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3564,7 +4225,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3575,7 +4237,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3586,7 +4249,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3597,7 +4261,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3608,7 +4273,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "b26d6242-0069-4a0e-a019-89aedcc922c0"
       }
     },
     {
@@ -3619,7 +4285,8 @@
         ],
         "lesson.key": "The Power of Words",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "9d2fa55c-e4c7-4d36-a156-170d80ccfa22"
       }
     },
     {
@@ -3630,7 +4297,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3641,7 +4309,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3652,7 +4321,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3663,7 +4333,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3674,7 +4345,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3685,7 +4357,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3696,7 +4369,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3707,7 +4381,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3718,7 +4393,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3729,7 +4405,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3740,7 +4417,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2e6c1734-d1c1-4cd6-90d5-82ec625b28a4"
       }
     },
     {
@@ -3751,7 +4429,8 @@
         ],
         "lesson.key": "Envelope Variables",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "cd9add40-6d21-4920-a0b9-058cc1e6bc9e"
       }
     },
     {
@@ -3762,7 +4441,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3773,7 +4453,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3784,7 +4465,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3795,7 +4477,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3806,7 +4489,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3817,7 +4501,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3828,7 +4513,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3839,7 +4525,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3850,7 +4537,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3861,7 +4549,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3872,7 +4561,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3883,7 +4573,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3894,7 +4585,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3905,7 +4597,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3916,7 +4609,8 @@
         ],
         "lesson.key": "Variables in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2b71a95d-af27-4db0-9686-89babd144bd5"
       }
     },
     {
@@ -3927,7 +4621,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       }
     },
     {
@@ -3938,7 +4633,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       }
     },
     {
@@ -3949,7 +4645,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       }
     },
     {
@@ -3960,7 +4657,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       }
     },
     {
@@ -3971,7 +4669,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       }
     },
     {
@@ -3982,7 +4681,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       }
     },
     {
@@ -3993,7 +4693,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       }
     },
     {
@@ -4004,7 +4705,8 @@
         ],
         "lesson.key": "Variables in Play Lab",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "76381f63-1d72-40ba-87f8-57b1eeabfc52"
       }
     },
     {
@@ -4015,7 +4717,8 @@
         ],
         "lesson.key": "For Loop Fun",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "07ef436a-b584-4b3e-9fa1-f74bb7b35bb6"
       }
     },
     {
@@ -4026,7 +4729,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4037,7 +4741,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4048,7 +4753,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4059,7 +4765,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4070,7 +4777,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4081,7 +4789,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4092,7 +4801,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4103,7 +4813,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4114,7 +4825,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4125,7 +4837,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4136,7 +4849,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4147,7 +4861,8 @@
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "a4bada95-3580-4b6d-9b10-a1398ca326f5"
       }
     },
     {
@@ -4158,7 +4873,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4169,7 +4885,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4180,7 +4897,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4191,7 +4909,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4202,7 +4921,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4213,7 +4933,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4224,7 +4945,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4235,7 +4957,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4246,7 +4969,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4257,7 +4981,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4268,7 +4993,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4279,7 +5005,8 @@
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "da4021fa-6a5c-407c-80da-6edde34e8946"
       }
     },
     {
@@ -4290,7 +5017,8 @@
         ],
         "lesson.key": "Songwriting with Parameters",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "921ff92a-8c35-43d4-b88c-d5577d352f57"
       }
     },
     {
@@ -4301,7 +5029,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4312,7 +5041,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4323,7 +5053,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4334,7 +5065,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4345,7 +5077,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4356,7 +5089,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4367,7 +5101,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4378,7 +5113,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4389,7 +5125,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4400,7 +5137,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4411,7 +5149,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4422,7 +5161,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4433,7 +5173,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4444,7 +5185,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4455,7 +5197,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4466,7 +5209,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4477,7 +5221,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4488,7 +5233,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4499,7 +5245,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4510,7 +5257,8 @@
         ],
         "lesson.key": "Conditionals and Functions in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0ecd648d-802d-4564-a74d-7a56049cbd1e"
       }
     },
     {
@@ -4521,7 +5269,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4532,7 +5281,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4543,7 +5293,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4554,7 +5305,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4565,7 +5317,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4576,7 +5329,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4587,7 +5341,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4598,7 +5353,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4609,7 +5365,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4620,7 +5377,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4631,7 +5389,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4642,7 +5401,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4653,7 +5413,8 @@
         ],
         "lesson.key": "Functions with Parameters in Artist",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d2a5b0ab-4980-4d32-8313-73205b6eb1cf"
       }
     },
     {
@@ -4664,7 +5425,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4675,7 +5437,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4686,7 +5449,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4697,7 +5461,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4708,7 +5473,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4719,7 +5485,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4730,7 +5497,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4741,7 +5509,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4752,7 +5521,8 @@
         ],
         "lesson.key": "Functions with Parameters in Bee",
         "lesson_group.key": "content",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "56d5d217-1104-46c5-a5ee-548e69cecefa"
       }
     },
     {
@@ -4763,7 +5533,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "16e8e780-2bc5-4e98-89b3-9bf74eef8053"
       }
     },
     {
@@ -4774,7 +5545,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "1e7d2c1c-c359-437e-868d-13117d29c09d"
       }
     },
     {
@@ -4785,7 +5557,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "2c7bb29e-7bec-49f5-ba89-735a6c1eede5"
       }
     },
     {
@@ -4796,7 +5569,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "e7b3707d-b203-410a-b93f-dbdbadffcfdc"
       }
     },
     {
@@ -4807,7 +5581,8 @@
         ],
         "lesson.key": "Explore Project Ideas",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "e89a1fe8-494f-4070-9816-f9aa678f5152"
       }
     },
     {
@@ -4818,7 +5593,8 @@
         ],
         "lesson.key": "The Design Process",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "0da1d7c7-c2c1-4980-acdf-e731596929d5"
       }
     },
     {
@@ -4829,7 +5605,8 @@
         ],
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "5d135d2a-27f1-4b82-a4f1-6241859701b7"
       }
     },
     {
@@ -4840,7 +5617,8 @@
         ],
         "lesson.key": "Build Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "9a89e579-434f-4468-a633-f334e1af8b05"
       }
     },
     {
@@ -4851,7 +5629,8 @@
         ],
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "d3e65963-e0a3-4873-a687-cb4039d9b4a1"
       }
     },
     {
@@ -4862,7 +5641,8 @@
         ],
         "lesson.key": "Revise Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "bf45d6c2-2133-40f0-8775-0c571f80ef24"
       }
     },
     {
@@ -4873,7 +5653,8 @@
         ],
         "lesson.key": "Presentation Your Project",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "coursef-draft"
+        "script.name": "coursef-draft",
+        "activity_section.key": "5ce322c2-961c-42d3-b478-b7f4e6cce43b"
       }
     }
   ],

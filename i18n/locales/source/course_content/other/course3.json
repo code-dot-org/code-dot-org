@@ -1422,6 +1422,10 @@
     "callouts": {
       "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
     },
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
+    },
     "function_definitions": {
       "win game": {
         "name": "win game"
@@ -1432,10 +1436,6 @@
       "keep playing": {
         "name": "keep playing"
       }
-    },
-    "placeholder_texts": {
-      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
-      "3e11a2dc6edb909c47778bed75a81769": "Text here"
     }
   },
   "https://studio.code.org/s/course3/lessons/18/levels/1": {

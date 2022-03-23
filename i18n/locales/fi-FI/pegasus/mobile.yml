@@ -392,6 +392,7 @@
   mc_gradelevel: "4-104-vuotiaille"
   mc_platformtext: "Nykyaikaiset selaimet, älypuhelimet, tabletit"
   mc_specs: "Useita kieliä | Modernit selaimet | Yli 6-vuotiaille"
+  minecraft_agent: "Minecraft: Sankarin matka"
   minecraft_designer: "Minecraft suunnittelija"
   minecraft_adventurer: "Minecraft seikkailija"
   minecraft_tutorials: "Minecraft Koodaustunnin ohjeet"
@@ -627,6 +628,7 @@
   dashboard_question: "Kysymys"
   dashboard_response: "Vastaus"
   dashboard_correctness_correct: "Oikein"
+  dashboard_submission_in_progress: "Kesken"
   stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain yhdessä viikossa:'
   stats_hoc_2013_image_alt: "Tilastoja vuoden 2013 Koodaustunnista"
   dashboard_teacher: "Opettaja"
@@ -811,6 +813,12 @@
   coursed-2020_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2020_gradelevel: 8-12-vuotiaille
   coursef-2020_gradelevel: 9-13-vuotiaille
+  coursea-2021_gradelevel: 4-7-vuotiaille
+  courseb-2021_gradelevel: 5-8-vuotiaille
+  coursec-2021_gradelevel: 6-10-vuotiaille
+  coursed-2021_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursee-2021_gradelevel: 8-12-vuotiaille
+  coursef-2021_gradelevel: 9-13-vuotiaille
   accelerated_gradelevel: "10+ -vuotiaille (kurssin 3 jälkeen)"
   codeorg_platformtext: "Nykyaikaiset selaimet, älypuhelimet, tabletit"
   codeintl_platformtext: "Nykyaikaiset selaimet, älypuhelimet, tabletit"
@@ -1181,7 +1189,10 @@
   hoc2018_creativity_what_will_you_create: "Mitä luot?"
   hoc2018_mc_page_title: "Minecraft Koodaustunnin ohjeet"
   hoc2018_mc_details: "Useita kieliä | Modernit selaimet | Luokista 2 alkaen"
+  hoc2018_mc_aquatic_title: "Minecraft: Merellinen matka"
   hoc2018_mc_aquatic_description: "Minecraft on palannut takaisin Hour of Code -tunnille täysin uudella toiminnolla! Matka Minecraftin läpi koodilla."
+  hoc2019_mc_aquatic_description: "Tutki vedenalaista maailmaa koodin avulla."
+  hoc2018_mc_hero_title: "Minecraft: Sankarin matka"
   hoc2018_mc_hero_description: "Minecraft on palannut takaisin Hour of Code -tunnille täysin uudella toiminnolla! Matka Minecraftin läpi koodilla."
   hoc2018_mc_designer_title: "Minecraft suunnittelija"
   hoc2018_mc_designer_description: "Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft versiollasi."
@@ -1190,6 +1201,7 @@
   hoc2018_mc_start: "Aloita"
   hoc2018_mc_no_internet: "Onko sinulla nettiyhteys?"
   hoc2018_mc_download_adventurer: "Lataa Minecraft seikkailijan offline-versio."
+  hoc2018_mc_educators_box1_button: "Aloitetaan"
   hoc2018_mc_educators_box2_button: "Lataa"
   hoc2018_mc_watch_videos: "Ennen kuin aloitat, katso yksi näistä inspiroivista videoista"
   hoc2018_mc_video_1min: "1 min"
@@ -1207,7 +1219,10 @@
   hoc2018_mc_teacher_guide: "Katso opettajan opas"
   hoc2018_mc_minecraft_education: "Minecraft koulutus"
   hoc2018_mc_short_description_shorter: "Minecraft on palannut takaisin Hour of Code -tunnille täysin uudella toiminnolla."
+  hoc2018_mc_journey: "Matka Minecraftin läpi koodilla."
   hoc2018_dance_party_main_heading: "Tanssibileet"
+  hoc2018_dance_party_landing_title: "Tanssi"
+  hoc2018_dance_party_subheading: "Auta kääntämään Tanssibileet"
   hoc2018_dance_create_your_own_dance_title: "Luo oma Dance Party"
   hoc2018_dance_party_box_title: "Tanssibileet"
   hoc2018_dance_party_box_description: "Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!"
@@ -1220,10 +1235,27 @@
   hoc2018_dance_teacher_resources_tile1_button: "Tuntisuunnitelma"
   hoc2018_dance_teacher_resources_tile2_description: "Tietokoneita ei tarvita!  Oppikaa koodaamisen käsitteitä ja luokaa koreografia tanssijoille yhdessä."
   hoc2018_dance_teacher_resources_tile2_button: "Tietokoneeton tekeminen"
+  hoc2018_dance_featured_student_creations_title: "Valittuja opiskelijoiden luomuksia"
+  hoc2018_dance_videos_section_heading: "Innostu"
+  hoc2018_dance_video_title_what_is_creativity: "Mitä on luovuus?"
   hoc2018_dance_amazon_about_future_engineer_button: "Lue lisää"
   hoc2018_dance_amazon_scholarship_programs_button: "Liity nyt"
+  hoc2018_dance_measure: "Tahti"
+  hoc2018_dance_measure_colon: 'Tahti:'
+  hoc2018_aquatic_video1: "Minecraft: Merellinen matka - Esittely"
+  hoc2018_aquatic_video2: "Minecraft: Merellinen matka - Silmukat"
+  hoc2018_aquatic_video3: "Minecraft: Merellinen matka - Ehtolauseet"
+  hoc2018_aquatic_video4: "Minecraft: Merellinen matka - Onnittelut"
+  hoc2018_dance_video1: "Tanssibileet - Esittely"
+  hoc2018_dance_video2: "Tanssibileet - Tapahtumat"
+  hoc2018_dance_video3: "Tanssibileet - Ominaisuudet"
+  hoc2018_dance_video4: "Tanssibileet - Onnittelut"
   page_not_found_title: "Sivua ei löydy"
   hoc2018_mc_thank_microsoft: "Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa ja sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä ja taitoja menestyä 2000-luvulla."
+  hoc2019_dance_previous_versions: "Etsitkö edellistä versiota Tanssibileistä?  \nKlikkaa täältä aloittaaksesi [Osan 1](%{dance_2018_link}) ja [Osan 2](%{dance_extras_2018_link}) vuodelta 2018."
+  homepage_slot_text_title_at_home: "Opi kotona"
+  homepage_slot_text_blurb_at_home: "Näillä materiaaleilla se käy helposti"
+  hoc2020_mc_available_code_org: "Saatavilla Code.org -sivustolla"
   footer_powered_by_aws: "Toimii Amazon Web Services -palvelun päällä"
   footer_privacy_policy: "Tietosuojakäytäntö"
   footer_about: "Tietoja"

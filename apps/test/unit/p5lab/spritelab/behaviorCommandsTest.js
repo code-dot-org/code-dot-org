@@ -1,7 +1,7 @@
 /* global p5 */
 import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
-import CoreLibrary from '@cdo/apps/p5lab/spritelab/libraries/CoreLibrary';
+import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands as actionCommands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import {commands as behaviorCommands} from '@cdo/apps/p5lab/spritelab/commands/behaviorCommands';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';

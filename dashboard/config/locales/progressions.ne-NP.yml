@@ -3,13 +3,20 @@ ne:
   data:
     progressions:
       'Artist: Variables': 'Artist: Variables'
+      Bass, Mid, and Treble: बास, मिड र ट्रेबल
+      Dance Crews: डान्स टोलीहरु
       Debugging: Debugging
-      Events: कार्य
+      Events: घटनाहरु
+      Example: उदाहरण
       For Loops: For Loops
       Functions: Functions
       Functions with Parameters: Functions with Parameters
+      Get In Formation: गठनमा हुनुहोस्
       Lists: Lists
       Overview: Overview
       Pair Programming: Pair Programming
+      Quarter Notes: क्वार्टर नोटहरु
+      Speed it Up, Slow it Down: गति बढाउनुहोस्, यसलाई सुस्त गर्नुहोस् ।
       Variables: Variables
+      Where'd They Go?: तिनीहरु कहाँ गए ?
       Wrap-up: Wrap-up

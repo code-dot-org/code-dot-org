@@ -9,7 +9,12 @@ describe('Code Review Comment Editor', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<CommentEditor onNewCommentSubmit={() => {}} />);
+    wrapper = shallow(
+      <CommentEditor
+        onNewCommentSubmit={() => {}}
+        onNewCommentCancel={() => {}}
+      />
+    );
   });
 
   it('does not show submit and cancel buttons initially', () => {

@@ -14,39 +14,37 @@ class SlackTest < Minitest::Test
   end
 
   def test_get_topic
-    Slack.expects(:open).returns(
-      stub(
-        read: {
-          'ok' => true,
-          'channel' => {
-            'topic' => {
-              'value' => FAKE_TOPIC
-            }
+    Slack.expects(:post_to_slack).returns(
+      {
+        'ok' => true,
+        'channel' => {
+          'topic' => {
+            'value' => FAKE_TOPIC
           }
-        }.to_json
-      )
+        }
+      }
     )
     actual_topic = Slack.get_topic FAKE_CHANNEL
     assert_equal FAKE_TOPIC, actual_topic
   end
 
   def test_get_topic_with_error_response
-    Slack.expects(:open).returns(stub(read: {'ok' => false}.to_json))
+    Slack.stubs(:post_to_slack).returns(false)
     assert_nil Slack.get_topic FAKE_CHANNEL
   end
 
   def test_update_topic
-    Slack.expects(:open).returns(stub(read: {'ok' => true}.to_json))
+    Slack.stubs(:post_to_slack).returns({'ok' => true})
     assert Slack.update_topic(FAKE_CHANNEL, FAKE_TOPIC)
   end
 
   def test_join_room
-    Slack.expects(:open).returns(stub(read: {'ok' => true}.to_json))
+    Slack.stubs(:post_to_slack).returns({'ok' => true})
     assert Slack.join_room(FAKE_CHANNEL)
   end
 
   def test_update_topic_with_error_response
-    Slack.expects(:open).returns(stub(read: {'ok' => false}.to_json))
+    Slack.stubs(:post_to_slack).returns(false)
     refute Slack.update_topic(FAKE_CHANNEL, FAKE_TOPIC)
   end
 

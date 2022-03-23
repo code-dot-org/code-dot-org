@@ -148,7 +148,7 @@
   "whenUpTooltip": "Thực hiện các thao tác dưới đây khi chìa khoá mũi tên chỉ lên bật.",
   "whenWallCollided": "Khi quả bóng chạm vào tường",
   "whenWallCollidedTooltip": "Thực hiện các lệnh dưới đây khi một quả bóng va chạm với một bức tường.",
-  "whileMsg": "Lặp khi",
+  "whileMsg": "trong khi",
   "whileTooltip": "Lặp lại các hành động trong câu lệnh cho đến khi có kết quả.",
   "yes": "Đồng ý"
 }

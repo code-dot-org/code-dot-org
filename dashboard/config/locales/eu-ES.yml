@@ -105,6 +105,8 @@ eu:
     field_is_required: beharrezkoa da
     email_preference_yes: Bai
     email_preference_no: Ez
+    share_teacher_email_reg_partner_preference_yes: Bai
+    share_teacher_email_reg_partner_preference_no: Ez
   school_info:
     other: Beste bat
   signin_form:
@@ -211,6 +213,7 @@ eu:
       eval: Ebal
       flappy: Flappy
       frozen: Frozen
+      gamelab: Jolas laborategia
       gamelab_jr: Game Lab (beta)
       gumball: Gumball
       iceage: Izotz Aroa
@@ -218,6 +221,7 @@ eu:
       minecraft_designer: Minecraft
       playlab: Jolas Laborategia
       starwars: Star Wars
+      loading: Kargatzen...
       weblab: Web Lab
     popup:
       progress_for_user: "%{name}'ren aurrerapenak"
@@ -232,6 +236,7 @@ eu:
       prizes_link: informazio gehiago
   teacher:
     answer: Erantzuna
+    dashboard: Irakaslearen arbela
     for_teachers_only: Irakasleentzat soilik
     title:
       one: 'Zure irakaslea:'
@@ -443,6 +448,8 @@ eu:
       title: Galeria
       body: Begira ezazu gure erabiltzaileek sortutako app eta irudi artistikoen bilduma
         bat
+    gamelab:
+      title: Jolas laborategia
     frozen:
       title: Frozen
     starwars:

@@ -2,4 +2,6 @@
 fil:
   data:
     shared_functions:
+      moving north and looping: gumagalaw sa hilaga at umiikot
+      moving south and looping: gumagalaw sa timog at umiikot
       moving with arrow keys: gumagalaw gamit ang mga arrow key

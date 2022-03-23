@@ -2,8 +2,905 @@
   "id-ID": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Jelaskan perpindahan mood sebuah puisi."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Tuangkan bahasa kiasan dan harfiah ke dalam teks."
+        },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Kembangkan program yang merespons event yang diberi waktu."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Kembangkan program yang merespons event yang diberi waktu."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Jelaskan perpindahan mood sebuah puisi."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Tuangkan bahasa kiasan dan harfiah ke dalam teks."
+        },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Jabarkan nilai penting pengguna dalam proses desain."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Identifikasi sprite dalam sebuah program komputer yang sedang berjalan."
+        },
+        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
+          "description": "Buat sprite baru lalu berilah kostum dan perilaku."
+        },
+        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
+          "description": "Buat animasi menggunakan sprite dan perilaku."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Kembangkan program yang merespons event yang diberi waktu."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Kembangkan program yang merespons input pengguna."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Buat animasi interaktif menggunakan event."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Buat hewan piaraan virtual interaktif menggunakan event, perilaku, dan seni khusus."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Solusi program untuk masalah yang timbul ketika mendesain hewan piaraan virtual, seperti memberinya makan."
+        },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Putuskan apa saja jenis pernyataan yang OK diucapkan secara online dan yang tidak."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Mendeklarasikan sebuah variabel"
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Beri nilai pada sebuah variable"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Panggil variable beberapa kali dalam sebuah program."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Tentukan hubungan antara cara menentukan, menyimpan, dan mengambil kembali variable ketika kita menekan “Run” pada sebuah program."
+        },
+        "28d3cc79-4aea-431d-a445-745e75e747d8": {
+          "description": "Gunakan variabel untuk menyimpan kata dan frasa."
+        },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Gunakan variable bersamaan dengan prompt."
+        },
+        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
+          "description": "Gunakan variabel untuk menyimpan kata dan frasa."
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Gunakan variable bersamaan dengan prompt."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Buat program komputer interaktif yang merespons input pengguna."
+        },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
+          "description": "Bedakan antara perintah yang perlu diulang dalam loop dan perintah yang harus digunakan sendiri."
+        },
+        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
+          "description": "Tetapkan nilai untuk variabel yang ada."
+        },
+        "550ac608-922b-468f-a69d-08cc1f20799e": {
+          "description": "Manfaatkan variabel sebagai pengganti nilai berulang dalam suatu program."
+        },
+        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
+          "description": "Gunakan variabel untuk mengubah nilai di dalam loop."
+        },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Pecah tugas yang rumit menjadi bagian kecil yang berulang."
+        },
+        "12412b47-e83e-43a9-ad42-e98cba364913": {
+          "description": "Kenali pola berulang besar yang tersusun dari pola berulang yang lebih kecil."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "059b2997-3d05-4186-8450-066fceeb8c5b": {
+          "description": "Identifikasi area-area yang murid bisa menggunakan variable untuk mengubah kuantitas selama runtime. "
+        },
+        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
+          "description": "Periksa code untuk menemukan titik-titik yang variable-nya dapat mengganti nilai spesifik."
+        },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Tentukan nilai permulaan, nilai berhenti, dan nilai langkah untuk \"for loop\"."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Jelaskan nilai-nilai penghitung pas satu putaran melalui \"for loop\" sepanjang runtime."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Tentukan nilai permulaan, nilai berhenti, dan nilai langkah untuk for loop."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Ketahui kapan menggunakan for loop dan kapan menggunakan loop lain, seperti repeat dan while loop."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Gunakan for loop untuk mengubah loop beberapa kali dengan nilai yang berbeda-beda."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Ketahui kapan menggunakan for loop dan kapan menggunakan loop lain, seperti repeat dan while loop."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Gunakan simulasi komputer untuk mengumpulkan data tentang suatu model"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Buat diagram dua baris untuk membandingkan data tentang dua sumber yang berbeda"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Buat dan uji prediksi dengan mengubah variable simulasi"
+        },
+        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
+          "description": "Pelajari kerumitan pengiriman pesan melalui internet."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Terjemahkan URL ke dalam Alamat IP."
+        },
+        "12c53e25-70d7-4192-a97a-da08dd673338": {
+          "description": "Belajar merencanakan terlebih dahulu untuk tugas yang sedang berlangsung."
+        },
+        "b76f1811-9865-416d-bd06-601301120384": {
+          "description": "Mampu menjelaskan bagaimana keterbatasan sistem dapat memengaruhi desain proyek."
+        },
+        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
+          "description": "Uraikan bagaimana kompromi dapat membantu menjaga proyek tetap berada pada jalurnya dan menginspirasi kreativitas."
+        },
+        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
+          "description": "Buat konsep dan terapkan rencana untuk menyelesaikan setiap masalah dalam kode mereka."
+        },
+        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
+          "description": "Ungkapkan proses desain dan cara proses tersebut ikut membentuk proyek pamungkas yang telah selesai."
+        },
+        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
+          "description": "Pelajari bahwa informasi yang mereka bagikan secara online meninggalkan jejak kaki digital atau \"jejak\"."
+        },
+        "5efa6c72-000c-40a0-ace0-55f47117305b": {
+          "description": "Telusuri informasi apa saja yang AMAN dibagikan secara online."
+        },
+        "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
+          "description": "Tentukan daftar langkah (algorithm) untuk mendapatkan teman dari posisi awal mereka menuju ke tujuan mereka"
+        },
+        "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
+          "description": "Terjemahkan daftar langkah menjadi serangkaian tindakan fisik"
+        },
+        "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
+          "description": "Identifikasi dan perbaiki kesalahan dalam menjalankan algorithm"
+        },
+        "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
+          "description": "Buat model perilaku yang sopan di lab komputer"
+        },
+        "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
+          "description": "Lakukan eksperimen dengan tindakan pemrograman berbasis blok standar seperti: mengklik, drag dan drop, dll."
+        },
+        "fae372cb-4b72-4b35-abd6-e2424e54d791": {
+          "description": "Terjemahkan gerakan ke dalam serangkaian perintah."
+        },
+        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
+          "description": "Buat sebuah program dengan menyusun ulang gerakan urutan."
+        },
+        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
+          "description": "Buat sebuah program komputer dari serangkaian instruksi tertulis."
+        },
+        "4576e06e-56f1-4e32-a81d-7bbfea125273": {
+          "description": "Terjemahkan gerakan ke dalam serangkaian perintah."
+        },
+        "d5f927b9-727a-423e-90d3-80faad21aa34": {
+          "description": "Identifikasi dan temukan bug dalam suatu program."
+        },
+        "6c67256a-a8d5-4a57-9744-092686fb01a0": {
+          "description": "Ulangi tindakan yang dimulai oleh instruktur."
+        },
+        "368e8edc-290d-4737-a616-a543e5298c66": {
+          "description": "Terjemahkan program gambar menjadi tarian dalam dunia nyata."
+        },
+        "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
+          "description": "Ubah serangkaian tindakan menjadi satu loop."
+        },
+        "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
+          "description": "Uraikan urutan instruksi yang panjang menjadi urutan berulang yang terkecil."
+        },
+        "8293f536-510e-44a0-880b-397b3f97deeb": {
+          "description": "Buat program untuk tugas tertentu yang loop urutan perintah."
+        },
+        "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
+          "description": "Gunakan kombinasi perintah berurutan dan berulang untuk mencapai ujung labirin."
+        },
+        "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
+          "description": "Uraikan urutan instruksi yang panjang menjadi urutan berulang yang terkecil."
+        },
+        "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
+          "description": "Hitung berapa kali suatu tindakan harus diulang dan representasikan sebagai sebuah loop."
+        },
+        "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
+          "description": "Uraikan bentuk menjadi urutan berulang terbesarnya."
+        },
+        "61329a99-1c0a-414f-9694-78f7f9c81372": {
+          "description": "Buat program yang menggambar bentuk rumit dengan mengulangi urutan sederhana."
+        },
+        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
+          "description": "Buat daftar beberapa contoh aplikasi smartphone yang berbeda."
+        },
+        "595564b5-94b4-4104-9613-05eadc30663e": {
+          "description": "Rekomendasikan teknologi kepada orang lain berdasarkan kebutuhan unik mereka. "
+        },
+        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
+          "description": "Terapkan empati dan kreativitas dalam mendesain teknologi untuk orang lain."
+        },
+        "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
+          "description": "Ulangi perintah yang diberikan instruktur."
+        },
+        "3997dff6-b815-412c-b3b5-52d4bd1fc019": {
+          "description": "Kenali tindakan guru sebagai sinyal untuk memulai perintah."
+        },
+        "86c93634-0b7d-46de-82dd-50b86576bd56": {
+          "description": "Berlatih membedakan tindakan yang telah ditentukan sebelumnya dan tindakan berbasis event."
+        },
+        "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
+          "description": "Buat cerita animasi interaktif menggunakan urutan dan pengendali event."
+        },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Terapkan konsep-konsep ilmu komputer dalam proyek terbuka."
+        },
+        "ae68c8b9-0188-48da-a066-b89a819b67e2": {
+          "description": "Atasi hambatan seperti kendala waktu atau bug."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Ketahuilah bahwa internet dapat digunakan untuk mengunjungi tempat-tempat yang jauh dan mempelajari hal-hal baru."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Bandingkan bahwa menjaga keselamatan diri secara online itu sama dengan menjaga keselamatan diri di dunia nyata."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Jelaskan aturan dalam melakukan penelusuran yang aman di internet."
+        },
+        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
+          "description": "Terjemahkan algoritma ke dalam suatu program"
+        },
+        "95ef707d-603d-4106-955e-3138f0f16a5d": {
+          "description": "Baca sandi dan jalankan suatu program yang dibuat oleh orang lain"
+        },
+        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
+          "description": "Identifikasi dan atasi bug atau kesalahan dalam instruksi berurutan"
+        },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Buat model perilaku yang sopan di lab komputer"
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Lakukan eksperimen dengan tindakan pemrograman berbasis blok standar seperti: mengklik, drag dan drop, dll."
+        },
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Buat program dengan mengatur ulang gerakan berurutan"
+        },
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Buat program komputer dari serangkaian instruksi tertulis"
+        },
+        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
+          "description": "Pilih praktik debug yang tepat ketika memecahkan masalah"
+        },
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Perintah urutan dalam urutan yang logis."
+        },
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Kenali masalah atau \"bug\" dalam suatu program dan kembangkan rencana untuk menyelesaikan masalah."
+        },
+        "407c5a4d-9337-4218-92d5-018597e41e19": {
+          "description": "Identifikasi kode berulang dan persingkat beberapa tindakan menjadi satu loop."
+        },
+        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
+          "description": "Tafsirkan program dengan loop sebagai serangkaian tindakan."
+        },
+        "cb7cab91-20ca-495a-a429-621631cb0507": {
+          "description": "Buat program menggunakan struktur yang mengulangi wilayah kode"
+        },
+        "381b89ab-336f-41cd-b755-78142a1f1f90": {
+          "description": "Tingkatkan kode yang ada dengan menemukan wilayah pengulangan dan memindahkannya ke struktur perulangan"
+        },
+        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Uraikan urutan instruksi yang panjang menjadi urutan berulang yang terkecil."
+        },
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Hitung berapa kali suatu tindakan harus diulang dan representasikan sebagai sebuah loop."
+        },
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Uraikan bentuk menjadi urutan berulang terbesarnya."
+        },
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Buat program yang menggambar bentuk rumit dengan mengulangi urutan sederhana."
+        },
+        "134f184c-8865-44d2-8921-5740c749bcd5": {
+          "description": "Ulangi perintah yang diberikan instruktur."
+        },
+        "b7973aec-afbf-4f81-820c-daced7731b0f": {
+          "description": "Kenali tindakan guru sebagai sinyal untuk memulai perintah."
+        },
+        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
+          "description": "Berlatih membedakan tindakan yang telah ditentukan sebelumnya dan tindakan berbasis event."
+        },
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Buat cerita animasi interaktif menggunakan urutan dan pengendali event."
+        },
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Terapkan konsep-konsep ilmu komputer dalam proyek terbuka."
+        },
+        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
+          "description": "Atasi hambatan seperti kendala waktu atau bug."
+        },
+        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
+          "description": "Pahami contoh nyata sikap kasar online dan dampaknya terhadap perasaan orang."
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "Identifikasi cara-cara merespons kata-kata kasar secara online, menggunakan S-T-O-P."
+        },
+        "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
+          "description": "Bersikap teliti ketika membuat instruksi"
+        },
+        "26392005-5f64-4707-b38b-847d1f009a29": {
+          "description": "Identifikasi dan atasi bug atau kesalahan dalam instruksi berurutan"
+        },
+        "560e14ee-7390-4244-aee5-a0c2737112e5": {
+          "description": "Terjemahkan gerakan ke dalam serangkaian perintah."
+        },
+        "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
+          "description": "Identifikasi dan temukan bug dalam suatu program."
+        },
+        "ce53a40d-db75-451a-a901-93f93226306a": {
+          "description": "Prediksi di mana suatu program akan gagal."
+        },
+        "3ad547f9-c577-4953-88d5-41f7ac1ab710": {
+          "description": "Ubah program yang ada untuk menghentikan kesalahan."
+        },
+        "367c7a8a-4dea-494f-87c7-77cba03711a1": {
+          "description": "Renungkan proses debug dengan cara yang sesuai usia."
+        },
+        "991aa440-0e71-40b0-8354-da04e3ad125b": {
+          "description": "Urutkan perintah gerakan sebagai langkah-langkah berurutan dalam suatu program."
+        },
+        "a48e07da-5c86-4377-8738-4a6a06633e1d": {
+          "description": "Merepresentasikan algorithm sebagai program komputer."
+        },
+        "d50f34e0-2613-485c-9381-7b63832dbd0a": {
+          "description": "Kembangkan keterampilan pemecahan masalah dan berpikir kritis dengan meninjau praktik debug."
+        },
+        "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
+          "description": "Identifikasi pola berulang dalam kode yang dapat diganti dengan satu Loop"
+        },
+        "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
+          "description": "Tulis instruksi menggunakan loop untuk mengulang pola"
+        },
+        "46288097-dbab-437f-897c-4e14352ae388": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
+          "description": "Uraikan urutan instruksi yang panjang menjadi urutan berulang yang terbesar."
+        },
+        "8e76410f-b4db-446b-88c0-00013d9c05bd": {
+          "description": "Gunakan kombinasi perintah berurutan dan berulang untuk mencapai ujung labirin."
+        },
+        "ff15ce2c-8445-442a-89f0-7a50e741850a": {
+          "description": "Tulis program untuk tugas yang diberikan dengan loop satu perintah."
+        },
+        "757d864e-38a3-4b30-8617-b9a4174c8b08": {
+          "description": "Identifikasi kapan loop dapat digunakan untuk menyederhanakan tindakan berulang."
+        },
+        "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
+          "description": "Gunakan kombinasi perintah berurutan dan berulang untuk bergerak dan melakukan tindakan."
+        },
+        "bf154cd9-0914-43c2-b895-030de92d1427": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
+          "description": "Bedakan antara perintah yang perlu diulang dalam loop dan perintah yang harus digunakan sendiri."
+        },
+        "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
+          "description": "Ulangi perintah yang diberikan instruktur."
+        },
+        "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
+          "description": "Kenali gerakan guru sebagai sinyal untuk memulai perintah."
+        },
+        "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
+          "description": "Berlatih membedakan tindakan yang telah ditentukan sebelumnya dan tindakan berbasis event."
+        },
+        "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
+          "description": "Cocokkan blok dengan pengendali event yang sesuai."
+        },
+        "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
+          "description": "Buat permainan menggunakan pengendali event."
+        },
+        "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
+          "description": "Buat permainan animasi interaktif menggunakan urutan dan pengendali event."
+        },
+        "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
+          "description": "Kumpulkan dan catat data tentang jumlah objek asli atau karakter di layar"
+        },
+        "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
+          "description": "Buat grafik batang atau grafik lingkaran untuk merepresentasikan data sederhana."
+        },
+        "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
+          "description": "Lakukan perbandingan antara visualisasi data yang dibuat oleh murid lain lalu gunakan hasil perbandingan itu untuk membuat prediksi."
+        },
+        "9a785141-1fe6-4728-996c-2fbb8781b62c": {
+          "description": "Lakukan encode huruf ke dalam binary."
+        },
+        "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
+          "description": "Decode binary kembali ke huruf."
+        },
+        "ce1f4117-76f3-4359-a554-683a878f82cb": {
+          "description": "Hubungkan gagasan menyimpan huruf di atas kertas dengan gagasan menyimpan informasi di komputer."
+        },
+        "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
+          "description": "Gunakan desain yang direncanakan sebagai cetak biru pembuatan."
+        },
+        "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
+          "description": "Atasi hambatan seperti kendala waktu atau bug."
+        },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "Definisikan istilah \"kata sandi\" dan jelaskan tujuan kata sandi."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "Praktikkan membuat kata sandi yang mudah diingat dan kuat."
+        },
+        "3c4b51d5-b72f-42df-a55a-86c146214424": {
+          "description": "Susun ulang urutan langkah sebagai program yang di-encode"
+        },
+        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
+          "description": "Jelaskan kendala menerjemahkan masalah dari bahasa manusia ke bahasa mesin"
+        },
+        "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
+          "description": "Urutkan perintah gerakan sebagai langkah-langkah berurutan dalam suatu program."
+        },
+        "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a": {
+          "description": "Ubah program yang ada untuk menghentikan kesalahan."
+        },
+        "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
+          "description": "Uraikan urutan instruksi yang panjang menjadi urutan berulang yang terbesar."
+        },
+        "8a0addda-b47f-4551-8c82-9115be3c130d": {
+          "description": "Tentukan ide menggunakan kode dan simbol."
+        },
+        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
+          "description": "Verifikasi pekerjaan yang dilakukan oleh rekan satu tim."
+        },
+        "8dba466d-d809-49c6-8f60-218c27964411": {
+          "description": "Identifikasi tanda-tanda frustrasi "
+        },
+        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
+          "description": "Baca dan pahami kode yang diberikan."
+        },
+        "71cede4e-3e93-41d6-a422-f2443f756a61": {
+          "description": "Identifikasi bug dan masalah yang ditimbulkannya dalam suatu program."
+        },
+        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
+          "description": "Uraikan dan terapkan rencana untuk melakukan debug suatu program."
+        },
+        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
+          "description": "Buat permainan animasi interaktif menggunakan urutan dan event."
+        },
+        "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
+          "description": "Buat program menggunakan struktur yang mengulangi wilayah kode"
+        },
+        "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
+          "description": "Tingkatkan kode yang ada dengan menemukan wilayah pengulangan dan memindahkannya ke struktur perulangan"
+        },
+        "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
+          "description": "Bedakan antara perintah yang perlu diulang dalam loop dan perintah yang harus digunakan sendiri."
+        },
+        "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
+          "description": "Pecah tugas yang rumit menjadi bagian kecil yang berulang."
+        },
+        "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
+          "description": "Kenali pola berulang besar yang tersusun dari pola berulang yang lebih kecil."
+        },
+        "673ddc56-5217-45a9-919c-b42024f7de2b": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "fd3464fd-5921-4873-a850-c0799c55eecd": {
+          "description": "Tetapkan keadaan ketika bagian tertentu dari suatu program harus dijalankan dan kapan seharusnya tidak dijalankan."
+        },
+        "494526f8-7392-4788-9126-b2e2dd53b241": {
+          "description": "Tentukan apakah persyaratan terpenuhi berdasarkan kriteria."
+        },
+        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
+          "description": "Jelajahi program dan prediksi hasilnya, dengan mempertimbangkan serangkaian input."
+        },
+        "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
+          "description": "Tetapkan keadaan ketika bagian tertentu dari suatu program harus dijalankan dan kapan seharusnya tidak dijalankan."
+        },
+        "83b6020a-2273-4966-abd6-0049afa1eb4e": {
+          "description": "Tentukan apakah persyaratan terpenuhi berdasarkan kriteria."
+        },
+        "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
+          "description": "Terjemahkan pernyataan bersyarat bahasa lisan ke dalam suatu program."
+        },
+        "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
+          "description": "Pecahkan puzzles menggunakan kombinasi urutan berulang dan kondisional."
+        },
+        "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
+          "description": "Bedakan antara loop yang berulang dengan jumlah pasti dan loop yang berulang selama kondisi benar."
+        },
+        "38cd04a9-3d07-4df9-b22d-18e39369e387": {
+          "description": "Gunakan while loop untuk membuat program yang dapat memecahkan masalah dengan nilai yang tidak diketahui."
+        },
+        "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
+          "description": "Buat program dengan pemahaman tentang berbagai strategi untuk menerapkan persyaratan."
+        },
+        "630e79db-15ec-49fd-804c-060b8adf40ea": {
+          "description": "Terjemahkan pernyataan kondisional bahasa lisan dan loop ke dalam suatu program."
+        },
+        "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
+          "description": "Atasi hambatan seperti kendala waktu atau bug."
+        },
+        "8c021568-46ed-4243-a4d1-f2037138c01a": {
+          "description": "Terjemahkan gerakan ke dalam serangkaian perintah."
+        },
+        "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
+          "description": "Identifikasi dan temukan bug dalam suatu program."
+        },
+        "f0852e8e-a4ab-49a6-8fc4-0c805f14999a": {
+          "description": "Prediksi di mana suatu program akan gagal."
+        },
+        "857073db-dcda-4868-8be6-e0fba5f981d7": {
+          "description": "Ubah program yang ada untuk menghentikan kesalahan."
+        },
+        "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
+          "description": "Renungkan proses debug dengan cara yang sesuai usia."
+        },
+        "4d4f7faa-e380-483d-b873-b04e114e077e": {
+          "description": "Urutkan perintah gerakan sebagai langkah-langkah berurutan dalam suatu program."
+        },
+        "6a4a4515-9250-4ad0-b943-afef3d26df68": {
+          "description": "Merepresentasikan algorithm sebagai program komputer."
+        },
+        "48b6e566-4a4b-424e-b104-33ce83bd2184": {
+          "description": "Kembangkan keterampilan pemecahan masalah dan berpikir kritis dengan meninjau praktik debug."
+        },
+        "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
+          "description": "Definisikan “sprite” sebagai karakter atau objek di layar yang dapat dipindahkan dan diubah."
+        },
+        "09281dd0-4b33-4537-9543-a2377bc2f923": {
+          "description": "Buat sprite baru lalu berilah kostum dan perilaku."
+        },
+        "30a80046-d715-46b1-8b89-65c410d04690": {
+          "description": "Buat sprite baru lalu berilah kostum dan perilaku."
+        },
+        "e0d4a883-51dc-4647-8c9f-59652f699aec": {
+          "description": "Buat animasi menggunakan sprite dan perilaku."
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Buat animasi interaktif menggunakan event."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Kembangkan program yang merespons event yang diberi waktu."
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Kembangkan program yang merespons input pengguna."
+        },
+        "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
+          "description": "Buat hewan piaraan virtual interaktif menggunakan event, perilaku, variable, dan seni khusus."
+        },
+        "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
+          "description": "Solusi program untuk masalah yang timbul ketika mendesain hewan piaraan virtual, seperti memberinya makan atau memantau kebahagiaannya."
+        },
+        "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
+          "description": "Uraikan urutan instruksi yang panjang menjadi urutan berulang yang terbesar."
+        },
+        "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
+          "description": "Gunakan kombinasi perintah berurutan dan berulang untuk mencapai ujung labirin."
+        },
+        "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "32250c07-4872-43ce-9968-33e17f779cf3": {
+          "description": "Bedakan antara perintah yang perlu diulang dalam loop dan perintah yang harus digunakan sendiri."
+        },
+        "06be5715-7c67-4b13-816d-acb7253a13b2": {
+          "description": "Pecah tugas yang rumit menjadi bagian kecil yang berulang."
+        },
+        "b884b12d-1247-42f3-a907-652dd25566f2": {
+          "description": "Kenali pola berulang besar yang tersusun dari pola berulang yang lebih kecil."
+        },
+        "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "f35a3857-a630-4783-98c3-c0e6304af48f": {
+          "description": "Pisahkan kode menjadi urutan berulang terbesar menggunakan loop dan juga nested loop."
+        },
+        "10a74fb8-26fd-4a7c-84f4-1b868f042670": {
+          "description": "Kenali perbedaan antara menggunakan loop dan nested loop."
+        },
+        "d1ca506b-d694-4c2b-bcc5-38af2ce425dd": {
+          "description": "Jelaskan kapan perlu loop, nested loop, atau tanpa loop."
+        },
+        "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
+          "description": "Tetapkan keadaan ketika bagian tertentu dari suatu program harus dijalankan dan kapan seharusnya tidak dijalankan."
+        },
+        "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
+          "description": "Tentukan apakah persyaratan terpenuhi berdasarkan kriteria."
+        },
+        "7002da51-158a-4849-b733-48282a764b82": {
+          "description": "Terjemahkan pernyataan bersyarat bahasa lisan ke dalam suatu program."
+        },
+        "08f476a4-492c-47ee-8291-a435761059ac": {
+          "description": "Pecahkan puzzles menggunakan kombinasi urutan berulang dan kondisional."
+        },
+        "e85d8d23-86c2-4644-9449-94af8b02f763": {
+          "description": "Bedakan antara loop yang berulang dengan jumlah pasti dan loop yang berulang selama kondisi benar."
+        },
+        "8bee7277-31d3-4032-a8ea-2d2c820425ec": {
+          "description": "Gunakan while loop untuk membuat program yang dapat memecahkan masalah dengan nilai yang tidak diketahui."
+        },
+        "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
+          "description": "Tetapkan keadaan ketika bagian tertentu dari suatu program harus dijalankan dan kapan seharusnya tidak dijalankan."
+        },
+        "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
+          "description": "Tentukan apakah persyaratan terpenuhi berdasarkan kriteria."
+        },
+        "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
+          "description": "Buat program dengan pemahaman tentang berbagai strategi untuk menerapkan persyaratan."
+        },
+        "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
+          "description": "Terjemahkan pernyataan kondisional bahasa lisan dan loop ke dalam suatu program."
+        },
+        "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
+          "description": "Nest kondisional untuk menganalisis beberapa kondisi nilai menggunakan logika if, else if, else."
+        },
+        "0174cd8f-0a91-423b-b643-2b8a0290fcff": {
+          "description": "Pasangkan loop dan pernyataan kondisional bersama-sama."
+        },
+        "1ece8579-425f-4324-a041-8f47ce736f42": {
+          "description": "Gunakan fungsi untuk menyederhanakan program yang rumit."
+        },
+        "4f16bc65-a8b7-485b-b34e-5b67c0c68259": {
+          "description": "Gunakan function yang telah ditentukan untuk menyelesaikan tugas yang sering diulang."
+        },
+        "ae435e31-012f-4ad5-aeb4-028f25f5671d": {
+          "description": "Kategorikan dan generalisasikan kode menjadi fungsi yang bermanfaat."
+        },
+        "36a2f4e1-f9df-4115-a898-a7d96ee60c27": {
+          "description": "Kenali kapan suatu fungsi dapat membantu menyederhanakan suatu program."
+        },
+        "22b69133-d5b3-407a-9c18-7b4841daffa7": {
+          "description": "Kenali kapan suatu fungsi dapat membantu menyederhanakan suatu program."
+        },
+        "5bbd5970-dd02-4100-b9c4-6d051ec9bba2": {
+          "description": "Gunakan function yang telah ditentukan untuk menyelesaikan tugas yang sering diulang."
+        },
+        "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
+          "description": "Tindakan Menggunakan variable untuk menyimpan kata-kata dan frasa."
+        },
+        "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
+          "description": "Gunakan variable bersamaan dengan prompt."
+        },
+        "16854174-125c-4c79-9a42-064ef84535e3": {
+          "description": "Tetapkan nilai untuk variabel yang ada."
+        },
+        "4fe2cf70-9f34-41b0-bae1-9c5af60706de": {
+          "description": "Manfaatkan variabel sebagai pengganti nilai berulang dalam suatu program."
+        },
+        "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
+          "description": "Gunakan variabel untuk mengubah nilai di dalam loop."
+        },
+        "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
+          "description": "Identifikasi area-area yang murid bisa menggunakan variable untuk mengubah kuantitas selama runtime. "
+        },
+        "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
+          "description": "Periksa code untuk menemukan titik-titik yang variable-nya dapat mengganti nilai spesifik."
+        },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Tentukan nilai permulaan, nilai berhenti, dan nilai langkah untuk for loop."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "Ketahui kapan menggunakan for loop dan kapan menggunakan loop lain, seperti repeat dan while loop."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Gunakan for loop untuk mengubah loop beberapa kali dengan nilai yang berbeda-beda."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "Ketahui kapan menggunakan for loop dan kapan menggunakan loop lain, seperti repeat dan while loop."
+        },
+        "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
+          "description": "Atasi hambatan seperti kendala waktu atau bug."
+        },
+        "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
+          "description": "Buat model perilaku yang sopan di lab komputer"
+        },
+        "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
+          "description": "Lakukan eksperimen dengan tindakan pemrograman berbasis blok standar seperti: mengklik, drag dan drop, dll."
+        },
+        "a5a52414-42a7-4b32-897b-819a70572328": {
+          "description": "Terjemahkan gerakan ke dalam serangkaian perintah."
+        },
+        "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
+          "description": "Buat program dengan mengatur ulang gerakan berurutan"
+        },
+        "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
+          "description": "Buat program komputer dari serangkaian instruksi tertulis"
+        },
+        "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
+          "description": "Perintah urutan dalam urutan yang logis."
+        },
+        "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
+          "description": "Kenali masalah atau \"bug\" dalam suatu program dan kembangkan rencana untuk menyelesaikan masalah."
+        },
+        "620da514-ad6e-4049-a9d3-d189a79af01e": {
+          "description": "Terjemahkan gerakan ke dalam serangkaian perintah."
+        },
+        "adabe26f-78e0-47f4-92b2-535a38f53f15": {
+          "description": "Identifikasi dan temukan bug dalam suatu program."
+        },
+        "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
+          "description": "Buat program menggunakan struktur yang mengulangi wilayah kode"
+        },
+        "b6f41a7c-0967-4986-b7b6-910819b28396": {
+          "description": "Tingkatkan kode yang ada dengan menemukan wilayah pengulangan dan memindahkannya ke struktur perulangan"
+        },
+        "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
+          "description": "Uraikan urutan instruksi yang panjang menjadi urutan berulang yang terkecil."
+        },
+        "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
+          "description": "Hitung berapa kali suatu tindakan harus diulang dan representasikan sebagai sebuah loop."
+        },
+        "6aac3c12-4427-43d1-877c-727d0665ab49": {
+          "description": "Uraikan bentuk menjadi urutan berulang terbesarnya."
+        },
+        "6dbab2fb-7a17-4269-885e-84768be03a1f": {
+          "description": "Buat program yang menggambar bentuk rumit dengan mengulangi urutan sederhana."
+        },
+        "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
+          "description": "Hitung berapa kali suatu tindakan harus diulang dan representasikan sebagai sebuah loop."
+        },
+        "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
+          "description": "Uraikan bentuk menjadi urutan berulang terbesarnya."
+        },
+        "dc83123d-d493-40aa-a543-9daa1421c2c8": {
+          "description": "Buat program yang menggambar bentuk rumit dengan mengulangi urutan sederhana."
+        },
+        "2fa04500-f1d4-4924-aa39-70292711d432": {
+          "description": "Buat cerita animasi interaktif menggunakan urutan dan pengendali event."
+        },
+        "70e87cab-0d62-4974-9061-425a179bcb2d": {
+          "description": "Buat cerita animasi interaktif menggunakan urutan dan pengendali event."
+        },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "mulai membangun keterkaitan topik tentang cara baru dalam menulis program"
+        },
+        "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
+          "description": "Definisikan “sprite” sebagai karakter atau objek di layar yang dapat dipindahkan dan diubah."
+        },
+        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
+          "description": "Buat sprite baru lalu berilah kostum dan perilaku."
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Buat animasi interaktif menggunakan sprite, perilaku, dan event."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Identifikasi alasan orang membagikan informasi tentang diri mereka sendiri secara online."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Jelaskan perbedaan antara informasi privat dan informasi pribadi."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Jelaskan rawannya membagikan informasi privat secara online."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Pilih informasi apa saja tentang diri mereka yang aman dibagikan secara online."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Buat sebuah program komputer interaktif yang mengekspresikan jati dirinya menggunakan teks dan gambar khusus."
+        },
+        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
+          "description": "Tafsirkan berbagi etis atas karya berhak cipta vs. Berbagi yang tidak etis."
+        },
+        "0709575a-e9e6-4856-a4f4-02b290f86975": {
+          "description": "Pahami hak-hak cipta kita sendiri menyangkut bahan/karya yang telah mereka buat"
+        },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Identifikasi manfaat menggunakan struktur loop daripada pengulangan secara manual."
+        },
+        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
+          "description": "Bedakan antara perintah yang perlu diulang dalam loop dan perintah yang harus digunakan sendiri."
+        },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Gabungkan bentuk sederhana menjadi desain rumit dengan nested loop."
+        },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Hitung berapa kali suatu tindakan harus diulang dan representasikan sebagai sebuah loop."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Pecah tugas yang rumit menjadi bagian kecil yang berulang."
+        },
+        "6174da85-eb3a-4c0e-925d-360b04604fdb": {
+          "description": "Jelaskan kapan perlu loop, nested loop, atau tanpa loop."
+        },
+        "90591bd7-cbd5-46c4-95dc-59e16e5a949c": {
+          "description": "Kenali perbedaan antara menggunakan loop dan nested loop."
+        },
+        "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
+          "description": "Pisahkan kode menjadi urutan berulang terbesar menggunakan loop dan juga nested loop."
+        },
+        "e26d818e-81fd-43c6-8558-fc69835e693a": {
+          "description": "Temukan frasa berulang di dalam lirik lagu."
+        },
+        "815c91bc-4848-43ba-a234-d1b184ab120b": {
+          "description": "Identifikasi bagian-bagian sebuah lagu untuk membuat suatu function."
+        },
+        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
+          "description": "Uraikan bagaimana fungsi dapat membuat program lebih mudah ditulis."
+        },
+        "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
+          "description": "Gunakan fungsi untuk menyederhanakan program yang rumit."
+        },
+        "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
+          "description": "Gunakan function yang telah ditentukan untuk menyelesaikan tugas yang sering diulang."
+        },
+        "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56": {
+          "description": "Kategorikan dan generalisasikan kode menjadi fungsi yang bermanfaat."
+        },
+        "75ef4b25-6f64-4795-9a13-f0d27662040e": {
+          "description": "Kenali kapan suatu fungsi dapat membantu menyederhanakan suatu program."
+        },
+        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
+          "description": "Tetapkan keadaan ketika bagian tertentu dari suatu program harus dijalankan dan kapan seharusnya tidak dijalankan."
+        },
+        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
+          "description": "Tentukan apakah persyaratan terpenuhi berdasarkan kriteria."
+        },
+        "9c7ff713-c208-4acf-9691-da7a4a152565": {
+          "description": "Tetapkan keadaan ketika bagian tertentu dari suatu program harus dijalankan dan kapan seharusnya tidak dijalankan."
+        },
+        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
+          "description": "Tentukan apakah persyaratan terpenuhi berdasarkan kriteria."
+        },
+        "dc1b604a-9814-45f4-aed5-b76776ad818c": {
+          "description": "Kenali kapan suatu fungsi dapat membantu menyederhanakan suatu program."
+        },
+        "cff52f84-5090-495e-a37b-02cf8b666ad6": {
+          "description": "Gunakan function yang telah ditentukan untuk menyelesaikan tugas yang sering diulang."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Jelaskan dampak aplikasi seluler terhadap dunia modern."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Jelaskan mengapa aksesibilitas itu merupakan bagian penting dari desain aplikasi untuk pengguna."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Sempurnakan desain sebuah aplikasi yang sudah ada dengan memenuhi kebutuhan aksesibilitas pengguna."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Belajar merencanakan terlebih dahulu untuk tugas yang sedang berlangsung."
+        },
+        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
+          "description": "Jelaskan bagaimana keterbatasan sistem dapat memengaruhi desain proyek."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Uraikan bagaimana kompromi dapat membantu menjaga proyek tetap berada pada jalurnya dan menginspirasi kreativitas."
+        },
+        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
+          "description": "Buat konsep dan terapkan rencana untuk menyelesaikan setiap masalah dalam kode mereka."
+        },
+        "2594052b-3b87-4d83-9038-56175058c1c2": {
+          "description": "Ungkapkan proses desain dan cara proses tersebut ikut membentuk proyek pamungkas yang telah selesai."
         }
       }
     }

@@ -801,6 +801,20 @@ fil:
         csd_what_computers_are: Ano ang isang Kompyuter?
         playlab_2021: Introduksiyon sa Play Lab
         playlab_2021_reader: Introduksiyon sa Play Lab
+        PL_CSD_TeacherTips_Advise: Mga Tip sa Guro - Payo sa mga Bagong Guro
+        PL_CSD_TeacherTips_IntroToCSD: Mga Tip sa Guro - Introduksiyon sa CS Discoveries
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Mga Tip sa Guro - Ang Proseso ng
+          Paglutas ng Problema
+        PL_CSD_TeacherTips_PairProgramming: Mga Tip ng Guro - Pares ng Programming
+        PL_CSD_TeacherTips_Debugging: Mga Tip sa Guro - Debugging
+        PL_CSD_TeacherTips_LeadLearner: Mga Tip sa Guro - Mga Lider ng Pagtuturo
+        poembot-playtest-intro: PoemBot Playtest Intro
+        poembot-playtest-sprites: PoemBot Playtest Tiyanak
+        poembot-playtest-events: PoemBot Playtest Kaganapan
+        hello_world_intro: Hello World - Maligayang Pagdating sa Sprite Lab
+        hello_world_events: Hello World - Pag-program gamit ang Mga Kaganapan
+        hello_world_congrats: Hello World - Gawin ang Gusto Mo
+        poemart_intro: Introduksiyon sa Sining ng Tula
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang

@@ -1,0 +1,23 @@
+{
+  "category": "",
+  "config": {
+    "func": "glideTo",
+    "docFunc": "gamelab_glideTo",
+    "blockText": "{SPRITE} glide to {LOCATION}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION",
+        "customInput": "locationPicker"
+      }
+    ],
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ]
+  }
+}

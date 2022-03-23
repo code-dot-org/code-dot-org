@@ -1,9 +1,34 @@
 {
   "pages": {
-    "/projects": "home-learning-2020"
-  },
-
+    "/projects": "coldplay",
+    "/home": "superhero",
+    "/certificates": "hoc-more"
+  },  
   "banners": {
+    "hoc-more": {
+      "image": "/images/marketing/certificates-promo.png",
+      "title": "Keep learning!",
+      "body": "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners.",
+      "buttonText": "View activities",
+      "buttonUrl": "https://hourofcode.com/learn",
+      "buttonId": "hoc-more-details"
+    },
+    "superhero": {
+      "image": "/images/marketing/superhero_teacherdash.png",
+      "title": "Help your students become superheroes!",
+      "body": "Add to your teaching toolbox with Code.org’s Professional Learning Program. More than 90% of attendees would recommend our program to another teacher!",
+      "buttonText": "Learn More",
+      "buttonUrl": "https://code.org/educate/professional-learning/",
+      "buttonId": "superhero-pl-details"
+    },
+    "csjourneys": {
+      "image": "/images/csjourneys/teacher-banner.png",
+      "title": "Explore the wide world of computer science",
+      "body": "Bring CS to life with Code.org’s new career inspiration and exploration program! Sign up for live, engaging classroom experiences like virtual field trips and class chats, or let students explore with short videos and other resources.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys",
+      "buttonId": "csjourneys-dashboard"
+    },
     "class-schedule-survey": {
       "image": "/images/class-schedule-survey.png",
       "title": "Fall 2021 Class Schedule Survey",
@@ -11,6 +36,14 @@
       "buttonText": "Take the survey",
       "buttonUrl": "https://docs.google.com/forms/d/e/1FAIpQLScS1FcBADzbFozhAXoICK4g1Yg2Hymhx0QYFP74yqSBXa0gnA/viewform",
       "buttonId": "class-schedule-survey-fall2021"
+    },
+    "back-to-school-2021": {
+      "image": "/images/back-to-school-2021.png",
+      "title": "Back to School Updates",
+      "body": " Check out the latest updates to Code.org’s curriculum and tools (including a new AI / ML module!), plus learn how to use Code.org in your classroom with our new Getting Started video series.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ-Updates-for-August-2021-",
+      "buttonId": "back-to-school-2021"
     },
     "teacher-apps-open-2021": {
       "image": "/images/fill-970x562/professional-learning-2021-1.jpg",
@@ -78,6 +111,22 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/ai",
       "buttonId": "2020-ai"
+    },
+    "congrats-certificate-share": {
+      "image": "/images/teacherdashboard1.png",
+      "title": "Try an Hour of Code",
+      "body": "Anyone can learn!",
+      "buttonText": "Start",
+      "buttonUrl": "https://code.org/learn",
+      "buttonId": "congrats-certificate-share-button"
+    },
+    "coldplay": {
+      "image": "/images/marketing/coldplay_minibanner.png",
+      "title": "Code and dance with Coldplay",
+      "body": "Use Dance Party to create something awesome! Share it online and Coldplay might spotlight your project on social media. You could even get to see the band live! Let's see what you create!",
+      "buttonText": "Try it",
+      "buttonUrl": "https://code.org/coldplay",
+      "buttonId": "coldplay"
     }
   }
 }

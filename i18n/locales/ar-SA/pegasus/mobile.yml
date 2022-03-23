@@ -992,6 +992,8 @@
   iceage_name: "العصر الجليدي"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "حرب النجوم (بلوكات)"
+  hoc-impact-study_name: متاهة كلاسيكية مع مسح
+  flappy-impact-study_name: رمز Flappy مع المسح
   hoc-encryption_name: شيفرة بسيطة
   text-compression_name: ضغط النص
   applab_name: "مختبر التطبيق"
@@ -1083,6 +1085,12 @@
   coursed-2020_gradelevel: الأعمار 7-11
   coursee-2020_gradelevel: الذين تتراوح أعمارهم بين 8-12
   coursef-2020_gradelevel: الأعمار 9-13
+  coursea-2021_gradelevel: الأعمار 4-7
+  courseb-2021_gradelevel: الأعمار 5-8
+  coursec-2021_gradelevel: الأعمار 6-10
+  coursed-2021_gradelevel: الأعمار 7-11
+  coursee-2021_gradelevel: الذين تتراوح أعمارهم بين 8-12
+  coursef-2021_gradelevel: الأعمار 9-13
   accelerated_gradelevel: "الأعمار 10-18"
   codeorg_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
   codeintl_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
@@ -1476,6 +1484,8 @@
   header_legal_privacy: "سياسة الخصوصية"
   header_legal_tos: "شروط الخدمة"
   header_tutorials: "البرامج التعليمية"
+  header_screen_reader_hamburger: "قائمة"
+  header_screen_reader_help: "قائمة المساعدة"
   app_lab_documentation: "وثائق مختبر التطبيقات"
   app_lab_tutorials: "البرامج التعليمية لمختبر التطبيقات"
   game_lab_documentation: "وثائق مختبر الألعاب"
@@ -1645,6 +1655,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "بالشراكة مع"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "مهندس* أمازون المستقبلي هو برنامج شامل من الطفولة إلى الاحتراف لإلهام وتعليم الأطفال والشباب من أسر منخفضة الدخل لمتابعة وظائف في مجال علم الحاسوب. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn more</a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "مهندس* أمازون المستقبلي هو برنامج شامل من الطفولة إلى الاحتراف لإلهام وتعليم الأطفال والشباب من أسر منخفضة الدخل لمتابعة وظائف في مجال علم الحاسوب. [تعلّم أكثر](%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "إذا كنت طالبًا أو مدرسًا في فرنسا، قم بزيارة [Amazon Future Engineer - فرنسا] (%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "تعلم المزيد عن مهندس أمازون المستقبلي"
   hoc2018_dance_amazon_about_future_engineer_title: "نبذة عن مهندس أمازون المستقبلي"
   hoc2018_dance_amazon_about_future_engineer_description: "تعرّف على برنامج Amazon من الروضة إلى الوظيفة لزيادة إمكانية الوصول إلى تعليم علم الحاسوب. اعثر على معلومات حول كيفية المشاركة في المخيمات الصيفية، وفصول علم الحاسوب بالمدارس الثانوية، والمنح الدراسية، والتدريب الداخلي."
@@ -1687,18 +1698,80 @@
   homepage_slot_text_link_code_break: "خذ استراحة من البرمجة"
   homepage_slot_text_link_do_hoc: "اعمل ساعة من البرمجة "
   homepage_slot_text_link_express_course: "جرّب دورة سريعة"
+  page_not_available_title: "الصفحة غير متوفرة"
+  page_not_available_description: "نأسف لأن الصفحة التي طلبتها لم تعد متاحة على هذا العنوان. إذا كنت لا تزال بحاجة إلى الوصول، يرجى إرسال بريد إلكتروني [support@code.org] (%{support_email_link})."
   page_not_available_button: "ارجع إلى صفحتنا الرئيسية"
+  hoc2020_mc_available_code_org: "متوفر على Code.org"
+  hoc2020_mc_available_mee: 'متوفر في Minecraft: إصدار التعليم'
+  hoc2020_mc_mee_title: "حكاية ماين كرافت لقريتين"
+  hoc2020_mc_mee_description: 'برنامج Minecraft Hour of Code التعليمي الجديد متاح الآن في Minecraft: Education Edition لنظام التشغيل Windows و Mac و Chromebook و iPad. تعلم أساسيات الترميز واستكشف التنوع والشمول مع طلابك! الوصول إلى الموارد المجانية بما في ذلك خطة الدرس ومقاطع الفيديو ومناهج علوم الكمبيوتر ودروس الإنصاف وتدريبات المعلمين.'
+  hoc2021_mc_mee_title: "ماين كرافت تايم كرافت"
+  hoc2021_mc_mee_description: 'سافر مرة أخرى في الوقت المناسب وتعلم التعليمات البرمجية! برنامج Minecraft Hour of Code التعليمي الجديد متاح الآن في Minecraft: Education Edition لنظام التشغيل Windows و Mac و Chromebook و iPad. ابدأ بموارد المعلمين المجانية والدورات التدريبية ومقاطع الفيديو.'
+  hoc2021_mc_mee_villages_title: "حكاية قريتين"
+  hoc2021_mc_mee_villages_description: 'تعلم أساسيات الترميز واستكشف التنوع والشمول مع طلابك في Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: "منظمة العفو الدولية للخير"
+  hoc2021_mc_mee_ai_description: 'استكشف الذكاء الاصطناعي مع طلابك وتعلم البرمجة في Minecraft: Education Edition.'
   footer_powered_by_aws: "تُعد Amazon Web Services وشعار \"Powered by AWS\" علامتين تجاريتين لشركة Amazon.com، Inc. أو الشركات التابعة لها في الولايات المتحدة و / أو البلدان الأخرى."
+  footer_built_on_github: "بنيت على GitHub من مايكروسوفت"
+  codebytes_skinny_banner_title: "انضم إلينا 7-11 ديسمبر للحصول على دروس CodeBytes المصغرة الحية!"
+  codebytes_skinny_banner_description: 'انضم إلينا كل يوم من أسبوع تعليم CS لـ CodeBytes، 20 دقيقة دروس علوم الكمبيوتر التفاعلية. البث المباشر مرتين يوميًا، يعد CodeBytes طريقة رائعة للطلاب للمشاركة في #HourOfCode افتراضي!'
   codebytes_skinny_banner_english_only: "فقط انجليزية"
+  codebytes_skinny_banner_learn: "تعرف على المزيد في [code.org/codebytes] (%{code_bytes_url})."
   footer_privacy_policy: "سياسة الخصوصية"
+  footer_privacy_policy_updated: "سياسة الخصوصية (محدثة)"
   footer_about: "نبذة"
   footer_partners: "الشركاء"
+  footer_blog: "مدونة"
   footer_donate: "تبرع"
+  footer_store: "متجر"
   footer_support: "الدعم"
   footer_terms: "الشروط"
   ai_for_oceans: "الذكاء الاصطناعي للمحيطات"
   ai_for_oceans_lesson_plan: "خطة الدرس"
+  ai_for_oceans_tile_description: "ساعد الذكاء الاصطناعي في تنظيف المحيطات من خلال تدريبها على اكتشاف القمامة! تعرف على بيانات التدريب والتحيز، وكيف يمكن للذكاء الاصطناعي معالجة المشاكل العالمية. عرض"
+  how_ai_works: "كيف يعمل الذكاء الاصطناعي"
+  how_ai_works_tile_description: "تعرف على كيفية عمل الذكاء الاصطناعي ولماذا يهم مع هذه السلسلة من مقاطع الفيديو القصيرة. يضم الرئيس التنفيذي لشركة Microsoft Satya Nadella ومجموعة متنوعة من الخبراء."
+  watch_the_videos: "شاهد مقاطع الفيديو"
+  ai_and_ethics: "الذكاء الاصطناعي والأخلاق"
+  ai_and_ethics_tile_description: "يفكر الطلاب في الآثار الأخلاقية للذكاء الاصطناعي، ثم يعملون معًا لإنشاء مورد «مدونة أخلاقيات الذكاء الاصطناعي» لمبدعي الذكاء الاصطناعي والمشرعين في كل مكان."
+  view_lesson_plan: "عرض خطة الدرس"
   ai_in_partnership_with: "بالشراكة مع"
   ai_microsoft_thanks: "نشكر مايكروسوفت على دعم رؤيتنا ورسالتنا لتأمين فرصة تعلم علم الحاسوب والمهارات لكل طفل لتحقيق النجاح في القرن 21."
+  ai_ethics_panel_header: "استكشاف حلقة نقاش أخلاقيات الذكاء الاصطناعي"
+  ai_ethics_panel_description_1: "تعمق أكثر مع بعض خبراء الذكاء الاصطناعي المفضلين لدينا! تتطرق حلقة النقاش هذه إلى قضايا مهمة مثل التحيز الخوارزمي ومستقبل العمل. قم بإقرانها مع"
+  ai_ethics_lesson_plan: "خطة دروس الذكاء الاصطناعي والأخلاقيات"
+  ai_ethics_panel_description_2: "للحصول على مقدمة رائعة لأخلاقيات الذكاء الاصطناعي!"
+  cs_for_good: "CS من أجل الخير"
+  cs_for_good_tile_description: "موارد لإلهام الطلاب للتفكير بعمق في الدور الذي يمكن أن تلعبه علوم الكمبيوتر في خلق عالم أكثر إنصافًا واستدامة."
+  view_resources: "عرض الموارد"
+  imagine_cup_junior: "إيماجين كوب جونيور"
+  imagine_cup_junior_tile_description: "يقدم هذا التحدي العالمي للذكاء الاصطناعي من أجل الخير الطلاب إلى مبادرات Microsoft AI for Good، مما يمكّنهم من حل مشكلة في العالم بقوة الذكاء الاصطناعي."
   ai_activity: "نشاط"
   ai_description: "وصف"
+  ai_seeing_ai: "رؤية الذكاء الاصطناعي"
+  ai_seeing_ai_description: "تطبيق مجاني يروي العالم من حولك بمجموعة متنوعة من اللغات."
+  ai_quick_draw: "سريع، ارسم!"
+  ai_quick_draw_description: "هل يمكن للشبكة العصبية تعلم التعرف على الخربشة؟"
+  ai_teachable_machine: "آلة قابلة للتعليم"
+  ai_teachable_machine_description: "قم بتدريب جهاز كمبيوتر للتعرف على الصور والأصوات والأوضاع الخاصة بك."
+  ai_google: "تجارب الذكاء الاصطناعي مع Google"
+  ai_google_description: "ابدأ باستكشاف التعلم الآلي من خلال الصور والرسومات واللغة والموسيقى والمزيد."
+  ai_zooniverse: "زونيفيرس - سناب شوت ماونتن زيبرا"
+  ai_zooniverse_description: "ساعد في حماية حمار وحشي كيب ماونتن المهددة بالانقراض من خلال تحديد الحيوانات المختلفة في الصور."
+  ai_audience: "الجمهور"
+  ai_minecraft_description: 'الوصول إلى الموارد المجانية بما في ذلك خطة الدرس ومقاطع الفيديو ومناهج علوم الكمبيوتر وتدريبات المعلمين. (يتطلب ماين كرافت: إصدار التعليم)'
+  ai_k_12_audience: "K-12 (القراءة مطلوبة)"
+  ai_microsoft_workshop: "ورش عمل افتراضية مجانية من Microsoft"
+  ai_microsoft_workshop_description: "أشعل الفضول مع ورش عمل STEM والترميز المجانية."
+  ai_machine_learning_for_kids: "تعلم الآلة للأطفال"
+  ai_machine_learning_for_kids_description: "قم بتدريب نموذج التعلم الآلي بالنص أو الأرقام أو الصور، واستخدمه لإنشاء ألعاب في Scratch."
+  ai_ibm_machine_learning_for_kids: 'IBM: التعلم الآلي للأطفال'
+  ai_ecs: 'ECS: الذكاء الاصطناعي (AI)'
+  ai_ecs_description: "وحدة مناهج بديلة جديدة لمنهج استكشاف علوم الكمبيوتر (ECS)."
+  ai_elements: "عناصر الذكاء الاصطناعي"
+  ai_elements_description: "سلسلة من الدورات المجانية عبر الإنترنت التي أنشأتها Reaktor وجامعة هلسنكي."
+  ai_cognimates: "تظلم"
+  ai_cognimates_description: "منصة تعليمية للذكاء الاصطناعي لبناء الألعاب وبرمجة الروبوتات والتدريب."
+  ai_try_activity: "جرب النشاط"
+  outbreak_tile_subtitle: "لقد أصاب فيروس مونستر تاون! قم بترميز جهاز محاكاة تفشي المرض وقم بعمل تنبؤات حول ما سيحدث لجيران Monster Town."
+  footer_cookie_notice: "إشعار ملفات تعريف الارتباط"

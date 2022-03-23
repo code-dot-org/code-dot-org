@@ -14,11 +14,24 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Ești profesor de informatică ? Vezi alte resurse CSEdWeek</a>'
   csedweek_banner_teachers_text: "Ești profesor de informatică ? Vezi alte resurse CSEdWeek"
   n_have_learned_an_hoc: "<h1>Încearcă o</h1><h2>Ora de cod</h2><h3># servit</h3>"
+  try_hoc_num_served: "<h1>Încearcă</h1><h2>Hour of Code</h2><h3>%{num} servit</h3>"
+  try_hoc_num_served_markdown: |-
+    # Încearcă o
+
+    ## Oră de codare
+
+    ### %{num} servit #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Oricine poate învăța."
   learn_now: "Învaţă Acum"
   petition_message: "Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea de a învăța informatică"
   petition_sign_message: 'Dacă ești de acord, semnează-te cu numele. Alătură-te # celorlalți.'
+  petition_sign_message_num: "Dacă ești de acord, scrie-ți numele. Alătură-te celorlalți cu %{num} ."
   petition_join_others: 'Alătură-te altor #'
+  petition_join_others_num: "Alătură-te %{num} celorlalți"
   name: "Nume"
   email: "Email"
   zipcode: "Cod poştal sau ţară"
@@ -43,6 +56,7 @@
   hoc2014_support: "Susține &#x25BE;"
   hoc2014_whatishoc: "Ce este Ora de Programare?"
   csedweek_map_header: "# SaptamanaEducatieiInInformatica / Evenimente Ora de Cod in intreaga lume"
+  csedweek_map_header_num: "%{num} SăptămânaEducațieiÎnInformatică / Evenimente Ora de Codare în întreaga lume"
   csedweek_map_signup: "Inscrieti-va evenimentul"
   csedweek_map_search_placeholder: "Cauta evenimente Hour of Code"
   csedweek_map_search_search: "Cautare"
@@ -145,12 +159,21 @@
   enter_valid_email: "Te rugăm să introduci o adresă de email validă"
   get_a_certificate_message: "Îti vom trimite un certificat si informatii despre cum sa <a href='/learn/beyond'> Inveti peste O Ora</a>"
   get_a_certificate_message_after: "Dati click pe certificat pentru a-l descarca si printa. Acum, incercati <a href='http://studio.code.org'> celelalte cursuri</a> ale noastre sau verificati mai multe opţiuni la <a href='/learn/beyond'> Invata mai mult de o Ora</a>."
+  get_a_certificate_message_after_markdown: "Dati click pe certificat pentru a-l descarca sau printa. Acum, incercati  [alte cursuri] (http://studio.code.org) ale noastre sau verificati mai multe opţiuni la  [Learn beyond an Hour](/learn/beyond)."
   thanks_for_submitting: "Mulţumim pentru transmitere!"
   if_you_enjoyed: "Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi să încerce acest lucru. Vrem ca toată lumea să învețe."
   personalize_certificate: "Personalizează-ți certificatul"
+  print_batch_certificates: "Imprimați mai multe certificate.diplome"
   print_certificates: "Tipărește certificatele"
+  certificate_sponsor_message: "%{sponsor_name} a făcut darul generos de a vă sponsoriza învățarea."
+  print_ice_art_from_frozen: "Imprimați arta cu gheață din tutorialele Frozen"
+  want_a_blank_certificate_template: "Doriți un șablon de certificat pe care să îl completați cu numele elevilor dvs.?"
+  landscape_recommended_certificates: "Este recomandat să alegeți formatul **Peisaj**  (Landscape) atunci când imprimați certificatele."
+  print_one_here_certificates: "Imprimați unul aici."
+  enter_certificate_names: "Introduceți până la 30 de nume, **unul pe rând**. Va fi generată o pagină personalizată ce poate fi imprimată cu certificatul %{script_name}."
   share_achievement: "Distribuie realizarea personală"
   beyond_hour_message: "Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a> ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa mai mult de O Oră</a>."
+  beyond_hour_message_markdown: "Continuați cu [altele cursuri](http://studio.code.org) sau vedeți mai multe opțiuni pentru [Învățați dincolo de o Ora de codare](/learn/beyond)."
   leaderboards_for_hoc: "Clasamentele pentru Ora de Cod."
   support_url: "http://support.code.org/"
   country: "Ţară"
@@ -225,6 +248,9 @@
   stats_nina: '"Fiecare zi a generat aceleaşi rezultate&mdash; 100% implicare."- Nina Nichols Peery, Profesor'
   stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana Alzate, elev de clasa a cincea'
   stats_michael: '"Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați să învețe."- Michael Clark, Profesor'
+  stats_nina_markdown: '"Fiecare zi a generat aceleaşi rezultate -  100% implicare."- Nina Nichols Peery, Profesor'
+  stats_student_markdown: '„Știam că aceasta este o șansă **o dată în viață**.” - Mariana Alzate, elevă în clasa a 3-a'
+  stats_michael_markdown: 'Eu nu i-am văzut niciodată pe elevii mei atât de entuziasmați să învețe ceva."- Michael Clark, Profesor'
   studiobar_title: "Explorează <a href='http://studio.code.org'>Studio-ul Code</a>"
   studiobar_title_nolink: "Explorează cursurile Code.org"
   studiobar_elementary_title: "Cursuri elementare"
@@ -350,6 +376,7 @@
   homepage_slot_text_link_donate: "Fă o donație"
   homepage_slot_text_link_shop: "Tricouri, palarii & mai mult"
   homepage_slot_text_link_administrators: "Aduceți Informatica în școala dvs."
+  homepage_gallery_header: "Peste %{project_count} milioane de proiecte Code.org create"
   homepage_header_donors: "Code.org mulţumește suporterilor săi"
   homepage_donors_seall: "Vizualizați toate"
   homepage_donors_donate: "Donează"
@@ -393,7 +420,9 @@
   class_submission_level_vocational: "Profesională"
   class_submission_languages_other: "Alte limbi"
   videos_more: "Mai multe <a href='%{inspiring_videos_playlist}'> videoclipuri inspirationale</a> cu modele şi celebrităţi"
+  videos_more_markdown: "Mai multe [videoclipuri inspiraționale](%{inspiring_videos_playlist}) care prezintă modele și celebrități"
   careers_page_more: "Mai multe <a href='%{careers_url}' target='_blank'> clipuri video inspiraționale</a> cu profesioniști din domeniile tehnologiei"
+  careers_page_more_markdown: "Mai multe [videoclipuri inspiraționale](%{careers_url}) care prezintă profesioniști din domeniile tehnologiei"
   playlab_choose_theme: "Alege tema ta la Laboratorul de Joacă"
   playlab_classic_title: "Clasic"
   playlab_gumball_title: "Minunata lume a lui Gumball"
@@ -418,6 +447,8 @@
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Tutoriale Hour of Code Minecraft"
   minecraft_specs: "Mai multe limbi | Browsere moderne și tablete | Clasele 2+"
+  minecraft_start_tutorial: "Start tutorial"
+  minecraft_agent_description: "Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod."
   minecraft_agent_button: "Începe"
   minecraft_designer_description: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
   minecraft_designer_button: "Începe"
@@ -497,9 +528,13 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} profesorii cauta voluntari pasionati de educatia stiintei calculatorului sa ajute cu Ora lor de programare in decembrie.<br>%{num_volunteers} voluntarii s-au inscris. Alatura-te lor."
   volunteer_engineer_submission_intro_background: "Ora de Cod este o mişcare globala pentru a testa o introducere de o ora in informatica, ajungând la zeci de milioane de elevi din peste 180 de ţări. Va rugam sa va implicati în timpul Săptămânii de Educației în Informatică, în perioada 7-13 decembrie."
   volunteer_engineer_submission_intro_recruit: 'Acesti profesori ar fi incantati sa aiba pe cineva <span style="font-family: ''Gotham 7r'', sans-serif;"> pasionati de informatica </span> care pot ajuta in sala de clasa sau cineva care poate <span style="font-family: ''Gotham 7r'', sans-serif;">inspira</span> studentii vorbindu-le despre nenumaratele posibilitati ale informaticii(care pot fii facute prin intermediul unui video chat).'
+  volunteer_engineer_submission_intro_recruit_markdown: "Profesorilor le-ar plăcea să aibă pe cineva **pasionat de educația informatică** care să poată ajuta la clasă sau pe cineva care poate **inspira** elevii vorbind despre amploarea posibilităților informatice (care ar putea fi realizată printr-un chat video)."
   volunteer_engineer_submission_intro_guide: "Aflați mai multe despre <a href=\"%{volunteer_guide}\">programul nostru de voluntariat aici</a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Aflați mai multe despre [programul nostru de voluntariat aici](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Te rugăm sa introduci următoarele informaţii, dacă ești un student la automatică și calculatoare sau matematică-informatică sau un profesionist în software. Câmpurile marcate cu un <span class=\"form-required-field\"> *</span> sunt obligatorii."
+  volunteer_engineer_submission_intro_signup_markdown: "Vă rugăm să introduceți următoarele informații dacă sunteți studenți în informatică sau profesioniști în IT. Trebuie să ai cel puțin 18 ani pentru a te înscrie ca voluntar. Rețineți că toate câmpurile pe care le completați în această secțiune vor fi disponibile public pentru oricine se uită la [harta voluntarilor](/voluntar/local). Câmpurile marcate cu _*_ sunt obligatorii."
   volunteer_engineer_submission_intro_links: "Esti un profesor in cautare de voluntari? Gaseste un voluntar local in <a href=\"%{volunteer_local}\">harte de voluntari</a>."
+  volunteer_engineer_submission_intro_links_markdown: "Ești profesor în căutare de voluntari? Găsește un voluntar local pe [harta voluntarilor](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Vă rugăm să actualizați informațiile dumneavoastră"
   volunteer_engineer_submission_header_shared: "Informatii distribuite profesorilor pe harta voluntarilor"
   volunteer_engineer_submission_field_name: "Nume"
@@ -533,6 +568,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Confirm că am cel puţin 18 ani."
   volunteer_engineer_submission_submit: "Trimite"
   volunteer_engineer_submission_thankyou: "Îți mulțumim pentru inscrierea ta ca voluntar. Profesorii vor folosi <a href=\"%{url}\">Aceasta harta</a> pentru a cauta si contacta voluntari ca tine."
+  volunteer_engineer_submission_thankyou_markdown: "Mulțumim! Informațiile dvs. pentru înscrierea ca voluntar au fost trimise cu succes. Profesorii vor folosi [această hartă](%{url}) pentru a căuta și a contacta voluntari ca dvs. Vă rugăm să acordați 48 de ore pentru ca informațiile dvs. să apară corect pe hartă."
   volunteer_engineer_submission_commitment_uncertain: "Nesigur"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 oră pe săptămână"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 ore pe săptămână"
@@ -732,6 +768,7 @@
   dashboard_pre-express: 'Curs Expres pentru preșcolari: '
   dashboard_express: 'Curs Expres: '
   dashboard_unplugged: "Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați aceste lecţii offline</a> în clasa dvs."
+  dashboard_unplugged_markdown: "Dacă nu aveți computere, [încercați aceste lecții deconectate](%{unplugged_url}) în sala de clasă."
   dashboard_tools: 'Instrumente: '
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "Prezentare generală Curriculum pentru clasele 1-5"
@@ -829,6 +866,7 @@
   carousel_heading_beyond_languages: "Tutoriale pentru alte limbaje de programare"
   carousel_heading_apps_games: "Creează-ți propriile aplicații sau jocuri"
   carousel_heading_university: "Cursuri universitare online"
+  carousel_heading_online_university: "Cursuri universitare disponibile online"
   carousel_heading_webpages: "Învață să creezi pagini web"
   carousel_heading_robots: "Învață să programezi cu roboți"
   carousel_heading_ide: "Platforme populare în rândul profesorilor"
@@ -939,12 +977,15 @@
   coursed-2021_name: "	\nCurs D (2021)"
   coursee-2021_name: "	\nCurs E (2021)"
   coursef-2021_name: Curs F (2021)
+  express-2018_name: Curs Expres (2018)
   pre-express-2018_name: Curs Expres pentru preșcolari (2018)
   express-2019_name: Curs expres (2019)
   pre-express-2019_name: Curs expres pentru preșcolari 2019)
   express-2020_name: Curs Expres (2020)
   pre-express-2020_name: Curs expres pentru preșcolari 2020)
   pre-express-2021_name: Curs Expres pentru preșcolari (2021)
+  csd2_name: 'Cap. 2: Dezvoltare Web'
+  csd3_name: 'Cap 3: Animație și jocuri'
   accelerated_name: "Curs intensiv"
   express_name: "Curs Expres"
   pre-express_name: Curs expres pentru preșcolari
@@ -957,7 +998,10 @@
   iceage_name: "Epoca de gheață"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (blocuri)"
+  hoc-impact-study_name: Labirint clasic cu Chestionar
+  flappy-impact-study_name: Cod Flappy cu Chestionar
   hoc-encryption_name: Criptare simplă
+  text-compression_name: Comprimare de text
   applab_name: "Laboratului Aplicației"
   gamelab_name: "Game Lab"
   basketball_name: "Realizeaza un joc de baschet"
@@ -1047,6 +1091,12 @@
   coursed-2020_gradelevel: Gradele 8+
   coursee-2020_gradelevel: Vârste 8-12 ani
   coursef-2020_gradelevel: Clasele 10+
+  coursea-2021_gradelevel: Clasele 5+
+  courseb-2021_gradelevel: Clasele 6+
+  coursec-2021_gradelevel: Clasele 7+
+  coursed-2021_gradelevel: Gradele 8+
+  coursee-2021_gradelevel: Vârste 8-12 ani
+  coursef-2021_gradelevel: Clasele 10+
   accelerated_gradelevel: "Vârste 10 - 18 ani"
   codeorg_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   codeintl_platformtext: "Browsere web moderne, smartphone-uri, tablete"
@@ -1435,12 +1485,23 @@
   header_teacher_community: "Comunitate profesori"
   header_help_support: 'Ajutor și asistență '
   header_report_bug: "Raportare problemă"
+  header_report_abuse: "Raportează abuz"
+  header_legal: "Confidențialitate&Legalitate"
   header_legal_privacy: "Politică de confidențialitate"
   header_legal_tos: "Termeni şi condiţii de utilizare"
   header_tutorials: "Tutoriale"
+  header_screen_reader_hamburger: "Meniu"
+  header_screen_reader_help: "Meniul Ajutor"
+  app_lab_documentation: "Documentația Laboratorului Web"
+  app_lab_tutorials: "Tutoriale  Laborator Web"
+  game_lab_documentation: "Documentația Laboratorului Web"
+  game_lab_tutorials: "Tutoriale  Laborator Web"
+  sprite_lab_documentation: "Documentație Sprite Lab"
+  sprite_lab_tutorials: "Tutoriale Sprite Lab"
   header_documentation: "Documentație"
   user_header_label: "Salut %{username}"
   user_header_team: "Echipa"
+  user_header_my_projects: "Proiectele mele"
   user_header_settings: "Contul meu"
   user_header_logout: "Deloghează-te"
   user_header_signin: "Autentificare"
@@ -1453,6 +1514,7 @@
   user_header_spritelab: "Laborator Sprite"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
+  user_header_view_all: "Vezi toate proiectele..."
   user_header_view_project_gallery: "Vezi proiectele"
   user_header_view_my_projects: "Vezi proiectele"
   view_all_sections: "Vizualizați toate secțiunile"
@@ -1482,13 +1544,23 @@
   syncing_students: "Sincronizarea elevilor dvs"
   syncing_students_instructions: 'În cazul în care secţiunea Code.org apare vreodată ieșită din actualitate cu lista elevilor dvs. în clasa de Google, faceţi clic pe butonul "Sincronizare elevii din clasa Google" de pe fila "Gestionare elevii":'
   google_sign_in_instruct: 'De acolo, ei ar trebui să aleagă opțiunea "Conectare cu contul Google":'
+  hero_name: 'Minecraft: Călătoria eroului'
   applab-intro_name: Introducere Laborator de Aplicații
+  applab_tile_title: "Introducere în App Lab (vârste peste 13 ani)"
+  applab_tile_subtitle: "Creați-vă propria aplicație în JavaScript utilizând programarea bazată pe blocuri. Sau duceți-vă abilitățile la nivelul următor cu programarea bazată pe text. (Doar engleză)"
   applab_tile_start_tutorial: "Începe"
+  aquatic_name: 'Minecraft: Voiaj Acvatic'
   account_sign_up_email_opt_in: "Sunteți de acord să vă trimitem prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?"
   account_sign_up_child_accept_terms: "Confirm că am permisiunea părintelui sau tutorelui meu legal de a utiliza serviciile Code.org."
   hoc_overview_dance_title: "Petrecere dansantă"
   hoc_overview_dance_subtitle: "Programează o petrecere dansantă pe care să le-o trimiți prietenilor. Cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara și încă 25!"
   hoc_overview_dance_2019_subtitle: "Programează o petrecere dansantă pe care să le-o trimiți prietenilor.  Cu Katy Perry, Shawn Mendes, Panic!At the disco, Lil Nas X, Jonas Brothers, Nicki Minaj și încă 34!"
+  hoc_overview_title: "Activități Ora de codare de la Code.org"
+  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Ora de codare</a> este o mișcare globală care ajunge la zeci de milioane de elevi din peste 180 de țări. Oricine, oriunde, poate organiza un eveniment Hour of Code sau poate încerca oricare dintre cele peste 500 de tutoriale de o oră, disponibile în peste 45 de limbi."
+  hoc_overview_subtitle_markdown: "[Ora de codare](https://hourofcode.com) este o mișcare globală care ajunge la zeci de milioane de studenți din peste 180 de țări. Oricine, oriunde, poate organiza un eveniment Hour of Code sau poate încerca oricare dintre cele peste 500 de tutoriale de o oră, disponibile în peste 45 de limbi."
+  hoc_overview_partner_activities_title: "Mai multe activități de la parteneri"
+  hoc_overview_partner_activities_body: "Site-ul Web Hour of Code are peste 500 de activități informatice pentru toate vârstele și nivelurile de experiență, dezvoltate de Code.org și parteneri."
+  hoc_overview_partner_activities_link: "Vizualizați Activitățile"
   hoc_overview_start_tutorial: "Începe"
   hoc_overview_more_resources: "Pentru mai multe resurse despre modul în care să te implici în clasa ta la distanță, vezi ghidul nostru despre găzduirea unei [Hour of Code virtuală](https://hourofcode.com/us/how-to/virtual). Pentru elevii cu o tehnologie limitată sau fără tehnologie sau conectivitate, distribuie acest pachet de [Activități Hour of Code fără calculator](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc2018_creativity: "creativitate"
@@ -1499,7 +1571,9 @@
   hoc2018_mc_page_title: "Tutoriale Hour of Code Minecraft"
   hoc2018_mc_details: "Mai multe limbi | Browsere moderne și tablete | Clasele 2+"
   hoc2018_mc_aquatic_announcement: "Înregistrează-ţi clasa pentru a încerca peste 150 de activităţi noi în cadrul Orei de cod (3+9 decembrie). Fi sigur că verifici noua noastră activitate Minecraft pentru 2018, Aventura acvatică! Înregistrează-ţi clasa astăzi."
+  hoc2018_mc_aquatic_description: "Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod."
   hoc2018_mc_hero_title: "Minecraft: Călătoria eroului"
+  hoc2018_mc_hero_description: "Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod."
   hoc2018_mc_designer_title: "Minecraft Designer"
   hoc2018_mc_designer_description: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
   hoc2018_mc_adventurer_title: "Minecraft Adventurer"
@@ -1528,6 +1602,7 @@
   hoc2018_mc_homepage_what_create: "Ce vei creea?"
   hoc2018_mc_homepage_join_us: "Alatura-ni-te"
   hoc2018_mc_homepage_try_it: "Încearcă"
+  hoc2018_mc_back_journey: "Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod."
   hoc2018_mc_minecraft_education: "Educație cu Minecraft"
   hoc2018_mc_continue_learning: "Continuă să înveți cu Minecraft."
   hoc2018_mc_go_to_mc_education: "Mergi la Minecraft Education"
@@ -1581,7 +1656,12 @@
   page_not_found_title: "Pagina nu a fost găsită"
   hoc2018_mc_with_microsoft: "În parteneriat cu â"
   hoc2018_mc_thank_microsoft: "Mulțumim Microsoft pentru că ne susține viziunea și misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile să reușească în secolul 21."
-  ! '': '[șir gol]'
+  hoc2021_mc_mee_title: "TimeCraft în Minecraft"
+  hoc2021_mc_mee_description: 'Călătoriți înapoi în timp și învățați să programați! Noul tutorial Hour of Code - Minecraft este acum disponibil în Minecraft: Education Edition pentru Windows, Mac, Chromebook și iPad. Începeți cu resursele gratuite pentru instructori, cursurile de formare și videoclipuri.'
+  hoc2021_mc_mee_villages_title: "Povestea celor două sate"
+  hoc2021_mc_mee_villages_description: 'Învățați elementele de bază ale programării și explorați conceptele de diversitate și incluziune cu elevii în Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: "Inteligența Artificială pentru a face bine"
+  hoc2021_mc_mee_ai_description: 'Explorați inteligența artificială împreună cu elevii și învățați să programați în Minecraft: Education Edition.'
   footer_powered_by_aws: "Susținut de Amazon Web Services"
   codebytes_skinny_banner_english_only: "Doar în engleză"
   footer_privacy_policy: "Politică de confidențialitate"
@@ -1595,3 +1675,5 @@
   ai_microsoft_thanks: "Mulțumim Microsoft pentru că ne susține viziunea și misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile să reușească în secolul 21."
   ai_activity: "Activitate"
   ai_description: "Descriere"
+  outbreak_tile_title: "Epidemie"
+  outbreak_tile_subtitle: "Un virus a infectat Orașul Monștrilor! Programați un simulator de epidemie și faceți predicții despre ce se va întâmpla cu vecinii din Orașul Monștrilor."

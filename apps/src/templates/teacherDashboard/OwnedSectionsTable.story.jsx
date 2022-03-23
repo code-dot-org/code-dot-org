@@ -3,10 +3,11 @@ import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import teacherSections, {
-  setValidGrades,
   setValidAssignments,
+  setCourseOfferings,
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const serverSections = [
   {
@@ -173,25 +174,8 @@ export default storybook => {
         name: 'section table',
         story: () => {
           const store = createStore(combineReducers({teacherSections}));
-          store.dispatch(
-            setValidGrades([
-              'K',
-              '1',
-              '2',
-              '3',
-              '4',
-              '5',
-              '6',
-              '7',
-              '8',
-              '9',
-              '10',
-              '11',
-              '12',
-              'Other'
-            ])
-          );
           store.dispatch(setValidAssignments(validCourses, validScripts));
+          store.dispatch(setCourseOfferings(courseOfferings));
           store.dispatch(setSections(serverSections));
           return (
             <Provider store={store}>

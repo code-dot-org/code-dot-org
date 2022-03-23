@@ -1,1 +1,5 @@
 mr:
+  data:
+    shared_functions:
+      moving north and looping: उत्तरेकडे जाणे आणि लुपिंग करणे 
+      moving south and looping: दक्षिणेकडे जाणे आणि लुपिंग करणे 

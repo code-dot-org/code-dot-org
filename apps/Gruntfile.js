@@ -5,6 +5,7 @@ var fs = require('fs');
 var os = require('os');
 var _ = require('lodash');
 var webpackConfig = require('./webpack');
+var offlineWebpackConfig = require('./webpackOffline.config');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
@@ -39,14 +40,18 @@ module.exports = function(grunt) {
 // Auto-generated from Gruntfile.js
 import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-15.4';
+import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
-import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/throwOnConsole';
+import { throwOnConsoleErrorsEverywhere } from './util/throwOnConsole';
 ${loadContext}
 describe('entry tests', () => {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
+
+  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
+  // https://codedotorg.atlassian.net/browse/XTEAM-377
+  // throwOnConsoleWarningsEverywhere();
+
   ${runTests}
 });
 `;
@@ -84,6 +89,7 @@ describe('entry tests', () => {
     'jigsaw',
     'maze',
     'netsim',
+    'poetry',
     'studio',
     'turtle',
     'weblab'
@@ -341,6 +347,10 @@ describe('entry tests', () => {
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
+            'build/package/css/reference_guides.css',
+            'style/curriculum/reference_guides.scss'
+          ],
+          [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
           ],
@@ -528,6 +538,7 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
+    'certificates/show': './src/sites/studio/pages/certificates/show.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
@@ -536,6 +547,15 @@ describe('entry tests', () => {
     'courses/resources': './src/sites/studio/pages/courses/resources.js',
     'courses/code': './src/sites/studio/pages/courses/code.js',
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
+    'lessons/show': './src/sites/studio/pages/lessons/show.js',
+    'lessons/student_lesson_plan':
+      './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'programming_environments/index':
+      './src/sites/studio/pages/programming_environments/index.js',
+    'programming_environments/show':
+      './src/sites/studio/pages/programming_environments/show.js',
+    'programming_expressions/show':
+      './src/sites/studio/pages/programming_expressions/show.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'devise/registrations/edit':
@@ -590,6 +610,8 @@ describe('entry tests', () => {
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'report_abuse/report_abuse_form':
       './src/sites/studio/pages/report_abuse/report_abuse_form.js',
+    'reference_guides/show':
+      './src/sites/studio/pages/reference_guides/show.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
     'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
@@ -609,19 +631,17 @@ describe('entry tests', () => {
   };
 
   var internalEntries = {
-    'admin_standards/index':
-      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
+    'course_offerings/edit':
+      './src/sites/studio/pages/course_offerings/edit.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'courses/new': './src/sites/studio/pages/courses/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
     'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
-    'lessons/show': './src/sites/studio/pages/lessons/show.js',
-    'lessons/student_lesson_plan':
-      './src/sites/studio/pages/lessons/student_lesson_plan.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -653,6 +673,16 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_environments/new':
+      './src/sites/studio/pages/programming_environments/new.js',
+    'programming_environments/edit':
+      './src/sites/studio/pages/programming_environments/edit.js',
+    'programming_expressions/new':
+      './src/sites/studio/pages/programming_expressions/new.js',
+    'programming_expressions/edit':
+      './src/sites/studio/pages/programming_expressions/edit.js',
+    'reference_guides/edit_all':
+      './src/sites/studio/pages/reference_guides/edit_all.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -663,7 +693,9 @@ describe('entry tests', () => {
     'sprite_management/sprite_management_directory':
       './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
     'sprite_management/default_sprites_editor':
-      './src/sites/studio/pages/sprite_management/default_sprites_editor.js'
+      './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
+    'sprite_management/select_start_animations':
+      './src/sites/studio/pages/sprite_management/select_start_animations.js'
   };
 
   var pegasusEntries = {
@@ -713,10 +745,6 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/learn/local.js',
     'code.org/views/professional_learning_apply_banner':
       './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
-    'code.org/views/at_home_banner':
-      './src/sites/code.org/pages/views/at_home_banner.js',
-    'code.org/views/virtual_hoc_banner':
-      './src/sites/code.org/pages/views/virtual_hoc_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
@@ -1061,6 +1089,8 @@ describe('entry tests', () => {
       watch: false
     }),
 
+    buildOffline: offlineWebpackConfig,
+
     uglify: createConfig({
       minify: true,
       watch: false
@@ -1278,10 +1308,14 @@ describe('entry tests', () => {
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
+    'webpack:buildOffline',
     'notify:js-build',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash'
   ]);
+
+  // Builds the Service Worker used for the Code.org offline experience.
+  grunt.registerTask('buildOffline', ['webpack:buildOffline']);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 

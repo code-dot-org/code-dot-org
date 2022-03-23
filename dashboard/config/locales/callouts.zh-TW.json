@@ -1570,8 +1570,8 @@
           "costumes_callout": "點擊以製作新服裝"
         },
         "CourseF_outbreak2": {
-          "minitoolbox": "點擊這裡擴展塊。",
-          "pointerlocation": "在這裡拖動一個主題塊。"
+          "minitoolbox": "點擊這裡擴展積木。",
+          "pointerlocation": "在這裡拖曳一個主題積木。"
         },
         "CourseF_outbreak7": {
           "costumes_callout": "點擊以製作新服裝"
@@ -1941,6 +1941,307 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "新的程式積木！",
+          "hello_world_new_block": "新積木！"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "新的程式積木！",
+          "hello_world_new_block": "新的程式積木！"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "新的程式積木！",
+          "hello_world_new_block": "新的程式積木！"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "新的程式積木！",
+          "hello_world_new_block": "新的程式積木！"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "新的程式積木！"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "新的程式積木！",
+          "poetry_foreground": "新的程式積木！"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "新的程式積木！",
+          "poetry_multiple_sprites": "新的程式積木！",
+          "poetry_new_block": "新的程式積木！",
+          "poetry_selector": "選擇任何詩歌，或輸入你自己的！"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "新的程式積木！",
+          "poetry_music": "新的程式積木！"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "新的程式積木！",
+          "poetry_sprite_stops": "新的程式積木！"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "新的程式積木！",
+          "poetry_remove_sprite": "新的程式積木！"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "使用這個積木來設置一個新背景。"
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "點擊這裡運行代碼。"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "將此事件積木添加到工作區。"
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+        },
+        "helloworld_animals_location": {
+          "pin": "針腳"
+        },
+        "helloworld_animals_multi": {
+          "pin": "針腳"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "使用這個積木讓精靈圖說話。",
+          "hello_world_make_sprite": "使用這個積木創建精靈圖。"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "使用這個積木來設置一個新背景。"
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "點擊這裡運行代碼。"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "將此事件積木添加到工作區。"
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+        },
+        "helloworld_emoji_location": {
+          "pin": "針腳"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "針腳"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "使用這個積木讓精靈圖說話。",
+          "hello_world_make_sprite": "使用這個積木創建精靈圖。"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "使用這個積木來設置一個新背景。"
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "helloworld_food_click": {
+          "hw_Run": "點擊這裡運行代碼。"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "將此事件積木添加到工作區。"
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+        },
+        "helloworld_food_location": {
+          "pin": "針腳"
+        },
+        "helloworld_food_multi": {
+          "pin": "針腳"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "使用這個積木讓精靈圖說話。",
+          "hello_world_make_sprite": "使用這個積木創建精靈圖。"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "使用這個積木來設置一個新背景。"
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "點擊這裡運行代碼。"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "將此事件積木添加到工作區。"
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+        },
+        "helloworld_retro_location": {
+          "pin": "針腳"
+        },
+        "helloworld_retro_multi": {
+          "pin": "針腳"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "使用這個積木讓精靈圖說話。",
+          "hello_world_make_sprite": "使用這個積木創建精靈圖。"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "在這裡尋找代碼積木。",
+          "run_button": "用這個按鈕測試動畫。"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "點擊此處以顯示格線。"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "在此修改數值"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction jumping_2021": {
+          "CSD_U3_L13_S8_C1": "在此設定速度"
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 platform background1_2021": {
+          "CSD_U3_L16_S3_C3": "修改這個函式。"
+        },
+        "CSD U3 platform platform1_2021": {
+          "CSD_U3_S17_L8_C1": "這個積木創建了一個新的角色。"
+        },
+        "CSD U3 platform scoreboard_2021": {
+          "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
+        },
+        "CSD U3 platform variable1_2021": {
+          "callout": "這個積木創建了一個變數。"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "添加你的積木到這兒。"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "這條線是做什麼的？"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "在此修改數值"
         }
       }
     }

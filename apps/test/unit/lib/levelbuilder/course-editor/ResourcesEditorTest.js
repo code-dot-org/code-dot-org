@@ -123,7 +123,7 @@ describe('ResourcesEditor', () => {
       <ResourcesEditor
         {...defaultProps}
         resources={undefined}
-        migratedTeacherResources={[
+        migratedResources={[
           {
             id: 1,
             key: 'curriculum',
@@ -149,7 +149,7 @@ describe('ResourcesEditor', () => {
       <ResourcesEditor
         {...defaultProps}
         resources={undefined}
-        migratedTeacherResources={[
+        migratedResources={[
           {
             id: 1,
             key: 'curriculum',
@@ -171,6 +171,36 @@ describe('ResourcesEditor', () => {
     expect(
       wrapper.contains(
         'Cannot add resources to migrated script without course version.'
+      )
+    );
+  });
+
+  it('uses no editor when migrated and unmigrated resources are present', () => {
+    const wrapper = shallow(
+      <ResourcesEditor
+        {...defaultProps}
+        migratedResources={[
+          {
+            id: 1,
+            key: 'curriculum',
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            id: 2,
+            key: 'vocabulary',
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+        useMigratedResources={true}
+        courseVersionId={1}
+      />
+    );
+    expect(wrapper.find('Connect(ResourcesEditor)').length).to.equal(0);
+    expect(
+      wrapper.contains(
+        'Cannot edit resources because they are being translated.'
       )
     );
   });

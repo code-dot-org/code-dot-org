@@ -1,7 +1,0 @@
-{
-  "func": "previousPosition",
-  "category": "Sprites",
-  "modeOptionName": "*.previousPosition",
-  "type": "property",
-  "noAutocomplete": true
-}

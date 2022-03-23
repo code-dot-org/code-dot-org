@@ -2,6 +2,11 @@
   "is-IS": {
     "data": {
       "lessons": {
+        "coursef-2021/lesson-6": {
+          "overview": "Þessi kennslustund hjálpar nemendum að **setja efnið í samhengi** með því að ræða hlutverk tölva og tækni í eigin lífi, með áherslu á hvernig öpp og verkfæri gefa notendum kost á velja hvernig þau eru notuð. Nemendur munu líka kanna öpp lík þeim sem þeir munu sjálfir búa til síðar.",
+          "preparation": "-   Skoða hvernig nemendur munu skrá sig inn á Code.org.\n-   Ef með þarf: Stofna Code.org aðganga fyrir nemendur.\n-   Láta nemendur gera Kynningu á Kvikasmiðju verkefnið.\n-   Prenta eintök af **\\*Exploring Apps** vinnublaðinu (eða leggja stafræna útgáfu inn í námsumsjónarkerfið).",
+          "purpose": "Fyrsta kennslustundin gengur út á að kveikja áhuga nemenda á námskeiðinu og að tengja eigin áhugamál þeirra við tölvunarfræði. "
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
           "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"

@@ -6,30 +6,32 @@ ur:
   front_title: تاریخ میں ہونے والی سب سے بڑی سیکھنے کی تقریب میں شامل ہوجائیے، %{campaign_date},
     ٢٠١٥
   coming_soon: جلد آ رہا ہے
-  campaign_date_start_short: دسمبر 7
-  campaign_date_start_long: 7 دسمبر
+  campaign_date_start_short: دسمبر 6
+  campaign_date_start_long: 6 دسمبر
   campaign_date_short: دسمبر 7-13
-  campaign_date_full: 7 تا 13 دسمبر
-  campaign_date_year: '2020'
-  campaign_date_full_year: 7-13، 2020
+  campaign_date_full: 6 تا 12 دسمبر
+  campaign_date_year: '2021'
+  campaign_date_full_year: 6-12، 2021
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 12
   latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2020'
+  latam_campaign_date_year: '2021'
   latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Oct. 9
-  europe_campaign_date_start_long: October 9
-  europe_campaign_date_short: Oct. 9-24
-  europe_campaign_date_full: October 9-24
-  europe_campaign_date_year: '2020'
-  europe_campaign_date_full_year: October 9-24, 2021
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2020'
-  africa_campaign_date_full_year: October 1-31, 2021
+  europe_campaign_date_start_short: دسمبر 6
+  europe_campaign_date_start_long: 6 دسمبر
+  europe_campaign_date_short: دسمبر 7-13
+  europe_campaign_date_full: 6 تا 12 دسمبر
+  europe_campaign_date_year: '2021'
+  europe_campaign_date_full_year: 6-12، 2021
+  africa_campaign_date_start_short: دسمبر 6
+  africa_campaign_date_start_long: 6 دسمبر
+  africa_campaign_date_short: دسمبر 7-13
+  africa_campaign_date_full: 6 تا 12 دسمبر
+  africa_campaign_date_year: '2021'
+  africa_campaign_date_full_year: 6-12، 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: اج سیکھیں، اور اپنا مستقبل روشن بنائیں.
   hoc2020_header_with_line_break_markdown: |-
     آج سیکھیں،
@@ -55,13 +57,14 @@ ur:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: آور آف کوڈ آرہا ہے۔
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: آور آف کوڈ 9-15 دسمبر، 2019 کو آ رہا ہے۔ کمپیوٹر سائنس
     ہر طالب علم کے سیکھنے کے لئے بنیادی ہے۔.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: سمندروں کے مصنوعی ذہانت
   oceans_landing_description: مشین لرننگ اور AI کے اخلاقی استعمال کے بارے جانیں.
   cs_for_good_hashtag: "#CSforGood"
@@ -132,6 +135,9 @@ ur:
     استعمال کے بارے میں جان رہے ہوتے ہیں. کمپیوٹر سائنس میں کوڈنگ کے علاوہ اور بھی
     بہت کچھ ہے! Code.org کے سارے نصاب میں ہماری طرف سے AI پڑھانے کے نئے سفر کے پہلے
     قدم سے لطف اٹھائیں.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -149,6 +155,12 @@ ur:
   hoc_overview_oceans_tutorial_desc: مصنوعی ذہانت، مشین لرننگ، ٹریننگ ڈاٹا، اور تعصب
     کے بارے میں ایسے حال میں سیکھیں جب آپ اخلاقی مسائل اورعالمی مسائل کے حل میں AI
     کے ممکن استعمال کے بارے میں جان رہے ہوتے ہیں.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -216,10 +228,17 @@ ur:
   hourofcode_homepage_hoc2018_header_line1: کوئی بھی، کہیں بھی کوڈ ایونٹ منظم کرسکتا
     ہے. 45 گھنٹے سے زائد زبانوں میں ایک گھنٹے کا سبق. کوئی تجربہ نہیں ہے.
   hourofcode_homepage_hoc2018_header_line2: 4 کے لئے 104 عمر ۔
+  codeorg_homepage_hoc_is_coming: آور آف کوڈ آرہا ہے۔
+  codeorg_homepage_celebrate_cse: ہر جگہ کمپیوٹر سائنس کا جشن منائیں!
+  codeorg_homepage_csc: کمپیوٹر سائنس کنکشنز میں کمپیوٹر سائنس زبان کے فنون، ریاضی،
+    اور مزید کے درمیان ربط پیدا کیا جاتا ہے
+  codeorg_homepage_csc_long: دیکھ لیجئے کہ ہمارے نصاب میں کمپیوٹر سائنس، زبان کے فنون،
+    ریاضی، اور مزید کیسے ملتے ہیں!
+  codeorg_homepage_csc_title: کمپیوٹر سائنس کنکشنز
   hoc2018_tutorial_mchoc_description: ایک نئی نئی سرگرمی کے ساتھ کوڈ کا قیام کے لئے
     میرا کرافٹ واپس آتا ہے! کوڈ کے ساتھ میرا دستکاری کے ذریعے سفر.
   codeorg_homepage_hoc2019_dance_heading: نیا آزمائیں <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: سکول کی بندش سے دوچار والدین اور اساتذہ کے لئے
     حمایت
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -586,12 +605,18 @@ ur:
   meta_tag_twitter_title: 'کوڈ کا قیام: تحریک میں شمولیت'
   meta_tag_twitter_description: کوڈ کا قیام ایک عالمی تحریک ہے جس میں 180+ ممالک اور
     45 سے زائد زبانوں میں ہر عمر کی دس لاکھ طالب علم تک پہنچ جاتے ہیں.
+  meta_tag_og_title_cs_movement: 'Hour of Code: Join the Computer Science Movement'
+  meta_tag_og_description_campaign: The Hour of Code is a global campaign reaching
+    and inspiring tens of millions of students of all ages to learn computer science
+    in 180+ countries and over 45 languages.
   twitter_default_text: 'میں اس سال کے #HourOfCode میں شرکت کر رہا ہوں، کیا آپ ہیں؟
     codeorg'
   twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
     (Thanks %{random_donor} for supporting @codeorg)'
   twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
     Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_default_text_donor: 'I''m participating in this year''s #HourOfCode, are
+    you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: اکثر پوچھے گئے سوالات
   hoc_faq_what_is_hoc_q: آور-آف-کوڈ کیا ہے؟
   hoc_faq_what_is_hoc_a: کوڈ کا قیام کمپیوٹر سائنس کے ایک گھنٹہ تعارف کے طور پر شروع
@@ -601,13 +626,14 @@ ur:
     توسیع کے ساتھ کمپیوٹر سائنس کا جشن منانے کے لئے دنیا بھر میں کوشش کی گئی ہے.  سبق
     اور سرگرمیاں  چیک کریں. یہ گھاس کی مہم کو شراکت دار ور دنیا بھر میں 200،000 تعلیم
     دہندگان کے ذریعے تعاون کی جاتی ہے.<a href='%{partners}'><a href='%{tutorials}
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: Hour of Code کا قیام کمپیوٹر سائنس کے ایک گھنٹہ
+    تعارف کے طور پر شروع ہوا، جسے "کوڈ" کو لوگوں کے سامنے واضح کرنے لیے ڈیزائن کیا
+    گیا تھا، یہ ظاہر کرنے کے لئے کہ کوئی بھی اس کی بنیادات کو سیکھ سکتا ہے، اور کمپیوٹر
+    سائنس کے میدان میں حصہ لینے والوں کی تعداد بڑھا سکتا ہے. اس کے بعد سے، یہ 1 گھنٹہ
+    کوڈنگ کی سرگرمیوں سے شروع ہو کر یہ کئی قسم کی کمیونٹیز تک وسیع ہو گیا ہے اور اب
+    یہ دنیا بھرمیں کمپیوٹر سائنس کے جشن طور پر پھیل گیا ہے. [سبق اور سرگرمیاں](%{tutorials})
+    چیک کریں. ‌اصلی زندگی کی سطح پر چلنے والی اس تحریک کو [400 شراکت داروں](%{partners})
+    اور دنیا بھر میں 200،000 تعلیم دہندگان کی حمایت حاصل ہے۔
   hoc_faq_last_year: ٹیٹوریئلز ٹرائی کریں
   hoc_faq_when_is_hoc_q: آور-آف-کوڈ کب ہوتا ہے؟
   hoc_faq_when_is_hoc_a: |-
@@ -704,9 +730,9 @@ ur:
   hoc_faq_international_a: دنیا میں کہیں بھی، کوئی بھی، آور-آف-کوڈ کا ایونٹ منظم کروا
     سکتا ہے۔ گزشتہ سال، دنیا بھر کے اسٹوڈینٹس نے آور-آف-کوڈ کے لیے باہم مل کر شمولیت
     اختیار کی۔ مزید جاننے کیلئے <a href='/resources'> یہاں </a>
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+  hoc_faq_international_a_markdown: دنیا میں کہیں بھی، کوئی بھی، آورآف کوڈ کا ایونٹ
+    منظم کروا سکتا ہے۔ گزشتہ سال، دنیا بھر کے اسٹوڈینٹس نے آورآف کوڈ کے لیے باہم مل
+    کر شمولیت اختیار کی۔ مزید جانیئے [یہاں](%{promote})۔
   hoc_faq_tutorial_q: میں آور-آف-کوڈ کا ایک ٹیٹوریئل کیسے بنا سکتا ہوں؟
   hoc_faq_tutorial_a: اگر آپ ٹیٹوریئل پارٹنر بننے میں دلچپسی رکھتے ہیں تو <a href='/tutorial-guidelines'>
     ہماری گائیڈلائنز اور انسٹرکشنز (ہدایات) دیکھیں۔ ہم انواع اقسام پر مشتمل آزمائشی
@@ -751,10 +777,11 @@ ur:
     اس ٹیٹوریئل کو <a href='%{codeorg_url}/learn'>%{partner_url}/ سیکھیں</a> دیکھیں
     تو آپ ایسے دیگر ٹیٹوریئل تلاش کر پائیں گے جو آئی پیڈ پر کام کرتے ہوں - منجانب
     Code.org، Tynker، یا CodeSpark۔
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch ٹیبلیٹ پر نہیں چلتا، اگر آپ کے اسٹوڈینٹس نوجوان
+    ہیں تو وہ (ابتدائی مطالعہ کے لیے) ScratchJR iPad ایپ استعمال کرسکتے ہیں۔ اگر آپ
+    [%{partner_url}/learn](%{codeorg_url}/learn) پر دستیاب ٹیٹوریئل کو دیکھیں، تو
+    آپ ایسے دیگر ٹیٹوریئل Code.org، Tynker، Lightbot یا CodeSpark ترتلاش کر سکتے ہیں
+    جو آئی پیڈ پر کام کرتے ہوں۔
   hoc_faq_count_hoc_q: آپ کس طرح آور-آف-کوڈ کو شمار کرتے ہیں؟
   hoc_faq_map_q: میں نقشے پر اپنے ڈاٹ کیوں نہیں دیکھ سکتا؟
   hoc_faq_map_a: ہمیں افسوس ہے کہ آپ اپنا ایونٹ کوڈ آفس کے نقشے پر نہیں دیکھ رہے ہیں.
@@ -819,7 +846,8 @@ ur:
   hoc_faq_more_questions_q: اب بھی کچھ سوالات ہیں؟
   hoc_faq_more_questions_a: جواب تلاش کرنے کے لیے ہمارے <a href='http://support.code.org'>
     سپورٹ فورم </a> پر آئیں۔
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
+  hoc_faq_more_questions_a_markdown: ہمارے [سپورٹ فورم](http://support.code.org) پر
+    جواب ڈھونڈنے کی کوشش کریں.
   hoc_faq_keep_learning_q: قیامت کے بعد میں کیسے سیکھ سکتا ہوں
   hoc_faq_keep_learning_a: کسی بھی وقت کسی بھی وقت کوڈ کا میزبانی کر سکتا ہے. سبق
     سال کا دور رہتا ہے. آپ ہماری ساری سبق اور نصاب کو ہماری سائٹ پر مستقل طور پر دستیاب
@@ -987,6 +1015,7 @@ ur:
   footer_menu_support: سہارا
   footer_menu_terms: Terms
   footer_menu_privacy: پرائیویسی پالیسی
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: کوڈ کی گھڑی
   learn_banner_blurb: 45 سے زائد زبانوں میں تمام عمر کے لئے ڈیزائن کیا گیا ایک ایک
     گھنٹہ ٹیوٹوریل کی کوشش کریں ۔  لاکھوں طلبہ اور اساتذہ میں 180 سے زیادہ ملکوں کی
@@ -1117,7 +1146,6 @@ ur:
   tutorial_ticklep_name: توتا ونڈر
   tutorial_bbot_name: بمباربٹ تفریح اور آسان کوڈنگ سرگرمیوں
   tutorial_scratchg_name: سکریچ میں پروگرامنگ کھیل
-  tutorial_roboticfriends_name: میرے روبوٹ دوست
   tutorial_sjforest_name: 'سکریچ جرن: کیا میں ڈراونا جنگل بنا سکتا ہوں؟'
   tutorial_sjgreet_name: 'سکریچ جرنر: کیا میں اپنے حروف کو ایک دوسرے کو مبارکباد دے
     سکتا ہوں؟'
@@ -1163,7 +1191,6 @@ ur:
   tutorial_tickles_name: سفارو رن
   tutorial_ozogame_name: ایک اوزوبوٹ کھیل سطح بنائیں
   tutorial_vidcodeio_name: ان پٹ اور آؤٹ پٹ، ریاضی کی سرگرمی
-  tutorial_besttech_name: سب سے بہتر ٹیکنالوجی سرگرمی
   tutorial_tlcbrain_name: دماغ-میں-ایک-بیگ سرگرمی
   tutorial_hopquiz_name: خالق کوئز
   tutorial_unfortunate_name: بدقسمت واقعات کا ایک سلسلہ
@@ -1171,7 +1198,6 @@ ur:
   tutorial_elaseq_name: 'تحریر اور ترمیز: ل انضمام عام بنیادی معیاروں کے ساتھ'
   tutorial_bbcmathi_name: باتسبون ترمیز + ریاضی (K-2)
   tutorial_tlcpixel_name: دانہ پہیلیاں
-  tutorial_arduino_name: آردوانو سرگرمی
   tutorial_introrobo_name: روبوٹکس کا تعارف
   tutorial_tlcinvis_name: غیر مرئی پالمانگ سرگرمی
   tutorial_tlcjflap_name: 'جفلاپ: متناہی ریاست مشینیں بنا رہا ہے ۔'
@@ -1197,7 +1223,6 @@ ur:
   tutorial_tlcmind_name: ریڈ بلیک دماغ ملٹی سرگرمی
   tutorial_tlctelebot_name: ٹیلی فوننگ روبوٹ سرگرمی
   tutorial_tlcaus_name: آسٹریلوی جادوگر کا خواب سرگرمی
-  tutorial_oralhist_name: زبانی تاریخ پروجیکٹ
   tutorial_tlcmicro_name: مائیکروویو لوگ دوڑ میں مقابلہ ویڈیو سرگرمی
   tutorial_imathematician_name: ریاضی دانش
   tutorial_tlcmagic_name: جادو کتاب جادو
@@ -1211,7 +1236,6 @@ ur:
   tutorial_tynkercan_name: طبیعیات تپ 2 پلیئر گیم کٹ
   tutorial_grokflags_name: دنیا کے پرچم (پطرن کچھی)
   tutorial_robomind_name: RoboMind کے ساتھ ایک مجازی روبوٹ پروگرام
-  tutorial_scratchanimwork_name: 'آپ کا نام: متحرک رہنمائی'
   tutorial_adventureq_name: ق کے ساتھ ساہسک
   tutorial_khan-es_name: جاوا اسکرپٹ کا تعارف
   tutorial_kpt_name: جاوا اسکرپٹ کا تعارف
@@ -1219,13 +1243,11 @@ ur:
   tutorial_khe_name: جاوا اسکرپٹ کا تعارف
   tutorial_kfr_name: جاوا اسکرپٹ کا تعارف
   tutorial_app-inventor_name: کوڈ کے ایپ انوائزر
-  tutorial_bits_name: بٹس اور اینٹوں
   tutorial_blockly_name: بلاگز کھیل آف لائن
   tutorial_tynker_name: اپنا اپنا کھیل بنائیں
   tutorial_baypt_name: کوڈ Baymax
   tutorial_code-combat_name: کوڈکومیٹ
   tutorial_mky_name: کوڈمکن
-  tutorial_spellcraft_name: 'CodeSpells: جادوگر'
   tutorial_pirates_name: کوڈنگ قزاقوں
   tutorial_csfirst_name: پہلے سی ایس
   tutorial_loopedy_name: لوپڈی لوپ رقص کریں
@@ -1284,7 +1306,6 @@ ur:
   tutorial_soloweb_name: ایک گھنٹہ میں آپ کا پہلا ویب پیج!
   tutorial_khanweb_name: 'خان اکیڈمی: ویب صفحات'
   tutorial_khandata_name: 'خان اکیڈمی: ڈیٹا بیس'
-  tutorial_robomeshiq_name: بلاکس کے ساتھ پروگرام VEX IQ روبوٹ
   tutorial_googlelogo_name: اپنا اپنا گوگل لوگو بنائیں
   tutorial_playtune_name: اس ٹون اے پی پی کو کھیلیں
   tutorial_computeit_name: اس کی تشکیل کرو
@@ -1343,7 +1364,6 @@ ur:
   tutorial_stemcod_name: ویڈیو گیمز کی طبیعیات!
   tutorial_techikb_name: متعامل کوٹلان بنیادی باتیں
   tutorial_kanostreet_name: سڑک فن کار
-  tutorial_nyblebot_name: بوگی بیوٹی
   tutorial_codemojijs_name: جاوا سکرپٹ کا آغاز
   tutorial_techapf_name: اعلی درجے کی پیڈون کی خصوصیات
   tutorial_techfpjs_name: جے ایس کے ساتھ فنکشنل پروگرامنگ کے عملی تعارف
@@ -1359,7 +1379,6 @@ ur:
   tutorial_gpbcircle_name: ایک انٹرایکٹو رنگ سرکل بنائیں
   tutorial_gpbpaint_name: اپنا اپنا پینٹ ایڈیٹر بنائیں
   tutorial_cocomarcade_name: 'کوڈ جنگجو: آرکیڈ کھیل کی تعمیر کرو!'
-  tutorial_techcpp_name: 7 خصوصیات جو آپ کے کوڈ کو آسان بنانے گا ج + + 17
   tutorial_beetik_name: کوڈ فرانز لاسزٹ کی موسیقی
   tutorial_codedj_name: کوڈ DJ کے ساتھ موسیقی کمپوز کریں
   tutorial_rgadvan_name: اعلی درجے کی روبوگاردان-
@@ -1432,7 +1451,6 @@ ur:
   tutorial_ifly_name: میں پرواز کرتا ہوں
   tutorial_idowedo_name: ٹھیک ہے،
   tutorial_diggindwarf_name: Diggin 'Dwarf
-  tutorial_rmedr_name: بلاکس کے ساتھ پروگرام وییکس EDR روبوٹ
   tutorial_spheroit_name: 'بلاکس 2: اگر / پھر بھی'
   tutorial_gameofcodes_name: کوڈز کا کھیل
   tutorial_blocklygames_name: بلاکس کھیل
@@ -1443,7 +1461,6 @@ ur:
   tutorial_bcjs1_name: جاوا سکرپٹ کی دنیا
   tutorial_bcjs2_name: جاوا سکرپٹ 2 کی دنیا
   tutorial_3dbearmars_name: مریخ کے بانی حضرات
-  tutorial_alexaskill_name: 'Alexa بلیو پرنٹس: ایک Alexa پتے تخلیق کریں'
   tutorial_bitsboxyak_name: یاک حملے! ٹائپ کردہ کوڈ پر مشتمل ایک کارڈ بنا
   tutorial_blockscadbargraphs_name: بار گراف
   tutorial_blockscadbirdhouses_name: بردہووساس
@@ -1500,7 +1517,6 @@ ur:
   tutorial_codinismhero_name: پروگرامنگ ہیرو
   tutorial_discovery_name: ایک غیر معمولی دریافت
   tutorial_csfirstname_name: نام کو متحرک کریں
-  tutorial_obstaclecourse_name: کوڈ ناپ کے ساتھ ایک رکاوٹ کورس نیویگیشن
   tutorial_edisonmove_name: 'ایڈیسن اور ایڈپی: ایڈیسن منتقل'
   tutorial_edisonspider_name: 'ایڈیسن اور سپیرنگ مکڑی کے نیٹ ورک
 
@@ -1632,7 +1648,7 @@ ur:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -1951,8 +1967,6 @@ ur:
   tutorial_bbot_shortdescription: اپنے طلبا کو تعلیم (7 کی عمر اور اپ) پروگرامنگ کی
     ایک تفریح اور آسان انداز میں ۔ کوئی پہلے پروگرامنگ کا علم یا تجربے کی ضرورت نہیں!
   tutorial_scratchg_shortdescription: کھیل سکریچ میں پروگرام کرنے کا طریقہ سیکھیں
-  tutorial_roboticfriends_shortdescription: نا پلگ شدہ ٹیوٹوریل کوئی آلات کے ساتھ
-    ایک گروپ کے لئے
   tutorial_sjforest_shortdescription: ایک تاریک جنگل کے ماحول میں ایک پروگرام جس میں
     مختلف جانوروں کو منتقل کرنے کے لئے سکریٹچجر پروگرامنگ اپلی کیشن کا استعمال کریں
     ۔
@@ -2044,8 +2058,6 @@ ur:
     کھیل کھیلنے کی جانب سے متعارف ہے ۔
   tutorial_vidcodeio_shortdescription: جاوا سکرپٹ افعال ریاضی اور حقیقی دنیا کے مسائل
     کی جڑ ۔
-  tutorial_besttech_shortdescription: طالب علموں کے بارے میں جانیں اور پچھلی چند دہائیوں
-    کے دوران اہم تکنیکی ایجادات پر تبادلہ خیال کرے گا ۔
   tutorial_tlcbrain_shortdescription: کس طرح انسانی دماغ سنیپ ادا کرتا ہے ایک شمارندگی
     ماڈل طالب علموں سے باہر نیوروناس کی تخلیق کی طرف سے کام کرتا ہے تلاش کرتے ہیں
     ۔
@@ -2059,8 +2071,6 @@ ur:
   tutorial_bbcmathi_shortdescription: معیارات پر مبنی سبق کی منصوبہ بندی 3-5 کے لئے.
   tutorial_tlcpixel_shortdescription: 'سادہ رنگ کی تعداد اور منطقی سوچ پہیلیاں حل
     اور تصویر نمائندگی اور سکڑاؤ کی عمیق تفہیم حاصل ہے ۔ '
-  tutorial_arduino_shortdescription: ایک بنیادی سرکٹ بنانے اور ایک روشنی جھپک بنانے
-    کا طریقہ سیکھیں ۔
   tutorial_introrobo_shortdescription: طلبا ڈیش اور نقطہ روبوٹکس اور پروگرامنگ کے
     نظریات کو متعارف ہوئے جان لیں گے ۔
   tutorial_tlcinvis_shortdescription: ایک چال ہے جہاں آپ جادو سے ایک کارڈ ایک ڈھیر
@@ -2101,8 +2111,6 @@ ur:
     پھر ایک دوسرے کے ساتھ دوبارہ پیش کیا ہے اور اب یہ صرف 16 ہے ۔
   tutorial_tlcaus_shortdescription: ایک جادو چال کرتے ہیں جہاں آپ کو منتخب کردہ کارڈ
     تلاش الگورتھم اور شمارندگی سوچ کو متعارف کرانے کی پیش گوئی ۔
-  tutorial_oralhist_shortdescription: کمپیوٹنگ معلمین زبانی ہسٹری پراجیکٹ انٹرویو
-    طور پر مواد اور آلات کو کیوہپ مجموعہ میں منسلک کی تعلیم کا ایک مجموعہ ہے ۔
   tutorial_tlcmicro_shortdescription: لوگ ایک آسان کام کے لیے استعمال کرنے کے لئے
     سب سے آسان ہے جس کو دیکھنے کے لئے مختلف مائکروویو ڈیزائن ریس ۔ کچھ دوسروں کی بہ
     نسبت کہیں زیادہ پیچیدہ ہو پر دیکھا جاتا ہے ۔
@@ -2131,8 +2139,6 @@ ur:
     کچھی کو پرچم سے دنیا بھر کو اپنی طرف متوجہ کرنے کی ہدایت! کتنے ممالک آپ جانتے
     ہیں؟
   tutorial_robomind_shortdescription: ایک مجازی روبوٹ کے لئے کوڈ لکھیں ۔
-  tutorial_scratchanimwork_shortdescription: اسکریچ پر طالب علم متعارف کرانے کے لئے
-    ایک ورکشاپ گائیڈ.
   tutorial_adventureq_shortdescription: پروگرامنگ منطق سیکھنے کے لئے پروگرامنگ بلاکس
     (جسمانی یا کھیل میں) کا استعمال کریں.
   tutorial_khan-es_shortdescription: جاوا سکرپٹ میں ڈرائیو سیکھنا
@@ -2142,7 +2148,6 @@ ur:
   tutorial_kfr_shortdescription: جاوا سکرپٹ میں ڈرائیو سیکھنا
   tutorial_app-inventor_shortdescription: اپنے اپلی کیشن بنائیں. (لوڈ، اتارنا Android
     صرف)
-  tutorial_bits_shortdescription: تھوڑا سا تھوڑا سا منتقل کریں!
   tutorial_blockly_shortdescription: آف لائن سیکھنے کیلئے زپ فائل ڈاؤن لوڈ کریں.
   tutorial_tynker_shortdescription: مزہ پہیلیاں حل کرنے اور اپنے اپنے کھیلوں کی تعمیر
     کرکے کوڈ سیکھیں.
@@ -2150,8 +2155,6 @@ ur:
   tutorial_code-combat_shortdescription: اس مہاکاوی پروگرامنگ کھیل میں پجن یا جاوا
     اسکرپٹ کو جاننے کے لئے خراب اوجز!
   tutorial_mky_shortdescription: طالب علم کیلے کو پکڑنے کے لئے بندر کا پروگرام.
-  tutorial_spellcraft_shortdescription: CodeSpells کی طاقت کا استعمال کرتے ہوئے واقعہ
-    سے چلنے والے پروگرامنگ کے بارے میں جانیں!
   tutorial_pirates_shortdescription: جنوبی گودھولی کے کرسٹل پانی کو نیویگیشن کریں،
     اپنا خزانہ نقشہ کوڈ کریں اور ان امیروں کو دریافت کریں جو سونے کے کنارے پر جھوٹ
     بولیں. کوڈنگ کے بنیادی تصورات کو جاننے کا ایک مذاق طریقہ.
@@ -2256,8 +2259,6 @@ ur:
     صفحات بنانے کا طریقہ جانیں، اپنے بہت سارے سلامتی کارڈ بنانے کے لۓ مکمل کریں.
   tutorial_khandata_shortdescription: کوائف کے ساتھ کھیل کی طرح؟ ایک ڈیٹا بیس میں
     کوائف جوڑتوڑ اور اپنے مخصوص سٹور بنانے کا طریقہ سیکھیں
-  tutorial_robomeshiq_shortdescription: طالب علموں کو ڈاؤن لوڈ، اتارنا کرئےگا عقل
-    روبوٹ کو کنٹرول کرنے کے لئے بلاکل گوگل کوڈ لکھ ۔
   tutorial_googlelogo_shortdescription: گوگل علامت (لوگو) اپنے تخیل اور تھوڑا سا کوڈ
     کا استعمال کرتے ہوئے زندگی کے لئے لائیں ۔
   tutorial_playtune_shortdescription: موسیقی پہیلیاں حل کرنے اور ایک لوڈ، اتارنا Android
@@ -2377,8 +2378,6 @@ ur:
   tutorial_techikb_shortdescription: بنیادی طور پر کوٹین میں کچھ خصوصیات شامل ہیں
   tutorial_kanostreet_shortdescription: کونو اسٹریٹ آرٹ کوڈنگ چیلنجوں کے ساتھ خوبصورت،
     منفرد آرٹ ورک بنائیں
-  tutorial_nyblebot_shortdescription: کوڈنگ جادو ہے - بچوں کو کوڈ کے ساتھ حیرت انگیز
-    چیزیں بنانے میں مدد.
   tutorial_codemojijs_shortdescription: کودیموجا آغاز طلبا جو مختلف کرداروں میں حرکت
     انداز کریں گے حقیقی جاوا سکرپٹ کے احکام کی ٹائپ کاری کو حاصل کرنے کے لئے جاوا
     اسکرپٹ ڈیزائن کیا گیا ہے ۔
@@ -2407,8 +2406,6 @@ ur:
     ۔
   tutorial_cocomarcade_shortdescription: لعبہ بقا اپنے آرکیڈ تعمیر اور اپنے دوستوں
     کو چیلنج!
-  tutorial_techcpp_shortdescription: آپ ج + + 17 کوڈ کو آسان بنانے میں مدد کرنے کے
-    لئے 7 خصوصیات
   tutorial_beetik_shortdescription: موسیقار فرانز لیزٹ کی موسیقی کو ہیک کرنے کے لئے
     کوڈ کا استعمال کریں.
   tutorial_codedj_shortdescription: جاوا اسکرپٹ کی بنیادی معلومات سیکھیں اور کوڈ ڈی
@@ -2559,8 +2556,6 @@ ur:
     گاڑی کا ڈیزائن اور تعمیر کریں.
   tutorial_diggindwarf_shortdescription: جاوا اسکرپٹ کا استعمال کرتے ہوئے جھاڑیوں
     کو نیویگیشن، کھدائی اور جمع کرنے کے لئے آپ کی مدد کی ضرورت ہے.
-  tutorial_rmedr_shortdescription: Blockly پروگرامنگ کا استعمال کرتے ہوئے ایک بھولبلییا
-    کو نیویگیشن کرنے کے لئے وییکس ای آر آر روبوٹ پروگرام.
   tutorial_spheroit_shortdescription: اس بارے میں جانیں کہ / پھر، آپ کے بہت ہی جانوروں
     کی آواز کا کھیل بنانے کے دوران دوسری حالتوں کو ہم "جانوروں کی ٹاس!" کہتے ہیں.
   tutorial_gameofcodes_shortdescription: اپنے خوفناک ڈریگن کھیل کی تعمیر کریں اور
@@ -2579,9 +2574,6 @@ ur:
     ماڈیول ہے کہ مریخ اور انسان بھی زندہ رہنے کے لیے ناگزیر حالات کے بارے میں حقائق
     کی تعلیم ہے ۔ طلبہ کالونی سہولیات اضافی ریئلٹی اور 3D پرنٹ کا استعمال کرتے ہوئے
     ایک کالونی تعمیر کریں گے ۔
-  tutorial_alexaskill_shortdescription: 'آپ ہی Alexa مہارت Alexa مہارت بلیو پرنٹس
-    کا استعمال کرتے ہوئے تخلیق کریں - آواز، مصنوعی ذہانت اور مہارت آپ کے انتخاب کی
-    ایک Alexa بنانا سیکھ مشین کے استعمال کے بارے میں معلومات حاصل کریں ۔ '
   tutorial_bitsboxyak_shortdescription: قسم کی دوستوں اور خاندان کے لیے ایک گریٹنگ
     کارڈ ہے جو آپ کو ای میل کر سکتے ہیں بنانے کے لئے جاوا سکرپٹ کوڈ تدوین ۔ یاک حملے!
     ایک مکمل طور پر غیر معینہ مدت تک سرگرمی ہے جو متغیر، حرکت احکام، لوپ افعال اور
@@ -2763,8 +2755,6 @@ ur:
   tutorial_csfirstname_shortdescription: ایک کا نام لینے اور کلام کے خطوط کوڈ کا استعمال
     کرتے ہوئے زندگی کے لئے لے آئے ۔ ایک عرفی نام، ایک پالتو جانور کا نام، جانور، کھیل،
     ایک جگہ یا ایک شوق کا انتخاب کریں ۔
-  tutorial_obstaclecourse_shortdescription: ایک پروگرام ہے جو رکاوٹ کورس کے ذریعے
-    ایک روبوٹ نے کامیابی سے لاگ کوڈ کے لئے اپنی ٹیم کے ساتھ مل کر کام.
   tutorial_edisonmove_shortdescription: متن کی بنیاد پر پروگرامنگ اور ایڈیسن روبوٹس
     اور ایدپی، ازگر پر مبنی ایک ٹیکسٹ بیسڈ پروگرامنگ زبان کا استعمال کرتے ہوئے اپنے
     طالب علموں کو تسلسل کے کلیدی شمارندگی تصور متعارف کرانے.
@@ -3595,12 +3585,6 @@ ur:
     مختلف شیلیوں کو پروگرام کرنا ہے. کھیلوں کے لئے تمام ضروری آرٹ فراہم کی جاتی ہیں،
     اور طالب علموں کو یہ کام کرنا ہوگا کہ ایک کام کرنے والی کھیل بنانے کے لئے سب کچھ
     مل کر کیسے مربوط ہو.
-  tutorial_roboticfriends_longdescription: قبل از کم "روبوٹ لفظی" طالب علموں کا استعمال
-    کرتے ہوئے اس بات کا پتہ چلتا ہے کہ ایک دوسرے کو ہدایت کیجیے کہ وہ مخصوص کاموں
-    کو پورا کرنے کے بغیر سب سے پہلے بات کریں. یہ سبق بچوں کو علامات اور اعمال کے ساتھ
-    ساتھ کنکشن کے قابل اندازی مہارت کے بارے میں سکھاتا ہے. "میرا روبوٹ دوست" ایک گروہ
-    کی سرگرمی کے طور پر سب سے بہتر کام کرتا ہے اور کلاس روم کے استعمال کے لئے ایک
-    استاد کا کام کتاب بھی شامل ہے.
   tutorial_sjforest_longdescription: '"کیا میں ڈراونا جنگل بنا سکتا ہوں؟" ایک انٹرمیڈیٹ
     سرگرمی ہے جس کا مطلب دوسری گریڈ کے ذریعے کنڈرگارٹن میں بچوں کے لئے ہے جو اسکریچ
     جرن کے بارے میں سیکھنے اور پروگراموں کے بارے میں جاننے کے پروگرامنگ کے ساتھ کچھ
@@ -3829,8 +3813,6 @@ ur:
   tutorial_vidcodeio_longdescription: اس مشق میں، آپ اپنے طالب علموں کے ساتھ چلیں
     گے کہ یہ پروگرامنگ کے ساتھ ریاضی مساوات کو حل کرنے سے متعلق ریاضی کے بارے میں
     کیا جانتا ہے.
-  tutorial_besttech_longdescription: طالب علموں کے بارے میں جانیں اور پچھلی چند دہائیوں
-    کے دوران اہم تکنیکی ایجادات پر تبادلہ خیال کرے گا ۔
   tutorial_tlcbrain_longdescription: یہ سرگرمی یہ بتاتی ہے کہ کس طرح کمپیوٹنگ ماڈلنگ
     (کمپیوٹنگ کی سوچ کا ایک اہم حصہ) حیاتیاتی نظام کو سمجھنے میں مدد کے لئے استعمال
     کیا جا سکتا ہے - یہاں نیورونز. ہم دیکھتے ہیں کہ ہمارے دماغ کے کام کس طرح کام پروگرام
@@ -3861,12 +3843,6 @@ ur:
     ہیں جہاں کم نمبروں کی طرف سے نمائندگی کی جاتی ہے لہذا کم اسٹوریج لگاتے ہیں لیکن
     آپ اسے واپس لے سکتے ہیں! ہر نمائندگی کی تصویر واپس حاصل کرنے کے لۓ اپنی الگورتھم
     کی ضرورت ہے.
-  tutorial_arduino_longdescription: کبھی حیران ہوتا ہے کہ جب آپ بٹن کو دھکا دیتے ہیں
-    تو کھلونے کس طرح شور اور چمکتی روشنیوں کو بناتے ہیں؟ مائیکرو کنکولیٹرز اور سرکٹس
-    ہر طرح کے ہر روز چیزوں میں استعمال ہوتے ہیں. ریموٹ کنٹرول کاروں سے روبوٹ اور ڈرونوں
-    سے. سڑک کی روشنی کو سینسر کا استعمال کرنے کا تعین کرنے کے لئے سینسر کا استعمال
-    کرتے ہیں جب سورج نیچے آ جاتا ہے، ایک کار سٹیریو پر حجم نوب مائکروکومومرڈرر کے
-    ذریعہ مزاحمت کو ایڈجسٹ کرتا ہے. وہ ہر جگہ ہیں!
   tutorial_introrobo_longdescription: اس سبق میں، روبوٹکس اور پروگرامنگ کے خیالات
     کو متعارف کرانے کے دوران طلباء کو ڈیش اور ڈاٹ معلوم ہو جائے گا. طالب علموں کو
     روبوٹ کیا ہے، ان کے ارد گرد دنیا کو کس طرح سمجھتا ہے، اور کس طرح کے پروگراموں
@@ -3963,8 +3939,6 @@ ur:
     منطقی استدلال اور کمپیوٹنگ ماڈلنگ کس طرح الگورتھم کاموں کو چیک کرنے کے لئے استعمال
     کیا جا سکتا ہے. 'پنچ کارڈ کی تلاش' کی سرگرمی کے ساتھ مل کر یہ ابتدائی کمپیوٹرز
     کی طرف سے استعمال ہونے والے الیگورتھم کو ایک تقسیم اور فتح حاصل کرتا ہے.
-  tutorial_oralhist_longdescription: کمپیوٹنگ معلمین زبانی ہسٹری پراجیکٹ انٹرویو طور
-    پر مواد اور آلات کو کیوہپ مجموعہ میں منسلک کی تعلیم کا ایک مجموعہ ہے ۔
   tutorial_tlcmicro_longdescription: اس ویڈیو کو انسانی کمپیوٹر کے تعامل (HCI) میں
     عام تعارف کے طور پر استعمال کیا جا سکتا ہے اور خاص طور پر کیوں اس طرح سے بہت سے
     گیجٹ کو استعمال کرنے کے لۓ استعمال کرنے کے لۓ استعمال کیا جا سکتا ہے. ڈیزائن کو
@@ -4023,10 +3997,6 @@ ur:
     کی بنیادی باتیں سیکھتے ہیں. آن لائن کورس پروگرامنگ کی مشقوں کے ساتھ مدد کرنے کے
     لئے مختصر پریزنٹیشنز، فلموں، سوالوں اور خود کار طریقے سے رہنمائی / نشان کے ساتھ
     مکمل طور پر موجود ہے.
-  tutorial_scratchanimwork_longdescription: 'یہ گائیڈ سکریچ کا استعمال کرتے ہوئے ایک
-    گھنٹہ ورکشاپ کی قیادت کے لئے خیالات پیش کرتا ہے. طلباء کو کوڈنگ کے ساتھ تجربہ
-    حاصل ہوگا کیونکہ وہ اپنے نام یا پسندیدہ لفظ کو متحرک کرتے ہیں. یہ اساتذہ گائیڈ
-    اس سکریچ ٹیوٹوریل کے ساتھ استعمال کے لئے ڈیزائن کیا گیا ہے: scratch.mit.edu/name'
   tutorial_adventureq_longdescription: ق کے ساتھ ساہسک اساتذہ (یا کسی کو) کے لئے ایک
     گروپ کی ترتیب میں پروگرامنگ منطق متعارف کرنے کے لئے استعمال کرنے کے لئے ایک سبق
     کا منصوبہ ہے. اس سرگرمی میں بچوں کو مکمل کرنے کے لئے مختلف سوالات شامل ہیں. بچوں
@@ -4047,11 +4017,6 @@ ur:
     تعمیر شروع کرنے کے لئے تیار ہو جائیں گے. اپنے دوستوں کے ساتھ اپنی اپلی کیشن کی
     تخلیق کا اشتراک کریں. یہ سرگرمیوں افراد کے لئے اور اساتذہ کے لئے تعلیم حاصل کرنے
     کے لئے مناسب ہیں.
-  tutorial_bits_longdescription: بٹ ایک چھوٹا سا، بہت بہادر لگو ® روبوٹ ہے، لیکن تمام
-    چھوٹے مخلوقات کے ساتھ، کبھی کبھی بٹ اپنے پروگراموں کو صحیح نہیں مل سکتا. آپ کو
-    کون سی پروگراموں کی ضرورت ہوتی ہے اس کی طرف سے چیلنجوں کو حل کرنے میں بٹ کی مدد
-    کر سکتے ہیں. آپ ایسا کرتے ہیں جو تھوڑا سا رویے کے بلاکس کے ترتیب کو تیار کرتے
-    ہیں جو بطور کیا کرتے ہیں.
   tutorial_blockly_longdescription: سست (یا غیر موجود) انٹرنیٹ تک رسائی حاصل کرنے
     والے کمپیوٹرز ہیں؟ بلاکس کھیلوں کا آف لائن ورژن ڈاؤن لوڈ کریں - ایک 3MB جیپ فائل
     کسی بھی کمپیوٹر پر لوڈ ہوسکتی ہے یا میموری چھڑی سے استعمال ہوتا ہے.
@@ -4069,12 +4034,6 @@ ur:
     لئے موزوں کوڈنگ کے تجربے کے بغیر. CodeMonkey کی انکولیشن پلیٹ فارم آپ کو تمام
     ہدایات اور اشارے دے گا جو آپ کی ضرورت ہوتی ہے، اور آپ کو اسکور ستارہ ملے گا. کوڈ
     لکھیں. کیلے پکڑو. دنیا کو بچاؤ.
-  tutorial_spellcraft_longdescription: منتر کی طاقت کا استعمال کرتے ہوئے واقعہ سے
-    چلنے والے پروگرامنگ کے بارے میں جانیں! CodeSpells کے ساتھ، آپ گوگل کے آسان استعمال
-    کے بلاکس کوڈنگ انٹرفیس یا بلٹ ان جاوا اسکرپٹ کے ٹیکسٹ ایڈیٹر کا استعمال کرتے ہوئے
-    اپنے بہت ہی جادوگر منتر ڈیزائن اور تخلیق کرسکتے ہیں. جادو کی تخلیق کے ذریعہ، طالب
-    علموں کو سیکھنے کے بارے میں واقعات کی بنیاد پر کوڈ لکھنے اور واقعات سے متعلق کوڈنگ
-    تصورات سے واقف ہو جائے گا.
   tutorial_pirates_longdescription: کیپٹن ہیک خزانہ تلاش کرنے کے لئے ایک سمندری ڈاکو
     ہے. انہوں نے خزانہ کے نقشے لکھتے ہیں، اور لکھتے ہیں جیسے لکھنا کوڈ. وہ (کھلاڑی)
     اس کے لئے "قزاقستان کوڈ" کا استعمال کرتا ہے. یہ ایک علامت پر مبنی پروگرامنگ زبان
@@ -4279,12 +4238,6 @@ ur:
     صفحات بنانے کا طریقہ جانیں، اپنے بہت سارے سلامتی کارڈ بنانے کے لۓ مکمل کریں.
   tutorial_khandata_longdescription: کوائف کے ساتھ کھیل کی طرح؟ ایک ڈیٹا بیس میں کوائف
     جوڑتوڑ اور اپنے مخصوص سٹور بنانے کا طریقہ سیکھیں
-  tutorial_robomeshiq_longdescription: طالب علم مقبول وییکس IQ روبوٹ کو کنٹرول کرنے
-    کے لئے Google Blockly کوڈ لکھتے ہیں. وہ یا تو ایک مجازی روبوٹ یا ایک حقیقی وییکس
-    IQ روبوٹ کے لئے کوڈ لکھنے کا انتخاب کرسکتے ہیں جو انہوں نے خود کو بنایا، اور دونوں
-    ہی اختیارات اسی ویب پر مبنی ترقی انٹرفیس میں دستیاب ہیں. طلباء بنیادی روبوٹ تحریک
-    کے بارے میں سیکھتے ہیں، اور سینسر اور آؤٹ پٹ ڈیوائس کا استعمال کیسے کریں. یہ آسان
-    اور مزہ ہے.
   tutorial_googlelogo_longdescription: گوگل علامت (لوگو) کو کوڈ کا استعمال کرکے زندگی
     لانے کے لۓ اپنی تخلیقی صلاحیتوں اور تخیل کا استعمال کریں. حروف رقص بنائیں، کہانی
     بتائیں یا ایک کھیل بنائیں. سکریچ اور سی ایس سب سے پہلے کے ساتھ، کسی کو کسی دن
@@ -4564,16 +4517,6 @@ ur:
     ورک بنا ایک پینٹ پرش کے ساتھ، کوڈ گا ۔ راستے ساز کمپیوٹر سائنس اصول ایک بدیہی
     اور کشش انداز میں ایک حقیقی پروگرامنگ زبان کا استعمال کرتے ہوئے جان سکیں گے ۔
     ہمارے استاد وسائل اور امامی مواد کے ساتھ ہر ایک پر تفریح حاصل کر سکتے ہیں ۔
-  tutorial_nyblebot_longdescription: بوگی بوٹ ایک مذاق اور مشق کوڈنگ ایپ ہے. زندگی
-    اور توانائی کے ساتھ جلا کر، یہ 3D اپلی کیشن بچوں کے کمپیوٹر پروگرامنگ کی بنیادیات
-    کو متعارف کرایا جائے گا جو Google کے بصری پروگرامنگ زبان کا استعمال کرتے ہوئے
-    بلایا جاتا ہے. بوگی بوٹ ایک رقص روبوٹ ہے، جو رقص چالو کرنے کے لئے پروگرام کیا
-    جا سکتا ہے. ایپ کی خصوصیات (مکمل ورژن میں دستیاب تمام خصوصیات) کوڈنگ بلاکس کے
-    ساتھ کوڈ کو سیکھنے، کوڈ کے ساتھ اپنے اپنے رقص کو تخلیق کریں، کئی مختلف منفرد رقص
-    پٹریوں سے منتخب کریں، کمرے کو ایک جدید پارٹی زون میں تبدیل کریں، مرحلے پر شاندار
-    اثرات شامل کریں، سکے کمائیں. جیسا کہ آپ پروگرامنگ کی تعمیر سیکھتے ہیں، کمرے میں
-    سجیلا چیزیں سجاتے ہیں، ایک انٹرایکٹو کمرہ میں چھپی ہوئی خصوصیات سے بھرا ہوا کھیلتے
-    ہیں، اور اپنے خوفناک تخلیق کی ایک ویڈیو کو محفوظ کریں.
   tutorial_codemojijs_longdescription: جاوا سکرپٹ کے شروع سادہ احکام جو حروف کے اعمال
     پر گہرا اثر پڑا ہے ٹائپ کاری طالب علموں کو حاصل کرنے کے لئے ڈیزائن کیا گیا ہے
     ۔ طلبہ احکام جو سب آوازیں بنائیں اور یہاں تک کہ بات چیت کے لیے باککفلپس سے کچھ
@@ -4631,9 +4574,6 @@ ur:
     پیڈون یا جاوا اسکرپٹ کا استعمال کرتے ہوئے افعال اور واقعات جیسا کہ اعلی درجے کی
     کوڈنگ تصورات پر برش کریں، پھر اپنے آرکیڈ بقا کے کھیل بنانے کے لئے ان کی مہارت
     کا استعمال کریں!
-  tutorial_techcpp_longdescription: ہر C ++ پروگرامر کا کوڈ کرنے کے لئے آسان، کلینر
-    اور زیادہ معنوی طریقوں کا مقصد ہے. یہ آسان سبق 7 بہترین ڈاؤن لوڈ، اتارنا C ++
-    خصوصیات اٹھایا جو آپ کا کوڈ اچھا کرے گا.
   tutorial_beetik_longdescription: اس سرگرمی میں، طالب علم فرجز لیسٹ کے مشہور مشہور
     ٹکڑے کا ایک چھوٹا حصہ تعمیر کرتے ہیں. طالب علموں کو سیکھنے کا طریقہ سیکھا جائے
     گا کہ وہ کس طرح چھٹکارا اور کمپیوٹر سائنس اور موسیقی دونوں میں استعمال کیا جاتا
@@ -5014,10 +4954,6 @@ ur:
   tutorial_diggindwarf_longdescription: گھومنے، کھودنے، اور جواہرات جمع کرنے کے لئے
     آپ کی مدد کی ضرورت ہے! جانیں کہ جاوا اسکرپٹ استعمال کرنے کے لئے اپنے بونے کو بھولنے
     کے لئے کس طرح بھولیں اور پہیلیاں.
-  tutorial_rmedr_longdescription: روبوٹ میش اسٹوڈیو میں بلاکی کا استعمال کرتے ہوئے،
-    ایک وییکس EDR روبوٹ آن لائن "روبوٹ" آن لائن پروگرام اور ایک بھولبلییا کے ذریعے
-    چلتے دیکھتے ہیں. طالب علموں کو بنیادی روبوٹ تحریک کے بارے میں جانتا ہے، اور ان
-    کے پروگرامنگ میں تین سینسر اور ایک پیداوار کس طرح شامل کرنا ہے.
   tutorial_spheroit_longdescription: اس بارے میں جانیں کہ / پھر، آپ کے بہت ہی جانوروں
     کی آواز کا کھیل بنانے کے دوران دوسری حالتوں کو ہم "جانوروں کی ٹاس!" کہتے ہیں.
   tutorial_gameofcodes_longdescription: دیوار کی حفاظت کے لئے ایک خوفناک ڈریگن کھیل
@@ -5087,11 +5023,6 @@ ur:
     ماڈیول ہے کہ مریخ اور انسان بھی زندہ رہنے کے لیے ناگزیر حالات کے بارے میں حقائق
     کی تعلیم ہے ۔ طلبہ کالونی سہولیات اضافی ریئلٹی اور 3D پرنٹ کا استعمال کرتے ہوئے
     ایک کالونی تعمیر کریں گے ۔
-  tutorial_alexaskill_longdescription: آپ ہی Alexa مہارت Alexa مہارت بلیو پرنٹس کا
-    استعمال کرتے ہوئے تخلیق کریں - آواز، مصنوعی ذہانت اور مہارت آپ کے انتخاب کی ایک
-    Alexa بنانا سیکھ مشین کے استعمال کے بارے میں معلومات حاصل کریں ۔ Alexa مذاق، بتا
-    سکتے ہیں ایک گیت گاتے، یا ایک شئیر کریں ۔ (ایمیزون لاگ ان درکار) سرگرمی افراد
-    یا استاد کی قیادت کی طرف سے مکمل ہو کر سکتے ہیں ۔
   tutorial_bitsboxyak_longdescription: قسم کی دوستوں اور خاندان کے لیے ایک گریٹنگ
     کارڈ ہے جو آپ کو ای میل کر سکتے ہیں بنانے کے لئے جاوا سکرپٹ کوڈ تدوین ۔ یاک حملے!
     ایک مکمل طور پر غیر معینہ مدت تک سرگرمی ہے جو متغیر، حرکت احکام، لوپ افعال اور
@@ -5329,8 +5260,6 @@ ur:
   tutorial_csfirstname_longdescription: ایک کا نام لینے اور کلام کے خطوط کوڈ کا استعمال
     کرتے ہوئے زندگی کے لئے لے آئے ۔ ایک عرفی نام، ایک پالتو جانور کا نام، جانور، کھیل،
     ایک جگہ یا ایک شوق کا انتخاب کریں ۔
-  tutorial_obstaclecourse_longdescription: ایک پروگرام ہے جو رکاوٹ کورس کے ذریعے ایک
-    روبوٹ نے کامیابی سے لاگ کوڈ کے لئے اپنی ٹیم کے ساتھ مل کر کام.
   tutorial_edisonmove_longdescription: ایڈیشن روبوٹ اور ایڈ پیی کا استعمال کرتے ہوئے
     اپنے طالب علموں کے لئے متن پر مبنی پروگرامنگ اور ترتیب کے اہم کمپیوٹنگ کا تصور
     متعارف کروانا، پطرون کی بنیاد پر متن پر مبنی پروگرامنگ زبان. افعال، ان پٹ، ان
@@ -5703,9 +5632,9 @@ ur:
     that will lead you to guess some rules and learn from your own mistakes.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
-    that has taken over the world! Along the way, you'll meet interesting characters
+    that has taken over the world! Along the way, you’ll meet interesting characters
     and travel to different lands, practicing coding concepts like sequences, loops,
-    debugging, and decomposition. In the end, you'll design a playable game that you
+    debugging, and decomposition. In the end, you’ll design a playable game that you
     can share with your friends!
   tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
     relevant intersection of math, environmental science, and computer science. In
@@ -5724,8 +5653,9 @@ ur:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -5828,7 +5758,7 @@ ur:
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
     own augmented reality virtual space.
   tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
-    about loops and conditionals within loops
+    about loops and conditionals within loops.
   tutorial_ttrace_longdescription: By calling functions and designing classes, players
     program their own race car to be fast, nimble, and powerful; during races, they
     can then hack their competitors' vehicles to scramble their controls.
@@ -5841,7 +5771,7 @@ ur:
   tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
-    creating your first program in an online coding editor
+    creating your first program in an online coding editor.
   tutorial_vidcodeplastiche_longdescription: ہمارے سمندر بھرنے والے پلاسٹک کا مسئلہ
     خراب ہو جاتا ہے. خوش قسمتی سے، آپ اپنی آواز کو کوڈ کے ساتھ پلاسٹک آلودگی پی ایس
     اے کے ذریعہ سن سکتے ہیں. جاوا اسکرپٹ کا استعمال کرتے ہوئے پلاسٹک آلودگی پر پی
@@ -5849,7 +5779,7 @@ ur:
     ہیں جسے آپ دیکھتے ہیں! منفرد منصوبے بنانے کے لئے لوپس، گناہ کی لہروں اور مرضی
     کے مطابق emojis استعمال کرنے کے لئے سیکھیں.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
-    and Machine Learning, as well as programing your own chatbot!
+    and Machine Learning, as well as programming your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
     create your own game in the process!
   tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
@@ -6111,792 +6041,6 @@ ur:
     of code to bring the two villages together. Players will experience empathy and
     compassion for their neighbors, learn cooperation and inclusion, and embrace the
     diversity that makes us all uniquely special.
-  tutorial_dance2019_language: عربی، چینی، چیک، ڈینش، ڈچ، انگریزی، فینیش، فرانسیسی،
-    جرمن، یونانی، ہندی، ہنگری، انڈونیشیائی، اطالوی، جاپانی، کورین، مالائی، پولش، پرتگالی،
-    اور 10 مزید!
-  tutorial_danceparty_language: ایک سے زیادہ
-  tutorial_chibitronics_language: انگلش
-  tutorial_athlete_language: انگریزی، فرانسیسی، ہسپانوی، اطالوی، پرتگالی (برازیل)
-  tutorial_moana_language: انگریزی، عربی، چینی (آسان)، چینی (روایتی) ڈینش، ڈچ، فینیش،
-    فرانسیسی، جرمن، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، پولش، پولینیس (ساموآن)،
-    پرتگالی، روسی، ہسپانوی، سویڈش، ترکی، یوکرین، ویتنامی
-  tutorial_star-wars_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش،
-    فرانسیسی، جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے،
-    فارسی، پولش، پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_gumadventure_language: صرف انگریزی
-  tutorial_mchoc_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_vidnews_language: صرف انگریزی
-  tutorial_kodable-pre_language: انگریزی، عربی، آزربائیجان، جرمن، یونانی، ہسپانوی،
-    فارسی، فرانسیسی، انڈونیشیا، آئس لینڈ، اطالوی، کوریائی، ڈچ، ناروے، پولش، پرتگالی،
-    رومانیہ، روسی، صربی، سویڈش، ترکی، یوکرینیائی، چینی
-  tutorial_highseas_language: صرف انگریزی
-  tutorial_capython_language: انگریزی، ڈچ، ہسپانوی
-  tutorial_frzn_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_cocom_language: انگریزی، عربی، بلغاریہ، چینی، چیک، ڈینش، ڈچ، فرانسیسی،
-    جرمن، یونانی، عبرانی، ہنگری، اندونیزیا، اطالوی، جاپانی، کوریائی، ناروے، فارسی،
-    پولش، پرتگالی، روسی، ہسپانوی، سویڈش، ترکی، یوکرین، ویتنامی اور 9 مزید
-  tutorial_play-lab_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش،
-    فرانسیسی، جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے،
-    فارسی، پولش، پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_boxisland_language: فرانسیسی، جرمن، یونانی، ہنگری، آئس لینڈ، انڈونیثیائی،
-    اطالوی، جاپانی، کوریائی، نارویجینسک، پولش، پرتگالی، رومانشین، روسی، ہسپانوی، سویڈش،
-    ترکی، یوکرینیائی، انگریزی، چینی، کراتی، چیک، ڈینش، فننش، ویتنامی
-  tutorial_textcomp_language: صرف انگریزی
-  tutorial_encryption_language: صرف انگریزی
-  tutorial_kanopixel_language: صرف انگریزی
-  tutorial_foos_language: انگریزی، عربی، آزربائیجان، چینی، ڈچ، فرانسیسی، جرمن، یونانی،
-    ہندی، ہنگری، آئس لینڈ، انڈونیشین، اطالوی، جاپانی، کوریائی، ناروے، پولش، پرتگالی،
-    رومانیہ، روسی، صربی، ہسپانوی، سویڈش، ترکی، یوکرینیائی
-  tutorial_tynkerdd_language: صرف انگریزی
-  tutorial_tynkerana_language: صرف انگریزی
-  tutorial_vidcard_language: صرف انگریزی
-  tutorial_spritebox_language: انگریزی، برازیل پرتگالی
-  tutorial_tynkerch_language: صرف انگریزی
-  tutorial_lightbot_language: فرانسیسی، جرمن، یونانی، ہندی، ہنگری، انڈونیثیائی، اطالوی،
-    جاپانی، کوریائی، ملائیشیا، ناروے، پولش، پرتگالی، رومانیہ، روسی، سلوواک، سلووینیا،
-    ہسپانوی، انگریزی، چینی، کراتی، چیک، ڈینش، فننش، سویڈش، تھائی
-  tutorial_hoc_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_code_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_tinspire_language: صرف انگریزی
-  tutorial_itchbounceball_language: صرف انگریزی
-  tutorial_vidclim_language: صرف انگریزی
-  tutorial_matlab_language: صرف انگریزی
-  tutorial_flap_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_galaxy_language: انگریزی، اطالوی، عربی، بوسنی، چینی، کراتی، چیک، ڈینش،
-    ڈچ، فرانسیسی، جرمن، عبرانی، اندونیزیا، اطالوی، جاپانی، کوریائی، فارسی، پولش، پرتگالی،
-    رومانیہ، روسی، سلووینیا، ہسپانوی، سویڈش، ترکی، ویتنامی
-  tutorial_inf_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_tynkersol_language: صرف انگریزی
-  tutorial_itchg_language: صرف انگریزی
-  tutorial_como_language: انگریزی، عربی، چینی، چیک، فرانسیسی، جرمن، یونانی، عبرانی،
-    جاپانی، کازخ، لتھواینین، پولش، پرتگالی، روسی، صربی، ہسپانوی، ترکی، یوکرینیائی
-  tutorial_processfound_language: صرف انگریزی
-  tutorial_tynkerhomo_language: صرف انگریزی
-  tutorial_art_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_tynkerbrick_language: صرف انگریزی
-  tutorial_itchbio_language: صرف انگریزی
-  tutorial_itchj_language: صرف انگریزی
-  tutorial_tickleo_language: صرف انگریزی
-  tutorial_hopgeo_language: صرف انگریزی
-  tutorial_tynkermult_language: صرف انگریزی
-  tutorial_monster_language: انگریزی، ہسپانوی، پرتگالی، اطالوی، فرانسیسی، جرمن، پولش،
-    ترکی
-  tutorial_tynkerapp_language: صرف انگریزی
-  tutorial_tynkerpup_language: صرف انگریزی
-  tutorial_livecode_language: صرف انگریزی
-  tutorial_cocomgame_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، چیک، ڈینش، ڈچ،
-    فینیش، فرانسیسی، جرمن، یونانی، عبرانی، اطالوی، جاپانی، کوریائی، ناروے، فارسی،
-    پولش، پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین، ویتنامی اور 8 مزید
-  tutorial_tynkerspin_language: صرف انگریزی
-  tutorial_code-avengers_language: انگریزی، ہسپانوی، ڈچ، روسی، پرتگالی
-  tutorial_tynkercq_language: صرف انگریزی
-  tutorial_cmgame_language: صرف انگریزی
-  tutorial_codesters_language: صرف انگریزی
-  tutorial_qrm_language: انگریزی، جرمن
-  tutorial_texas-instruments_language: صرف انگریزی
-  tutorial_cajava_language: انگریزی، ڈچ، ہسپانوی
-  tutorial_codehs_language: انگریزی، ہسپانوی
-  tutorial_hopemo_language: صرف انگریزی
-  tutorial_tynkercm_language: صرف انگریزی
-  tutorial_codesterswintergreet_language: انگریزی، ہسپانوی
-  tutorial_codestersc_language: انگریزی، ہسپانوی
-  tutorial_codestersturtle_language: انگریزی، ہسپانوی
-  tutorial_penjee_language: صرف انگریزی
-  tutorial_trinket_language: چینی (آسان)، انگریزی، کوریائی، ہسپانوی
-  tutorial_frogger_language: انگریزی، ہسپانوی، اطالوی، فرانسیسی، جرمن اور ڈچ
-  tutorial_tynkereco_language: صرف انگریزی
-  tutorial_mitedarc_language: صرف انگریزی
-  tutorial_khan_language: انگریزی، پرتگالی (برازیل)، ہسپانوی
-  tutorial_tynkerd_language: صرف انگریزی
-  tutorial_cdmy_language: انگریزی، ہسپانوی
-  tutorial_codestersdance_language: انگریزی، ہسپانوی
-  tutorial_codestersbasketball_language: انگریزی، ہسپانوی
-  tutorial_nclkarel_language: ایک سے زیادہ
-  tutorial_buildpong_language: انگریزی، پرتگالی (برازیل)، ہسپانوی
-  tutorial_tynkerdrones_language: صرف انگریزی
-  tutorial_carla_language: صرف انگریزی
-  tutorial_zulama_language: انگریزی، ہسپانوی
-  tutorial_capost_language: انگریزی، ڈچ، ہسپانوی، روسی
-  tutorial_marco_language: ایک سے زیادہ
-  tutorial_codestersflappybike_language: انگریزی، ہسپانوی
-  tutorial_kanopong_language: صرف انگریزی
-  tutorial_tynkerright_language: صرف انگریزی
-  tutorial_touchdevelop_language: صرف انگریزی
-  tutorial_tynkercc_language: صرف انگریزی
-  tutorial_bamboo_language: صرف انگریزی
-  tutorial_robojav_language: صرف انگریزی
-  tutorial_roboba_language: ایک سے زیادہ
-  tutorial_knodsnake_language: صرف انگریزی
-  tutorial_soccharater_language: صرف انگریزی
-  tutorial_silent_language: ایک سے زیادہ
-  tutorial_robomesh_language: صرف انگریزی
-  tutorial_amaze_language: انگریزی، پرتگالی (برازیل)، ہسپانوی
-  tutorial_codestersds_language: انگریزی، ہسپانوی
-  tutorial_knodtext_language: صرف انگریزی
-  tutorial_alicegar_language: صرف انگریزی
-  tutorial_codesterstransform_language: انگریزی، ہسپانوی
-  tutorial_flexfrog_language: ایک سے زیادہ
-  tutorial_codemoji_language: صرف انگریزی
-  tutorial_robobii_language: ایک سے زیادہ
-  tutorial_robobm_language: ایک سے زیادہ
-  tutorial_codingrobots_language: ایک سے زیادہ
-  tutorial_robob_language: ایک سے زیادہ
-  tutorial_coders_language: انگریزی، فرانسیسی
-  tutorial_tynkerhw_language: صرف انگریزی
-  tutorial_tynkermh_language: صرف انگریزی
-  tutorial_caphoto_language: انگریزی، ڈچ، ہسپانوی
-  tutorial_mozillahw_language: صرف انگریزی
-  tutorial_ticklep_language: چینی (روایتی)، ڈینش، انگریزی، فرانسیسی، جاپانی
-  tutorial_bbot_language: ڈچ، سوومی، انگریزی
-  tutorial_scratchg_language: صرف انگریزی
-  tutorial_roboticfriends_language: انگریزی، ہسپانوی
-  tutorial_sjforest_language: صرف انگریزی
-  tutorial_sjgreet_language: صرف انگریزی
-  tutorial_sjsunset_language: صرف انگریزی
-  tutorial_fufafrenz_language: صرف انگریزی
-  tutorial_bbcgeo_language: صرف انگریزی
-  tutorial_chspixel_language: صرف انگریزی
-  tutorial_hummingbird_language: صرف انگریزی
-  tutorial_recoloring_language: صرف انگریزی
-  tutorial_bbcchem_language: صرف انگریزی
-  tutorial_floalgo_language: صرف انگریزی
-  tutorial_flocond_language: صرف انگریزی
-  tutorial_floloops_language: صرف انگریزی
-  tutorial_pgts_language: صرف انگریزی
-  tutorial_ozo_language: صرف انگریزی
-  tutorial_bbcla_language: صرف انگریزی
-  tutorial_bbcsci_language: صرف انگریزی
-  tutorial_tlctour_language: صرف انگریزی
-  tutorial_codesterstj_language: صرف انگریزی
-  tutorial_tlclocked_language: صرف انگریزی
-  tutorial_baubles_language: صرف انگریزی
-  tutorial_bbcart_language: صرف انگریزی
-  tutorial_tlcknight_language: صرف انگریزی
-  tutorial_fufafit_language: صرف انگریزی
-  tutorial_ozodance_language: صرف انگریزی
-  tutorial_codingrobotics_language: صرف انگریزی
-  tutorial_box_language: ایک سے زیادہ
-  tutorial_hopgame_language: صرف انگریزی
-  tutorial_icontrol_language: صرف انگریزی
-  tutorial_cocomteach_language: صرف انگریزی
-  tutorial_bbcmathii_language: صرف انگریزی
-  tutorial_bbcphys_language: صرف انگریزی
-  tutorial_bitsbox_language: صرف انگریزی
-  tutorial_tlcemo_language: صرف انگریزی
-  tutorial_crd_language: صرف انگریزی
-  tutorial_bbcbio_language: صرف انگریزی
-  tutorial_ticklebb8_language: چینی (روایتی)، ڈینش، ڈچ، انگریزی، فرانسیسی
-  tutorial_grok_language: صرف انگریزی
-  tutorial_ijournalist_language: صرف انگریزی
-  tutorial_bbcmusic_language: صرف انگریزی
-  tutorial_secretcodes_language: صرف انگریزی
-  tutorial_tlchex_language: صرف انگریزی
-  tutorial_tickles_language: ایک سے زیادہ
-  tutorial_ozogame_language: صرف انگریزی
-  tutorial_vidcodeio_language: صرف انگریزی
-  tutorial_besttech_language: صرف انگریزی
-  tutorial_tlcbrain_language: صرف انگریزی
-  tutorial_hopquiz_language: صرف انگریزی
-  tutorial_unfortunate_language: صرف انگریزی
-  tutorial_cha_language: صرف انگریزی
-  tutorial_elaseq_language: صرف انگریزی
-  tutorial_bbcmathi_language: صرف انگریزی
-  tutorial_tlcpixel_language: صرف انگریزی
-  tutorial_arduino_language: صرف انگریزی
-  tutorial_introrobo_language: صرف انگریزی
-  tutorial_tlcinvis_language: صرف انگریزی
-  tutorial_tlcjflap_language: صرف انگریزی
-  tutorial_procolor_language: صرف انگریزی
-  tutorial_spiralsfinch_language: صرف انگریزی
-  tutorial_ozoi_language: صرف انگریزی
-  tutorial_ticklel_language: ایک سے زیادہ
-  tutorial_spiralsdash_language: صرف انگریزی
-  tutorial_ghdebug_language: صرف انگریزی
-  tutorial_tlckk_language: صرف انگریزی
-  tutorial_firstcomp_language: صرف انگریزی
-  tutorial_mazefinch_language: صرف انگریزی
-  tutorial_tlccc_language: صرف انگریزی
-  tutorial_tlcdoodle_language: صرف انگریزی
-  tutorial_tlcpunch_language: صرف انگریزی
-  tutorial_finchfract_language: صرف انگریزی
-  tutorial_tlcmind_language: صرف انگریزی
-  tutorial_tlctelebot_language: صرف انگریزی
-  tutorial_tlcaus_language: صرف انگریزی
-  tutorial_oralhist_language: صرف انگریزی
-  tutorial_tlcmicro_language: صرف انگریزی
-  tutorial_imathematician_language: صرف انگریزی
-  tutorial_tlcmagic_language: صرف انگریزی
-  tutorial_scratchmus_language: انگریزی، کاٹالانین، جرمن، اطالوی، ناروے، پرتگالی،
-    ہسپانوی
-  tutorial_scratchanim_language: انگریزی، فرانسیسی، جرمن، اطالوی، ناروے، پرتگالی،
-    ہسپانوی
-  tutorial_scratchfly_language: انگریزی، کاٹالانین، اطالوی، ناروے، پرتگالی
-  tutorial_tynkerarc_language: صرف انگریزی
-  tutorial_grokffpython_language: صرف انگریزی
-  tutorial_grokffblock_language: صرف انگریزی
-  tutorial_grokeliza_language: صرف انگریزی
-  tutorial_tynkercan_language: صرف انگریزی
-  tutorial_grokflags_language: صرف انگریزی
-  tutorial_robomind_language: انگریزی، ڈچ
-  tutorial_scratchanimwork_language: صرف انگریزی
-  tutorial_adventureq_language: چینی (آسان)، انگریزی
-  tutorial_khan-es_language: ہسپانوی
-  tutorial_kpt_language: پرتگالی
-  tutorial_kpl_language: پولش
-  tutorial_khe_language: عبرانی
-  tutorial_kfr_language: فرانسیسی
-  tutorial_app-inventor_language: صرف انگریزی
-  tutorial_bits_language: انگریزی، جرمن
-  tutorial_blockly_language: انگریزی، ہسپانوی، فرانسیسی، 40 دیگر
-  tutorial_tynker_language: صرف انگریزی
-  tutorial_baypt_language: پرتگالی
-  tutorial_code-combat_language: ایک سے زیادہ
-  tutorial_mky_language: ایک سے زیادہ
-  tutorial_spellcraft_language: صرف انگریزی
-  tutorial_pirates_language: انگریزی، ڈینش، جرمن
-  tutorial_csfirst_language: صرف انگریزی
-  tutorial_loopedy_language: صرف انگریزی
-  tutorial_dsw_language: انگریزی، ہسپانوی
-  tutorial_dswb_language: انگریزی، ہسپانوی
-  tutorial_ssw_language: انگریزی، ہسپانوی
-  tutorial_sswb_language: انگریزی، ہسپانوی
-  tutorial_kodable-unplugged_language: صرف انگریزی
-  tutorial_scratch_language: صرف انگریزی
-  tutorial_bayes_language: ہسپانوی
-  tutorial_gumball_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش،
-    فرانسیسی، جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے،
-    فارسی، پولش، پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_hrm_language: ایک سے زیادہ
-  tutorial_ice-age_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش،
-    فرانسیسی، جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے،
-    فارسی، پولش، پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_koapp_language: ایک سے زیادہ
-  tutorial_lightbot-intl_language: فرانسیسی، روسی، برازیل پرتگالی
-  tutorial_rmc_language: روسی
-  tutorial_smc_language: انگریزی، ہسپانوی
-  tutorial_minecraft-2016_language: ایک سے زیادہ
-  tutorial_thinkersmith-es_language: ہسپانوی
-  tutorial_pixie_language: ہسپانوی
-  tutorial_play_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_robomind-nl_language: ڈچ
-  tutorial_spheroi_language: صرف انگریزی
-  tutorial_spherol_language: صرف انگریزی
-  tutorial_spherov_language: صرف انگریزی
-  tutorial_swb_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ، فینیش، فرانسیسی،
-    جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی، ناروے، فارسی، پولش،
-    پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19 مزید
-  tutorial_build-a-galaxy_language: انگریزی، عربی، بلغاریہ، چینی، کراتی، ڈینش، ڈچ،
-    فینیش، فرانسیسی، جرمن، یونانی، آئس لینڈ، انڈونیثیائی، اطالوی، جاپانی، کوریائی،
-    ناروے، فارسی، پولش، پرتگالی، رومانیہ، روسی، ہسپانوی، سویڈش، ترکی، یوکرین اور 19
-    مزید
-  tutorial_alicesims_language: صرف انگریزی
-  tutorial_tchr_language: صرف انگریزی
-  tutorial_robogame_language: صرف انگریزی
-  tutorial_tap_language: صرف انگریزی
-  tutorial_cintl_language: آزربائیجان، صربی
-  tutorial_itchstop_language: صرف انگریزی
-  tutorial_tynkerpn_language: صرف انگریزی
-  tutorial_tynkerpd_language: صرف انگریزی
-  tutorial_persistence_language: صرف انگریزی
-  tutorial_getloopy_language: صرف انگریزی
-  tutorial_createface_language: صرف انگریزی
-  tutorial_happymaps_language: صرف انگریزی
-  tutorial_moveit_language: صرف انگریزی
-  tutorial_bigevent_language: صرف انگریزی
-  tutorial_gpp_language: صرف انگریزی
-  tutorial_foosgame_language: انگریزی، عربی، جرمن، ہسپانوی، فرانسیسی، جاپانی، کوریائی،
-    ڈچ، پرتگالی، برازیل پرتگالی، رومانیہ، ترکی، روایتی چینی، آسان چینی، یونانی، اطالوی،
-    پولش
-  tutorial_solopython_language: صرف انگریزی
-  tutorial_kodableint_language: صرف انگریزی
-  tutorial_kodableadv_language: صرف انگریزی
-  tutorial_tynkertj_language: صرف انگریزی
-  tutorial_wolframa_language: صرف انگریزی
-  tutorial_wolframm_language: صرف انگریزی
-  tutorial_wolframspi_language: صرف انگریزی
-  tutorial_wolframsph_language: صرف انگریزی
-  tutorial_wolframp_language: صرف انگریزی
-  tutorial_wolframn_language: صرف انگریزی
-  tutorial_soloweb_language: صرف انگریزی
-  tutorial_khanweb_language: انگریزی، پرتگالی (برازیل)، ہسپانوی
-  tutorial_khandata_language: انگریزی، پرتگالی (برازیل)، ہسپانوی
-  tutorial_robomeshiq_language: صرف انگریزی
-  tutorial_googlelogo_language: صرف انگریزی
-  tutorial_playtune_language: صرف انگریزی
-  tutorial_computeit_language: انگریزی، فرانسیسی، جرمن، انڈونیثیائی، اطالوی، پرتگالی،
-    رومانیہ، ہسپانوی
-  tutorial_codesterssj_language: انگریزی، چینی (روایتی)، ہسپانوی
-  tutorial_cmchat_language: صرف انگریزی
-  tutorial_tynkerdb_language: چینی (آسان)، انگریزی، فرانسیسی، جرمن، جاپانی، ہسپانوی
-  tutorial_cmbuild_language: چینی (آسان)، انگریزی، عبرانی، جاپانی
-  tutorial_robotrattle_language: صرف انگریزی
-  tutorial_codestersh_language: چینی (روایتی)، انگریزی، ہسپانوی
-  tutorial_codehsdigipixel_language: صرف انگریزی
-  tutorial_ccbinary_language: صرف انگریزی
-  tutorial_codehsturtle_language: صرف انگریزی
-  tutorial_grokhd_language: صرف انگریزی
-  tutorial_grokem_language: صرف انگریزی
-  tutorial_kodmaze_language: صرف انگریزی
-  tutorial_codestersa_language: چینی (روایتی)، انگریزی، ہسپانوی
-  tutorial_cmdodo_language: انگریزی، عبرانی
-  tutorial_tynkerspace_language: چینی (آسان)، انگریزی، فرانسیسی، جرمن، جاپانی، ہسپانوی
-  tutorial_gfbloons_language: صرف انگریزی
-  tutorial_raspipong_language: صرف انگریزی
-  tutorial_codehsvr_language: صرف انگریزی
-  tutorial_codesterstp_language: چینی (آسان)، انگریزی، ہسپانوی
-  tutorial_codestersbb_language: چینی (روایتی)، انگریزی، ہسپانوی
-  tutorial_gfcrossyroad_language: صرف انگریزی
-  tutorial_googleww_language: صرف انگریزی
-  tutorial_codehsjsapp_language: صرف انگریزی
-  tutorial_gfmihi_language: صرف انگریزی
-  tutorial_hopdropphone_language: صرف انگریزی
-  tutorial_techfaa_language: صرف انگریزی
-  tutorial_codehsjsgraph_language: صرف انگریزی
-  tutorial_thunkable_language: ایک سے زیادہ
-  tutorial_hopcrossyroad_language: صرف انگریزی
-  tutorial_switchglitch_language: صرف انگریزی
-  tutorial_codecar_language: صرف انگریزی
-  tutorial_codesterscp_language: چینی (روایتی)، انگریزی، ہسپانوی
-  tutorial_grokpetblock_language: صرف انگریزی
-  tutorial_techbim_language: صرف انگریزی
-  tutorial_techfpp_language: صرف انگریزی
-  tutorial_codesterscr_language: چینی (روایتی)، انگریزی، ہسپانوی
-  tutorial_grokdisease_language: صرف انگریزی
-  tutorial_techec_language: صرف انگریزی
-  tutorial_rgbegin_language: صرف انگریزی
-  tutorial_myradream_language: صرف انگریزی
-  tutorial_thinkfun_language: صرف انگریزی
-  tutorial_hopfireworks_language: صرف انگریزی
-  tutorial_grokspace_language: صرف انگریزی
-  tutorial_codehspython_language: صرف انگریزی
-  tutorial_codehsjava_language: صرف انگریزی
-  tutorial_techioda_language: صرف انگریزی
-  tutorial_grokmonster_language: صرف انگریزی
-  tutorial_techmjs_language: صرف انگریزی
-  tutorial_techga_language: صرف انگریزی
-  tutorial_techioan_language: صرف انگریزی
-  tutorial_techiogsr_language: صرف انگریزی
-  tutorial_groktunnel_language: صرف انگریزی
-  tutorial_stemcod_language: صرف انگریزی
-  tutorial_techikb_language: صرف انگریزی
-  tutorial_kanostreet_language: صرف انگریزی
-  tutorial_nyblebot_language: صرف انگریزی
-  tutorial_codemojijs_language: صرف انگریزی
-  tutorial_techapf_language: صرف انگریزی
-  tutorial_techfpjs_language: صرف انگریزی
-  tutorial_techlinq_language: صرف انگریزی
-  tutorial_gpbcatapult_language: صرف انگریزی
-  tutorial_quorumastro_language: صرف انگریزی
-  tutorial_alicewonder_language: صرف انگریزی
-  tutorial_rginter_language: صرف انگریزی
-  tutorial_cssgrid_language: ایک سے زیادہ
-  tutorial_jshero_language: انگریزی، جرمن
-  tutorial_codemojipy_language: صرف انگریزی
-  tutorial_nclabdrone_language: صرف انگریزی
-  tutorial_gpbcircle_language: صرف انگریزی
-  tutorial_gpbpaint_language: صرف انگریزی
-  tutorial_cocomarcade_language: ایک سے زیادہ
-  tutorial_techcpp_language: صرف انگریزی
-  tutorial_beetik_language: انگریزی، ہسپانوی
-  tutorial_codedj_language: انگریزی، فرانسیسی
-  tutorial_rgadvan_language: صرف انگریزی
-  tutorial_codehsrn_language: صرف انگریزی
-  tutorial_codehswd_language: صرف انگریزی
-  tutorial_turtlerobot_language: صرف انگریزی
-  tutorial_ozoevo_language: صرف انگریزی
-  tutorial_ozoexped_language: صرف انگریزی
-  tutorial_ozojourney_language: صرف انگریزی
-  tutorial_ozocodes_language: صرف انگریزی
-  tutorial_ozoeclipse_language: صرف انگریزی
-  tutorial_ozosimulator_language: صرف انگریزی
-  tutorial_ozoalgorithm_language: صرف انگریزی
-  tutorial_ozotimer_language: صرف انگریزی
-  tutorial_ozohabits_language: صرف انگریزی
-  tutorial_ozoprogram_language: صرف انگریزی
-  tutorial_ozopair_language: صرف انگریزی
-  tutorial_codesnoopy_language: انگریزی، چینی، ڈچ، فرانسیسی، جرمن، اطالوی، کوریائی،
-    مالائی، پرتگالی، ہسپانوی، سویڈش، تھائی
-  tutorial_applabintro_language: صرف انگریزی
-  tutorial_cslartist_language: صرف انگریزی
-  tutorial_cslscratchjr_language: صرف انگریزی
-  tutorial_floevents_language: صرف انگریزی
-  tutorial_florobot_language: صرف انگریزی
-  tutorial_isavesanta_language: صرف انگریزی
-  tutorial_iorder_language: صرف انگریزی
-  tutorial_ianimate_language: صرف انگریزی
-  tutorial_iloveada_language: صرف انگریزی
-  tutorial_kodflash_language: صرف انگریزی
-  tutorial_kodchoose_language: صرف انگریزی
-  tutorial_kodpizzapre_language: صرف انگریزی
-  tutorial_kodpizza_language: صرف انگریزی
-  tutorial_kodwomen_language: صرف انگریزی
-  tutorial_tfunplug_language: صرف انگریزی
-  tutorial_lbvariables_language: صرف انگریزی
-  tutorial_lbfunctions_language: صرف انگریزی
-  tutorial_lblogic_language: صرف انگریزی
-  tutorial_lbworld_language: صرف انگریزی
-  tutorial_lbloops_language: صرف انگریزی
-  tutorial_lbtug_language: صرف انگریزی
-  tutorial_lbpotato_language: صرف انگریزی
-  tutorial_lbguitar_language: صرف انگریزی
-  tutorial_lbio_language: صرف انگریزی
-  tutorial_wonpuppy_language: صرف انگریزی
-  tutorial_woncue_language: صرف انگریزی
-  tutorial_wonzoo_language: صرف انگریزی
-  tutorial_wontrip_language: صرف انگریزی
-  tutorial_woncollect_language: صرف انگریزی
-  tutorial_wonsecret_language: صرف انگریزی
-  tutorial_hsscience_language: صرف انگریزی
-  tutorial_popculture_language: صرف انگریزی
-  tutorial_legorobust_language: صرف انگریزی
-  tutorial_legoplants_language: صرف انگریزی
-  tutorial_legopark_language: صرف انگریزی
-  tutorial_legodetect_language: صرف انگریزی
-  tutorial_legolight_language: صرف انگریزی
-  tutorial_alexa_language: صرف انگریزی
-  tutorial_grokpetmicro_language: صرف انگریزی
-  tutorial_pirateplunder_language: صرف انگریزی
-  tutorial_cadj_language: صرف انگریزی
-  tutorial_cacrazy_language: صرف انگریزی
-  tutorial_cajump_language: صرف انگریزی
-  tutorial_carest_language: صرف انگریزی
-  tutorial_accai_language: انگریزی، فرانسیسی، اطالوی، اور ڈچ
-  tutorial_vceclipse_language: صرف انگریزی
-  tutorial_pmzero_language: صرف انگریزی
-  tutorial_hsela_language: صرف انگریزی
-  tutorial_ticklear_language: صرف انگریزی
-  tutorial_bcrobot_language: چینی، انگریزی، فرانسیسی، جرمن، ناروے، سلووینیا، ہسپانوی
-  tutorial_bcsnow_language: چینی، انگریزی، فرانسیسی، جرمن، ناروے، سلووینیا، ہسپانوی
-  tutorial_ifly_language: صرف انگریزی
-  tutorial_idowedo_language: صرف انگریزی
-  tutorial_diggindwarf_language: صرف انگریزی
-  tutorial_rmedr_language: صرف انگریزی
-  tutorial_spheroit_language: صرف انگریزی
-  tutorial_gameofcodes_language: انگریزی، پرتگالی (برازیل)، ہسپانوی
-  tutorial_blocklygames_language: انگریزی، ہسپانوی، فرانسیسی، 40 دیگر
-  tutorial_spherohello_language: صرف انگریزی
-  tutorial_spheroarcade_language: چینی (آسان)، انگریزی، فرانسیسی، جرمن، جاپانی، ہسپانوی
-  tutorial_bcpy1_language: صرف انگریزی
-  tutorial_bcpy2_language: صرف انگریزی
-  tutorial_bcjs1_language: صرف انگریزی
-  tutorial_bcjs2_language: صرف انگریزی
-  tutorial_3dbearmars_language: انگلش
-  tutorial_alexaskill_language: انگلش
-  tutorial_bitsboxyak_language: انگلش
-  tutorial_blockscadbargraphs_language: چینی (آسان)، انگریزی، فرانسیسی، جرمن، جاپانی،
-    ناروے (ناروی)، سربی (سیریلک)، ہسپانوی (سپین)، سویڈش
-  tutorial_blockscadbirdhouses_language: چینی (آسان)، انگریزی، فرانسیسی، جرمن، جاپانی،
-    ناروے (ناروی)، سربی (سیریلک)، ہسپانوی (سپین)، سویڈش
-  tutorial_blockscadclock_language: چینی (آسان)، انگریزی، فرانسیسی، جرمن، جاپانی،
-    ناروے (ناروی)، سربی (سیریلک)، ہسپانوی (سپین)، سویڈش
-  tutorial_blockscaddinner_language: چینی (آسان)، انگریزی، فرانسیسی، جرمن، جاپانی،
-    ناروے (ناروی)، سربی (سیریلک)، ہسپانوی (سپین)، سویڈش
-  tutorial_blockscadicecream_language: چینی (آسان)، انگریزی، فرانسیسی، جرمن، جاپانی،
-    ناروے (ناروی)، سربی (سیریلک)، ہسپانوی (سپین)، سویڈش
-  tutorial_blockscadpizza_language: چینی، انگریزی، فرانسیسی، جرمن، ناروے، سلووینیا،
-    ہسپانوی
-  tutorial_blockscadsugar_language: چینی، انگریزی، فرانسیسی، جرمن، ناروے، سلووینیا،
-    ہسپانوی
-  tutorial_bsgridlight_language: انگلش
-  tutorial_bpartscratch_language: انگلش
-  tutorial_bpartvid_language: انگلش
-  tutorial_bpenglishscratch_language: انگلش
-  tutorial_bpenglishvid_language: انگلش
-  tutorial_bphealthscratch_language: انگلش
-  tutorial_bphealthvid_language: انگلش
-  tutorial_bpmathscratch_language: انگلش
-  tutorial_bpmathvid_language: انگلش
-  tutorial_bpmlkscratch_language: انگلش
-  tutorial_bpmlkvid_language: انگلش
-  tutorial_bpsafetyscratch_language: انگلش
-  tutorial_bpsafetyvid_language: انگلش
-  tutorial_bpsciencescratch_language: انگلش
-  tutorial_bpsciencevid_language: انگلش
-  tutorial_bptechscratch_language: انگلش
-  tutorial_bptechvid_language: انگلش
-  tutorial_caflags_language: انگلش
-  tutorial_matariki_language: انگلش
-  tutorial_carestaurant_language: انگلش
-  tutorial_casea_language: انگلش
-  tutorial_cashield_language: انگلش
-  tutorial_ccwslimer_language: انگلش
-  tutorial_codinggalaxy_language: چینی، انگریزی
-  tutorial_boatrace_language: عربی، چینی (آسان)، چیک، ڈینش، ڈچ، فرانسیسی، جرمن، یونانی،
-    عبرانی، ہندی، اطالوی، جاپانی، کوریائی، دیگر، پولش، رومنی، صربی (سیریلک)، ہسپانوی،
-    یوکرینیائی
-  tutorial_ccplay_language: انگلش
-  tutorial_grinch_language: انگلش
-  tutorial_codehsart_language: انگلش
-  tutorial_codehsbitcoin_language: انگلش
-  tutorial_codehsblockchain_language: انگلش
-  tutorial_codehscipher_language: انگلش
-  tutorial_codehscollision_language: انگلش
-  tutorial_codehsmath_language: انگلش
-  tutorial_codehsmusic_language: انگلش
-  tutorial_codehssports_language: انگلش
-  tutorial_codemojipizza_language: انگلش
-  tutorial_moonlander_language: انگلش
-  tutorial_sushicards_language: انگلش
-  tutorial_codesparkcreate_language: انگریزی، عربی، آزربائیجان، چینی، ڈچ، فرانسیسی،
-    جرمن، یونانی، ہندی، ہنگری، آئس لینڈ، انڈونیشین، اطالوی، جاپانی، کوریائی، ناروے،
-    پولش، پرتگالی، رومانیہ، روسی، صربی، ہسپانوی، سویڈش، ترکی، یوکرینیائی
-  tutorial_hardvsoft_language: انگلش
-  tutorial_codestersecard_language: چینی, انگریزی, ہسپانوی
-  tutorial_codesterslogo_language: چینی, انگریزی, ہسپانوی
-  tutorial_codesterstshirt_language: چینی, انگریزی, ہسپانوی
-  tutorial_codewards_language: انگریزی, فرانسیسی, روسی, ہسپانوی, ترکی
-  tutorial_olympics_language: انگریزی, فرانسیسی, روسی, ہسپانوی
-  tutorial_codinismhero_language: انگلش
-  tutorial_discovery_language: انگریزی, ہسپانوی (میکسیکو)
-  tutorial_csfirstname_language: انگریزی, ہسپانوی (میکسیکو)
-  tutorial_obstaclecourse_language: چینی، انگریزی، فرانسیسی، جرمن، ناروے، سلووینیا،
-    ہسپانوی
-  tutorial_edisonmove_language: انگلش
-  tutorial_edisonspider_language: انگلش
-  tutorial_edisonspotlight_language: انگلش
-  tutorial_firiapython_language: انگلش
-  tutorial_gamefrootsquid_language: انگلش
-  tutorial_duckpiano_language: انگلش
-  tutorial_gpsound_language: انگلش
-  tutorial_groklearningpython_language: انگلش
-  tutorial_htmltimetravel_language: انگلش
-  tutorial_hp_flappy_language: انگلش
-  tutorial_appytappin_language: انگلش
-  tutorial_icipher_language: انگلش
-  tutorial_iguess_language: انگلش
-  tutorial_imake_language: انگلش
-  tutorial_imorse_language: انگلش
-  tutorial_kanohp_language: انگلش
-  tutorial_khanwebpages_language: انگریزی, اطالوی, پولش, پرتگالی, سربیائی, ہسپانوی
-  tutorial_kibobowl_language: انگلش
-  tutorial_kibodance_language: انگلش
-  tutorial_buildcharacters_language: انگلش
-  tutorial_designgames_language: انگلش
-  tutorial_makelevels_language: انگلش
-  tutorial_wizard_language: انگلش
-  tutorial_mbscratchcards_language: انگلش
-  tutorial_mbswiftplaygrounds_language: انگلش
-  tutorial_mbbuttons_language: انگلش
-  tutorial_meteor_language: انگلش
-  tutorial_ballbounce_language: انگلش
-  tutorial_mitcodi_language: انگلش
-  tutorial_mitdoodle_language: انگلش
-  tutorial_talktome_language: انگلش
-  tutorial_mobilecspmap_language: انگلش
-  tutorial_ozorandom_language: انگلش
-  tutorial_ozotroll_language: انگلش
-  tutorial_peblioart_language: انگلش
-  tutorial_astropi_language: عربی، ڈینش، ڈچ، انگریزی، عجیب، فرانسیسی، جرمن، یونانی،
-    ہنگری، اطالوی, نارویجی (نینا رسک)، دیگر، پولش، ہسپانوی، سویڈش
-  tutorial_rgart_language: انگلش
-  tutorial_rgengineer_language: انگلش
-  tutorial_rgmath_language: انگلش
-  tutorial_rgscience_language: انگلش
-  tutorial_rgtech_language: انگلش
-  tutorial_robotmagic3d_language: انگلش
-  tutorial_robotmagicflappy_language: انگلش
-  tutorial_scratchadventure_language: انگریزی، ہسپانوی
-  tutorial_scratchtalk_language: انگریزی، ہسپانوی
-  tutorial_scratchjrstory_language: انگلش
-  tutorial_scratchjrtwinkle_language: انگلش
-  tutorial_spherocomm_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی، اطالوی،
-    جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spherocommunity_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی،
-    اطالوی، جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spherofunctions_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی،
-    اطالوی، جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spheroinfrared_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی، اطالوی،
-    جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spherolightsensor_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی،
-    اطالوی، جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spheromansion_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی، اطالوی،
-    جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_roadblocks_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی، اطالوی،
-    جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spherotext2_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی، اطالوی،
-    جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spherotext3_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی، اطالوی،
-    جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spherotext4_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی، اطالوی،
-    جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_spheroraptor_language: عربی، چینی، انگریزی، فرانسیسی، جرمن، عبرانی، اطالوی،
-    جاپانی، کورین، نارویجن، ہسپانوی، سویڈش
-  tutorial_stempiday_language: انگلش
-  tutorial_stemplanetoids_language: انگلش
-  tutorial_stempong_language: انگلش
-  tutorial_algobot_language: انگلش
-  tutorial_thunkableapps_language: انگلش
-  tutorial_toxicodedot_language: انگریزی، فرانسیسی، جرمن، انڈونیثیائی، اطالوی، پرتگالی،
-    رومانیہ، ہسپانوی
-  tutorial_gcactions_language: انگلش
-  tutorial_gccomparators_language: انگلش
-  tutorial_gcconditions_language: انگلش
-  tutorial_gccreate_language: انگریزی، فرانسیسی
-  tutorial_gcevents_language: انگلش
-  tutorial_gcloops_language: انگلش
-  tutorial_gcvariables_language: انگلش
-  tutorial_beanything_language: انگلش
-  tutorial_change_language: انگلش
-  tutorial_cooking_language: انگلش
-  tutorial_crystal_language: انگلش
-  tutorial_landscape_language: انگلش
-  tutorial_pets_language: انگلش
-  tutorial_petvet_language: انگلش
-  tutorial_superhero_language: انگلش
-  tutorial_vidcodeplastic_language: انگلش
-  tutorial_vidcodetypeface_language: انگلش
-  tutorial_washustorm_language: انگلش
-  tutorial_activitypackets_language: انگلش
-  tutorial_googlerookie_language: انگلش
-  tutorial_tommyturtle_language: انگلش
-  tutorial_mazyad_language: عربی، انگریزی
-  tutorial_gamemaker_language: انگلش
-  tutorial_duckrace_language: انگریزی، جرمن
-  tutorial_allcancodeapps_language: انگلش
-  tutorial_n2y_language: انگلش
-  tutorial_microsoftarcade_language: انگلش
-  tutorial_csfirstunplugged_language: انگریزی, ہسپانوی (میکسیکو)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
-  tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
-    Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodedate_language: انگلش
-  tutorial_codemonkeyspace_language: English, English (UK), Hebrew
-  tutorial_codespeakhappy_language: انگلش
-  tutorial_grokimage_language: English, English (UK)
-  tutorial_icomputelearn_language: انگلش
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
-  tutorial_bsdcause_language: انگلش
-  tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_bsdinspire_language: انگلش
-  tutorial_tttractor_language: انگلش
-  tutorial_codeillusionmickey_language: انگلش
-  tutorial_scigirlsquest_language: انگلش
-  tutorial_codespeakbreathe_language: انگلش
-  tutorial_vidcodeface_language: انگلش
-  tutorial_educodemaze_language: English, English (UK)
-  tutorial_educoderace_language: English, English (UK)
-  tutorial_codespeakchatbot_language: انگلش
-  tutorial_gamefrootgames_language: انگلش
-  tutorial_codespeakgrandparent_language: انگلش
-  tutorial_educodekingdom_language: English, English (UK)
-  tutorial_codehsdata_language: انگلش
-  tutorial_educodecake_language: English, English (UK)
-  tutorial_ttsecond_language: انگلش
-  tutorial_bsdtrivia_language: انگلش
-  tutorial_csfirstdialogue_language: انگریزی, ہسپانوی (میکسیکو)
-  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
-    Japanese, Spanish (Spain), Spanish (Mexico)
-  tutorial_codestersdistance_language: انگلش
-  tutorial_itchspace_language: انگلش
-  tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_codespeakmeal_language: انگلش
-  tutorial_itchfish_language: انگلش
-  tutorial_bsdwebsite_language: انگلش
-  tutorial_codespeaktime_language: انگلش
-  tutorial_itchwebcam_language: انگلش
-  tutorial_itchball_language: انگلش
-  tutorial_ttrace_language: انگلش
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
-    Portuguese (Brazil), Spanish
-  tutorial_educodesecret_language: English, English (UK)
-  tutorial_itchshapes_language: انگلش
-  tutorial_codeguppytext_language: انگلش
-  tutorial_vidcodeplastiche_language: انگریزی، عبرانی
-  tutorial_educativechatbot_language: انگلش
-  tutorial_educodebasics_language: English, English (UK)
-  tutorial_codehsdesign_language: انگلش
-  tutorial_htmlacademyphp_language: انگلش
-  tutorial_gamefrootdistance_language: انگلش
-  tutorial_codesterscovid_language: انگلش
-  tutorial_ttbunker_language: انگلش
-  tutorial_cuttle_language: انگلش
-  tutorial_bsdjokes_language: انگلش
-  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
-  tutorial_codestersunity_language: انگلش
-  tutorial_codesterssoccer_language: انگلش
-  tutorial_breakoutlock_language: انگلش
-  tutorial_thunkablemask_language: انگلش
-  tutorial_cafarming_language: انگلش
-  tutorial_blocksmithyeti_language: انگلش
-  tutorial_codecapture_language: English, English (UK)
-  tutorial_codehslitter_language: English, English (UK)
-  tutorial_bsdocean_language: انگلش
-  tutorial_itchplatformer_language: انگلش
-  tutorial_codejika_language: English, English (UK)
-  tutorial_gamefrootclicker_language: انگلش
-  tutorial_rmagicequity_language: English, English (UK)
-  tutorial_ttfreestyle_language: انگلش
-  tutorial_ozobotcolor2_language: انگلش
-  tutorial_ozobotcolor3_language: انگلش
-  tutorial_clcarbon_language: English, English (UK)
-  tutorial_kodablebasics_language: انگلش
-  tutorial_scigirlscc_language: انگریزی, ہسپانوی (میکسیکو)
-  tutorial_irobotpicture_language: انگلش
-  tutorial_kcjmyself_language: انگریزی، فرانسیسی
-  tutorial_nearpodalgorithms_language: انگلش
-  tutorial_kibodrop_language: English, English (UK)
-  tutorial_ozobotcolor1_language: انگلش
-  tutorial_scigirlspixels_language: انگریزی, ہسپانوی (میکسیکو)
-  tutorial_kcjheroines_language: انگریزی، فرانسیسی
-  tutorial_ozobotvalue_language: انگلش
-  tutorial_icodebytes_language: انگلش
-  tutorial_clfashion2_language: English, English (UK)
-  tutorial_ai4all_language: انگلش
-  tutorial_cldata_language: English, English (UK)
-  tutorial_spheroinputs_language: انگلش
-  tutorial_edisoncount_language: انگلش
-  tutorial_spheroloops_language: انگلش
-  tutorial_kiboprogram_language: English, English (UK)
-  tutorial_hellorubycsin60_language: English, English (UK)
-  tutorial_clfashion1_language: English, English (UK)
-  tutorial_irobottraffic_language: انگلش
-  tutorial_edisonmystery_language: انگلش
-  tutorial_microbitseaturtles_language: English, English (UK)
-  tutorial_ozobotknow_language: انگلش
-  tutorial_imagilabs_language: English, English (UK)
-  tutorial_irobotsimulator_language: انگلش
-  tutorial_irobotkind_language: English, English (UK)
-  tutorial_firiavirtual_language: English, English (UK)
-  tutorial_irobotguesscode_language: انگلش
-  tutorial_ozobotnouns_language: انگلش
-  tutorial_nasa3d_language: انگلش
-  tutorial_blupants_language: انگلش
-  tutorial_legodance_language: انگلش
-  tutorial_nearpodcoding_language: انگلش
-  tutorial_kcjplastic_language: انگریزی، فرانسیسی
-  tutorial_legojourney_language: انگلش
-  tutorial_legohopper_language: انگلش
-  tutorial_catrobatembroidery_language: عربی ، بنگالی ، بوسنیائی ، چینی آسان ، کروشین
-    ، چیک ، انجلیش ، انگریزی (یوکے) ، فرانسیسی ، جرمن ، ہندی ، انڈونیشی ، اطالوی ،
-    جاپانی ، کورین ، نارویجین (نینورسک) ، دیگر ، پولش ، پرتگالی (برازیل) ، پرتگالی
-    ( پرتگال) ، روسی ، سربیا (سیریلک) ، سربیا (لاطینی) ، سلوواک ، ہسپانوی (اسپین ،
-    میکسیکو) ، سواحلی ، سویڈش ، تامل ، تھائی ، ترکی ، اردو (پاکستان) ، ویتنامی
-  tutorial_irobotphone_language: English, English (UK)
-  tutorial_codeguppydraw_language: English, English (UK)
-  tutorial_codejumper_language: انگلش
-  tutorial_meeempathy_language: انگلش
   tutorial_dance2019_string_detail_grades: گریڈ 2+
   tutorial_danceparty_string_detail_grades: گریڈ 2+
   tutorial_chibitronics_string_detail_grades: پری ریڈر - گریڈ 5
@@ -7011,7 +6155,6 @@ ur:
   tutorial_ticklep_string_detail_grades: مت دکھاو
   tutorial_bbot_string_detail_grades: گریڈ 2+
   tutorial_scratchg_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
-  tutorial_roboticfriends_string_detail_grades: تمام عمر
   tutorial_sjforest_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_sjgreet_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_sjsunset_string_detail_grades: پری ریڈر - گریڈ 5
@@ -7056,7 +6199,6 @@ ur:
   tutorial_tickles_string_detail_grades: گریڈ 2+
   tutorial_ozogame_string_detail_grades: تمام عمر
   tutorial_vidcodeio_string_detail_grades: گریڈ 2+
-  tutorial_besttech_string_detail_grades: گرڈ 9 +
   tutorial_tlcbrain_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_hopquiz_string_detail_grades: گریڈز 6-8
   tutorial_unfortunate_string_detail_grades: پری ریڈر - گریڈ 5
@@ -7064,7 +6206,6 @@ ur:
   tutorial_elaseq_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_bbcmathi_string_detail_grades: مت دکھاو
   tutorial_tlcpixel_string_detail_grades: گرڈ 2-8
-  tutorial_arduino_string_detail_grades: گریڈز 6-8
   tutorial_introrobo_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_tlcinvis_string_detail_grades: گریڈ 2+
   tutorial_tlcjflap_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
@@ -7084,7 +6225,6 @@ ur:
   tutorial_tlcmind_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_tlctelebot_string_detail_grades: گریڈ 2+
   tutorial_tlcaus_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
-  tutorial_oralhist_string_detail_grades: گرڈ 9 +
   tutorial_tlcmicro_string_detail_grades: گریڈ 2+
   tutorial_imathematician_string_detail_grades: گرڈ 2-8
   tutorial_tlcmagic_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
@@ -7098,7 +6238,6 @@ ur:
   tutorial_tynkercan_string_detail_grades: گریڈ 2+
   tutorial_grokflags_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_robomind_string_detail_grades: گرڈ 2-8
-  tutorial_scratchanimwork_string_detail_grades: گرڈ 2-8
   tutorial_adventureq_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_khan-es_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_kpt_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
@@ -7106,13 +6245,11 @@ ur:
   tutorial_khe_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_kfr_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_app-inventor_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
-  tutorial_bits_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_blockly_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_tynker_string_detail_grades: مت دکھاو
   tutorial_baypt_string_detail_grades: تمام عمر
   tutorial_code-combat_string_detail_grades: مت دکھاو
   tutorial_mky_string_detail_grades: گریڈ 2+
-  tutorial_spellcraft_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_pirates_string_detail_grades: گرڈ 2-8
   tutorial_csfirst_string_detail_grades: گریڈ 2+
   tutorial_loopedy_string_detail_grades: پری ریڈر - گریڈ 5
@@ -7169,7 +6306,6 @@ ur:
   tutorial_soloweb_string_detail_grades: گرڈ 9 +
   tutorial_khanweb_string_detail_grades: گریڈ 2+
   tutorial_khandata_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
-  tutorial_robomeshiq_string_detail_grades: گریڈ 2+
   tutorial_googlelogo_string_detail_grades: گریڈ 2+
   tutorial_playtune_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_computeit_string_detail_grades: گریڈ 2+
@@ -7228,7 +6364,6 @@ ur:
   tutorial_stemcod_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_techikb_string_detail_grades: جامع درس گاہ
   tutorial_kanostreet_string_detail_grades: پری ریڈر - گریڈ 5
-  tutorial_nyblebot_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_codemojijs_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_techapf_string_detail_grades: جامع درس گاہ
   tutorial_techfpjs_string_detail_grades: جامع درس گاہ
@@ -7244,7 +6379,6 @@ ur:
   tutorial_gpbcircle_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_gpbpaint_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_cocomarcade_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
-  tutorial_techcpp_string_detail_grades: جامع درس گاہ
   tutorial_beetik_string_detail_grades: گریڈز 6-8
   tutorial_codedj_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_rgadvan_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
@@ -7317,7 +6451,6 @@ ur:
   tutorial_ifly_string_detail_grades: گریڈ 2+
   tutorial_idowedo_string_detail_grades: گرڈ 2-8
   tutorial_diggindwarf_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
-  tutorial_rmedr_string_detail_grades: گرڈ 2-8
   tutorial_spheroit_string_detail_grades: گریڈ 2+
   tutorial_gameofcodes_string_detail_grades: گریڈ 2+
   tutorial_blocklygames_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
@@ -7328,7 +6461,6 @@ ur:
   tutorial_bcjs1_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_bcjs2_string_detail_grades: گرڈ 9 +
   tutorial_3dbearmars_string_detail_grades: گرڈ 2-8
-  tutorial_alexaskill_string_detail_grades: گرڈ 2-8
   tutorial_bitsboxyak_string_detail_grades: گرڈ 2-8
   tutorial_blockscadbargraphs_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_blockscadbirdhouses_string_detail_grades: پری ریڈر - گریڈ 5
@@ -7385,7 +6517,6 @@ ur:
   tutorial_codinismhero_string_detail_grades: گریڈ 2+
   tutorial_discovery_string_detail_grades: گریڈ 2+
   tutorial_csfirstname_string_detail_grades: گریڈ 2+
-  tutorial_obstaclecourse_string_detail_grades: گریڈ 2+
   tutorial_edisonmove_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_edisonspider_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_edisonspotlight_string_detail_grades: گرڈ 2-8
@@ -7479,7 +6610,7 @@ ur:
   tutorial_microsoftarcade_string_detail_grades: گریڈ 2+
   tutorial_csfirstunplugged_string_detail_grades: گرڈ 2-8
   tutorial_toxicodepython_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
-  tutorial_codecombatozaria_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_codecombatozaria_string_detail_grades: گریڈز 6-8
   tutorial_vidcodedate_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_codemonkeyspace_string_detail_grades: گرڈ 2-8
   tutorial_codespeakhappy_string_detail_grades: گرڈ 2-8
@@ -7750,7 +6881,6 @@ ur:
   tutorial_ticklep_string_platforms: مت دکھاو
   tutorial_bbot_string_platforms: جدید براؤزر
   tutorial_scratchg_string_platforms: جدید براؤزر
-  tutorial_roboticfriends_string_platforms: غیر منسلک
   tutorial_sjforest_string_platforms: رکن کی اپلی کیشن
   tutorial_sjgreet_string_platforms: رکن کی اپلی کیشن
   tutorial_sjsunset_string_platforms: رکن کی اپلی کیشن
@@ -7799,7 +6929,6 @@ ur:
   tutorial_ozogame_string_platforms: تمام جدید براؤزر، رکن، آئی فون، لوڈ، اتارنا Android
     ٹیبلٹ، اندراڈ فون، اوزبوٹ روبوٹ
   tutorial_vidcodeio_string_platforms: غیر منسلک
-  tutorial_besttech_string_platforms: غیر منسلک
   tutorial_tlcbrain_string_platforms: غیر منسلک
   tutorial_hopquiz_string_platforms: رکن اور آئی فون
   tutorial_unfortunate_string_platforms: ڈیش اور ڈاٹ روبوٹ
@@ -7808,7 +6937,6 @@ ur:
     Android ٹیبلٹ
   tutorial_bbcmathi_string_platforms: مت دکھاو
   tutorial_tlcpixel_string_platforms: غیر منسلک
-  tutorial_arduino_string_platforms: آرڈوینو سرکٹ بورڈز
   tutorial_introrobo_string_platforms: رکن، لوڈ، اتارنا Android کی گولی، ڈیش اور ڈاٹ
     روبوٹ
   tutorial_tlcinvis_string_platforms: غیر منسلک
@@ -7832,7 +6960,6 @@ ur:
   tutorial_tlcmind_string_platforms: غیر منسلک
   tutorial_tlctelebot_string_platforms: غیر منسلک
   tutorial_tlcaus_string_platforms: غیر منسلک
-  tutorial_oralhist_string_platforms: جدید براؤزر
   tutorial_tlcmicro_string_platforms: غیر منسلک
   tutorial_imathematician_string_platforms: جدید براؤزر
   tutorial_tlcmagic_string_platforms: غیر منسلک
@@ -7852,7 +6979,6 @@ ur:
     مرضی کے مطابق)
   tutorial_robomind_string_platforms: انٹرنیٹ ایکسپلورر 11، مائیکروسافٹ ایج، کروم،
     فائر فاکس، سفاری، لوڈ، اتارنا Android کی گولی، رکن
-  tutorial_scratchanimwork_string_platforms: جدید براؤزر
   tutorial_adventureq_string_platforms: واپس اوپر
   tutorial_khan-es_string_platforms: انٹرنیٹ ایکسپلورر 11، مائیکروسافٹ ایج، کروم،
     فائر فاکس، سفاری
@@ -7865,13 +6991,11 @@ ur:
   tutorial_kfr_string_platforms: انٹرنیٹ ایکسپلورر 11، مائیکروسافٹ ایج، کروم، فائر
     فاکس، سفاری
   tutorial_app-inventor_string_platforms: Android ڈاؤن لوڈ،
-  tutorial_bits_string_platforms: جدید براؤزر
   tutorial_blockly_string_platforms: جدید براؤزر
   tutorial_tynker_string_platforms: مت دکھاو
   tutorial_baypt_string_platforms: جدید براؤزر
   tutorial_code-combat_string_platforms: مت دکھاو
   tutorial_mky_string_platforms: جدید براؤزر
-  tutorial_spellcraft_string_platforms: ونڈوز
   tutorial_pirates_string_platforms: انٹرنیٹ ایکسپلورر 11، مائیکروسافٹ ایج، کروم،
     فائر فاکس، سفاری، لوڈ، اتارنا Android کی گولی، رکن، لوڈ، اتارنا Android فون، آئی
     فون
@@ -7942,8 +7066,6 @@ ur:
     لوڈ، اتارنا Android فون، رکن، آئی فون
   tutorial_khanweb_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android کی گولی
   tutorial_khandata_string_platforms: جدید براؤزر
-  tutorial_robomeshiq_string_platforms: انٹرنیٹ ایکسپلورر 11، کروم، فائر فاکس، وییکس
-    IQ روبوٹ
   tutorial_googlelogo_string_platforms: جدید براؤزر
   tutorial_playtune_string_platforms: کروم، فائر فاکس، سفاری
   tutorial_computeit_string_platforms: جدید براؤزر
@@ -8020,8 +7142,6 @@ ur:
   tutorial_techikb_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
     رکن، ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
   tutorial_kanostreet_string_platforms: جدید براؤزر
-  tutorial_nyblebot_string_platforms: لوڈ، اتارنا Android کی گولی، رکن، لوڈ، اتارنا
-    Android فون، آئی فون
   tutorial_codemojijs_string_platforms: جدید براؤزر
   tutorial_techapf_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
     رکن، ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
@@ -8043,8 +7163,6 @@ ur:
   tutorial_gpbpaint_string_platforms: جدید براؤزر
   tutorial_cocomarcade_string_platforms: انٹرنیٹ ایکسپلورر 11، مائیکروسافٹ ایج، کروم،
     فائر فاکس
-  tutorial_techcpp_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
-    رکن، ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
   tutorial_beetik_string_platforms: کروم، فائر فاکس، لوڈ، اتارنا Android ٹیبلٹ، رکن
   tutorial_codedj_string_platforms: کروم، فائر فاکس، سفاری، لوڈ، اتارنا Android کی
     گولی، رکن
@@ -8144,7 +7262,6 @@ ur:
   tutorial_idowedo_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
     رکن، ویڈو
   tutorial_diggindwarf_string_platforms: کروم، فائر فاکس، سفاری
-  tutorial_rmedr_string_platforms: تمام جدید براؤزر، وییکس ایڈی آر روبوٹ
   tutorial_spheroit_string_platforms: رکن، لوڈ، اتارنا Android کی گولی، آئی فون، لوڈ،
     اتارنا Android فون، سپروورو روبوٹ
   tutorial_gameofcodes_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
@@ -8160,7 +7277,6 @@ ur:
   tutorial_bcjs2_string_platforms: جدید براؤزر
   tutorial_3dbearmars_string_platforms: لوڈ، اتارنا Android کی گولی، رکن، لوڈ، اتارنا
     Android فون، آئی فون
-  tutorial_alexaskill_string_platforms: جدید براؤزر
   tutorial_bitsboxyak_string_platforms: جدید براؤزر
   tutorial_blockscadbargraphs_string_platforms: جدید براؤزر
   tutorial_blockscadbirdhouses_string_platforms: جدید براؤزر
@@ -8241,7 +7357,6 @@ ur:
     Android فون
   tutorial_discovery_string_platforms: جدید براؤزر
   tutorial_csfirstname_string_platforms: جدید براؤزر
-  tutorial_obstaclecourse_string_platforms: واپس اوپر
   tutorial_edisonmove_string_platforms: جدید براؤزر
   tutorial_edisonspider_string_platforms: تمام جدید براؤزر، رکن، لوڈ، اتارنا Android
     ٹیبلٹ
@@ -8385,7 +7500,8 @@ ur:
   tutorial_grokimage_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
     رکن
   tutorial_icomputelearn_string_platforms: جدید براؤزر
-  tutorial_rpstress_string_platforms: کروم، فائر فاکس
+  tutorial_rpstress_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن
   tutorial_bsdcause_string_platforms: کروم
   tutorial_vidcodeanimoji_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android
     ٹیبلٹ، رکن
@@ -8631,7 +7747,6 @@ ur:
   tutorial_ticklep_string_detail_platforms: مت دکھاو
   tutorial_bbot_string_detail_platforms: ''
   tutorial_scratchg_string_detail_platforms: ''
-  tutorial_roboticfriends_string_detail_platforms: غیر منسلک
   tutorial_sjforest_string_detail_platforms: رکن کی اپلی کیشن
   tutorial_sjgreet_string_detail_platforms: رکن کی اپلی کیشن
   tutorial_sjsunset_string_detail_platforms: رکن کی اپلی کیشن
@@ -8676,7 +7791,6 @@ ur:
   tutorial_tickles_string_detail_platforms: Sphero روبوٹ
   tutorial_ozogame_string_detail_platforms: Ozobot روبوٹ
   tutorial_vidcodeio_string_detail_platforms: غیر منسلک
-  tutorial_besttech_string_detail_platforms: غیر منسلک
   tutorial_tlcbrain_string_detail_platforms: غیر منسلک
   tutorial_hopquiz_string_detail_platforms: iOS ایپ
   tutorial_unfortunate_string_detail_platforms: ڈیش اور ڈاٹ روبوٹ
@@ -8684,7 +7798,6 @@ ur:
   tutorial_elaseq_string_detail_platforms: غیر منسلک
   tutorial_bbcmathi_string_detail_platforms: مت دکھاو
   tutorial_tlcpixel_string_detail_platforms: غیر منسلک
-  tutorial_arduino_string_detail_platforms: ''
   tutorial_introrobo_string_detail_platforms: ڈیش اور ڈاٹ روبوٹ
   tutorial_tlcinvis_string_detail_platforms: غیر منسلک
   tutorial_tlcjflap_string_detail_platforms: ''
@@ -8704,7 +7817,6 @@ ur:
   tutorial_tlcmind_string_detail_platforms: غیر منسلک
   tutorial_tlctelebot_string_detail_platforms: غیر منسلک
   tutorial_tlcaus_string_detail_platforms: غیر منسلک
-  tutorial_oralhist_string_detail_platforms: ''
   tutorial_tlcmicro_string_detail_platforms: غیر منسلک
   tutorial_imathematician_string_detail_platforms: ''
   tutorial_tlcmagic_string_detail_platforms: غیر منسلک
@@ -8718,7 +7830,6 @@ ur:
   tutorial_tynkercan_string_detail_platforms: ''
   tutorial_grokflags_string_detail_platforms: ''
   tutorial_robomind_string_detail_platforms: ''
-  tutorial_scratchanimwork_string_detail_platforms: ''
   tutorial_adventureq_string_detail_platforms: ''
   tutorial_khan-es_string_detail_platforms: ''
   tutorial_kpt_string_detail_platforms: ''
@@ -8726,13 +7837,11 @@ ur:
   tutorial_khe_string_detail_platforms: ''
   tutorial_kfr_string_detail_platforms: ''
   tutorial_app-inventor_string_detail_platforms: Android ڈاؤن لوڈ،
-  tutorial_bits_string_detail_platforms: ''
   tutorial_blockly_string_detail_platforms: ''
   tutorial_tynker_string_detail_platforms: مت دکھاو
   tutorial_baypt_string_detail_platforms: ''
   tutorial_code-combat_string_detail_platforms: مت دکھاو
   tutorial_mky_string_detail_platforms: ''
-  tutorial_spellcraft_string_detail_platforms: ''
   tutorial_pirates_string_detail_platforms: ''
   tutorial_csfirst_string_detail_platforms: ''
   tutorial_loopedy_string_detail_platforms: ڈیش اور ڈاٹ روبوٹ
@@ -8789,7 +7898,6 @@ ur:
   tutorial_soloweb_string_detail_platforms: ''
   tutorial_khanweb_string_detail_platforms: ''
   tutorial_khandata_string_detail_platforms: ''
-  tutorial_robomeshiq_string_detail_platforms: وییکس IQ روبوٹ
   tutorial_googlelogo_string_detail_platforms: ''
   tutorial_playtune_string_detail_platforms: ''
   tutorial_computeit_string_detail_platforms: ''
@@ -8848,7 +7956,6 @@ ur:
   tutorial_stemcod_string_detail_platforms: ''
   tutorial_techikb_string_detail_platforms: ''
   tutorial_kanostreet_string_detail_platforms: ''
-  tutorial_nyblebot_string_detail_platforms: ''
   tutorial_codemojijs_string_detail_platforms: ''
   tutorial_techapf_string_detail_platforms: ''
   tutorial_techfpjs_string_detail_platforms: ''
@@ -8864,7 +7971,6 @@ ur:
   tutorial_gpbcircle_string_detail_platforms: ''
   tutorial_gpbpaint_string_detail_platforms: ''
   tutorial_cocomarcade_string_detail_platforms: ''
-  tutorial_techcpp_string_detail_platforms: ''
   tutorial_beetik_string_detail_platforms: ''
   tutorial_codedj_string_detail_platforms: ''
   tutorial_rgadvan_string_detail_platforms: ''
@@ -8937,7 +8043,6 @@ ur:
   tutorial_ifly_string_detail_platforms: توتا مینی ڈرونز
   tutorial_idowedo_string_detail_platforms: ہم کرتے ہیں
   tutorial_diggindwarf_string_detail_platforms: ''
-  tutorial_rmedr_string_detail_platforms: وییکس ایڈی آر روبوٹ
   tutorial_spheroit_string_detail_platforms: Sphero روبوٹ
   tutorial_gameofcodes_string_detail_platforms: ''
   tutorial_blocklygames_string_detail_platforms: ''
@@ -8948,7 +8053,6 @@ ur:
   tutorial_bcjs1_string_detail_platforms: ''
   tutorial_bcjs2_string_detail_platforms: ''
   tutorial_3dbearmars_string_detail_platforms: 3D پرنٹر
-  tutorial_alexaskill_string_detail_platforms: ''
   tutorial_bitsboxyak_string_detail_platforms: ''
   tutorial_blockscadbargraphs_string_detail_platforms: ''
   tutorial_blockscadbirdhouses_string_detail_platforms: ''
@@ -9005,7 +8109,6 @@ ur:
   tutorial_codinismhero_string_detail_platforms: ''
   tutorial_discovery_string_detail_platforms: ''
   tutorial_csfirstname_string_detail_platforms: ''
-  tutorial_obstaclecourse_string_detail_platforms: Sphero روبوٹ
   tutorial_edisonmove_string_detail_platforms: ایڈیسن روبوٹ
   tutorial_edisonspider_string_detail_platforms: ایڈیسن روبوٹ
   tutorial_edisonspotlight_string_detail_platforms: ایڈیسن روبوٹ
@@ -9348,7 +8451,6 @@ ur:
   tutorial_ticklep_string_detail_programming_languages: مت دکھاو
   tutorial_bbot_string_detail_programming_languages: بصری پروگرامنگ زبان
   tutorial_scratchg_string_detail_programming_languages: آزاد زبان
-  tutorial_roboticfriends_string_detail_programming_languages: آزاد زبان
   tutorial_sjforest_string_detail_programming_languages: بلاکس
   tutorial_sjgreet_string_detail_programming_languages: بلاکس
   tutorial_sjsunset_string_detail_programming_languages: بلاکس
@@ -9395,7 +8497,6 @@ ur:
   tutorial_tickles_string_detail_programming_languages: بلاکس
   tutorial_ozogame_string_detail_programming_languages: بلاکس
   tutorial_vidcodeio_string_detail_programming_languages: آزاد زبان
-  tutorial_besttech_string_detail_programming_languages: بلاکس، سی  / سی ++
   tutorial_tlcbrain_string_detail_programming_languages: آزاد زبان
   tutorial_hopquiz_string_detail_programming_languages: ہوپسکوٹچ
   tutorial_unfortunate_string_detail_programming_languages: بلاکس
@@ -9403,7 +8504,6 @@ ur:
   tutorial_elaseq_string_detail_programming_languages: آزاد زبان
   tutorial_bbcmathi_string_detail_programming_languages: مت دکھاو
   tutorial_tlcpixel_string_detail_programming_languages: آزاد زبان
-  tutorial_arduino_string_detail_programming_languages: آردوانو
   tutorial_introrobo_string_detail_programming_languages: بلاکس، جاوا اسکرپٹ
   tutorial_tlcinvis_string_detail_programming_languages: آزاد زبان
   tutorial_tlcjflap_string_detail_programming_languages: آزاد زبان
@@ -9425,7 +8525,6 @@ ur:
   tutorial_tlcmind_string_detail_programming_languages: آزاد زبان
   tutorial_tlctelebot_string_detail_programming_languages: آزاد زبان
   tutorial_tlcaus_string_detail_programming_languages: آزاد زبان
-  tutorial_oralhist_string_detail_programming_languages: آزاد زبان
   tutorial_tlcmicro_string_detail_programming_languages: آزاد زبان
   tutorial_imathematician_string_detail_programming_languages: سکریچ
   tutorial_tlcmagic_string_detail_programming_languages: آزاد زبان
@@ -9441,7 +8540,6 @@ ur:
     ازگر
   tutorial_grokflags_string_detail_programming_languages: پادری
   tutorial_robomind_string_detail_programming_languages: بلاکس
-  tutorial_scratchanimwork_string_detail_programming_languages: بلاکس، سکریچ
   tutorial_adventureq_string_detail_programming_languages: بلاکس
   tutorial_khan-es_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_kpt_string_detail_programming_languages: جاوا اسکرپٹ
@@ -9449,13 +8547,11 @@ ur:
   tutorial_khe_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_kfr_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_app-inventor_string_detail_programming_languages: بلاکس
-  tutorial_bits_string_detail_programming_languages: بلاکس، آزاد زبان
   tutorial_blockly_string_detail_programming_languages: بلاکس
   tutorial_tynker_string_detail_programming_languages: مت دکھاو
   tutorial_baypt_string_detail_programming_languages: بلاکس
   tutorial_code-combat_string_detail_programming_languages: مت دکھاو
   tutorial_mky_string_detail_programming_languages: کافی سکرپٹ
-  tutorial_spellcraft_string_detail_programming_languages: بلاکس، جاوا اسکرپٹ
   tutorial_pirates_string_detail_programming_languages: بلاکس، سمندری ڈاکو کوڈ
   tutorial_csfirst_string_detail_programming_languages: سکریچ
   tutorial_loopedy_string_detail_programming_languages: بلاکس
@@ -9512,7 +8608,6 @@ ur:
   tutorial_soloweb_string_detail_programming_languages: ایچ ٹی ایم ایل، سی ایس ایس
   tutorial_khanweb_string_detail_programming_languages: ایچ ٹی ایم ایل، سی ایس ایس
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_robomeshiq_string_detail_programming_languages: بلاکس، پادری
   tutorial_googlelogo_string_detail_programming_languages: بلاکس، سکریچ
   tutorial_playtune_string_detail_programming_languages: بلاکس
   tutorial_computeit_string_detail_programming_languages: آزاد زبان
@@ -9573,7 +8668,6 @@ ur:
   tutorial_stemcod_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_techikb_string_detail_programming_languages: کوٹلان
   tutorial_kanostreet_string_detail_programming_languages: بلاکس، جاوا اسکرپٹ
-  tutorial_nyblebot_string_detail_programming_languages: بلاکس
   tutorial_codemojijs_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_techapf_string_detail_programming_languages: پادری
   tutorial_techfpjs_string_detail_programming_languages: جاوا اسکرپٹ
@@ -9589,7 +8683,6 @@ ur:
   tutorial_gpbcircle_string_detail_programming_languages: بلاکس
   tutorial_gpbpaint_string_detail_programming_languages: بلاکس
   tutorial_cocomarcade_string_detail_programming_languages: جاوا سکرپٹ، ازگر
-  tutorial_techcpp_string_detail_programming_languages: C / C + +
   tutorial_beetik_string_detail_programming_languages: بلاکس
   tutorial_codedj_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_rgadvan_string_detail_programming_languages: بلاکس، جاوا سکرپٹ، ازگر
@@ -9662,7 +8755,6 @@ ur:
   tutorial_ifly_string_detail_programming_languages: Tynker
   tutorial_idowedo_string_detail_programming_languages: سکریچ
   tutorial_diggindwarf_string_detail_programming_languages: جاوا اسکرپٹ
-  tutorial_rmedr_string_detail_programming_languages: بلاکس
   tutorial_spheroit_string_detail_programming_languages: بلاکس، جاوا اسکرپٹ
   tutorial_gameofcodes_string_detail_programming_languages: بلاکس، تیار، اتحاد
   tutorial_blocklygames_string_detail_programming_languages: بلاکس
@@ -9674,7 +8766,6 @@ ur:
   tutorial_bcjs2_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_3dbearmars_string_detail_programming_languages: زبان آزاد، (متعدد زبانوں
     میں بھی پڑھایا جا سکتا) استعمال کرتا ہے 3D ماڈلنگ میں اضافی ریئلٹی
-  tutorial_alexaskill_string_detail_programming_languages: بلاکس
   tutorial_bitsboxyak_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_blockscadbargraphs_string_detail_programming_languages: بلاکس
   tutorial_blockscadbirdhouses_string_detail_programming_languages: بلاکس
@@ -9734,7 +8825,6 @@ ur:
   tutorial_codinismhero_string_detail_programming_languages: پادری
   tutorial_discovery_string_detail_programming_languages: بلاکس، سکریچ
   tutorial_csfirstname_string_detail_programming_languages: بلاکس، سکریچ
-  tutorial_obstaclecourse_string_detail_programming_languages: بلاکس
   tutorial_edisonmove_string_detail_programming_languages: ازگر، ایدپی، ازگر پر مبنی
     ایک ٹیکسٹ بیسڈ پروگرامنگ زبان ہے ۔
   tutorial_edisonspider_string_detail_programming_languages: بلاکس
@@ -9833,7 +8923,7 @@ ur:
   tutorial_gamemaker_string_detail_programming_languages: جاوا اسکرپٹ
   tutorial_duckrace_string_detail_programming_languages: بلاکس
   tutorial_allcancodeapps_string_detail_programming_languages: بلاکس
-  tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_n2y_string_detail_programming_languages: غیر منسلک
   tutorial_microsoftarcade_string_detail_programming_languages: بلاکس
   tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
     Scratch
@@ -10050,7 +9140,6 @@ ur:
   tutorial_eddesign_name: Edison the designer
   tutorial_edshapeup_name: Robot shape-up with Edison
   tutorial_ozocolor_name: Pop Star|Creating Functions With Ozobot Color Codes
-  tutorial_kcjanimals_name: About a Canadian Animal
   tutorial_icomputeeggs_name: iHide Eggs
   tutorial_rootunplugged_name: iRobot Code Break
   tutorial_rgtreasure_name: RoboGarden Puzzles - Robo Treasure Chest
@@ -10067,13 +9156,11 @@ ur:
   tutorial_blockscadscale_name: Scale City
   tutorial_tcadloops_name: Using Loops in Tinkercad to Design a Bursting Star
   tutorial_phidgets_name: A Phidgets Theremin with Processing
-  tutorial_kcjmerry_name: Merry Micro:bits
   tutorial_modvariables_name: Investigating Variables & Block Values using Cubelets
   tutorial_codestersmicro_name: 'Codesters: Create a Micro Ball Game'
   tutorial_codestersdata_name: 'Codesters: Code & Graph micro:bit Data'
   tutorial_ikodexmas_name: iKode Xmas
   tutorial_rpisensehat_name: Sense HAT data logger
-  tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
   tutorial_ai-oceans_name: سمندروں کے مصنوعی ذہانت
@@ -10349,11 +9436,6 @@ ur:
     and unplugged lesson to introduce the concept of functions. It is the first lesson
     of a two lesson series, but either lesson can be taught in isolation. The second
     lesson utilizes OzoBlockly to build on the concept of functions. '
-  tutorial_kcjanimals_longdescription: Build a simple project to celebrate coding
-    and Canadian wildlife. Kids will choose a Canadian animal, like a bear or a moose,
-    and create an animation that explores the animal's world, such as its habitat,
-    eating habits, migration patterns and so on. The project is simple enough for
-    teachers or parents to facilitate and help the kids follow along.
   tutorial_icomputeeggs_longdescription: This teacher-led activity, adapted for the
     Hour of Code, provides pupils with an opportunity to explore physical programming
     through robotics. Using a drag-and-drop programming environment and a programmable
@@ -10405,11 +9487,6 @@ ur:
     can be combined to create a 3D model of a bursting star.
   tutorial_phidgets_longdescription: Create an awesome musical instrument with Phidgets
     and Processing!
-  tutorial_kcjmerry_longdescription: Build an interactive coding project with the
-    micro:bit to celebrate coding and the holiday season. Kids will use a combination
-    of block coding and physical computing to create a sparkling snow globe animation.
-    The project is simple enough for teachers or parents to facilitate and it comes
-    with activity cards that kids can use on their own for a further challenge.
   tutorial_modvariables_longdescription: 'Students investigate how data flows through
     a network using Cubelets robot blocks. This lesson assumes students are already
     familiar with how Cubelets robot blocks work in general.  Visit modrobotics.com/thehub
@@ -10431,8 +9508,6 @@ ur:
   tutorial_rpisensehat_longdescription: Learn how use the Sense HAT hardware to build
     a data-logging device which can capture a range of information about its immediate
     environment.
-  tutorial_modtraits_longdescription: 'Students use the steps of computational thinking
-    to analyze character traits and create an algorithm to demonstrate those traits. '
   tutorial_mee_longdescription: Program the Minecraft Agent to collect data about
     forest fires. Then write code to help prevent the spread of fire, save the village,
     and bring life back to the forest. Learn coding basics and explore a real-world
@@ -10444,109 +9519,6 @@ ur:
     کچھ ہے! مصنوعی ذہانت، مشین لرننگ، ٹریننگ ڈاٹا، اور تعصب کے بارے میں ایسے حال میں
     سیکھیں جب آپ اخلاقی مسائل اورعالمی مسائل کے حل میں AI کے ممکن استعمال کے بارے
     میں جان رہے ہوتے ہیں."
-  tutorial_scratchimagine_language: انگریزی، ہسپانوی
-  tutorial_codesterspsa_language: انگلش
-  tutorial_googlehero_language: انگریزی، ہسپانوی
-  tutorial_codestersbball_language: انگلش
-  tutorial_scratchcartoon_language: انگریزی، ہسپانوی
-  tutorial_codemonkeyjr_language: انگلش
-  tutorial_bananatales_language: انگلش
-  tutorial_scratchtales_language: انگریزی، ہسپانوی
-  tutorial_msemoji_language: انگلش
-  tutorial_cacolor_language: انگلش
-  tutorial_kodablebeach_language: English, Other
-  tutorial_tynkeren_language: انگلش
-  tutorial_tynkerjavapro_language: انگلش
-  tutorial_grasshopperhack_language: انگلش
-  tutorial_pbskids_language: انگریزی، ہسپانوی
-  tutorial_nclabdata_language: انگلش
-  tutorial_grasshopperphoto_language: انگلش
-  tutorial_tynkerpyland_language: انگلش
-  tutorial_codeitimages_language: انگریزی، جرمن
-  tutorial_hyperpadenemy_language: انگلش
-  tutorial_tynkerpro_language: انگلش
-  tutorial_trashtag_language: انگلش
-  tutorial_casiege_language: انگلش
-  tutorial_thunkableyeet_language: انگلش
-  tutorial_vidcodedeal_language: انگلش
-  tutorial_codehsgeno_language: انگلش
-  tutorial_hyperpadpong_language: انگلش
-  tutorial_tynkerland_language: انگلش
-  tutorial_trinketgirl_language: انگلش
-  tutorial_rpimosquito_language: انگلش
-  tutorial_tynkermars_language: انگلش
-  tutorial_cityx_language: Chinese (Traditional), English
-  tutorial_vidcodemap_language: انگلش
-  tutorial_robotmagicfarm_language: انگلش
-  tutorial_codehstriangle_language: انگلش
-  tutorial_ttwhitehouse_language: انگلش
-  tutorial_modulo_language: انگلش
-  tutorial_codingtown_language: انگلش
-  tutorial_kanoart_language: انگلش
-  tutorial_dragonscript_language: انگلش
-  tutorial_uwcloud_language: انگلش
-  tutorial_htmlmuffin_language: انگلش
-  tutorial_microsoftpizza_language: انگلش
-  tutorial_stemc_blckhole_language: انگلش
-  tutorial_careconfigure_language: انگلش
-  tutorial_rpiscratch_language: انگلش
-  tutorial_ozaria_language: انگریزی، ہسپانوی
-  tutorial_ttovum_language: انگلش
-  tutorial_ttpassage_language: انگلش
-  tutorial_tynkerhtmlen_language: انگلش
-  tutorial_ttfrog_language: انگلش
-  tutorial_codemojijava_language: انگلش
-  tutorial_ccfirewall_language: انگلش
-  tutorial_htmljs_language: انگلش
-  tutorial_ttaqueducts_language: انگلش
-  tutorial_vtgame_language: انگلش
-  tutorial_baroborav_language: انگلش
-  tutorial_baroboobstacle_language: انگلش
-  tutorial_pbstorytelling_language: انگلش
-  tutorial_kibosnow_language: انگلش
-  tutorial_kibohappy_language: انگلش
-  tutorial_rubylove_language: انگلش
-  tutorial_spherosmiles_language: انگلش
-  tutorial_spherobaby_language: انگلش
-  tutorial_toxarchitect_language: انگلش
-  tutorial_idodge_language: انگلش
-  tutorial_firiacodebot_language: انگلش
-  tutorial_modlighthouse_language: انگلش
-  tutorial_spherogreen_language: انگلش
-  tutorial_ozopopstar_language: انگلش
-  tutorial_eddesign_language: انگلش
-  tutorial_edshapeup_language: انگلش
-  tutorial_ozocolor_language: انگلش
-  tutorial_kcjanimals_language: انگلش
-  tutorial_icomputeeggs_language: انگلش
-  tutorial_rootunplugged_language: انگلش
-  tutorial_rgtreasure_language: انگلش
-  tutorial_peblioportraits_language: انگلش
-  tutorial_rootcodebreak_language: انگلش
-  tutorial_microbit14_language: انگلش
-  tutorial_barobomoon_language: انگلش
-  tutorial_eddog_language: انگلش
-  tutorial_microbit15_language: انگلش
-  tutorial_unity_language: انگلش
-  tutorial_blockscadtarget_language: انگلش
-  tutorial_tcadicicles_language: انگلش
-  tutorial_blockscadscale_language: انگلش
-  tutorial_tcadloops_language: انگلش
-  tutorial_phidgets_language: انگلش
-  tutorial_kcjmerry_language: انگلش
-  tutorial_modvariables_language: انگلش
-  tutorial_codestersmicro_language: انگلش
-  tutorial_codestersdata_language: انگلش
-  tutorial_ikodexmas_language: انگلش
-  tutorial_rpisensehat_language: انگلش
-  tutorial_modtraits_language: انگلش
-  tutorial_mee_language: Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech,
-    Danish, Dutch, English (UK), English (United States), Finnish, French (Canada),
-    French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
-    Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
-  tutorial_kuborobo_language: انگریزی، ہسپانوی
-  tutorial_ai-oceans_language: انگلش
   tutorial_scratchimagine_string_detail_grades: گریڈ 2+
   tutorial_codesterspsa_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_googlehero_string_detail_grades: گرڈ 2-8
@@ -10620,7 +9592,6 @@ ur:
   tutorial_eddesign_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_edshapeup_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_ozocolor_string_detail_grades: گرڈ 2-8
-  tutorial_kcjanimals_string_detail_grades: گرڈ 2-8
   tutorial_icomputeeggs_string_detail_grades: گرڈ 2-8
   tutorial_rootunplugged_string_detail_grades: گرڈ 2-8
   tutorial_rgtreasure_string_detail_grades: پری ریڈر - گریڈ 5
@@ -10636,13 +9607,11 @@ ur:
   tutorial_blockscadscale_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_tcadloops_string_detail_grades: گریڈز 6-8
   tutorial_phidgets_string_detail_grades: گرڈ 9 +
-  tutorial_kcjmerry_string_detail_grades: گرڈ 2-8
   tutorial_modvariables_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
   tutorial_codestersmicro_string_detail_grades: گریڈز 6-8
   tutorial_codestersdata_string_detail_grades: گریڈز 6-8
   tutorial_ikodexmas_string_detail_grades: پری ریڈر - گریڈ 5
   tutorial_rpisensehat_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
-  tutorial_modtraits_string_detail_grades: گریڈ 2+
   tutorial_mee_string_detail_grades: گریڈ 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_ai-oceans_string_detail_grades: گریڈز3+
@@ -10740,7 +9709,6 @@ ur:
   tutorial_eddesign_string_platforms: تمام جدید براؤزر، رکن، لوڈ، اتارنا Android ٹیبلٹ
   tutorial_edshapeup_string_platforms: جدید براؤزر
   tutorial_ozocolor_string_platforms: غیر منسلک
-  tutorial_kcjanimals_string_platforms: جدید براؤزر
   tutorial_icomputeeggs_string_platforms: All modern browers, Android phone, Android
     tablet, iPad, iPhone
   tutorial_rootunplugged_string_platforms: غیر منسلک
@@ -10757,14 +9725,12 @@ ur:
   tutorial_blockscadscale_string_platforms: جدید براؤزر
   tutorial_tcadloops_string_platforms: جدید براؤزر
   tutorial_phidgets_string_platforms: جدید براؤزر
-  tutorial_kcjmerry_string_platforms: جدید براؤزر
   tutorial_modvariables_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
     لوڈ، اتارنا Android فون، رکن، آئی فون
   tutorial_codestersmicro_string_platforms: 'All modern browsers '
   tutorial_codestersdata_string_platforms: 'All modern browsers '
   tutorial_ikodexmas_string_platforms: جدید براؤزر
   tutorial_rpisensehat_string_platforms: جدید براؤزر
-  tutorial_modtraits_string_platforms: جدید براؤزر
   tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
   tutorial_kuborobo_string_platforms: غیر منسلک
   tutorial_ai-oceans_string_platforms: تمام جدید براؤزر، جدید اینڈرائیڈ کے ٹیبلٹ،
@@ -10844,7 +9810,6 @@ ur:
   tutorial_eddesign_string_detail_platforms: ایڈیسن روبوٹ
   tutorial_edshapeup_string_detail_platforms: ایڈیسن روبوٹ
   tutorial_ozocolor_string_detail_platforms: Ozobot
-  tutorial_kcjanimals_string_detail_platforms: ''
   tutorial_icomputeeggs_string_detail_platforms: Sphero
   tutorial_rootunplugged_string_detail_platforms: ''
   tutorial_rgtreasure_string_detail_platforms: ''
@@ -10861,13 +9826,11 @@ ur:
   tutorial_tcadloops_string_detail_platforms: ''
   tutorial_phidgets_string_detail_platforms: Phidgets Getting Started Kit, Phidgets
     Distance Sensors.
-  tutorial_kcjmerry_string_detail_platforms: 'بی بی سی مائیکرو: بٹ'
   tutorial_modvariables_string_detail_platforms: Cubelets Robot Blocks
   tutorial_codestersmicro_string_detail_platforms: 'بی بی سی مائیکرو: بٹ'
   tutorial_codestersdata_string_detail_platforms: 'بی بی سی مائیکرو: بٹ'
   tutorial_ikodexmas_string_detail_platforms: Microsoft Kodu
   tutorial_rpisensehat_string_detail_platforms: Raspbian (software), SenseHAT
-  tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_ai-oceans_string_detail_platforms: ''
@@ -10957,7 +9920,6 @@ ur:
   tutorial_edshapeup_string_detail_programming_languages: ازگر، ایدپی، ازگر پر مبنی
     ایک ٹیکسٹ بیسڈ پروگرامنگ زبان ہے ۔
   tutorial_ozocolor_string_detail_programming_languages: بلاکس
-  tutorial_kcjanimals_string_detail_programming_languages: بلاکس
   tutorial_icomputeeggs_string_detail_programming_languages: بلاکس
   tutorial_rootunplugged_string_detail_programming_languages: بلاکس
   tutorial_rgtreasure_string_detail_programming_languages: بلاکس
@@ -10974,18 +9936,937 @@ ur:
   tutorial_tcadloops_string_detail_programming_languages: بلاکس
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
     major programming languages. Can easily adapt this project to another language/environment.
-  tutorial_kcjmerry_string_detail_programming_languages: بلاکس
   tutorial_modvariables_string_detail_programming_languages: زبان خود مختار (متعدد
     زبانوں میں بھی پڑھایا جا سکتا)
   tutorial_codestersmicro_string_detail_programming_languages: پادری
   tutorial_codestersdata_string_detail_programming_languages: پادری
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: پادری
-  tutorial_modtraits_string_detail_programming_languages: بلاکس
   tutorial_mee_string_detail_programming_languages: بلاکس
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
   tutorial_ai-oceans_string_detail_programming_languages: مصنوعی ذہانت اور مشین لرننگ
+  tutorial_hello_name: Hello World
+  tutorial_raspispace_name: 'Space Talk: Launch into Scratch coding'
+  tutorial_codemonkeyjump_name: 'Blocks Jumper: Game Creation'
+  tutorial_poemart_name: Poem Art
+  tutorial_kodablehero_name: Design your Hero
+  tutorial_cacloud_name: Operation Cloud
+  tutorial_blocksmithbot_name: Bot is sus?!
+  tutorial_hatchmario_name: 'Mario''s Secret Adventure: Build Your Own 3D Mario Game'
+  tutorial_microsoftforest_name: Save the Forest!
+  tutorial_blackbirdscreen_name: Screen Saver
+  tutorial_toxicodecompute2_name: Discover Python with Compute it
+  tutorial_minecrafttimecraft_name: Minecraft Timecraft
+  tutorial_blackbirdtether_name: Tetherball
+  tutorial_ob_name: Outbreak Simulator
+  tutorial_codeartportrait_name: Code Your Self-Portrait
+  tutorial_shelly_name: 'Shelly: Learn programming by drawing!'
+  tutorial_weavly_name: 'Weavly: Activities at Home'
+  tutorial_codespeakpassword_name: Program a Strong Password Generator in Python
+  tutorial_kodableshapes_name: Make Shapes with Code
+  tutorial_nasabinary_name: 'Binary Code: How to Talk to a Spacecraft'
+  tutorial_3dmaker_name: 3D Maker
+  tutorial_itchstart_name: 'iTCHcode: Scratch 5 Block Starter'
+  tutorial_hopsub_name: Build Subway Surfers with a Friend
+  tutorial_itchmundos_name: Los mundos en mi mundo_E2
+  tutorial_itchtenacity_name: Tenacity
+  tutorial_kcjskiing_name: 'Sport + Code: Skiing'
+  tutorial_groksecurity_name: 'Cyber Security: Defence Against the Dark Hats'
+  tutorial_creaticode_name: 3D Programming with Scratch Blocks
+  tutorial_kcjhockey_name: 'Sport + Code: Hockey'
+  tutorial_ttdungeon_name: Binary Dungeon
+  tutorial_ccai_name: Road to the AI League
+  tutorial_bsdai_name: AI Webcam Image Classifier
+  tutorial_stemdata_name: 'Data Science: Earth Day'
+  tutorial_thunkableinfo_name: Build an Informational App on Thunkable
+  tutorial_educodespace_name: Space Solo
+  tutorial_kcjtennis_name: 'Sport + Code: Tennis'
+  tutorial_robotmagictower_name: Hanoi Tower Game - recursive functions
+  tutorial_ttdragons_name: Dragon's Apprentice Chapter 1
+  tutorial_kcjarchery_name: 'Sport + Code: Archery'
+  tutorial_ttsprouts_name: Crowded Sprouts
+  tutorial_ttmaze_name: The Maze
+  tutorial_codetribe_name: 'Code Tribe: 10 Minute Program'
+  tutorial_ttcanyon_name: 'The Canyon: Battle Arena'
+  tutorial_kcjxtrail_name: 'Sport + Code: Xtrail'
+  tutorial_codespeakroad_name: Build a Road Game in Scratch
+  tutorial_educodelair_name: Chiroptera's Lair
+  tutorial_ibmhourofz_name: IBM Hour of Z
+  tutorial_gamefrootbacteria_name: Coding Bacteria with Gamefroot
+  tutorial_educodeforest_name: The Frosted Forest
+  tutorial_educodehorus_name: Temple of Horus
+  tutorial_codespeakpokemon_name: Code a Pokemon Evolution Game
+  tutorial_stemholiday_name: Code a Virtual Holiday Card
+  tutorial_codespeakpixel_name: Code a Pixel Art Editor in Bitsbox
+  tutorial_codespellsnexus_name: 'CodeSpells: The Nexus'
+  tutorial_carnegieslime_name: Super Slime Battle
+  tutorial_ozotown_name: 'Ozobot Blockly Challenge: OzoTown'
+  tutorial_milnedash_name: Dash Joins a Dance Circle
+  tutorial_microbitpet_name: micro:bit pet
+  tutorial_spherotriad_name: CIA Triad and Cybersecurity
+  tutorial_spheropassword_name: Password Security and Protection
+  tutorial_codequilt_name: CodeQuilt
+  tutorial_ozoshape1_name: 'Ozobot Blockly Challenge: ShapeTracer 1'
+  tutorial_ozoshape2_name: 'Ozobot Blockly Challenge: ShapeTracer 2'
+  tutorial_hopescape_name: Can You Escape? Build an Escape Room with Hopscotch
+  tutorial_ozorace_name: 50 cm Race
+  tutorial_ozoequestrian_name: Equestrian Event
+  tutorial_irobotpizza_name: Robot Pizza Party
+  tutorial_ai4alldance_name: 'AI4ALL: AI & Dance'
+  tutorial_ai4allneural_name: How Convolutional Neural Networks Work
+  tutorial_spheroinout_name: Inputs and Outputs
+  tutorial_edisonblueprint_name: Edison the Blueprint Designer
+  tutorial_edisonmaze_name: Edison the Maze Racer
+  tutorial_milnefunctions_name: Dash Joins a Dance Circle (with Functions)
+  tutorial_sasmap_name: 'Show With Code: Features on a Map'
+  tutorial_firstrobotics_name: FIRST Tech Challenge Simulator
+  tutorial_sasdata_name: Building Data Fundamentals
+  tutorial_carnegiesensabot_name: Sensabot Challenge
+  tutorial_robotical4_name: Hour of Code Activity 4 - Getting Started with MartyBlocks
+  tutorial_kinderadd_name: Adding and Subtracting with KIBO
+  tutorial_imagipython_name: Creative Coding in Python
+  tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
+  tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
+    Jr
+  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
+  tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
+  tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
+  tutorial_irobottools_name: 'Robotics for K-2: Robot Tools'
+  tutorial_kindercar_name: Create Your Dream Car with KIBO
+  tutorial_caavatar_name: 'AVATAR: Big Data & Digital Footprints'
+  tutorial_hello_longdescription: Learn the basics of computer science by programming
+    in Sprite Lab. You will create and animate sprites, and make your own interactive
+    scenes.
+  tutorial_raspispace_longdescription: Create a space scene with characters that 'emote'
+    to share their thoughts or feelings using sounds, colours, and actions. Use Scratch
+    blocks to code your characters with graphic effects, costume animation, speech
+    bubbles and sound effects.
+  tutorial_codemonkeyjump_longdescription: Create games and projects with block coding!
+    In this short course students will learn to create a simple jumper game using
+    basic event and function blocks.
+  tutorial_poemart_longdescription: Illustrate the mood of a poem with code.
+  tutorial_kodablehero_longdescription: Welcome to Bug World! The Kodable fuzzFamily
+    needs your coding help. Use your real-life heroes and your imagination to design
+    a character who will protect the fuzzFamily. You'll choose the properties your
+    hero possesses and put their strength to the test against the buggy slimes of
+    Bug World!
+  tutorial_cacloud_longdescription: Felix posts a seemingly innocent photo of Juno
+    on social media. She desperately wants it removed. Max, her friend, is quick to
+    turn the situation into a secret mission. Join them as they learn about cloud
+    computing and try to track down the photo on a server, stored in an ultra secure
+    data centre. Is there anyway to locate and destroy the photo?
+  tutorial_blocksmithbot_longdescription: Lasers, traps and marvelous mazes! Help
+    Bot0 escape before she gets ejected! Bot0 is a friendly, harmless helper robot.
+    Or is she? Her teammates believe otherwise. Program Bot0 to make her way through
+    the underbelly of the space ship and escape before they find her.
+  tutorial_hatchmario_longdescription: Build your very own 3D Mario game, while learning
+    the basics of programming. Learn about the fundamentals of game development; form
+    an understanding of motion in 3D space; learn to add score, lives and cool sound
+    effects to your game, all in less than an hour. And the best part, you can share
+    your game with your family and friends in just one click and play with them on
+    any device in your home.
+  tutorial_microsoftforest_longdescription: Code a game with Microsoft MakeCode Arcade
+    that recreates the conditions for a forest fire, and then code your fire-fighting
+    airtanker plane to spray water and put out the flames!
+  tutorial_blackbirdscreen_longdescription: Learn how to use conditional statements
+    to create a cool 90s style screen saver.
+  tutorial_toxicodecompute2_longdescription: Let's switch roles. This time YOU are
+    the computer! Read and interpret Python programs to find the right trajectory
+    and win the challenges. You will have to focus and use your intuitive abilities
+    to understand some core concepts of Python.
+  tutorial_minecrafttimecraft_longdescription: 'Travel back in time to save the future
+    in this free Hour of Code lesson in Minecraft: Education Edition. Students will
+    choose their own adventure and learn basic coding concepts to correct mysterious
+    mishaps throughout history. Along the way, they''ll connect with great innovators
+    and inventions in science, architecture, music, engineering, and more.'
+  tutorial_blackbirdtether_longdescription: Learn to use objects to program a fun,
+    physics-based game.
+  tutorial_ob_longdescription: Write code to create and run your own simulation of
+    the virus outbreak at Monster Town. A simulation is a computer model of a process
+    or system. Learn to code and make predictions about what will happen to the neighbors
+    of Monster Town.
+  tutorial_codeartportrait_longdescription: 'Learn to program your portrait using
+    p5.js. Express yourself creatively through code by incorporating your favorite
+    artistic styles and personal touches to create a true masterpiece! You may be
+    eligible to submit your finished project to Code/Art’s CodeYourSelf competition
+    for U.S. girls in grades 3-12. '
+  tutorial_shelly_longdescription: Shelly is a programming language for drawing. Drawing
+    is done by issuing instructions to a turtle. The turtle draws lines and shapes
+    as it moves, using various colors and styles. Challenge and creative modes are
+    available. The challenge mode includes a step-by-step tutorial, which introduces
+    the basics of the Shelly language and of programming in general.
+  tutorial_weavly_longdescription: In these short activities, go on a series of missions,
+    from exploring planets, to visiting animals on a safari, to hunting for sunken
+    treasure!
+  tutorial_codespeakpassword_longdescription: Learn to code a password generator in
+    Python and stay safe against hackers.
+  tutorial_kodableshapes_longdescription: 'Math is a part of our lives everywhere.
+    Use math and coding skills to make your own maze and then try to solve it. Start
+    with a basic square and then see how many different shapes you can include in
+    your maze designs! '
+  tutorial_nasabinary_longdescription: Learn how we use binary code to talk to a spacecraft,
+    and then try it yourself by translating your name into binary code on a name tag,
+    bracelet, pin, or even sound.
+  tutorial_3dmaker_longdescription: Make your own really cool, rotatable, 3D objects
+    fast and easily.
+  tutorial_itchstart_longdescription: This lesson is a good entry point for kids grade
+    2 or 3 that are just trying out Scratch for the very first time. They will get
+    to start with a set of 5 blocks that they need to put together to make their character
+    perform some actions.
+  tutorial_hopsub_longdescription: Learn how to pair program with a friend or classmate,
+    and create your own subway surfer with Hopscotch characters!
+  tutorial_itchmundos_longdescription: Conocerán Scratch, una herramienta para programar.
+    Agregarán objetos y fondos, usarán bloques de eventos y apariencia para dar vida
+    a su programa.
+  tutorial_itchtenacity_longdescription: En este proyecto programan en Scratch el
+    simulador de un robot que limpia las aguas marinas.
+  tutorial_kcjskiing_longdescription: 'It''s all fun and games until someone crashes
+    into a tree… or IS that the fun part? Strap on those skis and bend at the knees
+    as you guide your character down a hill of frozen obstacles using code in this
+    Scratch activity. Design the course, add movement and sensing, plus a bit of collision-interaction
+    and boom - you''ve got yourself a mountain of fun. '
+  tutorial_groksecurity_longdescription: Put your cyber-sleuthing hat on in this short
+    introduction to staying safe online. You'll learn about secure passwords, phishing,
+    security settings, social media and more!
+  tutorial_creaticode_longdescription: Learn to build stunning 3D projects using Scratch
+    blocks!
+  tutorial_kcjhockey_longdescription: You shoot, you SCORE - the crowd goes wild!
+    No need to lace up your skates when building this game, but be ready to sharpen
+    your coding skills! Learn how to code your own hockey game and test our skills
+    against an npc goalie in Scratch. Using movement, sensing, and variables, your
+    digital player can dodge and glide the puck to score the winning goal.
+  tutorial_ttdungeon_longdescription: The evil wizard Nullonor poses a grave threat
+    to the realm, and only you have the power to banish them forever. However, Nullonor
+    is as cunning as he is dangerous. He hides in his magical tower of ever-shifting
+    rooms, and no hero has successfully reached the top floor yet. As the champion
+    of the Index Knights, do you have what it takes to find and defeat Nullonor?
+  tutorial_ccai_longdescription: 'Competitive coding has never been so epic! No coding
+    experience...No problem. Enter the dungeon where you will level up your programming
+    powers by learning the coding strategies and tactics you will need to compete.
+    Once you''ve made it through the dungeon you''ll be ready to take on coders from
+    around the world in the CodeCombat AI League esports arena! '
+  tutorial_bsdai_longdescription: There is a specific set of neural networks and algorithms
+    that we call machine learning. In this project, we will explore an Artificial
+    Intelligence (AI) Image Recognition tool and learn how AI sees images, makes predictions,
+    and how we can make sure that those predictions are accurate and free of bias.
+  tutorial_stemdata_longdescription: Create a simple model for the climate where you
+    live and then use it to understand how a few degrees of increased temperature
+    can have a significant impact on the natural world. Includes an option to download
+    the data to a spreadsheet for further analysis.
+  tutorial_thunkableinfo_longdescription: Learn how to build an informational app
+    with code blocks and a data table
+  tutorial_educodespace_longdescription: The people of planet Allegrus have lost their
+    ancestral songs. Follow this tutorial to build your own musical side-scrolling
+    game and recover the lost melodies. Customize every aspect of the game, while
+    learning the basics of game development, physics and collisions. No coding or
+    musical knowledge required.
+  tutorial_kcjtennis_longdescription: Serve up a challenge and go head-to-head with
+    your own AI opponent in this digital tennis match. Using Scratch, this activity
+    will teach you how to code back-and-forth sprite interactions through broadcasting,
+    variables, and movement. Incorporate win/loss conditionals and kiss your 'love'
+    score good bye. Complete this project by yourself or with support from a grown
+    up.
+  tutorial_robotmagictower_longdescription: Learn about the Hanoi Tower game and how
+    to use recursive functions to solve problems.
+  tutorial_ttdragons_longdescription: 'An evil force has spread its way across the
+    land of Ovun and is threatening to destroy this peaceful city. Explore hidden
+    temples, learn magic runes that let you program and control the elements around
+    you, and battle the shadow fiends. Find all the keys in the Dragon Temples to
+    awaken the dragon. Be the hero that Ovun needs! '
+  tutorial_kcjarchery_longdescription: Stay on target and guide your arrow to the
+    bullseye using code! Learn how to code your own archery game using Scratch and
+    our step-by-step instructions. With the help of colour-sensing sprites, costume
+    changes, and motion sequences, you too can aim for gold and code your way to victory
+    - plus, add a score counter to up the ante. Complete this project by yourself
+    or with support from a grown up.
+  tutorial_ttsprouts_longdescription: Gardening is a full-time job! Start with just
+    a single bench of pots and tend to the plants within a greenhouse by accessing
+    an array. As you seed, water, and harvest each plant, earn money for all your
+    fruits and veggies! Use an increasingly complicated multidimensional array to
+    locate each pot as the greenhouse gets crowded.
+  tutorial_ttmaze_longdescription: You have landed on an alien planet in a pocket
+    universe and must find a way to escape so you can continue on your journey. Explore
+    the ruins of an advanced robotic civilization, navigate your way through mazes
+    and puzzles and fight off enemy robots. With the help of your trusty sidekick
+    F3lix, learn and use new programming concepts to hack your way to victory.
+  tutorial_codetribe_longdescription: A great intro to coding using HTML, CSS and
+    JavaScript. Code a few lines, and create your first application to verify the
+    age of people attending your party.
+  tutorial_ttcanyon_longdescription: You are trapped on an alien planet and must survive
+    the Arena, an endless fight with alien monsters! Use your hacking blaster to change
+    the programming of your sidekick, your opponents, and your environment. Your trusty
+    feline sidekick F3lix can help heal and support you, while you can reprogram enemies
+    and traps to disable them or fight each other.
+  tutorial_kcjxtrail_longdescription: Hit the trails with this cross country biking
+    activity using code and Scratch. Utilizing colour sensing blocks and movement,
+    you will design your course, integrate stops and interactions along the way, and
+    track your progress by coding a score keeper with functions. Don't forget your
+    helmet because we could be in for a wild ride! Complete this project by yourself
+    or with support from a grown up.
+  tutorial_codespeakroad_longdescription: Create a game where the user plays the role
+    of a civil engineer to plan out a road.
+  tutorial_educodelair_longdescription: George is being chased in Chiroptera's Lair
+    and needs your help to escape! Design your own complete 2D puzzle game by following
+    this tutorial and learning the basics of game development. Code your way out of
+    our level, or make your own to challenge your friends!
+  tutorial_ibmhourofz_longdescription: 'Have you ever withdrawn money from an ATM?
+    Used a credit card to pay for something? All these actions have one thing in common:
+    they all start with a simple click. But what''s really happening behind that click?
+    That''s Enterprise Computing. Get started learning more about how enterprise computing
+    works today with IBM Hour of Z.'
+  tutorial_gamefrootbacteria_longdescription: 'Students learn about the conditions
+    in which salmonella bacteria can survive while coding a fun simulation game in
+    Gamefroot! This activity is designed for science teachers AND Digital Technologies
+    teachers looking to engage their students in multiple subject areas. '
+  tutorial_educodeforest_longdescription: Alex has been trapped in the Frosted Forest
+    for a while. Can you help them escape? This easy-to-follow tutorial teaches you
+    how to build and customize a complete puzzle game that runs in any modern browser.
+    Try to beat our level, or create your own to challenge your friends!
+  tutorial_educodehorus_longdescription: Help Lisa solve Horus's enigma and escape
+    his temple. Follow this tutorial to code and customize your very own puzzle game
+    in a few steps. Try to beat our level, or edit it to make it as easy or challenging
+    as you want. Learn the basics of game development while playing!
+  tutorial_codespeakpokemon_longdescription: Code your favorite Pokemon to level up
+    and evolve.
+  tutorial_stemholiday_longdescription: STEMscopes Coding powered by BitsBox allows
+    students to build and share their own virtual holiday card using typed JavaScript
+    code. Our program is easy to use and requires no prior coding experience. We offer
+    embedded support throughout the program, and students can easily figure it out
+    on their own. Get excited to code your own virtual card to share with friends
+    and family this holiday season!
+  tutorial_codespeakpixel_longdescription: Learn to create a pixel art editor to create
+    your own custom character designs and art.
+  tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
+    puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
+    app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
+  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
+    between researchers at Carnegie Mellon University and students from the Boys and
+    Girls Clubs of Western PA where students and their (co)robot partners must defend
+    their candy stash from oncoming baddies.
+  tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
+    sequencing as students utilize logic, reasoning, and computer science skills to
+    navigate real life scenarios. No bot needed!
+  tutorial_milnedash_longdescription: Dash wants to learn how to dance! Can you help
+    her drive in and out and show her stuff in the middle? This activity is student-directed
+    and will teach the user about sequencing and loops.
+  tutorial_microbitpet_longdescription: 'Code your own electronic pet and customize
+    it to make it your own. '
+  tutorial_spherotriad_longdescription: 'Explore what each of the fundamental principles
+    of cybersecurity mean and learn how to find a balance to achieve a secure system
+    that works for all users. '
+  tutorial_spheropassword_longdescription: Explore how to make strong password combinations
+    using littleBits inventions and coding.
+  tutorial_codequilt_longdescription: Reflect on who gets to code and what can be
+    made with code while becoming familiar with Scratch.
+  tutorial_ozoshape1_longdescription: The Ozobot Blockly ShapeTracer will teach sequencing
+    and debugging skills. Students will utilize logic, reasoning, and computer science
+    skills. No bot needed!
+  tutorial_ozoshape2_longdescription: The Ozobot Blockly ShapeTracer 2 will teach
+    advanced sequencing and looping skills. Students will utilize logic, reasoning,
+    and computer science skills. No bot needed!
+  tutorial_hopescape_longdescription: Code an open-ended logic escape room game, and
+    learn about concepts such as iteration and other important game design elements.
+  tutorial_ozorace_longdescription: Students will plan and execute a program with
+    a variety of parameters, practice measurement, sequencing and debugging as they
+    create a racetrack for Ozobot.
+  tutorial_ozoequestrian_longdescription: Students will use Color Codes to program
+    their mount (Evo) to complete a course.
+  tutorial_irobotpizza_longdescription: Looking to make coding a collaborative, social
+    and super fun experience at your school?  In this out-of-the-box digital event
+    kit, we provide all the tools you'll need to host the perfect family code challenge.
+    At the iRobot Pizza Party, families come together to share a meal and code virtual
+    robots to complete challenges, designed for both beginners and advanced coders.
+  tutorial_ai4alldance_longdescription: In this short, fun byte of AI, students explore
+    how AI tools can help humans innovate, and how human innovators can help improve
+    AI.
+  tutorial_ai4allneural_longdescription: This curriculum is an introductory hands-on
+    deep dive into the technical details about how some AI systems can find objects
+    in images, or other patterns in context. In the end, students will teach others
+    what they have learned. If your students did AI & Dance, they may want to check
+    this out after to learn how that system worked.
+  tutorial_spheroinout_longdescription: indi is ready to learn more about how it and
+    other computers work. In this lesson, discover inputs and outputs through this
+    hands-on exploration.
+  tutorial_edisonblueprint_longdescription: Can you program Edison to drive in different
+    shapes so that the robot can draw different blueprints?
+  tutorial_edisonmaze_longdescription: Let's get the Edison robot to race along a
+    Euler Path shape!
+  tutorial_milnefunctions_longdescription: Dash wants to learn how to dance! Can you
+    help her drive in and out and show her stuff in the middle? This activity is student-directed
+    and will teach the user about sequencing, loops and functions.
+  tutorial_sasmap_longdescription: 'In this lesson, students will use code to demonstrate
+    an understanding of the difference between human and physical features on a map.
+    They will identity a path through a grid of math features such that a robot will
+    land only on human features. Students will then work in teams to write code that
+    will navigate their robot along the correct path. '
+  tutorial_firstrobotics_longdescription: Learn to code with FTC Sim, an online block-based
+    programming language that includes a live simulator so students can instantly
+    see the robot moving based on the code that they have written.
+  tutorial_sasdata_longdescription: Engage students with data through quick polls
+    that generate real-time interactive data visualizations. Students will identify,
+    interpret and communicate about data– important foundational skills for understanding
+    our data-rich world.
+  tutorial_carnegiesensabot_longdescription: Learn how to program a virtual EV3 robot
+    to complete the real-world Sensabot challenge in this activity the Carnegie Mellon
+    Robotics Academy.
+  tutorial_robotical4_longdescription: MartyBlocks is put together in a vertical format,
+    which is more common for writing code. Learners will be presented with a larger
+    workspace and greater functionality for controlling Marty and eventually having
+    them interact with the environment. This lesson will familiarize learners with
+    the sections, layout, comparing this new environment with MartyBlocks Jr.
+  tutorial_kinderadd_longdescription: In this lesson, students will use algorithms
+    and moving robots to model mathematical concepts. KIBO will travel along a physical
+    number line to model counting, addition, and subtraction. Students will create
+    algorithms (optionally including repeat loops) to solve problems, just like programmers
+    do at work!
+  tutorial_imagipython_longdescription: Join the world's first social network for
+    pre-teens who like to code. Design your first colorful project in minutes with
+    the free imagi app.
+  tutorial_robotical2_longdescription: Learners will create a sequence of steps to
+    allow a partner to travel a route to a goal, making use of the Marty Controller.
+    Each of the directional symbols has an attached movement; in this lesson, learners
+    will be encouraged to experiment with the directional arrows but the focus will
+    be on the forward arrow.
+  tutorial_robotical3_longdescription: Learners will explore the new interface for
+    Marty, where their instructions will stay on the device screen. Learners will
+    be estimating how many steps they think Marty will need to reach a goal.
+  tutorial_blockscadvirus_longdescription: 'Use a 3D design platform to model a virus
+    and learn about how our bodies use geometry to fight these invaders. '
+  tutorial_robotical1_longdescription: Learners will see Marty the Robot moving with
+    the Unplugged color cards. Learners will then guide a partner to move forward
+    and stop, making use of colored paper. Each of Robotical's colored cards has an
+    instruction built into it, that Marty understands, without the need to write or
+    arrange any code.
+  tutorial_irobotshapes_longdescription: Learn about different shapes through pattern
+    recognition and sequencing in this unplugged, printable robot-themed workbook!
+  tutorial_irobotparts_longdescription: Learn about the different pieces used to build
+    a robot through exploring your senses and practicing math basics.
+  tutorial_irobottools_longdescription: This workbook explores all of the different
+    kinds of tools used when building a robot through matching, counting, scavenger
+    hunts and measuring activities,
+  tutorial_kindercar_longdescription: Students will become engineers, learning the
+    steps of the Engineering Design Process. Inspired by the book 'If I Built a Car'
+    by Chris Van Dusen, students will follow the engineering design process to create
+    their own dream cars out of craft and recycled materials. They will scan a short
+    programming sequence to get their cars moving!
+  tutorial_caavatar_longdescription: 'AVATAR is the latest interactive attraction
+    at ThrillVille theme park. Sakura and Nikau can''t wait to visit it and experience
+    the world of tomorrow! In this interactive short course, the learner joins Sakura
+    and Nikau to learn about data, digital footprints, the Internet of things, Big
+    Data, and the implications these have for us as people, and our future.   '
+  tutorial_hello_language: Bulgarian, Corsican, Danish, Dutch, English, English (UK),
+    Estonian, French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese,
+    Nepali, Norwegian (Bokmål), Norwegian (Nynorsk), Other, Pashto, Portuguese (Portugal),
+    Romanian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Turkish, Vietnamese
+  tutorial_raspispace_language: Arabic, Dutch, English, English (UK), French, Greek
+  tutorial_codemonkeyjump_language: انگلش
+  tutorial_poemart_language: Bulgarian, Corsican, Danish, Dutch, English, Estonian,
+    French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese, Nepali,
+    Norwegian (Bokmål), Norwegian (Nynorsk), Other, Pashto, Portuguese (Brazil), Portuguese
+    (Portugal), Romanian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Turkish,
+    Vietnamese
+  tutorial_kodablehero_language: انگلش
+  tutorial_cacloud_language: English, English (UK)
+  tutorial_blocksmithbot_language: انگلش
+  tutorial_hatchmario_language: انگلش
+  tutorial_microsoftforest_language: انگلش
+  tutorial_blackbirdscreen_language: انگلش
+  tutorial_toxicodecompute2_language: انگلش
+  tutorial_minecrafttimecraft_language: Bulgarian, Chinese (Simplified), Chinese (Traditional),
+    Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Indonesian,
+    Italian, Japanese, Korean, Norwegian (Bokmål), Norwegian (Nynorsk), Polish, Portuguese
+    (Brazil), Portuguese (Portugal), Russian, Slovenian, Spanish (Spain), Spanish
+    (Mexico), Swedish, Turkish, Ukrainian
+  tutorial_blackbirdtether_language: انگلش
+  tutorial_ob_language: Arabic, Chinese (Simplified), Chinese (Traditional), Czech,
+    Danish, Dutch, English, French, German, Greek, Hindi, Indonesian, Italian, Japanese,
+    Korean, Malay, Other, Portuguese (Brazil), Portuguese (Portugal), Romanian, Serbian
+    (Cyrillic), Slovenian, Spanish (Spain), Spanish (Mexico), Swedish, Tamil, Thai,
+    Turkish, Ukrainian, Urdu (Pakistan), Vietnamese
+  tutorial_codeartportrait_language: انگلش
+  tutorial_shelly_language: English, Polish
+  tutorial_weavly_language: انگلش
+  tutorial_codespeakpassword_language: انگلش
+  tutorial_codecombatozaria_language: English, English (UK), Spanish (Spain), Spanish
+    (Mexico)
+  tutorial_kodableshapes_language: انگلش
+  tutorial_nasabinary_language: انگلش
+  tutorial_3dmaker_language: انگلش
+  tutorial_itchstart_language: انگلش
+  tutorial_hopsub_language: Chinese (Simplified), English, Spanish (Spain), Spanish
+    (Mexico)
+  tutorial_itchmundos_language: Spanish (Mexico)
+  tutorial_itchtenacity_language: Spanish (Mexico)
+  tutorial_kcjskiing_language: English, French
+  tutorial_groksecurity_language: انگلش
+  tutorial_creaticode_language: Chinese (Simplified), Chinese (Traditional), English
+  tutorial_kcjhockey_language: English, French
+  tutorial_ttdungeon_language: انگلش
+  tutorial_ccai_language: Arabic, Bulgarian, Catalan, Chinese (Simplified), Chinese
+    (Traditional), Czech, Danish, Dutch, English, English (UK), Finnish, French, Galician,
+    German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Lithuanian,
+    Macedonian (FRYOM), Malay, Norwegian (Bokmål), Norwegian (Nynorsk), Polish, Portuguese
+    (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian (Cyrillic), Slovenian,
+    Spanish (Spain), Spanish (Mexico), Swedish, Thai, Turkish, Ukrainian, Vietnamese
+  tutorial_bsdai_language: English, English (UK)
+  tutorial_stemdata_language: انگلش
+  tutorial_thunkableinfo_language: انگلش
+  tutorial_educodespace_language: انگلش
+  tutorial_kcjtennis_language: English, French
+  tutorial_robotmagictower_language: انگلش
+  tutorial_ttdragons_language: انگلش
+  tutorial_kcjarchery_language: English, French
+  tutorial_ttsprouts_language: انگلش
+  tutorial_ttmaze_language: انگلش
+  tutorial_codetribe_language: English, English (UK)
+  tutorial_ttcanyon_language: انگلش
+  tutorial_kcjxtrail_language: English, French
+  tutorial_codespeakroad_language: انگلش
+  tutorial_educodelair_language: انگلش
+  tutorial_ibmhourofz_language: English, English (UK)
+  tutorial_gamefrootbacteria_language: انگلش
+  tutorial_educodeforest_language: انگلش
+  tutorial_educodehorus_language: انگلش
+  tutorial_codespeakpokemon_language: انگلش
+  tutorial_stemholiday_language: انگلش
+  tutorial_codespeakpixel_language: انگلش
+  tutorial_codespellsnexus_language: انگلش
+  tutorial_carnegieslime_language: انگلش
+  tutorial_ozotown_language: انگلش
+  tutorial_milnedash_language: انگلش
+  tutorial_microbitpet_language: English, Spanish (Mexico), French, Croatian, Korean,
+    Portuguese (Brazil), Portuguese (Portugal), Serbian, Chinese (Simplified)
+  tutorial_spherotriad_language: انگلش
+  tutorial_spheropassword_language: انگلش
+  tutorial_codequilt_language: انگلش
+  tutorial_ozoshape1_language: انگلش
+  tutorial_ozoshape2_language: انگلش
+  tutorial_hopescape_language: Chinese (Simplified), English, Spanish (Spain), Spanish
+    (Mexico)
+  tutorial_ozorace_language: انگلش
+  tutorial_ozoequestrian_language: انگلش
+  tutorial_irobotpizza_language: انگلش
+  tutorial_ai4alldance_language: انگلش
+  tutorial_ai4allneural_language: انگلش
+  tutorial_spheroinout_language: انگلش
+  tutorial_edisonblueprint_language: انگلش
+  tutorial_edisonmaze_language: انگلش
+  tutorial_milnefunctions_language: انگلش
+  tutorial_sasmap_language: انگلش
+  tutorial_firstrobotics_language: انگلش
+  tutorial_sasdata_language: انگلش
+  tutorial_carnegiesensabot_language: انگلش
+  tutorial_robotical4_language: انگلش
+  tutorial_kinderadd_language: English, English (UK)
+  tutorial_imagipython_language: English, Swedish
+  tutorial_robotical2_language: انگلش
+  tutorial_robotical3_language: انگلش
+  tutorial_blockscadvirus_language: انگلش
+  tutorial_robotical1_language: انگلش
+  tutorial_irobotshapes_language: انگلش
+  tutorial_irobotparts_language: انگلش
+  tutorial_irobottools_language: انگلش
+  tutorial_kindercar_language: English, English (UK)
+  tutorial_caavatar_language: English, English (UK)
+  tutorial_hello_string_detail_grades: گریڈ 2+
+  tutorial_raspispace_string_detail_grades: گرڈ 2-8
+  tutorial_codemonkeyjump_string_detail_grades: گرڈ 2-8
+  tutorial_poemart_string_detail_grades: گرڈ 2-8
+  tutorial_kodablehero_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_cacloud_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_blocksmithbot_string_detail_grades: گرڈ 2-8
+  tutorial_hatchmario_string_detail_grades: گریڈ 2+
+  tutorial_microsoftforest_string_detail_grades: گریڈ 2+
+  tutorial_blackbirdscreen_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_toxicodecompute2_string_detail_grades: گریڈ 2+
+  tutorial_minecrafttimecraft_string_detail_grades: گریڈ 2+
+  tutorial_blackbirdtether_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_ob_string_detail_grades: گریڈ 2+
+  tutorial_codeartportrait_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_shelly_string_detail_grades: گرڈ 2-8
+  tutorial_weavly_string_detail_grades: گرڈ 2-8
+  tutorial_codespeakpassword_string_detail_grades: گریڈ 2+
+  tutorial_kodableshapes_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_nasabinary_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_3dmaker_string_detail_grades: گرڈ 2-8
+  tutorial_itchstart_string_detail_grades: گرڈ 2-8
+  tutorial_hopsub_string_detail_grades: گرڈ 2-8
+  tutorial_itchmundos_string_detail_grades: گریڈ 2+
+  tutorial_itchtenacity_string_detail_grades: گریڈ 2+
+  tutorial_kcjskiing_string_detail_grades: گریڈ 2+
+  tutorial_groksecurity_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_creaticode_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_kcjhockey_string_detail_grades: گریڈ 2+
+  tutorial_ttdungeon_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_ccai_string_detail_grades: گریڈز 6-8
+  tutorial_bsdai_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_stemdata_string_detail_grades: گرڈ 9 +
+  tutorial_thunkableinfo_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_educodespace_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_kcjtennis_string_detail_grades: گریڈ 2+
+  tutorial_robotmagictower_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_ttdragons_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_kcjarchery_string_detail_grades: گریڈ 2+
+  tutorial_ttsprouts_string_detail_grades: گریڈ 2+
+  tutorial_ttmaze_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_codetribe_string_detail_grades: گرڈ 2-8
+  tutorial_ttcanyon_string_detail_grades: گریڈز 6-8
+  tutorial_kcjxtrail_string_detail_grades: گرڈ 2-8
+  tutorial_codespeakroad_string_detail_grades: گرڈ 2-8
+  tutorial_educodelair_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_ibmhourofz_string_detail_grades: گرڈ 9 +
+  tutorial_gamefrootbacteria_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_educodeforest_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_educodehorus_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_codespeakpokemon_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_stemholiday_string_detail_grades: گریڈز 6-8
+  tutorial_codespeakpixel_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_codespellsnexus_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_carnegieslime_string_detail_grades: گرڈ 2-8
+  tutorial_ozotown_string_detail_grades: گریڈ 2+
+  tutorial_milnedash_string_detail_grades: پری ریڈر
+  tutorial_microbitpet_string_detail_grades: گرڈ 2-8
+  tutorial_spherotriad_string_detail_grades: گریڈ 2+
+  tutorial_spheropassword_string_detail_grades: گرڈ 2-8
+  tutorial_codequilt_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_ozoshape1_string_detail_grades: گریڈ 2+
+  tutorial_ozoshape2_string_detail_grades: گریڈ 2+
+  tutorial_hopescape_string_detail_grades: گریڈ 2+
+  tutorial_ozorace_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_ozoequestrian_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_irobotpizza_string_detail_grades: گرڈ 2-8
+  tutorial_ai4alldance_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_ai4allneural_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_spheroinout_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_edisonblueprint_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_edisonmaze_string_detail_grades: گرڈ 2-8
+  tutorial_milnefunctions_string_detail_grades: گریڈز 6-8
+  tutorial_sasmap_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_firstrobotics_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_sasdata_string_detail_grades: گریڈ 2+
+  tutorial_carnegiesensabot_string_detail_grades: گرڈ 2-8
+  tutorial_robotical4_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_kinderadd_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_imagipython_string_detail_grades: گرڈ 2-8
+  tutorial_robotical2_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_robotical3_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_blockscadvirus_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_robotical1_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_irobotshapes_string_detail_grades: پری ریڈر
+  tutorial_irobotparts_string_detail_grades: پری ریڈر
+  tutorial_irobottools_string_detail_grades: پری ریڈر
+  tutorial_kindercar_string_detail_grades: پری ریڈر
+  tutorial_caavatar_string_detail_grades: گریڈز6+ 11 اور اس سے زیادہ)
+  tutorial_hello_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ، رکن،
+    ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
+  tutorial_raspispace_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن
+  tutorial_codemonkeyjump_string_platforms: جدید براؤزر
+  tutorial_poemart_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone, Game console app, Screen reader
+  tutorial_kodablehero_string_platforms: لوڈ، اتارنا Android کی گولی، لوڈ، اتارنا
+    Android فون
+  tutorial_cacloud_string_platforms: جدید براؤزر
+  tutorial_blocksmithbot_string_platforms: جدید براؤزر
+  tutorial_hatchmario_string_platforms: جدید براؤزر
+  tutorial_microsoftforest_string_platforms: جدید براؤزر
+  tutorial_blackbirdscreen_string_platforms: کروم
+  tutorial_toxicodecompute2_string_platforms: جدید براؤزر
+  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
+    Android (Chromebooks), iPad, Screen reader
+  tutorial_blackbirdtether_string_platforms: کروم
+  tutorial_ob_string_platforms: جدید براؤزر
+  tutorial_codeartportrait_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android
+    ٹیبلٹ، رکن
+  tutorial_shelly_string_platforms: جدید براؤزر
+  tutorial_weavly_string_platforms: جدید براؤزر
+  tutorial_codespeakpassword_string_platforms: جدید براؤزر
+  tutorial_kodableshapes_string_platforms: لوڈ، اتارنا Android کی گولی، لوڈ، اتارنا
+    Android فون
+  tutorial_nasabinary_string_platforms: Unplugged, Screen reader
+  tutorial_3dmaker_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن، ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
+  tutorial_itchstart_string_platforms: تمام جدید براؤزرز، رکن
+  tutorial_hopsub_string_platforms: رکن، آئی فون
+  tutorial_itchmundos_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن
+  tutorial_itchtenacity_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن
+  tutorial_kcjskiing_string_platforms: جدید براؤزر
+  tutorial_groksecurity_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن، ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
+  tutorial_creaticode_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن، ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
+  tutorial_kcjhockey_string_platforms: جدید براؤزر
+  tutorial_ttdungeon_string_platforms: کروم، فائر فاکس
+  tutorial_ccai_string_platforms: جدید براؤزر
+  tutorial_bsdai_string_platforms: کروم، فائر فاکس
+  tutorial_stemdata_string_platforms: تمام جدید براؤزرز، رکن
+  tutorial_thunkableinfo_string_platforms: Chrome, Safari
+  tutorial_educodespace_string_platforms: جدید براؤزر
+  tutorial_kcjtennis_string_platforms: جدید براؤزر
+  tutorial_robotmagictower_string_platforms: جدید براؤزر
+  tutorial_ttdragons_string_platforms: کروم، فائر فاکس
+  tutorial_kcjarchery_string_platforms: جدید براؤزر
+  tutorial_ttsprouts_string_platforms: کروم، فائر فاکس
+  tutorial_ttmaze_string_platforms: کروم، فائر فاکس
+  tutorial_codetribe_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن، ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
+  tutorial_ttcanyon_string_platforms: کروم، فائر فاکس
+  tutorial_kcjxtrail_string_platforms: جدید براؤزر
+  tutorial_codespeakroad_string_platforms: کروم
+  tutorial_educodelair_string_platforms: تمام جدید براؤزرز، رکن
+  tutorial_ibmhourofz_string_platforms: Chrome, Firefox, Android phone, iPhone
+  tutorial_gamefrootbacteria_string_platforms: جدید براؤزر
+  tutorial_educodeforest_string_platforms: تمام جدید براؤزرز، رکن
+  tutorial_educodehorus_string_platforms: تمام جدید براؤزرز، رکن
+  tutorial_codespeakpokemon_string_platforms: جدید براؤزر
+  tutorial_stemholiday_string_platforms: کروم
+  tutorial_codespeakpixel_string_platforms: جدید براؤزر
+  tutorial_codespellsnexus_string_platforms: کروم، فائر فاکس
+  tutorial_carnegieslime_string_platforms: جدید براؤزر
+  tutorial_ozotown_string_platforms: جدید براؤزر
+  tutorial_milnedash_string_platforms: جدید براؤزر
+  tutorial_microbitpet_string_platforms: جدید براؤزر
+  tutorial_spherotriad_string_platforms: Android tablet, iPad, Android phone, iPhone,
+    Windows 10, macOS, ChromeOS
+  tutorial_spheropassword_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android
+    ٹیبلٹ، رکن، ونڈوز فون، لوڈ، اتارنا Android فون، آئی فون
+  tutorial_codequilt_string_platforms: جدید براؤزر
+  tutorial_ozoshape1_string_platforms: جدید براؤزر
+  tutorial_ozoshape2_string_platforms: جدید براؤزر
+  tutorial_hopescape_string_platforms: رکن، آئی فون
+  tutorial_ozorace_string_platforms: جدید براؤزر
+  tutorial_ozoequestrian_string_platforms: جدید براؤزر
+  tutorial_irobotpizza_string_platforms: غیر منسلک
+  tutorial_ai4alldance_string_platforms: جدید براؤزر
+  tutorial_ai4allneural_string_platforms: جدید براؤزر
+  tutorial_spheroinout_string_platforms: غیر منسلک
+  tutorial_edisonblueprint_string_platforms: جدید براؤزر
+  tutorial_edisonmaze_string_platforms: جدید براؤزر
+  tutorial_milnefunctions_string_platforms: جدید براؤزر
+  tutorial_sasmap_string_platforms: All modern browsers, iPad, Screen reader
+  tutorial_firstrobotics_string_platforms: جدید براؤزر
+  tutorial_sasdata_string_platforms: جدید براؤزر
+  tutorial_carnegiesensabot_string_platforms: جدید براؤزر
+  tutorial_robotical4_string_platforms: جدید براؤزر
+  tutorial_kinderadd_string_platforms: غیر منسلک
+  tutorial_imagipython_string_platforms: Chrome, Firefox, Android tablet, iPad, Android
+    phone, iPhone
+  tutorial_robotical2_string_platforms: غیر منسلک
+  tutorial_robotical3_string_platforms: جدید براؤزر
+  tutorial_blockscadvirus_string_platforms: جدید براؤزر
+  tutorial_robotical1_string_platforms: غیر منسلک
+  tutorial_irobotshapes_string_platforms: غیر منسلک
+  tutorial_irobotparts_string_platforms: غیر منسلک
+  tutorial_irobottools_string_platforms: غیر منسلک
+  tutorial_kindercar_string_platforms: غیر منسلک
+  tutorial_caavatar_string_platforms: تمام جدید براؤزر، لوڈ، اتارنا Android ٹیبلٹ،
+    رکن
+  tutorial_hello_string_detail_platforms: ''
+  tutorial_raspispace_string_detail_platforms: ''
+  tutorial_codemonkeyjump_string_detail_platforms: ''
+  tutorial_poemart_string_detail_platforms: ''
+  tutorial_kodablehero_string_detail_platforms: ''
+  tutorial_cacloud_string_detail_platforms: ''
+  tutorial_blocksmithbot_string_detail_platforms: انٹرنیٹ ایکسپلورر 11، مائیکروسافٹ
+    ایج، کروم، فائر فاکس، سفاری
+  tutorial_hatchmario_string_detail_platforms: ''
+  tutorial_microsoftforest_string_detail_platforms: ''
+  tutorial_blackbirdscreen_string_detail_platforms: ''
+  tutorial_toxicodecompute2_string_detail_platforms: Microsoft Edge, Chrome, Firefox,
+    Safari
+  tutorial_minecrafttimecraft_string_detail_platforms: ''
+  tutorial_blackbirdtether_string_detail_platforms: ''
+  tutorial_ob_string_detail_platforms: ''
+  tutorial_codeartportrait_string_detail_platforms: ''
+  tutorial_shelly_string_detail_platforms: ''
+  tutorial_weavly_string_detail_platforms: ''
+  tutorial_codespeakpassword_string_detail_platforms: کروم، فائر فاکس، سفاری
+  tutorial_kodableshapes_string_detail_platforms: ''
+  tutorial_nasabinary_string_detail_platforms: ''
+  tutorial_3dmaker_string_detail_platforms: ''
+  tutorial_itchstart_string_detail_platforms: ''
+  tutorial_hopsub_string_detail_platforms: ''
+  tutorial_itchmundos_string_detail_platforms: ''
+  tutorial_itchtenacity_string_detail_platforms: ''
+  tutorial_kcjskiing_string_detail_platforms: ''
+  tutorial_groksecurity_string_detail_platforms: ''
+  tutorial_creaticode_string_detail_platforms: ''
+  tutorial_kcjhockey_string_detail_platforms: ''
+  tutorial_ttdungeon_string_detail_platforms: ''
+  tutorial_ccai_string_detail_platforms: ''
+  tutorial_bsdai_string_detail_platforms: ''
+  tutorial_stemdata_string_detail_platforms: ''
+  tutorial_thunkableinfo_string_detail_platforms: ''
+  tutorial_educodespace_string_detail_platforms: ''
+  tutorial_kcjtennis_string_detail_platforms: ''
+  tutorial_robotmagictower_string_detail_platforms: ''
+  tutorial_ttdragons_string_detail_platforms: ''
+  tutorial_kcjarchery_string_detail_platforms: ''
+  tutorial_ttsprouts_string_detail_platforms: ''
+  tutorial_ttmaze_string_detail_platforms: ''
+  tutorial_codetribe_string_detail_platforms: ''
+  tutorial_ttcanyon_string_detail_platforms: ''
+  tutorial_kcjxtrail_string_detail_platforms: ''
+  tutorial_codespeakroad_string_detail_platforms: ''
+  tutorial_educodelair_string_detail_platforms: ''
+  tutorial_ibmhourofz_string_detail_platforms: ''
+  tutorial_gamefrootbacteria_string_detail_platforms: Microsoft Edge, Chrome, Firefox,
+    Safari
+  tutorial_educodeforest_string_detail_platforms: ''
+  tutorial_educodehorus_string_detail_platforms: ''
+  tutorial_codespeakpokemon_string_detail_platforms: ''
+  tutorial_stemholiday_string_detail_platforms: ''
+  tutorial_codespeakpixel_string_detail_platforms: کروم، فائر فاکس، سفاری
+  tutorial_codespellsnexus_string_detail_platforms: ''
+  tutorial_carnegieslime_string_detail_platforms: ''
+  tutorial_ozotown_string_detail_platforms: Ozobot
+  tutorial_milnedash_string_detail_platforms: ڈیش روبوٹ
+  tutorial_microbitpet_string_detail_platforms: 'مائکرو: بٹ'
+  tutorial_spherotriad_string_detail_platforms: Sphero Bolt
+  tutorial_spheropassword_string_detail_platforms: littleBits STEAM+ Coding Kit
+  tutorial_codequilt_string_detail_platforms: ''
+  tutorial_ozoshape1_string_detail_platforms: Ozobot
+  tutorial_ozoshape2_string_detail_platforms: Ozobot
+  tutorial_hopescape_string_detail_platforms: ''
+  tutorial_ozorace_string_detail_platforms: Ozobot
+  tutorial_ozoequestrian_string_detail_platforms: Ozobot
+  tutorial_irobotpizza_string_detail_platforms: ''
+  tutorial_ai4alldance_string_detail_platforms: ''
+  tutorial_ai4allneural_string_detail_platforms: ''
+  tutorial_spheroinout_string_detail_platforms: Sphero indi
+  tutorial_edisonblueprint_string_detail_platforms: ایڈیسن روبوٹ
+  tutorial_edisonmaze_string_detail_platforms: Edison robots
+  tutorial_milnefunctions_string_detail_platforms: ڈیش روبوٹ
+  tutorial_sasmap_string_detail_platforms: iPad, the free app and one robot. Supports
+    BOLT, SPRK+, Sphero Mini, SPRK, Sphero, and Ollie robots.
+  tutorial_firstrobotics_string_detail_platforms: ''
+  tutorial_sasdata_string_detail_platforms: ''
+  tutorial_carnegiesensabot_string_detail_platforms: ''
+  tutorial_robotical4_string_detail_platforms: Marty the Robot
+  tutorial_kinderadd_string_detail_platforms: کابا روبوٹ کٹ
+  tutorial_imagipython_string_detail_platforms: ''
+  tutorial_robotical2_string_detail_platforms: Marty the Robot
+  tutorial_robotical3_string_detail_platforms: Marty the Robot
+  tutorial_blockscadvirus_string_detail_platforms: ''
+  tutorial_robotical1_string_detail_platforms: Marty the Robot
+  tutorial_irobotshapes_string_detail_platforms: ''
+  tutorial_irobotparts_string_detail_platforms: ''
+  tutorial_irobottools_string_detail_platforms: ''
+  tutorial_kindercar_string_detail_platforms: کابا روبوٹ کٹ
+  tutorial_caavatar_string_detail_platforms: ''
+  tutorial_hello_string_detail_programming_languages: بلاکس
+  tutorial_raspispace_string_detail_programming_languages: بلاکس، سکریچ
+  tutorial_codemonkeyjump_string_detail_programming_languages: بلاکس
+  tutorial_poemart_string_detail_programming_languages: بلاکس
+  tutorial_kodablehero_string_detail_programming_languages: JavaScript, iOS/Swift,
+    Language independent (can be taught in multiple languages)
+  tutorial_cacloud_string_detail_programming_languages: Theory Based
+  tutorial_blocksmithbot_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_hatchmario_string_detail_programming_languages: بلاکس
+  tutorial_microsoftforest_string_detail_programming_languages: بلاکس
+  tutorial_blackbirdscreen_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_toxicodecompute2_string_detail_programming_languages: پادری
+  tutorial_minecrafttimecraft_string_detail_programming_languages: بلاکس، پادری
+  tutorial_blackbirdtether_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_ob_string_detail_programming_languages: بلاکس
+  tutorial_codeartportrait_string_detail_programming_languages: JavaScript, p5.js
+  tutorial_shelly_string_detail_programming_languages: A Logo-like language
+  tutorial_weavly_string_detail_programming_languages: بلاکس
+  tutorial_codespeakpassword_string_detail_programming_languages: پادری
+  tutorial_kodableshapes_string_detail_programming_languages: زبان خود مختار (متعدد
+    زبانوں میں بھی پڑھایا جا سکتا)
+  tutorial_nasabinary_string_detail_programming_languages: Binary code
+  tutorial_3dmaker_string_detail_programming_languages: بلاکس
+  tutorial_itchstart_string_detail_programming_languages: بلاکس
+  tutorial_hopsub_string_detail_programming_languages: ہوپسکوٹچ
+  tutorial_itchmundos_string_detail_programming_languages: بلاکس
+  tutorial_itchtenacity_string_detail_programming_languages: بلاکس
+  tutorial_kcjskiing_string_detail_programming_languages: بلاکس
+  tutorial_groksecurity_string_detail_programming_languages: None - no programming
+    required
+  tutorial_creaticode_string_detail_programming_languages: بلاکس
+  tutorial_kcjhockey_string_detail_programming_languages: بلاکس
+  tutorial_ttdungeon_string_detail_programming_languages: Algorithms
+  tutorial_ccai_string_detail_programming_languages: جاوا سکرپٹ، ازگر
+  tutorial_bsdai_string_detail_programming_languages: HTML, CSS and JavaScript
+  tutorial_stemdata_string_detail_programming_languages: JavaScript, Includes option
+    to download and analyze data in Google Sheets and Excel
+  tutorial_thunkableinfo_string_detail_programming_languages: بلاکس
+  tutorial_educodespace_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_kcjtennis_string_detail_programming_languages: بلاکس
+  tutorial_robotmagictower_string_detail_programming_languages: بلاکس، جاوا اسکرپٹ
+  tutorial_ttdragons_string_detail_programming_languages: بلاکس، جاوا اسکرپٹ
+  tutorial_kcjarchery_string_detail_programming_languages: بلاکس
+  tutorial_ttsprouts_string_detail_programming_languages: JavaScript, C#
+  tutorial_ttmaze_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_codetribe_string_detail_programming_languages: JavaScript, HTML and CSS.
+  tutorial_ttcanyon_string_detail_programming_languages: بلاکس، جاوا اسکرپٹ
+  tutorial_kcjxtrail_string_detail_programming_languages: بلاکس
+  tutorial_codespeakroad_string_detail_programming_languages: بلاکس
+  tutorial_educodelair_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_ibmhourofz_string_detail_programming_languages: Python, COBOL
+  tutorial_gamefrootbacteria_string_detail_programming_languages: بلاکس
+  tutorial_educodeforest_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_educodehorus_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_codespeakpokemon_string_detail_programming_languages: بلاکس
+  tutorial_stemholiday_string_detail_programming_languages: JavaScript, HTML5
+  tutorial_codespeakpixel_string_detail_programming_languages: جاوا اسکرپٹ
+  tutorial_codespellsnexus_string_detail_programming_languages: Blocks, JavaScript,
+    Racket
+  tutorial_carnegieslime_string_detail_programming_languages: بلاکس
+  tutorial_ozotown_string_detail_programming_languages: بلاکس
+  tutorial_milnedash_string_detail_programming_languages: بلاکس
+  tutorial_microbitpet_string_detail_programming_languages: Python, MakeCode
+  tutorial_spherotriad_string_detail_programming_languages: بلاکس
+  tutorial_spheropassword_string_detail_programming_languages: بلاکس
+  tutorial_codequilt_string_detail_programming_languages: بلاکس
+  tutorial_ozoshape1_string_detail_programming_languages: بلاکس
+  tutorial_ozoshape2_string_detail_programming_languages: بلاکس
+  tutorial_hopescape_string_detail_programming_languages: Blocks, Hopscotch
+  tutorial_ozorace_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_ozoequestrian_string_detail_programming_languages: Color Codes
+  tutorial_irobotpizza_string_detail_programming_languages: بلاکس
+  tutorial_ai4alldance_string_detail_programming_languages: No programming required.
+  tutorial_ai4allneural_string_detail_programming_languages: No programming required.
+  tutorial_spheroinout_string_detail_programming_languages: None - color tiles
+  tutorial_edisonblueprint_string_detail_programming_languages: بلاکس
+  tutorial_edisonmaze_string_detail_programming_languages: بلاکس
+  tutorial_milnefunctions_string_detail_programming_languages: بلاکس
+  tutorial_sasmap_string_detail_programming_languages: بلاکس
+  tutorial_firstrobotics_string_detail_programming_languages: Blocks, OnbotJava
+  tutorial_sasdata_string_detail_programming_languages: 'No programming languages. '
+  tutorial_carnegiesensabot_string_detail_programming_languages: بلاکس
+  tutorial_robotical4_string_detail_programming_languages: بلاکس
+  tutorial_kinderadd_string_detail_programming_languages: Tangible KIBO blocks
+  tutorial_imagipython_string_detail_programming_languages: پادری
+  tutorial_robotical2_string_detail_programming_languages: This makes use of a paper
+    printout of the Marty Controller
+  tutorial_robotical3_string_detail_programming_languages: بلاکس
+  tutorial_blockscadvirus_string_detail_programming_languages: بلاکس
+  tutorial_robotical1_string_detail_programming_languages: Language independent (can
+    be taught in multiple languages), Color cards are used to command the device featured
+    in the video and to instruct partners.
+  tutorial_irobotshapes_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_irobotparts_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_irobottools_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
+  tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
+    needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: پری ریڈر - گریڈ 5
+  tutorial_icomputefireworks_string_platforms: جدید براؤزر
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: بلاکس
   school_not_found_heading: ہم آپ کا اسکول نہیں مل سکا. مزید معلومات درج کریں.
   school_name: سکول کا نام
   school_name_error: اسکول کے نام کی ضرورت ہے.
@@ -11044,3 +10925,86 @@ ur:
   all: سب
   dont_know: مجھ نہیں پتہ
   language_label: Language
+  ar: Arabic
+  az: Azerbaijani
+  bg: Bulgarian
+  bn: Bangla
+  br: Breton
+  bs: Bosnian
+  ca: Catalan
+  cs: Czech
+  cs-cz: Czech (Czechia)
+  da: Danish
+  da-dk: Danish (Denmark)
+  de: German
+  de-de: German (Germany)
+  el: Greek
+  el-gr: Greek (Greece)
+  en: انگلش
+  en-gb: English (United Kingdom)
+  es: Spanish
+  es-es: Spanish (Spain)
+  es-mx: Spanish (Mexico)
+  et: Estonian
+  eu: Basque
+  fa: Persian
+  fa-ir: Persian (Iran)
+  fi: Finnish
+  fi-fi: Finnish (Finland)
+  fil-ph: Filipino (Philippines)
+  fr: French
+  gl: Galician
+  he: Hebrew
+  hi: Hindi
+  hi-in: Hindi (India)
+  hr: Croatian
+  hu: Hungarian
+  ia: Interlingua (International Auxiliary Language Association)
+  id: Bahasa Indonesian
+  is: Icelandic
+  it: Italian
+  it-it: Italian (Italy)
+  ja: Japanese
+  ja-jp: Japanese (Japan)
+  ka: Georgian
+  kk: Kazakh
+  ko: Korean
+  lt: Lithuanian
+  lv: Latvian
+  mk: Macedonian
+  mr: Marathi
+  ms: Malay
+  my: Burmese
+  nl: Dutch
+  nl-nl: Dutch (Netherlands)
+  nn: Norwegian (Nynorsk)
+  false: Norwegian
+  pl: Polish
+  pl-pl: Polish (Poland)
+  pt: Portuguese
+  pt-br: Portuguese (Brazil)
+  pt-pt: Portuguese (Portugal)
+  ro: Romanian
+  ru: Russian
+  sk: Slovak
+  sl: Slovenian
+  sq: Albanian
+  sr: Serbian
+  sv: Swedish
+  sv-se: Swedish (Sweden)
+  sw: Kiswahili
+  ta: Tamil
+  te: Telugu
+  th: Thai
+  tl: Tagalog
+  tr: Turkish
+  uk: Ukrainian
+  ur: Urdu
+  ur-in: Urdu (India)
+  ur-pk: Urdu (Islamic Republic of Pakistan)
+  vi: Vietnamese
+  zh: Chinese (Simplified)
+  zh-cn: Chinese (Simplified, People's Republic of China)
+  zh-hans: Chinese (Simplified) (zh-Hans)
+  zh-hant: Chinese (Traditional) (zh-Hant)
+  zh-tw: Chinese (Traditional, Taiwan)

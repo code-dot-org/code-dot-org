@@ -272,7 +272,7 @@ Resources:
         Statement:
           - Effect: Allow
             Principal:
-              Service: [ec2.amazonaws.com]
+              Service: [ec2.amazonaws.com, ecs-tasks.amazonaws.com]
             Action: ['sts:AssumeRole']
       Policies:
         - PolicyName: PMMRolePolicy
@@ -343,6 +343,15 @@ Resources:
               - ssmmessages:OpenDataChannel
               - ssm:UpdateInstanceInformation
             Resource: '*'
+  # Manually creating Service Linked Roles rather than granting CloudFormationService role permission
+  LambdaReplicatorRole:
+    Type: AWS::IAM::ServiceLinkedRole
+    Properties: 
+      AWSServiceName: replicator.lambda.amazonaws.com
+  CloudfrontLoggerRole:
+    Type: AWS::IAM::ServiceLinkedRole
+    Properties: 
+      AWSServiceName: logger.cloudfront.amazonaws.com
 Outputs:
   DevPermissions:
     Description: Developer Permissions
@@ -352,6 +361,10 @@ Outputs:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
+  PerconaMonitoringRoleARN:
+    Description: Percona Monitoring Role ARN
+    Value: !GetAtt PMMRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-PerconaMonitoringRoleARN"}
   SessionPermissions:
     Description: Session Permissions
     Value: !Ref SessionPermissions

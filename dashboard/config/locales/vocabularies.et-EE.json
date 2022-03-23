@@ -2,6 +2,75 @@
   "et-EE": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Debugimine"
+        },
+        "function/hero/unversioned": {
+          "word": "Funktsioon"
+        },
+        "code/poem-art/2021": {
+          "word": "Kood"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Debugimine"
+        },
+        "code/artist/unversioned": {
+          "word": "Kood"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugimine"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Tingimuslaused"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Tsüklid"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Debugimine"
+        },
+        "code/sports/unversioned": {
+          "word": "Kood"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Debugimine"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Debugimine"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kood"
+        },
         "variable/coursef/2021": {
           "word": "Muutuja"
         },
@@ -67,6 +136,24 @@
         },
         "define/coursee/2021": {
           "word": "Määra"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugimine"
+        },
+        "variable/csd/2021": {
+          "word": "Muutuja"
+        },
+        "conditionals/csd/2021": {
+          "word": "Tingimuslaused"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktsus"
+        },
+        "function/csd/2021": {
+          "word": "Funktsioon"
+        },
+        "copyright/csd/2021": {
+          "word": "Autoriõigus"
         }
       }
     }

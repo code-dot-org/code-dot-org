@@ -236,3 +236,26 @@ ta:
         text: "நிலை: நான் திரும்பி வந்துவிட்டேன்! சரி, நீங்கள், இது முகவர்! அது என்ன செய்ய முடியும் என்பதைக் காட்டுகிறேன். பாருங்கள், அதைச் செய்கிறீர்கள்! இந்த டெர்ரா கோட்டா தொகுதிகளில் இருந்து ஒரு படிக்கட்டு கட்ட நான் சொன்னேன், இப்போது இங்கிருந்து வெளியேற இதைப் பயன்படுத்தலாம். நீங்கள், இது படிக்கட்டுகள் மட்டுமல்ல. நான் என்ன வேண்டுமானாலும் செய்ய முகவரிடம் சொல்ல முடியும், அது எனக்கு செய்யும்."
       8:
         text: "ஸ்டாம்பி: நீங்கள் அதை எப்படி செய்தீர்கள்? நிலை: உண்மையில் இது எளிதானது. நான் குறியீட்டைப் பயன்படுத்தினேன்!"
+    poemart_intro:
+      1:
+        image: "notes/hoc_poem_art_2021_introduction_01.jpg\n"
+      2:
+        image: "notes/hoc_poem_art_2021_introduction_02.jpg\n"
+      3:
+        image: 'notes/hoc_poem_art_2021_introduction_03.jpg '
+      4:
+        image: "notes/hoc_poem_art_2021_introduction_04.jpg\n"
+      5:
+        image: "notes/hoc_poem_art_2021_introduction_05.jpg\n"
+      6:
+        image: "notes/hoc_poem_art_2021_introduction_06.jpg\n"
+      7:
+        image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+      8:
+        image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+      9:
+        image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+      10:
+        image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+      11:
+        image: 'notes/hoc_poem_art_2021_introduction_11.jpg'

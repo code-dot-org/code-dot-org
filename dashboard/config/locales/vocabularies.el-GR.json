@@ -2,6 +2,78 @@
   "el-GR": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "function/hero/unversioned": {
+          "word": "Συνάρτηση"
+        },
+        "code/poem-art/2021": {
+          "word": "Κώδικας"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "code/artist/unversioned": {
+          "word": "Κώδικας"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Συνθήκες"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Βρόχοι"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "code/sports/unversioned": {
+          "word": "Κώδικας"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Κώδικας"
+        },
         "variable/coursef/2021": {
           "word": "Μεταβλητή"
         },
@@ -91,6 +163,30 @@
         },
         "define/coursee/2021": {
           "word": "Όρισε"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "debugging/csd/2021": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "variable/csd/2021": {
+          "word": "Μεταβλητή"
+        },
+        "conditionals/csd/2021": {
+          "word": "Συνθήκες"
+        },
+        "abstraction/csd/2021": {
+          "word": "Αφαίρεση"
+        },
+        "function/csd/2021": {
+          "word": "Συνάρτηση"
+        },
+        "input/csd/2021": {
+          "word": "Είσοδος"
+        },
+        "copyright/csd/2021": {
+          "word": "Πνευματικά δικαιώματα"
         }
       }
     }

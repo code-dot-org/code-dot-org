@@ -2,6 +2,358 @@
   "fa-IR": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/hero/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/hero/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/hero/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "function/hero/unversioned": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "کد",
+          "definition": ""
+        },
+        "event/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/flappy/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/flappy/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/flappy/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/hourofcode/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/hourofcode/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/frozen/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/frozen/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/frozen/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/iceage/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/iceage/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/iceage/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/artist/unversioned": {
+          "word": "کد",
+          "definition": ""
+        },
+        "debugging/artist/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/artist/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/gumball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/gumball/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/gumball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "loops/aquatic/unversioned": {
+          "word": "حلقه‌ها",
+          "definition": ""
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwars/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwars/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/starwars/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/mc/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/mc/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/mc/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/playlab/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/playlab/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/sports/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "کد",
+          "definition": ""
+        },
+        "debugging/sports/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/sports/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/infinity/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/infinity/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/infinity/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/basketball/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/unversioned": {
+          "word": "کد",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "sprite/coursef/2021": {
           "word": "",
           "definition": ""
@@ -527,6 +879,250 @@
           "definition": ""
         },
         "try/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "machine_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "features/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "label/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "model/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "supervised_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "training/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "categorical_data/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "classification/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bias/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "numerical_data/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ethics/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "usability/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "prototype/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "user_interface/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "feature/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "analog/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "digital/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "array/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "for_loop/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "parameter/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "circuit/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "decode/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "encode/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "binary_system/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ascii/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bit/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "pixel/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "decrypt/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "encrypt/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/csd/2021": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "variable/csd/2021": {
+          "word": "متغیر",
+          "definition": ""
+        },
+        "property/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "sprite/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "dot_notation/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/csd/2021": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "boolean_expression/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "abstraction/csd/2021": {
+          "word": "انتزاع",
+          "definition": ""
+        },
+        "function/csd/2021": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "computer/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "input/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "output/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "processing/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "storage/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "html/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "html_element/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "html_tag/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "website_content/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "website_structure/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "heading/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "digital_footprint/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "css/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "css_selector/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "copyright/csd/2021": {
+          "word": "حق کپی برداری و نشر",
+          "definition": ""
+        },
+        "relevant/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "trustworthy/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "search_engine/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "css_class/csd/2021": {
           "word": "",
           "definition": ""
         }

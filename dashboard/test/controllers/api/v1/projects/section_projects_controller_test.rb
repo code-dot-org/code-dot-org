@@ -36,9 +36,7 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     }.to_json
     other_student_project = {id: 44, value: other_student_project_value}
 
-    PEGASUS_DB.stubs(:[]).with(:user_storage_ids).returns(
-      stub(where: stub(select_hash: {@student.id => STUDENT_STORAGE_ID}))
-    )
+    ProjectsList.stubs(:get_storage_ids_by_user_ids).returns({@student.id => STUDENT_STORAGE_ID})
     PEGASUS_DB.stubs(:[]).with(:storage_apps).returns(
       stub(where: [student_project, hidden_project, other_student_project])
     )

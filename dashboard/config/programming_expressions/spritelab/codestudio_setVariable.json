@@ -1,7 +1,0 @@
-{
-  "category": "Variables",
-  "config": {
-    "docFunc": "codestudio_setVariable",
-    "func": "variables_set"
-  }
-}

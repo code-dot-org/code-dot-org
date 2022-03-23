@@ -5,7 +5,7 @@ title: कैसे एक ऑवर ऑफ़ कोड की मेजबान�
 {{ signup_button }}
 
 # Hour of Code को आप के कंपनी में कैसे लाया जाय
-### पता लगाएं कि आप और आपके कर्मचारी छात्रों को कंप्यूटर विज्ञान की कोशिश करने के लिए प्रेरित कर सकते हैं!
+### छात्रों को कंप्यूटर साइंस के प्रति रूचि जगाने के लिए आप और आपके कर्मचारी कैसे प्रेरित कर सकते हैं!
 
 ***
 
@@ -52,7 +52,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
 ## 5.  Start your Hour of Code off with an inspiring video
-प्रेरणादायक प्रतिभागियों द्वारा कोड के अपने घंटे को शुरू करें और चर्चा करें कि कैसे कंप्यूटर विज्ञान हमारे जीवन के हर हिस्से को प्रभावित करता है। Share more about what inspired you to pursue computer science and your role at your company.
+प्रेरणादायक प्रतिभागियों द्वारा कोड के अपने घंटे को शुरू करें और चर्चा करें कि कैसे कंप्यूटर विज्ञान हमारे जीवन के हर हिस्से को प्रभावित करता है। संगणक शास्त्र में काम करने के बारे में आपकी क्या प्रेरणा थी और आपकी कंपनी में आपके कार्य की अधिक जानकारी दीजिये.
 
 **प्रेरणादायी व्हिडीओ दिखाइए:**
 
@@ -64,9 +64,9 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 **Ideas to introduce your Hour of Code activity to students:**
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- आप अगर तकनीकी क्षेत्र की कंपनी है तो आप कर रहे रंजक और नाविन्यपूर्ण उत्पदानोंका प्रात्यक्षिक दिखाइए.
+- आपकी कंपनी अगर तकनीकी क्षेत्र की नहीं है तो, आप तकनीक का इस्तमाल समस्याओंको सुलाझाने के लिये और लक्ष्य साध्य करने के लिए कैसे करते है इसके बारे में चर्चा कीजिये.
+- आपकी कंपनीके साॅफ्टवेअर अभियंताओंको बुला कर, उन्होंने संगणक शास्त्र सिखानेका और उसके प्रकल्पोंपर काम करनेका निर्णय क्यों लिया, इसके बारे में बताने को बोले.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Code!
@@ -75,7 +75,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
 - For younger students, load the activity page ahead of time or save it as a bookmark.
 
-**When participants come across difficulties it's okay to respond:**
+**अगर कोई कठिनाई आये तो निम्नलिखित जवाब देना उचित है:**
 
 - “I don’t know. Let’s figure this out together.”
 - "संगणक प्रोग्रामिंग सिखाना ये इक नयी भाषा सिखाने जैसा है; आप तुरंत सरलातासे प्रयोग नहीं कर पाएंगे|"
@@ -83,13 +83,13 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 **अगर किसीका कार्य जल्दी समाप्त हो तो?**
 
 - They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+- या, उन्हें, अगर किसीको कोई समस्या है तो, उनको मदत करने को बोले.
 
 ## ७) गतिविधि समाप्ति पर जश्न
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- आपके कर्मचारियोंके लिए [विशेष (सानुकूल) रूप से बनाये गए टी शर्ट](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) मंगवाइये.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 {{ signup_button }}

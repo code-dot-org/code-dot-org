@@ -653,6 +653,12 @@
   coursed-2020_gradelevel: Dob 7-11
   coursee-2020_gradelevel: Dob 8-12
   coursef-2020_gradelevel: Dob 9-13
+  coursea-2021_gradelevel: Dob 4-7
+  courseb-2021_gradelevel: Dob 5-8
+  coursec-2021_gradelevel: Dob 6-10
+  coursed-2021_gradelevel: Dob 7-11
+  coursee-2021_gradelevel: Dob 8-12
+  coursef-2021_gradelevel: Dob 9-13
   accelerated_gradelevel: "Dob 10+ (nakon Tečaja 3)"
   codeorg_platformtext: "Suvremeni preglednici, mobiteli, tableti"
   codeintl_platformtext: "Suvremeni preglednici, mobiteli, tableti"
@@ -947,6 +953,7 @@
   sphero_beyond_longdescription: "Bilo da ste učitelj ili roditelj, SPRK lekcije daju djeci zabavan brzinski tečaj programiranja robota dok usput poboljšavaju matematičke i znanstvene vještine."
   compatibility_hide_this_warning: "Sakrij ovo upozorenje"
   flappy_shortcode: "mahni krilima"
+  header_my_dashboard: "Moja nadzorna ploča"
   header_courses: "Tečajevi"
   header_course_catalog: "Katalog tečajeva"
   header_project_gallery: "Projekti"

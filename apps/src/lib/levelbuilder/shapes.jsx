@@ -42,7 +42,8 @@ export const scriptLevelShape = PropTypes.shape({
   // other script level options
   bonus: PropTypes.bool,
   assessment: PropTypes.bool,
-  challenge: PropTypes.bool
+  challenge: PropTypes.bool,
+  isViewingAsInstructorInTraining: PropTypes.bool
 });
 
 export const tipShape = PropTypes.shape({
@@ -125,44 +126,6 @@ export const standardShape = PropTypes.shape({
   categoryDescription: PropTypes.string.isRequired,
   shortcode: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
-});
-
-export const levelShapeForUnit = PropTypes.shape({
-  position: PropTypes.number,
-  activeId: PropTypes.string,
-  ids: PropTypes.arrayOf(PropTypes.string),
-  kind: PropTypes.string,
-  skin: PropTypes.string,
-  videoKey: PropTypes.string,
-  concepts: PropTypes.string,
-  conceptDifficulty: PropTypes.string,
-  progression: PropTypes.string,
-  named: PropTypes.bool,
-  bonus: PropTypes.bool,
-  assessment: PropTypes.bool,
-  challenge: PropTypes.bool
-});
-
-export const lessonShape = PropTypes.shape({
-  id: PropTypes.number,
-  key: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  position: PropTypes.number.isRequired,
-  lockable: PropTypes.bool,
-  unplugged: PropTypes.bool,
-  assessment: PropTypes.bool,
-  relativePosition: PropTypes.number,
-  levels: PropTypes.arrayOf(levelShapeForUnit).isRequired // TODO: Update to use scriptLevelShape
-});
-
-export const lessonGroupShape = PropTypes.shape({
-  key: PropTypes.string.isRequired,
-  displayName: PropTypes.string,
-  position: PropTypes.number.isRequired,
-  userFacing: PropTypes.bool.isRequired,
-  bigQuestions: PropTypes.string,
-  description: PropTypes.string,
-  lessons: PropTypes.arrayOf(lessonShape).isRequired
 });
 
 export const relatedLessonShape = PropTypes.shape({

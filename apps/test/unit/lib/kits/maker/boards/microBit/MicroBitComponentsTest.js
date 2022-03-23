@@ -174,6 +174,9 @@ describe('MicroBit Components', () => {
     beforeEach(() => {
       return createMicroBitComponents(board).then(c => (components = c));
     });
+    afterEach(() => {
+      sinon.restore();
+    });
 
     it('can be safely called on empty object', () => {
       expect(() => {

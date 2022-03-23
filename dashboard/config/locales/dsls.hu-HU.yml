@@ -301,10 +301,10 @@ hu-HU:
         title: Feleletválasztós
       4-5 Computational Thinking Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: E járművek mindegyike darabjaira van szétszerelve. Párosítsd mindegyik
           járműhöz a saját alkatrészeinek a listáját!
         questions:
@@ -469,7 +469,7 @@ hu-HU:
         - {}
         - {}
         questions:
-        - text: Melyik blokkok oldják meg ezt a rejtvényt?
+        - text: Melyik blokkok oldják meg ezt a feladványt?
         title: Labirintus Feltételes Többszörös választás
       4-5 maze match 1:
         answers:
@@ -489,7 +489,7 @@ hu-HU:
         - {}
         - {}
         questions:
-        - text: Melyik blokkok oldják meg ezt a rejtvényt?
+        - text: Melyik blokkok oldják meg ezt a feladványt?
         title: Labirintus - válaszd ki
       Begin planning your project:
         content1: a leírás itt található
@@ -1345,7 +1345,7 @@ hu-HU:
         - correct: true
           feedback: Helyes!
         - {}
-        - {}
+        - feedback: Helytelen
         questions:
         - {}
       behaviors 1 predict_2020:
@@ -1354,7 +1354,7 @@ hu-HU:
         - correct: true
           feedback: Helyes!
         - {}
-        - {}
+        - feedback: Helytelen
         questions:
         - {}
       behaviors 4 predict:
@@ -1363,7 +1363,7 @@ hu-HU:
         - correct: true
           feedback: Helyes!
         - {}
-        - {}
+        - feedback: Helytelen
         questions:
         - {}
       behaviors 4 predict_2020:
@@ -1372,7 +1372,7 @@ hu-HU:
         - correct: true
           feedback: Helyes!
         - {}
-        - {}
+        - feedback: Helytelen
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
@@ -2583,6 +2583,7 @@ hu-HU:
       courseD_EOC_2020:
         description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseD_project_exemplars_2020_2021:
         markdown: |+
           # Project Példák
@@ -2604,6 +2605,7 @@ hu-HU:
       courseE_EOC_2020:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseE_project_exemplars_2019_2020:
         markdown: "# Projekt példák\n\nNekiállhatsz az utolsó projektednek. Mielőtt
           elkezded, szánj egy kis időt, hogy megnézz néhány példa projektet. \n\n##
@@ -2623,6 +2625,7 @@ hu-HU:
       courseExpress_EOC_2020:
         description: Elértél az Express Tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseExpress_project_exemplars_2019_2020:
         markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
           nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
@@ -2642,6 +2645,7 @@ hu-HU:
       courseF_EOC_2020:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseF_project_exemplars_2019_2020:
         markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
           nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
@@ -2713,7 +2717,8 @@ hu-HU:
         - text: A művész egy négyzetet fog rajzolni.
           correct: true
           feedback: Helyes!
-        - {}
+        - text: A művész ötszöget fog rajzolni
+          feedback: Hibás. A művész egy négyzetet rajzol.
         questions:
         - text: Nézd meg figyelmesen az alábbi kódot! Mi történik, ha megnyomod a
             "Futtatás" gombot?
@@ -2741,7 +2746,8 @@ hu-HU:
           correct: true
           feedback: Helyes! A motkány mindjárt az elején rossz irányba fordul, aztán
             nem lép eleget ahhoz, hogy a makkig elérjen.
-        - feedback: Két hiba is van a kódban. Először is, a motkány rossz irányba
+        - text: A motkány nem mozdul el az első blokkról.
+          feedback: Két hiba is van a kódban. Először is, a motkány rossz irányba
             fordul, aztán nem lép eleget előre, hogy elérjen a makkig.
         questions:
         - text: Keress hibákat a kódban! Elér a motkány a makkig, vagy van valami
@@ -2755,7 +2761,8 @@ hu-HU:
           feedback: Helyes!
         - text: A madár beleszalad a TNT-be.
           feedback: Nem jó! Ez a kód pontosan a malachoz visz.
-        - feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: A madár nekifut a falnak.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         questions:
         - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
             gombot?
@@ -2783,13 +2790,16 @@ hu-HU:
         - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
           feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
             miközben hármat kellene előre haladnia.
-        - feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+        - text: BB-8 rossz irányba fordul az első ciklus után.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
             miközben hármat kellene előre haladnia.
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Mi történik, amikor megnyomod
+            a "Futtatás" gombot?
       courseD_EOC_2021:
         description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -2802,13 +2812,24 @@ hu-HU:
         - {}
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: A méh elmegy a felhőig, és megpróbál nektárt gyűjteni.
+          feedback: 'Rossz megoldás. A `ha virágnál` blokk hatására a méh csak akkor
+            fog nektárt gyűjteni, ha a felhő alatt virág van. '
+        - text: A méh elmegy a felhőig, és csak akkor fog ott nektárt gyűjteni, ha
+            virág van a felhő alatt.
+          correct: true
           feedback: Helyes!
-        - {}
-        - {}
+        - text: A méh elmegy a felhőig, és ott semmit sem fog csinálni.
+          feedback: 'Rossz megoldás. A `ha virágnál` blokk hatására a méh nektárt
+            fog gyűjteni, ha a felhő alatt virág van. '
+        - text: A méh nem ér el a felhőig.
+          feedback: 'Rossz megoldás. A `ha virágnál` blokk hatására a méh csak akkor
+            fog nektárt gyűjteni, ha a felhő alatt virág van. '
         questions:
-        - {}
+        - text: A felhőtől nem látni semmit! Akár virág is lehet alatta. Ha így van,
+            akkor onnan a méhnek nektárt kell gyűjtenie. Ha nincs virág a felhő alatt,
+            akkor nem kell csinálnia semmit. Nézz rá a kódra! Mit gondolsz, mi történik,
+            miután a "Futtatás" gombra kattintasz?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
@@ -2829,23 +2850,35 @@ hu-HU:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: A méh előrelép és begyűjt egy nektárt, mindezt egyetlen alkalommal.
+        - text: A méh két egységnyi nektárt szerez.
+        - text: A méh összegyűjti az összes nektárt.
+          correct: true
           feedback: Helyes!
-        - {}
+        - text: A méh rossz irányba fog fordulni.
         questions:
-        - {}
+        - text: Nézd meg közelebbről ezt a beágyazott ciklust! Mi történik, ha megnyomod
+            a "Futtatás" gombot?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          feedback: Hibás válasz. A méh minden lépés után két mézet készít az első
+            blokkban, aztán elfordulás után ismét kettőt. Mindezt kétszer hajtja végre.
+            (2+2)*2=8
         - text: '8'
           correct: true
           feedback: Helyes!
         - text: '10'
+          feedback: Hibás válasz. A méh minden lépés után két mézet készít az első
+            blokkban, aztán elfordulás után ismét kettőt. Mindezt kétszer hajtja végre.
+            (2+2)*2=8
         - text: '12'
+          feedback: Hibás válasz. A méh minden lépés után két mézet készít az első
+            blokkban, aztán elfordulás után ismét kettőt. Mindezt kétszer hajtja végre.
+            (2+2)*2=8
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Hány mézet készít a méh, miután
+            megnyomod a "Futtatás" gombot?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
         - {}
@@ -2895,9 +2928,11 @@ hu-HU:
       courseE_EOC_2021:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseE_EOC_examples_2021:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
@@ -2934,19 +2969,24 @@ hu-HU:
         - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - feedback: Helytelen. Az ördögszekér gördülni kezd.
+        - text: Az ördögszekér a képernyő tetején fog lebegni.
+          feedback: Helytelen. Az ördögszekér gördülni kezd.
+        - text: Az ördögszekér gördülni kezd.
+          correct: true
           feedback: Helyes!
-        - {}
+        - text: Az ördögszekér villogni fog.
+          feedback: Helytelen. Az ördögszekér gördülni kezd.
         questions:
         - {}
       courseF_EOC_2021:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseF_EOC_examples_2021:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseF_events_predict_multi:
         answers:
         - {}
@@ -3055,6 +3095,7 @@ hu-HU:
       express_EOC_2021:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
+        display_name: Kurzus Projekt vége
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
@@ -3067,8 +3108,181 @@ hu-HU:
         - text: Laurel összegyűjti az összes kincset.
           feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
             nincs, és ez hibát okoz.
-        - feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+        - text: Laurel 1 kincset gyűjt a kód használatával.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
             nincs, és ez hibát okoz.
         questions:
         - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
             a programot?
+      courseAB_EOC_2021:
+        display_name: Kurzus Projekt vége
+      courseB_EOC_2021:
+        display_name: Kurzus Projekt vége
+      courseF_EOC_samples_2021:
+        display_name: Kurzus Projekt vége
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Áttekintés
+
+          Az osztály úgy programozza a sprite-okat, hogy azok új módon lépjenek kapcsolatba egymással.  Az isTouching blokk használatának rövid áttekintése után az osztály ötletbörzét tart arról, hogy két sprite miképp léphetne kapcsolatba egymással.  Ezután az isTouching segítségével az egyik sprite egy másikat áttol a képernyőn, majd a négy ütközésblokk (ütközés, elmozdítás, ugrálás és leugrás) használatát gyakorolják.
+          ## Fogalomtár
+
+          * **Absztrakció** - Konkrét különbségek kiemelése, hogy egy megoldás több problémára is alkalmazható legyen.
+
+          ## Bevezetett kód
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Áttekintés
+
+          Ez az óra a függvényekkel foglalkozik, a függvénykódok rendszerezésével, olvashatóbbá tételével és az ismétlődő kódblokkok eltávolításával. Az osztály megtanulja, hogy a magasabb szintű vagy absztraktabb lépések megkönnyítik a lépések megértését és a lépésekről való gondolkodást, majd függvényeket kezdenek létrehozni a Game Labben.  Az óra végén az osztály ezeket a készségeket arra használja, hogy megszervezze és funkcióval egészítse ki az oldalgörgetős játékuk végleges változatát.
+          ## Fogalomtár
+
+          * **Függvény** - Olyan kódrészlet, amelyet könnyen újra és újra elő lehet hívni.
+
+          ## Bevezetett kód
+
+          * [Egy függvény meghatározása](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Egy függvény előhívása](//studio.code.org/docs/gamelab/callMyFunction/)
+
+
+
+
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          Ez a óra kibővíti a rajzolási készségeket a szélesség és a magasság megismeretésével, és bevezeti a véletlen számok generálásának fogalmát. Az osztály megtanul rajzolni az ellipse() és a rect() olyan változataival, amelyek szélességi és magassági paramétereket tartalmaznak, valamint a background() blokk használatával színekkel tölti ki a képernyőt. A folyamat végén az osztály megismerkedik a randomNumber() blokkal, és az új blokkok segítségével egy véletlenszerű szivárványkígyót rajzolnak.
+          ## Fogalomtár
+
+          * **Paraméter** - Egy extra információ, amelynek segítségével a függvény egy adott igényre szabható.
+
+          ## Bevezetett kód
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          Ezen az órán bemutatjuk a változókat, mint a programban egy szám megjelölésének vagy egy véletlenszerűen generált érték elmentésének módját. Az osztály a feladatot a változók céljának alapos megismerésével kezdi, majd gyakorolják az új blokkok használatát.  Ezt követően az osztály változókat használ egy véletlen szám elmentésére, így a programok többször is használhatják ugyanazt a véletlen számot.
+
+          ## Fogalomtár
+
+          * **Változó** - Egy helyőrző egy változó információ számára.
+
+          * [Egy változó kijelölése](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Egy változó kijelölése és érték hozzárendelése a változóhoz](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Erőforrások
+
+          * [Bevezetés a változókba](https://youtu.be/G41G_PEWFjE) - Videó ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Sprite tulajdonságok
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: a leírás itt található
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: cím
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: a leírás itt található
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: a leírás itt található
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: a leírás itt található
+      CSD U6 LED create intro_2021:
+        content1: a leírás itt található
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: a leírás itt található
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

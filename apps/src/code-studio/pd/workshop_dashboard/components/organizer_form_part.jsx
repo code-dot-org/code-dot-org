@@ -17,7 +17,7 @@ export default class OrganizerFormPart extends React.Component {
     error: false
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.load(this.props.workshopId);
   }
 

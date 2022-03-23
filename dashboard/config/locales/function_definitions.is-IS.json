@@ -1233,16 +1233,22 @@
             "parameters": {
               "points": "stig",
               "length": "lengd"
-            }
+            },
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd"
           },
           "draw a circle": {
-            "name": "teikna hring"
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "name": "teikna rellu",
             "parameters": {
               "length": "lengd",
-              "repeat": "endurtaka"
+              "repeat": "endurtaka",
+              "sides": "hliðar"
             }
           },
           "draw a triangle": {
@@ -1254,7 +1260,8 @@
           "draw a shape": {
             "name": "teikna form",
             "parameters": {
-              "length": "lengd"
+              "length": "lengd",
+              "sides": "hliðar"
             }
           },
           "draw a house": {
@@ -1284,14 +1291,16 @@
             "parameters": {
               "height": "hæð",
               "actor": "leikmaður"
-            }
+            },
+            "description": "fallkubbur fyrir hopp með stika fyrir hæð og leikveru"
           },
           "patrol": {
             "name": "rása",
             "parameters": {
               "actor": "leikmaður",
               "speed": "hraða"
-            }
+            },
+            "description": "fall fyrir hreyfingu fram og aftur  með stika fyrir leikveru og hraða"
           }
         },
         "Robot Doodle": {
@@ -3932,6 +3941,18 @@
               "length": "lengd",
               "sides": "hliðar"
             }
+          },
+          "small flower": {
+            "name": "lítið blóm"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "BLÓM2"
+          },
+          "LOGIC FLOWER": {
+            "name": "BLÓM1"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLEIRI BLÓM"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {

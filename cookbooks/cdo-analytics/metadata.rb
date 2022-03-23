@@ -1,4 +1,5 @@
 name 'cdo-analytics'
+version '0.1.6'
 
-depends 'apt', '~> 2.6.0'
+depends 'apt'
 depends 'ark'

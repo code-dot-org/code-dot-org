@@ -270,7 +270,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the Left arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.when())
@@ -290,7 +290,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the Right arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.when())
@@ -310,7 +310,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the Up arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.when())
@@ -330,7 +330,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the Down arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.when())
@@ -350,7 +350,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       this.appendDummyInput().appendTitle(commonMsg.when());
       if (isK1) {
         this.appendDummyInput().appendTitle(
@@ -390,7 +390,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle the repeating tick event while the game is running.
     helpUrl: '',
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       if (isK1) {
         this.appendDummyInput().appendTitle(commonMsg.repeat());
         this.appendStatementInput('DO').appendTitle(
@@ -415,7 +415,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when sprite is clicked.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput()
@@ -457,7 +457,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when sprite touches an item.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.whenTouchCharacter());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -471,7 +471,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when sprite touches a wall.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.whenTouchObstacle());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -485,7 +485,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when sprite touches a goal.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.whenTouchGoal());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -499,7 +499,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the primary sprite gets a character.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.VALUES),
         'VALUE'
@@ -528,7 +528,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the primary sprite gets all characters.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.whenGetAllCharacters());
       this.setPreviousStatement(false);
       this.setInputsInline(true);
@@ -543,7 +543,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the primary sprite gets all characters of a class.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.VALUES),
         'VALUE'
@@ -574,7 +574,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       var dropdown1;
       var dropdown2;
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
 
       if (isK1) {
         // NOTE: K1 block does not yet support projectile or edge collisions
@@ -640,7 +640,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_allowSpritesOutsidePlayspace = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown([
           [msg.allowActorsToLeaveThePlayspace(), 'true'],
@@ -665,7 +665,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for stopping the movement of a sprite.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (spriteCount > 1) {
         this.appendDummyInput().appendTitle(
           spriteNumberTextDropdown(msg.stopSpriteN),
@@ -685,7 +685,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for stopping the movement of a sprite.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendTitle(msg.stopSpriteN({spriteIndex: ''}));
@@ -717,7 +717,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for adding a character to the scene.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.addCharacter());
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(skin.itemChoices),
@@ -749,7 +749,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting the activity type on a class of items.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(skin.activityChoices),
         'TYPE'
@@ -797,7 +797,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting item speed
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
 
       this.appendDummyInput().appendTitle(msg.setItemSpeedSet());
       this.appendDummyInput().appendTitle(
@@ -834,7 +834,7 @@ exports.install = function(blockly, blockInstallOptions) {
   addRegularAndParamsVersions(
     'throw',
     function(actorSelectDropdown) {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       appendActorSelect(this, actorSelectDropdown);
       this.appendDummyInput().appendTitle(msg.throwSprite());
       this.appendDummyInput().appendTitle(
@@ -898,7 +898,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for making a projectile bounce or disappear.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.VALUES),
         'VALUE'
@@ -945,7 +945,7 @@ exports.install = function(blockly, blockInstallOptions) {
       );
 
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (spriteCount > 1) {
         this.interpolateMsg(
           msg.setSpritePosition(),
@@ -989,7 +989,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       var dropdown = new blockly.FieldDropdown(POSITION_VALUES);
       dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         msg.setSpritePosition(),
         () => {
@@ -1021,7 +1021,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for jumping a sprite to specific XY location.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (spriteCount > 1) {
         this.appendValueInput('SPRITE')
           .setCheck(blockly.BlockValueType.NUMBER)
@@ -1073,7 +1073,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         msg.addGoalPosition(),
         () => {
@@ -1106,7 +1106,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_addGoalXY = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.addGoal());
       this.appendDummyInput().appendTitle(msg.to());
       this.appendValueInput('XPOS').setCheck(blockly.BlockValueType.NUMBER);
@@ -1230,7 +1230,7 @@ exports.install = function(blockly, blockInstallOptions) {
       return {
         helpUrl: '',
         init: function() {
-          this.setHSV(184, 1.0, 0.74);
+          Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
           this.appendDummyInput()
             .appendTitle(msg.moveSprite()) // move
             .appendTitle(new blockly.FieldImage(directionConfig.image)) // arrow
@@ -1296,7 +1296,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving one frame a time.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput()
@@ -1363,7 +1363,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving/gliding a specific distance.
     block.helpUrl = '';
     block.init = function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (options.sprite) {
         this.appendValueInput('SPRITE')
           .setCheck(blockly.BlockValueType.NUMBER)
@@ -1558,7 +1558,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving forward/backward
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -1584,7 +1584,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -1631,7 +1631,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for playing sound.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.play())
@@ -1680,7 +1680,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for changing the score.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.score())
@@ -1719,7 +1719,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for adding points.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.VALUES),
         'VALUE'
@@ -1753,7 +1753,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for removing points.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
         new blockly.FieldDropdown(this.VALUES),
         'VALUE'
@@ -1786,7 +1786,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setScore = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.appendValueInput('VALUE').appendTitle(msg.setScore());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1807,7 +1807,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_getScore = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.appendDummyInput().appendTitle(msg.score());
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(msg.getScoreTooltip());
@@ -1822,7 +1822,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for adding arbitrary number of points
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('NUM')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendTitle(msg.add());
@@ -1849,7 +1849,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for adding arbitrary number of points
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('NUM').appendTitle(msg.remove());
       this.appendDummyInput().appendTitle(msg.points());
 
@@ -1874,7 +1874,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting the score text.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('TEXT').appendTitle(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1898,7 +1898,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for showing the protagonist's coordinates.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.showCoordinates());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1916,7 +1916,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting droid speed
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[2][1]); // default to normal
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
@@ -1948,7 +1948,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting sprite speed
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
 
       if (spriteCount > 1) {
         if (isK1) {
@@ -1988,7 +1988,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting sprite speed
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendTitle(msg.setSpriteN({spriteIndex: ''}));
@@ -2049,7 +2049,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting sprite size
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
 
       if (spriteCount > 1) {
         this.appendDummyInput().appendTitle(
@@ -2075,7 +2075,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for setting sprite size
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendTitle(msg.setSpriteN({spriteIndex: ''}));
@@ -2148,7 +2148,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesWander = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameWander);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -2168,7 +2168,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesStop = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       const dropdown = createSpriteGroupDropdown(msg.stopEverySpriteName);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -2188,7 +2188,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesChase = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       const dropdown = createSpriteGroupDropdown(
         msg.setEverySpriteNameChaseActor
       );
@@ -2212,7 +2212,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesFlee = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       const dropdown = createSpriteGroupDropdown(
         msg.setEverySpriteNameFleeActor
       );
@@ -2236,7 +2236,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesSpeed = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameSpeed);
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       this.appendValueInput('SPEED').setCheck(blockly.BlockValueType.NUMBER);
@@ -2263,7 +2263,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpriteBehavior = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.setActor());
       this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER);
       let hasTargetInput = true;
@@ -2318,14 +2318,14 @@ exports.install = function(blockly, blockInstallOptions) {
     // and sets a variable to the sprite in the group that was touched
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
 
       var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
       var endLabel = new Blockly.FieldLabel();
       var dropdown2 = createSpriteGroupDropdown(
         msg.collidesWithAnySpriteName,
         value =>
-          endLabel.setText(
+          endLabel.setValue(
             msg.toTouchedSpriteName({spriteName: stripQuotes(value)})
           )
       );
@@ -2361,7 +2361,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when a sprite collides with any sprite in a group
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
 
       var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
       var dropdown2 = createSpriteGroupDropdown(msg.collidesWithAnySpriteName);
@@ -2384,7 +2384,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setBackground = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.VALUES = [];
 
       var dropdown;
@@ -2414,7 +2414,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setBackgroundParam = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.VALUES = skin.backgroundChoices;
 
       this.appendDummyInput().appendTitle(msg.setBackground());
@@ -2450,7 +2450,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setMap = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       // 'random' is a special value, don't put it in quotes
       this.VALUES = skin.mapChoices.map(opt => [
         opt[0],
@@ -2479,7 +2479,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setMapAndColor = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       // 'random' is a special value, don't put it in quotes
       this.VALUES = skin.mapChoices.map(opt => [
         opt[0],
@@ -2521,7 +2521,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
     block.helpUrl = '';
     block.init = function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(msg.showTitleScreen());
       if (options.params) {
         this.appendValueInput('TITLE')
@@ -2612,7 +2612,7 @@ exports.install = function(blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function() {
-        this.setHSV(312, 0.32, 0.62);
+        Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
         var visibilityTextDropdown = new blockly.FieldDropdown(this.VALUES);
         visibilityTextDropdown.setValue(VISIBLE_VALUE); // default to visible
         this.appendDummyInput().appendTitle(visibilityTextDropdown, 'VALUE');
@@ -2642,7 +2642,7 @@ exports.install = function(blockly, blockInstallOptions) {
       init: function() {
         // shallow copy array:
         this.VALUES = [].concat(skin.spriteChoices);
-        this.setHSV(312, 0.32, 0.62);
+        Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
         if (spriteCount > 1) {
           this.appendDummyInput().appendTitle(
             spriteNumberTextDropdown(msg.setSpriteN),
@@ -2679,7 +2679,7 @@ exports.install = function(blockly, blockInstallOptions) {
       // default to first item after random/hidden
       dropdown.setValue(skin.spriteChoices[2][1]);
 
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendTitle(msg.setSpriteN({spriteIndex: ''}));
@@ -2694,7 +2694,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpriteParamValue = {
     helpUrl: '',
     init: function() {
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       if (spriteCount > 1) {
         this.appendDummyInput().appendTitle(
           spriteNumberTextDropdown(msg.setSpriteN),
@@ -2748,7 +2748,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpriteEmotion = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput()
@@ -2789,7 +2789,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpriteEmotionParams = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendTitle(msg.setSpriteN({spriteIndex: ''}));
@@ -2841,7 +2841,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for waiting a specific amount of time.
     block.helpUrl = '';
     block.init = function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (options.time) {
         this.appendValueInput('SPRITE')
           .setCheck(blockly.BlockValueType.NUMBER)
@@ -2992,7 +2992,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for waiting a specific amount of time.
     block.helpUrl = '';
     block.init = function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (options.params) {
         this.appendDummyInput().appendTitle(msg.waitFor());
         this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER);
@@ -3067,7 +3067,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_endGame = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[0][1]); // default to win
       this.appendDummyInput().appendTitle(dropdown, 'VALUE');
@@ -3175,9 +3175,9 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setFunctional(true, {
         headerHeight: 30
       });
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.NONE]
       );
 
       var options = {
@@ -3357,7 +3357,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_vanishSprite = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendTitle(msg.vanishActorN({spriteIndex: ''}));
@@ -3379,9 +3379,9 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_sprite_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
       );
 
       this.VALUES = skin.spriteChoices;
@@ -3412,9 +3412,9 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.functional_background_dropdown = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(
+      Blockly.cdoUtils.setHSV(
         this,
-        blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
+        ...blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
       );
 
       this.VALUES = skin.backgroundChoicesK1;
@@ -3469,7 +3469,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
       // Must be marked EDITABLE so that cloned blocks share the same var name
       fieldLabel.EDITABLE = true;
-      this.setHSV(312, 0.32, 0.62);
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
       this.appendDummyInput().appendTitle(msg.ask());
       this.setInputsInline(true);
       this.appendDummyInput()
@@ -3530,7 +3530,7 @@ function installVanish(
   blockly.Blocks.studio_vanish = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       if (blockInstallOptions.isK1) {
         this.appendDummyInput()
           .appendTitle(msg.vanish())
@@ -3614,7 +3614,7 @@ function installConditionals(
   addIfAndIfElseVersions(
     'ifActorHasEmotion',
     function(actorSelectDropdown, includeElseStatement) {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(commonMsg.ifCode());
 
       appendActorSelect(this, actorSelectDropdown);
@@ -3693,7 +3693,7 @@ function installConditionals(
             ['\u2265', 'GTE']
           ];
 
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(commonMsg.ifCode());
 
       appendActorSelect(this, actorSelectDropdown);
@@ -3766,7 +3766,7 @@ function installConditionals(
   addIfAndIfElseVersions(
     'ifActorIsVisible',
     function(actorSelectDropdown, includeElseStatement) {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(commonMsg.ifCode());
 
       appendActorSelect(this, actorSelectDropdown);
@@ -3820,7 +3820,7 @@ function installConditionals(
   addIfAndIfElseVersions(
     'ifActorIsSprite',
     function(actorSelectDropdown, includeElseStatement) {
-      this.setHSV(196, 1.0, 0.79);
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendTitle(commonMsg.ifCode());
 
       appendActorSelect(this, actorSelectDropdown);

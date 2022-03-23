@@ -11,8 +11,55 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_equal course_version, course_version.content_root.course_version
   end
 
+  test "recommended? is false if course_version is not stable" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(script)
+
+    unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(unit_group)
+
+    refute script.course_version.recommended?
+    refute unit_group.course_version.recommended?
+  end
+
+  test "recommended? is true if its the only course version in the course offering" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+
+    unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group)
+
+    assert script.course_version.recommended?
+    assert unit_group.course_version.recommended?
+  end
+
+  test "recommended? is true if its the latest stable version of unit in the family" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+    script2 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: [], published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script2)
+
+    refute script.course_version.recommended?('en-us')
+    assert script2.course_version.recommended?('en-us')
+    assert_equal script2.course_version.content_root, Script.latest_stable_version('ss')
+    assert script.course_version.recommended?('fake-locale')
+    refute script2.course_version.recommended?('fake-locale')
+    assert_equal script.course_version.content_root, Script.latest_stable_version('ss', locale: 'fake-locale')
+  end
+
+  test "recommended? is true if its the latest stable version of unit group in the family" do
+    unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group)
+    unit_group2 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group2)
+
+    refute unit_group.course_version.recommended?
+    assert unit_group2.course_version.recommended?
+    assert_equal unit_group2.course_version.content_root, UnitGroup.latest_stable_version('ug')
+  end
+
   test "add_course_version creates CourseVersion for script that doesn't have one if is_course is true" do
-    offering = create :course_offering
+    offering = create :course_offering, key: 'csz'
     script = create :script, family_name: 'csz', version_year: '2050', is_course: true
     course_version = CourseVersion.add_course_version(offering, script)
 
@@ -20,7 +67,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "add_course_version updates existing CourseVersion for script if properties change" do
-    course_version = create :course_version, :with_unit, :with_course_offering
+    course_version = create :course_version, :with_unit
     script = course_version.content_root
     offering = course_version.course_offering
 
@@ -35,7 +82,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "add_course_version deletes CourseVersion for script if is_course is changed to false" do
-    course_version = create :course_version, :with_unit, :with_course_offering
+    course_version = create :course_version, :with_unit
     script = course_version.content_root
     offering = course_version.course_offering
 
@@ -59,7 +106,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "destroy_and_destroy_parent_if_empty destroys version and offering for offering with one version" do
-    course_version = create :course_version, :with_course_offering
+    course_version = create :course_version
     offering = course_version.course_offering
 
     course_version.destroy_and_destroy_parent_if_empty
@@ -68,7 +115,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "destroy_and_destroy_parent_if_empty destroys version only for offering with multiple versions" do
-    course_version = create :course_version, :with_course_offering
+    course_version = create :course_version
     offering = course_version.course_offering
     create :course_version, course_offering: offering
 
@@ -79,7 +126,7 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "destroy_and_destroy_parent_if_empty destroys version for version with no offering" do
     # This case shouldn't occur normally, but may exist temporarily because the CourseOffering model was added after CourseVersion.
-    course_version = create :course_version
+    course_version = create :course_version, course_offering: nil
     assert_nil course_version.course_offering
 
     course_version.destroy_and_destroy_parent_if_empty

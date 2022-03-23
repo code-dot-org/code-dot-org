@@ -32,17 +32,20 @@ STATUSES_TO_REPORT = %w(new open)
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
   'ap-csa-dev' => ['CSA Engineering'],
+  'ap-csa-pilot' => ['CSA Curric.'],
   'csf' => ['CSF'],
   'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
   'disco-party' => ['CSD'],
+  'edpop' => ['EdPop Jess', 'EdPop Desiree', 'EdPop Tawny', 'EdPop Rosie'],
+  'facilitator-things' => ['PnP Andrea'],
   'foundations' => ['Accounts'],
   'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
   'marketing' => ['Media'],
   'pdot' => ['PDOT Amy', 'PDOT Desiree', 'PDOT Jess', 'PDOT Rosie', 'PDOT Tawny'],
-  'plc-engineering' => ['PLC Tools'],
   'product' => ['Product'],
+  'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
   'star-labs-cabal' => ['*Labs']
 }
@@ -65,6 +68,7 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
+  'ed-programs-tools' => ['zendesk-plctools'],
   'outreach_honky-tonk' => ['zendesk-outreach'],
   'pl-team-only' => ['zendesk-pl']
 }

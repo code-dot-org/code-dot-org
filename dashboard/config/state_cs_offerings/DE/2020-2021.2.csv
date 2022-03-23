@@ -1,0 +1,66 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Sussex Academy,,100001100091,unspecified,STEM in Computer Science I (Bootstrap),124,51,3,17,4,0,6,10,0
+Sussex Academy,,100001100091,unspecified,STEM in Computer Science II (Bootstrap),127,64,9,10,1,0,9,5,0
+Waters Middle School,,100008000222,unspecified,Computer Science for Innovators and Makers (PLTW),26,13,5,1,0,0,0,5,0
+Newark Charter,,100001500112,unspecified,ACM  Level 1 Course: Foundations of Computer Science (All Topics),182,94,14,8,1,0,15,8,0
+Gauger-Cobbs Middle,,100020000236,unspecified,ACM  Level 1 Course: Foundations of Computer Science (Topics 1-5),53,14,18,13,1,0,17,16,8
+Kirk Middle,,100020000235,unspecified,ACM  Level 1 Course: Foundations of Computer Science (Topics 1-5),86,32,41,13,0,0,20,18,5
+Conrad Schools of Science,,100130000270,unspecified,ACM  Level 1 Course: Foundations of Computer Science (Topics 1-5),22,3,0,2,0,0,0,0,0
+Gauger-Cobbs Middle,,100020000236,unspecified,ACM  Level 1 Course: Foundations of Computer Science (Topics 6-10),70,34,28,21,0,0,22,14,6
+Kirk Middle,,100020000235,unspecified,ACM  Level 1 Course: Foundations of Computer Science (Topics 6-10),113,48,43,19,0,0,36,27,0
+Conrad Schools of Science,,100130000270,unspecified,ACM  Level 1 Course: Foundations of Computer Science (Topics 6-10),11,4,2,1,0,0,0,0,0
+Appoquinimink High,,100008000225,11.04601011,Exploring Computer Science,70,12,11,7,0,0,0,0,0
+Middletown High,,100008000024,11.04601011,Exploring Computer Science,128,19,51,8,0,0,12,18,0
+Odessa HS,,100008000390,11.04601011,Exploring Computer Science,40,2,8,5,1,0,0,6,0
+Brandywine High School,,100124000242,11.04601011,Exploring Computer Science,35,9,11,2,0,0,0,5,0
+Mt Pleasant High School,,100124000246,11.04601011,Exploring Computer Science,11,3,4,0,0,0,0,0,0
+Caesar Rodney High School,,100018000040,11.04601011,Exploring Computer Science,61,11,12,2,0,0,9,0,0
+Cape Henlopen High School,,100017000029,11.04601011,Exploring Computer Science,21,4,0,2,0,1,6,0,0
+Newark High School,,100020000238,11.04601011,Exploring Computer Science,158,32,50,16,0,0,37,26,8
+Penn High School,,100023000209,11.04601011,Exploring Computer Science,51,2,18,6,0,1,7,12,0
+Indian River High School,,100068000085,11.04601011,Exploring Computer Science,60,10,2,12,1,0,0,5,0
+Milford High School,,100108000111,11.04601011,Exploring Computer Science,14,3,4,2,0,0,0,0,0
+MOT Charter School,,100001900123,11.04601011,Exploring Computer Science,157,56,51,15,0,0,12,0,0
+Newark Charter School,,100001500112,11.04601011,Exploring Computer Science,21,7,3,2,0,0,0,0,0
+Odyssey Charter School,,100002600259,11.04601011,Exploring Computer Science,72,38,23,7,0,0,10,11,0
+Conrad Schools of Science,,100130000270,11.04601011,Exploring Computer Science,17,4,1,3,0,0,0,0,0
+Smyrna High School,,100162000299,11.04601011,Exploring Computer Science,75,7,24,7,0,0,9,12,0
+Woodbridge High School,,100185000194,11.04601011,Exploring Computer Science,55,8,20,17,0,0,19,7,5
+Appoquinimink High,,100008000225,11.04601022,Computer Science Principles (AP),42,6,10,1,0,0,0,0,0
+Middletown High School,,100008000024,11.04601022,Computer Science Principles (AP),44,6,11,4,0,0,5,0,0
+Brandywine High School,,100124000242,11.04601022,Computer Science Principles (AP),36,4,7,2,0,0,5,0,0
+Caesar Rodney High School,,100018000040,11.04601022,Computer Science Principles (AP),36,10,5,1,0,0,0,0,0
+Cape Henlopen High School,,100017000029,11.04601022,Computer Science Principles (AP),21,3,0,3,0,0,0,0,0
+Newark High School,,100020000238,11.04601022,Computer Science Principles (AP),37,8,9,7,0,0,7,0,5
+Penn High School,,100023000209,11.04601022,Computer Science Principles (AP),33,4,14,10,0,0,9,0,0
+First State Military,,100005700368,11.04601022,Computer Science Principles (AP),14,5,5,0,0,0,0,0,0
+Milford High School,,100108000111,11.04601022,Computer Science Principles (AP),8,0,0,2,0,0,0,0,0
+MOT Charter,,100001900123,11.04601022,Computer Science Principles (AP),55,21,15,2,0,0,0,0,0
+Newark Charter School,,100001500112,11.04601022,Computer Science Principles (AP),29,8,3,4,0,0,0,0,0
+Odyssey Charter School,,100002600259,11.04601022,Computer Science Principles (AP),12,2,3,0,0,0,0,0,0
+Conrad Schools of Science,,100130000270,11.04601022,Computer Science Principles (AP),13,2,5,2,0,0,0,0,0
+Smyrna High School,,100162000299,11.04601022,Computer Science Principles (AP),46,4,13,3,0,0,5,5,0
+Woodbridge High School,,100185000194,11.04601022,Computer Science Principles (AP),12,2,4,0,0,0,0,0,0
+Appoquinimink High,,100008000225,11.04601033,Computer Science A (AP),29,2,4,1,0,0,0,0,0
+Middletown High School,,100008000024,11.04601033,Computer Science A (AP),48,6,12,5,0,0,0,0,0
+Brandywine High School,,100124000242,11.04601033,Computer Science A (AP),10,2,1,0,0,0,0,0,0
+Concord High School,,100124000247,11.04601033,Computer Science A (AP),21,3,1,2,0,0,0,0,0
+Caesar Rodney High School,,100018000040,11.04601033,Computer Science A (AP),16,3,1,0,0,0,0,0,0
+Cape Henlopen High School,,100017000029,11.04601033,Computer Science A (AP),10,2,3,0,0,0,0,0,0
+Newark High School,,100020000238,11.04601033,Computer Science A (AP),25,3,1,2,0,0,0,0,0
+Penn High School,,100023000209,11.04601033,Computer Science A (AP),8,0,1,2,0,0,0,0,0
+Milford High School,,100108000111,11.04601033,Computer Science A (AP),8,1,1,1,1,0,0,0,0
+MOT Charter,,100001900123,11.04601033,Computer Science A (AP),30,12,10,2,0,0,0,0,0
+Newark Charter School,,100001500112,11.04601033,Computer Science A (AP),16,3,3,0,0,0,0,0,0
+Odyssey Charter School,,100002600259,11.04601033,Computer Science A (AP),23,8,5,3,0,0,0,0,0
+Conrad Schools of Science,,100130000270,11.04601033,Computer Science A (AP),21,2,3,6,0,0,0,0,0
+Dickinson,,100130000275,11.04601033,Computer Science A (AP),2,1,0,1,0,0,0,0,0
+Smyrna High School,,100162000299,11.04601033,Computer Science A (AP),17,3,5,3,1,0,0,0,0
+Woodbridge High School,,100185000194,11.04601033,Computer Science A (AP),6,0,1,3,0,0,0,0,0
+CHARTER SCHOOL OF WILMINGTON,,100000400012,unspecified,unspecified,0,0,0,0,0,0,0,0,0
+RED CLAY CONSOLIDATED SCHOOL DISTRICT,,100130000276,unspecified,unspecified,0,0,0,0,0,0,0,0,0
+DELAWARE MILITARY ACADEMY,,100001600143,unspecified,unspecified,0,0,0,0,0,0,0,0,0
+NEW CASTLE COUNTY VOCATIONAL,,100128000154,unspecified,unspecified,0,0,0,0,0,0,0,0,0
+POLYTECH SCHOOL DISTRICT,,100075000092,unspecified,unspecified,0,0,0,0,0,0,0,0,0
+DELMAR SCHOOL DISTRICT,,100027000080,unspecified,unspecified,0,0,0,0,0,0,0,0,0
+EARLY COLLEGE HIGH SCHOOL AT DEL STATE,,100005500363,unspecified,unspecified,0,0,0,0,0,0,0,0,0

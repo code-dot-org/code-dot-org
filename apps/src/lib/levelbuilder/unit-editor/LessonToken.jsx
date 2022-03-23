@@ -3,20 +3,21 @@ import PropTypes from 'prop-types';
 import {Motion, spring} from 'react-motion';
 import color from '@cdo/apps/util/color';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
-import {lessonShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonShapeForUnitEdit} from './shapes';
 
 /**
  * Component for editing lessons
  */
 export default class LessonToken extends Component {
   static propTypes = {
-    lesson: lessonShape.isRequired,
+    lesson: lessonShapeForUnitEdit.isRequired,
     dragging: PropTypes.bool,
     draggedLessonPos: PropTypes.bool,
     delta: PropTypes.number,
     handleDragStart: PropTypes.func,
     removeLesson: PropTypes.func.isRequired,
-    cloneLesson: PropTypes.func.isRequired
+    cloneLesson: PropTypes.func.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired
   };
 
   render() {
@@ -53,6 +54,7 @@ export default class LessonToken extends Component {
             handleDragStart={this.props.handleDragStart}
             removeLesson={this.props.removeLesson}
             cloneLesson={this.props.cloneLesson}
+            allowMajorCurriculumChanges={this.props.allowMajorCurriculumChanges}
           />
         )}
       </Motion>
@@ -66,14 +68,14 @@ export class LessonTokenContents extends Component {
     scale: PropTypes.number.isRequired,
     shadow: PropTypes.number.isRequired,
     draggedLessonPos: PropTypes.bool,
-    lesson: lessonShape.isRequired,
+    lesson: lessonShapeForUnitEdit.isRequired,
     handleDragStart: PropTypes.func.isRequired,
     removeLesson: PropTypes.func.isRequired,
-    cloneLesson: PropTypes.func.isRequired
+    cloneLesson: PropTypes.func.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired
   };
 
   handleEditLesson = () => {
-    window.lessonEditorOpened = true;
     const url = this.props.lesson.lessonEditPath;
     const win = window.open(url, 'noopener', 'noreferrer');
     win.focus();
@@ -94,6 +96,7 @@ export class LessonTokenContents extends Component {
   render() {
     return (
       <div
+        className="uitest-lesson-token-contents"
         style={Object.assign({}, styles.lessonToken, {
           transform: `translate3d(0, ${this.props.y}px, 0) scale(${
             this.props.scale
@@ -105,9 +108,11 @@ export class LessonTokenContents extends Component {
             : 500 - this.props.lesson.position
         })}
       >
-        <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-          <i className="fa fa-arrows-v" />
-        </div>
+        {this.props.allowMajorCurriculumChanges && (
+          <div style={styles.reorder} onMouseDown={this.handleDragStart}>
+            <i className="fa fa-arrows-v" />
+          </div>
+        )}
         <span style={styles.lessonTokenName}>
           <span style={styles.lessonArea}>
             <span style={styles.lessonTitle}>{this.props.lesson.name}</span>
@@ -137,9 +142,11 @@ export class LessonTokenContents extends Component {
             <i className="fa fa-clone" />
           </div>
         )}
-        <div style={styles.remove} onMouseDown={this.handleRemove}>
-          <i className="fa fa-times" />
-        </div>
+        {this.props.allowMajorCurriculumChanges && (
+          <div style={styles.remove} onMouseDown={this.handleRemove}>
+            <i className="fa fa-times" />
+          </div>
+        )}
       </div>
     );
   }

@@ -310,16 +310,185 @@
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "baliq",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "boshqa"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "boshqa",
+          "f655df68ec33643278de7e69794e8d76": "Virtual Akvarium"
         },
         "courseF_apps_chatbot": {
-          "ae096fbf24d913754b01a1601672bf62": "ham!"
+          "ae096fbf24d913754b01a1601672bf62": "ham!",
+          "a72e7c5c68af0546e963e510297f5233": "Salom, men X-9! Ismingiz nima?",
+          "f0e5da70d264f312a1658d51c130b101": "Ismingizni kiriting:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Yoshingiz nechada?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yoshingizni kiriting:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ham shu yoshda!",
+          "605f302ebc9f7fbacba60b15f551a633": "Eng sevimli rangingiz qaysi?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Eng sevimli rangni kiriting:",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugungi suhmatimiz uchun rahmat!"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Siz yutasiz!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Siz yutasiz!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " soniya",
+          "490082498449bd20ff0199737dfa4916": "O'yin turini tanlang:",
+          "41f2b2212de0105c2a942ebb4a44e449": "Ulkan Kollektor o‘yini!"
         },
         "courseF_editable_chatbot": {
-          "ae096fbf24d913754b01a1601672bf62": "ham!"
+          "ae096fbf24d913754b01a1601672bf62": "ham!",
+          "a72e7c5c68af0546e963e510297f5233": "Salom, men X-9! Ismingiz nima?",
+          "f0e5da70d264f312a1658d51c130b101": "Ismingizni kiriting:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yoshingizni kiriting:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ham shu yoshda!",
+          "605f302ebc9f7fbacba60b15f551a633": "Eng sevimli rangingiz qaysi?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Eng sevimli rangni kiriting:",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugungi suhmatimiz uchun rahmat!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?",
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_apps_madlib": {
+          "514b8d5320196898a9ced3efe0d4c802": "Sifat kiriting:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekt kiriting:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Tana qismini kiriting:",
+          "e522ee28f39133b45497637539ff429b": "Son kiriting:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "o'yinlar.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-oyoqli poyga!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?",
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_editable_madlib": {
+          "514b8d5320196898a9ced3efe0d4c802": "Sifat kiriting:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekt kiriting:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Tana qismini kiriting:",
+          "e522ee28f39133b45497637539ff429b": "Son kiriting:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "o'yinlar.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-oyoqli poyga!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?",
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin.",
+          "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin.",
+          "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin.",
+          "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "83db90f8846d091d3532256816f105d9": "Bu Neila",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila o'z uyini kosmik robotdan himoya qilmoqchi.",
+          "df8312187449c70820d7c58229a6b17e": "Kosmik robot boshqa mavjudotlarni qo'rqitmoqda.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila kosmik robotga yaxshi bo'lishni o'rganishga yordam bermoqchi.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Bu ishladi! Neila kosmik robotga mehr kuchini ko'rsatdi.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Boshqa jonzotlar endi qo'rquvda bo'lmaydi!",
+          "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin.",
+          "3e11a2dc6edb909c47778bed75a81769": "Text here"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "It!",
+          "336ad881e37e713ba0325500a8fa1f00": "itlar!",
+          "27944770529dd15319a983bee8951560": "Mushuk!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "mushuklar!",
+          "1c64ef29c853587fbe94f69f05272b79": "Qush!",
+          "5b402e6ea05e847a076e03ad74420c45": "qushlar!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Ajdarho!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "jadarholar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Barcha hayvonlarni sanang!",
+          "f62038e77820419cd978f7b722da560a": "Nechta paydo bo'ladi?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Hayvonlarni sanang!"
+        },
+        "courseF_extras_sim": {
+          "a2e534e7e893bd7ddb5d2047ed29dc8e": "fil yig'gan"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Salom, dunyo!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Salom, dunyo!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Salom, dunyo!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Salom, dunyo!"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov",
+          "6cd3556deb0da54bca060b4c39479839": "Salom, dunyo!"
         }
       }
     }

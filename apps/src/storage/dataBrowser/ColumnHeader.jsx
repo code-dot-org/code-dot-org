@@ -39,7 +39,7 @@ class ColumnHeader extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (!this.props.isEditing && nextProps.isEditing) {
       // Don't display a stale value for newName.
       this.setState(INITIAL_STATE);

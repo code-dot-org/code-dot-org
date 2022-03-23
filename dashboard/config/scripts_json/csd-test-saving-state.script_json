@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:46 UTC",
+    "serialized_at": "2021-11-22 19:56:19 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd-test-saving-state"
     }
@@ -59,16 +63,60 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "54655db1-f676-4c22-8e85-122bbb8c8c4c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54655db1-f676-4c22-8e85-122bbb8c8c4c",
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "key": "e95e1ad6-ac6f-404a-a87b-51a42e8e2a5b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e95e1ad6-ac6f-404a-a87b-51a42e8e2a5b",
+        "lesson.key": "Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580",
+        "lesson_activity.key": "54655db1-f676-4c22-8e85-122bbb8c8c4c"
+      }
+    },
+    {
+      "key": "16c5999c-0f32-4a8d-b8a8-f88f68b45278",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "16c5999c-0f32-4a8d-b8a8-f88f68b45278",
+        "lesson_activity.key": "e95e1ad6-ac6f-404a-a87b-51a42e8e2a5b"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -82,7 +130,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       },
       "level_keys": [
         "csd digital unplugged WIAC"
@@ -91,7 +140,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -105,7 +154,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       },
       "level_keys": [
         "csd digital unplugged WIAC L1"
@@ -114,7 +164,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -128,7 +178,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       },
       "level_keys": [
         "csd digital unplugged WIAC L2"
@@ -137,7 +188,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -151,7 +202,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       },
       "level_keys": [
         "CSD digital Unplugged WIAC video"
@@ -160,7 +212,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -174,7 +226,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       },
       "level_keys": [
         "csd digital unplugged WIAC L3"
@@ -183,7 +236,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -197,7 +250,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       },
       "level_keys": [
         "CSD digital unplugged WIAC Qs"
@@ -206,7 +260,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -220,7 +274,8 @@
         ],
         "lesson.key": "Problem Solving Process",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "16c5999c-0f32-4a8d-b8a8-f88f68b45278"
       },
       "level_keys": [
         "csd digital unplugged PSP word search"
@@ -229,7 +284,7 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -243,7 +298,8 @@
         ],
         "lesson.key": "Problem Solving Process",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "16c5999c-0f32-4a8d-b8a8-f88f68b45278"
       },
       "level_keys": [
         "csd digital unplugged PSP seating"
@@ -259,7 +315,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       }
     },
     {
@@ -270,7 +327,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       }
     },
     {
@@ -281,7 +339,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       }
     },
     {
@@ -292,7 +351,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       }
     },
     {
@@ -303,7 +363,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       }
     },
     {
@@ -314,7 +375,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "974d9bcb-e83b-4a7d-97bd-dafdee6e2580"
       }
     },
     {
@@ -325,7 +387,8 @@
         ],
         "lesson.key": "Problem Solving Process",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "16c5999c-0f32-4a8d-b8a8-f88f68b45278"
       }
     },
     {
@@ -336,7 +399,8 @@
         ],
         "lesson.key": "Problem Solving Process",
         "lesson_group.key": "",
-        "script.name": "csd-test-saving-state"
+        "script.name": "csd-test-saving-state",
+        "activity_section.key": "16c5999c-0f32-4a8d-b8a8-f88f68b45278"
       }
     }
   ],

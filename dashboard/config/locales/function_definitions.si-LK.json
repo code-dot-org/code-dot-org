@@ -505,16 +505,23 @@
             "parameters": {
               "points": "ලකුණු",
               "length": "දිග"
-            }
+            },
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න "
           },
           "draw a circle": {
-            "name": "රවුමක් අඳින්න"
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "දිග",
-              "repeat": "repeat"
-            }
+              "repeat": "repeat",
+              "sides": "පැති"
+            },
+            "name": "පින් වීල් එකක් අඳින්න"
           },
           "draw a triangle": {
             "name": "ත්‍රිකොණයක් අඳින්න",
@@ -524,8 +531,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "දිග"
-            }
+              "length": "දිග",
+              "sides": "පැති"
+            },
+            "name": "හැඩයක් අඳින්න"
           },
           "draw a house": {
             "name": "ගෙයක් අඳින්න",
@@ -546,13 +555,16 @@
             "parameters": {
               "height": "උස",
               "actor": "නළුවා"
-            }
+            },
+            "description": "උස සහ නළ පරාමිතිය සහිත පැනීමේ කාර්ය කොටස"
           },
           "patrol": {
             "parameters": {
               "actor": "නළුවා",
               "speed": "වේගය"
-            }
+            },
+            "name": "මුර සංචාරයේ යෙදී",
+            "description": "නළුවෙකු සහ වේග පරාමිතියක් ඇති මුර සංචාර ශ්‍රිතයක්"
           }
         },
         "Standalone_Artist_7": {
@@ -2094,6 +2106,14 @@
             "parameters": {
               "binary": "ද්විමය"
             }
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "ශ්‍රිතය 1"
+          },
+          "function 2": {
+            "name": "ශ්‍රිතය 2"
           }
         }
       }

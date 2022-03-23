@@ -12,11 +12,22 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     @project_storage_app_id = 78
 
     @teacher = create :teacher
-    @section = create :section, user: @teacher
+
+    @section = create :section, user: @teacher, code_review_expires_at: Time.now.utc + 1.day
     @another_student = create :student
 
-    create :follower, student_user: @project_owner, section: @section
-    create :follower, student_user: @another_student, section: @section
+    @project_owner_follower = create :follower, student_user: @project_owner, section: @section
+    @another_student_follower = create :follower, student_user: @another_student, section: @section
+  end
+
+  # Some of the factory created objects above (eg, followers)
+  # could also be stubbed out.
+  setup do
+    User.any_instance.stubs(:code_review_groups).returns([build(:code_review_group)])
+  end
+
+  teardown do
+    User.unstub(:code_review_groups)
   end
 
   test 'signed out cannot create ReviewableProject' do
@@ -182,7 +193,12 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'student in same section project available for review gets project metadata' do
+  test 'student in code review group with project available for review gets list of peers' do
+    User.any_instance.unstub(:code_review_groups)
+    code_review_group = create :code_review_group, section: @section
+    create :code_review_group_member, follower: @another_student_follower, code_review_group: code_review_group
+    create :code_review_group_member, follower:  @project_owner_follower, code_review_group: code_review_group
+
     create :reviewable_project,
       user_id: @project_owner.id,
       level_id: @project_level_id,
@@ -191,18 +207,33 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     sign_in @another_student
     get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
 
-    assert_equal [[@project_owner.id, @project_owner.name]], JSON.parse(response.body)
+    assert_equal [{'id' => @project_owner.id, 'name' => @project_owner.name}], JSON.parse(response.body)
   end
 
-  test 'student does not get projects available for review if project available but not in same section' do
-    student = create :student
+  test 'student in code review group with only own project available for review gets empty list of peers' do
+    User.any_instance.unstub(:code_review_groups)
+    code_review_group = create :code_review_group, section: @section
+    create :code_review_group_member, follower: @project_owner_follower, code_review_group: code_review_group
 
     create :reviewable_project,
       user_id: @project_owner.id,
       level_id: @project_level_id,
       script_id: @project_script_id
 
-    sign_in student
+    sign_in @project_owner
+    get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
+
+    assert_equal [], JSON.parse(response.body)
+  end
+
+  test 'student not in code review group gets empty list of peers' do
+    User.any_instance.unstub(:code_review_groups)
+    create :reviewable_project,
+      user_id: @project_owner.id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+
+    sign_in @another_student
     get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
 
     assert_equal [], JSON.parse(response.body)

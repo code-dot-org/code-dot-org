@@ -435,8 +435,12 @@ sr:
         mc_congrats_no_share: Мајнкрафт - Честитамо
         iceage_intro: Ледено Доба час кода - увод
         CSF_loops_AB: Петље
+        hoc_dance_events: Плесна журка - Догађаји
+        hoc_dance_properties: Плесна журка - Својства
         csd_applab_parameters: Функције са параметрима
         csd_debugging: Отклањање грешака
+        hoc_dance_events_2019: Плесна журка - Догађаји
+        hoc_dance_properties_2019: Плесна журка - Својства
     callout:
       text:
         run: Притисни "Изврши" дугме да покренеш програм

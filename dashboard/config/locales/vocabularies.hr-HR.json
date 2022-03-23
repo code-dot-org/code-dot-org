@@ -2,6 +2,84 @@
   "hr-HR": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "function/hero/unversioned": {
+          "word": "Funkcija"
+        },
+        "code/poem-art/2021": {
+          "word": "Kôd"
+        },
+        "event/poem-art/2021": {
+          "word": "Događaj"
+        },
+        "program/poem-art/2021": {
+          "word": "Program"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "code/artist/unversioned": {
+          "word": "Kôd"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Uvjeti"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Petlje"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "code/sports/unversioned": {
+          "word": "Kôd"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Strojno učenje"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kôd"
+        },
         "variable/coursef/2021": {
           "word": "Varijabla"
         },
@@ -64,6 +142,30 @@
         },
         "define/coursee/2021": {
           "word": "Definirati"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Strojno učenje"
+        },
+        "debugging/csd/2021": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "variable/csd/2021": {
+          "word": "Varijabla"
+        },
+        "conditionals/csd/2021": {
+          "word": "Uvjeti"
+        },
+        "abstraction/csd/2021": {
+          "word": "Apstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
+        },
+        "input/csd/2021": {
+          "word": "Ulaz"
+        },
+        "copyright/csd/2021": {
+          "word": "Autorska prava"
         }
       }
     }

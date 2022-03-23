@@ -1,47 +1,47 @@
 ---
-title: Ukážka podporujúca Týždeň vyučovania informatiky a Hodiny kódu
+title: Ukážkový článok napísaný na podporu Týždňa informatiky a Hodiny kódu
 ---
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# Napíšte článok na podporu Týždňa informatiky
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### Nižšie nájdete príklad článku, ktorý vyjadruje podporu Týždňu informatiky a jeho cieľom. Vzorový článok môžu využiť zákonodarcovia na štátnej aj lokálnej úrovni, podnikatelia a ďalší.
 
-### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
+### Na stránke [advocacy.code.org]({{ urls/advocacy }}) nájdete informácie o výučbe informatiky v rôznych štátoch [zatiaľ iba pre USA].
 
 * * *
 
-#### Title: Computing…Where the Jobs Are
+#### Titulok: Najviac voľných pracovných miest je v IT
 
-#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
+#### AutorI: [VAŠE MENO] a [PRÍPADNÝ SPOLUAUTOR – PEDAGÓG, RIADITEĽ ALEBO MIESTNY PODNIKATEĽ]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Počítače sú všade. Máme ich vo vreckách. Máme ich na stenách. Máme ich v autách. Sú nevyhnutnou súčasťou našej infraštruktúry, od elektrických sietí cez semafory až po naše finančné trhy. A všetky tieto počítače spája jedna vec. Pri svojom fungovaní sa spoliehajú na softvér.
 
-But who exactly is going to write this software?
+Ale kto tento softvér napíše?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Vzhľadom na to, ako rýchlo sa náš svet vďaka technológiám mení, by sme mohli očakávať, že na základných a stredných školách sa dnes učí informatiku viac žiakov než kedykoľvek predtým. Opak je však pravdou. Pre väčšinu škôl a učiteľov informatika stále nie je ťažiskovým predmetom.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+V čase, keď je dopyt po skúsených programátoroch na historickom maxime, zo škôl vychádza čoraz menej odborníkov na informačné technológie. Dokonca aj pri súčasnej zvýšenej nezamestnanosti zostáva množstvo pracovných pozícií v **[VLOŽTE KRAJ/MESTO]** neobsadených, keďže nemáme dostatok kandidátov s požadovanými zručnosťami.
 
-Why is this? And how can we address it?
+Prečo sa to deje? A ako to môžeme vyriešiť?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Tento problém začína už na základných a stredných školách. Väčšina škôl neponúka dostatočnú hodinovú dotáciu informatiky a programovania. V **[MESTO/OKRES/KRAJ/ŠTÁT]** minulý rok z informatiky maturovalo iba **[NUMBER]** stredoškolákov. To je len **[XX %]** zo všetkých žiakov, ktorí daný rok maturovali. Jednoducho nerobíme dosť pre prípravu a motiváciu našich študentov, aby sa o tieto dobre platené a perspektívne pozície zaujímali.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Vo viacerých mestách na Slovensku majú IT firmy silné zastúpenie, ale to sa môže zmeniť, ak nezmeníme prístup.
 
-We need to make some changes.
+Musíme niečo zmeniť.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[VOLITEĽNÉ PRE VYBRANÉ ŠKOLY]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Pozitívnou zmenou by mohlo byť, keby sa informatika začala považovať za ťažiskový predmet a zvýšila sa jej hodinová dotácia. Na **[VLOŽTE NÁZOV ŠKOLY]** je informatika voliteľným predmetom. Pri dnešnom dôraze na iné predmety si však mnohí žiaci nemôžu dovoliť maturovať z informatiky. A práve táto zmena by mohla mať veľký vplyv. Ak by bola informatika ťažiskovým predmetom a nebola by len voliteľným kurzom určeným pre ľudí, ktorí sú vopred rozhodnutí, že ju budú študovať na vysokej škole, dokázala by zaujať aj oveľa viac dievčat a detí z marginalizovaných skupín.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+Mali by sme so žiakmi pracovať a vzbudiť v nich záujem o informatiku a programovanie už od mladého veku. Naše deti by vedieť nielen len to, ako používať aplikácie a hrať hry, ale mali by vedieť, ako sa vytvárajú. Deti sú schopné naučiť sa základy programovania už v druhom ročníku základnej školy.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Musíme prijať viac učiteľov informatiky a podporiť ich profesionálny rast a rozvoj. V dnešnej dobe existuje veľa online zdrojov, ktoré učiteľom pomôžu držať krok s najnovšími technológiami.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+V blízkej budúcnosti na Slovensku vzniknú desaťtisíce nových pracovných miest vo vedecko-technických odvetviach. Veľká časť z nich vznikne priamo odvetví informačných a počítačových technológií. Čím ďalej, tým viac platí, že informatika je pre prácu v 21. storočí nevyhnutnosťou. Kto však tieto pracovné miesta obsadí, ak naše deti nemajú možnosť získať požadované znalosti?
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/{{ country }} to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Tento týždeň – {{ campaign_date/full }} – je Týždňom informatiky. Na školách naprieč **[STATE]** sa naši žiaci zúčastnia Hodiny kódu, ktorej cieľom je demystifikovať programovanie a motivovať žiakov k tomu, aby sa o informatiku začali zaujímať viac. Pridám sa k nim aj ja a rovnako pozývam aj Vás. Každý by sa mal naučiť programovať. Viac sa dozviete na https://hourofcode.com/{{ country }}. A podporte naše úsilie priniesť informatiku na viac škôl na Slovensku.
 
 {{ signup_button }}

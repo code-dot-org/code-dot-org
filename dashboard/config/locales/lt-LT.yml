@@ -134,6 +134,8 @@ lt:
     email_preference_privacy: Tikrinti savo privatumą
     email_preference_yes: Taip
     email_preference_no: Ne
+    share_teacher_email_reg_partner_preference_yes: Taip
+    share_teacher_email_reg_partner_preference_no: Ne
   school_info:
     title: Mokyklos informacija (neprivaloma)
     select_school_type: Mokyklos tipas
@@ -284,6 +286,7 @@ lt:
       playlab: Laboratorija
       sports: Sportas
       starwars: Žvaigždžių karai
+      loading: Kraunama...
     popup:
       progress_for_user: "%{name} pažanga"
       progress: Jūsų pažanga
@@ -297,6 +300,7 @@ lt:
       prizes_link: daugiau informacijos
   teacher:
     answer: Atsakymas
+    dashboard: Mokytojo prietaisų skydelis
     for_teachers_only: Tik mokytojams
     title:
       one: 'Tavo mokytojas:'
@@ -727,6 +731,7 @@ lt:
   pd:
     form_labels:
       email: El. paštas
+      school: Mokykla
       school_name: Mokyklos pavadinimas
       colombian_chilean_school_name: Mokyklos pavadinimas
     form_entries:

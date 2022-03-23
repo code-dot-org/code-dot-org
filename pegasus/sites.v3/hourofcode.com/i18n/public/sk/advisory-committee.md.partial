@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Poradný výbor Hodiny kódu a Týždňa informatiky
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Poradný výbor Hodiny kódu a Týždňa informatiky
 
 {{ advisory-committee/about_headshots }}
 

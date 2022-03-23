@@ -8,7 +8,7 @@ title: Sprei ordet
 
 ## 1. Spre bodskapen
 
-Tell your friends about the **#HourOfCode**!
+Fortel venner og kjende om **#Kodetimen**!
 
 {{ promote/share_buttons }}
 

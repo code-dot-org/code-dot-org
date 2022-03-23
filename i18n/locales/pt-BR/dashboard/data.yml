@@ -559,6 +559,28 @@ pt:
         csd_what_computers_are: O que é um computador?
         playlab_2021: Introdução ao Laboratório
         playlab_2021_reader: Introdução ao Laboratório
+        PL_CSD_TeacherTips_Advise: Dicas de professores - Conselhos para novos professores
+        PL_CSD_TeacherTips_IntroToCSD: "\nDicas de professores - Introdução ao CS Discoveries"
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Dicas de professores - O processo de solução de problemas
+        PL_CSD_TeacherTips_PairProgramming: "\nDicas de professores - Programação em pares"
+        PL_CSD_TeacherTips_Debugging: Dicas de professores - Depuração
+        PL_CSD_TeacherTips_LeadLearner: Dicas de professores - Aluno principal
+        poembot-playtest-intro: PoemBot Playtest – Introdução
+        poembot-playtest-sprites: PoemBot Playtest – Fadas
+        poembot-playtest-events: PoemBot Playtest – Eventos
+        hello_world_intro: Olá Mundo - Seja bem-vindo ao Laboratório das fadas
+        hello_world_events: Olá Mundo - Programação com eventos
+        hello_world_congrats: Olá Mundo - Faça o que você quiser
+        rough_poemart_intro: v1 Introdução à Arte de Poema
+        rough_poemart_events: v1Eventos de Arte de Poema
+        rough_poemart_imagery: v1 Imagens de Arte de Poema
+        rough_poemart_congrats: v1 Parabéns à Arte de Poema
+        poetry_module_variables: Variáveis - Codificação com Poesia
+        poetry_module_textandvariables: Texto e Variáveis - Codificação com Poesia
+        poetry_module_planningapp: Planejamento do seu aplicativo gerador de poemas - Codificação com Poesia
+        poetry_module_multichoiceprompts: Prompts de Múltipla Escolha - Codificação com Poesia
+        poetry_module_conditionals: Condicionais - Codificação com Poesia
+        poemart_intro: Introdução à Arte em Poemas 
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

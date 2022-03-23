@@ -51,6 +51,8 @@ ky:
     email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
     email_preference_yes: "Ооба"
     email_preference_no: "Жок"
+    share_teacher_email_reg_partner_preference_yes: "Ооба"
+    share_teacher_email_reg_partner_preference_no: "Жок"
   school_info:
     other: 'Башка'
   signin_form:
@@ -107,6 +109,7 @@ ky:
     popup:
       prizes_link: 'кененирээк'
   teacher:
+    dashboard: 'Мугалимдин тактасы'
     panel:
       section: 'Секция'
   user:

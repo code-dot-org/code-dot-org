@@ -39,7 +39,7 @@
   twentyhours_heading: "Wypróbuj nasz kurs Wstęp do informatyki"
   twentyhours_text: "Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych pojęć informatycznych i dotyczących programowania w tym kursie, który następuje."
   og_title: 'Code.org: Każdy może się uczyć'
-  og_title_soon: "Zbliża się Godzina Kodowania"
+  og_title_soon: "Nadchodzi Godzina Kodowania."
   og_title_here: "Oto Godzina Kodowania!"
   og_description: "Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się informatyki."
   og_description_celeb: "Wypróbuj nowe samouczki, wygraj chat wideo z celebrytą dla siebie lub dla swojej klasy!"
@@ -314,7 +314,7 @@
   homepage_hero_text_stat_loc: "2,5 mln dziewcząt zapisało się, aby uczyć się na Code.org"
   homepage_hero_text_stat_students: "#student_count kont uczniów na Code.org"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
-  homepage_hero_hoc_is_coming: "Zbliża się Godzina Kodowania"
+  homepage_hero_hoc_is_coming: "Nadchodzi Godzina Kodowania."
   homepage_hero_hoc_is_here: "Godzina Kodowania jest tutaj"
   homepage_slot_text_hoc: "Godzina Kodowania"
   homepage_slot_text_frozen: "Kraina Lodu z Anną i Elsą"
@@ -385,6 +385,7 @@
   homepage_donors_donate: "Podaruj"
   homepage_below_hero_announcement_text: "Dbamy o Twoją prywatność i dokonujemy kilku aktualizacji naszej Polityki prywatności, które wejdą w życie 25 maja."
   homepage_below_hero_announcement_link_text: "Dowiedz się więcej"
+  homepage_higher_power_body: "Twórz z Potańcówką, zyskaj szansę zobaczenia zespołu na żywo."
   contact_form_topic_student: "Jestem uczniem"
   contact_form_topic_parent: "Jestem rodzicem"
   contact_form_topic_teacher: "Jestem nauczycielem/edukatorem"
@@ -1096,6 +1097,12 @@
   coursed-2020_gradelevel: Klasa 8+
   coursee-2020_gradelevel: W wieku 8-12
   coursef-2020_gradelevel: W wieku 9-13
+  coursea-2021_gradelevel: W wieku 4-7
+  courseb-2021_gradelevel: W wieku 5-8
+  coursec-2021_gradelevel: W wieku 6-10
+  coursed-2021_gradelevel: Klasa 8+
+  coursee-2021_gradelevel: W wieku 8-12
+  coursef-2021_gradelevel: W wieku 9-13
   accelerated_gradelevel: "W wieku 10-18"
   codeorg_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
   codeintl_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
@@ -1588,7 +1595,7 @@
   hoc_overview_view_teacher_guide: "Zobacz przewodnik nauczyciela"
   hoc2018_creativity: "kreatywność"
   hoc2018_creativity_create: "Utwórz"
-  hoc2018_creativity_hoc_coming: "Zbliża się Godzina Kodowania…"
+  hoc2018_creativity_hoc_coming: "Nadchodzi Godzina Kodowania.…"
   hoc2018_creativity_what_will_you_create: "Co będziesz tworzyć?"
   hoc2018_creativity_homepage: "Uwolnij wyobraźnię i rodzące się pomysły. Zacznij z Godziną kodowania i z własnym pomysłem, cokolwiek by to nie było. Obejrzyj nasze wideo."
   hoc2018_creativity_hoc_about: 'W tym roku, Godzina kodowania jest o kreatywności. '
@@ -1642,7 +1649,7 @@
   hoc2018_mc_video_title_hoc_is_here: "Godzina Kodowania jest tutaj - każdy może się uczyć"
   hoc2018_mc_video_title_anybody_can_learn: "Każdy może się uczyć"
   hoc2018_mc_video_title_my_name_is_aracely: "Nazywam się Aracely"
-  hoc2018_mc_homepage_hoc_coming: "Zbliża się Godzina Kodowania..."
+  hoc2018_mc_homepage_hoc_coming: "Nadchodzi Godzina Kodowania...."
   hoc2018_mc_homepage_what_create: "Co będziesz tworzyć?"
   hoc2018_mc_homepage_give_flight: "Uwolnij wyobraźnię i rodzące się pomysły. Zacznij z Godziną Kodowania i z własnym pomysłem na kreatywność, cokolwiek by to nie było."
   hoc2018_mc_homepage_watch_video: "Obejrzyj nasze wideo"
@@ -1709,6 +1716,8 @@
   hoc2018_dance_video2: "Potańcówka - Zdarzenia"
   hoc2018_dance_video3: "Potańcówka - Właściwości"
   hoc2018_dance_video4: "Potańcówka - Gratulacje"
+  dance_box_higher_power_line_1: "Zakoduj taniec do „Higher Power” Coldplay, a będziesz miał szansę zobaczyć zespół na żywo!"
+  dance_box_higher_power_line_2: "Więcej informacji znajdziesz na <a href=\"%{path}\">code.org/coldplay</a>."
   page_not_found_title: "Strona nie została znaleziona"
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_description: "Strona, której szukasz, nie istnieje pod tym adresem. Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną."
@@ -1732,6 +1741,12 @@
   hoc2020_mc_available_mee: 'Dostępne w Minecrafcie: Education Edition'
   hoc2020_mc_mee_title: "Opowieść Minecrafta o dwóch wioskach"
   hoc2020_mc_mee_description: 'Nowy samouczek Godziny Kodowania dla Minecrafta jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac, Chromebooka i iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Cofnij się w czasie i naucz się kodować! Nowy samouczek Minecraft w ramach Godziny Kodowania jest już dostępny w grze Minecraft: Education Edition dla systemów Windows, Mac, Chromebook i iPad. Zacznij od bezpłatnych zasobów, szkoleń i filmów dla nauczycieli.'
+  hoc2021_mc_mee_villages_title: "Opowieść o dwóch wioskach"
+  hoc2021_mc_mee_villages_description: 'Naucz się podstaw kodowania i odkrywaj różnorodność oraz integrację ze swoimi uczniami w Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: "AI Na dobre"
+  hoc2021_mc_mee_ai_description: 'Odkrywaj sztuczną inteligencję ze swoimi uczniami i naucz się kodować w grze Minecraft: Education Edition.'
   footer_powered_by_aws: "Amazon Web Services i logo “Powered by AWS” są znakami towarowymi Amazon.com, Inc. lub jej podmiotów zależnych w Stanach Zjednoczonych i / lub innych krajach.\n"
   footer_built_on_github: "Oparty na GitHub firmy Microsoft"
   codebytes_skinny_banner_title: "Dołącz do nas 7-11 grudnia do naszych mini-lekcjach na żywo z CodeBytes!"
@@ -1794,3 +1809,7 @@
   ai_cognimates: "Cognimates"
   ai_cognimates_description: "Platforma edukacyjna AI do tworzenia gier, programowania robotów i szkolenia."
   ai_try_activity: "Spróbuj aktywności"
+  outbreak_tile_title: "Epidemia"
+  outbreak_tile_subtitle: "Wirus zainfekował Miasto Potworów! Zakoduj symulator epidemii i przewiduj, co stanie się z sąsiadami tego miasta."
+  outbreak_tile_alt: "Symulacja rozprzestrzeniania się wirusa przez grupę fioletowych potworów."
+  footer_cookie_notice: "Informacja o plikach cookie"

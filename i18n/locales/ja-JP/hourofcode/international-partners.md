@@ -2,7 +2,7 @@
 title: Contact International Partners
 ---
 
-{{ signup_button }}
+サインアップ
 
 # Contact International Partners
 
@@ -14,4 +14,4 @@ You, too, can play a leading role to get more people in your country involved! I
 
 {{ international_partners_table }}
 
-{{ signup_button }}
+サインアップ

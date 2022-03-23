@@ -54,6 +54,10 @@ zu:
         options:
           CONDITION:
             '"when"': nini
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_digital/jump_7.mp3'": gxuma
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -66,6 +70,10 @@ zu:
         options:
           KEY:
             '"no"': cha
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': gxuma
       RyanLab_moveForward:
         text: qubekela phambili
       craft_ifPath:

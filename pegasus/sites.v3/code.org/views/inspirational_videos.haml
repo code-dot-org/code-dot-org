@@ -1,4 +1,5 @@
 - videos = []
+- videos << { id: 'change_the_voice',  code: 'uhcA6K8rWp0', text: I18n.t(:video_title_change_the_voice),  duration: I18n.t(:video_3min), download: "//videos.code.org/social/change-the-voice.mp4"}
 - videos << { id: 'steph_curry',  code: 'NYzN0a1U8mI', text: I18n.t(:video_title_steph_curry),  duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-steph-curry.mp4"}
 - videos << { id: 'athletes', code: 'ip051U7Rvds', text: I18n.t(:sports_og_title), duration: I18n.t(:video_1min), download: '//videos.code.org/social/athletes-hour-of-code.mp4'}
 - videos << { id: 'cs_changing_everything', code: 'QvyTEx1wyOY', text: I18n.t(:video_title_cs_is_everything), duration: I18n.t(:video_5min), download: '//videos.code.org/social/cs-is-everything.mp4'}
@@ -14,7 +15,7 @@
   .col-50{style: "float:left; padding:10px"}
     - url = "https://www.youtube.com/watch?v=#{video[:code]}"
     - facebook = {u: url}
-    - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
+    - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} (Thanks #{CdoDonor.get_random_donor_twitter} for supporting @codeorg)"}
     =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download]
 
 %div{style: 'clear: both'}

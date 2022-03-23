@@ -151,6 +151,9 @@ gl:
     email_preference_yes: "Si"
     email_preference_no: "Non"
     email_preference_required: "Tes que especificar un e-mail de preferencia."
+    share_teacher_email_reg_partner_preference_yes: "Si"
+    share_teacher_email_reg_partner_preference_no: "Non"
+    share_teacher_email_reg_partner_preference_required: "Tes que especificar un e-mail de preferencia."
   school_info:
     title: 'Información da escola (opcional)'
     school_country: 'País da escola'
@@ -339,6 +342,7 @@ gl:
       playlab: 'Laboratorio de Xogos'
       playlab_k1: 'Play Lab (para Educación Infantil)'
       starwars: 'Star Wars'
+      loading: 'Cargando...'
     popup:
       progress_for_user: "progreso de %{name}'s"
       progress: 'O teu progreso'
@@ -677,6 +681,7 @@ gl:
   pd:
     form_labels:
       email: 'E-mail'
+      school: 'Escola'
       school_name: 'Nome da escola'
       school_country: 'País da escola'
       colombian_chilean_school_name: 'Nome da escola'

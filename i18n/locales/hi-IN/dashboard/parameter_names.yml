@@ -1,15 +1,20 @@
 hi:
   data:
     parameter_names:
+      "???": "???"
       actor: अभिनेता
       color: रंग
       counter: काउंटर
+      direction: दिशा
       height: ऊंचाई
       honey: शहद
       left: बाएं
       length: लंबाई
       min: न्यूनतम
+      nectars: मधुरस
       points: अंक
+      radius: अर्धव्यास
+      sides: भुजाएं
       size: आकार
       speed: गति
       width: चौड़ाई

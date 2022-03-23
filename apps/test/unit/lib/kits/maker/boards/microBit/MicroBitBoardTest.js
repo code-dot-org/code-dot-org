@@ -1,13 +1,12 @@
-import {expect} from '../../../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MicrobitStubBoard} from '../makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
-import _ from 'lodash';
 import {
-  EXTERNAL_PINS,
   MB_COMPONENT_COUNT,
-  MB_COMPONENTS
+  MB_COMPONENTS,
+  MICROBIT_FIRMWARE_VERSION
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
@@ -17,6 +16,7 @@ function boardSetupAndStub(board) {
   stubOpenSerialPort(board);
   sinon.stub(board.boardClient_, 'connectBoard').callsFake(() => {
     board.boardClient_.myPort = {write: () => {}};
+    board.boardClient_.firmwareVersion = `Long String Includes ${MICROBIT_FIRMWARE_VERSION}`;
     sinon.stub(board.boardClient_.myPort, 'write');
   });
 }
@@ -40,6 +40,7 @@ describe('MicroBitBoard', () => {
 
   afterEach(() => {
     board = undefined;
+    sinon.restore();
   });
 
   describe('Maker Board Interface', () => {
@@ -182,8 +183,8 @@ describe('MicroBitBoard', () => {
             expect(component.start).to.be.a('function');
           });
 
-          it('setRange()', () => {
-            expect(component.setRange).to.be.a('function');
+          it('setScale()', () => {
+            expect(component.setScale).to.be.a('function');
           });
         });
 
@@ -343,26 +344,6 @@ describe('MicroBitBoard', () => {
         const pin = 13;
         const newButton = board.createButton(pin);
         expect(newButton).to.be.an.instanceOf(ExternalButton);
-      });
-    });
-
-    it('configures the controller as a pullup if passed an external pin', () => {
-      return board.connect().then(() => {
-        EXTERNAL_PINS.forEach(pin => {
-          const newButton = board.createButton(pin);
-          expect(newButton.pullup).to.be.true;
-        });
-      });
-    });
-
-    it('does not configure the controller as a pullup if passed a non-external pin', () => {
-      return board.connect().then(() => {
-        _.range(21)
-          .filter(pin => !EXTERNAL_PINS.includes(pin))
-          .forEach(pin => {
-            const newButton = board.createButton(pin);
-            expect(newButton.pullup).to.be.false;
-          });
       });
     });
   });

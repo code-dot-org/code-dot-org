@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Guia de instruções do Hour of Code para empresas
 ---
 
 {{ signup_button }}
@@ -34,7 +34,7 @@ Uma das maneiras mais satisfatórias de participar da Hora do Código é se volu
 
 Após a inscrição de um voluntário, um professor pode analisar seu perfil no nosso [mapa de voluntários](https://code.org/volunteer/local). Por isso, os perfis devem ser enviados da forma mais completa possível. Se você atender aos requisitos da turma, um professor entrará em contato contato pela plataforma (seu endereço de e-mail nunca será compartilhado com o professor). Você poderá combinar os detalhes diretamente com o professor sobre [melhor forma de se voluntariar na turma](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Para obter mais orientação sobre o voluntariado e mensagens de amostragem, para entusiasmar sua empresa em relação ao Hour of Code, confira o nosso [guia para sócios de empresas]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 

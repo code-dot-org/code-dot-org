@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import i18n from '@cdo/locale';
 
@@ -15,8 +14,7 @@ const DEFAULT_PROPS = {
   },
   performance: null,
   isEditable: true,
-  onRubricChange: () => {},
-  viewAs: ViewType.Teacher
+  onRubricChange: () => {}
 };
 
 const setUp = overrideProps => {
@@ -78,61 +76,52 @@ describe('Rubric', () => {
     expect(firstRubricField.props().currentlyChecked).to.be.true;
   });
 
-  describe('view as teacher', () => {
-    it('RubricField prop showFeedbackInputAreas is true if isEditable = true', () => {
-      const wrapper = setUp({
-        viewAs: ViewType.Teacher,
-        isEditable: true
-      });
-
-      const firstRubricField = wrapper.find('RubricField').first();
-      expect(firstRubricField.props().showFeedbackInputAreas).to.be.true;
+  it('RubricField prop showFeedbackInputAreas is true if isEditable = true', () => {
+    const wrapper = setUp({
+      isEditable: true
     });
 
-    it('RubricField prop showFeedbackInputAreas is false if isEditable = false', () => {
-      const wrapper = setUp({
-        viewAs: ViewType.Teacher,
-        isEditable: false
-      });
-
-      const firstRubricField = wrapper.find('RubricField').first();
-      expect(firstRubricField.props().showFeedbackInputAreas).to.be.false;
-    });
-
-    it('RubricField prop expandByDefault is false isEditable = true', () => {
-      const wrapper = setUp({
-        viewAs: ViewType.Teacher,
-        isEditable: true
-      });
-
-      const firstRubricField = wrapper.find('RubricField').first();
-      expect(firstRubricField.props().expandByDefault).to.be.false;
-    });
-
-    it('RubricField prop expandByDefault is true isEditable = false', () => {
-      const wrapper = setUp({
-        viewAs: ViewType.Teacher,
-        isEditable: false
-      });
-
-      const firstRubricField = wrapper.find('RubricField').first();
-      expect(firstRubricField.props().expandByDefault).to.be.true;
-    });
+    const firstRubricField = wrapper.find('RubricField').first();
+    expect(firstRubricField.props().showFeedbackInputAreas).to.be.true;
   });
 
-  describe('view as student', () => {
-    it('expands rubric value with feedback', () => {
-      const wrapper = setUp({
-        viewAs: ViewType.Student,
-        isEditable: false,
-        performance: 'performanceLevel2'
-      });
-
-      const firstRubricField = wrapper.find('RubricField').first();
-      expect(firstRubricField.props().expandByDefault).to.be.false;
-
-      const secondRubricField = wrapper.find('RubricField').at(1);
-      expect(secondRubricField.props().expandByDefault).to.be.true;
+  it('RubricField prop showFeedbackInputAreas is false if isEditable = false and there is no performance', () => {
+    const wrapper = setUp({
+      isEditable: false
     });
+
+    const firstRubricField = wrapper.find('RubricField').first();
+    expect(firstRubricField.props().showFeedbackInputAreas).to.be.false;
+  });
+
+  it('RubricField prop expandByDefault is false if isEditable = true and no performance', () => {
+    const wrapper = setUp({
+      isEditable: true
+    });
+
+    const firstRubricField = wrapper.find('RubricField').first();
+    expect(firstRubricField.props().expandByDefault).to.be.false;
+  });
+
+  it('RubricField prop expandByDefault is true if isEditable = false', () => {
+    const wrapper = setUp({
+      isEditable: false
+    });
+
+    const firstRubricField = wrapper.find('RubricField').first();
+    expect(firstRubricField.props().expandByDefault).to.be.true;
+  });
+
+  it('expands rubric value with feedback', () => {
+    const wrapper = setUp({
+      isEditable: false,
+      performance: 'performanceLevel2'
+    });
+
+    const firstRubricField = wrapper.find('RubricField').first();
+    expect(firstRubricField.props().expandByDefault).to.be.false;
+
+    const secondRubricField = wrapper.find('RubricField').at(1);
+    expect(secondRubricField.props().expandByDefault).to.be.true;
   });
 });

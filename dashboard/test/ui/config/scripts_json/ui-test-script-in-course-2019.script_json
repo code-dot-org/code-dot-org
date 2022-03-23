@@ -1,0 +1,145 @@
+{
+  "script": {
+    "name": "ui-test-script-in-course-2019",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-11-06 22:53:56 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "ui-test-script-in-course-2019"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lg_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lg_1",
+        "script.name": "ui-test-script-in-course-2019"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Lesson",
+      "name": "Lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson",
+        "lesson_group.key": "lg_1",
+        "script.name": "ui-test-script-in-course-2019"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "9ca80a74-e401-4b31-afce-045d72077aca",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ca80a74-e401-4b31-afce-045d72077aca",
+        "lesson.key": "Lesson",
+        "lesson_group.key": "lg_1",
+        "script.name": "ui-test-script-in-course-2019"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "634599d1-5c6f-4a76-81d0-651ebb2b2cc7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "634599d1-5c6f-4a76-81d0-651ebb2b2cc7",
+        "lesson_activity.key": "9ca80a74-e401-4b31-afce-045d72077aca"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L1 Student Lesson Introduction"
+        ],
+        "lesson.key": "Lesson",
+        "lesson_group.key": "lg_1",
+        "script.name": "ui-test-script-in-course-2019",
+        "activity_section.key": "634599d1-5c6f-4a76-81d0-651ebb2b2cc7"
+      },
+      "level_keys": [
+        "U1L1 Student Lesson Introduction"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U1L1 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U1L1 Student Lesson Introduction"
+        ],
+        "lesson.key": "Lesson",
+        "lesson_group.key": "lg_1",
+        "script.name": "ui-test-script-in-course-2019",
+        "activity_section.key": "634599d1-5c6f-4a76-81d0-651ebb2b2cc7"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

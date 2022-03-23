@@ -419,7 +419,8 @@
           "78d989e01047ba7043a38650d695abaa": "Wybierz gracza",
           "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
           "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3",
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Podniebny tancerz"
         },
         "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
@@ -451,7 +452,13 @@
         },
         "courseC19_playLab_sample2_2021": {
           "5cec903c4d41c49412a70a94d54999ee": "Możesz coś napisać.",
-          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst"
+          "3e11a2dc6edb909c47778bed75a81769": "Tutaj tekst",
+          "83db90f8846d091d3532256816f105d9": "To jest Neila.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila próbuje chronić swój dom przez kosmicznego robota - spacebota.",
+          "df8312187449c70820d7c58229a6b17e": "Kosmiczny robot odstrasza inne stworzenia.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila chce pomóc kosmicznemu robotowi - spacebotowi nauczyć się być miłym.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Udało się! Neila pokazała spacebotowi siłę uprzejmości.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Inne stworzenia już się nie boją!"
         },
         "courseC_PlayLab_eventsFP_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
@@ -473,7 +480,9 @@
         "courseE_aboutme_1_2021": {
           "b63151482630edd1589a9ac24d107c49": "To ja! Rikki! Lubię kodować, spotykać się z Thuy i jeść lody!",
           "810896b14fc6615f0c76628b9b6a727e": "To mój najlepszy przyjaciel Thuy! Jest naprawdę dobra w sportach!",
-          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!"
+          "6f97975a0bda0c9219915161149cbb26": "To mój komputer! Koduję na nim cały czas!",
+          "8e985f60f328934accd78e7649584840": "Mój ulubiony przysmak to lody!",
+          "31ba97bb501bb1f5b448221be09bad32": "To jest moja suczka corgi, Lollipop! Nauczę ją kodowania!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Witaj świecie!"
@@ -489,7 +498,11 @@
           "83e4a96aed96436c621b9809e258b309": "ryba",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
-          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium"
+          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Co dodasz?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Która ryba?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Które stworzenie?",
+          "78574118d153534fd0925a2f5ca25e79": "Która rzecz?"
         },
         "courseF_apps_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
@@ -504,17 +517,25 @@
           "ae096fbf24d913754b01a1601672bf62": "też!",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
           "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:"
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
           "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
-          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:"
+          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:",
+          "41f2b2212de0105c2a942ebb4a44e449": "Gra \"Wielki kolekcjoner\"!"
         },
         "courseF_apps_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier."
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!"
         },
         "courseF_editable_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
@@ -530,12 +551,19 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
           "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:"
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!"
         },
         "courseF_editable_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier."
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!"
         },
         "courseF_text_answer": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
@@ -547,7 +575,9 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_text_choice_events": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "c529a06c3f8518b63ff6dfac482b335c": "Nazwij tę planetę:",
+          "44506356d48394cd903b579df9de9117": ", mieszkańcu Ziemi!"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
@@ -556,28 +586,34 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "co chcesz na swoje urodziny?"
         },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "46463b2e9f71f2f15b7238f56f09ba30": "Koniec",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Dzięki za rozmowę!"
         },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "50d489a15105b987ec6d4410900c95dd": "Wpisz słowo akcji:"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
@@ -585,6 +621,40 @@
         "courseF_text_choice_multiprompt": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
           "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "Co będziesz jeść?",
+          "937dc37c06cc5d89a7096eb048b73590": "już idzie!"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "Nazwij robota.",
+          "34088af1fb721900963462375b3bbe23": "robot!"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "Kliknij duszki, aby dać im maski.",
+          "968c8b54671ab303d48320f86937c40b": "Maski pomagają spowolnić rozprzestrzenianie się wirusów! "
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
+          "30fcc1693fa8402931d13ac3a5f396fd": "wpisz tutaj tytuł"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3",
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
         }
       }
     }

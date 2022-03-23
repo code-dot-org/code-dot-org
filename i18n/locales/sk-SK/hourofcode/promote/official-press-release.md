@@ -1,46 +1,46 @@
 ---
-title: Oficiálna tlačová správa Hodiny kódu
+title: Oficiálna tlačová správa Hodiny kódu pre politikov
 ---
 
 {{ signup_button }}
 
-# Vzorová tlačová správa pre zvolených zástupcov
+# Vzorová tlačová správa pre politikov
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+### Použite túto vzorovú tlačovú správu na vytvorenie správy o vašej účasti na Hodine kódu.
 
 * * *
 
-#### For Immediate Release  
+#### Na okamžité zverejnenie  
 
 
-#### [DATE]  
+#### [DÁTUM]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### Kontakt: [KONTAKTNÉ ÚDAJE]
 
 <br />
 
-**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
+**ŽUPAN/PRIMÁTOR/STAROSTA/POSLANEC [VLOŽTE MENO] SA ZÚČASTNIL(A) HODINY KÓDU S MIESTNYMI ŽIAKMI** <br />
 
-Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+Ľudia z komunity spojili sily a zúčastnili sa Týždňa informatiky, aby zvýšili povedomie o dôležitosti informatického vzdelania<br /> <br />
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
+**DÁTUM** – [**VLOŽTE MENO**] sa dnes zúčastnil(a) podujatia [**NÁZOV PODUJATIA**]. Pridal(a) sa tak k riaditeľovi a členom učiteľského zboru na [**VLOŽTE NÁZOV ŠKOLY**], predstaviteľom firiem i miestnym rodinám a zapojil(a) sa spolu s nimi do Hodiny kódu, ktorá sa koná v rámci Týždňa informatiky. [**VLOŽTE MENO**] členovia komunity sa tak pridali k desiatkam miliónov ľudí po celom svete, ktorí sa zapojili do najväčšieho vzdelávacieho podujatia v dejinách. <br />
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
+[**VLOŽTE PODROBNOSTI O PODUJATÍ, POUŽÍVAJTE OPISNÝ JAZYK A KONKRÉTNE ÚDAJE. NAPRÍKLAD:**]  
+„Základná škola Ľudovíta Štúra zorganizovala celoškolské podujatie Hodiny kódu s cieľom priblížiť svojim žiakom základy informatiky. Viac ako 500 žiakov zo všetkých ročníkov absolvovalo aspoň jednu Hodinu kódu. Počas dňa im pomáhali desiatky rodičov a dobrovoľníkov z miestnej komunity, ktorí pre deti toto podujatie zorganizovali s cieľom ukázať, prečo je pre ich život informatika dôležitá.“ <br />
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
+[**VZOROVÝ TEXT NA DOPLNENIE KONTEXTU:**]  
+Počítače sú všade, no informatika stále nie je pre školy ťažiskovým predmetom. Dievčatá a žiaci z marginalizovaných skupín sa pritom informatike venujú v ešte nižšej miere. Dobrou správou však je, že tento stav sa mení k lepšiemu. Hodina kódu je kľúčom k tomu, aby sme mohli všetkým žiakom poskytnúť prístup ku kvalitnej výučbe informatiky. <br />
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
+Hodinu kódu už absolvovalo viac ako 100 miliónov žiakov po celom svete. Vďaka Hodine kódu sa informatika objavila medzi hlavnými správami od Googlu, MSN, Yahoo! aj Disney. Minuloročnú Hodinu kódu svojimi videami odštartovali známe osobnosti ako Barack Obama, Shakira či Ashton Kutcher. Na podporu tohto hnutia spojilo sily viac ako 100 partnerov. <br />
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
+[**VLOŽTE CITÁT OD AMBASÁDORA, VZOR NIŽŠIE:**]  
+„Musíme podporovať a motivovať žiakov, aby sa zaujímali o informatiku,” povedal(a) [**VLOŽTE MENO**]. „Každý žiak si zaslúži príležitosť učiť sa informatiku a získať tak prístup k tým najlepším povolaniam 21. storočia.“ <br />
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
+[**PRIDAJTE ĎALŠIE INFORMÁCIE O VAŠOM PODUJATÍ A/ALEBO ORGANIZÁCII**] <br />
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
+[**VLOŽTE CITÁT OD INEJ ORGANIZÁCIE ALEBO NIEKOHO, KTO SA UŽ PODUJATIA ZÚČASTNIL**] <br />
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+Viac informácií o [**PODUJATÍ/PROGRAME/ATĎ.**] nájdete na [**VLOŽTE URL ADRESU WEBU**] alebo kontaktujte [**VLOŽTE KONTAKTNÉ ÚDAJE**].
 
 {{ signup_button }}

@@ -78,15 +78,29 @@ class TeacherFeedback < ApplicationRecord
       order(created_at: :desc)
   end
 
-  # returns the latest feedback for each student on every level in a script given by the teacher
+  # Returns the latest feedback for each student on every level in a script given by the teacher
+  # Get number of passed levels per user for the given set of user IDs
+  # @param [Array<Integer>|Integer] student_ids: (optional) one or a list of student_ids. If nil student_id is excluded from the query
+  # @param [Array<Integer>|Integer] level_ids: (optional) one or a list of level_ids. If nil level_id is excluded from the query
+  # @param [Integer] script_id: (optional) if nil, script_id will be excluded from the query
+  # @param [Integer] teacher_id: (optional) if nil, teacher_id will be excluded from the query
+  # @return [Array<TeacherFeedback>] Array of TeacherFeedbacks
   def self.get_latest_feedbacks_given(student_ids, level_ids, script_id, teacher_id)
+    query = {
+      student_id: student_ids,
+      level_id: level_ids,
+      script_id: script_id,
+      teacher_id: teacher_id
+    }.compact
+
     find(
       where(
-        student_id: student_ids,
-        level_id: level_ids,
-        script_id: script_id,
-        teacher_id: teacher_id
-      ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
+        query
+      ).group([:student_id, :level_id]).pluck(
+        # This SQL string is not at risk for injection vulnerabilites because
+        # it's just a hardcoded string, so it's safe to wrap in Arel.sql
+        Arel.sql('MAX(teacher_feedbacks.id)')
+      )
     )
   end
 
@@ -96,7 +110,9 @@ class TeacherFeedback < ApplicationRecord
     where(id: joins(:student_sections).
         where('sections.user_id = teacher_id').
         group([:teacher_id, :student_id, :level_id]).
-        pluck('MAX(teacher_feedbacks.id)')
+        # This SQL string is not at risk for injection vulnerabilites because
+        # it's just a hardcoded string, so it's safe to wrap in Arel.sql
+        pluck(Arel.sql('MAX(teacher_feedbacks.id)'))
   )
   end
 
@@ -112,7 +128,7 @@ class TeacherFeedback < ApplicationRecord
       seen_on_feedback_page_at: nil,
       student_first_visited_at: nil
     ).select do |feedback|
-      User.find(feedback.teacher_id).authorized_teacher?
+      User.find(feedback.teacher_id).verified_instructor?
     end
 
     all_unseen_feedbacks.count
@@ -147,6 +163,48 @@ class TeacherFeedback < ApplicationRecord
       seen_on_feedback_page_at: seen_on_feedback_page_at,
       student_first_visited_at: student_first_visited_at,
       is_awaiting_teacher_review: awaiting_teacher_review?(is_latest)
+    }
+  end
+
+  def summarize_for_csv(level, script_level, student, sublevel_index = nil)
+    rubric_performance_json_to_ruby = {
+      performanceLevel1: "rubric_performance_level_1",
+      performanceLevel2: "rubric_performance_level_2",
+      performanceLevel3: "rubric_performance_level_3",
+      performanceLevel4: "rubric_performance_level_4"
+    }
+
+    rubric_performance_headers = {
+      performanceLevel1: "Extensive Evidence",
+      performanceLevel2: "Convincing Evidence",
+      performanceLevel3: "Limited Evidence",
+      performanceLevel4: "No Evidence"
+    }
+
+    review_state_labels = {
+      keepWorking: "Needs more work",
+      completed: "Reviewed, completed",
+    }
+
+    review_state_label = awaiting_teacher_review?(true) ? "Waiting for review" : review_state_labels[review_state&.to_sym]
+    level_num = script_level.position.to_s
+
+    if sublevel_index
+      level_num += BubbleChoice::ALPHABET[sublevel_index]
+    end
+
+    {
+      studentName: student.name,
+      lessonNum: script_level.lesson.relative_position.to_s,
+      lessonName: script_level.lesson.localized_title,
+      levelNum: level_num,
+      keyConcept: (level.rubric_key_concept || ''),
+      performanceLevelDetails: (level.properties[rubric_performance_json_to_ruby[performance&.to_sym]] || ''),
+      performance: rubric_performance_headers[performance&.to_sym],
+      comment: comment,
+      timestamp: updated_at.localtime.strftime("%D at %r"),
+      reviewStateLabel: review_state_label || "Never reviewed",
+      studentSeenFeedback: student_seen_feedback&.localtime&.strftime("%D at %r"),
     }
   end
 

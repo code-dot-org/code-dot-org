@@ -2,6 +2,331 @@
   "zh-TW": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "event/dance-extras/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "program/dance-extras/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/minecraft/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/minecraft/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "event/minecraft/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "loop/minecraft/unversioned": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "code/hero/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/hero/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/hero/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "function/hero/unversioned": {
+          "word": "函式",
+          "definition": "你可輕鬆不斷呼叫的程式碼。"
+        },
+        "code/poem-art/2021": {
+          "word": "代碼",
+          "definition": "（動詞）為電腦編寫指令。"
+        },
+        "event/poem-art/2021": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "line/poem-art/2021": {
+          "word": "詩歌行",
+          "definition": "（詩歌）- 一篇詩歌的組成部分，採用單行格式，在右側結束。 "
+        },
+        "mood/poem-art/2021": {
+          "word": "意境",
+          "definition": "藝術作品或文學作品所表達出某種感覺、氛圍或情感。"
+        },
+        "program/poem-art/2021": {
+          "word": "程式",
+          "definition": "一系列已編碼的步驟，可在設備上運行。"
+        },
+        "code/flappy/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/flappy/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/hourofcode/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/frozen/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/frozen/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/iceage/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/iceage/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/artist/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/artist/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/artist/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/gumball/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/gumball/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "event/dance/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "program/dance/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/dance/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "code/aquatic/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/aquatic/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "條件（Condition）",
+          "definition": "程式允許某個動作前會檢查條件，確認條件是否為真（true）。"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "條件判斷（Conditionals）",
+          "definition": " 僅可在某些條件下執行的陳述句。"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "加密"
+        },
+        "code/starwars/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/starwars/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/mc/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/mc/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/mc/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/playlab/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/playlab/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "無損壓縮"
+        },
+        "event/outbreak/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "event/sports/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "code/sports/unversioned": {
+          "word": "代碼"
+        },
+        "debugging/sports/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/sports/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/infinity/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/infinity/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "event/basketball/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "code/basketball/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/basketball/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "code/dance-2019/unversioned": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "機器學習",
+          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
+        },
+        "code/poem-art/unversioned": {
+          "word": "代碼",
+          "definition": "（動詞）為電腦編寫指令。"
+        },
+        "event/poem-art/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "program/poem-art/unversioned": {
+          "word": "程式",
+          "definition": "一系列已編碼的步驟，可在設備上運行。"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "意境",
+          "definition": "藝術作品或文學作品所表達出某種感覺、氛圍或情感。"
+        },
+        "line/poem-art/unversioned": {
+          "word": "詩歌行",
+          "definition": "（詩歌）- 一篇詩歌的組成部分，採用單行格式，在右側結束。 "
+        },
         "behavior/coursef/2021": {
           "word": "行為"
         },
@@ -478,6 +803,57 @@
         "try/coursee/2021": {
           "word": "嘗試（Try）",
           "definition": "試著去做某件事"
+        },
+        "machine_learning/csd/2021": {
+          "word": "機器學習",
+          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
+        },
+        "user_interface/csd/2021": {
+          "word": "使用者介面"
+        },
+        "bug/csd/2021": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "for_loop/csd/2021": {
+          "word": "計數/計次迴圈（For Loop）",
+          "definition": "有預先確定的開始、結束與增加幅度（階值）的迴圈。"
+        },
+        "debugging/csd/2021": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/csd/2021": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "variable/csd/2021": {
+          "word": "變數",
+          "definition": "放置可變更資訊的佔位符。"
+        },
+        "condition/csd/2021": {
+          "word": "條件（Condition）"
+        },
+        "conditionals/csd/2021": {
+          "word": "條件判斷（Conditionals）"
+        },
+        "abstraction/csd/2021": {
+          "word": "抽象概念"
+        },
+        "function/csd/2021": {
+          "word": "函式"
+        },
+        "input/csd/2021": {
+          "word": "輸入"
+        },
+        "processing/csd/2021": {
+          "word": "處理"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "數位足跡"
+        },
+        "copyright/csd/2021": {
+          "word": "版權所有"
         }
       }
     }

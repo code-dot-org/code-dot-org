@@ -1,0 +1,19 @@
+{
+  "category": "Poetry - Sprites",
+  "config": {
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "func": "destroy",
+    "docFunc": "gamelab_destroy",
+    "blockText": "remove {ANIMATION_NAME}",
+    "args": [
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

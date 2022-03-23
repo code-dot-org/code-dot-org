@@ -2,4 +2,6 @@
 ur:
   data:
     shared_functions:
+      moving north and looping: شمال کی طرف بڑھنا اور لوپ کرنا
+      moving south and looping: جنوب کی طرف بڑھنا اور لوپ کرنا
       moving with arrow keys: تیر یعنی arrow کے بٹنوں کے ساتھ حرکت

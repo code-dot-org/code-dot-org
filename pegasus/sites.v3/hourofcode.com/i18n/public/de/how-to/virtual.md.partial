@@ -1,5 +1,5 @@
 ---
-title: Hour of Code - So planen Sie Ihre virtuelle Veranstaltung
+title: Hour of Code - Anleitung für virtuelle Veranstaltungen
 layout: wide
 nav: how_to_nav
 ---
@@ -12,17 +12,17 @@ nav: how_to_nav
 
 ***
 
-Obwohl die Hour of Code traditionell in Klassenzimmern auf der ganzen Welt stattfindet, müssen Sie nicht dort anwesend sein, um den Spaß mitzumachen! Sie können eine interaktive und spannende Hour of Code für SchülerInnen auch virtuell moderieren. Verwenden Sie dafür unsere Empfehlungen.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Obwohl die Hour of Code traditionell in Klassenzimmern auf der ganzen Welt stattfindet, müssen Sie nicht dort anwesend sein, um den Spaß mitzumachen! Sie können eine interaktive und spannende Hour of Code auch virtuell moderieren. Verwenden Sie dafür einige unserer Empfehlungen.  Sollten Sie noch Fragen haben, schauen Sie bitte in unsere  [Anleitung für virtuelle Veranstaltungen]({{ localized_files/participation_guide_virtual }}) .
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
 ## Sie sind vielleicht nicht am gleichen Ort, aber Sie können dennoch zusammen beginnen
-Auch wenn Sie planen, dass die SchülerInnen ihre Aktivitäten selbstständig durchführen, sollten Sie Ihre Veranstaltung mit einem virtuellen Start einleiten, um sich das Interesse der TeilnehmerInnen zu sichern. Es gibt dafür mehrere interessante Möglichkeiten: 
+Auch wenn Sie planen, Lernenden ihre Aufgaben selbständig durchführen zu lassen, sollten Sie Ihre Veranstaltung mit einer virtuellen Einführungsveranstaltung beginnen, um die Teilnehmenden zu begeistern. Es gibt dafür mehrere interessante Möglichkeiten: 
 
 <ul>
-<li><b>Laden Sie eine/n GastreferentIn ein</b>: Tausende von Freiwilligen aus allen Bereichen möchten gerne von Ihnen hören! Verwenden Sie einfach unsere <a href="https://code.org/volunteer/local">Unterstützerkarte</a>, um sie zu finden. Mit einer virtuellen Hour of Code sind Sie nicht durch Entfernungen eingeschränkt, so können Sie bei Bedarf auch außerhalb Ihres Postleitzahlbereichs nach Freiwilligen suchen, die virtuelle Hilfe anbieten. Sobald Sie sich mit einem/einer Freiwilligen in Verbindung gesetzt haben, können Sie den Leitfaden <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code - So können Sie als Freiwillige(r) mitmachen</a> für die Auswahl potenzieller Themen, Themen für Gespräche und mehr heranziehen.</li> 
+<li><b>Laden Sie einen Gastreferenden ein</b>: Tausende von Freiwilligen aus allen Bereichen möchten gerne von Ihnen hören! Verwenden Sie einfach unsere <a href="https://code.org/volunteer/local">Übersichtskarte mit Freiwilligen</a>, um sie zu finden. Mit einer virtuellen Hour of Code sind Sie nicht durch Entfernungen eingeschränkt, so können Sie bei Bedarf auch außerhalb Ihres Postleitzahlbereichs nach Freiwilligen suchen, die virtuelle Hilfe anbieten. Sobald Sie sich mit einem/einer Freiwilligen in Verbindung gesetzt haben, können Sie den Leitfaden <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code - So können Sie als Freiwillige(r) mitmachen</a> für die Auswahl potenzieller Themen, Themen für Gespräche und mehr heranziehen.</li> 
 <li><b>Zeigen Sie ein motivierendes Video</b>: Eine weitere erprobte Möglichkeit für den Auftakt Ihrer Veranstaltung ist es, den TeilnehmerInnen eines unserer zahlreichen<a href="http://hourofcode.com/us/promote/resources#videos">motivierenden Videos</a> zu zeigen. Viele dieser Videos sind weniger als 5 Minuten lang und enthalten Inspiration und Ermutigung von Promis, die Ihre SchülerInnen erkennen werden.</li> 
 <li><b>Diskussionen über Informatik als festem Bestandteil unseres Lebens</b>: Vermitteln Sie in Ihrer Hour of Code Veranstaltung ein tieferes Verständnis der Informatik, indem Sie die Auswirkungen der Technologie auf unser tägliches Leben beschreiben. Stellen Sie den SchülerInnen gezielte Fragen und gestalten Sie den Beginn Ihrer Veranstaltung als interaktive Diskussion. Ideen, wie Sie die Diskussion aktiv in Gang bringen können, finden Sie in diesen <a href="https://code.org/csforgood#prompts">Fragen für Diskussionen</a>.</li>
 </ul>
@@ -36,7 +36,7 @@ Wahrscheinlich sind Sie mit Plattformen wie Cisco Webex, Google Meet, Microsoft 
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Planen Sie, wie die SchülerInnen teilnehmen sollen
+### 2. Planen Sie, wie die Lernenden teilnehmen sollen
 < strong x-id="1">Eigenständige Hour of Code Aktivität</strong><br> Wir empfehlen, dass Sie den SchülerInnen nach dem Auftakt der Veranstaltung erlauben, die Videokonferenz zu verlassen, um ihre <a href="https://hourofcode.com/us/learn">Hour of Code Aktivitäten</a> alleine statt in Echtzeit gemeinsam zu bearbeiten. Dass ermöglicht es den ihnen, in ihre eigenen Projekte einzutauchen und ein besseres Verständnis der Informatikkonzepte zu erlangen. Dadurch werden auch die Ablenkung und das Hindernis minimiert, das mit einem geöffneten Videokonferenzfenster verbunden ist.
 
 Es kann für Sie zweckdienlich sein, im Voraus ein bis drei 3 Tutorien zu ihrer Auswahl zu bestimmen. So können Sie Aktivitäten auswählen, die am besten für ihre Klassenstufe geeignet sind. Und wenn die SchülerInnen Fragen haben, die Ihre Hilfe erfordern, sind Sie mit Tutorien, die Sie bereits kennen, selbst besser vorbereitet

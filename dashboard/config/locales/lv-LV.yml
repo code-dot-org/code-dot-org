@@ -113,6 +113,8 @@ lv:
     error: Radusies kļūda.
     email_preference_yes: Jā
     email_preference_no: Nē
+    share_teacher_email_reg_partner_preference_yes: Jā
+    share_teacher_email_reg_partner_preference_no: Nē
   school_info:
     select_school_type: Skolas tips
     other: Citi
@@ -228,6 +230,7 @@ lv:
       frozen: Ledus sirds
       infinity: Bezgalība
       playlab: Spēles laboratorija
+      loading: Ielādē...
     popup:
       progress_for_user: "%{name} panākumi"
       progress: Jūsu progress
@@ -241,6 +244,7 @@ lv:
       prizes_link: Vairāk informācijas
   teacher:
     answer: Atbilde
+    dashboard: Skolotāju darba galds
     for_teachers_only: Tikai skolotājiem
     title:
       one: 'Tavs skolotājs:'
@@ -529,6 +533,7 @@ lv:
       first_name: Vārds
       last_name: Uzvārds
       email: E-pasts
+      school: Skola
       school_name: Skolas nosaukums
       colombian_chilean_school_name: Skolas nosaukums
     form_entries:

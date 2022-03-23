@@ -43,8 +43,8 @@ module Pd::Application
 
       if errors.any?
         msg = "Error sending emails for applications. Errors:\n"
-        errors.each do |application_id, error|
-          msg << "    Application #{application_id}: #{error}\n"
+        errors.each do |email_id, error|
+          msg << "    Email #{email_id}: #{error}\n"
         end
         raise msg
       end

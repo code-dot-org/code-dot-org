@@ -8,8 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 16:42:40 UTC",
+    "serialized_at": "2021-11-22 19:57:42 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csa-u6-dev"
     }
@@ -920,6 +923,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa widget test2"
+        ],
         "progression": "Neighborhood Setup Widget"
       },
       "bonus": false,
@@ -942,6 +948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 8x8 Practice Level"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -964,6 +973,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 12x12 Practice Level"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -986,6 +998,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 16x16 Practice Level"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -1008,6 +1023,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 32x32 Practice Level"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -1030,6 +1048,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Console Practice Level"
+        ],
         "progression": "Console"
       },
       "bonus": false,
@@ -1052,6 +1073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Theater Demo"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -1074,6 +1098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood Predict Level Example"
+        ],
         "progression": "Predict the Output Examples"
       },
       "bonus": false,

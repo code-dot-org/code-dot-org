@@ -294,7 +294,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -305,7 +305,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -316,7 +316,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -327,7 +327,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -338,7 +338,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -349,7 +349,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -360,7 +360,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -371,7 +371,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -382,7 +382,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -393,7 +393,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -407,7 +407,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           }
         },
@@ -436,29 +436,44 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "sammle 3 Nektar"
+            "name": "sammle 3 Nektar",
+            "parameters": {
+              "direction": "Richtung"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "sammle 3 Nektar"
+            "name": "sammle 3 Nektar",
+            "parameters": {
+              "direction": "Richtung"
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "sammle 5 Nektar"
+            "name": "sammle 5 Nektar",
+            "parameters": {
+              "direction": "Richtung"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "sammle 5 Nektar"
+            "name": "sammle 5 Nektar",
+            "parameters": {
+              "direction": "Richtung",
+              "nectar units": "Nektareinheiten"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "Nektar holen, Honig herstellen",
             "parameters": {
-              "honey": "Honig"
+              "honey": "Honig",
+              "direction": "Richtung",
+              "nectars": "Nektar"
             }
           }
         },
@@ -575,7 +590,8 @@
           "get nectar": {
             "name": "hole Nektar",
             "parameters": {
-              "counter": "Zähler"
+              "counter": "Zähler",
+              "dir": "dir"
             }
           }
         },
@@ -584,7 +600,10 @@
             "name": "zeichne Quadrat 20"
           },
           "draw octagons": {
-            "name": "zeichne Oktagons"
+            "name": "zeichne Oktagons",
+            "parameters": {
+              "numOctagons": "zahlOktagone"
+            }
           },
           "draw an octagon": {
             "name": "ein Achteck zeichnen"
@@ -717,7 +736,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "Vermutung prüfen"
+            "name": "Vermutung prüfen",
+            "parameters": {
+              "theGuess": "dieVermutung"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -726,7 +748,8 @@
             "parameters": {
               "length": "Länge",
               "sides": "Kanten"
-            }
+            },
+            "description": "Die Form verändert sich basierend auf der momentanen Anzahl Seiten. Sie braucht zwei Parameter, Länge und Anzahl Seiten. Länge "
           },
           "draw a loop": {
             "name": "eine Schleife zeichnen",
@@ -751,7 +774,8 @@
             }
           },
           "n-sided shape": {
-            "name": "Form mit n Seiten"
+            "name": "Form mit n Seiten",
+            "description": "Die Form verändert sich basierend auf der momentanen Anzahl Seiten. Sie braucht zwei Parameter, Länge und Anzahl Seiten. Länge "
           },
           "draw spiral circle": {
             "name": "Spiralkreis zeichnen",
@@ -1167,16 +1191,22 @@
             "parameters": {
               "points": "Punkte",
               "length": "Länge"
-            }
+            },
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge"
           },
           "draw a circle": {
-            "name": "Zeichne einen Kreis"
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
           },
           "draw a pinwheel": {
             "name": "zeichne ein Windrad",
             "parameters": {
               "length": "Länge",
-              "repeat": "wiederhole"
+              "repeat": "wiederhole",
+              "sides": "Kanten"
             }
           },
           "draw a triangle": {
@@ -1188,7 +1218,8 @@
           "draw a shape": {
             "name": "zeichne eine Form",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw a house": {
@@ -1218,13 +1249,16 @@
             "parameters": {
               "height": "Höhe",
               "actor": "Figur"
-            }
+            },
+            "description": "springen Funktionsblock mit den Parametern Höhe und Figur"
           },
           "patrol": {
             "parameters": {
               "actor": "Figur",
               "speed": "Geschwindigkeit"
-            }
+            },
+            "name": "Streife gehen",
+            "description": "eine 'Streife gehen' Funktion mit den Parametern Figur und Geschwindigkeit "
           }
         },
         "Robot Doodle": {
@@ -1346,7 +1380,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1357,7 +1391,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1524,7 +1558,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           }
         },
@@ -1535,7 +1569,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           }
         },
@@ -1546,7 +1580,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           }
         },
@@ -1557,7 +1591,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           }
         },
@@ -1565,7 +1599,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1576,7 +1610,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1587,7 +1621,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1598,7 +1632,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1609,7 +1643,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1620,7 +1654,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1631,7 +1665,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1642,7 +1676,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1653,7 +1687,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1664,7 +1698,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1675,7 +1709,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1686,7 +1720,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1697,7 +1731,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1708,7 +1742,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1719,7 +1753,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1730,7 +1764,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1741,7 +1775,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1752,7 +1786,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1763,7 +1797,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1774,7 +1808,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1785,7 +1819,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1796,7 +1830,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1807,7 +1841,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1818,7 +1852,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1829,7 +1863,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1840,7 +1874,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1851,7 +1885,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1862,7 +1896,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1873,7 +1907,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1884,7 +1918,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1895,7 +1929,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1906,7 +1940,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1917,7 +1951,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1928,7 +1962,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1939,7 +1973,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1950,7 +1984,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1961,7 +1995,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1972,7 +2006,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1983,7 +2017,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -1994,7 +2028,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -2005,7 +2039,7 @@
           "draw": {
             "name": "zeichne",
             "parameters": {
-              "binary": "binärdatei"
+              "binary": "binär"
             }
           },
           "draw bit": {
@@ -2103,6 +2137,9 @@
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw a plane of squares": {
+            "name": "Zeichne eine Ebene aus Quadraten"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -2111,6 +2148,9 @@
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw a plane of squares": {
+            "name": "Zeichne eine Ebene aus Quadraten"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -2869,7 +2909,7 @@
             "name": "untersuche Quadrat nach Mais"
           },
           "get produce": {
-            "name": "Landwirtschaftliche Erzeugnisse holen\n"
+            "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "get all pumpkins": {
             "name": "hole alle Kürbisse"
@@ -2886,7 +2926,7 @@
             "name": "untersuche Quadrat nach Mais"
           },
           "get produce": {
-            "name": "Landwirtschaftliche Erzeugnisse holen\n"
+            "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "get all pumpkins": {
             "name": "hole alle Kürbisse"
@@ -2903,7 +2943,7 @@
             "name": "untersuche Quadrat nach Mais"
           },
           "get produce": {
-            "name": "Landwirtschaftliche Erzeugnisse holen\n"
+            "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "get all pumpkins": {
             "name": "hole alle Kürbisse"
@@ -3855,6 +3895,18 @@
               "length": "Länge",
               "sides": "Kanten"
             }
+          },
+          "small flower": {
+            "name": "kleine Blume"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGISCHE BLUMEN2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGISCHE BLUME"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGISCHE BLUMEN"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -4267,7 +4319,7 @@
             "name": "untersuche Quadrat nach Mais"
           },
           "get produce": {
-            "name": "Landwirtschaftliche Erzeugnisse holen\n"
+            "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "get all pumpkins": {
             "name": "hole alle Kürbisse"
@@ -4347,6 +4399,19 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "Bewege dich und hole den Nektar mit einem Zähler"
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "parameters": {
+              "direction": "Richtung",
+              "nectars": "Nektar"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "Spiel zurücksetzen"
           }
         }
       }

@@ -205,7 +205,7 @@
               <value name="BEHAVIOR">
                 <block type="gamelab_behavior_get">
                   <mutation/>
-                  <title name="VAR">wandering</title>
+                  <title name="VAR" id="wandering">wandering</title>
                 </block>
               </value>
             </block>
@@ -224,7 +224,7 @@
               <value name="BEHAVIOR">
                 <block type="gamelab_behavior_get">
                   <mutation/>
-                  <title name="VAR">wandering</title>
+                  <title name="VAR" id="wandering">wandering</title>
                 </block>
               </value>
             </block>
@@ -243,7 +243,7 @@
               <value name="BEHAVIOR">
                 <block type="gamelab_behavior_get">
                   <mutation/>
-                  <title name="VAR">wandering</title>
+                  <title name="VAR" id="wandering">wandering</title>
                 </block>
               </value>
             </block>
@@ -262,7 +262,7 @@
               <value name="BEHAVIOR">
                 <block type="gamelab_behavior_get">
                   <mutation/>
-                  <title name="VAR">wandering</title>
+                  <title name="VAR" id="wandering">wandering</title>
                 </block>
               </value>
               <next>
@@ -275,7 +275,7 @@
                   <value name="BEHAVIOR">
                     <block type="gamelab_behavior_get">
                       <mutation/>
-                      <title name="VAR">wandering</title>
+                      <title name="VAR" id="wandering">wandering</title>
                     </block>
                   </value>
                   <next>
@@ -288,7 +288,7 @@
                       <value name="BEHAVIOR">
                         <block type="gamelab_behavior_get">
                           <mutation/>
-                          <title name="VAR">wandering</title>
+                          <title name="VAR" id="wandering">wandering</title>
                         </block>
                       </value>
                     </block>
@@ -418,7 +418,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">growing</title>
+          <title name="NAME" id="growing">growing</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -439,7 +439,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">jittering</title>
+          <title name="NAME" id="jittering">jittering</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -574,7 +574,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">
@@ -715,7 +715,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>change the size of a sprite</description>
           </mutation>
-          <title name="NAME">shrinking</title>
+          <title name="NAME" id="shrinking">shrinking</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -737,7 +737,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite across the screen, reversing direction if it touches the edges</description>
           </mutation>
-          <title name="NAME">patrolling</title>
+          <title name="NAME" id="patrolling">patrolling</title>
           <statement name="STACK">
             <block type="gamelab_moveForward">
               <value name="SPRITE">
@@ -1224,7 +1224,7 @@
               <arg name="this sprite" type="Sprite"/>
               <description>move a sprite, changing its direction randomly</description>
             </mutation>
-            <title name="NAME">wandering</title>
+            <title name="NAME" id="wandering">wandering</title>
             <statement name="STACK">
               <block type="controls_if">
                 <value name="IF0">
@@ -1409,7 +1409,7 @@
               <arg name="this sprite" type="Sprite"/>
               <description>change the size of a sprite</description>
             </mutation>
-            <title name="NAME">shrinking</title>
+            <title name="NAME" id="shrinking">shrinking</title>
             <statement name="STACK">
               <block type="gamelab_changePropBy">
                 <title name="PROPERTY">"scale"</title>
@@ -1431,7 +1431,7 @@
               <arg name="this sprite" type="Sprite"/>
               <description>change the size of a sprite</description>
             </mutation>
-            <title name="NAME">growing</title>
+            <title name="NAME" id="growing">growing</title>
             <statement name="STACK">
               <block type="gamelab_changePropBy">
                 <title name="PROPERTY">"scale"</title>
@@ -1620,7 +1620,7 @@
               <arg name="this sprite" type="Sprite"/>
               <description>randomly change the size of a sprite</description>
             </mutation>
-            <title name="NAME">jittering</title>
+            <title name="NAME" id="jittering">jittering</title>
             <statement name="STACK">
               <block type="gamelab_changePropBy">
                 <title name="PROPERTY">"scale"</title>
@@ -1673,7 +1673,7 @@
               <arg name="this sprite" type="Sprite"/>
               <description>move a sprite across the screen, reversing direction if it touches the edges</description>
             </mutation>
-            <title name="NAME">patrolling</title>
+            <title name="NAME" id="patrolling">patrolling</title>
             <statement name="STACK">
               <block type="gamelab_moveForward">
                 <value name="SPRITE">

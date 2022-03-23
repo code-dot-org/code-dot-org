@@ -61,7 +61,6 @@
                   </value>
                   <next>
                     <block type="controls_for_counter" inline="true">
-                      <mutation counter="counter"/>
                       <value name="FROM">
                         <block type="math_number">
                           <title name="NUM">15</title>
@@ -160,7 +159,6 @@
         </category>
         <category name="Loops">
           <block type="controls_for_counter" inline="true" editable="false">
-            <mutation counter="counter"/>
             <value name="FROM">
               <block type="math_number">
                 <title name="NUM">1</title>
@@ -237,7 +235,6 @@
                   </value>
                   <next>
                     <block type="controls_for_counter" inline="true">
-                      <mutation counter="counter"/>
                       <value name="FROM">
                         <block type="math_number">
                           <title name="NUM">15</title>

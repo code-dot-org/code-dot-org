@@ -855,13 +855,13 @@ pl:
         codebreak_e11: Odcinek 11.0 - Abstrakcja z Susan Wojcicki & China Anne McClain
         codebreak_e12: Odcinek 12.0 - Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą
           Mejią Minaya
-        csf21pilot_events: 'Sprite Lab: Duszki w akcji (CSF 2021 Pilotaż)'
-        csf21pilot_prompts: 'Sprite Lab: Tekst i zachęty (Pilotaż CSF 2021) '
+        csf21pilot_events: 'Sprite Lab: Duszki w akcji'
+        csf21pilot_prompts: 'Sprite Lab: Tekst i zachęty'
         outbreak_mike: Epizod CodeBytes 3 z Mikiem - Symulator pandemii
         poembot-pilot-prompts: Haiku Boty - Monituj z wyborem [PILOT]
         poembot-pilot-text: Haiku Boty - Zachowanie tekstu [PILOT]
         poembot-pilot-haiku: Haiku Boty - Pokaż swoje Haiku [PILOT]
-        csd_ml_intro_to_ai_lab: Lekcja 6
+        csd_ml_intro_to_ai_lab: Wprowadzenie do AI Lab
         csd_ml_import_model: Importowanie modelu AI
         csf_lots_of_sprites: 'Sprite Lab: Wiele duszków'
         playlab_2021: Wprowadzenie do Play Lab
@@ -872,7 +872,7 @@ pl:
         PL-Video-21: Zapraszamy do profesjonalnej nauki w Code.org!
         csp_tutorial_datavis1: Wizualizator danych w App Lab — część 1
         csp_tutorial_datavis2: Wizualizator danych w App Lab — część 2
-        csd_ml_intro_ai_lab_july2021: Lekcja 6
+        csd_ml_intro_ai_lab_july2021: Wprowadzenie do AI Lab
         csd_ml_training_testing_ai_lan: Szkolenie i testowanie w AI Lab
         csd_ml_model_cards_july2021: Karty modeli w AI Lab
         Gettting_Started_Progress: Postęp, informacje zwrotne i ocena
@@ -880,6 +880,46 @@ pl:
         Gettting_Started_StudentExperience: Doświadczenie uczniowskie
         Getting_Started_BasicFeatures: Podstawowe cechy Code.org
         PL_overview_CSD: Co to są odkrycia informatyki?
+        PL_CSD_TeacherTips_Advise: Wskazówki dla nauczycieli — porady dla nowych nauczycieli
+        PL_CSD_TeacherTips_IntroToCSD: Wskazówki dla nauczycieli — Wprowadzenie do
+          odkryć informatyki
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Wskazówki dla nauczycieli — Proces
+          rozwiązywania problemu
+        PL_CSD_TeacherTips_PairProgramming: Wskazówki dla nauczycieli — Programowanie
+          w parach
+        PL_CSD_TeacherTips_Debugging: Wskazówki dla nauczycieli — Debugowanie
+        PL_CSD_TeacherTips_LeadLearner: Wskazówki dla nauczycieli — Prowadzący uczeń
+        poembot-playtest-intro: Wprowadzenie do PoemBot Playtest
+        poembot-playtest-sprites: Duszki PoemBot Playtest
+        poembot-playtest-events: Zdarzenia PoemBot Playtest
+        hello_world_intro: Witaj świecie - Witamy w Sprite Lab
+        hello_world_events: Witaj świecie - Programowanie ze zdarzeniami
+        hello_world_congrats: Witaj świecie - Rób, co chcesz
+        csp_global_vs_local: Debugowanie zmiennych globalnych versus lokalnych
+        rough_poemart_intro: v1 Sztuka poezji Wprowadzenie
+        rough_poemart_events: v1 Sztuka poezji Zdarzenia
+        rough_poemart_imagery: v1 Sztuka poezji Obrazy
+        rough_poemart_congrats: " v1 Sztuka poezji Gratulacje"
+        poetry_module_variables: Zmienne - Kodowanie z Poezją
+        poetry_module_textandvariables: Tekst i Zmienne - Kodowanie z Poezją
+        poetry_module_planningapp: Planowanie aplikacji do generowania wierszy — Kodowanie
+          z poezją
+        poetry_module_multichoiceprompts: Monity wielokrotnego wyboru — kodowanie
+          z poezją
+        poetry_module_conditionals: Warunki - Kodowanie z Poezją
+        poemart_intro: Wprowadzenie do sztuki poezji
+        poemart_events: Zdarzenia związane z poematami
+        poemart_imagery: Obrazy związane z poematami
+        poemart_celebration: Święto związane z poematami
+        csd_u6_variables_part2: Zmienne - Część 2
+        csd_ml_ethics_ai: Etyka i AI
+        outbreak_intro: 'Symulacja epidemii: Wprowadzenie'
+        outbreak_events: 'Epidemia: Zdarzenia'
+        outbreak_scientist: 'Symulator epidemii: Myśląc jak naukowiec'
+        outbreak_outro: 'Symulator epidemii: czas na zabawę'
+        PL_overview_CSP: Co to jest Zasady Informatyki?
+        PL_CSP_EIPMOverview: Przewodnik po lekcjach EIPM
+        tesstest: Testy
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

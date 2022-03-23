@@ -1481,6 +1481,69 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Багажны хайрцагнаас блокуудыг татаж, ажлын талбар дээрээ авчраарай."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Шинэ блок!",
+          "hello_world_new_block": "Шинэ блок!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Шинэ блок!",
+          "hello_world_new_block": "Шинэ блок!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Шинэ блок!",
+          "hello_world_new_block": "Шинэ блок!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Шинэ блок!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Шинэ блок!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Шинэ блок!",
+          "poetry_foreground": "Шинэ блок!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Шинэ блок!",
+          "poetry_multiple_sprites": "Шинэ блок!",
+          "poetry_new_block": "Шинэ блок!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Шинэ блок!",
+          "poetry_music": "Шинэ блок!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Шинэ блок!",
+          "poetry_sprite_stops": "Шинэ блок!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Шинэ блок!",
+          "poetry_remove_sprite": "Шинэ блок!"
         }
       }
     }

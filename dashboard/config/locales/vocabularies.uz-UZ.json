@@ -2,9 +2,299 @@
   "uz-UZ": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Sikl",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "code/hero/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/hero/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "function/hero/unversioned": {
+          "word": "Funksiya",
+          "definition": "Siz osongina qayta-qayta chaqirishingiz mumkin bo‘lgan kod parchasi."
+        },
+        "code/poem-art/2021": {
+          "word": "Kod"
+        },
+        "event/poem-art/2021": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/poem-art/2021": {
+          "word": "Dastur"
+        },
+        "code/flappy/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/flappy/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/frozen/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/iceage/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/artist/unversioned": {
+          "word": "Kod",
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/artist/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/gumball/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "event/dance/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/dance/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/dance/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Shart",
+          "definition": "Dastur biror narsa amalga oshirishdan oldin uning to'g'riligini tekshiradi."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Shartli bayonotlar",
+          "definition": "Faqat ma'lum shartlar to'g'ri bo'lganda ishlaydigan bayonotlar."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Sikllar",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Encryption"
+        },
+        "code/starwars/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/starwars/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/mc/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/mc/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/playlab/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Lossless Compression"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "event/sports/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/sports/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/infinity/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "event/basketball/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/basketball/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Mashinalar o‘rganishi",
+          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kod"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Dastur"
+        },
         "sprite/coursef/2021": {
           "word": "Sprait",
           "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
+        },
+        "user/coursef/2021": {
+          "word": "Foydalanuvchi"
         },
         "behavior/coursef/2021": {
           "word": "Harakatlar/O‘zini tutish",
@@ -273,7 +563,6 @@
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "code/coursed/2021": {
-          "word": "Kod",
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },
         "repeat/coursed/2021": {
@@ -335,9 +624,6 @@
         "event/express/2021": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "code/express/2021": {
-          "word": "Kod"
         },
         "loop/express/2021": {
           "word": "Sikl",
@@ -502,6 +788,64 @@
         "try/coursee/2021": {
           "word": "Urinish (Try)",
           "definition": "Biror nima qilishga urinish"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Mashinalar o‘rganishi",
+          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
+        },
+        "ethics/csd/2021": {
+          "word": "Etika"
+        },
+        "user_interface/csd/2021": {
+          "word": "UI - Foydalanuvchi interfeysi"
+        },
+        "bug/csd/2021": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "for_loop/csd/2021": {
+          "word": "For sikli",
+          "definition": "Boshlanish, tugash va o‘sish qadami (oralig‘i) oldindan belgilangan sikllar."
+        },
+        "debugging/csd/2021": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/csd/2021": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "variable/csd/2021": {
+          "word": "O‘zgaruvchi",
+          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprait"
+        },
+        "condition/csd/2021": {
+          "word": "Shart"
+        },
+        "conditionals/csd/2021": {
+          "word": "Shartli bayonotlar"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksiya"
+        },
+        "function/csd/2021": {
+          "word": "Funksiya"
+        },
+        "input/csd/2021": {
+          "word": "Kiritish"
+        },
+        "processing/csd/2021": {
+          "word": "Processing"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digital Footprint"
+        },
+        "copyright/csd/2021": {
+          "word": "Mualliflik huquqi",
+          "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
         }
       }
     }

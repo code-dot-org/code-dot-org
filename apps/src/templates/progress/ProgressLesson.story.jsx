@@ -3,6 +3,10 @@ import {UnconnectedProgressLesson as ProgressLesson} from './ProgressLesson';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {fakeLesson, fakeLevels} from './progressTestHelpers';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import progress from '@cdo/apps/code-studio/progressRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
@@ -20,18 +24,45 @@ const defaultProps = {
       name: 'Last progression'
     }
   ],
-  showTeacherInfo: false,
-  viewAs: ViewType.Teacher,
-  lessonIsVisible: () => true,
-  lessonIsLockedForUser: () => false,
-  lessonIsLockedForAllStudents: () => false,
-  lockableAuthorized: true
+  viewAs: ViewType.Instructor,
+  isVisible: true,
+  isLockedForUser: false,
+  isLockedForAllStudents: false,
+  lockableAuthorized: true,
+  lockableAuthorizedLoaded: true,
+  hiddenForStudents: false,
+  lockStatusLoaded: true
+};
+
+const initialState = {
+  progress: {
+    lessonGroups: [],
+    lessons: [
+      {
+        levels: []
+      }
+    ],
+    focusAreaLessonIds: [],
+    isSummaryView: false,
+    professionalLearningCourse: false,
+    scriptName: 'script-name'
+  },
+  teacherSections: {
+    sectionsAreLoaded: true,
+    sections: {},
+    sectionIds: []
+  },
+  hiddenLesson: {},
+  lessonLock: {}
 };
 
 export default storybook => {
   storybook
     .storiesOf('Progress/ProgressLesson', module)
-    .withReduxStore()
+    .withReduxStore(
+      {progress, teacherSections, hiddenLesson, lessonLock},
+      initialState
+    )
     .addStoryTable([
       {
         name: 'progress lesson',
@@ -54,7 +85,7 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            viewAs={ViewType.Student}
+            viewAs={ViewType.Participant}
             currentLessonId={-1}
             lesson={{
               id: -1,
@@ -102,55 +133,51 @@ export default storybook => {
         )
       },
       {
-        name: 'hidden progress lesson as teacher',
+        name: 'hidden progress lesson as instructor',
         description: 'should be white with full opacity',
-        story: () => (
-          <ProgressLesson
-            {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
-          />
-        )
+        story: () => <ProgressLesson {...defaultProps} isVisible={true} />
       },
       {
-        name: 'hidden progress lesson as student',
+        name: 'hidden progress lesson as participant',
         description: 'should not show up',
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Student}
+            hiddenForStudents={true}
+            isVisible={true}
           />
         )
       },
       {
-        name: 'locked lesson as verified teacher',
+        name: 'locked lesson as verified instructor',
         story: () => (
           <ProgressLesson
             {...defaultProps}
             lesson={fakeLesson('Assessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForAllStudents={() => true}
+            isLockedForAllStudents={true}
           />
         )
       },
       {
-        name: 'unlocked lesson as verified teacher',
+        name: 'unlocked lesson as verified instructor',
         story: () => (
           <ProgressLesson
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForAllStudents={() => false}
+            isLockedForAllStudents={false}
           />
         )
       },
       {
-        name: 'locked lesson as unverified teacher',
+        name: 'locked lesson as unverified instructor',
         story: () => (
           <ProgressLesson
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={() => true}
+            isLockedForUser={true}
             lockableAuthorized={false}
           />
         )
@@ -160,25 +187,25 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            viewAs={ViewType.Student}
+            viewAs={ViewType.Participant}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={() => true}
+            isLockedForUser={true}
           />
         )
       },
       {
-        name: 'locked lesson as student',
+        name: 'locked lesson as participant',
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            viewAs={ViewType.Student}
+            viewAs={ViewType.Participant}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false}).map(level => ({
               ...level,
               isLocked: true
             }))}
-            lessonIsLockedForUser={() => true}
+            isLockedForUser={true}
           />
         )
       },

@@ -101,6 +101,8 @@ kk:
     accept_terms: Аккаунт құрі үшін келісуіңіз қажет
     email_preference_yes: Иә
     email_preference_no: Жоқ
+    share_teacher_email_reg_partner_preference_yes: Иә
+    share_teacher_email_reg_partner_preference_no: Жоқ
   school_info:
     other: Басқасы
   signin_form:
@@ -215,6 +217,7 @@ kk:
       playlab: Ойындар Лабораториясы
       sports: Спорттар
       starwars: Жұлдызды Соғыстар
+      loading: ЖҮКТЕЛУДЕ...
     popup:
       progress_for_user: "%{name} сабақ оқу барысы"
       progress: Сіздің сабақ оқу барысыңыз

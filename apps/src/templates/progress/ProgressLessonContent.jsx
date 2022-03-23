@@ -12,7 +12,7 @@ export default class ProgressLessonContent extends React.Component {
     description: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   render() {
@@ -48,10 +48,12 @@ export default class ProgressLessonContent extends React.Component {
 
     return (
       <div>
-        <div style={styles.summary}>
-          <SafeMarkdown markdown={description || ''} />
-        </div>
-        {bubbles}
+        {description && (
+          <div style={styles.summary}>
+            <SafeMarkdown markdown={description} />
+          </div>
+        )}
+        <div> {bubbles} </div>
       </div>
     );
   }

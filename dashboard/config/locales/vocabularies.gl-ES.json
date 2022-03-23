@@ -2,6 +2,27 @@
   "gl-ES": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Función"
+        },
+        "code/poem-art/2021": {
+          "word": "Código"
+        },
+        "code/artist/unversioned": {
+          "word": "Código"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Condicionais"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Bucles"
+        },
+        "code/sports/unversioned": {
+          "word": "Código"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Código"
+        },
         "variable/coursef/2021": {
           "word": "Variábel"
         },
@@ -40,6 +61,21 @@
         },
         "define/coursee/2021": {
           "word": "Definir"
+        },
+        "variable/csd/2021": {
+          "word": "Variábel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstracción"
+        },
+        "function/csd/2021": {
+          "word": "Función"
+        },
+        "copyright/csd/2021": {
+          "word": "Dereitos de Autor"
         }
       }
     }

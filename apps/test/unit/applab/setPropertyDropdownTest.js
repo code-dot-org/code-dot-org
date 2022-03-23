@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 import photoSelect from '@cdo/apps/applab/designElements/photoSelect';
 var testUtils = require('../../util/testUtils');
 

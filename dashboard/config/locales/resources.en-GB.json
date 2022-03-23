@@ -4,6 +4,12 @@
       "resources": {
         "variables_video/express/2021": {
           "name": "Variables"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "lists/csd/2021": {
+          "name": "Lists"
         }
       }
     }

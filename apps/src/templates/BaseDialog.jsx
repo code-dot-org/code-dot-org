@@ -31,7 +31,9 @@ export default class BaseDialog extends React.Component {
     bodyClassName: PropTypes.string,
     style: PropTypes.object,
     soundPlayer: PropTypes.object,
-    overflow: PropTypes.string
+    overflow: PropTypes.string,
+    // Temporary prop until AnimationPickerBody is redesigned
+    backdropStyle: PropTypes.object
   };
 
   componentDidMount() {
@@ -191,7 +193,11 @@ export default class BaseDialog extends React.Component {
 
     return (
       <div className={wrapperClassNames}>
-        <div className={modalBackdropClassNames} onClick={this.closeDialog} />
+        <div
+          className={modalBackdropClassNames}
+          style={this.props.backdropStyle}
+          onClick={this.closeDialog}
+        />
         {body}
       </div>
     );

@@ -152,6 +152,20 @@
           = f.radio_button :email_preference_opt_in, 'no'
           = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
 
+    .row#share-email-reg-part-preference-radio{style: "display: none;"}
+      .span10.signup-field-label
+        %p
+          = t('signup_form.share_teacher_email_reg_partner_question', cdo_regional_partner_desc: CDO.code_org_url('/educate/regional-partner'), markdown: true).html_safe
+        - if @user.errors[:share_teacher_email_reg_partner_opt_in_radio_choice].present?
+          %p.error= t('signup_form.share_teacher_email_reg_partner_preference_required')
+      .span2{style:"display:block"}
+        .radio
+          = f.radio_button :share_teacher_email_reg_partner_opt_in_radio_choice, 'yes'
+          = f.label :share_teacher_email_reg_partner_opt_in_radio_choice, t('signup_form.share_teacher_email_reg_partner_preference_yes'), value: 'yes'
+        .radio
+          = f.radio_button :share_teacher_email_reg_partner_opt_in_radio_choice, 'no'
+          = f.label :share_teacher_email_reg_partner_opt_in_radio_choice, t('signup_form.share_teacher_email_reg_partner_preference_no'), value: 'no'
+
     .row
       .span10.tos
         = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last

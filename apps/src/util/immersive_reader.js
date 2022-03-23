@@ -41,7 +41,7 @@ export default function handleLaunchImmersiveReader(locale, title, text) {
           }
         ]
       };
-      launchAsync(token, subdomain, data, {});
+      launchAsync(token, subdomain, data, {uiZIndex: 2113});
     })
     .catch(function(error) {
       console.error(error);

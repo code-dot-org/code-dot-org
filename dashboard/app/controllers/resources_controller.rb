@@ -1,4 +1,6 @@
 class ResourcesController < ApplicationController
+  load_and_authorize_resource
+
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show]
 
   # GET /resources/search

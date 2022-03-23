@@ -1,7 +1,0 @@
-{
-  "func": "velocityY",
-  "category": "Sprites",
-  "modeOptionName": "sprite_velocity_y",
-  "type": "property",
-  "noAutocomplete": true
-}

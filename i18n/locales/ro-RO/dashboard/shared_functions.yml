@@ -1,4 +1,6 @@
 ro:
   data:
     shared_functions:
+      moving north and looping: mergând către nord și formarea de bucle
+      moving south and looping: mergând către sud și formarea de bucle
       moving with arrow keys: mutare cu tastele săgeată

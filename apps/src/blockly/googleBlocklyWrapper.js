@@ -1,22 +1,32 @@
+import {ScrollOptions} from '@blockly/plugin-scroll-options';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
+import * as utils from '@cdo/apps/utils';
 import CdoBlockDragger from './addons/cdoBlockDragger';
 import CdoBlockSvg from './addons/cdoBlockSvg';
 import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
-import CdoPathObject from './addons/cdoPathObject';
+import CdoRenderer from './addons/cdoRenderer';
 import CdoTheme from './addons/cdoTheme';
+import CdoToolbox from './addons/cdoToolbox';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
+import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
+import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
+import initializeCss from './addons/cdoCss';
+import {UNKNOWN_BLOCK} from './addons/unknownBlock';
+import {registerAllContextMenuItems} from './addons/contextMenu';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -84,6 +94,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
+  blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
   blocklyWrapper.wrapReadOnlyProperty('Events');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
@@ -97,6 +108,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
+  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
@@ -118,12 +130,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
+  blocklyWrapper.wrapReadOnlyProperty('MenuItem');
   blocklyWrapper.wrapReadOnlyProperty('MetricsManager');
   blocklyWrapper.wrapReadOnlyProperty('modalBlockSpace');
   blocklyWrapper.wrapReadOnlyProperty('Msg');
   blocklyWrapper.wrapReadOnlyProperty('Names');
   blocklyWrapper.wrapReadOnlyProperty('netsim_locale');
-  blocklyWrapper.wrapReadOnlyProperty('PluginManager');
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
   blocklyWrapper.wrapReadOnlyProperty('registry');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
@@ -135,35 +147,52 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
+  blocklyWrapper.wrapReadOnlyProperty('VARIABLE_CATEGORY_NAME');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('VariableMap');
+  blocklyWrapper.wrapReadOnlyProperty('VariableModel');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.blockly_.BlockDragger = CdoBlockDragger;
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
+  blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.blockly_.FieldVariable = CdoFieldVariable;
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Input = CdoInput;
-  blocklyWrapper.blockly_.MetricsManager = CdoMetricsManager;
-  blocklyWrapper.geras.PathObject = CdoPathObject;
+  blocklyWrapper.blockly_.Toolbox = CdoToolbox;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.METRICS_MANAGER,
+    blocklyWrapper.blockly_.registry.Type.TOOLBOX,
     blocklyWrapper.blockly_.registry.DEFAULT,
-    CdoMetricsManager,
+    CdoToolbox,
     true /* opt_allowOverrides */
   );
 
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
+    blocklyWrapper.blockly_.registry.DEFAULT,
+    CdoVerticalFlyout,
+    true /* opt_allowOverrides */
+  );
+
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.RENDERER,
+    'cdo_renderer',
+    CdoRenderer,
+    true /* opt_allowOverrides */
+  );
+  registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
@@ -184,6 +213,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.wrapSettableProperty('assetUrl');
   blocklyWrapper.wrapSettableProperty('behaviorEditor');
+  blocklyWrapper.wrapSettableProperty('customSimpleDialog');
   blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
   blocklyWrapper.wrapSettableProperty('BUMP_UNCONNECTED');
   blocklyWrapper.wrapSettableProperty('HSV_SATURATION');
@@ -213,6 +243,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
   };
 
+  blocklyWrapper.getFieldForInputType = function(type) {
+    if (type === 'Number') {
+      return blocklyWrapper.FieldNumber;
+    }
+    return blocklyWrapper.FieldTextInput;
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
@@ -233,7 +270,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
       BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
       RUN_BUTTON_CLICKED: 'runButtonClicked'
     },
-    onMainBlockSpaceCreated: () => {}, // TODO
+    onMainBlockSpaceCreated: callback => {
+      if (Blockly.mainBlockSpace) {
+        callback();
+      } else {
+        document.addEventListener(
+          Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED,
+          callback
+        );
+      }
+    },
+
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
@@ -274,19 +321,39 @@ function initializeBlocklyWrapper(blocklyInstance) {
           vertical: true,
           horizontal: false
         }
-      }
+      },
+      plugins: {
+        blockDragger: CdoBlockDragger,
+        metricsManager: CdoMetricsManager
+      },
+      renderer: 'cdo_renderer'
     };
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);
 
+    // CDO Blockly takes customSimpleDialog as an inject option and uses it
+    // instead of the default prompt dialogs, so we should also set it here.
+    blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
+
     // Shrink container to make room for the workspace header
     container.style.height = `calc(100% - ${
       styleConstants['workspace-headers-height']
     }px)`;
-    blocklyWrapper.editBlocks = opt_options.editBlocks;
-    return blocklyWrapper.blockly_.inject(container, options);
+    blocklyWrapper.isStartMode = !!opt_options.editBlocks;
+    const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    if (!blocklyWrapper.isStartMode) {
+      workspace.addChangeListener(Blockly.Events.disableOrphans);
+    }
+
+    document.dispatchEvent(
+      utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
+    );
+
+    const scrollOptionsPlugin = new ScrollOptions(workspace);
+    scrollOptionsPlugin.init();
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
@@ -301,6 +368,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   initializeTouch(blocklyWrapper);
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
+  initializeCss(blocklyWrapper);
+
+  blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
+  blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
+
+  blocklyWrapper.cdoUtils = cdoUtils;
 
   return blocklyWrapper;
 }

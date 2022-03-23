@@ -2,16 +2,23 @@
 class TestController < ApplicationController
   layout false
 
-  def hidden_script_access
+  def levelbuilder_access
     return unless (user = current_user)
-    user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
+    user.permission = UserPermission::LEVELBUILDER
     user.save!
     head :ok
   end
 
-  def levelbuilder_access
+  def universal_instructor_access
     return unless (user = current_user)
-    user.permission = UserPermission::LEVELBUILDER
+    user.permission = UserPermission::UNIVERSAL_INSTRUCTOR
+    user.save!
+    head :ok
+  end
+
+  def facilitator_access
+    return unless (user = current_user)
+    user.permission = UserPermission::FACILITATOR
     user.save!
     head :ok
   end
@@ -33,6 +40,14 @@ class TestController < ApplicationController
         unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
       ]
     )
+  end
+
+  def create_section_assigned_to_script
+    return unless (user = current_user)
+    script = Script.find_by_name(params.require(:script_name))
+
+    Section.create!(name: "New Section", user: user, script: script)
+    head :ok
   end
 
   def assign_script_as_student
@@ -62,40 +77,11 @@ class TestController < ApplicationController
     render plain: I18n.t(params.require(:key), locale: locale)
   end
 
-  # Create a script containing a single lesson group, lesson and script level.
-  def create_script
-    script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
-      Script.create!(name: script_name)
-    end
-    lesson_group = script.lesson_groups.create(
-      key: '',
-      user_facing: false,
-      position: 1
-    )
-    lesson = lesson_group.lessons.create(
-      script: script,
-      key: 'temp-lesson',
-      name: 'Temp Lesson',
-      relative_position: 1,
-      absolute_position: 1,
-      has_lesson_plan: false
-    )
-    script_level = lesson.script_levels.create(
-      script: script,
-      chapter: 1,
-      position: 1
-    )
-    level = Level.find_by_name('Applab test')
-    script_level.levels.push(level)
-    render json: {script_name: script.name, lesson_id: lesson.id}
-  end
-
   # Create a script containing a single lesson group, lesson and script level that has the is_migrated setting
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
-      Script.create!(name: script_name, published_state: SharedConstants::PUBLISHED_STATE.in_development)
+      Script.create!(name: script_name, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development)
     end
     script.is_migrated = true
     script.save!
@@ -108,7 +94,7 @@ class TestController < ApplicationController
     lesson = lesson_group.lessons.create(
       script: script,
       key: 'temp-lesson',
-      name: 'Temp Lesson',
+      name: 'Temp Lesson With Lesson Plan',
       has_lesson_plan: true,
       relative_position: 1,
       absolute_position: 1

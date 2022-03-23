@@ -1,4 +1,4 @@
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
 import {
   pegasus,
@@ -79,7 +79,7 @@ describe('metaTagDescription() for valid urls', () => {
   </html>`;
 
   beforeEach(() => {
-    sandbox = sinon.sandbox.create();
+    sandbox = sinon.createSandbox();
   });
 
   afterEach(() => {

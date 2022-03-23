@@ -118,7 +118,7 @@ Scenario: Signed out user viewing help dropdown in Spanish on desktop
 Scenario: Student viewing help dropdown in Spanish on desktop
   Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/home/lang/es"
-  Then I wait until I am on "http://studio.code.org/home"
+  Then I wait until I am on "http://studio.code.org/home?lang=es"
   And I wait to see "#help-contents"
   Then I click selector "#help-icon"
   Then I wait to see "#help-contents"
@@ -132,7 +132,7 @@ Scenario: Student viewing help dropdown in Spanish on desktop
 Scenario: Teacher viewing help dropdown in Spanish on desktop
   Given I create a teacher named "Pabla Profesora"
   Given I am on "http://studio.code.org/home/lang/es"
-  Then I wait until I am on "http://studio.code.org/home"
+  Then I wait until I am on "http://studio.code.org/home?lang=es"
   Then I wait to see "#help-icon"
   Then I click selector "#help-icon"
   Then I wait to see "#help-contents"
@@ -145,7 +145,7 @@ Scenario: Teacher viewing help dropdown in Spanish on desktop
 Scenario: Student viewing help dropdown in Spanish on desktop on level
   Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1/lang/es"
-  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
+  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1?lang=es"
   Then I wait to see "#help-icon"
   Then I click selector "#help-icon"
   Then I wait to see "#help-contents"
@@ -157,7 +157,7 @@ Scenario: Student viewing help dropdown in Spanish on desktop on level
 Scenario: Teacher viewing help dropdown in Spanish on desktop on level
   Given I create a teacher named "Pabla Profesora"
   Given I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1/lang/es"
-  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
+  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1?lang=es"
   Then I wait to see "#help-icon"
   Then I click selector "#help-icon"
   Then I wait to see "#help-contents"

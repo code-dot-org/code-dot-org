@@ -146,8 +146,7 @@ class ProgrammingExpressionsEditor extends Component {
   };
 
   handleCloseAddProgrammingExpression = programmingExpression => {
-    this.setState(
-      {addProgrammingExpressionOpen: false},
+    this.setState({addProgrammingExpressionOpen: false}, () =>
       this.props.addProgrammingExpression(programmingExpression)
     );
   };
@@ -219,7 +218,7 @@ export const UnconnectedProgrammingExpressionsEditor = ProgrammingExpressionsEdi
 export default connect(
   state => ({
     programmingExpressions: state.programmingExpressions,
-    programmingEnvironments: state.programmingEnvironments
+    programmingEnvironments: state.levelSearchingInfo.programmingEnvironments
   }),
   {
     addProgrammingExpression,

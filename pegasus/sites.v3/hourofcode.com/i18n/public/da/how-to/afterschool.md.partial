@@ -12,7 +12,7 @@ nav: how_to_nav
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Hvis du gerne vil have et par ekstra hænder til hjælp, kan du finde en [lokal frivillig](%= codeorg_url('/volunteer/local') %) til at hjælpe med at køre en Hour of Code i din fritidsordning eller klub.
 
 ### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
@@ -42,7 +42,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 Stil høretelefoner til rådighed i din klasse, eller bed eleverne medbringe deres egne, hvis øvelsen, du vælger, fungerer bedst med lyd.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når eleverne arbejder sammen, hjælper de hinanden og har mindre brug for hjælp fra læreren. De vil også opleve at programmering er en social aktivitet, hvor samarbejde er vigtigt.
+**Har du ikke nok enheder?** Brug [par programmering](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når eleverne arbejder sammen, hjælper de hinanden og har mindre brug for hjælp fra læreren. De vil også opleve at programmering er en social aktivitet, hvor samarbejde er vigtigt.
 
 ## 5. Start your Hour of Code off with an inspiring video
 
@@ -57,7 +57,7 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 **It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Forklare hvordan teknologi påvirker vores liv, med eksempler som både drenge og piger kan være interesseret i. (snak om apps og teknologi, der bruges til at redde liv, hjælpe folk, forbinde mennesker osv).
 - Fortæl om ting fra hverdagen, der indeholder programmer/kode.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
@@ -80,13 +80,13 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
+- Tjek [tips og tricks](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra andre Hour of Code arrangører.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Besøg [Hour of Code forummet](http://forum.code.org/c/plc/hour-of-code) for at få rådgivning, indsigt og støtte fra andre arrangører.
 - Tjek vores [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Hvad er næste skridt efter Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Hour of Code er blot det første skridt på en lang rejse for at lære mere om, hvordan teknologi fungerer, og hvordan du kan lave dine egne programmer. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ tilmeld_knap }}

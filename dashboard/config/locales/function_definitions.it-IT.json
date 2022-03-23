@@ -1102,16 +1102,22 @@
             "parameters": {
               "points": "punti",
               "length": "lunghezza"
-            }
+            },
+            "description": "disegna una stella con il numero di punte richiesto e i lati della lunghezza richiesta"
           },
           "draw a circle": {
-            "name": "disegna un cerchio"
+            "name": "disegna un cerchio",
+            "description": "disegna un cerchio con il raggio richiesto",
+            "parameters": {
+              "radius": "raggio"
+            }
           },
           "draw a pinwheel": {
             "name": "disegna una girandola",
             "parameters": {
               "length": "lunghezza",
-              "repeat": "ripeti"
+              "repeat": "ripeti",
+              "sides": "lati"
             }
           },
           "draw a triangle": {
@@ -1123,7 +1129,8 @@
           "draw a shape": {
             "name": "disegna una forma",
             "parameters": {
-              "length": "lunghezza"
+              "length": "lunghezza",
+              "sides": "lati"
             }
           },
           "draw a house": {
@@ -1153,14 +1160,16 @@
             "parameters": {
               "height": "altezza",
               "actor": "personaggio"
-            }
+            },
+            "description": "blocco della funzione salta con parametro di altezza e attore"
           },
           "patrol": {
             "name": "pattuglia",
             "parameters": {
               "actor": "personaggio",
               "speed": "velocità"
-            }
+            },
+            "description": "una funzione pattuglia che ha un parametro attore e velocità"
           }
         },
         "Robot Doodle": {
@@ -3833,6 +3842,18 @@
               "length": "lunghezza",
               "sides": "lati"
             }
+          },
+          "small flower": {
+            "name": "fiore piccolo"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FIORI DI LOGICA2"
+          },
+          "LOGIC FLOWER": {
+            "name": "FIORE DI LOGICA"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FIORI DI LOGICA"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -4325,6 +4346,11 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "vai avanti e prendi il nettare con contatore"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "ripristina il gioco"
           }
         }
       }

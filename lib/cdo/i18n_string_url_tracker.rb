@@ -1,4 +1,4 @@
-require 'cdo/redis'
+require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 require 'uri'
 require 'active_support/core_ext/numeric/time'
@@ -16,8 +16,9 @@ class I18nStringUrlTracker
   I18N_STRING_TRACKING_DCDO_KEY = 'i18n_string_tracking'.freeze
 
   # The amount of time which will pass before the buffered i18n usage data is uploaded to Firehose.
-  # TODO: increase this interval to 12.hours once we verify everything is working.
-  FLUSH_INTERVAL = 1.hour
+  # Select a random interval time between the MIN and MAX so we can avoid all the servers flushing data at the same time.
+  FLUSH_INTERVAL_MIN = 8.hours
+  FLUSH_INTERVAL_MAX = 16.hours
 
   MAX_BUFFER_SIZE = 250.megabytes
 
@@ -27,7 +28,7 @@ class I18nStringUrlTracker
     # It will be in the following form:
     # {
     #   <url>: {
-    #     <string_key>: [<source>, ...],
+    #     <normalized_key>: [<source>, ...],
     #     ...
     #   },
     #   ...
@@ -52,38 +53,64 @@ class I18nStringUrlTracker
     @buffer_size_max = MAX_BUFFER_SIZE
 
     # Flushes the buffer in a loop which executes at the given interval
-    @task = Concurrent::TimerTask.execute(execution_interval: FLUSH_INTERVAL) {flush}
+    interval = rand(FLUSH_INTERVAL_MIN...FLUSH_INTERVAL_MAX)
+    @task = Concurrent::TimerTask.execute(execution_interval: interval) {flush}
   end
 
   # Records the given string_key and URL so we can analyze later what strings are present on what pages.
-  # @param string_key [String] The key used to review the translated string from our i18n system.
   # @param url [String] The url which required the translation of the given string_key.
   # @param source [String] Context about where the string lives e.g. 'ruby', 'maze', 'turtle', etc
-  def log(string_key, url, source)
+  # @param string_key [String] The key used to locate the desired string.
+  # @param scope [Array|String] Array of strings representing the hierarchy leading up to the string_key. OR
+  #                             String with values separated by the separator value.
+  # @param separator [String] The separator string used by I18n to concatenate the string_key hierarchy
+  #        into a single normalized string.
+  def log(url, source, string_key, scope = [], separator = I18n.default_separator)
+    # Return if DCDO flag is unset, or we get incomplete info
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
+    return unless string_key && url && source
+
+    # We got a bad string_key if there is no English source string
+    source_string = I18n.t(string_key, locale: I18n.default_locale, tracking: false)
+    return if !source_string ||
+      (source_string.is_a?(String) && source_string.start_with?("translation missing"))
+
     # Skip URLs we are not interested in.
     return unless allowed(url)
-
     url = normalize_url(url)
-    return unless string_key && url && source
+
+    # Scope could come in as a normalized string, so make sure it's an array
+    scope = scope.split(separator) if scope.is_a? String
+
+    # We use -> as the separator in the normalized_key for ease of searching in Crowdin, and to prevent keys
+    # that include a . from getting split in two.
+    normalized_key = I18n.normalize_keys(nil, string_key, scope, ' -> ').join(' -> ')
 
     # Reverse the URL encoding on special characters so the human readable characters are logged.
     logged_url = CGI.unescape(url)
-    add_to_buffer(string_key, logged_url, source)
+
+    # Stringify all items in the scope array so we can JSON stringify and parse it.
+    stringified_scope = scope&.map(&:to_s).to_s
+    add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
   end
 
   private
 
   # Records the log data to a buffer which will eventually be flushed
-  def add_to_buffer(string_key, url, source)
+  def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
     # make sure this is the only thread modifying @buffer
     @buffer.synchronize do
       # update the buffer size if we are adding any new data to it
       # duplicate data will not increase the buffer size
       buffer_url = @buffer[url] ||= {}.tap {@buffer_size += url.bytesize}
-      buffer_string_key = buffer_url[string_key] ||= Set.new.tap {@buffer_size += string_key.bytesize}
+      buffer_normalized_key = buffer_url[normalized_key] ||= Set.new.tap {@buffer_size += normalized_key.bytesize}
       # add the new data to the buffer
-      @buffer_size += source.bytesize if buffer_string_key.add?(source)
+      buffer_values = [source, string_key, scope, separator]
+
+      if buffer_normalized_key.add?(buffer_values)
+        buffer_values_size = buffer_values.reduce(0) {|sum, s| sum + (s ? s.bytesize : 0)}
+        @buffer_size += buffer_values_size
+      end
     end
 
     # if the buffer is too large, trigger an early flush
@@ -114,14 +141,17 @@ class I18nStringUrlTracker
       @buffer_size = 0
     end
 
-    # log every <string_key>:<url>:<source> combination to Firehose
+    # If the DCDO flag has changed since data was buffered, we want to clear the buffer and not log/flush the data.
+    return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
+
+    # log every <url>:<normalized_key>:<source>:<string_key>:<scope>:<separator> combination to Firehose
     buffer&.each_key do |url|
-      buffer[url].each_key do |string_key|
-        buffer[url][string_key].each do |source|
-          # record the string : url association.
-          RedisClient.instance.put_record(
+      buffer[url].each_key do |normalized_key|
+        buffer[url][normalized_key].each do |values|
+          # record the <url>:<normalized_key>:<source>:<string_key>:<scope>:<separator> association.
+          FirehoseClient.instance.put_record(
             :i18n,
-            {url: url, string_key: string_key, source: source}
+            {url: url, normalized_key: normalized_key, source: values[0], string_key: values[1], scope: values[2], separator: values[3]}
           )
         end
       end

@@ -5,27 +5,24 @@ import i18n from '@cdo/locale';
 import {getCurrentUnitData} from './sectionProgressRedux';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
 import {h3Style} from '../../lib/ui/Headings';
 import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 class ProgressViewHeader extends Component {
   static propTypes = {
     scriptId: PropTypes.number,
     //redux
     currentView: PropTypes.oneOf(Object.values(ViewType)),
-    refreshing: PropTypes.bool,
-    section: sectionDataPropType.isRequired,
+    sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType
   };
 
   getLinkToOverview() {
-    const {scriptData, section} = this.props;
-    return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
+    const {scriptData, sectionId} = this.props;
+    return scriptData ? `${scriptData.path}?section_id=${sectionId}` : null;
   }
 
   navigateToScript = () => {
@@ -35,7 +32,7 @@ class ProgressViewHeader extends Component {
         study_group: 'progress',
         event: 'go_to_script',
         data_json: JSON.stringify({
-          section_id: this.props.section.id,
+          section_id: this.props.sectionId,
           script_id: this.props.scriptId
         })
       },
@@ -44,7 +41,7 @@ class ProgressViewHeader extends Component {
   };
 
   render() {
-    const {currentView, scriptFriendlyName, refreshing} = this.props;
+    const {currentView, scriptFriendlyName} = this.props;
     const linkToOverview = this.getLinkToOverview();
     const headingText = {
       [ViewType.SUMMARY]: i18n.lessonsAttempted() + ' ',
@@ -63,19 +60,8 @@ class ProgressViewHeader extends Component {
             {scriptFriendlyName}
           </a>
         </span>
-        {refreshing && (
-          <span style={styles.refreshing}>
-            <FontAwesome
-              id="uitest-spinner"
-              icon="spinner"
-              className="fa-pulse"
-              style={styles.refreshSpinner}
-            />
-            {i18n.updating()}
-          </span>
-        )}
         {currentView === ViewType.STANDARDS && (
-          <StandardsViewHeaderButtons sectionId={this.props.section.id} />
+          <StandardsViewHeaderButtons sectionId={this.props.sectionId} />
         )}
       </div>
     );
@@ -95,21 +81,14 @@ const styles = {
   },
   scriptLink: {
     color: color.teal
-  },
-  refreshing: {
-    color: color.orange
-  },
-  refreshSpinner: {
-    marginRight: 5
   }
 };
 
 export const UnconnectedProgressViewHeader = ProgressViewHeader;
 
 export default connect(state => ({
-  section: state.sectionData.section,
+  sectionId: state.teacherSections.selectedSectionId,
   currentView: state.sectionProgress.currentView,
-  refreshing: state.sectionProgress.isRefreshingProgress,
   scriptData: getCurrentUnitData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state)
 }))(ProgressViewHeader);

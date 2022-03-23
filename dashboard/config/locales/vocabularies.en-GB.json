@@ -2,6 +2,24 @@
   "en-GB": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Function"
+        },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Loops"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code"
+        },
         "variable/coursef/2021": {
           "word": "Variable"
         },
@@ -22,6 +40,12 @@
         },
         "define/coursee/2021": {
           "word": "Define"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "function/csd/2021": {
+          "word": "Function"
         }
       }
     }

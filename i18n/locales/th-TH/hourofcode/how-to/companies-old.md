@@ -5,7 +5,7 @@ title: วิธีจัดกิจกรรมชั่วโมงเขี�
 {{ signup_button }}
 
 # วิธีแนะนำ Hour of Code ให้บริษัทของคุณ
-### Find out how you and your employees can inspire students to try computer science!
+### ดูวิธีที่คุณและพนักงานของคุณจะสามารถสร้างแรงบันดาลใจให้นักเรียนในเรื่องวิทยาการคอมพิวเตอร์!
 
 ***
 
@@ -29,7 +29,7 @@ For more instructions on encouraging employees and connecting your employees wit
 
 ## 1. Promote your Hour of Code
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+- แนะนำให้วิศวกรซอฟต์แวร์ที่บริษัทของคุณเยี่ยมชมห้องเรียนท้องถิ่น เพื่อช่วยนำ Hour of Code และสร้างแรงบันดาลใจให้นักเรียนมาเรียนวิชาวิทยาการคอมพิวเตอร์ They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
@@ -47,12 +47,12 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 **Plan Ahead!** Do the following before your event starts:
 
 - Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. พวกเขาจะยังเห็นวิชาวิทยาการคอมพิวเตอร์เป็นสิ่งที่ช่วยเข้าสังคมและใช้ความร่วมมืออีกด้วย
+- จัดหาหูฟัง หรือให้ผู้เข้าร่วมนำมาเอง ถ้ากิจกรรมที่คุณเลือกใช้งานได้ดีกับเสียง
+- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). เมื่อผู้เข้าร่วมจับคู่กัน พวกเขาจะช่วยกันเองและพึ่งพาผู้จัดงานน้อยลง พวกเขาจะยังเห็นวิชาวิทยาการคอมพิวเตอร์เป็นสิ่งที่ช่วยเข้าสังคมและใช้ความร่วมมืออีกด้วย
 - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
 ## 5.  Start your Hour of Code off with an inspiring video
-เริ่มต้น Hour of Code ของคุณด้วยผู้เข้าร่วมที่มีแรงบันดาลใจ เเละพูดคุยว่าวิทยาการคอมพิวเตอร์มีผลต่อชีวิตของเราในทุกๆด้านอย่างไร Share more about what inspired you to pursue computer science and your role at your company.
+เริ่มต้น Hour of Code ของคุณด้วยผู้เข้าร่วมที่มีแรงบันดาลใจ เเละพูดคุยว่าวิทยาการคอมพิวเตอร์มีผลต่อชีวิตของเราในทุกๆด้านอย่างไร แบ่งปันเพิ่มเติมเกี่ยวกับสิ่งที่สร้างแรงบันดาลใจให้คุณเรียนวิชาวิทยาการคอมพิวเตอร์ และหน้าที่ของคุณในบริษัทของคุณ
 
 **เปิดวิดีโอสร้างแรงบันดาลใจ**
 
@@ -61,21 +61,21 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - [ประธานาธิบดี Obama เชิญชวนให้นักเรียนทุกคนเรียนวิชาวิทยาการคอมพิวเตอร์](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - หาวิดีโอสร้างแรงบันดาลใจอื่นๆ[ที่นี่](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
 
-**Ideas to introduce your Hour of Code activity to students:**
+**แนวคิดที่จะแนะนำกิจกรรม Hour of Code ของคุณให้กับนักเรียน:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- อธิบายวิธีที่เทคโนโลยีส่งผลต่อชีวิตของเรา ด้วยตัวอย่างที่ทั้งเด็กผู้ชายและเด็กผู้หญิงจะสนใจ - พูดถึงเทคโนโลยีที่ช่วยชีวิต, ช่วยเหลือคน, เชื่อมต่อผู้คน
+- ถ้าคุณคือบริษัทเทคโนโลยี สาธิตผลิตภัณฑ์ที่สนุกและมีนวัตกรรมที่บริษัทของคุณกำลังทำอยู่
+- ถ้าคุณไม่ใช่บริษัทเทคโนโลยี พูดคุยเกี่ยวกับวิธีที่บริษัทของคุณใช้เทคโนโลยีเพื่อแก้ปัญหาและบรรลุเป้าหมาย
+- เชิญวิศวกรซอฟต์แวร์จากบริษัทของคุณมาพูดเกี่ยวกับว่าทำไมพวกเขาจึงตัดสินใจเรียนวิชาวิทยาการคอมพิวเตอร์ และพูดถึงโครงการที่พวกเขากำลังทำอยู่
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Code!
 **ให้ผู้เข้าร่วมไปสู่กิจกรรม**
 
 - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- สำหรับนักเรียนอายุน้อย โหลดหน้ากิจกรรมไว้ล่วงหน้าและบันทึกมันไว้เป็น bookmark
 
-**When participants come across difficulties it's okay to respond:**
+**เมื่อมีผู้เข้าร่วมพบปัญหา มันโอเคที่จะตอบว่า:**
 
 - “I don’t know. Let’s figure this out together.”
 - "การเรียนเขียนโปรแกรมก็เหมือนกับการเรียนภาษา เธอจะไม่คล่องในตอนแรกทันที"
@@ -83,13 +83,13 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 **จะทำอย่างไรถ้ามีคนทำเสร็จเร็ว?**
 
 - They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+- หรือขอให้พวกเขาช่วยเพื่อนที่มีปัญหากับกิจกรรม
 
 ## 7) ฉลอง
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- [สั่งซื้อเสื้อยืดสั่งทำ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)สำหรับลูกจ้างของคุณ
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 {{ signup_button }}

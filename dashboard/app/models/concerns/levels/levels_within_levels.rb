@@ -167,8 +167,10 @@ module Levels
 
       # otherwise, update project template level to match
       levels_child_levels.project_template.destroy_all
+      return if project_template_level_name.blank?
+      template_level = Level.find_by_name!(project_template_level_name)
       ParentLevelsChildLevel.create!(
-        child_level: Level.find_by_name(project_template_level_name),
+        child_level: template_level,
         kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
         parent_level: self
       )

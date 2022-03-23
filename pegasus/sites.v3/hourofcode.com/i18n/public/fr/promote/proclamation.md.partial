@@ -19,29 +19,29 @@ nav: promote_nav
 
 Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Tandis que la technologie informatique fait partie intégrale de notre culture et transforme comment on intéragit avec les autres et le monde autour de soi;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Tandis que l'informatique est en train de transformer l'industrie, rendant possible de noueaux domaines de commerce, inspirant de l'innovation en touts domaines scientifiques et en renforçant la productivité aux secteurs économiques établis;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Tandis que le domaine d'informatique soutient le secteur technologie d'information de cet économie, ce qui est un contributeur important de l'économique de ce pays;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Tandis que le domaine d'informatique est un science essentiel de l'ère numérique;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Tandis que le secteur des technologies de l'information occupe une position unique pour aider à la relance économique et au développement de nouvelles innovations;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Tandis que l'avenir des emplois d'informatique semble radieux avec plus que 500,000 postes informatiques à travers le pays;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+En donnant aux étudiants la chance de participer à des activités d'informatique de haute qualité, nous les exposons à de riches possibilités dans un domaine qui offre et fournit des compétences d'esprit critique qui leur serviront tout au long de leur vie ;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Considérant que tous les élèves méritent une préparation minutieuse dans l'enseignement des sciences informatiques, y compris l'accès à des enseignants qualifiés, du matériel technologique et un curriculum adapté à l'âge. Element primordial pour apprendre l'informatique dans l'enseignement primaires et secondaire ;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Considérant que l'enseignement des sciences informatiques a des défis à relever, y compris intégrer des classes d'informatique dans les exigences d'obtention du baccalauréat de lycée et fournir aux professionnel enseignants des possibilités de développement de leurs compétences ;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Considérant que le participation à Une Heure de Code durant la semaine de l'éducation des sciences informatiques peut servir à démystifier le domaine de l'informatique et encourager davantage d'étudiants à poursuivre leurs études dans l'informatique ;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Considérant que le domaine de l'informatique a des obstacles significatifs à relever, notamment attirer plus de participation des femmes et des minorités sous-représentées à tous les niveaux et dans toutes les branches ;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Alors que Grace Murray Hopper, une des premières femmes dans le domaine des nouvelles technologies, a conçu de nouveaux langages de programmation et mis au point des normes qui ont posées les bases des systèmes informatiques et permis de nombreux progrès ; et
 
 Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
@@ -49,12 +49,12 @@ Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
 (1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) encourage les écoles, les éducateurs, les parents et les décideurs à participer à La Semaine d'éducation des sciences informatiques en permettant à leurs étudiants de participer à Une Heure de Code ;
 
 (3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) encourage les législateurs à éliminer les obstacles qui empêchent les cours d'informatiques d'être intégrés dans les cursus diplômant comme le sont les mathématiques ou les sciences ;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) encourage les possibilités, y compris par le biais de programmes existants, pour les femmes et les minorités sous-représentées dans le domaine de l'informatique.
 
 {{ signup_button }}

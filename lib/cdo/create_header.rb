@@ -27,6 +27,9 @@ class CreateHeader
     },
     artist_k1: {
       image: "logo_artist.png"
+    },
+    poetry_hoc: {
+      image: "logo_poetry.png"
     }
   }.freeze
 

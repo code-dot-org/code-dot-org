@@ -2,6 +2,313 @@
   "zh-CN": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "event/dance-extras/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "program/dance-extras/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/minecraft/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "event/minecraft/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "loop/minecraft/unversioned": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/hero/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/hero/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "function/hero/unversioned": {
+          "word": "函数",
+          "definition": "一段可以很容易地反复调用的代码。"
+        },
+        "code/poem-art/2021": {
+          "word": "代码",
+          "definition": "（动词）为计算机编写指令。"
+        },
+        "event/poem-art/2021": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "line/poem-art/2021": {
+          "word": "诗歌行",
+          "definition": "（诗歌）- 一篇诗歌的组成部分，采用单行格式，在右侧结束。 "
+        },
+        "mood/poem-art/2021": {
+          "word": "意境",
+          "definition": "艺术作品或文学作品所表达出某种感觉、氛围或情感。"
+        },
+        "program/poem-art/2021": {
+          "word": "程序",
+          "definition": "一系列已编码的步骤，可在设备上运行。"
+        },
+        "code/flappy/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/flappy/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/frozen/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/iceage/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/artist/unversioned": {
+          "word": "代码",
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/artist/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/artist/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/gumball/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "event/dance/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "program/dance/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/aquatic/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "条件",
+          "definition": "程序检查是否为真以决定是否允许某项行动的东西。"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "条件语句",
+          "definition": "仅在特定条件下运行的语句。"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "加密"
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/starwars/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/mc/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/mc/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/playlab/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "无损压缩"
+        },
+        "event/outbreak/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "event/sports/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "code/sports/unversioned": {
+          "word": "代码"
+        },
+        "debugging/sports/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/sports/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/infinity/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "event/basketball/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/basketball/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "机器学习",
+          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
+        },
+        "code/poem-art/unversioned": {
+          "word": "代码",
+          "definition": "（动词）为计算机编写指令。"
+        },
+        "event/poem-art/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "program/poem-art/unversioned": {
+          "word": "程序",
+          "definition": "一系列已编码的步骤，可在设备上运行。"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "意境",
+          "definition": "艺术作品或文学作品所表达出某种感觉、氛围或情感。"
+        },
+        "line/poem-art/unversioned": {
+          "word": "诗歌行",
+          "definition": "（诗歌）- 一篇诗歌的组成部分，采用单行格式，在右侧结束。 "
+        },
         "sprite/coursef/2021": {
           "word": "精灵"
         },
@@ -271,7 +578,6 @@
           "definition": "导致某些事情发生的操作。"
         },
         "code/coursed/2021": {
-          "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"
         },
         "repeat/coursed/2021": {
@@ -330,9 +636,6 @@
         "event/express/2021": {
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
-        },
-        "code/express/2021": {
-          "word": "代码"
         },
         "loop/express/2021": {
           "word": "循环",
@@ -493,6 +796,57 @@
         "try/coursee/2021": {
           "word": "尝试",
           "definition": "试图做某事"
+        },
+        "machine_learning/csd/2021": {
+          "word": "机器学习",
+          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
+        },
+        "bug/csd/2021": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "for_loop/csd/2021": {
+          "word": "For循环",
+          "definition": "具有预定开始、结束和增量（步长间隔）的循环。"
+        },
+        "debugging/csd/2021": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/csd/2021": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "variable/csd/2021": {
+          "word": "变量",
+          "definition": "程序中使用的一段信息的标签。"
+        },
+        "sprite/csd/2021": {
+          "word": "精灵"
+        },
+        "condition/csd/2021": {
+          "word": "条件"
+        },
+        "conditionals/csd/2021": {
+          "word": "条件语句"
+        },
+        "abstraction/csd/2021": {
+          "word": "抽象化"
+        },
+        "function/csd/2021": {
+          "word": "函数"
+        },
+        "input/csd/2021": {
+          "word": "输入"
+        },
+        "processing/csd/2021": {
+          "word": "正在处理中"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "数字足迹"
+        },
+        "copyright/csd/2021": {
+          "word": "版权"
         }
       }
     }

@@ -438,6 +438,26 @@ uk:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': прибульці
             '"BEAR"': Ведмеді
@@ -997,6 +1017,15 @@ uk:
         text: коли клацнули {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): пурхання
+            new Behavior(wobbling, []): хитання
+            new Behavior(wandering, []): бродіння
+            new Behavior(patrolling, []): патрулювання
+            new Behavior(moving_west_and_looping, []): рух на захід і циклічно
+            new Behavior(moving_east_and_looping, []): рух на схід і циклічно
       gamelab_comment:
         text: 'коментар: {COMMENT}'
       gamelab_costumeImage:
@@ -1045,6 +1074,19 @@ uk:
         text: |-
           якщо {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} костюм є {COSTUME}"
       gamelab_isKeyPressed:
@@ -1142,10 +1184,22 @@ uk:
         text: розташування {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': вибух
+            '"rain"': дощ
       gamelab_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNumSprites:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': праворуч
+            '90': вниз
+            '180': ліворуч
+            '270': вгору
       gamelab_mirrorSprite:
         text: повернути {SPRITE} у напрямку {DIRECTION}
         options:
@@ -1176,6 +1230,33 @@ uk:
         text: патрулювання вгору та вниз
       gamelab_playSound:
         text: грати звук {SOUND}
+      gamelab_playSoundOptions:
+        text: грати звук {SOUND}
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": акцент
+            "'sound://category_app/app_button_1.mp3'": кнопка
+            "'sound://category_collect/clicky_crunch.mp3'": хрускіт
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": бульбашка
+            "'sound://category_animals/bear.mp3'": Ведмідь
+            "'sound://category_animals/cat.mp3'": кіт
+            "'sound://category_animals/cow.mp3'": корова
+            "'sound://category_animals/pig.mp3'": свиня
+            "'sound://category_animals/sheep.mp3'": вівця
+            "'sound://category_animals/goat.mp3'": коза
+            "'sound://category_animals/chicken.mp3'": курка
+            "'sound://category_animals/rooster.mp3'": півень
+            "'sound://category_animals/elephant.mp3'": слон
+            "'sound://category_animals/dolphin.mp3'": дельфін
+            "'sound://category_animals/dog.mp3'": пес
+            "'sound://category_animals/tiger.mp3'": тигр
+            "'sound://category_digital/jump_7.mp3'": стрибок
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): рух за стрілками
+            new Behavior(driving_with_arrow_keys, []): рух за стрілками
+            draggable(): будучи перетягуваним
       gamelab_pointInDirection:
         text: Точки {SPRITE} {DIRECTION}
         options:
@@ -1212,11 +1293,20 @@ uk:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': суду
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': пустеля
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': пустельна
+              дорога
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': сільськогосподарська
+              земля
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галактики
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сітка
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': кухня
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': вітальня
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': луг
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': веселка
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': науково-фантастичного
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': зірки
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': сонце
+              і веселка
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: немає
@@ -1262,6 +1352,14 @@ uk:
             '"scale"': розмір
             '"width"': ширина
             '"height"': висота
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': повільно
+            '5': нормальний
+            '7': швидко
+            '9': extra fast
       gamelab_setTint:
         text: змінити колір {THIS} до {COLOR}
       gamelab_setupSim:
@@ -1557,6 +1655,10 @@ uk:
         text: 'місце розташування x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        options:
+          TEXT1:
+            '"A chubby cat "': 'Пухлявий кіт '
       Mikelab_randomColor:
         text: випадковий колір
       Mikelab_removeBehaviorSimple:
@@ -1571,6 +1673,15 @@ uk:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': пустельна
+              дорога
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': сільськогосподарська
+              земля
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': кухня
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': вітальня
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': луг
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': сонце
+              і веселка
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1652,26 +1763,111 @@ uk:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: |-
-          встановити ефект тла
-          {BG_EFFECT} [PALETTE][1]
+      Poetry_addFrame:
         options:
-          BG_EFFECT:
-            '"solid"': суцільний
+          BRUSH:
+            '"brick"': цеглина
+            '"fire"': вогонь
+            '"flowers"': квіти
+            '"hearts"': серця
+            '"iceCream"': Морозиво
+            '"leaves"': листя
             '"rainbow"': веселка
-      PoemBot_setForegroundEffect:
-        text: встановити ефект переднього плану {FG_EFFECT}
+            '"stars"': зірки
+            '"waves"': хвилі
+      Poetry_makeBurst:
         options:
-          FG_EFFECT:
+          EFFECT:
+            '"burst"': вибух
             '"rain"': дощ
-            '"bubbles"': бульбашки
-      PoemBot_stringConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      Poetry_makeNewSpriteAnon:
+        text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
+      Poetry_makeNumSprites:
+        text: створити {NUM} нових {ANIMATION_NAME} спрайтів
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
+            '"sound://category_nature/summer_night_loop.mp3"': ніч
+            '"sound://category_background/ocean_waves.mp3"': океан
+            '"sound://category_background/rainforest_ambient_sound.mp3"': тропічний
+              ліс
+            '"sound://category_background/wavering_wind.mp3"': сонний
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': повільно
+      Poetry_playSound:
+        text: грати звук {SOUND}
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': дзвоник
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': бульбашка
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': стрибок
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': світло
+      Poetry_setBackground:
+        text: встановити колір тла {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"bubbles"': Бульбашки
+            '"clouds"': хмарно
+            '"confetti"': Конфеті
+            '"hearts"': серця
+            '"space"': Відступ
+            '"rain"': дощ
+            '"ripples"': Брижі
+            '"colors"': Кольори
+            '"stars"': Зірки
+            '"squiggles"': Звивання
+          PALETTE:
+            '"ocean"': океан
+            '"rainbow"': веселка
+            '"spring"': весна
+            '"winter"': зима
+      Poetry_setBackgroundImageAs:
+        text: встановити фон {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"bubbles"': Бульбашки
+            '"confetti"': Конфеті
+            '"hearts"': серця
+            '"rain"': дощ
+            '"starburst"': Вибухаюча зірка
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"fluttering"': пурхання
+            '"growing"': ріст
+            '"shrinking"': стиснення
+            '"swimming_left_and_right"': плавання
+            '"wandering"': бродіння
+            '"wobbling"': хитання
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            '"fluttering"': пурхання
+            '"growing"': ріст
+            '"shrinking"': стиснення
+            '"swimming_left_and_right"': плавання
+            '"wandering"': бродіння
+            '"wobbling"': хитання
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: коли відповідь {VAR}
       RyanLab_moveForward:
         text: рухатись вперед
       RyanLab_turnLeft:

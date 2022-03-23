@@ -91,7 +91,7 @@ es:
       speed: velocidad
       startX: inicioX
       startY: inicioY
-      variable: variables
+      variable: variable
       width: ancho
       wizard: mago
       x: x

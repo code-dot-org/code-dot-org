@@ -2,6 +2,75 @@
   "uz-UZ": {
     "data": {
       "objectives": {
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
+        },
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "Tasvirni ketma-ket qadamlar yordamida bajarish uchun dastur yarating."
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "Murakkab shakllarni oddiy qismlarga ajrating."
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "foydalanuvchi ma'lumotlariga javob beradigan dasturlarni ishlab chiqish"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Kod bilan raqs animatsiyalari yarating"
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Kiritish hodisalari bilan bog‘liq harakatlarni aniqlang."
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Ketma-ketlik va hodisa-ishlovchilar yordamida interaktiv o‘yin yarating."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Ijodiy asarni boshqa talabalar bilan baham ko‘ring."
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Kiritish hodisalari bilan bog‘liq harakatlarni aniqlang."
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Ketma-ketlik va hodisa-ishlovchilar yordamida interaktiv o‘yin yarating."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Ijodiy asarni boshqa talabalar bilan baham ko‘ring."
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "foydalanuvchi ma'lumotlariga javob beradigan dasturlarni ishlab chiqish"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Kod bilan raqs animatsiyalari yarating"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Sun'iy intellektni boshqarish hayotida o‘ynaydigan rolni ko‘rib chiqing."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Mashinani o‘rganish modelini o‘rgating va sinovdan o‘tkazing."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Mashinani o‘rganishda inson tarafkashligi qanday rol o‘ynashi haqida sabab."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Talabalar kompyuter laboratoriyasiga o‘tishda nimani kutishlarini bilib oling."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Kompyuter sichqonchasi, trekpad yoki sensorli ekranga tegishli terminologiyadan foydalaning."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Vaqt o‘tgan voqealarga javob beradigan dasturlarni ishlab chiqish."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "foydalanuvchi ma'lumotlariga javob beradigan dasturlarni ishlab chiqish."
+        },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "So‘z va iboralarni saqlash uchun o‘zgaruvchilardan foydalaning."
         },
@@ -778,6 +847,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Loyihalash jarayonini aniqlang va u yakunlangan loyihani shakllantirishda qanday yordam berdi."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Mashinani o‘rganish modelini o‘rgating va sinovdan o‘tkazing."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Mashinani o‘rganishda inson tarafkashligi qanday rol o‘ynashi haqida sabab."
         }
       }
     }

@@ -2,7 +2,7 @@
 title: コンピューターサイエンス教育週間とHour of Codeを支援する論説文例
 ---
 
-{{ signup_button }}
+サインアップ
 
 # Write an op-ed in support of Computer Science Education Week
 
@@ -12,36 +12,36 @@ title: コンピューターサイエンス教育週間とHour of Codeを支援�
 
 * * *
 
-#### Title: Computing…Where the Jobs Are
+#### Title: コンピューティング…仕事のありか
 
-#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
+#### [NAME]　 [教育者、管理者、ビジネスリーダーとの共著も検討してください]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+コンピューターはあらゆるところに存在しています。 ポケットの中、 壁にもぶら下がっていますし、 車の中にもあります。 電力グリッドをはじめ、信号機、金融市場での作業と、我々のインフラに欠かせないものとなっています。 これらのコンピューターには共通点が１つあります。 何をするのかソフトウェアが制御しているということです。
 
-But who exactly is going to write this software?
+では、このソフトウェアは誰が書いているのでしょうか？
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+テクノロジーによって我々の世界がすごいスピードで変化していることを考えると、幼稚園から高校生まで数多くの生徒がコンピューターサイエンスを学んでいると思うかもしれません。 残念ながらそうではありません。 実際には、コンピューターサイエンスを学んでいる生徒はほとんどいません。教えている学校もほとんどありません。10年前より減っているのです。
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+スキルの高いプログラマーへの需要はかつてないほど高まっています。コンピューター科学者は不足しています。 Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
 
-Why is this? And how can we address it?
+なぜでしょう？どうしたら解決できるでしょうか？
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+問題は中学、高校にあるようです。 10校中9校はコンピュータープログラミングのクラスを設けていません。 昨年度、**[SCHOOL DISTRICT]**, たった **[NUMBER]** 人の生徒しか、大学レベルのコンピューターサイエンスの試験を受けませんでした。私たちの州ではたった、**[%]**の生徒しか受験しなかったのです。 私たちは、高給で重要なキャリアを追い求めるよう、生徒を励ましたり、サポートしたりしなかったのです。
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+ほとんどすべてのコンピューターの革新はこの国で発明されました。しかし、今対処しないと、リーダーシップを失うというリスクにさらされています。
 
-We need to make some changes.
+状況を変える必要があるのです。
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+1 つの有望な解決策は、コンピュータサイエンスの授業で、高校の数学や理科の卒業要件を満たすことができるようにすることでしょう。 **[県名]**において、コンピュータサイエンスは選択授業です。 大学に入学するために他の教科を選択するために、生徒は選択科目としてコンピュータサイエンスを選ぶ余裕がありません。 そして、それを変えることはとても大きなインパクトを与えることができるのです。 コンピュータ サイエンスのコースが卒業の要件としてカウントされている州においては、コンピュータサイエンスのコースは少数派民族の参加により、コンピュータサイエンスを選択授業として扱っている州より50％も大きいものとなっています。
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+また、私たちは若い世代の学生のためにも、彼らのコンピュータサイエンスやコーディングに対する興味を刺戟するために動くべきです。 私たちの子供は、ただアプリを使いゲームで遊ぶのではいけません。 彼らはそれらをどのように作るかを学ぶべきなのです。 子供達は早ければ小学2年生でコーディングの基礎を学ぶことができます。
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+私たちはさらにコンピュータサイエンスの先生を募集し、彼らの分野の専門的な開発を奨励する必要が有ります。 今日、世の中にはたくさんのオンラインの資料があます。先生はそれらの資料を使うことにより、生徒のために最新のテクノロジーに触れることができます。
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+労働統計局によると、2020年までには920万もの科学・技術・エンジニアリング・数学に関する分野の仕事があると予測されています。 それらの半分にあたる460万の仕事はコンピューティングや情報処理技術に関する仕事となるでしょう。 そして21世紀までに、コンピュータサイエンスはどんどん基礎知識となるでしょう。 もしも私たちの子供たちが、必要とされているスキルを学ぶ機会を与えられなかったのだとしたら、誰がそれらの仕事をするのでしょうか？
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/{{ country }} to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+This week, {{ campaign_date/full }}, is Computer Science Education Week. **[県名]**の学校では、生徒はHour of Code に参加しているでしょう。そしてコンピュータサイエンスに関する謎を紐解き、そしてうまくいけば、彼らはさらに学びたいと思うでしょう。 私はHour of Codeに加わります。そして、あなたもHour of Codeに招待します。 全ての人がプログラミングを学ぶべきなのです。 Visit https://hourofcode.com/{{ country }} to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
 
-{{ signup_button }}
+サインアップ

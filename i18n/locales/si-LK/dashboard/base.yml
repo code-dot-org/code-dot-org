@@ -128,6 +128,8 @@ si:
     accept_terms: "ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය"
     email_preference_yes: "ඔව්"
     email_preference_no: "නැහැ"
+    share_teacher_email_reg_partner_preference_yes: "ඔව්"
+    share_teacher_email_reg_partner_preference_no: "නැහැ"
   school_info:
     other: 'වෙනත්'
   signin_form:
@@ -246,6 +248,7 @@ si:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (කොටස්)'
       starwarsblocks_hour: 'Star Wars (කොටස්)'
+      loading: 'පූරණය වෙමින්...'
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
       progress: 'ඔබගේ ප්‍රගතිය'
@@ -259,6 +262,7 @@ si:
       prizes_link: 'වැඩිදුර තොරතුරු'
   teacher:
     answer: පිළිතුර
+    dashboard: 'ගුරු උපකරණ පුවරුව'
     for_teachers_only: ගුරුවරුන්ට පමණි
     title:
       one: 'ඔබගේ ගුරුවරයා:'

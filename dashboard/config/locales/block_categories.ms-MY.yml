@@ -19,6 +19,7 @@ ms:
       Games/Score: Permainan/Skor
       Groups: Kumpulan
       Input: Input
+      Location: Lokasi
       Locations: Lokasi
       Logic: Logik
       Loops: Gelung
@@ -29,4 +30,5 @@ ms:
       Text: teks
       Variables: Pembolehubah
       'Variables ': 'Pembolehubah '
+      'Variables  ': 'Pembolehubah  '
       World: Dunia

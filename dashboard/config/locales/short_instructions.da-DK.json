@@ -531,9 +531,9 @@
         "CourseF_outbreak2": "Skift sunde monstre til syge monstre, når de rører ved hinanden.",
         "CourseF_outbreak3": "Skift monstre til monstre med ansigtsmasker, når du klikker på dem.",
         "CourseF_outbreak4": "Skift antal og størrelse af monster figure til din simulering.",
-        "CourseF_outbreak6": "Tilføj en procent chance for, at monstre bliver syge, når sunde monstre rører ved syge monstre. Gør dette for alle kombinationer af monstre med og uden masker.",
-        "CourseF_outbreak7": "Opret et nyt kostume til monstre med immunitet over for virussen, og brug det i din simulering.",
-        "CourseF_outbreak8": "Del en besked med din simulering.",
+        "CourseF_outbreak6": "Få alle de syge monstre til at begynde at komme sig, når et sundt monster rører ved et syg monster.",
+        "CourseF_outbreak7": "Tilføj en procent chance for, at monstre bliver syge, når sunde monstre rører ved syge monstre. Gør dette for alle kombinationer af monstre med og uden masker.",
+        "CourseF_outbreak8": "Opret et nyt kostume til monstre med immunitet over for virussen, og brug det i din simulering.",
         "courseA_artist_loops10_2021": "Hjælp mig med at lægge nogle sten, så jeg ikke falder i vandet!",
         "courseA_artist_loops11_2021": "Hjælp mig med at bygge trin så jeg kan se skibene sejle.",
         "courseA_artist_loops12_2021": "Kunstneren så noget sjovt. Tegn hvad du tror han så.",
@@ -618,7 +618,9 @@
         "courseA_collector_loops8_2021": "Skriv koden for at samle alle skattene.",
         "courseA_collector_loops9_2021": "**Udfordring:** Skattene ligger hele vejen op ad trinene! Skriv en kode så Laurel samle alle op.",
         "courseD_maze_nestedLoops4_2021": "Få mig til solsikken!",
-        "courseD_maze_nestedLoops6_2021": "Få mig til solsikken!"
+        "courseD_maze_nestedLoops6_2021": "Få mig til solsikken!",
+        "CourseF_outbreak5": "Skift antal og størrelse af monster figure til din simulering.",
+        "international_outbreak_freeplay": "Del en besked med din simulering."
       }
     }
   }

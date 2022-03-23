@@ -2,11 +2,164 @@
   "it-IT": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Illustrare i cambiamenti di umore di una poesia."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Rappresentare il linguaggio figurato e letterale in un testo."
+        },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Sviluppa programmi che rispondano a eventi a tempo."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "creare un programma costituito da una sequenza di istruzioni per completare un'immagine"
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "suddividere forme complesse in parti più semplici"
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "sviluppare programmi che rispondano ad eventi temporizzati"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "sviluppare programmi che rispondono all'input dell'utente"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "creare animazioni di danza con il codice"
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "identificare le azioni correlate agli eventi in ingresso"
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "condividere un artefatto creativo con altri alunni"
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "identificare le azioni correlate agli eventi in ingresso"
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "condividere un artefatto creativo con altri alunni"
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "sviluppare programmi che rispondano ad eventi temporizzati"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "sviluppare programmi che rispondono all'input dell'utente"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "creare animazioni di danza con il codice"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "discutere il ruolo che l'intelligenza artificiale gioca nelle nostre vite"
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "addestrare e testare un modello di apprendimento automatico"
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "ragionare su come i pregiudizi umani giocano un ruolo nell'apprendimento automatico"
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Crea nuovi personaggi e assegna loro indumenti e posizioni."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Crea un'animazione interattiva utilizzando personaggi ed eventi."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Sviluppa programmi che rispondano a eventi a tempo."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Illustrare i cambiamenti di umore di una poesia."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Rappresentare il linguaggio figurato e letterale in un testo."
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "rendersi conto di cosa ci si aspetta dagli alunni mentre si recano in aula computer"
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "utilizzare la terminologia appropriata quando si fa riferimento al mouse, al trackpad o al touchscreen di un computer"
+        },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Descrivi l'importanza dell'utente nel processo di progettazione."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Identifica gli sprite in un programma per computer in esecuzione."
+        },
+        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
+          "description": "Crea nuovi sprite e assegna loro costumi e comportamenti."
+        },
+        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
+          "description": "Crea un'animazione usando sprite e comportamenti."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Sviluppa programmi che rispondano a eventi a tempo."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Sviluppa programmi che rispondano all'input dell'utente."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Crea un'animazione interattiva utilizzando gli eventi."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Crea un animale domestico virtuale interattivo utilizzando eventi, comportamenti e grafica personalizzata."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Programmare soluzioni ai problemi che si presentano quando si progetta un animale domestico virtuale, come nutrirlo."
+        },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Decidi quali tipi di dichiarazioni è giusto dire online e quali no."
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Assegna un valore a una variabile"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Chiama una variabile più volte in un programma."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Determina la relazione tra il modo in cui una variabile viene definita, memorizzata e recuperata quando premiamo «Esegui» su un programma."
+        },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "usare le variabili per contenere parole e frasi"
         },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Usa le variabili insieme ai prompt."
+        },
         "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
           "description": "usare le variabili per contenere parole e frasi"
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Usa le variabili insieme ai prompt."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Crea un programma interattivo per computer che risponda all'input dell'utente."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
@@ -38,6 +191,33 @@
         "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
           "description": "esaminare il programma per trovare i punti in cui le variabili possono essere sostituite con valori specifici"
         },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Determina il valore iniziale, il valore di arresto e il valore di passo per un «ciclo for»."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Illustrare i valori dei contatori colpiti ogni volta attraverso un «ciclo for» durante il runtime."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Determina il valore iniziale, il valore di arresto e il valore di passo per un ciclo for."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Riconosci quando usare un ciclo for e quando usare altri loop come i loop repeat e while."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Utilizzare for loop per cambiare loop più volte con valori diversi."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Riconosci quando usare un ciclo for e quando usare altri loop come i loop repeat e while."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Utilizzare una simulazione al computer per raccogliere dati su un modello"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Crea un grafico a doppia linea per confrontare i dati su due fonti diverse"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Effettuare e testare una previsione modificando le variabili di simulazione"
+        },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "discutere il ruolo che l'intelligenza artificiale gioca nelle nostre vite"
         },
@@ -68,6 +248,12 @@
         "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
           "description": "articolare il processo di progettazione ed evidenziare in che modo questo ha contribuito a dare forma al progetto di finale"
         },
+        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
+          "description": "Scopri che le informazioni che condividono online lasciano un'impronta digitale o una «traccia»."
+        },
+        "5efa6c72-000c-40a0-ace0-55f47117305b": {
+          "description": "Scopri quali informazioni possono essere condivise online."
+        },
         "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
           "description": "definire un elenco di passaggi (algoritmo) per portare un amico dalla sua posizione di partenza al suo obiettivo"
         },
@@ -85,6 +271,12 @@
         },
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
           "description": "tradurre i movimenti in una serie di istruzioni"
+        },
+        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
+          "description": "Costruisci un programma riorganizzando i movimenti sequenziali."
+        },
+        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
+          "description": "Crea un programma per computer da una serie di istruzioni scritte."
         },
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
           "description": "tradurre i movimenti in una serie di istruzioni"
@@ -128,6 +320,15 @@
         "61329a99-1c0a-414f-9694-78f7f9c81372": {
           "description": "creare un programma che disegna forme complesse ripetendo sequenze semplici"
         },
+        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
+          "description": "Elenca diversi esempi di app per smartphone."
+        },
+        "595564b5-94b4-4104-9613-05eadc30663e": {
+          "description": "Raccomandare la tecnologia ad altri in base alle loro esigenze specifiche. "
+        },
+        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
+          "description": "Applica empatia e creatività alla tecnologia di progettazione per gli altri. "
+        },
         "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
           "description": "ripetere i comandi impartiti dall'insegnante"
         },
@@ -146,8 +347,20 @@
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
           "description": "condividere un artefatto creativo con altri alunni"
         },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Applicare concetti di informatica in un progetto a tempo indeterminato."
+        },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "superare ostacoli come vincoli di tempo o errori"
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Scopri che internet può essere usato per visitare luoghi lontani e imparare cose nuove."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Confronta in che modo rimanere al sicuro online è simile a rimanere al sicuro nel mondo reale."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Spiegare le regole per viaggiare in sicurezza su internet."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "rendersi conto di cosa ci si aspetta dagli alunni mentre si recano in aula computer"
@@ -230,8 +443,17 @@
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "condividere un artefatto creativo con altri alunni"
         },
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Applicare concetti di informatica in un progetto a tempo indeterminato."
+        },
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "superare ostacoli come vincoli di tempo o errori"
+        },
+        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
+          "description": "Comprendi come può essere la cattiveria online e come può far sentire le persone."
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "Identifica i modi per rispondere alle parole cattive online, utilizzando S-T-O-P."
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
           "description": "focalizzarsi sulla precisione durante la creazione delle istruzioni"
@@ -323,6 +545,15 @@
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
         },
+        "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
+          "description": "Raccogliere e registrare dati su quantità di oggetti reali o caratteri su uno schermo"
+        },
+        "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
+          "description": "Crea un grafico a barre e un grafico a torta per rappresentare dati semplici."
+        },
+        "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
+          "description": "Effettuare confronti tra visualizzazioni di dati effettuate da altri e utilizzarle per fare una previsione."
+        },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "codificare le lettere in binario"
         },
@@ -332,8 +563,17 @@
         "ce1f4117-76f3-4359-a554-683a878f82cb": {
           "description": "collegare il concetto di memorizzare le lettere sulla carta con il concetto di memorizzare le informazioni in un computer"
         },
+        "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
+          "description": "Usa un progetto pianificato come modello per la creazione."
+        },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "superare ostacoli come vincoli di tempo o errori"
+        },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "Definire il termine «password» e descrivere lo scopo di una password."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "Esercitati a creare una password memorabile e sicura."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "riformulare una sequenza di passaggi, traducendola in un programma codificato"
@@ -482,6 +722,24 @@
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
           "description": "definire uno \"sprite\" come un personaggio o un oggetto sullo schermo che può essere spostato e modificato"
         },
+        "09281dd0-4b33-4537-9543-a2377bc2f923": {
+          "description": "Crea nuovi sprite e assegna loro costumi e comportamenti."
+        },
+        "30a80046-d715-46b1-8b89-65c410d04690": {
+          "description": "Crea nuovi sprite e assegna loro costumi e comportamenti."
+        },
+        "e0d4a883-51dc-4647-8c9f-59652f699aec": {
+          "description": "Crea un'animazione usando sprite e comportamenti."
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Crea un'animazione interattiva utilizzando gli eventi."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Sviluppa programmi che rispondano a eventi a tempo."
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Sviluppa programmi che rispondano all'input dell'utente."
+        },
         "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
           "description": "creare un animale domestico virtuale interattivo utilizzando eventi, comportamenti, variabili e grafica personalizzata"
         },
@@ -584,6 +842,12 @@
         "5bbd5970-dd02-4100-b9c4-6d051ec9bba2": {
           "description": "usare funzioni predeterminate per completare attività ripetute"
         },
+        "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
+          "description": "Azioni Usa le variabili per contenere parole e frasi."
+        },
+        "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
+          "description": "Usa le variabili insieme ai prompt."
+        },
         "16854174-125c-4c79-9a42-064ef84535e3": {
           "description": "assegnare valori a variabili esistenti"
         },
@@ -598,6 +862,18 @@
         },
         "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
           "description": "esaminare il programma per trovare i punti in cui le variabili possono essere sostituite con valori specifici"
+        },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Determina il valore iniziale, il valore di arresto e il valore di passo per un ciclo for."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "Riconosci quando usare un ciclo for e quando usare altri loop come i loop repeat e while."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Utilizzare for loop per cambiare loop più volte con valori diversi."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "Riconosci quando usare un ciclo for e quando usare altri loop come i loop repeat e while."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "superare ostacoli come vincoli di tempo o errori"
@@ -686,6 +962,9 @@
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
           "description": "definire uno \"sprite\" come un personaggio o un oggetto sullo schermo che può essere spostato e modificato"
         },
+        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
+          "description": "Crea nuovi sprite e assegna loro costumi e comportamenti."
+        },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
         },
@@ -772,6 +1051,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "articolare il processo di progettazione ed evidenziare in che modo questo ha contribuito a dare forma al progetto di finale"
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "addestrare e testare un modello di apprendimento automatico"
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "ragionare su come i pregiudizi umani giocano un ruolo nell'apprendimento automatico"
         }
       }
     }

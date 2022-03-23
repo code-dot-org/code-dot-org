@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import library from '@cdo/apps/applab/designElements/library';
 import * as applabConstants from '@cdo/apps/applab/constants';
 

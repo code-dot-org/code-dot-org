@@ -1,6 +1,7 @@
 mk:
   data:
     progressions:
+      Example: Пример
       Lists: Листи
       Variables: Променливи
       'Video: What Makes a Computer, a Computer?': 'Видео: Што го прави компјутерот, компјутер?'

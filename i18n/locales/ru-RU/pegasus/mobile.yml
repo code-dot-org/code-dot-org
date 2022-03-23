@@ -1070,6 +1070,12 @@
   coursed-2020_gradelevel: Класс 8 и выше
   coursee-2020_gradelevel: Возраст 8-12
   coursef-2020_gradelevel: Возраст 9-13
+  coursea-2021_gradelevel: Возраст 4-7
+  courseb-2021_gradelevel: Возраст 5-8
+  coursec-2021_gradelevel: Возраст 6-10
+  coursed-2021_gradelevel: Класс 8 и выше
+  coursee-2021_gradelevel: Возраст 8-12
+  coursef-2021_gradelevel: Возраст 9-13
   accelerated_gradelevel: "Возраст 10-18 лет"
   codeorg_platformtext: "Современные браузеры, смартфоны, планшеты"
   codeintl_platformtext: "Современные браузеры, смартфоны, планшеты"
@@ -1664,6 +1670,12 @@
   page_not_available_title: "Страница недоступна"
   page_not_available_description: "К сожалению, запрошенная Вами страница больше не доступна по этому адресу. Если вам всё ещё нужен доступ, пожалуйста, напишите нам по электронной почте [support@code.org](%{support_email_link})."
   page_not_available_button: "Вернуться на домашнюю страницу"
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Возвращайтесь вовремя и изучайте программирование! Новое руководство «Minecraft Hour of Code» теперь доступно в Minecraft: Education Edition для Windows, Mac, Chromebook и iPad. Начните с бесплатных ресурсов, обучающих курсов и видеороликов для преподавателей.'
+  hoc2021_mc_mee_villages_title: "Сказка о двух деревнях"
+  hoc2021_mc_mee_villages_description: 'Изучите основы программирования и узнайте о разнообразии и вовлеченности учащихся в Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: "ИИ навсегда!"
+  hoc2021_mc_mee_ai_description: 'Изучайте ИИ со своими учениками и учитесь программировать код в Minecraft: Education Edition.'
   footer_powered_by_aws: "Создано с помощью Amazon Web Services"
   codebytes_skinny_banner_english_only: "Только на английском языке"
   footer_privacy_policy: "Политика конфиденциальности"
@@ -1678,3 +1690,6 @@
   ai_microsoft_thanks: "Благодарим компанию Microsoft за поддержку нашего видения и миссии предоставить каждому ребенку возможность изучить компьютерные науки и приобрести навыки, необходимые для преуспевания в XXI веке."
   ai_activity: "Занятие"
   ai_description: "Описание"
+  outbreak_tile_title: "Эпидемия"
+  outbreak_tile_subtitle: "Вирус заразил Город Монстров! Создайте симулятор эпидемии и сделайте прогнозы о том, что произойдет с соседями Города Монстров."
+  footer_cookie_notice: "Уведомление о cookie"

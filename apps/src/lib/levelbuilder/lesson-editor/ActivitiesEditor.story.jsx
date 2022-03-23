@@ -2,7 +2,8 @@ import React from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import reducers, {
-  init
+  initActivities,
+  initLevelSearching
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
   initResources
@@ -27,7 +28,13 @@ const createStoreWithLessonPlan = () => {
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();
-  store.dispatch(init(sampleActivities, searchOptions, [], false));
+  store.dispatch(initActivities(sampleActivities));
+  store.dispatch(
+    initLevelSearching({
+      searchOptions: searchOptions,
+      programmingEnvironments: []
+    })
+  );
   store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
   return store;
@@ -40,8 +47,12 @@ const createStoreWithoutLessonPlan = () => {
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();
+  store.dispatch(initActivities([sampleActivityForLessonWithoutLessonPlan]));
   store.dispatch(
-    init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [], false)
+    initLevelSearching({
+      searchOptions: searchOptions,
+      programmingEnvironments: []
+    })
   );
   store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
@@ -58,7 +69,10 @@ export default storybook => {
       name: 'ActivitiesEditor For Lesson With Lesson Plan',
       story: () => (
         <Provider store={createStoreWithLessonPlan()}>
-          <ActivitiesEditor hasLessonPlan={true} />
+          <ActivitiesEditor
+            hasLessonPlan={true}
+            allowMajorCurriculumChanges={true}
+          />
         </Provider>
       )
     },
@@ -66,7 +80,21 @@ export default storybook => {
       name: 'ActivitiesEditor For Lesson Without Lesson Plan',
       story: () => (
         <Provider store={createStoreWithoutLessonPlan()}>
-          <ActivitiesEditor hasLessonPlan={false} />
+          <ActivitiesEditor
+            hasLessonPlan={false}
+            allowMajorCurriculumChanges={true}
+          />
+        </Provider>
+      )
+    },
+    {
+      name: 'ActivitiesEditor when major changes are not allowed',
+      story: () => (
+        <Provider store={createStoreWithoutLessonPlan()}>
+          <ActivitiesEditor
+            hasLessonPlan={true}
+            allowMajorCurriculumChanges={false}
+          />
         </Provider>
       )
     }

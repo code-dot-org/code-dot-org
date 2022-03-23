@@ -4,13 +4,18 @@ import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {KeyCodes} from '@cdo/apps/constants';
-import {appendInputLog, clearConsoleLogs} from './javalabRedux';
+import {
+  appendInputLog,
+  clearConsoleLogs,
+  closePhotoPrompter
+} from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
-import InputPrompt from './InputPrompt';
+import PhotoSelectionView from './components/PhotoSelectionView';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -35,6 +40,7 @@ function moveCaretToEndOfDiv(element) {
 class JavalabConsole extends React.Component {
   static propTypes = {
     onInputMessage: PropTypes.func.isRequired,
+    onPhotoPrompterFileSelected: PropTypes.func.isRequired,
     bottomRow: PropTypes.element,
     style: PropTypes.object,
 
@@ -42,7 +48,11 @@ class JavalabConsole extends React.Component {
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
     clearConsoleLogs: PropTypes.func,
-    isDarkMode: PropTypes.bool
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
+    isPhotoPrompterOpen: PropTypes.bool,
+    closePhotoPrompter: PropTypes.func,
+    photoPrompterPromptText: PropTypes.string,
+    shouldJumpToInput: PropTypes.bool
   };
 
   state = {
@@ -63,23 +73,93 @@ class JavalabConsole extends React.Component {
     this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
   };
 
-  displayConsoleLogs() {
-    return this.props.consoleLogs.map((log, i) => {
+  // Transform this.props.consoleLogs into an array of strings, with each string
+  // representing a single line that will appear in the console.
+  getConsoleLines() {
+    const lines = [];
+    let currentLine = 0;
+
+    lines[currentLine] = '';
+
+    for (const log of this.props.consoleLogs) {
       if (log.type === 'newline') {
+        lines[++currentLine] = '';
+      } else {
+        const text = log.type === 'input' ? log.text + '\n' : log.text;
+        const splitText = text.split(/\r?\n/).entries();
+        for (const [i, value] of splitText) {
+          if (i > 0) {
+            lines[++currentLine] = value;
+          } else {
+            lines[currentLine] += value;
+          }
+        }
+      }
+    }
+
+    return lines;
+  }
+
+  // Returns a rendering of the console log.  It includes the input field following the final
+  // content, taking up the remaining width of the line.
+  renderConsoleLogs(displayTheme) {
+    const lines = this.getConsoleLines();
+
+    return lines.map((line, index) => {
+      if (index === lines.length - 1) {
         return (
-          <p key={`log-${i}`} style={styles.log}>
-            <br />
-          </p>
+          <div key={index} style={{display: 'flex'}}>
+            {line}
+            <input
+              id="console-input"
+              type="text"
+              spellCheck="false"
+              style={{
+                ...styles.input,
+                ...(displayTheme === DisplayTheme.DARK
+                  ? styles.darkModeInput
+                  : styles.lightModeInput)
+              }}
+              onKeyDown={this.onInputKeyDown}
+              aria-label="console input"
+              ref={ref => (this.inputRef = ref)}
+              autoFocus
+            />
+          </div>
         );
       } else {
-        return (
-          <p key={`log-${i}`} style={{...styles.lineWrapper, ...styles.log}}>
-            {log.type === 'input' && <InputPrompt />}
-            {log.text}
-          </p>
-        );
+        return <div key={index}>{line.length === 0 ? ' ' : line}</div>;
       }
     });
+  }
+
+  renderConsoleBody() {
+    const {
+      isPhotoPrompterOpen,
+      photoPrompterPromptText,
+      onPhotoPrompterFileSelected,
+      closePhotoPrompter,
+      displayTheme
+    } = this.props;
+
+    if (isPhotoPrompterOpen) {
+      return (
+        <PhotoSelectionView
+          promptText={photoPrompterPromptText}
+          style={styles.photoPrompter}
+          onPhotoSelected={file => {
+            onPhotoPrompterFileSelected(file);
+            closePhotoPrompter();
+          }}
+        />
+      );
+    } else {
+      return (
+        <div onClick={this.onLogsClick} style={styles.logs}>
+          {this.renderConsoleLogs(displayTheme)}
+        </div>
+      );
+    }
   }
 
   onInputKeyDown = e => {
@@ -103,47 +183,54 @@ class JavalabConsole extends React.Component {
     }
   };
 
+  onLogsClick = () => {
+    // only jump to input if the program is currently in run or test mode.
+    if (this.props.shouldJumpToInput) {
+      this.inputRef.focus();
+    }
+  };
+
   render() {
-    const {isDarkMode, style, bottomRow, clearConsoleLogs} = this.props;
+    const {displayTheme, style, bottomRow, clearConsoleLogs} = this.props;
 
     return (
       <div style={style}>
         <PaneHeader id="pane-header" style={styles.header} hasFocus>
-          <PaneButton
-            id="javalab-console-clear"
-            headerHasFocus
-            isRtl={false}
-            onClick={() => {
-              clearConsoleLogs();
-            }}
-            iconClass="fa fa-eraser"
-            label={javalabMsg.clearConsole()}
+          <PaneSection
+            className={'pane-header-section pane-header-section-left'}
           />
-          <PaneSection>{javalabMsg.console()}</PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-center'}
+          >
+            {javalabMsg.console()}
+          </PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-right'}
+          >
+            <PaneButton
+              id="javalab-console-clear"
+              headerHasFocus
+              isRtl={false}
+              onClick={() => {
+                clearConsoleLogs();
+              }}
+              iconClass="fa fa-eraser"
+              label={javalabMsg.clearConsole()}
+            />
+          </PaneSection>
         </PaneHeader>
         <div style={styles.container}>
           <div
             style={{
               ...styles.console,
-              ...(isDarkMode ? styles.darkMode : styles.lightMode)
+              ...(displayTheme === DisplayTheme.DARK
+                ? styles.darkMode
+                : styles.lightMode)
             }}
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
           >
-            <div style={styles.logs}>{this.displayConsoleLogs()}</div>
-            <div style={styles.lineWrapper}>
-              <InputPrompt onClick={this.focus} />
-              <input
-                type="text"
-                spellCheck="false"
-                style={{
-                  ...styles.input,
-                  ...(isDarkMode ? styles.darkMode : styles.lightMode)
-                }}
-                onKeyDown={this.onInputKeyDown}
-                aria-label="console input"
-              />
-            </div>
+            {this.renderConsoleBody()}
           </div>
           {bottomRow && [
             {...bottomRow, key: 'bottom-row'},
@@ -158,11 +245,15 @@ class JavalabConsole extends React.Component {
 export default connect(
   state => ({
     consoleLogs: state.javalab.consoleLogs,
-    isDarkMode: state.javalab.isDarkMode
+    displayTheme: state.javalab.displayTheme,
+    isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
+    photoPrompterPromptText: state.javalab.photoPrompterPromptText,
+    shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),
-    clearConsoleLogs: () => dispatch(clearConsoleLogs())
+    clearConsoleLogs: () => dispatch(clearConsoleLogs()),
+    closePhotoPrompter: () => dispatch(closePhotoPrompter())
   })
 )(JavalabConsole);
 
@@ -173,6 +264,15 @@ const styles = {
   },
   lightMode: {
     backgroundColor: color.white,
+    color: color.black
+  },
+  darkModeInput: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: color.white,
+    float: 'left'
+  },
+  lightModeInput: {
+    backgroundColor: 'rgba(0,0,0,0)',
     color: color.black
   },
   container: {
@@ -186,29 +286,27 @@ const styles = {
     flexGrow: 2,
     overflowY: 'auto',
     padding: 5,
-    fontFamily: 'monospace'
+    display: 'flex',
+    flexDirection: 'column'
   },
   logs: {
     lineHeight: 'normal',
     cursor: 'text',
     whiteSpace: 'pre-wrap',
-    flexGrow: 1
+    fontFamily: 'monospace'
   },
-  lineWrapper: {
-    flexGrow: 0,
-    flexShrink: 0,
-    display: 'flex',
-    alignItems: 'center',
-    overflow: 'auto',
-    fontSize: 14
+  logLine: {
+    display: 'flex'
   },
   input: {
-    flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none',
     border: 'none',
     padding: 0,
-    fontFamily: 'monospace'
+    fontFamily: 'monospace',
+    flexGrow: 1,
+    marginTop: -2,
+    fontSize: 13
   },
   spacer: {
     width: 8
@@ -217,10 +315,14 @@ const styles = {
     position: 'absolute',
     textAlign: 'center',
     lineHeight: '30px',
-    width: '100%'
+    width: '100%',
+    display: 'flex'
   },
   log: {
     padding: 0,
     margin: 0
+  },
+  photoPrompter: {
+    flexGrow: 1
   }
 };

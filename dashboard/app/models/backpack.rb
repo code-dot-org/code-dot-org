@@ -21,7 +21,7 @@ class Backpack < ApplicationRecord
     unless backpack
       # Create a storage app for this user's backpack
       storage_app = StorageApps.new(storage_id_for_user_id(user_id))
-      encrypted_id = storage_app.create('', ip: ip, type: 'backpack')
+      encrypted_id = storage_app.create({'hidden': true}, ip: ip, type: 'backpack')
       _, storage_app_id = storage_decrypt_channel_id(encrypted_id)
       backpack = create!(user_id: user_id, storage_app_id: storage_app_id)
     end

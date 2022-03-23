@@ -15,6 +15,7 @@ hy:
     messages:
       not_saved: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
       too_young: 'Այս բովանդակությունը տարիքային սահմանափակումներ տեղում է եւ մատչելի չէ երիտասարդ ուսանողների'
+      teacher_must_accept_terms: 'Այս բովանդակությունն ունի տարիքային սահմանափակումներ և հասանելի չէ ավելի երիտասարդ ուսանողների համար: Խնդրեք ձեր ուսուցչին ընդունել նորացված Օգտագործման պայմանները, որպեսզի ձեզ հասանելի լինի այս բովանդակությունը: Ձեր ուսուցիչը կարող է դա անել՝ մուտք գործելով Code Studio և սեղմելով «Վերանայել թարմացված պայմանները» կոճակը Code Studio-ի գլխավոր էջի վերևի մոտ:'
   activerecord:
     errors:
       messages:
@@ -111,6 +112,8 @@ hy:
     field_is_required: "պարտադիր ե"
     email_preference_yes: "այո"
     email_preference_no: "ոչ"
+    share_teacher_email_reg_partner_preference_yes: "այո"
+    share_teacher_email_reg_partner_preference_no: "ոչ"
   school_info:
     other: 'Այլ'
   signin_form:
@@ -218,6 +221,7 @@ hy:
       starwars: 'Աստղային պատերազմներ'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      loading: 'Loading...'
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
       progress: 'Ձեր առաջընթացը'
@@ -231,6 +235,7 @@ hy:
       prizes_link: 'ավելի շատ տեղեկություն'
   teacher:
     answer: պատասխան
+    dashboard: 'Ուսուցչի Վահանակ'
     for_teachers_only: Ուսուցիչների համար Միայն
     title:
       one: 'Ձեր ուսուցիչը.'

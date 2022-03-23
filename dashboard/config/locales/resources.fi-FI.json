@@ -223,6 +223,51 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Sprite-labra dokumentaatio"
+        },
+        "design_mode/csd/2021": {
+          "name": "Suunnittelutila"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Suunnittelutila"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funktiot"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Silmukat"
+        },
+        "for_loops/csd/2021": {
+          "name": "Silmukat"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Koneoppiminen"
+        },
+        "variables_1/csd/2021": {
+          "name": "Muuttujat"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animaatio-välilehti"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Nopeus"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Nopeus"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funktiot"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funktiot"
+        },
+        "lists/csd/2021": {
+          "name": "Listat"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Johdanto TK:n - Osa 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Johdanto TK:n - Osa 2"
         }
       }
     }

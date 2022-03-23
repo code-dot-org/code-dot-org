@@ -29,6 +29,9 @@ module UsersHelper
       return false
     end
 
+    # TODO: Remove this call https://codedotorg.atlassian.net/browse/FND-1927
+    log_self_takeover_investigation_to_firehose(firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
+
     ActiveRecord::Base.transaction do
       # Move over sections that source_user follows
       Follower.where(student_user_id: source_user.id).each do |followed|
@@ -47,7 +50,18 @@ module UsersHelper
 
     log_account_takeover_to_firehose(firehose_params)
     true
-  rescue
+  rescue => e
+    # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
+    if source_user && destination_user
+      firehose_params = {
+        source_user: source_user,
+        destination_user: destination_user,
+        type: takeover_type,
+        provider: provider,
+        error: "Type: #{e.class} Message: #{e.message}"
+      }
+      log_self_takeover_investigation_to_firehose(firehose_params)
+    end
     false
   end
 
@@ -63,6 +77,29 @@ module UsersHelper
         data_json: {
           user_type: destination_user.user_type,
           error: error,
+        }.to_json
+      }
+    )
+  end
+
+  # TODO: Remove this function https://codedotorg.atlassian.net/browse/FND-1927
+  def log_self_takeover_investigation_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'self-takeover-investigation',
+        event: "#{type}-account-takeover", # Silent or OAuth takeover
+        user_id: source_user.id, # User account being "taken over" (deleted)
+        data_int: destination_user.id, # User account after takeover
+        data_string: provider,
+        error: error,   # Move error outside of data_json to query easier
+        data_json: {
+          session_sign_up_type: session[:sign_up_type],
+          destination_user_hashed_email: destination_user.hashed_email,
+          source_user_hashed_email: source_user.hashed_email,
+          # Including the auth_option_ids for reference, but not confident they will reveal much
+          destination_user_auth_option_ids: destination_user.authentication_options.map(&:id).join(', '),
+          source_user_auth_option_ids: source_user.authentication_options.map(&:id).join(', ')
         }.to_json
       }
     )
@@ -114,9 +151,9 @@ module UsersHelper
     user_data = {}
     if user
       user_data[:disableSocialShare] = true if user.under_13?
-      user_data[:lockableAuthorized] = user.teacher? ? user.authorized_teacher? : user.student_of_authorized_teacher?
+      user_data[:lockableAuthorized] = user.teacher? ? user.verified_instructor? : user.student_of_verified_instructor?
       user_data[:isTeacher] = true if user.teacher?
-      user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
+      user_data[:isVerifiedInstructor] = true if user.verified_teacher?
       user_data[:linesOfCode] = user.total_lines
       user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
@@ -192,7 +229,7 @@ module UsersHelper
   private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     return user_data unless user
 
-    if script.professional_learning_course?
+    if script.old_professional_learning_course?
       user_data[:professionalLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
       if unit_assignment
@@ -261,7 +298,15 @@ module UsersHelper
             sum_time_spent = bubble_choice_progress.values.reduce(0) do |sum, sublevel_progress|
               sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
             end
-            level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
+
+            # The existence of level_progress needs to be checked due to a race condition where the user makes sublevel
+            # progress between when user_levels_by_level is fetched and when level_for_progress is fetched. In this
+            # case, user_levels_by_level may not include the user level for the new level_for_progress, resulting in nil
+            # level_progress. This may manifest for the user as a bubble choice bubble looking as though it hasn't been tried
+            # even though there is progress on a sublevel and should be resolved by a page refresh.
+            if level_progress && sum_time_spent > 0
+              level_progress[:time_spent] = sum_time_spent
+            end
           end
         end
 

@@ -984,13 +984,19 @@
             }
           },
           "draw a circle": {
-            "name": "bir çember çiz"
+            "name": "bir çember çiz",
+            "description": "verilen yarıçapta bir daire çizin",
+            "parameters": {
+              "radius": "yarıçap"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "uzunluk",
-              "repeat": "bu işlemleri"
-            }
+              "repeat": "bu işlemleri",
+              "sides": "kenarlar"
+            },
+            "name": "bir fırıldak çizin"
           },
           "draw a triangle": {
             "name": "bir üçgen çiz",
@@ -1001,7 +1007,8 @@
           "draw a shape": {
             "name": "bir şekil çiz",
             "parameters": {
-              "length": "uzunluk"
+              "length": "uzunluk",
+              "sides": "kenarlar"
             }
           },
           "draw a house": {
@@ -3488,7 +3495,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3530,6 +3538,18 @@
               "length": "uzunluk",
               "sides": "kenarlar"
             }
+          },
+          "small flower": {
+            "name": "küçük çiçek"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGIC FLOWERS2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGIC FLOWERS"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -3538,7 +3558,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3587,7 +3608,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3636,7 +3658,8 @@
             "parameters": {
               "points": "Puanlar",
               "length": "uzunluk"
-            }
+            },
+            "description": "verilen noktaları ve belirli uzunlukta kenarları olan bir yıldız çiz"
           },
           "draw a circle": {
             "name": "bir çember çiz",
@@ -3866,11 +3889,17 @@
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "my design": {
+            "name": "benim tasarımım"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -4000,6 +4029,24 @@
         "courseF_apps_collector": {
           "end game": {
             "name": "oyunu bitir"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "oyunu sıfırla"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "fonksiyon 1"
+          },
+          "function 2": {
+            "name": "fonksiyon 2\n"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "hareket et ve sayaç ile nektar al"
           }
         }
       }

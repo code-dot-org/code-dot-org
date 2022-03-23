@@ -8,6 +8,36 @@
         "2-3 Artist 6": {
           "2-3_Artist_6_a": "Da napraviš ove male kuteve, trebaš skrenuti svaki puta _dalje_ nego što si s kvadratom.   ",
           "2-3_Artist_6_b": "Budući da sam već usmjeren desno, najlakše je krenuti naprijed, zatim raditi skretanja ulijevo da napravimo trokut."
+        },
+        "helloworld_animals_click": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
+        "helloworld_emoji_click": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
+        "helloworld_food_click": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
+        "helloworld_retro_click": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
+        "course1_artist_loops_challenge4": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1_2018": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1_2019": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1_2020": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
         }
       }
     }

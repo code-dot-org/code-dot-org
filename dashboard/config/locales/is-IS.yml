@@ -223,6 +223,9 @@ is:
     email_preference_yes: Já
     email_preference_no: Nei
     email_preference_required: Þú verður tilgreina tölvupóst.
+    share_teacher_email_reg_partner_preference_yes: Já
+    share_teacher_email_reg_partner_preference_no: Nei
+    share_teacher_email_reg_partner_preference_required: Þú verður tilgreina tölvupóst.
     parent_account_checkbox: Ég er foreldri/forráðamaður sem er að skrá fyrir hönd
       barns míns
     parent_account_email_progress_permission: Megum við senda þér af og til netpóst
@@ -458,6 +461,7 @@ is:
       starwars: Star Wars
       starwarsblocks: Star Wars (Kubbar)
       starwarsblocks_hour: Star Wars (Kubbar)
+      loading: Hleð...
       weblab: Vefsmiðja
       view_all: Sjá öll verkefni...
     popup:
@@ -473,6 +477,7 @@ is:
       prizes_link: Nánar
   teacher:
     answer: Svar
+    dashboard: Stjórnborð kennara
     for_teachers_only: Aðeins fyrir kennara
     title:
       one: 'Kennari þinn:'
@@ -1222,6 +1227,7 @@ is:
       email: Netfang
       email_alternate: Annað netfang
       gender: Kyn
+      school: Skóli
       school_name: Nafn skóla
       school_city: Bær skóla
       school_country: Land skóla
@@ -1380,3 +1386,4 @@ is:
   behaviors:
     this_sprite: þessi vera
   unit_prefix: Eining %{n}
+  teacher_feedback: Endurgjöf kennara

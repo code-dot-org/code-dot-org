@@ -1083,6 +1083,12 @@
   coursed-2020_gradelevel: 8+ sınıfları
   coursee-2020_gradelevel: 9. ve üzeri Sınıflar
   coursef-2020_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2021_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2021_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2021_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2021_gradelevel: 8+ sınıfları
+  coursee-2021_gradelevel: 9. ve üzeri Sınıflar
+  coursef-2021_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: "10 Yaş ve Üstü (Ders 3 sonrası)"
   codeorg_platformtext: "Modern tarayıcılar, akıllı telefonlar, tabletler"
   codeintl_platformtext: "Modern tarayıcılar, akıllı telefonlar, tabletler"
@@ -1692,6 +1698,11 @@
   page_not_available_title: "Sayfa Kullanılamıyor"
   page_not_available_description: "Üzgünüz, açmak istediğiniz sayfa artık bu adreste bulunmuyor. Yine de erişim isterseniz, lütfen [support@code.org](%{support_email_link}) adresine e-posta gönderin."
   page_not_available_button: "Anasayfaya Dön"
+  hoc2021_mc_mee_description: 'Zamanda geriye yolculuk yapın ve kodlamayı öğrenin! Yeni Minecraft Kodlama Saati öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümünde mevcuttur. Ücretsiz eğitimci kaynakları, eğitimler ve videolar ile başlayın.'
+  hoc2021_mc_mee_villages_title: "İki Köyün Hikâyesi"
+  hoc2021_mc_mee_villages_description: 'Minecraft: Eğitim Sürümünde öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin.'
+  hoc2021_mc_mee_ai_title: "İyilik İçin Yapay Zeka"
+  hoc2021_mc_mee_ai_description: 'Öğrencilerinizle yapay zekayı keşfedin ve Minecraft: Eğitim Sürümünde kodlamayı öğrenin.'
   footer_powered_by_aws: "Amazon Web Services tarafından desteklenmektedir"
   codebytes_skinny_banner_english_only: "Sadece İngilizce"
   footer_privacy_policy: "Gizlilik Politikası"
@@ -1706,3 +1717,6 @@
   ai_microsoft_thanks: "21. yüzyılda başarıyı yakalamak için her çocuğun bilgisayar bilimini ve becerileri öğrenme olanağına sahip olmasını sağlamaya yönelik vizyonumuzu ve misyonumuzu desteklediği için Microsoft'a teşekkür ederiz."
   ai_activity: "Etkinlik"
   ai_description: "Tanım"
+  outbreak_tile_title: "Salgın"
+  outbreak_tile_subtitle: "Monster Town'a bir virüs bulaştı! Bir salgın simülatörü kodlayın ve Monster Town'ın komşularına ne olacağı hakkında tahminlerde bulunun."
+  footer_cookie_notice: "Çerez Bildirimi"

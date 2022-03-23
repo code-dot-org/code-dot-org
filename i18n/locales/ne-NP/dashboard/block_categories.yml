@@ -4,13 +4,17 @@ ne:
       Actions: Actions
       Color: Color
       Conditionals: Conditionals
-      Events: कार्य 
+      Dancers: डान्सरहरु
+      Events: घटनाहरु
       Functions: Functions
       'Functions ': 'Functions '
+      Groups: समूहहरु
       Location: Location
-      Logic: Logic
+      Logic: लजिक
       Loops: Loops
       Math: Math
+      Numbers: संख्याहरु
       Text: Text
       Variables: Variables
       'Variables ': 'Variables '
+      World: विश्व

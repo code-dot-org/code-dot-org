@@ -1,4 +1,4 @@
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {setExternalGlobals} from '../../../util/testUtils';
@@ -164,6 +164,7 @@ describe('InlineAudio', function() {
     expect(window.Audio).to.have.been.calledOnce;
     component.instance().playAudio();
     expect(window.Audio).to.have.been.calledOnce;
+    sinon.restore();
   });
 
   it('handles source update gracefully, stopping audio', async function() {

@@ -8,8 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:32 UTC",
+    "serialized_at": "2021-11-22 19:57:41 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csa-videos"
     }
@@ -3153,7 +3156,6 @@
         ],
         "progression": "Empty Neighborhood Level"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3179,7 +3181,6 @@
         ],
         "progression": "Empty Java Console Level"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3205,7 +3206,6 @@
         ],
         "progression": "Neighborhood Setup Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3230,7 +3230,6 @@
           "U2L2 Video 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -325,7 +325,7 @@ th-TH:
   homepage_banner_40k_teachers_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   homepage_slot_text_title_hoc: ช่วงเวลาของ Code
   homepage_slot_text_blurb_hoc: ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้
-  homepage_slot_text_link_hoc: ลองใช้ Hour of Code สิ
+  homepage_slot_text_link_hoc: ลองใช้ Hour of Code
   homepage_slot_text_link_host: จัดงาน Hour of Code
   homepage_slot_text_link_hocserved: "# คน เข้าร่วมแล้ว"
   homepage_solot_text_link_volunteer: อาสาสมัครสำหรับชั่วโมงแห่งการเขียนโค้ด
@@ -507,6 +507,7 @@ th-TH:
   volunteer_engineer_submission_field_description: รายละเอียด
   volunteer_engineer_submission_field_email: ที่อยู่อีเมล
   volunteer_engineer_submission_field_email_placeholder: ที่อยู่อีเมล
+  volunteer_engineer_submission_field_email_preference_privacy: "(ดูนโยบายความเป็นส่วนตัวของเรา)"
   volunteer_engineer_submission_field_email_preference_yes: ใช่
   volunteer_engineer_submission_field_email_preference_no: ไม่ใช่
   volunteer_engineer_submission_checkbox_age_18_plus: ฉันยืนยันว่าฉันอายุมากกว่าหรือเท่ากับ
@@ -933,6 +934,12 @@ th-TH:
   coursed-2020_gradelevel: เกรด 8 +
   coursee-2020_gradelevel: อายุ 8-12 ปี
   coursef-2020_gradelevel: อายุ 9 - 13 ปี
+  coursea-2021_gradelevel: อายุ 4 - 7 ปี
+  courseb-2021_gradelevel: อายุ 5-8 ปี
+  coursec-2021_gradelevel: อายุ 6-10 ปี
+  coursed-2021_gradelevel: เกรด 8 +
+  coursee-2021_gradelevel: อายุ 8-12 ปี
+  coursef-2021_gradelevel: อายุ 9 - 13 ปี
   accelerated_gradelevel: อายุ 10-18 ปี
   codeorg_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
   codeintl_platformtext: เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต
@@ -1413,8 +1420,10 @@ th-TH:
   user_header_playlab: เรื่องราวและเกม
   user_header_dance: Dance Party
   user_header_minecraft: ไมน์คราฟท์
+  user_header_flappy: แฟล๊ปปี้
   user_header_view_project_gallery: ดูโปรเจกต์ต่าง ๆ
   user_header_view_my_projects: ดูโปรเจกต์ต่าง ๆของฉัน
+  view_all_sections: ดูหมวดทั้งหมด
   signing_in: เข้าสู่ระบบ
   hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
   applab_tile_subtitle: สร้างแอปของคุณเองในจาวาสคริปต์โดยใช้การเขียนโปรแกรมบนบล็อกเป็นหลัก
@@ -1498,6 +1507,9 @@ th-TH:
   hoc2018_mc_back_journey: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
     มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
   hoc2018_mc_teacher_guide: ดูคำแนะนำสำหรับผู้สอน
+  hoc2018_mc_minecraft_education: การศึกษา Minecraft
+  hoc2018_mc_continue_learning: เรียนรู้ต่อไปกับ Minecraft
+  hoc2018_mc_go_to_mc_education: ไปที่ Minecraft Education
   hoc2018_mc_short_description_shorter: ใช้ความคิดสร้างสรรค์และทักษะต่างๆในการแก้ปัญหาของคุณ
     เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!
   hoc2018_mc_journey: ท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
@@ -1564,7 +1576,18 @@ th-TH:
     ลองศึกษาพื้นฐานของการเขียนโค้ดและทำความเข้าใจเรื่องความหลากหลายและการมีส่วนร่วมไปพร้อมกับนักเรียนของคุณ!
     เข้าถึงแหล่งข้อมูลต่าง ๆ ได้ฟรี ไม่ว่าจะเป็นแผนการเรียนการสอน วิดีโอ หลักสูตรของวิทยาการคอมพิวเตอร์  บทเรียนเรื่องความเท่าเทียม
     และการฝึกอบรมผู้สอน'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'เดินทางย้อนเวลา และเรียนรู้เรื่องโค้ด! บทช่วยสอนของชั่วโมงเขียนโค้ดตอนไมน์คราฟท์ใหม่ตอนนี้เปิดให้ศึกษาแล้วใน
+    Minecraft: Education Edition สำหรับ Windows, Mac, Chromebook และ iPad ลองดูโดยใช้แหล่งข้อมูล
+    การฝึกอบรมและวิดีโอฟรีสำหรับนักการศึกษา'
+  hoc2021_mc_mee_villages_title: Tale of Two Villages
+  hoc2021_mc_mee_villages_description: 'ลองศึกษาพื้นฐานของการเขียนโค้ดและทำความเข้าใจเรื่องความหลากหลายและการมีส่วนร่วมไปพร้อมกับผู้เรียนของคุณใน
+    Minecraft: Education Edition'
+  hoc2021_mc_mee_ai_title: AI For Good
+  hoc2021_mc_mee_ai_description: 'ดูเรื่องปัญญาประดิษฐ์ไปพร้อม ๆ กับผู้เรียนของคุณ
+    และเรียนรู้วิธีเขียนโค้ดจากภายใน Minecraft: Education Edition'
   footer_powered_by_aws: ขับเคลื่อนระบบด้วย Amazon Web Services
+  codebytes_skinny_banner_english_only: ภาษาอังกฤษเท่านั้น
   footer_privacy_policy: นโยบายความเป็นส่วนตัว
   footer_about: เกี่ยวกับ
   footer_donate: ร่วมบริจาค
@@ -1634,3 +1657,7 @@ th-TH:
   ai_cognimates: Cognimates
   ai_cognimates_description: แพล็ตฟอร์มวิชาการ AI เพื่อสร้างเกม ตั้งโปรแกรมให้กับหุ่นยนต์และฝึกความชำนาญ
   ai_try_activity: ลองกิจกรรมนี้
+  outbreak_tile_title: การระบาด
+  outbreak_tile_subtitle: Monster Town กำลังติดไวรัส! เขียนโค้ดเครื่องจำลองการแพร่ระบาดของไวรัส
+    และคาดการณ์สิ่งที่จะเกิดขึ้นกับเมืองที่อยู่กับเมืองนี้
+  footer_cookie_notice: ประกาศเกี่ยวกับคุกกี้

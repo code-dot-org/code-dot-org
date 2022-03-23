@@ -36,24 +36,24 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
   test 'redirects cartoon network quick links' do
     get '/flappy/lang/ar'
-    assert_redirected_to '/flappy/1'
+    assert_redirected_to '/flappy/1?lang=ar-SA'
 
     get '/playlab/lang/ar'
-    assert_redirected_to '/s/playlab/lessons/1/levels/1'
+    assert_redirected_to '/s/playlab/lessons/1/levels/1?lang=ar-SA'
 
     get '/artist/lang/ar'
-    assert_redirected_to '/s/artist/lessons/1/levels/1'
+    assert_redirected_to '/s/artist/lessons/1/levels/1?lang=ar-SA'
   end
 
   test 'redirects lang parameter' do
     get '/lang/es'
-    assert_redirected_to '/'
+    assert_redirected_to '/?lang=es'
 
     get '/s/frozen/lang/es'
-    assert_redirected_to '/s/frozen'
+    assert_redirected_to '/s/frozen?lang=es'
 
     get '/s/course1/lessons/1/levels/1/lang/es'
-    assert_redirected_to '/s/course1/lessons/1/levels/1'
+    assert_redirected_to '/s/course1/lessons/1/levels/1?lang=es'
   end
 
   test 'redirects urls with stage and puzzle to lessons and levels' do

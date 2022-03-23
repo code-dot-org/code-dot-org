@@ -1,14 +1,14 @@
 ---
-title: Ghid instructiv pentru evenimentul Hour of Code
+title: Ghidul de organizare a unui eveniment Hour of Code
 ---
 
 {{ signup_button }}
 
 # Cum să planificați evenimentul Hour of Code
 
-### Alătură-te mișcării și prezintă-le elevilor știința calculatoarelor, folosind acești pași.
+### Alătură-te mișcării și prezintă-le elevilor tehnologia informatiei si computerelor, folosind acești pași.
 
-Gândirea de calcul contribuie la dezvoltarea abilităților de rezolvare a problemelor, a logicii și a creativității. Iar tehnologia transformă toate sectoarele de activitate de pe planetă. Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească. Dacă încep de timpuriu, aceștia vor avea o bază pentru succesul profesional într-o carieră potrivită pentru secolul XXI.
+Gândirea computationala contribuie la dezvoltarea abilităților de rezolvare a problemelor, a logicii și a creativității. Iar tehnologia transformă toate sectoarele de activitate de pe planetă. Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească. Dacă încep de timpuriu, aceștia vor avea o bază pentru succesul profesional într-o carieră potrivită pentru secolul XXI.
 
 Evenimentul Hour of Code este o modalitate simplă și distractivă de a le prezenta elevilor universul științei calculatoarelor (de multe ori prima introducere de acest fel) și se potrivește perfect atât cu activitățile desfășurate în clasă, cât și după aceea. Consultă ghidul nostru de participare [dacă mai ai întrebări]({{ localized_files/participation_guide }}).
 

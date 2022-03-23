@@ -17,10 +17,7 @@ class ProgressBubbleSet extends React.Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    selectedSectionId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
@@ -70,7 +67,8 @@ class ProgressBubbleSet extends React.Component {
     const containerStyleProp = {
       ...styles.container,
       ...(level.isUnplugged && styles.pillContainer),
-      ...(level.isConceptLevel && styles.diamondContainer)
+      ...(level.isConceptLevel && styles.diamondContainer),
+      ...(isSublevel && styles.containerSublevel)
     };
 
     return (
@@ -142,7 +140,7 @@ const styles = {
     top: (18 + 4 + 12 + 6 - 10) / 2
   },
   backgroundSublevel: {
-    top: 4
+    top: 9
   },
   backgroundFirst: {
     left: 15
@@ -152,6 +150,9 @@ const styles = {
   },
   container: {
     position: 'relative'
+  },
+  containerSublevel: {
+    top: 5
   },
   diamondContainer: {
     // Height needed only by IE to get diamonds to line up properly

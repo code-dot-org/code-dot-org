@@ -2,6 +2,48 @@
   "nl-NL": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Veranderingen in de stemming van een gedicht illustreren."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Creëer nieuwe sprites en wijs ze kostuums en locaties toe."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Creëer een interactieve animatie met behulp van sprites en events."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Veranderingen in de stemming van een gedicht illustreren."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Figuurlijke en letterlijke taal in een tekst weergeven."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Een variabele declareren"
         }

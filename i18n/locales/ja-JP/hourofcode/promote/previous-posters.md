@@ -2,7 +2,7 @@
 title: 過去のHour of Codeのポスター
 ---
 
-{{ signup_button }}
+サインアップ
 
 # 過去に使われたHour of Codeのポスター
 
@@ -14,4 +14,4 @@ title: 過去のHour of Codeのポスター
 
 {{ promote_posters }}
 
-{{ signup_button }}
+サインアップ

@@ -15,9 +15,29 @@ export default function ControlButtons({
   disableFinishButton,
   onContinue,
   renderSettings,
-  disableRunButtons,
-  showTestButton
+  disableRunButton,
+  disableTestButton,
+  showTestButton,
+  isSubmittable,
+  isSubmitted
 }) {
+  /* The ids of these buttons are relied on in other parts of the codebase.
+   * All of them are relied on for UI tests
+   * The submit/unsubmit button ids are relied on for hooking in the submit
+   * utils, see https://github.com/code-dot-org/code-dot-org/blob/47be99d6cf7df2be746b592906f50c0f3860b80a/apps/src/submitHelper.js#L26
+   */
+  let finishButtonText, finishButtonId;
+  if (isSubmitted) {
+    finishButtonText = i18n.unsubmit();
+    finishButtonId = 'unsubmitButton';
+  } else if (isSubmittable) {
+    finishButtonText = i18n.submit();
+    finishButtonId = 'submitButton';
+  } else {
+    finishButtonText = i18n.finish();
+    finishButtonId = 'finishButton';
+  }
+
   return (
     <div>
       <div style={styles.leftButtons}>
@@ -30,16 +50,17 @@ export default function ControlButtons({
           onClick={toggleRun}
           isHorizontal
           style={{...styles.button.all, ...styles.button.orange}}
-          isDisabled={disableRunButtons}
+          isDisabled={disableRunButton}
         />
         {showTestButton && (
           <JavalabButton
+            id="testButton"
             text={isTesting ? i18n.stopTests() : i18n.test()}
             icon={<FontAwesome icon="flask" className="fa" />}
             onClick={toggleTest}
             isHorizontal
             style={{...styles.button.all, ...styles.button.white}}
-            isDisabled={disableRunButtons}
+            isDisabled={disableTestButton}
           />
         )}
       </div>
@@ -47,11 +68,11 @@ export default function ControlButtons({
         <JavalabSettings>{renderSettings()}</JavalabSettings>
         {!isEditingStartSources && (
           <JavalabButton
-            text={i18n.finish()}
-            onClick={onContinue}
+            text={finishButtonText}
+            onClick={isSubmittable ? null : onContinue}
             style={{...styles.button.all, ...styles.button.blue}}
             isDisabled={disableFinishButton}
-            id="finishButton"
+            id={finishButtonId}
           />
         )}
       </div>
@@ -68,8 +89,11 @@ ControlButtons.propTypes = {
   disableFinishButton: PropTypes.bool,
   onContinue: PropTypes.func.isRequired,
   renderSettings: PropTypes.func.isRequired,
-  disableRunButtons: PropTypes.bool,
-  showTestButton: PropTypes.bool
+  disableRunButton: PropTypes.bool,
+  disableTestButton: PropTypes.bool,
+  showTestButton: PropTypes.bool,
+  isSubmittable: PropTypes.bool,
+  isSubmitted: PropTypes.bool
 };
 
 const styles = {
@@ -109,8 +133,8 @@ const styles = {
       }
     },
     blue: {
-      backgroundColor: color.default_blue,
-      borderColor: color.default_blue
+      backgroundColor: color.cyan,
+      borderColor: color.cyan
     }
   },
   finish: {

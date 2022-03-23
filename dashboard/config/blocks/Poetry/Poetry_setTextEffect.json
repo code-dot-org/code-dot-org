@@ -1,0 +1,43 @@
+{
+  "category": "Poetry - Effects",
+  "config": {
+    "func": "setTextEffect",
+    "blockText": "set text effect {EFFECT}",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "fade",
+            "\"fade\""
+          ],
+          [
+            "fly from left",
+            "\"flyLeft\""
+          ],
+          [
+            "fly from right",
+            "\"flyRight\""
+          ],
+          [
+            "fly from top",
+            "\"flyTop\""
+          ],
+          [
+            "fly from bottom",
+            "\"flyBottom\""
+          ],
+          [
+            "typewriter",
+            "\"typewriter\""
+          ]
+        ]
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}

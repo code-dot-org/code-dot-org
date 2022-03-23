@@ -24,7 +24,7 @@ describe('ProjectCardGrid', () => {
       .instance();
 
     // Should show all project types.
-    expect(wrapper.find(ProjectAppTypeArea)).to.have.lengthOf(9);
+    expect(wrapper.find(ProjectAppTypeArea)).to.have.lengthOf(10);
     const props1 = wrapper
       .find(ProjectAppTypeArea)
       .first()
@@ -48,7 +48,7 @@ describe('ProjectCardGrid', () => {
     // Show all project types.
     component.viewAllProjects();
     wrapper.setProps({}); // Force a re-render
-    expect(wrapper.find(ProjectAppTypeArea)).to.have.lengthOf(9);
+    expect(wrapper.find(ProjectAppTypeArea)).to.have.lengthOf(10);
 
     // Filter to only show Minecraft projects.
     component.onSelectApp('minecraft');

@@ -1,22 +1,22 @@
 # Helper steps for dance party levels
 free_play_level_urls = {
   'blockly' => {
-    'Dance Party' => 'http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true',
-    'Artist' => 'http://studio.code.org/s/20-hour/lessons/5/levels/10?noautoplay=true',
-    'Bounce' => 'http://studio.code.org/s/course3/lessons/15/levels/10?noautoplay=true',
-    'CS in Algebra' => 'http://studio.code.org/s/algebra/lessons/1/levels/2?noautoplay=true',
-    'Flappy' => 'http://studio.code.org/flappy/10?noautoplay=true',
-    'Sprite Lab' => 'http://studio.code.org/s/coursee-2019/lessons/9/levels/6?noautoplay=true'
+    'Dance Party' => 'http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true&no_redirect=true',
+    'Artist' => 'http://studio.code.org/s/20-hour/lessons/5/levels/10?noautoplay=true&no_redirect=true',
+    'Bounce' => 'http://studio.code.org/s/course3/lessons/15/levels/10?noautoplay=true&no_redirect=true',
+    'CS in Algebra' => 'http://studio.code.org/s/algebra/lessons/1/levels/2?noautoplay=true&no_redirect=true',
+    'Flappy' => 'http://studio.code.org/flappy/10?noautoplay=true&no_redirect=true',
+    'Sprite Lab' => 'http://studio.code.org/s/coursee-2019/lessons/9/levels/6?noautoplay=true&no_redirect=true'
   },
   'droplet' => {
-    'App Lab' => 'http://studio.code.org/s/applab-intro/lessons/1/levels/15?noautoplay=true',
-    'Game Lab' => 'http://studio.code.org/s/csd3-2019/lessons/22/levels/12?noautoplay=true'
+    'App Lab' => 'http://studio.code.org/s/applab-intro/lessons/1/levels/15?noautoplay=true&no_redirect=true',
+    'Game Lab' => 'http://studio.code.org/s/allthethings/lessons/19/levels/4?noautoplay=true&no_redirect=true'
   },
   'minecraft' => {
-    'Minecraft Aquatic' => 'http://studio.code.org/s/aquatic/lessons/1/levels/12?noautoplay=true',
-    'Minecraft Heroes Journey' => 'http://studio.code.org/s/hero/lessons/1/levels/12?noautoplay=true',
-    'Minecraft Adventurer' => 'http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true',
-    'Minecraft Designer' => 'http://studio.code.org/s/minecraft/lessons/1/levels/12?noautoplay=true'
+    'Minecraft Aquatic' => 'http://studio.code.org/s/aquatic/lessons/1/levels/12?noautoplay=true&no_redirect=true',
+    'Minecraft Heroes Journey' => 'http://studio.code.org/s/hero/lessons/1/levels/12?noautoplay=true&no_redirect=true',
+    'Minecraft Adventurer' => 'http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true&no_redirect=true',
+    'Minecraft Designer' => 'http://studio.code.org/s/minecraft/lessons/1/levels/12?noautoplay=true&no_redirect=true'
   }
 }
 

@@ -1,7 +1,0 @@
-{
-  "func": "frameDelay",
-  "category": "Animations",
-  "modeOptionName": "anim_frameDelay",
-  "type": "property",
-  "noAutocomplete": true
-}

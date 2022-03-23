@@ -2,4 +2,23 @@
 fr:
   data:
     shared_functions:
+      driving with arrow keys: se déplacer avec les touches de direction
+      fluttering: flotter
+      growing: agrandir
+      jittering: gigoter
+      moving east: se déplacer vers l'est
+      moving east and looping: aller vers l'Est et tourner en boucles
+      moving north: aller vers le Nord
+      moving north and looping: aller vers le Nord et tourner en boucles
+      moving south: aller vers le Sud
+      moving south and looping: aller vers le Sud et tourner en boucles
+      moving west: aller vers l'Ouest
+      moving west and looping: aller vers l'Ouest et tourner en boucles
       moving with arrow keys: se déplacer avec les touches de direction
+      patrolling: patrouiller
+      shrinking: contracter
+      spinning left: tournoyer à gauche
+      spinning right: tournoyer à droite
+      swimming left and right: nager à gauche et à droite
+      wandering: se balader
+      wobbling: vaciller

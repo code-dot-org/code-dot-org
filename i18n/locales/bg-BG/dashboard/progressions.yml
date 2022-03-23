@@ -3,20 +3,26 @@ bg:
     progressions:
       Artist Project: Проект "Художник"
       'Artist: Variables': 'Художник: променливи'
+      Assessment: Оценка
       Binary Numbers: Бинарни числа
       Debugging: Отстраняване на грешки
       Design Mode: Режим на проектиране
+      Drawing: Рисуване
       Events: Събития
+      Example: Пример
       For Loops: За циклите
       Free Play: Свободна игра
       Functions: Функции
       Functions with Parameters: Функции с параметри
       Lesson Extras: Допълнителни екстри
+      Levels: Нива
       Lists: Списъци
       Measures: Измерване
+      'Minecraft: Hero''s Journey': 'Minecraft: Пътуването на героя'
       Overview: Общ преглед
       Pair Programming: Програмиране по двойки
       Reflection: Рефлексия
+      Review: Преглед
       Sprite Properties: Свойства на Спрайта
       Text Compression: Компресия на текста
       The Animation Tab: Раздел "Анимация"

@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:04 UTC",
+    "serialized_at": "2021-11-22 19:57:35 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ai-classroom-test"
     }
@@ -44,16 +48,72 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "61011232-71c2-446a-add2-c8027cc55e4b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "61011232-71c2-446a-add2-c8027cc55e4b",
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "db2ea610-829c-44d3-b3b1-83a0517eae74",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "db2ea610-829c-44d3-b3b1-83a0517eae74",
+        "lesson_activity.key": "61011232-71c2-446a-add2-c8027cc55e4b"
+      }
+    },
+    {
+      "key": "55aa5013-0731-4679-8666-2473771c13b3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore AI Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "55aa5013-0731-4679-8666-2473771c13b3",
+        "lesson_activity.key": "61011232-71c2-446a-add2-c8027cc55e4b"
+      }
+    },
+    {
+      "key": "722b2f6b-a1a4-4433-bc05-e958fba38a0c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Import a Model to App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "722b2f6b-a1a4-4433-bc05-e958fba38a0c",
+        "lesson_activity.key": "61011232-71c2-446a-add2-c8027cc55e4b"
+      }
+    },
+    {
+      "key": "e9d7c34c-1e13-408d-9b1a-26f3f832796e",
+      "position": 4,
+      "properties": {
+        "name": "Customize Your App",
+        "progression_name": "Customize Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9d7c34c-1e13-408d-9b1a-26f3f832796e",
+        "lesson_activity.key": "61011232-71c2-446a-add2-c8027cc55e4b"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -68,7 +128,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
+        "script.name": "ai-classroom-test",
+        "activity_section.key": "db2ea610-829c-44d3-b3b1-83a0517eae74"
       },
       "level_keys": [
         "ml-class test-ai lab foods"
@@ -77,7 +138,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -92,7 +153,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
+        "script.name": "ai-classroom-test",
+        "activity_section.key": "55aa5013-0731-4679-8666-2473771c13b3"
       },
       "level_keys": [
         "ml-class test-ai lab choice-parent"
@@ -101,7 +163,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -116,7 +178,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
+        "script.name": "ai-classroom-test",
+        "activity_section.key": "722b2f6b-a1a4-4433-bc05-e958fba38a0c"
       },
       "level_keys": [
         "ml-class test-app lab import"
@@ -125,7 +188,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -140,7 +203,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
+        "script.name": "ai-classroom-test",
+        "activity_section.key": "e9d7c34c-1e13-408d-9b1a-26f3f832796e"
       },
       "level_keys": [
         "ml-class test-app lab choice parent"
@@ -156,7 +220,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
+        "script.name": "ai-classroom-test",
+        "activity_section.key": "db2ea610-829c-44d3-b3b1-83a0517eae74"
       }
     },
     {
@@ -167,7 +232,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
+        "script.name": "ai-classroom-test",
+        "activity_section.key": "55aa5013-0731-4679-8666-2473771c13b3"
       }
     },
     {
@@ -178,7 +244,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
+        "script.name": "ai-classroom-test",
+        "activity_section.key": "722b2f6b-a1a4-4433-bc05-e958fba38a0c"
       }
     },
     {
@@ -189,7 +256,8 @@
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
+        "script.name": "ai-classroom-test",
+        "activity_section.key": "e9d7c34c-1e13-408d-9b1a-26f3f832796e"
       }
     }
   ],

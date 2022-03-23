@@ -34,6 +34,8 @@ class Resource < ApplicationRecord
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores; got \"%{value}\"."
 
+  validates_presence_of :name
+
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   has_and_belongs_to_many :scripts, join_table: :scripts_resources
   has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
@@ -95,7 +97,7 @@ class Resource < ApplicationRecord
       url: get_localized_property(:url),
       download_url: download_url,
       audience: audience || 'All',
-      type: type
+      type: get_localized_property(:type)
     }
   end
 

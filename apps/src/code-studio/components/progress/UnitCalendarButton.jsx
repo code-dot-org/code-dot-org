@@ -57,6 +57,7 @@ export default class UnitCalendarButton extends React.Component {
             weeklyInstructionalMinutes={
               this.props.weeklyInstructionalMinutes || 225
             }
+            scriptId={this.props.scriptId}
           />
         )}
       </div>

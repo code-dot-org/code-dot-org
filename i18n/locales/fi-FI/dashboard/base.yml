@@ -172,6 +172,9 @@ fi:
     email_preference_yes: "Kyllä"
     email_preference_no: "Ei"
     email_preference_required: "Sinun on määriteltävä haluatko sähköpostia."
+    share_teacher_email_reg_partner_preference_yes: "Kyllä"
+    share_teacher_email_reg_partner_preference_no: "Ei"
+    share_teacher_email_reg_partner_preference_required: "Sinun on määriteltävä haluatko sähköpostia."
     parent_account_checkbox: "Olen lapseni puolesta ilmoittautuva vanhempi/huoltaja"
     parent_account_email_progress_permission: "Voimmeko lähettää sinulle satunnaisia päivityksiä sähköpostitse lapsesi edistymisestä ja projekteista sekä päivityksiä lapsesi kurssista ja tietotekniikasta? [(Katso tietosuojakäytäntömme)] (%{privacy_policy_url})"
     parent_account_email_label: "Vanhemman/Huoltajan sähköpostiosoite"
@@ -374,6 +377,7 @@ fi:
       minecraft_hero: 'Minecraft sankari'
       playlab: 'Pelilabra'
       starwars: 'Tähtien sota'
+      loading: 'Lataa...'
       weblab: 'Nettilabra'
       view_all: 'Kaikki projektit...'
     popup:
@@ -389,6 +393,7 @@ fi:
       prizes_link: 'lisätietoja'
   teacher:
     answer: Vastaus
+    dashboard: 'Opettajan päänäyttö'
     for_teachers_only: Vain opettajille
     title:
       one: 'Opettajasi:'
@@ -838,6 +843,7 @@ fi:
   pd:
     form_labels:
       email: 'Sähköposti'
+      school: 'Koulu'
       school_name: 'Koulun nimi'
       school_country: 'Koulun maa'
       colombian_chilean_school_name: 'Koulun nimi'

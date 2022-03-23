@@ -46,7 +46,7 @@ class I18nStringTrackerWorker {
     }
 
     this.buffer[source] = this.buffer[source] || new Set();
-    this.buffer[source].add(stringKey);
+    this.buffer[source].add(`${source}.${stringKey}`);
 
     // schedule a buffer flush if there isn't already one.
     if (!this.pendingFlush) {
@@ -66,8 +66,11 @@ class I18nStringTrackerWorker {
     this.buffer = {};
     this.pendingFlush = null;
 
-    // Record the i18n string usage data.
-    sendRecords(records);
+    // RNG to send only 1% of the time
+    if (Math.floor(Math.random() * 100) === 0) {
+      // Record the i18n string usage data.
+      sendRecords(records);
+    }
   }
 }
 
@@ -79,7 +82,17 @@ const RECORD_LIMIT = 500;
  * @param {I18nRecords} records The records of i18n string usage information to be sent.
  */
 function sendRecords(records) {
-  const url = window.location.origin + window.location.pathname; //strip the query string from the URL
+  let locationOrigin = window.location.origin;
+  if (!locationOrigin) {
+    locationOrigin =
+      window.location.protocol +
+      '//' +
+      window.location.hostname +
+      (window.location.port ? ':' + window.location.port : '');
+  }
+
+  const url = locationOrigin + window.location.pathname; //strip the query string from the URL
+
   Object.keys(records).forEach(source => {
     const stringKeys = Array.from(records[source]);
     // Break the keys up into smaller batches because the API has a maximum limit.

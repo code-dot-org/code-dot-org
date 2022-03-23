@@ -129,14 +129,16 @@
         "Course 4 Play Lab Params 7": {
           "patrol": {
             "parameters": {
-              "actor": "اداکار"
+              "actor": "اداکار",
+              "speed": "رفتار"
             }
           }
         },
         "Course 4 Play Lab Params 8": {
           "patrol": {
             "parameters": {
-              "actor": "اداکار"
+              "actor": "اداکار",
+              "speed": "رفتار"
             }
           }
         },
@@ -149,7 +151,8 @@
           "get nectar": {
             "parameters": {
               "counter": "گنتی کرنے والا"
-            }
+            },
+            "name": "امرت حاصل کریں"
           }
         },
         "Course 4 SCF 3": {
@@ -178,6 +181,12 @@
           },
           "draw a house": {
             "name": "ایک گھر بنائیں"
+          },
+          "sun": {
+            "name": "سورج"
+          },
+          "square": {
+            "name": "مربع"
           }
         },
         "Geometric Sun_2018": {
@@ -186,6 +195,12 @@
           },
           "draw a house": {
             "name": "ایک گھر بنائیں"
+          },
+          "sun": {
+            "name": "سورج"
+          },
+          "square": {
+            "name": "مربع"
           }
         },
         "InspirationalArtwork": {
@@ -306,7 +321,8 @@
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "points": "نقاط"
             }
           },
           "draw a circle": {
@@ -438,7 +454,8 @@
           },
           "patrol": {
             "parameters": {
-              "actor": "اداکار"
+              "actor": "اداکار",
+              "speed": "رفتار"
             }
           }
         },
@@ -446,7 +463,8 @@
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "points": "نقاط"
             }
           },
           "draw a circle": {
@@ -492,7 +510,8 @@
           },
           "patrol": {
             "parameters": {
-              "actor": "اداکار"
+              "actor": "اداکار",
+              "speed": "رفتار"
             }
           }
         },
@@ -1084,7 +1103,8 @@
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "points": "نقاط"
             }
           },
           "draw a circle": {
@@ -1211,7 +1231,8 @@
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "points": "نقاط"
             }
           },
           "draw a circle": {
@@ -1251,7 +1272,8 @@
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "points": "نقاط"
             }
           },
           "draw a circle": {
@@ -1291,7 +1313,8 @@
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "points": "نقاط"
             }
           },
           "draw a circle": {
@@ -1331,7 +1354,8 @@
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "points": "نقاط"
             }
           },
           "draw a circle": {
@@ -1371,7 +1395,8 @@
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں",
             "parameters": {
-              "length": "لمبائی"
+              "length": "لمبائی",
+              "points": "نقاط"
             }
           },
           "draw a circle": {
@@ -1509,7 +1534,182 @@
         },
         "courseF_apps_collector": {
           "end game": {
-            "name": "کھیل ختم"
+            "name": "کھیل ختم کریں"
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "پل بنائیں"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "پل بنائیں"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "پل بنائیں"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          },
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          },
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          },
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          },
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "اسکور کو مقرر کریں"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "اسکور کو مقرر کریں"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "میرا فنکشن"
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "میرا فنکشن"
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "جمع کریں"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "جمع کریں"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "جمع کریں"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "جمع کریں"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "جمع کریں"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "جمع کریں"
           }
         }
       }

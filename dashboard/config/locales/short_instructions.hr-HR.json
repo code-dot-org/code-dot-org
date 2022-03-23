@@ -155,7 +155,22 @@
         "Underground Iron_2021": "Hodanje u rastaljene lave je loša ideja. Mjesto kaldrma stvoriti most, a zatim moja dva željeza blokova.",
         "Underground Mining Coal_2021": "Najcjenjenije resurse pronaći će te ispod zemlje, no tamo može postati mračno. Stoga upalite bar dvije baklje i iskopajte bar dva bloka ugljena.",
         "courseD_maze_nestedLoops4_2021": "Odvedi me do suncokreta!",
-        "courseD_maze_nestedLoops6_2021": "Odvedi me do suncokreta!"
+        "courseD_maze_nestedLoops6_2021": "Odvedi me do suncokreta!",
+        "Widget: Text Compression": "Potražite uzorke (ponavljane riječi ili fraze) u tekstu. Unesite uzorke koje vidite u rječnik s desne strane. Dok upisujete unose u rječnik, simbol za unos se umeće u tekst umjesto uzorka.",
+        "scrat 16": "Žir! Žir! Žir! Koristeći \"ako\" blok dovedi me do njega s najmanjim brojem blokova.",
+        "scrat 17": "Ok, hajdemo to napraviti ponovno za vježbu - ovo je vrlo slično, ali pazi na zid!",
+        "scrat 18": "\"Ako-inače\" blokovi provjeravaju uvjet i ovisno o uvjetu rade jednu ili drugu stvar. Probaj me dovesti do žira koristeći taj novi blok.",
+        "scrat 20": "Možeš li dodati samo 3 bloka da mi pomogneš riješiti složeniji labirint? Učiniš li to kako treba, moći ću hodati svakom krivudavom stazom bez obzira na njenu duljinu! Požuri! Led se topi!",
+        "K-1 Maze 10": "Idi oko TNT-a da me odvedeš do svinje!",
+        "K-1 Maze 11": "Prati stazu i odvedi me do šašave svinje. Zaobiđi TNT ili će perje letjeti na sve strane! Savjet: Ona je južno od mene.",
+        "K-1 Maze 2": "Pomakni me na istok da me odvedeš do svinje!",
+        "K-1 Maze 5": "Pomakni me na istok da me odvedeš do svinje!",
+        "K-1 Maze 6": "Pomakni se jednim, pa drugim putem da me odvedeš do svinje!",
+        "K-1 Maze 7": "Pomakni se jednim, pa drugim putem da me odvedeš do svinje!",
+        "K-1 Maze 8": "Pomakni se jednim, pa drugim putem da me odvedeš do svinje!",
+        "K-1 Maze 9": "Pomakni se jednim, pa drugim putem da me odvedeš do svinje!",
+        "K-1 Maze Sequence Assessment 1": "Da vidimo što ste naučili!\nPomiči se korak po korak da me odvedeš do svinje.",
+        "k-1 maze 1": "Možeš li me premjestiti na zapad da dođem do svinje?"
       }
     }
   }

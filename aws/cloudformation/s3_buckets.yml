@@ -24,6 +24,58 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+  ## Create S3 bucket for student sources (project code)
+  SourcesBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "cdo-v3-sources"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LifecycleConfiguration:
+        Rules:
+          -
+            Id: "365-day expiration of old versions"
+            NoncurrentVersionExpirationInDays: 365
+            Prefix: "sources/"
+            Status: "Enabled"
+          -
+            Id: "Clean Test Sources"
+            NoncurrentVersionExpirationInDays: 1
+            Prefix: "sources_test/"
+            Status: "Enabled"
+          -
+            Id: "Clean Circle Sources"
+            NoncurrentVersionExpirationInDays: 1
+            Prefix: "sources_circle/"
+            Status: "Enabled"
+      LoggingConfiguration:
+        DestinationBucketName: "cdo-logs"
+        LogFilePrefix: "s3/cdo-v3-sources/"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+  ## Create S3 bucket used to store weblab files and dance party thumbnails (possibly other use cases)
+  FilesBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "cdo-v3-files"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LifecycleConfiguration:
+        Rules:
+          -
+            Id: "365-day expiration of old versions"
+            NoncurrentVersionExpirationInDays: 365
+            Status: "Enabled"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
   DroneLibraryBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:

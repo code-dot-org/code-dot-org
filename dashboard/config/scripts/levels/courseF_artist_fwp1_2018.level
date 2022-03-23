@@ -369,7 +369,6 @@
                           </value>
                           <next>
                             <block type="controls_for_counter" inline="true">
-                              <mutation counter="counter"/>
                               <value name="FROM">
                                 <block type="math_number">
                                   <title name="NUM">1</title>
@@ -703,7 +702,6 @@
                       </statement>
                       <next>
                         <block type="controls_for_counter" inline="true">
-                          <mutation counter="counter"/>
                           <value name="FROM">
                             <block type="math_arithmetic" inline="true">
                               <title name="OP">MINUS</title>

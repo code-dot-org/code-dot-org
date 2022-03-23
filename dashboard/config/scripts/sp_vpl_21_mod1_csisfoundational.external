@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # About Code.org
 
-#### Code.org is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science as part of their core K-12 education.
+##### Code.org is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science as part of their core K-12 education.
 
-## The majority of our students are young women or students from marginalized racial and ethnic groups
+## The majority of our students are young women or students from marginalized racial and ethnic groups.
 
 <img src="https://images.code.org/65a91afb6fa3e31a8c3e22c4560924e3-image-1628863624258.png" alt="Donut chart representing racial and ethnic groups for US Code.org students. White students: 47%; Black / African American students: 21.2%; Hispanic / Latinx students: 21%; Students of two or more races / ethnicities: 7.1%; Asian students: 5.9%; Native American / Alaskan students: 1.3%; Native Hawaiian / Pacific Islander students: 0.9%"  style = "height: 435px; clear: both; margin: 0 20px 20px 0;">
 
@@ -18,9 +18,10 @@ markdown <<MARKDOWN
 ##### Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning.
 
 ##### For the fourth year in a row, students from marginalized racial and ethnic groups make up half of students in our courses. Increasing diversity in computer science is foundational to our work, and <a href="https://code.org/diversity" target="blank" rel="noopener noreferrer">we encourage you to read more about our efforts</a>.
+<br>
 
 > ##**Curriculum Value:** Equity
-**We believe that acknowledging and shining a light on the historical inequities within the field of computer science is critical to reaching our goal of bringing computer science to all students.** We provide tools and strategies to help teachers understand and address well-known equity gaps within the field. We recognize that some students and classrooms need more supports than others, and so those with the greatest needs should be prioritized. **All students can succeed in computer science when given the right supports and opportunities, regardless of prior knowledge or privilege.** We actively seek to eliminate and discredit stereotypes that plague computer science and lead to attrition of the very students we aim to reach.
+> #####**We believe that acknowledging and shining a light on the historical inequities within the field of computer science is critical to reaching our goal of bringing computer science to all students.** We provide tools and strategies to help teachers understand and address well-known equity gaps within the field. We recognize that some students and classrooms need more supports than others, and so those with the greatest needs should be prioritized. **All students can succeed in computer science when given the right supports and opportunities, regardless of prior knowledge or privilege.** We actively seek to eliminate and discredit stereotypes that plague computer science and lead to attrition of the very students we aim to reach.
 
 ## Our commitment to accessibility
 

@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:48 UTC",
+    "serialized_at": "2021-11-22 19:55:42 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "algebraPD-NexTech"
     }
@@ -121,16 +124,152 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f45f7fd8-b31f-43f0-afe3-5ec64278c98f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f45f7fd8-b31f-43f0-afe3-5ec64278c98f",
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD-NexTech"
+      }
+    },
+    {
+      "key": "0be7c072-fb8a-40e6-84a7-dd5257104625",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0be7c072-fb8a-40e6-84a7-dd5257104625",
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD-NexTech"
+      }
+    },
+    {
+      "key": "a1579374-40ed-4519-8342-b767527c002c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1579374-40ed-4519-8342-b767527c002c",
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD-NexTech"
+      }
+    },
+    {
+      "key": "403d550e-8d89-420f-a905-8d9e53271ff1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "403d550e-8d89-420f-a905-8d9e53271ff1",
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD-NexTech"
+      }
+    },
+    {
+      "key": "026767dd-2687-4274-b273-1b5b379df95f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "026767dd-2687-4274-b273-1b5b379df95f",
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD-NexTech"
+      }
+    },
+    {
+      "key": "0b046007-aafe-464d-8fcd-925a1338f8c5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0b046007-aafe-464d-8fcd-925a1338f8c5",
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD-NexTech"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "c976d904-a275-46ed-8706-72c19a763c71",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71",
+        "lesson_activity.key": "f45f7fd8-b31f-43f0-afe3-5ec64278c98f"
+      }
+    },
+    {
+      "key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54",
+        "lesson_activity.key": "0be7c072-fb8a-40e6-84a7-dd5257104625"
+      }
+    },
+    {
+      "key": "dbd75989-c122-4406-9bc2-418d6d5fa5ac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dbd75989-c122-4406-9bc2-418d6d5fa5ac",
+        "lesson_activity.key": "a1579374-40ed-4519-8342-b767527c002c"
+      }
+    },
+    {
+      "key": "b60356dd-4b46-42de-b1b9-43af6dca77a8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8",
+        "lesson_activity.key": "403d550e-8d89-420f-a905-8d9e53271ff1"
+      }
+    },
+    {
+      "key": "da64b073-c795-4117-8c56-74ddbfa7f0e1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "da64b073-c795-4117-8c56-74ddbfa7f0e1",
+        "lesson_activity.key": "026767dd-2687-4274-b273-1b5b379df95f"
+      }
+    },
+    {
+      "key": "0ceba867-4cfd-469b-bb7a-2dc5bfd0e81c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0ceba867-4cfd-469b-bb7a-2dc5bfd0e81c",
+        "lesson_activity.key": "0b046007-aafe-464d-8fcd-925a1338f8c5"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -144,7 +283,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       },
       "level_keys": [
         "PDAlg Intro"
@@ -153,7 +293,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -167,7 +307,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       },
       "level_keys": [
         "PDECS tour"
@@ -176,7 +317,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -190,7 +331,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       },
       "level_keys": [
         "PDAlg commitment"
@@ -199,7 +341,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -213,7 +355,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       },
       "level_keys": [
         "PDAlg commitment match"
@@ -222,7 +365,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -236,7 +379,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       },
       "level_keys": [
         "PDAlg attendance commitment"
@@ -245,7 +389,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -259,7 +403,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       },
       "level_keys": [
         "PDAlg Teacher Introduction"
@@ -268,7 +413,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -282,7 +427,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       },
       "level_keys": [
         "PDAlg Curriculum Overview"
@@ -291,7 +437,7 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -305,7 +451,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       },
       "level_keys": [
         "PDAlg Scope"
@@ -314,7 +461,7 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -328,7 +475,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       },
       "level_keys": [
         "PDAlg implementation"
@@ -337,7 +485,7 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -351,7 +499,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       },
       "level_keys": [
         "PDAlg course goals"
@@ -360,7 +509,7 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -374,7 +523,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       },
       "level_keys": [
         "PDAlg Attitude Survey"
@@ -383,7 +533,7 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -397,7 +547,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       },
       "level_keys": [
         "AlgPD Break"
@@ -406,7 +557,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -420,7 +571,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "dbd75989-c122-4406-9bc2-418d6d5fa5ac"
       },
       "level_keys": [
         "PDAlg functions"
@@ -429,7 +581,7 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -443,7 +595,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "dbd75989-c122-4406-9bc2-418d6d5fa5ac"
       },
       "level_keys": [
         "PDAlg hard video"
@@ -452,7 +605,7 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -466,7 +619,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "dbd75989-c122-4406-9bc2-418d6d5fa5ac"
       },
       "level_keys": [
         "PDAlg functional"
@@ -475,7 +629,7 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -489,7 +643,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "PDAlg Blocks Video"
@@ -498,7 +653,7 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -512,7 +667,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval 1"
@@ -521,7 +677,7 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -535,7 +691,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval 2"
@@ -544,7 +701,7 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -558,7 +715,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval 3"
@@ -567,7 +725,7 @@
     {
       "chapter": 20,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -581,7 +739,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval 5"
@@ -590,7 +749,7 @@
     {
       "chapter": 21,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -604,7 +763,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval 6"
@@ -613,7 +773,7 @@
     {
       "chapter": 22,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -627,7 +787,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval 7"
@@ -636,7 +797,7 @@
     {
       "chapter": 23,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -650,7 +811,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval 8"
@@ -659,7 +821,7 @@
     {
       "chapter": 24,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -673,7 +835,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval 9"
@@ -682,7 +845,7 @@
     {
       "chapter": 25,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -696,7 +859,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       },
       "level_keys": [
         "Calc Circles of Eval Free Play"
@@ -705,7 +869,7 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -719,7 +883,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "da64b073-c795-4117-8c56-74ddbfa7f0e1"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 1"
@@ -728,7 +893,7 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -742,7 +907,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "da64b073-c795-4117-8c56-74ddbfa7f0e1"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 2"
@@ -751,7 +917,7 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -765,7 +931,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "da64b073-c795-4117-8c56-74ddbfa7f0e1"
       },
       "level_keys": [
         "PDAlg Teacher Dashboard"
@@ -774,7 +941,7 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -788,7 +955,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "0ceba867-4cfd-469b-bb7a-2dc5bfd0e81c"
       },
       "level_keys": [
         "PDAlg Facilitators"
@@ -797,7 +965,7 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -811,7 +979,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "0ceba867-4cfd-469b-bb7a-2dc5bfd0e81c"
       },
       "level_keys": [
         "PDAlg End of P1"
@@ -820,7 +989,7 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -834,7 +1003,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "0ceba867-4cfd-469b-bb7a-2dc5bfd0e81c"
       },
       "level_keys": [
         "PDAlg Post Survey"
@@ -850,7 +1020,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       }
     },
     {
@@ -861,7 +1032,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       }
     },
     {
@@ -872,7 +1044,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       }
     },
     {
@@ -883,7 +1056,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       }
     },
     {
@@ -894,7 +1068,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       }
     },
     {
@@ -905,7 +1080,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "c976d904-a275-46ed-8706-72c19a763c71"
       }
     },
     {
@@ -916,7 +1092,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       }
     },
     {
@@ -927,7 +1104,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       }
     },
     {
@@ -938,7 +1116,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       }
     },
     {
@@ -949,7 +1128,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       }
     },
     {
@@ -960,7 +1140,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       }
     },
     {
@@ -971,7 +1152,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "a3699f08-1a0f-4a51-8ddc-5683f63b3a54"
       }
     },
     {
@@ -982,7 +1164,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "dbd75989-c122-4406-9bc2-418d6d5fa5ac"
       }
     },
     {
@@ -993,7 +1176,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "dbd75989-c122-4406-9bc2-418d6d5fa5ac"
       }
     },
     {
@@ -1004,7 +1188,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "dbd75989-c122-4406-9bc2-418d6d5fa5ac"
       }
     },
     {
@@ -1015,7 +1200,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1026,7 +1212,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1037,7 +1224,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1048,7 +1236,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1059,7 +1248,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1070,7 +1260,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1081,7 +1272,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1092,7 +1284,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1103,7 +1296,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1114,7 +1308,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "b60356dd-4b46-42de-b1b9-43af6dca77a8"
       }
     },
     {
@@ -1125,7 +1320,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "da64b073-c795-4117-8c56-74ddbfa7f0e1"
       }
     },
     {
@@ -1136,7 +1332,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "da64b073-c795-4117-8c56-74ddbfa7f0e1"
       }
     },
     {
@@ -1147,7 +1344,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "da64b073-c795-4117-8c56-74ddbfa7f0e1"
       }
     },
     {
@@ -1158,7 +1356,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "0ceba867-4cfd-469b-bb7a-2dc5bfd0e81c"
       }
     },
     {
@@ -1169,7 +1368,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "0ceba867-4cfd-469b-bb7a-2dc5bfd0e81c"
       }
     },
     {
@@ -1180,7 +1380,8 @@
         ],
         "lesson.key": "Preparing for in-person PD",
         "lesson_group.key": "",
-        "script.name": "algebraPD-NexTech"
+        "script.name": "algebraPD-NexTech",
+        "activity_section.key": "0ceba867-4cfd-469b-bb7a-2dc5bfd0e81c"
       }
     }
   ],

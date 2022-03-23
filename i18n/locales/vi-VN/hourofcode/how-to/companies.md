@@ -17,7 +17,7 @@ Trong chiến dịch Giờ lập trình, doanh nghiệp của bạn có thể gi
 - [Khuyến khích nhân viên tình nguyện tham gia lớp học](#encourage-employees)
 - [Kết nối doanh nghiệp của bạn với trường học](#connect-with-a-school)
 - [Tổ chức sự kiện Giờ lập trình của riêng bạn](#host-hour-of-code)
-- [Quảng bá Hour of Code](#promote-hour-of-code)
+- [Quảng bá Giờ lập trình](#promote-hour-of-code)
 - [Các cách khác để ủng hộ Giờ lập trình](#support-hour-of-code)
 
 * * *
@@ -128,7 +128,7 @@ Sau khi học sinh hoặc khách mời đã hoàn thành Giờ lập trình, đ�
 
 <a id="promote-hour-of-code"></a>
 
-## Quảng bá Hour of Code
+## Quảng bá Giờ lập trình
 
 Một trong những cách tốt nhất để trợ giúp là lan rộng thông tin và quảng bá Giờ lập trình.
 

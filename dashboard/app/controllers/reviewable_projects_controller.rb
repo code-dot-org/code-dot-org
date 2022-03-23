@@ -63,9 +63,10 @@ class ReviewableProjectsController < ApplicationController
 
   def for_level
     peer_user_ids = current_user.
-      sections_as_student.
-      map(&:followers).
+      code_review_groups.
+      map(&:members).
       flatten.
+      map(&:follower).
       pluck(:student_user_id).
       select {|student_user_id| current_user.id != student_user_id}
 
@@ -75,7 +76,7 @@ class ReviewableProjectsController < ApplicationController
       script_id: params[:script_id]
     ).map(&:user)
 
-    return render json: peers_ready_for_review.pluck(:id, :name)
+    return render json: peers_ready_for_review.map {|user| {id: user.id, name: user.name}}
   end
 
   def decrypt_channel_id

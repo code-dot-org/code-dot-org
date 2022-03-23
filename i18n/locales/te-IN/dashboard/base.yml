@@ -129,6 +129,8 @@ te:
     field_is_required: "అవసరమా?"
     email_preference_yes: "అవును"
     email_preference_no: "లేదు"
+    share_teacher_email_reg_partner_preference_yes: "అవును"
+    share_teacher_email_reg_partner_preference_no: "లేదు"
     parent_account_checkbox: "నేను మా చిన్నారి తరఫున సైన్-అప్ చేస్తున్న ఒక పేరెంట్/సంరక్షకుడిని "
     parent_account_email_progress_permission: "మీ చిన్నారి యొక్క పురోగతి మరియు ప్రాజెక్టులపై ఎప్పటికప్పటి ఆధునీకరణలు, మరియు వారి కోర్సు మరియు కంప్యూటర్ సైన్స్ గురించిన ఆధునీకరణలను మేము మీకు ఇమెయిల్ చేయవచ్చునా? [(మా గోప్యతా పాలసీ చూడండి)](%{privacy_policy_url})"
     parent_account_email_label: "తల్లి లేదా తండ్రి/సంరక్షకుడి ఇమెయిల్ "

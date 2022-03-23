@@ -11,6 +11,7 @@ uk:
       Artist Intro with JR Hildebrand: Художник Вступ з JR Хільдебранд
       Artist Intro with JR Hildebrande: Художник Вступ з JR Хільдебранде
       'Artist: Variables': 'Художник: змінні'
+      Assessment: Оцінка
       Attribution: Присвоєння
       Back and Forth: Назад і вперед
       Basic Conditionals: Основні умовні умови
@@ -23,7 +24,7 @@ uk:
       Building an App: Створення програми
       Buttons and Switch: Кнопки та перемикач
       CS Discoveries Post-Course Survey: Опитування після курсу Відкриття інформатики
-      CS Discoveries Post-course Survey: CS відкриття після курсу опитування
+      CS Discoveries Post-course Survey: Опитування після курсу Відкриття інформатики
       CSS Classes: Класи CSS
       CSS Text Properties: Властивості тексту CSS
       CSS and Style Sheets: CSS та таблиці стилів
@@ -53,7 +54,6 @@ uk:
       Create a Story: Створити історію
       Create your project: Створити ваш проект
       Creating Sprites: Створення Sprites
-      Creating a Simulation: Створення симуляції
       Dance Crews: Танцювальні команди
       Data Visualization: Візуалізація даних
       De-bugging with the Step Button: Де-багінг за допомогою кнопки кроку
@@ -68,12 +68,15 @@ uk:
       Events: Події
       Events and Linking Screens: Події та зв'язування екранів
       Events and Properties: Події та властивості
+      Example: Приклад
       Example projects: Приклади проектів
       Expanding Personal Website: Розширення особистого веб-сайту
       Expanding Your Website: Розширення вашого веб-сайту
       Experiment with Web Lab: Експеримент з Web Lab
+      'Exploration: Adding Style': 'Дослідження: Додавання стилю'
       Explore HTML: Досліджуйте HTML
       Exploring more CSS: Вивчення більш CSS
+      Extra: Додатково
       Finish a Screen: Завершення екрана
       Finish the Prototype: Закінчити прототип
       Fonts and Style: Шрифти та стиль
@@ -140,7 +143,6 @@ uk:
       Modifying and Creating Arrays: Змінення та створення масивів
       More Buttons: Більше кнопок
       More Input: Більше вхідних даних
-      More Monsters: Більше монстрів
       More Parameters: Інші параметри
       Motorcycle: Мотоцикл
       Movement with the Counter Pattern: Рух з лічильником візерунком
@@ -155,7 +157,6 @@ uk:
       Playing with Notes: Відтворення з нотатками
       Practice: Практика
       Prediction: Прогнозування
-      Programming with Events: Програмування подій
       Programs that Repeat: Програми, які повторюються
       Project: Проект
       Project - Background and Variables: Проект — тло та змінні
@@ -165,7 +166,6 @@ uk:
       Quarter Notes: Четвертні ноти
       RGB Exploration: Дослідження RGB
       Reading Sensors: Датчики читання
-      Recovery: Одужання
       Repeat Blocks: Повторювати блоки
       Repeat Blocks with BB-8: Повторіть блоки з BB-8
       Repeat Blocks with the Artist: Повторіть блоки з виконавцем
@@ -177,13 +177,11 @@ uk:
       Sensor Events: Сенсорні події
       Sensors to Colors: Датчики до кольорів
       Share Your App: Поділіться своїм додатком
-      Share Your Message: Поділитись своїм повідомленням
       Side Scroller: Прокрутка збоку
       Simple Circuits: Прості схеми
       Sliders: Слайдери
       Speed it Up, Slow it Down: Пришвидшення та сповільнення
       Star Chaser: Зірка Chaser
-      Stopping the Outbreak with Masks: Припинення спалаху за допомогою масок
       Text Compression: Стиснення тексту
       The Animation Tab: Анімація
       The Collector: Колекціонер
@@ -193,10 +191,15 @@ uk:
       User Interface: Інтерфейс користувача
       Using HTML Tags: Використання тегів HTML
       Using the Repeat Block: Використання блоку повторів
-      Vaccines: Вакцини
       Variables: Змінні
       Velocity: Швидкість
+      'Video: Intro to CSS': 'Відео: Вступ до CSS'
+      'Video: Intro to Web Lab - Part 1': |2-
+
+        Відео: Вступ до веб-лабораторії - частина 1
+      'Video: Intro to Web Lab - Part 2': 'Відео: Вступ до Web Lab - частина 2'
       'Video: Problem Solving Process': 'Відео: Процес вирішення проблем'
+      'Video: What Makes a Computer, a Computer?': 'Відео: Що робить комп''ютер комп''ютером?'
       Warm Up: Розминка
       Website Project: Проект сайту
       Welcome to Monster Town: Ласкаво просимо до Монстро-міста

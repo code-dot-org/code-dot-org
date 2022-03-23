@@ -65,6 +65,7 @@
   "gender": "ڕەگەز",
   "genderMale": "نێر",
   "genderFemale": "مێ",
+  "groups": "کۆمەڵەکان",
   "hintPrompt": "یارمەتیت پێویستە؟",
   "ifCode": "ئەگەر",
   "justDidHourOfCode": "هەرئێستا من #کاتژێری_کۆدنووسی م تەواوکرد - دەتوانی لە @codeorg سەیری بکەی",
@@ -132,6 +133,7 @@
   "topRight": "سەرەوە لای ڕاست",
   "tos": "بڕگەکان",
   "tryIt": "تاقیبکەوە",
+  "type": "جۆر",
   "unpluggedActivity": "خولی بێ كۆمپیوتەر",
   "versionHistory_ajaxFailure": "هەڵەیەك ڕوویدا.",
   "viewCourse": "ئەم خولە پشانبدە"

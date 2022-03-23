@@ -149,6 +149,9 @@ sq:
     email_preference_yes: "Po"
     email_preference_no: "Jo"
     email_preference_required: "Ju duhet të specifikoni preferencën e postës elektronike."
+    share_teacher_email_reg_partner_preference_yes: "Po"
+    share_teacher_email_reg_partner_preference_no: "Jo"
+    share_teacher_email_reg_partner_preference_required: "Ju duhet të specifikoni preferencën e postës elektronike."
   school_info:
     title: 'Informacione për shkollën (opsionale)'
     school_country: 'Qyteti i shkollës'
@@ -285,6 +288,7 @@ sq:
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
       starwars: 'Lufta e Yjeve'
+      loading: 'Në ngarkim...'
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'
@@ -298,6 +302,7 @@ sq:
       prizes_link: 'Më shumë informacion'
   teacher:
     answer: Përgjigje
+    dashboard: 'Dërrasa e zezë '
     for_teachers_only: Vetëm për mësuesit
     title:
       one: 'Mësuesi yt:'
@@ -714,6 +719,7 @@ sq:
   pd:
     form_labels:
       email: 'Email'
+      school: 'Shkolla'
       school_name: 'Emri i shkollës'
       school_country: 'Qyteti i shkollës'
       colombian_chilean_school_name: 'Emri i shkollës'

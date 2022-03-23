@@ -111,6 +111,13 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_animals/cow.mp3'": cow
+            "'sound://category_animals/chicken.mp3'": chicken
+            "'sound://category_digital/jump_7.mp3'": jump
       gamelab_randColor:
         text: random colour
       gamelab_randomColor:
@@ -166,10 +173,25 @@ en-GB:
           KEY:
             '"yes"': 'yes'
             '"no"': 'no'
-      PoemBot_setBackgroundEffect:
+      Poetry_addFrame:
         options:
-          BG_EFFECT:
+          BRUSH:
             '"rainbow"': rainbow
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': night
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': jump
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': cloudy
+          PALETTE:
+            '"rainbow"': rainbow
+            '"winter"': winter
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:

@@ -236,7 +236,7 @@
         "course1_artist_loops_challenge2": "La oss spille et spill! Tegn så mange X-er du klarer! Klarer du tre på rad?",
         "course1_artist_loops_challenge3": "**Kvitre!**\n_\"Kan du hjelpe meg å lage to fuglekasser?\"_",
         "course1_playlab_events_challenge1": "_\"Hvor gjemmer vennene mine seg? I dette spillet kan du vise vennen min, katten Olive, ved å trykke på meg!\"_\n\nTrykker du på Olive, vil Robin dukke opp! Kan du skrive koden for å vise resten av karakterene også?\n\nHusk å bruke hint om du sitter fast i denne oppgaven. Hintene vil hjelpe deg med å løse oppgaven steg-for-steg. ",
-        "course1_playlab_events_challenge2": "_\"La oss ha en fest! Gi vennene mine noe å gjøre når du trykker på dem.\"_\n\nHva vil du dyrene skal si? Hva annet kan skje?\n\nHusk å bruke hintene om du sitter fast. Hintene vil gi deg tips til morsomme ting du kan prøve!\n\n[][0]",
+        "course1_playlab_events_challenge2": "_\"La oss ha en fest! Gi vennene mine noe å gjøre når du trykker på dem.\"_\n\nHva vil du dyrene skal si? Hva annet kan skje?\n\nHusk å bruke hintene om du sitter fast. Hintene vil gi deg tips til morsomme ting du kan prøve!\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)",
         "CourseD_Dance_2020_01_2021": "Dra <xml><block type=\"Dancelab_makeAnonymousDanceSprite\" block-text=\"make a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;PINEAPPLE&quot;\">\"CAT\"</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml>-blokken inn i arbeidsområdet, og koble den inne i <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\" block-text=\"setup\"></block></xml>-blokken\n\n Velg `katt` eller `dovendyr` for å lage din første danser.\n\n-   _Du kan også klikke på lyspæren til venstre om du ønsker mer informasjon eller flere utfordringer._",
         "CourseD_Dance_2020_02_2021": "<xml><block type=\"Dancelab_whenKey\" block-text=\"when up pressed\"></block></xml>-blokken lar deg kjøre kode når du bruker piltastene. Bruk <xml><block type=\"Dancelab_doMoveEachLR\" block-text=\"do once\"><title name=\"GROUP\">\"CAT\"</title><title name=\"MOVE\">MOVES.XClapSide</title><title name=\"DIR\">-1</title></block></xml>-blokken for å få katten til å klappe!\n\n_Husk å trykke på «pil opp» tasten eller ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) etter at du har klikket på Kjør knappen!_",
         "CourseD_Dance_2020_03_2021": "Det er klart for dansekonkurranse! Programmer hver danser til å bevege seg når du bruker ulike taster. Velg din favorittbevegelse for hver danser og sett den til '(Tilfeldig)' for å noe helt uforutsett!",
@@ -281,7 +281,28 @@
         "courseD_farmer_while_challenge1_2021": "Fyll inn alle hullene og fjern alle haugene.",
         "courseD_maze_nestedLoops4_2021": "Få meg til solsikken!",
         "courseF_bee2": "Kan du bruke en løkke til å samle inn all nektaren?",
-        "courseF_bee_for_challenge2_2021": "Løs denne oppgaven med færrest mulig brikker."
+        "courseF_bee_for_challenge2_2021": "Løs denne oppgaven med færrest mulig brikker.",
+        "courseB_maze_seq10_2021": "Fiks feilen for å få Scrat til eikenøtten.",
+        "courseB_maze_seq11_2021": "Nå er det bare deg! Få Scrat til eikenøtten.",
+        "courseB_maze_seq12_2021": "Nå få tak i eikenøtten på hvilken som helst måte!",
+        "courseB_maze_seq1_2021": "hh",
+        "courseB_maze_seq4_2021": "Bruk **2** bevegelsesblokken for å få Scrat til eikenøtten.",
+        "courseB_maze_seq5_2021": "Denne oppgaven er litt vanskelig!",
+        "courseB_maze_seq6_2021": "Flytt først en vei, så en annen for å få Scrat til eikenøtten!",
+        "courseB_maze_seq7_2021": "Finn ut hva som mangler og legg så til de manglende brikkene for å få Scrat til eikenøtten!",
+        "courseB_maze_seq8_2021": "Din tur! Hva trenger du for å få Scrat til eikenøtten?",
+        "courseB_maze_seq9_2021": "**Utfordring:** Flytt deg rundt den sprekte isen for å få Scrat til eikenøtten.",
+        "courseB_maze_seq_challenge1_2021": "Du har bare 4 av hver bevegelsesblokk. Kan du finne en rute før du går tom for blokker?",
+        "courseB_maze_seq_challenge2_2021": "Feilsøk dette nivået. Du har de riktige blokkene, men de er i feil rekkefølge!",
+        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
+        "courseB_Scrat_ramp1_2021": "For å få Scrat til eikenøtten, fest  <xml><block type=\"maze_moveEast\" block-text=\"move East\"/></xml> blokken til bunnen av <xml><block type=\"when_run\" block-text=\"when run\"/></xml> blokken og trykk \"Kjør\"",
+        "courseB_Scrat_ramp2_2021": "Slå sammen begge <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> blokkene til bunnen av <xml><block type=\"when_run\" block-text=\"when run\"/></xml> blokken for å fullføre koden, klikk så på \"Run\"",
+        "courseB_Scrat_ramp3a_2021": "Ta en <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> blokk fra verktøykassen og legg til bunnen av de andre blokkene for å fullføre koden, klikke så på \"Kjør\"",
+        "courseB_Scrat_ramp3b_2021": "Det er en ekstra blokk på slutten av denne koden!\n\nDra den tilbake til verktøykassen for å fjerne den.",
+        "courseB_Scrat_ramp4a_2021": "Kan du finne ut hvilken blokk du må legge til bunnen av de andre blokkene for å fullføre koden?",
+        "courseB_Scrat_ramp5a_2021": "Prøv denne helt alene!",
+        "courseB_starWars_prog1_2021": "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\_ \"Gå å hent skrapmetallet, BB-8!\"\\_\n\nSe opp for vegger og kasser. Skrapmetall ser slik ut: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)",
+        "courseB_starWars_prog2_2021": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \\_ \"Få tak i alt metallet\" \\_"
       }
     }
   }

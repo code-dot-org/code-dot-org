@@ -575,6 +575,32 @@ it:
         playlab_2021: Introduzione al Laboratorio
         playlab_2021_reader: Introduzione al Laboratorio
         csd_ml_intro_ai_lab_july2021: Lezione 6
+        PL_overview_CSD: Cos'è Alla scoperta dell'informatica?
+        PL_CSD_TeacherTips_Advise: 'Suggerimenti per gli insegnanti: consigli per i nuovi insegnanti'
+        PL_CSD_TeacherTips_IntroToCSD: 'Suggerimenti per gli insegnanti: introduzione Alla scoperta dell''informatica'
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 'Suggerimenti per gli insegnanti: la procedura di risoluzione dei problemi'
+        PL_CSD_TeacherTips_PairProgramming: 'Suggerimenti per gli insegnanti: programmazione in coppia'
+        PL_CSD_TeacherTips_Debugging: 'Suggerimenti per gli insegnanti: debugging'
+        PL_CSD_TeacherTips_LeadLearner: 'Suggerimenti per gli insegnanti: potenziale studente'
+        poembot-playtest-intro: Introduzione al test di gioco di PoemBot
+        poembot-playtest-sprites: Personaggi del test di gioco di PoemBot
+        poembot-playtest-events: Eventi del test di gioco di PoemBot
+        hello_world_intro: Insegna una nuova parola all'IA
+        hello_world_events: 'Ciao a tutti: programmare con gli Eventi'
+        hello_world_congrats: 'Ciao a tutto: cosa desiderate'
+        rough_poemart_intro: L'arte della poesia - Introduzione
+        rough_poemart_events: L'arte della poesia - Eventi
+        rough_poemart_imagery: L'arte della poesia  - Metafore
+        rough_poemart_congrats: L'arte della poesia - Congratulazioni
+        poetry_module_variables: Variabili - Coding con la poesia
+        poetry_module_textandvariables: Testo e variabili - Coding con la poesia
+        poetry_module_planningapp: Pianifica la tua app generatrice di poesie - Coding con la poesia
+        poetry_module_multichoiceprompts: Prompt a scelta multipla - Coding con la poesia
+        poetry_module_conditionals: Condizionali - Coding con la poesia
+        poemart_intro: L'arte della poesia - Introduzione
+        poemart_events: L'arte della poesia - Eventi
+        poemart_imagery: L'arte della poesia  - Metafore
+        poemart_celebration: L'arte della poesia  - Celebrazione
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:19 UTC",
+    "serialized_at": "2021-11-22 19:57:16 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "subgoals-assessment-staging"
     }
@@ -119,16 +123,193 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "eda981d1-ab7f-48f3-8cb4-0365afd6b8eb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eda981d1-ab7f-48f3-8cb4-0365afd6b8eb",
+        "lesson.key": "all assessment items as standalone assessment levels",
+        "lesson_group.key": "",
+        "script.name": "subgoals-assessment-staging"
+      }
+    },
+    {
+      "key": "9a82c5dc-3562-44a3-9a01-37ccee02bd77",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a82c5dc-3562-44a3-9a01-37ccee02bd77",
+        "lesson.key": "submittable if last assessment item",
+        "lesson_group.key": "",
+        "script.name": "subgoals-assessment-staging"
+      }
+    },
+    {
+      "key": "3cc4fe58-0c47-4601-b7d0-e74968da7b8b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3cc4fe58-0c47-4601-b7d0-e74968da7b8b",
+        "lesson.key": "dummy",
+        "lesson_group.key": "",
+        "script.name": "subgoals-assessment-staging"
+      }
+    },
+    {
+      "key": "7f22e22f-e5d7-4304-b472-466c313b2553",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f22e22f-e5d7-4304-b472-466c313b2553",
+        "lesson.key": "assessment sandwiched between app lab levels",
+        "lesson_group.key": "",
+        "script.name": "subgoals-assessment-staging"
+      }
+    },
+    {
+      "key": "2371f9d9-3731-4337-90d0-33c99ac439e8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2371f9d9-3731-4337-90d0-33c99ac439e8",
+        "lesson.key": "all assessment items clustered in levelgroup as a single \"test\"",
+        "lesson_group.key": "",
+        "script.name": "subgoals-assessment-staging"
+      }
+    },
+    {
+      "key": "8c4cb335-f313-4819-897d-54b8aa3c0eb1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c4cb335-f313-4819-897d-54b8aa3c0eb1",
+        "lesson.key": "CSP 3 updates staging ground",
+        "lesson_group.key": "",
+        "script.name": "subgoals-assessment-staging"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7",
+        "lesson_activity.key": "eda981d1-ab7f-48f3-8cb4-0365afd6b8eb"
+      }
+    },
+    {
+      "key": "6dc1b85f-00d0-464b-bee3-440235f439f2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Some app lab progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "6dc1b85f-00d0-464b-bee3-440235f439f2",
+        "lesson_activity.key": "9a82c5dc-3562-44a3-9a01-37ccee02bd77"
+      }
+    },
+    {
+      "key": "2936b439-53b3-42a4-9c7a-9f4752743aad",
+      "position": 2,
+      "properties": {
+        "name": "Check for understanding",
+        "progression_name": "Check for understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "2936b439-53b3-42a4-9c7a-9f4752743aad",
+        "lesson_activity.key": "9a82c5dc-3562-44a3-9a01-37ccee02bd77"
+      }
+    },
+    {
+      "key": "3f692796-7879-4a5f-af89-67271a42ab7a",
+      "position": 1,
+      "properties": {
+        "name": "Check for understanding (diff between 3 and 4)",
+        "progression_name": "Check for understanding (diff between 3 and 4)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f692796-7879-4a5f-af89-67271a42ab7a",
+        "lesson_activity.key": "3cc4fe58-0c47-4601-b7d0-e74968da7b8b"
+      }
+    },
+    {
+      "key": "69041df5-d643-4a0a-b5ae-cb67735002d3",
+      "position": 1,
+      "properties": {
+        "name": "Some app lab progression",
+        "progression_name": "Some app lab progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "69041df5-d643-4a0a-b5ae-cb67735002d3",
+        "lesson_activity.key": "7f22e22f-e5d7-4304-b472-466c313b2553"
+      }
+    },
+    {
+      "key": "6e249ace-ddf1-48d5-8ef6-b68fc31676c9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6e249ace-ddf1-48d5-8ef6-b68fc31676c9",
+        "lesson_activity.key": "2371f9d9-3731-4337-90d0-33c99ac439e8"
+      }
+    },
+    {
+      "key": "2030b497-1efa-4503-8d1a-2e5b4995969c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 5.6 - (new) Abstraction in Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "2030b497-1efa-4503-8d1a-2e5b4995969c",
+        "lesson_activity.key": "8c4cb335-f313-4819-897d-54b8aa3c0eb1"
+      }
+    },
+    {
+      "key": "771ebe8a-6a47-4a27-948b-f505c8861341",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson 8.8 - (new) What is a comment?"
+      },
+      "seeding_key": {
+        "activity_section.key": "771ebe8a-6a47-4a27-948b-f505c8861341",
+        "lesson_activity.key": "8c4cb335-f313-4819-897d-54b8aa3c0eb1"
+      }
+    },
+    {
+      "key": "04590b87-9bf2-45e5-a452-0fe64c808e90",
+      "position": 3,
+      "properties": {
+        "name": "Lesson 8.9 - How to add comments - Review for instructions and starting code",
+        "progression_name": "Lesson 8.9 - How to add comments - Review for instructions and starting code"
+      },
+      "seeding_key": {
+        "activity_section.key": "04590b87-9bf2-45e5-a452-0fe64c808e90",
+        "lesson_activity.key": "8c4cb335-f313-4819-897d-54b8aa3c0eb1"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -142,7 +323,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       },
       "level_keys": [
         "csp_U3_square_v_rect_FR"
@@ -151,7 +333,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -165,7 +347,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       },
       "level_keys": [
         "csp_U3_plan_code_FR"
@@ -174,7 +357,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -188,7 +371,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       },
       "level_keys": [
         "csp_U3_turtle_subgoal_q1_mc"
@@ -197,7 +381,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -211,7 +395,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       },
       "level_keys": [
         "csp_U3_turtle_subgoal_q2_mc"
@@ -220,7 +405,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -234,7 +419,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       },
       "level_keys": [
         "csp_U3_turtle_subgoal_q3_mc"
@@ -243,7 +429,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -257,7 +443,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       },
       "level_keys": [
         "csp_U3_subgoal_q4_mc"
@@ -266,7 +453,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -280,7 +467,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       },
       "level_keys": [
         "subgoals_U3_turtle_prediction_FR"
@@ -289,7 +477,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -303,7 +491,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       },
       "level_keys": [
         "subgoals_u3_top_down_FR"
@@ -312,7 +501,7 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -327,7 +516,8 @@
         ],
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "6dc1b85f-00d0-464b-bee3-440235f439f2"
       },
       "level_keys": [
         "U3L03 Three Steps"
@@ -336,7 +526,7 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -351,7 +541,8 @@
         ],
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "6dc1b85f-00d0-464b-bee3-440235f439f2"
       },
       "level_keys": [
         "U3L03 draw diamond"
@@ -360,7 +551,7 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -375,7 +566,8 @@
         ],
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "2936b439-53b3-42a4-9c7a-9f4752743aad"
       },
       "level_keys": [
         "csp_U3_turtle_subgoal_q1_mc"
@@ -384,7 +576,7 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -399,7 +591,8 @@
         ],
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "2936b439-53b3-42a4-9c7a-9f4752743aad"
       },
       "level_keys": [
         "csp3_U3_turtle_subgoal_mc_levelgroup"
@@ -408,7 +601,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -423,7 +616,8 @@
         ],
         "lesson.key": "dummy",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "3f692796-7879-4a5f-af89-67271a42ab7a"
       },
       "level_keys": [
         "subgoals_assessement_levelgroup_test2"
@@ -432,7 +626,7 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -447,7 +641,8 @@
         ],
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "69041df5-d643-4a0a-b5ae-cb67735002d3"
       },
       "level_keys": [
         "U3L03 Draw a T using turnAround"
@@ -456,7 +651,7 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -471,7 +666,8 @@
         ],
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "69041df5-d643-4a0a-b5ae-cb67735002d3"
       },
       "level_keys": [
         "csp_U3_square_v_rect_FR"
@@ -480,7 +676,7 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -495,7 +691,8 @@
         ],
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "69041df5-d643-4a0a-b5ae-cb67735002d3"
       },
       "level_keys": [
         "U3L03 define turnRight and draw a rectangle"
@@ -504,7 +701,7 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -518,7 +715,8 @@
         ],
         "lesson.key": "all assessment items clustered in levelgroup as a single \"test\"",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "6e249ace-ddf1-48d5-8ef6-b68fc31676c9"
       },
       "level_keys": [
         "subgoal_assessments_levelgroup_test"
@@ -527,7 +725,7 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -542,7 +740,8 @@
         ],
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "2030b497-1efa-4503-8d1a-2e5b4995969c"
       },
       "level_keys": [
         "SG CSP Abstraction in Programming 2"
@@ -551,7 +750,7 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -566,7 +765,8 @@
         ],
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "771ebe8a-6a47-4a27-948b-f505c8861341"
       },
       "level_keys": [
         "SG U3 whats a comment"
@@ -575,7 +775,7 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -590,7 +790,8 @@
         ],
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "04590b87-9bf2-45e5-a452-0fe64c808e90"
       },
       "level_keys": [
         "SG U3L08 how to add comments"
@@ -606,7 +807,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       }
     },
     {
@@ -617,7 +819,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       }
     },
     {
@@ -628,7 +831,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       }
     },
     {
@@ -639,7 +843,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       }
     },
     {
@@ -650,7 +855,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       }
     },
     {
@@ -661,7 +867,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       }
     },
     {
@@ -672,7 +879,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       }
     },
     {
@@ -683,7 +891,8 @@
         ],
         "lesson.key": "all assessment items as standalone assessment levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "9ee3322d-6bef-4d0e-acb4-df224a5bfde7"
       }
     },
     {
@@ -694,7 +903,8 @@
         ],
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "6dc1b85f-00d0-464b-bee3-440235f439f2"
       }
     },
     {
@@ -705,7 +915,8 @@
         ],
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "6dc1b85f-00d0-464b-bee3-440235f439f2"
       }
     },
     {
@@ -716,7 +927,8 @@
         ],
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "2936b439-53b3-42a4-9c7a-9f4752743aad"
       }
     },
     {
@@ -727,7 +939,8 @@
         ],
         "lesson.key": "submittable if last assessment item",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "2936b439-53b3-42a4-9c7a-9f4752743aad"
       }
     },
     {
@@ -738,7 +951,8 @@
         ],
         "lesson.key": "dummy",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "3f692796-7879-4a5f-af89-67271a42ab7a"
       }
     },
     {
@@ -749,7 +963,8 @@
         ],
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "69041df5-d643-4a0a-b5ae-cb67735002d3"
       }
     },
     {
@@ -760,7 +975,8 @@
         ],
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "69041df5-d643-4a0a-b5ae-cb67735002d3"
       }
     },
     {
@@ -771,7 +987,8 @@
         ],
         "lesson.key": "assessment sandwiched between app lab levels",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "69041df5-d643-4a0a-b5ae-cb67735002d3"
       }
     },
     {
@@ -782,7 +999,8 @@
         ],
         "lesson.key": "all assessment items clustered in levelgroup as a single \"test\"",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "6e249ace-ddf1-48d5-8ef6-b68fc31676c9"
       }
     },
     {
@@ -793,7 +1011,8 @@
         ],
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "2030b497-1efa-4503-8d1a-2e5b4995969c"
       }
     },
     {
@@ -804,7 +1023,8 @@
         ],
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "771ebe8a-6a47-4a27-948b-f505c8861341"
       }
     },
     {
@@ -815,7 +1035,8 @@
         ],
         "lesson.key": "CSP 3 updates staging ground",
         "lesson_group.key": "",
-        "script.name": "subgoals-assessment-staging"
+        "script.name": "subgoals-assessment-staging",
+        "activity_section.key": "04590b87-9bf2-45e5-a452-0fe64c808e90"
       }
     }
   ],

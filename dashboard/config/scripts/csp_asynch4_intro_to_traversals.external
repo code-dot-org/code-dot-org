@@ -4,9 +4,9 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-# Using traversals and datasets
+# Using Traversals and Datasets
 
-**Goals:** The purpose of this task is to get hands-on practice with using code to implement loops and traversals.  Additionally, the levels from the Investigate lesson utilize datasets which is a feature in App Lab you haven’t seen yet.  This task will allow you to gain experience with this feature before using it with students. *(Estimated time: ~15 minutes)*
+**Goal:** The purpose of this task is to get hands-on practice with using code to implement loops and traversals.  Additionally, the levels from the Investigate lesson utilize datasets which is a feature in App Lab you haven’t seen yet.  This task will allow you to gain experience with this feature before using it with students. *(Estimated time: ~15 minutes)*
 
 ## Context
 
@@ -19,7 +19,8 @@ In this lesson, students will practice using lists, loops, and traversals togeth
 ![](https://images.code.org/830695060516de4356ce779b95a0354b-image-1597447891568.31.01 PM.png)
 
 ## Do this
-1. Read the <a href="https://curriculum.code.org/csp-20/unit5/10/" target="blank" rel="noopener noreferrer">U5L10 lesson plan</a>.
+1. Read the <a href="https://studio.code.org/s/csp5-2021/lessons/10" target="blank" rel="noopener noreferrer">U5L10 lesson plan</a>.
+2. Watch <a href="https://studio.code.org/s/csp5-2021/lessons/10/levels/3" target="blank" rel="noopener noreferrer">this video</a> showing you how to use the data tab in App Lab.
 2. Engage with the following 3 levels in this module.  As you review the different datasets, anticipate which datasets your students will gravitate toward.
 
 

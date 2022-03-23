@@ -1,9 +1,9 @@
 /** @file Tests for Game Lab helper methods that make decisions based on redux state */
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import {forEveryBooleanPermutation} from '../../util/testUtils';
 import {
   allowAnimationMode,
-  showVisualizationHeader
+  countAllowedModes
 } from '@cdo/apps/p5lab/stateQueries';
 
 describe('stateQueries', function() {
@@ -73,18 +73,11 @@ describe('stateQueries', function() {
     });
   });
 
-  describe('showVisualizationHeader', function() {
-    it('is shown whenever animation mode is allowed, and hidden when it is not allowed', function() {
-      forEveryBooleanPermutation((a, b, c, d) => {
-        const state = stateFromPageConstants({
-          showAnimationMode: a,
-          isEmbedView: b,
-          isShareView: c,
-          isReadOnlyWorkspace: d
-        });
-        expect(allowAnimationMode(state)).to.equal(
-          showVisualizationHeader(state)
-        );
+  describe('countAllowedModes', function() {
+    it('is either 1 or 2, depending on whether animation mode is allowed', function() {
+      forEveryBooleanPermutation(a => {
+        const state = stateFromPageConstants({showAnimationMode: a});
+        expect(countAllowedModes(state)).to.equal(a ? 2 : 1);
       });
     });
   });

@@ -221,6 +221,10 @@ ga:
     email_preference_yes: Tá
     email_preference_no: Níl
     email_preference_required: Caithfidh tú an cheist seo a fhreagairt.
+    share_teacher_email_reg_partner_preference_yes: Tá
+    share_teacher_email_reg_partner_preference_no: Níl
+    share_teacher_email_reg_partner_preference_required: Caithfidh tú an cheist seo
+      a fhreagairt.
     parent_account_checkbox: Is tuismitheoir/caomhnóir mé agus tá mé ag clárú ar son
       mo pháiste
     parent_account_email_progress_permission: An bhfuil cead againn ríomhphost a sheoladh
@@ -457,6 +461,7 @@ ga:
       starwars: Star Wars
       starwarsblocks: Star Wars (Blocanna)
       starwarsblocks_hour: Star Wars (Blocanna)
+      loading: Á lódáil...
       weblab: Saotharlann an Ghréasáin
       view_all: Gach Tionscadal...
     popup:
@@ -472,6 +477,7 @@ ga:
       prizes_link: tuilleadh eolais
   teacher:
     answer: Freagra
+    dashboard: Painéal na Múinteoirí
     for_teachers_only: Do Mhúinteoirí Amháin
     title:
       one: 'Do mhúinteoir:'
@@ -1215,6 +1221,7 @@ ga:
       email: Ríomhphost
       email_alternate: Seoladh r-phoist malartach
       gender: Féiniúlacht Inscne
+      school: Scoil
       school_name: Ainm na Scoile
       school_city: Cathair na Scoile
       school_country: Tír na Scoile
@@ -1364,3 +1371,4 @@ ga:
       an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste!"
     link_your_email: Ceangail do sheoladh r-phoist
     not_now: Ná ceangail anois
+  teacher_feedback: Aiseolas ó Mhúinteoirí

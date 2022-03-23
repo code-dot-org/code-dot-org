@@ -981,6 +981,12 @@
   coursed-2020_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2020_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2020_gradelevel: Τάξεις Α' Λυκείου +
+  coursea-2021_gradelevel: Τάξεις Ε' Δημοτικού +
+  courseb-2021_gradelevel: Ηλικίες 5-8
+  coursec-2021_gradelevel: Τάξεις Α' Γυμνασίου +
+  coursed-2021_gradelevel: Τάξεις Β' Γυμνασίου +
+  coursee-2021_gradelevel: Τάξεις Γ' Γυμνασίου +
+  coursef-2021_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
   codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
@@ -1463,3 +1469,4 @@
   ai_microsoft_thanks: "Ευχαριστούμε πολύ την Microsoft για την υποστήριξη του οράματός και της αποστολής μας για εξασφάλιση της ευκαιρίας για κάθε παιδί να μαθαίνει την Επιστήμη της Πληροφορικής και να έχει τις δεξιότητες να επιτυγχάνει στον 21ο αιώνα."
   ai_activity: "Δραστηριότητα"
   ai_description: "Περιγραφή"
+  outbreak_tile_title: "Έξαρση"

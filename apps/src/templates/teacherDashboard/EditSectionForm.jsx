@@ -5,50 +5,33 @@ import {Heading1, h3Style} from '../../lib/ui/Headings';
 import * as styleConstants from '@cdo/apps/styleConstants';
 import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
-import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
+import {
+  sectionShape,
+  assignmentShape,
+  assignmentFamilyShape,
+  assignmentCourseOfferingShape
+} from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
   assignedUnitName,
+  assignedUnitTextToSpeechEnabled,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  lessonExtrasAvailable
+  assignedUnitLessonExtrasAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {
+  SectionLoginType,
+  StudentGradeLevels
+} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-
-const style = {
-  root: {
-    width: styleConstants['content-width'],
-    height: '80vh',
-    left: 20,
-    right: 20
-  },
-  dropdown: {
-    padding: '0.3em'
-  },
-  sectionNameInput: {
-    // Full-width, large happy text, lots of space.
-    display: 'block',
-    width: '98%',
-    boxSizing: 'border-box',
-    fontSize: 'large',
-    padding: '0.5em'
-  },
-  scroll: {
-    position: 'absolute',
-    top: 80,
-    overflowY: 'scroll',
-    height: 'calc(80vh - 200px)'
-  }
-};
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -62,18 +45,19 @@ class EditSectionForm extends Component {
     //Comes from redux
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
-    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
+    courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
+      .isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    lessonExtrasAvailable: PropTypes.func.isRequired,
+    assignedUnitLessonExtrasAvailable: PropTypes.bool.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
     assignedUnitName: PropTypes.string.isRequired,
+    assignedUnitTextToSpeechEnabled: PropTypes.bool.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeCode: PropTypes.string,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
@@ -157,14 +141,14 @@ class EditSectionForm extends Component {
     const {
       section,
       title,
-      validGrades,
       validAssignments,
       assignmentFamilies,
+      courseOfferings,
       isSaveInProgress,
       editSectionProperties,
       handleClose,
-      lessonExtrasAvailable,
-      textToSpeechUnitIds,
+      assignedUnitLessonExtrasAvailable,
+      assignedUnitTextToSpeechEnabled,
       assignedUnitName,
       localeCode,
       isNewSection,
@@ -220,7 +204,6 @@ class EditSectionForm extends Component {
           <GradeField
             value={section.grade || ''}
             onChange={grade => editSectionProperties({grade})}
-            validGrades={validGrades}
             disabled={isSaveInProgress}
           />
           {showLoginTypeField && (
@@ -236,11 +219,12 @@ class EditSectionForm extends Component {
             onChange={ids => editSectionProperties(ids)}
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
+            courseOfferings={courseOfferings}
             disabled={isSaveInProgress}
             localeCode={localeCode}
             isNewSection={isNewSection}
           />
-          {lessonExtrasAvailable(section.scriptId) && (
+          {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
               value={section.lessonExtras}
               onChange={lessonExtras => editSectionProperties({lessonExtras})}
@@ -252,7 +236,7 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
+          {assignedUnitTextToSpeechEnabled && (
             <TtsAutoplayField
               isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
@@ -329,8 +313,8 @@ const SectionNameField = ({value, onChange, disabled}) => (
 );
 SectionNameField.propTypes = FieldProps;
 
-const GradeField = ({value, onChange, validGrades, disabled}) => {
-  const gradeOptions = [''].concat(validGrades).map(grade => ({
+const GradeField = ({value, onChange, disabled}) => {
+  const gradeOptions = [''].concat(StudentGradeLevels).map(grade => ({
     value: grade,
     text: grade === 'Other' ? 'Other/Mixed' : grade
   }));
@@ -351,10 +335,7 @@ const GradeField = ({value, onChange, validGrades, disabled}) => {
     </div>
   );
 };
-GradeField.propTypes = {
-  ...FieldProps,
-  validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
-};
+GradeField.propTypes = FieldProps;
 
 const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
   const friendlyNameByLoginType = {
@@ -400,6 +381,7 @@ const AssignmentField = ({
   onChange,
   validAssignments,
   assignmentFamilies,
+  courseOfferings,
   disabled,
   localeCode,
   isNewSection
@@ -412,6 +394,7 @@ const AssignmentField = ({
       onChange={ids => onChange(ids)}
       assignments={validAssignments}
       assignmentFamilies={assignmentFamilies}
+      courseOfferings={courseOfferings}
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
@@ -425,6 +408,7 @@ AssignmentField.propTypes = {
   onChange: PropTypes.func.isRequired,
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
+  courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape).isRequired,
   disabled: PropTypes.bool,
   localeCode: PropTypes.string,
   isNewSection: PropTypes.bool
@@ -569,15 +553,15 @@ YesNoDropdown.propTypes = FieldProps;
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialUnitId: state.teacherSections.initialUnitId,
-  validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
+  courseOfferings: state.teacherSections.courseOfferings,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
-  lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
+  assignedUnitLessonExtrasAvailable: assignedUnitLessonExtrasAvailable(state),
   hiddenLessonState: state.hiddenLesson,
   assignedUnitName: assignedUnitName(state),
+  assignedUnitTextToSpeechEnabled: assignedUnitTextToSpeechEnabled(state),
   localeCode: state.locales.localeCode,
 
   // DCDO Flag - show/hide Lock Section field
@@ -605,3 +589,29 @@ export default connect(
     handleClose: cancelEditingSection
   }
 )(EditSectionForm);
+
+const style = {
+  root: {
+    width: styleConstants['content-width'],
+    height: '80vh',
+    left: 20,
+    right: 20
+  },
+  dropdown: {
+    padding: '0.3em'
+  },
+  sectionNameInput: {
+    // Full-width, large happy text, lots of space.
+    display: 'block',
+    width: '98%',
+    boxSizing: 'border-box',
+    fontSize: 'large',
+    padding: '0.5em'
+  },
+  scroll: {
+    position: 'absolute',
+    top: 80,
+    overflowY: 'scroll',
+    height: 'calc(80vh - 200px)'
+  }
+};

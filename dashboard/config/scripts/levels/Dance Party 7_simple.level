@@ -324,7 +324,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>Moves back and forth in one direction. To change the direction a sprite is moving, change its "movement direction"</description>
           </mutation>
-          <title name="NAME">moving</title>
+          <title name="NAME" id="moving">moving</title>
           <statement name="STACK">
             <block type="gamelab_moveForward">
               <value name="SPRITE">
@@ -381,7 +381,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">

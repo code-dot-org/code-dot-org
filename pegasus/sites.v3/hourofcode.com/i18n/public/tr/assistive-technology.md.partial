@@ -2,20 +2,47 @@
 title: Kodlama Saatini Yardımcı Teknoloji ile tamamlamak
 ---
 
-# Kodlama Saatini Yardımcı Teknoloji ile tamamlamak
+<h1>Kodlama Saatini Yardımcı Teknoloji ile tamamlamak</h1>
 
-Bilgisayar bilimi eğitimi haftasında herkes bir saatlik kodlama saati etkinliğini deneyebilir.
+<p>Bilgisayar bilimi eğitimi haftasında herkes bir saatlik kodlama saati etkinliğini deneyebilir.</p>
 
-## Ekran okuyucularını kullanma
+<h2>Ekran okuyucularını kullanma</h2>
 
-Ekran okuyucusu kullanıyorsanız, [Yeni başlayanlar için Quorum eğitimi ](https://quorumlanguage.com/hourofcode/astro1.html) ya da [Deneyimli kullanıcılar için Quorum eğitimi](https://quorumlanguage.com/hourofcode/part1.html) kodlama saatine başlamak için idealdir. Quorum, ekran okuyucuları tarafından erişilebilir olması için yorumlanabilir bir programlama dili olarak başladı. Zamanla tüm kullanıcılar için genel amaçlı bir programlama dili haline geldi. Bir Kodlama Saati'nden daha fazlasını istiyorsanız, Quorum ekibi ekstra müfredat ve araç da sunuyor.
+<p>The Hour of Code activities page now includes a <a href="https://hourofcode.com/us/learn?platform=screenreader" target="_blank">filter for activities compatible with screen readers</a>.</p>
 
-[![Yeni başlayanlar için dersler](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Deneyimliler için dersler](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+<p>If you use a screen reader, the <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">Quorum tutorial for beginners</a> or the <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">Quorum tutorial for comfortable students</a> are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. Bir Kodlama Saati'nden daha fazlasını istiyorsanız, Quorum ekibi ekstra müfredat ve araç da sunuyor.</p>
 
-## Sessiz code.org dersleri
+<p>If you use a screen reader and are interested in robotics, try the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">Dash Joins a Dance Circle activity</a> (for grades K-5) or the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">Dash Joins a Dance Circle with Functions activity</a> (for grades 6-8) from Lauren Milne.</p>
 
-[Code.org dersleri ](https://studio.code.org/courses) sesli veya sessiz olarak kullanılabilir. Tüm videolarda alt yazı bulunmaktadır.
+<br />
 
-## Eşli programlama
+<div class="row">
+    <div class="col-xs-4">
+        <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225/tutorials/hoc2017/quorum_astronomy.jpg" alt="Tutorial for beginners">
+        </a>
+    </div>
+    <div class="col-xs-4">
+        <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225/quorum.jpg" alt="Tutorial for comfortable students">
+        </a>
+    </div>
+    <div class="col-xs-4">
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225//tutorials/hoc2021/milne_dash.jpg" alt="Robotics tutorial for beginners">
+        </a>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">For grades K-5</a>
+        <br>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">For grades 6-8</a>
+    </div>
+</div>
 
-Eşli programlama (pair programming) bilgisayar mühendislerinin problem çözmede takımlar veya eşler halinde çalıştıkları bir yöntemdir. Kodlama saati etkinliklerini bir arkadaşınızla yapmayı deneyin. Eşli programlama (pair programming) nın en iyi yöntemlerini anlatan [ videoyu ](https://www.youtube.com/watch?v=vgkahOzFH2Q) izlemeyi unutmayın.
+<div style="clear: both"></div>
+
+<h2>Sessiz code.org dersleri</h2>
+
+<p>The <a href="https://studio.code.org/courses" target="_blank">Code.org tutorials</a> can all be used with or without sound. All the videos have captions.</p>
+
+<h2>Eşli programlama</h2>
+
+<p>Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="_blank">check out this video</a> to learn the best techniques for pair programming.</p>

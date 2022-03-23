@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:06 UTC",
+    "serialized_at": "2021-11-22 19:57:20 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "workshop-maker"
     }
@@ -89,16 +93,301 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "97e26030-bc93-41fd-9f6e-47a273dfd002",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97e26030-bc93-41fd-9f6e-47a273dfd002",
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "key": "ae479aed-ef4f-41cc-88de-d9a891d3d4b4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae479aed-ef4f-41cc-88de-d9a891d3d4b4",
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "key": "ce80d9ff-7d42-4941-be5e-5dc2644624f6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce80d9ff-7d42-4941-be5e-5dc2644624f6",
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "key": "a9b13a04-d731-4c37-a154-b901a4dff9eb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a9b13a04-d731-4c37-a154-b901a4dff9eb",
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "739b1890-9f07-4280-bc12-9f7aa7116349",
+      "position": 1,
+      "properties": {
+        "progression_name": "Review: Design Mode, IDs, and Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "739b1890-9f07-4280-bc12-9f7aa7116349",
+        "lesson_activity.key": "97e26030-bc93-41fd-9f6e-47a273dfd002"
+      }
+    },
+    {
+      "key": "09f7499e-a36e-4ae1-b231-e962b9b06a86",
+      "position": 2,
+      "properties": {
+        "progression_name": "Review: Event-driven Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "09f7499e-a36e-4ae1-b231-e962b9b06a86",
+        "lesson_activity.key": "97e26030-bc93-41fd-9f6e-47a273dfd002"
+      }
+    },
+    {
+      "key": "5904d22a-731b-4172-b74b-1138152ef9b1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Getters and Setters"
+      },
+      "seeding_key": {
+        "activity_section.key": "5904d22a-731b-4172-b74b-1138152ef9b1",
+        "lesson_activity.key": "97e26030-bc93-41fd-9f6e-47a273dfd002"
+      }
+    },
+    {
+      "key": "2c058e23-9d0f-488a-a217-17eb02ba8af6",
+      "position": 4,
+      "properties": {
+        "name": "Using Getters and Setters",
+        "progression_name": "Using Getters and Setters"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c058e23-9d0f-488a-a217-17eb02ba8af6",
+        "lesson_activity.key": "97e26030-bc93-41fd-9f6e-47a273dfd002"
+      }
+    },
+    {
+      "key": "969a005a-5207-4b79-b05e-acbcae9f6c5a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Circuit Playground: LEDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "969a005a-5207-4b79-b05e-acbcae9f6c5a",
+        "lesson_activity.key": "ae479aed-ef4f-41cc-88de-d9a891d3d4b4"
+      }
+    },
+    {
+      "key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using the LED"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0",
+        "lesson_activity.key": "ae479aed-ef4f-41cc-88de-d9a891d3d4b4"
+      }
+    },
+    {
+      "key": "b084048e-a54c-477e-9fec-e57f778469d6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Circuit Playground: Buzzer"
+      },
+      "seeding_key": {
+        "activity_section.key": "b084048e-a54c-477e-9fec-e57f778469d6",
+        "lesson_activity.key": "ae479aed-ef4f-41cc-88de-d9a891d3d4b4"
+      }
+    },
+    {
+      "key": "a9008527-db65-489b-ae99-8de30ea74c1c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using the Buzzer"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9008527-db65-489b-ae99-8de30ea74c1c",
+        "lesson_activity.key": "ae479aed-ef4f-41cc-88de-d9a891d3d4b4"
+      }
+    },
+    {
+      "key": "6a1fd34e-bd2b-4327-a5e7-71e6c5fd8d7f",
+      "position": 5,
+      "properties": {
+        "name": "Challenge: Buzzer and LED",
+        "progression_name": "Challenge: Buzzer and LED"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a1fd34e-bd2b-4327-a5e7-71e6c5fd8d7f",
+        "lesson_activity.key": "ae479aed-ef4f-41cc-88de-d9a891d3d4b4"
+      }
+    },
+    {
+      "key": "132967fa-0a51-4b84-8831-10baea4d118f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Responding to Board Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "132967fa-0a51-4b84-8831-10baea4d118f",
+        "lesson_activity.key": "ce80d9ff-7d42-4941-be5e-5dc2644624f6"
+      }
+    },
+    {
+      "key": "43a489d2-8f9c-440e-bc10-3ef635cb1f3e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Board Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "43a489d2-8f9c-440e-bc10-3ef635cb1f3e",
+        "lesson_activity.key": "ce80d9ff-7d42-4941-be5e-5dc2644624f6"
+      }
+    },
+    {
+      "key": "e476c6c4-4261-49a2-ae6d-8ca74d48686a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Buttons and Switch"
+      },
+      "seeding_key": {
+        "activity_section.key": "e476c6c4-4261-49a2-ae6d-8ca74d48686a",
+        "lesson_activity.key": "ce80d9ff-7d42-4941-be5e-5dc2644624f6"
+      }
+    },
+    {
+      "key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using the Buttons"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13",
+        "lesson_activity.key": "ce80d9ff-7d42-4941-be5e-5dc2644624f6"
+      }
+    },
+    {
+      "key": "59d8d2c7-9538-4ca4-b7f3-37c1c3d4141a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Tug o War Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "59d8d2c7-9538-4ca4-b7f3-37c1c3d4141a",
+        "lesson_activity.key": "ce80d9ff-7d42-4941-be5e-5dc2644624f6"
+      }
+    },
+    {
+      "key": "b9bda5f3-6779-4010-af21-cb762737dd7a",
+      "position": 6,
+      "properties": {
+        "name": "Tug o War game",
+        "progression_name": "Tug o War game"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9bda5f3-6779-4010-af21-cb762737dd7a",
+        "lesson_activity.key": "ce80d9ff-7d42-4941-be5e-5dc2644624f6"
+      }
+    },
+    {
+      "key": "ebf3e69f-91ad-4278-bda6-7e245e3c7f84",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sensor Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebf3e69f-91ad-4278-bda6-7e245e3c7f84",
+        "lesson_activity.key": "a9b13a04-d731-4c37-a154-b901a4dff9eb"
+      }
+    },
+    {
+      "key": "c8c4c116-72e0-4523-a4f6-d9eded701922",
+      "position": 2,
+      "properties": {
+        "progression_name": "Analog Sensors"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8c4c116-72e0-4523-a4f6-d9eded701922",
+        "lesson_activity.key": "a9b13a04-d731-4c37-a154-b901a4dff9eb"
+      }
+    },
+    {
+      "key": "22204d74-500d-4041-bf0f-14d7477fcef3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using Sensors"
+      },
+      "seeding_key": {
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3",
+        "lesson_activity.key": "a9b13a04-d731-4c37-a154-b901a4dff9eb"
+      }
+    },
+    {
+      "key": "3ec64d33-6e9f-471b-9403-317d33071a06",
+      "position": 4,
+      "properties": {
+        "progression_name": "Polling Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ec64d33-6e9f-471b-9403-317d33071a06",
+        "lesson_activity.key": "a9b13a04-d731-4c37-a154-b901a4dff9eb"
+      }
+    },
+    {
+      "key": "85f46bc8-472c-4360-a262-3136dcfab0e2",
+      "position": 5,
+      "properties": {
+        "progression_name": "Displaying Sensor Values"
+      },
+      "seeding_key": {
+        "activity_section.key": "85f46bc8-472c-4360-a262-3136dcfab0e2",
+        "lesson_activity.key": "a9b13a04-d731-4c37-a154-b901a4dff9eb"
+      }
+    },
+    {
+      "key": "90f5661e-c46e-4b32-a10e-33b7789dad71",
+      "position": 6,
+      "properties": {
+        "name": "Challenge: Explore!",
+        "progression_name": "Challenge: Explore!"
+      },
+      "seeding_key": {
+        "activity_section.key": "90f5661e-c46e-4b32-a10e-33b7789dad71",
+        "lesson_activity.key": "a9b13a04-d731-4c37-a154-b901a4dff9eb"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -113,7 +402,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "739b1890-9f07-4280-bc12-9f7aa7116349"
       },
       "level_keys": [
         "CSD Review: Design Mode, IDs, and Events"
@@ -122,7 +412,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -137,7 +427,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "09f7499e-a36e-4ae1-b231-e962b9b06a86"
       },
       "level_keys": [
         "CSD: Review Events"
@@ -146,7 +437,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -161,7 +452,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "5904d22a-731b-4172-b74b-1138152ef9b1"
       },
       "level_keys": [
         "CSD - Getters and Setters"
@@ -170,7 +462,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -185,7 +477,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "2c058e23-9d0f-488a-a217-17eb02ba8af6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setText"
@@ -194,7 +487,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -209,7 +502,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "2c058e23-9d0f-488a-a217-17eb02ba8af6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - hide show"
@@ -218,7 +512,7 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -233,7 +527,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "969a005a-5207-4b79-b05e-acbcae9f6c5a"
       },
       "level_keys": [
         "Circuit Playground Map: LEDS"
@@ -242,7 +537,7 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -257,7 +552,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       },
       "level_keys": [
         "CSDU6 Circuit Playground Test"
@@ -266,7 +562,7 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -281,7 +577,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       },
       "level_keys": [
         "CSDU6 LED basics led.on"
@@ -290,7 +587,7 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -305,7 +602,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       },
       "level_keys": [
         "CSDU6 LED basics onEvent"
@@ -314,7 +612,7 @@
     {
       "chapter": 10,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -329,7 +627,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       },
       "level_keys": [
         "CSDU6 LED basics led.off()"
@@ -338,7 +637,7 @@
     {
       "chapter": 11,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -353,7 +652,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       },
       "level_keys": [
         "CSDU6 LED predict"
@@ -362,7 +662,7 @@
     {
       "chapter": 12,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -377,7 +677,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       },
       "level_keys": [
         "CSDU6 LED alarm silent"
@@ -386,7 +687,7 @@
     {
       "chapter": 13,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -401,7 +702,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "b084048e-a54c-477e-9fec-e57f778469d6"
       },
       "level_keys": [
         "Circuit Playground Map: Buzzer"
@@ -410,7 +712,7 @@
     {
       "chapter": 14,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -425,7 +727,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "a9008527-db65-489b-ae99-8de30ea74c1c"
       },
       "level_keys": [
         "CSDU6 buzzer freq"
@@ -434,7 +737,7 @@
     {
       "chapter": 15,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -449,7 +752,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "a9008527-db65-489b-ae99-8de30ea74c1c"
       },
       "level_keys": [
         "CSDU6 buzzer stop"
@@ -458,7 +762,7 @@
     {
       "chapter": 16,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -473,7 +777,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "a9008527-db65-489b-ae99-8de30ea74c1c"
       },
       "level_keys": [
         "CSDU6 buzzer alarm"
@@ -482,7 +787,7 @@
     {
       "chapter": 17,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -497,7 +802,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "6a1fd34e-bd2b-4327-a5e7-71e6c5fd8d7f"
       },
       "level_keys": [
         "Challenge: Buzzer and LED"
@@ -506,7 +812,7 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -521,7 +827,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "132967fa-0a51-4b84-8831-10baea4d118f"
       },
       "level_keys": [
         "CSD Map: onBoardEvent"
@@ -530,7 +837,7 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -545,7 +852,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "43a489d2-8f9c-440e-bc10-3ef635cb1f3e"
       },
       "level_keys": [
         "CSDU6 - button screen buttonL"
@@ -554,7 +862,7 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -569,7 +877,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "43a489d2-8f9c-440e-bc10-3ef635cb1f3e"
       },
       "level_keys": [
         "CSDU6 - button screen buttonR"
@@ -578,7 +887,7 @@
     {
       "chapter": 21,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -593,7 +902,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "e476c6c4-4261-49a2-ae6d-8ca74d48686a"
       },
       "level_keys": [
         "CSD Map: Board Buttons"
@@ -602,7 +912,7 @@
     {
       "chapter": 22,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -617,7 +927,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13"
       },
       "level_keys": [
         "CSDU6 - button toggle"
@@ -626,7 +937,7 @@
     {
       "chapter": 23,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -641,7 +952,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13"
       },
       "level_keys": [
         "CSDU6 - button on off"
@@ -650,7 +962,7 @@
     {
       "chapter": 24,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -665,7 +977,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13"
       },
       "level_keys": [
         "CSDU6 - button up down predict"
@@ -674,7 +987,7 @@
     {
       "chapter": 25,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -689,7 +1002,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13"
       },
       "level_keys": [
         "CSDU6 - button up down"
@@ -698,7 +1012,7 @@
     {
       "chapter": 26,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -713,7 +1027,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "59d8d2c7-9538-4ca4-b7f3-37c1c3d4141a"
       },
       "level_keys": [
         "CSDU6 - button tug o war right button"
@@ -722,7 +1037,7 @@
     {
       "chapter": 27,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -737,7 +1052,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "59d8d2c7-9538-4ca4-b7f3-37c1c3d4141a"
       },
       "level_keys": [
         "CSDU6 - button tug o war left button"
@@ -746,7 +1062,7 @@
     {
       "chapter": 28,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -761,7 +1077,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "b9bda5f3-6779-4010-af21-cb762737dd7a"
       },
       "level_keys": [
         "CSDU6 - button tug o war challenge"
@@ -770,7 +1087,7 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -785,7 +1102,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "ebf3e69f-91ad-4278-bda6-7e245e3c7f84"
       },
       "level_keys": [
         "CSDU6 - sensors experiment"
@@ -794,7 +1112,7 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -809,7 +1127,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c8c4c116-72e0-4523-a4f6-d9eded701922"
       },
       "level_keys": [
         "CSD Map: Board Sensors"
@@ -818,7 +1137,7 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -833,7 +1152,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3"
       },
       "level_keys": [
         "CSDU6 - sensors sound"
@@ -842,7 +1162,7 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -857,7 +1177,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3"
       },
       "level_keys": [
         "CSDU6 - sensors light"
@@ -866,7 +1187,7 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -881,7 +1202,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3"
       },
       "level_keys": [
         "CSDU6 - sensors temp"
@@ -890,7 +1212,7 @@
     {
       "chapter": 34,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -905,7 +1227,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3"
       },
       "level_keys": [
         "CSDU6 - sensors predict"
@@ -914,7 +1237,7 @@
     {
       "chapter": 35,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -929,7 +1252,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "3ec64d33-6e9f-471b-9403-317d33071a06"
       },
       "level_keys": [
         "CSD Map: Polling Events"
@@ -938,7 +1262,7 @@
     {
       "chapter": 36,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -953,7 +1277,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "85f46bc8-472c-4360-a262-3136dcfab0e2"
       },
       "level_keys": [
         "CSDU6 - sensors temp f c"
@@ -962,12 +1287,13 @@
     {
       "chapter": 37,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSDU6 light sensor alarm"
-        ]
+        ],
+        "progression": "Challenge: Explore!"
       },
       "bonus": false,
       "seeding_key": {
@@ -976,7 +1302,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "90f5661e-c46e-4b32-a10e-33b7789dad71"
       },
       "level_keys": [
         "CSDU6 light sensor alarm"
@@ -985,7 +1312,7 @@
     {
       "chapter": 38,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1000,7 +1327,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "90f5661e-c46e-4b32-a10e-33b7789dad71"
       },
       "level_keys": [
         "maker workshop final"
@@ -1016,7 +1344,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "739b1890-9f07-4280-bc12-9f7aa7116349"
       }
     },
     {
@@ -1027,7 +1356,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "09f7499e-a36e-4ae1-b231-e962b9b06a86"
       }
     },
     {
@@ -1038,7 +1368,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "5904d22a-731b-4172-b74b-1138152ef9b1"
       }
     },
     {
@@ -1049,7 +1380,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "2c058e23-9d0f-488a-a217-17eb02ba8af6"
       }
     },
     {
@@ -1060,7 +1392,8 @@
         ],
         "lesson.key": "App Lab Basics",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "2c058e23-9d0f-488a-a217-17eb02ba8af6"
       }
     },
     {
@@ -1071,7 +1404,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "969a005a-5207-4b79-b05e-acbcae9f6c5a"
       }
     },
     {
@@ -1082,7 +1416,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       }
     },
     {
@@ -1093,7 +1428,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       }
     },
     {
@@ -1104,7 +1440,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       }
     },
     {
@@ -1115,7 +1452,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       }
     },
     {
@@ -1126,7 +1464,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       }
     },
     {
@@ -1137,7 +1476,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "0ded29e6-03bc-4300-9bce-4702b9e8c6a0"
       }
     },
     {
@@ -1148,7 +1488,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "b084048e-a54c-477e-9fec-e57f778469d6"
       }
     },
     {
@@ -1159,7 +1500,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "a9008527-db65-489b-ae99-8de30ea74c1c"
       }
     },
     {
@@ -1170,7 +1512,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "a9008527-db65-489b-ae99-8de30ea74c1c"
       }
     },
     {
@@ -1181,7 +1524,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "a9008527-db65-489b-ae99-8de30ea74c1c"
       }
     },
     {
@@ -1192,7 +1536,8 @@
         ],
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "6a1fd34e-bd2b-4327-a5e7-71e6c5fd8d7f"
       }
     },
     {
@@ -1203,7 +1548,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "132967fa-0a51-4b84-8831-10baea4d118f"
       }
     },
     {
@@ -1214,7 +1560,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "43a489d2-8f9c-440e-bc10-3ef635cb1f3e"
       }
     },
     {
@@ -1225,7 +1572,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "43a489d2-8f9c-440e-bc10-3ef635cb1f3e"
       }
     },
     {
@@ -1236,7 +1584,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "e476c6c4-4261-49a2-ae6d-8ca74d48686a"
       }
     },
     {
@@ -1247,7 +1596,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13"
       }
     },
     {
@@ -1258,7 +1608,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13"
       }
     },
     {
@@ -1269,7 +1620,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13"
       }
     },
     {
@@ -1280,7 +1632,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c4e0a9f3-eb6d-4fc5-b41d-f38889e63d13"
       }
     },
     {
@@ -1291,7 +1644,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "59d8d2c7-9538-4ca4-b7f3-37c1c3d4141a"
       }
     },
     {
@@ -1302,7 +1656,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "59d8d2c7-9538-4ca4-b7f3-37c1c3d4141a"
       }
     },
     {
@@ -1313,7 +1668,8 @@
         ],
         "lesson.key": "Physical Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "b9bda5f3-6779-4010-af21-cb762737dd7a"
       }
     },
     {
@@ -1324,7 +1680,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "ebf3e69f-91ad-4278-bda6-7e245e3c7f84"
       }
     },
     {
@@ -1335,7 +1692,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "c8c4c116-72e0-4523-a4f6-d9eded701922"
       }
     },
     {
@@ -1346,7 +1704,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3"
       }
     },
     {
@@ -1357,7 +1716,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3"
       }
     },
     {
@@ -1368,7 +1728,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3"
       }
     },
     {
@@ -1379,7 +1740,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "22204d74-500d-4041-bf0f-14d7477fcef3"
       }
     },
     {
@@ -1390,7 +1752,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "3ec64d33-6e9f-471b-9403-317d33071a06"
       }
     },
     {
@@ -1401,7 +1764,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "85f46bc8-472c-4360-a262-3136dcfab0e2"
       }
     },
     {
@@ -1412,7 +1776,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "90f5661e-c46e-4b32-a10e-33b7789dad71"
       }
     },
     {
@@ -1423,7 +1788,8 @@
         ],
         "lesson.key": "Analog Input",
         "lesson_group.key": "",
-        "script.name": "workshop-maker"
+        "script.name": "workshop-maker",
+        "activity_section.key": "90f5661e-c46e-4b32-a10e-33b7789dad71"
       }
     }
   ],

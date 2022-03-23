@@ -56,6 +56,7 @@
   "genderNotListed": "Válljejuvvon sátni ii leat biddjon",
   "getHelp": "Oza Veahki",
   "goToCodeStudio": "Mana Code Studio",
+  "groups": "Joavkkut",
   "hintPrompt": "Dárbbašat go veahki?",
   "howItWorks": "Movt Doaibmá (Čájet Code)",
   "incorrectAnswer": "Boasttu vástádus",
@@ -137,5 +138,6 @@
   "unsubmitAssessment": "Gease ruovttoluotta du árvvoštallama",
   "update": "Ođasmahte",
   "versionHistory_ajaxFailure": "Okta boastuvuohta čuožžilii.",
+  "view": "Čájet",
   "viewLessonPlan": "Čájet BargoPlána"
 }

@@ -6,6 +6,7 @@ import javalab from '@cdo/apps/javalab/javalabRedux';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import sinon from 'sinon';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;
@@ -16,7 +17,7 @@ describe('Java Lab Backpack Test', () => {
     backpackApiStub = sinon.createStubInstance(BackpackClientApi);
     backpackApiStub.hasBackpack.returns(true);
     defaultProps = {
-      isDarkMode: true,
+      displayTheme: DisplayTheme.DARK,
       isDisabled: false,
       onImport: () => {},
       backpackApi: backpackApiStub
@@ -69,5 +70,59 @@ describe('Java Lab Backpack Test', () => {
     assert.isFalse(state.backpackLoadError);
     expect(state.selectedFiles.length).to.equal(0);
     expect(state.backpackFilenames.length).to.equal(0);
+  });
+
+  it('import shows warning before overwriting files', () => {
+    const otherProps = {
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    // set state to something that should be cleared by expandDropdown
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file1', 'file3']
+    });
+
+    wrapper.instance().handleImport();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal('IMPORT_WARNING');
+  });
+
+  it('import shows error if hidden file name is used', () => {
+    const otherProps = {
+      sources: {visibleFile: {isVisible: true}, hiddenFile: {isVisible: false}}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    // set state to something that should be cleared by expandDropdown
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['visibleFile', 'hiddenFile', 'file3'],
+      selectedFiles: ['hiddenFile', 'file3']
+    });
+
+    wrapper.instance().handleImport();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal('IMPORT_ERROR');
+  });
+
+  it('no dialog shown if there are no duplicate file names', () => {
+    const otherProps = {
+      sources: {}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    // set state to something that should be cleared by expandDropdown
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file2', 'file3']
+    });
+
+    wrapper.instance().handleImport();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal(null);
   });
 });

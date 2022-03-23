@@ -204,3 +204,7 @@ And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
   user.permission = UserPermission::AUTHORIZED_TEACHER
   user.save!
 end
+
+And(/^I get universal instructor access$/) do
+  browser_request(url: '/api/test/universal_instructor_access', method: 'POST')
+end

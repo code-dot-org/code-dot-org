@@ -28,9 +28,9 @@ Set poster baharu tersedia yang menampilkan Malala, Stephen Curry, Shakira dan r
 
 ## Siarkan ini di dalam media sosial
 
-[![imej](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imej](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![imej](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imej](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![imej](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -40,7 +40,7 @@ Set poster baharu tersedia yang menampilkan Malala, Stephen Curry, Shakira dan r
 
 [![imej]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![imej]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Muat turun versi resolusi tinggi](http://images.code.org/share/hour-of-code-logo.zip)
+[Muat turun versi resolusi tinggi](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" dan "Hora del Código" sudah menjadi tanda dagangan. Kami tidak mahu menghalang penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut had yang ditentukan:**
 
@@ -84,7 +84,7 @@ Set poster baharu tersedia yang menampilkan Malala, Stephen Curry, Shakira dan r
 
 **Tajuk subjek:** Sertai saya dan lebih daripada 100 juta pelajar untuk acara Jam Kod <br />
 
-Komputer berada di mana-mana sahaja, mengubah setiap industri di dalam planet ini. Tetapi hanya 47% daripada semua sekolah tinggi yang mengajar sains komputer. Berita baiknya ialah, kita sedang berusaha mengubahnya! Jika anda pernah mendengar tentang Jam Kod sebelum ini, anda mungkin tahu bahawa ia pernah mencipta sejarah. Lebih daripada 100 juta pelajar telah mencuba Jam Kod.
+Komputer berada di mana-mana sahaja, mengubah setiap industri di dalam planet ini. But only 51% of all high schools offer computer science. Berita baiknya ialah, kita sedang berusaha mengubahnya! Jika anda pernah mendengar tentang Jam Kod sebelum ini, anda mungkin tahu bahawa ia pernah mencipta sejarah. Lebih daripada 100 juta pelajar telah mencuba Jam Kod.
 
 Dengan Jam Kod, sains komputer dipaparkan pada laman utama Google, MSN, Yahoo! dan Disney. Lebih daripada 100 rakan kongsi bekerjasama menyokong pergerakan ini. Setiap Kedai Apple di dunia telah menganjurkan Jam Kod dan pemimpin seperti Presiden Obama dan Perdana Menteri Kanada Justin Trudeau menulis baris pertama kod mereka sebagai sebahagian daripada kempen.
 
@@ -110,7 +110,7 @@ Antara {{ campaign_date/short }}, sepuluh peratus daripada pelajar di seluruh du
 
 Pelajar akan mencipta aplikasi atau permainan mereka sendiri yang boleh ditunjukkan kepada ibu bapa mereka dan kami juga akan mencetak sijil Jam Kod yang dapat mereka bawa pulang. Dan, ia menyeronokkkan! Bersama aktiviti berinteraktif dan praktikal, pelajar akan belajar kemahiran pemikiran pengiraan dengan cara yang mudah didekati.
 
-Komputer berada di mana-mana sahaja, mengubah setiap industri di dalam planet ini. Tetapi hanya 47% daripada semua sekolah tinggi yang mengajar sains komputer. Berita baiknya ialah, kami sedang dalam proses mengubahnya! Jika anda pernah mendengar tentang Jam Kod sebelum ini, anda mungkin tahu ia telah mencipta sejarah - lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod. Malah pemimpin seperti Presiden Obama dan Perdana Menteri Kanada Justin Trudeau menulis barisan kod pertama mereka sebagai sebahagian daripada kempen itu.
+Komputer berada di mana-mana sahaja, mengubah setiap industri di dalam planet ini. But only 51% of all high schools offer computer science. Berita baiknya ialah, kami sedang dalam proses mengubahnya! Jika anda pernah mendengar tentang Jam Kod sebelum ini, anda mungkin tahu ia telah mencipta sejarah - lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod. Malah pemimpin seperti Presiden Obama dan Perdana Menteri Kanada Justin Trudeau menulis barisan kod pertama mereka sebagai sebahagian daripada kempen itu.
 
 Anda boleh membaca tentang acara tersebut dengan lebih lanjut di http://hourofcode.com. Atau, beritahulah kami jika anda ingin menjadualkan sedikit masa anda untuk berbincang tentang cara [school name] boleh menyertainya.<br />
 
@@ -126,7 +126,7 @@ Ibu Bapa yang Dihormati,
 
 Kita hidup di dunia yang dikelilingi dengan teknologi. Dan kita tahu bahawa apa sahaja bidang yang dipilih oleh pelajar kita sebagai orang dewasa, kemampuan mereka untuk berjaya akan bergantung pada pemahaman cara teknologi berfungsi.
 
-Tetapi hanya sebahagian kecil daripada kita sedang mempelajari **cara** teknologi berfungsi. 47% daripada semua sekolah tinggi sahaja yang mengajar sains komputer.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 Itu menjadi antara sebab seluruh sekolah kita menyertai acara pembelajaran terbesar dalam sejarah: Jam Kod, semasa Minggu Pendidikan Sains Komputer ({{ campaign_date/full }}). Lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod. Jam Kod kita membuat pernyataan bahawa [SCHOOL NAME] sudah bersedia mengajar kemahiran asas abad ke-21 ini. Untuk terus membawa aktiviti pengaturcaraan kepada pelajar anda, kita mahu menjadikan Jam Kod kita acara yang amat besar. Saya menggalakkan anda menjadi sukarelawan, menghubungi media tempatan, berkongsi berita di dalam saluran media sosial dan mempertimbang untuk menganjurkan acara Jam Kod tambahan di dalam komuniti.
 
@@ -144,11 +144,11 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 **Tajuk subjek**: Sekolah tempatan menyertai misi memperkenalkan pelajar kepada sains komputer
 
-Komputer berada di mana-mana sahaja, mengubah setiap industri di planet ini, tetapi hanya 47% daripada semua sekolah yang mengajar sains komputer. Wanita muda dan pelajar daripada kumpulan kaum dan etnik terpinggir terlalu dipencilkan di dalam kelas sains komputer dan industri teknologi. Berita baiknya ialah, kami sedang dalam proses mengubahnya.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Wanita muda dan pelajar daripada kumpulan kaum dan etnik terpinggir terlalu dipencilkan di dalam kelas sains komputer dan industri teknologi. Berita baiknya ialah, kami sedang dalam proses mengubahnya.
 
 Dengan Jam Kod, sains komputer dipaparkan pada laman utama Google, MSN, Yahoo! dan Disney. Lebih daripada 100 rakan kongsi bekerjasama menyokong pergerakan ini. Setiap Kedai Apple di dunia telah menganjurkan Jam Kod. Malah Presiden Obama telah menulis barisan kod beliau yang pertama sebagai sebahagian daripada kempen ini.
 
-Itulah sebabnya setiap pelajar [X number] di [SCHOOL NAME] menyertai acara pembelajaran terbesar dalam sejarah: Jam Kod, semasa Minggu Pendidikan Sains Komputer (3-9 Disember).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
 
 Saya menulis untuk menjemput anda menghadiri perhimpunan pelancaran kita dan melihat kanak-kanak memulakan aktiviti pada [DATE].
 
@@ -172,7 +172,7 @@ Saya berharap kita akan terus berhubung. <br />
 
 Adakah anda tahu bahawa pengkomputeran merupakan sumber upah #1 di Amerika Syarikat? Terdapat lebih daripada 500,000 pekerjaan pengkomputeran dibuka di seluruh negara, tetapi pada tahun lepas hanya 42,969 pelajar sains komputer tamat pengajian untuk diambil sebagai tenaga kerja.
 
-Sains komputer ialah asas untuk setiap industri hari ini, namun kebanyakan sekolah tidak mengajarkannya. Di [SCHOOL NAME], kami berusaha mengubahnya.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 Itu menjadi antara sebab seluruh sekolah kita menyertai acara pembelajaran terbesar dalam sejarah: Jam Kod, semasa Minggu Pendidikan Sains Komputer ({{ campaign_date/full }}). Lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod.
 

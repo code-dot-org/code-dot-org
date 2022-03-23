@@ -1,7 +1,6 @@
 import {EventEmitter} from 'events';
 import {
   SENSOR_CHANNELS,
-  roundToHundredth,
   SAMPLE_INTERVAL,
   MAX_SENSOR_BUFFER_DURATION,
   MAX_LIGHT_SENSOR_VALUE
@@ -141,7 +140,7 @@ export default class LightSensor extends EventEmitter {
     );
   }
 
-  setRange(min, max) {
+  setScale(min, max) {
     this.state.rangeMin = min;
     this.state.rangeMax = max;
   }
@@ -152,5 +151,5 @@ export default class LightSensor extends EventEmitter {
 // falls within the min and max range.
 function scaleWithinRange(value, min, max) {
   let ratio = value / MAX_LIGHT_SENSOR_VALUE;
-  return roundToHundredth(min + ratio * (max - min));
+  return Math.round(min + ratio * (max - min));
 }

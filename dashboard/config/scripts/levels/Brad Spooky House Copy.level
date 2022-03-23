@@ -658,7 +658,6 @@
         </category>
         <category name="Loops">
           <block type="controls_for_counter" inline="true">
-            <mutation counter="counter"/>
             <value name="FROM">
               <block type="math_number">
                 <title name="NUM">???</title>
@@ -1406,7 +1405,6 @@
                       <title name="WIDTH">5</title>
                       <next>
                         <block type="controls_for_counter" inline="true">
-                          <mutation counter="counter"/>
                           <value name="FROM">
                             <block type="parameters_get">
                               <title name="VAR">width</title>
@@ -1514,7 +1512,6 @@
                               </value>
                               <next>
                                 <block type="controls_for_counter" inline="true">
-                                  <mutation counter="counter"/>
                                   <value name="FROM">
                                     <block type="parameters_get">
                                       <title name="VAR">width</title>
