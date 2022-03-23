@@ -124,7 +124,8 @@ module Cdo
         # DNS record that redirects requests to localhost. Javabuilder, as a
         # separate service, uses a different port. Therefore, we can access the
         # the service directly.
-        'ws://localhost:8080/javabuilder'
+        # 'ws://localhost:8080/javabuilder'
+        'wss://javabuilder-molly.dev-code.org'
       else
         # TODO: Update to use this URL once we have Route53 set up for API Gateway
         # site_url('javabuilder.code.org', '', 'wss')
@@ -134,7 +135,8 @@ module Cdo
 
     def javabuilder_upload_url(path = '', scheme = '')
       if rack_env?(:development)
-        'http://localhost:8080/javabuilderfiles/seedsources'
+        # 'http://localhost:8080/javabuilderfiles/seedsources'
+        'https://javabuilder-molly-http.dev-code.org/seedsources/sources.json'
       else
         'https://javabuilderbeta-http.code.org/seedsources/sources.json'
       end
