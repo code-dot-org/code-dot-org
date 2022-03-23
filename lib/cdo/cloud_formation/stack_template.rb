@@ -77,6 +77,12 @@ module Cdo::CloudFormation
       erb_file(aws_dir("cloudformation/components/#{name}.yml.erb"), vars)
     end
 
+    # Inline stack resources into the template using local variables as parameters
+    def resource_component(name, var = {})
+      resource_indent = 2 # allow component file to be unindented
+      indent(erb_file(aws_dir("cloudformation/components/#{name}.yml.erb"), vars), resource_indent)
+    end
+
     # Adds the specified properties to a YAML document.
     def add_properties(properties)
       properties.transform_values(&:to_json).map {|p| p.join(': ')}.join
