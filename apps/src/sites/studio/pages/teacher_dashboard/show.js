@@ -14,8 +14,7 @@ import teacherSections, {
   setRosterProvider,
   setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
-  setStudentsForCurrentSection,
-  setCanAssignPLOfferings
+  setStudentsForCurrentSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -59,7 +58,6 @@ $(document).ready(function() {
     locales
   });
   const store = getStore();
-  store.dispatch(setCanAssignPLOfferings(false));
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );

@@ -130,10 +130,6 @@ export const setAvailableParticipantTypes = availableParticipantTypes => ({
   type: SET_AVAILABLE_PARTICIPANT_TYPES,
   availableParticipantTypes
 });
-export const setCanAssignPLOfferings = canAssignPLOfferings => ({
-  type: SET_CAN_ASSIGN_PL_OFFERINGS,
-  canAssignPLOfferings
-});
 
 export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
@@ -423,7 +419,6 @@ export const asyncLoadSectionData = id => dispatch => {
             availableParticipantTypes.availableParticipantTypes
           )
         );
-        dispatch(setCanAssignPLOfferings(false));
         dispatch(setSections(sections));
         if (id) {
           dispatch(setStudentsForCurrentSection(id, students));
