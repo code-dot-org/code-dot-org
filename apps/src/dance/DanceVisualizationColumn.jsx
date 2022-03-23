@@ -29,6 +29,19 @@ const SongSelector = Radium(
     };
 
     render() {
+      const {
+        selectedSong,
+        songData,
+        enableSongSelection,
+        filterOn
+      } = this.props;
+
+      let songKeys = Object.keys(songData);
+      if (filterOn) {
+        // Filter is on, only include songs that are not pg13
+        songKeys = songKeys.filter(key => !songData[key].pg13);
+      }
+
       return (
         <div id="song-selector-wrapper">
           <label>
@@ -38,18 +51,14 @@ const SongSelector = Radium(
             id="song_selector"
             style={styles.selectStyle}
             onChange={this.changeSong}
-            value={this.props.selectedSong}
-            disabled={!this.props.enableSongSelection}
+            value={selectedSong}
+            disabled={!enableSongSelection}
           >
-            {Object.keys(this.props.songData).map(
-              (option, i) =>
-                // Song should be displayed if it is not pg13 or if the filter is off.
-                (!this.props.filterOn || !this.props.songData[option].pg13) && (
-                  <option key={i} value={option}>
-                    {this.props.songData[option].title}
-                  </option>
-                )
-            )}
+            {songKeys.map((option, i) => (
+              <option key={i} value={option}>
+                {songData[option].title}
+              </option>
+            ))}
           </select>
         </div>
       );
@@ -71,7 +80,7 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   state = {
-    filterOn: this.initializeFilterStatus()
+    filterOn: this.getFilterStatus()
   };
 
   /*
@@ -84,7 +93,7 @@ class DanceVisualizationColumn extends React.Component {
   /*
     The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
    */
-  initializeFilterStatus() {
+  getFilterStatus() {
     const {userType, under13} = this.props;
 
     // Check if song filter override is triggered and initialize song filter to true.
