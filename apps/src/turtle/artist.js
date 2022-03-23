@@ -66,7 +66,7 @@ const DEFAULT_Y = CANVAS_HEIGHT / 2;
 const DEFAULT_DIRECTION = 90;
 
 const MAX_STICKER_SIZE = 100;
-const MAX_PATTERN_BLOCK_SIZE = 400;
+const MAX_SHAPE_SIZE = 400;
 
 const SMOOTH_ANIMATE_STEP_SIZE = 5;
 const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
@@ -1233,7 +1233,7 @@ Artist.prototype.step = function(command, values, options) {
       this.visualization.avatar.visible = true;
       break;
     case 'shape': {
-      let size = MAX_PATTERN_BLOCK_SIZE;
+      let size = MAX_SHAPE_SIZE;
 
       if (typeof values[1] === 'number') {
         // Shapes are scaled up 4 times. The student is specifying the
