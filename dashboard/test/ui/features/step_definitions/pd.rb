@@ -156,28 +156,29 @@ And(/^I create some fake applications of each type and status$/) do
   require_rails_env
   time_start = Time.now
 
-  # There's no need to create more applications if a lot already exist in the system
-  if Pd::Application::ActiveApplicationModels::FACILITATOR_APPLICATION_CLASS.count < 100
-    %w(csf csd csp).each do |course|
-      Pd::Application::ApplicationBase.statuses.each do |status|
-        10.times do
-          teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application = FactoryGirl.create(Pd::Application::ActiveApplicationModels::FACILITATOR_APPLICATION_FACTORY, course: course, user: teacher)
-          application.update(status: status)
-        end
-      end
-    end
-  end
-
-  if Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.count < 100
-    %w(csd csp).each do |course|
-      (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
-        10.times do
-          teacher = FactoryGirl.create(:teacher, school_info: SchoolInfo.first, email: "teacher_#{SecureRandom.hex}@code.org")
-          application_hash = FactoryGirl.build(Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_HASH_FACTORY, course.to_sym, school: School.first)
-          application = FactoryGirl.create(Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY, form_data_hash: application_hash, course: course, user: teacher)
-          application.update(status: status)
-        end
+  %w(csd csp).each do |course|
+    (Pd::Application::TeacherApplication.statuses).each do |status|
+      teacher_email = "#{course}_#{status}@code.org"
+      teacher = User.find_or_create_teacher(
+        {name: "#{course} #{status}", email: teacher_email}, nil, nil
+      )
+      next if Pd::Application::TeacherApplication.find_by(user_id: teacher.id)
+      form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, course.to_sym, first_name: course, last_name: status)
+      if status == 'incomplete'
+        FactoryGirl.create(
+          :pd_teacher_application,
+          form_data_hash: form_data_hash,
+          user: teacher,
+          status: 'incomplete'
+        )
+      else
+        application = FactoryGirl.create(
+          :pd_teacher_application,
+          form_data_hash: form_data_hash,
+          user: teacher,
+          status: 'unreviewed'
+        )
+        application.update!(status: status)
       end
     end
   end

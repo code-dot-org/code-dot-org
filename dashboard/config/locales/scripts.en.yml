@@ -33231,6 +33231,20 @@ en:
               name: "[TEMPLATE] Unit Wrap Up"
               description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
               description_teacher: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+            lesson-3:
+              name: "[TEMPLATE] Content lessons"
+              description_student: |-
+                **You will:**
+
+                * Insert lesson objectives.
+
+                **Suggested time:** ____ minutes
+              description_teacher: |-
+                **You will:**
+
+                * Insert lesson objectives.
+
+                **Suggested time:** ____ minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -33491,12 +33505,19 @@ en:
             lesson-4:
               name: Consider real-world implications
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Consider real-world implications of web development.
+
+                **Suggested time:** 20 minutes
             lesson-5:
               name: Unit wrap up
               description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
               description_teacher: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Web Development
           name: vpl-csd2-ci-pilot-2022
           title: 'Module 2: Preparing to Teach Web Development'
           description_audience: ''
@@ -33558,4 +33579,17 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Level Updates
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csd-playground
+          title: CSD Playground
+          description_audience: Curriculum Writers
+          description_short: For staging updates to lessons or levels between curriculum versions
+          description: For staging updates to lessons or levels between curriculum versions
           student_description: ''
