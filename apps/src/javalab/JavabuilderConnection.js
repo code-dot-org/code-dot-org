@@ -22,7 +22,8 @@ export default class JavabuilderConnection {
     setIsRunning,
     setIsTesting,
     executionType,
-    miniAppType
+    miniAppType,
+    overrideSources
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -35,17 +36,21 @@ export default class JavabuilderConnection {
     this.setIsTesting = setIsTesting;
     this.executionType = executionType;
     this.miniAppType = miniAppType;
+    this.overrideSources = overrideSources;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilder() {
-    // Don't attempt to connect to Javabuilder if we do not have a project identifier.
+    // Don't attempt to connect to Javabuilder if we do not have a project.
     // This typically occurs if a teacher is trying to view a student's project
     // that has not been modified from the starter code.
     // This case does not apply to students, who are able to execute unmodified starter code.
     // See this comment for more detail: https://github.com/code-dot-org/code-dot-org/pull/42313#discussion_r701417221
-    if (project.getCurrentId() === undefined) {
+    //
+    // The exception to this rule is that we do not need a project if we are passing in the code that will be executed
+    // via an optional overrideSources parameter, which levelbuilders use when writing exemplar code.
+    if (project.getCurrentId() === undefined && !this.overrideSources) {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }
@@ -53,19 +58,33 @@ export default class JavabuilderConnection {
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
     this.onNewlineMessage();
 
+    const payload = {
+      projectUrl: this.overrideSources
+        ? 'override'
+        : project.getProjectSourcesUrl(),
+      projectVersion: this.overrideSources
+        ? 'override'
+        : project.getCurrentSourceVersionId(),
+      levelId: this.levelId,
+      options: this.options,
+      executionType: this.executionType,
+      useDashboardSources: false,
+      miniAppType: this.miniAppType
+    };
+
+    let url;
+    if (this.overrideSources) {
+      url = '/javabuilder/access_token_with_override_sources';
+      payload.overrideSources = this.overrideSources;
+    } else {
+      url = '/javabuilder/access_token';
+      payload.channelId = this.channelId;
+    }
+
     $.ajax({
-      url: '/javabuilder/access_token',
+      url: url,
       type: 'get',
-      data: {
-        projectUrl: project.getProjectSourcesUrl(),
-        channelId: this.channelId,
-        projectVersion: project.getCurrentSourceVersionId(),
-        levelId: this.levelId,
-        options: this.options,
-        executionType: this.executionType,
-        useDashboardSources: false,
-        miniAppType: this.miniAppType
-      }
+      data: payload
     })
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
