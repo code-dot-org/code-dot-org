@@ -77,20 +77,6 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.can_be_instructor?(user)}
   end
 
-  def can_assign_to_section_participants?(participant_type)
-    participant_audience = course_versions.first.content_root.participant_audience
-
-    if participant_type == 'facilitator'
-      return ['facilitator', 'teacher', 'student'].include? participant_audience
-    elsif participant_type == 'teacher'
-      return ['teacher', 'student'].include? participant_audience
-    elsif participant_type == 'student'
-      return 'student' == participant_audience
-    end
-
-    false
-  end
-
   def any_versions_launched?
     course_versions.any?(&:launched?)
   end
