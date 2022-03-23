@@ -29,14 +29,6 @@ Sequel.migration do
         end
       end
     end
-
-    # In Drone CI, the table will be created from from schema.rb file. After that, this migration
-    # will get run, we can't do a table rename at that point because user_project_storage_ids will already
-    # exist. So we just need to drop the old table and create the view for consistency between envs.
-    if ENV['CI']
-      drop_table(pegasus_user_storage_ids)
-      create_view(pegasus_user_storage_ids, DB[dashboard_user_project_storage_ids].select_all)
-    end
   end
 
   down do
