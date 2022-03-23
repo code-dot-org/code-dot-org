@@ -549,7 +549,7 @@ Resources:
 <%=  component 'database'%>
 <% end -%>
 
-<%=  component 'codeprojects'%>
+<%= indent(component('codeprojects'), 2) %>
 
   ChefConfig:
     Type: AWS::SecretsManager::Secret
