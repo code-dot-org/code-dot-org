@@ -1550,6 +1550,94 @@ exports.install = function(blockly, blockInstallOptions) {
         'block_id_${this.id}');\n`;
   };
 
+  function createDrawShapeBlock(blockName) {
+    return {
+      helpUrl: '',
+      init: function() {
+        this.setHSV(184, 1.0, 0.74);
+        var dropdown;
+        var input = this.appendDummyInput();
+        input.appendTitle(msg.drawShape());
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+
+        // Generates a list of pairs of the form [[url, name]]
+        var values = [];
+        for (var name in skin.shapes) {
+          var url = skin.shapes[name];
+          values.push([url, name]);
+        }
+        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+
+        input.appendTitle(dropdown, 'VALUE');
+
+        appendToDrawShapeBlock(blockName, this);
+      }
+    };
+  }
+
+  // Add size input to the draw shape block (text input & socket)
+  function appendToDrawShapeBlock(blockName, block) {
+    if (blockName === 'turtle_shape_with_side_length') {
+      block.appendDummyInput().appendTitle(msg.withSideLength());
+      block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
+      block.appendDummyInput().appendTitle(msg.pixels());
+      block.setTooltip(msg.drawShapeWithSideLength());
+    } else if (blockName === 'turtle_shape_with_side_length_non_param') {
+      block.appendDummyInput().appendTitle(msg.withSideLength());
+      block
+        .appendDummyInput()
+        .appendTitle(
+          new blockly.FieldTextInput(
+            '0',
+            blockly.FieldTextInput.numberValidator
+          ),
+          'SIZE'
+        )
+        .appendTitle(msg.pixels());
+      block.setTooltip(msg.drawShapeWithSideLength());
+    } else {
+      block.setTooltip(msg.drawShape());
+    }
+  }
+
+  blockly.Blocks.shape = createDrawShapeBlock();
+
+  generator.shape = function() {
+    return (
+      'Turtle.drawShape("' +
+      this.getTitleValue('VALUE') +
+      '", null, \'block_id_' +
+      this.id +
+      "');\n"
+    );
+  };
+
+  blockly.Blocks.turtle_shape_with_side_length = createDrawShapeBlock(
+    'turtle_shape_with_side_length'
+  );
+
+  generator.turtle_shape_with_side_length = function() {
+    let size = generator.valueToCode(
+      this,
+      'SIZE',
+      Blockly.JavaScript.ORDER_NONE
+    );
+    return `Turtle.drawShape('${this.getTitleValue('VALUE')}',${size},
+        'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.turtle_shape_with_side_length_non_param = createDrawShapeBlock(
+    'turtle_shape_with_side_length_non_param'
+  );
+
+  generator.turtle_shape_with_side_length_non_param = function() {
+    let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
+    return `Turtle.drawShape('${this.getTitleValue('VALUE')}',${size},
+        'block_id_${this.id}');\n`;
+  };
+
   blockly.Blocks.turtle_setArtist = {
     helpUrl: '',
     init: function() {
