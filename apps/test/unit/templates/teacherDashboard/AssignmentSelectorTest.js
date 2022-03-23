@@ -2,12 +2,15 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/reconfiguredChai';
-import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
+import AssignmentSelector, {
+  getCourseOfferingsByCategory
+} from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   localeCode: 'en-US',
   courseOfferings: courseOfferings,
+  audience: 'student',
   section: {
     id: 11,
     name: 'foo',
@@ -26,6 +29,7 @@ const defaultProps = {
 
 const hiddenSectionProps = {
   courseOfferings: courseOfferings,
+  audience: 'student',
   section: {
     id: 11,
     name: 'foo',
@@ -43,6 +47,68 @@ const hiddenSectionProps = {
 };
 
 describe('AssignmentSelector', () => {
+  it('getCourseOfferingsByCategory gets the right course offerings for student', () => {
+    let courseOfferingsByCategory = getCourseOfferingsByCategory(
+      defaultProps.courseOfferings,
+      'student'
+    );
+
+    assert.deepEqual(Object.keys(courseOfferingsByCategory), [
+      'hoc',
+      'full_course',
+      'csf'
+    ]);
+    assert.deepEqual(
+      courseOfferingsByCategory['full_course'].map(s => s.display_name),
+      ['Computer Science A', 'Computer Science Discoveries']
+    );
+    // Hello World and Poem Art at featured so they show up before non-featured
+    assert.deepEqual(
+      courseOfferingsByCategory['hoc'].map(s => s.display_name),
+      ['Hello World', 'Poem Art', 'Artist', 'Flappy']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['csf'].map(s => s.display_name),
+      ['Course A']
+    );
+  });
+
+  it('getCourseOfferingsByCategory gets the right course offerings for teacher', () => {
+    let courseOfferingsByCategory = getCourseOfferingsByCategory(
+      defaultProps.courseOfferings,
+      'teacher'
+    );
+
+    assert.deepEqual(Object.keys(courseOfferingsByCategory), [
+      'hoc',
+      'full_course',
+      'csf',
+      'self_paced_pl',
+      'virtual_pl'
+    ]);
+    assert.deepEqual(
+      courseOfferingsByCategory['full_course'].map(s => s.display_name),
+      ['Computer Science A', 'Computer Science Discoveries']
+    );
+    // Hello World and Poem Art at featured so they show up before non-featured
+    assert.deepEqual(
+      courseOfferingsByCategory['hoc'].map(s => s.display_name),
+      ['Hello World', 'Poem Art', 'Artist', 'Flappy']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['csf'].map(s => s.display_name),
+      ['Course A']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['self_paced_pl'].map(s => s.display_name),
+      ['Self Paced PL CSP']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['virtual_pl'].map(s => s.display_name),
+      ['Virtual PL CSP']
+    );
+  });
+
   it('defaults to just course offering dropdown with no selection when no section is provided', () => {
     const wrapper = shallow(
       <AssignmentSelector {...defaultProps} section={null} />

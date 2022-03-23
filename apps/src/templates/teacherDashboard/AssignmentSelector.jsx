@@ -20,6 +20,26 @@ const participantTypesByAudience = {
   facilitator: ['student', 'teacher', 'facilitator']
 };
 
+export const getCourseOfferingsByCategory = (courseOfferings, audience) => {
+  const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
+    return participantTypesByAudience[audience].includes(
+      offering.participant_audience
+    );
+  });
+  let orderedCourseOfferings = _.orderBy(filterCourseOfferings, 'display_name');
+  orderedCourseOfferings = _.orderBy(
+    orderedCourseOfferings,
+    'is_featured',
+    'desc'
+  );
+  const courseOfferingsByCategories = _.groupBy(
+    orderedCourseOfferings,
+    'category'
+  );
+
+  return courseOfferingsByCategories;
+};
+
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
@@ -194,24 +214,9 @@ export default class AssignmentSelector extends Component {
       selectedUnitId
     } = this.state;
 
-    // this needs to be equal to or lower
-    const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
-      return participantTypesByAudience[audience].includes(
-        offering.participant_audience
-      );
-    });
-    let orderedCourseOfferings = _.orderBy(
-      filterCourseOfferings,
-      'display_name'
-    );
-    orderedCourseOfferings = _.orderBy(
-      orderedCourseOfferings,
-      'is_featured',
-      'desc'
-    );
-    const courseOfferingsByCategories = _.groupBy(
-      orderedCourseOfferings,
-      'category'
+    const courseOfferingsByCategories = getCourseOfferingsByCategory(
+      courseOfferings,
+      audience
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];
