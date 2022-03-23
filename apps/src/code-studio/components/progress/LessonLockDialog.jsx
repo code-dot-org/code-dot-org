@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from './progressStyles';
@@ -11,7 +10,7 @@ import SectionSelector from './SectionSelector';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-class LessonLockDialog extends React.Component {
+export class UnconnectedLessonLockDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
@@ -102,7 +101,7 @@ class LessonLockDialog extends React.Component {
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
       >
-        <div style={[styles.main, responsiveHeight]}>
+        <div style={{...styles.main, ...responsiveHeight}}>
           <div>
             <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
             <SectionSelector
@@ -174,16 +173,22 @@ class LessonLockDialog extends React.Component {
               </tr>
             </tbody>
           </table>
-          <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>
+          <div
+            style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}
+          >
             {commonMsg.autolock()}
           </div>
-          <div style={[styles.title, hiddenUnlessSelectedSection]}>
+          <div style={{...styles.title, ...hiddenUnlessSelectedSection}}>
             {commonMsg.studentControl()}
           </div>
-          <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>
+          <div
+            style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}
+          >
             {commonMsg.studentLockStateInstructions()}
           </div>
-          <table style={[styles.studentTable, hiddenUnlessSelectedSection]}>
+          <table
+            style={{...styles.studentTable, ...hiddenUnlessSelectedSection}}
+          >
             <thead>
               <tr>
                 <th style={styles.headerRow}>{commonMsg.student()}</th>
@@ -197,11 +202,12 @@ class LessonLockDialog extends React.Component {
                 <tr key={index}>
                   <td style={styles.tableCell}>{name}</td>
                   <td
-                    style={[
-                      styles.tableCell,
-                      styles.radioCell,
-                      lockStatus === LockStatus.Locked && styles.selectedCell
-                    ]}
+                    style={{
+                      ...styles.tableCell,
+                      ...styles.radioCell,
+                      ...(lockStatus === LockStatus.Locked &&
+                        styles.selectedCell)
+                    }}
                   >
                     <input
                       type="radio"
@@ -212,11 +218,12 @@ class LessonLockDialog extends React.Component {
                     />
                   </td>
                   <td
-                    style={[
-                      styles.tableCell,
-                      styles.radioCell,
-                      lockStatus === LockStatus.Editable && styles.selectedCell
-                    ]}
+                    style={{
+                      ...styles.tableCell,
+                      ...styles.radioCell,
+                      ...(lockStatus === LockStatus.Editable &&
+                        styles.selectedCell)
+                    }}
                   >
                     <input
                       type="radio"
@@ -227,12 +234,12 @@ class LessonLockDialog extends React.Component {
                     />
                   </td>
                   <td
-                    style={[
-                      styles.tableCell,
-                      styles.radioCell,
-                      lockStatus === LockStatus.ReadonlyAnswers &&
-                        styles.selectedCell
-                    ]}
+                    style={{
+                      ...styles.tableCell,
+                      ...styles.radioCell,
+                      ...(lockStatus === LockStatus.ReadonlyAnswers &&
+                        styles.selectedCell)
+                    }}
                   >
                     <input
                       type="radio"
@@ -257,7 +264,10 @@ class LessonLockDialog extends React.Component {
           </button>
           <button
             type="button"
-            style={[progressStyles.blueButton, hiddenUnlessSelectedSection]}
+            style={{
+              ...progressStyles.blueButton,
+              ...hiddenUnlessSelectedSection
+            }}
             onClick={this.handleSave}
             disabled={this.props.saving}
           >
@@ -326,7 +336,6 @@ const styles = {
   }
 };
 
-export const UnconnectedLessonLockDialog = Radium(LessonLockDialog);
 export default connect(
   state => ({
     initialLockStatus: state.lessonLock.lockStatus,
