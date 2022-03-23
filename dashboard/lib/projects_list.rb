@@ -50,9 +50,7 @@ module ProjectsList
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
 
-      storage_apps_query = PEGASUS_DB[:storage_apps].
-        where(storage_id: storage_id, state: state).
-        order(Sequel.desc(:updated_at))
+      storage_apps_query = StorageApps.new(storage_id).get_projects_with_state(state: state, order: Sequel.desc(:updated_at))
 
       storage_apps_query.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
@@ -149,7 +147,7 @@ module ProjectsList
       [].tap do |projects_list_data|
         user_storage_ids = get_user_ids_by_storage_ids(section_users.pluck(:id))
         user_storage_id_list = user_storage_ids.keys
-        PEGASUS_DB[:storage_apps].
+        StorageApps.table.
           where(storage_id: user_storage_id_list, state: 'active').
           where(project_type: project_types).
           where("value->'$.libraryName' IS NOT NULL").
@@ -200,18 +198,17 @@ module ProjectsList
     end
 
     def project_and_featured_project_and_user_fields
-      [
-        :storage_apps__id___id,
-        :storage_apps__storage_id___storage_id,
-        :storage_apps__value___value,
-        :storage_apps__project_type___project_type,
-        :storage_apps__published_at___published_at,
+      storage_apps_fields = prefix_storage_app_fields(%w(id___id storage_id___storage_id value___value project_type___project_type published_at___published_at))
+
+      other_fields = [
         :featured_projects__featured_at___featured_at,
         :featured_projects__unfeatured_at___unfeatured_at,
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
       ]
+
+      storage_apps_fields.concat(other_fields)
     end
 
     def fetch_featured_projects_by_type(project_type)
@@ -305,17 +302,15 @@ module ProjectsList
     end
 
     def project_and_user_fields
-      [
-        :storage_apps__id___id,
-        :storage_apps__storage_id___storage_id,
-        :storage_apps__value___value,
-        :storage_apps__project_type___project_type,
-        :storage_apps__published_at___published_at,
-        :storage_apps__abuse_score___abuse_score,
+      storage_app_fields = prefix_storage_app_fields(%w(id___id storage_id___storage_id value___value project_type___project_type published_at___published_at abuse_score___abuse_score))
+
+      user_fields = [
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
       ]
+
+      storage_app_fields.concat(user_fields)
     end
 
     def fetch_published_project_types(project_groups, limit:, published_before: nil)
@@ -326,7 +321,7 @@ module ProjectsList
       {}.tap do |projects|
         project_groups.map do |project_group|
           project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
-          projects[project_group] = PEGASUS_DB[:storage_apps].
+          projects[project_group] = StorageApps.table.
             select(*project_and_user_fields).
             join(user_project_storage_ids, id: :storage_id).
             join(users, id: :user_id).
@@ -359,6 +354,11 @@ module ProjectsList
           isFeatured: false
         }
       ).with_indifferent_access
+    end
+
+    def prefix_storage_app_fields(field_names)
+      table_name = "storage_apps"
+      field_names.map {|field_name| "#{table_name}__#{field_name}".to_sym}
     end
   end
 end
