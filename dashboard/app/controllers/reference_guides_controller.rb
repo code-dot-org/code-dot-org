@@ -7,7 +7,7 @@ class ReferenceGuidesController < ApplicationController
 
   # GET /courses/:course_name/guides/edit
   def edit_all
-    @base_url = "/courses/#{params[:course_course_name]}/guides/"
+    @base_url = "/courses/#{params[:course_course_name]}/guides"
   end
 
   # GET /courses/:course_name/guides/:key
@@ -29,7 +29,7 @@ class ReferenceGuidesController < ApplicationController
   # GET /courses/:course_name/guides/:key/edit
   def edit
     @update_url = course_reference_guide_url(params[:course_course_name], params[:key])
-    @edit_all_url = "/courses/#{params[:course_course_name]}/guides/edit"
+    @edit_all_url = edit_all_reference_guides_url(params[:course_course_name])
   end
 
   private
