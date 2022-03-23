@@ -185,7 +185,9 @@ describe('ReferenceGuideEditAll', () => {
     const referenceGuides = [
       makeReferenceGuide('a', null, 0),
       makeReferenceGuide('b', null, 1),
-      makeReferenceGuide('c', null, 2)
+      makeReferenceGuide('c', null, 2),
+      makeReferenceGuide('d', 'b', 0),
+      makeReferenceGuide('e', 'b', 1)
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideEditAll
@@ -195,19 +197,20 @@ describe('ReferenceGuideEditAll', () => {
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'b', 'c']);
+    ).to.deep.equal(['a', 'b', 'd', 'e', 'c']);
 
     // click delete on second
     wrapper
       .findAll('.actions-box')[1]
       .findAll('MiniIconButton')[1]
       .props.func();
-    expect(wrapper.exists('Dialog'));
+    expect(wrapper.exists('DeleteWarningDialog'));
 
     // confirm delete
-    wrapper.findOne('Dialog').props.onConfirm();
+    wrapper.findOne('DeleteWarningDialog').props.deleteGuide();
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
     ).to.deep.equal(['a', 'c']);
+    expect(wrapper.exists('DeleteWarningDialog')).to.not.be.true;
   });
 });
