@@ -25,8 +25,18 @@ describe('ReferenceGuideEditorTest', () => {
 
   it('displays the reference guide', () => {
     const referenceGuide = makeReferenceGuide('hello_world', 'parent_key');
+    const referenceGuides = [
+      makeReferenceGuide('hello_world', 'parent_key'),
+      makeReferenceGuide('hello_world2', 'parent_key'),
+      makeReferenceGuide('hello_world3', 'parent_key')
+    ];
     const wrapper = isolateComponent(
-      <ReferenceGuideEditor referenceGuide={referenceGuide} />
+      <ReferenceGuideEditor
+        referenceGuide={referenceGuide}
+        referenceGuides={referenceGuides}
+        updateUrl={'/courses/etc/guides/'}
+        editAllUrl={'/courses/etc/guides/edit'}
+      />
     );
     expect(wrapper.exists('input[value=hello_world]'));
     expect(wrapper.exists('input[value=csa-2021]'));
@@ -39,13 +49,34 @@ describe('ReferenceGuideEditorTest', () => {
   it('saves the new data with save is pressed', () => {
     fetchSpy.returns(Promise.resolve({ok: true}));
     const referenceGuide = makeReferenceGuide('hello_world', 'parent_key');
+    const referenceGuides = [
+      makeReferenceGuide('hello_world', 'parent_key'),
+      makeReferenceGuide('hello_world2', 'parent_key'),
+      makeReferenceGuide('hello_world3', 'parent_key')
+    ];
     const wrapper = isolateComponent(
-      <ReferenceGuideEditor referenceGuide={referenceGuide} />
+      <ReferenceGuideEditor
+        referenceGuide={referenceGuide}
+        referenceGuides={referenceGuides}
+        updateUrl={'/courses/etc/guides/'}
+        editAllUrl={'/courses/etc/guides/edit'}
+      />
     );
 
+    expect(
+      wrapper.findOne('select').children.map(c => c.toString())
+    ).to.not.include('<option>hello_world</option>');
+    expect(
+      wrapper.findOne('select').children.map(c => c.toString())
+    ).to.include('<option>hello_world2</option>');
+    expect(
+      wrapper.findOne('select').children.map(c => c.toString())
+    ).to.include('<option>hello_world3</option>');
+
+    // change the display name
     wrapper
-      .findOne('input[value=parent_key]')
-      .props.onChange({target: {value: 'new_parent_key'}});
+      .findAll('input[value=hello_world]')[1]
+      .props.onChange({target: {value: 'new_display_name'}});
 
     // click save
     wrapper.findOne('SaveBar').props.handleSave();
@@ -54,7 +85,7 @@ describe('ReferenceGuideEditorTest', () => {
     expect(fetchSpy.getCall(0).args[1].body).to.equal(
       JSON.stringify({
         ...referenceGuide,
-        parent_reference_guide_key: 'new_parent_key'
+        display_name: 'new_display_name'
       })
     );
   });

@@ -7,6 +7,10 @@ import {
   getGuideChildren,
   organizeReferenceGuides
 } from './referenceGuideHelpers';
+import Dialog, {
+  Title as DialogTitle,
+  Body as DialogBody
+} from '@cdo/apps/templates/Dialog';
 
 const MiniIconButton = ({icon, alt, func, href}) => (
   <TextLink
@@ -32,22 +36,39 @@ export default function ReferenceGuideEditAll(props) {
     () => organizeReferenceGuides(referenceGuides),
     [referenceGuides]
   );
-
-  const deleteGuide = useCallback(
-    guideKey => {
-      setReferenceGuides([
-        ...referenceGuides.filter(guide => guide.key !== guideKey)
-      ]);
-      fetch(`${baseUrl}/${guideKey}`, {
-        method: 'DELETE',
-        headers: {
-          'content-type': 'application/json',
-          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-        }
-      });
-    },
-    [referenceGuides, baseUrl]
+  const [showDeleteWarningDialog, setShowDeleteWarningDialog] = useState(false);
+  const [pendingDeleteKey, setPendingDeleteKey] = useState(null);
+  const pendingDeleteAffectedKeys = useMemo(
+    () =>
+      [pendingDeleteKey].concat(
+        organizeReferenceGuides(referenceGuides, pendingDeleteKey).map(
+          guide => guide.key
+        )
+      ),
+    [pendingDeleteKey, referenceGuides]
   );
+
+  const initiateDeleteGuide = guideKey => {
+    setShowDeleteWarningDialog(true);
+    setPendingDeleteKey(guideKey);
+  };
+
+  const deleteGuide = useCallback(() => {
+    setReferenceGuides([
+      ...referenceGuides.filter(
+        guide => !pendingDeleteAffectedKeys.includes(guide.key)
+      )
+    ]);
+    fetch(`${baseUrl}/${pendingDeleteKey}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json',
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+    setShowDeleteWarningDialog(false);
+    setPendingDeleteKey(null);
+  }, [referenceGuides, baseUrl, pendingDeleteKey, pendingDeleteAffectedKeys]);
 
   // To move guides, we will swap the positions of guides in the direction we want to move.
   // The positions might sometimes have gaps (in the case of deletion or changing parents),
@@ -118,6 +139,35 @@ export default function ReferenceGuideEditAll(props) {
         />
       </div>
 
+      {showDeleteWarningDialog && (
+        <Dialog
+          body={
+            <>
+              <DialogTitle>{`Are you sure you want to permanently delete reference guide ${pendingDeleteKey}?
+          `}</DialogTitle>
+              <DialogBody>
+                <p>
+                  This will also delete any child reference guides. List of
+                  guides affected:
+                </p>
+                <ul>
+                  {pendingDeleteAffectedKeys.map(guideKey => (
+                    <li key={guideKey}>{guideKey}</li>
+                  ))}
+                </ul>
+              </DialogBody>
+            </>
+          }
+          cancelText="Cancel"
+          confirmText="Delete"
+          confirmType="danger"
+          isOpen={true}
+          handleClose={() => setShowDeleteWarningDialog(false)}
+          onCancel={() => setShowDeleteWarningDialog(false)}
+          onConfirm={() => deleteGuide()}
+        />
+      )}
+
       <div className="guides-table">
         <span className="header">Actions</span>
         <span className="header">Reference Guides</span>
@@ -132,7 +182,7 @@ export default function ReferenceGuideEditAll(props) {
               <MiniIconButton
                 icon="trash"
                 alt="delete"
-                func={() => deleteGuide(guide.key)}
+                func={() => initiateDeleteGuide(guide.key)}
               />
               <MiniIconButton
                 icon="caret-up"

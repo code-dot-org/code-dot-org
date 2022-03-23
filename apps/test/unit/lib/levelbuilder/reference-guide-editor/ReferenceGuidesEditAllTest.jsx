@@ -25,7 +25,10 @@ describe('ReferenceGuideEditAll', () => {
   it('displays the name of the reference guide', () => {
     const referenceGuides = [makeReferenceGuide('hello_world')];
     const wrapper = isolateComponent(
-      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll
+        referenceGuides={referenceGuides}
+        baseUrl={'/courses/etc/guides'}
+      />
     );
     expect(wrapper.findOne('.guide-box').content()).to.equal('hello_world');
   });
@@ -33,7 +36,10 @@ describe('ReferenceGuideEditAll', () => {
   it('sets up all the actions for a ref guide', () => {
     const referenceGuides = [makeReferenceGuide('hello_world')];
     const wrapper = isolateComponent(
-      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll
+        referenceGuides={referenceGuides}
+        baseUrl={'/courses/etc/guides'}
+      />
     );
     expect(wrapper.findAll('MiniIconButton').length).to.equal(4);
     expect(wrapper.findOne('.actions-box').toString()).to.contain('edit');
@@ -62,7 +68,10 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('f', 'c', 1)
     ];
     let wrapper = isolateComponent(
-      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll
+        referenceGuides={referenceGuides}
+        baseUrl={'/courses/etc/guides'}
+      />
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
@@ -80,7 +89,10 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('h', 'c', 4)
     ];
     wrapper = isolateComponent(
-      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll
+        referenceGuides={referenceGuides}
+        baseUrl={'/courses/etc/guides'}
+      />
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
@@ -97,7 +109,10 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('f', 'c', 1)
     ];
     const wrapper = isolateComponent(
-      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll
+        referenceGuides={referenceGuides}
+        baseUrl={'/courses/etc/guides'}
+      />
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.props.style.paddingLeft)
@@ -116,7 +131,10 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('c', null, 2)
     ];
     const wrapper = isolateComponent(
-      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll
+        referenceGuides={referenceGuides}
+        baseUrl={'/courses/etc/guides'}
+      />
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
@@ -170,7 +188,10 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('c', null, 2)
     ];
     const wrapper = isolateComponent(
-      <ReferenceGuideEditAll referenceGuides={referenceGuides} />
+      <ReferenceGuideEditAll
+        referenceGuides={referenceGuides}
+        baseUrl={'/courses/etc/guides'}
+      />
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
@@ -181,6 +202,10 @@ describe('ReferenceGuideEditAll', () => {
       .findAll('.actions-box')[1]
       .findAll('MiniIconButton')[1]
       .props.func();
+    expect(wrapper.exists('Dialog'));
+
+    // confirm delete
+    wrapper.findOne('Dialog').props.onConfirm();
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
     ).to.deep.equal(['a', 'c']);
