@@ -3,23 +3,18 @@ import PropTypes from 'prop-types';
 import $ from 'jquery';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {TextLink} from '@dsco_/link';
 import {navigateToHref} from '@cdo/apps/utils';
 
-// the edit url with the last '/edit' removed
-const guideUrl = window.location.href
-  .split('/')
-  .slice(0, -1)
-  .join('/');
-// the edit url with the guide key removed
-const editAllUrl = window.location.href
-  .split('/')
-  .slice(0, -2)
-  .concat('edit')
-  .join('/');
-
 export default function ReferenceGuideEditor(props) {
-  const [referenceGuide, setReferenceGuide] = useState(props.referenceGuide);
+  const {
+    referenceGuide: initialReferenceGuide,
+    referenceGuides,
+    updateUrl,
+    editAllUrl
+  } = props;
+  const [referenceGuide, setReferenceGuide] = useState(initialReferenceGuide);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -29,7 +24,7 @@ export default function ReferenceGuideEditor(props) {
       return;
     }
     setIsSaving(true);
-    fetch(guideUrl, {
+    fetch(updateUrl, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -57,16 +52,21 @@ export default function ReferenceGuideEditor(props) {
         text={`All reference guides for ${referenceGuide.course_version_name}`}
       />
       <label>
-        <h2>Key</h2>
-        <input value={referenceGuide.key} disabled={true} />
+        Key
+        <input className="input" value={referenceGuide.key} disabled={true} />
       </label>
       <label>
-        <h2>Course Version</h2>
-        <input value={referenceGuide.course_version_name} disabled={true} />
-      </label>
-      <label>
-        <h2>Display Name</h2>
+        Course Version
         <input
+          className="input"
+          value={referenceGuide.course_version_name}
+          disabled={true}
+        />
+      </label>
+      <label>
+        Display Name
+        <input
+          className="input"
           value={referenceGuide.display_name}
           onChange={e =>
             setReferenceGuide({...referenceGuide, display_name: e.target.value})
@@ -74,8 +74,15 @@ export default function ReferenceGuideEditor(props) {
         />
       </label>
       <label>
-        <h2>Parent Reference Guide</h2>
-        <input
+        Parent Reference Guide
+        <HelpTip>
+          <p>
+            This change the reference guide to be nested within a different
+            reference guide. All guides nested within this guide will follow it.
+          </p>
+        </HelpTip>
+        <select
+          className="input"
           value={referenceGuide.parent_reference_guide_key}
           onChange={e =>
             setReferenceGuide({
@@ -83,10 +90,16 @@ export default function ReferenceGuideEditor(props) {
               parent_reference_guide_key: e.target.value
             })
           }
-        />
+        >
+          {referenceGuides
+            .sort((a, b) => a.key.localeCompare(b.key))
+            .map(guide => (
+              <option key={guide.key}>{guide.key}</option>
+            ))}
+        </select>
       </label>
       <TextareaWithMarkdownPreview
-        label={<h2>Content</h2>}
+        label="Content"
         handleMarkdownChange={e =>
           setReferenceGuide({...referenceGuide, content: e.target.value})
         }
@@ -98,7 +111,7 @@ export default function ReferenceGuideEditor(props) {
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref(guideUrl)}
+        handleView={() => navigateToHref(updateUrl)}
       />
     </div>
   );
@@ -113,5 +126,8 @@ const referenceGuideShape = PropTypes.shape({
 });
 
 ReferenceGuideEditor.propTypes = {
-  referenceGuide: referenceGuideShape.isRequired
+  referenceGuide: referenceGuideShape.isRequired,
+  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired,
+  updateUrl: PropTypes.string.isRequired,
+  editAllUrl: PropTypes.string.isRequired
 };

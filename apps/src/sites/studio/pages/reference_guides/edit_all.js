@@ -5,8 +5,12 @@ import ReferenceGuideEditAll from '@cdo/apps/lib/levelbuilder/reference-guide-ed
 
 $(() => {
   const referenceGuides = getScriptData('referenceGuides');
+  const baseUrl = getScriptData('baseUrl');
   ReactDOM.render(
-    <ReferenceGuideEditAll referenceGuides={referenceGuides} />,
+    <ReferenceGuideEditAll
+      referenceGuides={referenceGuides}
+      baseUrl={baseUrl}
+    />,
     document.getElementById('show-container')
   );
 });
