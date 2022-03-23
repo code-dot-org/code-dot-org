@@ -176,6 +176,7 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
+    # Figure out if caching is a concern
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
@@ -195,7 +196,7 @@ module LevelsHelper
         (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
-    level_requires_channel = false if @is_editing_exemplar
+    level_requires_channel = false if @is_editing_exemplar || @is_viewing_exemplar
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching

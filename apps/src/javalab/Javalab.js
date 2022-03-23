@@ -86,6 +86,7 @@ Javalab.prototype.init = function(config) {
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
   this.isEditingExemplar = !!config.level.isEditingExemplar;
+  this.isViewingExemplar = !!config.level.exemplarSources;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -358,7 +359,7 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
   }
 
   let overrideSources;
-  if (this.isEditingExemplar) {
+  if (this.isEditingExemplar || this.isViewingExemplar) {
     overrideSources = getSources(getStore().getState());
   }
 

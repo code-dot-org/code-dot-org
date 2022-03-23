@@ -519,10 +519,11 @@ class ScriptLevelsController < ApplicationController
     # javalab specfiic
     # check for exemplar as URL param
     if params[:exemplar]
+      @is_viewing_exemplar = true
       exemplar_sources = @level.try(:exemplar_sources)
       level_view_options(@level.id, {exemplar_sources: exemplar_sources})
       # add some cancan check that only verified teachers can view this
-      # readonly?
+      readonly_view_options
     end
 
     view_options(
