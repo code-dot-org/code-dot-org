@@ -38,6 +38,10 @@
         "debugging/aquatic/unversioned": {
           "word": "Отстраняване на грешки"
         },
+        "condition/aquatic/unversioned": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Условия"
         },
@@ -122,6 +126,10 @@
         "conditionals/coursed/2021": {
           "word": "Условия"
         },
+        "condition/coursed/2021": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
         "debugging/express/2021": {
           "word": "Отстраняване на грешки"
         },
@@ -130,6 +138,10 @@
         },
         "behavior/express/2021": {
           "word": "Поведение"
+        },
+        "condition/express/2021": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
         },
         "conditionals/express/2021": {
           "word": "Условия"
@@ -161,6 +173,10 @@
         "function/coursee/2021": {
           "word": "Функция"
         },
+        "condition/coursee/2021": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
         "conditionals/coursee/2021": {
           "word": "Условия"
         },
@@ -172,6 +188,9 @@
         },
         "variable/csd/2021": {
           "word": "Променлива"
+        },
+        "condition/csd/2021": {
+          "word": "Условие"
         },
         "conditionals/csd/2021": {
           "word": "Условия"

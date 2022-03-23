@@ -145,6 +145,10 @@ export default class JavabuilderConnection {
         message = javalabMsg.runningValidation();
         lineBreakCount = 2;
         break;
+      case StatusMessageType.NO_TESTS_FOUND:
+        this.onNewlineMessage();
+        message = javalabMsg.noTestsFound();
+        break;
       default:
         break;
     }

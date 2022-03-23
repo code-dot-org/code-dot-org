@@ -77,11 +77,13 @@ export const assignmentUnitShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   lesson_extras_available: PropTypes.bool.isRequired,
-  text_to_speech_enabled: PropTypes.bool.isRequired
+  text_to_speech_enabled: PropTypes.bool.isRequired,
+  position: PropTypes.number
 });
 
 export const assignmentCourseVersionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
   version_year: PropTypes.string.isRequired,
   content_root_id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
