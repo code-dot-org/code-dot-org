@@ -143,13 +143,19 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def teacher_enrollment_reminder__csp_summer_workshop_3_day
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
-      options: {days_before: 3}
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+    regional_partner.assign_attributes contact_name: 'Patty Partner', contact_email: 'patty@we_teach_code.ex.net'
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
+      options: {days_before: 3},
+      workshop_params: {regional_partner: regional_partner}
   end
 
   def teacher_enrollment_reminder__csa_summer_workshop_10_day
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+    regional_partner.assign_attributes contact_name: 'Patty Partner', contact_email: 'patty@we_teach_code.ex.net'
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
-      options: {days_before: 10}
+      options: {days_before: 10},
+      workshop_params: {regional_partner: regional_partner}
   end
 
   def teacher_enrollment_reminder__csa_summer_workshop_3_day
@@ -232,6 +238,32 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
       options: {days_before: 3},
       workshop_params: {
         virtual: true,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csa_summer_workshop_10_day_virtual
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+    regional_partner.assign_attributes contact_name: 'Patty Partner', contact_email: 'patty@we_teach_code.ex.net'
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
+      options: {days_before: 10},
+      workshop_params: {
+        virtual: true,
+        regional_partner: regional_partner,
+        location_name: 'zoom_link',
+        location_address: nil
+      }
+  end
+
+  def teacher_enrollment_reminder__csa_summer_workshop_3_day_virtual
+    regional_partner = build :regional_partner, name: 'We Teach Code'
+    regional_partner.assign_attributes contact_name: 'Patty Partner', contact_email: 'patty@we_teach_code.ex.net'
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSA, Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP,
+      options: {days_before: 3},
+      workshop_params: {
+        virtual: true,
+        regional_partner: regional_partner,
         location_name: 'zoom_link',
         location_address: nil
       }
