@@ -1,8 +1,6 @@
 /**
- * View shown to a teacher when beginning to add students to an empty section.
- * Lets the teacher decide whether to use word/picture logins, have students
- * manage their own accounts via email/oauth, or to sync students with an
- * external service like Microsoft Classroom or Clever.
+ * View shown to an instructor if they can create sections with different participant types
+ * (students, teachers, facilitators). Allows user to pick participant type for this section
  */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -29,8 +27,8 @@ const cardInfoByAudience = {
 };
 
 /**
- * UI for selecting the login type of a class section:
- * Word, picture, or email logins, or one of several third-party integrations.
+ * UI for selecting the participant type of a class section:
+ * Student, Teacher or Facilitator
  */
 export default class AudienceTypePicker extends Component {
   static propTypes = {
@@ -101,9 +99,6 @@ const style = {
     overflowY: 'auto',
     height: 'calc(80vh - 200px)'
   },
-  thirdPartyProviderUpsell: {
-    marginBottom: '10px'
-  },
   footer: {
     position: 'absolute',
     width: styleConstants['content-width'],
@@ -113,10 +108,5 @@ const style = {
     padding: '0px 20px 20px 20px',
     backgroundColor: '#fff',
     borderRadius: '5px'
-  },
-  emailPolicyNote: {
-    marginBottom: '20px',
-    paddingTop: '20px',
-    borderTop: '1px solid #000'
   }
 };
