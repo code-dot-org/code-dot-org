@@ -1251,7 +1251,7 @@ Artist.prototype.step = function(command, values, options) {
       width = dimensions.width;
       height = dimensions.height;
 
-      // Rotate the image such the the turtle is at the center of the bottom of
+      // Rotate the image such the turtle is at the center of the bottom of
       // the image and the image is pointing (from bottom to top) in the same
       // direction as the turtle.
       this.visualization.ctxScratch.save();
@@ -1295,7 +1295,7 @@ Artist.prototype.step = function(command, values, options) {
       width = dimensions.width;
       height = dimensions.height;
 
-      // Rotate the image such the the turtle is at the center of the bottom of
+      // Rotate the image such the turtle is at the center of the bottom of
       // the image and the image is pointing (from bottom to top) in the same
       // direction as the turtle.
       this.visualization.ctxScratch.save();
