@@ -173,16 +173,16 @@ exports.load = function(assetUrl, id) {
   var patternBlocks = function() {
     // Pattern Blocks
     var patternBlocks = [
-      'smallRhombus1',
-      'smallRhombus2',
-      'smallRhombus3',
-      'smallRhombus4',
-      'smallRhombus5',
-      'smallRhombus6',
-      'smallRhombus7',
-      'smallRhombus8',
-      'smallRhombus9',
-      'smallRhombus10'
+      'smallRhombusMaroon',
+      'smallRhombusRed',
+      'smallRhombusOrange',
+      'smallRhombusYellow',
+      'smallRhombusGreen',
+      'smallRhombusCyan',
+      'smallRhombusLightBlue',
+      'smallRhombusBlue',
+      'smallRhombusPurple',
+      'smallRhombusMagenta'
     ];
 
     var mapping = {};
