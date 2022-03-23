@@ -58,7 +58,6 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -484,13 +483,14 @@ export default class P5Lab {
       ? config.initialAnimationList
       : this.startAnimations;
     initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList
+      initialAnimationList,
+      this.defaultAnimations
     );
 
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        defaultSprites /* spritesForV3Migration */,
+        this.defaultAnimations /* spritesForV3Migration */,
         this.isBlockly
       )
     );
