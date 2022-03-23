@@ -1557,7 +1557,7 @@ exports.install = function(blockly, blockInstallOptions) {
         this.setHSV(184, 1.0, 0.74);
         var dropdown;
         var input = this.appendDummyInput();
-        input.appendTitle(msg.drawShape());
+        input.appendField(msg.drawShape());
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -1570,7 +1570,7 @@ exports.install = function(blockly, blockInstallOptions) {
         }
         dropdown = new blockly.FieldImageDropdown(values, 40, 40);
 
-        input.appendTitle(dropdown, 'VALUE');
+        input.appendField(dropdown, 'VALUE');
 
         appendToDrawShapeBlock(blockName, this);
       }
@@ -1580,22 +1580,22 @@ exports.install = function(blockly, blockInstallOptions) {
   // Add size input to the draw shape block (text input & socket)
   function appendToDrawShapeBlock(blockName, block) {
     if (blockName === 'turtle_shape_with_side_length') {
-      block.appendDummyInput().appendTitle(msg.withSideLength());
+      block.appendDummyInput().appendField(msg.withSideLength());
       block.appendValueInput('SIZE').setCheck(blockly.BlockValueType.NUMBER);
-      block.appendDummyInput().appendTitle(msg.pixels());
+      block.appendDummyInput().appendField(msg.pixels());
       block.setTooltip(msg.drawShapeWithSideLength());
     } else if (blockName === 'turtle_shape_with_side_length_non_param') {
-      block.appendDummyInput().appendTitle(msg.withSideLength());
+      block.appendDummyInput().appendField(msg.withSideLength());
       block
         .appendDummyInput()
-        .appendTitle(
+        .appendField(
           new blockly.FieldTextInput(
             '0',
             blockly.FieldTextInput.numberValidator
           ),
           'SIZE'
         )
-        .appendTitle(msg.pixels());
+        .appendField(msg.pixels());
       block.setTooltip(msg.drawShapeWithSideLength());
     } else {
       block.setTooltip(msg.drawShape());
