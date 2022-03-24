@@ -33,21 +33,11 @@
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-20/unit1/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-20/unit1/standards/"
-        ]
-      ],
       "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:08:07 UTC",
+    "serialized_at": "2022-03-22 21:16:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3100,13 +3090,45 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp-20/unit1/",
+      "key": "lesson_plans",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp-20/unit1/standards/",
+      "key": "standard_mappings",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans",
+        "script.name": "csp1-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings",
+        "script.name": "csp1-2020"
+      }
+    }
   ],
   "scripts_student_resources": [
 
