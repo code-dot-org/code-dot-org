@@ -1,9 +1,5 @@
 <StandaloneVideo>
   <config><![CDATA[{
-  "game_id": 54,
-  "created_at": "2022-03-20T21:31:55.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "video_key": "csd_weblab_css_2",
     "instructions_important": "false",
@@ -12,11 +8,17 @@
     "parent_level_id": 20023,
     "name_suffix": "_2021",
     "display_name": "Video: Intro to CSS Part 2",
-    "long_instructions": "## Question to Consider\r\n* How does the web page know what stylesheet it should be using?",
-    "teacher_markdown": "## Discussion Goals\r\n\r\nMake sure all the students understand how to link to their stylesheet from each web page."
+    "long_instructions": "This video is included in the CS Discoveries curriculum. \r\n\r\n## As you watch the video, consider the following:\r\n\r\n#### How does the web page know what stylesheet it should be using?",
+    "encrypted": "false"
   },
+  "game_id": 54,
   "published": true,
+  "created_at": "2022-03-20T21:31:55.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-20T21:31:55.609+00:00\",\"changed\":[\"cloned from \\\"Video: Intro to CSS Part 2_2021\\\"\"],\"cloned_from\":\"Video: Intro to CSS Part 2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-20T21:31:55.609+00:00\",\"changed\":[\"cloned from \\\"Video: Intro to CSS Part 2_2021\\\"\"],\"cloned_from\":\"Video: Intro to CSS Part 2_2021\"},{\"changed_at\":\"2022-03-23 14:35:40 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-23 16:01:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>
