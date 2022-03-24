@@ -4,8 +4,12 @@
 
 %h2 Survey Audience
 
-%select{:name => "Survey Audience"}
+%select{:name => "audience"}
   %option{:value => "all"} all teachers
   %option{:value => "even"} even ID teachers
   %option{:value => "odd"} odd ID teachers
   %option{:value => "none"} no teachers
+
+= form_tag({controller: 'admin_nps', action: 'nps_update', method: "post"}, style: 'margin: 5px;')do
+  = hidden_field_tag 'audience', audience
+  %button.btn{type: 'submit'}= "Save"
