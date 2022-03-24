@@ -259,11 +259,13 @@ Dashboard::Application.routes.draw do
       get 'get_rubric'
       get 'embed_level'
       get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      get 'edit_exemplar'
       get 'get_serialized_maze'
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
       post 'update_start_code'
+      post 'update_exemplar_code'
     end
   end
 
@@ -890,6 +892,7 @@ Dashboard::Application.routes.draw do
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
   get '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#get_access_token_with_override_sources'
+  get '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#get_access_token_with_override_validation'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do

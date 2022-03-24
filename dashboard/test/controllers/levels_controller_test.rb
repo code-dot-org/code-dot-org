@@ -138,6 +138,48 @@ class LevelsControllerTest < ActionController::TestCase
     user: :teacher
   )
 
+  test "levelbuilder can get exemplar to edit" do
+    get :edit_exemplar,
+      params: {id: @level.id}
+    assert_response :success
+  end
+
+  test "teacher cannot get exemplar to edit" do
+    teacher = create(:teacher)
+    sign_out(@levelbuilder)
+    sign_in(teacher)
+
+    get :edit_exemplar,
+      params: {id: @level.id}
+    assert_response :forbidden
+  end
+
+  test "levelbuilder can update exemplar" do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    exemplar_sources = {"File.java" => "System.out.println()"}
+    javalab_level = create(:javalab)
+    assert_nil javalab_level.exemplar_sources
+
+    post :update_exemplar_code,
+      params: {id: javalab_level.id},
+      body: {exemplar_sources: {"File.java" => "System.out.println()"}}.to_json
+
+    assert_response :success
+    javalab_level.reload
+    assert_equal exemplar_sources, javalab_level.exemplar_sources
+  end
+
+  test "teacher cannot update exemplar" do
+    teacher = create(:teacher)
+    sign_out(@levelbuilder)
+    sign_in(teacher)
+
+    javalab_level = create(:javalab)
+    post :update_exemplar_code,
+      params: {id: javalab_level.id}
+    assert_response :forbidden
+  end
+
   test "should get new" do
     get :new, params: {game_id: @level.game}
     assert_response :success
