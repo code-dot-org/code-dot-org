@@ -26,6 +26,9 @@ function LessonLockDialog({
     }
   }, [initialLockStatus]);
 
+  //
+  // Event handlers
+  //
   const setAllLockStatus = lockStatus => {
     setlockStatuses(currentLockStatuses =>
       currentLockStatuses.map(item => ({...item, lockStatus}))
@@ -64,184 +67,209 @@ function LessonLockDialog({
     saveDialog(selectedSectionId, lockStatuses);
   };
 
+  //
+  // Rendering helpers that each render a section of the dialog
+  //
+  const hasSelectedSection = selectedSectionId !== NO_SECTION;
+  const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
+
+  const renderHeading = () => (
+    <div>
+      <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
+      <SectionSelector
+        style={{marginLeft: 10}}
+        requireSelection={hasSelectedSection}
+      />
+    </div>
+  );
+
+  const renderInstructionsAndButtons = () => (
+    <>
+      <table style={hiddenUnlessSelectedSection}>
+        <tbody>
+          <tr>
+            <td>1. {commonMsg.allowEditingInstructions()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.orangeButton}
+                onClick={allowEditing}
+              >
+                {commonMsg.allowEditing()}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>2. {commonMsg.lockStageInstructions()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.orangeButton}
+                onClick={lockLesson}
+              >
+                {commonMsg.lockStage()}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>3. {commonMsg.showAnswersInstructions()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.orangeButton}
+                onClick={showAnswers}
+              >
+                {commonMsg.showAnswers()}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>4. {commonMsg.relockStageInstructions()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.orangeButton}
+                onClick={lockLesson}
+              >
+                {commonMsg.relockStage()}
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>5. {commonMsg.reviewResponses()}</td>
+            <td>
+              <button
+                type="button"
+                style={progressStyles.whiteButton}
+                onClick={viewSection}
+              >
+                {commonMsg.viewSection()}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
+        {commonMsg.autolock()}
+      </div>
+    </>
+  );
+
+  const renderStudentTable = () => (
+    <>
+      <div style={{...styles.title, ...hiddenUnlessSelectedSection}}>
+        {commonMsg.studentControl()}
+      </div>
+      <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
+        {commonMsg.studentLockStateInstructions()}
+      </div>
+      <table style={{...styles.studentTable, ...hiddenUnlessSelectedSection}}>
+        <thead>
+          <tr>
+            <th style={styles.headerRow}>{commonMsg.student()}</th>
+            <th style={styles.headerRow}>{commonMsg.locked()}</th>
+            <th style={styles.headerRow}>{commonMsg.editable()}</th>
+            <th style={styles.headerRow}>{commonMsg.answersVisible()}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {lockStatuses.map(({name, lockStatus}, index) =>
+            renderStudentRow(index, name, lockStatus)
+          )}
+        </tbody>
+      </table>
+    </>
+  );
+
+  const renderStudentRow = (index, name, lockStatus) => (
+    <tr key={index}>
+      <td style={styles.tableCell}>{name}</td>
+      <td
+        style={{
+          ...styles.tableCell,
+          ...styles.radioCell,
+          ...(lockStatus === LockStatus.Locked && styles.selectedCell)
+        }}
+      >
+        <input
+          type="radio"
+          name={index}
+          value={LockStatus.Locked}
+          checked={lockStatus === LockStatus.Locked}
+          onChange={handleRadioChange}
+        />
+      </td>
+      <td
+        style={{
+          ...styles.tableCell,
+          ...styles.radioCell,
+          ...(lockStatus === LockStatus.Editable && styles.selectedCell)
+        }}
+      >
+        <input
+          type="radio"
+          name={index}
+          value={LockStatus.Editable}
+          checked={lockStatus === LockStatus.Editable}
+          onChange={handleRadioChange}
+        />
+      </td>
+      <td
+        style={{
+          ...styles.tableCell,
+          ...styles.radioCell,
+          ...(lockStatus === LockStatus.ReadonlyAnswers && styles.selectedCell)
+        }}
+      >
+        <input
+          type="radio"
+          name={index}
+          value={LockStatus.ReadonlyAnswers}
+          checked={lockStatus === LockStatus.ReadonlyAnswers}
+          onChange={handleRadioChange}
+        />
+      </td>
+    </tr>
+  );
+
+  const renderFooterButtons = () => (
+    <div style={styles.buttonContainer}>
+      <button
+        type="button"
+        style={progressStyles.baseButton}
+        onClick={handleClose}
+      >
+        {commonMsg.dialogCancel()}
+      </button>
+      <button
+        type="button"
+        style={{
+          ...progressStyles.blueButton,
+          ...hiddenUnlessSelectedSection
+        }}
+        onClick={handleSave}
+        disabled={saving}
+      >
+        {saving ? commonMsg.saving() : commonMsg.save()}
+      </button>
+    </div>
+  );
+
+  //
+  // Main rendering logic
+  //
   const responsiveHeight = {
     maxHeight: window.innerHeight * 0.8 - 100
   };
-  const hasSelectedSection = selectedSectionId !== NO_SECTION;
-  const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
 
   return (
     <BaseDialog isOpen={isOpen} handleClose={handleClose}>
       <div style={{...styles.main, ...responsiveHeight}}>
-        <div>
-          <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
-          <SectionSelector
-            style={{marginLeft: 10}}
-            requireSelection={hasSelectedSection}
-          />
-        </div>
-        <table style={hiddenUnlessSelectedSection}>
-          <tbody>
-            <tr>
-              <td>1. {commonMsg.allowEditingInstructions()}</td>
-              <td>
-                <button
-                  type="button"
-                  style={progressStyles.orangeButton}
-                  onClick={allowEditing}
-                >
-                  {commonMsg.allowEditing()}
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>2. {commonMsg.lockStageInstructions()}</td>
-              <td>
-                <button
-                  type="button"
-                  style={progressStyles.orangeButton}
-                  onClick={lockLesson}
-                >
-                  {commonMsg.lockStage()}
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>3. {commonMsg.showAnswersInstructions()}</td>
-              <td>
-                <button
-                  type="button"
-                  style={progressStyles.orangeButton}
-                  onClick={showAnswers}
-                >
-                  {commonMsg.showAnswers()}
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>4. {commonMsg.relockStageInstructions()}</td>
-              <td>
-                <button
-                  type="button"
-                  style={progressStyles.orangeButton}
-                  onClick={lockLesson}
-                >
-                  {commonMsg.relockStage()}
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>5. {commonMsg.reviewResponses()}</td>
-              <td>
-                <button
-                  type="button"
-                  style={progressStyles.whiteButton}
-                  onClick={viewSection}
-                >
-                  {commonMsg.viewSection()}
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div
-          style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}
-        >
-          {commonMsg.autolock()}
-        </div>
-        <div style={{...styles.title, ...hiddenUnlessSelectedSection}}>
-          {commonMsg.studentControl()}
-        </div>
-        <div
-          style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}
-        >
-          {commonMsg.studentLockStateInstructions()}
-        </div>
-        <table style={{...styles.studentTable, ...hiddenUnlessSelectedSection}}>
-          <thead>
-            <tr>
-              <th style={styles.headerRow}>{commonMsg.student()}</th>
-              <th style={styles.headerRow}>{commonMsg.locked()}</th>
-              <th style={styles.headerRow}>{commonMsg.editable()}</th>
-              <th style={styles.headerRow}>{commonMsg.answersVisible()}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {lockStatuses.map(({name, lockStatus}, index) => (
-              <tr key={index}>
-                <td style={styles.tableCell}>{name}</td>
-                <td
-                  style={{
-                    ...styles.tableCell,
-                    ...styles.radioCell,
-                    ...(lockStatus === LockStatus.Locked && styles.selectedCell)
-                  }}
-                >
-                  <input
-                    type="radio"
-                    name={index}
-                    value={LockStatus.Locked}
-                    checked={lockStatus === LockStatus.Locked}
-                    onChange={handleRadioChange}
-                  />
-                </td>
-                <td
-                  style={{
-                    ...styles.tableCell,
-                    ...styles.radioCell,
-                    ...(lockStatus === LockStatus.Editable &&
-                      styles.selectedCell)
-                  }}
-                >
-                  <input
-                    type="radio"
-                    name={index}
-                    value={LockStatus.Editable}
-                    checked={lockStatus === LockStatus.Editable}
-                    onChange={handleRadioChange}
-                  />
-                </td>
-                <td
-                  style={{
-                    ...styles.tableCell,
-                    ...styles.radioCell,
-                    ...(lockStatus === LockStatus.ReadonlyAnswers &&
-                      styles.selectedCell)
-                  }}
-                >
-                  <input
-                    type="radio"
-                    name={index}
-                    value={LockStatus.ReadonlyAnswers}
-                    checked={lockStatus === LockStatus.ReadonlyAnswers}
-                    onChange={handleRadioChange}
-                  />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {renderHeading()}
+        {renderInstructionsAndButtons()}
+        {renderStudentTable()}
       </div>
-      <div style={styles.buttonContainer}>
-        <button
-          type="button"
-          style={progressStyles.baseButton}
-          onClick={handleClose}
-        >
-          {commonMsg.dialogCancel()}
-        </button>
-        <button
-          type="button"
-          style={{
-            ...progressStyles.blueButton,
-            ...hiddenUnlessSelectedSection
-          }}
-          onClick={handleSave}
-          disabled={saving}
-        >
-          {saving ? commonMsg.saving() : commonMsg.save()}
-        </button>
-      </div>
+      {renderFooterButtons()}
     </BaseDialog>
   );
 }
